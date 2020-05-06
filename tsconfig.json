@@ -1,31 +1,34 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "es6"
-    ],
-    "target": "es2017",
+    "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
-    "isolatedModules": false,
-    "experimentalDecorators": true,
+    "strict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
+    "importHelpers": true,
+    "isolatedModules": false,
+    "moduleResolution": "node",
     "jsx": "preserve",
-    "jsxFactory": "h"
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": ["webpack-env", "jest"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
     "./**/*.ts",
-    "./**/*.tsx"
+    "./**/*.tsx",
+    "./**/*.vue", 
+    "docs/common/markdown-loader.js"
   ],
-  "exclude": [
-    "node_modules",
-    "tools"
-  ],
-  "compileOnSave": false
+  "exclude": ["node_modules"]
 }

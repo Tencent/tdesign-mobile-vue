@@ -1,28 +1,28 @@
-import Icon from './icon';
-import Button from './button';
+import Icon from "./icon";
+// import Button from './button';
 
 const components = {
-  Icon,
-  Button,
+  Icon
+  // Button,
 };
 
-const install = function(Vue:any, config?:object): void {
+const install = function(Vue: any, config?: object): void {
   const defaults = {
-    prefix: 'tdesign',
+    prefix: "td"
   };
   const installConfig = { ...defaults, ...config };
-  Object.keys(components).forEach((key) => {
+  Object.keys(components).forEach(key => {
     Vue.component(installConfig.prefix + key, components[key]);
   });
 };
 
 // install
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
-}
+// if (typeof window !== 'undefined' && window.Vue) {
+//   install(window.Vue);
+// }
 
 export default {
   install,
-  version: typeof VERSION === 'undefined' ? '' : VERSION, // eslint-disable-line
-  ...components,
+  version: typeof VERSION === "undefined" ? "" : VERSION, // eslint-disable-line
+  ...components
 };
