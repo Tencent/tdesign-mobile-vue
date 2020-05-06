@@ -27,8 +27,7 @@
     "new-cap": 0,
     "prefer-destructuring": 0,
     "no-underscore-dangle": 0,
-    "func-style": 0,
-    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "func-style": 0
   },
   "overrides": [
     {

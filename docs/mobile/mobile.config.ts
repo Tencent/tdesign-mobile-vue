@@ -30,14 +30,9 @@ export default {
             //   component: () => import('@/button/button.md'),
             // },
             {
-              title: 'Icon',
+              title: 'Icon 图标',
               name: 'icon',
               component: () => import('@/icon/demos/base.vue'),
-            },
-            {
-              title: 'Button',
-              name: 'button',
-              component: () => import('@/button/demos/base.vue'),
             },
           ],
         },

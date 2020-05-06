@@ -1,5 +1,5 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
-import config from './sites.config';
+import config from './mobile.config';
 
 // const demoReq = require.context("@/", true, /demos[/\\][\w-]+\.vue$/im);
 
@@ -25,6 +25,7 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   return docsRoutes;
 }
 console.log(getDocsRoutes(navs.components.docs, 'component'));
+// console.log(import("@/icon/icon.md"))
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -34,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
 });
 
 export default router;
