@@ -1,8 +1,8 @@
 export default {
   navs: {
     components: {
-      title: "组件",
-      url: "components",
+      title: '组件',
+      url: 'components',
       docs: [
         // {
         //   title: "开始",
@@ -21,8 +21,8 @@ export default {
         //   ]
         // },
         {
-          title: "基础组件",
-          type: "component", // 组件文档
+          title: '基础组件',
+          type: 'component', // 组件文档
           children: [
             // {
             //   title: 'Button 按钮',
@@ -30,13 +30,18 @@ export default {
             //   component: () => import('@/button/button.md'),
             // },
             {
-              title: "Icon 图标",
-              name: "icon",
-              component: () => import("@/icon/demos/base.vue")
-            }
-          ]
-        }
-      ]
-    }
-  }
+              title: 'Icon',
+              name: 'icon',
+              component: () => import('@/icon/demos/base.vue'),
+            },
+            {
+              title: 'Button',
+              name: 'button',
+              component: () => import('@/button/demos/base.vue'),
+            },
+          ],
+        },
+      ],
+    },
+  },
 };

@@ -1,17 +1,20 @@
-import Icon from "./icon";
-// import Button from './button';
+import config from './config';
+import Icon from './icon';
+import Button from './button';
+
+const { prefix } = config;
 
 const components = {
-  Icon
-  // Button,
+  Icon,
+  Button,
 };
 
-const install = function(Vue: any, config?: object): void {
+const install = function (Vue: any, config?: object): void {
   const defaults = {
-    prefix: "td"
+    prefix,
   };
   const installConfig = { ...defaults, ...config };
-  Object.keys(components).forEach(key => {
+  Object.keys(components).forEach((key) => {
     Vue.component(installConfig.prefix + key, components[key]);
   });
 };
@@ -24,5 +27,5 @@ const install = function(Vue: any, config?: object): void {
 export default {
   install,
   version: typeof VERSION === "undefined" ? "" : VERSION, // eslint-disable-line
-  ...components
+  ...components,
 };

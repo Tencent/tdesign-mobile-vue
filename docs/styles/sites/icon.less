@@ -1,0 +1,19 @@
+@import "../vars.less";
+@import "../mixins/index.less";
+
+.demo-icon {
+  .demo-icon-iconbox {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    .@{prefix}-icon {
+      color: inherit;
+      font-size: 28px;
+    }
+    p {
+      margin-top: 10px;
+      .text-ellipsis();
+    }
+  }
+}
