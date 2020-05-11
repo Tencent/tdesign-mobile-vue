@@ -4,10 +4,10 @@ import router from './router';
 
 import TDesign from '@/index';
 
-import '../styles/index.less';
+import '../../common/style/mobile/index.less';
+import '../styles/mobile/index.less';
 
 createApp(app)
   .use(TDesign)
   .use(router)
-  .component('spfx-demo', import('./components/demo.vue'))
   .mount('#app');

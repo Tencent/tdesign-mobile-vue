@@ -1,9 +1,8 @@
 <template>
   <button :class="classes" :disabled="disabled">
-    <t-icon icon="loading_gradient" :class="iconClass" v-if="loading" />
-    <t-icon :icon="icon" :class="iconClass" v-if="icon && !loading" />
+    <t-icon :icon="icon" :class="iconClass" v-if="icon" />
 
-    <span v-if="!iconOnly">
+    <span :class="textClass" v-if="!iconOnly">
       <slot />
     </span>
 
@@ -12,90 +11,113 @@
 </template>
 
 <script lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, watch, toRefs, SetupContext } from 'vue';
 import config from '../config';
 const { prefix } = config;
-const name: string = `${prefix}-button`;
+const name = `${prefix}-button`;
 
-interface ButtonProps {
-  /**
-   * 风格样式
-   */
+export enum ButtonShape {
+  Square = 'square',
+  Round = 'round',
+  Circle = 'circle'
+}
+
+export interface ButtonProps {
   theme: {
-    type: String;
-    default: 'primary';
+    type: string;
+    default: 'default';
   };
-  /**
-   * 按钮大小
-   */
   size: {
-    type: String;
-    default: 'm';
+    type: string;
+    default: 'default';
   };
-  /**
-   * 圆角
-   */
-  round: Boolean;
-  loading: Boolean;
-  disabled: Boolean;
-  icon: String;
-  suffixIcon: String;
-  htmlType:  String;
-  iconOnly: Boolean;
+  icon: string;
+  suffixIcon: string;
   block: {
-    type: Boolean;
+    type: boolean;
+    default: false;
+  };
+  shape: {
+    type: ButtonShape;
+    default: ButtonShape.Round;
+  };
+  loading: {
+    type: boolean;
+    default: false;
+  };
+  disabled: {
+    type: boolean;
     default: false;
   };
 }
-
 
 export default {
   name,
   props: {
     theme: {
       type: String,
-      default: 'primary',
+      default: 'default',
     },
-    /**
-     * 按钮大小
-     */
     size: {
       type: String,
-      default: 'm',
+      default: 'default',
     },
-    /**
-     * 圆角
-     */
-    round: Boolean,
-    loading: Boolean,
-    disabled: Boolean,
     icon: String,
     suffixIcon: String,
-    htmlType: String,
-    iconOnly: Boolean,
     block: {
       type: Boolean,
       default: false,
     },
+    shape: {
+      type: String,
+      default: ButtonShape.Round,
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
-  setup(props:ButtonProps) {
-    console.log(props.theme);
+  setup(props: ButtonProps, context: SetupContext) {
+    const { icon, loading } = toRefs(props);
+    const inIcon = props.icon;
+    const iconOnly = computed(() => !context.slots.default);
+
+    const textClass = computed(() => [`${name}--text`]);
     const iconClass = ref(`${name}__icon`);
     const iconSuffixIconClass = ref(`${name}__suffix-icon`);
 
     const classes = computed(() => [
       `${name}`,
-      `${name}--size-${props.size}`,
       `${name}--theme-${props.theme}`,
       {
-        ['is-disabled']: props.disabled,
-        [`${name}--notext`]: props.iconOnly,
-        [`${name}--loading`]: props.loading,
-        [`${name}--round`]: props.round,
-        [`${name}--block`]: props.block,
+        [`${name}--size-${props.size}`]: props.size,
+        [`${name}--square`]:
+          props.shape.valueOf() === ButtonShape.Square.valueOf(),
+        [`${name}--circle`]:
+          props.shape.valueOf() === ButtonShape.Circle.valueOf(),
+        [`${prefix}-is-block`]: props.block,
+        [`${prefix}-is-disabled`]: props.disabled,
+        [`${prefix}-is-loading`]: props.loading,
       },
     ]);
-    return { classes, iconClass, iconSuffixIconClass, ...props };
+
+    watch(loading, (loading, prevLoading)  => {
+      console.log(loading, prevLoading);
+      icon.value = loading ? 'loading_gradient' : inIcon;
+    });
+
+    return {
+      classes,
+      textClass,
+      iconClass,
+      iconSuffixIconClass,
+      iconOnly,
+      ...toRefs(props),
+    };
   },
 };
 </script>

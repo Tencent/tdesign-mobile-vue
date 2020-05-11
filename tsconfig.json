@@ -24,10 +24,11 @@
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
+  "rules": { "trailing-comma": false },
   "include": [
     "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.vue", 
+    "./**/*.vue",
     "docs/common/markdown-loader.js"
   ],
   "exclude": ["node_modules"]

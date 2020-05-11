@@ -1,0 +1,36 @@
+@import '../vars.less';
+@import '../mixins/index.less';
+@import '../common/index.less';
+@import './icon.less';
+@import './button.less';
+
+#app {
+  height: 100%;
+}
+
+.spfx-home {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 46px 20px 20px;
+  background: #fff;
+  & h1{
+    padding-bottom:16px;
+    font-size: 32px;
+  }
+}
+.navs {
+  position: relative;
+  display: flex;
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: #323233;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 40px;
+  background: #f7f8fa;
+  & a {
+    text-decoration: none;
+    color: #323233
+  }
+}
