@@ -1,12 +1,9 @@
 <template>
   <button :class="classes" :disabled="disabled">
     <t-icon :icon="icon" :class="iconClass" v-if="icon" />
-
     <span :class="textClass" v-if="!iconOnly">
       <slot />
     </span>
-
-    <t-icon :icon="suffixIcon" :class="iconSuffixIconClass" v-if="suffixIcon" />
   </button>
 </template>
 
@@ -32,7 +29,6 @@ export interface ButtonProps {
     default: 'default';
   };
   icon: string;
-  suffixIcon: string;
   block: {
     type: boolean;
     default: false;
@@ -63,7 +59,6 @@ export default {
       default: 'default',
     },
     icon: String,
-    suffixIcon: String,
     block: {
       type: Boolean,
       default: false,
@@ -86,9 +81,8 @@ export default {
     const inIcon = props.icon;
     const iconOnly = computed(() => !context.slots.default);
 
-    const textClass = computed(() => [`${name}--text`]);
+    const textClass = computed(() => [`${name}__text`]);
     const iconClass = ref(`${name}__icon`);
-    const iconSuffixIconClass = ref(`${name}__suffix-icon`);
 
     const classes = computed(() => [
       `${name}`,
@@ -105,8 +99,8 @@ export default {
       },
     ]);
 
-    watch(loading, (loading, prevLoading)  => {
-      console.log(loading, prevLoading);
+    watch(loading, (loading)  => {
+      console.log(loading);
       icon.value = loading ? 'loading_gradient' : inIcon;
     });
 
@@ -114,7 +108,6 @@ export default {
       classes,
       textClass,
       iconClass,
-      iconSuffixIconClass,
       iconOnly,
       ...toRefs(props),
     };
