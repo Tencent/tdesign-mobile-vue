@@ -14,6 +14,11 @@ export default {
           name: 'icon',
           component: () => import('@/icon/demos/base.vue'),
         },
+        {
+          title: 'Cell 单元格',
+          name: 'cell',
+          component: () => import('@/cell/demos/base.vue'),
+        },
       ],
     },
   },
