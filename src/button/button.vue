@@ -1,6 +1,6 @@
 <template>
   <button :class="classes" :disabled="disabled">
-    <t-icon :icon="icon" :class="iconClass" v-if="icon" />
+    <t-icon :icon="_icon" :class="iconClass" v-if="_icon" />
     <span :class="textClass" v-if="!iconOnly">
       <slot />
     </span>
@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, toRefs, SetupContext } from 'vue';
+import { ref, computed, toRefs, SetupContext } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-button`;
@@ -77,7 +77,7 @@ export default {
     },
   },
   setup(props: ButtonProps, context: SetupContext) {
-    const { icon, loading } = toRefs(props);
+    const { loading } = toRefs(props);
     const inIcon = props.icon;
     const iconOnly = computed(() => !context.slots.default);
 
@@ -99,16 +99,14 @@ export default {
       },
     ]);
 
-    watch(loading, (loading)  => {
-      console.log(loading);
-      icon.value = loading ? 'loading_gradient' : inIcon;
-    });
+    const _icon = computed(() => (loading.value ? 'loading_gradient' : inIcon));
 
     return {
       classes,
       textClass,
       iconClass,
       iconOnly,
+      _icon,
       ...toRefs(props),
     };
   },
