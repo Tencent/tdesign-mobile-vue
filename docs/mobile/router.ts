@@ -14,6 +14,7 @@ function getDocsRoutes(docs: any[]): RouteRecordRaw[] {
       path: `/${item.name}`,
       name: item.name,
       component: item.component,
+      meta: { title: item.title },
     });
   });
   return docsRoutes;

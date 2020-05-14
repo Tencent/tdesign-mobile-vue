@@ -3,8 +3,10 @@
     <h1>
       <span>{{ title }}</span>
     </h1>
-    <div class="navs" v-for="(navItem, index) in navs" :key="index">
-      <router-link :to="`${navItem.name}`">{{ navItem.title }}</router-link>
+    <div class="spfx-home-navs" v-for="(navItem, index) in navs" :key="index">
+      <router-link class="spfx-home-navlink" :to="`${navItem.name}`">
+        {{ navItem.title }}
+      </router-link>
     </div>
   </div>
 </template>
