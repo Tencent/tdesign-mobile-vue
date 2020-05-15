@@ -1,12 +1,14 @@
 import config from './config';
 import Icon from './icon';
 import Button from './button';
+import Rate from './rate';
 
 const { prefix } = config;
 
 const components = {
   Icon,
   Button,
+  Rate,
 };
 
 const install = function (Vue: any, config?: object): void {
