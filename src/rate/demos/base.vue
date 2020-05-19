@@ -22,7 +22,7 @@
 export default {
   data() {
     return {
-      current: 3,
+      current: 0,
       current1: 2,
       current2: 1.5,
       texts: ['很差', '差', '一般', '好评', '优秀']

@@ -1,6 +1,11 @@
 <template>
   <div :class="`${prefix}-rate`">
-    <ul :class="`${prefix}-rate--list`">
+    <ul
+      :class="`${prefix}-rate--list`"
+      ref="rateWrapper"
+      @touchstart="onTouchstart"
+      @touchmove="onTouchmove"
+    >
       <li
         :class="{
         [`${prefix}-rate--item`]: true,
@@ -41,7 +46,7 @@ import TIcon from '../icon';
 import config from '../config';
 const { prefix } = config;
 
-export interface RateProps {
+interface RateProps {
   value: Number;
   count: Number;
   readonly: Boolean;
@@ -53,6 +58,11 @@ export interface RateProps {
   textColor: String;
   icon: String;
   size: String;
+}
+
+interface RangeTypes {
+  score: number;
+  left: number;
 }
 
 export default {
@@ -138,6 +148,7 @@ export default {
     size: String
   },
   setup(props: RateProps, context: SetupContext) {
+    const rateWrapper = ref(null);
     const actualVal: number = computed(() => props.modelValue || props.value);
     const rateText: string = computed(() => {
       if (props.texts.length > 0) {
@@ -147,21 +158,60 @@ export default {
       return actualVal.value > 0 ? `${actualVal.value} 分` : '';
     });
 
-    function onClick(current) {
-      if (props.readonly) return;
-
-      const val: number =
-        props.clearable && actualVal.value === current ? 0 : current;
-
+    function emit(val) {
       context.emit('change', val);
       context.emit('update:modelValue', val);
     }
 
+    function onClick(current) {
+      if (props.readonly) return;
+      emit(props.clearable && actualVal.value === current ? 0 : current);
+    }
+
+    let ranges: Array<RangeTypes> = [];
+    function onTouchstart(e) {
+      ranges = [];
+      const items: HTMLCollection = rateWrapper.value.children;
+      Array.from(items).forEach((node: HTMLElement, index: number) => {
+        const { left, width } = node.getBoundingClientRect();
+        if (props.allowHalf) {
+          ranges.push(
+            { score: index + 0.5, left },
+            { score: index + 1, left: left + width / 2 }
+          );
+        } else {
+          ranges.push({ score: index + 1, left });
+        }
+      });
+    }
+
+    function onTouchmove(e) {
+      if (this.readonly) return;
+
+      const { clientX } = e.touches[0];
+
+      let score: number = props.allowHalf ? 0.5 : 1;
+
+      for (let i = ranges.length - 1; i >= 0; i--) {
+        if (clientX > ranges[i].left) {
+          score = ranges[i].score;
+          break;
+        } else {
+          score = 0;
+        }
+      }
+
+      emit(score);
+    }
+
     return {
       prefix: ref(prefix),
+      rateWrapper,
       actualVal,
       rateText,
-      onClick
+      onClick,
+      onTouchstart,
+      onTouchmove
     };
   }
 };
