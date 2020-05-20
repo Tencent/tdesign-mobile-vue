@@ -25,14 +25,14 @@ export default {
       current: 0,
       current1: 2,
       current2: 1.5,
-      texts: ['很差', '差', '一般', '好评', '优秀']
+      texts: ['很差', '差', '一般', '好评', '优秀'],
     };
   },
   methods: {
     onChange(val) {
       console.log(val);
       this.current = val;
-    }
-  }
+    },
+  },
 };
 </script>
