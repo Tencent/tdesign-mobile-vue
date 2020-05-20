@@ -8,10 +8,10 @@
     >
       <li
         :class="{
-        [`${prefix}-rate--item`]: true,
-        [`${prefix}-rate-full`]: actualVal >= n,
-        [`${prefix}-rate-half`]: actualVal + 0.5 === n
-      }"
+          [`${prefix}-rate--item`]: true,
+          [`${prefix}-rate-full`]: actualVal >= n,
+          [`${prefix}-rate-half`]: actualVal + 0.5 === n
+        }"
         v-for="n in count"
         :key="n"
       >
@@ -34,13 +34,18 @@
         </span>
       </li>
     </ul>
-    <span v-if="showText" :style="{color: textColor}" :class="`${prefix}-rate--text`">{{rateText}}</span>
+    <span
+      v-if="showText"
+      :style="{
+        color: textColor
+      }"
+      :class="`${prefix}-rate--text`"
+    >{{rateText}}</span>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, toRefs, SetupContext } from 'vue';
-import { SetupContext } from 'vue';
+import { ref, computed, SetupContext } from 'vue';
 import TIcon from '../icon';
 
 import config from '../config';
@@ -81,7 +86,7 @@ export default {
      */
     count: {
       type: Number,
-      default: 5
+      default: 5,
     },
     /**
      * @description 是否为只读
@@ -89,7 +94,7 @@ export default {
      */
     readonly: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * @description 是否允许半选
@@ -97,7 +102,7 @@ export default {
      */
     allowHalf: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * @description 是否允许取消选择
@@ -105,11 +110,11 @@ export default {
      */
     clearable: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * @description 评分图标的颜色
-     * @attribute clearable
+     * @attribute color
      */
     color: String,
     /**
@@ -118,7 +123,7 @@ export default {
      */
     showText: {
       type: Boolean,
-      default: false
+      default: false,
     },
     /**
      * @description 评分等级对应的辅助文字
@@ -126,7 +131,7 @@ export default {
      */
     texts: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     /**
      * @description 评分等级对应的辅助文字
@@ -139,13 +144,13 @@ export default {
      */
     icon: {
       type: String,
-      default: 'start'
+      default: 'start',
     },
     /**
      * @description 评分图标的大小
      * @attribute size
      */
-    size: String
+    size: String,
   },
   setup(props: RateProps, context: SetupContext) {
     const rateWrapper = ref(null);
@@ -169,7 +174,7 @@ export default {
     }
 
     let ranges: Array<RangeTypes> = [];
-    function onTouchstart(e) {
+    function onTouchstart() {
       ranges = [];
       const items: HTMLCollection = rateWrapper.value.children;
       Array.from(items).forEach((node: HTMLElement, index: number) => {
@@ -177,7 +182,7 @@ export default {
         if (props.allowHalf) {
           ranges.push(
             { score: index + 0.5, left },
-            { score: index + 1, left: left + width / 2 }
+            { score: index + 1, left: left + width / 2 },
           );
         } else {
           ranges.push({ score: index + 1, left });
@@ -211,8 +216,8 @@ export default {
       rateText,
       onClick,
       onTouchstart,
-      onTouchmove
+      onTouchmove,
     };
-  }
+  },
 };
 </script>

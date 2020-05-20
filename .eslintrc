@@ -31,6 +31,7 @@
       "files": ["*.vue"],
       "rules": {
         "indent": 2,
+        "no-mixed-operators": 0,
         "vue/html-indent": [2, 2],
         "vue/return-in-computed-property": 1,
         "vue/order-in-components": 2,
