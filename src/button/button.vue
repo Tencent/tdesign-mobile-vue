@@ -1,17 +1,14 @@
 <template>
   <button :class="classes" :disabled="disabled">
-    <t-icon :icon="icon" :class="iconClass" v-if="icon" />
-
+    <t-icon :icon="_icon" :class="iconClass" v-if="_icon" />
     <span :class="textClass" v-if="!iconOnly">
       <slot />
     </span>
-
-    <t-icon :icon="suffixIcon" :class="iconSuffixIconClass" v-if="suffixIcon" />
   </button>
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, toRefs, SetupContext } from 'vue';
+import { ref, computed, toRefs, SetupContext } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-button`;
@@ -32,7 +29,6 @@ export interface ButtonProps {
     default: 'default';
   };
   icon: string;
-  suffixIcon: string;
   block: {
     type: boolean;
     default: false;
@@ -63,7 +59,6 @@ export default {
       default: 'default',
     },
     icon: String,
-    suffixIcon: String,
     block: {
       type: Boolean,
       default: false,
@@ -82,13 +77,12 @@ export default {
     },
   },
   setup(props: ButtonProps, context: SetupContext) {
-    const { icon, loading } = toRefs(props);
+    const { loading } = toRefs(props);
     const inIcon = props.icon;
     const iconOnly = computed(() => !context.slots.default);
 
-    const textClass = computed(() => [`${name}--text`]);
+    const textClass = computed(() => [`${name}__text`]);
     const iconClass = ref(`${name}__icon`);
-    const iconSuffixIconClass = ref(`${name}__suffix-icon`);
 
     const classes = computed(() => [
       `${name}`,
@@ -105,17 +99,14 @@ export default {
       },
     ]);
 
-    watch(loading, (loading, prevLoading)  => {
-      console.log(loading, prevLoading);
-      icon.value = loading ? 'loading_gradient' : inIcon;
-    });
+    const _icon = computed(() => (loading.value ? 'loading_gradient' : inIcon));
 
     return {
       classes,
       textClass,
       iconClass,
-      iconSuffixIconClass,
       iconOnly,
+      _icon,
       ...toRefs(props),
     };
   },
