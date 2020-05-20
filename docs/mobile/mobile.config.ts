@@ -19,6 +19,11 @@ export default {
           name: 'cell',
           component: () => import('@/cell/demos/base.vue'),
         },
+        {
+          title: 'Rate 评分',
+          name: 'rate',
+          component: () => import('@/rate/demos/base.vue'),
+        },
       ],
     },
   },
