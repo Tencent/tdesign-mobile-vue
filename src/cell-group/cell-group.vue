@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div :class="styleWrapper">
     <slot name="title">
       <div v-if="title" :class="styleTitle">{{ title }}</div>
     </slot>
-    <div :class="styleWrapper">
+    <div :class="styleContainer">
       <slot></slot>
     </div>
   </div>
@@ -34,11 +34,13 @@ export default {
     },
   },
   setup(props: CellGroupProps) {
-    const styleWrapper = computed(() => (props.border ? `${name} border--top-bottom` : name));
+    const styleWrapper = ref(name);
+    const styleContainer = computed(() => (props.border ? `${name}-container border--top-bottom` : `${name}-container`));
     const styleTitle = ref(`${name}--title`);
 
     return {
       styleWrapper,
+      styleContainer,
       styleTitle,
     };
   },

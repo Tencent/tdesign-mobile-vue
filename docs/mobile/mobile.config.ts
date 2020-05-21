@@ -24,6 +24,11 @@ export default {
           name: 'rate',
           component: () => import('@/rate/demos/base.vue'),
         },
+        {
+          title: 'Input 输入框',
+          name: 'input',
+          component: () => import('@/input/demos/base.vue'),
+        },
       ],
     },
   },

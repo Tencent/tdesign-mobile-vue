@@ -4,6 +4,7 @@ import Button from './button';
 import Rate from './rate';
 import CellGroup from './cell-group';
 import Cell from './cell';
+import Input from './input';
 
 const { prefix } = config;
 
@@ -13,6 +14,7 @@ const components = {
   Rate,
   CellGroup,
   Cell,
+  Input,
 };
 
 const install = function (Vue: any, config?: object): void {
