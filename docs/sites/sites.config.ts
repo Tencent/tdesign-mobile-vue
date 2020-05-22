@@ -39,6 +39,11 @@ export default {
               name: 'button',
               component: () => import('@/button/demos/base.vue'),
             },
+            {
+              title: 'Rate',
+              name: 'rate',
+              component: () => import('@/rate/demos/base.vue'),
+            },
           ],
         },
       ],

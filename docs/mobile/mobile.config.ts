@@ -14,6 +14,21 @@ export default {
           name: 'icon',
           component: () => import('@/icon/demos/base.vue'),
         },
+        {
+          title: 'Cell 单元格',
+          name: 'cell',
+          component: () => import('@/cell/demos/base.vue'),
+        },
+        {
+          title: 'Rate 评分',
+          name: 'rate',
+          component: () => import('@/rate/demos/base.vue'),
+        },
+        {
+          title: 'Input 输入框',
+          name: 'input',
+          component: () => import('@/input/demos/base.vue'),
+        },
       ],
     },
   },

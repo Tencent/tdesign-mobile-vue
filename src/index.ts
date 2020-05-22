@@ -1,12 +1,20 @@
 import config from './config';
 import Icon from './icon';
 import Button from './button';
+import Rate from './rate';
+import CellGroup from './cell-group';
+import Cell from './cell';
+import Input from './input';
 
 const { prefix } = config;
 
 const components = {
   Icon,
   Button,
+  Rate,
+  CellGroup,
+  Cell,
+  Input,
 };
 
 const install = function (Vue: any, config?: object): void {

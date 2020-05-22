@@ -1,0 +1,86 @@
+<template>
+  <div :class="styleWrapper">
+    <div v-if="hasLabel" :class="styleLabel">
+      <slot name="label">
+        <div v-if="label">{{ label }}</div>
+      </slot>
+    </div>
+    <div :class="styleValue">
+      <slot>
+        <div v-if="value">{{ value }}</div>
+      </slot>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { ref, computed, SetupContext } from 'vue';
+import config from '../config';
+const { prefix } = config;
+const name = `${prefix}-cell`;
+
+export enum ValueAlign {
+  Left = 'left',
+  Right = 'right',
+}
+export interface CellProps {
+  theme: {
+    type: string;
+    default: 'default';
+  };
+  size: {
+    type: string;
+    default: 'default';
+  };
+  label: string;
+  value: string;
+  suffixIcon: string;
+  valueAlign: {
+    type: ValueAlign,
+    default: ValueAlign.Right,
+  },
+  disabled: {
+    type: boolean;
+    default: false;
+  };
+}
+
+export default {
+  name,
+  props: {
+    label: String,
+    value: String,
+    valueAlign: {
+      type: String,
+      default: ValueAlign.Right,
+    },
+  },
+  setup(props: CellProps, context: SetupContext) {
+    const styleLabel = ref(`${name}--label`);
+    const styleWrapper = computed(() => [
+      `${name}`,
+      `${name}--theme-${props.theme}`,
+    ]);
+    const hasLabel = computed(() => {
+      if (props.label) return true;
+      return !!context.slots.label;
+    });
+
+    const styleValue = computed(() => {
+      const alignLeft = `${name}--value ${name}__left`;
+      if (hasLabel) {
+        return props.valueAlign.valueOf() === ValueAlign.Right.valueOf() ? `${name}--value` : alignLeft;
+      }
+      // 没有label时默认左对齐
+      return alignLeft;
+    });
+
+    return {
+      styleWrapper,
+      styleLabel,
+      styleValue,
+      hasLabel,
+    };
+  },
+};
+</script>

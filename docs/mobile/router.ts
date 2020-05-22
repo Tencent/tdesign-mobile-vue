@@ -14,6 +14,7 @@ function getDocsRoutes(docs: any[]): RouteRecordRaw[] {
       path: `/${item.name}`,
       name: item.name,
       component: item.component,
+      meta: { title: item.title },
     });
   });
   return docsRoutes;
@@ -26,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
   ...getDocsRoutes(navs.components.docs),
 ];
 const router = createRouter({
-  history: createWebHashHistory(`${process.env.BASE_URL}mobile.html/`),
+  history: createWebHashHistory(`${process.env.BASE_URL}mobile.html`),
   routes,
 });
 
