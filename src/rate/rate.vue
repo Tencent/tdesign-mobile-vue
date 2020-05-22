@@ -6,15 +6,7 @@
       @touchstart="onTouchstart"
       @touchmove="onTouchmove"
     >
-      <li
-        :class="{
-          [`${name}--item`]: true,
-          [`${name}-full`]: actualVal >= n,
-          [`${name}-half`]: actualVal + 0.5 === n
-        }"
-        v-for="n in count"
-        :key="n"
-      >
+      <li :class="classes(n)" v-for="n in count" :key="n">
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
@@ -164,6 +156,12 @@ export default {
       return actualVal.value > 0 ? `${actualVal.value} 分` : '';
     });
 
+    const classes = n => ({
+      [`${name}--item`]: true,
+      [`${name}-full`]: actualVal.value >= n,
+      [`${name}-half`]: actualVal.value + 0.5 === n,
+    });
+
     function emit(val) {
       context.emit('change', val);
       context.emit('update:modelValue', val);
@@ -183,7 +181,7 @@ export default {
         if (props.allowHalf) {
           ranges.push(
             { score: index + 0.5, left },
-            { score: index + 1, left: left + width / 2 },
+            { score: index + 1, left: left + width / 2 }
           );
         } else {
           ranges.push({ score: index + 1, left });
@@ -212,6 +210,7 @@ export default {
 
     return {
       name: ref(name),
+      classes,
       rateWrapper,
       actualVal,
       rateText,
