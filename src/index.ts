@@ -5,7 +5,7 @@ import Rate from './rate';
 import CellGroup from './cell-group';
 import Cell from './cell';
 import Input from './input';
-import Switch from "./switch";
+import Switch from './switch';
 
 const { prefix } = config;
 

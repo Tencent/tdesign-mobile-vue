@@ -29,6 +29,11 @@ export default {
           name: 'input',
           component: () => import('@/input/demos/base.vue'),
         },
+        {
+          title: 'Switch 开关',
+          name: 'switch',
+          component: () => import('@/switch/demos/base.vue'),
+        },
       ],
     },
   },
