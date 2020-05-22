@@ -2,7 +2,7 @@
   <div class="button-base">
     <t-cell-group title="基础按钮">
       <t-cell value-align="left">
-        <t-button @click="onClick" size="large">主按钮</t-button>
+        <t-button @click="onClick" @touchstart="onTouchStart" size="large">主按钮</t-button>
         <t-button size="large" disabled>主按钮-禁用</t-button>
         <t-button theme="line" size="large" >次要按钮</t-button>
         <t-button theme="line" size="large" disabled>次要按钮-禁用</t-button>
@@ -52,8 +52,11 @@ export default {
     const onClick = () => {
       console.log('ttt');
     };
+    const onTouchStart = () => {
+      console.log('touch start');
+    };
     const loading = ref(true);
-    return { onClick, loading };
+    return { onClick, onTouchStart, loading };
   },
 };
 </script>

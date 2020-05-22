@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" :disabled="disabled">
+  <button :class="classes" :disabled="disabled" @click="onClick" @touchstart="onTouchstart">
     <t-icon :icon="_icon" :class="iconClass" v-if="_icon" />
     <span :class="textClass" v-if="!iconOnly">
       <slot />
@@ -100,6 +100,16 @@ export default {
     ]);
 
     const _icon = computed(() => (loading.value ? 'loading_gradient' : inIcon));
+    const onClick = (e:Event) => {
+      if (!props.loading && !props.disabled) {
+        e.stopPropagation();
+      } else {
+        context.emit('click', e);
+      }
+    };
+    const onTouchstart = (event: TouchEvent) => {
+      context.emit('touchstart', event);
+    };
 
     return {
       classes,
@@ -108,6 +118,8 @@ export default {
       iconOnly,
       _icon,
       ...toRefs(props),
+      onClick,
+      onTouchstart,
     };
   },
 };
