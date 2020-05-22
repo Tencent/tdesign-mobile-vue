@@ -1,33 +1,25 @@
 <template>
-  <div :class="`${prefix}-rate`">
+  <div :class="`${name}`">
     <ul
-      :class="`${prefix}-rate--list`"
+      :class="`${name}--list`"
       ref="rateWrapper"
       @touchstart="onTouchstart"
       @touchmove="onTouchmove"
     >
-      <li
-        :class="{
-          [`${prefix}-rate--item`]: true,
-          [`${prefix}-rate-full`]: actualVal >= n,
-          [`${prefix}-rate-half`]: actualVal + 0.5 === n
-        }"
-        v-for="n in count"
-        :key="n"
-      >
+      <li :class="classes(n)" v-for="n in count" :key="n">
         <template v-if="allowHalf">
-          <span :class="`${prefix}-rate--icon-left`" @click="onClick(n - 0.5)">
+          <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
               <t-icon icon="star" />
             </slot>
           </span>
-          <span :class="`${prefix}-rate--icon-right`" @click="onClick(n)">
+          <span :class="`${name}--icon-right`" @click="onClick(n)">
             <slot name="icon">
               <t-icon icon="star" />
             </slot>
           </span>
         </template>
-        <span v-else :class="`${prefix}-rate--icon`" @click="onClick(n)">
+        <span v-else :class="`${name}--icon`" @click="onClick(n)">
           <slot name="icon">
             <t-icon icon="star" />
           </slot>
@@ -39,7 +31,7 @@
       :style="{
         color: textColor
       }"
-      :class="`${prefix}-rate--text`"
+      :class="`${name}--text`"
     >{{rateText}}</span>
   </div>
 </template>
@@ -47,9 +39,10 @@
 <script lang="ts">
 import { ref, computed, SetupContext } from 'vue';
 import TIcon from '../icon';
-
 import config from '../config';
+
 const { prefix } = config;
+const name = `${prefix}-rate`;
 
 interface RateProps {
   value: Number;
@@ -163,6 +156,12 @@ export default {
       return actualVal.value > 0 ? `${actualVal.value} 分` : '';
     });
 
+    const classes = n => ({
+      [`${name}--item`]: true,
+      [`${name}-full`]: actualVal.value >= n,
+      [`${name}-half`]: actualVal.value + 0.5 === n,
+    });
+
     function emit(val) {
       context.emit('change', val);
       context.emit('update:modelValue', val);
@@ -182,7 +181,7 @@ export default {
         if (props.allowHalf) {
           ranges.push(
             { score: index + 0.5, left },
-            { score: index + 1, left: left + width / 2 },
+            { score: index + 1, left: left + width / 2 }
           );
         } else {
           ranges.push({ score: index + 1, left });
@@ -210,7 +209,8 @@ export default {
     }
 
     return {
-      prefix: ref(prefix),
+      name: ref(name),
+      classes,
       rateWrapper,
       actualVal,
       rateText,
