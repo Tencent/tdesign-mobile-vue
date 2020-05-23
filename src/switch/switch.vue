@@ -9,17 +9,13 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, SetupContext } from 'vue';
+import { ref, computed, toRefs, SetupContext } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-switch`;
 
 export interface SwitchProps {
     modelValue: {
-      type: [string, number, boolean],
-      default: false
-    },
-    value: {
       type: [string, number, boolean],
       default: false
     },
@@ -41,15 +37,11 @@ export interface SwitchProps {
 export default {
   name,
   props: {
-    modelValue: {
-      type: [String, Number, Boolean],
-      default: false,
-    },
     /**
-       * @description 当前选择的值
-       * @attribute value
-       */
-    value: {
+     * @description 当前选择的值
+     * @attribute modelValue
+     */
+    modelValue: {
       type: [String, Number, Boolean],
       default: false,
     },
@@ -87,12 +79,14 @@ export default {
     },
   },
   setup(props: SwitchProps, context: SetupContext) {
+    const _value = ref(false);
     const currentValue = computed({
       set(val) {
+        _value.value = val;
         context.emit('update:modelValue', val);
       },
       get() {
-        return props.modelValue || props.value;
+        return props.modelValue || _value.value;
       },
     });
 
@@ -121,7 +115,7 @@ export default {
         ? props.inactiveValue : props.activeValue;
 
       currentValue.value = checked;
-      context.emit('change', checked);
+      context.emit('onChange', checked);
     }
 
     function toggle(event:Event) {

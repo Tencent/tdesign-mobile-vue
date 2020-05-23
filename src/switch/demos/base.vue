@@ -1,8 +1,40 @@
 <template>
-  <div>
-    <t-switch v-model="checked" :active-value="activeValue" :text="text"
-              :inactive-value="inactiveValue" @change="onChange" >
-    </t-switch>
+  <div class="cell-base">
+    <t-cell-group title="基础开关">
+      <t-cell label="标题">
+        <t-switch v-model="checked" @onChange="onChange" >
+        </t-switch>
+      </t-cell>
+      <t-cell label="标题">
+        <t-switch></t-switch>
+      </t-cell>
+      <t-cell label="标题">
+        <t-switch v-model="disabledValue" disabled>
+        </t-switch>
+      </t-cell>
+      <t-cell label="标题">
+        <t-switch disabled>
+        </t-switch>
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group title="带描述开关">
+      <t-cell label="标题">
+        <t-switch v-model="value" text="描述信息" >
+        </t-switch>
+      </t-cell>
+      <t-cell label="标题">
+        <t-switch text="描述信息" >
+        </t-switch>
+      </t-cell>
+      <t-cell label="标题">
+        <t-switch v-model="disabledValue" disabled text="描述信息">
+        </t-switch>
+      </t-cell>
+      <t-cell label="标题">
+        <t-switch disabled text="描述信息">
+        </t-switch>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 
@@ -15,18 +47,16 @@ const name = `${prefix}-switch-base-demo`;
 export default {
   name,
   setup() {
-    const text = ref('描述信息');
-    const checked = ref('Y');
-    const activeValue = ref('Y');
-    const inactiveValue = ref('N');
+    const value = ref(true);
+    const disabledValue = ref(true);
+    const checked = ref(true);
     function onChange($event:string|number|boolean) {
       console.log(`change to ${$event}`);
     }
     return {
-      text,
+      value,
+      disabledValue,
       checked,
-      activeValue,
-      inactiveValue,
       onChange,
     };
   },
