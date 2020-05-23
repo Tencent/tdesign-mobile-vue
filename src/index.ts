@@ -5,6 +5,7 @@ import Rate from './rate';
 import CellGroup from './cell-group';
 import Cell from './cell';
 import Input from './input';
+import Switch from './switch';
 
 const { prefix } = config;
 
@@ -15,6 +16,7 @@ const components = {
   CellGroup,
   Cell,
   Input,
+  Switch,
 };
 
 const install = function (Vue: any, config?: object): void {

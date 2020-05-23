@@ -44,6 +44,11 @@ export default {
               name: 'rate',
               component: () => import('@/rate/demos/base.vue'),
             },
+            {
+              title: 'Switch',
+              name: 'switch',
+              component: () => import('@/switch/demos/base.vue'),
+            },
           ],
         },
       ],
