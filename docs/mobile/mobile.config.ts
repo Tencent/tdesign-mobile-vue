@@ -38,7 +38,7 @@ export default {
           title: 'Picker 选择器',
           name: 'picker',
           component: () => import('@/picker/demos/base.vue'),
-        }
+        },
       ],
   },
 };
