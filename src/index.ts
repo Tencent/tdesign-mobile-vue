@@ -6,6 +6,7 @@ import CellGroup from './cell-group';
 import Cell from './cell';
 import Input from './input';
 import Switch from './switch';
+import { Picker, PickerColumn } from './picker';
 
 const { prefix } = config;
 
@@ -14,12 +15,12 @@ const components = {
   Button,
   Rate,
   CellGroup,
-  Cell,
   Input,
   Switch,
+  Picker,
+  PickerColumn,
 };
 
-const install = function (Vue: any, config?: object): void {
   const defaults = {
     prefix,
   };
