@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-25 16:40:09
+ * @LastEditTime: 2020-05-25 16:43:29
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /tdesign-mobile-vue/src/index.ts
+ */
 import config from './config';
 import Icon from './icon';
 import Button from './button';
@@ -6,6 +14,8 @@ import CellGroup from './cell-group';
 import Cell from './cell';
 import Input from './input';
 import Switch from './switch';
+import Radio from './radio';
+import RadioGroup from './radio-group';
 import { Picker, PickerColumn } from './picker';
 
 const { prefix } = config;
@@ -20,6 +30,8 @@ const components = {
   Switch,
   Picker,
   PickerColumn,
+  Radio,
+  RadioGroup,
 };
 const install = function (Vue: any, config?: object): void {
   const defaults = {

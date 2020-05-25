@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-25 16:40:09
+ * @LastEditTime: 2020-05-25 16:52:33
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
+ */
 export default {
   navs: {
     components: {
@@ -48,6 +56,11 @@ export default {
               title: 'Switch',
               name: 'switch',
               component: () => import('@/switch/demos/base.vue'),
+            },
+            {
+              title: 'Radio',
+              name: 'radio',
+              component: () => import('@/radio/demos/base.vue'),
             },
           ],
         },
