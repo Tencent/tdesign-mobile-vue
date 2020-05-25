@@ -14,13 +14,14 @@ const components = {
   Icon,
   Button,
   Rate,
+  Cell,
   CellGroup,
   Input,
   Switch,
   Picker,
   PickerColumn,
 };
-
+const install = function (Vue: any, config?: object): void {
   const defaults = {
     prefix,
   };
