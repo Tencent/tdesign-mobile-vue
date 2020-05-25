@@ -40,5 +40,6 @@ export default {
           component: () => import('@/picker/demos/base.vue'),
         },
       ],
+    },
   },
 };
