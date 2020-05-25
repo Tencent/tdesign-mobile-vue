@@ -1,12 +1,15 @@
 import config from './config';
 import Icon from './icon';
 import Button from './button';
+import { Picker, PickerColumn } from './picker';
 
 const { prefix } = config;
 
 const components = {
   Icon,
   Button,
+  Picker,
+  PickerColumn,
 };
 
 const install = function (Vue: any, config?: object): void {
