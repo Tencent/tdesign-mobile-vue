@@ -1,8 +1,16 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-25 16:40:09
+ * @LastEditTime: 2020-05-25 17:20:55
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /tdesign-mobile-vue/src/cell/cell.vue
+-->
 <template>
   <div :class="styleWrapper">
     <div v-if="hasLabel" :class="styleLabel">
       <slot name="label">
-        <div v-if="label">{{ label }}</div>
+        <div v-if="label" >{{ label }}</div>
       </slot>
     </div>
     <div :class="styleValue">
