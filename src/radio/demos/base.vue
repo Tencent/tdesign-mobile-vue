@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-21 10:56:48
- * @LastEditTime: 2020-05-25 23:12:25
+ * @LastEditTime: 2020-05-26 12:07:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio/demos/base.vue
@@ -74,14 +74,30 @@
           一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-radio>
       </t-cell>
       <t-cell value-align="left">
-        <t-radio name="2" title="单行标题" v-model="radio5" @change="testChange5">
-          一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-radio>
+        <t-radio name="2" title="单行标题" v-model="radio5" @change="testChange5" disabled>
+          不可点击</t-radio>
       </t-cell>
       <t-cell value-align="left">
         <t-radio
-          name="3" title="双行标题，长文本自动换行，该选项的描述是一段很长的内容" v-model="radio5" @change="testChange5">
+          name="3"
+          title="双行标题，长文本自动换行，该选项的描述是一段很长的内容"
+          v-model="radio5"
+          @change="testChange5"
+          limit-content-row="1"
+          limit-title-row="1">
           一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字
         </t-radio>
+      </t-cell>
+    </t-cell-group>
+
+    <t-cell-group title="基础单选框-标题-文本-文本部分不能点击">
+      <t-cell value-align="left">
+        <t-radio name="1" title="单行标题" v-model="radio6" content-disabled @change="testChange6">
+          一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-radio>
+      </t-cell>
+      <t-cell value-align="left">
+        <t-radio name="2" title="单行标题" v-model="radio6" content-disabled @change="testChange6">
+          不可点击</t-radio>
       </t-cell>
     </t-cell-group>
   </div>
@@ -97,26 +113,35 @@ export default {
     const radio3 = ref('1');
     const radio4 = ref('1');
     const radio5 = ref('1');
+    const radio6 = ref('1');
     const rootDisable = ref(true);
     onMounted(() => {
     });
     const testChange = (name: string) => {
       radio.value = name;
+      console.log('select-radio', name);
     };
     const testChange2 = (name: string) => {
       radio2.value = name;
+      console.log('select-radio', name);
     };
     const testChange3 = (name: string) => {
       radio3.value = name;
+      console.log('select-radio', name);
     };
     const testChange4 = (name: string) => {
       radio4.value = name;
+      console.log('select-radio', name);
     };
     const testChange5 = (name: string) => {
       radio5.value = name;
+      console.log('select-radio', name);
+    };
+    const testChange6 = (name: string) => {
+      radio6.value = name;
     };
     // eslint-disable-next-line max-len
-    return { radio, radio2, radio3, radio4, radio5, testChange, testChange2, testChange3, testChange4, testChange5, rootDisable };
+    return { radio, radio2, radio3, radio4, radio5, radio6, testChange, testChange2, testChange3, testChange4, testChange5, testChange6, rootDisable };
   },
 };
 </script>
