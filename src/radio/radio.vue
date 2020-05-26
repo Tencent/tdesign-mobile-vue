@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:16:28
- * @LastEditTime: 2020-05-26 12:13:16
+ * @LastEditTime: 2020-05-26 15:59:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio/index.vue
@@ -16,7 +16,7 @@
       <span :class="titleClasses" :style="titleStyle" v-if="title">
         {{ title }}
       </span>
-      <div :class="`${flagName}__content-inner`" :style="contentStyle">
+      <div :class="`${flagName}__content-inner`" :style="contentStyle" v-if="hasSlot">
         <slot></slot>
       </div>
     </span>
@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import { inject, computed, SetupContext } from 'vue';
+import { ref, inject, computed, SetupContext } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -91,14 +91,6 @@ export default {
       default: '',
     },
     /**
-     * @description radio 当前的标题限制行数
-     * @attribute titleLimitRow
-     */
-    titleLimitRow: {
-      type: Number,
-      default: 0,
-    },
-    /**
      * @description radio 当前radio是否能选中，整体是否能被点击
      * @attribute disabled
      */
@@ -148,15 +140,20 @@ export default {
     },
   },
   setup(props: RadioProps, content: SetupContext) {
-    const flagName = name;
+    const hasSlot = ref(false);
+    const flagName: string = name;
     const rootGroupProps:any = inject('rootGroupProps', {});
     const rootGroupChange:any = inject('rootGroupChange', () => {});
     const limitTitleRow:number = props?.limitTitleRow || 0;
     const limitContentRow:number = props?.limitContentRow || 0;
     const titleStyle:object = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
     const contentStyle:object = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
-
     const classes = getClasses(props, rootGroupProps);
+    hasSlot.value = !!content.slots.default;// 判断是否有default slot
+    if (!content.slots.default || !props?.title) {
+      // 当没有title或者slot的时候去掉中间的margin-top
+      Object.assign(contentStyle, { marginTop: 0 });
+    }
     /**
      * @description: 按钮处理方法
      * @param {string}
@@ -174,10 +171,11 @@ export default {
     };
     return {
       flagName,
-      ...classes,
+      hasSlot,
       radioChange,
       titleStyle,
       contentStyle,
+      ...classes,
     };
   },
 };
