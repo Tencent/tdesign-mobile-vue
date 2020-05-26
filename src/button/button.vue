@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="onClick" @touchstart="onTouchstart">
+  <button :class="classes" :disabled="disabled" @click="onClick" @touchstart.passive="onTouchstart">
     <t-icon :icon="_icon" :class="iconClass" v-if="_icon" />
     <span :class="textClass" v-if="!iconOnly">
       <slot />

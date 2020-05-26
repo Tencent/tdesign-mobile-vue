@@ -10,6 +10,11 @@ export default {
           component: () => import('@/button/demos/base.vue'),
         },
         {
+          title: 'ButtonGroup 按钮组',
+          name: 'button-group',
+          component: () => import('@/button-group/demos/base.vue'),
+        },
+        {
           title: 'Icon 图标',
           name: 'icon',
           component: () => import('@/icon/demos/base.vue'),

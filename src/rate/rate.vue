@@ -181,7 +181,7 @@ export default {
         if (props.allowHalf) {
           ranges.push(
             { score: index + 0.5, left },
-            { score: index + 1, left: left + width / 2 }
+            { score: index + 1, left: left + width / 2 },
           );
         } else {
           ranges.push({ score: index + 1, left });
