@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:20:11
- * @LastEditTime: 2020-05-25 20:06:33
+ * @LastEditTime: 2020-05-26 15:24:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio-group/index.vue
@@ -27,13 +27,26 @@ export interface RadioGroupProps {
 export default {
   name,
   props: {
+    /**
+     * @description radio-group 当前的值radio的值
+     * @attribute modelValue
+     */
     modelValue: String,
+    /**
+     * @description radio-group 当前的值radio组是否能被点击
+     * @attribute disabled
+     */
     disabled: {
       type: Boolean,
       default: false,
     },
   },
   setup(props: RadioGroupProps, content: SetupContext) {
+    /**
+     * @description: radio 事件change回调
+     * @param {string}
+     * @return: void
+     */
     const change = (name: string) => {
       content.emit('change', name);
     };
