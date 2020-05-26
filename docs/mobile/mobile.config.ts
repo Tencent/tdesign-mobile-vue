@@ -1,3 +1,11 @@
+/*
+ * @Author: yuliangyang
+ * @Date: 2020-05-25 23:24:58
+ * @LastEditTime: 2020-05-26 12:11:33
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /tdesign-mobile-vue/docs/mobile/mobile.config.ts
+ */
 export default {
   navs: {
     components: {
@@ -38,6 +46,11 @@ export default {
           title: 'Picker 选择器',
           name: 'picker',
           component: () => import('@/picker/demos/base.vue'),
+        },
+        {
+          title: 'Radio 单选',
+          name: 'radio',
+          component: () => import('@/radio/demos/base.vue'),
         },
       ],
     },

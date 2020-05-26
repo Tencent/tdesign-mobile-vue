@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:16:28
- * @LastEditTime: 2020-05-26 12:04:57
+ * @LastEditTime: 2020-05-26 12:13:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio/index.vue
@@ -16,7 +16,7 @@
       <span :class="titleClasses" :style="titleStyle" v-if="title">
         {{ title }}
       </span>
-      <div class="default-content" :style="contentStyle">
+      <div :class="`${flagName}__content-inner`" :style="contentStyle">
         <slot></slot>
       </div>
     </span>
