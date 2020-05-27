@@ -1,31 +1,35 @@
 @import '../vars.less';
 @import '../mixins/index.less';
-@import '../common/index.less';
-@import './icon.less';
-@import './button.less';
+
+@import './layout.less';
+@import './sidenav.less';
+@import './fixed-side.less';
+@import './doc.less';
+@import './demo.less';
+@import './components.less';
 
 #app {
   height: 100%;
 }
 
-.spfx-text-ellipsis {
+.@{prefix}-demo-text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.spfx-text-tip {
+.@{prefix}-demo-text-tip {
   font-size: 12px;
   color: @text-color-lighter-1;
 }
 
-.spfx-pic {
+.@{prefix}-demo-pic {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-a.spfx-main-link {
+a.@{prefix}-demo-main-link {
   color: @text-color;
   text-decoration: none;
 
@@ -47,7 +51,7 @@ a.spfx-main-link {
   }
 }
 
-a.spfx-link {
+a.@{prefix}-demo-link {
   color: @text-color;
   text-decoration: none;
 

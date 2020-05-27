@@ -1,7 +1,7 @@
 <template>
   <div>
     <spfx-header />
-    <div class="spfx-main">
+    <div class="tdesign-demo-main">
       <router-view />
     </div>
   </div>

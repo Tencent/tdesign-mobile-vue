@@ -1,5 +1,5 @@
 <template>
-  <div class="button-base">
+  <div class="tdesign-demo-button-base">
     <t-cell-group title="基础按钮">
       <t-cell value-align="left">
         <t-button @click="onClick" @touchstart="onTouchStart" size="large">主按钮</t-button>
