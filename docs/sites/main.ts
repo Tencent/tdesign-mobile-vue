@@ -11,5 +11,5 @@ import '../styles/sites/index.less';
 createApp(app)
   .use(TDesign)
   .use(router)
-  .component('spfx-demo', import('./components/demo.vue'))
+  .component('tdesign-demo', import('./components/demo.vue'))
   .mount('#app');

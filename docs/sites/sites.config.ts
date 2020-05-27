@@ -4,22 +4,27 @@ export default {
       title: '组件',
       url: 'components',
       docs: [
-        // {
-        //   title: "开始",
-        //   type: "document", // 普通文档
-        //   children: [
-        //     {
-        //       title: "安装",
-        //       name: "install",
-        //       component: import("@/../docs/install.md")
-        //     },
-        //     {
-        //       title: "更新日志",
-        //       name: "changelog",
-        //       component: () => import("@/../CHANGELOG.md")
-        //     }
-        //   ]
-        // },
+        {
+          title: '开始',
+          type: 'document', // 普通文档
+          children: [
+            {
+              title: '安装',
+              name: 'install',
+              component: () => import('@/../docs/install.md'),
+            },
+            {
+              title: '开发',
+              name: 'develop',
+              component: () => import('@/../docs/develop.md'),
+            },
+            {
+              title: '更新日志',
+              name: 'changelog',
+              component: () => import('@/../CHANGELOG.md'),
+            },
+          ],
+        },
         {
           title: '基础组件',
           type: 'component', // 组件文档
@@ -32,7 +37,7 @@ export default {
             {
               title: 'Icon',
               name: 'icon',
-              component: () => import('@/icon/demos/base.vue'),
+              component: () => import('@/icon/icon.md'),
             },
             {
               title: 'Button',
