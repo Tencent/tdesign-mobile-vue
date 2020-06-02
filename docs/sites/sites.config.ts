@@ -67,6 +67,11 @@ export default {
               name: 'message',
               component: () => import('@/message/demos/base.vue'),
             },
+            {
+              title: 'Progress',
+              name: 'progress',
+              component: () => import('@/progress/demos/base.vue'),
+            },
           ],
         },
       ],
