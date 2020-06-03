@@ -17,6 +17,7 @@ import Switch from './switch';
 import Radio from './radio';
 import RadioGroup from './radio-group';
 import { Picker, PickerColumn } from './picker';
+import Message from './message';
 
 const { prefix } = config;
 
@@ -32,6 +33,7 @@ const components = {
   PickerColumn,
   Radio,
   RadioGroup,
+  Message,
 };
 const install = function (Vue: any, config?: object): void {
   const defaults = {
