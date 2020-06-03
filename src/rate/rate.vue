@@ -65,7 +65,7 @@ interface RangeTypes {
 
 export default {
   name,
-  component: { TIcon },
+  components: { TIcon },
   props: {
     modelValue: Number,
     /**
