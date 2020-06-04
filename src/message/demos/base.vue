@@ -28,9 +28,9 @@
       </t-cell>
     </t-cell-group>
     <t-message v-model="visible" content="普通消息"></t-message>
-    <t-message v-model="visible1" content="成功消息" type="success"></t-message>
-    <t-message v-model="visible2" content="警示消息" type="warning"></t-message>
-    <t-message v-model="visible3" content="错误消息" type="error"></t-message>
+    <t-message v-model="visible1" content="成功消息" theme="success"></t-message>
+    <t-message v-model="visible2" content="警示消息" theme="warning"></t-message>
+    <t-message v-model="visible3" content="错误消息" theme="error"></t-message>
     <t-message
       v-model="visible4"
       content="message"
