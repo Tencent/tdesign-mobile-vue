@@ -3,9 +3,9 @@ export type MessageType = 'info' | 'success' | 'warning' | 'error';
 export type MessageAlignType = 'left' | 'center';
 
 export interface IMessageOffset {
-  top?: number;
-  right?: number;
-  left?: number;
+  top?: number | string;
+  right?: number | string;
+  left?: number | string;
 }
 
 export interface IMessageProps {
