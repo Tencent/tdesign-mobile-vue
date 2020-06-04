@@ -31,15 +31,15 @@ function create(props: IMessageProps): void {
   Message[type] = (options: IMessageProps | string) => {
     let props: IMessageProps = {
       content: '',
+      theme: type,
     };
 
     if (typeof options === 'string') {
-      props = {
-        content: options,
-      };
+      props.content = options;
+    } else {
+      props = { ...props, ...options };
     }
 
-    props.theme = type;
     create(props);
   };
 });
