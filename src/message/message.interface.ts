@@ -11,7 +11,7 @@ export interface IMessageOffset {
 export interface IMessageProps {
   visible?: boolean;
   content: string;
-  type?: MessageType;
+  theme?: MessageType;
   align?: MessageAlignType;
   offset?: IMessageOffset;
   duration?: number;

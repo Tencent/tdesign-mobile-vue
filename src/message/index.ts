@@ -39,7 +39,7 @@ function create(props: IMessageProps): void {
       };
     }
 
-    props.type = type;
+    props.theme = type;
     create(props);
   };
 });

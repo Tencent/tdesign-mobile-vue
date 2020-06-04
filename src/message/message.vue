@@ -1,5 +1,5 @@
 <template>
-  <transition name="message" @after-leave="afterLeave">
+  <transition name="message" @after-leave="afterLeave" @after-enter="afterEnter">
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
         <t-icon icon="circle_info" />
@@ -36,9 +36,9 @@ export default {
     content: String,
     /**
      * @description 消息类型
-     * @attribute type
+     * @attribute theme
      */
-    type: {
+    theme: {
       type: String,
       default: 'info',
     },
@@ -79,7 +79,7 @@ export default {
     const currentVisible: boolean = computed(() => props.modelValue || props.visible);
     const rootClasses: string[] = computed(() => ({
       [name]: true,
-      [`${name}--${props.type}`]: true,
+      [`${name}--${props.theme}`]: true,
       [`${name}-align--${props.align}`]: !!props.align,
     }));
     const rootStyles: object = computed(() => ({
@@ -92,6 +92,7 @@ export default {
       (val) => {
         context.emit('visible-change', val);
         if (val) {
+          context.emit('open');
           setTimeout(() => {
             context.emit('update:modelValue', false);
             context.emit('close');
@@ -106,6 +107,7 @@ export default {
       currentVisible,
       rootClasses,
       rootStyles,
+      afterEnter: () => context.emit('opened'),
       afterLeave: () => context.emit('closed'),
     };
   },
