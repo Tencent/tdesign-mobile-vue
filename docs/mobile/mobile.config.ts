@@ -52,6 +52,11 @@ export default {
           name: 'radio',
           component: () => import('@/radio/demos/base.vue'),
         },
+        {
+          title: 'Message 消息通知',
+          name: 'message',
+          component: () => import('@/message/demos/base.vue'),
+        },
       ],
     },
   },
