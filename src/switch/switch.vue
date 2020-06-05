@@ -100,6 +100,9 @@ export default {
 
     const textClasses = computed(() => [
       `${name}__text`,
+      {
+        [`${prefix}-is-disabled`]: props.disabled,
+      },
     ]);
 
     const nodeClasses = computed(() => [
@@ -115,7 +118,7 @@ export default {
         ? props.inactiveValue : props.activeValue;
 
       currentValue.value = checked;
-      context.emit('onChange', checked);
+      context.emit('change', checked);
     }
 
     function toggle(event:Event) {
