@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:20:11
- * @LastEditTime: 2020-05-26 15:24:14
+ * @LastEditTime: 2020-06-06 20:42:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio-group/index.vue
@@ -18,6 +18,7 @@ import { SetupContext, provide } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
+const name = `${prefix}-radio-group`;
 
 export interface RadioGroupProps {
   modelValue?: string,
