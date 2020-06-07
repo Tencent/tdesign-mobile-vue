@@ -14,7 +14,7 @@ export default {
               component: () => import('@/../docs/install.md'),
             },
             {
-              title: '开发',
+              title: '开发指南',
               name: 'develop',
               component: () => import('@/../docs/develop.md'),
             },
@@ -29,30 +29,25 @@ export default {
           title: '基础组件',
           type: 'component', // 组件文档
           children: [
-            // {
-            //   title: 'Button 按钮',
-            //   name: 'button',
-            //   component: () => import('@/button/button.md'),
-            // },
             {
-              title: 'Icon',
+              title: 'Icon 图标',
               name: 'icon',
               component: () => import('@/icon/icon.md'),
             },
             {
-              title: 'Button',
+              title: 'Button 按钮',
               name: 'button',
-              component: () => import('@/button/demos/base.vue'),
+              component: () => import('@/button/button.md'),
             },
             {
-              title: 'Rate',
+              title: 'Rate 评分',
               name: 'rate',
-              component: () => import('@/rate/demos/base.vue'),
+              component: () => import('@/rate/rate.md'),
             },
             {
-              title: 'Switch',
+              title: 'Switch 选择器',
               name: 'switch',
-              component: () => import('@/switch/demos/base.vue'),
+              component: () => import('@/switch/switch.md'),
             },
           ],
         },
