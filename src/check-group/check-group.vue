@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref } from 'vue';
+import { SetupContext, provide, ref, computed } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -60,7 +60,7 @@ export default {
   },
   setup(props: CheckGroupProps, content: SetupContext) {
     const children = ref({});
-    const checkedValues = ref(props?.modelValue);
+    const checkedValues: any = computed(() => props?.modelValue || []);
     /**
      * @description: 为check-box注册
      * @param {object}
@@ -84,11 +84,10 @@ export default {
      * @return: void
      */
     const check = (name: string) => {
-      const index = checkedValues?.value?.indexOf(name);
+      const index = checkedValues.value.indexOf(name);
       const inMax = (props?.max < 1 || checkedValues?.value?.length < props?.max);
       if (index !== undefined && index === -1 && inMax) {
-        checkedValues.value = checkedValues?.value?.concat(name);
-        content.emit('change', [...checkedValues.value]);
+        content.emit('update:modelValue', checkedValues?.value?.concat(name));
       }
     };
     /**
@@ -97,11 +96,10 @@ export default {
      * @return: void
      */
     const uncheck = (name: string) => {
-      const index = checkedValues?.value?.indexOf(name);
+      const index = checkedValues?.value.indexOf(name);
       if (index !== undefined && index !== -1) {
-        const tempValues = checkedValues?.value?.slice(0, index);
-        checkedValues.value = tempValues.concat(checkedValues?.value?.slice(index + 1));
-        content.emit('change', [...checkedValues.value]);
+        const tempValues = checkedValues?.value.slice(0, index);
+        content.emit('update:modelValue', tempValues.concat(checkedValues?.value.slice(index + 1)));
       }
     };
     /**
@@ -110,7 +108,7 @@ export default {
      * @return: void
      */
     const toggle = (name: string) => {
-      const index = checkedValues?.value?.indexOf(name);
+      const index = checkedValues?.value.indexOf(name);
       if (index === -1) {
         check(name);
       } else {
@@ -132,7 +130,7 @@ export default {
         // eslint-disable-next-line no-nested-ternary
         return checked === false ? false : !checked ? !isChecked : true;
       });
-      content.emit('change', names);
+      content.emit('update:modelValue', names);
     };
     provide('rootGroup', {
       checkedValues,
