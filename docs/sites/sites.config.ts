@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-05-25 16:52:33
+ * @LastEditTime: 2020-06-06 19:52:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
@@ -71,6 +71,11 @@ export default {
               title: 'Progress',
               name: 'progress',
               component: () => import('@/progress/demos/base.vue'),
+            },
+            {
+              title: 'CheckBox',
+              name: 'check-box',
+              component: () => import('@/check-box/demos/base.vue'),
             },
           ],
         },

@@ -62,6 +62,11 @@ export default {
           name: 'message',
           component: () => import('@/message/demos/base.vue'),
         },
+        {
+          title: 'Check-box 多选框',
+          name: 'check-box',
+          component: () => import('@/check-box/demos/base.vue'),
+        },
       ],
     },
   },

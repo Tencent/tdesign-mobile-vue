@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-05-25 16:43:29
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-06 20:46:57
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/index.ts
  */
@@ -20,6 +20,9 @@ import RadioGroup from './radio-group';
 import { Picker, PickerColumn } from './picker';
 import Message from './message';
 import Progress from './progress';
+import CheckBox from './check-box';
+import CheckGroup from './check-group';
+
 
 const { prefix } = config;
 
@@ -38,6 +41,8 @@ const components = {
   RadioGroup,
   Message,
   Progress,
+  CheckBox,
+  CheckGroup,
 };
 const install = function (Vue: any, config?: object): void {
   const defaults = {
