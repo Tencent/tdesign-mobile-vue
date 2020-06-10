@@ -72,6 +72,11 @@ export default {
               name: 'progress',
               component: () => import('@/progress/demos/base.vue'),
             },
+            {
+              title: 'Toast',
+              name: 'toast',
+              component: () => import('@/toast/demos/base.vue'),
+            },
           ],
         },
       ],

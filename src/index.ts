@@ -20,6 +20,7 @@ import RadioGroup from './radio-group';
 import { Picker, PickerColumn } from './picker';
 import Message from './message';
 import Progress from './progress';
+import Toast from './toast';
 
 const { prefix } = config;
 
@@ -38,6 +39,7 @@ const components = {
   RadioGroup,
   Message,
   Progress,
+  Toast,
 };
 const install = function (Vue: any, config?: object): void {
   const defaults = {
