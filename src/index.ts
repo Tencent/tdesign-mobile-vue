@@ -19,6 +19,7 @@ import RadioGroup from './radio-group';
 import { Picker, PickerColumn } from './picker';
 import Message from './message';
 import Progress from './progress';
+import Tag from './tag';
 
 const { prefix } = config;
 
@@ -36,7 +37,10 @@ const components = {
   RadioGroup,
   Message,
   Progress,
+  Tag,
+  CheckTag: Tag.CheckTag,
 };
+
 const install = function (Vue: any, config?: object): void {
   const defaults = {
     prefix,

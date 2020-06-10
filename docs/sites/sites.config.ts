@@ -72,6 +72,11 @@ export default {
               name: 'progress',
               component: () => import('@/progress/demos/base.vue'),
             },
+            {
+              title: 'Tag',
+              name: 'tag',
+              component: () => import('@/tag/demos/base.vue'),
+            },
           ],
         },
       ],
