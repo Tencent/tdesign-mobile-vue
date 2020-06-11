@@ -21,6 +21,7 @@ import { Picker, PickerColumn } from './picker';
 import Message from './message';
 import Progress from './progress';
 import Toast from './toast';
+import Mask from './mask';
 
 const { prefix } = config;
 
@@ -40,6 +41,7 @@ const components = {
   Message,
   Progress,
   Toast,
+  Mask,
 };
 const install = function (Vue: any, config?: object): void {
   const defaults = {

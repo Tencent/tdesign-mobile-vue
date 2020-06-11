@@ -44,6 +44,11 @@
         <t-button size="large" @click="cur= 11">底部Bottom</t-button>
       </t-cell>
     </t-cell-group>
+    <t-cell-group title="z遮罩">
+      <t-cell value-align="left">
+        <t-button size="large" @click="cur= 12">带背景遮罩</t-button>
+      </t-cell>
+    </t-cell-group>
     <t-toast v-show="cur== 0" theme="text">轻提示内容</t-toast>
     <t-toast v-show="cur== 1" theme="text">
       这是一条很长的轻提示内容，这是一条很长的轻提示内容
@@ -55,11 +60,14 @@
     <t-toast icon="tick"  theme="success"  v-show="cur==5" >成功文案</t-toast>
     <t-toast icon="error" theme="fail" v-show="cur==6" >失败文案</t-toast>
     <t-toast icon="loading_gradient" theme="loading"
-             v-show="cur==7" >失败文案</t-toast>
+             v-show="cur==7" >提示文案</t-toast>
     <t-toast icon="clear"  v-show="cur==8" >提示文案</t-toast>
     <t-toast theme="text" position="top" v-show="cur==9" >提示文案</t-toast>
     <t-toast theme="text" position="middle" v-show="cur==10" >提示文案</t-toast>
     <t-toast theme="text" position="bottom" v-show="cur==11" >提示文案</t-toast>
+
+    <t-mask  v-show="cur==12"/>
+    <t-toast icon="tick"  theme="success"  v-show="cur==12" >提示文案</t-toast>
   </div>
 </template>
 

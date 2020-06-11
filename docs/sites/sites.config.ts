@@ -77,6 +77,11 @@ export default {
               name: 'toast',
               component: () => import('@/toast/demos/base.vue'),
             },
+            {
+              title: 'Mask',
+              name: 'mask',
+              component: () => import('@/mask/demos/base.vue'),
+            },
           ],
         },
       ],
