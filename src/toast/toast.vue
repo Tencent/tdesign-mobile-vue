@@ -26,7 +26,6 @@ export enum ToastPosition {
 }
 export interface ToastProps {
   icon: String;
-  iconOnly: Boolean,
   loading: Boolean;
   theme: ToastTheme;
   position:ToastPosition
@@ -40,10 +39,6 @@ export default {
       default: ToastPosition.Middle,
     },
     loading: {
-      type: Boolean,
-      default: false,
-    },
-    iconOnly: {
       type: Boolean,
       default: false,
     },
@@ -79,7 +74,6 @@ export default {
           props.position.valueOf() === ToastPosition.Top.valueOf(),
         [`${name}--bottom`]:
           props.position.valueOf() === ToastPosition.Bottom.valueOf(),
-        [`${name}--icononly`]: props.iconOnly,
       },
     ]);
 

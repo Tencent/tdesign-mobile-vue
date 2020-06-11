@@ -48,12 +48,12 @@
     <t-toast v-show="cur== 1" theme="text">
       这是一条很长的轻提示内容，这是一条很长的轻提示内容
     </t-toast>
-    <t-toast icon="tick"  theme="success" iconOnly="true" v-show="cur==2" ></t-toast>
-    <t-toast icon="error" theme="fail" iconOnly="true" v-show="cur==3" ></t-toast>
-    <t-toast icon="clear" iconOnly="true" v-show="cur==4" ></t-toast>
+    <t-toast icon="tick"  class="t-toast--icononly" theme="success" v-show="cur==2" ></t-toast>
+    <t-toast icon="error" class="t-toast--icononly" theme="fail" v-show="cur==3" ></t-toast>
+    <t-toast icon="clear" class="t-toast--icononly" v-show="cur==4" ></t-toast>
 
     <t-toast icon="tick"  theme="success"  v-show="cur==5" >成功文案</t-toast>
-    <t-toast icon="error"  theme="fail" v-show="cur==6" >失败文案</t-toast>
+    <t-toast icon="error" theme="fail" v-show="cur==6" >失败文案</t-toast>
     <t-toast icon="loading_gradient" theme="loading"
              v-show="cur==7" >失败文案</t-toast>
     <t-toast icon="clear"  v-show="cur==8" >提示文案</t-toast>
