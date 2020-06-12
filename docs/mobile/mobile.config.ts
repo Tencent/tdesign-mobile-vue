@@ -67,6 +67,11 @@ export default {
           name: 'check-box',
           component: () => import('@/check-box/demos/base.vue'),
         },
+        {
+          title: 'Progress 进度条',
+          name: 'progress',
+          component: () => import('@/progress/demos/base.vue'),
+        },
       ],
     },
   },
