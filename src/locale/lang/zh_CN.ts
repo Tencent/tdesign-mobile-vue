@@ -6,8 +6,5 @@ export default {
   complete: '完成',
   loading: '处理中...',
   button: {
-    prev: '上一页',
-    next: '下一页',
-    total: '总数 {total}',
   },
 };

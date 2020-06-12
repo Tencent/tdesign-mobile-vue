@@ -38,9 +38,11 @@ const createI18n = (config: i18nConfig) => {
   }, {
     flush: 'sync',
   });
-  const use = (locale: string, componentname: string) => {
+  const use = (locale: string, componentname?: string) => {
     lang.value = locale;
-    componentName.value = componentname;
+    if (componentname !== undefined) {
+      componentName.value = componentname;
+    };
   };
   const t = (pattern: string, placement: Placement) => {
     const regx: RegExp = /\{\s*([\w-]+)\s*\}/g;
