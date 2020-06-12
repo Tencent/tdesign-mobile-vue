@@ -1,6 +1,6 @@
 <template>
-  <div class="demo-icon">
-    <div class="demo-icon-iconbox" v-for="icon in icons" :key="icon">
+  <div class="tdesign-demo-icon">
+    <div class="tdesign-demo-icon-iconbox" v-for="icon in icons" :key="icon">
       <t-icon :icon="icon" />
       <p :title="icon">{{ icon }}</p>
     </div>

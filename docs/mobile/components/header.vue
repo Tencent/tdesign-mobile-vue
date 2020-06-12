@@ -1,7 +1,7 @@
 <template>
-  <div v-show="title" class="spfx-topnav">
-    <div class="spfx-topnav-title">{{ title }}</div>
-    <t-icon class="spfx-topnav__back" icon="left" @click="onBack" />
+  <div v-show="title" class="tdesign-demo-topnav">
+    <div class="tdesign-demo-topnav-title">{{ title }}</div>
+    <t-icon class="tdesign-demo-topnav__back" icon="left" @click="onBack" />
   </div>
 </template>
 <script lang="ts">

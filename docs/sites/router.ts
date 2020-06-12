@@ -30,6 +30,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/',
     redirect: '/components/install',
   },
+  ...getDocsRoutes(navs.components.docs, 'document'),
   ...getDocsRoutes(navs.components.docs, 'component'),
 ];
 const router = createRouter({
