@@ -1,86 +1,88 @@
 <template>
-  <div :class="classes">
-    <t-icon :icon="_icon" :class="iconClass" v-if="_icon" />
-    <div :class="textClass">
-      <slot />
+  <div>
+    <t-mask v-show="showOverlay"/>
+    <div :class="classes">
+      <t-icon :icon="_icon" :class="`${name}__icon`" v-if="_icon" />
+      <div :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, toRefs, ref } from 'vue';
+
+import TIcon from '../icon';
+import TMask from '../mask';
+import { ToastPosition, ToastProps, ToastTypeIcon } from './toast.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-toast`;
 
-export enum ToastTheme {
-  Text = 'text',
-  Loading = 'loading',
-  Success = 'success',
-  Fail = 'fail'
-}
-export enum ToastPosition {
-  Middle = 'middle',
-  Top = 'top',
-  Bottom = 'bottom'
-}
-export interface ToastProps {
-  icon: String;
-  loading: Boolean;
-  theme: ToastTheme;
-  position:ToastPosition
-}
-
 export default {
   name,
+  components: { TIcon, TMask },
   props: {
+    /**
+     * @description 消息内容
+     * @attribute message
+     */
+    message: String,
+    /**
+     * @description 提示类型
+     * @attribute type
+     */
+    type: String,
+    /**
+     * @description 展示位置
+     * @attribute position
+     */
     position: {
       type: String,
       default: ToastPosition.Middle,
     },
-    loading: {
-      type: Boolean,
-      default: false,
-    },
-    icon: {
-      type: String,
-      default: '',
-    },
-    theme: {
-      type: String,
-      default: '',
+    /**
+     * @description 自定义图标
+     * @attribute icon
+     */
+    icon: [String, Function],
+    /**
+     * @description 是否显示背景遮罩
+     * @attribute showOverlay
+     */
+    showOverlay: Boolean,
+    /**
+     * @description 显示时间，毫秒
+     * @attribute duration
+     */
+    duration: {
+      type: Number,
+      default: 2000,
     },
   },
   setup(props: ToastProps) {
-    const textClass = computed(() => [`${name}__text`]);
-    const _icon = computed(() => (loading.value ? 'loading_gradient' : inIcon));
-    const iconClass = ref(`${name}__icon`);
-    const inIcon = props.icon;
-    const { loading } = toRefs(props);
+    const _icon = computed(() => {
+      let icon : string = props.type && ToastTypeIcon[props.type];
+      if (props.icon) icon = props.icon;
+      return icon;
+    });
+
     const classes = computed(() => [
       `${name}`,
       {
-        [`${name}--text`]:
-          props.theme.valueOf() === ToastTheme.Text.valueOf(),
-        [`${name}--success`]:
-          props.theme.valueOf() === ToastTheme.Success.valueOf(),
-        [`${name}--fail`]:
-          props.theme.valueOf() === ToastTheme.Fail.valueOf(),
-        [`${name}--loading`]:
-          props.theme.valueOf() === ToastTheme.Loading.valueOf(),
+        [`${name}--icononly`]:
+          !props.message && _icon,
         [`${name}--middle`]:
-          props.position.valueOf() === ToastPosition.Middle.valueOf(),
+          props.position === ToastPosition.Middle.valueOf(),
         [`${name}--top`]:
-          props.position.valueOf() === ToastPosition.Top.valueOf(),
+          props.position === ToastPosition.Top.valueOf(),
         [`${name}--bottom`]:
-          props.position.valueOf() === ToastPosition.Bottom.valueOf(),
+          props.position === ToastPosition.Bottom.valueOf(),
       },
     ]);
 
     return {
+      name: ref(name),
       classes,
-      textClass,
-      iconClass,
       _icon,
       ...toRefs(props),
     };

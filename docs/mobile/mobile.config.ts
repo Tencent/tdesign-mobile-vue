@@ -62,6 +62,11 @@ export default {
           name: 'message',
           component: () => import('@/message/demos/base.vue'),
         },
+        {
+          title: 'Toast 轻提示',
+          name: 'toast',
+          component: () => import('@/toast/demos/base.vue'),
+        },
       ],
     },
   },
