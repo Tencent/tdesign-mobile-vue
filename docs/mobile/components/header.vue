@@ -9,6 +9,7 @@ import { getCurrentInstance, computed } from 'vue';
 export default {
   setup() {
     const { ctx } = getCurrentInstance();
+    console.log(ctx.$router);
     const title = computed(() => (ctx.$router ? ctx.$router.currentRoute.value.meta.title : ''));
     const onBack = () => {
       if (history.length > 1) {

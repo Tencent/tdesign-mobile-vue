@@ -11,5 +11,5 @@ import '../styles/mobile/index.less';
 createApp(app)
   .use(TDesign)
   .use(router)
-  .component('spfx-header', header)
+  .component('tdesign-header', header)
   .mount('#app');
