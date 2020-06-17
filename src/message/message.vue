@@ -76,13 +76,13 @@ export default {
   },
   setup(props: IMessageProps, context: SetupContext) {
     const root = ref(null);
-    const currentVisible: boolean = computed(() => props.modelValue || props.visible);
-    const rootClasses: string[] = computed(() => ({
+    const currentVisible = computed(() => props.modelValue || props.visible);
+    const rootClasses = computed(() => ({
       [name]: true,
       [`${name}--${props.theme}`]: true,
       [`${name}-align--${props.align}`]: !!props.align,
     }));
-    const rootStyles: object = computed(() => ({
+    const rootStyles = computed(() => ({
       zIndex: props.zIndex,
       ...props.offset,
     }));
