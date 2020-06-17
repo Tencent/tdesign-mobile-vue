@@ -23,6 +23,8 @@ import Progress from './progress';
 import CheckBox from './check-box';
 import CheckGroup from './check-group';
 
+import Toast from './toast';
+import Mask from './mask';
 
 const { prefix } = config;
 
@@ -43,6 +45,8 @@ const components = {
   Progress,
   CheckBox,
   CheckGroup,
+  Toast,
+  Mask,
 };
 const install = function (Vue: any, config?: object): void {
   const defaults = {

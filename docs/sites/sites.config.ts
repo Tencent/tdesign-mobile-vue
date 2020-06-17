@@ -77,6 +77,16 @@ export default {
               name: 'check-box',
               component: () => import('@/check-box/demos/base.vue'),
             },
+            {
+              title: 'Toast',
+              name: 'toast',
+              component: () => import('@/toast/demos/base.vue'),
+            },
+            {
+              title: 'Mask',
+              name: 'mask',
+              component: () => import('@/mask/demos/base.vue'),
+            },
           ],
         },
       ],
