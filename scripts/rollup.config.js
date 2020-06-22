@@ -124,7 +124,7 @@ export default [
     plugins: getPlugins({ isProd: false, env: 'development' }),
     output: {
       ...commonConfig.bundle.output,
-      file: 'dist/TDesign.umd.js',
+      file: `dist/${name}.js`,
     },
   },
   // umd.min
@@ -133,7 +133,7 @@ export default [
     plugins: getPlugins({ isProd: true, env: 'production', analyze: true }),
     output: {
       ...commonConfig.bundle.output,
-      file: 'dist/TDesign.umd.min.js',
+      file: `dist/${name}.min.js`,
     },
   },
 ];
