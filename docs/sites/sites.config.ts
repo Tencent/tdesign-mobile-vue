@@ -63,9 +63,9 @@ export default {
               component: () => import('@/radio/demos/base.vue'),
             },
             {
-              title: 'Message',
+              title: 'Message 消息',
               name: 'message',
-              component: () => import('@/message/demos/base.vue'),
+              component: () => import('@/message/message.md'),
             },
             {
               title: 'Progress',
