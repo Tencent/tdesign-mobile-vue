@@ -6,55 +6,21 @@
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/index.ts
  */
+import { App } from 'vue';
+
 import config from './config';
-import Icon from './icon';
-import Button from './button';
-import ButtonGroup from './button-group';
-import Rate from './rate';
-import CellGroup from './cell-group';
-import Cell from './cell';
-import Input from './input';
-import Switch from './switch';
-import Radio from './radio';
-import RadioGroup from './radio-group';
-import { Picker, PickerColumn } from './picker';
-import Message from './message';
-import Progress from './progress';
-import CheckBox from './check-box';
-import CheckGroup from './check-group';
+import * as plugins from './plugins';
+import * as components from './components';
 
-import Toast from './toast';
-import Mask from './mask';
+const install = function (app: App, option?: object): void {
+  const newConfig = { ...config, ...option };
 
-const { prefix } = config;
-
-const components = {
-  Icon,
-  Button,
-  ButtonGroup,
-  Rate,
-  Cell,
-  CellGroup,
-  Input,
-  Switch,
-  Picker,
-  PickerColumn,
-  Radio,
-  RadioGroup,
-  Message,
-  Progress,
-  CheckBox,
-  CheckGroup,
-  Toast,
-  Mask,
-};
-const install = function (Vue: any, config?: object): void {
-  const defaults = {
-    prefix,
-  };
-  const installConfig = { ...defaults, ...config };
   Object.keys(components).forEach((key) => {
-    Vue.component(installConfig.prefix + key, components[key]);
+    app.component(newConfig.prefix + key, components[key]);
+  });
+
+  Object.keys(plugins).forEach((key) => {
+    app.use(plugins[key]);
   });
 };
 
@@ -63,8 +29,9 @@ const install = function (Vue: any, config?: object): void {
 //   install(window.Vue);
 // }
 
-export default {
-  install,
-  version: typeof VERSION === "undefined" ? "" : VERSION, // eslint-disable-line
-  ...components,
-};
+const version = typeof VERSION === "undefined" ? "" : VERSION // eslint-disable-line
+
+export { install, version };
+export * from './plugins';
+export * from './components';
+export default { install, version };
