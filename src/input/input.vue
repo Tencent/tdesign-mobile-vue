@@ -158,7 +158,7 @@ export default {
       get() {
         return props.modelValue || state.cacheValue;
       },
-      set(val) {
+      set(val: string) {
         emit('update:modelValue', val);
         state.cacheValue = val;
       },
