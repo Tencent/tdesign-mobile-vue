@@ -1,16 +1,22 @@
 node_modules
-package-lock.json
-.vscode
-.DS_Store
-.vscode
-lib
-dist
 _site
+.DS_Store
 package
 tmpfile*
 coverage
 test-report.html
-.idea/
-yarn.lock
 *.zip
+
+# output
+es/
+lib/
+dist/
+
+# lock
+yarn.lock
+package-lock.json
+
+# editor
+.idea/
+.vscode/
 .history/
