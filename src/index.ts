@@ -26,6 +26,8 @@ import CheckGroup from './check-group';
 import Toast from './toast';
 import Mask from './mask';
 
+import Stepper from './stepper';
+
 const { prefix } = config;
 
 const components = {
@@ -47,6 +49,7 @@ const components = {
   CheckGroup,
   Toast,
   Mask,
+  Stepper,
 };
 const install = function (Vue: any, config?: object): void {
   const defaults = {
