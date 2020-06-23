@@ -1,6 +1,7 @@
 import vueToast from './toast.vue';
+import { PolySymbol } from '../_utils';
 
-import { createApp, defineComponent } from 'vue';
+import { createApp, defineComponent, App } from 'vue';
 import { ToastProps, ToastPropsDefault } from './toast.interface';
 
 let instance: any = null;
@@ -58,12 +59,17 @@ Toast.clear = () => {
   };
 });
 
-
 function parseOptions(message: any) {
   if (typeof message === 'string') {
     return { message };
   }
   return message;
 }
+
+Toast.install = (app: App) => {
+  // 添加插件入口
+  const toastKey = PolySymbol<typeof Toast>('toast');
+  app.provide(toastKey, Toast);
+};
 
 export default Toast;
