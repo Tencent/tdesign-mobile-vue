@@ -1,5 +1,5 @@
 <template>
-  <span :class="classes">
+  <button :class="classes" @click="onClick($event)" :disabled="disabled">
     <t-icon :class="baseClass+'__icon'" v-if="icon" :icon="icon" />
     <slot :class="baseClass+'__text'" />
     <t-icon
@@ -8,11 +8,12 @@
       icon="clear"
       @click="onClickClose"
     />
-  </span>
+  </button>
 </template>
 
-<script lang="ts">
+<script lang="tsx">
 import { defineComponent, computed, toRefs } from 'vue';
+import TIcon from '../icon';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -31,8 +32,11 @@ export enum TagShape {
 
 export type TagProps = {};
 
-const Tag = defineComponent({
+const CheckTag = defineComponent({
   name,
+  components: {
+    TIcon,
+  },
   props: {
     size: {
       type: String,
@@ -57,15 +61,14 @@ const Tag = defineComponent({
     },
   },
   setup(props, context) {
-    const baseClass = `${prefix}-tag`;;
+    const baseClass = `${prefix}-tag`;
 
     const { checked, disabled } = toRefs(props);
     const { size, shape } = props;
 
     const classes = computed(() => [
       `${baseClass}`,
-      `${baseClass}`,
-      `${baseClass}--theme-default`,
+      `${baseClass}--checkable`,
       {
         [`${baseClass}--size-${size}`]: size,
         [`${baseClass}--disabled`]: disabled.value,
@@ -76,7 +79,14 @@ const Tag = defineComponent({
       },
     ]);
 
-    function onClickClose(e: Event) {
+    function onClick(e: Event): void {
+      if (props.disabled) {
+        e.stopPropagation();
+        e.preventDefault();
+      }
+    }
+
+    function onClickClose(e: Event): void {
       if (props.disabled) {
         e.stopPropagation();
       } else {
@@ -87,10 +97,11 @@ const Tag = defineComponent({
     return {
       baseClass,
       classes,
+      onClick,
       onClickClose,
     };
   },
 });
 
-export default Tag;
+export default CheckTag;
 </script>

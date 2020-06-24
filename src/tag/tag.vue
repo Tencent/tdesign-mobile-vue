@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, toRefs } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-tag`;
@@ -25,6 +25,7 @@ export enum TagTheme {
   Danger = 'danger',
   Success = 'success'
 }
+
 export enum TagEffect {
   Dark = 'dark',
   Light = 'light',
@@ -33,7 +34,7 @@ export enum TagEffect {
 
 export enum TagSize {
   Large = 'large',
-  Default = 'default',
+  Medium = 'medium',
   Small = 'small'
 }
 
@@ -58,7 +59,7 @@ const Tag = defineComponent({
     },
     size: {
       type: String,
-      default: TagSize.Default,
+      default: TagSize.Medium,
     },
     icon: String,
     shape: {
@@ -76,6 +77,7 @@ const Tag = defineComponent({
   },
   setup(props, context) {
     const baseClass = name;
+    const { disabled } = toRefs(props);
 
     const { size, shape, theme, effect } = props;
 
@@ -83,7 +85,8 @@ const Tag = defineComponent({
       `${baseClass}`,
       `${baseClass}--theme-${theme}`,
       {
-        [`${baseClass}--effect-${effect}`]: theme !== 'default',
+        [`${baseClass}--effect-${effect}`]: theme,
+        [`${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--size-${size}`]: size,
         [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),
         [`${baseClass}--round`]: shape.valueOf() === TagShape.Round.valueOf(),

@@ -8,29 +8,35 @@
 -->
 <template>
   <div class="tag-base">
-    <t-cell-group title="预设状态">
+    <t-cell-group title="主题和效果">
       <t-cell>
         <div style="text-align: left;">
-          <div class="intro">预设的几种状态颜色</div>
-          <t-tag>default</t-tag>
-          <t-tag theme="primary">primary</t-tag>
-          <!-- <t-tag theme="info">info</t-tag> -->
-          <t-tag theme="danger">danger</t-tag>
-          <t-tag theme="warning">warning</t-tag>
-          <t-tag theme="success">success</t-tag>
-        </div>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="主题效果">
-      <t-cell>
-        <div style="text-align: left;">
-          <div class="intro">预设的三种主题效果：深色（dark，默认），浅色（light），朴素（plain）</div>
-          <t-tag theme="warning" effect="dark">dark</t-tag>
-          <t-tag theme="warning" effect="light">light</t-tag>
-          <t-tag theme="warning" effect="plain">plain</t-tag>
-          <t-tag theme="primary" effect="dark">dark</t-tag>
-          <t-tag theme="primary" effect="light">light</t-tag>
-          <t-tag theme="primary" effect="plain">plain</t-tag>
+          <div>
+            默认：
+            <t-tag>默认</t-tag>
+          </div>
+
+          <div>
+            深色：
+            <t-tag theme="primary">重要</t-tag>
+            <t-tag theme="danger">危险</t-tag>
+            <t-tag theme="warning">警告</t-tag>
+            <t-tag theme="success">成功</t-tag>
+          </div>
+          <div>
+            浅色：
+            <t-tag theme="primary" effect="light">重要</t-tag>
+            <t-tag theme="danger" effect="light">危险</t-tag>
+            <t-tag theme="warning" effect="light">警告</t-tag>
+            <t-tag theme="success" effect="light">成功</t-tag>
+          </div>
+          <div>
+            朴素：
+            <t-tag theme="primary" effect="plain">重要</t-tag>
+            <t-tag theme="danger" effect="plain">危险</t-tag>
+            <t-tag theme="warning" effect="plain">警告</t-tag>
+            <t-tag theme="success" effect="plain">成功</t-tag>
+          </div>
         </div>
       </t-cell>
     </t-cell-group>
@@ -38,24 +44,12 @@
       <t-cell>
         <div style="text-align: left;">
           <t-tag size="small">small</t-tag>
-          <t-tag>default</t-tag>
+          <t-tag>medium</t-tag>
           <t-tag size="large">large</t-tag>
         </div>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="可关闭标签和失效标签">
-      <t-cell>
-        <div style="text-align: left;">
-          <t-tag
-            v-for="(tag, index) in closableTags"
-            :closable="true"
-            :disabled="tag.disabled"
-            :key="tag.name"
-            @close="onClickClose(index)"
-          >{{tag.name}}</t-tag>
-        </div>
-      </t-cell>
-    </t-cell-group>
+
     <t-cell-group title="icon">
       <t-cell>
         <div style="text-align: left;">
@@ -68,9 +62,9 @@
       <t-cell>
         <div style="text-align: left;">
           <div></div>
-          <t-tag shape="square">square</t-tag>
-          <t-tag shape="round">round</t-tag>
-          <t-tag shape="circle">circle</t-tag>
+          <t-tag shape="square" theme="primary">square</t-tag>
+          <t-tag shape="round" theme="primary">round</t-tag>
+          <t-tag shape="circle" theme="primary">circle</t-tag>
         </div>
       </t-cell>
     </t-cell-group>
@@ -90,7 +84,21 @@
             @click="onClickFruit(index)"
             :key="fruit.name"
             :checked="fruit.checked"
+            :disabled="fruit.disabled"
           >{{fruit.name}}</t-check-tag>
+        </div>
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group title="可关闭标签">
+      <t-cell>
+        <div style="text-align: left;">
+          <t-tag
+            v-for="(tag, index) in closableTags"
+            :closable="true"
+            :disabled="tag.disabled"
+            :key="tag.name"
+            @close="onClickClose(index)"
+          >{{tag.name}}</t-tag>
         </div>
       </t-cell>
     </t-cell-group>
@@ -119,6 +127,11 @@ export default {
         name: '桃子',
         checked: false,
       },
+      {
+        name: '火龙果',
+        checked: false,
+        disabled: true,
+      },
     ]);
 
     const closableTags = ref([
@@ -132,7 +145,7 @@ export default {
         name: '标签3',
       },
       {
-        name: '失效标签',
+        name: '标签4',
         disabled: true,
       },
     ]);

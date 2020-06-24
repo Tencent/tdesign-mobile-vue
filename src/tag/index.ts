@@ -1,6 +1,7 @@
-import Tag from './tag.vue';
+import Tag  from './tag.vue' ;
 import CheckTag from './check-tag.vue';
 
-Tag.CheckTag = CheckTag;
+const _Tag:any = Tag;
+_Tag.CheckTag = CheckTag;
 
-export default Tag;
+export default _Tag;
