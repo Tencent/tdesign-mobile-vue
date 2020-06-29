@@ -1,5 +1,7 @@
 **/*test*
 !.*.js
-dist
+es
 lib
+dist
+*.md
 node_modules
