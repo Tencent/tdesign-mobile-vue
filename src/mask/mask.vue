@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs } from 'vue';
+import { computed, toRefs, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-mask`;
@@ -12,7 +12,7 @@ export interface MaskProps {
   transparent: Boolean;
 }
 
-export default {
+export default defineComponent({
   name,
   props: {
     transparent: {
@@ -31,5 +31,5 @@ export default {
       ...toRefs(props),
     };
   },
-};
+});
 </script>

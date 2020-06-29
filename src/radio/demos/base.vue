@@ -104,9 +104,9 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   setup() {
     const radio = ref('1');
     const radio2 = ref('1');
@@ -143,5 +143,5 @@ export default {
     // eslint-disable-next-line max-len
     return { radio, radio2, radio3, radio4, radio5, radio6, testChange, testChange2, testChange3, testChange4, testChange5, testChange6, rootDisable };
   },
-};
+});
 </script>

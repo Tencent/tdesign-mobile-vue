@@ -14,23 +14,17 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed } from 'vue';
+import { SetupContext, provide, ref, computed, defineComponent, PropType } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
 
-export interface CheckGroupProps {
-  modelValue: Array<string>,
-  disabled?: boolean,
-  max: string | number,
-}
-
 export interface Child {
   name: string
 }
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -38,7 +32,7 @@ export default {
      * @attribute modelValue
      */
     modelValue: {
-      type: Array,
+      type: Array as PropType<string[]>,
       default: () => [],
     },
     /**
@@ -58,9 +52,9 @@ export default {
       default: 0,
     },
   },
-  setup(props: CheckGroupProps, content: SetupContext) {
+  setup(props, content: SetupContext) {
     const children = ref({});
-    const checkedValues: any = computed(() => props?.modelValue || []);
+    const checkedValues = computed(() => props.modelValue || []);
     /**
      * @description: 为check-box注册
      * @param {object}
@@ -152,5 +146,5 @@ export default {
       toggleAll,
     };
   },
-};
+});
 </script>
