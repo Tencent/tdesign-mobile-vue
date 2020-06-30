@@ -1,26 +1,24 @@
 <template>
   <div class="cell-base">
 
-    <t-cell-group title="步进器">
-      <t-cell label="标准">
-        <t-stepper  v-model.number="number1" :step="10" :min="10" :max="100" @change="onChange"/>
-      </t-cell>
-      <t-cell label="disabled">
-        <t-stepper disabled/>
-      </t-cell>
-      <t-cell label="测试">
-        <t-stepper  v-model.number="number2"/>
-      </t-cell>
-      <t-cell label="不可输入">
-        <t-stepper  v-model.number="number3" disableInput/>
-      </t-cell>
+    <t-cell-group title="基础步进器">
+      <t-stepper label="标题文字" v-model.number="number1" :step="1" :min="0" :max="100"
+                 :input-width="70" @change="onChange" @input="onInput"/>
+      <t-stepper  label="标题文字" v-model.number="number2" :step="1" :min="0" :max="9999"
+                  @change="onChange"/>
+      <t-stepper label="禁用" v-model.number="number3" :step="1" :min="0" :max="9999" disabled/>
     </t-cell-group>
+    <t-cell-group title="带单位步进器">
+      <t-stepper label="标题文字（单位）" v-model.number="number4" :step="1" :min="0" :max="100"/>
 
+      <t-stepper label="禁用（单位）" v-model.number="number5" :step="1" :min="0" :max="100" disabled/>
+
+    </t-cell-group>
   </div>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { reactive, toRefs } from 'vue';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-stepper-demo`;
@@ -28,17 +26,23 @@ const name = `${prefix}-stepper-demo`;
 export default {
   name,
   setup() {
-    const number1 = ref(0);
-    const number2 = ref(3);
-    const number3 = ref(10);
-    function onChange($event:string|number|boolean) {
+    const state = reactive({
+      number1: 0,
+      number2: 9999,
+      number3: 0,
+      number4: 0,
+      number5: 0,
+    });
+    const onChange = ($event:string|number) => {
       console.log(`change to ${$event}`);
-    }
+    };
+    const onInput = ($event:string|number) => {
+      console.log(`input ${$event}`);
+    };
     return {
-      number1,
-      number2,
-      number3,
       onChange,
+      onInput,
+      ...toRefs(state),
     };
   },
 };
