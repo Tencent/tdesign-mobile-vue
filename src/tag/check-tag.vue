@@ -63,7 +63,7 @@ const CheckTag = defineComponent({
   setup(props, context) {
     const baseClass = `${prefix}-tag`;
 
-    const { checked, disabled } = toRefs(props);
+    const { checked, disabled, closable } = toRefs(props);
     const { size, shape } = props;
 
     const classes = computed(() => [
@@ -71,6 +71,7 @@ const CheckTag = defineComponent({
       `${baseClass}--checkable`,
       {
         [`${baseClass}--size-${size}`]: size,
+        [`${baseClass}--closable`]: closable.value,
         [`${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--checked`]: checked.value,
         [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),

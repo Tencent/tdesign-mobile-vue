@@ -8,98 +8,70 @@
 -->
 <template>
   <div class="tag-base">
-    <t-cell-group title="主题和效果">
+    <t-cell-group title="展示型标签">
       <t-cell>
-        <div style="text-align: left;">
-          <div>
-            默认：
-            <t-tag>默认</t-tag>
-          </div>
-
-          <div>
-            深色：
-            <t-tag theme="primary">重要</t-tag>
-            <t-tag theme="danger">危险</t-tag>
-            <t-tag theme="warning">警告</t-tag>
-            <t-tag theme="success">成功</t-tag>
-          </div>
-          <div>
-            浅色：
-            <t-tag theme="primary" effect="light">重要</t-tag>
-            <t-tag theme="danger" effect="light">危险</t-tag>
-            <t-tag theme="warning" effect="light">警告</t-tag>
-            <t-tag theme="success" effect="light">成功</t-tag>
-          </div>
-          <div>
-            朴素：
-            <t-tag theme="primary" effect="plain">重要</t-tag>
-            <t-tag theme="danger" effect="plain">危险</t-tag>
-            <t-tag theme="warning" effect="plain">警告</t-tag>
-            <t-tag theme="success" effect="plain">成功</t-tag>
-          </div>
-        </div>
+        <t-tag theme="primary">重要</t-tag>
+        <t-tag theme="danger">危险</t-tag>
+        <t-tag theme="warning">警告</t-tag>
+        <t-tag theme="success">成功</t-tag>
+        <t-tag theme="info">信息</t-tag>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="不同尺寸">
+    <t-cell-group>
       <t-cell>
-        <div style="text-align: left;">
-          <t-tag size="small">small</t-tag>
-          <t-tag>medium</t-tag>
-          <t-tag size="large">large</t-tag>
-        </div>
+        <t-tag theme="primary" effect="dark">深色</t-tag>
+        <t-tag theme="primary" effect="light">浅色</t-tag>
+        <t-tag theme="primary" effect="plain">朴素</t-tag>
       </t-cell>
     </t-cell-group>
-
-    <t-cell-group title="icon">
+    <t-cell-group>
       <t-cell>
-        <div style="text-align: left;">
-          <t-tag icon="apple">apple</t-tag>
-          <t-tag icon="android">android</t-tag>
-        </div>
+        <t-tag size="large" theme="primary">大号</t-tag>
+        <t-tag size="medium" theme="primary">中号</t-tag>
+        <t-tag size="small" theme="primary">小号</t-tag>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="圆角效果">
+    <t-cell-group>
       <t-cell>
-        <div style="text-align: left;">
-          <div></div>
-          <t-tag shape="square" theme="primary">square</t-tag>
-          <t-tag shape="round" theme="primary">round</t-tag>
-          <t-tag shape="circle" theme="primary">circle</t-tag>
-        </div>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="内容超长省略">
-      <t-cell>
-        <div style="text-align: left;">
-          <t-tag @click="onClickBtn()">听说内容超长就会被省略</t-tag>
-        </div>
+        <t-tag size="large" theme="primary" shape="circle">圆角</t-tag>
+        <t-tag size="medium" theme="primary" shape="circle">圆角</t-tag>
+        <t-tag size="small" theme="primary" shape="circle">圆角</t-tag>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="点击型标签">
       <t-cell>
-        <div style="text-align: left;">
-          <div class="intro">选择你喜欢的水果</div>
-          <t-check-tag
-            v-for="(fruit, index) in fruits"
-            @click="onClickFruit(index)"
-            :key="fruit.name"
-            :checked="fruit.checked"
-            :disabled="fruit.disabled"
-          >{{fruit.name}}</t-check-tag>
-        </div>
+        <t-check-tag
+          size="large"
+          v-for="(fruit, index) in fruits"
+          @click="onClickFruit(index)"
+          :key="fruit.name"
+          :checked="fruit.checked"
+          :disabled="fruit.disabled"
+        >{{fruit.name}}</t-check-tag>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="可关闭标签">
+    <t-cell-group>
       <t-cell>
-        <div style="text-align: left;">
-          <t-tag
-            v-for="(tag, index) in closableTags"
-            :closable="true"
-            :disabled="tag.disabled"
-            :key="tag.name"
-            @close="onClickClose(index)"
-          >{{tag.name}}</t-tag>
-        </div>
+        <t-check-tag
+          v-for="(fruit, index) in fruits2"
+          @click="onClickFruit2(index)"
+          :key="fruit.name"
+          :checked="fruit.checked"
+          :disabled="fruit.disabled"
+        >{{fruit.name}}</t-check-tag>
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group>
+      <t-cell>
+        <t-tag
+          v-for="(tag,index) in closableTags"
+          :closable="true"
+          :disabled="tag.disabled"
+          :key="tag"
+          theme="primary"
+          :size="tag.size"
+          @close="onClickClose(index)"
+        >{{tag.name}}</t-tag>
       </t-cell>
     </t-cell-group>
   </div>
@@ -134,18 +106,36 @@ export default {
       },
     ]);
 
+    const fruits2 = ref([
+      {
+        name: '苹果',
+        checked: true,
+      },
+      {
+        name: '香蕉',
+        checked: false,
+      },
+      {
+        name: '桃子',
+        checked: false,
+      },
+      {
+        name: '火龙果',
+        checked: false,
+        disabled: true,
+      },
+    ]);
+
     const closableTags = ref([
       {
-        name: '标签1',
+        name: '可关闭',
+        size: 'large',
       },
       {
-        name: '标签2',
+        name: '可关闭',
       },
       {
-        name: '标签3',
-      },
-      {
-        name: '标签4',
+        name: '失效标签',
         disabled: true,
       },
     ]);
@@ -158,10 +148,16 @@ export default {
       fruits.value[index].checked = !fruits.value[index].checked;
     }
 
+    function onClickFruit2(index: number) {
+      fruits2.value[index].checked = !fruits2.value[index].checked;
+    }
+
     return {
       fruits,
+      fruits2,
       closableTags,
       onClickFruit,
+      onClickFruit2,
       onClickClose,
     };
   },
@@ -176,6 +172,9 @@ export default {
   .intro {
     font-size: 14px;
     color: #555;
+  }
+  .t-cell--value {
+    text-align: left;
   }
 }
 </style>

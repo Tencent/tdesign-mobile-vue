@@ -77,7 +77,7 @@ const Tag = defineComponent({
   },
   setup(props, context) {
     const baseClass = name;
-    const { disabled } = toRefs(props);
+    const { disabled, closable } = toRefs(props);
 
     const { size, shape, theme, effect } = props;
 
@@ -86,6 +86,7 @@ const Tag = defineComponent({
       `${baseClass}--theme-${theme}`,
       {
         [`${baseClass}--effect-${effect}`]: theme,
+        [`${baseClass}--closable`]: closable.value,
         [`${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--size-${size}`]: size,
         [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),

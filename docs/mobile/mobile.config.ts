@@ -57,6 +57,11 @@ export default {
           name: 'message',
           component: () => import('@/message/demos/base.vue'),
         },
+        {
+          title: 'Tag 标签',
+          name: 'tag',
+          component: () => import('@/tag/demos/base.vue'),
+        },
       ],
     },
   },
