@@ -73,6 +73,11 @@ export default {
               component: () => import('@/progress/demos/base.vue'),
             },
             {
+              title: 'Tag',
+              name: 'tag',
+              component: () => import('@/tag/tag.md'),
+            },
+            {
               title: 'CheckBox',
               name: 'check-box',
               component: () => import('@/check-box/demos/base.vue'),

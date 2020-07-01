@@ -63,6 +63,11 @@ export default {
           component: () => import('@/message/demos/base.vue'),
         },
         {
+          title: 'Tag 标签',
+          name: 'tag',
+          component: () => import('@/tag/demos/base.vue'),
+        },
+        {
           title: 'Check-box 多选框',
           name: 'check-box',
           component: () => import('@/check-box/demos/base.vue'),

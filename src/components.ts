@@ -15,3 +15,4 @@ export { default as Rate } from './rate';
 export { default as Switch } from './switch';
 export { default as Stepper } from './stepper';
 export { Picker, PickerColumn } from './picker';
+export { Tag, CheckTag } from './tag';
