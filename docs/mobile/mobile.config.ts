@@ -77,6 +77,16 @@ export default {
           name: 'toast',
           component: () => import('@/toast/demos/base.vue'),
         },
+        {
+          title: 'Dialog 对话框',
+          name: 'dialog',
+          component: () => import('@/dialog/demos/base.vue'),
+        },
+        {
+          title: 'Mask 遮罩层',
+          name: 'mask',
+          component: () => import('@/mask/demos/base.vue'),
+        },
       ],
     },
   },
