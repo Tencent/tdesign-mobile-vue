@@ -1,31 +1,66 @@
 @import '../vars.less';
 @import '../mixins/index.less';
-@import '../common/index.less';
-@import './icon.less';
-@import './button.less';
+
+body {
+  background-color: @body-background;
+  color: @text-color;
+  font-family: @font-family;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  -webkit-font-smoothing: antialiased;
+}
+pre {
+  font-family: @font-family;
+}
+ul, dl, li, dd, dt {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin: 0;
+}
+
+html, body, #app{
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 
 #app {
   height: 100%;
 }
 
-.spfx-text-ellipsis {
+.@{prefix}-text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.spfx-text-tip {
+.@{prefix}-text-tip {
   font-size: 12px;
   color: @text-color-lighter-1;
 }
 
-.spfx-pic {
+.@{prefix}-pic {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-a.spfx-main-link {
+a.@{prefix}-main-link {
   color: @text-color;
   text-decoration: none;
 
@@ -47,7 +82,7 @@ a.spfx-main-link {
   }
 }
 
-a.spfx-link {
+a.@{prefix}-link {
   color: @text-color;
   text-decoration: none;
 
@@ -68,3 +103,10 @@ a.spfx-link {
     text-decoration: none;
   }
 }
+
+
+@import './layout.less';
+@import './sidenav.less';
+@import './doc.less';
+@import './demo.less';
+@import './components.less';

@@ -4,4 +4,7 @@ import CheckTag from './check-tag.vue';
 const _Tag:any = Tag;
 _Tag.CheckTag = CheckTag;
 
-export default _Tag;
+export {
+  Tag,
+  CheckTag,
+};

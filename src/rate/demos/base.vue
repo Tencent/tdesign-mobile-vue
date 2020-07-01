@@ -8,25 +8,25 @@
 
     <t-cell-group title="允许半选">
       <t-cell value-align="left">
-        <t-rate v-model="current1" clearable allowHalf />
+        <t-rate v-model="current1" clearable allow-half />
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="带辅助文本">
       <t-cell value-align="left">
-        <t-rate v-model="current2" clearable showText />
+        <t-rate v-model="current2" clearable show-text />
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="自定义辅助文本">
       <t-cell value-align="left">
-        <t-rate v-model="current3" clearable showText :texts="texts" />
+        <t-rate v-model="current3" clearable show-text :texts="texts" />
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="自定义图标和数量">
       <t-cell value-align="left">
-        <t-rate v-model="current4" :count="6" clearable showText allowHalf>
+        <t-rate v-model="current4" :count="6" clearable show-text allow-half>
           <template v-slot:icon>
             <t-icon icon="apple" />
           </template>

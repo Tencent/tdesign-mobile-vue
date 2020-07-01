@@ -1,6 +1,6 @@
 <template>
-  <span :class="classes">
-    <t-icon :class="`${baseClass}__icon`" v-if="icon" :icon="icon" />
+  <span :class="classes" :style="style">
+    <t-icon :class="`${baseClass}__icon`"  v-if="icon" :icon="icon" />
     <slot :class="`${baseClass}__text`" />
     <t-icon
       :class="`${baseClass}__close`"
@@ -74,12 +74,21 @@ const Tag = defineComponent({
       type: Boolean,
       default: false,
     },
+    maxWidth: {
+      type: Number || String,
+      default: false,
+    },
   },
   setup(props, context) {
     const baseClass = name;
     const { disabled, closable } = toRefs(props);
 
-    const { size, shape, theme, effect } = props;
+    const { size, shape, theme, effect, maxWidth } = props;
+
+    const style = {};
+    if (maxWidth) {
+      style.maxWidth = `${maxWidth}px`;
+    }
 
     const classes = computed(() => [
       `${baseClass}`,
@@ -106,6 +115,7 @@ const Tag = defineComponent({
     return {
       baseClass,
       classes,
+      style,
       onClickClose,
     };
   },

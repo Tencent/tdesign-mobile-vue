@@ -9,6 +9,7 @@ export interface IMessageOffset {
 }
 
 export interface IMessageProps {
+  modelValue?: boolean;
   visible?: boolean;
   content: string;
   theme?: MessageType;

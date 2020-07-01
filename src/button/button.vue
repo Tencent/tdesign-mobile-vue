@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="onClick" @touchstart="onTouchstart">
+  <button :class="classes" :disabled="disabled" @click="onClick" @touchstart.passive="onTouchstart">
     <t-icon :icon="_icon" :class="iconClass" v-if="_icon" />
     <span :class="textClass" v-if="!iconOnly">
       <slot />
@@ -20,31 +20,14 @@ export enum ButtonShape {
 }
 
 export interface ButtonProps {
-  theme: {
-    type: string;
-    default: 'default';
-  };
-  size: {
-    type: string;
-    default: 'default';
-  };
-  icon: string;
-  block: {
-    type: boolean;
-    default: false;
-  };
-  shape: {
-    type: ButtonShape;
-    default: ButtonShape.Round;
-  };
-  loading: {
-    type: boolean;
-    default: false;
-  };
-  disabled: {
-    type: boolean;
-    default: false;
-  };
+  theme: String;
+  size: String;
+  icon: String;
+  plain: Boolean;
+  block: Boolean;
+  loading: Boolean;
+  disabled: Boolean;
+  shape: ButtonShape;
 }
 
 export default {
@@ -59,6 +42,10 @@ export default {
       default: 'default',
     },
     icon: String,
+    plain: {
+      type: Boolean,
+      default: false,
+    },
     block: {
       type: Boolean,
       default: false,
@@ -86,7 +73,7 @@ export default {
 
     const classes = computed(() => [
       `${name}`,
-      `${name}--theme-${props.theme}`,
+      `${name}--${props.theme}`,
       {
         [`${name}--size-${props.size}`]: props.size,
         [`${name}--square`]:
@@ -96,6 +83,7 @@ export default {
         [`${prefix}-is-block`]: props.block,
         [`${prefix}-is-disabled`]: props.disabled,
         [`${prefix}-is-loading`]: props.loading,
+        [`${prefix}-is-plain`]: props.plain,
       },
     ]);
 

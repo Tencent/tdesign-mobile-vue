@@ -18,6 +18,11 @@ export default {
           component: () => import('@/button/demos/base.vue'),
         },
         {
+          title: 'ButtonGroup 按钮组',
+          name: 'button-group',
+          component: () => import('@/button-group/demos/base.vue'),
+        },
+        {
           title: 'Icon 图标',
           name: 'icon',
           component: () => import('@/icon/demos/base.vue'),
@@ -61,6 +66,26 @@ export default {
           title: 'Tag 标签',
           name: 'tag',
           component: () => import('@/tag/demos/base.vue'),
+        },
+        {
+          title: 'Check-box 多选框',
+          name: 'check-box',
+          component: () => import('@/check-box/demos/base.vue'),
+        },
+        {
+          title: 'Progress 进度条',
+          name: 'progress',
+          component: () => import('@/progress/demos/base.vue'),
+        },
+        {
+          title: 'Toast 轻提示',
+          name: 'toast',
+          component: () => import('@/toast/demos/base.vue'),
+        },
+        {
+          title: 'Stepper 步进器',
+          name: 'stepper',
+          component: () => import('@/stepper/demos/base.vue'),
         },
       ],
     },

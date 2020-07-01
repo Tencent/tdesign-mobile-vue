@@ -1,6 +1,9 @@
-import { createApp, defineComponent, ref, h, VNode } from 'vue';
+import { createApp, defineComponent, ref, h, VNode, App, Plugin } from 'vue';
 import { IMessageProps, MessageType } from './message.interface';
-import Message from './message.vue';
+import { PolySymbol } from '../_utils';
+import MessageComp from './message.vue';
+
+const Message = MessageComp as (typeof MessageComp & Plugin);
 
 function create(props: IMessageProps): void {
   const visible = ref(false);
@@ -8,7 +11,7 @@ function create(props: IMessageProps): void {
   document.body.appendChild(root);
 
   const component = defineComponent({
-    render: (): VNode => h(Message, {
+    render: (): VNode => h(MessageComp, {
       ...props,
       visible: visible.value,
       onClose: () => {
@@ -43,5 +46,11 @@ function create(props: IMessageProps): void {
     create(props);
   };
 });
+
+Message.install = (app: App) => {
+  // 添加插件入口
+  const messageKey = PolySymbol<typeof Message>('message');
+  app.provide(messageKey, Message);
+};
 
 export default Message;

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-05-25 16:52:33
+ * @LastEditTime: 2020-06-06 19:52:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
@@ -12,50 +12,50 @@ export default {
       title: '组件',
       url: 'components',
       docs: [
-        // {
-        //   title: "开始",
-        //   type: "document", // 普通文档
-        //   children: [
-        //     {
-        //       title: "安装",
-        //       name: "install",
-        //       component: import("@/../docs/install.md")
-        //     },
-        //     {
-        //       title: "更新日志",
-        //       name: "changelog",
-        //       component: () => import("@/../CHANGELOG.md")
-        //     }
-        //   ]
-        // },
+        {
+          title: '开始',
+          type: 'document', // 普通文档
+          children: [
+            {
+              title: '安装',
+              name: 'install',
+              component: () => import('@/../docs/install.md'),
+            },
+            {
+              title: '开发指南',
+              name: 'develop',
+              component: () => import('@/../docs/develop.md'),
+            },
+            {
+              title: '更新日志',
+              name: 'changelog',
+              component: () => import('@/../CHANGELOG.md'),
+            },
+          ],
+        },
         {
           title: '基础组件',
           type: 'component', // 组件文档
           children: [
-            // {
-            //   title: 'Button 按钮',
-            //   name: 'button',
-            //   component: () => import('@/button/button.md'),
-            // },
             {
-              title: 'Icon',
+              title: 'Icon 图标',
               name: 'icon',
-              component: () => import('@/icon/demos/base.vue'),
+              component: () => import('@/icon/icon.md'),
             },
             {
-              title: 'Button',
+              title: 'Button 按钮',
               name: 'button',
-              component: () => import('@/button/demos/base.vue'),
+              component: () => import('@/button/button.md'),
             },
             {
-              title: 'Rate',
+              title: 'Rate 评分',
               name: 'rate',
-              component: () => import('@/rate/demos/base.vue'),
+              component: () => import('@/rate/rate.md'),
             },
             {
-              title: 'Switch',
+              title: 'Switch 选择器',
               name: 'switch',
-              component: () => import('@/switch/demos/base.vue'),
+              component: () => import('@/switch/switch.md'),
             },
             {
               title: 'Radio',
@@ -63,9 +63,9 @@ export default {
               component: () => import('@/radio/demos/base.vue'),
             },
             {
-              title: 'Message',
+              title: 'Message 消息',
               name: 'message',
-              component: () => import('@/message/demos/base.vue'),
+              component: () => import('@/message/message.md'),
             },
             {
               title: 'Progress',
@@ -75,7 +75,22 @@ export default {
             {
               title: 'Tag',
               name: 'tag',
-              component: () => import('@/tag/demos/base.vue'),
+              component: () => import('@/tag/tag.md'),
+            },
+            {
+              title: 'CheckBox',
+              name: 'check-box',
+              component: () => import('@/check-box/demos/base.vue'),
+            },
+            {
+              title: 'Toast',
+              name: 'toast',
+              component: () => import('@/toast/demos/base.vue'),
+            },
+            {
+              title: 'Mask',
+              name: 'mask',
+              component: () => import('@/mask/demos/base.vue'),
             },
           ],
         },

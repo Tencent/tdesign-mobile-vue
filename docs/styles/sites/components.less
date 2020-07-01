@@ -1,17 +1,25 @@
 @import "../vars.less";
 @import "../mixins/index.less";
 
-.demo-icon {
-  .demo-icon-iconbox {
+
+.@{prefix}-demo-block{
+  .t-button {
+    margin-right:10px;
+  }
+}
+
+.@{prefix}-demo-icon {
+  .@{prefix}-demo-icon-iconbox {
     display: inline-block;
-    width: 25%;
+    width: 90px;
+    height: 90px;
     text-align: center;
-    .@{prefix}-icon {
+    .t-icon {
       color: inherit;
       font-size: 28px;
     }
     p {
-      margin: 10px 0;
+      margin-top: 10px;
       .text-ellipsis();
     }
   }
