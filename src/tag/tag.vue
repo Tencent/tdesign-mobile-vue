@@ -1,9 +1,9 @@
 <template>
   <span :class="classes">
-    <t-icon :class="baseClass+'__icon'" v-if="icon" :icon="icon" />
-    <slot :class="baseClass+'__text'" />
+    <t-icon :class="`${baseClass}__icon`" v-if="icon" :icon="icon" />
+    <slot :class="`${baseClass}__text`" />
     <t-icon
-      :class="baseClass+'__close'"
+      :class="`${baseClass}__close`"
       v-if="closable && !disabled"
       icon="clear"
       @click="onClickClose"
