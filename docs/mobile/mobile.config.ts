@@ -77,6 +77,11 @@ export default {
           name: 'toast',
           component: () => import('@/toast/demos/base.vue'),
         },
+        {
+          title: 'Stepper 步进器',
+          name: 'stepper',
+          component: () => import('@/stepper/demos/base.vue'),
+        },
       ],
     },
   },
