@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:16:28
- * @LastEditTime: 2020-07-01 19:11:23
+ * @LastEditTime: 2020-07-02 10:21:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio/index.vue
@@ -45,7 +45,7 @@ interface RadioProps {
 }
 
 /**
- * @description: 判断当前check-box是否选中
+ * @description: 判断当前radio是否选中
  * @param {props} props属性对象
 * @param {rootGroup} Group注入的对象
  * @return: 返回是否选中的对象
@@ -63,10 +63,10 @@ const getClasses = (props: RadioProps, rootGroupProps: any) => {
   const shapeClasses = computed(() => [
     `${name}__default-shape`,
     {
-      [`${name}__default-shape--disabled`]: (rootGroupProps?.disabled || props?.disabled),
+      ['t-is-disabled']: (rootGroupProps?.disabled || props?.disabled),
     }]);
-  const titleClasses = computed(() => [{ [`${name}__content-title--disable`]: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
-  const iconClasses = computed(() => [{ [`${name}__default-shape--checked`]: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name) }]);
+  const titleClasses = computed(() => [{ ['t-is-disabled']: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
+  const iconClasses = computed(() => [{ ['t-is-checked']: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name) }]);
   return {
     outerClasses,
     shapeClasses,
