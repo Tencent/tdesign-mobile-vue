@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-06-06 19:52:11
+ * @LastEditTime: 2020-07-01 16:36:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
@@ -60,7 +60,7 @@ export default {
             {
               title: 'Radio',
               name: 'radio',
-              component: () => import('@/radio/demos/base.vue'),
+              component: () => import('@/radio/radio.md'),
             },
             {
               title: 'Message 消息',
