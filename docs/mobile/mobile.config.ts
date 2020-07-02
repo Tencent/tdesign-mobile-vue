@@ -87,6 +87,11 @@ export default {
           name: 'stepper',
           component: () => import('@/stepper/demos/base.vue'),
         },
+        {
+          title: 'Slider 滑块',
+          name: 'Slider',
+          component: () => import('@/slider/demos/base.vue'),
+        },
       ],
     },
   },
