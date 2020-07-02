@@ -1,6 +1,6 @@
 
 <template>
-  <div class="container">
+  <div class="container tdesign-demo-tag">
     <t-tag
       v-for="(tag,index) in closableTags"
       :closable="true"
@@ -43,12 +43,3 @@ export default {
   },
 };
 </script>
-<style>
-  .t-tag + .t-tag {
-    margin-left: 8px;
-  }
-  .container{
-    background-color: #fff;
-    padding: 16px;
-  }
-</style>

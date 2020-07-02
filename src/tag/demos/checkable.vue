@@ -1,12 +1,13 @@
 
 <template>
-  <div class="container">
+  <div class="container tdesign-demo-tag">
     <t-check-tag
       size="large"
       v-for="(fruit, index) in fruits"
       @click="onClickFruit(index)"
       :key="fruit.name"
-      :checked="fruit.checked"
+      v-model:checked="fruit.checked"
+      @change="change"
       :disabled="fruit.disabled"
     >{{fruit.name}}</t-check-tag>
     <t-check-tag
@@ -73,22 +74,17 @@ export default {
       fruits2.value[index].checked = !fruits2.value[index].checked;
     }
 
+    function change(checked: Boolean) {
+      console.log(checked);
+    }
 
     return {
       fruits,
       fruits2,
+      change,
       onClickFruit,
       onClickFruit2,
     };
   },
 };
 </script>
-<style>
-  .t-tag + .t-tag {
-    margin-left: 8px;
-  }
-  .container{
-    background-color: #fff;
-    padding: 16px;
-  }
-</style>
