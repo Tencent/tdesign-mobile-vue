@@ -22,7 +22,7 @@ const name = `${prefix}-slider-base-demo`;
 export default {
   name,
   setup() {
-    const rangeValue = ref([30, 70]);
+    const rangeValue = ref([30, 80]);
     function onChange($event:number|number[]) {
       console.log(`change to ${$event}`);
     }
