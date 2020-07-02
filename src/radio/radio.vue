@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:16:28
- * @LastEditTime: 2020-07-02 10:21:10
+ * @LastEditTime: 2020-07-02 10:29:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio/index.vue
@@ -63,10 +63,10 @@ const getClasses = (props: RadioProps, rootGroupProps: any) => {
   const shapeClasses = computed(() => [
     `${name}__default-shape`,
     {
-      ['t-is-disabled']: (rootGroupProps?.disabled || props?.disabled),
+      [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled),
     }]);
-  const titleClasses = computed(() => [{ ['t-is-disabled']: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
-  const iconClasses = computed(() => [{ ['t-is-checked']: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name) }]);
+  const titleClasses = computed(() => [{ [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
+  const iconClasses = computed(() => [{ [`${prefix}-is-checked`]: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name) }]);
   return {
     outerClasses,
     shapeClasses,
