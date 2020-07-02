@@ -36,7 +36,8 @@
         "vue/return-in-computed-property": 1,
         "vue/order-in-components": 2,
         "vue/component-name-in-template-casing": [2, "kebab-case"],
-        "vue/require-default-prop": 0
+        "vue/require-default-prop": 0,
+        "vue/no-v-model-argument": 0
       }
     },
     {

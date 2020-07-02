@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" @click="onClick($event)" :disabled="disabled">
+  <button :class="classes" :disabled="disabled">
     <t-icon :class="`${baseClass}__icon`" v-if="icon" :icon="icon" />
     <slot :class="`${baseClass}__text`" />
     <t-icon
@@ -12,7 +12,7 @@
 </template>
 
 <script lang="tsx">
-import { defineComponent, computed, toRefs } from 'vue';
+import { defineComponent, computed, toRefs, watch } from 'vue';
 import TIcon from '../icon';
 import config from '../config';
 const { prefix } = config;
@@ -80,13 +80,6 @@ const CheckTag = defineComponent({
       },
     ]);
 
-    function onClick(e: Event): void {
-      if (props.disabled) {
-        e.stopPropagation();
-        e.preventDefault();
-      }
-    }
-
     function onClickClose(e: Event): void {
       if (props.disabled) {
         e.stopPropagation();
@@ -95,10 +88,13 @@ const CheckTag = defineComponent({
       }
     }
 
+    watch(checked, (checked) => {
+      context.emit('change', checked);
+    });
+
     return {
       baseClass,
       classes,
-      onClick,
       onClickClose,
     };
   },

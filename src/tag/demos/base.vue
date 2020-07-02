@@ -7,7 +7,7 @@
  * @FilePath: /tdesign-mobile-vue/src/tag/tag.vue
 -->
 <template>
-  <div class="tag-base">
+  <div class="tag-base tdesign-demo-tag">
     <t-cell-group title="展示型标签">
       <t-cell>
         <t-tag theme="primary">重要</t-tag>
