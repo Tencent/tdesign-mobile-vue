@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-07-01 16:36:46
+ * @LastEditTime: 2020-07-02 14:45:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
@@ -58,7 +58,7 @@ export default {
               component: () => import('@/switch/switch.md'),
             },
             {
-              title: 'Radio',
+              title: 'Radio 单选框',
               name: 'radio',
               component: () => import('@/radio/radio.md'),
             },
@@ -78,9 +78,9 @@ export default {
               component: () => import('@/tag/tag.md'),
             },
             {
-              title: 'CheckBox',
+              title: 'CheckBox 复选框',
               name: 'check-box',
-              component: () => import('@/check-box/demos/base.vue'),
+              component: () => import('@/check-box/check-box.md'),
             },
             {
               title: 'Toast',

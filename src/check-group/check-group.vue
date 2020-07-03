@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-06-06 15:11:46
- * @LastEditTime: 2020-06-07 17:39:09
+ * @LastEditTime: 2020-07-03 11:29:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/check-group/check-group.vue
@@ -87,7 +87,8 @@ export default {
       const index = checkedValues.value.indexOf(name);
       const inMax = (props?.max < 1 || checkedValues?.value?.length < props?.max);
       if (index !== undefined && index === -1 && inMax) {
-        content.emit('update:modelValue', checkedValues?.value?.concat(name));
+        const tempValues = checkedValues?.value?.concat(name);
+        content.emit('update:modelValue', [...Array.from(tempValues)]);
       }
     };
     /**
@@ -131,6 +132,7 @@ export default {
         return checked === false ? false : !checked ? !isChecked : true;
       });
       content.emit('update:modelValue', names);
+      content.emit('change', names);
     };
     provide('rootGroup', {
       checkedValues,
