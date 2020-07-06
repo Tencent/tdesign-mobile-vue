@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { ref, inject, computed, SetupContext } from 'vue';
+import { ref, inject, computed, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -86,7 +86,7 @@ const getLimitRow = (row?: number):object => ({
   '-webkit-line-clamp': row,
 });
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -196,5 +196,5 @@ export default {
       ...classes,
     };
   },
-};
+});
 </script>

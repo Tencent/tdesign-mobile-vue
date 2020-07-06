@@ -4,19 +4,12 @@
   </div>
 </template>
 <script lang='ts'>
-import { computed } from 'vue';
+import { computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-button-group`;
 
-export interface ButtonGroup{
-  type: {
-    type: String;
-    default: 'default';
-  };
-}
-
-export default {
+export default defineComponent({
   name,
   props: {
     type: {
@@ -24,12 +17,12 @@ export default {
       default: 'default',
     },
   },
-  setup(props:ButtonGroup) {
+  setup(props) {
     const classes = computed(() => [
       `${name}`,
       `${name}--${props.type}`,
     ]);
     return { classes };
   },
-};
+});
 </script>

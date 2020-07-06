@@ -10,21 +10,12 @@
 </template>
 
 <script lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-cell-group`;
 
-
-export interface CellGroupProps {
-  title: string;
-  border: {
-    type: string;
-    default: true;
-  };
-}
-
-export default {
+export default defineComponent({
   name,
   props: {
     title: String,
@@ -33,7 +24,7 @@ export default {
       default: true,
     },
   },
-  setup(props: CellGroupProps) {
+  setup(props) {
     const styleWrapper = ref(name);
     const styleContainer = computed(() => (props.border ? `${name}-container border--top-bottom` : `${name}-container`));
     const styleTitle = ref(`${name}--title`);
@@ -44,5 +35,5 @@ export default {
       styleTitle,
     };
   },
-};
+});
 </script>

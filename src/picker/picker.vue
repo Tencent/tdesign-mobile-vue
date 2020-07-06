@@ -16,14 +16,14 @@
 </template>
 
 <script lang="ts">
-import { computed, SetupContext, mergeProps } from 'vue';
+import { computed, SetupContext, mergeProps, defineComponent } from 'vue';
 import config from '../config';
 import { PickerProps, IPickerProps } from './picker.interface';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
 
-export default {
+export default defineComponent({
   props: PickerProps,
   setup(props: IPickerProps,  context: SetupContext) {
     const className = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
@@ -100,5 +100,5 @@ export default {
       curData,
     };
   },
-};
+});
 </script>

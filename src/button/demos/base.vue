@@ -48,8 +48,9 @@
   </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue';
-export default {
+import { ref, defineComponent } from 'vue';
+
+export default defineComponent({
   setup() {
     const onClick = () => {
       console.log('ttt');
@@ -60,5 +61,5 @@ export default {
     const loading = ref(true);
     return { onClick, onTouchStart, loading };
   },
-};
+});
 </script>

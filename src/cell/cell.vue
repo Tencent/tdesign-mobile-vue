@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext } from 'vue';
+import { ref, computed, SetupContext, defineComponent, PropType } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-cell`;
@@ -31,39 +31,22 @@ export enum ValueAlign {
   Left = 'left',
   Right = 'right',
 }
-export interface CellProps {
-  theme: {
-    type: string;
-    default: 'default';
-  };
-  size: {
-    type: string;
-    default: 'default';
-  };
-  label: string;
-  value: string;
-  suffixIcon: string;
-  valueAlign: {
-    type: ValueAlign,
-    default: ValueAlign.Right,
-  },
-  disabled: {
-    type: boolean;
-    default: false;
-  };
-}
 
-export default {
+export default defineComponent({
   name,
   props: {
+    theme: {
+      type: String,
+      default: 'default',
+    },
     label: String,
     value: String,
     valueAlign: {
-      type: String,
+      type: String as PropType<ValueAlign>,
       default: ValueAlign.Right,
     },
   },
-  setup(props: CellProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const styleLabel = ref(`${name}--label`);
     const styleWrapper = computed(() => [
       `${name}`,
@@ -90,5 +73,5 @@ export default {
       hasLabel,
     };
   },
-};
+});
 </script>

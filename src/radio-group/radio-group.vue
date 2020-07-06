@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide } from 'vue';
+import { SetupContext, provide, defineComponent } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -25,7 +25,7 @@ export interface RadioGroupProps {
   disabled?: boolean,
 }
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -59,5 +59,5 @@ export default {
       change,
     };
   },
-};
+});
 </script>

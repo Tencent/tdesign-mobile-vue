@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext } from 'vue';
+import { SetupContext, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-progress`;
@@ -25,7 +25,7 @@ export interface ProgressProps {
   color: string;
 }
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -61,5 +61,5 @@ export default {
       name,
     };
   },
-};
+});
 </script>
