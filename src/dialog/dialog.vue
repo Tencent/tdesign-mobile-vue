@@ -1,49 +1,52 @@
 <template>
-  <div v-if="isShowDialog">
-    <t-mask @click="handleCancel" />
-    <!-- 对话框 -->
-    <div :class="dClassName">
-      <div :class="dHeaderClassName" v-if="showTitle">
-        <slot name="title">
-          <div :class="dTitleClassName">{{title}}</div>
-        </slot>
-      </div>
-      <div :class="dBodyClassName">
-        <slot name="tips">
-          <div :class="dTextClassName" v-if="tips">{{tips}}</div>
-        </slot>
-        <input
-          v-model="innerValue"
-          :class="dInputClassName"
-          type="text"
-          :placeholder="placeholderText"
-          v-if="isInput">
-      </div>
-      <div :class="dFooterClassName" v-if="type=='confirm'">
-        <a href="javascript:" :class="dDefaultBtnClassName" @click="handleCancel">
-          <slot name="footer-cancel">
-            {{cancelButtonText}}
+  <transition name="dialog" @after-leave="afterLeave" @after-enter="afterEnter">
+    <div v-if="currentVisible" ref="root">
+      <t-mask @click="handleClosed" />
+      <!-- 对话框 -->
+      <div :class="dClassName" id="root">
+        <div :class="dHeaderClassName" v-if="showTitle">
+          <slot name="title">
+            <div :class="dTitleClassName">{{title}}</div>
           </slot>
-        </a>
-        <a href="javascript:" :class="dConformBtnClassName" @click="handleConfirm">
-          <slot name="footer-confirm">
-            {{confirmButtonText}}
+        </div>
+        <div :class="dBodyClassName">
+          <slot name="content">
+            <div :class="dTextClassName" v-if="content">{{content}}</div>
           </slot>
-        </a>
-      </div>
-      <div :class="dFooterClassName" v-if="showFooter&&type!='confirm'">
-        <a href="javascript:" :class="dDefaultBtnClassName" @click="handleConfirm">
-          <slot name="footer">
-            {{sureButtonText}}
-          </slot>
-        </a>
+          <input
+            v-model="innerValue"
+            id="input"
+            :class="dInputClassName"
+            type="text"
+            :placeholder="placeholderText"
+            v-if="isInput">
+        </div>
+        <div :class="dFooterClassName" v-if="type=='confirm'">
+          <a href="javascript:" :class="dDefaultBtnClassName" @click="handleCancel">
+            <slot name="footer-cancel">
+              {{cancelContent}}
+            </slot>
+          </a>
+          <a href="javascript:" :class="dConformBtnClassName" @click="handleConfirm">
+            <slot name="footer-confirm">
+              {{confirmContent}}
+            </slot>
+          </a>
+        </div>
+        <div :class="dFooterClassName" v-if="showFooter&&type!='confirm'">
+          <a href="javascript:" :class="dDefaultBtnClassName" @click="handleConfirm">
+            <slot name="footer">
+              {{knowContent}}
+            </slot>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 <script lang="ts">
 import TMask from '../mask';
-import { SetupContext, computed, ref, watch } from 'vue';
+import { SetupContext, computed, ref } from 'vue';
 import config from '../config';
 import { DialogProps, IDialogProps } from './dialog.interface';
 
@@ -55,6 +58,7 @@ export default {
   components: { TMask },
   props: DialogProps,
   setup(props: IDialogProps, context: SetupContext) {
+    const root = ref(null);
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);
     const dBoxClassName = computed(() => `${name}__box`);
@@ -67,35 +71,38 @@ export default {
     const dDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`]);
     const dConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`]);
     const showTitle = computed(() => props.showTitle);
-    const title = computed(() => props.title || '温馨提醒');
-    const tips = computed(() => props.tips || '');
-    const type = computed(() => props.type || '');
+    const title = computed(() => props.title);
+    const content = computed(() => props.content);
+    const type = computed(() => props.type);
     const showFooter = computed(() => props.showFooter);
-    const confirmButtonText = computed(() => props.confirmButtonText || '确定');
-    const cancelButtonText = computed(() => props.cancelButtonText || '取消');
+    const confirmContent = computed(() => props.confirmContent);
+    const cancelContent = computed(() => props.cancelContent);
+    const knowContent = computed(() => props.knowContent);
 
     const isInput = computed(() => props.isInput);
-    const isShowDialog = computed(() => props.isShowDialog);
+    const currentVisible = computed(() => props.modelValue || props.visible);
 
     const handleConfirm = () => {
+      context.emit('update:modelValue', false);
       context.emit('confirm', innerValue.value);
       innerValue.value = '';
     };
 
     const handleCancel = () => {
+      context.emit('update:modelValue', false);
       context.emit('cancel');
       innerValue.value = '';
     };
 
-    watch(isShowDialog, (val) => {
-      if (val) {
-        context.emit('opened', val);
-      } else {
-        context.emit('closed', val);
-      }
-    });
+    const handleClosed = () => {
+      context.emit('update:modelValue', false);
+      context.emit('clickoverlay');
+      innerValue.value = '';
+    };
 
     return {
+      root,
+      currentVisible,
       innerValue,
       dClassName,
       dBoxClassName,
@@ -109,15 +116,18 @@ export default {
       dConformBtnClassName,
       showTitle,
       title,
-      tips,
+      content,
       type,
       showFooter,
-      confirmButtonText,
-      cancelButtonText,
+      confirmContent,
+      cancelContent,
       handleConfirm,
       handleCancel,
+      handleClosed,
       isInput,
-      isShowDialog,
+      knowContent,
+      afterEnter: () => context.emit('opened'),
+      afterLeave: () => context.emit('closed'),
     };
   },
 };

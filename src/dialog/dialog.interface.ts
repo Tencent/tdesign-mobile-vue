@@ -1,28 +1,34 @@
 export interface IDialogProps {
-  theme: string,
-  showTitle: boolean,
-  title: string,
-  tips: string,
-  type: string,
-  showFooter: boolean,
-  placeholderText: string,
-  confirmButtonText: string,
-  cancelButtonText: string,
-  isInput: boolean,
-  isShowDialog: boolean,
-  knowButtonText: string,
-  inputValue: string,
+  modelValue?: boolean,
+  showTitle?: boolean,
+  title?: string,
+  content: string,
+  type?: string,
+  showFooter?: boolean,
+  placeholderText?: string,
+  confirmContent?: string,
+  cancelContent?: string,
+  isInput?: boolean,
+  visible?: boolean,
+  knowContent?: string,
+};
+
+export const DialogPropsDefault = {
+  showTitle: true,
+  title: '温馨提醒',
+  content: '',
+  type: '',
+  showFooter: true,
+  placeholderText: '',
+  confirmContent: '确认',
+  cancelContent: '取消',
+  isInput: false,
+  visible: true,
+  knowContent: '我知道了',
 };
 
 export const DialogProps = {
-  /**
-   * @description 主题
-   * @property title
-   */
-  theme: {
-    type: String,
-    default: 'default',
-  },
+  modelValue: Boolean,
   /**
    * @description 是否显示标题
    * @property showTitle
@@ -37,13 +43,13 @@ export const DialogProps = {
    */
   title: {
     type: String,
-    default: '',
+    default: '温馨提醒',
   },
   /**
    * @description 提示文案
-   * @property tips
+   * @property content
    */
-  tips: {
+  content: {
     type: String,
     default: '',
   },
@@ -73,25 +79,25 @@ export const DialogProps = {
   },
   /**
    * @description 取消按钮文字
-   * @property cancelButtonText
+   * @property cancelContent
    */
-  cancelButtonText: {
+  cancelContent: {
     type: String,
     default: '取消',
   },
   /**
    * @description 确定按钮文字
-   * @property confirmButtonText
+   * @property confirmContent
    */
-  confirmButtonText: {
+  confirmContent: {
     type: String,
     default: '确认',
   },
   /**
    * @description 我知道了按钮文字
-   * @property sureButtonText
+   * @property knowContent
    */
-  sureButtonText: {
+  knowContent: {
     type: String,
     default: '我知道了',
   },
@@ -105,18 +111,10 @@ export const DialogProps = {
   },
   /**
    * @description 是否显示弹出框
-   * @property isShowDialog
+   * @property visible
    */
-  isShowDialog: {
+  visible: {
     type: Boolean,
     default: false,
-  },
-  /**
-   * @description 输入框输入内容
-   * @property inputValue
-   */
-  inputValue: {
-    type: String,
-    default: '{}',
   },
 };

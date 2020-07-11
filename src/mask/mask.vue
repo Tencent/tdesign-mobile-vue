@@ -1,9 +1,9 @@
 <template>
-  <div :class="classes" @click="handleClick"></div>
+  <div :class="classes"></div>
 </template>
 
 <script lang="ts">
-import { computed, toRefs, SetupContext } from 'vue';
+import { computed, toRefs } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-mask`;
@@ -20,20 +20,15 @@ export default {
       default: false,
     },
   },
-  setup(props: MaskProps, context: SetupContext) {
+  setup(props: MaskProps) {
     const classes = computed(() => ({
       [`${name}`]: !props.transparent,
       [`${name}--transparent`]: props.transparent,
     }));
 
-    const handleClick = () => {
-      context.emit('click');
-    };
-
     return {
       classes,
       ...toRefs(props),
-      handleClick,
     };
   },
 };
