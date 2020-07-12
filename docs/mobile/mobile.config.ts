@@ -92,6 +92,11 @@ export default {
           name: 'Slider',
           component: () => import('@/slider/demos/base.vue'),
         },
+        {
+          title: 'NoticeBar 公告栏',
+          name: 'notice-bar',
+          component: () => import('@/notice-bar/demos/base.vue'),
+        },
       ],
     },
   },
