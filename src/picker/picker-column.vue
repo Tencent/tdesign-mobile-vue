@@ -60,6 +60,7 @@ export default defineComponent({
       wrapperClassName,
       itemClassName,
       curIndex,
+      formatter: PickerColumnProps.formatter,
       ...toRefs(props),
     };
   },
