@@ -1,10 +1,8 @@
 <template>
-  <div class="notice-bar-base">
+  <div class="cell-base">
     <t-cell-group>
-      <t-cell value-align="left">
-        <t-notice-bar
-          content="提示文字描述提示文字描述提示文字描述" leftIcon="apple"
-        />
+      <t-cell>
+        <t-progress :percentage="30" />
       </t-cell>
     </t-cell-group>
   </div>
@@ -12,8 +10,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import config from '@/config';
+const { prefix } = config;
+const name = `${prefix}-progress-demo`;
 
 export default defineComponent({
+  name,
   setup() {
     return {};
   },
