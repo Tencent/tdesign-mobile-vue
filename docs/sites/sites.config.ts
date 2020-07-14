@@ -58,6 +58,11 @@ export default {
               component: () => import('@/switch/switch.md'),
             },
             {
+              title: 'Picker 选择器',
+              name: 'picker',
+              component: () => import('@/picker/demos/base.vue'),
+            },
+            {
               title: 'Radio 单选框',
               name: 'radio',
               component: () => import('@/radio/radio.md'),
