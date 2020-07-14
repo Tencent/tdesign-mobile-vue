@@ -1,6 +1,6 @@
 <template>
   <div class="notice-bar-base">
-    <t-cell-group title="公告栏 - 自定义样式">
+    <t-cell-group>
       <t-cell value-align="left">
         <t-notice-bar
           content="提示文字描述提示文字描述提示文字描述"
