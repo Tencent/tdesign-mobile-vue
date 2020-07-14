@@ -92,6 +92,11 @@ export default {
               name: 'mask',
               component: () => import('@/mask/demos/base.vue'),
             },
+            {
+              title: 'DropdownMenu',
+              name: 'dropdown-menu',
+              component: () => import('@/dropdown-menu/demos/base.vue'),
+            },
           ],
         },
       ],
