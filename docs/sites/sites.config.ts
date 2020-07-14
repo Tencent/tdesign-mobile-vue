@@ -68,9 +68,9 @@ export default {
               component: () => import('@/message/message.md'),
             },
             {
-              title: 'Progress',
+              title: 'Progress 进度条',
               name: 'progress',
-              component: () => import('@/progress/demos/base.vue'),
+              component: () => import('@/progress/progress.md'),
             },
             {
               title: 'Tag',
@@ -91,6 +91,11 @@ export default {
               title: 'Mask',
               name: 'mask',
               component: () => import('@/mask/demos/base.vue'),
+            },
+            {
+              title: 'NoticeBar 公告栏',
+              name: 'notice-bar',
+              component: () => import('@/notice-bar/notice-bar.md'),
             },
           ],
         },
