@@ -88,9 +88,9 @@ export default {
               component: () => import('@/check-box/check-box.md'),
             },
             {
-              title: 'Toast',
+              title: 'Toast 轻提示',
               name: 'toast',
-              component: () => import('@/toast/demos/base.vue'),
+              component: () => import('@/toast/toast.md'),
             },
             {
               title: 'Mask',
