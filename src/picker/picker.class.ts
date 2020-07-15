@@ -143,7 +143,7 @@ class Picker {
     // 加速度方向
     const dir = v > 0 ? -1 : 1;
     // 摩擦系数，参考iscroll的阻尼系数
-    const dampingCoefficient = 0.0006;
+    const dampingCoefficient = 0.0008;
     // 加速度
     const deceleration = -1 * dir * dampingCoefficient;
     // 滚动持续时间

@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:16:28
- * @LastEditTime: 2020-05-26 15:59:30
+ * @LastEditTime: 2020-07-02 10:29:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio/index.vue
@@ -11,6 +11,9 @@
     :class="outerClasses"
   >
     <span :class="shapeClasses" @click="radioChange">
+      <slot name="checkedIcon">
+        <span :class="iconClasses" :style="{backgroundColor: checkedColor}" v-if="isChecked"></span>
+      </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="radioChange('content')">
       <span :class="titleClasses" :style="titleStyle" v-if="title">
@@ -24,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { ref, inject, computed, SetupContext } from 'vue';
+import { ref, inject, computed, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -38,7 +41,18 @@ interface RadioProps {
   modelValue?: string,
   limitTitleRow?: number,
   limitContentRow?: number,
+  checkedColor?: string,
 }
+
+/**
+ * @description: 判断当前radio是否选中
+ * @param {props} props属性对象
+* @param {rootGroup} Group注入的对象
+ * @return: 返回是否选中的对象
+ */
+// eslint-disable-next-line max-len
+const getIsCheck = (props: RadioProps, rootGroupProps: any): object => computed(() => (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name));
+
 /**
  * @description: 命名类逻辑处理
  * @param {type}
@@ -49,14 +63,15 @@ const getClasses = (props: RadioProps, rootGroupProps: any) => {
   const shapeClasses = computed(() => [
     `${name}__default-shape`,
     {
-      [`${name}__default-shape--disabled`]: (rootGroupProps?.disabled || props?.disabled),
-      [`${name}__default-shape--checked`]: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name),
+      [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled),
     }]);
-  const titleClasses = computed(() => [{ [`${name}__content-title--disable`]: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
+  const titleClasses = computed(() => [{ [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
+  const iconClasses = computed(() => [{ [`${prefix}-is-checked`]: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name) }]);
   return {
     outerClasses,
     shapeClasses,
     titleClasses,
+    iconClasses,
   };
 };
 /**
@@ -71,7 +86,7 @@ const getLimitRow = (row?: number):object => ({
   '-webkit-line-clamp': row,
 });
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -149,6 +164,7 @@ export default {
     const titleStyle:object = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
     const contentStyle:object = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
     const classes = getClasses(props, rootGroupProps);
+    const isChecked = getIsCheck(props, rootGroupProps);
     hasSlot.value = !!content.slots.default;// 判断是否有default slot
     if (!content.slots.default || !props?.title) {
       // 当没有title或者slot的时候去掉中间的margin-top
@@ -167,6 +183,7 @@ export default {
         return;
       }
       rootGroupChange(props?.name); // 往group组件调用
+      content.emit('update:modelValue', props?.name); // 改变自身的v-model值
       content.emit('change', props?.name); // 自身组件广播事件
     };
     return {
@@ -175,8 +192,9 @@ export default {
       radioChange,
       titleStyle,
       contentStyle,
+      isChecked,
       ...classes,
     };
   },
-};
+});
 </script>

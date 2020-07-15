@@ -10,8 +10,8 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch } from 'vue';
-import { IMessageProps } from './message.interface';
+import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
+import { MessageType, MessageAlignType, IMessageOffset } from './message.interface';
 import TIcon from '../icon';
 
 import config from '../config';
@@ -19,7 +19,7 @@ const { prefix } = config;
 
 const name = `${prefix}-message`;
 
-export default {
+export default defineComponent({
   name,
   components: { TIcon },
   props: {
@@ -39,7 +39,7 @@ export default {
      * @attribute theme
      */
     theme: {
-      type: String,
+      type: String as PropType<MessageType>,
       default: 'info',
     },
     /**
@@ -54,13 +54,13 @@ export default {
      * @description 文本对齐方式
      * @attribute align
      */
-    align: String,
+    align: String as PropType<MessageAlignType>,
     /**
      * @description 偏移量
      * @attribute offset
      */
     offset: {
-      type: Object,
+      type: Object as PropType<IMessageOffset>,
       default: () => {},
     },
     /**
@@ -74,7 +74,7 @@ export default {
      */
     zIndex: Number,
   },
-  setup(props: IMessageProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);
     const rootClasses = computed(() => ({
@@ -111,5 +111,5 @@ export default {
       afterLeave: () => context.emit('closed'),
     };
   },
-};
+});
 </script>

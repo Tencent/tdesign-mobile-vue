@@ -17,18 +17,18 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-mask-base-demo`;
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
       cur: 0,
     };
   },
-};
+});
 </script>
 <style lang="less" scoped>
 .t-mask-base-demo {

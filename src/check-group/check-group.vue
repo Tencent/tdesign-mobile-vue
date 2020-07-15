@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-06-06 15:11:46
- * @LastEditTime: 2020-06-07 17:39:09
+ * @LastEditTime: 2020-07-03 11:29:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/check-group/check-group.vue
@@ -14,23 +14,17 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed } from 'vue';
+import { SetupContext, provide, ref, computed, defineComponent, PropType } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
 
-export interface CheckGroupProps {
-  modelValue: Array<string>,
-  disabled?: boolean,
-  max: string | number,
-}
-
 export interface Child {
   name: string
 }
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -38,7 +32,7 @@ export default {
      * @attribute modelValue
      */
     modelValue: {
-      type: Array,
+      type: Array as PropType<string[]>,
       default: () => [],
     },
     /**
@@ -58,9 +52,9 @@ export default {
       default: 0,
     },
   },
-  setup(props: CheckGroupProps, content: SetupContext) {
+  setup(props, content: SetupContext) {
     const children = ref({});
-    const checkedValues: any = computed(() => props?.modelValue || []);
+    const checkedValues = computed(() => props.modelValue || []);
     /**
      * @description: 为check-box注册
      * @param {object}
@@ -87,7 +81,8 @@ export default {
       const index = checkedValues.value.indexOf(name);
       const inMax = (props?.max < 1 || checkedValues?.value?.length < props?.max);
       if (index !== undefined && index === -1 && inMax) {
-        content.emit('update:modelValue', checkedValues?.value?.concat(name));
+        const tempValues = checkedValues?.value?.concat(name);
+        content.emit('update:modelValue', [...Array.from(tempValues)]);
       }
     };
     /**
@@ -131,6 +126,7 @@ export default {
         return checked === false ? false : !checked ? !isChecked : true;
       });
       content.emit('update:modelValue', names);
+      content.emit('change', names);
     };
     provide('rootGroup', {
       checkedValues,
@@ -150,5 +146,5 @@ export default {
       toggleAll,
     };
   },
-};
+});
 </script>

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-06-06 19:52:11
+ * @LastEditTime: 2020-07-02 14:45:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
@@ -58,29 +58,39 @@ export default {
               component: () => import('@/switch/switch.md'),
             },
             {
-              title: 'Radio',
+              title: 'Picker 选择器',
+              name: 'picker',
+              component: () => import('@/picker/demos/base.vue'),
+            },
+            {
+              title: 'Radio 单选框',
               name: 'radio',
-              component: () => import('@/radio/demos/base.vue'),
+              component: () => import('@/radio/radio.md'),
             },
             {
-              title: 'Message',
+              title: 'Message 消息',
               name: 'message',
-              component: () => import('@/message/demos/base.vue'),
+              component: () => import('@/message/message.md'),
             },
             {
-              title: 'Progress',
+              title: 'Progress 进度条',
               name: 'progress',
-              component: () => import('@/progress/demos/base.vue'),
+              component: () => import('@/progress/progress.md'),
             },
             {
-              title: 'CheckBox',
+              title: 'Tag',
+              name: 'tag',
+              component: () => import('@/tag/tag.md'),
+            },
+            {
+              title: 'CheckBox 复选框',
               name: 'check-box',
-              component: () => import('@/check-box/demos/base.vue'),
+              component: () => import('@/check-box/check-box.md'),
             },
             {
-              title: 'Toast',
+              title: 'Toast 轻提示',
               name: 'toast',
-              component: () => import('@/toast/demos/base.vue'),
+              component: () => import('@/toast/toast.md'),
             },
             {
               title: 'Mask',
@@ -88,9 +98,14 @@ export default {
               component: () => import('@/mask/demos/base.vue'),
             },
             {
+              title: 'NoticeBar 公告栏',
+              name: 'notice-bar',
+              component: () => import('@/notice-bar/notice-bar.md'),
+            },
+            {
               title: 'Stepper 步进器',
               name: 'stepper',
-              component: () => import('@/stepper/demos/base.vue'),
+              component: () => import('@/stepper/stepper.md'),
             },
           ],
         },

@@ -63,6 +63,11 @@ export default {
           component: () => import('@/message/demos/base.vue'),
         },
         {
+          title: 'Tag 标签',
+          name: 'tag',
+          component: () => import('@/tag/demos/base.vue'),
+        },
+        {
           title: 'Check-box 多选框',
           name: 'check-box',
           component: () => import('@/check-box/demos/base.vue'),
@@ -81,6 +86,16 @@ export default {
           title: 'Stepper 步进器',
           name: 'stepper',
           component: () => import('@/stepper/demos/base.vue'),
+        },
+        {
+          title: 'Slider 滑块',
+          name: 'Slider',
+          component: () => import('@/slider/demos/base.vue'),
+        },
+        {
+          title: 'NoticeBar 公告栏',
+          name: 'notice-bar',
+          component: () => import('@/notice-bar/demos/base.vue'),
         },
       ],
     },

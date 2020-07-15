@@ -9,9 +9,9 @@
 
 <script lang="ts">
 import Clipboard from 'clipboard';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   setup() {
     const icons = ref([
       'add',
@@ -227,5 +227,5 @@ export default {
 
     return { icons };
   },
-};
+});
 </script>

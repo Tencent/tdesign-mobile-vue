@@ -1,7 +1,7 @@
 <!--
  * @Author: yuliangyang
  * @Date: 2020-05-20 19:20:11
- * @LastEditTime: 2020-06-06 20:42:23
+ * @LastEditTime: 2020-07-01 16:48:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/src/radio-group/index.vue
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide } from 'vue';
+import { SetupContext, provide, defineComponent } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -25,7 +25,7 @@ export interface RadioGroupProps {
   disabled?: boolean,
 }
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -49,6 +49,7 @@ export default {
      * @return: void
      */
     const change = (name: string) => {
+      content.emit('update:modelValue', name); // 改变自身的v-model值
       content.emit('change', name);
     };
     provide('rootGroupProps', props);
@@ -58,5 +59,5 @@ export default {
       change,
     };
   },
-};
+});
 </script>

@@ -1,31 +1,28 @@
 <template>
-  <div :class="`${name}`">
+  <div :class="rootClasses">
     <div :class="`${name}__inner`">
-      <div :class="`${name}__bd`">
+      <div :class="`${name}__bd`" :style="progressBgColorStyle">
         <div
           :class="`${name}__percent`"
-          :style="`width:${percentage}%; background-color:${color};`"></div>
+          :style="progressStyle"></div>
       </div>
-      <div :class="`${name}__ft`" v-if="showText">
-        <span :class="`${name}__text-info`">{{percentage}}%</span>
+      <div :class="`${name}__ft`" v-if="showTextPercentage">
+        <span
+          :class="`${name}__text-percentage`" :style="percentageTextStyle"
+        >{{percentage}}%</span>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { SetupContext } from 'vue';
+import { SetupContext, defineComponent, computed } from 'vue';
+import { ProgressType, ProgressProps } from './progress.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-progress`;
 
-export interface ProgressProps {
-  percentage: number;
-  showText: boolean;
-  color: string;
-}
-
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -42,7 +39,7 @@ export default {
      */
     showText: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * @description 进度条的颜色
@@ -50,16 +47,70 @@ export default {
      */
     color: {
       type: String,
-      default: '#0052d9',
+      default: '',
+    },
+    /**
+     * @description 进度条的背景色
+     * @attribute bgColor
+     */
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    /**
+     * @description 百分比文本颜色
+     * @attribute textColor
+     */
+    textColor: {
+      type: String,
+      default: '',
+    },
+    /**
+     * @description 类型
+     * @attribute type
+     */
+    type: {
+      type: String,
+      default: ProgressType.Info,
     },
   },
   setup(props: ProgressProps, context: SetupContext) {
-    console.log('props', props);
+    // console.log('props', props);
     console.log('context', context);
+
+    const rootClasses = computed(() => [
+      `${name}`,
+      {
+        [`${name}--info`]:
+          props.type === ProgressType.Info.valueOf(),
+        [`${name}--error`]:
+          props.type === ProgressType.Error.valueOf(),
+      },
+    ]);
+
+    const showTextPercentage = computed(() => props.showText);
+
+    const progressStyle = computed(() => ({
+      width: `${props.percentage > 0 ? `${props.percentage}%` : 0}`,
+      backgroundColor: `${props.color ? props.color : ''}`,
+    }));
+
+    const progressBgColorStyle = computed(() => ({
+      backgroundColor: `${props.bgColor ? props.bgColor : ''}`,
+    }));
+
+    const percentageTextStyle = computed(() => ({
+      color: `${props.textColor ? props.textColor : ''}`,
+    }));
 
     return {
       name,
+      rootClasses,
+      showTextPercentage,
+      progressStyle,
+      progressBgColorStyle,
+      percentageTextStyle,
     };
   },
-};
+});
 </script>

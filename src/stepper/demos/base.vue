@@ -3,7 +3,7 @@
 
     <t-cell-group title="基础步进器">
       <t-stepper label="标题文字" v-model.number="number1" :step="1" :min="0" :max="100"
-                 :input-width="70" @change="onChange" @input="onInput"/>
+                 :input-width="70" @change="onChange"/>
       <t-stepper  label="标题文字" v-model.number="number2" :step="1" :min="0" :max="9999"
                   @change="onChange"/>
       <t-stepper label="禁用" v-model.number="number3" :step="1" :min="0" :max="9999" disabled/>
@@ -27,21 +27,17 @@ export default {
   name,
   setup() {
     const state = reactive({
-      number1: 0,
+      number1: 10,
       number2: 9999,
       number3: 0,
       number4: 0,
       number5: 0,
     });
-    const onChange = ($event:string|number) => {
+    const onChange = ($event: number) => {
       console.log(`change to ${$event}`);
-    };
-    const onInput = ($event:string|number) => {
-      console.log(`input ${$event}`);
     };
     return {
       onChange,
-      onInput,
       ...toRefs(state),
     };
   },

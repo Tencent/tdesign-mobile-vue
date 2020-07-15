@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, toRefs, SetupContext } from 'vue';
+import { ref, computed, toRefs, SetupContext, defineComponent, PropType } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-button`;
@@ -19,18 +19,7 @@ export enum ButtonShape {
   Circle = 'circle'
 }
 
-export interface ButtonProps {
-  theme: String;
-  size: String;
-  icon: String;
-  plain: Boolean;
-  block: Boolean;
-  loading: Boolean;
-  disabled: Boolean;
-  shape: ButtonShape;
-}
-
-export default {
+export default defineComponent({
   name,
   props: {
     theme: {
@@ -51,7 +40,7 @@ export default {
       default: false,
     },
     shape: {
-      type: String,
+      type: String as PropType<ButtonShape>,
       default: ButtonShape.Round,
     },
     loading: {
@@ -63,7 +52,7 @@ export default {
       default: false,
     },
   },
-  setup(props: ButtonProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const { loading } = toRefs(props);
     const inIcon = props.icon;
     const iconOnly = computed(() => !context.slots.default);
@@ -110,5 +99,5 @@ export default {
       onTouchstart,
     };
   },
-};
+});
 </script>

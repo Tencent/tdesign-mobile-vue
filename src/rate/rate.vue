@@ -127,7 +127,7 @@ export default {
       default: () => [],
     },
     /**
-     * @description 评分等级对应的辅助文字
+     * @description 评分等级对应的辅助文字颜色
      * @attribute texts
      */
     textColor: String,

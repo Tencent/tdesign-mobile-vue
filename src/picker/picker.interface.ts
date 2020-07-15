@@ -70,9 +70,7 @@ export const PickerColumnProps = {
    */
   formatter: {
     type: Function,
-    default() {
-      return (val: string) => val;
-    },
+    default: (val: string) => val,
   },
   /**
    * @description 默认选中的索引，默认值为0

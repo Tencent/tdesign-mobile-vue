@@ -58,36 +58,13 @@ import {
   watch,
   onMounted,
   SetupContext,
+  defineComponent,
 } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-input`;
 
-export interface InputProps {
-  label: string;
-  modelValue: string;
-  error: {
-    type: boolean;
-    default: false;
-  };
-  rightIcon: string;
-  errorMessage: string,
-  suffix: string,
-  type: string,
-  maxlength: number,
-  rows: number,
-  maxRows: number,
-  clearable: {
-    type: boolean;
-    default: false;
-  };
-  disabled: {
-    type: boolean;
-    default: false;
-  };
-}
-
-export default {
+export default defineComponent({
   name,
   props: {
     label: String,
@@ -112,7 +89,7 @@ export default {
     clearable: Boolean,
     disabled: Boolean,
   },
-  setup(props: InputProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const { emit } = context;
     const textarea = ref();
     const state = reactive({
@@ -158,7 +135,7 @@ export default {
       get() {
         return props.modelValue || state.cacheValue;
       },
-      set(val) {
+      set(val: string) {
         emit('update:modelValue', val);
         state.cacheValue = val;
       },
@@ -206,5 +183,5 @@ export default {
       handleClear,
     };
   },
-};
+});
 </script>

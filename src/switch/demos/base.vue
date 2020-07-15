@@ -39,12 +39,12 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-switch-base-demo`;
 
-export default {
+export default defineComponent({
   name,
   setup() {
     const value = ref(true);
@@ -60,5 +60,5 @@ export default {
       onChange,
     };
   },
-};
+});
 </script>

@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, toRefs, SetupContext } from 'vue';
+import { ref, computed, toRefs, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-switch`;
@@ -34,7 +34,7 @@ export interface SwitchProps {
     text: string,
   }
 
-export default {
+export default defineComponent({
   name,
   props: {
     /**
@@ -78,7 +78,7 @@ export default {
       default: '',
     },
   },
-  setup(props: SwitchProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const _value = ref(false);
     const currentValue = computed({
       set(val) {
@@ -138,5 +138,5 @@ export default {
       ...toRefs(props),
     };
   },
-};
+});
 </script>
