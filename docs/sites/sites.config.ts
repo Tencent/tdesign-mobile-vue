@@ -87,6 +87,11 @@ export default {
               name: 'mask',
               component: () => import('@/mask/demos/base.vue'),
             },
+            {
+              title: 'Stepper 步进器',
+              name: 'stepper',
+              component: () => import('@/stepper/demos/base.vue'),
+            },
           ],
         },
       ],
