@@ -102,6 +102,11 @@ export default {
               name: 'notice-bar',
               component: () => import('@/notice-bar/notice-bar.md'),
             },
+            {
+              title: 'Stepper 步进器',
+              name: 'stepper',
+              component: () => import('@/stepper/stepper.md'),
+            },
           ],
         },
       ],

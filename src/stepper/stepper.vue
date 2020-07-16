@@ -29,7 +29,7 @@ export interface StepperProps {
   label: string;
   disabled: boolean;
   disableInput: boolean;
-  modelValue: string | number;
+  modelValue: number | string;
   min: number;
   max: number;
   step: number;
@@ -74,17 +74,17 @@ export default {
   },
   setup(props: StepperProps, context: SetupContext) {
     const { emit } = context;
-    const modelValue = Number(props.modelValue);
     const state = reactive({
-      cacheValue: modelValue,
+      cacheValue: Number(props.modelValue),
     });
     const currentValue = computed({
       get() {
-        return modelValue || state.cacheValue;
+        return Number(props.modelValue) || state.cacheValue;
       },
       set(val:number) {
-        emit('update:modelValue', val);
         emit('change', val);
+        emit('update:modelValue', val);
+        console.log(val, props.modelValue);
         state.cacheValue = val;
       },
     });
@@ -95,7 +95,7 @@ export default {
       min, val,
       Number.MIN_SAFE_INTEGER,
     ), max, Number.MAX_SAFE_INTEGER);
-    currentValue.value = format(modelValue);
+    currentValue.value = format(Number(props.modelValue));
     const plusValue = () => {
       if (state.cacheValue + props.step > props.max || props.disabled) return;
       currentValue.value = state.cacheValue + props.step;
@@ -115,10 +115,6 @@ export default {
     const onBlur =  (e:Event) => {
       changeValue(e);
     };
-    const onInput =  (e:Event) => {
-      changeValue(e);
-      emit('input', e);
-    };
     const hasLabel = computed(() => {
       if (props.label) return true;
     });
@@ -131,7 +127,6 @@ export default {
       inputStyle,
       hasLabel,
       onBlur,
-      onInput,
       ...toRefs(props),
     };
   },
