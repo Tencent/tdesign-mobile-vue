@@ -2,34 +2,30 @@
   <div :class="`${name}`">
     <t-cell-group title="单选下拉菜单">
       <t-cell value-align="left">
-        <t-dropdown-menu
-          :showOverlay="true"
-          :list="barList"
-          selectMode="tree"
-          optionsLayout="col3"
-          :isChecked="false"
-          v-if="true"
-        />
+        <t-dropdown-menu>
+          <t-dropdown-item title="商品类别" :options="options1"></t-dropdown-item>
+          <t-dropdown-item title="排序" :options="options1"></t-dropdown-item>
+        </t-dropdown-menu>
       </t-cell>
       <t-cell value-align="left">
-        <t-dropdown-menu
+        <!-- <t-dropdown-menu
           :showOverlay="true"
           :list="barList"
           selectMode="single"
           optionsLayout="col3"
           :isChecked="false"
           v-if="false"
-        />
+        />-->
       </t-cell>
       <t-cell value-align="left">
-        <t-dropdown-menu
+        <!-- <t-dropdown-menu
           :showOverlay="true"
           :list="barList"
           selectMode="multi"
           optionsLayout="col3"
           :isChecked="true"
           v-if="false"
-        />
+        />-->
       </t-cell>
     </t-cell-group>
   </div>
@@ -45,11 +41,13 @@ export default defineComponent({
   name,
   data() {
     return {
-      radio: '1',
-      barList: [
-        { title: '全部商品', disabled: false, barActive: true },
-        { title: '新款商品', disabled: true, barActive: false },
-      ],
+      options1: [{
+        title: '全部商品',
+        value: 'all',
+      }, {
+        title: '热销商品',
+        value: 'hot',
+      }],
     };
   },
 });

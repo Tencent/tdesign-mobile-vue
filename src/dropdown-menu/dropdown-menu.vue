@@ -1,18 +1,15 @@
 <template>
   <div :class="classes">
     <div :class="styleBar">
-      <div :class="styleBarItem(item)" v-for="item in list" :key="item" @click="expandMenu">
+      <div :class="styleBarItem(item)" v-for="item in items" :key="item" @click="expandMenu">
         <div :class="`${name}__title`">{{item.title}}</div>
       </div>
     </div>
-    <dropdown-item />
   </div>
 </template>
 
 <script lang="ts">
 import { computed, toRefs, ref, reactive } from 'vue';
-
-import DropdownItem from './dropdown-item.vue';
 
 import config from '../config';
 const { prefix } = config;
@@ -28,9 +25,6 @@ interface DropdownMenuProps {
 }
 export default {
   name,
-  components: {
-    DropdownItem,
-  },
   props: {
     activeColor: String,
     zIndex: {
@@ -50,8 +44,13 @@ export default {
       default: true,
     },
   },
-  setup(props: DropdownMenuProps) {
-    const barStatus = reactive({
+  setup(props: DropdownMenuProps, { slots }) {
+    const children = slots.default();
+    const items = children
+      .filter(vn => vn.type === `${prefix}-dropdown-item`)
+      .map(vn => ({ ...vn.props }));
+    const state = reactive({
+      items,
       currentActive: null,
     });
     const classes = computed(() => [
@@ -75,7 +74,7 @@ export default {
       barName,
       styleBarItem,
       ...toRefs(props),
-      ...toRefs(barStatus),
+      ...toRefs(state),
     };
   },
 };

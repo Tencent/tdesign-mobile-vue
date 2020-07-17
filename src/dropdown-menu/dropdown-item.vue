@@ -64,15 +64,6 @@
 <script lang="ts">
 import { computed, toRefs, ref, reactive } from 'vue';
 
-import TMask from '../mask';
-import TIcon from '../icon';
-import TButton from '../button';
-import TCellGroup from '../cell-group';
-import TCell from '../cell';
-import TCheckGroup from '../check-group';
-import TCheckBox from '../check-box';
-import TRadioGroup from '../radio-group';
-import TRadio from '../radio';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
@@ -90,17 +81,6 @@ interface DropdownItemProps {
 }
 export default {
   name,
-  components: {
-    TMask,
-    TButton,
-    TIcon,
-    TCellGroup,
-    TCell,
-    TCheckGroup,
-    TCheckBox,
-    TRadioGroup,
-    TRadio,
-  },
   props: {
     /**
      * @description 标题
