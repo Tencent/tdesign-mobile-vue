@@ -97,6 +97,11 @@ export default {
           name: 'notice-bar',
           component: () => import('@/notice-bar/demos/base.vue'),
         },
+        {
+          title: 'DropdownMenu 下拉菜单',
+          name: 'dropdown-menu',
+          component: () => import('@/dropdown-menu/demos/base.vue'),
+        },
       ],
     },
   },

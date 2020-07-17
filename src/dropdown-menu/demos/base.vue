@@ -48,7 +48,7 @@ export default defineComponent({
       radio: '1',
       barList: [
         { title: '全部商品', disabled: false, barActive: true },
-        { title: '新款商品', disabled: true, barActive: false  },
+        { title: '新款商品', disabled: true, barActive: false },
       ],
     };
   },
