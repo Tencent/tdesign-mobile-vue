@@ -18,4 +18,4 @@ export { default as Slider } from './slider';
 export { Picker, PickerColumn } from './picker';
 export { Tag, CheckTag } from './tag';
 export { default as NoticeBar } from './notice-bar';
-export { default as DropdownMenu } from './dropdown-menu';
+export { DropdownMenu, DropdownItem } from './dropdown-menu';

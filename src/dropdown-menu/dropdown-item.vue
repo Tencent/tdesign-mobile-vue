@@ -62,70 +62,19 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, reactive } from 'vue';
+import { computed, toRefs, ref, reactive, inject, defineComponent } from 'vue';
 
+import { DropdownItemProps, IDropdownItemProps } from './dropdown.interface';
 import config from '../config';
 const { prefix } = config;
-const name = `${prefix}-dropdown-menu`;
+const name = `${prefix}-dropdown-item`;
 const itemName = `${prefix}-dropdown-item`;
-const barName = `${prefix}-dropdown__bar`;
 
-interface DropdownItemProps {
-  title?: string,
-  value?: string | number,
-  options: Array<any>,
-  disabled?: boolean,
-  selectMode: string,
-  optionsLayout: string,
-  optionsColumns: number,
-}
-export default {
+export default defineComponent({
   name,
-  props: {
-    /**
-     * @description 标题
-     * @attribute title
-     */
-    title: String,
-    value: [String, Number],
-    /**
-     * @description 选项数据
-     * @attribute options
-     */
-    options: {
-      type: Array,
-      default: () => [],
-    },
-    /**
-     * @description 是否禁用
-     * @attribute disabled
-     */
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * @description 选取模式
-     * @attribute selectMode
-     */
-    selectMode: {
-      type: String,
-      default: 'single',
-    },
-    /**
-     * @description 选项排列
-     * @attribute optionsLayout
-     */
-    optionsLayout: {
-      type: String,
-      default: 'column',
-    },
-    optionsColumns: {
-      type: Number,
-      default: 1,
-    },
-  },
-  setup(props: DropdownItemProps) {
+  props: DropdownItemProps,
+  setup(props: IDropdownItemProps) {
+    const menuState = inject('dropdownMenuState') as any;
     const styleItem = computed(() => [
       `${itemName}`,
     ]);
@@ -146,37 +95,27 @@ export default {
         [`${prefix}-is-col3`]: props.optionsLayout === 'col3',
       },
     ]);
-    const menuState = reactive({
-      isExpanded: false,
+    const isExpanded = computed(() => menuState.activeId === props.itemId);
+    const state = reactive({
+      isExpanded,
     });
-    const expandMenu = () => {
-      menuState.isExpanded = true;
-    };
-    const collapseMenu = () => {
-      menuState.isExpanded = false;
-    };
     const confirmSelect = () => {
-      collapseMenu();
+      // collapseMenu();
     };
     return {
       name: ref(name),
       itemName,
-      barName,
       styleItem,
       styleContent,
+      ...toRefs({
+        radio: '1',
+        checkBoxes: ['1'],
+        isExpanded: false,
+      }),
       ...toRefs(props),
-      ...toRefs(menuState),
-      expandMenu,
-      collapseMenu,
+      ...toRefs(state),
       confirmSelect,
     };
   },
-  data() {
-    return {
-      radio: '1',
-      checkBoxes: ['1'],
-      isExpanded: false,
-    };
-  },
-};
+});
 </script>

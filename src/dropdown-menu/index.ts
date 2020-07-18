@@ -1,3 +1,7 @@
 import DropdownMenu from './dropdown-menu.vue';
+import DropdownItem from './dropdown-item.vue';
 
-export default DropdownMenu;
+export {
+  DropdownMenu,
+  DropdownItem,
+};
