@@ -68,11 +68,6 @@ export default {
               component: () => import('@/radio/radio.md'),
             },
             {
-              title: 'Message 消息',
-              name: 'message',
-              component: () => import('@/message/message.md'),
-            },
-            {
               title: 'Progress 进度条',
               name: 'progress',
               component: () => import('@/progress/progress.md'),
@@ -88,24 +83,35 @@ export default {
               component: () => import('@/check-box/check-box.md'),
             },
             {
-              title: 'Toast 轻提示',
-              name: 'toast',
-              component: () => import('@/toast/toast.md'),
-            },
-            {
               title: 'Mask',
               name: 'mask',
               component: () => import('@/mask/demos/base.vue'),
             },
             {
-              title: 'NoticeBar 公告栏',
-              name: 'notice-bar',
-              component: () => import('@/notice-bar/notice-bar.md'),
-            },
-            {
               title: 'Stepper 步进器',
               name: 'stepper',
               component: () => import('@/stepper/stepper.md'),
+            },
+          ],
+        },
+        {
+          title: '消息提醒',
+          type: 'component', // 组件文档
+          children: [
+            {
+              title: 'Toast 轻提示',
+              name: 'toast',
+              component: () => import('@/toast/toast.md'),
+            },
+            {
+              title: 'Message 消息',
+              name: 'message',
+              component: () => import('@/message/message.md'),
+            },
+            {
+              title: 'NoticeBar 公告栏',
+              name: 'notice-bar',
+              component: () => import('@/notice-bar/notice-bar.md'),
             },
           ],
         },
