@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <div :class="styleBar">
+    <div ref="refBar" :class="styleBar">
       <div
         :class="styleBarItem(item)"
         v-for="(item, idx) in itemProps"
@@ -11,7 +11,6 @@
       </div>
     </div>
     <component :is="innerItems" />
-    <!-- <slot /> -->
   </div>
 </template>
 
@@ -22,7 +21,6 @@ import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
-const barName = `${prefix}-dropdown__bar`;
 
 export const ItemInstanceManager = {
   usedIds: {},
@@ -42,22 +40,37 @@ export default defineComponent({
   name,
   props: DropdownMenuProps,
   setup(props: IDropdownMenuProps, { slots }) {
-    const children = (slots.default ? slots.default() : [])
-      .filter((child: any) => child.type.name === `${prefix}-dropdown-item`);
-    const innerItems = () => children
-      .map((child: any) => {
-        const { itemId = ItemInstanceManager.generateId() } = child.props;
-        child.props = mergeProps(child.props, { itemId });
-        return child;
-      });
+    // 通过 slots.default 子成员，计算标题栏选项
+    const { innerItems, itemProps } = (() => {
+      const children = (slots.default ? slots.default() : [])
+        .filter((child: any) => child.type.name === `${prefix}-dropdown-item`)
+        .map((child: any) => {
+          const { itemId = ItemInstanceManager.generateId() } = child.props;
+          child.props = mergeProps(child.props, { itemId });
+          return child;
+        });
+      const itemProps = children.map((item: any) => ({ ...item.props }));
+      return {
+        innerItems: () => children,
+        itemProps,
+      };
+    })();
+    // 菜单状态
     const state = reactive({
-      itemProps: children.map((item: any) => ({ ...item.props })),
+      itemProps,
       activeId: null,
+      barRect: {},
+      showOverlay: props.overlay,
     });
+    // 提供子组件访问
     provide('dropdownMenuState', state);
+    // 根结点样式
     const classes = computed(() => [
       `${name}`,
     ]);
+    // 标题栏结点引用
+    const refBar = ref(null);
+    // 标题栏样式
     const styleBar = computed(() =>
       // if (props.showMenu) return `${name}__bar ${name}__bar--open`;
       `${name}__bar`);
@@ -65,18 +78,31 @@ export default defineComponent({
       `${name}__item`,
       {
         [`${prefix}-is-disabled`]: item.disabled,
-        // [`${prefix}-is-active`]: item.barActive,
+        [`${prefix}-is-active`]: item.itemId === state.activeId,
       },
     ]);
+    // 展开对应项目的菜单
     const expandMenu = ({ idx }: { idx: number }) => {
-      const item = children[idx];
-      state.activeId = item.props!.itemId;
+      const props = itemProps[idx];
+      const thisId = props.itemId;
+
+      if (state.activeId === thisId) {
+        // 再次点击时收起
+        state.activeId = null;
+        return;
+      }
+
+      state.activeId = thisId;
+
+      const bar = refBar.value as any;
+      const barRect = bar.getBoundingClientRect();
+      state.barRect = barRect;
     };
     return {
       name: ref(name),
       classes,
+      refBar,
       styleBar,
-      barName,
       styleBarItem,
       ...toRefs(props),
       innerItems,

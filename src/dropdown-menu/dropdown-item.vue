@@ -1,8 +1,8 @@
 <template>
-  <div :class="styleItem" v-if="isExpanded">
-    <t-mask v-show="showOverlay" />
+  <div :class="styleItem" v-if="isExpanded" :style="{...expandStyle}">
+    <t-mask v-show="showOverlay" style="position: absolute;" />
     <div :class="styleContent">
-      <div :class="`${itemName}__bd`">
+      <div :class="`${name}__bd`" style="overflow: auto;">
         <slot>
           <t-cell-group v-if="true">
             <t-radio-group v-model="radio">
@@ -53,7 +53,7 @@
           </t-cell-group>
         </slot>
       </div>
-      <div :class="`${itemName}__ft`">
+      <div :class="`${name}__ft`">
         <t-button theme="default">重置</t-button>
         <t-button theme="primary" @click="confirmSelect">确定</t-button>
       </div>
@@ -62,13 +62,31 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, reactive, inject, defineComponent } from 'vue';
+import { computed, toRefs, ref, reactive, inject, nextTick, watch, defineComponent } from 'vue';
 
 import { DropdownItemProps, IDropdownItemProps } from './dropdown.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
-const itemName = `${prefix}-dropdown-item`;
+
+interface ITransAnimation {
+  timeout: number;
+  interval: number;
+  setTo(nowDo: Function, thenDo: Function): void;
+};
+
+const transAnimation: ITransAnimation = {
+  timeout: 0,
+  interval: 300,
+  setTo(nowDo, thenDo) {
+    if (this.timeout) window.clearTimeout(this.timeout);
+    nextTick(() => nowDo());
+    this.timeout = window.setTimeout(() => {
+      this.timeout = 0;
+      thenDo();
+    }, this.interval);
+  },
+};
 
 export default defineComponent({
   name,
@@ -76,16 +94,16 @@ export default defineComponent({
   setup(props: IDropdownItemProps) {
     const menuState = inject('dropdownMenuState') as any;
     const styleItem = computed(() => [
-      `${itemName}`,
+      `${name}`,
     ]);
     // const styleDropRadio = computed(() => [
-    //   `${itemName}__radio`,
-    //   {
-    //     [`${prefix}-is-checked`]: props.isChecked,
-    //   },
+    // `${name}__radio`,
+    // {
+    // [`${prefix}-is-checked`]: props.isChecked,
+    // },
     // ]);
     const styleContent = computed(() => [
-      `${itemName}__content`,
+      `${name}__content`,
       {
         [`${prefix}-is-single`]: props.selectMode === 'single',
         [`${prefix}-is-multi`]: props.selectMode === 'multi',
@@ -95,16 +113,35 @@ export default defineComponent({
         [`${prefix}-is-col3`]: props.optionsLayout === 'col3',
       },
     ]);
-    const isExpanded = computed(() => menuState.activeId === props.itemId);
-    const state = reactive({
-      isExpanded,
+    watch(() => (menuState.activeId === props.itemId), (val: boolean) => {
+      setExpand(val);
     });
+    const state = reactive({
+      showOverlay: computed(() => menuState.showOverlay),
+      isExpanded: false,
+      expandStyle: {},
+    });
+    const setExpand = (val: boolean) => {
+      state.isExpanded = val;
+      const { bottom } = menuState.barRect;
+      state.expandStyle = { top: `${bottom}px` };
+      transAnimation.setTo(() => {
+        // Todo: 动画开始时的样式设置
+      }, () => {
+        // Todo: 动画结束时的回调
+      });
+    };
+    const expandMenu = () => {
+      menuState.activeId = props.itemId;
+    };
+    const collapseMenu = () => {
+      menuState.activeId = null;
+    };
     const confirmSelect = () => {
-      // collapseMenu();
+      collapseMenu();
     };
     return {
       name: ref(name),
-      itemName,
       styleItem,
       styleContent,
       ...toRefs({
@@ -114,6 +151,8 @@ export default defineComponent({
       }),
       ...toRefs(props),
       ...toRefs(state),
+      expandMenu,
+      collapseMenu,
       confirmSelect,
     };
   },
