@@ -1,8 +1,8 @@
 <template>
-  <div :class="styleItem" v-if="isExpanded" :style="{...expandStyle}">
-    <t-mask v-show="showOverlay" style="position: absolute;" />
-    <div :class="styleContent">
-      <div :class="`${name}__bd`" style="overflow: auto;">
+  <div :class="styleItem" v-if="isShowItems" :style="{...expandStyle}">
+    <t-mask v-show="showOverlay" />
+    <div :class="styleContent" :style="{...transitionStyle}">
+      <div :class="`${name}__bd`">
         <slot>
           <t-cell-group v-if="true">
             <t-radio-group v-model="radio">
@@ -80,7 +80,7 @@ const transAnimation: ITransAnimation = {
   interval: 300,
   setTo(nowDo, thenDo) {
     if (this.timeout) window.clearTimeout(this.timeout);
-    nextTick(() => nowDo());
+    nextTick(() => window.setTimeout(nowDo, 0));
     this.timeout = window.setTimeout(() => {
       this.timeout = 0;
       thenDo();
@@ -95,7 +95,23 @@ export default defineComponent({
     const menuState = inject('dropdownMenuState') as any;
     const styleItem = computed(() => [
       `${name}`,
+      {
+        [`${prefix}-is-expanded`]: state.isExpanded,
+      },
     ]);
+    watch(() => (menuState.activeId === props.itemId), (val: boolean) => {
+      setExpand(val);
+    });
+    const state = reactive({
+      showOverlay: computed(() => menuState.showOverlay),
+      isShowItems: false,
+      isExpanded: false,
+      expandStyle: {},
+      transitionStyle: {
+        transition: 'transform 300ms ease',
+        '-webkit-transition': 'transform 300ms ease',
+      },
+    });
     // const styleDropRadio = computed(() => [
     // `${name}__radio`,
     // {
@@ -113,22 +129,18 @@ export default defineComponent({
         [`${prefix}-is-col3`]: props.optionsLayout === 'col3',
       },
     ]);
-    watch(() => (menuState.activeId === props.itemId), (val: boolean) => {
-      setExpand(val);
-    });
-    const state = reactive({
-      showOverlay: computed(() => menuState.showOverlay),
-      isExpanded: false,
-      expandStyle: {},
-    });
     const setExpand = (val: boolean) => {
-      state.isExpanded = val;
+      // 菜单定位
       const { bottom } = menuState.barRect;
       state.expandStyle = { top: `${bottom}px` };
+      // 动画状态准备
+      if (val) state.isShowItems = val;
+      state.isExpanded = !val;
       transAnimation.setTo(() => {
-        // Todo: 动画开始时的样式设置
+        state.isExpanded = val;
       }, () => {
-        // Todo: 动画结束时的回调
+        console.log('动画结束');
+        if (!val) state.isShowItems = val;
       });
     };
     const expandMenu = () => {
