@@ -8,12 +8,12 @@ module.exports = {
     /**
      * https://github.com/postcss/postcss-url
      */
-    require('postcss-url')({
-      url: (asset) => {
-        const absPath = asset.absolutePath;
-        const relPath = require('path').relative('dist', absPath);
-        return relPath + asset.search + asset.hash;
-      },
-    }),
+    // require('postcss-url')({
+    //   url: (asset) => {
+    //     const absPath = asset.absolutePath;
+    //     const relPath = require('path').relative('dist', absPath);
+    //     return relPath + asset.search + asset.hash;
+    //   },
+    // }),
   ],
 };
