@@ -5,12 +5,12 @@
   </div>
 </template>
 <script lang="ts">
-import { getCurrentInstance, computed } from 'vue';
+import { computed } from 'vue';
+import { useRouter } from 'vue-router';
 export default {
   setup() {
-    const { ctx } = getCurrentInstance();
-    console.log(ctx.$router);
-    const title = computed(() => (ctx.$router ? ctx.$router.currentRoute.value.meta.title : ''));
+    const router = useRouter();
+    const title = computed(() => router.currentRoute.value.meta.title);
     const onBack = () => {
       if (history.length > 1) {
         history.back();
