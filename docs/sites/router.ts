@@ -24,7 +24,6 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   });
   return docsRoutes;
 }
-console.log(getDocsRoutes(navs.components.docs, 'component'));
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
