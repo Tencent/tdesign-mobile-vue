@@ -69,8 +69,10 @@ export default {
     const classes = computed(() => [
       `${name}`,
       {
+        [`${name}--text`]:
+          !_icon.value,
         [`${name}--icononly`]:
-          !props.message && _icon,
+          !props.message && _icon.value,
         [`${name}--middle`]:
           props.position === ToastPosition.Middle.valueOf(),
         [`${name}--top`]:
