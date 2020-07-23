@@ -1,6 +1,6 @@
 <template>
   <div :class="styleItem" v-if="isShowItems" :style="{...expandStyle}">
-    <t-mask v-show="showOverlay" />
+    <t-mask v-if="showOverlay" />
     <div :class="styleContent" :style="{...transitionStyle}">
       <div :class="`${name}__bd`">
         <slot>
@@ -75,18 +75,7 @@ interface ITransAnimation {
   setTo(nowDo: Function, thenDo: Function): void;
 };
 
-const transAnimation: ITransAnimation = {
-  timeout: 0,
-  interval: 300,
-  setTo(nowDo, thenDo) {
-    if (this.timeout) window.clearTimeout(this.timeout);
-    nextTick(() => window.setTimeout(nowDo, 0));
-    this.timeout = window.setTimeout(() => {
-      this.timeout = 0;
-      thenDo();
-    }, this.interval);
-  },
-};
+let expandedMenu: any;
 
 export default defineComponent({
   name,
@@ -129,18 +118,43 @@ export default defineComponent({
         [`${prefix}-is-col3`]: props.optionsLayout === 'col3',
       },
     ]);
+    const transAnimation: ITransAnimation = {
+      timeout: 0,
+      interval: 300,
+      setTo(nowDo, thenDo) {
+        if (this.timeout) window.clearTimeout(this.timeout);
+        nextTick(() => window.setTimeout(nowDo, 0));
+        this.timeout = window.setTimeout(() => {
+          this.timeout = 0;
+          thenDo();
+        }, this.interval);
+      },
+    };
     const setExpand = (val: boolean) => {
       // 菜单定位
       const { bottom } = menuState.barRect;
       state.expandStyle = { top: `${bottom}px` };
+      console.log(`dropdown-item(${props.itemId}) changing state: `, val);
       // 动画状态准备
-      if (val) state.isShowItems = val;
+      if (val) {
+        if (expandedMenu && expandedMenu !== menuState) {
+          // 关闭其他菜单
+          expandedMenu.activeId = null;
+        }
+        expandedMenu = menuState;
+        state.isShowItems = val;
+      }
       state.isExpanded = !val;
       transAnimation.setTo(() => {
         state.isExpanded = val;
       }, () => {
-        console.log('动画结束');
-        if (!val) state.isShowItems = val;
+        if (!val) {
+          if (expandedMenu === menuState) {
+            expandedMenu = null;
+          }
+          state.isShowItems = val;
+        }
+        console.log(`dropdown-item(${props.itemId}) change state complete: `, val);
       });
     };
     const expandMenu = () => {
