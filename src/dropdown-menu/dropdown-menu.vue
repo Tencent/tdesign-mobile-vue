@@ -45,9 +45,10 @@ export default defineComponent({
       const children = (slots.default ? slots.default() : [])
         .filter((child: any) => child.type.name === `${prefix}-dropdown-item`)
         .map((child: any) => {
+          const newChild = child;
           const { itemId = ItemInstanceManager.generateId() } = child.props;
-          child.props = mergeProps(child.props, { itemId });
-          return child;
+          newChild.props = mergeProps(child.props, { itemId });
+          return newChild;
         });
       const itemProps = children.map((item: any) => ({ ...item.props }));
       return {
@@ -71,9 +72,12 @@ export default defineComponent({
     // 标题栏结点引用
     const refBar = ref(null);
     // 标题栏样式
-    const styleBar = computed(() =>
-      // if (props.showMenu) return `${name}__bar ${name}__bar--open`;
-      `${name}__bar`);
+    const styleBar = computed(() => [
+      `${name}__bar`,
+      {
+        [`${name}__bar ${name}__bar--open`]: state.activeId,
+      },
+    ]);
     const styleBarItem = computed(() => (item: any) => [
       `${name}__item`,
       {

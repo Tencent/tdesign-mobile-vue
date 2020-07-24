@@ -4,56 +4,44 @@
     <div :class="styleContent" :style="{...transitionStyle}">
       <div :class="`${name}__bd`">
         <slot>
-          <t-cell-group v-if="true">
-            <t-radio-group v-model="radio">
-              <t-cell value-align="left">
-                <t-radio name="1" title="单选框1" :class="styleDropRadio" disabled>
-                  <template #checkedIcon v-if="isChecked">
-                    <t-icon icon="tick" />
-                  </template>
-                </t-radio>
-              </t-cell>
-              <t-cell value-align="left">
-                <t-radio name="2" title="单选框2" :class="styleDropRadio">
-                  <template #checkedIcon v-if="isChecked">
-                    <t-icon icon="tick" />
-                  </template>
-                </t-radio>
-              </t-cell>
+          <t-cell-group v-if="selectMode === 'single'">
+            <t-radio-group v-model="radioSelect">
+              <template v-for="option in options">
+                <t-cell :key="option.value" value-align="left">
+                  <t-radio
+                    :name="option.value"
+                    :title="option.title"
+                    :class="styleDropRadio(option.value)"
+                  >
+                    <template v-slot:checkedIcon>
+                      <t-icon icon="tick" v-if="isCheckedRadio(option.value)" />
+                    </template>
+                  </t-radio>
+                </t-cell>
+              </template>
             </t-radio-group>
           </t-cell-group>
-          <t-cell-group>
-            <t-check-group v-model="checkBoxes">
-              <t-cell value-align="left">
-                <t-check-box name="1" title="复选框1"></t-check-box>
-              </t-cell>
-              <t-cell value-align="left">
-                <t-check-box name="2" title="复选框2" disabled></t-check-box>
-              </t-cell>
-              <t-cell value-align="left">
-                <t-check-box name="3" title="复选框3"></t-check-box>
-              </t-cell>
-              <t-cell value-align="left">
-                <t-check-box name="4" title="复选框4"></t-check-box>
-              </t-cell>
-              <t-cell value-align="left">
-                <t-check-box name="5" title="复选框5"></t-check-box>
-              </t-cell>
+          <t-cell-group v-else-if="selectMode === 'multi'">
+            <t-check-group v-model="checkSelect">
+              <template v-for="option in options">
+                <t-cell :key="option.value" value-align="left">
+                  <t-check-box :name="option.value" :title="option.title"></t-check-box>
+                </t-cell>
+              </template>
             </t-check-group>
           </t-cell-group>
-          <t-cell-group v-if="true">
-            <t-check-group v-model="checkBoxes">
-              <t-cell value-align="left">
-                <t-check-box name="1" title="复选框1"></t-check-box>
-              </t-cell>
-              <t-cell value-align="left">
-                <t-check-box name="2" title="复选框2"></t-check-box>
-              </t-cell>
+          <t-cell-group v-else-if="selectMode === 'tree'">
+            <t-check-group v-model="checkSelect2">
+              <template v-for="option in options">
+                <t-cell :key="option.value" value-align="left">
+                  <t-check-box :name="option.value" :title="option.title"></t-check-box>
+                </t-cell>
+              </template>
             </t-check-group>
           </t-cell-group>
         </slot>
       </div>
-      <div :class="`${name}__ft`">
+      <div :class="`${name}__ft`" v-if="selectMode === 'multi' || selectMode === 'tree'">
         <t-button theme="default">重置</t-button>
         <t-button theme="primary" @click="confirmSelect">确定</t-button>
       </div>
@@ -72,6 +60,7 @@ const name = `${prefix}-dropdown-item`;
 interface ITransAnimation {
   timeout: number;
   interval: number;
+  thenDo: Function | null;
   setTo(nowDo: Function, thenDo: Function): void;
 };
 
@@ -100,13 +89,18 @@ export default defineComponent({
         transition: 'transform 300ms ease',
         '-webkit-transition': 'transform 300ms ease',
       },
+      selectMode: computed(() => props.selectMode),
+      optionsLayout: computed(() => props.optionsLayout),
+      options: computed(() => props.options),
     });
-    // const styleDropRadio = computed(() => [
-    // `${name}__radio`,
-    // {
-    // [`${prefix}-is-checked`]: props.isChecked,
-    // },
-    // ]);
+    const isCheckedRadio = (value: string) => value === radioSelect.value;
+    const styleDropRadio = (value: string) => [
+      `${name}__radio`,
+      {
+        [`${prefix}-is-tick`]: props.selectMode === 'single',
+        [`${prefix}-is-checked`]: isCheckedRadio(value),
+      },
+    ];
     const styleContent = computed(() => [
       `${name}__content`,
       {
@@ -119,15 +113,20 @@ export default defineComponent({
       },
     ]);
     const transAnimation: ITransAnimation = {
+      thenDo: null,
       timeout: 0,
       interval: 300,
       setTo(nowDo, thenDo) {
-        if (this.timeout) window.clearTimeout(this.timeout);
+        if (this.timeout) {
+          window.clearTimeout(this.timeout);
+          this.thenDo && this.thenDo();
+        }
         nextTick(() => window.setTimeout(nowDo, 0));
         this.timeout = window.setTimeout(() => {
           this.timeout = 0;
           thenDo();
         }, this.interval);
+        this.thenDo = thenDo;
       },
     };
     const setExpand = (val: boolean) => {
@@ -154,7 +153,6 @@ export default defineComponent({
           }
           state.isShowItems = val;
         }
-        console.log(`dropdown-item(${props.itemId}) change state complete: `, val);
       });
     };
     const expandMenu = () => {
@@ -166,15 +164,16 @@ export default defineComponent({
     const confirmSelect = () => {
       collapseMenu();
     };
+    const radioSelect = ref(null);
+    const checkSelect = ref([]);
     return {
       name: ref(name),
       styleItem,
       styleContent,
-      ...toRefs({
-        radio: '1',
-        checkBoxes: ['1'],
-        isExpanded: false,
-      }),
+      styleDropRadio,
+      radioSelect,
+      checkSelect,
+      isCheckedRadio,
       ...toRefs(props),
       ...toRefs(state),
       expandMenu,
