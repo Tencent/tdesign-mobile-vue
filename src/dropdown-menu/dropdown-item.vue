@@ -30,15 +30,33 @@
               </template>
             </t-check-group>
           </t-cell-group>
-          <t-cell-group v-else-if="selectMode === 'tree'">
-            <t-check-group v-model="checkSelect2">
-              <template v-for="option in options">
-                <t-cell :key="option.value" value-align="left">
-                  <t-check-box :name="option.value" :title="option.title"></t-check-box>
-                </t-cell>
-              </template>
-            </t-check-group>
-          </t-cell-group>
+          <template v-else-if="selectMode === 'tree'">
+            <t-cell-group v-for="(options, level) in treeOptions" :key="level">
+              <t-radio-group
+                v-if="level < treeState.leafLevel"
+                :modelValue="treeState.parentPath[level]"
+                @update:modelValue="selectTreeParent(level, $event)"
+                :data-value="treeState.parentPath[level]"
+              >
+                <template v-for="option in options">
+                  <t-cell :key="option.value" value-align="left">
+                    <t-radio
+                      :class="styleTreeRadio(option.value, level)"
+                      :name="option.value"
+                      :title="option.title"
+                    />
+                  </t-cell>
+                </template>
+              </t-radio-group>
+              <t-check-group v-else v-model="treeState.select">
+                <template v-for="option in options">
+                  <t-cell :key="option.value" value-align="left">
+                    <t-check-box :name="option.value" :title="option.title"></t-check-box>
+                  </t-cell>
+                </template>
+              </t-check-group>
+            </t-cell-group>
+          </template>
         </slot>
       </div>
       <div :class="`${name}__ft`" v-if="selectMode === 'multi' || selectMode === 'tree'">
@@ -96,17 +114,22 @@ export default defineComponent({
         [`${prefix}-is-checked`]: isCheckedRadio(value),
       },
     ];
-    const styleContent = computed(() => [
-      `${name}__content`,
-      {
-        [`${prefix}-is-single`]: props.selectMode === 'single',
-        [`${prefix}-is-multi`]: props.selectMode === 'multi',
-        [`${prefix}-is-tree`]: props.selectMode === 'tree',
-        [`${prefix}-is-col1`]: props.optionsLayout === 'col1',
-        [`${prefix}-is-col2`]: props.optionsLayout === 'col2',
-        [`${prefix}-is-col3`]: props.optionsLayout === 'col3',
-      },
-    ]);
+    const styleContent = computed(() => {
+      const selectMode = props.selectMode;
+      const layoutCol = props.optionsLayout;
+      const treeCol = selectMode === 'tree' ? treeState.leafLevel + 1 : 0;
+      return [
+        `${name}__content`,
+        {
+          [`${prefix}-is-single`]: selectMode === 'single',
+          [`${prefix}-is-multi`]: selectMode === 'multi',
+          [`${prefix}-is-tree`]: selectMode === 'tree',
+          [`${prefix}-is-col1`]: layoutCol === 'col1' || treeCol === 1,
+          [`${prefix}-is-col2`]: layoutCol === 'col2' || treeCol === 2,
+          [`${prefix}-is-col3`]: layoutCol === 'col3' || treeCol === 3,
+        },
+      ];
+    });
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
       // 菜单定位
@@ -148,14 +171,69 @@ export default defineComponent({
     };
     const radioSelect = ref(null);
     const checkSelect = ref([]);
+    // const defaultTreeNode = computed(() => {
+    //   const nodeList = [];
+    //   let child: any = props.options;
+    //   do {
+    //     nodeList.push(child[0]);
+    //     child = child.options;
+    //   } while (child);
+    //   return nodeList;
+    // });
+    const treeState = reactive({
+      leafLevel: 0,
+      parentPath: [],
+      select: [],
+    });
+    const selectTreeParent = (level: number, value: any) => {
+      console.log('level:', level, 'value:', value);
+      const tempValue: any = treeState.parentPath.slice(0, level);
+      tempValue[level] = value;
+      treeState.parentPath = tempValue;
+      treeState.select = [];
+    };
+    const styleTreeRadio = computed(() => (value: string, level: number) => [
+      `${name}__radio`,
+      {
+        [`${prefix}-is-checked`]: value === treeState.parentPath[level],
+      },
+    ]);
+    // 处理后的树形选项列表
+    const treeOptions = computed(() => {
+      const options = props.options;
+      const isLeafLevel = (list: any) => list.find((item: any) => !item.options);
+      const treeOptions = [];
+      let list = options;
+      let level = 0;
+      while (!isLeafLevel(list)) {
+        treeOptions.push(list);
+        const thisValue: string | number | null = treeState.parentPath[level];
+        const child: any = thisValue && list.find((child: any) => child.value === thisValue);
+        if (thisValue === undefined || !child) {
+          const firstChild = list[0];
+          selectTreeParent(level, firstChild.value);
+          list = firstChild.options;
+        } else {
+          list = child.options;
+        }
+        level += 1;
+      }
+      treeState.leafLevel = level;
+      treeOptions.push(list);
+      return treeOptions;
+    });
     return {
       name: ref(name),
       classes,
       styleContent,
       styleDropRadio,
+      isCheckedRadio,
       radioSelect,
       checkSelect,
-      isCheckedRadio,
+      treeOptions,
+      treeState,
+      selectTreeParent,
+      styleTreeRadio,
       ...toRefs(props),
       ...toRefs(state),
       expandMenu,

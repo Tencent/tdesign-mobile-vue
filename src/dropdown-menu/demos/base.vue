@@ -79,11 +79,17 @@ export default defineComponent({
       title: '一级选项 2',
       value: 'top_2',
       options: [],
-    }].map((child: any) => {
+    }].map((child: any, i: number) => {
       const newChild = child;
-      const childOptions = numberArr.map((child: any) => {
-        const newChild = { ...child };
-        newChild.options = charArr.map((child: any) => ({ ...child }));
+      const childOptions = numberArr.map((child: any, j: number) => {
+        const newChild = {
+          ...child,
+          title: `选项 ${i + 1}-${j + 1}`,
+        };
+        newChild.options = charArr.map((child: any, k: number) => ({
+          ...child,
+          title: `选项 ${i + 1}-${j + 1}-${k + 1}`,
+        }));
         return newChild;
       });
       newChild.options = childOptions;
