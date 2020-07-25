@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-demo-block">
     <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-      <t-picker-column :options="roleOptions" @change="onColumnChange" />
+      <t-picker-column :options="rolesObjOptions" option-key="name" @change="onColumnChange" />
     </t-picker>
   </div>
 </template>
@@ -10,9 +10,16 @@
 import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup() {
-    const roles = ['战士', '法师', '射手', '刺客', '坦克', '辅助'];
+    const rolesObjs = [
+      { name: '战士', value: 'warrior' },
+      { name: '法师', value: 'mage' },
+      { name: '射手', value: 'shooter' },
+      { name: '刺客', value: 'ssassin' },
+      { name: '坦克', value: 'tank' },
+      { name: '辅助', value: 'auxiliary' },
+    ];
     const curRoleIndex = ref(0);
-    const roleOptions = ref(roles);
+    const rolesObjOptions = ref(rolesObjs);
 
     const onColumnChange = (e: any) => {
       console.log('column:change', e);
@@ -36,7 +43,7 @@ export default defineComponent({
     };
 
     return {
-      roleOptions,
+      rolesObjOptions,
       onColumnChange,
       onRoleChange,
       onChange,
@@ -46,4 +53,3 @@ export default defineComponent({
   },
 });
 </script>
-
