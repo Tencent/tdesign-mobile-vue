@@ -4,7 +4,7 @@
       <t-input label="标准五个字" placeholder="预设文本(非必填)" v-model="text" right-icon="circle_help" />
       <t-input label="一个很长的标题需换行" placeholder="预设文本保持上下居中" >
         <template #rightIcon>
-          <t-icon icon="circle_info" />
+          <t-icon name="circle_info" />
         </template>
       </t-input>
       <t-input placeholder="无标题预设文本" />

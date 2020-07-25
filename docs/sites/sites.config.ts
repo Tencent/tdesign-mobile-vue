@@ -17,7 +17,7 @@ export default {
           type: 'document', // 普通文档
           children: [
             {
-              title: '安装',
+              title: '如何开始',
               name: 'install',
               component: () => import('@/../docs/install.md'),
             },
@@ -73,7 +73,7 @@ export default {
               component: () => import('@/progress/progress.md'),
             },
             {
-              title: 'Tag',
+              title: 'Tag 标签',
               name: 'tag',
               component: () => import('@/tag/tag.md'),
             },
@@ -82,11 +82,11 @@ export default {
               name: 'check-box',
               component: () => import('@/check-box/check-box.md'),
             },
-            {
-              title: 'Mask',
-              name: 'mask',
-              component: () => import('@/mask/demos/base.vue'),
-            },
+            // {
+            //   title: 'Mask',
+            //   name: 'mask',
+            //   component: () => import('@/mask/demos/base.vue'),
+            // },
             {
               title: 'Stepper 步进器',
               name: 'stepper',

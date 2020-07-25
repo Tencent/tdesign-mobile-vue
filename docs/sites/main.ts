@@ -7,7 +7,7 @@ import ComponentContributors from './components/component-contributors.vue';
 import TDesign from '@/index';
 
 import '../../common/style/mobile/index.less';
-import '@/../common/style/site/index.less';
+import '../../common/style/site/index.less';
 import '../styles/sites/index.less';
 
 createApp(app)

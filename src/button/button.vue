@@ -1,6 +1,6 @@
 <template>
   <button :class="classes" :disabled="disabled" @click="onClick" @touchstart.passive="onTouchstart">
-    <t-icon :icon="_icon" :class="iconClass" v-if="_icon" />
+    <t-icon :name="_icon" :class="iconClass" v-if="_icon" />
     <span :class="textClass" v-if="!iconOnly">
       <slot />
     </span>
@@ -76,7 +76,7 @@ export default defineComponent({
       },
     ]);
 
-    const _icon = computed(() => (loading.value ? 'loading_gradient' : inIcon));
+    const _icon = computed(() => (loading.value ? 'loading' : inIcon));
     const onClick = (e:Event) => {
       if (!props.loading && !props.disabled) {
         e.stopPropagation();

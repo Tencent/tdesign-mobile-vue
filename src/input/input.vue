@@ -15,7 +15,7 @@
           :disabled="disabled"
         />
         <div v-if="clearable && innerValue.length > 0" @click="handleClear" :class="styleIcon">
-          <t-icon icon="circle_clear" />
+          <t-icon name="circle_clear" />
         </div>
         <div v-if="hasSuffix" :class="styleSuffix">
           <slot name="suffix"></slot>
@@ -23,7 +23,7 @@
         <div v-if="hasRightIcon" :class="styleIcon">
           <slot name="rightIcon">
             <div v-if="suffix">{{ suffix }}</div>
-            <t-icon v-if="rightIcon" :icon="rightIcon" @click="handleClickIcon" />
+            <t-icon v-if="rightIcon" :name="rightIcon" @click="handleClickIcon" />
           </slot>
         </div>
       </div>

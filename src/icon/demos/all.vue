@@ -1,13 +1,13 @@
 <template>
   <!--
-    该文件有脚本 tdesign/tdesign-web-vue/src/icon/generate/index.js 自动生成。
+    该文件有脚本 tdesign/tdesign-mobile-vue/src/icon/generate/index.js 自动生成。
     若需要编辑，请编辑源文件：tdesign/tdesign-mobile-vue/src/icon/generate/demo.tpl 。
   -->
   <div class="tdesign-demo-iconfont">
     <p>目前设计师给到的全部图标</p><br>
     <div class="tdesign-demo-icon">
-      <t-icon name="arrow"/>
-      <div class="tdesign-demo-icon-name">arrow</div>
+      <t-icon name="arrow-right"/>
+      <div class="tdesign-demo-icon-name">arrow-right</div>
     </div>
     <div class="tdesign-demo-icon">
       <t-icon name="location_fill"/>
@@ -64,6 +64,18 @@
     <div class="tdesign-demo-icon">
       <t-icon name="close_fill"/>
       <div class="tdesign-demo-icon-name">close_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="star_fill"/>
+      <div class="tdesign-demo-icon-name">star_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="sound_fill"/>
+      <div class="tdesign-demo-icon-name">sound_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="circle"/>
+      <div class="tdesign-demo-icon-name">circle</div>
     </div>
   </div>
 </template>

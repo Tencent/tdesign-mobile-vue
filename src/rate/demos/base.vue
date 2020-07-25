@@ -28,7 +28,7 @@
       <t-cell value-align="left">
         <t-rate v-model="current4" :count="6" clearable show-text allow-half>
           <template v-slot:icon>
-            <t-icon icon="apple" />
+            <t-icon name="apple" />
           </template>
         </t-rate>
       </t-cell>
