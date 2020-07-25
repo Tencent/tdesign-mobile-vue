@@ -4,34 +4,39 @@
     <div :class="styleContent" :style="{...transitionStyle}">
       <div :class="`${name}__bd`">
         <slot>
-          <t-cell-group v-if="optionsLayout === 'columns' &&selectMode === 'single'">
-            <t-radio-group v-model="radioSelect">
-              <template v-for="option in options">
-                <t-cell :key="option.value" value-align="left">
-                  <t-radio
-                    :name="option.value"
-                    :title="option.title"
-                    :class="styleDropRadio(option.value)"
-                  >
-                    <template v-slot:checkedIcon>
-                      <t-icon icon="tick" v-if="isCheckedRadio(option.value)" />
-                    </template>
-                  </t-radio>
-                </t-cell>
-              </template>
-            </t-radio-group>
-          </t-cell-group>
-          <t-cell-group v-else-if="optionsLayout === 'columns' && selectMode === 'multi'">
-            <t-check-group v-model="checkSelect">
-              <template v-for="option in options">
-                <t-cell :key="option.value" value-align="left">
-                  <t-check-box :name="option.value" :title="option.title"></t-check-box>
-                </t-cell>
-              </template>
-            </t-check-group>
-          </t-cell-group>
+          <template v-if="optionsLayout === 'columns'">
+            <t-cell-group v-if="selectMode === 'single'">
+              <!-- 单选列表 -->
+              <t-radio-group v-model="radioSelect">
+                <template v-for="option in options">
+                  <t-cell :key="option.value" value-align="left">
+                    <t-radio
+                      :name="option.value"
+                      :title="option.title"
+                      :class="styleDropRadio(option.value)"
+                    >
+                      <template v-slot:checkedIcon>
+                        <t-icon icon="tick" v-if="isCheckedRadio(option.value)" />
+                      </template>
+                    </t-radio>
+                  </t-cell>
+                </template>
+              </t-radio-group>
+            </t-cell-group>
+            <t-cell-group v-else-if="selectMode === 'multi'">
+              <!-- 多选列表 -->
+              <t-check-group v-model="checkSelect">
+                <template v-for="option in options">
+                  <t-cell :key="option.value" value-align="left">
+                    <t-check-box :name="option.value" :title="option.title"></t-check-box>
+                  </t-cell>
+                </template>
+              </t-check-group>
+            </t-cell-group>
+          </template>
           <template v-else-if="optionsLayout === 'tree'">
             <t-cell-group v-for="(options, level) in treeOptions" :key="level">
+              <!-- 树形列表 - 父级节点 -->
               <t-radio-group
                 v-if="level < treeState.leafLevel"
                 :modelValue="treeState.parentPath[level]"
@@ -49,9 +54,14 @@
                 </template>
               </t-radio-group>
               <template v-else>
-                <t-radio-group v-if="selectMode === 'single'" v-model="radioSelect">
-                  <template v-for="option in options">
-                    <t-cell :key="option.value" value-align="left">
+                <template v-if="selectMode === 'single'">
+                  <!-- 树形列表 - 叶子节点（单选） -->
+                  <t-radio-group
+                    v-for="option in options"
+                    :key="option.value"
+                    v-model="radioSelect"
+                  >
+                    <t-cell value-align="left">
                       <t-radio
                         :name="option.value"
                         :title="option.title"
@@ -62,21 +72,26 @@
                         </template>
                       </t-radio>
                     </t-cell>
-                  </template>
-                </t-radio-group>
-                <t-check-group v-else-if="selectMode=== 'multi'" v-model="treeState.select">
-                  <template v-for="option in options">
-                    <t-cell :key="option.value" value-align="left">
+                  </t-radio-group>
+                </template>
+                <template v-else-if="selectMode=== 'multi'">
+                  <!-- 树形列表 - 叶子节点（多选） -->
+                  <t-check-group
+                    v-for="option in options"
+                    :key="option.value"
+                    v-model="treeState.select"
+                  >
+                    <t-cell value-align="left">
                       <t-check-box :name="option.value" :title="option.title"></t-check-box>
                     </t-cell>
-                  </template>
-                </t-check-group>
+                  </t-check-group>
+                </template>
               </template>
             </t-cell-group>
           </template>
         </slot>
       </div>
-      <div :class="`${name}__ft`" v-if="selectMode === 'multi' || selectMode === 'tree'">
+      <div :class="`${name}__ft`" v-if="selectMode === 'multi'">
         <t-button theme="default" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
         <t-button theme="primary" :disabled="isBtnDisabled" @click="confirmSelect">确定</t-button>
       </div>
@@ -134,7 +149,7 @@ export default defineComponent({
     const styleContent = computed(() => {
       const selectMode = props.selectMode;
       const optionsLayout = props.optionsLayout;
-      const layoutCol = props.optionsLayout;
+      const layoutCol = +props.optionsColumns;
       const isTree = optionsLayout === 'tree';
       const treeCol = isTree ? treeState.leafLevel + 1 : 0;
       return [
@@ -143,9 +158,9 @@ export default defineComponent({
           [`${prefix}-is-tree`]: isTree,
           [`${prefix}-is-single`]: !isTree && selectMode === 'single',
           [`${prefix}-is-multi`]: !isTree && selectMode === 'multi',
-          [`${prefix}-is-col1`]: layoutCol === 'col1' || treeCol === 1,
-          [`${prefix}-is-col2`]: layoutCol === 'col2' || treeCol === 2,
-          [`${prefix}-is-col3`]: layoutCol === 'col3' || treeCol === 3,
+          [`${prefix}-is-col1`]: layoutCol === 1 || treeCol === 1,
+          [`${prefix}-is-col2`]: layoutCol === 2 || treeCol === 2,
+          [`${prefix}-is-col3`]: layoutCol === 3 || treeCol === 3,
         },
       ];
     });
