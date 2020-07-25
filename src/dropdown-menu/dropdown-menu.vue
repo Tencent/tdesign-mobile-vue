@@ -19,6 +19,8 @@ import { defineComponent, computed, toRefs, ref, reactive, mergeProps, provide }
 
 import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
 import config from '../config';
+import TransAniControl from './trans-ani-control';
+
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
 
@@ -63,10 +65,12 @@ export default defineComponent({
       itemProps,
       activeId: null,
       barRect: {},
-      showOverlay: props.overlay,
     });
+    const aniControl = new TransAniControl();
     // 提供子组件访问
+    provide('dropdownMenuProps', props);
     provide('dropdownMenuState', state);
+    provide('dropdownAniControl', aniControl);
     // 根结点样式
     const classes = computed(() => [
       `${name}`,
@@ -97,19 +101,24 @@ export default defineComponent({
         return;
       }
 
+      // 如果有已展开菜单，并且不是当前菜单，则收起它
       if (expandedControl && expandedControl !== control) {
         expandedControl.collapseMenu();
       }
+      // 已展开状态记录
       expandedControl = control;
 
       state.activeId = itemId;
 
+      // 获取菜单定位
       const bar = refBar.value as any;
       const barRect = bar.getBoundingClientRect();
       state.barRect = barRect;
     };
     const collapseMenu = () => {
       state.activeId = null;
+
+      // 清除已展开状态记录
       if (expandedControl === control) {
         expandedControl = null;
       }

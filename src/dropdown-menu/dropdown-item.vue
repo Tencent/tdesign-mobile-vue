@@ -1,6 +1,6 @@
 <template>
-  <div :class="styleItem" v-if="isShowItems" :style="{...expandStyle}">
-    <t-mask v-if="showOverlay" />
+  <div :class="classes" v-if="isShowItems" :style="{...expandStyle}">
+    <t-mask v-if="isShowItems && showOverlay" @click="onClickOverlay" />
     <div :class="styleContent" :style="{...transitionStyle}">
       <div :class="`${name}__bd`">
         <slot>
@@ -50,47 +50,40 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, reactive, inject, nextTick, watch, defineComponent } from 'vue';
+import { computed, toRefs, ref, reactive, inject, watch, defineComponent } from 'vue';
 
-import { DropdownItemProps, IDropdownItemProps } from './dropdown.interface';
+import { IDropdownMenuProps, DropdownItemProps, IDropdownItemProps } from './dropdown.interface';
 import config from '../config';
+import TransAniControl from './trans-ani-control';
+
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
-
-interface ITransAnimation {
-  timeout: number;
-  interval: number;
-  thenDo: Function | null;
-  setTo(nowDo: Function, thenDo: Function): void;
-};
 
 export default defineComponent({
   name,
   props: DropdownItemProps,
   setup(props: IDropdownItemProps) {
+    // 从父组件取属性、状态和控制函数
+    const menuProps = inject('dropdownMenuProps') as IDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as any;
     const { expandMenu, collapseMenu } = inject('dropdownMenuControl') as any;
-    const styleItem = computed(() => [
+    const menuAniControl = inject('dropdownAniControl') as TransAniControl;
+    // 组件样式
+    const classes = computed(() => [
       `${name}`,
       {
         [`${prefix}-is-expanded`]: state.isExpanded,
       },
     ]);
-    watch(
-      () => (menuState.activeId === props.itemId),
-      (val: boolean) => {
-        setExpand(val);
-      },
-    );
     const state = reactive({
-      showOverlay: computed(() => menuState.showOverlay),
+      showOverlay: computed(() => menuProps.overlay),
       isShowItems: false,
       isExpanded: false,
       expandStyle: {},
-      transitionStyle: {
-        transition: 'transform 300ms ease',
-        '-webkit-transition': 'transform 300ms ease',
-      },
+      transitionStyle: computed(() => ({
+        transition: `transform ${menuProps.duration}ms ease`,
+        '-webkit-transition': `transform ${menuProps.duration}ms ease`,
+      })),
       selectMode: computed(() => props.selectMode),
       optionsLayout: computed(() => props.optionsLayout),
       options: computed(() => props.options),
@@ -114,49 +107,50 @@ export default defineComponent({
         [`${prefix}-is-col3`]: props.optionsLayout === 'col3',
       },
     ]);
-    const transAnimation: ITransAnimation = {
-      thenDo: null,
-      timeout: 0,
-      interval: 300,
-      setTo(nowDo, thenDo) {
-        if (this.timeout) {
-          window.clearTimeout(this.timeout);
-          this.thenDo && this.thenDo();
-        }
-        nextTick(() => window.setTimeout(nowDo, 0));
-        this.timeout = window.setTimeout(() => {
-          this.timeout = 0;
-          thenDo();
-        }, this.interval);
-        this.thenDo = thenDo;
-      },
-    };
+    // 设置展开/收起状态
     const setExpand = (val: boolean) => {
       // 菜单定位
       const { bottom } = menuState.barRect;
-      state.expandStyle = { top: `${bottom}px` };
-      console.log(`dropdown-item(${props.itemId}) changing state: `, val);
-      // 动画状态准备
-      if (val) {
-        state.isShowItems = val;
-      }
-      state.isExpanded = !val;
-      transAnimation.setTo(() => {
+      state.expandStyle = {
+        zIndex: menuProps.zIndex,
+        top: `${bottom}px`,
+      };
+      // console.log(`dropdown-item(${props.itemId}) changing state: `, val);
+      const duration = menuProps.duration;
+      // 动画状态控制
+      menuAniControl.setTo(duration, () => {
+        // Now do:
+        if (val) {
+          state.isShowItems = val;
+        }
+        state.isExpanded = !val;
+      }, () => { // Next tick do:
         state.isExpanded = val;
-      }, () => {
+      }, () => { // Finally do:
         if (!val) {
           state.isShowItems = val;
         }
       });
     };
+
+    // 根据父组件状态，判断当前是否展开
+    watch(
+      () => (menuState.activeId === props.itemId),
+      (val: boolean) => setExpand(val),
+    );
     const confirmSelect = () => {
       collapseMenu();
+    };
+    const onClickOverlay = () => {
+      if (menuProps.closeOnClickOverlay) {
+        collapseMenu();
+      }
     };
     const radioSelect = ref(null);
     const checkSelect = ref([]);
     return {
       name: ref(name),
-      styleItem,
+      classes,
       styleContent,
       styleDropRadio,
       radioSelect,
@@ -167,6 +161,7 @@ export default defineComponent({
       expandMenu,
       collapseMenu,
       confirmSelect,
+      onClickOverlay,
     };
   },
 });
