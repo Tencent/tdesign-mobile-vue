@@ -3,9 +3,9 @@
     <div ref="refBar" :class="styleBar">
       <div
         :class="styleBarItem(item)"
-        v-for="(item, idx) in itemProps"
+        v-for="item in itemProps"
         :key="item.itemId"
-        @click="expandMenu({idx})"
+        @click="expandMenu(item)"
       >
         <div :class="`${name}__title`">{{item.title}}</div>
       </div>
@@ -21,6 +21,8 @@ import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
+
+let expandedControl: any;
 
 export const ItemInstanceManager = {
   usedIds: {},
@@ -86,22 +88,35 @@ export default defineComponent({
       },
     ]);
     // 展开对应项目的菜单
-    const expandMenu = ({ idx }: { idx: number }) => {
-      const props = itemProps[idx];
-      const thisId = props.itemId;
+    const expandMenu = (itemProps: any) => {
+      const { itemId } = itemProps;
 
-      if (state.activeId === thisId) {
+      if (state.activeId === itemId) {
         // 再次点击时收起
         state.activeId = null;
         return;
       }
 
-      state.activeId = thisId;
+      if (expandedControl && expandedControl !== control) {
+        expandedControl.collapseMenu();
+      }
+      expandedControl = control;
+
+      state.activeId = itemId;
 
       const bar = refBar.value as any;
       const barRect = bar.getBoundingClientRect();
       state.barRect = barRect;
     };
+    const collapseMenu = () => {
+      state.activeId = null;
+      if (expandedControl === control) {
+        expandedControl = null;
+      }
+    };
+    const control = { expandMenu, collapseMenu };
+    // 提供子组件访问
+    provide('dropdownMenuControl', control);
     return {
       name: ref(name),
       classes,

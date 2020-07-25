@@ -64,22 +64,24 @@ interface ITransAnimation {
   setTo(nowDo: Function, thenDo: Function): void;
 };
 
-let expandedMenu: any;
-
 export default defineComponent({
   name,
   props: DropdownItemProps,
   setup(props: IDropdownItemProps) {
     const menuState = inject('dropdownMenuState') as any;
+    const { expandMenu, collapseMenu } = inject('dropdownMenuControl') as any;
     const styleItem = computed(() => [
       `${name}`,
       {
         [`${prefix}-is-expanded`]: state.isExpanded,
       },
     ]);
-    watch(() => (menuState.activeId === props.itemId), (val: boolean) => {
-      setExpand(val);
-    });
+    watch(
+      () => (menuState.activeId === props.itemId),
+      (val: boolean) => {
+        setExpand(val);
+      },
+    );
     const state = reactive({
       showOverlay: computed(() => menuState.showOverlay),
       isShowItems: false,
@@ -136,11 +138,6 @@ export default defineComponent({
       console.log(`dropdown-item(${props.itemId}) changing state: `, val);
       // 动画状态准备
       if (val) {
-        if (expandedMenu && expandedMenu !== menuState) {
-          // 关闭其他菜单
-          expandedMenu.activeId = null;
-        }
-        expandedMenu = menuState;
         state.isShowItems = val;
       }
       state.isExpanded = !val;
@@ -148,18 +145,9 @@ export default defineComponent({
         state.isExpanded = val;
       }, () => {
         if (!val) {
-          if (expandedMenu === menuState) {
-            expandedMenu = null;
-          }
           state.isShowItems = val;
         }
       });
-    };
-    const expandMenu = () => {
-      menuState.activeId = props.itemId;
-    };
-    const collapseMenu = () => {
-      menuState.activeId = null;
     };
     const confirmSelect = () => {
       collapseMenu();
