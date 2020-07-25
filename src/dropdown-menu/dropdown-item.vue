@@ -60,15 +60,15 @@
         </slot>
       </div>
       <div :class="`${name}__ft`" v-if="selectMode === 'multi' || selectMode === 'tree'">
-        <t-button theme="default">重置</t-button>
-        <t-button theme="primary" @click="confirmSelect">确定</t-button>
+        <t-button theme="default" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
+        <t-button theme="primary" :disabled="isBtnDisabled" @click="confirmSelect">确定</t-button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, reactive, inject, watch, defineComponent } from 'vue';
+import { computed, toRefs, ref, reactive, inject, watch, defineComponent, SetupContext } from 'vue';
 
 import { IDropdownMenuProps, DropdownItemProps, IDropdownItemProps } from './dropdown.interface';
 import config from '../config';
@@ -80,7 +80,7 @@ const name = `${prefix}-dropdown-item`;
 export default defineComponent({
   name,
   props: DropdownItemProps,
-  setup(props: IDropdownItemProps) {
+  setup(props: IDropdownItemProps, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as IDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as any;
@@ -143,6 +143,7 @@ export default defineComponent({
       // 动画状态控制
       menuAniControl.setTo(duration, () => {
         // Now do:
+        context.emit(val ? 'open' : 'close');
         if (val) {
           state.isShowItems = val;
         }
@@ -153,6 +154,7 @@ export default defineComponent({
         if (!val) {
           state.isShowItems = val;
         }
+        context.emit(val ? 'opened' : 'closed');
       });
     };
 
@@ -161,14 +163,7 @@ export default defineComponent({
       () => (menuState.activeId === props.itemId),
       (val: boolean) => setExpand(val),
     );
-    const confirmSelect = () => {
-      collapseMenu();
-    };
-    const onClickOverlay = () => {
-      if (menuProps.closeOnClickOverlay) {
-        collapseMenu();
-      }
-    };
+
     const radioSelect = ref(null);
     const checkSelect = ref([]);
     // const defaultTreeNode = computed(() => {
@@ -186,7 +181,7 @@ export default defineComponent({
       select: [],
     });
     const selectTreeParent = (level: number, value: any) => {
-      console.log('level:', level, 'value:', value);
+      // console.log('level:', level, 'value:', value);
       const tempValue: any = treeState.parentPath.slice(0, level);
       tempValue[level] = value;
       treeState.parentPath = tempValue;
@@ -222,11 +217,114 @@ export default defineComponent({
       treeOptions.push(list);
       return treeOptions;
     });
+    // 根据传入值更新当前选中
+    const updateSelectValue = (val: any) => {
+      const valueList = val || [];
+      switch (props.selectMode) {
+        case 'single':
+          {
+            const firstChild = props.options[0] || {};
+            radioSelect.value = val === undefined ? firstChild.value : val;
+          }
+          break;
+        case 'multi':
+          {
+            checkSelect.value = valueList;
+          }
+          break;
+        case 'tree':
+          {
+            treeState.select = valueList;
+            const child = valueList[0];
+            if (child) {
+              const value = child.value;
+              const findNode = (list: any[], condition: Function, passPath: any): boolean => {
+                let isFound = false;
+                list.forEach((item: any) => {
+                  if (isFound) return;
+                  if (condition(item)) {
+                    isFound = true;
+                  } else if (item.options) {
+                    passPath.push(item.value);
+                    isFound = findNode(item.props, condition, passPath);
+                    if (isFound) return;
+                    passPath.pop();
+                  }
+                });
+                return isFound;
+              };
+              const parentPath: any = [];
+              findNode(props.options, (item: any) => item.value === value, parentPath);
+              treeState.parentPath = parentPath;
+            }
+          }
+          break;
+      }
+    };
+    // 初始值更新一次选中项
+    updateSelectValue(props.modelValue);
+    // 跟踪 modelValue 更新选项
+    watch(() => props.modelValue, (val: any) => updateSelectValue(val));
+
+    // 底部按键是否可用
+    const isBtnDisabled = computed(() => {
+      switch (props.selectMode) {
+        case 'multi':
+          return checkSelect.value.length <= 0;
+        case 'tree':
+          return treeState.select.length <= 0;
+      }
+      return true;
+    });
+    // 重置
+    const resetSelect = () => {
+      switch (props.selectMode) {
+        case 'multi':
+          checkSelect.value = [];
+          break;
+        case 'tree':
+          treeState.select = [];
+          treeState.parentPath = [];
+          break;
+      }
+    };
+    // 确认
+    const confirmSelect = () => {
+      let values;
+      switch (props.selectMode) {
+        case 'multi':
+          values = checkSelect.value;
+          break;
+        case 'tree':
+          values = treeState.select;
+          break;
+      }
+      context.emit('update:modelValue', values);
+      context.emit('change', values);
+      collapseMenu();
+    };
+    // 单选值监控
+    watch(radioSelect, (val: any) => {
+      if (props.selectMode !== 'single') return;
+      if (!state.isShowItems) return;
+      const value = props.modelValue || [];
+      if (value[0] === val) return;
+      context.emit('update:modelValue', val);
+      context.emit('change', val);
+      collapseMenu();
+    });
+    // 点击遮罩层
+    const onClickOverlay = () => {
+      if (menuProps.closeOnClickOverlay) {
+        collapseMenu();
+      }
+    };
     return {
       name: ref(name),
       classes,
       styleContent,
       styleDropRadio,
+      isBtnDisabled,
       isCheckedRadio,
       radioSelect,
       checkSelect,
@@ -238,6 +336,7 @@ export default defineComponent({
       ...toRefs(state),
       expandMenu,
       collapseMenu,
+      resetSelect,
       confirmSelect,
       onClickOverlay,
     };

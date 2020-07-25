@@ -3,8 +3,8 @@
     <t-cell-group title="单选/多选下拉菜单">
       <t-cell value-align="left">
         <t-dropdown-menu>
-          <t-dropdown-item title="单选菜单" :options="options1N" />
-          <t-dropdown-item title="多选菜单" :options="options1C" selectMode="multi" />
+          <t-dropdown-item title="单选菜单" :options="options1N" v-model="value1S" />
+          <t-dropdown-item title="多选菜单" :options="options1C" selectMode="multi" v-model="value1M" />
         </t-dropdown-menu>
       </t-cell>
     </t-cell-group>
@@ -16,12 +16,20 @@
             :options="options2N"
             selectMode="multi"
             optionsLayout="col2"
+            @open="log('[menu open] menu item 2N')"
+            @opened="log('[menu opened] menu item 2N')"
+            @close="log('[menu close] menu item 2N')"
+            @closed="log('[menu closed] menu item 2N')"
           />
           <t-dropdown-item
             title="三栏菜单"
             :options="options2C"
             selectMode="multi"
             optionsLayout="col3"
+            @open="log('[menu open] menu item 2C')"
+            @opened="log('[menu opened] menu item 2C')"
+            @close="log('[menu close] menu item 2C')"
+            @closed="log('[menu closed] menu item 2C')"
           />
         </t-dropdown-menu>
       </t-cell>
@@ -46,11 +54,19 @@
         </t-dropdown-menu>
       </t-cell>
     </t-cell-group>
+    <t-cell-group title="禁用选项">
+      <t-cell value-align="left">
+        <t-dropdown-menu>
+          <t-dropdown-item title="单选菜单" disabled />
+          <t-dropdown-item title="多选菜单" disabled selectMode="multi" />
+        </t-dropdown-menu>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { ref, defineComponent, watch } from 'vue';
 
 import config from '../../config';
 const { prefix } = config;
@@ -100,12 +116,25 @@ export default defineComponent({
     const options2N = ref(numberArr);
     const options2C = ref(charArr);
     const options3T = ref(tree);
+    const value1S = ref('option_2');
+    const value1M = ref(['options_A', 'options_C']);
+    watch(() => value1S.value, (val: any) => {
+      console.log('单选菜单 选中项:', val);
+    });
+    watch(() => value1M.value, (val: any) => {
+      console.log('多选菜单 选中项:', val);
+    });
     return {
+      log: (...args: []) => {
+        console.log(...args);
+      },
       options1N,
       options1C,
       options2N,
       options2C,
       options3T,
+      value1S,
+      value1M,
     };
   },
 });

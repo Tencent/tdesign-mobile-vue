@@ -2,9 +2,9 @@
   <div :class="classes">
     <div ref="refBar" :class="styleBar">
       <div
-        :class="styleBarItem(item)"
         v-for="item in itemProps"
         :key="item.itemId"
+        :class="styleBarItem(item)"
         @click="expandMenu(item)"
       >
         <div :class="`${name}__title`">{{item.title}}</div>
@@ -54,7 +54,10 @@ export default defineComponent({
           newChild.props = mergeProps(child.props, { itemId });
           return newChild;
         });
-      const itemProps = children.map((item: any) => ({ ...item.props }));
+      const itemProps = children.map((item: any) => ({
+        ...item.props,
+        disabled: item.props.disabled !== undefined && item.props.disabled !== false,
+      }));
       return {
         innerItems: () => children,
         itemProps,
@@ -93,7 +96,9 @@ export default defineComponent({
     ]);
     // 展开对应项目的菜单
     const expandMenu = (itemProps: any) => {
-      const { itemId } = itemProps;
+      const { itemId, disabled } = itemProps;
+
+      if (disabled) return;
 
       if (state.activeId === itemId) {
         // 再次点击时收起
