@@ -7,6 +7,8 @@
         <t-dialog
           :content="content"
           :title="title"
+          :zIndex="zIndex"
+          :width="width"
           v-model="isShowDialog"
           @clickoverlay='clickoverlay'
           @confirm="onConfirm">
@@ -123,6 +125,8 @@ export default {
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
       confirmButtonText: '继续',
+      zIndex: 3000,
+      width: 250,
       showTitle: false,
       showFooter: false,
       isInput: true,
@@ -222,6 +226,7 @@ export default {
       switch (idx) {
         case 1: {
           this.$dialog({
+            showOverlay: false,
             content: '我的家里有个人很酷',
             knowContent: 'i know',
           });
@@ -229,8 +234,9 @@ export default {
         }
         case 2: {
           this.$dialog({
+            width: '350px',
             showFooter: false,
-            content: '我的家里有个人很酷',
+            content: '我的家里有个人很酷!',
             knowContent: 'i know',
           });
           break;

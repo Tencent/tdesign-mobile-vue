@@ -1,9 +1,13 @@
 <template>
-  <transition name="dialog" @after-leave="afterLeave" @after-enter="afterEnter">
+  <transition
+    name="dialog"
+    @after-leave="afterLeave"
+    @after-enter="afterEnter"
+    @click="handleClosed">
     <div v-if="currentVisible" ref="root">
-      <t-mask @click="handleClosed" />
+      <t-mask @click="handleClosed" v-show="showOverlay" />
       <!-- 对话框 -->
-      <div :class="dClassName" id="root">
+      <div :class="dClassName" id="root" :style="rootStyles">
         <div :class="dHeaderClassName" v-if="showTitle">
           <slot name="title">
             <div :class="dTitleClassName">{{title}}</div>
@@ -22,23 +26,23 @@
             v-if="isInput">
         </div>
         <div :class="dFooterClassName" v-if="type=='confirm'">
-          <a href="javascript:" :class="dDefaultBtnClassName" @click="handleCancel">
+          <div :class="dDefaultBtnClassName" @click="handleCancel">
             <slot name="footer-cancel">
               {{cancelContent}}
             </slot>
-          </a>
-          <a href="javascript:" :class="dConformBtnClassName" @click="handleConfirm">
+          </div>
+          <div :class="dConformBtnClassName" @click="handleConfirm">
             <slot name="footer-confirm">
               {{confirmContent}}
             </slot>
-          </a>
+          </div>
         </div>
         <div :class="dFooterClassName" v-if="showFooter&&type!='confirm'">
-          <a href="javascript:" :class="dDefaultBtnClassName" @click="handleConfirm">
+          <div :class="dDefaultBtnClassName" @click="handleConfirm">
             <slot name="footer">
               {{knowContent}}
             </slot>
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -46,7 +50,7 @@
 </template>
 <script lang="ts">
 import TMask from '../mask';
-import { SetupContext, computed, ref } from 'vue';
+import { SetupContext, computed, ref, toRefs } from 'vue';
 import config from '../config';
 import { DialogProps, IDialogProps } from './dialog.interface';
 
@@ -70,17 +74,11 @@ export default {
     const dFooterClassName = computed(() => `${name}__footer`);
     const dDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`]);
     const dConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`]);
-    const showTitle = computed(() => props.showTitle);
-    const title = computed(() => props.title);
-    const content = computed(() => props.content);
-    const type = computed(() => props.type);
-    const showFooter = computed(() => props.showFooter);
-    const confirmContent = computed(() => props.confirmContent);
-    const cancelContent = computed(() => props.cancelContent);
-    const knowContent = computed(() => props.knowContent);
-
-    const isInput = computed(() => props.isInput);
     const currentVisible = computed(() => props.modelValue || props.visible);
+    const rootStyles = computed(() => ({
+      zIndex: props.zIndex,
+      width: typeof props.width === 'string' ? props.width : `${props.width}px`,
+    }));
 
     const handleConfirm = () => {
       context.emit('update:modelValue', false);
@@ -114,18 +112,11 @@ export default {
       dFooterClassName,
       dDefaultBtnClassName,
       dConformBtnClassName,
-      showTitle,
-      title,
-      content,
-      type,
-      showFooter,
-      confirmContent,
-      cancelContent,
       handleConfirm,
       handleCancel,
       handleClosed,
-      isInput,
-      knowContent,
+      rootStyles,
+      ...toRefs(props),
       afterEnter: () => context.emit('opened'),
       afterLeave: () => context.emit('closed'),
     };

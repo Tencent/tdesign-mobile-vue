@@ -11,6 +11,9 @@ export interface IDialogProps {
   isInput?: boolean,
   visible?: boolean,
   knowContent?: string,
+  zIndex?: number,
+  showOverlay?: boolean,
+  width: '320px',
 };
 
 export const DialogPropsDefault = {
@@ -25,10 +28,21 @@ export const DialogPropsDefault = {
   isInput: false,
   visible: true,
   knowContent: '我知道了',
+  zIndex: 2500,
+  showOverlay: true,
+  width: '320px',
 };
 
 export const DialogProps = {
   modelValue: Boolean,
+  /**
+   * @description 是否显示遮罩层
+   * @property showOverlay
+   */
+  showOverlay: {
+    type: Boolean,
+    default: true,
+  },
   /**
    * @description 是否显示标题
    * @property showTitle
@@ -116,5 +130,21 @@ export const DialogProps = {
   visible: {
     type: Boolean,
     default: false,
+  },
+  /**
+   * @description 定位层级
+   * @property zIndex
+   */
+  zIndex: {
+    type: Number,
+    default: 2500,
+  },
+  /**
+   * @description 宽度
+   * @property width
+   */
+  width: {
+    type: [Number, String],
+    default: '320px',
   },
 };
