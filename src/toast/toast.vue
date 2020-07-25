@@ -2,7 +2,7 @@
   <div>
     <t-mask v-show="showOverlay"/>
     <div :class="classes">
-      <t-icon :icon="_icon" :class="`${name}__icon`" v-if="_icon" />
+      <t-icon :name="_icon" :class="`${name}__icon`" v-if="_icon" />
       <div :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>

@@ -4,7 +4,7 @@
       <div :class="`${name}__hd`" v-if="showLeftArea">
         <slot name="leftSlot">
           <t-icon
-            :icon="`${leftIconCustom}`"
+            :name="`${leftIconCustom}`"
             :style="iconColorCustom"
           />
         </slot>
@@ -35,7 +35,7 @@
       <div :class="`${name}__ft`" v-if="showRightArea" @click="handleClickIcon">
         <slot name="rightSlot">
           <t-icon
-            :icon="`${rightIconCustom}`"
+            :name="`${rightIconCustom}`"
             :style="iconColorCustom"
           />
         </slot>

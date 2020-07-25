@@ -2,7 +2,7 @@
   <transition name="message" @after-leave="afterLeave" @after-enter="afterEnter">
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
-        <t-icon icon="circle_info" />
+        <t-icon name="circle_info" />
         <span :class="`${name}--txt`">{{content}}</span>
       </slot>
     </div>
