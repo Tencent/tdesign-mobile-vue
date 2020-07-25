@@ -34,14 +34,34 @@
         </t-dropdown-menu>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="树形选单/自定义内容">
+    <t-cell-group title="树形单选/多选菜单">
       <t-cell value-align="left">
         <t-dropdown-menu>
-          <t-dropdown-item title="树形选单" :options="options3T" selectMode="tree" />
+          <t-dropdown-item
+            title="树形单选"
+            :options="options3T"
+            optionsLayout="tree"
+            @change="log('[value change] tree - single select:', $event)"
+          />
+          <t-dropdown-item
+            title="树形多选"
+            :options="options3T"
+            optionsLayout="tree"
+            selectMode="multi"
+            @change="log('[value change] tree - multi select:', $event)"
+          />
+        </t-dropdown-menu>
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group title="禁用选项/自定义内容">
+      <t-cell value-align="left">
+        <t-dropdown-menu>
+          <t-dropdown-item title="单选菜单" disabled />
+          <t-dropdown-item title="多选菜单" disabled selectMode="multi" />
           <t-dropdown-item title="自定义内容">
             <t-cell-group>
               <t-cell label="开关 1">
-                <t-switch v-model="value" text="描述信息"></t-switch>
+                <t-switch text="描述信息"></t-switch>
               </t-cell>
               <t-cell label="开关 2">
                 <t-switch text="描述信息"></t-switch>
@@ -51,14 +71,6 @@
               </t-cell>
             </t-cell-group>
           </t-dropdown-item>
-        </t-dropdown-menu>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="禁用选项">
-      <t-cell value-align="left">
-        <t-dropdown-menu>
-          <t-dropdown-item title="单选菜单" disabled />
-          <t-dropdown-item title="多选菜单" disabled selectMode="multi" />
         </t-dropdown-menu>
       </t-cell>
     </t-cell-group>
@@ -104,7 +116,7 @@ export default defineComponent({
         };
         newChild.options = charArr.map((child: any, k: number) => ({
           ...child,
-          title: `选项 ${i + 1}-${j + 1}-${k + 1}`,
+          title: `叶子 ${i + 1}${j + 1}${k + 1}`,
         }));
         return newChild;
       });
@@ -125,6 +137,7 @@ export default defineComponent({
       console.log('多选菜单 选中项:', val);
     });
     return {
+      name: 'dropdown-menu',
       log: (...args: []) => {
         console.log(...args);
       },

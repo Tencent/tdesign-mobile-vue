@@ -4,7 +4,7 @@
     <div :class="styleContent" :style="{...transitionStyle}">
       <div :class="`${name}__bd`">
         <slot>
-          <t-cell-group v-if="selectMode === 'single'">
+          <t-cell-group v-if="optionsLayout === 'columns' &&selectMode === 'single'">
             <t-radio-group v-model="radioSelect">
               <template v-for="option in options">
                 <t-cell :key="option.value" value-align="left">
@@ -21,7 +21,7 @@
               </template>
             </t-radio-group>
           </t-cell-group>
-          <t-cell-group v-else-if="selectMode === 'multi'">
+          <t-cell-group v-else-if="optionsLayout === 'columns' && selectMode === 'multi'">
             <t-check-group v-model="checkSelect">
               <template v-for="option in options">
                 <t-cell :key="option.value" value-align="left">
@@ -30,7 +30,7 @@
               </template>
             </t-check-group>
           </t-cell-group>
-          <template v-else-if="selectMode === 'tree'">
+          <template v-else-if="optionsLayout === 'tree'">
             <t-cell-group v-for="(options, level) in treeOptions" :key="level">
               <t-radio-group
                 v-if="level < treeState.leafLevel"
@@ -48,13 +48,30 @@
                   </t-cell>
                 </template>
               </t-radio-group>
-              <t-check-group v-else v-model="treeState.select">
-                <template v-for="option in options">
-                  <t-cell :key="option.value" value-align="left">
-                    <t-check-box :name="option.value" :title="option.title"></t-check-box>
-                  </t-cell>
-                </template>
-              </t-check-group>
+              <template v-else>
+                <t-radio-group v-if="selectMode === 'single'" v-model="radioSelect">
+                  <template v-for="option in options">
+                    <t-cell :key="option.value" value-align="left">
+                      <t-radio
+                        :name="option.value"
+                        :title="option.title"
+                        :class="styleDropRadio(option.value)"
+                      >
+                        <template v-slot:checkedIcon>
+                          <t-icon icon="tick" v-if="isCheckedRadio(option.value)" />
+                        </template>
+                      </t-radio>
+                    </t-cell>
+                  </template>
+                </t-radio-group>
+                <t-check-group v-else-if="selectMode=== 'multi'" v-model="treeState.select">
+                  <template v-for="option in options">
+                    <t-cell :key="option.value" value-align="left">
+                      <t-check-box :name="option.value" :title="option.title"></t-check-box>
+                    </t-cell>
+                  </template>
+                </t-check-group>
+              </template>
             </t-cell-group>
           </template>
         </slot>
@@ -116,14 +133,16 @@ export default defineComponent({
     ];
     const styleContent = computed(() => {
       const selectMode = props.selectMode;
+      const optionsLayout = props.optionsLayout;
       const layoutCol = props.optionsLayout;
-      const treeCol = selectMode === 'tree' ? treeState.leafLevel + 1 : 0;
+      const isTree = optionsLayout === 'tree';
+      const treeCol = isTree ? treeState.leafLevel + 1 : 0;
       return [
         `${name}__content`,
         {
-          [`${prefix}-is-single`]: selectMode === 'single',
-          [`${prefix}-is-multi`]: selectMode === 'multi',
-          [`${prefix}-is-tree`]: selectMode === 'tree',
+          [`${prefix}-is-tree`]: isTree,
+          [`${prefix}-is-single`]: !isTree && selectMode === 'single',
+          [`${prefix}-is-multi`]: !isTree && selectMode === 'multi',
           [`${prefix}-is-col1`]: layoutCol === 'col1' || treeCol === 1,
           [`${prefix}-is-col2`]: layoutCol === 'col2' || treeCol === 2,
           [`${prefix}-is-col3`]: layoutCol === 'col3' || treeCol === 3,
@@ -220,45 +239,38 @@ export default defineComponent({
     // 根据传入值更新当前选中
     const updateSelectValue = (val: any) => {
       const valueList = val || [];
-      switch (props.selectMode) {
-        case 'single':
-          {
-            const firstChild = props.options[0] || {};
-            radioSelect.value = val === undefined ? firstChild.value : val;
-          }
-          break;
-        case 'multi':
-          {
-            checkSelect.value = valueList;
-          }
-          break;
-        case 'tree':
-          {
-            treeState.select = valueList;
-            const child = valueList[0];
-            if (child) {
-              const value = child.value;
-              const findNode = (list: any[], condition: Function, passPath: any): boolean => {
-                let isFound = false;
-                list.forEach((item: any) => {
+      const mode = props.selectMode;
+      if (mode === 'single') {
+        const firstChild = props.options[0] || {};
+        radioSelect.value = val === undefined ? firstChild.value : val;
+      } else if (mode === 'multi') {
+        if (props.optionsLayout === 'columns') {
+          checkSelect.value = valueList;
+        } else {
+          treeState.select = valueList;
+          const child = valueList[0];
+          if (child) {
+            const value = child.value;
+            const findNode = (list: any, condition: Function, passPath: any): boolean => {
+              let isFound = false;
+              list.forEach((item: any) => {
+                if (isFound) return;
+                if (condition(item)) {
+                  isFound = true;
+                } else if (item.options) {
+                  passPath.push(item.value);
+                  isFound = findNode(item.props, condition, passPath);
                   if (isFound) return;
-                  if (condition(item)) {
-                    isFound = true;
-                  } else if (item.options) {
-                    passPath.push(item.value);
-                    isFound = findNode(item.props, condition, passPath);
-                    if (isFound) return;
-                    passPath.pop();
-                  }
-                });
-                return isFound;
-              };
-              const parentPath: any = [];
-              findNode(props.options, (item: any) => item.value === value, parentPath);
-              treeState.parentPath = parentPath;
-            }
+                  passPath.pop();
+                }
+              });
+              return isFound;
+            };
+            const parentPath: any = [];
+            findNode(props.options, (item: any) => item.value === value, parentPath);
+            treeState.parentPath = parentPath;
           }
-          break;
+        }
       }
     };
     // 初始值更新一次选中项
@@ -268,8 +280,8 @@ export default defineComponent({
 
     // 底部按键是否可用
     const isBtnDisabled = computed(() => {
-      switch (props.selectMode) {
-        case 'multi':
+      switch (props.optionsLayout) {
+        case 'columns':
           return checkSelect.value.length <= 0;
         case 'tree':
           return treeState.select.length <= 0;
@@ -278,8 +290,8 @@ export default defineComponent({
     });
     // 重置
     const resetSelect = () => {
-      switch (props.selectMode) {
-        case 'multi':
+      switch (props.optionsLayout) {
+        case 'columns':
           checkSelect.value = [];
           break;
         case 'tree':
@@ -291,8 +303,8 @@ export default defineComponent({
     // 确认
     const confirmSelect = () => {
       let values;
-      switch (props.selectMode) {
-        case 'multi':
+      switch (props.optionsLayout) {
+        case 'columns':
           values = checkSelect.value;
           break;
         case 'tree':
