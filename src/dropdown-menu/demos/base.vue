@@ -8,7 +8,7 @@
         </t-dropdown-menu>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="多选菜单分栏">
+    <t-cell-group title="分栏多选菜单/自定义内容">
       <t-cell value-align="left">
         <t-dropdown-menu>
           <t-dropdown-item
@@ -33,6 +33,19 @@
             @close="log('[menu close] menu item 2C')"
             @closed="log('[menu closed] menu item 2C')"
           />
+          <t-dropdown-item title="自定义内容">
+            <t-cell-group>
+              <t-cell label="开关 1">
+                <t-switch text="描述信息"></t-switch>
+              </t-cell>
+              <t-cell label="开关 2">
+                <t-switch text="描述信息"></t-switch>
+              </t-cell>
+              <t-cell label="开关 3">
+                <t-switch disabled text="描述信息"></t-switch>
+              </t-cell>
+            </t-cell-group>
+          </t-dropdown-item>
         </t-dropdown-menu>
       </t-cell>
     </t-cell-group>
@@ -50,29 +63,28 @@
             :options="options3T2"
             optionsLayout="tree"
             selectMode="multi"
+            v-model="treeValue"
             @change="log('[value change] tree - multi select:', $event)"
           />
         </t-dropdown-menu>
       </t-cell>
+      <t-cell value-align="left">
+        <div>
+          <p>
+            <strong>注意：所有树形结构分支深度比如一致。</strong>
+          </p>
+          <p>
+            否则，多选模式中某一分支内可能同时包含叶子节点和子菜单节点。
+            <br />菜单内需要混合 radio 和 check-box 组件，无法通过 radio-group 和 check-group 实现。
+          </p>
+        </div>
+      </t-cell>
     </t-cell-group>
-    <t-cell-group title="禁用选项/自定义内容">
+    <t-cell-group title="禁用选项">
       <t-cell value-align="left">
         <t-dropdown-menu>
           <t-dropdown-item title="单选菜单" disabled />
           <t-dropdown-item title="多选菜单" disabled selectMode="multi" />
-          <t-dropdown-item title="自定义内容">
-            <t-cell-group>
-              <t-cell label="开关 1">
-                <t-switch text="描述信息"></t-switch>
-              </t-cell>
-              <t-cell label="开关 2">
-                <t-switch text="描述信息"></t-switch>
-              </t-cell>
-              <t-cell label="开关 3">
-                <t-switch disabled text="描述信息"></t-switch>
-              </t-cell>
-            </t-cell-group>
-          </t-dropdown-item>
         </t-dropdown-menu>
       </t-cell>
     </t-cell-group>
@@ -210,10 +222,32 @@ export default defineComponent({
         {
           title: '唐山市',
           value: 'tangshan',
-        },
-        {
-          title: '秦皇岛市',
-          value: 'qinhuangdao',
+          options: [
+            {
+              title: '曹妃甸区',
+              value: 'caofeidian',
+            },
+            {
+              title: '丰南区',
+              value: 'fengnan',
+            },
+            {
+              title: '丰润区',
+              value: 'fengrun',
+            },
+            {
+              title: '古冶区',
+              value: 'guye',
+            },
+            {
+              title: '开平区',
+              value: 'kaiping',
+            },
+            {
+              title: '乐亭区',
+              value: 'laoting',
+            },
+          ],
         },
       ],
     }];
@@ -225,6 +259,7 @@ export default defineComponent({
     const options3T2 = ref(JSON.parse(JSON.stringify(tree)));
     const value1S = ref('option_2');
     const value1M = ref(['options_A', 'options_C']);
+    const treeValue = ref(['tianjin', 'tianjin', ['hedong', 'hexi']]);
     watch(() => value1S.value, (val: any) => {
       console.log('单选菜单 选中项:', val);
     });
@@ -244,6 +279,7 @@ export default defineComponent({
       options3T2,
       value1S,
       value1M,
+      treeValue,
     };
   },
 });

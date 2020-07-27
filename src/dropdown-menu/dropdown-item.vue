@@ -44,8 +44,8 @@
               <!-- 树形列表 - 父级节点 -->
               <t-radio-group
                 v-if="level < treeState.leafLevel"
-                :modelValue="treeState.parentPath[level]"
-                @update:modelValue="selectTreeParent(level, $event)"
+                :modelValue="treeState.selectList[level]"
+                @update:modelValue="selectTreeNode(level, $event)"
               >
                 <t-cell
                   v-for="option in treeOptions[level]"
@@ -67,17 +67,18 @@
                   <t-radio-group
                     v-for="option in treeOptions[level]"
                     :key="option.value"
-                    v-model="radioSelect"
+                    :modelValue="treeState.selectList[level]"
+                    @update:modelValue="selectTreeNode(level, $event)"
                   >
                     <t-cell value-align="left">
                       <t-radio
                         :name="option.value"
                         :title="option.title"
                         :disabled="option.disabled"
-                        :class="styleDropRadio(option.value)"
+                        :class="styleTreeRadio(option.value, level)"
                       >
                         <template v-slot:checkedIcon>
-                          <t-icon icon="tick" v-if="isCheckedRadio(option.value)" />
+                          <t-icon icon="tick" v-if="option.value === treeState.selectList[level]" />
                         </template>
                       </t-radio>
                     </t-cell>
@@ -88,7 +89,8 @@
                   <t-check-group
                     v-for="option in treeOptions[level]"
                     :key="option.value"
-                    v-model="treeState.select"
+                    :modelValue="treeState.selectList[level]"
+                    @update:modelValue="selectTreeNode(level, $event)"
                   >
                     <t-cell value-align="left">
                       <t-check-box
@@ -224,42 +226,58 @@ export default defineComponent({
     // });
     const treeState = reactive({
       leafLevel: 0,
-      parentPath: [],
+      selectList: [],
       select: [],
     });
     const styleTreeRadio = computed(() => (value: string, level: number) => [
       `${name}__radio`,
       {
-        [`${prefix}-is-checked`]: value === treeState.parentPath[level],
+        [`${prefix}-is-tick`]: level === treeState.leafLevel,
+        [`${prefix}-is-checked`]: value === treeState.selectList[level],
       },
     ]);
-    // 点击父级节点的时候
-    const selectTreeParent = (level: number, value: any) => {
+    // 点击树形节点的时候
+    const selectTreeNode = (level: number, value: any) => {
       // console.log('level:', level, 'value:', value);
-      const tempValue: any = treeState.parentPath.slice(0, level);
+      // 当前节点
+      const tempValue: any = treeState.selectList.slice(0, level);
       tempValue[level] = value;
-      treeState.parentPath = tempValue;
-      treeState.select = [];
+      treeState.selectList = tempValue;
     };
     // 处理后的树形选项列表
     const treeOptions = ref([]);
     const buildTreeOptions = () => {
-      const { options } = props;
-      const { parentPath } = treeState;
+      const { options, selectMode } = props;
+      const { selectList } = treeState;
       const newTreeOptions = [];
       let level = -1;
       let node = { options };
       while (node.options) {
+        // 当前层级节点的列表
         const list = node.options;
         newTreeOptions.push([...list]);
         level += 1;
-        const thisValue: string | number | null = parentPath[level];
-        const child: any = thisValue && list.find((child: any) => child.value === thisValue);
-        if (thisValue === undefined || !child) {
+        // 当前层级列表选中项
+        const thisValue: [] | string | number | null = selectList[level];
+        if (thisValue === undefined) {
           const firstChild = list[0];
-          selectTreeParent(level, firstChild.value);
-          node = firstChild;
+          if (selectMode === 'single') {
+            selectTreeNode(level, firstChild.value);
+            node = firstChild;
+          } else if (selectMode === 'multi') {
+            if (firstChild.options) {
+              // 还有子节点，当前层级作为单选处理
+              selectTreeNode(level, firstChild.value);
+              node = firstChild;
+            } else {
+              // 没有子节点，选中首项后结束处理
+              selectTreeNode(level, []);
+              break;
+            }
+          }
         } else {
+          const child: any = !Array.isArray(thisValue) &&
+            list.find((child: any) => child.value === thisValue);
           node = child;
         }
       }
@@ -269,8 +287,7 @@ export default defineComponent({
     if (props.optionsLayout === 'tree') {
       watch(() => ({
         options: props.options,
-        parentPath: treeState.parentPath,
-        select: treeState.select,
+        selectList: treeState.selectList,
       }), buildTreeOptions);
       buildTreeOptions();
     }
@@ -278,35 +295,16 @@ export default defineComponent({
     const updateSelectValue = (val: any) => {
       const valueList = val || [];
       const mode = props.selectMode;
-      if (mode === 'single') {
-        const firstChild = props.options[0] || {};
-        radioSelect.value = val === undefined ? firstChild.value : val;
-      } else if (mode === 'multi') {
-        if (props.optionsLayout === 'columns') {
-          checkSelect.value = valueList;
-        } else {
-          treeState.select = valueList;
-          const child = valueList[0];
-          if (child) {
-            const value = child.value;
-            const findNode = (list: any, condition: Function, passPath: any): boolean => {
-              let isFound = false;
-              list.forEach((item: any) => {
-                if (isFound) return;
-                if (condition(item)) {
-                  isFound = true;
-                } else if (item.options) {
-                  passPath.push(item.value);
-                  isFound = findNode(item.props, condition, passPath);
-                  if (isFound) return;
-                  passPath.pop();
-                }
-              });
-              return isFound;
-            };
-            const parentPath: any = [];
-            findNode(props.options, (item: any) => item.value === value, parentPath);
-            treeState.parentPath = parentPath;
+      const layout = props.optionsLayout;
+      if (layout === 'tree') {
+        treeState.selectList = valueList;
+      } else if (layout === 'columns') {
+        if (mode === 'single') {
+          const firstChild = props.options[0] || {};
+          radioSelect.value = val === undefined ? firstChild.value : val;
+        } else if (mode === 'multi') {
+          if (props.optionsLayout === 'columns') {
+            checkSelect.value = valueList;
           }
         }
       }
@@ -322,7 +320,13 @@ export default defineComponent({
         case 'columns':
           return checkSelect.value.length <= 0;
         case 'tree':
-          return treeState.select.length <= 0;
+          if (props.selectMode === 'single') {
+            return treeState.selectList.length < treeState.leafLevel;
+          }
+          if (props.selectMode === 'multi') {
+            const selectList = treeState.selectList[treeState.leafLevel] as [];
+            return selectList.length <= 0;
+          }
       }
       return true;
     });
@@ -333,8 +337,7 @@ export default defineComponent({
           checkSelect.value = [];
           break;
         case 'tree':
-          treeState.select = [];
-          treeState.parentPath = [];
+          treeState.selectList = [];
           break;
       }
     };
@@ -346,9 +349,10 @@ export default defineComponent({
           values = checkSelect.value;
           break;
         case 'tree':
-          values = treeState.select;
+          values = treeState.selectList;
           break;
       }
+      values = JSON.parse(JSON.stringify(values));
       context.emit('update:modelValue', values);
       context.emit('change', values);
       collapseMenu();
@@ -380,7 +384,7 @@ export default defineComponent({
       checkSelect,
       treeOptions,
       treeState,
-      selectTreeParent,
+      selectTreeNode,
       styleTreeRadio,
       ...toRefs(props),
       ...toRefs(state),
