@@ -47,7 +47,7 @@
           />
           <t-dropdown-item
             title="树形多选"
-            :options="options3T"
+            :options="options3T2"
             optionsLayout="tree"
             selectMode="multi"
             @change="log('[value change] tree - multi select:', $event)"
@@ -93,43 +93,128 @@ export default defineComponent({
     const numberArr = emptyArr.map((_, i) => ({
       title: `选项 ${i + 1}`,
       value: `option_${i + 1}`,
+      disabled: (i - 2) % 4 === 0,
     }));
     const charArr = emptyArr.map((_, i) => {
       const char = String.fromCharCode(65 + i);
       return {
         title: `选项 ${char}`,
         value: `options_${char}`,
+        disabled: (i - 1) % 5 === 0,
       };
     });
     const tree = [{
-      title: '一级选项 1',
-      value: 'top_1',
-      options: [],
+      title: '北京市',
+      value: 'beijing',
+      options: [
+        {
+          title: '东城区',
+          value: 'dongcheng',
+        },
+        {
+          title: '西城区',
+          value: 'xicheng',
+        },
+        {
+          title: '朝阳区',
+          value: 'chaoyang',
+        },
+        {
+          title: '丰台区',
+          value: 'fengtai',
+        },
+        {
+          title: '石景山区',
+          value: 'shijingshan',
+        },
+        {
+          title: '海淀区',
+          value: 'haidian',
+        },
+        {
+          title: '门头沟区',
+          value: 'mentougou',
+        },
+        {
+          title: '房山区',
+          value: 'fangshan',
+        },
+        {
+          title: '通州区',
+          value: 'tongzhou',
+        },
+        {
+          title: '顺义区',
+          value: 'shunyi',
+        },
+      ],
     }, {
-      title: '一级选项 2',
-      value: 'top_2',
-      options: [],
-    }].map((child: any, i: number) => {
-      const newChild = child;
-      const childOptions = numberArr.map((child: any, j: number) => {
-        const newChild = {
-          ...child,
-          title: `选项 ${i + 1}-${j + 1}`,
-        };
-        newChild.options = charArr.map((child: any, k: number) => ({
-          ...child,
-          title: `叶子 ${i + 1}${j + 1}${k + 1}`,
-        }));
-        return newChild;
-      });
-      newChild.options = childOptions;
-      return newChild;
-    });
+      title: '天津市',
+      value: 'tianjin',
+      options: [
+        {
+          title: '和平区',
+          value: 'heping',
+        },
+        {
+          title: '河东区',
+          value: 'hedong',
+        },
+        {
+          title: '河西区',
+          value: 'hexi',
+        },
+      ],
+    }, {
+      title: '河北省',
+      value: 'hebei',
+      options: [
+        {
+          title: '石家庄市',
+          value: 'shijiazhuang',
+          options: [
+            {
+              title: '长安区',
+              value: 'changan',
+            },
+            {
+              title: '桥西区',
+              value: 'qiaoxi',
+            },
+            {
+              title: '新华区',
+              value: 'xinhua',
+            },
+            {
+              title: '井陉矿区',
+              value: 'jingjingkuang',
+            },
+            {
+              title: '裕华区',
+              value: 'yuhua',
+            },
+            {
+              title: '藁城区',
+              value: 'gaocheng',
+            },
+          ],
+        },
+        {
+          title: '唐山市',
+          value: 'tangshan',
+        },
+        {
+          title: '秦皇岛市',
+          value: 'qinhuangdao',
+        },
+      ],
+    }];
     const options1N = ref(numberArr);
     const options1C = ref(charArr);
     const options2N = ref(numberArr);
     const options2C = ref(charArr);
     const options3T = ref(tree);
+    const options3T2 = ref(JSON.parse(JSON.stringify(tree)));
     const value1S = ref('option_2');
     const value1M = ref(['options_A', 'options_C']);
     watch(() => value1S.value, (val: any) => {
@@ -148,6 +233,7 @@ export default defineComponent({
       options2N,
       options2C,
       options3T,
+      options3T2,
       value1S,
       value1M,
     };

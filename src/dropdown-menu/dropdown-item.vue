@@ -13,6 +13,7 @@
                     <t-radio
                       :name="option.value"
                       :title="option.title"
+                      :disabled="option.disabled"
                       :class="styleDropRadio(option.value)"
                     >
                       <template v-slot:checkedIcon>
@@ -28,7 +29,11 @@
               <t-check-group v-model="checkSelect">
                 <template v-for="option in options">
                   <t-cell :key="option.value" value-align="left">
-                    <t-check-box :name="option.value" :title="option.title"></t-check-box>
+                    <t-check-box
+                      :name="option.value"
+                      :title="option.title"
+                      :disabled="option.disabled"
+                    ></t-check-box>
                   </t-cell>
                 </template>
               </t-check-group>
@@ -41,17 +46,20 @@
                 v-if="level < treeState.leafLevel"
                 :modelValue="treeState.parentPath[level]"
                 @update:modelValue="selectTreeParent(level, $event)"
-                :data-value="treeState.parentPath[level]"
               >
-                <template v-for="option in options">
-                  <t-cell :key="option.value" value-align="left">
-                    <t-radio
-                      :class="styleTreeRadio(option.value, level)"
-                      :name="option.value"
-                      :title="option.title"
-                    />
-                  </t-cell>
-                </template>
+                <t-cell
+                  v-for="option in options"
+                  :key="option.value"
+                  value-align="left"
+                  :data-value="option.value"
+                >
+                  <t-radio
+                    :class="styleTreeRadio(option.value, level)"
+                    :name="option.value"
+                    :title="option.title"
+                    :disabled="option.disabled"
+                  />
+                </t-cell>
               </t-radio-group>
               <template v-else>
                 <template v-if="selectMode === 'single'">
@@ -65,6 +73,7 @@
                       <t-radio
                         :name="option.value"
                         :title="option.title"
+                        :disabled="option.disabled"
                         :class="styleDropRadio(option.value)"
                       >
                         <template v-slot:checkedIcon>
@@ -82,7 +91,11 @@
                     v-model="treeState.select"
                   >
                     <t-cell value-align="left">
-                      <t-check-box :name="option.value" :title="option.title"></t-check-box>
+                      <t-check-box
+                        :name="option.value"
+                        :title="option.title"
+                        :disabled="option.disabled"
+                      ></t-check-box>
                     </t-cell>
                   </t-check-group>
                 </template>
@@ -91,7 +104,7 @@
           </template>
         </slot>
       </div>
-      <div :class="`${name}__ft`" v-if="selectMode === 'multi'">
+      <div :class="`${name}__ft`" v-if="selectMode === 'multi' || optionsLayout === 'tree'">
         <t-button theme="default" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
         <t-button theme="primary" :disabled="isBtnDisabled" @click="confirmSelect">确定</t-button>
       </div>
@@ -230,25 +243,25 @@ export default defineComponent({
     // 处理后的树形选项列表
     const treeOptions = computed(() => {
       const options = props.options;
-      const isLeafLevel = (list: any) => list.find((item: any) => !item.options);
       const treeOptions = [];
-      let list = options;
       let level = 0;
-      while (!isLeafLevel(list)) {
-        treeOptions.push(list);
+      let node = { options };
+      while (node.options) {
+        const list = node.options;
+        treeOptions.push([...list]);
         const thisValue: string | number | null = treeState.parentPath[level];
         const child: any = thisValue && list.find((child: any) => child.value === thisValue);
         if (thisValue === undefined || !child) {
           const firstChild = list[0];
           selectTreeParent(level, firstChild.value);
-          list = firstChild.options;
+          node = firstChild;
         } else {
-          list = child.options;
+          node = child;
         }
         level += 1;
       }
       treeState.leafLevel = level;
-      treeOptions.push(list);
+      debugger;
       return treeOptions;
     });
     // 根据传入值更新当前选中
@@ -332,7 +345,7 @@ export default defineComponent({
     };
     // 单选值监控
     watch(radioSelect, (val: any) => {
-      if (props.selectMode !== 'single') return;
+      if (props.selectMode !== 'single' || props.optionsLayout === 'tree') return;
       if (!state.isShowItems) return;
       const value = props.modelValue || [];
       if (value[0] === val) return;
