@@ -110,8 +110,8 @@ export default {
             },
             {
               title: 'NoticeBar 公告栏',
-              name: 'notice-bar',
-              component: () => import('@/notice-bar/notice-bar.md'),
+              name: 'noticebar',
+              component: () => import('@/noticebar/noticebar.md'),
             },
           ],
         },

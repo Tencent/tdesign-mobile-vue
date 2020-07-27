@@ -94,8 +94,8 @@ export default {
         },
         {
           title: 'NoticeBar 公告栏',
-          name: 'notice-bar',
-          component: () => import('@/notice-bar/demos/base.vue'),
+          name: 'noticebar',
+          component: () => import('@/noticebar/demos/base.vue'),
         },
       ],
     },
