@@ -215,15 +215,6 @@ export default defineComponent({
 
     const radioSelect = ref(null);
     const checkSelect = ref([]);
-    // const defaultTreeNode = computed(() => {
-    //   const nodeList = [];
-    //   let child: any = props.options;
-    //   do {
-    //     nodeList.push(child[0]);
-    //     child = child.options;
-    //   } while (child);
-    //   return nodeList;
-    // });
     const treeState = reactive({
       leafLevel: 0,
       selectList: [],
@@ -261,19 +252,14 @@ export default defineComponent({
         const thisValue: [] | string | number | null = selectList[level];
         if (thisValue === undefined) {
           const firstChild = list[0];
-          if (selectMode === 'single') {
+          if (firstChild.options) {
+            // 还有子节点，当前层级作为单选处理
             selectTreeNode(level, firstChild.value);
             node = firstChild;
-          } else if (selectMode === 'multi') {
-            if (firstChild.options) {
-              // 还有子节点，当前层级作为单选处理
-              selectTreeNode(level, firstChild.value);
-              node = firstChild;
-            } else {
-              // 没有子节点，选中首项后结束处理
-              selectTreeNode(level, []);
-              break;
-            }
+          } else {
+            // 没有子节点，结束处理
+            selectTreeNode(level, selectMode === 'multi' ? [] : undefined);
+            break;
           }
         } else {
           const child: any = !Array.isArray(thisValue) &&
@@ -321,7 +307,7 @@ export default defineComponent({
           return checkSelect.value.length <= 0;
         case 'tree':
           if (props.selectMode === 'single') {
-            return treeState.selectList.length < treeState.leafLevel;
+            return treeState.selectList[treeState.leafLevel] === undefined;
           }
           if (props.selectMode === 'multi') {
             const selectList = treeState.selectList[treeState.leafLevel] as [];

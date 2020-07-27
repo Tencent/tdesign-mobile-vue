@@ -19,12 +19,11 @@ import { defineComponent, computed, toRefs, ref, reactive, mergeProps, provide }
 
 import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
 import config from '../config';
+import { DropdownMenuState, context as menuContext, DropdownMenuControl } from './context';
 import TransAniControl from './trans-ani-control';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
-
-let expandedControl: any;
 
 export const ItemInstanceManager = {
   usedIds: {},
@@ -102,16 +101,9 @@ export default defineComponent({
 
       if (state.activeId === itemId) {
         // 再次点击时收起
-        state.activeId = null;
+        collapseMenu();
         return;
       }
-
-      // 如果有已展开菜单，并且不是当前菜单，则收起它
-      if (expandedControl && expandedControl !== control) {
-        expandedControl.collapseMenu();
-      }
-      // 已展开状态记录
-      expandedControl = control;
 
       state.activeId = itemId;
 
@@ -119,16 +111,17 @@ export default defineComponent({
       const bar = refBar.value as any;
       const barRect = bar.getBoundingClientRect();
       state.barRect = barRect;
+
+      // 记录展开状态
+      menuContext.recordMenuExpanded(control, DropdownMenuState.expanded);
     };
     const collapseMenu = () => {
       state.activeId = null;
 
       // 清除已展开状态记录
-      if (expandedControl === control) {
-        expandedControl = null;
-      }
+      menuContext.recordMenuExpanded(control, DropdownMenuState.collapsed);
     };
-    const control = { expandMenu, collapseMenu };
+    const control: DropdownMenuControl = { expandMenu, collapseMenu };
     // 提供子组件访问
     provide('dropdownMenuControl', control);
     return {

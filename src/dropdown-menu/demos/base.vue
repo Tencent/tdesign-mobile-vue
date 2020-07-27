@@ -6,6 +6,10 @@
           <t-dropdown-item title="单选菜单" :options="options1N" v-model="value1S" />
           <t-dropdown-item title="多选菜单" :options="options1C" selectMode="multi" v-model="value1M" />
         </t-dropdown-menu>
+        <p>
+          目前暂时无法快速修改所有子组件的主色调样式（标题小箭头、按键、内部图标），所以暂时不提供
+          <strong>active-color</strong> 属性来修改选中颜色。
+        </p>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="分栏多选菜单/自定义内容">
@@ -47,6 +51,10 @@
             </t-cell-group>
           </t-dropdown-item>
         </t-dropdown-menu>
+        <p>
+          同时指定了
+          <strong>options</strong> 属性和内部自定义内容时，将优先展示自定义内容。
+        </p>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="树形单选/多选菜单">
@@ -67,17 +75,18 @@
             @change="log('[value change] tree - multi select:', $event)"
           />
         </t-dropdown-menu>
-      </t-cell>
-      <t-cell value-align="left">
-        <div>
-          <p>
-            <strong>注意：所有树形结构分支深度比如一致。</strong>
-          </p>
-          <p>
-            否则，多选模式中某一分支内可能同时包含叶子节点和子菜单节点。
-            <br />菜单内需要混合 radio 和 check-box 组件，无法通过 radio-group 和 check-group 实现。
-          </p>
-        </div>
+        <p>
+          <strong>注意：树形数据的所有分支深度必须一致。</strong>
+        </p>
+        <p>
+          否则，多选模式中某一分支内可能同时包含叶子节点和子菜单节点。
+          <br />导致菜单内需要混合
+          <strong>radio</strong> 和
+          <strong>check-box</strong> 组件，无法通过
+          <strong>radio-group</strong> 和
+          <strong>check-group</strong> 实现这一层级的选单。
+        </p>
+        <div></div>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="禁用选项">
@@ -289,5 +298,10 @@ export default defineComponent({
   background: #fff;
   position: relative;
   height: 100vh;
+}
+p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 1em .5em;
 }
 </style>
