@@ -40,7 +40,7 @@
             </t-cell-group>
           </template>
           <template v-else-if="optionsLayout === 'tree'">
-            <t-cell-group v-for="(options, level) in treeOptions" :key="level">
+            <t-cell-group v-for="(_, level) in treeOptions" :key="level">
               <!-- 树形列表 - 父级节点 -->
               <t-radio-group
                 v-if="level < treeState.leafLevel"
@@ -48,7 +48,7 @@
                 @update:modelValue="selectTreeParent(level, $event)"
               >
                 <t-cell
-                  v-for="option in options"
+                  v-for="option in treeOptions[level]"
                   :key="option.value"
                   value-align="left"
                   :data-value="option.value"
@@ -65,7 +65,7 @@
                 <template v-if="selectMode === 'single'">
                   <!-- 树形列表 - 叶子节点（单选） -->
                   <t-radio-group
-                    v-for="option in options"
+                    v-for="option in treeOptions[level]"
                     :key="option.value"
                     v-model="radioSelect"
                   >
@@ -86,7 +86,7 @@
                 <template v-else-if="selectMode=== 'multi'">
                   <!-- 树形列表 - 叶子节点（多选） -->
                   <t-check-group
-                    v-for="option in options"
+                    v-for="option in treeOptions[level]"
                     :key="option.value"
                     v-model="treeState.select"
                   >
@@ -227,6 +227,13 @@ export default defineComponent({
       parentPath: [],
       select: [],
     });
+    const styleTreeRadio = computed(() => (value: string, level: number) => [
+      `${name}__radio`,
+      {
+        [`${prefix}-is-checked`]: value === treeState.parentPath[level],
+      },
+    ]);
+    // 点击父级节点的时候
     const selectTreeParent = (level: number, value: any) => {
       // console.log('level:', level, 'value:', value);
       const tempValue: any = treeState.parentPath.slice(0, level);
@@ -234,22 +241,19 @@ export default defineComponent({
       treeState.parentPath = tempValue;
       treeState.select = [];
     };
-    const styleTreeRadio = computed(() => (value: string, level: number) => [
-      `${name}__radio`,
-      {
-        [`${prefix}-is-checked`]: value === treeState.parentPath[level],
-      },
-    ]);
     // 处理后的树形选项列表
-    const treeOptions = computed(() => {
-      const options = props.options;
-      const treeOptions = [];
-      let level = 0;
+    const treeOptions = ref([]);
+    const buildTreeOptions = () => {
+      const { options } = props;
+      const { parentPath } = treeState;
+      const newTreeOptions = [];
+      let level = -1;
       let node = { options };
       while (node.options) {
         const list = node.options;
-        treeOptions.push([...list]);
-        const thisValue: string | number | null = treeState.parentPath[level];
+        newTreeOptions.push([...list]);
+        level += 1;
+        const thisValue: string | number | null = parentPath[level];
         const child: any = thisValue && list.find((child: any) => child.value === thisValue);
         if (thisValue === undefined || !child) {
           const firstChild = list[0];
@@ -258,12 +262,18 @@ export default defineComponent({
         } else {
           node = child;
         }
-        level += 1;
       }
-      treeState.leafLevel = level;
-      debugger;
-      return treeOptions;
-    });
+      treeState.leafLevel = Math.max(0, level);
+      treeOptions.value = newTreeOptions as [];
+    };
+    if (props.optionsLayout === 'tree') {
+      watch(() => ({
+        options: props.options,
+        parentPath: treeState.parentPath,
+        select: treeState.select,
+      }), buildTreeOptions);
+      buildTreeOptions();
+    }
     // 根据传入值更新当前选中
     const updateSelectValue = (val: any) => {
       const valueList = val || [];

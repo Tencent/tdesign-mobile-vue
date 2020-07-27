@@ -106,65 +106,73 @@ export default defineComponent({
     const tree = [{
       title: '北京市',
       value: 'beijing',
-      options: [
-        {
-          title: '东城区',
-          value: 'dongcheng',
-        },
-        {
-          title: '西城区',
-          value: 'xicheng',
-        },
-        {
-          title: '朝阳区',
-          value: 'chaoyang',
-        },
-        {
-          title: '丰台区',
-          value: 'fengtai',
-        },
-        {
-          title: '石景山区',
-          value: 'shijingshan',
-        },
-        {
-          title: '海淀区',
-          value: 'haidian',
-        },
-        {
-          title: '门头沟区',
-          value: 'mentougou',
-        },
-        {
-          title: '房山区',
-          value: 'fangshan',
-        },
-        {
-          title: '通州区',
-          value: 'tongzhou',
-        },
-        {
-          title: '顺义区',
-          value: 'shunyi',
-        },
-      ],
+      options: [{
+        title: '北京市',
+        value: 'beijing',
+        options: [
+          {
+            title: '东城区',
+            value: 'dongcheng',
+          },
+          {
+            title: '西城区',
+            value: 'xicheng',
+          },
+          {
+            title: '朝阳区',
+            value: 'chaoyang',
+          },
+          {
+            title: '丰台区',
+            value: 'fengtai',
+          },
+          {
+            title: '石景山区',
+            value: 'shijingshan',
+          },
+          {
+            title: '海淀区',
+            value: 'haidian',
+          },
+          {
+            title: '门头沟区',
+            value: 'mentougou',
+          },
+          {
+            title: '房山区',
+            value: 'fangshan',
+          },
+          {
+            title: '通州区',
+            value: 'tongzhou',
+          },
+          {
+            title: '顺义区',
+            value: 'shunyi',
+          },
+        ],
+      }],
     }, {
       title: '天津市',
       value: 'tianjin',
-      options: [
-        {
-          title: '和平区',
-          value: 'heping',
-        },
-        {
-          title: '河东区',
-          value: 'hedong',
-        },
-        {
-          title: '河西区',
-          value: 'hexi',
-        },
-      ],
+      options: [{
+        title: '天津市',
+        value: 'tianjin',
+        options: [
+          {
+            title: '和平区',
+            value: 'heping',
+          },
+          {
+            title: '河东区',
+            value: 'hedong',
+          },
+          {
+            title: '河西区',
+            value: 'hexi',
+          },
+        ],
+      }],
     }, {
       title: '河北省',
       value: 'hebei',
