@@ -1,7 +1,11 @@
 <template>
   <div class="tdesign-demo-block">
     <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-      <t-picker-column :options="roleOptions" @change="onColumnChange" />
+      <t-picker-column
+        :options="roleOptions"
+        :formatter="(val) => `辣鸡${val}`"
+        @change="onColumnChange"
+      />
     </t-picker>
   </div>
 </template>
@@ -13,6 +17,19 @@ export default defineComponent({
     const roles = ['战士', '法师', '射手', '刺客', '坦克', '辅助'];
     const curRoleIndex = ref(0);
     const roleOptions = ref(roles);
+    const gameOptions = ref([
+      '端游',
+      '手游',
+      'PS4',
+      'NS',
+    ]);
+    const gameLevelOptions = ref([
+      '3A大作',
+      '精品游戏',
+      '换皮游戏',
+      '氪金游戏',
+      '辣鸡游戏',
+    ]);
 
     const onColumnChange = (e: any) => {
       console.log('column:change', e);
@@ -37,6 +54,8 @@ export default defineComponent({
 
     return {
       roleOptions,
+      gameOptions,
+      gameLevelOptions,
       onColumnChange,
       onRoleChange,
       onChange,
@@ -46,4 +65,3 @@ export default defineComponent({
   },
 });
 </script>
-

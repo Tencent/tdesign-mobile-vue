@@ -153,6 +153,7 @@ class Picker {
     // 滚动距离
     const dist = (v * duration) - ((duration ** 2) * deceleration / 2) + dragRange;
     if (dist === 0) {
+      this.stopInertiaMove = false;
       this.endScroll();
       return;
     }
