@@ -97,6 +97,11 @@ export default {
           name: 'noticebar',
           component: () => import('@/noticebar/demos/base.vue'),
         },
+        {
+          title: 'Dialog 对话框',
+          name: 'dialog',
+          component: () => import('@/dialog/demos/base.vue'),
+        },
       ],
     },
   },

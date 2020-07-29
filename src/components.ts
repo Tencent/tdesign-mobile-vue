@@ -15,6 +15,7 @@ export { default as Rate } from './rate';
 export { default as Switch } from './switch';
 export { default as Stepper } from './stepper';
 export { default as Slider } from './slider';
+export { default as NoticeBar } from './noticebar';
+export { default as Dialog } from './dialog';
 export { Picker, PickerColumn } from './picker';
 export { Tag, CheckTag } from './tag';
-export { default as NoticeBar } from './noticebar';
