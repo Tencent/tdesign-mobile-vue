@@ -22,7 +22,7 @@ export default {
               component: () => import('@/../docs/install.md'),
             },
             {
-              title: '开发指南',
+              title: '贡献指南',
               name: 'develop',
               component: () => import('@/../docs/develop.md'),
             },
