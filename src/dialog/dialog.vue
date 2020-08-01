@@ -1,16 +1,19 @@
 <template>
   <transition
     name="dialog"
-    @after-leave="afterLeave"
-    @after-enter="afterEnter"
-    @click="handleClosed">
+    @after-leave="afterLeave()"
+    @after-enter="afterEnter()"
+    @touchmove="stopScroll">
     <div v-if="currentVisible" ref="root">
-      <t-mask @click="handleClosed" v-show="showOverlay" />
+      <t-mask @click="handleClosed" :transparent="!showOverlay"/>
       <!-- 对话框 -->
-      <div :class="dClassName" id="root" :style="rootStyles">
-        <div :class="dHeaderClassName" v-if="showTitle">
-          <slot name="title">
-            <div :class="dTitleClassName">{{title}}</div>
+      <div
+        :class="dClassName"
+        id="root"
+        :style="rootStyles">
+        <div :class="dHeaderClassName" v-if="showHeader">
+          <slot name="header">
+            <div :class="dTitleClassName">{{header}}</div>
           </slot>
         </div>
         <div :class="dBodyClassName">
@@ -50,7 +53,7 @@
 </template>
 <script lang="ts">
 import TMask from '../mask';
-import { SetupContext, computed, ref, toRefs } from 'vue';
+import { SetupContext, computed, ref, toRefs, watch } from 'vue';
 import config from '../config';
 import { DialogProps, IDialogProps } from './dialog.interface';
 
@@ -98,6 +101,23 @@ export default {
       innerValue.value = '';
     };
 
+    const afterEnter = () => {
+      document.body.style.overflowY = 'hidden';
+      context.emit('opened');
+    };
+
+    const afterLeave = () => {
+      document.body.style.overflowY = 'auto';
+      context.emit('closed');
+    };
+
+    watch(
+      () => currentVisible.value,
+      (val) => {
+        context.emit('visible-change', val);
+      },
+    );
+
     return {
       root,
       currentVisible,
@@ -117,8 +137,8 @@ export default {
       handleClosed,
       rootStyles,
       ...toRefs(props),
-      afterEnter: () => context.emit('opened'),
-      afterLeave: () => context.emit('closed'),
+      afterEnter,
+      afterLeave,
     };
   },
 };

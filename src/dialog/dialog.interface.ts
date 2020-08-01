@@ -1,7 +1,7 @@
 export interface IDialogProps {
   modelValue?: boolean,
-  showTitle?: boolean,
-  title?: string,
+  showHeader?: boolean,
+  header?: string,
   content: string,
   type?: string,
   showFooter?: boolean,
@@ -17,8 +17,8 @@ export interface IDialogProps {
 };
 
 export const DialogPropsDefault = {
-  showTitle: true,
-  title: '温馨提醒',
+  showHeader: true,
+  header: '温馨提醒',
   content: '',
   type: '',
   showFooter: true,
@@ -45,17 +45,17 @@ export const DialogProps = {
   },
   /**
    * @description 是否显示标题
-   * @property showTitle
+   * @property showHeader
    */
-  showTitle: {
+  showHeader: {
     type: Boolean,
     default: true,
   },
   /**
    * @description 标题
-   * @property title
+   * @property header
    */
-  title: {
+  header: {
     type: String,
     default: '温馨提醒',
   },
