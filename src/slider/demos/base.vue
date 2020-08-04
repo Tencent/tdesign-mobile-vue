@@ -45,12 +45,8 @@
 
 <script lang="ts">
 import { ref } from 'vue';
-import config from '@/config';
-const { prefix } = config;
-const name = `${prefix}-slider-base-demo`;
 
 export default {
-  name,
   setup() {
     const value = ref(60);
     const value1 = ref(60);
