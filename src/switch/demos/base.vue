@@ -39,13 +39,9 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
-import config from '@/config';
-const { prefix } = config;
-const name = `${prefix}-switch-base-demo`;
+import { ref } from 'vue';
 
-export default defineComponent({
-  name,
+export default {
   setup() {
     const value = ref(true);
     const disabledValue = ref(true);
@@ -60,5 +56,5 @@ export default defineComponent({
       onChange,
     };
   },
-});
+};
 </script>

@@ -15,12 +15,7 @@
 
 <script lang="ts">
 import { ref } from 'vue';
-import config from '@/config';
-const { prefix } = config;
-const name = `${prefix}-slider-base-demo`;
-
 export default {
-  name,
   setup() {
     const rangeValue = ref([30, 80]);
     function onChange($event:number|number[]) {
