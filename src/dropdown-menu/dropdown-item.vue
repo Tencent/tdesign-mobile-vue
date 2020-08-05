@@ -40,13 +40,14 @@
             </t-cell-group>
           </template>
           <template v-else-if="optionsLayout === 'tree'">
+            <!-- 树形列表 ST -->
             <t-cell-group v-for="(_, level) in treeOptions" :key="level">
-              <!-- 树形列表 - 父级节点 -->
               <t-radio-group
                 v-if="level < treeState.leafLevel"
                 :modelValue="treeState.selectList[level]"
                 @update:modelValue="selectTreeNode(level, $event)"
               >
+                <!-- 树形列表 - 父级节点 ST -->
                 <t-cell
                   v-for="option in treeOptions[level]"
                   :key="option.value"
@@ -60,10 +61,12 @@
                     :disabled="option.disabled"
                   />
                 </t-cell>
+                <!-- 树形列表 - 父级节点 ED -->
               </t-radio-group>
               <template v-else>
+                <!-- 树形列表 - 叶子节点 ST -->
                 <template v-if="selectMode === 'single'">
-                  <!-- 树形列表 - 叶子节点（单选） -->
+                  <!-- 树形列表 - 叶子节点（单选） ST -->
                   <t-radio-group
                     v-for="option in treeOptions[level]"
                     :key="option.value"
@@ -83,9 +86,10 @@
                       </t-radio>
                     </t-cell>
                   </t-radio-group>
+                  <!-- 树形列表 - 叶子节点（单选） ED -->
                 </template>
                 <template v-else-if="selectMode=== 'multi'">
-                  <!-- 树形列表 - 叶子节点（多选） -->
+                  <!-- 树形列表 - 叶子节点（多选） ST -->
                   <t-check-group
                     v-for="option in treeOptions[level]"
                     :key="option.value"
@@ -100,9 +104,12 @@
                       ></t-check-box>
                     </t-cell>
                   </t-check-group>
+                  <!-- 树形列表 - 叶子节点（多选） ED -->
                 </template>
+                <!-- 树形列表 - 叶子节点 ED -->
               </template>
             </t-cell-group>
+            <!-- 树形列表 ED -->
           </template>
         </slot>
       </div>
