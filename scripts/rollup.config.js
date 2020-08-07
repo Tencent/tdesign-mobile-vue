@@ -79,6 +79,7 @@ const commonConfig = {
       'src/**/*.ts',
       '!src/**/demos',
       '!src/**/__tests__',
+      '!src/**/*.interface.ts',
     ],
     external: externalDeps.concat(externalPeerDeps),
     plugins: [multiInput()].concat(getPlugins({ isProd: false, vueOpt: { css: true } })),

@@ -17,64 +17,15 @@
 
 <script lang="ts">
 import { SetupContext, defineComponent, computed } from 'vue';
-import { ProgressType, ProgressProps } from './progress.interface';
+import { ProgressType, progressProps } from './progress.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-progress`;
 
 export default defineComponent({
   name,
-  props: {
-    /**
-     * @description 百分比
-     * @attribute percentage
-     */
-    percentage: {
-      type: Number,
-      default: 0,
-    },
-    /**
-     * @description 是否显示百分比文本
-     * @attribute showText
-     */
-    showText: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * @description 进度条的颜色
-     * @attribute color
-     */
-    color: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description 进度条的背景色
-     * @attribute bgColor
-     */
-    bgColor: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description 百分比文本颜色
-     * @attribute textColor
-     */
-    textColor: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description 类型
-     * @attribute type
-     */
-    type: {
-      type: String,
-      default: ProgressType.Info,
-    },
-  },
-  setup(props: ProgressProps, context: SetupContext) {
+  props: progressProps,
+  setup(props, context: SetupContext) {
     // console.log('props', props);
     console.log('context', context);
 

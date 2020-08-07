@@ -85,7 +85,7 @@ const Tag = defineComponent({
 
     const { size, shape, theme, effect, maxWidth } = props;
 
-    const style = {};
+    const style: { maxWidth?: string } = {};
     if (maxWidth) {
       style.maxWidth = `${maxWidth}px`;
     }

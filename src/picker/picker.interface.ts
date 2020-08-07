@@ -1,3 +1,5 @@
+import { ExtractPropTypes } from 'vue';
+
 export interface IPickerProps {
   theme: string,
   title: string,
@@ -40,14 +42,9 @@ export const PickerProps = {
   },
 };
 
-export interface IPickerColumnProps {
-  options: any[],
-  optionKey: string,
-  formatter: Function,
-  defaultIndex: number,
-};
+export type PickerColumnPropsType = ExtractPropTypes<typeof pickerColumnProps>;
 
-export const PickerColumnProps = {
+export const pickerColumnProps = {
   /**
    * @description 可选项，类似select的列表项
    * @property options

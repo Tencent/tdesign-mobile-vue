@@ -10,10 +10,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, onMounted, watch, nextTick, toRefs, defineComponent } from 'vue';
-import {
-  PickerColumnProps,
-  IPickerColumnProps,
-} from './picker.interface';
+import { pickerColumnProps } from './picker.interface';
 import config from '../config';
 import Picker from './picker.class';
 
@@ -21,8 +18,8 @@ const { prefix } = config;
 const name = `${prefix}-picker-column`;
 
 export default defineComponent({
-  props: PickerColumnProps,
-  setup(props: IPickerColumnProps, context: SetupContext) {
+  props: pickerColumnProps,
+  setup(props, context: SetupContext) {
     let picker: Picker|null = null;
     const el = document.createElement('div');
     const root = ref(el);
@@ -60,7 +57,7 @@ export default defineComponent({
       wrapperClassName,
       itemClassName,
       curIndex,
-      formatter: PickerColumnProps.formatter,
+      formatter: pickerColumnProps.formatter,
       ...toRefs(props),
     };
   },

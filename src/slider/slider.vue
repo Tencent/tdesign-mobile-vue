@@ -1,9 +1,9 @@
 <template>
-  <div :class="classes">
+  <div ref="rootRef" :class="classes">
     <template v-if="!range">
       <div :class="`${name}`" @click="onClick">
         <!-- 总长度 -->
-        <div ref="bar" :class="`${name}__bar`"></div>
+        <div ref="barRef" :class="`${name}__bar`"></div>
         <!-- 滑块长度 -->
         <div :class="`${name}__track`" :style="`width:${value[0]}%`"></div>
         <!-- 滑块操作 -->
@@ -40,7 +40,7 @@
     <template v-else>
       <div :class="`${name}`" @click="onClick">
         <!-- 总长度 -->
-        <div ref="bar" :class="`${name}__bar`"></div>
+        <div ref="barRef" :class="`${name}__bar`"></div>
         <!-- 滑块长度 -->
         <div :class="`${name}__track`"
              :style="`left:${value[0]}%;width:${value[1]-value[0]}%`"></div>
@@ -70,21 +70,46 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, reactive } from 'vue';
+import { ref, computed, SetupContext, reactive, defineComponent, ExtractPropTypes, PropType } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-slider`;
 
-export interface SliderProps {
-  range: boolean;
-  marks: {[index:number]:string};
-  max: number;
-  min: number;
-  modelValue: [number, Array<number>];
-  showValue: boolean;
-  step: number;
-  disabled: boolean;
-}
+export const sliderProps = {
+  range: {
+    type: Boolean,
+    default: false,
+  },
+  marks: {
+    type: Object,
+    default: () => {},
+  },
+  max: {
+    type: Number,
+    default: 100,
+  },
+  min: {
+    type: Number,
+    default: 0,
+  },
+  modelValue: {
+    type: [Number, Array] as PropType<number | number[]>,
+    default: 0,
+  },
+  showValue: {
+    type: Boolean,
+    default: false,
+  },
+  step: {
+    type: Number,
+    default: 1,
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+};
+export type SliderPropsType = ExtractPropTypes<typeof sliderProps>;
 
 export interface TouchData {
   startValue: number;
@@ -94,43 +119,13 @@ export interface TouchData {
   offsetX: number;
 }
 
-export default {
+export default defineComponent({
   name,
-  props: {
-    range: {
-      type: Boolean,
-      default: false,
-    },
-    marks: {
-      type: Object,
-      default: () => {},
-    },
-    max: {
-      type: Number,
-      default: 100,
-    },
-    min: {
-      type: Number,
-      default: 0,
-    },
-    modelValue: {
-      type: [Number, Array],
-      default: 0,
-    },
-    showValue: {
-      type: Boolean,
-      default: false,
-    },
-    step: {
-      type: Number,
-      default: 1,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  setup(props: SliderProps, context:SetupContext) {
+  props: sliderProps,
+  setup(props, context: SetupContext) {
+    const rootRef = ref<HTMLElement | null>(null);
+    const barRef = ref<HTMLElement | null>(null);
+
     const classes = computed(() => [
       `${name}-wrap`,
       {
@@ -153,8 +148,8 @@ export default {
     });
 
     const dragStatus = ref<string>('');
-    const _value = ref([]);
-    const value = computed({
+    const _value = ref<number[]>([]);
+    const value = computed<number[]>({
       set(val) {
         _value.value = val;
       },
@@ -164,9 +159,9 @@ export default {
         }
         let _initValue = [];
         if (props.range) {
-          _initValue = props.modelValue;
+          _initValue = props.modelValue as number[];
         } else {
-          _initValue = [props.modelValue];
+          _initValue = [props.modelValue as number];
         }
         return _initValue;
       },
@@ -181,7 +176,7 @@ export default {
     });
 
     function onTouchStart(event:TouchEvent, index:number) {
-      if (this.disabled) {
+      if (props.disabled) {
         return;
       }
       event.stopPropagation();
@@ -194,9 +189,9 @@ export default {
     }
 
     function onTouchMove(event:TouchEvent, index:number) {
-      if (props.disabled) {
-        return;
-      }
+      if (props.disabled) return;
+      if (!rootRef.value) return;
+
       event.stopPropagation();
       event.preventDefault();
       if (dragStatus.value === 'start') {
@@ -207,7 +202,7 @@ export default {
       touchData.offsetX = Math.abs(touchData.deltaX);
       dragStatus.value = 'draging';
 
-      const rect = this.$el.getBoundingClientRect();
+      const rect = rootRef.value.getBoundingClientRect();
       const delta = touchData.deltaX;
       const total = rect.width;
       const diff = (delta / total) * (props.max - props.min);
@@ -234,11 +229,12 @@ export default {
       event.stopPropagation();
 
       if (props.disabled) return;
+      if (!barRef.value) return;
 
-      const rect = this.$refs.bar.getBoundingClientRect();
+      const rect = barRef.value.getBoundingClientRect();
       const delta =  event.clientX - rect.left;
       const total = rect.width;
-      const current = +props.min + (delta / total) * (props.max - props.min) ;
+      const current = +props.min + ((delta / total) * (props.max - props.min));
 
       let index = 0;
       if (props.range) {
@@ -269,7 +265,7 @@ export default {
       );
     }
 
-    function updateValue(newValue:number, index:number, end:boolean) {
+    function updateValue(newValue:number, index:number, end = false) {
       const formatValue = format(newValue);
       if (props.range) {
         if (end && formatValue !== touchData.startValue) {
@@ -297,6 +293,8 @@ export default {
 
     return {
       name: ref(name),
+      rootRef,
+      barRef,
       value,
       classes,
       handleClass,
@@ -306,5 +304,5 @@ export default {
       onClick,
     };
   },
-};
+});
 </script>
