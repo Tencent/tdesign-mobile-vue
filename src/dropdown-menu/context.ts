@@ -12,12 +12,17 @@ let oldOverflow: string | null = null;
 
 type DropdownMenuContext = {
   expandedMenuControl: DropdownMenuControl | null;
-  recordMenuExpanded(menuControl: DropdownMenuControl, action: DropdownMenuState): void;
+  recordMenuExpanded(
+    container: any,
+    menuControl: DropdownMenuControl,
+    action: DropdownMenuState
+  ): void;
 };
 
 export const context: DropdownMenuContext = {
   expandedMenuControl: null,
-  recordMenuExpanded(menuControl: DropdownMenuControl, action: DropdownMenuState) {
+  recordMenuExpanded(container: any, menuControl: DropdownMenuControl, action: DropdownMenuState) {
+    const containerDom = container;
     if (action === DropdownMenuState.expanded) {
       const { expandedMenuControl } = this;
       if (expandedMenuControl && expandedMenuControl !== menuControl) {
@@ -25,15 +30,15 @@ export const context: DropdownMenuContext = {
       }
       this.expandedMenuControl = menuControl;
       if (oldOverflow === null) {
-        oldOverflow = document.body.style.overflow;
-        document.body.style.overflow = 'hidden';
+        oldOverflow = container.style.overflow;
+        containerDom.style.overflow = 'hidden';
       }
     } else if (action === DropdownMenuState.collapsed) {
       if (this.expandedMenuControl === menuControl) {
         this.expandedMenuControl = null;
       }
       if (!this.expandedMenuControl && oldOverflow !== null) {
-        document.body.style.overflow = oldOverflow as string;
+        containerDom.style.overflow = oldOverflow as string;
         oldOverflow = null;
       }
     }

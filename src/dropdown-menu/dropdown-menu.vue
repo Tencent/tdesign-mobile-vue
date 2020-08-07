@@ -21,6 +21,7 @@ import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
 import config from '../config';
 import { DropdownMenuState, context as menuContext, DropdownMenuControl } from './context';
 import TransAniControl from './trans-ani-control';
+import { findRelativeRect, findRelativeContainer } from './dom-utils';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
@@ -67,7 +68,6 @@ export default defineComponent({
       itemProps,
       activeId: null,
       barRect: {},
-      relativeRect: {},
     });
     const aniControl = new TransAniControl();
     // 提供子组件访问
@@ -110,30 +110,20 @@ export default defineComponent({
 
       // 获取菜单定位
       const bar = refBar.value as any;
-      const barRect = bar.getBoundingClientRect();
+      const barRect = findRelativeRect(bar);
       state.barRect = barRect;
 
-      // 相对定位容器
-      const relativeContainer = (() => {
-        let node = bar;
-        while (node) {
-          node = node.parentNode;
-          const { transform } = getComputedStyle(node);
-          if (!/matrix\([\d,\s]+\)/.test(transform)) continue;
-          return node;
-        }
-        return null;
-      })();
-      state.relativeRect = relativeContainer && relativeContainer.getBoundingClientRect();
-
       // 记录展开状态
-      menuContext.recordMenuExpanded(control, DropdownMenuState.expanded);
+      const container = findRelativeContainer(bar) || document.body;
+      menuContext.recordMenuExpanded(container, control, DropdownMenuState.expanded);
     };
     const collapseMenu = () => {
       state.activeId = null;
 
       // 清除已展开状态记录
-      menuContext.recordMenuExpanded(control, DropdownMenuState.collapsed);
+      const bar = refBar.value as any;
+      const container = findRelativeContainer(bar) || document.body;
+      menuContext.recordMenuExpanded(container, control, DropdownMenuState.collapsed);
     };
     const control: DropdownMenuControl = { expandMenu, collapseMenu };
     // 提供子组件访问
