@@ -189,7 +189,11 @@ export default defineComponent({
     // 设置展开/收起状态
     const setExpand = (val: boolean) => {
       // 菜单定位
-      const { bottom } = menuState.barRect;
+      let { bottom } = menuState.barRect;
+      const { relativeRect } = menuState;
+      if (relativeRect) {
+        bottom -= relativeRect.top;
+      }
       state.expandStyle = {
         zIndex: menuProps.zIndex,
         top: `${bottom}px`,

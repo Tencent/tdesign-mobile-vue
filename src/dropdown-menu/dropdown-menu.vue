@@ -67,6 +67,7 @@ export default defineComponent({
       itemProps,
       activeId: null,
       barRect: {},
+      relativeRect: {},
     });
     const aniControl = new TransAniControl();
     // 提供子组件访问
@@ -111,6 +112,19 @@ export default defineComponent({
       const bar = refBar.value as any;
       const barRect = bar.getBoundingClientRect();
       state.barRect = barRect;
+
+      // 相对定位容器
+      const relativeContainer = (() => {
+        let node = bar;
+        while (node) {
+          node = node.parentNode;
+          const { transform } = getComputedStyle(node);
+          if (!/matrix\([\d,\s]+\)/.test(transform)) continue;
+          return node;
+        }
+        return null;
+      })();
+      state.relativeRect = relativeContainer && relativeContainer.getBoundingClientRect();
 
       // 记录展开状态
       menuContext.recordMenuExpanded(control, DropdownMenuState.expanded);

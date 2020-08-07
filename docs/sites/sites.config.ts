@@ -95,7 +95,7 @@ export default {
             {
               title: 'DropdownMenu',
               name: 'dropdown-menu',
-              component: () => import('@/dropdown-menu/demos/base.vue'),
+              component: () => import('@/dropdown-menu/dropdown-menu.md'),
             },
           ],
         },

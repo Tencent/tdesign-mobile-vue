@@ -105,7 +105,7 @@ import { ref, defineComponent, watch } from 'vue';
 
 import config from '../../config';
 const { prefix } = config;
-const name = `${prefix}-dropdown-menu-group`;
+const name = `${prefix}-dropdown-menu-demo`;
 
 export default defineComponent({
   name,
@@ -276,7 +276,7 @@ export default defineComponent({
       console.log('多选菜单 选中项:', val);
     });
     return {
-      name: 'dropdown-menu',
+      name,
       log: (...args: []) => {
         console.log(...args);
       },
@@ -294,10 +294,10 @@ export default defineComponent({
 });
 </script>
 <style lang="less" scoped>
-.t-dropdown-menu-base-demo {
-  background: #fff;
+.t-dropdown-menu-demo {
   position: relative;
-  height: 100vh;
+  background: #fff;
+  transform: translate(0, 0);
 }
 p {
   font-size: 14px;
