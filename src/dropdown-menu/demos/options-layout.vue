@@ -1,16 +1,30 @@
 <template>
   <div :class="`${name}`">
     <t-dropdown-menu>
-      <t-dropdown-item title="单选菜单" :options="optionsN" v-model="valueS" />
-      <t-dropdown-item title="多选菜单" :options="optionsC" v-model="valueM" selectMode="multi" />
+      <t-dropdown-item
+        title="两栏菜单"
+        :options="optionsN"
+        selectMode="multi"
+        optionsLayout="columns"
+        optionsColumns="2"
+        v-model="valueM1"
+      />
+      <t-dropdown-item
+        title="三栏菜单"
+        :options="optionsC"
+        selectMode="multi"
+        optionsLayout="columns"
+        optionsColumns="3"
+        v-model="valueM2"
+      />
     </t-dropdown-menu>
     <p>
-      单选菜单 选中项:
-      <strong>{{valueS}}</strong>
+      两栏菜单 选中项:
+      <strong>{{valueM1.join(', ')}}</strong>
     </p>
     <p>
-      多选菜单 选中项:
-      <strong>{{valueM.join(', ')}}</strong>
+      三栏菜单 选中项:
+      <strong>{{valueM2.join(', ')}}</strong>
     </p>
   </div>
 </template>
@@ -38,14 +52,17 @@ export default defineComponent({
     });
     const optionsN = ref(numberArr);
     const optionsC = ref(charArr);
-    const valueS = ref('option_2');
-    const valueM = ref(['options_A', 'options_C']);
+    const valueM1 = ref(['options_A', 'options_C']);
+    const valueM2 = ref([]);
     return {
       name,
+      log: (...args: []) => {
+        console.log(...args);
+      },
       optionsN,
       optionsC,
-      valueS,
-      valueM,
+      valueM1,
+      valueM2,
     };
   },
 });

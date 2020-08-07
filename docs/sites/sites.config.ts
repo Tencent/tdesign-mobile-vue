@@ -93,7 +93,7 @@ export default {
               component: () => import('@/mask/demos/base.vue'),
             },
             {
-              title: 'DropdownMenu',
+              title: 'DropdownMenu 下拉菜单',
               name: 'dropdown-menu',
               component: () => import('@/dropdown-menu/dropdown-menu.md'),
             },

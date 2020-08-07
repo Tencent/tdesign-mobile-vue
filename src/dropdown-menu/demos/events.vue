@@ -1,8 +1,32 @@
 <template>
   <div :class="`${name}`">
     <t-dropdown-menu>
-      <t-dropdown-item title="单选菜单" :options="optionsN" v-model="valueS" />
-      <t-dropdown-item title="多选菜单" :options="optionsC" v-model="valueM" selectMode="multi" />
+      <t-dropdown-item
+        title="单选菜单"
+        :options="optionsN"
+        selectMode="multi"
+        optionsLayout="columns"
+        optionsColumns="2"
+        v-model="valueS"
+        @change="log('[menu select] item: ', $event)"
+        @open="log('[menu open] menu item 2N')"
+        @opened="log('[menu opened] menu item 2N')"
+        @close="log('[menu close] menu item 2N')"
+        @closed="log('[menu closed] menu item 2N')"
+      />
+      <t-dropdown-item
+        title="多选菜单"
+        :options="optionsC"
+        selectMode="multi"
+        optionsLayout="columns"
+        optionsColumns="3"
+        v-model="valueM"
+        @change="log('[menu select] item: ', $event)"
+        @open="log('[menu open] menu item 2C')"
+        @opened="log('[menu opened] menu item 2C')"
+        @close="log('[menu close] menu item 2C')"
+        @closed="log('[menu closed] menu item 2C')"
+      />
     </t-dropdown-menu>
     <p>
       单选菜单 选中项:
@@ -42,6 +66,9 @@ export default defineComponent({
     const valueM = ref(['options_A', 'options_C']);
     return {
       name,
+      log: (...args: []) => {
+        console.log(...args);
+      },
       optionsN,
       optionsC,
       valueS,
