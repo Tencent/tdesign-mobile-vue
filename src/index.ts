@@ -12,6 +12,8 @@ import config from './config';
 import * as plugins from './plugins';
 import * as components from './components';
 
+import '../common/style/mobile/';
+
 const install = function (app: App, option?: object): void {
   const newConfig = { ...config, ...option };
 
