@@ -77,6 +77,7 @@ const commonConfig = {
   multi: {
     input: [
       'src/**/*.ts',
+      '!src/dist.ts',
       '!src/**/demos',
       '!src/**/__tests__',
       '!src/**/*.interface.ts',
@@ -86,7 +87,7 @@ const commonConfig = {
     output: { banner, sourcemap: true },
   },
   bundle: {
-    input: 'src/index.ts',
+    input: 'src/dist.ts',
     external: externalPeerDeps,
     output: {
       name: 'TDesign',
