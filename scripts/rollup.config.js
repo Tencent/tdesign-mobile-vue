@@ -77,15 +77,17 @@ const commonConfig = {
   multi: {
     input: [
       'src/**/*.ts',
+      '!src/dist.ts',
       '!src/**/demos',
       '!src/**/__tests__',
+      '!src/**/*.interface.ts',
     ],
     external: externalDeps.concat(externalPeerDeps),
     plugins: [multiInput()].concat(getPlugins({ isProd: false, vueOpt: { css: true } })),
     output: { banner, sourcemap: true },
   },
   bundle: {
-    input: 'src/index.ts',
+    input: 'src/dist.ts',
     external: externalPeerDeps,
     output: {
       name: 'TDesign',

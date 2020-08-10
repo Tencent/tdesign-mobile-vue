@@ -9,80 +9,63 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, toRefs, SetupContext, defineComponent } from 'vue';
+import { ref, computed, toRefs, SetupContext, defineComponent, ExtractPropTypes } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-switch`;
 
-export interface SwitchProps {
-    modelValue: {
-      type: [string, number, boolean],
-      default: false
-    },
-    activeValue: {
-      type: [string, number, boolean],
-      default: true
-    },
-    inactiveValue: {
-      type: [string, number, boolean],
-      default: false
-    },
-    disabled: {
-      type: boolean,
-      default: false
-    },
-    text: string,
-  }
+export const switchProps = {
+  /**
+   * @description 当前选择的值
+   * @attribute modelValue
+   */
+  modelValue: {
+    type: [String, Number, Boolean],
+    default: false,
+  },
+  /**
+   * @description 打开的值
+   * @attribute activeValue
+   */
+  activeValue: {
+    type: [String, Number, Boolean],
+    default: true,
+  },
+  /**
+   * @description 关闭的值
+   * @attribute inactiveValue
+   */
+  inactiveValue: {
+    type: [String, Number, Boolean],
+    default: false,
+  },
+  /**
+   * @description 是否禁用
+   * @attribute disabled
+   */
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
+  /**
+   * @description 描述文字
+   * @attribute text
+   */
+  text: {
+    type: String,
+    default: '',
+  },
+};
+export type SwitchPropsType = ExtractPropTypes<typeof switchProps>;
 
 export default defineComponent({
   name,
-  props: {
-    /**
-     * @description 当前选择的值
-     * @attribute modelValue
-     */
-    modelValue: {
-      type: [String, Number, Boolean],
-      default: false,
-    },
-    /**
-       * @description 打开的值
-       * @attribute activeValue
-       */
-    activeValue: {
-      type: [String, Number, Boolean],
-      default: true,
-    },
-    /**
-       * @description 关闭的值
-       * @attribute inactiveValue
-       */
-    inactiveValue: {
-      type: [String, Number, Boolean],
-      default: false,
-    },
-    /**
-       * @description 是否禁用
-       * @attribute disabled
-       */
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-       * @description 描述文字
-       * @attribute text
-       */
-    text: {
-      type: String,
-      default: '',
-    },
-  },
+  props: switchProps,
   setup(props, context: SetupContext) {
     const _value = ref(false);
     const currentValue = computed({
       set(val) {
-        _value.value = val;
+        _value.value = val as boolean;
         context.emit('update:modelValue', val);
       },
       get() {
