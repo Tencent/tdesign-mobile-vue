@@ -1,14 +1,10 @@
 <template>
   <div :class="`${name}`">
-    <t-cell-group title="方式二：函数调用">
-      <t-cell-group class="dialog-type-title" title="反馈类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible">
-            含标题含底部
-          </t-button>
-        </t-cell>
-      </t-cell-group>
-    </t-cell-group>
+    <t-cell value-align="left">
+      <t-button theme="primary" size="large" @click="changeFunctionVisible">
+        确认类弹出框
+      </t-button>
+    </t-cell>
   </div>
 </template>
 <script lang="ts">
@@ -44,20 +40,20 @@ export default {
   },
   methods: {
     changeFunctionVisible() {
-        Dialog.alert({
-            showHeader: false,
-            content: '我的家里有个人很酷',
-            knowContent: 'i know',
-            onConfirm: (e:any) => {
-              console.log('dialog:confirm', e);
-            },
-            onCancel: () => {
-              console.log('dialog:cancel');
-            },
-            onClickoverlay: () => {
-              console.log('dialog:clickoverlay');
-            },
-        });
+      Dialog.alert({
+        showHeader: false,
+        content: '我的家里有个人很酷',
+        knowContent: 'i know',
+        onConfirm: (e:any) => {
+          console.log('dialog:confirm', e);
+        },
+        onCancel: () => {
+          console.log('dialog:cancel');
+        },
+        onClickoverlay: () => {
+          console.log('dialog:clickoverlay');
+        },
+      });
     },
   },
 };

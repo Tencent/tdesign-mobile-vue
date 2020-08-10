@@ -1,39 +1,23 @@
 <template>
   <div :class="`${name}`">
-    <t-cell-group title="方式一：组件调用">
-      <t-cell-group class="dialog-type-title" title="确认类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="this.isShowDialog = true">
-            确认类弹出框
-          </t-button>
-          <t-dialog
-            :showOverlay="showOverlay"
-            type="confirm"
-            :isInput="isInput"
-            :header="header"
-            :content="content"
-            :placeholderText="placeholderText"
-            v-model="isShowDialog"
-            :cancelButtonText="cancelButtonText"
-            :confirmButtonText="confirmButtonText"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-            <template #footer-cancel>
-              <div style="color:grey;font-size:18px;">我不同意</div>
-            </template>
-            <template #footer-confirm>
-              <div style="color:blue;font-size:18px;">我同意</div>
-            </template>
-          </t-dialog>
-        </t-cell>
-      </t-cell-group>
-    </t-cell-group>
+    <t-cell value-align="left">
+      <t-button theme="primary" size="large" @click="this.isShowDialog = true">
+        反馈类弹出框
+      </t-button>
+      <t-dialog
+        :content="content"
+        @clickoverlay="clickoverlay"
+        @confirm="onConfirm"
+        @opened="openDialog"
+        @closed="closeDialog"
+        @visible-change="changeVisible"
+        v-model="isShowDialog"></t-dialog>
+    </t-cell>
   </div>
 </template>
 <script lang="ts">
 import { ref } from 'vue';
 
-import Dialog from '../index.func';
 import config from '@/config';
 
 const { prefix } = config;
@@ -64,10 +48,6 @@ export default {
   methods: {
     onConfirm(e:any)  {
       console.log('dialog:confirm', e);
-    },
-
-    onCancel() {
-      console.log('dialog:cancel');
     },
 
     openDialog() {

@@ -1,14 +1,10 @@
 <template>
   <div :class="`${name}`">
-    <t-cell-group title="方式二：函数调用">
-      <t-cell-group class="dialog-type-title" title="确认类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible()">
-            含标题含底部含input
-          </t-button>
-        </t-cell>
-      </t-cell-group>
-    </t-cell-group>
+    <t-cell value-align="left">
+      <t-button theme="primary" size="large" @click="changeFunctionVisible()">
+        反馈类弹出框
+      </t-button>
+    </t-cell>
   </div>
 </template>
 <script lang="ts">
@@ -42,23 +38,23 @@ export default {
     };
   },
   methods: {
-
     changeFunctionVisible() {
-        Dialog.confirm({
-            isInput: true,
-            content: '我的家里有个人很酷',
-            knowContent: 'i know',
-            placeholderText: '请输入您的名字',
-            onConfirm: (e:any) => {
-                console.log('dialog:confirm', e);
-            },
-            onCancel: () => {
-                console.log('dialog:cancel');
-            },
-            onClickoverlay: () => {
-                console.log('dialog:clickoverlay');
-            },
-        });
+      Dialog.confirm({
+        isInput: true,
+        content: '我的家里有个人很酷',
+        knowContent: 'i know',
+        placeholderText: '请输入您的名字',
+        onConfirm: (e:any) => {
+          console.log('dialog:confirm', e);
+        },
+        onCancel: () => {
+          console.log('dialog:cancel');
+        },
+        onClickoverlay: () => {
+          console.log('dialog:clickoverlay');
+        },
+      });
+    },
   },
 };
 </script>
