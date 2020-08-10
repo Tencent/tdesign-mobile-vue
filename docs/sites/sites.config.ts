@@ -118,6 +118,11 @@ export default {
               name: 'noticebar',
               component: () => import('@/noticebar/noticebar.md'),
             },
+            {
+              title: 'DropdownMenu 下拉菜单',
+              name: 'dropdown-menu',
+              component: () => import('@/dropdown-menu/dropdown-menu.md'),
+            },
           ],
         },
       ],

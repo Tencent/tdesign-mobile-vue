@@ -1,0 +1,144 @@
+<template>
+  <div :class="classes">
+    <div ref="refBar" :class="styleBar">
+      <div
+        v-for="item in itemProps"
+        :key="item.itemId"
+        :class="styleBarItem(item)"
+        @click="expandMenu(item)"
+      >
+        <div :class="`${name}__title`">{{item.title}}</div>
+      </div>
+    </div>
+    <component :is="innerItems" />
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, computed, toRefs, ref, reactive, mergeProps, provide } from 'vue';
+
+import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
+import config from '../config';
+import { DropdownMenuState, context as menuContext, DropdownMenuControl } from './context';
+import TransAniControl from './trans-ani-control';
+import { findRelativeRect, findRelativeContainer } from './dom-utils';
+
+const { prefix } = config;
+const name = `${prefix}-dropdown-menu`;
+
+export const ItemInstanceManager = {
+  usedIds: {},
+  generateId() {
+    const { usedIds } = this;
+    let id;
+    do {
+      const r = String(Math.random()).substr(2);
+      id = `item_${Date.now()}_${r}`;
+    } while (usedIds[id]);
+    usedIds[id] = true;
+    return id;
+  },
+};
+
+export default defineComponent({
+  name,
+  props: DropdownMenuProps,
+  setup(props: IDropdownMenuProps, { slots }) {
+    // 通过 slots.default 子成员，计算标题栏选项
+    const { innerItems, itemProps } = (() => {
+      const children = (slots.default ? slots.default() : [])
+        .filter((child: any) => child.type.name === `${prefix}-dropdown-item`)
+        .map((child: any) => {
+          const newChild = child;
+          const { itemId = ItemInstanceManager.generateId() } = child.props;
+          newChild.props = mergeProps(child.props, { itemId });
+          return newChild;
+        });
+      const itemProps = children.map((item: any) => ({
+        ...item.props,
+        disabled: item.props.disabled !== undefined && item.props.disabled !== false,
+      }));
+      return {
+        innerItems: () => children,
+        itemProps,
+      };
+    })();
+    // 菜单状态
+    const state = reactive({
+      itemProps,
+      activeId: null,
+      barRect: {},
+    });
+    const aniControl = new TransAniControl();
+    // 提供子组件访问
+    provide('dropdownMenuProps', props);
+    provide('dropdownMenuState', state);
+    provide('dropdownAniControl', aniControl);
+    // 根结点样式
+    const classes = computed(() => [
+      `${name}`,
+    ]);
+    // 标题栏结点引用
+    const refBar = ref(null);
+    // 标题栏样式
+    const styleBar = computed(() => [
+      `${name}__bar`,
+      {
+        [`${name}__bar ${name}__bar--open`]: state.activeId,
+      },
+    ]);
+    const styleBarItem = computed(() => (item: any) => [
+      `${name}__item`,
+      {
+        [`${prefix}-is-disabled`]: item.disabled,
+        [`${prefix}-is-active`]: item.itemId === state.activeId,
+      },
+    ]);
+    // 展开对应项目的菜单
+    const expandMenu = (itemProps: any) => {
+      const { itemId, disabled } = itemProps;
+
+      if (disabled) return;
+
+      if (state.activeId === itemId) {
+        // 再次点击时收起
+        collapseMenu();
+        return;
+      }
+
+      state.activeId = itemId;
+
+      // 获取菜单定位
+      const bar = refBar.value as any;
+      const barRect = findRelativeRect(bar);
+      state.barRect = barRect;
+
+      // 记录展开状态
+      const container = findRelativeContainer(bar) || document.body;
+      menuContext.recordMenuExpanded(container, control, DropdownMenuState.expanded);
+    };
+    const collapseMenu = () => {
+      state.activeId = null;
+
+      // 清除已展开状态记录
+      const bar = refBar.value as any;
+      const container = findRelativeContainer(bar) || document.body;
+      menuContext.recordMenuExpanded(container, control, DropdownMenuState.collapsed);
+    };
+    const control: DropdownMenuControl = { expandMenu, collapseMenu };
+    // 提供子组件访问
+    provide('dropdownMenuControl', control);
+    return {
+      name: ref(name),
+      classes,
+      refBar,
+      styleBar,
+      styleBarItem,
+      ...toRefs(props),
+      innerItems,
+      ...toRefs(state),
+      expandMenu,
+    };
+  },
+});
+</script>

@@ -58,7 +58,7 @@ export default defineComponent({
     });
 
     const styleValue = computed(() => {
-      const alignLeft = `${name}--value ${name}__left`;
+      const alignLeft = `${name}__value ${name}__left`;
       if (hasLabel) {
         return props.valueAlign.valueOf() === ValueAlign.Right.valueOf() ? `${name}--value` : alignLeft;
       }

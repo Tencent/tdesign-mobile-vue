@@ -102,6 +102,11 @@ export default {
           name: 'dialog',
           component: () => import('@/dialog/demos/base.vue'),
         },
+        {
+          title: 'DropdownMenu 下拉菜单',
+          name: 'dropdown-menu',
+          component: () => import('@/dropdown-menu/demos/base.vue'),
+        },
       ],
     },
   },
