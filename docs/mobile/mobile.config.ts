@@ -50,7 +50,7 @@ export default {
         {
           title: 'Picker 选择器',
           name: 'picker',
-          component: () => import('@/picker/demos/base.vue'),
+          component: () => import('@/picker/demos/mobile.vue'),
         },
         {
           title: 'Radio 单选',
