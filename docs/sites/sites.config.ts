@@ -97,6 +97,11 @@ export default {
               name: 'slider',
               component: () => import('@/slider/slider.md'),
             },
+            {
+              title: 'Dialog 弹出框',
+              name: 'dialog',
+              component: () => import('@/dialog/dialog.md'),
+            },
           ],
         },
         {
