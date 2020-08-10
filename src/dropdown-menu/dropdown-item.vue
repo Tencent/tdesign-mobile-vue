@@ -17,7 +17,7 @@
                       :class="styleDropRadio(option.value)"
                     >
                       <template v-slot:checkedIcon>
-                        <t-icon icon="tick" v-if="isCheckedRadio(option.value)" />
+                        <t-icon name="tick" v-if="isCheckedRadio(option.value)" />
                       </template>
                     </t-radio>
                   </t-cell>
@@ -81,7 +81,7 @@
                         :class="styleTreeRadio(option.value, level)"
                       >
                         <template v-slot:checkedIcon>
-                          <t-icon icon="tick" v-if="option.value === treeState.selectList[level]" />
+                          <t-icon name="tick" v-if="option.value === treeState.selectList[level]" />
                         </template>
                       </t-radio>
                     </t-cell>
@@ -278,7 +278,7 @@ export default defineComponent({
       treeOptions.value = newTreeOptions as [];
     };
     if (props.optionsLayout === 'tree') {
-      watch(() => ({
+      watch(() => JSON.stringify({
         options: props.options,
         selectList: treeState.selectList,
       }), buildTreeOptions);
@@ -318,7 +318,7 @@ export default defineComponent({
           }
           if (props.selectMode === 'multi') {
             const selectList = treeState.selectList[treeState.leafLevel] as [];
-            return selectList.length <= 0;
+            return selectList && selectList.length <= 0;
           }
       }
       return true;
