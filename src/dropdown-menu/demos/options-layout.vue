@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${name}`">
+  <demo-container>
     <t-dropdown-menu>
       <t-dropdown-item
         title="两栏菜单"
@@ -26,17 +26,17 @@
       三栏菜单 选中项:
       <strong>{{valueM2.join(', ')}}</strong>
     </p>
-  </div>
+  </demo-container>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-
-const componentName = 'dropdown-menu';
-const name = `${componentName}-demo`;
+import DemoContainer from './demo-container.vue';
 
 export default defineComponent({
-  name,
+  components: {
+    DemoContainer,
+  },
   setup() {
     const emptyArr = new Array(20).fill(null);
     const numberArr = emptyArr.map((_, i) => ({

@@ -1,10 +1,12 @@
 // 获取相对定位容器
 export const findRelativeContainer = (dom: any) => {
   let node = dom;
-  while (node) {
-    node = node.parentNode;
+  while (node && node !== document.body) {
     const { transform } = getComputedStyle(node);
-    if (!/matrix\([\d,\s]+\)/.test(transform)) continue;
+    if (!/matrix\([\d,\s]+\)/.test(transform)) {
+      node = node.parentNode;
+      continue;
+    }
     return node;
   }
   return null;

@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${name}`">
+  <demo-container>
     <t-dropdown-menu>
       <t-dropdown-item title="单选菜单" disabled />
       <t-dropdown-item title="自定义内容">
@@ -28,17 +28,17 @@
       开关 3:
       <strong>{{switch3}}</strong>
     </p>
-  </div>
+  </demo-container>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-
-const componentName = 'dropdown-menu';
-const name = `${componentName}-demo`;
+import DemoContainer from './demo-container.vue';
 
 export default defineComponent({
-  name,
+  components: {
+    DemoContainer,
+  },
   setup() {
     const switch1 = ref(false);
     const switch2 = ref(true);
@@ -52,17 +52,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less" scoped>
-.dropdown-menu-demo {
-  position: relative;
-  background: #fff;
-  transform: translate(0, 0);
-  height: 400px;
-  padding: 1px 0;
-}
-p {
-  font-size: 14px;
-  line-height: 1.4;
-  margin: 1em .5em;
-}
-</style>
