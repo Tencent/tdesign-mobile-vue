@@ -2,7 +2,7 @@
 @import "../mixins/index.less";
 
 
-.@{prefix}-demo-block{
+.@{prefix}-demo-block {
   .t-button {
     margin-right:10px;
   }
@@ -25,7 +25,7 @@
   }
 }
 
-.@{prefix}-demo-tag{
+.@{prefix}-demo-tag {
   .t-tag + .t-tag {
     margin-left: 8px;
   }
@@ -35,3 +35,21 @@
   }
 }
 
+.@{prefix}-demo-dropdown-menu {
+  position: relative;
+  background: #fff;
+  // 为下拉菜单预留空间
+  height: 400px;
+  // 避免切换 overflow: hidden 时 margin 折叠变化产生抖动
+  padding: 1px 0;
+
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 1em .5em;
+  }
+
+  &.relative-container {
+    transform: translate(0, 0);
+  }
+}

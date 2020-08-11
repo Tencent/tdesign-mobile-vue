@@ -8,7 +8,7 @@
 import { ref, computed, onMounted } from 'vue';
 
 const componentName = 'dropdown-menu';
-const name = `${componentName}-demo`;
+const name = `tdesign-demo-${componentName}`;
 
 export default {
   name,
@@ -31,20 +31,3 @@ export default {
   },
 };
 </script>
-
-<style lang="less" scoped>
-.dropdown-menu-demo {
-  position: relative;
-  background: #fff;
-  height: 400px;
-  padding: 1px 0;
-  & /deep/ p {
-    font-size: 14px;
-    line-height: 1.4;
-    margin: 1em .5em;
-  }
-}
-.relative-container {
-  transform: translate(0, 0);
-}
-</style>

@@ -4,6 +4,7 @@
       <t-dropdown-item title="禁用菜单" disabled />
       <t-dropdown-item title="禁用选项" :options="optionsN" />
     </t-dropdown-menu>
+    <p>禁用了序号是3的倍数的选项。</p>
   </demo-container>
 </template>
 
