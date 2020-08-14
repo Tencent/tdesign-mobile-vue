@@ -6,10 +6,6 @@
   <div class="tdesign-demo-iconfont">
     <p>目前设计师给到的全部图标</p><br>
     <div class="tdesign-demo-icon">
-      <t-icon name="arrow-right"/>
-      <div class="tdesign-demo-icon-name">arrow-right</div>
-    </div>
-    <div class="tdesign-demo-icon">
       <t-icon name="location_fill"/>
       <div class="tdesign-demo-icon-name">location_fill</div>
     </div>
@@ -76,6 +72,14 @@
     <div class="tdesign-demo-icon">
       <t-icon name="circle"/>
       <div class="tdesign-demo-icon-name">circle</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="arrow-left"/>
+      <div class="tdesign-demo-icon-name">arrow-left</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="arrow-right"/>
+      <div class="tdesign-demo-icon-name">arrow-right</div>
     </div>
   </div>
 </template>
