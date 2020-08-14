@@ -3,10 +3,10 @@
 
     <t-cell-group title="文本轻提示">
       <t-cell value-align="left">
-        <t-button size="large" @click="$toast(text1)">短文本</t-button>
+        <t-button size="large" @click="showText(text1)">短文本</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="$toast(text2)">长文本</t-button>
+        <t-button size="large" @click="showText(text2)">长文本</t-button>
       </t-cell>
     </t-cell-group>
 
@@ -55,26 +55,6 @@
       </t-cell>
     </t-cell-group>
 
-    <!-- <t-toast v-show="cur== 0" theme="text">轻提示内容</t-toast>
-    <t-toast v-show="cur== 1" theme="text">
-      这是一条很长的轻提示内容，这是一条很长的轻提示内容
-    </t-toast>
-
-    <t-toast icon="tick" theme="success" v-show="cur==2" ></t-toast>
-    <t-toast icon="error" class="t-toast--icononly" theme="fail" v-show="cur==3" ></t-toast>
-    <t-toast icon="clear" class="t-toast--icononly" v-show="cur==4" ></t-toast>
-
-    <t-toast icon="tick"  theme="success"  v-show="cur==5" >成功文案</t-toast>
-    <t-toast icon="error" theme="fail" v-show="cur==6" >失败文案</t-toast>
-    <t-toast icon="loading_gradient" theme="loading"
-             v-show="cur==7" >提示文案</t-toast>
-    <t-toast icon="clear"  v-show="cur==8" >提示文案</t-toast>
-    <t-toast theme="text" position="top" v-show="cur==9" >提示文案</t-toast>
-    <t-toast theme="text" position="middle" v-show="cur==10" >提示文案</t-toast>
-    <t-toast theme="text" position="bottom" v-show="cur==11" >提示文案</t-toast>
-
-    <t-mask  v-show="cur==12"/>
-    <t-toast icon="tick"  theme="success"  v-show="cur==12" >提示文案</t-toast> -->
   </div>
 </template>
 
@@ -102,53 +82,38 @@ export default {
     };
   },
   methods: {
-    $toast: Toast,
-    showTextToast() {
-      console.log(Toast);
+    showText(message: string | undefined) {
+      Toast(message);
     },
     showSuccess(message: string | undefined) {
-      // this.$toast({
-      //   type: 'success',
-      //   message,
-      // });
       Toast.success(message);
     },
     showFail(message: string | undefined) {
-      this.$toast({
+      Toast({
         type: 'fail',
         message,
       });
     },
     showCustom(message: string | undefined) {
-      this.$toast({
-        icon: 'books',
+      Toast({
+        icon: 'user_fill',
         message,
-        duration: 100000,
       });
     },
     showLoading(message: string | undefined) {
-      // this.$toast({
-      //   type: 'loading',
-      //   message,
-      // });
-      const ins = Toast.loading(message);
-      console.log(ins);
+      Toast.loading(message);
     },
     showPosition(position: string) {
-      this.$toast({
+      Toast({
         type: 'success',
         position,
       });
     },
     showMask() {
-      this.$toast({
+      Toast({
         showOverlay: true,
         message: this.text1,
-        duration: 10000,
       });
-      setTimeout(() => {
-        Toast.clear();
-      }, 1000);
     },
   },
 };
