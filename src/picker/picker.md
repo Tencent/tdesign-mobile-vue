@@ -20,7 +20,7 @@
 
 ## Props
 
-### Picker
+### Picker Props
 | 属性 | 类型 | 默认值 | 必传 | 说明 |
 |-----|-----|-----|-----|-----|
 |theme|String|defaykt|N|picker主题|
@@ -28,20 +28,22 @@
 |confirmButtonText|String|确定|N|确定按钮文字|
 |cancelButtonText|String|取消|N|取消按钮文字|
 
-### Picker Events
-| 事件名 | 说明 | 回调参数 |
-|-------|-----|---------|
-|change|选中变化时候触发|[{value, index}]|
-|confirm|点击确定按钮时候触发|{value: [], index: []}|
-|cancel|点击取消时候触发|-|
-
-### PickerItem
+### PickerItem Props
 | 属性 | 类型 | 默认值 | 必传 | 说明 |
 |-----|-----|-----|-----|-----|
 |options|Array|[]|Y|列的候选项|
 |optionKey|String|-|N|options为ObjectArray的时候，指定显示对象的key|
 |formatter|Function|(val: string) => val|N|格式化显示的候选项|
 |defaultIndex|Number|0|N|默认选中的候选项|
+
+## Events
+
+### Picker Events
+| 事件名 | 说明 | 回调参数 |
+|-------|-----|---------|
+|change|选中变化时候触发|[{value, index}]|
+|confirm|点击确定按钮时候触发|{value: [], index: []}|
+|cancel|点击取消时候触发|-|
 
 ### PickerItem Events
 | 事件名 | 说明 | 回调参数 |
