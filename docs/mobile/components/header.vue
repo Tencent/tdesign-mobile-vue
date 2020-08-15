@@ -1,7 +1,7 @@
 <template>
   <div v-show="title" class="tdesign-demo-topnav">
     <div class="tdesign-demo-topnav-title">{{ title }}</div>
-    <t-icon class="tdesign-demo-topnav__back" name="left" @click="onBack" />
+    <t-icon class="tdesign-demo-topnav__back" name="arrow-left" @click="onBack" />
   </div>
 </template>
 <script lang="ts">
