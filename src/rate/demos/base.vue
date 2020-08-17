@@ -24,13 +24,9 @@
       </t-cell>
     </t-cell-group>
 
-    <t-cell-group title="自定义图标和数量">
+    <t-cell-group title="自定义数量">
       <t-cell value-align="left">
-        <t-rate v-model="current4" :count="6" clearable show-text allow-half>
-          <template v-slot:icon>
-            <t-icon name="apple" />
-          </template>
-        </t-rate>
+        <t-rate v-model="current4" :count="6" size="large" clearable show-text allow-half />
       </t-cell>
     </t-cell-group>
   </div>
