@@ -18,17 +18,16 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["webpack-env", "jest"],
     "paths": {
       "@/*": ["src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
+  "rules": { "trailing-comma": false },
   "include": [
     "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.vue", 
-    "docs/common/markdown-loader.js"
+    "./**/*.vue"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "docs/common/tdesign-doc-loader.js"]
 }

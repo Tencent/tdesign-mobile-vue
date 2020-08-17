@@ -1,232 +1,106 @@
 <template>
-  <div class="demo-icon">
-    <div class="demo-icon-iconbox" v-for="icon in icons" :key="icon">
-      <t-icon :icon="icon" />
-      <p :title="icon">{{ icon }}</p>
+  <!--
+    该文件有脚本 tdesign/tdesign-web-vue/src/icon/generate/index.js 自动生成。
+    若需要编辑，请编辑源文件：tdesign/tdesign-mobile-vue/src/icon/generate/demo.tpl 。
+  -->
+  <div class="tdesign-demo-iconfont">
+    <p>目前设计师给到的全部图标</p><br>
+    <div class="tdesign-demo-icon">
+      <t-icon name="arrow-right"/>
+      <div class="tdesign-demo-icon-name">arrow-right</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="location_fill"/>
+      <div class="tdesign-demo-icon-name">location_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="tick_fill"/>
+      <div class="tdesign-demo-icon-name">tick_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="close"/>
+      <div class="tdesign-demo-icon-name">close</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="warning"/>
+      <div class="tdesign-demo-icon-name">warning</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="circle-time_fill"/>
+      <div class="tdesign-demo-icon-name">circle-time_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="loading"/>
+      <div class="tdesign-demo-icon-name">loading</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="arrow-up"/>
+      <div class="tdesign-demo-icon-name">arrow-up</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="arrow-down"/>
+      <div class="tdesign-demo-icon-name">arrow-down</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="help_fill"/>
+      <div class="tdesign-demo-icon-name">help_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="tick"/>
+      <div class="tdesign-demo-icon-name">tick</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="user_fill"/>
+      <div class="tdesign-demo-icon-name">user_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="remove"/>
+      <div class="tdesign-demo-icon-name">remove</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="add"/>
+      <div class="tdesign-demo-icon-name">add</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="close_fill"/>
+      <div class="tdesign-demo-icon-name">close_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="star_fill"/>
+      <div class="tdesign-demo-icon-name">star_fill</div>
+    </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="sound_fill"/>
+      <div class="tdesign-demo-icon-name">sound_fill</div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import Clipboard from "clipboard";
-import { ref, onMounted } from "vue";
-
-export default {
-  setup() {
-    const icons = ref([
-      "add",
-      "android",
-      "app",
-      "apple",
-      "arrow_down",
-      "arrow_left",
-      "arrow_right",
-      "arrow_up",
-      "ascending_order",
-      "attach",
-      "backtop",
-      "backward",
-      "barcode",
-      "books",
-      "bulletpoint",
-      "calendar",
-      "call",
-      "carret_down",
-      "carret_left",
-      "carret_right",
-      "carret_up",
-      "cart",
-      "chart",
-      "chart_bar",
-      "chart_bubble",
-      "chart_pit",
-      "chat",
-      "chrome",
-      "circle_add",
-      "circle_backtop",
-      "circle_clear",
-      "circle_down",
-      "circle_error",
-      "circle_help",
-      "circle_info",
-      "circle_left",
-      "circle_money",
-      "circle_play",
-      "circle_remove",
-      "circle_right",
-      "circle_stop",
-      "circle_tick",
-      "circle_time",
-      "circle_up",
-      "clear",
-      "cloud",
-      "cloud_download",
-      "cloud_upload",
-      "code",
-      "contact",
-      "creditcard",
-      "customerservice",
-      "delete",
-      "descending_order",
-      "desktop",
-      "double_left",
-      "double_right",
-      "down",
-      "download",
-      "edit",
-      "eject",
-      "enter",
-      "error",
-      "female",
-      "file",
-      "file_copy",
-      "file_exel",
-      "file_jpg",
-      "file_new",
-      "file_open",
-      "file_paste",
-      "file_pdf",
-      "file_powerpoint",
-      "file_unknown",
-      "file_word",
-      "filter",
-      "first_page",
-      "flag",
-      "folder_new",
-      "fork",
-      "forward",
-      "fullsreen",
-      "fullsreen_exit",
-      "gift",
-      "github",
-      "group_add",
-      "heart",
-      "help",
-      "history",
-      "home",
-      "ie",
-      "image",
-      "inbox",
-      "info",
-      "internet",
-      "jump",
-      "label",
-      "laptop",
-      "last_page",
-      "left",
-      "line_circle_add",
-      "line_circle_clear",
-      "line_circle_down",
-      "line_circle_error",
-      "line_circle_help",
-      "line_circle_info",
-      "line_circle_left",
-      "line_circle_play",
-      "line_circle_remove",
-      "line_circle_right",
-      "line_circle_stop",
-      "line_circle_tick",
-      "line_circle_time",
-      "line_circle_up",
-      "line_star",
-      "link",
-      "link_unlink",
-      "loading",
-      "loading_gradient",
-      "loading_sand",
-      "location",
-      "lock_off",
-      "lock_on",
-      "login",
-      "mail",
-      "male",
-      "management",
-      "menu_fold",
-      "menu_unfold",
-      "mobile",
-      "mobile_vibrate",
-      "more",
-      "next",
-      "notification",
-      "on",
-      "order_horizontal_bottomup",
-      "order_horizontal_normal",
-      "order_horizontal_updown",
-      "order_verticle_bottomup",
-      "order_verticle_normal",
-      "order_verticle_updown",
-      "photo",
-      "pin",
-      "previous",
-      "print",
-      "qrcode",
-      "queue",
-      "rectangle_add",
-      "rectangle_clear",
-      "rectangle_down",
-      "rectangle_left",
-      "rectangle_remove",
-      "rectangle_right",
-      "rectangle_tick",
-      "rectangle_up",
-      "refresh",
-      "remove",
-      "right",
-      "rollback",
-      "save",
-      "scan",
-      "secured",
-      "server",
-      "setting",
-      "share",
-      "share_alt",
-      "shop",
-      "sound",
-      "star",
-      "star_stroke",
-      "stop",
-      "swap",
-      "swap_left",
-      "swap_right",
-      "table",
-      "thumb_down",
-      "thumb_up",
-      "tick",
-      "tips",
-      "tools",
-      "up",
-      "upload",
-      "usb",
-      "user",
-      "user_add",
-      "user_delete",
-      "usergroup",
-      "usergroup_delete",
-      "video",
-      "view_column",
-      "view_list",
-      "view_module",
-      "visibility_off",
-      "visibility_on",
-      "wallet",
-      "wifi",
-      "windows",
-      "zoom",
-      "zoom_in",
-      "zoom_out"
-    ]);
-
-    onMounted(() => {
-      const clipboard = new Clipboard(".demo-icon-iconbox", {
-        text: trigger => trigger.querySelector("p").innerText
-      });
-      clipboard.on("success", e => {
-        this.$message.closeAll();
-        this.$message.success(`${e.text} 已复制`);
-      });
-    });
-
-    return { icons };
+<style lang="less">
+  .tdesign-demo-iconfont {
+    .tdesign-demo-icon {
+      width: 130px;
+      height: 100px;
+      margin-right: 24px;
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      .t-icon {
+        font-size: 25px;
+        margin-right: 0;
+        color: #999999;
+        transition: all .2s;
+      }
+      .t-icon:hover {
+        color: #0052d9;
+        font-size: 30px;
+        transition: all .2s;
+      }
+      .tdesign-demo-icon-name {
+        text-align: center;
+        margin-top: 8px;
+        font-size: 12px;
+      }
+    }
   }
-};
-</script>
+</style>
