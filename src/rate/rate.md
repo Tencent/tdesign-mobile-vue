@@ -15,8 +15,6 @@
 ::: demo 只读 ./demos/readonly.vue
 :::
 
-::: demo 自定义图标 ./demos/icon.vue
-:::
 
 ## Props
 | 属性 | 类型 | 默认值 | 必传 | 说明 |
@@ -29,6 +27,5 @@
 |show-text|Boolean|false|N|是否显示辅助文字|
 |texts|Array|-|N|评分等级对应的辅助文字|
 |text-color|String|-|N|辅助文字颜色|
-|icon|String|start|N|评分图标Icon组件的class类名|
 |color|String|-|N|评分图标的颜色（待完善）|
 |size|String|-|N|评分图标的大小（待完善）|
