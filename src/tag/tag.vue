@@ -95,8 +95,11 @@ const Tag = defineComponent({
       `${baseClass}--theme-${theme}`,
       {
         [`${baseClass}--effect-${effect}`]: theme,
-        [`${baseClass}--closable`]: closable.value,
-        [`${baseClass}--disabled`]: disabled.value,
+        [`${prefix}-is-error`]: theme === 'danger',
+        [`${prefix}-is-success`]: theme === 'success',
+        [`${prefix}-is-warnging`]: theme === 'warnging',
+        [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
+        [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--size-${size}`]: size,
         [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),
         [`${baseClass}--round`]: shape.valueOf() === TagShape.Round.valueOf(),

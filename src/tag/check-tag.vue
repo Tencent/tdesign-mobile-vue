@@ -71,9 +71,9 @@ const CheckTag = defineComponent({
       `${baseClass}--checkable`,
       {
         [`${baseClass}--size-${size}`]: size,
-        [`${baseClass}--closable`]: closable.value,
-        [`${baseClass}--disabled`]: disabled.value,
-        [`${baseClass}--checked`]: checked.value,
+        [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
+        [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
+        [`${prefix}-is-checked ${baseClass}--checked`]: checked.value,
         [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),
         [`${baseClass}--round`]: shape.valueOf() === TagShape.Round.valueOf(),
         [`${baseClass}--circle`]: shape.valueOf() === TagShape.Circle.valueOf(),
