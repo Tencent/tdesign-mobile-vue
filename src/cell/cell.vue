@@ -60,7 +60,7 @@ export default defineComponent({
     const styleValue = computed(() => {
       const alignLeft = `${name}__value ${name}__left`;
       if (hasLabel) {
-        return props.valueAlign.valueOf() === ValueAlign.Right.valueOf() ? `${name}--value` : alignLeft;
+        return props.valueAlign.valueOf() === ValueAlign.Right.valueOf() ? `${name}__value` : alignLeft;
       }
       // 没有label时默认左对齐
       return alignLeft;
