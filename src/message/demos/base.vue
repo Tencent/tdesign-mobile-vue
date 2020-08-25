@@ -21,6 +21,11 @@
         <t-button theme="primary" @click="visible6 = true">居中</t-button>
       </t-cell>
     </t-cell-group>
+    <t-cell-group title="纯文本消息">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="visible7 = true">纯文本</t-button>
+      </t-cell>
+    </t-cell-group>
     <t-cell-group title="快捷调用">
       <t-cell value-align="left">
         <t-button theme="primary" @click="onClick('info')">普通</t-button>
@@ -36,6 +41,7 @@
     <t-message v-model="visible4" content="message" :offset="{top: 0, left: 0, right: 0}" />
     <t-message v-model="visible5" content="5000ms后消失" :duration="5000"></t-message>
     <t-message v-model="visible6" content="居中对齐" align="center"></t-message>
+    <t-message v-model="visible7">纯文本，不带icon</t-message>
   </div>
 </template>
 
@@ -51,6 +57,7 @@ export default {
       visible4: false,
       visible5: false,
       visible6: false,
+      visible7: false,
     };
   },
   methods: {
