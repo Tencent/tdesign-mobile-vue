@@ -81,6 +81,10 @@
       <t-icon name="arrow-right"/>
       <div class="tdesign-demo-icon-name">arrow-right</div>
     </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="warning_fill"/>
+      <div class="tdesign-demo-icon-name">warning_fill</div>
+    </div>
   </div>
 </template>
 
