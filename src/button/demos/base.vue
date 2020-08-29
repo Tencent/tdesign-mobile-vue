@@ -8,8 +8,8 @@
         <t-button size="large" disabled>次要按钮-禁用</t-button>
         <t-button theme="ghost" size="large" >幽灵按钮</t-button>
         <t-button theme="ghost" size="large" disabled >幽灵按钮-禁用</t-button>
-        <t-button theme="success" size="large" >错误按钮</t-button>
-        <t-button theme="success" size="large" disabled >错误按钮-禁用</t-button>
+        <t-button theme="success" size="large" >成功按钮</t-button>
+        <t-button theme="success" size="large" disabled >成功按钮-禁用</t-button>
         <t-button theme="danger" size="large" >错误按钮</t-button>
         <t-button theme="danger" size="large" disabled >错误按钮-禁用</t-button>
         <t-button theme="warning" size="large" >警告按钮</t-button>
