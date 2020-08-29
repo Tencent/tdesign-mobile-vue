@@ -34,10 +34,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less">
-  .tdesign-demo-iconfont {
-    .t-icon {
-      margin-right: 24px;
-    }
-  }
-</style>

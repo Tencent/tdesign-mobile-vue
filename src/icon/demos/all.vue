@@ -87,32 +87,3 @@
     </div>
   </div>
 </template>
-
-<style lang="less">
-  .tdesign-demo-iconfont {
-    .tdesign-demo-icon {
-      width: 130px;
-      height: 100px;
-      margin-right: 24px;
-      display: inline-block;
-      text-align: center;
-      vertical-align: top;
-      .t-icon {
-        font-size: 25px;
-        margin-right: 0;
-        color: #999999;
-        transition: all .2s;
-      }
-      .t-icon:hover {
-        color: #0052d9;
-        font-size: 30px;
-        transition: all .2s;
-      }
-      .tdesign-demo-icon-name {
-        text-align: center;
-        margin-top: 8px;
-        font-size: 12px;
-      }
-    }
-  }
-</style>
