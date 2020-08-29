@@ -2,7 +2,7 @@
   <transition name="message" @after-leave="afterLeave" @after-enter="afterEnter">
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
-        <t-icon name="circle_info" />
+        <t-icon :name="iconName" />
         <span :class="`${name}--txt`">{{content}}</span>
       </slot>
     </div>
@@ -77,6 +77,7 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);
+    const iconName = computed(() => props.theme === 'success' ? 'tick_fill' : 'warning_fill');
     const rootClasses = computed(() => ({
       [name]: true,
       [`${name}--${props.theme}`]: true,
@@ -105,6 +106,7 @@ export default defineComponent({
       name: ref(name),
       root,
       currentVisible,
+      iconName,
       rootClasses,
       rootStyles,
       afterEnter: () => context.emit('opened'),
