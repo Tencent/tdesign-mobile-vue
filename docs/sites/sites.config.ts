@@ -102,6 +102,11 @@ export default {
               name: 'dialog',
               component: () => import('@/dialog/dialog.md'),
             },
+            {
+              title: 'DropdownMenu 下拉菜单',
+              name: 'dropdown-menu',
+              component: () => import('@/dropdown-menu/dropdown-menu.md'),
+            },
           ],
         },
         {
@@ -122,11 +127,6 @@ export default {
               title: 'NoticeBar 公告栏',
               name: 'noticebar',
               component: () => import('@/noticebar/noticebar.md'),
-            },
-            {
-              title: 'DropdownMenu 下拉菜单',
-              name: 'dropdown-menu',
-              component: () => import('@/dropdown-menu/dropdown-menu.md'),
             },
           ],
         },
