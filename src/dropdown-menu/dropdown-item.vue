@@ -8,34 +8,30 @@
             <t-cell-group v-if="selectMode === 'single'">
               <!-- 单选列表 -->
               <t-radio-group v-model="radioSelect">
-                <template v-for="option in options">
-                  <t-cell :key="option.value" value-align="left">
-                    <t-radio
-                      :name="option.value"
-                      :title="option.title"
-                      :disabled="option.disabled"
-                      :class="styleDropRadio(option.value)"
-                    >
-                      <template v-slot:checkedIcon>
-                        <t-icon name="tick" v-if="isCheckedRadio(option.value)" />
-                      </template>
-                    </t-radio>
-                  </t-cell>
-                </template>
+                <t-cell v-for="option in options" :key="option.value" value-align="left">
+                  <t-radio
+                    :name="option.value"
+                    :title="option.title"
+                    :disabled="option.disabled"
+                    :class="styleDropRadio(option.value)"
+                  >
+                    <template v-slot:checkedIcon>
+                      <t-icon name="tick" v-if="isCheckedRadio(option.value)" />
+                    </template>
+                  </t-radio>
+                </t-cell>
               </t-radio-group>
             </t-cell-group>
             <t-cell-group v-else-if="selectMode === 'multi'">
               <!-- 多选列表 -->
               <t-check-group v-model="checkSelect">
-                <template v-for="option in options">
-                  <t-cell :key="option.value" value-align="left">
-                    <t-check-box
-                      :name="option.value"
-                      :title="option.title"
-                      :disabled="option.disabled"
-                    ></t-check-box>
-                  </t-cell>
-                </template>
+                <t-cell v-for="option in options" :key="option.value" value-align="left">
+                  <t-check-box
+                    :name="option.value"
+                    :title="option.title"
+                    :disabled="option.disabled"
+                  ></t-check-box>
+                </t-cell>
               </t-check-group>
             </t-cell-group>
           </template>
