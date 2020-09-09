@@ -9,3 +9,7 @@ declare module '*.json' {
 }
 
 declare module 'clipboard';
+
+declare module 'vfile-message' {
+  export type VFileMessage = any;
+}
