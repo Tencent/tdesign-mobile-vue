@@ -11,7 +11,7 @@
   </button>
 </template>
 
-<script lang="tsx">
+<script lang="ts">
 import { defineComponent, computed, toRefs, watch } from 'vue';
 import TIcon from '../icon';
 import config from '../config';
