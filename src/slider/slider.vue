@@ -260,8 +260,8 @@ export default defineComponent({
         }
       }
       return (
-        Math.round(Math.max(props.min, Math.min(current, props.max)) / props.step)
-        * props.step
+        Math.round(Math.max(props.min, Math.min(current, props.max)) / props.step) *
+        props.step
       );
     }
 
