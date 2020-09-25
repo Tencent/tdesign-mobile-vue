@@ -38,6 +38,11 @@ export default {
           type: 'component', // 组件文档
           children: [
             {
+              title: 'Badge 徽标',
+              name: 'badge',
+              component: () => import('@/badge/badge.md'),
+            },
+            {
               title: 'Icon 图标',
               name: 'icon',
               component: () => import('@/icon/icon.md'),
@@ -71,11 +76,6 @@ export default {
               title: 'Progress 进度条',
               name: 'progress',
               component: () => import('@/progress/progress.md'),
-            },
-            {
-              title: 'Tag 标签',
-              name: 'tag',
-              component: () => import('@/tag/tag.md'),
             },
             {
               title: 'CheckBox 复选框',

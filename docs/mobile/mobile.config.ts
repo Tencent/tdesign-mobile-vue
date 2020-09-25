@@ -13,6 +13,11 @@ export default {
       url: 'components',
       docs: [
         {
+          title: 'Badge 徽标',
+          name: 'badge',
+          component: () => import('@/badge/demos/base.vue'),
+        },
+        {
           title: 'Button 按钮',
           name: 'button',
           component: () => import('@/button/demos/base.vue'),
@@ -61,11 +66,6 @@ export default {
           title: 'Message 消息通知',
           name: 'message',
           component: () => import('@/message/demos/base.vue'),
-        },
-        {
-          title: 'Tag 标签',
-          name: 'tag',
-          component: () => import('@/tag/demos/base.vue'),
         },
         {
           title: 'Check-box 多选框',
