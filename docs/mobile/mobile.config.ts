@@ -107,6 +107,11 @@ export default {
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
         },
+        {
+          title: 'TabBar 标签栏',
+          name: 'tab-bar',
+          component: () => import('@/tab-bar/demos/base.vue'),
+        },
       ],
     },
   },

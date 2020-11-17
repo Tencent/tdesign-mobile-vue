@@ -110,6 +110,17 @@ export default {
           ],
         },
         {
+          title: '导航组件',
+          type: 'component',
+          children: [
+            {
+              title: 'TabBar 标签栏',
+              name: 'tab-bar',
+              component: () => import('@/tab-bar/tab-bar.md'),
+            },
+          ],
+        },
+        {
           title: '消息提醒',
           type: 'component', // 组件文档
           children: [
