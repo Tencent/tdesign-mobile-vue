@@ -45,7 +45,7 @@ function create(props: IMessageProps): void {
   };
 });
 
-MessageComp.install = (app: App) => {
+(MessageComp as unknown as Plugin).install = (app: App) => {
   // 添加插件入口
   const messageKey = PolySymbol<typeof MessageComp & Plugin>('message');
   app.provide(messageKey, MessageComp);
