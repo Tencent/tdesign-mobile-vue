@@ -9,16 +9,16 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref } from 'vue';
+import { computed, toRefs, ref, defineComponent } from 'vue';
 
 import TIcon from '../icon';
 import TMask from '../mask';
-import { ToastPosition, ToastProps, ToastTypeIcon } from './toast.interface';
+import { ToastPosition, ToastTypeIcon } from './toast.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-toast`;
 
-export default {
+export default defineComponent({
   name,
   components: { TIcon, TMask },
   props: {
@@ -59,9 +59,9 @@ export default {
       default: 2000,
     },
   },
-  setup(props: ToastProps) {
+  setup(props) {
     const _icon = computed(() => {
-      let icon : string = props.type && ToastTypeIcon[props.type];
+      let icon = props.type && ToastTypeIcon[props.type];
       if (props.icon) icon = props.icon;
       return icon;
     });
@@ -89,5 +89,5 @@ export default {
       ...toRefs(props),
     };
   },
-};
+});
 </script>
