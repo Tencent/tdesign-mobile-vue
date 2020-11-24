@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "strict": true,
+    "declaration": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
@@ -29,5 +30,5 @@
     "./**/*.tsx",
     "./**/*.vue"
   ],
-  "exclude": ["node_modules", "docs/common/tdesign-doc-loader.js"]
+  "exclude": ["node_modules", "docs", "common"]
 }

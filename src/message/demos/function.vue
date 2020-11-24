@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Message from '../message';
+import Message from '../index';
 export default {
   methods: {
     onClick(type) {

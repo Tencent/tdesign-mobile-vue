@@ -3,8 +3,6 @@ import { IMessageProps, MessageType } from './message.interface';
 import { PolySymbol } from '../_utils';
 import MessageComp from './message.vue';
 
-const Message = MessageComp as (typeof MessageComp & Plugin);
-
 function create(props: IMessageProps): void {
   const visible = ref(false);
   const root: HTMLElement = document.createElement('div');
@@ -31,7 +29,7 @@ function create(props: IMessageProps): void {
 }
 
 (['info', 'success', 'warning', 'error'] as MessageType[]).forEach((type: MessageType): void => {
-  Message[type] = (options: IMessageProps | string) => {
+  MessageComp[type] = (options: IMessageProps | string) => {
     let props: IMessageProps = {
       content: '',
       theme: type,
@@ -47,10 +45,13 @@ function create(props: IMessageProps): void {
   };
 });
 
-Message.install = (app: App) => {
+MessageComp.install = (app: App) => {
   // 添加插件入口
-  const messageKey = PolySymbol<typeof Message>('message');
-  app.provide(messageKey, Message);
+  const messageKey = PolySymbol<typeof MessageComp & Plugin>('message');
+  app.provide(messageKey, MessageComp);
 };
 
-export default Message;
+type MessageFnType = {
+  [k in MessageType]: (options: IMessageProps | string) => void
+}
+export default MessageComp as unknown as (Plugin & MessageFnType);
