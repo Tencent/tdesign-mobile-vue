@@ -130,6 +130,17 @@ export default {
             },
           ],
         },
+        {
+          title: '操作控件',
+          type: 'component', // 组件文档
+          children: [
+            {
+              title: 'Indexes 索引',
+              name: 'indexes',
+              component: () => import('@/indexes/indexes.md'),
+            },
+          ],
+        },
       ],
     },
   },

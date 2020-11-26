@@ -17,6 +17,7 @@ export { default as Stepper } from './stepper';
 export { default as Slider } from './slider';
 export { default as NoticeBar } from './noticebar';
 export { default as Dialog } from './dialog';
+export { Indexes, IndexesCell, IndexesAnchor } from './indexes';
 export { Picker, PickerColumn } from './picker';
 export { Tag, CheckTag } from './tag';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';

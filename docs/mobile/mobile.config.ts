@@ -107,6 +107,11 @@ export default {
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
         },
+        {
+          title: 'Indexes 索引',
+          name: 'indexes',
+          component: () => import('@/indexes/demos/base.vue'),
+        },
       ],
     },
   },
