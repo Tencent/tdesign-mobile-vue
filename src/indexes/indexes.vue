@@ -165,6 +165,7 @@ export default defineComponent({
       const { scrollTop } = event.target
       const children: Array<any> = getTitleNode()
       let currentTarget: string = ''
+
       for (let ele of children) {
         const { offsetTop, clientHeight } = ele
         const targetClientVertical = offsetTop - clientHeight
