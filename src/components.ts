@@ -19,4 +19,5 @@ export { default as NoticeBar } from './noticebar';
 export { default as Dialog } from './dialog';
 export { Picker, PickerColumn } from './picker';
 export { Tag, CheckTag } from './tag';
+export { TabBar, TabBarItem } from './tab-bar';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';

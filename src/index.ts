@@ -16,7 +16,7 @@ const install = function (app: App, option?: object): void {
   const newConfig = { ...config, ...option };
 
   Object.keys(components).forEach((key) => {
-    console.log(newConfig.prefix + key);
+    // console.log(newConfig.prefix + key);
     app.component(newConfig.prefix + key, components[key]);
   });
 

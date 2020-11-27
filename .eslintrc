@@ -44,7 +44,13 @@
       "files": ["**/demos/*", "script/**/*", "script/*"],
       "rules": {
         "no-var-requires": 0,
-        "no-console": 0
+        "no-console": 0,
+        "no-param-reassign": [
+          "error",
+          {
+            "props": false
+          }
+        ]
       }
     }
   ]
