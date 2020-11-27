@@ -1,8 +1,8 @@
 /*
  * @Author: yuliangyang
  * @Date: 2020-05-25 23:24:58
- * @LastEditTime: 2020-05-26 12:11:33
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-26 12:07:31
+ * @LastEditors: angelaguo
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/mobile/mobile.config.ts
  */
@@ -106,6 +106,11 @@ export default {
           title: 'DropdownMenu 下拉菜单',
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
+        },
+        {
+          title: 'Collapse 折叠面板',
+          name: 'collapse',
+          component: () => import('@/collapse/demos/base.vue'),
         },
       ],
     },
