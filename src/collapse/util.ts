@@ -10,7 +10,7 @@ export function isIncluded(
 ):boolean | number {
   // 0 '0' 相等
   const reg = new RegExp(`^${!v && v !== 0 ? '' : v}$`);
-  if (Array.isArray(set)) {
+  if (typeof set === 'object') {
     const i = set.findIndex(s => reg.test(s));
     return withIndex ? i : i > -1;
   }
@@ -30,14 +30,25 @@ export function toggleElem(
   multiple: boolean, // 是否多选
   keepOne: boolean, // 是否保留一个
 ): any[] | string | number {
-  // 判断是否数组，便于后续读取
-  const isSetArray: boolean = Array.isArray(set);
-  // 统一数组处理
-  const arr: any[] = isSetArray ? [...set] : (!isFalsy(set) ? [set] : []);
+  // 判断是否要返回数组
+  // 多选 | 集合为 array/proxy等
+  const toReturnArray: boolean = !!multiple || (!!set && typeof set === 'object');
+
+  // 统一数组处理(可监听的数组Proxy类，也支持数组操作)
+  let arr: any[] = [];
+  if (!isFalsy(set)) {
+    if (typeof set === 'object') {
+      arr = Array.from(set);
+    } else {
+      arr = [set];
+    }
+  }
   const arrLen: number = arr.length;
-  // 预设 集合按原类型返回
-  const returnFn = (v: any[]) => (isSetArray ? v : v[0]);
+
+  // 预设 集合按原类型(多选除外)返回
+  const returnFn = (v: any[]) => (!toReturnArray ? v[0] : v);
   const i = isIncluded(v, arr, true);
+
   // 元素存在
   if (i > -1) {
     // 限制保留一个，且只剩下最后一个
@@ -48,12 +59,13 @@ export function toggleElem(
     arr.splice(i, 1);
     return returnFn(arr);
   }
-  // console.log('multiple', multiple, arrLen);
+
   // 不存在，增加 / 替换
   if (!multiple && arrLen > 0) {
     // 替换: 不支持多选，且已有1个
     return returnFn([v]);
   }
+
   // 增加
   arr.push(v);
   return returnFn(arr);

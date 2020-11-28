@@ -12,6 +12,7 @@ import {
   reactive,
   SetupContext,
   defineComponent,
+  watch,
 } from 'vue';
 import { ICollapseProps, CollapseProps } from './collapse.interface';
 import config from '../config';
@@ -22,24 +23,29 @@ export default defineComponent({
   name,
   props: CollapseProps,
   setup(props: ICollapseProps, context: SetupContext) {
-    // , context: SetupContext
-    // const { slots } = context;
-    // { attrs, slots, emit }
     // 根结点类名
     const state = reactive({
       className: name,
+      curValue: props.value,
     });
-    // 提供子组件访问
-    provide('collapseProps', props);
-    const collapsePanelChange: Function = (name) => {
-      const newV = toggleElem(name, props.value, !props.accordion, props?.keepOne);
-      console.log('props', { ...props }, props.accordion);
+
+    watch(props.value, (v) => {
+      console.log('[watch] props.value', v, state.curValue);
+      state.curValue = v;
+    });
+    const onPanelChange: Function = (name) => {
+      const newV = toggleElem(name, state.curValue, !props.accordion, props?.keepOne);
+      state.curValue = newV;
       context.emit('update:value', newV);
     };
-    provide('collapsePanelChange', collapsePanelChange);
+
+    // 提供子组件访问
+    provide('collapseProps', props);
+    provide('collapseState', state);
+    provide('onPanelChange', onPanelChange);
     return {
-      ...toRefs(props),
       ...toRefs(state),
+      ...toRefs(props),
     };
   },
 });

@@ -1,16 +1,23 @@
 <template>
   <div ref="wrapDOM" :class="className">
     <div ref="headDOM" :class="`${baseClass}__header`" @click="e => onChange(e, 'header')">
-      <div :class="`${baseClass}__title`">{{title}}</div>
+      <div :class="`${baseClass}__title`">
+        <slot v-if="$slots.title" name="title"></slot>
+        <template v-else>{{title}}</template>
+      </div>
       <div :class="`${baseClass}__header-right`" @click="onChange">
-        <div v-if="extra" :class="`${baseClass}__header-extra`">{{extra}}</div>
+        <div v-if="extra || $slots.extra" :class="`${baseClass}__header-extra`">
+          <slot v-if="$slots.extra" name="extra"></slot>
+          <template v-else>{{extra}}</template>
+        </div>
         <t-icon :class="`${baseClass}__header-icon`" :name="rightIcon" />
       </div>
     </div>
-    <div ref="bodyDOM" :class="`${baseClass}__body`" :style="bodyStyle">
+    <div ref="bodyDOM" :class="`${baseClass}__body`">
       <div :class="contentClassName(c)" v-for="(c, i) in contList" :key="i">
-        <template v-if="typeof c === 'object'">
-          <div :class="`${baseClass}-list__title`" :style="listLabelStyle">{{c.label}}</div>
+        <slot v-if="$slots.default"></slot>
+        <template v-else-if="typeof c === 'object'">
+          <div :class="`${baseClass}-list__label`" :style="listLabelStyle">{{c.label}}</div>
           <div :class="`${baseClass}-list__content`">{{c.content}}</div>
         </template>
         <template v-else >{{c}}</template>
@@ -37,24 +44,23 @@ import {
 import { ICollapseProps, ICollapsePanelProps, CollapsePanelProps, CollapseIcon } from './collapse.interface';
 import config from '../config';
 import TIcon from '../icon';
-import { isIncluded } from './util.ts';
+import { isIncluded, isFalsy } from './util.ts';
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
-
+function getExpandIconName(isActive) {
+  return isActive ? CollapseIcon.active : CollapseIcon.inactive;
+  // CollapseIcon.right;
+  //
+}
 export default defineComponent({
   name,
   components: { TIcon },
   props: CollapsePanelProps,
   setup(props: ICollapsePanelProps) {
     // 从父组件取属性、状态和控制函数
-    const wrapProps = inject('collapseProps') as ICollapseProps;
-    const collapsePanelChange = inject('collapsePanelChange') as Function;
-
-    const state = reactive({
-      baseClass: name,
-      // 右侧按钮是否展开
-      rightIcon: CollapseIcon.inactive,
-    });
+    const collapseProps = inject('collapseProps') as ICollapseProps;
+    const collapseState = inject('collapseState');
+    const onPanelChange = inject('onPanelChange') as Function;
 
     // 内容转为数组统一处理
     const contList = computed(() => (Array.isArray(props.content) ? props.content : [props.content]));
@@ -63,27 +69,29 @@ export default defineComponent({
       isActive.value ? `${name}--active` : '',
       props.disabled ? `${name}--disabled` : '',
     ]);
+    const labelWidth = computed(() => props.labelWidth || collapseProps.labelWidth);
     const contentClassName = computed(() => c => [`${name}__content`, typeof c === 'object' ? `${name}-list__item` : '']);
     const listLabelStyle = computed(() => ({
-      ...wrapProps.labelWidth ? { width: `${wrapProps.labelWidth}px` } : {},
-    }));
-    const bodyStyle = computed(() => ({
-      ...wrapProps.labelWidth ? { width: `${wrapProps.labelWidth}px` } : {},
+      ...!isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {},
     }));
     // 是否展开态
-    const isActive = computed(() => isIncluded(props.name, wrapProps.value));
+    const isActive = computed(() => isIncluded(props.name, collapseState.curValue));
+    const state = reactive({
+      baseClass: name,
+      // 右侧按钮是否展开
+      rightIcon: getExpandIconName(isActive.value),
+    });
 
     // 切换自身展开态
     const onChange: Function = (e, from = '') => {
-      e.stopPropagation();
+      e && e.stopPropagation();
       if (props.disabled) {
         return;
       }
-      console.log('props.headerClickable', from, props.headerClickable);
       if (/^header$/i.test(from) && !props.headerClickable) {
         return;
       }
-      collapsePanelChange(props.name);
+      onPanelChange(props.name);
     };
 
     // 设置折叠/展开高度过渡
@@ -97,12 +105,11 @@ export default defineComponent({
       }
       // console.log('headDOM', headDOM, headDOM.value);
       const { height: headHeight } = headDOM.value.getBoundingClientRect();
+      state.rightIcon = getExpandIconName(isActive.value);
       if (!isActive.value) {
-        state.rightIcon = CollapseIcon.inactive;
         wrapDOM.value.style.height = `${headHeight}px`;
         return;
       }
-      state.rightIcon = CollapseIcon.active;
       const { height: bodyHeight } = bodyDOM.value.getBoundingClientRect();
       const height = headHeight + bodyHeight;
       wrapDOM.value.style.height = `${height}px`;
@@ -114,6 +121,10 @@ export default defineComponent({
       });
     });
     onMounted(() => {
+      if (collapseProps.defaultExpandAll) {
+        // 展开未展开的
+        !isActive.value && onChange();
+      }
       updatePanelState();
     });
     return {
@@ -125,7 +136,6 @@ export default defineComponent({
       className,
       contentClassName,
       listLabelStyle,
-      bodyStyle,
       onChange,
     };
   },

@@ -2,30 +2,34 @@ export interface ICollapseProps {
   /**
    * @description 展开的面板，支持 v-model 双向绑定
    */
-  value?: string[] | number[],
+  value?: string | number | any[],
   /**
    * @description 手风琴模式，每次只打开一个面板
    * @default false
    */
   accordion: boolean,
   /**
-   * @description 面板内列表标签宽度
-   */
-  labelWidth: number,
-  /**
    * @description 折叠面板标题
    */
   title: string,
+  /**
+   * @description: 默认`false`。若为`true`，默认展开全部
+   */
+  defaultExpandAll: boolean,
+  /**
+   * @description 面板内列表标签宽度
+   */
+  labelWidth: number,
 }
 
 export const CollapseProps = {
-  value: Array,
+  value: [Array, String, Number],
   accordion: {
     type: Boolean,
     default: false,
   },
-  labelWidth: Number,
   title: String,
+  defaultExpandAll: Boolean,
 };
 
 export interface ICollapsePanelProps {
@@ -37,11 +41,6 @@ export interface ICollapsePanelProps {
    * @description 标题，支持命名slot
    */
   title: string | number,
-  /**
-   * @description 是否展开态，支持 v-model 双向绑定
-   * @default false
-   */
-  active: boolean,
   /**
    * @description 右侧补充描述，支持命名slot
    */
@@ -55,20 +54,21 @@ export interface ICollapsePanelProps {
    */
   disabled: boolean,
   /**
+   * @description 面板内列表标签宽度
+   */
+  labelWidth: number,
+  /**
    * @description 默认`true`，面板头部可点，触发展开/折叠事件
    */
   headerClickable: boolean,
 }
 export const CollapsePanelProps = {
   name: [String, Number],
-  active: {
-    type: Boolean,
-    default: false,
-  },
   title: [String, Number],
   extra: [String, Number],
   content: [String, Number, Array],
   disabled: Boolean,
+  labelWidth: Number,
   headerClickable: {
     type: Boolean,
     default: true,
@@ -82,4 +82,5 @@ export enum CollapseIcon {
   active = 'arrow-up',
   // 非展开态
   inactive = 'arrow-down',
+  right = 'arror-right'
 }
