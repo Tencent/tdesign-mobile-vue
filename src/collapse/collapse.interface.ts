@@ -12,6 +12,10 @@ export interface ICollapseProps {
    * @description 面板内列表标签宽度
    */
   labelWidth: number,
+  /**
+   * @description 折叠面板标题
+   */
+  title: string,
 }
 
 export const CollapseProps = {
@@ -21,6 +25,7 @@ export const CollapseProps = {
     default: false,
   },
   labelWidth: Number,
+  title: String,
 };
 
 export interface ICollapsePanelProps {
@@ -45,6 +50,14 @@ export interface ICollapsePanelProps {
    * @description 内容，默认slot；数组，则为列表内容
    */
   content: any[] | string | number,
+  /**
+   * @description 若为`true`，面板将不可展开/折叠
+   */
+  disabled: boolean,
+  /**
+   * @description 默认`true`，面板头部可点，触发展开/折叠事件
+   */
+  headerClickable: boolean,
 }
 export const CollapsePanelProps = {
   name: [String, Number],
@@ -55,6 +68,11 @@ export const CollapsePanelProps = {
   title: [String, Number],
   extra: [String, Number],
   content: [String, Number, Array],
+  disabled: Boolean,
+  headerClickable: {
+    type: Boolean,
+    default: true,
+  },
 };
 
 /**

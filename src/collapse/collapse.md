@@ -1,6 +1,6 @@
 # Collapse 折叠面板
 
-::: demo 基础型 ./demos/base.vue
+::: demo 折叠面板 ./demos/index.vue
 :::
 
 

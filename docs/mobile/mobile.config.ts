@@ -1,7 +1,7 @@
 /*
  * @Author: yuliangyang
  * @Date: 2020-05-25 23:24:58
- * @LastEditTime: 2020-11-26 12:07:31
+ * @LastEditTime: 2020-11-28 12:00:40
  * @LastEditors: angelaguo
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/mobile/mobile.config.ts
@@ -110,7 +110,7 @@ export default {
         {
           title: 'Collapse 折叠面板',
           name: 'collapse',
-          component: () => import('@/collapse/demos/base.vue'),
+          component: () => import('@/collapse/demos/index.vue'),
         },
       ],
     },
