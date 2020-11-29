@@ -28,10 +28,11 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, inject, computed, ref, watch } from 'vue';
+import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef } from 'vue';
 import TIcon from '../icon';
 import config from '../config';
 import { initName } from './useTabBar';
+import { TabBarItemProps, TabBarItemSpreadProps } from './tab-bar.d';
 const { prefix } = config;
 const componentName = `${prefix}-tab-bar-item`;
 
@@ -43,15 +44,15 @@ export default defineComponent({
   props: {
     name: [Number, String],
     icon: String,
-    children: Array,
+    children: Array as Array<TabBarItemSpreadProps>,
   },
-  setup(props) {
+  setup(props: TabBarItemProps) {
     const { defaultIndex, activeValue, updateChild } = inject('tab-bar', {});
     const currentName:number | string = initName(defaultIndex);
     const hasChildren = !!props.children;
-    const isSpread:ref<boolean> = ref(false);
+    const isSpread:Ref<boolean> = ref(false);
 
-    const isChecked = computed(() => {
+    const isChecked: ComputedRef<boolean> = computed(() => {
       if (hasChildren && Array.isArray(activeValue.value)) {
         return activeValue.value.includes(currentName);
       };

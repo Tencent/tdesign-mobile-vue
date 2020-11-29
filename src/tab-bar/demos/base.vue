@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-tag-bar">
+  <div class="demo-tab-bar">
     <t-cell-group title="单层级纯文本标签栏">
       <t-tab-bar
         v-model="value"
@@ -154,7 +154,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.demo-tag-bar{
+.demo-tab-bar{
   background-color: #fbfbfb;
 }
 

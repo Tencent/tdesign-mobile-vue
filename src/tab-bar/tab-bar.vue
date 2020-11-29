@@ -5,8 +5,8 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, ref, provide, watch } from 'vue';
-import { ModelValueProps } from './tab-bar.d';
+import { defineComponent, ref, provide, watch, Ref } from 'vue';
+import { ModelValueProps, TabBarProps } from './tab-bar.d';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-tab-bar`;
@@ -19,9 +19,9 @@ export default defineComponent({
       default: 0,
     },
   },
-  setup(props, { emit }) {
-    const activeValue = ref<ModelValueProps>(props.modelValue || 0);
-    const defaultIndex = ref<number>(-1);
+  setup(props: TabBarProps, { emit }) {
+    const activeValue:Ref<ModelValueProps> = ref(props.modelValue || 0);
+    const defaultIndex:Ref<number> = ref(-1);
 
     const updateChild = (currentValue) => {
       activeValue.value = currentValue;

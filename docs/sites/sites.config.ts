@@ -118,6 +118,11 @@ export default {
               name: 'tab-bar',
               component: () => import('@/tab-bar/tab-bar.md'),
             },
+            {
+              title: 'SegmentControl 分段器',
+              name: 'segment-control',
+              component: () => import('@/segment-control/segment-control.md'),
+            },
           ],
         },
         {

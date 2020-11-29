@@ -112,6 +112,11 @@ export default {
           name: 'tab-bar',
           component: () => import('@/tab-bar/demos/base.vue'),
         },
+        {
+          title: 'Segment Control 分段器',
+          name: 'segment-control',
+          component: () => import('@/segment-control/demos/base.vue'),
+        },
       ],
     },
   },

@@ -21,3 +21,4 @@ export { Picker, PickerColumn } from './picker';
 export { Tag, CheckTag } from './tag';
 export { TabBar, TabBarItem } from './tab-bar';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';
+export { default as SegmentControl } from './segment-control';
