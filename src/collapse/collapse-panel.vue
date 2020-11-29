@@ -56,7 +56,7 @@ export default defineComponent({
   name,
   components: { TIcon },
   props: CollapsePanelProps,
-  setup(props: ICollapsePanelProps) {
+  setup(props: ICollapsePanelProps, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
     const collapseProps = inject('collapseProps') as ICollapseProps;
     const collapseState = inject('collapseState');
@@ -88,6 +88,7 @@ export default defineComponent({
       if (props.disabled) {
         return;
       }
+      context.emit('click', props.name);
       if (/^header$/i.test(from) && !props.headerClickable) {
         return;
       }

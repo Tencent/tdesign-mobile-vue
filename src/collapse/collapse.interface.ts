@@ -30,11 +30,12 @@ export const CollapseProps = {
   },
   title: String,
   defaultExpandAll: Boolean,
+  labelWidth: Number,
 };
 
 export interface ICollapsePanelProps {
   /**
-   * @description 面板标识 name，不填为索引值
+   * @description 面板标识
    */
   name?: string | number,
   /**
@@ -42,7 +43,7 @@ export interface ICollapsePanelProps {
    */
   title: string | number,
   /**
-   * @description 右侧补充描述，支持命名slot
+   * @description 展开按钮左侧补充描述，支持命名slot
    */
   extra: string | number,
   /**
@@ -54,11 +55,11 @@ export interface ICollapsePanelProps {
    */
   disabled: boolean,
   /**
-   * @description 面板内列表标签宽度
+   * @description 面板内列表标签宽度，单项设置优先级高
    */
   labelWidth: number,
   /**
-   * @description 默认`true`，面板头部可点，触发展开/折叠事件
+   * @description 若为`true`，面板头部可点，触发展开/折叠事件
    */
   headerClickable: boolean,
 }

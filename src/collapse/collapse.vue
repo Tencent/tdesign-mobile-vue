@@ -29,14 +29,15 @@ export default defineComponent({
       curValue: props.value,
     });
 
-    watch(props.value, (v) => {
+    watch(() => props.value, (v) => {
       console.log('[watch] props.value', v, state.curValue);
       state.curValue = v;
     });
     const onPanelChange: Function = (name) => {
-      const newV = toggleElem(name, state.curValue, !props.accordion, props?.keepOne);
+      const newV = toggleElem(name, state.curValue, !props.accordion);
       state.curValue = newV;
       context.emit('update:value', newV);
+      context.emit('change', newV);
     };
 
     // 提供子组件访问
