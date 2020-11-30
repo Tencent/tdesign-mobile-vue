@@ -107,6 +107,11 @@ export default {
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
         },
+        {
+          title: 'Fab 悬浮按钮',
+          name: 'fab',
+          component: () => import('@/fab/demos/base.vue'),
+        },
       ],
     },
   },
