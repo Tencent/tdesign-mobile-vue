@@ -1,12 +1,12 @@
 <template>
-  <t-button class="t-fab" :class="classes" theme="primary" shape="circle" @click="onClick">
+  <t-button :class="classes" theme="primary" shape="circle" @click="onClick">
     <t-icon :name="icon" style="color: white;"></t-icon>
-    <span v-if="text" class="t-fab__text">{{ text }}</span>
+    <span v-if="text" :class="`${name}__text`">{{ text }}</span>
   </t-button>
 </template>
 
 <script lang="ts">
-import { computed, SetupContext, defineComponent } from 'vue';
+import { ref, computed, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-fab`;
@@ -36,6 +36,7 @@ export default defineComponent({
     };
 
     return {
+      name: ref(name),
       classes,
       onClick,
     };
