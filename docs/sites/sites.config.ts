@@ -107,6 +107,11 @@ export default {
               name: 'dropdown-menu',
               component: () => import('@/dropdown-menu/dropdown-menu.md'),
             },
+            {
+              title: 'ImageViewer 图片预览',
+              name: 'image-viewer',
+              component: () => import('@/image-viewer/image-viewer.md'),
+            },
           ],
         },
         {
