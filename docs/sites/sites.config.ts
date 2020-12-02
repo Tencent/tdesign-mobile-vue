@@ -78,6 +78,11 @@ export default {
               component: () => import('@/progress/progress.md'),
             },
             {
+              title: 'Tag 标签',
+              name: 'tag',
+              component: () => import('@/tag/tag.md'),
+            },
+            {
               title: 'CheckBox 复选框',
               name: 'check-box',
               component: () => import('@/check-box/check-box.md'),
