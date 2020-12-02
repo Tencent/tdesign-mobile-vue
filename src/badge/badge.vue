@@ -19,23 +19,22 @@ export default defineComponent({
     // 是否展示徽标
     const showBadge = computed(() => props.content || props.showZero || props.count !== 0);
 
-    // 徽标样式类
+    // 徽标外层样式类
     const badgeClasses = computed(() => [
       `${name}`,
     ]);
 
-    console.log('offset: ', props.offset);
+    // 徽标内层样式类
+    const badgeInnerClasses = computed(() => ({
+      [`${name}--basic`]: true,
+      [`${name}--dot`]: props.dot,
+      [`${name}--small`]: props.size === 'small',
+      [`${name}--circle`]: props.shape === 'circle',
+      [`${name}--round`]: props.shape === 'round',
+      [`${name}--ribbon`]: props.shape === 'ribbon',
+    }));
 
-    const badgeInnerClasses = computed(() => [
-      `${name}--basic`,
-      props.dot && `${name}--dot`,
-      props.size === 'small' && `${name}--small`,
-      props.shape === 'circle' && `${name}--circle`,
-      props.shape === 'round' && `${name}--round`,
-      props.shape === 'ribbon' && `${name}--ribbon`,
-    ]);
-
-    // 徽标自定义颜色
+    // 徽标自定义样式
     const badgeStyles = computed(() => ({
       background: props.color,
       top: `${props.offset[0]}px`,
