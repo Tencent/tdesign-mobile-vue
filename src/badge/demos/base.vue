@@ -1,55 +1,44 @@
 <template>
   <div>
-    <div class="badge-wrap">
-      <t-badge :count="12" class="badge-item">
-        <t-button>按钮</t-button>
-      </t-badge>
-      <t-badge :count="999" color="green" class="badge-item">
-        <t-button>绿色</t-button>
-      </t-badge>
-      <t-badge :count="1" color="#f52fff" class="badge-item">
-        <t-button>自定义颜色</t-button>
-      </t-badge>
-    </div>
-    <div class="badge-wrap">
-      <t-badge :count="1" text="NEW" class="badge-item">
-        <t-button>文字</t-button>
-      </t-badge>
-      <t-badge :count="1" text="新消息" class="badge-item">
-        <t-button>文字</t-button>
-      </t-badge>
-      <t-badge :count="1" text="···" class="badge-item">
-        <t-button>省略号</t-button>
-      </t-badge>
-    </div>
-    <div class="badge-wrap">
-      <t-badge dot class="badge-item">
-        <t-button>dot</t-button>
-      </t-badge>
-      <t-badge :count="12" :overflowCount="9" class="badge-item">
-        <t-button>按钮</t-button>
-      </t-badge>
-      <t-badge :count="1112" :overflowCount="999" class="badge-item">
-        <t-button>按钮</t-button>
-      </t-badge>
-    </div>
-    <div class="badge-wrap">
-      <t-badge dot class="badge-item"></t-badge>
-      <t-badge :count="1" class="badge-item"></t-badge>
-      <t-badge text="···" class="badge-item"></t-badge>
-      <t-badge text="新消息" class="badge-item"></t-badge>
-    </div>
-    <div class="badge-wrap">
-      <t-badge :count="12" size="default" class="badge-item">
-        <t-button>默认大小</t-button>
-      </t-badge>
-      <t-badge :count="12" size="small" class="badge-item">
-        <t-button>small</t-button>
-      </t-badge>
-      <t-badge :count="12" size="large" class="badge-item">
-        <t-button>large</t-button>
-      </t-badge>
-    </div>
+    <t-cell-group title="按钮带徽标">
+      <div class="badge-wrap">
+        <t-badge :count="16" class="badge-item">
+          <t-button size="small">小按钮</t-button>
+        </t-badge>
+        <t-badge dot class="badge-item">
+          <t-button size="small">小按钮</t-button>
+        </t-badge>
+        <t-badge content="NEW" class="badge-item">
+          <t-button size="small">小按钮</t-button>
+        </t-badge>
+        <t-badge content="···" class="badge-item">
+          <t-button size="small">小按钮</t-button>
+        </t-badge>
+      </div>
+    </t-cell-group>
+    <t-cell-group title="列表带徽标">
+      <t-cell value-align="left">
+        <span>单行标题</span>
+        <t-badge dot :offset="[10, 0]" class="list-item-badge"/>
+      </t-cell>
+      <t-cell value-align="left">
+        <span>单行标题</span>
+        <t-badge :count="16" :offset="[10, 0]" class="list-item-badge"/>
+      </t-cell>
+      <t-cell value-align="left">
+        <span>单行标题</span>
+        <div class="badge-tag-wrap">
+          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
+          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
+          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
+          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
+        </div>
+      </t-cell>
+      <t-cell value-align="left">
+        <span>单行标题</span>
+        <t-badge content="NEW" :offset="[-5, -15]" shape="ribbon" class="list-item-badge"/>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 
@@ -63,7 +52,25 @@ export default defineComponent({});
   padding: 20px 0;
 
   .badge-item {
-    margin: 0 20px;
+    margin: 0 10px;
   }
+
+  .custom {
+    background-color: '#fff';
+    color: '#999';
+    box-shadow: '0 0 0 1px #d9d9d9 inset';
+  }
+}
+.list-item-badge {
+  float: right;
+  vertical-align: middle;
+}
+.badge-tag-wrap {
+  float: right;
+  margin-right: 10px;
+}
+.badge-tag {
+  width: 50px;
+  height: 20px;
 }
 </style>

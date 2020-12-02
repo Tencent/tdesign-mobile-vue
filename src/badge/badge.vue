@@ -1,6 +1,6 @@
 <template>
-  <div class="badgeWrapper">
-    <span :class="badgeClasses" :style="`background-color: ${color}`">{{value}}</span>
+  <div :class="badgeClasses" v-if="showBadge">
+    <span :class="badgeInnerClasses" :style="badgeStyles">{{value}}</span>
     <slot />
   </div>
 </template>
@@ -16,64 +16,51 @@ export default defineComponent({
   name,
   props: badgeProps,
   setup(props) {
+    // 是否展示徽标
+    const showBadge = computed(() => props.content || props.showZero || props.count !== 0);
+
+    // 徽标样式类
     const badgeClasses = computed(() => [
       `${name}`,
-      props.dot && `${name}__dot`,
-      props.size === 'small' && `${name}__small`,
-      props.size === 'large' && `${name}__large`,
     ]);
 
+    console.log('offset: ', props.offset);
+
+    const badgeInnerClasses = computed(() => [
+      `${name}--basic`,
+      props.dot && `${name}--dot`,
+      props.size === 'small' && `${name}--small`,
+      props.shape === 'circle' && `${name}--circle`,
+      props.shape === 'round' && `${name}--round`,
+      props.shape === 'ribbon' && `${name}--ribbon`,
+    ]);
+
+    // 徽标自定义颜色
+    const badgeStyles = computed(() => ({
+      background: props.color,
+      top: `${props.offset[0]}px`,
+      right: `${props.offset[1]}px`,
+    }));
+
+    // 徽标内展示的内容
     const value = computed(() => {
-      if (props.text) {
-        return props.text;
+      if (props.dot) {
+        return '';
       }
-      return props.count > props.overflowCount ? `${props.overflowCount}+` : props.count;
+      if (props.content) {
+        return props.content;
+      }
+      return props.count > props.maxCount ? `${props.maxCount}+` : props.count;
     });
 
     return {
+      showBadge,
+      badgeStyles,
       badgeClasses,
+      badgeInnerClasses,
       ...toRefs(props),
       value,
     };
   },
 });
 </script>
-<style lang="less" scoped>
-.badgeWrapper {
-  position: relative;
-  display: inline-block;
-
-  .t-badge {
-    transform: translate(50%,-50%);
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 100;
-    font-size: 12px;
-    color: white;
-    background-color: red;
-    border-radius: 10px;
-    min-width: 20px;
-    height: 20px;
-    padding: 0 6px;
-    text-align: center;
-    line-height: 20px;
-    font-weight: 400;
-  }
-
-  .t-badge__dot {
-    height: 10px;
-    border-radius: 5px;
-    min-width: 10px;
-    padding: 0;
-  }
-
-  .t-badge__small {
-    transform: translate(50%,-50%) scale(0.75);
-  }
-
-  .t-badge__large {
-    transform: translate(50%,-50%) scale(1.5);
-  }
-}
-</style>
