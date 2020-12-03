@@ -7,19 +7,19 @@ export interface ICollapseProps {
    * @description 手风琴模式，每次只打开一个面板
    * @default false
    */
-  accordion: boolean,
+  accordion?: boolean,
   /**
    * @description 折叠面板标题
    */
-  title: string,
+  title?: string,
   /**
    * @description: 默认`false`。若为`true`，默认展开全部
    */
-  defaultExpandAll: boolean,
+  defaultExpandAll?: boolean,
   /**
    * @description 面板内列表标签宽度
    */
-  labelWidth: number,
+  labelWidth?: number,
 }
 
 export const CollapseProps = {
@@ -41,27 +41,27 @@ export interface ICollapsePanelProps {
   /**
    * @description 标题，支持命名slot
    */
-  title: string | number,
+  title?: string | number,
   /**
    * @description 展开按钮左侧补充描述，支持命名slot
    */
-  extra: string | number,
+  extra?: string | number,
   /**
    * @description 内容，默认slot；数组，则为列表内容
    */
-  content: any[] | string | number,
+  content?: any[] | string | number,
   /**
    * @description 若为`true`，面板将不可展开/折叠
    */
-  disabled: boolean,
+  disabled?: boolean,
   /**
    * @description 面板内列表标签宽度，单项设置优先级高
    */
-  labelWidth: number,
+  labelWidth?: number,
   /**
    * @description 若为`true`，面板头部可点，触发展开/折叠事件
    */
-  headerClickable: boolean,
+  headerClickable?: boolean,
 }
 export const CollapsePanelProps = {
   name: [String, Number],

@@ -16,7 +16,7 @@ import {
 } from 'vue';
 import { ICollapseProps, CollapseProps } from './collapse.interface';
 import config from '../config';
-import { toggleElem } from './util.ts';
+import { toggleElem } from './util';
 const { prefix } = config;
 const name = `${prefix}-collapse`;
 export default defineComponent({
@@ -33,7 +33,7 @@ export default defineComponent({
       console.log('[watch] props.value', v, state.curValue);
       state.curValue = v;
     });
-    const onPanelChange = (name) => {
+    const onPanelChange = (name: any) => {
       const newV = toggleElem(name, state.curValue, !props.accordion);
       state.curValue = newV;
       context.emit('update:value', newV);

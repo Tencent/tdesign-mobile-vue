@@ -37,16 +37,16 @@ import {
   watch,
   onMounted,
   inject,
-  // SetupContext,
+  SetupContext,
   defineComponent,
 } from 'vue';
 import { ICollapseProps, ICollapseState, ICollapsePanelProps, CollapsePanelProps, CollapseIcon } from './collapse.interface';
 import config from '../config';
 import TIcon from '../icon';
-import { findIndex, isFalsy } from './util.ts';
+import { findIndex, isFalsy, toArray } from './util';
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
-function getExpandIconName(isActive) {
+function getExpandIconName(isActive: boolean) {
   return isActive ? CollapseIcon.active : CollapseIcon.inactive;
   // CollapseIcon.right;
   //
@@ -62,14 +62,14 @@ export default defineComponent({
     const onPanelChange = inject('onPanelChange') as Function;
 
     // 内容转为数组统一处理
-    const contList = computed(() => (Array.isArray(props.content) ? props.content : [props.content]));
+    const contList = computed(() => (toArray(props.content)));
     const className = computed(() => [
       `${name}`,
       isActive.value ? `${name}--active` : '',
       props.disabled ? `${name}--disabled` : '',
     ]);
     const labelWidth = computed(() => props.labelWidth || collapseProps.labelWidth);
-    const contentClassName = computed(() => c => [`${name}__content`, typeof c === 'object' ? `${name}-list__item` : '']);
+    const contentClassName = computed(() => (c: number | string | object) => [`${name}__content`, typeof c === 'object' ? `${name}-list__item` : '']);
     const listLabelStyle = computed(() => ({
       ...!isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {},
     }));
@@ -82,7 +82,7 @@ export default defineComponent({
     });
 
     // 切换自身展开态
-    const onChange = (e, from = '') => {
+    const onChange = (e: any = null, from = '') => {
       e && e.stopPropagation();
       if (props.disabled) {
         return;

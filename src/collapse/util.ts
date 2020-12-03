@@ -4,8 +4,8 @@
  * @return 是否包含 | 位置索引
  */
 export function findIndex(
-  v: string | number,
-  set: any[] | string | number,
+  v: any,
+  set: any,
 ):number {
   // 正则方式，辨别0='0'
   const reg = new RegExp(`^${!v && v !== 0 ? '' : v}$`);
@@ -35,9 +35,9 @@ export function toArray(v: any): any[] {
  */
 export function toggleElem(
   v: string | number, // 要切换的元素
-  set: any[] | string | number, // 集合
+  set: any, // 集合
   multiple: boolean, // 是否多选
-  atLeastOne: boolean, // 是否保留一个
+  atLeastOne: boolean = false, // 是否保留一个
 ): any[] | string | number {
   // 判断是否要返回数组。 多选 | 集合为 array/proxy等需要
   const toReturnArray: boolean = !!multiple || (!!set && typeof set === 'object');
