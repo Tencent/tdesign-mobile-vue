@@ -3,30 +3,28 @@
  * @description: 判断集合是否包含指定内容
  * @return 是否包含 | 位置索引
  */
-export function isIncluded(
+export function findIndex(
   v: string | number,
   set: any[] | string | number,
-  withIndex: boolean, // 仅针对数组集合；非数组集合，返回 true/false
-):boolean | number {
+):number {
   // 正则方式，辨别0='0'
   const reg = new RegExp(`^${!v && v !== 0 ? '' : v}$`);
 
   // 转数组统一处理
   const arr = toArray(set);
-  const i = arr.findIndex(s => reg.test(s));
-  return withIndex ? i : i > -1;
+  return arr.findIndex(s => reg.test(s));
 }
 /**
  * @description: 判断是否假植 undefined|null|''等
  */
-export function isFalsy(v: any) {
+export function isFalsy(v: any): boolean {
   return !v && v !== 0;
 }
 
 /**
  * @description: 转化为数组
  */
-export function toArray(v: any) {
+export function toArray(v: any): any[] {
   if (isFalsy(v)) return [];
   if (typeof v === 'object') return Array.from(v);
   return [v];
@@ -52,7 +50,7 @@ export function toggleElem(
   const arrLen: number = arr.length;
 
   // 元素所在索引
-  const i = isIncluded(v, arr, true);
+  const i = findIndex(v, arr);
 
   // 元素存在
   if (i > -1) {

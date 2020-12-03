@@ -85,3 +85,14 @@ export enum CollapseIcon {
   inactive = 'arrow-down',
   right = 'arror-right'
 }
+
+export interface ICollapseState {
+  /**
+   * @description 折叠面板 class类
+   */
+  className: string,
+  /**
+   * @description 展开的面板状态
+   */
+  curValue?: string | number | any[],
+}

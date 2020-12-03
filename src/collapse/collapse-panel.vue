@@ -2,25 +2,24 @@
   <div ref="wrapDOM" :class="className">
     <div ref="headDOM" :class="`${baseClass}__header`" @click="e => onChange(e, 'header')">
       <div :class="`${baseClass}__title`">
-        <slot v-if="$slots.title" name="title"></slot>
-        <template v-else>{{title}}</template>
+        <slot name="title">{{title}}</slot>
       </div>
       <div :class="`${baseClass}__header-right`" @click="onChange">
         <div v-if="extra || $slots.extra" :class="`${baseClass}__header-extra`">
-          <slot v-if="$slots.extra" name="extra"></slot>
-          <template v-else>{{extra}}</template>
+          <slot name="extra">{{extra}}</slot>
         </div>
         <t-icon :class="`${baseClass}__header-icon`" :name="rightIcon" />
       </div>
     </div>
     <div ref="bodyDOM" :class="`${baseClass}__body`">
       <div :class="contentClassName(c)" v-for="(c, i) in contList" :key="i">
-        <slot v-if="$slots.default"></slot>
-        <template v-else-if="typeof c === 'object'">
-          <div :class="`${baseClass}-list__label`" :style="listLabelStyle">{{c.label}}</div>
-          <div :class="`${baseClass}-list__content`">{{c.content}}</div>
-        </template>
-        <template v-else >{{c}}</template>
+        <slot name="default">
+          <template v-if="typeof c === 'object'">
+            <div :class="`${baseClass}-list__label`" :style="listLabelStyle">{{c.label}}</div>
+            <div :class="`${baseClass}-list__content`">{{c.content}}</div>
+          </template>
+          <template v-else >{{c}}</template>
+        </slot>
       </div>
     </div>
     <!-- <transition name="collapse">
@@ -41,10 +40,10 @@ import {
   // SetupContext,
   defineComponent,
 } from 'vue';
-import { ICollapseProps, ICollapsePanelProps, CollapsePanelProps, CollapseIcon } from './collapse.interface';
+import { ICollapseProps, ICollapseState, ICollapsePanelProps, CollapsePanelProps, CollapseIcon } from './collapse.interface';
 import config from '../config';
 import TIcon from '../icon';
-import { isIncluded, isFalsy } from './util.ts';
+import { findIndex, isFalsy } from './util.ts';
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 function getExpandIconName(isActive) {
@@ -59,7 +58,7 @@ export default defineComponent({
   setup(props: ICollapsePanelProps, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
     const collapseProps = inject('collapseProps') as ICollapseProps;
-    const collapseState = inject('collapseState');
+    const collapseState = inject('collapseState') as ICollapseState;
     const onPanelChange = inject('onPanelChange') as Function;
 
     // 内容转为数组统一处理
@@ -75,7 +74,7 @@ export default defineComponent({
       ...!isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {},
     }));
     // 是否展开态
-    const isActive = computed(() => isIncluded(props.name, collapseState.curValue));
+    const isActive = computed(() => findIndex(props.name, collapseState.curValue) > -1);
     const state = reactive({
       baseClass: name,
       // 右侧按钮是否展开
@@ -83,7 +82,7 @@ export default defineComponent({
     });
 
     // 切换自身展开态
-    const onChange: Function = (e, from = '') => {
+    const onChange = (e, from = '') => {
       e && e.stopPropagation();
       if (props.disabled) {
         return;
@@ -99,7 +98,7 @@ export default defineComponent({
     const bodyDOM = ref();
     const wrapDOM = ref();
     const headDOM = ref();
-    const updatePanelState: Function = () => {
+    const updatePanelState = () => {
       if (!wrapDOM.value) {
         console.log('[collapse] 组件尚未挂载', wrapDOM.value);
         return;

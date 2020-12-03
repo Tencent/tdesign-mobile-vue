@@ -33,7 +33,7 @@ export default defineComponent({
       console.log('[watch] props.value', v, state.curValue);
       state.curValue = v;
     });
-    const onPanelChange: Function = (name) => {
+    const onPanelChange = (name) => {
       const newV = toggleElem(name, state.curValue, !props.accordion);
       state.curValue = newV;
       context.emit('update:value', newV);
