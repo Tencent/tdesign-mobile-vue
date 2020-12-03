@@ -63,16 +63,14 @@ export default defineComponent({
 
     // 内容转为数组统一处理
     const contList = computed(() => (toArray(props.content)));
-    const className = computed(() => [
-      `${name}`,
-      isActive.value ? `${name}--active` : '',
-      props.disabled ? `${name}--disabled` : '',
-    ]);
+    const className = computed(() => ({
+      [`${name}`]: true,
+      [`${name}--active`]: isActive.value,
+      [`${name}--disabled`]: props.disabled,
+    }));
     const labelWidth = computed(() => props.labelWidth || collapseProps.labelWidth);
     const contentClassName = computed(() => (c: number | string | object) => [`${name}__content`, typeof c === 'object' ? `${name}-list__item` : '']);
-    const listLabelStyle = computed(() => ({
-      ...!isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {},
-    }));
+    const listLabelStyle = computed(() => (isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {}));
     // 是否展开态
     const isActive = computed(() => findIndex(props.name, collapseState.curValue) > -1);
     const state = reactive({
