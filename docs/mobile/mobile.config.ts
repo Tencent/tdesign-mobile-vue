@@ -107,6 +107,11 @@ export default {
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
         },
+        {
+          title: 'Popup 弹出层',
+          name: 'popup',
+          component: () => import('@/popup/demos/base.vue'),
+        },
       ],
     },
   },
