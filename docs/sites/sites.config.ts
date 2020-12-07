@@ -108,6 +108,11 @@ export default {
               component: () => import('@/dropdown-menu/dropdown-menu.md'),
             },
             {
+              title: 'Popup 弹出层',
+              name: 'popup',
+              component: () => import('@/popup/popup.md'),
+            },
+            {
               title: 'Collapse 折叠面板',
               name: 'collapse',
               component: () => import('@/collapse/collapse.md'),

@@ -108,6 +108,11 @@ export default {
           component: () => import('@/dropdown-menu/demos/base.vue'),
         },
         {
+          title: 'Popup 弹出层',
+          name: 'popup',
+          component: () => import('@/popup/demos/base.vue'),
+        },
+        {
           title: 'Collapse 折叠面板',
           name: 'collapse',
           component: () => import('@/collapse/demos/index.vue'),
