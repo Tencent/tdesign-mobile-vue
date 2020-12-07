@@ -20,3 +20,4 @@ export { default as Dialog } from './dialog';
 export { Picker, PickerColumn } from './picker';
 export { Tag, CheckTag } from './tag';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';
+export { Collapse, CollapsePanel } from './collapse';
