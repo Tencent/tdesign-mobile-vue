@@ -21,3 +21,4 @@ export { Picker, PickerColumn } from './picker';
 export { default as Popup } from './popup';
 export { Tag, CheckTag } from './tag';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';
+export { Collapse, CollapsePanel } from './collapse';

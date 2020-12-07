@@ -1,4 +1,4 @@
-import { createApp, defineComponent, ref, h, VNode, App, Plugin } from 'vue';
+import { createApp, defineComponent, ref, h, VNode, App, Plugin, nextTick } from 'vue';
 import { IMessageProps, MessageType } from './message.interface';
 import { PolySymbol } from '../_utils';
 import MessageComp from './message.vue';
@@ -23,9 +23,9 @@ function create(props: IMessageProps): void {
 
   createApp(component).mount(root);
 
-  setTimeout(() => {
+  nextTick(() => {
     visible.value = true;
-  }, 0);
+  });
 }
 
 (['info', 'success', 'warning', 'error'] as MessageType[]).forEach((type: MessageType): void => {
