@@ -22,3 +22,4 @@ export { default as Popup } from './popup';
 export { Tag, CheckTag } from './tag';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';
 export { Collapse, CollapsePanel } from './collapse';
+export { default as Badge } from './badge';

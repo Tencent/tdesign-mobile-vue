@@ -38,6 +38,11 @@ export default {
           type: 'component', // 组件文档
           children: [
             {
+              title: 'Badge 徽标',
+              name: 'badge',
+              component: () => import('@/badge/badge.md'),
+            },
+            {
               title: 'Icon 图标',
               name: 'icon',
               component: () => import('@/icon/icon.md'),
