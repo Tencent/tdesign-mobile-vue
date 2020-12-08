@@ -122,6 +122,16 @@ export default {
           name: 'collapse',
           component: () => import('@/collapse/demos/index.vue'),
         },
+        {
+          title: 'TabBar 标签栏',
+          name: 'tab-bar',
+          component: () => import('@/tab-bar/demos/base.vue'),
+        },
+        {
+          title: 'Segment Control 分段器',
+          name: 'segment-control',
+          component: () => import('@/segment-control/demos/base.vue'),
+        },
       ],
     },
   },

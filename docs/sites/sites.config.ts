@@ -125,6 +125,22 @@ export default {
           ],
         },
         {
+          title: '导航组件',
+          type: 'component',
+          children: [
+            {
+              title: 'TabBar 标签栏',
+              name: 'tab-bar',
+              component: () => import('@/tab-bar/tab-bar.md'),
+            },
+            {
+              title: 'SegmentControl 分段器',
+              name: 'segment-control',
+              component: () => import('@/segment-control/segment-control.md'),
+            },
+          ],
+        },
+        {
           title: '消息提醒',
           type: 'component', // 组件文档
           children: [
