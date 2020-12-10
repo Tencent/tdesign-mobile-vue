@@ -1,6 +1,6 @@
 import { getCurrentInstance, Ref } from 'vue';
 
-export const initName = (defaultIndex: Ref) => {
+export const initName = (defaultIndex: Ref<number>) => {
   const index = defaultIndex;
   const instance = getCurrentInstance();
   if (typeof instance?.props?.name !== 'undefined') {
