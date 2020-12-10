@@ -1,7 +1,7 @@
 <template>
   <div :class="componentName">
     <div
-      :class="[`${componentName}__content`, isChecked && 'is-checked', icon && 's']"
+      :class="[`${componentName}__content`, isChecked && 't-is-checked', icon && 't-size-s']"
       @click="toggle"
     >
       <div :class="`${componentName}__icon`" v-if="icon">
