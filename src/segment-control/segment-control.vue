@@ -2,7 +2,7 @@
   <div :class="name">
     <ul :class="`${name}__list`" v-if="items.length > 0">
       <li
-        :class="[`${name}__item`, currentActive.includes(item.value || index) && 't-is-active']"
+        :class="[`${name}__item`, currentActive.includes(item.value || index) && `${prefix}-is-active`]"
         v-for="(item, index) in items"
         :key="item.value || index"
         @click="selectChild(item.value || index)"
@@ -56,6 +56,7 @@ export default defineComponent({
     });
 
     return {
+      prefix,
       name,
       currentActive,
       selectChild,
