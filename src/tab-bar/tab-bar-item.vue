@@ -1,7 +1,11 @@
 <template>
   <div :class="componentName">
     <div
-      :class="[`${componentName}__content`, isChecked && 't-is-checked', icon && 't-size-s']"
+      :class="{
+        [`${componentName}__content`]: true,
+        [`${prefix}-is-checked`]: isChecked,
+        [`${prefix}-size-s`]: icon,
+      }"
       @click="toggle"
     >
       <div :class="`${componentName}__icon`" v-if="icon">
@@ -85,6 +89,7 @@ export default defineComponent({
     };
 
     return {
+      prefix,
       componentName,
       isChecked,
       toggle,
