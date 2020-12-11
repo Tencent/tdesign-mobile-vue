@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import Message from '../message';
+import Message from '../index';
 export default {
   data() {
     return {

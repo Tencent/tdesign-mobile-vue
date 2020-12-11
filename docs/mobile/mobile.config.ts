@@ -1,8 +1,8 @@
 /*
  * @Author: yuliangyang
  * @Date: 2020-05-25 23:24:58
- * @LastEditTime: 2020-05-26 12:11:33
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-28 12:00:40
+ * @LastEditors: angelaguo
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/mobile/mobile.config.ts
  */
@@ -12,6 +12,11 @@ export default {
       title: 'TDesign',
       url: 'components',
       docs: [
+        {
+          title: 'Badge 徽标',
+          name: 'badge',
+          component: () => import('@/badge/demos/base.vue'),
+        },
         {
           title: 'Button 按钮',
           name: 'button',
@@ -106,6 +111,16 @@ export default {
           title: 'DropdownMenu 下拉菜单',
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
+        },
+        {
+          title: 'Popup 弹出层',
+          name: 'popup',
+          component: () => import('@/popup/demos/base.vue'),
+        },
+        {
+          title: 'Collapse 折叠面板',
+          name: 'collapse',
+          component: () => import('@/collapse/demos/index.vue'),
         },
         {
           title: 'TabBar 标签栏',

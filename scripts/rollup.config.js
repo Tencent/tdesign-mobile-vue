@@ -29,8 +29,6 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
     eslint({ include: ['**/*.ts', '**/*.js'] }),
     typescript({
       cacheRoot: `${require('os').tmpdir()}/.rpt2_cache`,
-      // TODO: typings
-      useTsconfigDeclarationDir: true,
     }),
     vuePlugin(vueOpt),
     babel({

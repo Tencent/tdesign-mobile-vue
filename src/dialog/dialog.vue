@@ -53,18 +53,18 @@
 </template>
 <script lang="ts">
 import TMask from '../mask';
-import { SetupContext, computed, ref, toRefs, watch } from 'vue';
+import { SetupContext, computed, ref, toRefs, watch, defineComponent } from 'vue';
 import config from '../config';
-import { DialogProps, IDialogProps } from './dialog.interface';
+import { DialogProps } from './dialog.interface';
 
 const { prefix } = config;
 const name = `${prefix}-dialog`;
 
-export default {
+export default defineComponent({
   name,
   components: { TMask },
   props: DialogProps,
-  setup(props: IDialogProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const root = ref(null);
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);
@@ -141,5 +141,5 @@ export default {
       afterLeave,
     };
   },
-};
+});
 </script>
