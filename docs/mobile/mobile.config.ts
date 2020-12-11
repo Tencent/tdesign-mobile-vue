@@ -132,6 +132,11 @@ export default {
           name: 'segment-control',
           component: () => import('@/segment-control/demos/base.vue'),
         },
+        {
+          title: 'Fab 悬浮按钮',
+          name: 'fab',
+          component: () => import('@/fab/demos/base.vue'),
+        },
       ],
     },
   },

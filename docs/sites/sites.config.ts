@@ -161,6 +161,17 @@ export default {
             },
           ],
         },
+        {
+          title: '输入类组件',
+          type: 'component',
+          children: [
+            {
+              title: 'Fab 悬浮按钮',
+              name: 'fab',
+              component: () => import('@/fab/fab.md'),
+            },
+          ],
+        },
       ],
     },
   },
