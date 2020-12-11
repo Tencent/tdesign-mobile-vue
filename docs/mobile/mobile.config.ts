@@ -118,6 +118,11 @@ export default {
           component: () => import('@/popup/demos/base.vue'),
         },
         {
+          title: 'ActionSheet 动作面板',
+          name: 'actionsheet',
+          component: () => import('@/action-sheet/demos/base.vue'),
+        },
+        {
           title: 'Collapse 折叠面板',
           name: 'collapse',
           component: () => import('@/collapse/demos/index.vue'),
