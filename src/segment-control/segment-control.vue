@@ -2,7 +2,7 @@
   <div :class="name">
     <ul :class="`${name}__list`" v-if="items.length > 0">
       <li
-        :class="[`${name}__item`, currentActive.includes(item.value || index) && 'active']"
+        :class="[`${name}__item`, currentActive.includes(item.value || index) && `${prefix}-is-active`]"
         v-for="(item, index) in items"
         :key="item.value || index"
         @click="selectChild(item.value || index)"
@@ -14,16 +14,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch, Ref } from 'vue';
+import { defineComponent, ref, watch } from 'vue';
 import config from '../config';
-import { ModelValueProps, ItemsProps, SegmentControlProps } from './segment-control.d';
+import { ModelValueProps, ItemsProps } from './segment-control.interface';
 const { prefix } = config;
 const name = `${prefix}-segment-control`;
 
 export default defineComponent({
   name,
   props: {
-    modelValue: [Array, Number, String] as ModelValueProps,
+    modelValue: [Array, Number, String],
     items: {
       type: Array as ItemsProps,
       default: () => [],
@@ -33,13 +33,13 @@ export default defineComponent({
       default: false,
     },
   },
-  setup(props: SegmentControlProps, { emit }) {
-    const initActive = (modelValue, isMultiple): ModelValueProps => {
-      const concatValue = [].concat(modelValue);
+  setup(props, { emit }) {
+    const initActive = (modelValue: ModelValueProps, isMultiple: boolean) => {
+      const concatValue = modelValue ? ([] as any[]).concat(modelValue) : [];
       return !isMultiple && concatValue.length > 1 ? [concatValue[0]] : concatValue;
     };
-    const currentActive:Ref<ModelValueProps>  = ref(initActive(props.modelValue, props.isMultiple));
-    const selectChild = (value) => {
+    const currentActive = ref(initActive(props.modelValue as ModelValueProps, props.isMultiple));
+    const selectChild = (value: string | number) => {
       const isIncluded = currentActive.value.includes(value);
       if (isIncluded) {
         props.isMultiple && (
@@ -56,6 +56,7 @@ export default defineComponent({
     });
 
     return {
+      prefix,
       name,
       currentActive,
       selectChild,

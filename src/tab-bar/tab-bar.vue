@@ -6,7 +6,6 @@
 
 <script lang='ts'>
 import { defineComponent, ref, provide, watch, Ref } from 'vue';
-import { ModelValueProps, TabBarProps } from './tab-bar.d';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-tab-bar`;
@@ -15,15 +14,15 @@ export default defineComponent({
   name,
   props: {
     modelValue: {
-      type: [Array, Number, String] as ModelValueProps,
+      type: [Array, Number, String],
       default: 0,
     },
   },
-  setup(props: TabBarProps, { emit }) {
-    const activeValue:Ref<ModelValueProps> = ref(props.modelValue || 0);
+  setup(props, { emit }) {
+    const activeValue = ref(props.modelValue || 0);
     const defaultIndex:Ref<number> = ref(-1);
 
-    const updateChild = (currentValue) => {
+    const updateChild = (currentValue: number | string) => {
       activeValue.value = currentValue;
     };
 
