@@ -70,7 +70,7 @@ export default defineComponent({
     }));
     const labelWidth = computed(() => props.labelWidth || collapseProps.labelWidth);
     const contentClassName = computed(() => (c: number | string | object) => [`${name}__content`, typeof c === 'object' ? `${name}-list__item` : '']);
-    const listLabelStyle = computed(() => (isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {}));
+    const listLabelStyle = computed(() => (!isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {}));
     // 是否展开态
     const isActive = computed(() => findIndex(props.name, collapseState.curValue) > -1);
     const state = reactive({
