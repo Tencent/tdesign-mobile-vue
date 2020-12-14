@@ -107,6 +107,11 @@ export default {
               name: 'dropdown-menu',
               component: () => import('@/dropdown-menu/dropdown-menu.md'),
             },
+            {
+              title: 'Navbar 导航条',
+              name: 'navbar',
+              component: () => import('@/navbar/navbar.md'),
+            },
           ],
         },
         {
