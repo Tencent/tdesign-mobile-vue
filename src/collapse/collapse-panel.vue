@@ -101,7 +101,6 @@ export default defineComponent({
         console.log('[collapse] 组件尚未挂载', wrapDOM.value);
         return;
       }
-      // console.log('headDOM', headDOM, headDOM.value);
       const { height: headHeight } = headDOM.value.getBoundingClientRect();
       state.rightIcon = getExpandIconName(isActive.value);
       if (!isActive.value) {
