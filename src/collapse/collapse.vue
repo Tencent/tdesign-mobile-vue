@@ -30,7 +30,6 @@ export default defineComponent({
     });
 
     watch(() => props.value, (v) => {
-      console.log('[watch] props.value', v, state.curValue);
       state.curValue = v;
     });
     const onPanelChange = (name: any) => {
