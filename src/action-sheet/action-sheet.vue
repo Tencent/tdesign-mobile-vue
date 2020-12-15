@@ -1,25 +1,21 @@
 <template>
   <t-popup :class="name" :visible="currentVisible" @close="handleClose" position="bottom">
     <div :class="rootClasses">
-      <div :class="`${name}__menu`">
-        <button
-          v-for="(item, index) in actionItems"
-          :key="index"
-          :class="`${name}__cell`"
-          :disabled="item.disabled"
-          @click="handleSelect(index)"
-        >
-          <div
-            v-if="type === 'grid' && item.icon"
-            :class="`${name}__cell-icon`"
-            :style="{backgroundImage: `url(${item.icon})`}"
-          ></div>
-          <div :class="`${name}__cell-text`" :style="{color: item.color}">{{ item.label }}</div>
+
+      <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect" />
+
+      <menu-grid v-else :items="actionItems" :count="count" @select="handleSelect">
+        <template v-slot:cell="slotProps">
+          <slot name="cell" :item="slotProps.item"></slot>
+        </template>
+      </menu-grid>
+
+      <template v-if="showCancel">
+        <div :class="`${name}__separation`"></div>
+        <button :class="`${name}__action`" @click="handleCancel">
+          {{ cancelText }}
         </button>
-      </div>
-      <button v-if="showCancel" :class="`${name}__action`" @click="handleCancel">
-        {{ cancelText }}
-      </button>
+      </template>
     </div>
   </t-popup>
 </template>
@@ -27,17 +23,21 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
 import { IPopupProps, ActionSheetType } from './action-sheet.interface';
-
+import MenuList from './menu-list';
+import MenuGrid from './menu-grid';
 import TPopup from '../popup';
-
 import config from '../config';
-const { prefix } = config;
 
+const { prefix } = config;
 const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
   name,
-  components: { TPopup },
+  components: {
+    TPopup,
+    MenuList,
+    MenuGrid,
+  },
   props: {
     modelValue: Boolean,
     /**
@@ -65,12 +65,20 @@ export default defineComponent({
       default: 'list',
     },
     /**
+     * @description grid时每页显示的数量
+     * @attribute count
+     */
+    count: {
+      type: Number,
+      default: 8,
+    },
+    /**
      * @description 是否展示【取消】选项
      * @attribute show-cancel
      */
     showCancel: {
       type: Boolean,
-      dafault: true,
+      default: true,
     },
     /**
      * @description 【取消】选项的文本
@@ -80,17 +88,11 @@ export default defineComponent({
       type: String,
       default: '取消',
     },
-    /**
-     * @description 是否展示选中后的图标
-     * @attribute show-select-icon
-     */
-    showSelectIcon: {
-      type: Boolean,
-      default: false,
-    },
   },
   setup(props: IPopupProps, context: SetupContext) {
     const actionItems = ref([]);
+
+    console.log('props-----', props.count);
 
     const currentVisible = computed(() => props.modelValue || props.visible);
     const rootClasses = computed(() => ({

@@ -32,14 +32,20 @@
       @select="handleSelect"
       @cancel="handleCancel"
     />
-    <t-action-sheet-grid
+    <t-action-sheet
       type="grid"
       v-model="visible3"
       :items="items2"
       show-cancel
+      :count="4"
       @select="handleSelect"
       @cancel="handleCancel"
-    />
+    >
+      <template v-slot:cell="slotProps">
+        <div class="meun-icon" :style="{backgroundImage: `url(${slotProps.item.icon})`}"></div>
+        <div>{{slotProps.item.label}}</div>
+      </template>
+    </t-action-sheet>
   </div>
 </template>
 
@@ -59,6 +65,11 @@ export default {
         { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
         { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
         { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
+        { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
+        { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
+        { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
+        { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
+        { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
       ],
     };
   },
@@ -72,3 +83,16 @@ export default {
   },
 };
 </script>
+
+<style lang="less">
+  .action-sheet-base {
+    .meun-icon {
+      width: 36px;
+      height: 36px;
+      margin-bottom: 4px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+</style>
