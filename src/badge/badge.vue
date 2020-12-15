@@ -1,5 +1,5 @@
-<template>
-  <div :class="badgeClasses" v-if="showBadge">
+ß<template>
+  <div v-if="showBadge" :class="badgeClasses">
     <span :class="badgeInnerClasses" :style="badgeStyles">{{value}}</span>
     <slot />
   </div>

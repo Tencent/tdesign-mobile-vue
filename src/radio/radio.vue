@@ -12,14 +12,14 @@
   >
     <span :class="shapeClasses" @click="radioChange">
       <slot name="checkedIcon">
-        <span :class="iconClasses" :style="{backgroundColor: checkedColor}" v-if="isChecked"></span>
+        <span v-if="isChecked" :class="iconClasses" :style="{backgroundColor: checkedColor}"></span>
       </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="radioChange('content')">
-      <span :class="titleClasses" :style="titleStyle" v-if="title">
+      <span v-if="title" :class="titleClasses" :style="titleStyle">
         {{ title }}
       </span>
-      <div :class="`${flagName}__content-inner`" :style="contentStyle" v-if="hasSlot">
+      <div v-if="hasSlot" :class="`${flagName}__content-inner`" :style="contentStyle">
         <slot></slot>
       </div>
     </span>

@@ -6,7 +6,7 @@
           :class="`${name}__percent`"
           :style="progressStyle"></div>
       </div>
-      <div :class="`${name}__ft`" v-if="showTextPercentage">
+      <div v-if="showTextPercentage" :class="`${name}__ft`">
         <span
           :class="`${name}__text-percentage`" :style="percentageTextStyle"
         >{{percentage}}%</span>

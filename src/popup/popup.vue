@@ -1,7 +1,11 @@
 <template>
   <div :class="rootClasses" @touchmove="handleMove">
     <transition name="fade">
-      <t-mask v-show="currentVisible" :transparent="maskTransparent" @click="handleMaskClick" />
+      <t-mask
+        v-show="currentVisible"
+        :transparent="maskTransparent"
+        @click="handleMaskClick"
+      />
     </transition>
     <transition
       :name="contentTransitionName"
@@ -16,12 +20,19 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { PositionType, IPopupProps } from './popup.interface';
+import {
+  ref,
+  computed,
+  SetupContext,
+  watch,
+  defineComponent,
+  PropType,
+} from "vue";
+import { PositionType, IPopupProps } from "./popup.interface";
 
-import TMask from '../mask';
+import TMask from "../mask";
 
-import config from '../config';
+import config from "../config";
 const { prefix } = config;
 
 const name = `${prefix}-popup`;
@@ -60,15 +71,27 @@ export default defineComponent({
      */
     position: {
       type: String as PropType<PositionType>,
-      default: 'bottom',
-      validator: val => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
+      default: "bottom",
+      validator: (val: string) =>
+        ["top", "right", "bottom", "left", "center"].indexOf(val) !== -1,
     },
     /**
      * @description 弹出层内容区的动画名，等价于transition组件的name属性
      * @attribute transition-name
      */
-    transitionName: String,
+    transitionName: {
+      type: String,
+      default: "",
+    },
   },
+  emits: [
+    "open",
+    "visible-change",
+    "close",
+    "opened",
+    "update:modelValue",
+    "closed",
+  ],
   setup(props: IPopupProps, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
@@ -82,23 +105,23 @@ export default defineComponent({
     const contentTransitionName = computed(() => {
       const { transitionName, position } = props;
       if (transitionName) return transitionName;
-      if (position === 'center') return 'fade-zoom';
+      if (position === "center") return "fade-zoom";
       return `slide-${position}`;
     });
 
     watch(
       () => currentVisible.value,
       (val) => {
-        context.emit('visible-change', val);
+        context.emit("visible-change", val);
         const cls = `${prefix}-overflow-hidden`;
         if (val) {
           document.body.classList.add(cls);
-          context.emit('open');
+          context.emit("open");
         } else {
           document.body.classList.remove(cls);
-          context.emit('close');
+          context.emit("close");
         }
-      },
+      }
     );
 
     function handleMove(e) {
@@ -113,9 +136,9 @@ export default defineComponent({
       rootClasses,
       contentClasses,
       contentTransitionName,
-      afterEnter: () => context.emit('opened'),
-      afterLeave: () => context.emit('closed'),
-      handleMaskClick: () => context.emit('update:modelValue', false),
+      afterEnter: () => context.emit("opened"),
+      afterLeave: () => context.emit("closed"),
+      handleMaskClick: () => context.emit("update:modelValue", false),
       handleMove,
     };
   },

@@ -2,7 +2,7 @@
   <div>
     <t-mask v-show="showOverlay"/>
     <div :class="classes">
-      <t-icon :name="_icon" :class="`${name}__icon`" v-if="_icon" />
+      <t-icon v-if="_icon" :name="_icon" :class="`${name}__icon`" />
       <div :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>
@@ -26,12 +26,18 @@ export default defineComponent({
      * @description 消息内容
      * @attribute message
      */
-    message: String,
+    message: {
+      type: String,
+      default: '',
+    },
     /**
      * @description 提示类型
      * @attribute type
      */
-    type: String,
+    type: {
+      type: String,
+      default: '',
+    },
     /**
      * @description 展示位置
      * @attribute position

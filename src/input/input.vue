@@ -8,13 +8,13 @@
     <template #default>
       <div :class="styleValueWrap">
         <input
-          v-bind="$attrs"
           v-model="innerValue"
+          v-bind="$attrs"
           :class="styleControl"
           :type="type"
           :disabled="disabled"
         />
-        <div v-if="clearable && innerValue.length > 0" @click="handleClear" :class="styleIcon">
+        <div v-if="clearable && innerValue.length > 0" :class="styleIcon" @click="handleClear">
           <t-icon name="circle_clear" />
         </div>
         <div v-if="hasSuffix" :class="styleSuffix">
@@ -38,9 +38,9 @@
     </div>
     <div :class="styleTextarea">
       <textarea
-        v-bind="$attrs"
         ref="textarea"
         v-model="innerValue"
+        v-bind="$attrs"
         :maxlength="maxlength"
         :disabled="disabled"
       />

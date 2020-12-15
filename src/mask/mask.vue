@@ -9,7 +9,7 @@ const { prefix } = config;
 const name = `${prefix}-mask`;
 
 export interface MaskProps {
-  transparent: Boolean;
+  transparent: boolean;
 }
 
 export default defineComponent({

@@ -9,10 +9,10 @@
       <span :class="[`${name}__minus`,
                      `${(disabled || currentValue <= min) ? 't-is-disabled': ''}`]"
             @click="minusValue"></span>
-      <input :class="`${name}__input`" type="tel" :style="inputStyle"
-             pattern="[0-9]*" v-model="currentValue"
-             :disabled="disableInput || disabled" @input="onInput"
-             @blur="onBlur" :readonly="disableInput" />
+      <input v-model="currentValue" :class="`${name}__input`" type="tel"
+             :style="inputStyle" pattern="[0-9]*"
+             :disabled="disableInput || disabled" :readonly="disableInput"
+             @input="onInput" @blur="onBlur" />
       <span :class="[`${name}__plus`,
                      `${(disabled || currentValue >= max) ? 't-is-disabled': ''}`]"
             @click="plusValue"></span>

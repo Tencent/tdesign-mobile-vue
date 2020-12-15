@@ -1,7 +1,7 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="onClick" @touchstart.passive="onTouchstart">
-    <t-icon :name="_icon" :class="iconClass" v-if="_icon" />
-    <span :class="textClass" v-if="!iconOnly">
+  <button :class="classes" :disabled="disabled" @click="onClick">
+    <t-icon v-if="_icon" :name="_icon" :class="iconClass" />
+    <span v-if="!iconOnly" :class="textClass">
       <slot />
     </span>
   </button>
@@ -30,7 +30,10 @@ export default defineComponent({
       type: String,
       default: 'default',
     },
-    icon: String,
+    icon: {
+      type: String,
+      default: '',
+    },
     plain: {
       type: Boolean,
       default: false,
@@ -52,6 +55,7 @@ export default defineComponent({
       default: false,
     },
   },
+  emits: ['click'],
   setup(props, context: SetupContext) {
     const { loading } = toRefs(props);
     const inIcon = props.icon;
@@ -84,9 +88,6 @@ export default defineComponent({
         context.emit('click', e);
       }
     };
-    const onTouchstart = (event: TouchEvent) => {
-      context.emit('touchstart', event);
-    };
 
     return {
       classes,
@@ -95,8 +96,7 @@ export default defineComponent({
       iconOnly,
       _icon,
       ...toRefs(props),
-      onClick,
-      onTouchstart,
+      onClick
     };
   },
 });

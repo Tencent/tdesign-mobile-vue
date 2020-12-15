@@ -1,12 +1,12 @@
 <template>
   <div :class="`${name}`">
     <ul
-      :class="`${name}--list`"
       ref="rateWrapper"
+      :class="`${name}--list`"
       @touchstart="onTouchstart"
       @touchmove="onTouchmove"
     >
-      <li :class="classes(n)" v-for="n in count" :key="n">
+      <li v-for="n in count" :key="n" :class="classes(n)">
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
@@ -135,6 +135,7 @@ export default defineComponent({
   name,
   components: { TIcon },
   props: rateProps,
+  emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
     const actualVal = computed(() => props.modelValue || props.value) as ComputedRef<number>;

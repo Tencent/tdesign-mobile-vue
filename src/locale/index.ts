@@ -45,7 +45,7 @@ const createI18n = (config: i18nConfig) => {
     };
   };
   const t = (pattern: string, placement: Placement) => {
-    const regx: RegExp = /\{\s*([\w-]+)\s*\}/g;
+    const regx = /\{\s*([\w-]+)\s*\}/g;
     const translated = pattern.replace(regx, (match, key) => {
       if (placement) {
         return String(placement[key]);

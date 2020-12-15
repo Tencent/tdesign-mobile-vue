@@ -74,6 +74,7 @@ export default defineComponent({
      */
     zIndex: Number,
   },
+  emits: ['update:modelValue', 'open', 'visible-change', 'close', 'opened', 'closed'],
   setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);

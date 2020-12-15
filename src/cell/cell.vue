@@ -1,11 +1,3 @@
-<!--
- * @Author: your name
- * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-05-25 17:20:55
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/src/cell/cell.vue
--->
 <template>
   <div :class="styleWrapper">
     <div v-if="hasLabel" :class="styleLabel">
@@ -39,8 +31,14 @@ export default defineComponent({
       type: String,
       default: 'default',
     },
-    label: String,
-    value: String,
+    label: {
+      type: String,
+      default: '',
+    },
+    value: {
+      type: String,
+      default: '',
+    },
     valueAlign: {
       type: String as PropType<ValueAlign>,
       default: ValueAlign.Right,
@@ -52,6 +50,7 @@ export default defineComponent({
       `${name}`,
       `${name}--theme-${props.theme}`,
     ]);
+    
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;
@@ -59,10 +58,9 @@ export default defineComponent({
 
     const styleValue = computed(() => {
       const alignLeft = `${name}__value ${name}__left`;
-      if (hasLabel) {
+      if (hasLabel.value) {
         return props.valueAlign.valueOf() === ValueAlign.Right.valueOf() ? `${name}__value` : alignLeft;
       }
-      // 没有label时默认左对齐
       return alignLeft;
     });
 

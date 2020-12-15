@@ -1,6 +1,6 @@
 <template>
   <span :class="classes">
-    <span :class="textClasses" v-if="text">
+    <span v-if="text" :class="textClasses">
       {{text}}
     </span>
     <span :class="nodeClasses" @click="toggle">
@@ -61,6 +61,7 @@ export type SwitchPropsType = ExtractPropTypes<typeof switchProps>;
 export default defineComponent({
   name,
   props: switchProps,
+  emits: ['update:modelValue', 'change'],
   setup(props, context: SetupContext) {
     const _value = ref(false);
     const currentValue = computed({

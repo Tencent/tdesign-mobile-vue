@@ -42,6 +42,7 @@ export default defineComponent({
       default: false,
     },
   },
+  emits: ['update:modelValue', 'change'],
   setup(props: RadioGroupProps, content: SetupContext) {
     /**
      * @description: radio 事件change回调

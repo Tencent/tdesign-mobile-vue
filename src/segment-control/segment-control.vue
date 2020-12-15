@@ -1,10 +1,10 @@
 <template>
   <div :class="name">
-    <ul :class="`${name}__list`" v-if="items.length > 0">
+    <ul v-if="items.length > 0" :class="`${name}__list`">
       <li
-        :class="[`${name}__item`, currentActive.includes(item.value || index) && `${prefix}-is-active`]"
         v-for="(item, index) in items"
         :key="item.value || index"
+        :class="[`${name}__item`, currentActive.includes(item.value || index) && `${prefix}-is-active`]"
         @click="selectChild(item.value || index)"
       >
         {{ item.text }}
@@ -33,6 +33,7 @@ export default defineComponent({
       default: false,
     },
   },
+  emits: ['change', 'update:modelValue'],
   setup(props, { emit }) {
     const initActive = (modelValue: ModelValueProps, isMultiple: boolean) => {
       const concatValue = modelValue ? ([] as any[]).concat(modelValue) : [];

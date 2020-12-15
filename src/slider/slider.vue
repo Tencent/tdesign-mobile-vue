@@ -8,31 +8,31 @@
         <div :class="`${name}__track`" :style="`width:${value[0]}%`"></div>
         <!-- 滑块操作 -->
         <div
-          :class="handleClass"
           v-for="(item, index) in value"
           :key="index+1"
+          :class="handleClass"
           :style="`left:${value[index]}%`"
           @touchstart="onTouchStart($event,index)"
           @touchmove="onTouchMove($event,index)"
           @touchend="onTouchEnd($event,index)"
         ></div>
         <!-- 刻度内容 -->
-        <div :class="`${name}__mark`" v-if="marks">
+        <div v-if="marks" :class="`${name}__mark`">
           <div
-            :class="`${name}__mark-text`"
             v-for="(v, k) in marks"
             :key="k"
-            v-text="v"
+            :class="`${name}__mark-text`"
             :style="`left:${k}%`"
+            v-text="v"
           >
           </div>
         </div>
       </div>
       <template v-if="showValue">
         <div
-          :class="`${name}-wrap__value`"
           v-for="(item, index) in value"
           :key="index"
+          :class="`${name}-wrap__value`"
           v-text="item"
         ></div>
       </template>
@@ -46,9 +46,9 @@
              :style="`left:${value[0]}%;width:${value[1]-value[0]}%`"></div>
         <!-- 滑块操作 -->
         <div
-          :class="handleClass"
           v-for="(item, index) in value"
           :key="index+1"
+          :class="handleClass"
           :style="`left:${value[index]}%`"
           @touchstart="onTouchStart($event,index)"
           @touchmove="onTouchMove($event,index)"
@@ -57,11 +57,11 @@
         <!-- 刻度内容 -->
         <div :class="`${name}__mark`">
           <div
-            :class="`${name}__mark-text`"
             v-for="(item, index) in value"
             :key="index"
-            v-text="item"
+            :class="`${name}__mark-text`"
             :style="`left:${value[index]}%`"
+            v-text="item"
           ></div>
         </div>
       </div>

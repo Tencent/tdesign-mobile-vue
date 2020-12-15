@@ -29,20 +29,20 @@ class Picker {
   list: HTMLUListElement | null = null;
   elementItems: HTMLLIElement[] = []
   height: number = DEFAULT_HOLDER_HEIGHT
-  curIndex: number = 0
-  itemClassName: string = ''
-  itemSelectedClassName: string = '';
+  curIndex = 0
+  itemClassName = ''
+  itemSelectedClassName = '';
   itemHeight: number = DEFAULT_ITEM_HEIGHT;
-  lastMoveTime: number = 0;
-  lastMoveStart: number = 0;
-  stopInertiaMove: boolean = false;
-  startY: number = 0;
-  isPicking: boolean = false;
+  lastMoveTime = 0;
+  lastMoveStart = 0;
+  stopInertiaMove = false;
+  startY = 0;
+  isPicking = false;
   offsetYOfStartBound: number = OFFSET_OF_BOUND;
   offsetYOfEndBound: number = -OFFSET_OF_BOUND;
-  offsetY: number = 0;
-  offsetYOfStart: number = 0;
-  offsetYOfEnd: number = 0;
+  offsetY = 0;
+  offsetYOfStart = 0;
+  offsetYOfEnd = 0;
   onChange: Function;
   constructor(options: PickerOptions) {
     if (!options.el) throw 'options el needed!';
@@ -219,7 +219,7 @@ class Picker {
    * @param index
    * @param duration
    */
-  updateIndex(index: number, duration:number = 460) {
+  updateIndex(index: number, duration = 460) {
     this.curIndex = index;
     this.setSelectedClassName();
     const moveOffsetY = (-index + 2) * this.itemHeight;

@@ -25,6 +25,7 @@ const name = `${prefix}-picker`;
 
 export default defineComponent({
   props: PickerProps,
+  emits: ['change', 'cancel', 'confirm'],
   setup(props: IPickerProps,  context: SetupContext) {
     const className = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
     const groupClassName = computed(() => `${name}-column__group`);

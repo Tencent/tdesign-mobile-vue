@@ -13,7 +13,7 @@ export interface IDialogProps {
   knowContent?: string,
   zIndex?: number,
   showOverlay?: boolean,
-  width?: [Number, String],
+  width?: [number, string],
 };
 
 export const DialogPropsDefault = {

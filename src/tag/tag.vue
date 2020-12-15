@@ -1,10 +1,10 @@
 <template>
   <span :class="classes" :style="style">
-    <t-icon :class="`${baseClass}__icon`"  v-if="icon" :name="icon" />
+    <t-icon v-if="icon"  :class="`${baseClass}__icon`" :name="icon" />
     <slot :class="`${baseClass}__text`" />
     <t-icon
-      :class="`${baseClass}__close`"
       v-if="closable && !disabled"
+      :class="`${baseClass}__close`"
       name="close"
       @click="onClickClose"
     />
@@ -79,6 +79,7 @@ const Tag = defineComponent({
       default: false,
     },
   },
+emits: ['close'],
   setup(props, context) {
     const baseClass = name;
     const { disabled, closable } = toRefs(props);

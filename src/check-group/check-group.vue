@@ -1,11 +1,3 @@
-<!--
- * @Author: yuliangyang
- * @Date: 2020-06-06 15:11:46
- * @LastEditTime: 2020-07-03 11:29:49
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/src/check-group/check-group.vue
--->
 <template>
   <div :class="`${prefix}-check-group`">
     <slot>
@@ -52,6 +44,7 @@ export default defineComponent({
       default: 0,
     },
   },
+emits: ['update:modelValue', 'change'],
   setup(props, content: SetupContext) {
     const children = ref({});
     const checkedValues = computed(() => props.modelValue || []);

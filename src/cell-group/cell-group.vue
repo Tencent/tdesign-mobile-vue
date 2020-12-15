@@ -18,7 +18,10 @@ const name = `${prefix}-cell-group`;
 export default defineComponent({
   name,
   props: {
-    title: String,
+    title: {
+      type: String,
+      default: '',
+    },
     border: {
       type: Boolean,
       default: true,

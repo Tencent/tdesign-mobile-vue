@@ -55,11 +55,8 @@ export default defineComponent({
     const onClick = () => {
       console.log('ttt');
     };
-    const onTouchStart = () => {
-      console.log('touch start');
-    };
     const loading = ref(true);
-    return { onClick, onTouchStart, loading };
+    return { onClick, loading };
   },
 });
 </script>

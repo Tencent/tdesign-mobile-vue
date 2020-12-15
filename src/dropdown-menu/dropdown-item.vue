@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes" v-if="isShowItems" :style="{...expandStyle}">
+  <div v-if="isShowItems" :class="classes" :style="{...expandStyle}">
     <t-mask v-if="isShowItems && showOverlay" @click="onClickOverlay" />
     <div :class="styleContent" :style="{...transitionStyle}">
       <div :class="`${name}__bd`">
@@ -15,8 +15,8 @@
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
                   >
-                    <template v-slot:checkedIcon>
-                      <t-icon name="tick" v-if="isCheckedRadio(option.value)" />
+                    <template #checkedIcon>
+                      <t-icon v-if="isCheckedRadio(option.value)" name="tick" />
                     </template>
                   </t-radio>
                 </t-cell>
@@ -40,7 +40,7 @@
             <t-cell-group v-for="(_, level) in treeOptions" :key="level">
               <t-radio-group
                 v-if="level < treeState.leafLevel"
-                :modelValue="treeState.selectList[level]"
+                :model-value="treeState.selectList[level]"
                 @update:modelValue="selectTreeNode(level, $event)"
               >
                 <!-- 树形列表 - 父级节点 ST -->
@@ -66,7 +66,7 @@
                   <t-radio-group
                     v-for="option in treeOptions[level]"
                     :key="option.value"
-                    :modelValue="treeState.selectList[level]"
+                    :model-value="treeState.selectList[level]"
                     @update:modelValue="selectTreeNode(level, $event)"
                   >
                     <t-cell value-align="left">
@@ -76,8 +76,8 @@
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
                       >
-                        <template v-slot:checkedIcon>
-                          <t-icon name="tick" v-if="option.value === treeState.selectList[level]" />
+                        <template #checkedIcon>
+                          <t-icon v-if="option.value === treeState.selectList[level]" name="tick" />
                         </template>
                       </t-radio>
                     </t-cell>
@@ -89,7 +89,7 @@
                   <t-check-group
                     v-for="option in treeOptions[level]"
                     :key="option.value"
-                    :modelValue="treeState.selectList[level]"
+                    :model-value="treeState.selectList[level]"
                     @update:modelValue="selectTreeNode(level, $event)"
                   >
                     <t-cell value-align="left">
@@ -109,7 +109,7 @@
           </template>
         </slot>
       </div>
-      <div :class="`${name}__ft`" v-if="selectMode === 'multi' || optionsLayout === 'tree'">
+      <div v-if="selectMode === 'multi' || optionsLayout === 'tree'" :class="`${name}__ft`">
         <t-button theme="default" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
         <t-button theme="primary" :disabled="isBtnDisabled" @click="confirmSelect">确定</t-button>
       </div>
@@ -130,6 +130,7 @@ const name = `${prefix}-dropdown-item`;
 export default defineComponent({
   name,
   props: DropdownItemProps,
+  emits: ['update:modelValue', 'change'],
   setup(props: IDropdownItemProps, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as IDropdownMenuProps;

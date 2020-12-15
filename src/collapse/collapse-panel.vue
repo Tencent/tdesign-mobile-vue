@@ -12,7 +12,7 @@
       </div>
     </div>
     <div ref="bodyDOM" :class="`${baseClass}__body`">
-      <div :class="contentClassName(c)" v-for="(c, i) in contList" :key="i">
+      <div v-for="(c, i) in contList" :key="i" :class="contentClassName(c)">
         <slot name="default">
           <template v-if="typeof c === 'object'">
             <div :class="`${baseClass}-list__label`" :style="listLabelStyle">{{c.label}}</div>
@@ -55,6 +55,7 @@ export default defineComponent({
   name,
   components: { TIcon },
   props: CollapsePanelProps,
+  emits: ['click'],
   setup(props: ICollapsePanelProps, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
     const collapseProps = inject('collapseProps') as ICollapseProps;

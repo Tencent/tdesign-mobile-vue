@@ -22,6 +22,7 @@ const name = `${prefix}-collapse`;
 export default defineComponent({
   name,
   props: CollapseProps,
+  emits: ['update:value', 'change'],
   setup(props: ICollapseProps, context: SetupContext) {
     // 根结点类名
     const state = reactive({
