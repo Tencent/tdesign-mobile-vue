@@ -1,8 +1,12 @@
 <template>
   <div :class="componentName">
     <div
-      :class="[`${componentName}__content`, isChecked && 'is-checked', icon && 's']"
-      @click="toggle(currentName)"
+      :class="{
+        [`${componentName}__content`]: true,
+        [`${prefix}-is-checked`]: isChecked,
+        [`${prefix}-size-s`]: icon,
+      }"
+      @click="toggle"
     >
       <div :class="`${componentName}__icon`" v-if="icon">
         <t-icon :name="icon"></t-icon>
@@ -32,7 +36,6 @@ import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef } from 
 import TIcon from '../icon';
 import config from '../config';
 import { initName } from './useTabBar';
-import { TabBarItemProps, TabBarItemSpreadProps } from './tab-bar.d';
 const { prefix } = config;
 const componentName = `${prefix}-tab-bar-item`;
 
@@ -44,11 +47,11 @@ export default defineComponent({
   props: {
     name: [Number, String],
     icon: String,
-    children: Array as Array<TabBarItemSpreadProps>,
+    children: Array,
   },
-  setup(props: TabBarItemProps) {
-    const { defaultIndex, activeValue, updateChild } = inject('tab-bar', {});
-    const currentName:number | string = initName(defaultIndex);
+  setup(props) {
+    const { defaultIndex, activeValue, updateChild } = inject<any>('tab-bar');
+    const currentName = initName(defaultIndex);
     const hasChildren = !!props.children;
     const isSpread:Ref<boolean> = ref(false);
 
@@ -75,7 +78,7 @@ export default defineComponent({
       updateChild(currentName);
     };
 
-    const selectChild = (childName) => {
+    const selectChild = (childName: number | string) => {
       if (!(
         Array.isArray(activeValue.value)
         && activeValue.value[1] === childName
@@ -86,6 +89,7 @@ export default defineComponent({
     };
 
     return {
+      prefix,
       componentName,
       isChecked,
       toggle,
