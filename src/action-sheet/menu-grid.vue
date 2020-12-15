@@ -99,16 +99,19 @@ export default defineComponent({
 
     const handleTouchmove = (e: TouchEvent) => {
       const { clientX } = e.touches[0];
+      const minOffset = 0;
+      const maxOffset = getMaxOffset();
+
       if (Math.abs(clientX - startX) < 15) return;
       moveOffset.value = clientX - startOffset;
 
       // 滑动临界值判单
-      if (moveOffset.value > 0) {
-        moveOffset.value = 0;
+      if (moveOffset.value > minOffset) {
+        moveOffset.value = minOffset;
         canMove = false;
       }
-      if (Math.abs(moveOffset.value) >= getMaxOffset()) {
-        moveOffset.value = getMaxOffset() * -1;
+      if (Math.abs(moveOffset.value) >= maxOffset) {
+        moveOffset.value = maxOffset * -1;
         canMove = false;
       }
     };
