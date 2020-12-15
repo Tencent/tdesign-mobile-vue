@@ -7,7 +7,9 @@
       :disabled="item.disabled"
       @click="handleSelect(index)"
     >
-      <div :class="`${name}__cell-text`" :style="{color: item.color}">{{ item.label }}</div>
+      <slot name="cell" :item="item">
+        <div :class="`${name}__cell-text`" :style="{color: item.color}">{{ item.label }}</div>
+      </slot>
     </button>
   </div>
 </template>

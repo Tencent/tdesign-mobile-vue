@@ -30,10 +30,14 @@
 
     </div>
     <div :class="`${name}__indicator`" v-if="pageNum > 1">
-      <div :class="{
-        [`${name}__indicator-item`]: true,
-        on: currentIndex === index -1,
-      }" v-for="index in pageNum" :key="index"></div>
+      <div
+        v-for="index in pageNum"
+        :key="index"
+        :class="{
+          [`${name}__indicator-item`]: true,
+          on: currentIndex === index -1,
+        }"
+      />
     </div>
 
   </div>
@@ -58,31 +62,32 @@ export default defineComponent({
     let startOffset = 0;
     let canMove = true;
 
-    const currentVisible = computed(() => props.modelValue || props.visible);
+    const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
     const wrapperStyle = computed(() => ({
       transform: `translate3d(${moveOffset.value}px, 0, 0)`,
       transition: useTransition.value ? 'transform 300ms' : null,
     }));
-    const pageNum = computed(() => Math.ceil(props.items.length / props.count));
+    const pageNum = computed(() => Math.ceil(props.items.length / props.count)) as ComputedRef<number>;
+    // 分页数据处理
     const actionItems = computed(() => {
       const res = [];
       for (let i = 0; i < pageNum.value; i++) {
         const temp = props.items.slice(i * props.count, (i + 1) * props.count);
         res.push(temp);
       }
-
       return res;
     });
 
-    const handleSelect = (index) => {
+    const handleSelect = (index: number) => {
       context.emit('select', index);
     };
 
-    const moveByIndex = (index) => {
+    const moveByIndex = (index: number) => {
       useTransition.value = true;
       moveOffset.value = pageNum.value > 1 ? index * containerWrapper.value.offsetWidth * -1 : 0;
     };
 
+    // 滑动时的最大偏移
     const getMaxOffset = () => (pageNum.value - 1) * containerWrapper.value.offsetWidth;
 
     const handleTouchstart = (e: TouchEvent) => {

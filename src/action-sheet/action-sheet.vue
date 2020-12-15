@@ -2,7 +2,11 @@
   <t-popup :class="name" :visible="currentVisible" @close="handleClose" position="bottom">
     <div :class="rootClasses">
 
-      <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect" />
+      <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect">
+        <template v-slot:cell="slotProps">
+          <slot name="cell" :item="slotProps.item"></slot>
+        </template>
+      </menu-list>
 
       <menu-grid v-else :items="actionItems" :count="count" @select="handleSelect">
         <template v-slot:cell="slotProps">
@@ -12,9 +16,7 @@
 
       <template v-if="showCancel">
         <div :class="`${name}__separation`"></div>
-        <button :class="`${name}__action`" @click="handleCancel">
-          {{ cancelText }}
-        </button>
+        <button :class="`${name}__action`" @click="handleCancel">{{ cancelText }}</button>
       </template>
     </div>
   </t-popup>
@@ -92,9 +94,7 @@ export default defineComponent({
   setup(props: IPopupProps, context: SetupContext) {
     const actionItems = ref([]);
 
-    console.log('props-----', props.count);
-
-    const currentVisible = computed(() => props.modelValue || props.visible);
+    const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
     const rootClasses = computed(() => ({
       [`${name}__panel`]: true,
       [`${name}__panel-list`]: props.type === 'list',
@@ -104,7 +104,6 @@ export default defineComponent({
     watch(
       () => props.items,
       (val) => {
-        console.log(val);
         let items = JSON.parse(JSON.stringify(val));
         // 数据格式处理，统一转为object结构
         items = items.map((item) => {
