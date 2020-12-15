@@ -26,3 +26,6 @@ export { DropdownMenu, DropdownItem } from './dropdown-menu';
 export { Collapse, CollapsePanel } from './collapse';
 export { default as Badge } from './badge';
 export { default as SegmentControl } from './segment-control';
+export { default as Fab } from './fab';
+export { default as ImageViewer } from './image-viewer';
+

@@ -143,6 +143,11 @@ export default {
               name: 'segment-control',
               component: () => import('@/segment-control/segment-control.md'),
             },
+            {
+              title: 'ImageViewer 图片预览',
+              name: 'image-viewer',
+              component: () => import('@/image-viewer/image-viewer.md'),
+            },
           ],
         },
         {
@@ -163,6 +168,17 @@ export default {
               title: 'NoticeBar 公告栏',
               name: 'noticebar',
               component: () => import('@/noticebar/noticebar.md'),
+            },
+          ],
+        },
+        {
+          title: '输入类组件',
+          type: 'component',
+          children: [
+            {
+              title: 'Fab 悬浮按钮',
+              name: 'fab',
+              component: () => import('@/fab/fab.md'),
             },
           ],
         },
