@@ -137,6 +137,11 @@ export default {
           name: 'fab',
           component: () => import('@/fab/demos/base.vue'),
         },
+        {
+          title: 'ImageViewer 图片预览',
+          name: 'image-viewer',
+          component: () => import('@/image-viewer/demos/base.vue'),
+        },
       ],
     },
   },

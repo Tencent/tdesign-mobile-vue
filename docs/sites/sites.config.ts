@@ -138,6 +138,11 @@ export default {
               name: 'segment-control',
               component: () => import('@/segment-control/segment-control.md'),
             },
+            {
+              title: 'ImageViewer 图片预览',
+              name: 'image-viewer',
+              component: () => import('@/image-viewer/image-viewer.md'),
+            },
           ],
         },
         {
