@@ -96,16 +96,23 @@ export default defineComponent({
           context.emit('open');
         } else {
           document.body.classList.remove(cls);
-          context.emit('close');
         }
       },
     );
 
-    function handleMove(e) {
+    const handleMaskClick = () => {
+      context.emit('close');
+      context.emit('update:modelValue', false);
+    };
+
+    const handleMove = (e) => {
       if (props.lockScroll) {
         e.preventDefault();
       }
-    }
+    };
+
+    const afterLeave = () => context.emit('closed');
+    const afterEnter = () => context.emit('opened');
 
     return {
       name: ref(name),
@@ -113,9 +120,9 @@ export default defineComponent({
       rootClasses,
       contentClasses,
       contentTransitionName,
-      afterEnter: () => context.emit('opened'),
-      afterLeave: () => context.emit('closed'),
-      handleMaskClick: () => context.emit('update:modelValue', false),
+      afterEnter,
+      afterLeave,
+      handleMaskClick,
       handleMove,
     };
   },

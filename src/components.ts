@@ -19,6 +19,7 @@ export { default as NoticeBar } from './noticebar';
 export { default as Dialog } from './dialog';
 export { Picker, PickerColumn } from './picker';
 export { default as Popup } from './popup';
+export { default as ActionSheet } from './action-sheet';
 export { Tag, CheckTag } from './tag';
 export { TabBar, TabBarItem } from './tab-bar';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';

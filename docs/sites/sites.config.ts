@@ -118,6 +118,11 @@ export default {
               component: () => import('@/popup/popup.md'),
             },
             {
+              title: 'ActionSheet 动作面板',
+              name: 'actionsheet',
+              component: () => import('@/action-sheet/action-sheet.md'),
+            },
+            {
               title: 'Collapse 折叠面板',
               name: 'collapse',
               component: () => import('@/collapse/collapse.md'),
