@@ -1,6 +1,6 @@
 export type DropdownMenuControl = {
-  expandMenu: Function,
-  collapseMenu: Function,
+  expandMenu: (itemProps: any) => void,
+  collapseMenu: (itemProps: any) => void,
 };
 
 export enum DropdownMenuState {

@@ -148,7 +148,7 @@
 <script lang="ts">
 import { ref } from 'vue';
 
-import Dialog from '../index.func';
+import Dialog from './index.func';
 import config from '@/config';
 
 const { prefix } = config;

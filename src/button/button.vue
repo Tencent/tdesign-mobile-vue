@@ -1,6 +1,6 @@
 <template>
   <button :class="classes" :disabled="disabled" @click="onClick">
-    <t-icon v-if="_icon" :name="_icon" :class="iconClass" />
+    <t-icon v-if="displayIcon" :name="displayIcon" :class="iconClass" />
     <span v-if="!iconOnly" :class="textClass">
       <slot />
     </span>
@@ -58,7 +58,6 @@ export default defineComponent({
   emits: ['click'],
   setup(props, context: SetupContext) {
     const { loading } = toRefs(props);
-    const inIcon = props.icon;
     const iconOnly = computed(() => !context.slots.default);
 
     const textClass = computed(() => [`${name}__text`]);
@@ -80,7 +79,7 @@ export default defineComponent({
       },
     ]);
 
-    const _icon = computed(() => (loading.value ? 'loading' : inIcon));
+    const displayIcon = computed(() => (loading.value ? 'loading' : props.icon));
     const onClick = (e:Event) => {
       if (!props.loading && !props.disabled) {
         e.stopPropagation();
@@ -94,7 +93,7 @@ export default defineComponent({
       textClass,
       iconClass,
       iconOnly,
-      _icon,
+      displayIcon,
       ...toRefs(props),
       onClick
     };

@@ -45,9 +45,18 @@ export default defineComponent({
     [TIcon.name]: TIcon,
   },
   props: {
-    name: [Number, String],
-    icon: String,
-    children: Array,
+    name: {
+      type: [Number, String],
+      default: '',
+    },
+    icon: {
+      type: String,
+      default: '',
+    },
+    children: {
+      type: Array,
+      default: () => [],
+    }
   },
   setup(props) {
     const { defaultIndex, activeValue, updateChild } = inject<any>('tab-bar');

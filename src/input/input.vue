@@ -1,5 +1,9 @@
 <template>
-  <t-cell v-if="type !== 'textarea'" :class="styleWrapper" :value-align="valueAlign">
+  <t-cell
+    v-if="type !== 'textarea'"
+    :class="styleWrapper"
+    :value-align="valueAlign"
+  >
     <template v-if="hasLabel" #label>
       <slot name="label">
         <div v-if="label" :class="styleLabel">{{ label }}</div>
@@ -14,7 +18,11 @@
           :type="type"
           :disabled="disabled"
         />
-        <div v-if="clearable && innerValue.length > 0" :class="styleIcon" @click="handleClear">
+        <div
+          v-if="clearable && innerValue.length > 0"
+          :class="styleIcon"
+          @click="handleClear"
+        >
           <t-icon name="circle_clear" />
         </div>
         <div v-if="hasSuffix" :class="styleSuffix">
@@ -23,11 +31,15 @@
         <div v-if="hasRightIcon" :class="styleIcon">
           <slot name="rightIcon">
             <div v-if="suffix">{{ suffix }}</div>
-            <t-icon v-if="rightIcon" :name="rightIcon" @click="handleClickIcon" />
+            <t-icon
+              v-if="rightIcon"
+              :name="rightIcon"
+              @click="handleClickIcon"
+            />
           </slot>
         </div>
       </div>
-      <div v-if="errorMessage" :class="styleErrMsg">{{ errorMessage}}</div>
+      <div v-if="errorMessage" :class="styleErrMsg">{{ errorMessage }}</div>
     </template>
   </t-cell>
   <div v-else>
@@ -59,21 +71,39 @@ import {
   onMounted,
   SetupContext,
   defineComponent,
-} from 'vue';
-import config from '../config';
+} from "vue";
+import config from "../config";
 const { prefix } = config;
 const name = `${prefix}-input`;
 
 export default defineComponent({
   name,
   props: {
-    label: String,
-    modelValue: String,
+    label: {
+      type: String,
+      default: "",
+    },
+    modelValue: {
+      type: String,
+      default: "",
+    },
     error: Boolean,
-    errorMessage: String,
-    rightIcon: String,
-    suffix: String,
-    type: String,
+    errorMessage: {
+      type: String,
+      default: "",
+    },
+    rightIcon: {
+      type: String,
+      default: "",
+    },
+    suffix: {
+      type: String,
+      default: "",
+    },
+    type: {
+      type: String,
+      default: "",
+    },
     maxlength: {
       type: Number,
       default: 500,
@@ -101,7 +131,7 @@ export default defineComponent({
       styleTextareaLabel: `${name}--textarea-label`,
       styleCount: `${name}--count`,
       styleDisabled: `${name}__disabled`,
-      cacheValue: '',
+      cacheValue: "",
     });
     const styleControl = computed(() => {
       if (props.suffix) {
@@ -129,41 +159,41 @@ export default defineComponent({
       if (props.rightIcon || props.suffix) return true;
       return !!context.slots.rightIcon;
     });
-    const valueAlign = computed(() => (hasLabel.value ? 'right' : 'left'));
+    const valueAlign = computed(() => (hasLabel.value ? "right" : "left"));
 
     const innerValue = computed({
       get() {
         return props.modelValue || state.cacheValue;
       },
       set(val: string) {
-        emit('update:modelValue', val);
+        emit("update:modelValue", val);
         state.cacheValue = val;
       },
     });
     const handleClickIcon = () => {
-      emit('click-icon');
+      emit("click-icon");
     };
     const handleClear = () => {
-      innerValue.value = '';
+      innerValue.value = "";
     };
 
     const MIN_HEIGHT = 22 * props.rows; // 默认四行
     const MAX_HEIGHT = 22 * props.maxRows; // 默认12行
     onMounted(() => {
-      if (props.type === 'textarea') {
+      if (props.type === "textarea") {
         textarea.value.style.height = `${MIN_HEIGHT}px`;
       }
     });
     watch(innerValue, () => {
-      if (props.type === 'textarea') {
-        textarea.value.style.height = 'auto';
+      if (props.type === "textarea") {
+        textarea.value.style.height = "auto";
         let height = textarea.value.scrollHeight;
         if (height < MIN_HEIGHT) {
           height = MIN_HEIGHT;
         }
         if (height > MAX_HEIGHT) {
           // 如果只设置rows，且rows大于maxRows，则忽略maxRows
-          height =  MIN_HEIGHT > MAX_HEIGHT ? MIN_HEIGHT : MAX_HEIGHT;
+          height = MIN_HEIGHT > MAX_HEIGHT ? MIN_HEIGHT : MAX_HEIGHT;
         }
         textarea.value.style.height = `${height}px`;
       }

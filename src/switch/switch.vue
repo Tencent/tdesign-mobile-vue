@@ -63,14 +63,14 @@ export default defineComponent({
   props: switchProps,
   emits: ['update:modelValue', 'change'],
   setup(props, context: SetupContext) {
-    const _value = ref(false);
+    const switchValue = ref(false);
     const currentValue = computed({
       set(val) {
-        _value.value = val as boolean;
+        switchValue.value = val as boolean;
         context.emit('update:modelValue', val);
       },
       get() {
-        return props.modelValue || _value.value;
+        return props.modelValue || switchValue.value;
       },
     });
 

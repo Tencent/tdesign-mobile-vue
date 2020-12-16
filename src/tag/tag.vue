@@ -1,6 +1,6 @@
 <template>
   <span :class="classes" :style="style">
-    <t-icon v-if="icon"  :class="`${baseClass}__icon`" :name="icon" />
+    <t-icon v-if="icon" :class="`${baseClass}__icon`" :name="icon" />
     <slot :class="`${baseClass}__text`" />
     <t-icon
       v-if="closable && !disabled"
@@ -12,39 +12,39 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs } from 'vue';
-import config from '../config';
+import { defineComponent, computed, toRefs } from "vue";
+import config from "../config";
 const { prefix } = config;
 const name = `${prefix}-tag`;
 
 export enum TagTheme {
-  Default = 'default',
-  Primary = 'primary',
-  Info = 'info',
-  Warning = 'warning',
-  Danger = 'danger',
-  Success = 'success'
+  Default = "default",
+  Primary = "primary",
+  Info = "info",
+  Warning = "warning",
+  Danger = "danger",
+  Success = "success",
 }
 
 export enum TagEffect {
-  Dark = 'dark',
-  Light = 'light',
-  Plain = 'plain'
+  Dark = "dark",
+  Light = "light",
+  Plain = "plain",
 }
 
 export enum TagSize {
-  Large = 'large',
-  Medium = 'medium',
-  Small = 'small'
+  Large = "large",
+  Medium = "medium",
+  Small = "small",
 }
 
 export enum TagShape {
-  Square = 'square',
-  Round = 'round',
-  Circle = 'circle'
+  Square = "square",
+  Round = "round",
+  Circle = "circle",
 }
 
-export type TagProps = {};
+// export type TagProps = {};
 
 const Tag = defineComponent({
   name,
@@ -61,7 +61,10 @@ const Tag = defineComponent({
       type: String,
       default: TagSize.Medium,
     },
-    icon: String,
+    icon: {
+      type: String,
+      default: "",
+    },
     shape: {
       type: String,
       default: TagShape.Square,
@@ -79,29 +82,27 @@ const Tag = defineComponent({
       default: false,
     },
   },
-emits: ['close'],
+  emits: ["close"],
   setup(props, context) {
     const baseClass = name;
-    const { disabled, closable } = toRefs(props);
-
-    const { size, shape, theme, effect, maxWidth } = props;
+    const { size, shape, theme, effect, maxWidth, disabled, closable } = toRefs(props);
 
     const style: { maxWidth?: string } = {};
-    if (maxWidth) {
-      style.maxWidth = `${maxWidth}px`;
+    if (maxWidth.value) {
+      style.maxWidth = `${maxWidth.value}px`;
     }
 
     const classes = computed(() => [
       `${baseClass}`,
-      `${baseClass}--theme-${theme}`,
+      `${baseClass}--theme-${theme.value}`,
       {
-        [`${baseClass}--effect-${effect}`]: theme,
-        [`${prefix}-is-error`]: theme === 'danger',
-        [`${prefix}-is-success`]: theme === 'success',
-        [`${prefix}-is-warnging`]: theme === 'warnging',
+        [`${baseClass}--effect-${effect.value}`]: theme.value,
+        [`${prefix}-is-error`]: theme.value === "danger",
+        [`${prefix}-is-success`]: theme.value === "success",
+        [`${prefix}-is-warnging`]: theme.value === "warnging",
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
-        [`${baseClass}--size-${size}`]: size,
+        [`${baseClass}--size-${size.value}`]: size.value,
         [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),
         [`${baseClass}--round`]: shape.valueOf() === TagShape.Round.valueOf(),
         [`${baseClass}--circle`]: shape.valueOf() === TagShape.Circle.valueOf(),
@@ -112,7 +113,7 @@ emits: ['close'],
       if (props.disabled) {
         e.stopPropagation();
       } else {
-        context.emit('close', e);
+        context.emit("close", e);
       }
     }
 

@@ -2,7 +2,7 @@
   <div>
     <t-mask v-show="showOverlay"/>
     <div :class="classes">
-      <t-icon v-if="_icon" :name="_icon" :class="`${name}__icon`" />
+      <t-icon v-if="computedIcon" :name="computedIcon" :class="`${name}__icon`" />
       <div :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>
@@ -66,7 +66,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const _icon = computed(() => {
+    const computedIcon = computed(() => {
       let icon = props.type && ToastTypeIcon[props.type];
       if (props.icon) icon = props.icon;
       return icon;
@@ -76,9 +76,9 @@ export default defineComponent({
       `${name}`,
       {
         [`${name}--text`]:
-          !_icon.value,
+          !computedIcon.value,
         [`${name}--icononly`]:
-          !props.message && _icon.value,
+          !props.message && computedIcon.value,
         [`${name}--middle`]:
           props.position === ToastPosition.Middle.valueOf(),
         [`${name}--top`]:
@@ -91,7 +91,7 @@ export default defineComponent({
     return {
       name: ref(name),
       classes,
-      _icon,
+      computedIcon,
       ...toRefs(props),
     };
   },

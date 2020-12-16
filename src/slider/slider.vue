@@ -9,12 +9,12 @@
         <!-- 滑块操作 -->
         <div
           v-for="(item, index) in value"
-          :key="index+1"
+          :key="index + 1"
           :class="handleClass"
           :style="`left:${value[index]}%`"
-          @touchstart="onTouchStart($event,index)"
-          @touchmove="onTouchMove($event,index)"
-          @touchend="onTouchEnd($event,index)"
+          @touchstart="onTouchStart($event, index)"
+          @touchmove="onTouchMove($event, index)"
+          @touchend="onTouchEnd($event, index)"
         ></div>
         <!-- 刻度内容 -->
         <div v-if="marks" :class="`${name}__mark`">
@@ -24,8 +24,7 @@
             :class="`${name}__mark-text`"
             :style="`left:${k}%`"
             v-text="v"
-          >
-          </div>
+          ></div>
         </div>
       </div>
       <template v-if="showValue">
@@ -42,17 +41,19 @@
         <!-- 总长度 -->
         <div ref="barRef" :class="`${name}__bar`"></div>
         <!-- 滑块长度 -->
-        <div :class="`${name}__track`"
-             :style="`left:${value[0]}%;width:${value[1]-value[0]}%`"></div>
+        <div
+          :class="`${name}__track`"
+          :style="`left:${value[0]}%;width:${value[1] - value[0]}%`"
+        ></div>
         <!-- 滑块操作 -->
         <div
           v-for="(item, index) in value"
-          :key="index+1"
+          :key="index + 1"
           :class="handleClass"
           :style="`left:${value[index]}%`"
-          @touchstart="onTouchStart($event,index)"
-          @touchmove="onTouchMove($event,index)"
-          @touchend="onTouchEnd($event,index)"
+          @touchstart="onTouchStart($event, index)"
+          @touchmove="onTouchMove($event, index)"
+          @touchend="onTouchEnd($event, index)"
         ></div>
         <!-- 刻度内容 -->
         <div :class="`${name}__mark`">
@@ -70,8 +71,16 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, reactive, defineComponent, ExtractPropTypes, PropType } from 'vue';
-import config from '../config';
+import {
+  ref,
+  computed,
+  SetupContext,
+  reactive,
+  defineComponent,
+  ExtractPropTypes,
+  PropType,
+} from "vue";
+import config from "../config";
 const { prefix } = config;
 const name = `${prefix}-slider`;
 
@@ -122,6 +131,7 @@ export interface TouchData {
 export default defineComponent({
   name,
   props: sliderProps,
+  emits: ["drag-start", "drag-end", "update:modelValue", "change"],
   setup(props, context: SetupContext) {
     const rootRef = ref<HTMLElement | null>(null);
     const barRef = ref<HTMLElement | null>(null);
@@ -134,11 +144,9 @@ export default defineComponent({
         [`${prefix}-is-value`]: props.showValue,
       },
     ]);
-    const handleClass = computed(() => [
-      `${name}__handle`,
-    ]);
+    const handleClass = computed(() => [`${name}__handle`]);
     const marksData = computed(() => {
-      const arr :Array<number> = [];
+      const arr: Array<number> = [];
       if (!props.range && props.marks) {
         Object.keys(props.marks).forEach((item) => {
           arr.push(parseInt(item, 10));
@@ -147,23 +155,23 @@ export default defineComponent({
       return arr.sort((a, b) => a - b);
     });
 
-    const dragStatus = ref<string>('');
-    const _value = ref<number[]>([]);
+    const dragStatus = ref<string>("");
+    const innerValue = ref<number[]>([]);
     const value = computed<number[]>({
       set(val) {
-        _value.value = val;
+        innerValue.value = val;
       },
       get() {
-        if (_value.value && _value.value.length) {
-          return _value.value;
+        if (innerValue?.value?.length) {
+          return innerValue.value;
         }
-        let _initValue = [];
+        let initValue = [];
         if (props.range) {
-          _initValue = props.modelValue as number[];
+          initValue = props.modelValue as number[];
         } else {
-          _initValue = [props.modelValue as number];
+          initValue = [props.modelValue as number];
         }
-        return _initValue;
+        return initValue;
       },
     });
 
@@ -175,7 +183,7 @@ export default defineComponent({
       offsetX: 0,
     });
 
-    function onTouchStart(event:TouchEvent, index:number) {
+    function onTouchStart(event: TouchEvent, index: number) {
       if (props.disabled) {
         return;
       }
@@ -185,22 +193,22 @@ export default defineComponent({
       touchData.offsetX = 0;
       touchData.startX = event.touches[0].clientX;
       touchData.startValue = format(value.value[index]);
-      dragStatus.value = 'start';
+      dragStatus.value = "start";
     }
 
-    function onTouchMove(event:TouchEvent, index:number) {
+    function onTouchMove(event: TouchEvent, index: number) {
       if (props.disabled) return;
       if (!rootRef.value) return;
 
       event.stopPropagation();
       event.preventDefault();
-      if (dragStatus.value === 'start') {
-        context.emit('drag-start');
+      if (dragStatus.value === "start") {
+        context.emit("drag-start");
       }
       const touch = event.touches[0];
-      touchData.deltaX = touch.clientX -  touchData.startX;
+      touchData.deltaX = touch.clientX - touchData.startX;
       touchData.offsetX = Math.abs(touchData.deltaX);
-      dragStatus.value = 'draging';
+      dragStatus.value = "draging";
 
       const rect = rootRef.value.getBoundingClientRect();
       const delta = touchData.deltaX;
@@ -211,18 +219,18 @@ export default defineComponent({
       updateValue(touchData.newValue, index);
     }
 
-    function onTouchEnd(event:TouchEvent, index:number) {
+    function onTouchEnd(event: TouchEvent, index: number) {
       if (props.disabled) {
         return;
       }
       event.stopPropagation();
       event.preventDefault();
-      if (dragStatus.value === 'draging') {
+      if (dragStatus.value === "draging") {
         updateValue(touchData.newValue, index, true);
-        context.emit('drag-end');
+        context.emit("drag-end");
       }
 
-      dragStatus.value = '';
+      dragStatus.value = "";
     }
 
     function onClick(event: MouseEvent) {
@@ -232,13 +240,16 @@ export default defineComponent({
       if (!barRef.value) return;
 
       const rect = barRef.value.getBoundingClientRect();
-      const delta =  event.clientX - rect.left;
+      const delta = event.clientX - rect.left;
       const total = rect.width;
-      const current = +props.min + ((delta / total) * (props.max - props.min));
+      const current = +props.min + (delta / total) * (props.max - props.min);
 
       let index = 0;
       if (props.range) {
-        if (Math.abs(current - value.value[0]) > Math.abs(current - value.value[1])) {
+        if (
+          Math.abs(current - value.value[0]) >
+          Math.abs(current - value.value[1])
+        ) {
           index = 1;
         }
       }
@@ -246,33 +257,34 @@ export default defineComponent({
       updateValue(current, index, true);
     }
 
-    function format(value:number): number {
+    function format(value: number): number {
       let current = value;
       if (!props.range && props.marks) {
-        if (marksData.value && marksData.value.length) {
+        if (marksData?.value?.length) {
           let min = marksData.value[0];
-          for (let i = 0;i < marksData.value.length;i++) {
-            if (Math.abs(marksData.value[i] - value) < Math.abs(min - value)) {
-              min = marksData.value[i];
+          marksData.value.forEach((marksDataItemValue) => {
+            if (Math.abs(marksDataItemValue - value) < Math.abs(min - value)) {
+              min = marksDataItemValue;
             }
-          }
+          });
           current = min;
         }
       }
       return (
-        Math.round(Math.max(props.min, Math.min(current, props.max)) / props.step)
-        * props.step
+        Math.round(
+          Math.max(props.min, Math.min(current, props.max)) / props.step
+        ) * props.step
       );
     }
 
-    function updateValue(newValue:number, index:number, end = false) {
+    function updateValue(newValue: number, index: number, end = false) {
       const formatValue = format(newValue);
       if (props.range) {
         if (end && formatValue !== touchData.startValue) {
           value.value[index] = formatValue;
-          value.value  = value.value.sort((a, b) => a - b);
-          context.emit('update:modelValue', value);
-          context.emit('change', value);
+          value.value = value.value.sort((a, b) => a - b);
+          context.emit("update:modelValue", value);
+          context.emit("change", value);
         } else {
           if (formatValue !== touchData.startValue) {
             value.value[index] = formatValue;
@@ -281,8 +293,8 @@ export default defineComponent({
       } else {
         if (end && formatValue !== touchData.startValue) {
           value.value = [formatValue];
-          context.emit('update:modelValue', formatValue);
-          context.emit('change', formatValue);
+          context.emit("update:modelValue", formatValue);
+          context.emit("change", formatValue);
         } else {
           if (formatValue !== touchData.startValue) {
             value.value = [formatValue];

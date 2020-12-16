@@ -12,25 +12,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, watch } from 'vue';
-import TIcon from '../icon';
-import config from '../config';
+import { defineComponent, computed, toRefs, watch } from "vue";
+import TIcon from "../icon";
+import config from "../config";
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
 
 export enum TagSize {
-  Large = 'large',
-  Default = 'default',
-  Small = 'small'
+  Large = "large",
+  Default = "default",
+  Small = "small",
 }
 
 export enum TagShape {
-  Square = 'square',
-  Round = 'round',
-  Circle = 'circle'
+  Square = "square",
+  Round = "round",
+  Circle = "circle",
 }
 
-export type TagProps = {};
+// export type TagProps = {};
 
 const CheckTag = defineComponent({
   name,
@@ -42,7 +42,10 @@ const CheckTag = defineComponent({
       type: String,
       default: TagSize.Default,
     },
-    icon: String,
+    icon: {
+      type: String,
+      default: "",
+    },
     shape: {
       type: String,
       default: TagShape.Square,
@@ -60,23 +63,23 @@ const CheckTag = defineComponent({
       default: false,
     },
   },
+  emits: ["change", "close"],
   setup(props, context) {
     const baseClass = `${prefix}-tag`;
 
-    const { checked, disabled, closable } = toRefs(props);
-    const { size, shape } = props;
+    const {  size, shape, checked, disabled, closable } = toRefs(props);
 
     const classes = computed(() => [
       `${baseClass}`,
       `${baseClass}--checkable`,
       {
-        [`${baseClass}--size-${size}`]: size,
+        [`${baseClass}--size-${size.value}`]: size.value,
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
         [`${prefix}-is-checked ${baseClass}--checked`]: checked.value,
-        [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),
-        [`${baseClass}--round`]: shape.valueOf() === TagShape.Round.valueOf(),
-        [`${baseClass}--circle`]: shape.valueOf() === TagShape.Circle.valueOf(),
+        [`${baseClass}--square`]: shape.value.valueOf() === TagShape.Square.valueOf(),
+        [`${baseClass}--round`]: shape.value.valueOf() === TagShape.Round.valueOf(),
+        [`${baseClass}--circle`]: shape.value.valueOf() === TagShape.Circle.valueOf(),
       },
     ]);
 
@@ -84,12 +87,12 @@ const CheckTag = defineComponent({
       if (props.disabled) {
         e.stopPropagation();
       } else {
-        context.emit('close', e);
+        context.emit("close", e);
       }
     }
 
     watch(checked, (checked) => {
-      context.emit('change', checked);
+      context.emit("change", checked);
     });
 
     return {

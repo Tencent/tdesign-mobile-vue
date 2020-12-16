@@ -82,7 +82,7 @@ export default defineComponent({
 
     // 切换自身展开态
     const onChange = (e: any = null, from = '') => {
-      e && e.stopPropagation();
+      e?.stopPropagation();
       if (props.disabled) {
         return;
       }

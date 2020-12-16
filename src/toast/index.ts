@@ -1,12 +1,12 @@
 import vueToast from './toast.vue';
 import { PolySymbol } from '../_utils';
 
-import { createApp, defineComponent, App } from 'vue';
+import { createApp, defineComponent, App, DefineComponent } from 'vue';
 import { ToastProps, ToastPropsDefault } from './toast.interface';
 
 let instance: any = null;
 
-function Toast(props: any): Object {
+function Toast(props: any): DefineComponent {
   const root: HTMLElement = document.createElement('div');
   document.body.appendChild(root);
 

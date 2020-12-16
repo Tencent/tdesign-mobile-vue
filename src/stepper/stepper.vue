@@ -21,7 +21,8 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, toRefs, computed, reactive } from 'vue';
+// XXX: 组件内的样式需要修改到代码逻辑中
+import { SetupContext, toRefs, computed, reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-stepper`;
@@ -36,7 +37,7 @@ export interface StepperProps {
   inputWidth: number;
 }
 
-export default {
+export default defineComponent({
   name,
   props: {
     label: {
@@ -88,13 +89,13 @@ export default {
         state.cacheValue = val;
       },
     });
-    const { min, max, inputWidth } = props;
-    const inputStyle = inputWidth ? { width: `${inputWidth}px` } : '';
+    const { min, max, inputWidth } = toRefs(props);
+    const inputStyle = inputWidth ? { width: `${inputWidth.value}px` } : '';
     console.log(inputStyle);
     const format = (val:number) => Math.min(Math.max(
-      min, val,
+      min.value, val,
       Number.MIN_SAFE_INTEGER,
-    ), max, Number.MAX_SAFE_INTEGER);
+    ), max.value, Number.MAX_SAFE_INTEGER);
     currentValue.value = format(Number(props.modelValue));
     const plusValue = () => {
       if (state.cacheValue + props.step > props.max || props.disabled) return;
@@ -131,5 +132,5 @@ export default {
     };
   },
 
-};
+});
 </script>

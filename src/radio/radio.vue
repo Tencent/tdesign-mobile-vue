@@ -1,11 +1,3 @@
-<!--
- * @Author: yuliangyang
- * @Date: 2020-05-20 19:16:28
- * @LastEditTime: 2020-07-02 10:29:50
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/src/radio/index.vue
--->
 <template>
   <div
     :class="outerClasses"
@@ -154,6 +146,7 @@ export default defineComponent({
       default: '#0052d9',
     },
   },
+emits: ['update:modelValue', 'change'],
   setup(props: RadioProps, content: SetupContext) {
     const hasSlot = ref(false);
     const flagName: string = name;
@@ -161,8 +154,8 @@ export default defineComponent({
     const rootGroupChange:any = inject('rootGroupChange', () => {});
     const limitTitleRow:number = props?.limitTitleRow || 0;
     const limitContentRow:number = props?.limitContentRow || 0;
-    const titleStyle:object = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
-    const contentStyle:object = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
+    const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
+    const contentStyle = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
     const classes = getClasses(props, rootGroupProps);
     const isChecked = getIsCheck(props, rootGroupProps);
     hasSlot.value = !!content.slots.default;// 判断是否有default slot
