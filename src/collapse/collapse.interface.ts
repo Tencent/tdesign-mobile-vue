@@ -1,3 +1,4 @@
+export type onChangeEvent = (name:any) => void;
 export interface ICollapseProps {
   /**
    * @description 展开的面板，支持 v-model 双向绑定

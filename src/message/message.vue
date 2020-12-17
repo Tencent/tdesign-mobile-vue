@@ -33,7 +33,10 @@ export default defineComponent({
      * @description 消息内容
      * @attribute content
      */
-    content: String,
+    content: {
+      type: String,
+      default: '',
+    },
     /**
      * @description 消息类型
      * @attribute theme
@@ -67,12 +70,18 @@ export default defineComponent({
      * @description 自定义图标
      * @attribute icon
      */
-    icon: [String, Function],
+    icon: {
+      type: [String, Function],
+      default: '',
+    },
     /**
      * @description 自定义层级
      * @attribute zIndex
      */
-    zIndex: Number,
+    zIndex:{
+      type: Number,
+      default: 5000,
+    },
   },
   emits: ['update:modelValue', 'open', 'visible-change', 'close', 'opened', 'closed'],
   setup(props, context: SetupContext) {

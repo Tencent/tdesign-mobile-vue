@@ -43,7 +43,7 @@ interface RadioProps {
  * @return: 返回是否选中的对象
  */
 // eslint-disable-next-line max-len
-const getIsCheck = (props: RadioProps, rootGroupProps: any): object => computed(() => (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name));
+const getIsCheck = (props: RadioProps, rootGroupProps: any) => computed(() => (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name));
 
 /**
  * @description: 命名类逻辑处理
@@ -71,7 +71,7 @@ const getClasses = (props: RadioProps, rootGroupProps: any) => {
  * @param {number} 行数
  * @return: 返回样式对象
  */
-const getLimitRow = (row?: number):object => ({
+const getLimitRow = (row?: number) => ({
   display: '-webkit-box',
   overflow: 'hidden',
   '-webkit-box-orient': 'vertical',
@@ -151,7 +151,7 @@ emits: ['update:modelValue', 'change'],
     const hasSlot = ref(false);
     const flagName: string = name;
     const rootGroupProps:any = inject('rootGroupProps', {});
-    const rootGroupChange:any = inject('rootGroupChange', () => {});
+    const rootGroupChange:any = inject('rootGroupChange', () => ({}));
     const limitTitleRow:number = props?.limitTitleRow || 0;
     const limitContentRow:number = props?.limitContentRow || 0;
     const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};

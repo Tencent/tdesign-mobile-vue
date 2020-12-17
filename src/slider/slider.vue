@@ -89,10 +89,8 @@ export const sliderProps = {
     type: Boolean,
     default: false,
   },
-  marks: {
-    type: Object,
-    default: () => {},
-  },
+  // XXX: Props默认值定义有问题
+  marks: Object,
   max: {
     type: Number,
     default: 100,

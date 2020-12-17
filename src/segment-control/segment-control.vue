@@ -23,7 +23,10 @@ const name = `${prefix}-segment-control`;
 export default defineComponent({
   name,
   props: {
-    modelValue: [Array, Number, String],
+    modelValue: {
+      type: [Array, Number, String],
+      default: '',
+    },
     items: {
       type: Array as ItemsProps,
       default: () => [],

@@ -4,8 +4,8 @@
  * @return 是否包含 | 位置索引
  */
 export function findIndex(
-  v: any,
-  set: any,
+  v: unknown,
+  set: unknown,
 ):number {
   // 正则方式，辨别0='0'
   const reg = new RegExp(`^${!v && v !== 0 ? '' : v}$`);
@@ -17,14 +17,14 @@ export function findIndex(
 /**
  * @description: 判断是否假植 undefined|null|''等
  */
-export function isFalsy(v: any): boolean {
+export function isFalsy(v: unknown): boolean {
   return !v && v !== 0;
 }
 
 /**
  * @description: 转化为数组
  */
-export function toArray(v: any): any[] {
+export function toArray(v: unknown): any[] {
   if (isFalsy(v)) return [];
   if (typeof v === 'object') return Array.from(v);
   return [v];
@@ -35,7 +35,7 @@ export function toArray(v: any): any[] {
  */
 export function toggleElem(
   v: string | number, // 要切换的元素
-  set: any, // 集合
+  set: unknown, // 集合
   multiple: boolean, // 是否多选
   atLeastOne = false, // 是否保留一个
 ): any[] | string | number {
