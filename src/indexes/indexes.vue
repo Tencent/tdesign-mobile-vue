@@ -30,9 +30,9 @@
   </div>
 </template>
 <script lang="ts">
-import { ref, reactive, SetupContext, defineComponent, PropType, computed, onMounted, watchEffect, watch } from 'vue'
-import config from '../config'
-const { prefix } = config
+import { ref, reactive, defineComponent, PropType, onMounted, watchEffect } from 'vue';
+import config from '../config';
+const { prefix } = config;
 
 interface IndexesProps{
   indexList?: Array<string>
@@ -60,137 +60,134 @@ const touch: Touch = {
   deltaY: 0,
   offsetX: 0,
   offsetY: 0,
-}
+};
 
-let children: Array<Element> = []
-const componentName: string = `${prefix}-indexes`
+let children: Array<Element> = [];
+const componentName: string = `${prefix}-indexes`;
 
 export default defineComponent({
   props: {
     indexList: Array as PropType<Array<string>>,
   },
   setup(props: IndexesProps) {
-    let timeOut: number
-    let rootScrollMask: boolean = false
-    const indexesRoot = ref(null)
+    let timeOut: number;
+    let rootScrollMask: boolean = false;
+    const indexesRoot = ref(null);
     const state: State = reactive({
       componentName,
       indexList: props?.indexList || [],
       showCurrentSidebar: false,
       currentSidebar: '',
-      children: []
-    })
+      children: [],
+    });
 
     const scrollToView = (): void => {
-      const targets = children.filter((ele: any) => {
-        const { dataset } = ele
-        return dataset && dataset.index === state.currentSidebar
-      })
-      targets && targets[0].scrollIntoView()
-    }
+      const targets = children.filter((ele: HTMLElement) => {
+        const { dataset } = ele;
+        return dataset && dataset.index === state.currentSidebar;
+      });
+      targets && targets[0].scrollIntoView();
+    };
 
-    const getTitleNode = (): Array<Element> => {
-      return Array.from(document.getElementsByClassName(`${componentName}__anchor`))
-    }
+    const getTitleNode = (): Array<HTMLElement> => Array.from(document.getElementsByClassName(`${componentName}__anchor`));
 
     const setCurrentSidebar = (index: string) => {
-      state.currentSidebar = index
-      state.showCurrentSidebar = true
-    }
+      state.currentSidebar = index;
+      state.showCurrentSidebar = true;
+    };
 
     watchEffect(() => {
       if (state.showCurrentSidebar) {
-        clearCurrentSidebarToast()
+        clearCurrentSidebarToast();
       }
-    })
+    });
 
     onMounted(() => {
-      children = getTitleNode()
+      children = getTitleNode();
       if (children) {
-        const tempNode: any = children[0] && children[0] || {}
-        const { index } = tempNode.dataset
+        const tempNode = children[0] && children[0] || {};
+        const { index } = tempNode.dataset;
         if (index !== undefined) {
-          state.currentSidebar = index
+          state.currentSidebar = index;
         }
       }
-    })
+    });
 
-    const handleSidebarItemClick = (event: any) => {
-      const { index } = event.target && event.target.dataset
-      setCurrentSidebar(index)
-      scrollToView()
-    }
+    const handleSidebarItemClick = (event: Event) => {
+      const { index } = event.target && event.target.dataset;
+      setCurrentSidebar(index);
+      scrollToView();
+    };
 
     const handleSidebarTouchstart = (event: TouchEvent): void => {
-      const { touches } = event
-      touch.startX = touches[0].clientX
-      touch.startY = touches[0].clientX
-    }
+      const { touches } = event;
+      touch.startX = touches[0].clientX;
+      touch.startY = touches[0].clientX;
+    };
 
     const handleSidebarTouchmove = (event: TouchEvent): void => {
-      const { touches } = event
+      const { touches } = event;
       const { clientX, clientY } = touches[0];
 
-      const target: any = document.elementFromPoint(clientX, clientY)
+      const target = document.elementFromPoint(clientX, clientY);
       if (target && target.className === `${componentName}__sidebar-item`) {
-        const { index } = target.dataset
+        const { index } = target.dataset;
         if (index !== undefined && state.currentSidebar !== index) {
-          setCurrentSidebar(index)
-          scrollToView()
+          setCurrentSidebar(index);
+          scrollToView();
         }
       }
-    }
+    };
+
+    const handleRootScroll = (event: Event) => {
+      if (!rootScrollMask) {
+        return;
+      }
+
+      const { scrollTop } = event.target;
+      const children = getTitleNode();
+      let currentTarget: string = '';
+
+      for (const ele of children) {
+        const { offsetTop, clientHeight } = ele;
+        const targetClientVertical = offsetTop - clientHeight;
+        if (currentTarget === '' && targetClientVertical > 0) {
+          currentTarget = children[0].dataset.index;
+        } else if (targetClientVertical < scrollTop) {
+          currentTarget = ele.dataset.index;
+        } else {
+          break;
+        }
+      }
+      setCurrentSidebar(currentTarget);
+    };
 
     const handleRootTouchstart = () => {
-      rootScrollMask = true
-    }
+      rootScrollMask = true;
+    };
     const handleRootTouchend = () => {
-      rootScrollMask = false
-    }
+      rootScrollMask = false;
+    };
 
     const clearCurrentSidebarToast = (): void => {
       if (state.showCurrentSidebar && state.currentSidebar) {
-        timeOut && clearTimeout(timeOut)
-        timeOut = <any>setTimeout(() => {
-          state.showCurrentSidebar = false
-        }, 2000)
+        timeOut && clearTimeout(timeOut);
+        timeOut = setTimeout(() => {
+          state.showCurrentSidebar = false;
+        }, 2000);
       }
-    }
-
-    const handleRootScroll = (event: any) => {
-      if(!rootScrollMask) {
-        return
-      }
-
-      const { scrollTop } = event.target
-      const children: Array<any> = getTitleNode()
-      let currentTarget: string = ''
-
-      for (let ele of children) {
-        const { offsetTop, clientHeight } = ele
-        const targetClientVertical = offsetTop - clientHeight
-        if (currentTarget === '' && targetClientVertical > 0) {
-          currentTarget = children[0].dataset.index
-        } else if (targetClientVertical < scrollTop) {
-          currentTarget = ele.dataset.index
-        } else {
-          break
-        }
-      }
-      setCurrentSidebar(currentTarget)
-      return
-    }
+    };
 
     return {
       state,
       indexesRoot,
-      handleRootScroll,
       handleRootTouchend,
       handleRootTouchstart,
       handleSidebarItemClick,
       handleSidebarTouchmove,
       handleSidebarTouchstart,
-    }
-  }
-})
+      handleRootScroll,
+    };
+  },
+});
 </script>
