@@ -48,13 +48,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less">
-.t-indexes__cell{
-  line-height: 48px;
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: #fff;
-}
-</style>

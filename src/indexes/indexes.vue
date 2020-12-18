@@ -194,34 +194,3 @@ export default defineComponent({
   }
 })
 </script>
-<style lang="less">
-.t-indexes{
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100%;
-  position: relative;
-  background-color: #F5F5F5;
-  &__sidebar{
-    position: fixed;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 12px;
-    &-item{
-      padding: 5px 10px;
-      &--active{
-        color: #0052D9;
-      }
-    }
-  }
-  &__current{
-    padding: 20px;
-    position: fixed;
-    z-index: 999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, .2);
-  }
-}
-</style>

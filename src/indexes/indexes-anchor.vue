@@ -34,13 +34,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="less">
-.t-indexes__anchor{
-  line-height: 32px;
-  font-size: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
-}
-</style>
