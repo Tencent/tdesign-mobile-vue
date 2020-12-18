@@ -29,7 +29,9 @@ export default defineComponent({
   },
   setup(props) {
     const styleWrapper = ref(name);
-    const styleContainer = computed(() => (props.border ? `${name}-container border--top-bottom` : `${name}-container`));
+    const styleContainer = computed(() =>
+      props.border ? `${name}-container border--top-bottom` : `${name}-container`,
+    );
     const styleTitle = ref(`${name}--title`);
 
     return {

@@ -2,46 +2,41 @@
   <span :class="classes" :style="style">
     <t-icon v-if="icon" :class="`${baseClass}__icon`" :name="icon" />
     <slot :class="`${baseClass}__text`" />
-    <t-icon
-      v-if="closable && !disabled"
-      :class="`${baseClass}__close`"
-      name="close"
-      @click="onClickClose"
-    />
+    <t-icon v-if="closable && !disabled" :class="`${baseClass}__close`" name="close" @click="onClickClose" />
   </span>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs } from "vue";
-import config from "../config";
+import { defineComponent, computed, toRefs } from 'vue';
+import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-tag`;
 
 export enum TagTheme {
-  Default = "default",
-  Primary = "primary",
-  Info = "info",
-  Warning = "warning",
-  Danger = "danger",
-  Success = "success",
+  Default = 'default',
+  Primary = 'primary',
+  Info = 'info',
+  Warning = 'warning',
+  Danger = 'danger',
+  Success = 'success',
 }
 
 export enum TagEffect {
-  Dark = "dark",
-  Light = "light",
-  Plain = "plain",
+  Dark = 'dark',
+  Light = 'light',
+  Plain = 'plain',
 }
 
 export enum TagSize {
-  Large = "large",
-  Medium = "medium",
-  Small = "small",
+  Large = 'large',
+  Medium = 'medium',
+  Small = 'small',
 }
 
 export enum TagShape {
-  Square = "square",
-  Round = "round",
-  Circle = "circle",
+  Square = 'square',
+  Round = 'round',
+  Circle = 'circle',
 }
 
 // export type TagProps = {};
@@ -63,7 +58,7 @@ const Tag = defineComponent({
     },
     icon: {
       type: String,
-      default: "",
+      default: '',
     },
     shape: {
       type: String,
@@ -82,7 +77,7 @@ const Tag = defineComponent({
       default: false,
     },
   },
-  emits: ["close"],
+  emits: ['close'],
   setup(props, context) {
     const baseClass = name;
     const { size, shape, theme, effect, maxWidth, disabled, closable } = toRefs(props);
@@ -97,9 +92,9 @@ const Tag = defineComponent({
       `${baseClass}--theme-${theme.value}`,
       {
         [`${baseClass}--effect-${effect.value}`]: theme.value,
-        [`${prefix}-is-error`]: theme.value === "danger",
-        [`${prefix}-is-success`]: theme.value === "success",
-        [`${prefix}-is-warnging`]: theme.value === "warnging",
+        [`${prefix}-is-error`]: theme.value === 'danger',
+        [`${prefix}-is-success`]: theme.value === 'success',
+        [`${prefix}-is-warnging`]: theme.value === 'warnging',
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--size-${size.value}`]: size.value,
@@ -113,7 +108,7 @@ const Tag = defineComponent({
       if (props.disabled) {
         e.stopPropagation();
       } else {
-        context.emit("close", e);
+        context.emit('close', e);
       }
     }
 

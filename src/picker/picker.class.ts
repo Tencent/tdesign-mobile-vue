@@ -1,5 +1,5 @@
-import { PickerOptions } from "./picker.interface";
-import config from "../config";
+import { PickerOptions } from './picker.interface';
+import config from '../config';
 
 const { prefix } = config;
 
@@ -30,8 +30,8 @@ class Picker {
   elementItems: HTMLLIElement[] = [];
   height: number = DEFAULT_HOLDER_HEIGHT;
   curIndex = 0;
-  itemClassName = "";
-  itemSelectedClassName = "";
+  itemClassName = '';
+  itemSelectedClassName = '';
   itemHeight: number = DEFAULT_ITEM_HEIGHT;
   lastMoveTime = 0;
   lastMoveStart = 0;
@@ -45,7 +45,7 @@ class Picker {
   offsetYOfEnd = 0;
   onChange: (index: number) => void;
   constructor(options: PickerOptions) {
-    if (!options.el) throw "options el needed!";
+    if (!options.el) throw 'options el needed!';
     this.holder = options.el;
     this.options = options || {};
     this.onChange = options.onChange;
@@ -65,23 +65,19 @@ class Picker {
    * @description 获取所有的列表DOM元素
    */
   updateItems(): void {
-    this.elementItems = [...this.holder.querySelectorAll("li")];
+    this.elementItems = [...this.holder.querySelectorAll('li')];
     const itemLen = this.elementItems.length;
     this.offsetYOfEnd = -this.itemHeight * (itemLen - 3);
-    this.offsetYOfEndBound = -(
-      this.itemHeight * (itemLen - 3) +
-      OFFSET_OF_BOUND
-    );
+    this.offsetYOfEndBound = -(this.itemHeight * (itemLen - 3) + OFFSET_OF_BOUND);
   }
 
   /**
    * @description 初始化滚动参数
    */
   initScrollParams(): void {
-    this.list = this.holder.querySelector("ul");
-    this.elementItems = [...this.holder.querySelectorAll("li")];
-    this.itemHeight =
-      this.holder.querySelector("li")?.offsetHeight || DEFAULT_ITEM_HEIGHT;
+    this.list = this.holder.querySelector('ul');
+    this.elementItems = [...this.holder.querySelectorAll('li')];
+    this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.curIndex = this.options.defaultIndex || 0;
     this.itemClassName = `${prefix}-picker-column__item`;
@@ -98,46 +94,27 @@ class Picker {
     this.offsetYOfStart = startOffsetY;
     this.offsetYOfEnd = -this.itemHeight * (itemLen - 3);
     this.offsetYOfStartBound = startOffsetY + OFFSET_OF_BOUND;
-    this.offsetYOfEndBound = -(
-      this.itemHeight * (itemLen - 3) +
-      OFFSET_OF_BOUND
-    );
+    this.offsetYOfEndBound = -(this.itemHeight * (itemLen - 3) + OFFSET_OF_BOUND);
   }
 
   bindEvent(): void {
-    this.holder.addEventListener(
-      "touchstart",
-      (e) => this.touchStartHandler(e),
-      false
-    );
-    this.holder.addEventListener(
-      "touchmove",
-      (e) => this.touchMoveHandler(e),
-      false
-    );
-    this.holder.addEventListener(
-      "touchend",
-      (e) => this.touchEndHandler(e),
-      false
-    );
-    this.holder.addEventListener(
-      "touchcancel",
-      (e) => this.touchEndHandler(e),
-      false
-    );
+    this.holder.addEventListener('touchstart', (e) => this.touchStartHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchmove', (e) => this.touchMoveHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchend', (e) => this.touchEndHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchcancel', (e) => this.touchEndHandler(e as TouchEvent), false);
   }
 
-  touchStartHandler(event: any): void {
+  touchStartHandler(event: TouchEvent): void {
     this.isPicking = true;
     event.preventDefault();
     if (!this.holder) return;
-    if (this.list) this.list.style.transition = "";
+    if (this.list) this.list.style.transition = '';
     this.startY = event.changedTouches[0].pageY;
     // 更新惯性参数
     this.updateInertiaParams(event, true);
   }
 
-  touchMoveHandler(event: any): void {
+  touchMoveHandler(event: TouchEvent): void {
     if (!this.isPicking || !this.holder) return;
     event.preventDefault();
     const endY = event.changedTouches[0].pageY;
@@ -147,7 +124,7 @@ class Picker {
     this.setOffsetY(moveOffsetY);
   }
 
-  touchEndHandler(event: any): void {
+  touchEndHandler(event: TouchEvent): void {
     this.isPicking = false;
     event.preventDefault();
     if (!this.holder) return;
@@ -188,7 +165,7 @@ class Picker {
    * @param event
    * @param isStart
    */
-  updateInertiaParams(event: any, isStart: boolean): void {
+  updateInertiaParams(event: TouchEvent, isStart: boolean): void {
     const point = event.changedTouches[0];
     if (isStart) {
       this.lastMoveStart = point.pageY;
@@ -204,12 +181,7 @@ class Picker {
    * @param dist
    * @param duration
    */
-  scrollDist(
-    now: number,
-    startOffsetY: number,
-    dist: number,
-    duration: number
-  ): void {
+  scrollDist(now: number, startOffsetY: number, dist: number, duration: number): void {
     this.stopInertiaMove = false;
     let start: any = null;
     const inertiaMove = (timestamp: number) => {
@@ -221,11 +193,7 @@ class Picker {
       const newOffsetY = quartEaseOut(progress, startOffsetY, dist, duration);
       // const destOffsetY = newOffsetY
       this.setOffsetY(newOffsetY);
-      if (
-        progress > duration ||
-        newOffsetY > this.offsetYOfStartBound ||
-        newOffsetY < this.offsetYOfEndBound
-      ) {
+      if (progress > duration || newOffsetY > this.offsetYOfStartBound || newOffsetY < this.offsetYOfEndBound) {
         this.endScroll();
       } else {
         window.requestAnimationFrame(inertiaMove);
@@ -239,8 +207,7 @@ class Picker {
    */
   update(): void {
     this.updateItems();
-    const updateIndex =
-      this.curIndex > this.elementItems.length - 1 ? 0 : this.curIndex;
+    const updateIndex = this.curIndex > this.elementItems.length - 1 ? 0 : this.curIndex;
     this.updateIndex(updateIndex);
   }
 
@@ -259,7 +226,7 @@ class Picker {
       // this.list.style.webkitTransitionDuration = `${duration}ms`;
       this.list.style.transitionDuration = `${duration}ms`;
       // this.list.style.webkitTransitionTimingFunction = "ease-out";
-      this.list.style.transitionTimingFunction = "ease-out";
+      this.list.style.transitionTimingFunction = 'ease-out';
     }
     this.onChange(index);
   }
@@ -287,12 +254,12 @@ class Picker {
    * @description 设置item样式
    */
   setSelectedClassName(): void {
-    const regClass = new RegExp(this.itemClassName, "i");
-    const regSelected = new RegExp(this.itemSelectedClassName, "i");
+    const regClass = new RegExp(this.itemClassName, 'i');
+    const regSelected = new RegExp(this.itemSelectedClassName, 'i');
     this.elementItems.forEach((item, i) => {
       const tempItem = item;
       const itemClass = tempItem.className;
-      if (itemClass === "" || !itemClass) {
+      if (itemClass === '' || !itemClass) {
         tempItem.className = this.itemClassName;
       } else {
         if (!regClass.test(itemClass)) {
@@ -331,23 +298,22 @@ class Picker {
       curIndex = 0;
       if (this.list) {
         // this.list.style.webkitTransition = "150ms ease-out";
-        this.list.style.transition = "150ms ease-out";
+        this.list.style.transition = '150ms ease-out';
       }
     } else if (this.offsetY < this.offsetYOfEndBound) {
       curIndex = this.elementItems.length - 1;
       if (this.list) {
         // this.list.style.webkitTransition = "150ms ease-out";
-        this.list.style.transition = "150ms ease-out";
+        this.list.style.transition = '150ms ease-out';
       }
     } else {
       if (this.list) {
         // this.list.style.webkitTransition = "100ms ease-out";
-        this.list.style.transition = "100ms ease-out";
+        this.list.style.transition = '100ms ease-out';
       }
       curIndex = 2 - Math.round(this.offsetY / this.itemHeight);
       if (curIndex < 0) curIndex = 0;
-      if (curIndex > this.elementItems.length - 1)
-        curIndex = this.elementItems.length - 1;
+      if (curIndex > this.elementItems.length - 1) curIndex = this.elementItems.length - 1;
     }
     const offsetY = (-curIndex + 2) * this.itemHeight;
     this.setOffsetY(offsetY);

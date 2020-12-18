@@ -16,7 +16,7 @@ const name = `${prefix}-button`;
 export enum ButtonShape {
   Square = 'square',
   Round = 'round',
-  Circle = 'circle'
+  Circle = 'circle',
 }
 
 export default defineComponent({
@@ -68,10 +68,8 @@ export default defineComponent({
       `${name}--${props.theme}`,
       {
         [`${name}--size-${props.size}`]: props.size,
-        [`${name}--square`]:
-          props.shape.valueOf() === ButtonShape.Square.valueOf(),
-        [`${name}--circle`]:
-          props.shape.valueOf() === ButtonShape.Circle.valueOf(),
+        [`${name}--square`]: props.shape.valueOf() === ButtonShape.Square.valueOf(),
+        [`${name}--circle`]: props.shape.valueOf() === ButtonShape.Circle.valueOf(),
         [`${prefix}-is-block`]: props.block,
         [`${prefix}-is-disabled`]: props.disabled,
         [`${prefix}-is-loading`]: props.loading,
@@ -80,7 +78,7 @@ export default defineComponent({
     ]);
 
     const displayIcon = computed(() => (loading.value ? 'loading' : props.icon));
-    const onClick = (e:Event) => {
+    const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
         e.stopPropagation();
       } else {
@@ -95,7 +93,7 @@ export default defineComponent({
       iconOnly,
       displayIcon,
       ...toRefs(props),
-      onClick
+      onClick,
     };
   },
 });

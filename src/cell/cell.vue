@@ -2,7 +2,7 @@
   <div :class="styleWrapper">
     <div v-if="hasLabel" :class="styleLabel">
       <slot name="label">
-        <div v-if="label" >{{ label }}</div>
+        <div v-if="label">{{ label }}</div>
       </slot>
     </div>
     <div :class="styleValue">
@@ -46,11 +46,8 @@ export default defineComponent({
   },
   setup(props, context: SetupContext) {
     const styleLabel = ref(`${name}--label`);
-    const styleWrapper = computed(() => [
-      `${name}`,
-      `${name}--theme-${props.theme}`,
-    ]);
-    
+    const styleWrapper = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
+
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;

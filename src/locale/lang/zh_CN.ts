@@ -5,6 +5,5 @@ export default {
   delete: '删除',
   complete: '完成',
   loading: '处理中...',
-  button: {
-  },
+  button: {},
 };

@@ -1,9 +1,5 @@
 <template>
-  <t-cell
-    v-if="type !== 'textarea'"
-    :class="styleWrapper"
-    :value-align="valueAlign"
-  >
+  <t-cell v-if="type !== 'textarea'" :class="styleWrapper" :value-align="valueAlign">
     <template v-if="hasLabel" #label>
       <slot name="label">
         <div v-if="label" :class="styleLabel">{{ label }}</div>
@@ -11,18 +7,8 @@
     </template>
     <template #default>
       <div :class="styleValueWrap">
-        <input
-          v-model="innerValue"
-          v-bind="$attrs"
-          :class="styleControl"
-          :type="type"
-          :disabled="disabled"
-        />
-        <div
-          v-if="clearable && innerValue.length > 0"
-          :class="styleIcon"
-          @click="handleClear"
-        >
+        <input v-model="innerValue" v-bind="$attrs" :class="styleControl" :type="type" :disabled="disabled" />
+        <div v-if="clearable && innerValue.length > 0" :class="styleIcon" @click="handleClear">
           <t-icon name="circle_clear" />
         </div>
         <div v-if="hasSuffix" :class="styleSuffix">
@@ -31,11 +17,7 @@
         <div v-if="hasRightIcon" :class="styleIcon">
           <slot name="rightIcon">
             <div v-if="suffix">{{ suffix }}</div>
-            <t-icon
-              v-if="rightIcon"
-              :name="rightIcon"
-              @click="handleClickIcon"
-            />
+            <t-icon v-if="rightIcon" :name="rightIcon" @click="handleClickIcon" />
           </slot>
         </div>
       </div>
@@ -49,30 +31,15 @@
       </slot>
     </div>
     <div :class="styleTextarea">
-      <textarea
-        ref="textarea"
-        v-model="innerValue"
-        v-bind="$attrs"
-        :maxlength="maxlength"
-        :disabled="disabled"
-      />
+      <textarea ref="textarea" v-model="innerValue" v-bind="$attrs" :maxlength="maxlength" :disabled="disabled" />
       <div :class="styleCount">{{ `${innerValue.length} / ${maxlength}` }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  reactive,
-  toRefs,
-  computed,
-  watch,
-  onMounted,
-  SetupContext,
-  defineComponent,
-} from "vue";
-import config from "../config";
+import { ref, reactive, toRefs, computed, watch, onMounted, SetupContext, defineComponent } from 'vue';
+import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-input`;
 
@@ -81,28 +48,28 @@ export default defineComponent({
   props: {
     label: {
       type: String,
-      default: "",
+      default: '',
     },
     modelValue: {
       type: String,
-      default: "",
+      default: '',
     },
     error: Boolean,
     errorMessage: {
       type: String,
-      default: "",
+      default: '',
     },
     rightIcon: {
       type: String,
-      default: "",
+      default: '',
     },
     suffix: {
       type: String,
-      default: "",
+      default: '',
     },
     type: {
       type: String,
-      default: "",
+      default: '',
     },
     maxlength: {
       type: Number,
@@ -131,7 +98,7 @@ export default defineComponent({
       styleTextareaLabel: `${name}--textarea-label`,
       styleCount: `${name}--count`,
       styleDisabled: `${name}__disabled`,
-      cacheValue: "",
+      cacheValue: '',
     });
     const styleControl = computed(() => {
       if (props.suffix) {
@@ -159,34 +126,34 @@ export default defineComponent({
       if (props.rightIcon || props.suffix) return true;
       return !!context.slots.rightIcon;
     });
-    const valueAlign = computed(() => (hasLabel.value ? "right" : "left"));
+    const valueAlign = computed(() => (hasLabel.value ? 'right' : 'left'));
 
     const innerValue = computed({
       get() {
         return props.modelValue || state.cacheValue;
       },
       set(val: string) {
-        emit("update:modelValue", val);
+        emit('update:modelValue', val);
         state.cacheValue = val;
       },
     });
     const handleClickIcon = () => {
-      emit("click-icon");
+      emit('click-icon');
     };
     const handleClear = () => {
-      innerValue.value = "";
+      innerValue.value = '';
     };
 
     const MIN_HEIGHT = 22 * props.rows; // 默认四行
     const MAX_HEIGHT = 22 * props.maxRows; // 默认12行
     onMounted(() => {
-      if (props.type === "textarea") {
+      if (props.type === 'textarea') {
         textarea.value.style.height = `${MIN_HEIGHT}px`;
       }
     });
     watch(innerValue, () => {
-      if (props.type === "textarea") {
-        textarea.value.style.height = "auto";
+      if (props.type === 'textarea') {
+        textarea.value.style.height = 'auto';
         let height = textarea.value.scrollHeight;
         if (height < MIN_HEIGHT) {
           height = MIN_HEIGHT;

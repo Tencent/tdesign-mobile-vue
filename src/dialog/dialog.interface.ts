@@ -1,20 +1,20 @@
 export interface IDialogProps {
-  modelValue?: boolean,
-  showHeader?: boolean,
-  header?: string,
-  content: string,
-  type?: string,
-  showFooter?: boolean,
-  placeholderText?: string,
-  confirmContent?: string,
-  cancelContent?: string,
-  isInput?: boolean,
-  visible?: boolean,
-  knowContent?: string,
-  zIndex?: number,
-  showOverlay?: boolean,
-  width?: [number, string],
-};
+  modelValue?: boolean;
+  showHeader?: boolean;
+  header?: string;
+  content: string;
+  type?: string;
+  showFooter?: boolean;
+  placeholderText?: string;
+  confirmContent?: string;
+  cancelContent?: string;
+  isInput?: boolean;
+  visible?: boolean;
+  knowContent?: string;
+  zIndex?: number;
+  showOverlay?: boolean;
+  width?: [number, string];
+}
 
 export const DialogPropsDefault = {
   showHeader: true,

@@ -1,11 +1,6 @@
 <template>
   <div :class="`${name}`">
-    <ul
-      ref="rateWrapper"
-      :class="`${name}--list`"
-      @touchstart="onTouchstart"
-      @touchmove="onTouchmove"
-    >
+    <ul ref="rateWrapper" :class="`${name}--list`" @touchstart="onTouchstart" @touchmove="onTouchmove">
       <li v-for="n in count" :key="n" :class="classes(n)">
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
@@ -29,10 +24,11 @@
     <span
       v-if="showText"
       :style="{
-        color: textColor
+        color: textColor,
       }"
       :class="`${name}--text`"
-    >{{rateText}}</span>
+      >{{ rateText }}</span
+    >
   </div>
 </template>
 
@@ -172,10 +168,7 @@ export default defineComponent({
         Array.from(items).forEach((node, index) => {
           const { left, width } = node.getBoundingClientRect();
           if (props.allowHalf) {
-            ranges.push(
-              { score: index + 0.5, left },
-              { score: index + 1, left: left + (width / 2) },
-            );
+            ranges.push({ score: index + 0.5, left }, { score: index + 1, left: left + width / 2 });
           } else {
             ranges.push({ score: index + 1, left });
           }

@@ -1,19 +1,12 @@
 <template>
   <div :class="className">
-    <div v-if="title" :class="`${className}__title`">{{title}}</div>
+    <div v-if="title" :class="`${className}__title`">{{ title }}</div>
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  toRefs,
-  provide,
-  reactive,
-  SetupContext,
-  defineComponent,
-  watch,
-} from 'vue';
+import { toRefs, provide, reactive, SetupContext, defineComponent, watch } from 'vue';
 import { ICollapseProps, CollapseProps, onChangeEvent } from './collapse.interface';
 import config from '../config';
 import { toggleElem } from './util';
@@ -30,9 +23,12 @@ export default defineComponent({
       curValue: props.value,
     });
 
-    watch(() => props.value, (v) => {
-      state.curValue = v;
-    });
+    watch(
+      () => props.value,
+      (v) => {
+        state.curValue = v;
+      },
+    );
     const onPanelChange: onChangeEvent = (name: any) => {
       const newV = toggleElem(name, state.curValue, !props.accordion);
       state.curValue = newV;
@@ -52,6 +48,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-
-</style>
+<style></style>

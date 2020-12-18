@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-mask v-show="showOverlay"/>
+    <t-mask v-show="showOverlay" />
     <div :class="classes">
       <t-icon v-if="computedIcon" :name="computedIcon" :class="`${name}__icon`" />
       <div :class="`${name}__text`">{{ message }}</div>
@@ -50,7 +50,10 @@ export default defineComponent({
      * @description 自定义图标
      * @attribute icon
      */
-    icon: [String, Function],
+    icon: {
+      type: [String, Function],
+      default: '',
+    },
     /**
      * @description 是否显示背景遮罩
      * @attribute showOverlay
@@ -75,16 +78,11 @@ export default defineComponent({
     const classes = computed(() => [
       `${name}`,
       {
-        [`${name}--text`]:
-          !computedIcon.value,
-        [`${name}--icononly`]:
-          !props.message && computedIcon.value,
-        [`${name}--middle`]:
-          props.position === ToastPosition.Middle.valueOf(),
-        [`${name}--top`]:
-          props.position === ToastPosition.Top.valueOf(),
-        [`${name}--bottom`]:
-          props.position === ToastPosition.Bottom.valueOf(),
+        [`${name}--text`]: !computedIcon.value,
+        [`${name}--icononly`]: !props.message && computedIcon.value,
+        [`${name}--middle`]: props.position === ToastPosition.Middle.valueOf(),
+        [`${name}--top`]: props.position === ToastPosition.Top.valueOf(),
+        [`${name}--bottom`]: props.position === ToastPosition.Bottom.valueOf(),
       },
     ]);
 

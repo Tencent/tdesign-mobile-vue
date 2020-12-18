@@ -1,22 +1,18 @@
 export type DropdownMenuControl = {
-  expandMenu: (itemProps: any) => void,
-  collapseMenu: (itemProps: any) => void,
+  expandMenu: (itemProps?: any) => void;
+  collapseMenu: (itemProps?: any) => void;
 };
 
 export enum DropdownMenuState {
   expanded = 'expanded',
   collapsed = 'collapsed',
-};
+}
 
 let oldOverflow: string | null = null;
 
 type DropdownMenuContext = {
   expandedMenuControl: DropdownMenuControl | null;
-  recordMenuExpanded(
-    container: any,
-    menuControl: DropdownMenuControl,
-    action: DropdownMenuState
-  ): void;
+  recordMenuExpanded(container: any, menuControl: DropdownMenuControl, action: DropdownMenuState): void;
 };
 
 export const context: DropdownMenuContext = {

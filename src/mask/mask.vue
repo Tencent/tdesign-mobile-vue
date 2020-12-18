@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, SetupContext } from "vue";
-import config from "../config";
+import { computed, defineComponent, SetupContext } from 'vue';
+import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-mask`;
 
@@ -20,7 +20,7 @@ export default defineComponent({
       default: false,
     },
   },
-  emits: ["click"],
+  emits: ['click'],
   setup(props: MaskProps, context: SetupContext) {
     const classes = computed(() => ({
       [`${name}`]: !props.transparent,
@@ -29,7 +29,7 @@ export default defineComponent({
 
     return {
       classes,
-      handleClick: () => context.emit("click"),
+      handleClick: () => context.emit('click'),
     };
   },
 });

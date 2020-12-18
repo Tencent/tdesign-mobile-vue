@@ -46,9 +46,7 @@ export default defineComponent({
     const selectChild = (value: string | number) => {
       const isIncluded = currentActive.value.includes(value);
       if (isIncluded) {
-        props.isMultiple && (
-          currentActive.value = currentActive.value.filter(i => i !== value)
-        );
+        props.isMultiple && (currentActive.value = currentActive.value.filter((i) => i !== value));
       } else {
         currentActive.value = props.isMultiple ? [...currentActive.value, value] : [value];
       }

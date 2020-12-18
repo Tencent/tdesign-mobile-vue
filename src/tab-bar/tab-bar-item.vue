@@ -13,7 +13,7 @@
       </div>
       <div :class="`${componentName}__text`">
         <div v-if="children" :class="`${componentName}__icon-menu`"></div>
-        <slot/>
+        <slot />
       </div>
     </div>
 
@@ -24,14 +24,15 @@
           :key="child.name || index"
           :class="[`${componentName}__spread-item`]"
           @click="selectChild(child.name || index)"
-        >{{ child.text }}</li>
+        >
+          {{ child.text }}
+        </li>
       </ul>
     </transition>
   </div>
-
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef } from 'vue';
 import TIcon from '../icon';
 import config from '../config';
@@ -56,18 +57,18 @@ export default defineComponent({
     children: {
       type: Array,
       default: () => [],
-    }
+    },
   },
   setup(props) {
     const { defaultIndex, activeValue, updateChild } = inject<any>('tab-bar');
     const currentName = initName(defaultIndex);
     const hasChildren = !!props.children;
-    const isSpread:Ref<boolean> = ref(false);
+    const isSpread: Ref<boolean> = ref(false);
 
     const isChecked: ComputedRef<boolean> = computed(() => {
       if (hasChildren && Array.isArray(activeValue.value)) {
         return activeValue.value.includes(currentName);
-      };
+      }
       return currentName === activeValue.value;
     });
 
@@ -83,15 +84,12 @@ export default defineComponent({
         if (!isToggleCurrent.value) {
           updateChild([currentName]);
         }
-      };
+      }
       updateChild(currentName);
     };
 
     const selectChild = (childName: number | string) => {
-      if (!(
-        Array.isArray(activeValue.value)
-        && activeValue.value[1] === childName
-      )) {
+      if (!(Array.isArray(activeValue.value) && activeValue.value[1] === childName)) {
         updateChild([currentName, childName]);
       }
       isSpread.value = false;

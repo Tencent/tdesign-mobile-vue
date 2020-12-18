@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, defineComponent } from "vue";
-import config from "../config";
+import { SetupContext, provide, defineComponent } from 'vue';
+import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-radio-group`;
@@ -25,7 +25,7 @@ export default defineComponent({
      */
     modelValue: {
       type: String,
-      default: "",
+      default: '',
     },
     /**
      * @description radio-group 当前的值radio组是否能被点击
@@ -36,7 +36,7 @@ export default defineComponent({
       default: false,
     },
   },
-  emits: ["update:modelValue", "change"],
+  emits: ['update:modelValue', 'change'],
   setup(props: RadioGroupProps, content: SetupContext) {
     /**
      * @description: radio 事件change回调
@@ -44,11 +44,11 @@ export default defineComponent({
      * @return: void
      */
     const change = (name: string) => {
-      content.emit("update:modelValue", name); // 改变自身的v-model值
-      content.emit("change", name);
+      content.emit('update:modelValue', name); // 改变自身的v-model值
+      content.emit('change', name);
     };
-    provide("rootGroupProps", props);
-    provide("rootGroupChange", change);
+    provide('rootGroupProps', props);
+    provide('rootGroupChange', change);
     return {
       prefix,
       change,

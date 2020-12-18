@@ -1,10 +1,8 @@
 <template>
-  <div
-    :class="outerClasses"
-  >
+  <div :class="outerClasses">
     <span :class="shapeClasses" @click="radioChange">
       <slot name="checkedIcon">
-        <span v-if="isChecked" :class="iconClasses" :style="{backgroundColor: checkedColor}"></span>
+        <span v-if="isChecked" :class="iconClasses" :style="{ backgroundColor: checkedColor }"></span>
       </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="radioChange('content')">
@@ -26,24 +24,25 @@ const { prefix } = config;
 const name = `${prefix}-radio`;
 
 interface RadioProps {
-  name?: string,
-  title?: string,
-  disabled?: boolean,
-  contentDisabled?: boolean,
-  modelValue?: string,
-  limitTitleRow?: number,
-  limitContentRow?: number,
-  checkedColor?: string,
+  name?: string;
+  title?: string;
+  disabled?: boolean;
+  contentDisabled?: boolean;
+  modelValue?: string;
+  limitTitleRow?: number;
+  limitContentRow?: number;
+  checkedColor?: string;
 }
 
 /**
  * @description: 判断当前radio是否选中
  * @param {props} props属性对象
-* @param {rootGroup} Group注入的对象
+ * @param {rootGroup} Group注入的对象
  * @return: 返回是否选中的对象
  */
 // eslint-disable-next-line max-len
-const getIsCheck = (props: RadioProps, rootGroupProps: any) => computed(() => (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name));
+const getIsCheck = (props: RadioProps, rootGroupProps: any) =>
+  computed(() => rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name);
 
 /**
  * @description: 命名类逻辑处理
@@ -55,10 +54,16 @@ const getClasses = (props: RadioProps, rootGroupProps: any) => {
   const shapeClasses = computed(() => [
     `${name}__default-shape`,
     {
-      [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled),
-    }]);
-  const titleClasses = computed(() => [{ [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
-  const iconClasses = computed(() => [{ [`${prefix}-is-checked`]: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name) }]);
+      [`${prefix}-is-disabled`]: rootGroupProps?.disabled || props?.disabled,
+    },
+  ]);
+  const titleClasses = computed(() => [
+    { [`${prefix}-is-disabled`]: rootGroupProps?.disabled || props?.disabled },
+    `${name}__content-title`,
+  ]);
+  const iconClasses = computed(() => [
+    { [`${prefix}-is-checked`]: rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name },
+  ]);
   return {
     outerClasses,
     shapeClasses,
@@ -146,19 +151,19 @@ export default defineComponent({
       default: '#0052d9',
     },
   },
-emits: ['update:modelValue', 'change'],
+  emits: ['update:modelValue', 'change'],
   setup(props: RadioProps, content: SetupContext) {
     const hasSlot = ref(false);
     const flagName: string = name;
-    const rootGroupProps:any = inject('rootGroupProps', {});
-    const rootGroupChange:any = inject('rootGroupChange', () => ({}));
-    const limitTitleRow:number = props?.limitTitleRow || 0;
-    const limitContentRow:number = props?.limitContentRow || 0;
+    const rootGroupProps: any = inject('rootGroupProps', {});
+    const rootGroupChange: any = inject('rootGroupChange', () => ({}));
+    const limitTitleRow: number = props?.limitTitleRow || 0;
+    const limitContentRow: number = props?.limitContentRow || 0;
     const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
     const contentStyle = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
     const classes = getClasses(props, rootGroupProps);
     const isChecked = getIsCheck(props, rootGroupProps);
-    hasSlot.value = !!content.slots.default;// 判断是否有default slot
+    hasSlot.value = !!content.slots.default; // 判断是否有default slot
     if (!content.slots.default || !props?.title) {
       // 当没有title或者slot的时候去掉中间的margin-top
       Object.assign(contentStyle, { marginTop: 0 });

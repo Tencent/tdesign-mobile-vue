@@ -3,7 +3,7 @@
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
         <t-icon :name="iconName" />
-        <span :class="`${name}--txt`">{{content}}</span>
+        <span :class="`${name}--txt`">{{ content }}</span>
       </slot>
     </div>
   </transition>
@@ -57,14 +57,17 @@ export default defineComponent({
      * @description 文本对齐方式
      * @attribute align
      */
-    align: String as PropType<MessageAlignType>,
+    align: {
+      type: String as PropType<MessageAlignType>,
+      default: 'left',
+    },
     /**
      * @description 偏移量
      * @attribute offset
      */
     offset: {
       type: Object as PropType<IMessageOffset>,
-      default: () => {},
+      default: () => ({}),
     },
     /**
      * @description 自定义图标
@@ -78,7 +81,7 @@ export default defineComponent({
      * @description 自定义层级
      * @attribute zIndex
      */
-    zIndex:{
+    zIndex: {
       type: Number,
       default: 5000,
     },

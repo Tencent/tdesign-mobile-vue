@@ -2,32 +2,27 @@
   <button :class="classes" :disabled="disabled">
     <t-icon v-if="icon" :class="`${baseClass}__icon`" :name="icon" />
     <slot :class="`${baseClass}__text`" />
-    <t-icon
-      v-if="closable && !disabled"
-      :class="`${baseClass}__close`"
-      name="clear"
-      @click="onClickClose"
-    />
+    <t-icon v-if="closable && !disabled" :class="`${baseClass}__close`" name="clear" @click="onClickClose" />
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, watch } from "vue";
-import TIcon from "../icon";
-import config from "../config";
+import { defineComponent, computed, toRefs, watch } from 'vue';
+import TIcon from '../icon';
+import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
 
 export enum TagSize {
-  Large = "large",
-  Default = "default",
-  Small = "small",
+  Large = 'large',
+  Default = 'default',
+  Small = 'small',
 }
 
 export enum TagShape {
-  Square = "square",
-  Round = "round",
-  Circle = "circle",
+  Square = 'square',
+  Round = 'round',
+  Circle = 'circle',
 }
 
 // export type TagProps = {};
@@ -44,7 +39,7 @@ const CheckTag = defineComponent({
     },
     icon: {
       type: String,
-      default: "",
+      default: '',
     },
     shape: {
       type: String,
@@ -63,11 +58,11 @@ const CheckTag = defineComponent({
       default: false,
     },
   },
-  emits: ["change", "close"],
+  emits: ['change', 'close'],
   setup(props, context) {
     const baseClass = `${prefix}-tag`;
 
-    const {  size, shape, checked, disabled, closable } = toRefs(props);
+    const { size, shape, checked, disabled, closable } = toRefs(props);
 
     const classes = computed(() => [
       `${baseClass}`,
@@ -87,12 +82,12 @@ const CheckTag = defineComponent({
       if (props.disabled) {
         e.stopPropagation();
       } else {
-        context.emit("close", e);
+        context.emit('close', e);
       }
     }
 
     watch(checked, (checked) => {
-      context.emit("change", checked);
+      context.emit('change', checked);
     });
 
     return {

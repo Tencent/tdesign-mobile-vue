@@ -18,22 +18,11 @@
         ></div>
         <!-- 刻度内容 -->
         <div v-if="marks" :class="`${name}__mark`">
-          <div
-            v-for="(v, k) in marks"
-            :key="k"
-            :class="`${name}__mark-text`"
-            :style="`left:${k}%`"
-            v-text="v"
-          ></div>
+          <div v-for="(v, k) in marks" :key="k" :class="`${name}__mark-text`" :style="`left:${k}%`" v-text="v"></div>
         </div>
       </div>
       <template v-if="showValue">
-        <div
-          v-for="(item, index) in value"
-          :key="index"
-          :class="`${name}-wrap__value`"
-          v-text="item"
-        ></div>
+        <div v-for="(item, index) in value" :key="index" :class="`${name}-wrap__value`" v-text="item"></div>
       </template>
     </template>
     <template v-else>
@@ -41,10 +30,7 @@
         <!-- 总长度 -->
         <div ref="barRef" :class="`${name}__bar`"></div>
         <!-- 滑块长度 -->
-        <div
-          :class="`${name}__track`"
-          :style="`left:${value[0]}%;width:${value[1] - value[0]}%`"
-        ></div>
+        <div :class="`${name}__track`" :style="`left:${value[0]}%;width:${value[1] - value[0]}%`"></div>
         <!-- 滑块操作 -->
         <div
           v-for="(item, index) in value"
@@ -71,16 +57,8 @@
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  computed,
-  SetupContext,
-  reactive,
-  defineComponent,
-  ExtractPropTypes,
-  PropType,
-} from "vue";
-import config from "../config";
+import { ref, computed, SetupContext, reactive, defineComponent, ExtractPropTypes, PropType } from 'vue';
+import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-slider`;
 
@@ -129,7 +107,7 @@ export interface TouchData {
 export default defineComponent({
   name,
   props: sliderProps,
-  emits: ["drag-start", "drag-end", "update:modelValue", "change"],
+  emits: ['drag-start', 'drag-end', 'update:modelValue', 'change'],
   setup(props, context: SetupContext) {
     const rootRef = ref<HTMLElement | null>(null);
     const barRef = ref<HTMLElement | null>(null);
@@ -153,7 +131,7 @@ export default defineComponent({
       return arr.sort((a, b) => a - b);
     });
 
-    const dragStatus = ref<string>("");
+    const dragStatus = ref<string>('');
     const innerValue = ref<number[]>([]);
     const value = computed<number[]>({
       set(val) {
@@ -191,7 +169,7 @@ export default defineComponent({
       touchData.offsetX = 0;
       touchData.startX = event.touches[0].clientX;
       touchData.startValue = format(value.value[index]);
-      dragStatus.value = "start";
+      dragStatus.value = 'start';
     }
 
     function onTouchMove(event: TouchEvent, index: number) {
@@ -200,13 +178,13 @@ export default defineComponent({
 
       event.stopPropagation();
       event.preventDefault();
-      if (dragStatus.value === "start") {
-        context.emit("drag-start");
+      if (dragStatus.value === 'start') {
+        context.emit('drag-start');
       }
       const touch = event.touches[0];
       touchData.deltaX = touch.clientX - touchData.startX;
       touchData.offsetX = Math.abs(touchData.deltaX);
-      dragStatus.value = "draging";
+      dragStatus.value = 'draging';
 
       const rect = rootRef.value.getBoundingClientRect();
       const delta = touchData.deltaX;
@@ -223,12 +201,12 @@ export default defineComponent({
       }
       event.stopPropagation();
       event.preventDefault();
-      if (dragStatus.value === "draging") {
+      if (dragStatus.value === 'draging') {
         updateValue(touchData.newValue, index, true);
-        context.emit("drag-end");
+        context.emit('drag-end');
       }
 
-      dragStatus.value = "";
+      dragStatus.value = '';
     }
 
     function onClick(event: MouseEvent) {
@@ -244,10 +222,7 @@ export default defineComponent({
 
       let index = 0;
       if (props.range) {
-        if (
-          Math.abs(current - value.value[0]) >
-          Math.abs(current - value.value[1])
-        ) {
+        if (Math.abs(current - value.value[0]) > Math.abs(current - value.value[1])) {
           index = 1;
         }
       }
@@ -268,11 +243,7 @@ export default defineComponent({
           current = min;
         }
       }
-      return (
-        Math.round(
-          Math.max(props.min, Math.min(current, props.max)) / props.step
-        ) * props.step
-      );
+      return Math.round(Math.max(props.min, Math.min(current, props.max)) / props.step) * props.step;
     }
 
     function updateValue(newValue: number, index: number, end = false) {
@@ -281,8 +252,8 @@ export default defineComponent({
         if (end && formatValue !== touchData.startValue) {
           value.value[index] = formatValue;
           value.value = value.value.sort((a, b) => a - b);
-          context.emit("update:modelValue", value);
-          context.emit("change", value);
+          context.emit('update:modelValue', value);
+          context.emit('change', value);
         } else {
           if (formatValue !== touchData.startValue) {
             value.value[index] = formatValue;
@@ -291,8 +262,8 @@ export default defineComponent({
       } else {
         if (end && formatValue !== touchData.startValue) {
           value.value = [formatValue];
-          context.emit("update:modelValue", formatValue);
-          context.emit("change", formatValue);
+          context.emit('update:modelValue', formatValue);
+          context.emit('change', formatValue);
         } else {
           if (formatValue !== touchData.startValue) {
             value.value = [formatValue];

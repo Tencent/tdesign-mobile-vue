@@ -1,10 +1,9 @@
 <template>
   <span :class="classes">
     <span v-if="text" :class="textClasses">
-      {{text}}
+      {{ text }}
     </span>
-    <span :class="nodeClasses" @click="toggle">
-    </span>
+    <span :class="nodeClasses" @click="toggle"> </span>
   </span>
 </template>
 
@@ -98,14 +97,13 @@ export default defineComponent({
     ]);
 
     function handleToggle() {
-      const checked = currentValue.value === props.activeValue
-        ? props.inactiveValue : props.activeValue;
+      const checked = currentValue.value === props.activeValue ? props.inactiveValue : props.activeValue;
 
       currentValue.value = checked;
       context.emit('change', checked);
     }
 
-    function toggle(event:Event) {
+    function toggle(event: Event) {
       event.preventDefault();
       if (props.disabled) {
         return false;

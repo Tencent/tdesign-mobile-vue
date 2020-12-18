@@ -1,17 +1,9 @@
 <template>
   <div :class="rootClasses" @touchmove="handleMove">
     <transition name="fade">
-      <t-mask
-        v-show="currentVisible"
-        :transparent="maskTransparent"
-        @click="handleMaskClick"
-      />
+      <t-mask v-show="currentVisible" :transparent="maskTransparent" @click="handleMaskClick" />
     </transition>
-    <transition
-      :name="contentTransitionName"
-      @after-enter="afterEnter"
-      @after-leave="afterLeave"
-    >
+    <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
       <div v-show="currentVisible" :class="contentClasses">
         <slot></slot>
       </div>
@@ -20,19 +12,12 @@
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  computed,
-  SetupContext,
-  watch,
-  defineComponent,
-  PropType,
-} from "vue";
-import { PositionType, IPopupProps } from "./popup.interface";
+import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
+import { PositionType, IPopupProps } from './popup.interface';
 
-import TMask from "../mask";
+import TMask from '../mask';
 
-import config from "../config";
+import config from '../config';
 const { prefix } = config;
 
 const name = `${prefix}-popup`;
@@ -71,9 +56,8 @@ export default defineComponent({
      */
     position: {
       type: String as PropType<PositionType>,
-      default: "bottom",
-      validator: (val: string) =>
-        ["top", "right", "bottom", "left", "center"].indexOf(val) !== -1,
+      default: 'bottom',
+      validator: (val: string) => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
     },
     /**
      * @description 弹出层内容区的动画名，等价于transition组件的name属性
@@ -81,17 +65,10 @@ export default defineComponent({
      */
     transitionName: {
       type: String,
-      default: "",
+      default: '',
     },
   },
-  emits: [
-    "open",
-    "visible-change",
-    "close",
-    "opened",
-    "update:modelValue",
-    "closed",
-  ],
+  emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
   setup(props: IPopupProps, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
@@ -105,26 +82,26 @@ export default defineComponent({
     const contentTransitionName = computed(() => {
       const { transitionName, position } = props;
       if (transitionName) return transitionName;
-      if (position === "center") return "fade-zoom";
+      if (position === 'center') return 'fade-zoom';
       return `slide-${position}`;
     });
 
     watch(
       () => currentVisible.value,
       (val) => {
-        context.emit("visible-change", val);
+        context.emit('visible-change', val);
         const cls = `${prefix}-overflow-hidden`;
         if (val) {
           document.body.classList.add(cls);
-          context.emit("open");
+          context.emit('open');
         } else {
           document.body.classList.remove(cls);
-          context.emit("close");
+          context.emit('close');
         }
-      }
+      },
     );
 
-    function handleMove(e) {
+    function handleMove(e: TouchEvent) {
       if (props.lockScroll) {
         e.preventDefault();
       }
@@ -136,9 +113,9 @@ export default defineComponent({
       rootClasses,
       contentClasses,
       contentTransitionName,
-      afterEnter: () => context.emit("opened"),
-      afterLeave: () => context.emit("closed"),
-      handleMaskClick: () => context.emit("update:modelValue", false),
+      afterEnter: () => context.emit('opened'),
+      afterLeave: () => context.emit('closed'),
+      handleMaskClick: () => context.emit('update:modelValue', false),
       handleMove,
     };
   },

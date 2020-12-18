@@ -9,16 +9,17 @@ function create(props: IMessageProps): void {
   document.body.appendChild(root);
 
   const component = defineComponent({
-    render: (): VNode => h(MessageComp, {
-      ...props,
-      visible: visible.value,
-      onClose: () => {
-        visible.value = false;
-      },
-      onClosed: () => {
-        root.remove();
-      },
-    }),
+    render: (): VNode =>
+      h(MessageComp, {
+        ...props,
+        visible: visible.value,
+        onClose: () => {
+          visible.value = false;
+        },
+        onClosed: () => {
+          root.remove();
+        },
+      }),
   });
 
   createApp(component).mount(root);
@@ -45,13 +46,13 @@ function create(props: IMessageProps): void {
   };
 });
 
-(MessageComp as unknown as Plugin).install = (app: App) => {
+((MessageComp as unknown) as Plugin).install = (app: App) => {
   // 添加插件入口
   const messageKey = PolySymbol<typeof MessageComp & Plugin>('message');
   app.provide(messageKey, MessageComp);
 };
 
 type MessageFnType = {
-  [k in MessageType]: (options: IMessageProps | string) => void
-}
-export default MessageComp as unknown as (Plugin & MessageFnType);
+  [k in MessageType]: (options: IMessageProps | string) => void;
+};
+export default (MessageComp as unknown) as Plugin & MessageFnType;

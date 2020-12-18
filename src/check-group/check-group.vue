@@ -1,7 +1,6 @@
 <template>
   <div :class="`${prefix}-check-group`">
-    <slot>
-    </slot>
+    <slot> </slot>
   </div>
 </template>
 
@@ -13,7 +12,7 @@ const { prefix } = config;
 const name = `${prefix}-check-group`;
 
 export interface Child {
-  name: string
+  name: string;
 }
 
 export default defineComponent({
@@ -44,7 +43,7 @@ export default defineComponent({
       default: 0,
     },
   },
-emits: ['update:modelValue', 'change'],
+  emits: ['update:modelValue', 'change'],
   setup(props, content: SetupContext) {
     const children = ref({});
     const checkedValues = computed(() => props.modelValue || []);
@@ -72,7 +71,7 @@ emits: ['update:modelValue', 'change'],
      */
     const check = (name: string) => {
       const index = checkedValues.value.indexOf(name);
-      const inMax = (props?.max < 1 || checkedValues?.value?.length < props?.max);
+      const inMax = props?.max < 1 || checkedValues?.value?.length < props?.max;
       if (index !== undefined && index === -1 && inMax) {
         const tempValues = checkedValues?.value?.concat(name);
         content.emit('update:modelValue', [...Array.from(tempValues)]);
@@ -111,7 +110,7 @@ emits: ['update:modelValue', 'change'],
     const toggleAll = (checked: boolean) => {
       const names = Object.keys(children.value).filter((name: string) => {
         const child = children.value[name];
-        const isChecked = !!~(checkedValues?.value?.indexOf(name));
+        const isChecked = !!~checkedValues?.value?.indexOf(name);
         if (child.disabled) {
           return isChecked;
         }

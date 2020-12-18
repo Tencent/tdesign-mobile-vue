@@ -1,12 +1,7 @@
 <template>
   <div :class="classes">
     <div ref="refBar" :class="styleBar">
-      <div
-        v-for="item in itemProps"
-        :key="item.itemId"
-        :class="styleBarItem(item)"
-        @click="expandMenu(item)"
-      >
+      <div v-for="item in itemProps" :key="item.itemId" :class="styleBarItem(item)" @click="expandMenu(item)">
         <div :class="`${name}__title`">{{ item.title }}</div>
       </div>
     </div>
@@ -15,25 +10,13 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  computed,
-  toRefs,
-  ref,
-  reactive,
-  mergeProps,
-  provide,
-} from "vue";
+import { defineComponent, computed, toRefs, ref, reactive, mergeProps, provide } from 'vue';
 
-import { DropdownMenuProps, IDropdownMenuProps } from "./dropdown.interface";
-import config from "../config";
-import {
-  DropdownMenuState,
-  context as menuContext,
-  DropdownMenuControl,
-} from "./context";
-import TransAniControl from "./trans-ani-control";
-import { findRelativeRect, findRelativeContainer } from "./dom-utils";
+import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
+import config from '../config';
+import { DropdownMenuState, context as menuContext, DropdownMenuControl } from './context';
+import TransAniControl from './trans-ani-control';
+import { findRelativeRect, findRelativeContainer } from './dom-utils';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
@@ -68,8 +51,7 @@ export default defineComponent({
         });
       const itemProps = children.map((item: any) => ({
         ...item.props,
-        disabled:
-          item.props.disabled !== undefined && item.props.disabled !== false,
+        disabled: item.props.disabled !== undefined && item.props.disabled !== false,
       }));
       return {
         innerItems: () => children,
@@ -84,9 +66,9 @@ export default defineComponent({
     });
     const aniControl = new TransAniControl();
     // 提供子组件访问
-    provide("dropdownMenuProps", props);
-    provide("dropdownMenuState", state);
-    provide("dropdownAniControl", aniControl);
+    provide('dropdownMenuProps', props);
+    provide('dropdownMenuState', state);
+    provide('dropdownAniControl', aniControl);
     // 根结点样式
     const classes = computed(() => [`${name}`]);
     // 标题栏结点引用
@@ -126,11 +108,7 @@ export default defineComponent({
 
       // 记录展开状态
       const container = findRelativeContainer(bar) || document.body;
-      menuContext.recordMenuExpanded(
-        container,
-        control,
-        DropdownMenuState.expanded
-      );
+      menuContext.recordMenuExpanded(container, control, DropdownMenuState.expanded);
     };
     const collapseMenu = () => {
       state.activeId = null;
@@ -138,15 +116,11 @@ export default defineComponent({
       // 清除已展开状态记录
       const bar = refBar.value as any;
       const container = findRelativeContainer(bar) || document.body;
-      menuContext.recordMenuExpanded(
-        container,
-        control,
-        DropdownMenuState.collapsed
-      );
+      menuContext.recordMenuExpanded(container, control, DropdownMenuState.collapsed);
     };
     const control: DropdownMenuControl = { expandMenu, collapseMenu };
     // 提供子组件访问
-    provide("dropdownMenuControl", control);
+    provide('dropdownMenuControl', control);
     return {
       name: ref(name),
       classes,

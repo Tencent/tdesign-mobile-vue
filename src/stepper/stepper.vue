@@ -1,21 +1,30 @@
 <template>
-  <t-cell :label="label" :class="[`${name}`, `${disabled? 't-is-disabled': ''}`]">
+  <t-cell :label="label" :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`]">
     <template v-if="hasLabel" #label>
       <slot name="label">
         <div v-if="label" :class="`${name}__label`">{{ label }}</div>
       </slot>
     </template>
     <template #default>
-      <span :class="[`${name}__minus`,
-                     `${(disabled || currentValue <= min) ? 't-is-disabled': ''}`]"
-            @click="minusValue"></span>
-      <input v-model="currentValue" :class="`${name}__input`" type="tel"
-             :style="inputStyle" pattern="[0-9]*"
-             :disabled="disableInput || disabled" :readonly="disableInput"
-             @input="onInput" @blur="onBlur" />
-      <span :class="[`${name}__plus`,
-                     `${(disabled || currentValue >= max) ? 't-is-disabled': ''}`]"
-            @click="plusValue"></span>
+      <span
+        :class="[`${name}__minus`, `${disabled || currentValue <= min ? 't-is-disabled' : ''}`]"
+        @click="minusValue"
+      ></span>
+      <input
+        v-model="currentValue"
+        :class="`${name}__input`"
+        type="tel"
+        :style="inputStyle"
+        pattern="[0-9]*"
+        :disabled="disableInput || disabled"
+        :readonly="disableInput"
+        @input="onInput"
+        @blur="onBlur"
+      />
+      <span
+        :class="[`${name}__plus`, `${disabled || currentValue >= max ? 't-is-disabled' : ''}`]"
+        @click="plusValue"
+      ></span>
     </template>
   </t-cell>
 </template>
@@ -82,7 +91,7 @@ export default defineComponent({
       get() {
         return Number(props.modelValue) || state.cacheValue;
       },
-      set(val:number) {
+      set(val: number) {
         emit('change', val);
         emit('update:modelValue', val);
         console.log(val, props.modelValue);
@@ -92,10 +101,8 @@ export default defineComponent({
     const { min, max, inputWidth } = toRefs(props);
     const inputStyle = inputWidth ? { width: `${inputWidth.value}px` } : '';
     console.log(inputStyle);
-    const format = (val:number) => Math.min(Math.max(
-      min.value, val,
-      Number.MIN_SAFE_INTEGER,
-    ), max.value, Number.MAX_SAFE_INTEGER);
+    const format = (val: number) =>
+      Math.min(Math.max(min.value, val, Number.MIN_SAFE_INTEGER), max.value, Number.MAX_SAFE_INTEGER);
     currentValue.value = format(Number(props.modelValue));
     const plusValue = () => {
       if (state.cacheValue + props.step > props.max || props.disabled) return;
@@ -105,7 +112,7 @@ export default defineComponent({
       if (state.cacheValue - props.step < props.min || props.disabled) return;
       currentValue.value = state.cacheValue - props.step;
     };
-    const changeValue = (e:Event) => {
+    const changeValue = (e: Event) => {
       const value = (e.target as HTMLTextAreaElement).value.split('.')[0].replace(/[^-0-9]/g, '');
       if (value.trim() === '') {
         currentValue.value = 0;
@@ -113,7 +120,7 @@ export default defineComponent({
         currentValue.value = format(Number(value));
       }
     };
-    const onBlur =  (e:Event) => {
+    const onBlur = (e: Event) => {
       changeValue(e);
     };
     const hasLabel = computed(() => {
@@ -131,6 +138,5 @@ export default defineComponent({
       ...toRefs(props),
     };
   },
-
 });
 </script>

@@ -3,7 +3,7 @@ import { ExtractPropTypes } from 'vue';
 export enum ProgressType {
   Info = 'info',
   Error = 'error',
-};
+}
 
 export type ProgressPropsType = ExtractPropTypes<typeof progressProps>;
 

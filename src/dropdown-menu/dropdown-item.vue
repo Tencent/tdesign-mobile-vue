@@ -1,7 +1,7 @@
 <template>
-  <div v-if="isShowItems" :class="classes" :style="{...expandStyle}">
+  <div v-if="isShowItems" :class="classes" :style="{ ...expandStyle }">
     <t-mask v-if="isShowItems && showOverlay" @click="onClickOverlay" />
-    <div :class="styleContent" :style="{...transitionStyle}">
+    <div :class="styleContent" :style="{ ...transitionStyle }">
       <div :class="`${name}__bd`">
         <slot>
           <template v-if="optionsLayout === 'columns'">
@@ -26,11 +26,7 @@
               <!-- 多选列表 -->
               <t-check-group v-model="checkSelect">
                 <t-cell v-for="option in options" :key="option.value" value-align="left">
-                  <t-check-box
-                    :name="option.value"
-                    :title="option.title"
-                    :disabled="option.disabled"
-                  ></t-check-box>
+                  <t-check-box :name="option.value" :title="option.title" :disabled="option.disabled"></t-check-box>
                 </t-cell>
               </t-check-group>
             </t-cell-group>
@@ -84,7 +80,7 @@
                   </t-radio-group>
                   <!-- 树形列表 - 叶子节点（单选） ED -->
                 </template>
-                <template v-else-if="selectMode=== 'multi'">
+                <template v-else-if="selectMode === 'multi'">
                   <!-- 树形列表 - 叶子节点（多选） ST -->
                   <t-check-group
                     v-for="option in treeOptions[level]"
@@ -93,11 +89,7 @@
                     @update:modelValue="selectTreeNode(level, $event)"
                   >
                     <t-cell value-align="left">
-                      <t-check-box
-                        :name="option.value"
-                        :title="option.title"
-                        :disabled="option.disabled"
-                      ></t-check-box>
+                      <t-check-box :name="option.value" :title="option.title" :disabled="option.disabled"></t-check-box>
                     </t-cell>
                   </t-check-group>
                   <!-- 树形列表 - 叶子节点（多选） ED -->
@@ -194,26 +186,33 @@ export default defineComponent({
       // console.log(`dropdown-item(${props.itemId}) changing state: `, val);
       const duration = menuProps.duration;
       // 动画状态控制
-      menuAniControl.setTo(duration, () => {
-        // Now do:
-        context.emit(val ? 'open' : 'close');
-        if (val) {
-          state.isShowItems = val;
-        }
-        state.isExpanded = !val;
-      }, () => { // Next tick do:
-        state.isExpanded = val;
-      }, () => { // Finally do:
-        if (!val) {
-          state.isShowItems = val;
-        }
-        context.emit(val ? 'opened' : 'closed');
-      });
+      menuAniControl.setTo(
+        duration,
+        () => {
+          // Now do:
+          context.emit(val ? 'open' : 'close');
+          if (val) {
+            state.isShowItems = val;
+          }
+          state.isExpanded = !val;
+        },
+        () => {
+          // Next tick do:
+          state.isExpanded = val;
+        },
+        () => {
+          // Finally do:
+          if (!val) {
+            state.isShowItems = val;
+          }
+          context.emit(val ? 'opened' : 'closed');
+        },
+      );
     };
 
     // 根据父组件状态，判断当前是否展开
     watch(
-      () => (menuState.activeId === props.itemId),
+      () => menuState.activeId === props.itemId,
       (val: boolean) => setExpand(val),
     );
 
@@ -266,8 +265,7 @@ export default defineComponent({
             break;
           }
         } else {
-          const child: any = !Array.isArray(thisValue)
-            && list.find((child: any) => child.value === thisValue);
+          const child: any = !Array.isArray(thisValue) && list.find((child: any) => child.value === thisValue);
           node = child;
         }
       }
@@ -275,10 +273,14 @@ export default defineComponent({
       treeOptions.value = newTreeOptions as [];
     };
     if (props.optionsLayout === 'tree') {
-      watch(() => JSON.stringify({
-        options: props.options,
-        selectList: treeState.selectList,
-      }), buildTreeOptions);
+      watch(
+        () =>
+          JSON.stringify({
+            options: props.options,
+            selectList: treeState.selectList,
+          }),
+        buildTreeOptions,
+      );
       buildTreeOptions();
     }
     // 根据传入值更新当前选中
@@ -302,7 +304,10 @@ export default defineComponent({
     // 初始值更新一次选中项
     updateSelectValue(props.modelValue);
     // 跟踪 modelValue 更新选项
-    watch(() => props.modelValue, (val: any) => updateSelectValue(val));
+    watch(
+      () => props.modelValue,
+      (val: any) => updateSelectValue(val),
+    );
 
     // 底部按键是否可用
     const isBtnDisabled = computed(() => {

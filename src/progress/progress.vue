@@ -2,14 +2,10 @@
   <div :class="rootClasses">
     <div :class="`${name}__inner`">
       <div :class="`${name}__bd`" :style="progressBgColorStyle">
-        <div
-          :class="`${name}__percent`"
-          :style="progressStyle"></div>
+        <div :class="`${name}__percent`" :style="progressStyle"></div>
       </div>
       <div v-if="showTextPercentage" :class="`${name}__ft`">
-        <span
-          :class="`${name}__text-percentage`" :style="percentageTextStyle"
-        >{{percentage}}%</span>
+        <span :class="`${name}__text-percentage`" :style="percentageTextStyle">{{ percentage }}%</span>
       </div>
     </div>
   </div>
@@ -32,10 +28,8 @@ export default defineComponent({
     const rootClasses = computed(() => [
       `${name}`,
       {
-        [`${name}--info`]:
-          props.type === ProgressType.Info.valueOf(),
-        [`${name}--error`]:
-          props.type === ProgressType.Error.valueOf(),
+        [`${name}--info`]: props.type === ProgressType.Info.valueOf(),
+        [`${name}--error`]: props.type === ProgressType.Error.valueOf(),
       },
     ]);
 

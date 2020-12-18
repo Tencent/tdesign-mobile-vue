@@ -1,10 +1,6 @@
 <template>
   <div ref="wrapDOM" :class="className">
-    <div
-      ref="headDOM"
-      :class="`${baseClass}__header`"
-      @click="(e) => onChange(e, 'header')"
-    >
+    <div ref="headDOM" :class="`${baseClass}__header`" @click="(e) => onChange(e, 'header')">
       <div :class="`${baseClass}__title`">
         <slot name="title">{{ title }}</slot>
       </div>
@@ -45,7 +41,7 @@ import {
   inject,
   SetupContext,
   defineComponent,
-} from "vue";
+} from 'vue';
 import {
   ICollapseProps,
   ICollapseState,
@@ -53,10 +49,10 @@ import {
   CollapsePanelProps,
   CollapseIcon,
   onChangeEvent,
-} from "./collapse.interface";
-import config from "../config";
-import TIcon from "../icon";
-import { findIndex, isFalsy, toArray } from "./util";
+} from './collapse.interface';
+import config from '../config';
+import TIcon from '../icon';
+import { findIndex, isFalsy, toArray } from './util';
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 function getExpandIconName(isActive: boolean) {
@@ -66,12 +62,12 @@ export default defineComponent({
   name,
   components: { TIcon },
   props: CollapsePanelProps,
-  emits: ["click"],
+  emits: ['click'],
   setup(props: ICollapsePanelProps, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
-    const collapseProps = inject("collapseProps") as ICollapseProps;
-    const collapseState = inject("collapseState") as ICollapseState;
-    const onPanelChange = inject("onPanelChange") as onChangeEvent;
+    const collapseProps = inject('collapseProps') as ICollapseProps;
+    const collapseState = inject('collapseState') as ICollapseState;
+    const onPanelChange = inject('onPanelChange') as onChangeEvent;
 
     // 内容转为数组统一处理
     const contList = computed(() => toArray(props.content));
@@ -80,20 +76,14 @@ export default defineComponent({
       [`${name}--active`]: isActive.value,
       [`${name}--disabled`]: props.disabled,
     }));
-    const labelWidth = computed(
-      () => props.labelWidth || collapseProps.labelWidth
-    );
+    const labelWidth = computed(() => props.labelWidth || collapseProps.labelWidth);
     const contentClassName = computed(() => (c: number | string | Record<string, unknown>) => [
       `${name}__content`,
-      typeof c === "object" ? `${name}-list__item` : "",
+      typeof c === 'object' ? `${name}-list__item` : '',
     ]);
-    const listLabelStyle = computed(() =>
-      !isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {}
-    );
+    const listLabelStyle = computed(() => (!isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {}));
     // 是否展开态
-    const isActive = computed(
-      () => findIndex(props.name, collapseState.curValue) > -1
-    );
+    const isActive = computed(() => findIndex(props.name, collapseState.curValue) > -1);
     const state = reactive({
       baseClass: name,
       // 右侧按钮是否展开
@@ -101,12 +91,12 @@ export default defineComponent({
     });
 
     // 切换自身展开态
-    const onChange = (e: any = null, from = "") => {
+    const onChange = (e: any = null, from = '') => {
       e?.stopPropagation();
       if (props.disabled) {
         return;
       }
-      context.emit("click", props.name);
+      context.emit('click', props.name);
       if (/^header$/i.test(from) && !props.headerClickable) {
         return;
       }
@@ -119,7 +109,7 @@ export default defineComponent({
     const headDOM = ref();
     const updatePanelState = () => {
       if (!wrapDOM.value) {
-        console.log("[collapse] 组件尚未挂载", wrapDOM.value);
+        console.log('[collapse] 组件尚未挂载', wrapDOM.value);
         return;
       }
       const { height: headHeight } = headDOM.value.getBoundingClientRect();
