@@ -9,6 +9,7 @@
 
 <script lang="ts">
 import { ref, computed, toRefs, SetupContext, defineComponent, PropType } from 'vue';
+// import { TNode } from '../shared';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-button`;
@@ -31,7 +32,7 @@ export default defineComponent({
       default: 'default',
     },
     icon: {
-      type: String,
+      type: [String, Function],
       default: '',
     },
     plain: {

@@ -11,7 +11,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "moduleResolution": "node",
     "jsx": "preserve",
     "experimentalDecorators": true,

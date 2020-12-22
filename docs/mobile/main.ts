@@ -8,8 +8,4 @@ import TDesign from '@/index';
 import '../../common/style/mobile/index.less';
 import '../styles/mobile/index.less';
 
-createApp(app)
-  .use(TDesign)
-  .use(router)
-  .component('tdesign-header', header)
-  .mount('#app');
+createApp(app).use(TDesign).use(router).component('tdesign-header', header).mount('#app');
