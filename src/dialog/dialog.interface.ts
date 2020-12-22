@@ -26,7 +26,7 @@ export const DialogPropsDefault = {
   confirmContent: '确认',
   cancelContent: '取消',
   isInput: false,
-  visible: true,
+  visible: false,
   knowContent: '我知道了',
   zIndex: 2500,
   showOverlay: true,
