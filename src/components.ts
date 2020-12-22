@@ -14,6 +14,7 @@ export { default as RadioGroup } from './radio-group';
 export { default as Rate } from './rate';
 export { default as Switch } from './switch';
 export { default as Stepper } from './stepper';
+export { Steps, Step } from './steps';
 export { default as Slider } from './slider';
 export { default as NoticeBar } from './noticebar';
 export { default as Dialog } from './dialog';
