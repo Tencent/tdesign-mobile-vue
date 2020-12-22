@@ -29,7 +29,7 @@ export default defineComponent({
   name,
   props: {
     modelValue: {
-      type: [Boolean],
+      type: Boolean,
       default: false,
     },
     showIcon: {
