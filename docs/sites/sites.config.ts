@@ -148,6 +148,11 @@ export default {
               name: 'image-viewer',
               component: () => import('@/image-viewer/image-viewer.md'),
             },
+            {
+              title: 'Drawer 抽屉',
+              name: 'drawer',
+              component: () => import('@/drawer/demos/base.vue'),
+            },
           ],
         },
         {
