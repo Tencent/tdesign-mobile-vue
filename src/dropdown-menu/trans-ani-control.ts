@@ -1,5 +1,5 @@
 import { nextTick } from 'vue';
-import { NOOP } from '@/shared/functions';
+import { NOOP } from '../shared/functions';
 import { DropdownMenuDo } from './dropdown.interface';
 
 export default class TransAniControl {
