@@ -147,6 +147,11 @@ export default {
           name: 'image-viewer',
           component: () => import('@/image-viewer/demos/base.vue'),
         },
+        {
+          title: 'Indexes 索引',
+          name: 'indexes',
+          component: () => import('@/indexes/demos/base.vue'),
+        },
       ],
     },
   },
