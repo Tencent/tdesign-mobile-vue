@@ -25,7 +25,7 @@ const name = `${prefix}-action-sheet`;
 export default defineComponent({
   props: ['items'],
   setup(props, context: SetupContext) {
-    const handleSelect = (index) => {
+    const handleSelect = (index: number) => {
       context.emit('select', index);
     };
 

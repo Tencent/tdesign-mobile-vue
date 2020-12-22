@@ -23,10 +23,10 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { IPopupProps, ActionSheetType } from './action-sheet.interface';
-import MenuList from './menu-list';
-import MenuGrid from './menu-grid';
+import { ref, computed, SetupContext, watch, defineComponent, PropType, ComputedRef } from 'vue';
+import { ActionSheetType } from './action-sheet.interface';
+import MenuList from './menu-list.vue';
+import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
 import config from '../config';
 
@@ -91,7 +91,7 @@ export default defineComponent({
       default: '取消',
     },
   },
-  setup(props: IPopupProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const actionItems = ref([]);
 
     const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
@@ -106,7 +106,7 @@ export default defineComponent({
       (val) => {
         let items = JSON.parse(JSON.stringify(val));
         // 数据格式处理，统一转为object结构
-        items = items.map((item) => {
+        items = items.map((item: unknown) => {
           if (typeof item === 'string') {
             return { label: item };
           }
@@ -126,7 +126,7 @@ export default defineComponent({
       context.emit('update:modelValue', false);
     };
 
-    const handleSelect = (index) => {
+    const handleSelect = (index: number) => {
       context.emit('select', props.items[index], index);
     };
 
