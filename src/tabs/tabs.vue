@@ -2,11 +2,7 @@
   <div :class="classes">
     <div :class="navClasses" ref="navScroll">
       <div :class="`${name}__nav-wrap`" ref="navWrap">
-        <div :class="{
-               [`${name}__nav-item`]: true,
-               [`${prefix}-is-active`]: item.name===state.currentName,
-               [`${prefix}-is-disabled`]: item.disabled,
-             }"
+        <div :class="getItemClasses(item)"
              v-for="item in itemProps"  :key="item.name" @click="(e) => tabClick(e, item)">
           {{item.label}}
         </div>
@@ -39,6 +35,17 @@ export default defineComponent({
     const state = reactive({
       currentName: String(props.activeName),
     });
+    const getItemClasses = (item: { name: string; disabled: any; }) => {
+      const itemClasses:Array<string> = [`${name}__nav-item`];
+      if (item.name === state.currentName) {
+        itemClasses.push(`${prefix}-is-active`);
+      }
+      if (item.disabled) {
+        itemClasses.push(`${prefix}-is-disabled`);
+      }
+      console.log(itemClasses);
+      return itemClasses;
+    };
 
     const { itemProps } = (() => {
       const children = (slots.default ? slots.default() : [])
@@ -107,6 +114,7 @@ export default defineComponent({
       navWrap,
       navLine,
       lineStyle,
+      getItemClasses,
     };
   },
 });
