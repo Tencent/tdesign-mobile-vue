@@ -67,12 +67,10 @@ export default defineComponent({
         const tab = navWrap.value.querySelector('.t-is-active');
         const line = navLine.value;
         if (props.direction === 'horizontal' && tab) {
-          lineStyle.value =
-            `transform: translateY(${tab.offsetTop}px)`
+          lineStyle.value =            `transform: translateY(${tab.offsetTop}px)`
           ;
         } else if (tab) {
-          lineStyle.value =
-            `transform: translateX(${Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2}px)`
+          lineStyle.value =            `transform: translateX(${Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2}px)`
           ;
         }
       }

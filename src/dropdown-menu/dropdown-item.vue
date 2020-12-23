@@ -265,8 +265,8 @@ export default defineComponent({
             break;
           }
         } else {
-          const child: any = !Array.isArray(thisValue) &&
-            list.find((child: any) => child.value === thisValue);
+          const child: any = !Array.isArray(thisValue)
+            && list.find((child: any) => child.value === thisValue);
           node = child;
         }
       }
