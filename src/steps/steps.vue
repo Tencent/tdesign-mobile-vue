@@ -20,6 +20,7 @@ const name = `${prefix}-steps`;
 export default {
   name,
   props: StepsProps,
+  emits: ['change', 'update:modelValue'],
   setup(props: StepsProps, context: SetupContext) {
     const baseClass = computed(() => [
       name,
