@@ -3,8 +3,8 @@
     <div :class="`${baseClassName}__inner`">
       <div :class="`${baseClassName}-icon`" @click="onClickIcon">
         <slot name="icon" >
-          <span v-if="parentType === 'default'" :class="`${baseClassName}-icon__number`">{{index + 1}}</span>
-          <span v-else :class="`${baseClassName}-icon__dot`"></span>
+          <span v-if="isDot" :class="`${baseClassName}-icon__dot`"></span>
+          <span v-else :class="`${baseClassName}-icon__number`">{{index + 1}}</span>
         </slot>
       </div>
       <div :class="`${baseClassName}-content`">
@@ -47,6 +47,8 @@ export default {
     const rootClassName = computed(() => [name, curStatus.value ? `${name}--${curStatus.value}` : '']);
     const readonly = computed(() => stepsProvide.readonly);
 
+    const isDot = computed(() => parentType.value === 'dot' && stepsProvide.direction === 'vertical');
+
     let { status } = props;
     const curStatus = computed(() => {
       if (props.status) {
@@ -63,8 +65,9 @@ export default {
     });
 
     const onClickIcon  = () => {
-      // 垂直方向上不做选择处理
-      if (stepsProvide.direction === 'vertical') {
+      if (
+        stepsProvide.direction === 'vertical'
+        || parentType.value !== 'default') {
         return;
       }
 
@@ -83,6 +86,7 @@ export default {
       rootClassName,
       stepsStatus,
       readonly,
+      isDot,
     };
   },
 };

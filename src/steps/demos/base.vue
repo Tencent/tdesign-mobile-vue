@@ -1,8 +1,10 @@
 <template>
   <div class="t-steps-demo">
     <t-cell-group title="横向不可操作">
-      <t-cell>
-        <t-steps v-model="current" :readonly="false">
+      <t-cell >
+        <t-steps
+          v-model="current"
+          :readonly="false">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
         </t-steps>
@@ -53,6 +55,15 @@
         <t-steps v-model="current6" direction="vertical">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="错误步骤" content="辅助信息文字最多两行" status="error"></t-step>
+          <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
+        </t-steps>
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group title="竖向简化只读步骤条">
+      <t-cell>
+        <t-steps type="dot" v-model="current5" direction="vertical">
+          <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
+          <t-step title="当前步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
         </t-steps>
       </t-cell>

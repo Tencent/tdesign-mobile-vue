@@ -1,5 +1,5 @@
 import Steps from './steps.vue';
-import Step from './step.vue';
+import Step from './step-item.vue';
 
 export {
   Steps,
