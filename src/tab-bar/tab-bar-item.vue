@@ -80,8 +80,8 @@ export default defineComponent({
 
     const selectChild = (childName: number | string) => {
       if (!(
-        Array.isArray(activeValue.value) &&
-        activeValue.value[1] === childName
+        Array.isArray(activeValue.value)
+        && activeValue.value[1] === childName
       )) {
         updateChild([currentName, childName]);
       }

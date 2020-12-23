@@ -193,9 +193,9 @@ class Picker {
       const newOffsetY = quartEaseOut(progress, startOffsetY, dist, duration);
       // const destOffsetY = newOffsetY
       this.setOffsetY(newOffsetY);
-      if (progress > duration ||
-        newOffsetY > this.offsetYOfStartBound ||
-        newOffsetY < this.offsetYOfEndBound
+      if (progress > duration
+        || newOffsetY > this.offsetYOfStartBound
+        || newOffsetY < this.offsetYOfEndBound
       ) {
         this.endScroll();
       } else {
