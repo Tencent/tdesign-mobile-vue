@@ -26,7 +26,7 @@
               <!-- 多选列表 -->
               <t-check-group v-model="checkSelect">
                 <t-cell v-for="option in options" :key="option.value" value-align="left">
-                  <t-check-box :name="option.value" :title="option.title" :disabled="option.disabled"></t-check-box>
+                  <t-checkbox :name="option.value" :title="option.title" :disabled="option.disabled"></t-checkbox>
                 </t-cell>
               </t-check-group>
             </t-cell-group>
@@ -89,7 +89,7 @@
                     @update:modelValue="selectTreeNode(level, $event)"
                   >
                     <t-cell value-align="left">
-                      <t-check-box :name="option.value" :title="option.title" :disabled="option.disabled"></t-check-box>
+                      <t-checkbox :name="option.value" :title="option.title" :disabled="option.disabled"></t-checkbox>
                     </t-cell>
                   </t-check-group>
                   <!-- 树形列表 - 叶子节点（多选） ED -->

@@ -65,7 +65,10 @@ export const pickerColumnProps = {
    * @description 格式化需要显示当内容
    * @property formatter
    */
-  formatter: Function,
+  formatter: {
+    type: Function,
+    default: (value: string): string  => value,
+  },
   /**
    * @description 默认选中的索引，默认值为0
    * @property defaultIndex

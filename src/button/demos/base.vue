@@ -2,8 +2,8 @@
   <div class="tdesign-demo-button-base">
     <t-cell-group title="基础按钮">
       <t-cell value-align="left">
-        <t-button theme="primary" size="large">主按钮</t-button>
-        <t-button theme="primary" size="large" disabled>主按钮-禁用</t-button>
+        <t-button theme="primary" size="large" @click="onClick">主按钮</t-button>
+        <t-button theme="primary" size="large" disabled @click="onClick">主按钮-禁用</t-button>
         <t-button size="large" >次要按钮</t-button>
         <t-button size="large" disabled>次要按钮-禁用</t-button>
         <t-button theme="ghost" size="large" >幽灵按钮</t-button>

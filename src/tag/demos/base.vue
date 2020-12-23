@@ -1,11 +1,3 @@
-<!--
- * @Author: pinghai li
- * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-05-25 17:20:55
- * @LastEditors: pinghai li
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/src/tag/tag.vue
--->
 <template>
   <div class="tag-base tdesign-demo-tag">
     <t-cell-group title="展示型标签">

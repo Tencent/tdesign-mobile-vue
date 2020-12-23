@@ -73,8 +73,8 @@ const Tag = defineComponent({
       default: false,
     },
     maxWidth: {
-      type: Number || String,
-      default: false,
+      type: [String, Number],
+      default: '',
     },
   },
   emits: ['close'],

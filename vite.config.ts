@@ -8,7 +8,8 @@ module.exports = {
   resolvers: [
     {
       alias(id: string) {
-        return id.replace(/^@\//, '/@/') // add slash to particular id, then vite won't resolve it as a module
+        // add slash to particular id, then vite won't resolve it as a module
+        return id.replace(/^@\//, '/@/') 
       },
     },
   ],

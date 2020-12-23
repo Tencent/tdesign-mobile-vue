@@ -81,9 +81,10 @@ export default defineComponent({
     const displayIcon = computed(() => (loading.value ? 'loading' : props.icon));
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
-        e.stopPropagation();
-      } else {
+        // 既不是加载也不是禁用时触发事件
         context.emit('click', e);
+      } else {
+        e.stopPropagation();
       }
     };
 

@@ -19,7 +19,7 @@ export default defineComponent({
   name,
   props: {
     /**
-     * @description check-group 当前的值check-box的值
+     * @description check-group 当前的值checkbox的值
      * @attribute modelValue
      */
     modelValue: {
@@ -27,7 +27,7 @@ export default defineComponent({
       default: () => [],
     },
     /**
-     * @description check-group 当前的值check-box组是否能被点击
+     * @description check-group 当前的值checkbox组是否能被点击
      * @attribute disabled
      */
     disabled: {
@@ -48,7 +48,7 @@ export default defineComponent({
     const children = ref({});
     const checkedValues = computed(() => props.modelValue || []);
     /**
-     * @description: 为check-box注册
+     * @description: 为checkbox注册
      * @param {object}
      * @return: void
      */
@@ -57,7 +57,7 @@ export default defineComponent({
     };
 
     /**
-     * @description: 为check-box取消注册
+     * @description: 为checkbox取消注册
      * @param {object}
      * @return: void
      */
@@ -65,7 +65,7 @@ export default defineComponent({
       child.name && delete children.value[child.name];
     };
     /**
-     * @description: 为check-box选中
+     * @description: 为checkbox选中
      * @param {string}
      * @return: void
      */
@@ -78,7 +78,7 @@ export default defineComponent({
       }
     };
     /**
-     * @description: 为check-box取消选中
+     * @description: 为checkbox取消选中
      * @param {string}
      * @return: void
      */

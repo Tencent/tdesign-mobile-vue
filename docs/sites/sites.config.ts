@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-11-26 12:07:57
- * @LastEditors: angelaguo
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
- */
 export default {
   navs: {
     components: {
@@ -84,8 +76,8 @@ export default {
             },
             {
               title: 'CheckBox 复选框',
-              name: 'check-box',
-              component: () => import('@/check-box/check-box.md'),
+              name: 'checkbox',
+              component: () => import('@/checkbox/checkbox.md'),
             },
             // {
             //   title: 'Mask',

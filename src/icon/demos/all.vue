@@ -4,7 +4,7 @@
     若需要编辑，请编辑源文件：tdesign/tdesign-mobile-vue/src/icon/generate/demo.tpl 。
   -->
   <div class="tdesign-demo-iconfont">
-    <p>目前设计师给到的全部图标</p><br>
+    <br>
     <div class="tdesign-demo-icon">
       <t-icon name="location_fill"/>
       <div class="tdesign-demo-icon-name">location_fill</div>
