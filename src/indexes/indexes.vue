@@ -21,8 +21,7 @@
           `${state.componentName}__sidebar-item`,
           state.currentSidebar === item ? `${state.componentName}__sidebar-item--active` : '',
         ]"
-        :data-index="item"
-        @click.prevent="handleSidebarItemClick"
+        @click.prevent="handleSidebarItemClick(item)"
         :key="item">{{item}}</div>
     </div>
     <div v-if="state.showCurrentSidebar" :class="`${state.componentName}__current`">{{state.currentSidebar}}</div>
@@ -62,7 +61,7 @@ const touch: Touch = {
   offsetY: 0,
 };
 
-let children: Array<Element> = [];
+let children: Array<HTMLElement> = [];
 const componentName: string = `${prefix}-indexes`;
 
 export default defineComponent({
@@ -89,7 +88,9 @@ export default defineComponent({
       targets && targets[0].scrollIntoView();
     };
 
-    const getTitleNode = (): Array<HTMLElement> => Array.from(document.getElementsByClassName(`${componentName}__anchor`));
+    const getTitleNode = () => Array
+      .from(document.getElementsByClassName(`${componentName}__anchor`))
+      .filter((x): x is HTMLElement => x instanceof HTMLElement);
 
     const setCurrentSidebar = (index: string) => {
       state.currentSidebar = index;
@@ -105,16 +106,14 @@ export default defineComponent({
     onMounted(() => {
       children = getTitleNode();
       if (children) {
-        const tempNode = children[0] && children[0] || {};
-        const { index } = tempNode.dataset;
+        const { index } = children[0].dataset;
         if (index !== undefined) {
           state.currentSidebar = index;
         }
       }
     });
 
-    const handleSidebarItemClick = (event: Event) => {
-      const { index } = event.target && event.target.dataset;
+    const handleSidebarItemClick = (index: string) => {
       setCurrentSidebar(index);
       scrollToView();
     };
@@ -130,7 +129,11 @@ export default defineComponent({
       const { clientX, clientY } = touches[0];
 
       const target = document.elementFromPoint(clientX, clientY);
-      if (target && target.className === `${componentName}__sidebar-item`) {
+      if (
+        target
+        && target.className === `${componentName}__sidebar-item`
+        && target instanceof HTMLElement
+      ) {
         const { index } = target.dataset;
         if (index !== undefined && state.currentSidebar !== index) {
           setCurrentSidebar(index);
@@ -139,26 +142,25 @@ export default defineComponent({
       }
     };
 
-    const handleRootScroll = (event: Event) => {
+    const handleRootScroll = (event: Event & { target: HTMLElement }) => {
       if (!rootScrollMask) {
         return;
       }
 
       const { scrollTop } = event.target;
       const children = getTitleNode();
-      let currentTarget: string = '';
+      let currentTarget = '';
 
-      for (const ele of children) {
+      children.forEach((ele) => {
         const { offsetTop, clientHeight } = ele;
         const targetClientVertical = offsetTop - clientHeight;
         if (currentTarget === '' && targetClientVertical > 0) {
-          currentTarget = children[0].dataset.index;
+          currentTarget = children[0].dataset.index ?? '';
         } else if (targetClientVertical < scrollTop) {
-          currentTarget = ele.dataset.index;
-        } else {
-          break;
+          currentTarget = ele.dataset.index ?? '';
         }
-      }
+      });
+
       setCurrentSidebar(currentTarget);
     };
 
@@ -172,7 +174,7 @@ export default defineComponent({
     const clearCurrentSidebarToast = (): void => {
       if (state.showCurrentSidebar && state.currentSidebar) {
         timeOut && clearTimeout(timeOut);
-        timeOut = setTimeout(() => {
+        timeOut = window.setTimeout(() => {
           state.showCurrentSidebar = false;
         }, 2000);
       }
