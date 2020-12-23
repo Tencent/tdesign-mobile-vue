@@ -76,7 +76,6 @@ const Tag = defineComponent({
     },
     maxWidth: {
       type: Number || String,
-      default: false,
     },
   },
   setup(props, context) {
