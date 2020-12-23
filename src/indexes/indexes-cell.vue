@@ -4,7 +4,8 @@
  * @FilePath: /tdesign-mobile-vue/src/indexes/indexes.vue
 -->
 <template>
-  <div :data-value="state.value" :class="state.componentName" @click="handleClick">{{state.title}}</div>
+  <div :data-value="state.value" :class="state.componentName" @click="handleClick">
+    {{state.title}}</div>
 </template>
 
 <script lang="ts">

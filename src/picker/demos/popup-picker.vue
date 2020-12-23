@@ -1,6 +1,7 @@
 <template>
   <div class="tdesign-demo-block">
-    <t-button theme="primary" @click="visible = true" style="margin-left: 20px;">结合Popup组件</t-button>
+    <t-button theme="primary" @click="visible = true" style="margin-left: 20px;">
+      结合Popup组件</t-button>
     <t-popup v-model="visible">
       <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
         <t-picker-column

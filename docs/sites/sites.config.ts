@@ -148,6 +148,11 @@ export default {
               name: 'image-viewer',
               component: () => import('@/image-viewer/image-viewer.md'),
             },
+            {
+              title: 'Tabs 选项卡',
+              name: 'tabs',
+              component: () => import('@/tabs/tabs.md'),
+            },
           ],
         },
         {

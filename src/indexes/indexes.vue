@@ -24,7 +24,8 @@
         @click.prevent="handleSidebarItemClick(item)"
         :key="item">{{item}}</div>
     </div>
-    <div v-if="state.showCurrentSidebar" :class="`${state.componentName}__current`">{{state.currentSidebar}}</div>
+    <div v-if="state.showCurrentSidebar" :class="`${state.componentName}__current`">
+      {{state.currentSidebar}}</div>
     <slot></slot>
   </div>
 </template>
