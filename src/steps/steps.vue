@@ -43,6 +43,7 @@ export default {
     const onClickItem = (curIndex) => {
       if (props.modelValue !== 'undefined') {
         context.emit('update:modelValue', curIndex);
+        context.emit('change', curIndex);
       }
     };
 
