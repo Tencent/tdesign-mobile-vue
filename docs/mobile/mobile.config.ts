@@ -147,6 +147,11 @@ export default {
           name: 'image-viewer',
           component: () => import('@/image-viewer/demos/base.vue'),
         },
+        {
+          title: 'Tabs 选项卡',
+          name: 'tabs',
+          component: () => import('@/tabs/demos/base.vue'),
+        },
       ],
     },
   },
