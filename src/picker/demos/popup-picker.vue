@@ -1,12 +1,14 @@
 <template>
   <div class="tdesign-demo-block">
-    <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-      <t-picker-column
-        :options="roleOptions"
-        :formatter="(val) => val"
-        @change="onColumnChange"
-      />
-    </t-picker>
+    <t-button theme="primary" @click="visible = true" style="margin-left: 20px;">
+      结合Popup组件</t-button>
+    <t-popup v-model="visible">
+      <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
+        <t-picker-column
+          :options="roleOptions"
+          @change="onColumnChange" />
+      </t-picker>
+    </t-popup>
   </div>
 </template>
 
@@ -17,19 +19,7 @@ export default defineComponent({
     const roles = ['战士', '法师', '射手', '刺客', '坦克', '辅助'];
     const curRoleIndex = ref(0);
     const roleOptions = ref(roles);
-    const gameOptions = ref([
-      '端游',
-      '手游',
-      'PS4',
-      'NS',
-    ]);
-    const gameLevelOptions = ref([
-      '3A大作',
-      '精品游戏',
-      '换皮游戏',
-      '氪金游戏',
-      '辣鸡游戏',
-    ]);
+    const visible = ref(false);
 
     const onColumnChange = (e: any) => {
       console.log('column:change', e);
@@ -46,16 +36,17 @@ export default defineComponent({
 
     const onConfirm = (e: any) => {
       console.log('picker:confirm', e);
+      visible.value = false;
     };
 
     const onCancel = () => {
       console.log('取消');
+      visible.value = false;
     };
 
     return {
       roleOptions,
-      gameOptions,
-      gameLevelOptions,
+      visible,
       onColumnChange,
       onRoleChange,
       onChange,
@@ -65,3 +56,4 @@ export default defineComponent({
   },
 });
 </script>
+
