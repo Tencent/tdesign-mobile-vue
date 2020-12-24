@@ -90,6 +90,11 @@ export default {
               component: () => import('@/stepper/stepper.md'),
             },
             {
+              title: 'Steps 步进器',
+              name: 'steps',
+              component: () => import('@/steps/steps.md'),
+            },
+            {
               title: 'Slider 滑动选择器',
               name: 'slider',
               component: () => import('@/slider/slider.md'),

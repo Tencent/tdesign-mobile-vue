@@ -93,6 +93,11 @@ export default {
           component: () => import('@/stepper/demos/base.vue'),
         },
         {
+          title: 'Steps 步骤条',
+          name: 'steps',
+          component: () => import('@/steps/demos/base.vue'),
+        },
+        {
           title: 'Slider 滑块',
           name: 'Slider',
           component: () => import('@/slider/demos/base.vue'),
