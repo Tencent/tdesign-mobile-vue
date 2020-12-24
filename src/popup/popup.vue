@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { PositionType, IPopupProps } from './popup.interface';
+import { PositionType, IPopupProps } from './popup';
 
 import TMask from '../mask';
 
@@ -61,7 +61,7 @@ export default defineComponent({
     position: {
       type: String as PropType<PositionType>,
       default: 'bottom',
-      validator: val => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
+      validator: (val: string) => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
     },
     /**
      * @description 弹出层内容区的动画名，等价于transition组件的name属性
@@ -105,7 +105,7 @@ export default defineComponent({
       context.emit('update:modelValue', false);
     };
 
-    const handleMove = (e) => {
+    const handleMove = (e: TouchEvent) => {
       if (props.lockScroll) {
         e.preventDefault();
       }

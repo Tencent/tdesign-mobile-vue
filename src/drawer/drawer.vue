@@ -41,6 +41,7 @@ export default defineComponent({
       default: () => [],
     },
   },
+  emits: ['update:modelValue'],
   setup(props, context: SetupContext) {
     const { modelValue } = toRefs(props);
     const open = ref(false) || modelValue;

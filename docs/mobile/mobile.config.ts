@@ -152,6 +152,16 @@ export default {
           name: 'drawer',
           component: () => import('@/drawer/demos/base.vue'),
         },
+        {
+          title: 'Indexes 索引',
+          name: 'indexes',
+          component: () => import('@/indexes/demos/base.vue'),
+        },
+        {
+          title: 'Tabs 选项卡',
+          name: 'tabs',
+          component: () => import('@/tabs/demos/base.vue'),
+        },
       ],
     },
   },

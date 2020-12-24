@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, SetupContext } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-mask`;

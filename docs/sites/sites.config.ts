@@ -151,7 +151,12 @@ export default {
             {
               title: 'Drawer 抽屉',
               name: 'drawer',
-              component: () => import('@/drawer/demos/base.vue'),
+              component: () => import('@/drawer/drawer.md'),
+            },
+            {
+              title: 'Tabs 选项卡',
+              name: 'tabs',
+              component: () => import('@/tabs/tabs.md'),
             },
           ],
         },
@@ -184,6 +189,17 @@ export default {
               title: 'Fab 悬浮按钮',
               name: 'fab',
               component: () => import('@/fab/fab.md'),
+            },
+          ],
+        },
+        {
+          title: '操作控件',
+          type: 'component', // 组件文档
+          children: [
+            {
+              title: 'Indexes 索引',
+              name: 'indexes',
+              component: () => import('@/indexes/indexes.md'),
             },
           ],
         },

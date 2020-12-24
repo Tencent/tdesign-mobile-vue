@@ -52,7 +52,33 @@ const { prefix } = config;
 const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
-  props: ['items', 'count'],
+  props: {
+    modelValue: Boolean,
+    /**
+     * @description 菜单项
+     * @attribute items
+     */
+    /**
+     * @description 是否显示
+     * @attribute visible
+     */
+    visible: {
+      type: Boolean,
+      default: false,
+    },
+    items: {
+      type: Array,
+      required: true,
+    },
+    /**
+     * @description grid时每页显示的数量
+     * @attribute count
+     */
+    count: {
+      type: Number,
+      default: 8,
+    },
+  },
   setup(props, context: SetupContext) {
     const containerWrapper = ref<HTMLElement | null>(null);
     const moveOffset = ref(0);
@@ -62,12 +88,12 @@ export default defineComponent({
     let startOffset = 0;
     let canMove = true;
 
-    const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
+    const currentVisible = computed(() => props.modelValue || props.visible);
     const wrapperStyle = computed(() => ({
       transform: `translate3d(${moveOffset.value}px, 0, 0)`,
       transition: useTransition.value ? 'transform 300ms' : null,
     }));
-    const pageNum = computed(() => Math.ceil(props.items.length / props.count)) as ComputedRef<number>;
+    const pageNum = computed(() => Math.ceil(props.items.length / props.count));
     // 分页数据处理
     const actionItems = computed(() => {
       const res = [];
@@ -84,11 +110,17 @@ export default defineComponent({
 
     const moveByIndex = (index: number) => {
       useTransition.value = true;
-      moveOffset.value = pageNum.value > 1 ? index * containerWrapper.value.offsetWidth * -1 : 0;
+      if (containerWrapper.value) {
+        moveOffset.value = pageNum.value > 1 ? index * containerWrapper.value.offsetWidth * -1 : 0;
+      }
     };
 
     // 滑动时的最大偏移
-    const getMaxOffset = () => (pageNum.value - 1) * containerWrapper.value.offsetWidth;
+    const getMaxOffset = () => {
+      if (!containerWrapper.value) return 0;
+
+      return (pageNum.value - 1) * containerWrapper.value.offsetWidth;
+    };
 
     const handleTouchstart = (e: TouchEvent) => {
       canMove = true;
