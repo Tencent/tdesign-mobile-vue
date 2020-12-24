@@ -26,4 +26,4 @@ export { default as Badge } from './badge';
 export { default as SegmentControl } from './segment-control';
 export { default as Fab } from './fab';
 export { default as ImageViewer } from './image-viewer';
-// export { default as Message } from './message';
+export { default as Message } from './message';
