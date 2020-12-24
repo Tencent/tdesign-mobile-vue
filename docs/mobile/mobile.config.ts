@@ -162,6 +162,11 @@ export default {
           name: 'tabs',
           component: () => import('@/tabs/demos/base.vue'),
         },
+        {
+          title: 'Navbar 导航条',
+          name: 'navbar',
+          component: () => import('@/navbar/demos/base.vue'),
+        },
       ],
     },
   },

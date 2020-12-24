@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-11-26 12:07:57
- * @LastEditors: angelaguo
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
- */
 export default {
   navs: {
     components: {
@@ -157,6 +149,11 @@ export default {
               title: 'Tabs 选项卡',
               name: 'tabs',
               component: () => import('@/tabs/tabs.md'),
+            },
+            {
+              title: 'Navbar 导航条',
+              name: 'navbar',
+              component: () => import('@/navbar/navbar.md'),
             },
           ],
         },

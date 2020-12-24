@@ -31,4 +31,4 @@ export { default as Fab } from './fab';
 export { default as ImageViewer } from './image-viewer';
 export { default as Drawer } from './drawer';
 export { Tabs, TabPanel } from './tabs';
-
+export { default as Navbar } from './navbar';
