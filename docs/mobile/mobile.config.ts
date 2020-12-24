@@ -148,6 +148,11 @@ export default {
           component: () => import('@/image-viewer/demos/base.vue'),
         },
         {
+          title: 'Drawer 抽屉',
+          name: 'drawer',
+          component: () => import('@/drawer/demos/base.vue'),
+        },
+        {
           title: 'Indexes 索引',
           name: 'indexes',
           component: () => import('@/indexes/demos/base.vue'),

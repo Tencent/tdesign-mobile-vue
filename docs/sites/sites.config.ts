@@ -149,6 +149,11 @@ export default {
               component: () => import('@/image-viewer/image-viewer.md'),
             },
             {
+              title: 'Drawer 抽屉',
+              name: 'drawer',
+              component: () => import('@/drawer/drawer.md'),
+            },
+            {
               title: 'Tabs 选项卡',
               name: 'tabs',
               component: () => import('@/tabs/tabs.md'),
