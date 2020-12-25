@@ -5,7 +5,7 @@
         <t-icon
           :class="`${name}__icon-search`"
           name="search"
-          style="color: #BBBBBB;"
+          :style="iconStyle"
         ></t-icon>
         <input
           :class="`${name}__input`"
@@ -18,7 +18,7 @@
           v-if="clearable && currentValue.length > 0"
           :class="`${name}__icon-close`"
           name="close_fill"
-          style="color: #BBBBBB;"
+          :style="iconStyle"
           @click="onClear"
         ></t-icon>
       </div>
@@ -30,7 +30,7 @@
         <t-icon
           :class="`${name}__label-icon-search`"
           name="search"
-          style="color: #BBBBBB;"
+          :style="iconStyle"
         ></t-icon>
         <span :class="`${name}__label-text`">{{ placeholder }}</span>
       </label>
@@ -46,7 +46,7 @@
 </template>
 
 <script lang="ts">
-import { ref, reactive, computed, SetupContext, defineComponent } from 'vue';
+import { ref, reactive, computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-search-field`;
@@ -57,6 +57,10 @@ export default defineComponent({
     autofocus: {
       type: Boolean,
       default: true,
+    },
+    iconColor: {
+      type: String,
+      default: '#888888',
     },
     clearable: {
       type: Boolean,
@@ -75,15 +79,23 @@ export default defineComponent({
       default: '取消',
     },
   },
-  setup(props, context: SetupContext) {
-    const { emit } = context;
+  emits: {
+    change: ({ val }) => {
+      if (val) {
+        return true;
+      }
+    },
+    cancel: null,
+    clear: null,
+  },
+  setup(props, { emit }) {
+    const classes = computed(() => ({
+      [`${name}`]: true,
+      [`${prefix}-is-focused`]: !state.labelActive,
+    }));
 
-    const classes = computed(() => [
-      `${name}`,
-      {
-        [`${prefix}-is-focused`]: !state.labelActive,
-      },
-    ]);
+    const iconStyle = computed(() => (
+      props.iconColor ? `color:${props.iconColor};` : ''));
 
     const state = reactive({
       labelActive: true,
@@ -92,7 +104,7 @@ export default defineComponent({
 
     const curLabelActive = computed({
       get() {
-        return true;
+        return state.labelActive;
       },
       set(val: boolean) {
         state.labelActive = !val;
@@ -116,7 +128,8 @@ export default defineComponent({
 
     const onCancel = (e: Event) => {
       curLabelActive.value = state.labelActive;
-      context.emit('cancel', e);
+      currentValue.value = '';
+      emit('cancel', e);
     };
 
     const onInput = (e: Event) => {
@@ -125,12 +138,13 @@ export default defineComponent({
 
     const onClear = (e: Event) => {
       currentValue.value = '';
-      context.emit('clear', e);
+      emit('clear', e);
     };
 
     return {
       name: ref(name),
       classes,
+      iconStyle,
       onClick,
       onCancel,
       onInput,
