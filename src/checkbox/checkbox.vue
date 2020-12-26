@@ -2,7 +2,7 @@
   <div :class="`${flagName}`">
     <span :class="iconClasses" :style="iconStyle" @click="checkBoxChange">
       <slot name="icon" :checked="isChecked">
-        <t-icon v-if="isChecked" name="tick_fill" />
+        <t-icon v-if="isChecked" name="check-circle-filled" />
       </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="checkBoxChange('content')">

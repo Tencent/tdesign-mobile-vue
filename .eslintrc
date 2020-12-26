@@ -4,7 +4,7 @@
     "node": true,
     "jest": true,
     "es6": true
-  }, 
+  },
   "extends": [
     "@tencent/eslint-config-tencent",
     "@tencent/eslint-config-tencent/ts",
@@ -31,6 +31,17 @@
     "func-style": 0,
     "no-console": 0,
     "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/no-unused-vars": ["error"]
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": false
+        }
+      }
+    ]
   }
 }

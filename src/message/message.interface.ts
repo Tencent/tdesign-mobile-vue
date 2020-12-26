@@ -1,21 +1,23 @@
+import { TNode } from "@/shared";
+
 export type MessageType = 'info' | 'success' | 'warning' | 'error';
 
 export type MessageAlignType = 'left' | 'center';
 
-export interface IMessageOffset {
+export interface MessageOffset {
   top?: number | string;
   right?: number | string;
   left?: number | string;
 }
 
-export interface IMessageProps {
+export interface MessageProps {
   modelValue?: boolean;
   visible?: boolean;
   content: string;
   theme?: MessageType;
   align?: MessageAlignType;
-  offset?: IMessageOffset;
+  offset?: MessageOffset;
   duration?: number;
-  icon?: string;
+  icon?: TNode;
   zIndex?: number;
 }

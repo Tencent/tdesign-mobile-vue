@@ -11,12 +11,10 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { MessageType, MessageAlignType, IMessageOffset } from './message.interface';
+import { MessageType, MessageAlignType, MessageOffset } from './message.interface';
 import TIcon from '../icon';
-
 import config from '../config';
 const { prefix } = config;
-
 const name = `${prefix}-message`;
 
 export default defineComponent({
@@ -66,7 +64,7 @@ export default defineComponent({
      * @attribute offset
      */
     offset: {
-      type: Object as PropType<IMessageOffset>,
+      type: Object as PropType<MessageOffset>,
       default: () => ({}),
     },
     /**
@@ -74,8 +72,8 @@ export default defineComponent({
      * @attribute icon
      */
     icon: {
-      type: [String, Function],
-      default: '',
+      type: Function,
+      default: () => ({}),
     },
     /**
      * @description 自定义层级
@@ -86,11 +84,11 @@ export default defineComponent({
       default: 5000,
     },
   },
-  emits: ['update:modelValue', 'open', 'visible-change', 'close', 'opened', 'closed'],
+  emits: ['update:modelValue', 'visible-change', 'open', 'opened', 'close', 'closed'],
   setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);
-    const iconName = computed(() => (props.theme === 'success' ? 'tick_fill' : 'warning_fill'));
+    const iconName = computed(() => (props.theme === 'success' ? 'check-filled' : 'warning_fill'));
     const rootClasses = computed(() => ({
       [name]: true,
       [`${name}--${props.theme}`]: true,

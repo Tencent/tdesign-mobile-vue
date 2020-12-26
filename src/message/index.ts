@@ -1,9 +1,9 @@
 import { createApp, defineComponent, ref, h, VNode, App, Plugin, nextTick } from 'vue';
-import { IMessageProps, MessageType } from './message.interface';
+import { MessageProps, MessageType } from './message.interface';
 import { PolySymbol } from '../_utils';
 import MessageComp from './message.vue';
 
-function create(props: IMessageProps): void {
+function create(props: MessageProps): void {
   const visible = ref(false);
   const root: HTMLElement = document.createElement('div');
   document.body.appendChild(root);
@@ -30,8 +30,8 @@ function create(props: IMessageProps): void {
 }
 
 (['info', 'success', 'warning', 'error'] as MessageType[]).forEach((type: MessageType): void => {
-  MessageComp[type] = (options: IMessageProps | string) => {
-    let props: IMessageProps = {
+  MessageComp[type] = (options: MessageProps | string) => {
+    let props: MessageProps = {
       content: '',
       theme: type,
     };
@@ -53,6 +53,6 @@ function create(props: IMessageProps): void {
 };
 
 type MessageFnType = {
-  [k in MessageType]: (options: IMessageProps | string) => void;
+  [k in MessageType]: (options: MessageProps | string) => void;
 };
 export default (MessageComp as unknown) as Plugin & MessageFnType;
