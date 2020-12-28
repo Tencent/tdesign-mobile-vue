@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="tdesign-demo-block">
-      <t-check-group v-model="checkBoxs" ref="checkGroup">
+      <t-check-group ref="checkGroup" v-model="checkBoxs">
         <t-checkbox
           name="1"
           title="复选框1">
@@ -24,21 +24,21 @@
 </template>
 
 <script>
-export default {
-  data() {
+import { ref, defineComponent, watch } from 'vue';
+export default defineComponent({
+  setup() {
+    const checkGroup = ref(null);
+    const checkBoxs = ref(['1']);
+
+    watch(() => checkBoxs.value, (val) => {
+      console.log(Array.from(val));
+    });
+
     return {
-      checkBoxs: ['1'],
+      checkBoxs,
+      checkGroup,
+      toggleSelect: (check) => checkGroup.value.toggleAll(check),
     };
   },
-  watch: {
-    checkBoxs(val) {
-      console.log(Array.from(val));
-    },
-  },
-  methods: {
-    toggleSelect(check) {
-      this.$refs.checkGroup.toggleAll(check);
-    },
-  },
-};
+});
 </script>

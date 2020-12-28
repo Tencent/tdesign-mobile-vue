@@ -1,29 +1,33 @@
 <template>
   <div class="cell-base">
-
     <t-cell-group title="基础步进器">
-      <t-stepper label="标题文字" v-model.number="number1" :step="1" :min="0" :max="100"
-                 :input-width="70" @change="onChange"/>
-      <t-stepper  label="标题文字" v-model.number="number2" :step="1" :min="0" :max="9999"
-                  @change="onChange"/>
-      <t-stepper label="禁用" v-model.number="number3" :step="1" :min="0" :max="9999" disabled/>
+      <t-stepper
+        v-model.number="number1"
+        label="标题文字"
+        :step="1"
+        :min="0"
+        :max="100"
+        :input-width="70"
+        @change="onChange"
+      />
+      <t-stepper v-model.number="number2" label="标题文字" :step="1" :min="0" :max="9999" @change="onChange" />
+      <t-stepper v-model.number="number3" label="禁用" :step="1" :min="0" :max="9999" disabled />
     </t-cell-group>
     <t-cell-group title="带单位步进器">
-      <t-stepper label="标题文字（单位）" v-model.number="number4" :step="1" :min="0" :max="100"/>
+      <t-stepper v-model.number="number4" label="标题文字（单位）" :step="1" :min="0" :max="100" />
 
-      <t-stepper label="禁用（单位）" v-model.number="number5" :step="1" :min="0" :max="100" disabled/>
-
+      <t-stepper v-model.number="number5" label="禁用（单位）" :step="1" :min="0" :max="100" disabled />
     </t-cell-group>
   </div>
 </template>
 
 <script lang="ts">
-import { reactive, toRefs } from 'vue';
+import { reactive, toRefs, defineComponent } from 'vue';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-stepper-demo`;
 
-export default {
+export default defineComponent({
   name,
   setup() {
     const state = reactive({
@@ -41,5 +45,5 @@ export default {
       ...toRefs(state),
     };
   },
-};
+});
 </script>

@@ -2,15 +2,15 @@
   <div class="demo-tab-bar">
     <t-cell-group title="单层级纯文本标签栏">
       <t-tab-bar
-        v-model="value"
-        @change="change"
         v-for="(list, index) in demoList_1"
         :key="index"
+        v-model="value"
         class="mt-12"
+        @change="change"
       >
         <t-tab-bar-item
-          v-for="(item, index) in list"
-          :key="item.name || index"
+          v-for="(item, i) in list"
+          :key="item.name || i"
           :name="item.name"
         >
           {{ item.text }}
@@ -33,15 +33,15 @@
 
     <t-cell-group title="文本加图标标签栏">
       <t-tab-bar
-        v-model="value"
-        @change="change"
         v-for="(list, index) in demoList_2"
         :key="index"
+        v-model="value"
         class="mt-12"
+        @change="change"
       >
         <t-tab-bar-item
-          v-for="(item, index) in list"
-          :key="item.name || index"
+          v-for="(item, i) in list"
+          :key="item.name || i"
           :icon="item.icon"
           :name="item.name"
         >
@@ -52,15 +52,15 @@
 
     <t-cell-group title="纯图标标签栏">
       <t-tab-bar
-        v-model="value"
-        @change="change"
         v-for="(list, index) in demoList_2"
         :key="index"
+        v-model="value"
         class="mt-12"
+        @change="change"
       >
         <t-tab-bar-item
-          v-for="(item, index) in list"
-          :key="item.name || index"
+          v-for="(item, i) in list"
+          :key="item.name || i"
           :icon="item.icon"
           :name="item.name"
         ></t-tab-bar-item>
@@ -134,6 +134,10 @@ export default defineComponent({
       },
     ];
 
+    const change = (changeValue) => {
+      console.log('TabBar 值改变为：', changeValue);
+    };
+
     return {
       demoList_1: [
         list_1,
@@ -148,6 +152,7 @@ export default defineComponent({
       ],
       list_5,
       value,
+      change
     };
   },
 });

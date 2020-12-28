@@ -15,20 +15,23 @@
   </div>
 </template>
 <script>
-export default {
-  data() {
+import { ref, defineComponent, watch } from 'vue';
+export default defineComponent({
+  setup() {
+    const checked1 = ref('1');
+    const checked2 = ref('2');
+
+    watch(() => checked1.value, (val) => {
+      console.log(val);
+    });
+    watch(() => checked2.value, (val) => {
+      console.log(val);
+    });
+
     return {
-      checked1: '1',
-      checked2: '2',
+      checked1,
+      checked2,
     };
   },
-  watch: {
-    checked1(val) {
-      console.log(val);
-    },
-    checked2(val) {
-      console.log(val);
-    },
-  },
-};
+});
 </script>

@@ -1,4 +1,4 @@
-export interface IDialogProps {
+export interface DialogPropsType {
   modelValue?: boolean;
   showHeader?: boolean;
   header?: string;

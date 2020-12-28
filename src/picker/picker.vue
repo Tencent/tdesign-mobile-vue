@@ -18,7 +18,7 @@
 <script lang="ts">
 import { computed, SetupContext, mergeProps, defineComponent } from 'vue';
 import config from '../config';
-import { PickerProps, IPickerProps } from './picker.interface';
+import { PickerProps, PickerPropsType } from './picker.interface';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
@@ -26,7 +26,7 @@ const name = `${prefix}-picker`;
 export default defineComponent({
   props: PickerProps,
   emits: ['change', 'cancel', 'confirm'],
-  setup(props: IPickerProps, context: SetupContext) {
+  setup(props: PickerPropsType, context: SetupContext) {
     const className = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
     const groupClassName = computed(() => `${name}-column__group`);
     const maskClassName = computed(() => `${name}__mask`);

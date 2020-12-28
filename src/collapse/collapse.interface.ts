@@ -1,5 +1,5 @@
 export type onChangeEvent = (name: any) => void;
-export interface ICollapseProps {
+export interface CollapsePropsType {
   /**
    * @description 展开的面板，支持 v-model 双向绑定
    */
@@ -34,7 +34,7 @@ export const CollapseProps = {
   labelWidth: Number,
 };
 
-export interface ICollapsePanelProps {
+export interface CollapsePanelPropsType {
   /**
    * @description 面板标识
    */
@@ -87,7 +87,7 @@ export enum CollapseIcon {
   right = 'arror-right',
 }
 
-export interface ICollapseState {
+export interface CollapseStateType {
   /**
    * @description 折叠面板 class类
    */

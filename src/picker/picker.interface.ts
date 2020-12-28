@@ -1,6 +1,6 @@
 import { ExtractPropTypes } from 'vue';
 
-export interface IPickerProps {
+export interface PickerPropsType {
   theme: string;
   title: string;
   confirmButtonText: string;

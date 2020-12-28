@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent, computed, toRefs, ref, reactive, mergeProps, provide } from 'vue';
 
-import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
+import { DropdownMenuProps, DropdownMenuPropsType } from './dropdown.interface';
 import config from '../config';
 import { DropdownMenuState, context as menuContext, DropdownMenuControl } from './context';
 import TransAniControl from './trans-ani-control';
@@ -38,7 +38,7 @@ export const ItemInstanceManager = {
 export default defineComponent({
   name,
   props: DropdownMenuProps,
-  setup(props: IDropdownMenuProps, { slots }) {
+  setup(props: DropdownMenuPropsType, { slots }) {
     // 通过 slots.default 子成员，计算标题栏选项
     const { innerItems, itemProps } = (() => {
       const children = (slots.default ? slots.default() : [])
