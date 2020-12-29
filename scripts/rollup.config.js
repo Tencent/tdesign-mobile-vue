@@ -16,8 +16,7 @@ import pkg from '../package.json';
 const name = 'tdesign';
 const externalDeps = Object.keys(pkg.dependencies);
 const externalPeerDeps = Object.keys(pkg.peerDependencies);
-const banner =
-`/**
+const banner = `/**
  * ${name} v${pkg.version}
  * (c) ${new Date().getFullYear()} ${pkg.author}
  * @license ${pkg.license}
@@ -29,8 +28,6 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
     eslint({ include: ['**/*.ts', '**/*.js'] }),
     typescript({
       cacheRoot: `${require('os').tmpdir()}/.rpt2_cache`,
-      // TODO: typings
-      useTsconfigDeclarationDir: true,
     }),
     vuePlugin(vueOpt),
     babel({

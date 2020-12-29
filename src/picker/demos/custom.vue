@@ -3,7 +3,7 @@
     <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
       <t-picker-column
         :options="roleOptions"
-        :formatter="(val) => `辣鸡${val}`"
+        :formatter="(val) => val"
         @change="onColumnChange"
       />
     </t-picker>

@@ -85,5 +85,9 @@
       <t-icon name="warning_fill"/>
       <div class="tdesign-demo-icon-name">warning_fill</div>
     </div>
+    <div class="tdesign-demo-icon">
+      <t-icon name="search"/>
+      <div class="tdesign-demo-icon-name">search</div>
+    </div>
   </div>
 </template>

@@ -64,6 +64,19 @@
           @change="onColumnChange" />
       </t-picker>
     </div>
+    <div class="block">
+      <!-- 单列 -->
+      <div class="block--title">弹出层的Picker</div>
+      <t-button theme="primary" @click="visible = true" style="margin-left: 20px;">
+        结合Popup组件</t-button>
+      <t-popup v-model="visible">
+        <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
+          <t-picker-column
+            :options="roleOptions"
+            @change="onColumnChange" />
+        </t-picker>
+      </t-popup>
+    </div>
   </div>
 </template>
 <script lang="ts">
@@ -104,6 +117,7 @@ export default {
       '氪金游戏',
       '辣鸡游戏',
     ]);
+    const visible = ref(false);
     const heroOptions = computed(() => heros[curRoleIndex.value]);
     const onColumnChange = (e: any) => {
       console.log('column:change', e);
@@ -117,9 +131,11 @@ export default {
     };
     const onConfirm = (e: any) => {
       console.log('picker:confirm', e);
+      visible.value = false;
     };
     const onCancel = () => {
       console.log('取消');
+      visible.value = false;
     };
     return {
       roleOptions,
@@ -127,6 +143,7 @@ export default {
       heroOptions,
       gameOptions,
       gameLevelOptions,
+      visible,
       onColumnChange,
       onRoleChange,
       onChange,

@@ -1,8 +1,8 @@
 /*
  * @Author: yuliangyang
  * @Date: 2020-05-25 23:24:58
- * @LastEditTime: 2020-05-26 12:11:33
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-11-28 12:00:40
+ * @LastEditors: angelaguo
  * @Description: In User Settings Edit
  * @FilePath: /tdesign-mobile-vue/docs/mobile/mobile.config.ts
  */
@@ -12,6 +12,11 @@ export default {
       title: 'TDesign',
       url: 'components',
       docs: [
+        {
+          title: 'Badge 徽标',
+          name: 'badge',
+          component: () => import('@/badge/demos/base.vue'),
+        },
         {
           title: 'Button 按钮',
           name: 'button',
@@ -88,6 +93,11 @@ export default {
           component: () => import('@/stepper/demos/base.vue'),
         },
         {
+          title: 'Steps 步骤条',
+          name: 'steps',
+          component: () => import('@/steps/demos/base.vue'),
+        },
+        {
           title: 'Slider 滑块',
           name: 'Slider',
           component: () => import('@/slider/demos/base.vue'),
@@ -106,6 +116,56 @@ export default {
           title: 'DropdownMenu 下拉菜单',
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
+        },
+        {
+          title: 'Popup 弹出层',
+          name: 'popup',
+          component: () => import('@/popup/demos/base.vue'),
+        },
+        {
+          title: 'ActionSheet 动作面板',
+          name: 'actionsheet',
+          component: () => import('@/action-sheet/demos/base.vue'),
+        },
+        {
+          title: 'Collapse 折叠面板',
+          name: 'collapse',
+          component: () => import('@/collapse/demos/index.vue'),
+        },
+        {
+          title: 'TabBar 标签栏',
+          name: 'tab-bar',
+          component: () => import('@/tab-bar/demos/base.vue'),
+        },
+        {
+          title: 'Segment Control 分段器',
+          name: 'segment-control',
+          component: () => import('@/segment-control/demos/base.vue'),
+        },
+        {
+          title: 'Fab 悬浮按钮',
+          name: 'fab',
+          component: () => import('@/fab/demos/base.vue'),
+        },
+        {
+          title: 'ImageViewer 图片预览',
+          name: 'image-viewer',
+          component: () => import('@/image-viewer/demos/base.vue'),
+        },
+        {
+          title: 'Drawer 抽屉',
+          name: 'drawer',
+          component: () => import('@/drawer/demos/base.vue'),
+        },
+        {
+          title: 'Indexes 索引',
+          name: 'indexes',
+          component: () => import('@/indexes/demos/base.vue'),
+        },
+        {
+          title: 'Tabs 选项卡',
+          name: 'tabs',
+          component: () => import('@/tabs/demos/base.vue'),
         },
         {
           title: 'Navbar 导航条',

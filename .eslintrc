@@ -19,6 +19,7 @@
     "camelcase": 0,
     "no-new": 1,
     "new-cap": 0,
+    "max-len": 0,
     "prefer-destructuring": 0,
     "no-underscore-dangle": 0,
     "func-style": 0,
@@ -44,7 +45,13 @@
       "files": ["**/demos/*", "script/**/*", "script/*"],
       "rules": {
         "no-var-requires": 0,
-        "no-console": 0
+        "no-console": 0,
+        "no-param-reassign": [
+          "error",
+          {
+            "props": false
+          }
+        ]
       }
     }
   ]
