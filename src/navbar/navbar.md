@@ -1,5 +1,8 @@
 # Navbar 导航栏
 
+::: Navbar 导航栏 ./demos/index.vue
+:::
+
 ## Props
 
 | 属性 | 类型 | 默认值 | 必传 | 说明 |

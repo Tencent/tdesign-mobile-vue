@@ -28,6 +28,7 @@ const name = `${prefix}-navbar`;
 export default defineComponent({
   name,
   props: NavbarProps,
+  emits: ['on-click-right', 'on-click-text'],
   setup(props: IDNavbarProps, context: SetupContext) {
     const nClassName = computed(() => `${name}`);
     const nBackClass = computed(() => `${name}__back`);
