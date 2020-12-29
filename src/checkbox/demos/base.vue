@@ -150,7 +150,7 @@
     </t-cell-group>
 
     <t-cell-group title="全选和取消">
-      <t-check-group v-model="checkBoxs5" ref="checkGroup">
+      <t-check-group ref="checkGroup" v-model="checkBoxs5">
         <t-cell value-align="left">
           <t-checkbox
             name="1"
@@ -199,23 +199,6 @@
     </t-cell-group>
   </div>
 </template>
-<style lang="less" scoped>
-  .select {
-    font-size: 16px;
-    display: inline-block;
-    width: 50px;
-    text-align: center;
-    border-radius: 2px;
-    color: #FFFFFF;
-  }
-  .select-all {
-    background-color: #0052D9;
-  }
-  .canle-all {
-    background-color: #07c160;
-    margin-left: 20px;
-  }
-</style>
 <script lang="ts">
 import { ref, onMounted, watch, defineComponent } from 'vue';
 
@@ -302,7 +285,7 @@ export default defineComponent({
     );
 
     const toggleSelect = (check: boolean) => {
-      checkGroup.toggleAll(check);
+      checkGroup.value.toggleAll(check);
     };
     return {
       checkGroup,
@@ -322,3 +305,20 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="less" scoped>
+  .select {
+    font-size: 16px;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    border-radius: 2px;
+    color: #FFFFFF;
+  }
+  .select-all {
+    background-color: #0052D9;
+  }
+  .canle-all {
+    background-color: #07c160;
+    margin-left: 20px;
+  }
+</style>

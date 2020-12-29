@@ -29,7 +29,7 @@ interface RadioProps {
   disabled?: boolean;
   contentDisabled?: boolean;
   modelValue?: string;
-  limitTitleRow?: number;
+  limitTitleRow?: number | string;
   limitContentRow?: number;
   checkedColor?: string;
 }
@@ -131,7 +131,7 @@ export default defineComponent({
      * @attribute limitTitleRow
      */
     limitTitleRow: {
-      type: Number,
+      type: [Number, String],
       default: 0,
     },
     /**
@@ -139,7 +139,7 @@ export default defineComponent({
      * @attribute limitContentRow
      */
     limitContentRow: {
-      type: Number,
+      type: [Number, String],
       default: 0,
     },
     /**

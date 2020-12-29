@@ -1,7 +1,7 @@
 import { provide, inject, ref, Ref, watchEffect } from 'vue';
 // import defaultLocale from './lang/zh_CN';
 
-export interface i18nConfig {
+export interface I18nConfig {
   locale?: string;
   componentName?: string;
 }
@@ -28,7 +28,7 @@ const loadLocales = () => {
     .reduce((locs: Array<string>, loc: string) => ({ ...locs, [loc.replace(/\.|\/|ts/g, '')]: locales(loc) }), {});
 };
 
-const createI18n = (config: i18nConfig) => {
+const createI18n = (config: I18nConfig) => {
   const componentName = ref(config.componentName || '');
   const allLocales = loadLocales();
   const lang = ref(config.locale || 'zh_CN');
@@ -69,7 +69,7 @@ const createI18n = (config: i18nConfig) => {
   };
 };
 
-export function provideI18n(config: i18nConfig): void {
+export function provideI18n(config: I18nConfig): void {
   const i18n = createI18n(config);
   provide(i18nSymbol, i18n);
 }

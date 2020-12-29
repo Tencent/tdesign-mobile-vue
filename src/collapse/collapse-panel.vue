@@ -43,9 +43,9 @@ import {
   defineComponent,
 } from 'vue';
 import {
-  ICollapseProps,
-  ICollapseState,
-  ICollapsePanelProps,
+  CollapsePropsType,
+  CollapseStateType,
+  CollapsePanelPropsType,
   CollapsePanelProps,
   CollapseIcon,
   onChangeEvent,
@@ -63,10 +63,10 @@ export default defineComponent({
   components: { TIcon },
   props: CollapsePanelProps,
   emits: ['click'],
-  setup(props: ICollapsePanelProps, context: SetupContext) {
+  setup(props: CollapsePanelPropsType, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
-    const collapseProps = inject('collapseProps') as ICollapseProps;
-    const collapseState = inject('collapseState') as ICollapseState;
+    const collapseProps = inject('collapseProps') as CollapsePropsType;
+    const collapseState = inject('collapseState') as CollapseStateType;
     const onPanelChange = inject('onPanelChange') as onChangeEvent;
 
     // 内容转为数组统一处理

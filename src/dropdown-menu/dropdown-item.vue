@@ -112,7 +112,7 @@
 <script lang="ts">
 import { computed, toRefs, ref, reactive, inject, watch, defineComponent, SetupContext } from 'vue';
 
-import { IDropdownMenuProps, DropdownItemProps, IDropdownItemProps } from './dropdown.interface';
+import { DropdownMenuPropsType, DropdownItemProps, DropdownItemPropsType } from './dropdown.interface';
 import config from '../config';
 import TransAniControl from './trans-ani-control';
 
@@ -122,10 +122,10 @@ const name = `${prefix}-dropdown-item`;
 export default defineComponent({
   name,
   props: DropdownItemProps,
-  emits: ['update:modelValue', 'change'],
-  setup(props: IDropdownItemProps, context: SetupContext) {
+  emits: ['update:modelValue', 'change', 'open', 'opened', 'close', 'closed'],
+  setup(props: DropdownItemPropsType, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
-    const menuProps = inject('dropdownMenuProps') as IDropdownMenuProps;
+    const menuProps = inject('dropdownMenuProps') as DropdownMenuPropsType;
     const menuState = inject('dropdownMenuState') as any;
     const { expandMenu, collapseMenu } = inject('dropdownMenuControl') as any;
     const menuAniControl = inject('dropdownAniControl') as TransAniControl;

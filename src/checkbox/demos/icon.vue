@@ -19,21 +19,23 @@
   </div>
 </template>
 <script>
-import activeIcon from './user-active.png';
-import inactiveIcon from './user-inactive.png';
+import { ref, defineComponent, watch } from 'vue';
 
-export default {
-  data() {
+export default defineComponent({
+  setup() {
+    const activeIcon = ref('https://sola.gtimg.cn/aoi/sola/20201228145929_WkFqkMzJ1x.png');
+    const inactiveIcon = ref('https://sola.gtimg.cn/aoi/sola/20201228145929_J7ntvZWBWD.png');
+    const checkBoxs = ref(['1']);
+
+    watch(() => checkBoxs.value, (val) => {
+      console.log(val);
+    });
+
     return {
       activeIcon,
       inactiveIcon,
-      checkBoxs: ['1'],
+      checkBoxs,
     };
   },
-  watch: {
-    checkBoxs(val) {
-      console.log(Array.from(val));
-    },
-  },
-};
+});
 </script>

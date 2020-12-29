@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { PositionType, IPopupProps } from './popup.interface';
+import { PositionType, PopupProps } from './popup.interface';
 
 import TMask from '../mask';
 
@@ -69,7 +69,7 @@ export default defineComponent({
     },
   },
   emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
-  setup(props: IPopupProps, context: SetupContext) {
+  setup(props: PopupProps, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);

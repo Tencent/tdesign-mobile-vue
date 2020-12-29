@@ -33,12 +33,12 @@
     <t-cell-group title="点击型标签">
       <t-cell>
         <t-check-tag
-          size="large"
           v-for="(fruit, index) in fruits"
-          @click="onClickFruit(index)"
           :key="fruit.name"
+          size="large"
           :checked="fruit.checked"
           :disabled="fruit.disabled"
+          @click="onClickFruit(index)"
         >{{fruit.name}}</t-check-tag>
       </t-cell>
     </t-cell-group>
@@ -46,10 +46,10 @@
       <t-cell>
         <t-check-tag
           v-for="(fruit, index) in fruits2"
-          @click="onClickFruit2(index)"
           :key="fruit.name"
           :checked="fruit.checked"
           :disabled="fruit.disabled"
+          @click="onClickFruit2(index)"
         >{{fruit.name}}</t-check-tag>
       </t-cell>
     </t-cell-group>
@@ -57,9 +57,9 @@
       <t-cell>
         <t-tag
           v-for="(tag,index) in closableTags"
+          :key="tag"
           :closable="true"
           :disabled="tag.disabled"
-          :key="tag"
           theme="primary"
           :size="tag.size"
           @close="onClickClose(index)"
@@ -70,12 +70,12 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-tag-base-demo`;
 
-export default {
+export default defineComponent({
   name,
   setup() {
     const fruits = ref([
@@ -153,7 +153,7 @@ export default {
       onClickClose,
     };
   },
-};
+});
 </script>
 <style lang="less" >
 .tag-base {

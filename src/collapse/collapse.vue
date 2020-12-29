@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { toRefs, provide, reactive, SetupContext, defineComponent, watch } from 'vue';
-import { ICollapseProps, CollapseProps, onChangeEvent } from './collapse.interface';
+import { CollapsePropsType, CollapseProps, onChangeEvent } from './collapse.interface';
 import config from '../config';
 import { toggleElem } from './util';
 const { prefix } = config;
@@ -16,7 +16,7 @@ export default defineComponent({
   name,
   props: CollapseProps,
   emits: ['update:value', 'change'],
-  setup(props: ICollapseProps, context: SetupContext) {
+  setup(props: CollapsePropsType, context: SetupContext) {
     // 根结点类名
     const state = reactive({
       className: name,

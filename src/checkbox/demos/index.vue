@@ -14,12 +14,16 @@
   </div>
 </template>
 <script>
-export default {
-  data() {
+import { ref, defineComponent } from 'vue';
+export default defineComponent({
+  setup() {
+    const checked1 = ref('1');
+    const checked2 = ref('2');
+
     return {
-      checked1: '1',
-      checked2: '2',
+      checked1,
+      checked2,
     };
   },
-};
+});
 </script>
