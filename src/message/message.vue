@@ -88,7 +88,7 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);
-    const iconName = computed(() => (props.theme === 'success' ? 'check-filled' : 'warning_fill'));
+    const iconName = computed(() => (props.theme === 'success' ? 'check-circle-filled' : 'error-circle-filled'));
     const rootClasses = computed(() => ({
       [name]: true,
       [`${name}--${props.theme}`]: true,
