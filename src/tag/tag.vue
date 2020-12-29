@@ -32,7 +32,7 @@ export enum TagSize {
   Medium = 'medium',
   Small = 'small',
 }
-
+ 
 export enum TagShape {
   Square = 'square',
   Round = 'round',
