@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { SetupContext, defineComponent, computed } from 'vue';
-import { ProgressType, progressProps } from './progress.interface';
+import { progressProps, ProgressPropsType } from './progress.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-progress`;
@@ -21,15 +21,14 @@ const name = `${prefix}-progress`;
 export default defineComponent({
   name,
   props: progressProps,
-  setup(props, context: SetupContext) {
-    // console.log('props', props);
+  setup(props: ProgressPropsType, context: SetupContext) {
     console.log('context', context);
 
     const rootClasses = computed(() => [
       `${name}`,
       {
-        [`${name}--info`]: props.type === ProgressType.Info.valueOf(),
-        [`${name}--error`]: props.type === ProgressType.Error.valueOf(),
+        [`${name}--info`]: props.type === 'info',
+        [`${name}--error`]: props.type === 'error',
       },
     ]);
 
