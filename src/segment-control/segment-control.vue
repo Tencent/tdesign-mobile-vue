@@ -33,6 +33,7 @@ export default defineComponent({
       default: false,
     },
   },
+  emits: ['change', 'update:modelValue'],
   setup(props, { emit }) {
     const initActive = (modelValue: ModelValueProps, isMultiple: boolean) => {
       const concatValue = modelValue ? ([] as any[]).concat(modelValue) : [];
