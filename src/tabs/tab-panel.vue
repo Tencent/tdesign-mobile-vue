@@ -12,12 +12,13 @@
 <script lang="ts">
 import { defineComponent, inject, toRefs, computed, watch } from 'vue';
 import config from '../config';
-import { TabPanelProps, ITabPanelProps } from './tabs.interface';
+import { TabPanelProps } from './tabs.interface';
 const { prefix } = config;
+
 export default defineComponent({
   name: `${prefix}-tab-panel`,
   props: TabPanelProps,
-  setup(props: ITabPanelProps) {
+  setup(props) {
     const getCurrentName = inject('getCurrentName') as Function;
     const currentName = computed(() => getCurrentName());
     let isActive = computed(() => currentName.value === props.name);

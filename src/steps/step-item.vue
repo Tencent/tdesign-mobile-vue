@@ -23,17 +23,17 @@
 </template>
 
 <script lang="ts">
-import { computed, ref, inject, SetupContext } from 'vue';
-import { StepItemProps } from './steps.interface';
+import { computed, ref, inject, SetupContext, defineComponent } from 'vue';
+import { StepItemProps, StepStatusEnum } from './steps.interface';
 import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-steps-item`;
 
-export default {
+export default defineComponent({
   name,
   props: StepItemProps,
-  setup(props: StepItemProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const { attrs } = context;
     const index = ref(attrs.index);
 
@@ -55,11 +55,12 @@ export default {
         return props.status;
       }
       if (index.value === current.value) {
-        status = 'process';
-      } else if (index.value < current.value) {
-        status = 'finish';
+        status = StepStatusEnum.Process;
+        // TODO: corret type，暂时写成 any 为了打包编译通过
+      } else if ((index.value as any) < current.value) {
+        status = StepStatusEnum.Finish;
       } else {
-        status = '';
+        status = StepStatusEnum.Empty;
       }
       return status || '';
     });
@@ -89,5 +90,5 @@ export default {
       isDot,
     };
   },
-};
+});
 </script>
