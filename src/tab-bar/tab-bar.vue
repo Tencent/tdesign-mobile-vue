@@ -18,6 +18,7 @@ export default defineComponent({
       default: 0,
     },
   },
+  emits: ['change', 'update:modelValue'],
   setup(props, { emit }) {
     const activeValue = ref(props.modelValue || 0);
     const defaultIndex:Ref<number> = ref(-1);
