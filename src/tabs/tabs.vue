@@ -2,8 +2,15 @@
   <div :class="classes">
     <div :class="navClasses" ref="navScroll">
       <div :class="`${name}__nav-wrap`" ref="navWrap">
-        <div :class="getItemClasses(item)"
-             v-for="item in itemProps"  :key="item.name" @click="(e) => tabClick(e, item)">
+        <div
+          :class="{
+            [`${name}__nav-item`]: true,
+            [`${prefix}-is-active`]: item.name === currentName,
+            [`${prefix}-is-disabled`]: item.disabled
+          }"
+          v-for="item in itemProps"
+          :key="item.name" @click="(e) => tabClick(e, item)"
+        >
           {{item.label}}
         </div>
         <div :class="`${name}__nav-line`" ref="navLine"
@@ -18,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, provide, reactive, ref, nextTick, onBeforeUnmount } from 'vue';
+import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount } from 'vue';
 import config from '../config';
 import { TabsProps } from './tabs.interface';
 
@@ -32,20 +39,7 @@ export default defineComponent({
     const classes = computed(() => [`${name}`, { [`${name}--horizontal`]: props.direction === 'horizontal' }]);
     const navClasses = computed(() => [`${name}__nav`, { [`${name}__nav--scroll`]: props.scrollable }]);
 
-    const state = reactive({
-      currentName: String(props.activeName),
-    });
-    const getItemClasses = (item: { name: string; disabled: any; }) => {
-      const itemClasses:Array<string> = [`${name}__nav-item`];
-      if (item.name === state.currentName) {
-        itemClasses.push(`${prefix}-is-active`);
-      }
-      if (item.disabled) {
-        itemClasses.push(`${prefix}-is-disabled`);
-      }
-      console.log(itemClasses);
-      return itemClasses;
-    };
+    const currentName = ref(props.activeName);
 
     const { itemProps } = (() => {
       const children = (slots.default ? slots.default() : [])
@@ -84,14 +78,14 @@ export default defineComponent({
     });
     const setCurrentName = (val: string)  => {
       emit('change', val);
-      state.currentName = val;
+      currentName.value = val;
     };
     const tabChange = (event: Event, name: string) => {
       setCurrentName(name);
     };
     const tabClick = (event: Event, item: object) => {
       const { name, disabled } = item as any;
-      if (disabled || state.currentName === name) {
+      if (disabled || currentName.value === name) {
         return false;
       }
       tabChange(event, name);
@@ -99,20 +93,20 @@ export default defineComponent({
         moveToActiveTab();
       });
     };
-    provide('getCurrentName', () => state.currentName);
+    provide('currentName', currentName);
+
     return {
       name,
       prefix,
-      state,
       classes,
       navClasses,
+      currentName,
       tabClick,
       itemProps,
       navScroll,
       navWrap,
       navLine,
       lineStyle,
-      getItemClasses,
     };
   },
 });
