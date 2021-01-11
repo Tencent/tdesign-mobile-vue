@@ -7,14 +7,14 @@
       </t-cell>
     </t-cell-group>
     <t-action-sheet
-      type="grid"
       v-model="visible"
+      type="grid"
       :items="items"
       :count="count"
       @select="handleSelect"
       @cancel="handleCancel"
     >
-      <template v-slot:cell="slotProps">
+      <template #cell="slotProps">
         <div class="meun-icon" :style="{backgroundImage: `url(${slotProps.item.icon})`}"></div>
         <div>{{slotProps.item.label}}</div>
       </template>

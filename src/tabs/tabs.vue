@@ -1,12 +1,12 @@
 <template>
   <div :class="classes">
-    <div :class="navClasses" ref="navScroll">
-      <div :class="`${name}__nav-wrap`" ref="navWrap">
-        <div :class="getItemClasses(item)"
-             v-for="item in itemProps"  :key="item.name" @click="(e) => tabClick(e, item)">
+    <div ref="navScroll" :class="navClasses">
+      <div ref="navWrap" :class="`${name}__nav-wrap`">
+        <div v-for="item in itemProps"
+             :key="item.name"  :class="getItemClasses(item)" @click="(e) => tabClick(e, item)">
           {{item.label}}
         </div>
-        <div :class="`${name}__nav-line`" ref="navLine"
+        <div ref="navLine" :class="`${name}__nav-line`"
              :style="lineStyle"></div>
       </div>
     </div>
@@ -20,7 +20,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, provide, reactive, ref, nextTick, onBeforeUnmount } from 'vue';
 import config from '../config';
-import { TabsProps, ITabsProps } from './tabs.interface';
+import { TabsProps } from './tabs.interface';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
@@ -28,7 +28,7 @@ const name = `${prefix}-tabs`;
 export default defineComponent({
   props: TabsProps,
   emits: ['change'],
-  setup(props: ITabsProps,  {  emit, slots }) {
+  setup(props, { emit, slots }) {
     const classes = computed(() => [`${name}`, { [`${name}--horizontal`]: props.direction === 'horizontal' }]);
     const navClasses = computed(() => [`${name}__nav`, { [`${name}__nav--scroll`]: props.scrollable }]);
 
@@ -64,13 +64,13 @@ export default defineComponent({
     const lineStyle = ref('');
     const moveToActiveTab = () => {
       if (navWrap.value && navLine.value) {
-        const tab = navWrap.value.querySelector('.t-is-active');
+        const tab = navWrap.value.querySelector<HTMLElement>('.t-is-active');
         const line = navLine.value;
         if (props.direction === 'horizontal' && tab) {
-          lineStyle.value =            `transform: translateY(${tab.offsetTop}px)`
+          lineStyle.value = `transform: translateY(${tab.offsetTop}px)`
           ;
         } else if (tab) {
-          lineStyle.value =            `transform: translateX(${Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2}px)`
+          lineStyle.value = `transform: translateX(${Number(tab.offsetLeft) + (Number(tab.offsetWidth) / 2) - (line.offsetWidth / 2)}px)`
           ;
         }
       }

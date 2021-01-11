@@ -17,12 +17,12 @@
       @touchmove="handleSidebarTouchmove">
       <div
         v-for="item in state.indexList"
+        :key="item"
         :class="[
           `${state.componentName}__sidebar-item`,
           state.currentSidebar === item ? `${state.componentName}__sidebar-item--active` : '',
         ]"
-        @click.prevent="handleSidebarItemClick(item)"
-        :key="item">{{item}}</div>
+        @click.prevent="handleSidebarItemClick(item)">{{item}}</div>
     </div>
     <div v-if="state.showCurrentSidebar" :class="`${state.componentName}__current`">
       {{state.currentSidebar}}</div>
@@ -46,11 +46,11 @@ interface Touch {
   offsetY: number,
 }
 interface State{
-  componentName: String,
+  componentName: string,
   indexList: Array<string>,
   children: Array<object>,
-  showCurrentSidebar: Boolean,
-  currentSidebar: String
+  showCurrentSidebar: boolean,
+  currentSidebar: string
 }
 
 const touch: Touch = {
@@ -63,7 +63,7 @@ const touch: Touch = {
 };
 
 let children: Array<HTMLElement> = [];
-const componentName: string = `${prefix}-indexes`;
+const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
   props: {
@@ -71,7 +71,7 @@ export default defineComponent({
   },
   setup(props: IndexesProps) {
     let timeOut: number;
-    let rootScrollMask: boolean = false;
+    let rootScrollMask = false;
     const indexesRoot = ref(null);
     const state: State = reactive({
       componentName,

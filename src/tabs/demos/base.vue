@@ -28,7 +28,7 @@
       </t-tabs>
     </t-cell-group>
     <t-cell-group title="横向可滑动选项卡">
-      <t-tabs active-name="1" @change="onChange" :scrollable="true">
+      <t-tabs active-name="1" :scrollable="true" @change="onChange">
         <t-tab-panel name="1" label="选项卡1">
           <p style="padding: 25px;">选项卡1</p>
         </t-tab-panel>
@@ -59,8 +59,8 @@
       </t-tabs>
     </t-cell-group>
     <t-cell-group title="竖向选项卡">
-      <t-tabs active-name="1" @change="onChange"
-              direction="horizontal" >
+      <t-tabs active-name="1" direction="horizontal"
+              @change="onChange" >
         <t-tab-panel name="1" label="选项卡1">
           <p style="padding: 25px;">选项卡1</p>
         </t-tab-panel>
@@ -73,8 +73,8 @@
       </t-tabs>
     </t-cell-group>
     <t-cell-group title="竖向可滑动选项卡">
-      <t-tabs active-name="1" @change="onChange"
-              :scrollable="true" direction="horizontal" style="height: 200px">
+      <t-tabs active-name="1" :scrollable="true"
+              direction="horizontal" style="height: 200px" @change="onChange">
         <t-tab-panel name="1" label="选项卡1">
           <p style="padding: 25px;">选项卡1</p>
         </t-tab-panel>

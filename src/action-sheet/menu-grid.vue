@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${name}__menu-wrapper`" ref="containerWrapper">
+  <div ref="containerWrapper" :class="`${name}__menu-wrapper`">
     <div
       :class="`${name}__menu-slider`"
       :style="wrapperStyle"
@@ -7,7 +7,7 @@
       @touchmove="handleTouchmove"
       @touchend="handleTouchend"
     >
-      <div :class="`${name}__menu`" v-for="(items, i) in actionItems" :key="i">
+      <div v-for="(items, i) in actionItems" :key="i" :class="`${name}__menu`">
         <div>
           <button
             v-for="(item, index) in items"
@@ -29,7 +29,7 @@
       </div>
 
     </div>
-    <div :class="`${name}__indicator`" v-if="pageNum > 1">
+    <div v-if="pageNum > 1" :class="`${name}__indicator`">
       <div
         v-for="index in pageNum"
         :key="index"

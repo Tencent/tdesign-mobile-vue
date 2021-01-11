@@ -27,7 +27,7 @@ export default defineComponent({
     value: String,
   },
   setup(props: IndexesCellProps, context: SetupContext) {
-    const currentSidebar: string = '';
+    const currentSidebar = '';
     const { emit } = context;
     const state: object = reactive({
       componentName: `${prefix}-indexes__cell`,

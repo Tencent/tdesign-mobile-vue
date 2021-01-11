@@ -1,7 +1,7 @@
 <template>
   <div :class="nClassName">
     <div :class="nBackClass" >
-      <t-icon v-if="leftArrow" @click="handleBack" :class="`${nBackClass}--arrow`" name="arrow-left"></t-icon>
+      <t-icon v-if="leftArrow" :class="`${nBackClass}--arrow`" name="arrow-left" @click="handleBack"></t-icon>
       <slot name="left">
       </slot>
     </div>
@@ -20,7 +20,7 @@
 <script lang='ts'>
 import config from '../config';
 import { computed, defineComponent, SetupContext } from 'vue';
-import { NavbarProps, IDNavbarProps } from './navbar.interface';
+import { NavbarProps } from './navbar.interface';
 
 const { prefix } = config;
 const name = `${prefix}-navbar`;
@@ -28,7 +28,7 @@ const name = `${prefix}-navbar`;
 export default defineComponent({
   name,
   props: NavbarProps,
-  setup(props: IDNavbarProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const nClassName = computed(() => `${name}`);
     const nBackClass = computed(() => `${name}__back`);
     const nCloseClass = computed(() => `${name}__close`);
@@ -37,7 +37,7 @@ export default defineComponent({
     const nTitleContent = computed(() => {
       const { title, maxLen } = props;
       if (title && title.trim().length > maxLen) {
-        return `${title.split(0, maxLen)}...`;
+        return `${title.slice(0, maxLen)}...`;
       }
       return title;
     });
@@ -48,11 +48,11 @@ export default defineComponent({
       }
     };
 
-    const handleMore = (evt) => {
+    const handleMore = (evt: TouchEvent) => {
       context.emit('on-click-right', evt);
     };
 
-    const clickText = (evt) => {
+    const clickText = (evt: TouchEvent) => {
       context.emit('on-click-text', evt);
     };
 
