@@ -1,20 +1,17 @@
-<!--
- * @Author: Colahan
- * @Date: 2020-11-24 16:16:16
- * @FilePath: /tdesign-mobile-vue/src/indexes/indexes.vue
--->
 <template>
   <div
     ref="indexesRoot"
     :class="state.componentName"
     @touchstart="handleRootTouchstart"
     @touchend="handleRootTouchend"
-    @scroll="handleRootScroll">
+    @scroll="handleRootScroll"
+  >
     <div
       v-if="state.indexList.length > 0"
       :class="`${state.componentName}__sidebar`"
       @touchstart="handleSidebarTouchstart"
-      @touchmove="handleSidebarTouchmove">
+      @touchmove="handleSidebarTouchmove"
+    >
       <div
         v-for="item in state.indexList"
         :key="item"
@@ -22,10 +19,14 @@
           `${state.componentName}__sidebar-item`,
           state.currentSidebar === item ? `${state.componentName}__sidebar-item--active` : '',
         ]"
-        @click.prevent="handleSidebarItemClick(item)">{{item}}</div>
+        @click.prevent="handleSidebarItemClick(item)"
+      >
+        {{ item }}
+      </div>
     </div>
     <div v-if="state.showCurrentSidebar" :class="`${state.componentName}__current`">
-      {{state.currentSidebar}}</div>
+      {{ state.currentSidebar }}
+    </div>
     <slot></slot>
   </div>
 </template>
@@ -34,23 +35,23 @@ import { ref, reactive, defineComponent, PropType, onMounted, watchEffect } from
 import config from '../config';
 const { prefix } = config;
 
-interface IndexesProps{
-  indexList?: Array<string>
+interface IndexesProps {
+  indexList?: Array<string>;
 }
 interface Touch {
-  startX: number,
-  startY: number,
-  deltaX: number,
-  deltaY: number,
-  offsetX: number,
-  offsetY: number,
+  startX: number;
+  startY: number;
+  deltaX: number;
+  deltaY: number;
+  offsetX: number;
+  offsetY: number;
 }
-interface State{
-  componentName: string,
-  indexList: Array<string>,
-  children: Array<object>,
-  showCurrentSidebar: boolean,
-  currentSidebar: string
+interface State {
+  componentName: string;
+  indexList: Array<string>;
+  children: Array<Record<string, unknown>>;
+  showCurrentSidebar: boolean;
+  currentSidebar: string;
 }
 
 const touch: Touch = {
@@ -67,7 +68,10 @@ const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
   props: {
-    indexList: Array as PropType<Array<string>>,
+    indexList: {
+      type: Array as PropType<Array<string>>,
+      default: [],
+    },
   },
   setup(props: IndexesProps) {
     let timeOut: number;
@@ -86,12 +90,13 @@ export default defineComponent({
         const { dataset } = ele;
         return dataset && dataset.index === state.currentSidebar;
       });
-      targets && targets[0].scrollIntoView();
+      targets?.[0].scrollIntoView();
     };
 
-    const getTitleNode = () => Array
-      .from(document.getElementsByClassName(`${componentName}__anchor`))
-      .filter((x): x is HTMLElement => x instanceof HTMLElement);
+    const getTitleNode = () =>
+      Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter(
+        (x): x is HTMLElement => x instanceof HTMLElement,
+      );
 
     const setCurrentSidebar = (index: string) => {
       state.currentSidebar = index;
@@ -130,11 +135,7 @@ export default defineComponent({
       const { clientX, clientY } = touches[0];
 
       const target = document.elementFromPoint(clientX, clientY);
-      if (
-        target
-        && target.className === `${componentName}__sidebar-item`
-        && target instanceof HTMLElement
-      ) {
+      if (target && target.className === `${componentName}__sidebar-item` && target instanceof HTMLElement) {
         const { index } = target.dataset;
         if (index !== undefined && state.currentSidebar !== index) {
           setCurrentSidebar(index);

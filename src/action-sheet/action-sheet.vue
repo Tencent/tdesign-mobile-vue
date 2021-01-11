@@ -91,6 +91,7 @@ export default defineComponent({
       default: '取消',
     },
   },
+  emits: ['select', 'update:modelValue', 'cancel', 'close'],
   setup(props, context: SetupContext) {
     const actionItems = ref([]);
 

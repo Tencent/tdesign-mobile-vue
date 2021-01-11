@@ -100,16 +100,12 @@ export default defineComponent({
       },
     );
 
-<<<<<<< HEAD
     const handleMaskClick = () => {
       context.emit('close');
       context.emit('update:modelValue', false);
     };
 
     const handleMove = (e: TouchEvent) => {
-=======
-    function handleMove(e: TouchEvent) {
->>>>>>> maggieytlin/tdesign-mobile-vue-feature/search-field
       if (props.lockScroll) {
         e.preventDefault();
       }

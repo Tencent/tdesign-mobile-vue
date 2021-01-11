@@ -1,4 +1,4 @@
-export interface IDNavbarProps {
+export interface DNavbarProps {
   title?: string,
   maxLen?: number,
   leftArrow?: boolean,

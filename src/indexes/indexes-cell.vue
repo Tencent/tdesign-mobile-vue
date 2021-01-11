@@ -1,8 +1,3 @@
-<!--
- * @Author: Colahan
- * @Date: 2020-11-24 16:16:16
- * @FilePath: /tdesign-mobile-vue/src/indexes/indexes.vue
--->
 <template>
   <div :data-value="state.value" :class="state.componentName" @click="handleClick">
     {{state.title}}</div>
@@ -24,12 +19,15 @@ export default defineComponent({
       type: String,
       default: '',
     },
-    value: String,
+    value: {
+      type: String,
+      default: '',
+    },
   },
   setup(props: IndexesCellProps, context: SetupContext) {
     const currentSidebar = '';
     const { emit } = context;
-    const state: object = reactive({
+    const state = reactive({
       componentName: `${prefix}-indexes__cell`,
       title: props?.title,
       value: props?.value,
