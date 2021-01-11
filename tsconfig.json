@@ -11,7 +11,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "moduleResolution": "node",
     "jsx": "preserve",
     "experimentalDecorators": true,
@@ -20,7 +20,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },

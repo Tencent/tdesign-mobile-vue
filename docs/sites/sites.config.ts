@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-11-26 12:07:57
- * @LastEditors: angelaguo
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
- */
 export default {
   navs: {
     components: {
@@ -37,6 +29,11 @@ export default {
           title: '基础组件',
           type: 'component', // 组件文档
           children: [
+            {
+              title: 'Badge 徽标',
+              name: 'badge',
+              component: () => import('@/badge/badge.md'),
+            },
             {
               title: 'Icon 图标',
               name: 'icon',
@@ -79,8 +76,8 @@ export default {
             },
             {
               title: 'CheckBox 复选框',
-              name: 'check-box',
-              component: () => import('@/check-box/check-box.md'),
+              name: 'checkbox',
+              component: () => import('@/checkbox/checkbox.md'),
             },
             // {
             //   title: 'Mask',
@@ -91,6 +88,11 @@ export default {
               title: 'Stepper 步进器',
               name: 'stepper',
               component: () => import('@/stepper/stepper.md'),
+            },
+            {
+              title: 'Steps 步进器',
+              name: 'steps',
+              component: () => import('@/steps/steps.md'),
             },
             {
               title: 'Slider 滑动选择器',
@@ -108,9 +110,55 @@ export default {
               component: () => import('@/dropdown-menu/dropdown-menu.md'),
             },
             {
+              title: 'Popup 弹出层',
+              name: 'popup',
+              component: () => import('@/popup/popup.md'),
+            },
+            {
+              title: 'ActionSheet 动作面板',
+              name: 'actionsheet',
+              component: () => import('@/action-sheet/action-sheet.md'),
+            },
+            {
               title: 'Collapse 折叠面板',
               name: 'collapse',
               component: () => import('@/collapse/collapse.md'),
+            },
+          ],
+        },
+        {
+          title: '导航组件',
+          type: 'component',
+          children: [
+            {
+              title: 'TabBar 标签栏',
+              name: 'tab-bar',
+              component: () => import('@/tab-bar/tab-bar.md'),
+            },
+            {
+              title: 'SegmentControl 分段器',
+              name: 'segment-control',
+              component: () => import('@/segment-control/segment-control.md'),
+            },
+            {
+              title: 'ImageViewer 图片预览',
+              name: 'image-viewer',
+              component: () => import('@/image-viewer/image-viewer.md'),
+            },
+            {
+              title: 'Drawer 抽屉',
+              name: 'drawer',
+              component: () => import('@/drawer/drawer.md'),
+            },
+            {
+              title: 'Tabs 选项卡',
+              name: 'tabs',
+              component: () => import('@/tabs/tabs.md'),
+            },
+            {
+              title: 'Navbar 导航条',
+              name: 'navbar',
+              component: () => import('@/navbar/navbar.md'),
             },
           ],
         },
@@ -132,6 +180,28 @@ export default {
               title: 'NoticeBar 公告栏',
               name: 'noticebar',
               component: () => import('@/noticebar/noticebar.md'),
+            },
+          ],
+        },
+        {
+          title: '输入类组件',
+          type: 'component',
+          children: [
+            {
+              title: 'Fab 悬浮按钮',
+              name: 'fab',
+              component: () => import('@/fab/fab.md'),
+            },
+          ],
+        },
+        {
+          title: '操作控件',
+          type: 'component', // 组件文档
+          children: [
+            {
+              title: 'Indexes 索引',
+              name: 'indexes',
+              component: () => import('@/indexes/indexes.md'),
             },
           ],
         },

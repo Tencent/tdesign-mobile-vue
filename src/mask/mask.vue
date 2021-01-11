@@ -1,15 +1,15 @@
 <template>
-  <div :class="classes"></div>
+  <div :class="classes" @click="handleClick" @touchmove.prevent />
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent } from 'vue';
+import { computed, defineComponent, SetupContext } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-mask`;
 
 export interface MaskProps {
-  transparent: Boolean;
+  transparent: boolean;
 }
 
 export default defineComponent({
@@ -20,7 +20,8 @@ export default defineComponent({
       default: false,
     },
   },
-  setup(props: MaskProps) {
+  emits: ['click'],
+  setup(props: MaskProps, context: SetupContext) {
     const classes = computed(() => ({
       [`${name}`]: !props.transparent,
       [`${name}--transparent`]: props.transparent,
@@ -28,7 +29,7 @@ export default defineComponent({
 
     return {
       classes,
-      ...toRefs(props),
+      handleClick: () => context.emit('click'),
     };
   },
 });

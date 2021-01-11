@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 // 获取相对定位容器
 export const findRelativeContainer = (dom: any) => {
   let node = dom;
@@ -15,10 +16,12 @@ export const findRelativeContainer = (dom: any) => {
 // 获取相对定位视区参数
 export const findRelativeRect = (dom: any) => {
   const container = findRelativeContainer(dom);
-  const containerRect = container ? container.getBoundingClientRect() : {
-    top: 0,
-    left: 0,
-  };
+  const containerRect = container
+    ? container.getBoundingClientRect()
+    : {
+        top: 0,
+        left: 0,
+      };
   const { top, left, bottom, right, width, height } = dom.getBoundingClientRect();
   return {
     top: top - containerRect.top,

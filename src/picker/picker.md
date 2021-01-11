@@ -18,6 +18,9 @@
 ::: demo 联动选择 ./demos/cascade.vue
 :::
 
+::: demo 弹窗层的Picker ./demos/popup-picker.vue
+:::
+
 ## Props
 
 ### Picker Props

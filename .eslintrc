@@ -1,51 +1,48 @@
 {
-  "extends": ["@tencent/eslint-config-tencent", "plugin:vue/essential"],
   "env": {
     "browser": true,
     "node": true,
     "jest": true,
     "es6": true
   },
+  "extends": [
+    "@tencent/eslint-config-tencent",
+    "@tencent/eslint-config-tencent/ts",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/vue3-recommended",
+    "prettier",
+    "prettier/vue",
+    "prettier/@typescript-eslint"
+  ],
   "plugins": ["vue", "@typescript-eslint"],
+  "parser": "vue-eslint-parser",
   "parserOptions": {
+    "project": ["./tsconfig.json"],
     "parser": "@typescript-eslint/parser",
-    "sourceType": "module",
-    "allowImportExportEverywhere": true,
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "extraFileExtensions": [".vue"],
+    "sourceType": "module"
   },
   "rules": {
     "camelcase": 0,
     "no-new": 1,
     "new-cap": 0,
+    "max-len": 0,
     "prefer-destructuring": 0,
     "no-underscore-dangle": 0,
     "func-style": 0,
     "no-console": 0,
     "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/no-unused-vars": ["error"]
-  },
-  "overrides": [
-    {
-      "files": ["*.vue"],
-      "rules": {
-        "indent": 2,
-        "no-mixed-operators": 0,
-        "vue/html-indent": [2, 2],
-        "vue/return-in-computed-property": 1,
-        "vue/order-in-components": 2,
-        "vue/component-name-in-template-casing": [2, "kebab-case"],
-        "vue/require-default-prop": 0,
-        "vue/no-v-model-argument": 0
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": false
+        }
       }
-    },
-    {
-      "files": ["**/demos/*", "script/**/*", "script/*"],
-      "rules": {
-        "no-var-requires": 0,
-        "no-console": 0
-      }
-    }
-  ]
+    ]
+  }
 }

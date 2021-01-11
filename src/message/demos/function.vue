@@ -8,12 +8,13 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue';
 import Message from '../index';
-export default {
-  methods: {
-    onClick(type) {
-      Message[type](type);
-    },
+export default defineComponent({
+  setup() {
+    return {
+      onClick: (type) => Message[type](type)
+    };
   },
-};
+});
 </script>

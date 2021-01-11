@@ -1,7 +1,7 @@
 <template>
   <div class="input-base" style="padding-bottom: 20px">
     <t-cell-group title="基础输入框">
-      <t-input label="标准五个字" placeholder="预设文本(非必填)" v-model="text" right-icon="circle_help" />
+      <t-input v-model="text" label="标准五个字" placeholder="预设文本(非必填)" right-icon="circle_help" />
       <t-input label="一个很长的标题需换行" placeholder="预设文本保持上下居中" >
         <template #rightIcon>
           <t-icon name="circle_info" />
@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue';
-export default {
+import { reactive, toRefs, defineComponent } from 'vue';
+export default defineComponent({
   setup() {
     const state = reactive({
       text: '',
@@ -56,5 +56,5 @@ export default {
       ...toRefs(state),
     };
   },
-};
+});
 </script>

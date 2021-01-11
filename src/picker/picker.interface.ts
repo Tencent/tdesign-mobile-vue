@@ -1,11 +1,11 @@
 import { ExtractPropTypes } from 'vue';
 
-export interface IPickerProps {
-  theme: string,
-  title: string,
-  confirmButtonText: string,
-  cancelButtonText: string,
-};
+export interface PickerPropsType {
+  theme: string;
+  title: string;
+  confirmButtonText: string;
+  cancelButtonText: string;
+}
 
 export const PickerProps = {
   /**
@@ -51,7 +51,7 @@ export const pickerColumnProps = {
    */
   options: {
     type: Array,
-    default: () => [],
+    default: [],
   },
   /**
    * @description 需要显示对象对应的key，当options为对象数组当时候用
@@ -67,7 +67,7 @@ export const pickerColumnProps = {
    */
   formatter: {
     type: Function,
-    default: (val: string) => val,
+    default: (value: string): string  => value,
   },
   /**
    * @description 默认选中的索引，默认值为0
@@ -80,7 +80,7 @@ export const pickerColumnProps = {
 };
 
 export interface PickerOptions {
-  defaultIndex?: number,
-  el: HTMLElement | HTMLDivElement | HTMLUListElement,
-  onChange: Function,
+  defaultIndex?: number;
+  el: HTMLElement | HTMLDivElement | HTMLUListElement;
+  onChange: (index: number) => void;
 }

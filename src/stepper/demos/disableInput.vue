@@ -1,19 +1,18 @@
 <template>
   <div class="cell-base">
-
     <t-cell-group title="禁止输入">
-      <t-stepper label="禁止输入" v-model.number="number" :step="1" :min="0" :max="100"
-                 disableInput/>
+      <t-stepper v-model.number="number" label="禁止输入" :step="1" :min="0" :max="100" disable-input />
     </t-cell-group>
   </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
   setup() {
     return {
-      number: 10,
+      number: ref(10),
     };
   },
-};
+});
 </script>

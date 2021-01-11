@@ -1,27 +1,22 @@
 <template>
   <div :class="`${name}`">
-    <ul
-      :class="`${name}--list`"
-      ref="rateWrapper"
-      @touchstart="onTouchstart"
-      @touchmove="onTouchmove"
-    >
-      <li :class="classes(n)" v-for="n in count" :key="n">
+    <ul ref="rateWrapper" :class="`${name}--list`" @touchstart="onTouchstart" @touchmove="onTouchmove">
+      <li v-for="n in count" :key="n" :class="classes(n)">
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
-              <t-icon name="star_fill" />
+              <t-icon name="star-filled" />
             </slot>
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
             <slot name="icon">
-              <t-icon name="star_fill" />
+              <t-icon name="star-filled" />
             </slot>
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
           <slot name="icon">
-            <t-icon name="star_fill" />
+            <t-icon name="star-filled" />
           </slot>
         </span>
       </li>
@@ -29,10 +24,11 @@
     <span
       v-if="showText"
       :style="{
-        color: textColor
+        color: textColor,
       }"
       :class="`${name}--text`"
-    >{{rateText}}</span>
+      >{{ rateText }}</span
+    >
   </div>
 </template>
 
@@ -135,6 +131,7 @@ export default defineComponent({
   name,
   components: { TIcon },
   props: rateProps,
+  emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
     const actualVal = computed(() => props.modelValue || props.value) as ComputedRef<number>;
@@ -171,10 +168,7 @@ export default defineComponent({
         Array.from(items).forEach((node, index) => {
           const { left, width } = node.getBoundingClientRect();
           if (props.allowHalf) {
-            ranges.push(
-              { score: index + 0.5, left },
-              { score: index + 1, left: left + (width / 2) },
-            );
+            ranges.push({ score: index + 0.5, left }, { score: index + 1, left: left + width / 2 });
           } else {
             ranges.push({ score: index + 1, left });
           }

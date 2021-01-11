@@ -1,12 +1,12 @@
 import vueToast from './toast.vue';
 import { PolySymbol } from '../_utils';
 
-import { createApp, defineComponent, App } from 'vue';
+import { createApp, App, DefineComponent } from 'vue';
 import { ToastProps, ToastPropsDefault } from './toast.interface';
 
 let instance: any = null;
 
-function Toast(props: any): Object {
+function Toast(props: ToastProps): DefineComponent {
   const root: HTMLElement = document.createElement('div');
   document.body.appendChild(root);
 
@@ -18,7 +18,9 @@ function Toast(props: any): Object {
   if (instance) {
     instance.clear();
   }
-  instance = defineComponent(vueToast);
+  // XXX: 实例化问题
+  // instance = defineComponent(vueToast);
+  instance = vueToast;
 
   instance.clear = () => {
     clearTimeout(instance.timer);
@@ -42,7 +44,7 @@ Toast.clear = () => {
   }
 };
 
-(['loading', 'success', 'fail']).forEach((type: string): void => {
+['loading', 'success', 'fail'].forEach((type: string): void => {
   Toast[type] = (options: ToastProps | string) => {
     let props: ToastProps = {
       message: '',

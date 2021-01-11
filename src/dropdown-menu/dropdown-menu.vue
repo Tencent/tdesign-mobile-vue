@@ -1,13 +1,8 @@
 <template>
   <div :class="classes">
     <div ref="refBar" :class="styleBar">
-      <div
-        v-for="item in itemProps"
-        :key="item.itemId"
-        :class="styleBarItem(item)"
-        @click="expandMenu(item)"
-      >
-        <div :class="`${name}__title`">{{item.title}}</div>
+      <div v-for="item in itemProps" :key="item.itemId" :class="styleBarItem(item)" @click="expandMenu(item)">
+        <div :class="`${name}__title`">{{ item.title }}</div>
       </div>
     </div>
     <component :is="innerItems" />
@@ -17,7 +12,7 @@
 <script lang="ts">
 import { defineComponent, computed, toRefs, ref, reactive, mergeProps, provide } from 'vue';
 
-import { DropdownMenuProps, IDropdownMenuProps } from './dropdown.interface';
+import { DropdownMenuProps, DropdownMenuPropsType } from './dropdown.interface';
 import config from '../config';
 import { DropdownMenuState, context as menuContext, DropdownMenuControl } from './context';
 import TransAniControl from './trans-ani-control';
@@ -28,7 +23,7 @@ const name = `${prefix}-dropdown-menu`;
 
 export const ItemInstanceManager = {
   usedIds: {},
-  generateId() {
+  generateId(): string {
     const { usedIds } = this;
     let id;
     do {
@@ -43,7 +38,7 @@ export const ItemInstanceManager = {
 export default defineComponent({
   name,
   props: DropdownMenuProps,
-  setup(props: IDropdownMenuProps, { slots }) {
+  setup(props: DropdownMenuPropsType, { slots }) {
     // 通过 slots.default 子成员，计算标题栏选项
     const { innerItems, itemProps } = (() => {
       const children = (slots.default ? slots.default() : [])
@@ -75,9 +70,7 @@ export default defineComponent({
     provide('dropdownMenuState', state);
     provide('dropdownAniControl', aniControl);
     // 根结点样式
-    const classes = computed(() => [
-      `${name}`,
-    ]);
+    const classes = computed(() => [`${name}`]);
     // 标题栏结点引用
     const refBar = ref(null);
     // 标题栏样式
