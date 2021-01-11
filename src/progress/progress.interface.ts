@@ -1,9 +1,6 @@
-import { ExtractPropTypes } from 'vue';
+import { ExtractPropTypes, PropType } from 'vue';
 
-export enum ProgressType {
-  Info = 'info',
-  Error = 'error',
-};
+export type ProgressType = 'info' | 'error';
 
 export type ProgressPropsType = ExtractPropTypes<typeof progressProps>;
 
@@ -53,7 +50,7 @@ export const progressProps = {
    * @attribute type
    */
   type: {
-    type: String,
-    default: ProgressType.Info,
+    type: String as PropType<ProgressType>,
+    default: 'info',
   },
 };

@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   setup() {
     const disabledValue = ref(true);
     function onChange($event) {
@@ -27,5 +27,5 @@ export default {
       onChange,
     };
   },
-};
+});
 </script>

@@ -5,9 +5,9 @@
   </div>
 </template>
 <script lang="ts">
-import { computed } from 'vue';
+import { computed, defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
-export default {
+export default defineComponent({
   setup() {
     const router = useRouter();
     const title = computed(() => router.currentRoute.value.meta.title);
@@ -18,5 +18,5 @@ export default {
     };
     return { onBack, title };
   },
-};
+});
 </script>

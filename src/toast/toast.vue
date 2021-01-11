@@ -1,8 +1,8 @@
 <template>
   <div>
-    <t-mask v-show="showOverlay"/>
+    <t-mask v-show="showOverlay" />
     <div :class="classes">
-      <t-icon :name="_icon" :class="`${name}__icon`" v-if="_icon" />
+      <t-icon v-if="computedIcon" :name="computedIcon" :class="`${name}__icon`" />
       <div :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>
@@ -26,12 +26,18 @@ export default defineComponent({
      * @description 消息内容
      * @attribute message
      */
-    message: String,
+    message: {
+      type: String,
+      default: '',
+    },
     /**
      * @description 提示类型
      * @attribute type
      */
-    type: String,
+    type: {
+      type: String,
+      default: '',
+    },
     /**
      * @description 展示位置
      * @attribute position
@@ -44,7 +50,10 @@ export default defineComponent({
      * @description 自定义图标
      * @attribute icon
      */
-    icon: [String, Function],
+    icon: {
+      type: [String, Function],
+      default: '',
+    },
     /**
      * @description 是否显示背景遮罩
      * @attribute showOverlay
@@ -60,7 +69,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const _icon = computed(() => {
+    const computedIcon = computed(() => {
       let icon = props.type && ToastTypeIcon[props.type];
       if (props.icon) icon = props.icon;
       return icon;
@@ -69,23 +78,18 @@ export default defineComponent({
     const classes = computed(() => [
       `${name}`,
       {
-        [`${name}--text`]:
-          !_icon.value,
-        [`${name}--icononly`]:
-          !props.message && _icon.value,
-        [`${name}--middle`]:
-          props.position === ToastPosition.Middle.valueOf(),
-        [`${name}--top`]:
-          props.position === ToastPosition.Top.valueOf(),
-        [`${name}--bottom`]:
-          props.position === ToastPosition.Bottom.valueOf(),
+        [`${name}--text`]: !computedIcon.value,
+        [`${name}--icononly`]: !props.message && computedIcon.value,
+        [`${name}--middle`]: props.position === ToastPosition.Middle.valueOf(),
+        [`${name}--top`]: props.position === ToastPosition.Top.valueOf(),
+        [`${name}--bottom`]: props.position === ToastPosition.Bottom.valueOf(),
       },
     ]);
 
     return {
       name: ref(name),
       classes,
-      _icon,
+      computedIcon,
       ...toRefs(props),
     };
   },

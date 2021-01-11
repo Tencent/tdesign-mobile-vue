@@ -38,7 +38,7 @@
     <t-message v-model="visible1" content="成功消息" theme="success"></t-message>
     <t-message v-model="visible2" content="警示消息" theme="warning"></t-message>
     <t-message v-model="visible3" content="错误消息" theme="error"></t-message>
-    <t-message v-model="visible4" content="message" :offset="{top: 0, left: 0, right: 0}" />
+    <t-message v-model="visible4" content="message" :offset="{ top: 0, left: 0, right: 0 }" />
     <t-message v-model="visible5" content="5000ms后消失" :duration="5000"></t-message>
     <t-message v-model="visible6" content="居中对齐" align="center"></t-message>
     <t-message v-model="visible7">纯文本，不带icon</t-message>
@@ -46,32 +46,39 @@
 </template>
 
 <script>
+import { defineComponent, ref } from 'vue';
 import Message from '../index';
-export default {
-  data() {
+
+export default defineComponent({
+  setup() {
+    const visible = ref(false);
+    const visible1 = ref(false);
+    const visible2 = ref(false);
+    const visible3 = ref(false);
+    const visible4 = ref(false);
+    const visible5 = ref(false);
+    const visible6 = ref(false);
+    const visible7 = ref(false);
+
     return {
-      visible: false,
-      visible1: false,
-      visible2: false,
-      visible3: false,
-      visible4: false,
-      visible5: false,
-      visible6: false,
-      visible7: false,
+      visible,
+      visible1,
+      visible2,
+      visible3,
+      visible4,
+      visible5,
+      visible6,
+      visible7,
+      onClick: (type) => Message[type](type),
     };
   },
-  methods: {
-    onClick(type) {
-      Message[type](type);
-    },
-  },
-};
+});
 </script>
 
 <style lang="less">
-  .message-base {
-    .t-button:not(:last-child) {
-      margin-right: 24px;
-    }
+.message-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
+}
 </style>

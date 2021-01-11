@@ -8,15 +8,15 @@
   </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-import Dialog from '../index.func';
+import Dialog from './index.func';
 import config from '@/config';
 
 const { prefix } = config;
 const name = `${prefix}-demo--dialog`;
 
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
@@ -44,7 +44,7 @@ export default {
         content: '我的家里有个人很酷',
         knowContent: 'i know',
         placeholderText: '请输入您的名字',
-        onConfirm: (e:any) => {
+        onConfirm: (e: string) => {
           console.log('dialog:confirm', e);
         },
         onCancel: () => {
@@ -56,7 +56,7 @@ export default {
       });
     },
   },
-};
+});
 </script>
 
 <style lang="less" scoped>

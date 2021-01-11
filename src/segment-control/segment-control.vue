@@ -1,10 +1,10 @@
 <template>
   <div :class="name">
-    <ul :class="`${name}__list`" v-if="items.length > 0">
+    <ul v-if="items.length > 0" :class="`${name}__list`">
       <li
-        :class="[`${name}__item`, currentActive.includes(item.value || index) && `${prefix}-is-active`]"
         v-for="(item, index) in items"
         :key="item.value || index"
+        :class="[`${name}__item`, currentActive.includes(item.value || index) && `${prefix}-is-active`]"
         @click="selectChild(item.value || index)"
       >
         {{ item.text }}
@@ -23,7 +23,10 @@ const name = `${prefix}-segment-control`;
 export default defineComponent({
   name,
   props: {
-    modelValue: [Array, Number, String],
+    modelValue: {
+      type: [Array, Number, String],
+      default: '',
+    },
     items: {
       type: Array as ItemsProps,
       default: () => [],
@@ -33,6 +36,7 @@ export default defineComponent({
       default: false,
     },
   },
+  emits: ['change', 'update:modelValue'],
   setup(props, { emit }) {
     const initActive = (modelValue: ModelValueProps, isMultiple: boolean) => {
       const concatValue = modelValue ? ([] as any[]).concat(modelValue) : [];
@@ -42,9 +46,7 @@ export default defineComponent({
     const selectChild = (value: string | number) => {
       const isIncluded = currentActive.value.includes(value);
       if (isIncluded) {
-        props.isMultiple && (
-          currentActive.value = currentActive.value.filter(i => i !== value)
-        );
+        props.isMultiple && (currentActive.value = currentActive.value.filter((i) => i !== value));
       } else {
         currentActive.value = props.isMultiple ? [...currentActive.value, value] : [value];
       }

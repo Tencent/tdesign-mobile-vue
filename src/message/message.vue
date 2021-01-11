@@ -3,7 +3,7 @@
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
         <t-icon :name="iconName" />
-        <span :class="`${name}--txt`">{{content}}</span>
+        <span :class="`${name}--txt`">{{ content }}</span>
       </slot>
     </div>
   </transition>
@@ -11,12 +11,11 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { MessageType, MessageAlignType, IMessageOffset } from './message.interface';
+import { MessageType, MessageAlignType, MessageOffset } from './message.interface';
 import TIcon from '../icon';
-
 import config from '../config';
+import { TNode } from '@/shared';
 const { prefix } = config;
-
 const name = `${prefix}-message`;
 
 export default defineComponent({
@@ -33,7 +32,10 @@ export default defineComponent({
      * @description 消息内容
      * @attribute content
      */
-    content: String,
+    content: {
+      type: String,
+      default: '',
+    },
     /**
      * @description 消息类型
      * @attribute theme
@@ -54,30 +56,40 @@ export default defineComponent({
      * @description 文本对齐方式
      * @attribute align
      */
-    align: String as PropType<MessageAlignType>,
+    align: {
+      type: String as PropType<MessageAlignType>,
+      default: 'left',
+    },
     /**
      * @description 偏移量
      * @attribute offset
      */
     offset: {
-      type: Object as PropType<IMessageOffset>,
-      default: () => {},
+      type: Object as PropType<MessageOffset>,
+      default: () => ({}),
     },
     /**
      * @description 自定义图标
      * @attribute icon
      */
-    icon: [String, Function],
+    icon: {
+      type: Function as PropType<TNode>,
+      default: () => ({}),
+    },
     /**
      * @description 自定义层级
      * @attribute zIndex
      */
-    zIndex: Number,
+    zIndex: {
+      type: Number,
+      default: 5000,
+    },
   },
+  emits: ['update:modelValue', 'visible-change', 'open', 'opened', 'close', 'closed'],
   setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);
-    const iconName = computed(() => (props.theme === 'success' ? 'tick_fill' : 'warning_fill'));
+    const iconName = computed(() => (props.theme === 'success' ? 'check-circle-filled' : 'error-circle-filled'));
     const rootClasses = computed(() => ({
       [name]: true,
       [`${name}--${props.theme}`]: true,

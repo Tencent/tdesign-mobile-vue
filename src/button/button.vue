@@ -1,22 +1,24 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="onClick" @touchstart.passive="onTouchstart">
-    <t-icon :name="_icon" :class="iconClass" v-if="_icon" />
-    <span :class="textClass" v-if="!iconOnly">
+  <button :class="classes" :disabled="disabled" @click="onClick">
+    <t-icon v-if="displayIcon" :name="displayIcon" :class="iconClass" />
+    <span v-if="!iconOnly" :class="textClass">
       <slot />
     </span>
   </button>
 </template>
 
 <script lang="ts">
+import { TNode } from '@/shared';
 import { ref, computed, toRefs, SetupContext, defineComponent, PropType } from 'vue';
+
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-button`;
 
-export enum ButtonShape {
+export const enum ButtonShape {
   Square = 'square',
   Round = 'round',
-  Circle = 'circle'
+  Circle = 'circle',
 }
 
 export default defineComponent({
@@ -30,7 +32,10 @@ export default defineComponent({
       type: String,
       default: 'default',
     },
-    icon: String,
+    icon: {
+      type: Function as PropType<TNode>,
+      default: '',
+    },
     plain: {
       type: Boolean,
       default: false,
@@ -52,9 +57,9 @@ export default defineComponent({
       default: false,
     },
   },
+  emits: ['click'],
   setup(props, context: SetupContext) {
     const { loading } = toRefs(props);
-    const inIcon = props.icon;
     const iconOnly = computed(() => !context.slots.default);
 
     const textClass = computed(() => [`${name}__text`]);
@@ -65,10 +70,8 @@ export default defineComponent({
       `${name}--${props.theme}`,
       {
         [`${name}--size-${props.size}`]: props.size,
-        [`${name}--square`]:
-          props.shape.valueOf() === ButtonShape.Square.valueOf(),
-        [`${name}--circle`]:
-          props.shape.valueOf() === ButtonShape.Circle.valueOf(),
+        [`${name}--square`]: props.shape.valueOf() === ButtonShape.Square.valueOf(),
+        [`${name}--circle`]: props.shape.valueOf() === ButtonShape.Circle.valueOf(),
         [`${prefix}-is-block`]: props.block,
         [`${prefix}-is-disabled`]: props.disabled,
         [`${prefix}-is-loading`]: props.loading,
@@ -76,16 +79,14 @@ export default defineComponent({
       },
     ]);
 
-    const _icon = computed(() => (loading.value ? 'loading' : inIcon));
-    const onClick = (e:Event) => {
+    const displayIcon = computed(() => (loading.value ? 'loading' : props.icon));
+    const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
-        e.stopPropagation();
-      } else {
+        // 既不是加载也不是禁用时触发事件
         context.emit('click', e);
+      } else {
+        e.stopPropagation();
       }
-    };
-    const onTouchstart = (event: TouchEvent) => {
-      context.emit('touchstart', event);
     };
 
     return {
@@ -93,10 +94,9 @@ export default defineComponent({
       textClass,
       iconClass,
       iconOnly,
-      _icon,
+      displayIcon,
       ...toRefs(props),
       onClick,
-      onTouchstart,
     };
   },
 });

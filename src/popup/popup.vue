@@ -3,11 +3,7 @@
     <transition name="fade">
       <t-mask v-show="currentVisible" :transparent="maskTransparent" @click="handleMaskClick" />
     </transition>
-    <transition
-      :name="contentTransitionName"
-      @after-enter="afterEnter"
-      @after-leave="afterLeave"
-    >
+    <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
       <div v-show="currentVisible" :class="contentClasses">
         <slot></slot>
       </div>
@@ -17,7 +13,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { PositionType, IPopupProps } from './popup';
+import { PositionType, PopupProps } from './popup.interface';
 
 import TMask from '../mask';
 
@@ -67,9 +63,13 @@ export default defineComponent({
      * @description 弹出层内容区的动画名，等价于transition组件的name属性
      * @attribute transition-name
      */
-    transitionName: String,
+    transitionName: {
+      type: String,
+      default: '',
+    },
   },
-  setup(props: IPopupProps, context: SetupContext) {
+  emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
+  setup(props: PopupProps, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);
@@ -100,12 +100,16 @@ export default defineComponent({
       },
     );
 
+<<<<<<< HEAD
     const handleMaskClick = () => {
       context.emit('close');
       context.emit('update:modelValue', false);
     };
 
     const handleMove = (e: TouchEvent) => {
+=======
+    function handleMove(e: TouchEvent) {
+>>>>>>> maggieytlin/tdesign-mobile-vue-feature/search-field
       if (props.lockScroll) {
         e.preventDefault();
       }

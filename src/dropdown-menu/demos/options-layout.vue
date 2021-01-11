@@ -2,20 +2,20 @@
   <demo-container>
     <t-dropdown-menu>
       <t-dropdown-item
+        v-model="valueM1"
         title="两栏菜单"
         :options="optionsN"
-        selectMode="multi"
-        optionsLayout="columns"
-        optionsColumns="2"
-        v-model="valueM1"
+        select-mode="multi"
+        options-layout="columns"
+        options-columns="2"
       />
       <t-dropdown-item
+        v-model="valueM2"
         title="三栏菜单"
         :options="optionsC"
-        selectMode="multi"
-        optionsLayout="columns"
-        optionsColumns="3"
-        v-model="valueM2"
+        select-mode="multi"
+        options-layout="columns"
+        options-columns="3"
       />
     </t-dropdown-menu>
     <p>

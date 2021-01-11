@@ -1,25 +1,15 @@
-<!--
- * @Author: yuliangyang
- * @Date: 2020-05-20 19:16:28
- * @LastEditTime: 2020-07-02 10:29:50
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/src/radio/index.vue
--->
 <template>
-  <div
-    :class="outerClasses"
-  >
+  <div :class="outerClasses">
     <span :class="shapeClasses" @click="radioChange">
       <slot name="checkedIcon">
-        <span :class="iconClasses" :style="{backgroundColor: checkedColor}" v-if="isChecked"></span>
+        <span v-if="isChecked" :class="iconClasses" :style="{ backgroundColor: checkedColor }"></span>
       </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="radioChange('content')">
-      <span :class="titleClasses" :style="titleStyle" v-if="title">
+      <span v-if="title" :class="titleClasses" :style="titleStyle">
         {{ title }}
       </span>
-      <div :class="`${flagName}__content-inner`" :style="contentStyle" v-if="hasSlot">
+      <div v-if="hasSlot" :class="`${flagName}__content-inner`" :style="contentStyle">
         <slot></slot>
       </div>
     </span>
@@ -34,24 +24,25 @@ const { prefix } = config;
 const name = `${prefix}-radio`;
 
 interface RadioProps {
-  name?: string,
-  title?: string,
-  disabled?: boolean,
-  contentDisabled?: boolean,
-  modelValue?: string,
-  limitTitleRow?: number,
-  limitContentRow?: number,
-  checkedColor?: string,
+  name?: string;
+  title?: string;
+  disabled?: boolean;
+  contentDisabled?: boolean;
+  modelValue?: string;
+  limitTitleRow?: number | string;
+  limitContentRow?: number;
+  checkedColor?: string;
 }
 
 /**
  * @description: 判断当前radio是否选中
  * @param {props} props属性对象
-* @param {rootGroup} Group注入的对象
+ * @param {rootGroup} Group注入的对象
  * @return: 返回是否选中的对象
  */
 // eslint-disable-next-line max-len
-const getIsCheck = (props: RadioProps, rootGroupProps: any): object => computed(() => (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name));
+const getIsCheck = (props: RadioProps, rootGroupProps: any) =>
+  computed(() => rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name);
 
 /**
  * @description: 命名类逻辑处理
@@ -63,10 +54,16 @@ const getClasses = (props: RadioProps, rootGroupProps: any) => {
   const shapeClasses = computed(() => [
     `${name}__default-shape`,
     {
-      [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled),
-    }]);
-  const titleClasses = computed(() => [{ [`${prefix}-is-disabled`]: (rootGroupProps?.disabled || props?.disabled) }, `${name}__content-title`]);
-  const iconClasses = computed(() => [{ [`${prefix}-is-checked`]: (rootGroupProps?.modelValue === props?.name) || (props?.modelValue === props?.name) }]);
+      [`${prefix}-is-disabled`]: rootGroupProps?.disabled || props?.disabled,
+    },
+  ]);
+  const titleClasses = computed(() => [
+    { [`${prefix}-is-disabled`]: rootGroupProps?.disabled || props?.disabled },
+    `${name}__content-title`,
+  ]);
+  const iconClasses = computed(() => [
+    { [`${prefix}-is-checked`]: rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name },
+  ]);
   return {
     outerClasses,
     shapeClasses,
@@ -79,7 +76,7 @@ const getClasses = (props: RadioProps, rootGroupProps: any) => {
  * @param {number} 行数
  * @return: 返回样式对象
  */
-const getLimitRow = (row?: number):object => ({
+const getLimitRow = (row?: number) => ({
   display: '-webkit-box',
   overflow: 'hidden',
   '-webkit-box-orient': 'vertical',
@@ -134,7 +131,7 @@ export default defineComponent({
      * @attribute limitTitleRow
      */
     limitTitleRow: {
-      type: Number,
+      type: [Number, String],
       default: 0,
     },
     /**
@@ -142,7 +139,7 @@ export default defineComponent({
      * @attribute limitContentRow
      */
     limitContentRow: {
-      type: Number,
+      type: [Number, String],
       default: 0,
     },
     /**
@@ -154,18 +151,19 @@ export default defineComponent({
       default: '#0052d9',
     },
   },
+  emits: ['update:modelValue', 'change'],
   setup(props: RadioProps, content: SetupContext) {
     const hasSlot = ref(false);
     const flagName: string = name;
-    const rootGroupProps:any = inject('rootGroupProps', {});
-    const rootGroupChange:any = inject('rootGroupChange', () => {});
-    const limitTitleRow:number = props?.limitTitleRow || 0;
-    const limitContentRow:number = props?.limitContentRow || 0;
-    const titleStyle:object = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
-    const contentStyle:object = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
+    const rootGroupProps: any = inject('rootGroupProps', {});
+    const rootGroupChange: any = inject('rootGroupChange', () => ({}));
+    const limitTitleRow: number = props?.limitTitleRow || 0;
+    const limitContentRow: number = props?.limitContentRow || 0;
+    const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
+    const contentStyle = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
     const classes = getClasses(props, rootGroupProps);
     const isChecked = getIsCheck(props, rootGroupProps);
-    hasSlot.value = !!content.slots.default;// 判断是否有default slot
+    hasSlot.value = !!content.slots.default; // 判断是否有default slot
     if (!content.slots.default || !props?.title) {
       // 当没有title或者slot的时候去掉中间的margin-top
       Object.assign(contentStyle, { marginTop: 0 });
