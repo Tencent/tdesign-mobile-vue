@@ -1,15 +1,15 @@
 <template>
-  <t-popup :class="name" :visible="currentVisible" @close="handleClose" position="bottom">
+  <t-popup :class="name" :visible="currentVisible" position="bottom" @close="handleClose">
     <div :class="rootClasses">
 
       <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect">
-        <template v-slot:cell="slotProps">
+        <template #cell="slotProps">
           <slot name="cell" :item="slotProps.item"></slot>
         </template>
       </menu-list>
 
       <menu-grid v-else :items="actionItems" :count="count" @select="handleSelect">
-        <template v-slot:cell="slotProps">
+        <template #cell="slotProps">
           <slot name="cell" :item="slotProps.item"></slot>
         </template>
       </menu-grid>
@@ -91,6 +91,7 @@ export default defineComponent({
       default: '取消',
     },
   },
+  emits: ['select', 'update:modelValue', 'cancel', 'close'],
   setup(props, context: SetupContext) {
     const actionItems = ref([]);
 

@@ -76,8 +76,8 @@ export default {
             },
             {
               title: 'CheckBox 复选框',
-              name: 'check-box',
-              component: () => import('@/check-box/check-box.md'),
+              name: 'checkbox',
+              component: () => import('@/checkbox/checkbox.md'),
             },
             // {
             //   title: 'Mask',

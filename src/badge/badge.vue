@@ -1,6 +1,7 @@
+ß
 <template>
-  <div :class="badgeClasses" v-if="showBadge">
-    <span :class="badgeInnerClasses" :style="badgeStyles">{{value}}</span>
+  <div v-if="showBadge" :class="badgeClasses">
+    <span :class="badgeInnerClasses" :style="badgeStyles">{{ value }}</span>
     <slot />
   </div>
 </template>
@@ -20,9 +21,7 @@ export default defineComponent({
     const showBadge = computed(() => props.content || props.showZero || props.count !== 0);
 
     // 徽标外层样式类
-    const badgeClasses = computed(() => [
-      `${name}`,
-    ]);
+    const badgeClasses = computed(() => [`${name}`]);
 
     // 徽标内层样式类
     const badgeInnerClasses = computed(() => ({

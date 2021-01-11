@@ -12,12 +12,12 @@
 </template>
 <script lang="ts">
 import config from '../mobile.config';
-import { ref } from 'vue';
-export default {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
   setup() {
     const navs = ref(config.navs.components.docs);
     const title = ref(config.navs.components.title);
     return { title, navs };
   },
-};
+});
 </script>

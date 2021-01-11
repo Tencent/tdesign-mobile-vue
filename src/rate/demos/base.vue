@@ -33,16 +33,24 @@
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
+    const current = ref(0);
+    const current1 = ref(2);
+    const current2 = ref(1.5);
+    const current3 = ref(3);
+    const current4 = ref(2);
+    const texts = ref(['很差', '差', '一般', '好评', '优秀']);
+
     return {
-      current: 0,
-      current1: 2,
-      current2: 1.5,
-      current3: 3,
-      current4: 2,
-      texts: ['很差', '差', '一般', '好评', '优秀'],
+      current,
+      current1,
+      current2,
+      current3,
+      current4,
+      texts,
     };
   },
-};
+});
 </script>

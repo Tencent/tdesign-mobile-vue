@@ -5,8 +5,8 @@
         <t-progress
           :percentage="50"
           color="#FF00FF"
-          bgColor="#000000"
-          textColor="#00FFFF"
+          bg-color="#000000"
+          text-color="#00FFFF"
         />
       </t-cell>
     </t-cell-group>

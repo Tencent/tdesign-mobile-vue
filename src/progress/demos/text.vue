@@ -4,14 +4,14 @@
       <t-cell>
         <t-progress
           :percentage="50"
-          :showText="false"
+          :show-text="false"
         />
       </t-cell>
       <t-cell>
         <t-progress
           type="error"
           :percentage="88"
-          :showText="false"
+          :show-text="false"
         />
       </t-cell>
     </t-cell-group>

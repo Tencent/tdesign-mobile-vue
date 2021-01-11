@@ -2,17 +2,17 @@
   <demo-container>
     <t-dropdown-menu>
       <t-dropdown-item
+        v-model="treeValue1"
         title="单选树形菜单"
         :options="optionsT"
-        optionsLayout="tree"
-        v-model="treeValue1"
+        options-layout="tree"
       />
       <t-dropdown-item
+        v-model="treeValue2"
         title="多选树形菜单"
         :options="optionsT2"
-        optionsLayout="tree"
-        selectMode="multi"
-        v-model="treeValue2"
+        options-layout="tree"
+        select-mode="multi"
       />
     </t-dropdown-menu>
     <p>

@@ -1,30 +1,26 @@
-
 /**
  * @description: 判断集合是否包含指定内容
  * @return 是否包含 | 位置索引
  */
-export function findIndex(
-  v: any,
-  set: any,
-):number {
+export function findIndex(v: unknown, set: unknown): number {
   // 正则方式，辨别0='0'
   const reg = new RegExp(`^${!v && v !== 0 ? '' : v}$`);
 
   // 转数组统一处理
   const arr = toArray(set);
-  return arr.findIndex(s => reg.test(s));
+  return arr.findIndex((s) => reg.test(s));
 }
 /**
  * @description: 判断是否假植 undefined|null|''等
  */
-export function isFalsy(v: any): boolean {
+export function isFalsy(v: unknown): boolean {
   return !v && v !== 0;
 }
 
 /**
  * @description: 转化为数组
  */
-export function toArray(v: any): any[] {
+export function toArray(v: unknown): any[] {
   if (isFalsy(v)) return [];
   if (typeof v === 'object') return Array.from(v);
   return [v];
@@ -35,9 +31,9 @@ export function toArray(v: any): any[] {
  */
 export function toggleElem(
   v: string | number, // 要切换的元素
-  set: any, // 集合
+  set: unknown, // 集合
   multiple: boolean, // 是否多选
-  atLeastOne: boolean = false, // 是否保留一个
+  atLeastOne = false, // 是否保留一个
 ): any[] | string | number {
   // 判断是否要返回数组。 多选 | 集合为 array/proxy等需要
   const toReturnArray: boolean = !!multiple || (!!set && typeof set === 'object');

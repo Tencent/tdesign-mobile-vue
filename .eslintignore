@@ -1,4 +1,6 @@
 **/*test*
+**/*docs*
+**/*common*
 !.*.js
 es
 lib

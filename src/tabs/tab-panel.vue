@@ -1,9 +1,9 @@
 <template>
   <div
-    :class="`${prefix}-tabs__panel`"
-    :name="name"
     v-if="forceRender || isActive"
     v-show="isActive"
+    :class="`${prefix}-tabs__panel`"
+    :name="name"
   >
     <slot></slot>
   </div>

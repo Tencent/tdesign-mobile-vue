@@ -1,8 +1,10 @@
 <template>
   <div :class="styleWrapper">
-    <slot name="title">
-      <div v-if="title" :class="styleTitle">{{ title }}</div>
-    </slot>
+    <div v-if="title" :class="styleTitle">
+      <slot name="title">
+        {{ title }}
+      </slot>
+    </div>
     <div :class="styleContainer">
       <slot></slot>
     </div>
@@ -18,7 +20,10 @@ const name = `${prefix}-cell-group`;
 export default defineComponent({
   name,
   props: {
-    title: String,
+    title: {
+      type: String,
+      default: '',
+    },
     border: {
       type: Boolean,
       default: true,
@@ -26,7 +31,9 @@ export default defineComponent({
   },
   setup(props) {
     const styleWrapper = ref(name);
-    const styleContainer = computed(() => (props.border ? `${name}-container border--top-bottom` : `${name}-container`));
+    const styleContainer = computed(() =>
+      props.border ? `${name}-container border--top-bottom` : `${name}-container`,
+    );
     const styleTitle = ref(`${name}--title`);
 
     return {

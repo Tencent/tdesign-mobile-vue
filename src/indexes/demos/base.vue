@@ -14,12 +14,11 @@
   </div>
 </template>
 <script lang="ts">
-import { reactive } from 'vue';
+import { defineComponent, reactive } from 'vue';
 
-export default {
-
+export default defineComponent({
   setup() {
-    const state: object = reactive({
+    const state = reactive({
       indexLists: ['A', 'B', 'C', 'D', 'E', 'F'],
     });
 
@@ -32,7 +31,7 @@ export default {
       handleClick,
     };
   },
-};
+});
 </script>
 <style lang="less">
 .component-wrap{

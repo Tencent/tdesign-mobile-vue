@@ -59,13 +59,13 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
 import Toast from '../index';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-toast-base-demo`;
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
@@ -116,7 +116,7 @@ export default {
       });
     },
   },
-};
+});
 </script>
 <style lang="less" scoped>
 .t-toast-base-demo {

@@ -1,19 +1,19 @@
 <template>
   <div :class="classes">
-    <div :class="navClasses" ref="navScroll">
-      <div :class="`${name}__nav-wrap`" ref="navWrap">
+    <div ref="navScroll" :class="navClasses">
+      <div ref="navWrap" :class="`${name}__nav-wrap`">
         <div
+          v-for="item in itemProps"
+          :key="item.name"
           :class="{
             [`${name}__nav-item`]: true,
             [`${prefix}-is-active`]: item.name === currentName,
             [`${prefix}-is-disabled`]: item.disabled
-          }"
-          v-for="item in itemProps"
-          :key="item.name" @click="(e) => tabClick(e, item)"
+          }" @click="(e) => tabClick(e, item)"
         >
           {{item.label}}
         </div>
-        <div :class="`${name}__nav-line`" ref="navLine"
+        <div ref="navLine" :class="`${name}__nav-line`"
              :style="lineStyle"></div>
       </div>
     </div>
@@ -83,7 +83,7 @@ export default defineComponent({
     const tabChange = (event: Event, name: string) => {
       setCurrentName(name);
     };
-    const tabClick = (event: Event, item: object) => {
+    const tabClick = (event: Event, item: Record<string, unknown>) => {
       const { name, disabled } = item as any;
       if (disabled || currentName.value === name) {
         return false;

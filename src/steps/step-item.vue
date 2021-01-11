@@ -47,8 +47,8 @@ export default defineComponent({
 
     const isDot = computed(() => parentType.value === 'dot' && stepsProvide.direction === 'vertical');
 
-    let { status } = props;
     const curStatus = computed(() => {
+      let { status } = props;
       if (props.status) {
         return props.status;
       }
