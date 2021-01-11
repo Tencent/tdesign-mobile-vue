@@ -100,9 +100,10 @@
 
 <script lang='ts'>
 import config from '@/config';
+import { defineComponent } from 'vue';
 const { prefix } = config;
 const name = `${prefix}-tabs-demo`;
-export default {
+export default defineComponent({
   name,
   setup() {
     const onChange = ($event: number) => {
@@ -112,7 +113,7 @@ export default {
       onChange,
     };
   },
-};
+});
 </script>
 
 <style lang="less" scoped>

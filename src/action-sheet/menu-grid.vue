@@ -7,10 +7,10 @@
       @touchmove="handleTouchmove"
       @touchend="handleTouchend"
     >
-      <div v-for="(items, i) in actionItems" :key="i" :class="`${name}__menu`">
+      <div v-for="(Items, i) in actionItems" :key="i" :class="`${name}__menu`">
         <div>
           <button
-            v-for="(item, index) in items"
+            v-for="(item, index) in Items"
             :key="index"
             :class="`${name}__cell`"
             :disabled="item.disabled"
@@ -79,6 +79,7 @@ export default defineComponent({
       default: 8,
     },
   },
+  emits: ['select'],
   setup(props, context: SetupContext) {
     const containerWrapper = ref<HTMLElement | null>(null);
     const moveOffset = ref(0);

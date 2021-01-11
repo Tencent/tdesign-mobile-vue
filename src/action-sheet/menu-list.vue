@@ -23,7 +23,7 @@ const { prefix } = config;
 const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
-  props: ['items'],
+  emits: ['select'],
   setup(props, context: SetupContext) {
     const handleSelect = (index: number) => {
       context.emit('select', index);

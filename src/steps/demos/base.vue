@@ -84,11 +84,11 @@
   </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-steps-demo`;
-export default {
+export default defineComponent({
   name,
   setup() {
     const current = ref(0);
@@ -111,5 +111,5 @@ export default {
       current7,
     };
   },
-};
+});
 </script>

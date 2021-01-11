@@ -89,7 +89,7 @@ export default defineComponent({
     const tabChange = (event: Event, name: string) => {
       setCurrentName(name);
     };
-    const tabClick = (event: Event, item: object) => {
+    const tabClick = (event: Event, item: Record<string, unknown>) => {
       const { name, disabled } = item as any;
       if (disabled || state.currentName === name) {
         return false;

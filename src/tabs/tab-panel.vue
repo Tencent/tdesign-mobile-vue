@@ -19,7 +19,7 @@ export default defineComponent({
   name: `${prefix}-tab-panel`,
   props: TabPanelProps,
   setup(props) {
-    const getCurrentName = inject('getCurrentName') as Function;
+    const getCurrentName = inject('getCurrentName') as () => string;
     const currentName = computed(() => getCurrentName());
     let isActive = computed(() => currentName.value === props.name);
     watch(currentName, (newValue) => {
