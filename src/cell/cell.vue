@@ -19,18 +19,11 @@ import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-cell`;
 
-export enum ValueAlign {
-  Left = 'left',
-  Right = 'right',
-}
+export type ValueAlign = 'left' | 'right';
 
 export default defineComponent({
   name,
   props: {
-    theme: {
-      type: String,
-      default: 'default',
-    },
     label: {
       type: String,
       default: '',
@@ -41,12 +34,12 @@ export default defineComponent({
     },
     valueAlign: {
       type: String as PropType<ValueAlign>,
-      default: ValueAlign.Right,
+      default: 'right',
     },
   },
   setup(props, context: SetupContext) {
-    const styleLabel = ref(`${name}--label`);
-    const styleWrapper = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
+    const styleLabel = ref(`${name}__label`);
+    const styleWrapper = computed(() => [`${name}`]);
 
     const hasLabel = computed(() => {
       if (props.label) return true;
@@ -56,7 +49,7 @@ export default defineComponent({
     const styleValue = computed(() => {
       const alignLeft = `${name}__value ${name}__left`;
       if (hasLabel.value) {
-        return props.valueAlign.valueOf() === ValueAlign.Right.valueOf() ? `${name}__value` : alignLeft;
+        return props.valueAlign === 'right' ? `${name}__value` : alignLeft;
       }
       return alignLeft;
     });

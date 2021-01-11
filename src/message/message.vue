@@ -14,6 +14,7 @@ import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'v
 import { MessageType, MessageAlignType, MessageOffset } from './message.interface';
 import TIcon from '../icon';
 import config from '../config';
+import { TNode } from '@/shared';
 const { prefix } = config;
 const name = `${prefix}-message`;
 
@@ -71,9 +72,8 @@ export default defineComponent({
      * @description 自定义图标
      * @attribute icon
      */
-    // TODO: ICON FUNCTION
     icon: {
-      type: Function,
+      type: Function as PropType<TNode>,
       default: () => ({}),
     },
     /**

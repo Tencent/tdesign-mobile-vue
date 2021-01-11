@@ -1,8 +1,10 @@
 <template>
   <div :class="styleWrapper">
-    <slot name="title">
-      <div v-if="title" :class="styleTitle">{{ title }}</div>
-    </slot>
+    <div v-if="title" :class="styleTitle">
+      <slot name="title">
+        {{ title }}
+      </slot>
+    </div>
     <div :class="styleContainer">
       <slot></slot>
     </div>
