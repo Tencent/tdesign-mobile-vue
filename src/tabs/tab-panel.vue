@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, toRefs, computed, watch } from 'vue';
+import { defineComponent, inject, toRefs, computed } from 'vue';
 import config from '../config';
 import { TabPanelProps } from './tabs.interface';
 const { prefix } = config;
@@ -19,12 +19,9 @@ export default defineComponent({
   name: `${prefix}-tab-panel`,
   props: TabPanelProps,
   setup(props) {
-    const getCurrentName = inject('getCurrentName') as () => string;
-    const currentName = computed(() => getCurrentName());
-    let isActive = computed(() => currentName.value === props.name);
-    watch(currentName, (newValue) => {
-      isActive = computed(() => newValue === props.name);
-    });
+    const currentName = inject('currentName', '');
+    const isActive = computed(() => currentName === props.name);
+
     return {
       prefix,
       isActive,

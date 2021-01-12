@@ -1,20 +1,20 @@
 <template>
   <div :class="rootClassName">
-    <div :class="`${baseClassName}__inner`">
-      <div :class="`${baseClassName}-icon`" @click="onClickIcon">
+    <div :class="`${name}__inner`">
+      <div :class="`${name}-icon`" @click="onClickIcon">
         <slot name="icon" >
-          <span v-if="isDot" :class="`${baseClassName}-icon__dot`"></span>
-          <span v-else :class="`${baseClassName}-icon__number`">{{index + 1}}</span>
+          <span v-if="isDot" :class="`${name}-icon__dot`"></span>
+          <span v-else :class="`${name}-icon__number`">{{index + 1}}</span>
         </slot>
       </div>
-      <div :class="`${baseClassName}-content`">
-        <div :class="`${baseClassName}-title`">
+      <div :class="`${name}-content`">
+        <div :class="`${name}-title`">
           <slot name="title">{{ title }}</slot>
         </div>
-        <div :class="`${baseClassName}-description`">
+        <div :class="`${name}-description`">
           <slot name="content">{{ content }}</slot>
         </div>
-        <div :class="`${baseClassName}-extra`">
+        <div :class="`${name}-extra`">
           <slot name="extra"></slot>
         </div>
       </div>
@@ -38,8 +38,6 @@ export default defineComponent({
     const index = ref(attrs.index);
 
     const stepsProvide: any = inject('stepsProvide', undefined);
-
-    const baseClassName = computed(() => name);
 
     const parentType = computed(() => stepsProvide.type);
     const current = computed(() => (stepsProvide?.modelValue?.value || stepsProvide?.current?.value || 0));
@@ -78,7 +76,7 @@ export default defineComponent({
     };
 
     return {
-      baseClassName,
+      name,
       current,
       curStatus,
       index,

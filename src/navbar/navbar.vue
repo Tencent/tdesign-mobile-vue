@@ -1,18 +1,18 @@
 <template>
-  <div :class="nClassName">
-    <div :class="nBackClass" >
+  <div :class="name">
+    <div :class="`${name}__back`" >
       <t-icon v-if="leftArrow" :class="`${nBackClass}--arrow`" name="arrow-left" @click="handleBack"></t-icon>
       <slot name="left">
       </slot>
     </div>
 
-    <div :class="nTitleClass" @click="clickText">
+    <div :class="`${name}__text`" @click="clickText">
       <slot>{{ nTitleContent }}</slot>
     </div>
 
-    <div :class="nRightClass" @click="handleMore">
+    <div :class="`${name}__right`" @click="handleMore">
       <slot name="right">
-        <i :class="`${nRightClass}--more`"></i>
+        <i :class="`$${name}__right--more`"></i>
       </slot>
     </div>
   </div>
@@ -20,6 +20,7 @@
 <script lang='ts'>
 import config from '../config';
 import { computed, defineComponent, SetupContext } from 'vue';
+import TIcon from '../icon';
 import { NavbarProps } from './navbar.interface';
 
 const { prefix } = config;
@@ -27,14 +28,10 @@ const name = `${prefix}-navbar`;
 
 export default defineComponent({
   name,
+  components: { TIcon },
   props: NavbarProps,
-  emits: ['on-click-text', 'on-click-right'],
+  emits: ['click-right', 'click-text'],
   setup(props, context: SetupContext) {
-    const nClassName = computed(() => `${name}`);
-    const nBackClass = computed(() => `${name}__back`);
-    const nCloseClass = computed(() => `${name}__close`);
-    const nTitleClass = computed(() => `${name}__text`);
-    const nRightClass = computed(() => `${name}__right`);
     const nTitleContent = computed(() => {
       const { title, maxLen } = props;
       if (title && title.trim().length > maxLen) {
@@ -50,23 +47,19 @@ export default defineComponent({
     };
 
     const handleMore = (evt: TouchEvent) => {
-      context.emit('on-click-right', evt);
+      context.emit('click-right', evt);
     };
 
     const clickText = (evt: TouchEvent) => {
-      context.emit('on-click-text', evt);
+      context.emit('click-text', evt);
     };
 
     return {
-      nClassName,
-      nBackClass,
-      nTitleClass,
-      nRightClass,
+      name,
       nTitleContent,
       handleBack,
       handleMore,
       clickText,
-      nCloseClass,
     };
   },
 });
