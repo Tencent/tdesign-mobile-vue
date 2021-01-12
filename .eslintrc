@@ -33,6 +33,7 @@
     "no-console": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/ban-ts-comment": 0,
     "@typescript-eslint/naming-convention": [
       "error",
       {
