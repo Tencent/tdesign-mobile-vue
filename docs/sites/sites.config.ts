@@ -192,6 +192,11 @@ export default {
               name: 'fab',
               component: () => import('@/fab/fab.md'),
             },
+            {
+              title: 'SearchField 搜索框',
+              name: 'search-field',
+              component: () => import('@/search-field/search-field.md'),
+            },
           ],
         },
         {

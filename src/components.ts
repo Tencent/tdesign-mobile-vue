@@ -25,6 +25,7 @@ export { default as ImageViewer } from './image-viewer';
 export { default as Drawer } from './drawer';
 export { default as Navbar } from './navbar';
 export { default as Message } from './message';
+export { default as SearchField } from './search-field';
 export { Steps, Step } from './steps';
 export { Indexes, IndexesCell, IndexesAnchor } from './indexes';
 export { Picker, PickerColumn } from './picker';

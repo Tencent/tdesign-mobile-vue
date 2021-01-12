@@ -164,6 +164,11 @@ export default {
           name: 'navbar',
           component: () => import('@/navbar/demos/base.vue'),
         },
+        {
+          title: 'SearchField 搜索框',
+          name: 'search-field',
+          component: () => import('@/search-field/demos/base.vue'),
+        },
       ],
     },
   },
