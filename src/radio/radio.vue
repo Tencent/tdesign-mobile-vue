@@ -131,7 +131,7 @@ export default defineComponent({
      * @attribute limitTitleRow
      */
     limitTitleRow: {
-      type: [Number, String],
+      type: Number,
       default: 0,
     },
     /**
@@ -139,7 +139,7 @@ export default defineComponent({
      * @attribute limitContentRow
      */
     limitContentRow: {
-      type: [Number, String],
+      type: Number,
       default: 0,
     },
     /**
@@ -152,7 +152,7 @@ export default defineComponent({
     },
   },
   emits: ['update:modelValue', 'change'],
-  setup(props: RadioProps, content: SetupContext) {
+  setup(props, content: SetupContext) {
     const hasSlot = ref(false);
     const flagName: string = name;
     const rootGroupProps: any = inject('rootGroupProps', {});

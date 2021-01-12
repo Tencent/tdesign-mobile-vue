@@ -10,6 +10,7 @@ export function findIndex(v: unknown, set: unknown): number {
   const arr = toArray(set);
   return arr.findIndex((s) => reg.test(s));
 }
+
 /**
  * @description: 判断是否假植 undefined|null|''等
  */
@@ -22,7 +23,7 @@ export function isFalsy(v: unknown): boolean {
  */
 export function toArray(v: unknown): any[] {
   if (isFalsy(v)) return [];
-  if (typeof v === 'object') return Array.from(v);
+  if (typeof v === 'object') return Array.from(v as Iterable<unknown> | ArrayLike<unknown>);
   return [v];
 }
 

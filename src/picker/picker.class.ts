@@ -326,6 +326,7 @@ class Picker {
   }
 
   destroy(): void {
+    // @ts-ignore: TODO
     delete this.holder;
   }
 }
