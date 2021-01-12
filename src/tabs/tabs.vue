@@ -93,7 +93,7 @@ export default defineComponent({
         moveToActiveTab();
       });
     };
-    provide('currentName', currentName);
+    provide('currentName', currentName.value);
 
     return {
       name,

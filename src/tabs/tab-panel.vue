@@ -20,7 +20,7 @@ export default defineComponent({
   props: TabPanelProps,
   setup(props) {
     const currentName = inject('currentName', '');
-    const isActive = computed(() => currentName.value === props.name);
+    const isActive = computed(() => currentName === props.name);
 
     return {
       prefix,
