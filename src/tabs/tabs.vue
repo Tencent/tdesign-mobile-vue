@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount } from 'vue';
+import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount, readonly } from 'vue';
 import config from '../config';
 import { TabsProps } from './tabs.interface';
 
@@ -93,7 +93,7 @@ export default defineComponent({
         moveToActiveTab();
       });
     };
-    provide('currentName', currentName.value);
+    provide('currentName', readonly(currentName));
 
     return {
       name,
