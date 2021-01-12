@@ -1,8 +1,8 @@
 <template>
   <div>
     <t-search-field
-      placeholder="请输入关键字"
       v-model="value"
+      placeholder="请输入关键字"
       @change="onChange"
     ></t-search-field>
   </div>
