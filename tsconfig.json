@@ -30,5 +30,5 @@
     "./**/*.tsx",
     "./**/*.vue"
   ],
-  "exclude": ["node_modules", "docs", "common"]
+  "exclude": ["node_modules", "docs", "common", "vite.config.ts"]
 }
