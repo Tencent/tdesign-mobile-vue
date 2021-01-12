@@ -18,11 +18,11 @@
     </div>
 
     <transition name="spread">
-      <ul v-if="children && isSpread" :class="[`${componentName}__spread`]">
+      <ul v-if="children && isSpread" :class="`${componentName}__spread`">
         <li
           v-for="(child, index) in children"
           :key="child.name || index"
-          :class="[`${componentName}__spread-item`]"
+          :class="`${componentName}__spread-item`"
           @click="selectChild(child.name || index)"
         >
           {{ child.text }}
@@ -42,9 +42,7 @@ const componentName = `${prefix}-tab-bar-item`;
 
 export default defineComponent({
   name: componentName,
-  components: {
-    [TIcon.name]: TIcon,
-  },
+  components: { TIcon },
   props: {
     name: {
       type: [Number, String],
@@ -73,7 +71,9 @@ export default defineComponent({
     });
 
     watch(isChecked, (newValue) => {
-      !newValue && (isSpread.value = false);
+      if (!newValue) {
+        isSpread.value = false;
+      }
     });
 
     const isToggleCurrent = computed(() => Array.isArray(activeValue.value) && activeValue.value[0] === currentName);
