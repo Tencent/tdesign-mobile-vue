@@ -12,8 +12,11 @@
       </div>
     </div>
     <div ref="bodyDOM" :class="`${baseClass}__body`">
-      <div v-for="(c, i) in contList" :key="i" :class="contentClassName(c)">
-        <slot name="default">
+      <div v-if="$slots.default" :class="`${baseClass}__body-slot`">
+        <slot></slot>
+      </div>
+      <template v-else>
+        <div v-for="(c, i) in contList" :key="i" :class="contentClassName(c)">
           <template v-if="typeof c === 'object'">
             <div :class="`${baseClass}-list__label`" :style="listLabelStyle">
               {{ c.label }}
@@ -21,8 +24,8 @@
             <div :class="`${baseClass}-list__content`">{{ c.content }}</div>
           </template>
           <template v-else>{{ c }}</template>
-        </slot>
-      </div>
+        </div>
+      </template>
     </div>
     <!-- <transition name="collapse">
     </transition> -->
