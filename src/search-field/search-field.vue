@@ -8,11 +8,11 @@
           :style="iconStyle"
         ></t-icon>
         <input
+          v-model="currentValue"
           :class="`${name}__input`"
           type="text"
           :autofocus="autofocus"
           :placeholder="placeholder"
-          v-model="currentValue"
         />
         <t-icon
           v-if="clearable && currentValue.length > 0"
@@ -79,15 +79,7 @@ export default defineComponent({
       default: '取消',
     },
   },
-  emits: {
-    change: ({ val }) => {
-      if (val) {
-        return true;
-      }
-    },
-    cancel: null,
-    clear: null,
-  },
+  emits: ['change', 'update:modelValue', 'clear', 'cancel'],
   setup(props, { emit }) {
     const classes = computed(() => ({
       [`${name}`]: true,
@@ -132,9 +124,10 @@ export default defineComponent({
       emit('cancel', e);
     };
 
-    const onInput = (e: Event) => {
-      currentValue.value = e?.target?.value ?? '';
-    };
+    // no use
+    // const onInput = (e: Event) => {
+    //   currentValue.value = e?.target?.value ?? '';
+    // };
 
     const onClear = (e: Event) => {
       currentValue.value = '';
@@ -147,7 +140,6 @@ export default defineComponent({
       iconStyle,
       onClick,
       onCancel,
-      onInput,
       onClear,
       state,
       currentValue,
