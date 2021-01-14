@@ -3,7 +3,8 @@ import app from './app.vue';
 import header from './components/header.vue';
 import router from './router';
 
-import TDesign from '/@/index';
+//@ts-ignore
+import TDesign from '@/';
 
 import '../../common/style/mobile/index.less';
 import '../styles/mobile/index.less';

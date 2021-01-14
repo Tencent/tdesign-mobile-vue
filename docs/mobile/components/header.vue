@@ -11,6 +11,7 @@ export default defineComponent({
   setup() {
     const router = useRouter();
     const title = computed(() => router.currentRoute.value.meta.title);
+    
     const onBack = () => {
       if (history.length > 1) {
         history.back();
