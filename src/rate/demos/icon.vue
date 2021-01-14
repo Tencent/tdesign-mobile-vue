@@ -1,7 +1,7 @@
 <template>
   <t-rate v-model="value" clearable show-text allow-half>
     <template #icon>
-      <t-icon name="apple" />
+      <t-icon name="user-filled" />
     </template>
   </t-rate>
 </template>
