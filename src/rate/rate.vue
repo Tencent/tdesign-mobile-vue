@@ -5,18 +5,18 @@
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
-              <t-icon name="star-filled" />
+              <t-star-icon :size="size" :style="iconHalfStyle(n)" />
             </slot>
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
             <slot name="icon">
-              <t-icon name="star-filled" />
+              <t-star-icon :size="size" :style="iconFullStyle(n)" />
             </slot>
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
           <slot name="icon">
-            <t-icon name="star-filled" />
+            <t-star-icon :size="size" :style="iconFullStyle(n)" />
           </slot>
         </span>
       </li>
@@ -34,7 +34,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
-import TIcon from '../icon';
+import TStarIcon from '../icon/star-filled.vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -106,14 +106,6 @@ const rateProps = {
    */
   textColor: String,
   /**
-   * @description 评分图标的class类名
-   * @attribute icon
-   */
-  icon: {
-    type: String,
-    default: 'start',
-  },
-  /**
    * @description 评分图标的大小
    * @attribute size
    */
@@ -129,7 +121,7 @@ interface RangeTypes {
 
 export default defineComponent({
   name,
-  components: { TIcon },
+  components: { TStarIcon },
   props: rateProps,
   emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {
@@ -141,6 +133,13 @@ export default defineComponent({
       }
 
       return actualVal.value > 0 ? `${actualVal.value} 分` : '';
+    });
+
+    const iconHalfStyle = (n: number) => ({
+      color: actualVal.value + 0.5 === n || actualVal.value >= n ? props.color : null
+    });
+    const iconFullStyle = (n: number) => ({
+      color: actualVal.value >= n ? props.color : null
     });
 
     const classes = (n: number) => ({
@@ -200,6 +199,8 @@ export default defineComponent({
       classes,
       rateWrapper,
       actualVal,
+      iconHalfStyle,
+      iconFullStyle,
       rateText,
       onClick,
       onTouchstart,
