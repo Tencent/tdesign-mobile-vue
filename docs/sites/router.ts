@@ -46,7 +46,6 @@ const routes: Array<RouteRecordRaw> = [
   ...getDocsRoutes(navs.components.docs, 'document'),
   ...getDocsRoutes(navs.components.docs, 'component'),
 ];
-console.log(process.env.BASE_URL);
 const router = createRouter({
   history: createWebHistory('vue-mobile'),
   routes,
