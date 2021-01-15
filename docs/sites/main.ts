@@ -10,6 +10,7 @@ import TDesign from '@/index';
 import '../../common/style/mobile/index.less';
 import '../../common/style/site/index.less';
 import '../styles/sites/index.less';
+import 'prismjs/themes/prism.css';
 
 createApp(app)
   .use(TDesign)

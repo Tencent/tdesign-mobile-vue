@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { createTDesignPlugin } from './docs/sites/common';
-// import vue from '@vitejs/plugin-vue'
+import { createTDesignPlugin } from './docs/sites/common/';
+import vue from '@vitejs/plugin-vue';
 
 module.exports = {
   alias: {
@@ -16,7 +16,7 @@ module.exports = {
     base: process.env.NODE_ENV === 'development' ? './' : '/vue-mobile/',
     outDir: 'dist',
   },
-  plugins: [...createTDesignPlugin()],
+  plugins: [vue(), ...createTDesignPlugin()],
   rollupOptions: {
     input: {
       main: path.resolve(__dirname, 'docs/sites/index.html'),
