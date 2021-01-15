@@ -1,6 +1,6 @@
 import * as path from 'path';
 import * as markdown from './docs/sites/common/vite-plugin-tdesign-doc/';
-import vue from '@vitejs/plugin-vue'
+// import vue from '@vitejs/plugin-vue'
 
 module.exports = {
   alias: {
@@ -17,7 +17,6 @@ module.exports = {
     outDir: 'dist',
   },
   plugins: [
-    vue(),
     ...markdown.createTDesignPlugin()
   ],
   rollupOptions: {
