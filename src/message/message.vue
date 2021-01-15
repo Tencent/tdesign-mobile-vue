@@ -2,7 +2,10 @@
   <transition name="message" @after-leave="afterLeave" @after-enter="afterEnter">
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
-        <t-icon :name="iconName" />
+        <slot name="icon">
+          <t-check-icon v-if="theme === 'success'" />
+          <t-error-icon v-else />
+        </slot>
         <span :class="`${name}--txt`">{{ content }}</span>
       </slot>
     </div>
@@ -11,16 +14,16 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { MessageType, MessageAlignType, MessageOffset } from './message.interface';
-import TIcon from '../icon';
+import { MessageType, MessageAlignType } from './message.interface';
+import TCheckIcon from '../icon/check-circle-filled.vue';
+import TErrorIcon from '../icon/error-circle-filled.vue';
 import config from '../config';
-import { TNode } from '@/shared';
 const { prefix } = config;
 const name = `${prefix}-message`;
 
 export default defineComponent({
   name,
-  components: { TIcon },
+  components: { TCheckIcon, TErrorIcon },
   props: {
     modelValue: Boolean,
     /**
@@ -61,22 +64,6 @@ export default defineComponent({
       default: 'left',
     },
     /**
-     * @description 偏移量
-     * @attribute offset
-     */
-    offset: {
-      type: Object as PropType<MessageOffset>,
-      default: () => ({}),
-    },
-    /**
-     * @description 自定义图标
-     * @attribute icon
-     */
-    icon: {
-      type: Function as PropType<TNode>,
-      default: () => ({}),
-    },
-    /**
      * @description 自定义层级
      * @attribute zIndex
      */
@@ -89,7 +76,6 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);
-    const iconName = computed(() => (props.theme === 'success' ? 'check-circle-filled' : 'error-circle-filled'));
     const rootClasses = computed(() => ({
       [name]: true,
       [`${name}--${props.theme}`]: true,
@@ -97,7 +83,6 @@ export default defineComponent({
     }));
     const rootStyles = computed(() => ({
       zIndex: props.zIndex,
-      ...props.offset,
     }));
 
     watch(
@@ -118,7 +103,6 @@ export default defineComponent({
       name: ref(name),
       root,
       currentVisible,
-      iconName,
       rootClasses,
       rootStyles,
       afterEnter: () => context.emit('opened'),
