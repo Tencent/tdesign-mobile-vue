@@ -1,5 +1,5 @@
 import * as path from 'path';
-import * as markdown from './docs/sites/common/vite-plugin-tdesign-doc/';
+import { createTDesignPlugin } from './docs/sites/common';
 // import vue from '@vitejs/plugin-vue'
 
 module.exports = {
@@ -16,9 +16,7 @@ module.exports = {
     base: process.env.NODE_ENV === 'development' ? './' : '/vue-mobile/',
     outDir: 'dist',
   },
-  plugins: [
-    ...markdown.createTDesignPlugin()
-  ],
+  plugins: [...createTDesignPlugin()],
   rollupOptions: {
     input: {
       main: path.resolve(__dirname, 'docs/sites/index.html'),
