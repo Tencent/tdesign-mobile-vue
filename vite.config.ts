@@ -1,23 +1,26 @@
 import * as path from 'path';
+import { createTDesignPlugin } from './docs/sites/common/';
+import vue from '@vitejs/plugin-vue';
 
 module.exports = {
   alias: {
-    // 键必须以斜线开始和结束
-    '/@/': path.resolve(__dirname, 'src'),
+    '@': path.resolve(__dirname, 'src'),
   },
-  resolvers: [
-    {
-      alias(id: string) {
-        // add slash to particular id, then vite won't resolve it as a module
-        return id.replace(/^@\//, '/@/') 
-      },
+  server: {
+    host: '127.0.0.1',
+    port: 16000,
+    open: '/docs/sites/index.html#/',
+    https: false,
+  },
+  build: {
+    base: process.env.NODE_ENV === 'development' ? './' : '/vue-mobile/',
+    outDir: 'dist',
+  },
+  plugins: [vue(), ...createTDesignPlugin()],
+  rollupOptions: {
+    input: {
+      main: path.resolve(__dirname, 'docs/sites/index.html'),
+      mobile: path.resolve(__dirname, 'docs/mobile/index.html'),
     },
-  ],
-  hostname: '0.0.0.0',
-  port: 16000,
-  open: true,
-  https: false,
-  ssr: false,
-  base: process.env.NODE_ENV === 'development' ? './' : '/vue-mobile/',
-  outDir: 'dist',
+  },
 };
