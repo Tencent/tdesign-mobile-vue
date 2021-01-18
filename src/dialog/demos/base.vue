@@ -148,7 +148,7 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 
-import Dialog from './index.func';
+import Dialog from '../index';
 import config from '@/config';
 
 const { prefix } = config;
@@ -271,7 +271,7 @@ export default defineComponent({
     changeFunctionVisible(idx: number) {
       switch (idx) {
         case 1: {
-          Dialog({
+          Dialog.show({
             showOverlay: false,
             content: '我的家里有个人很酷',
             knowContent: 'i know',
@@ -279,7 +279,7 @@ export default defineComponent({
           break;
         }
         case 2: {
-          Dialog({
+          Dialog.show({
             width: '350px',
             showFooter: false,
             content: '我的家里有个人很酷!',
