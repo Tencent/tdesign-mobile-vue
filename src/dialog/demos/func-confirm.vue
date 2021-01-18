@@ -10,7 +10,7 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 
-import Dialog from './index.func';
+import Dialog from '../index';
 import config from '@/config';
 
 const { prefix } = config;

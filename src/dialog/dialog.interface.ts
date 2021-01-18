@@ -1,3 +1,4 @@
+export type DialogType = 'alert' | 'confirm' | 'show';
 export interface DialogPropsType {
   modelValue?: boolean;
   showHeader?: boolean;
