@@ -7,14 +7,8 @@
     </template>
     <template #default>
       <div :class="styleValueWrap">
-        <input
-          v-bind="$attrs"
-          v-model="innerValue"
-          :class="styleControl"
-          :type="type"
-          :disabled="disabled"
-        />
-        <div v-if="clearable && innerValue.length > 0" @click="handleClear" :class="styleIcon">
+        <input v-model="innerValue" v-bind="$attrs" :class="styleControl" :type="type" :disabled="disabled" />
+        <div v-if="clearable && innerValue.length > 0" :class="styleIcon" @click="handleClear">
           <t-icon name="circle_clear" />
         </div>
         <div v-if="hasSuffix" :class="styleSuffix">
@@ -27,7 +21,7 @@
           </slot>
         </div>
       </div>
-      <div v-if="errorMessage" :class="styleErrMsg">{{ errorMessage}}</div>
+      <div v-if="errorMessage" :class="styleErrMsg">{{ errorMessage }}</div>
     </template>
   </t-cell>
   <div v-else>
@@ -37,29 +31,14 @@
       </slot>
     </div>
     <div :class="styleTextarea">
-      <textarea
-        v-bind="$attrs"
-        ref="textarea"
-        v-model="innerValue"
-        :maxlength="maxlength"
-        :disabled="disabled"
-      />
+      <textarea ref="textarea" v-model="innerValue" v-bind="$attrs" :maxlength="maxlength" :disabled="disabled" />
       <div :class="styleCount">{{ `${innerValue.length} / ${maxlength}` }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  reactive,
-  toRefs,
-  computed,
-  watch,
-  onMounted,
-  SetupContext,
-  defineComponent,
-} from 'vue';
+import { ref, reactive, toRefs, computed, watch, onMounted, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-input`;
@@ -67,13 +46,31 @@ const name = `${prefix}-input`;
 export default defineComponent({
   name,
   props: {
-    label: String,
-    modelValue: String,
+    label: {
+      type: String,
+      default: '',
+    },
+    modelValue: {
+      type: String,
+      default: '',
+    },
     error: Boolean,
-    errorMessage: String,
-    rightIcon: String,
-    suffix: String,
-    type: String,
+    errorMessage: {
+      type: String,
+      default: '',
+    },
+    rightIcon: {
+      type: String,
+      default: '',
+    },
+    suffix: {
+      type: String,
+      default: '',
+    },
+    type: {
+      type: String,
+      default: '',
+    },
     maxlength: {
       type: Number,
       default: 500,
@@ -163,7 +160,7 @@ export default defineComponent({
         }
         if (height > MAX_HEIGHT) {
           // 如果只设置rows，且rows大于maxRows，则忽略maxRows
-          height =  MIN_HEIGHT > MAX_HEIGHT ? MIN_HEIGHT : MAX_HEIGHT;
+          height = MIN_HEIGHT > MAX_HEIGHT ? MIN_HEIGHT : MAX_HEIGHT;
         }
         textarea.value.style.height = `${height}px`;
       }

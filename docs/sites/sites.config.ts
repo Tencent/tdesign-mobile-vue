@@ -76,8 +76,8 @@ export default {
             },
             {
               title: 'CheckBox 复选框',
-              name: 'check-box',
-              component: () => import('@/check-box/check-box.md'),
+              name: 'checkbox',
+              component: () => import('@/checkbox/checkbox.md'),
             },
             // {
             //   title: 'Mask',
@@ -191,6 +191,11 @@ export default {
               title: 'Fab 悬浮按钮',
               name: 'fab',
               component: () => import('@/fab/fab.md'),
+            },
+            {
+              title: 'SearchField 搜索框',
+              name: 'search-field',
+              component: () => import('@/search-field/search-field.md'),
             },
           ],
         },

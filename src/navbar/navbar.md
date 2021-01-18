@@ -12,5 +12,5 @@
 
 | 事件名 | 说明 | 回调参数 |
 |-------|-----|---------|
-|on-click-right|点击右侧更多icon||
-|on-click-text|点击标题文字||
+|click-right|点击右侧更多icon|event|
+|click-text|点击标题文字|event|

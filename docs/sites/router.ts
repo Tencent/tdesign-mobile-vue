@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
+import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router';
 import config from './sites.config';
 
 // const demoReq = require.context("@/", true, /demos[/\\][\w-]+\.vue$/im);
@@ -47,7 +47,8 @@ const routes: Array<RouteRecordRaw> = [
   ...getDocsRoutes(navs.components.docs, 'component'),
 ];
 const router = createRouter({
-  history: createWebHistory('vue-mobile'),
+  // history: createWebHistory('vue-mobile'),
+  history: createWebHashHistory('/'),
   routes,
 });
 

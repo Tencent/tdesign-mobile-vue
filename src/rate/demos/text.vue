@@ -13,14 +13,20 @@
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
+    const value = ref(0);
+    const value1 = ref(2.5);
+    const value2 = ref(3);
+    const texts = ref(['很差', '差', '一般', '好评', '优秀']);
+
     return {
-      value: 1,
-      value1: 2.5,
-      value2: 3,
-      texts: ['很差', '差', '一般', '好评', '优秀'],
+      value,
+      value1,
+      value2,
+      texts,
     };
   },
-};
+});
 </script>

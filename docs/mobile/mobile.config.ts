@@ -1,11 +1,3 @@
-/*
- * @Author: yuliangyang
- * @Date: 2020-05-25 23:24:58
- * @LastEditTime: 2020-11-28 12:00:40
- * @LastEditors: angelaguo
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/docs/mobile/mobile.config.ts
- */
 export default {
   navs: {
     components: {
@@ -38,14 +30,14 @@ export default {
           component: () => import('@/cell/demos/base.vue'),
         },
         {
-          title: 'Rate 评分',
-          name: 'rate',
-          component: () => import('@/rate/demos/base.vue'),
-        },
-        {
           title: 'Input 输入框',
           name: 'input',
           component: () => import('@/input/demos/base.vue'),
+        },
+        {
+          title: 'Rate 评分',
+          name: 'rate',
+          component: () => import('@/rate/demos/base.vue'),
         },
         {
           title: 'Switch 开关',
@@ -73,9 +65,9 @@ export default {
           component: () => import('@/tag/demos/base.vue'),
         },
         {
-          title: 'Check-box 多选框',
-          name: 'check-box',
-          component: () => import('@/check-box/demos/base.vue'),
+          title: 'CheckBox 多选框',
+          name: 'checkbox',
+          component: () => import('@/checkbox/demos/base.vue'),
         },
         {
           title: 'Progress 进度条',
@@ -99,7 +91,7 @@ export default {
         },
         {
           title: 'Slider 滑块',
-          name: 'Slider',
+          name: 'slider',
           component: () => import('@/slider/demos/base.vue'),
         },
         {
@@ -134,7 +126,7 @@ export default {
         },
         {
           title: 'TabBar 标签栏',
-          name: 'tab-bar',
+          name: 'tabbar',
           component: () => import('@/tab-bar/demos/base.vue'),
         },
         {
@@ -171,6 +163,11 @@ export default {
           title: 'Navbar 导航条',
           name: 'navbar',
           component: () => import('@/navbar/demos/base.vue'),
+        },
+        {
+          title: 'SearchField 搜索框',
+          name: 'search-field',
+          component: () => import('@/search-field/demos/base.vue'),
         },
       ],
     },

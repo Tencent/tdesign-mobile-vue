@@ -1,23 +1,21 @@
 <template>
-  <div :class="rootClasses" @touchmove="handleMove">
-    <transition name="fade">
-      <t-mask v-show="currentVisible" :transparent="maskTransparent" @click="handleMaskClick" />
-    </transition>
-    <transition
-      :name="contentTransitionName"
-      @after-enter="afterEnter"
-      @after-leave="afterLeave"
-    >
-      <div v-show="currentVisible" :class="contentClasses">
-        <slot></slot>
-      </div>
-    </transition>
-  </div>
+  <teleport :to="to" :disabled="teleportDisabled">
+    <div :class="rootClasses" @touchmove="handleMove">
+      <transition name="fade">
+        <t-mask v-show="currentVisible" :transparent="maskTransparent" @click="handleMaskClick" />
+      </transition>
+      <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
+        <div v-show="currentVisible" :class="contentClasses">
+          <slot></slot>
+        </div>
+      </transition>
+    </div>
+  </teleport>
 </template>
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { PositionType, IPopupProps } from './popup';
+import { PositionType, PopupProps } from './popup.interface';
 
 import TMask from '../mask';
 
@@ -40,6 +38,22 @@ export default defineComponent({
      * @description 遮罩层是否透明
      * @attribute mask-transparent
      */
+    /**
+     * @description 将popup放在哪个el下，该el在createApp前必须存在
+     * @attribute to
+     */
+    to: {
+      type: String,
+      default: 'body',
+    },
+    /**
+     * @description 是否禁用teleport
+     * @attribute teleport-disabled
+     */
+    teleportDisabled: {
+      type: Boolean,
+      default: false,
+    },
     maskTransparent: {
       type: Boolean,
       default: false,
@@ -67,9 +81,13 @@ export default defineComponent({
      * @description 弹出层内容区的动画名，等价于transition组件的name属性
      * @attribute transition-name
      */
-    transitionName: String,
+    transitionName: {
+      type: String,
+      default: '',
+    },
   },
-  setup(props: IPopupProps, context: SetupContext) {
+  emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
+  setup(props: PopupProps, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);

@@ -61,7 +61,7 @@
     </t-cell-group>
     <t-cell-group title="竖向简化只读步骤条">
       <t-cell>
-        <t-steps type="dot" v-model="current5" direction="vertical">
+        <t-steps v-model="current5" type="dot" direction="vertical">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="当前步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
@@ -72,7 +72,7 @@
       <t-cell>
         <t-steps v-model="current7" direction="vertical">
           <t-step title="已完成步骤" content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。">
-            <template v-slot:extra>
+            <template #extra>
               <img src="//0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png" alt="">
             </template>
           </t-step>
@@ -84,11 +84,11 @@
   </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-steps-demo`;
-export default {
+export default defineComponent({
   name,
   setup() {
     const current = ref(0);
@@ -111,5 +111,5 @@ export default {
       current7,
     };
   },
-};
+});
 </script>

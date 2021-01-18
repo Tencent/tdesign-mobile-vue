@@ -7,10 +7,10 @@
             含header含footer，宽度、层级自定义
           </t-button>
           <t-dialog
+            v-model="isShowDialog"
             :content="content"
-            :zIndex="zIndex"
-            :width="width"
-            v-model="isShowDialog">
+            :z-index="zIndex"
+            :width="width">
             <template #header>
               <div style="color:red;font-size:18px;">特此警告</div>
             </template>
@@ -22,14 +22,14 @@
             含默认header/宽度/层级,事件调用
           </t-button>
           <t-dialog
-            :showFooter="showFooter"
+            v-model="isShowDialog7"
+            :show-footer="showFooter"
             :content="content"
             @clickoverlay="clickoverlay"
             @confirm="onConfirm"
             @opened="openDialog"
             @closed="closeDialog"
-            @visible-change="changeVisible"
-            v-model="isShowDialog7"></t-dialog>
+            @visible-change="changeVisible"></t-dialog>
         </t-cell>
 
         <t-cell value-align="left">
@@ -37,9 +37,9 @@
             含默认footer，宽度、层级默认
           </t-button>
           <t-dialog
-            :showHeader="showHeader"
-            :content="content"
-            v-model="isShowDialog3">
+            v-model="isShowDialog3"
+            :show-header="showHeader"
+            :content="content">
             <template #footer>
               <div style="color:pink;font-size:18px;">我同意</div>
             </template>
@@ -53,15 +53,15 @@
             含标题含input含底部
           </t-button>
           <t-dialog
-            :showOverlay="showOverlay"
+            v-model="isShowDialog4"
+            :show-overlay="showOverlay"
             type="confirm"
-            :isInput="isInput"
+            :is-input="isInput"
             :header="header"
             :content="content"
-            :placeholderText="placeholderText"
-            v-model="isShowDialog4"
-            :cancelButtonText="cancelButtonText"
-            :confirmButtonText="confirmButtonText"
+            :placeholder-text="placeholderText"
+            :cancel-button-text="cancelButtonText"
+            :confirm-button-text="confirmButtonText"
             @confirm="onConfirm"
             @cancel="onCancel">
             <template #footer-cancel>
@@ -78,9 +78,9 @@
             含标题
           </t-button>
           <t-dialog
-            type="confirm"
             v-model="isShowDialog5"
-            :showFooter="showFooter"
+            type="confirm"
+            :show-footer="showFooter"
             @confirm="onConfirm"
             @cancel="onCancel">
             <template #content>
@@ -94,12 +94,12 @@
             含input
           </t-button>
           <t-dialog
-            type="confirm"
-            :showHeader="showHeader"
-            :content="content"
-            :isInput="isInput"
-            :showFooter="showFooter"
             v-model="isShowDialog6"
+            type="confirm"
+            :show-header="showHeader"
+            :content="content"
+            :is-input="isInput"
+            :show-footer="showFooter"
             @confirm="onConfirm"
             @cancel="onCancel"></t-dialog>
         </t-cell>
@@ -146,15 +146,15 @@
   </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-import Dialog from '../index.func';
+import Dialog from './index.func';
 import config from '@/config';
 
 const { prefix } = config;
 const name = `${prefix}-demo--dialog`;
 
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
@@ -244,7 +244,7 @@ export default {
       }
     },
 
-    onConfirm(e:any)  {
+    onConfirm(e: string)  {
       console.log('dialog:confirm', e);
     },
 
@@ -260,7 +260,7 @@ export default {
       console.log('dialog:closed');
     },
 
-    changeVisible(e:any) {
+    changeVisible(e: boolean) {
       console.log('dialog:visible-change', e);
     },
 
@@ -332,7 +332,7 @@ export default {
       }
     },
   },
-};
+});
 </script>
 
 <style lang="less" scoped>

@@ -11,17 +11,19 @@ import {
   computed,
   SetupContext,
   mergeProps,
+  defineComponent,
+  Component,
 } from 'vue';
 import { StepsProps } from './steps.interface';
 import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-steps`;
-export default {
+export default defineComponent({
   name,
   props: StepsProps,
   emits: ['change', 'update:modelValue'],
-  setup(props: StepsProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const baseClass = computed(() => [
       name,
       `${name}--${props.direction}`,
@@ -33,7 +35,7 @@ export default {
     const stepItemsComponent = () => {
       const defaults = context.slots.default ? context.slots.default() : [];
       return defaults
-        .filter(item => item.type.name === `${prefix}-steps-item`)
+        .filter(item => (item.type as Component).name === `${prefix}-steps-item`)
         .map((comp: any, index: number) => {
           const newComp = comp;
           newComp.props = mergeProps(comp.props, { index });
@@ -41,8 +43,8 @@ export default {
         });
     };
 
-    const onClickItem = (curIndex) => {
-      if (props.modelValue !== 'undefined') {
+    const onClickItem = (curIndex: number) => {
+      if (typeof props.modelValue !== 'undefined') {
         context.emit('update:modelValue', curIndex);
         context.emit('change', curIndex);
       }
@@ -61,6 +63,5 @@ export default {
       ...toRefs(props),
     };
   },
-
-};
+});
 </script>

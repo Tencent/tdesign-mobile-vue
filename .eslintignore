@@ -1,4 +1,6 @@
 **/*test*
+**/*docs*
+**/*common*
 !.*.js
 es
 lib
@@ -6,3 +8,4 @@ dist
 *.md
 node_modules
 yarn-error.log
+vite.config.ts

@@ -10,8 +10,8 @@
     <t-cell-group title="左侧关闭icon">
       <t-cell >
         <t-navbar>
-          <template v-slot:left>
-            <t-icon @click="onClickLeft" name="close"></t-icon>
+          <template #left>
+            <t-icon name="close" @click="onClickLeft"></t-icon>
           </template>
         </t-navbar>
       </t-cell>
@@ -19,7 +19,7 @@
     <t-cell-group title="右侧icon">
       <t-cell >
         <t-navbar>
-          <template v-slot:right>
+          <template #right>
             <t-icon name="circle"></t-icon>
           </template>
         </t-navbar>
@@ -29,8 +29,8 @@
       <t-cell >
         <t-navbar
           @on-click-right="onClickMore">
-          <template v-slot:left>
-            <t-icon @click="onClickLeft" name="close"></t-icon>
+          <template #left>
+            <t-icon name="close" @click="onClickLeft"></t-icon>
           </template>
         </t-navbar>
       </t-cell>

@@ -1,6 +1,6 @@
 export type PositionType = 'top' | 'bottom' | 'left' | 'right' | 'center';
 
-export interface IPopupProps {
+export interface PopupProps {
   modelValue?: boolean;
   visible?: boolean;
   maskTransparent?: boolean;
