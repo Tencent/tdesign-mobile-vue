@@ -19,7 +19,7 @@ export { default as Dialog } from './dialog';
 export { default as Popup } from './popup';
 export { default as ActionSheet } from './action-sheet';
 export { default as Badge } from './badge';
-export { default as SegmentControl } from './segment-control';
+export { default as SegmentedControl } from './segmented-control';
 export { default as Fab } from './fab';
 export { default as ImageViewer } from './image-viewer';
 export { default as Drawer } from './drawer';

@@ -16,9 +16,9 @@
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
 import config from '../config';
-import { ModelValueProps, ItemsProps } from './segment-control.interface';
+import { ModelValueProps, ItemsProps } from './segmented-control.interface';
 const { prefix } = config;
-const name = `${prefix}-segment-control`;
+const name = `${prefix}-segmented-control`;
 
 export default defineComponent({
   name,
