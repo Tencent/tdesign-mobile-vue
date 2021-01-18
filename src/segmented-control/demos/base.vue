@@ -23,44 +23,19 @@
         ></t-segmented-control>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="分段器多选">
-      <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items.slice(0,2)"
-          is-multiple
-          @change="change"
-        ></t-segmented-control>
-      </t-cell>
-      <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items.slice(0,3)"
-          is-multiple
-          @change="change"
-        ></t-segmented-control>
-      </t-cell>
-      <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items"
-          is-multiple
-          @change="change"
-        ></t-segmented-control>
-      </t-cell>
-    </t-cell-group>
   </div>
 </template>
 
 <script lang='ts'>
 import { defineComponent, ref, watch } from 'vue';
+import { ModelValueProps } from '../segmented-control.interface';
 export default defineComponent({
   setup() {
     const defaultValue = ref([null]);
     watch(defaultValue, (newValue) => {
       console.log(`当前值为：${newValue}`);
     });
-    const change = (value) => {
+    const change = (value: ModelValueProps) => {
       console.log(`值已改变为：${value}`);
     };
     return {
