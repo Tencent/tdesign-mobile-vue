@@ -3,7 +3,7 @@
     :visible="currentVisible"
     position="center"
     :mask-transparent="!showOverlay"
-    :teleportDisabled="true"
+    :teleport-disabled="true"
     @opened="afterEnter"
     @closed="afterLeave"
     @close="handleClosed"
