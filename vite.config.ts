@@ -13,14 +13,14 @@ module.exports = {
     https: false,
   },
   build: {
-    base: process.env.NODE_ENV === 'development' ? './' : '/vue-mobile/',
     outDir: 'dist',
-  },
-  plugins: [vue(), ...createTDesignPlugin()],
-  rollupOptions: {
-    input: {
-      main: path.resolve(__dirname, 'docs/sites/index.html'),
-      mobile: path.resolve(__dirname, 'docs/mobile/index.html'),
+    base: process.env.NODE_ENV === 'development' ? './' : '/vue-mobile/',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'docs/sites/index.html'),
+        mobile: path.resolve(__dirname, 'docs/mobile/index.html'),
+      },
     },
   },
+  plugins: [vue(), ...createTDesignPlugin()],
 };
