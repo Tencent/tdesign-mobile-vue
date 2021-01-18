@@ -106,7 +106,6 @@ export default defineComponent({
     showPosition(position: string) {
       Toast({
         type: 'success',
-        icon: renderIcon()
         position,
       });
     },
