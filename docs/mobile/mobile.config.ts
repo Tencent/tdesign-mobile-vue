@@ -130,9 +130,9 @@ export default {
           component: () => import('@/tab-bar/demos/base.vue'),
         },
         {
-          title: 'Segment Control 分段器',
-          name: 'segment-control',
-          component: () => import('@/segment-control/demos/base.vue'),
+          title: 'Segmented Control 分段器',
+          name: 'segmented-control',
+          component: () => import('@/segmented-control/demos/base.vue'),
         },
         {
           title: 'Fab 悬浮按钮',

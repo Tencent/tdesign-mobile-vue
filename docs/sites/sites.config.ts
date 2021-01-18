@@ -136,9 +136,9 @@ export default {
               component: () => import('@/tab-bar/tab-bar.md'),
             },
             {
-              title: 'SegmentControl 分段器',
-              name: 'segment-control',
-              component: () => import('@/segment-control/segment-control.md'),
+              title: 'SegmentedControl 分段器',
+              name: 'segmented-control',
+              component: () => import('@/segmented-control/segmented-control.md'),
             },
             {
               title: 'ImageViewer 图片预览',
