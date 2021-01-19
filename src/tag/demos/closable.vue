@@ -3,9 +3,9 @@
   <div class="container tdesign-demo-tag">
     <t-tag
       v-for="(tag,index) in closableTags"
+      :key="tag"
       :closable="true"
       :disabled="tag.disabled"
-      :key="tag"
       theme="primary"
       :size="tag.size"
       @close="onClickClose(index)"
@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   setup() {
     const closableTags = ref([
       {
@@ -41,5 +41,5 @@ export default {
       onClickClose,
     };
   },
-};
+});
 </script>

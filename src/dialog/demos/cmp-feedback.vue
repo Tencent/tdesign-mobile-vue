@@ -1,29 +1,29 @@
 <template>
   <div :class="`${name}`">
     <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="this.isShowDialog = true">
+      <t-button theme="primary" size="large" @click="isShowDialog = true">
         反馈类弹出框
       </t-button>
       <t-dialog
+        v-model="isShowDialog"
         :content="content"
         @clickoverlay="clickoverlay"
         @confirm="onConfirm"
         @opened="openDialog"
         @closed="closeDialog"
-        @visible-change="changeVisible"
-        v-model="isShowDialog"></t-dialog>
+        @visible-change="changeVisible"></t-dialog>
     </t-cell>
   </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
 import config from '@/config';
 
 const { prefix } = config;
 const name = `${prefix}-demo--dialog`;
 
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
@@ -46,7 +46,7 @@ export default {
     };
   },
   methods: {
-    onConfirm(e:any)  {
+    onConfirm(e: string)  {
       console.log('dialog:confirm', e);
     },
 
@@ -58,7 +58,7 @@ export default {
       console.log('dialog:closed');
     },
 
-    changeVisible(e:any) {
+    changeVisible(e: boolean) {
       console.log('dialog:visible-change', e);
     },
 
@@ -66,7 +66,7 @@ export default {
       console.log('dialog:clickoverlay');
     },
   },
-};
+});
 </script>
 
 <style lang="less" scoped>

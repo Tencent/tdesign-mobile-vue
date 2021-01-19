@@ -6,7 +6,7 @@ export type Items = {
   color?: string
 }
 
-export interface IPopupProps {
+export interface PopupProps {
   modelValue: boolean;
   visible:boolean;
   count: number;

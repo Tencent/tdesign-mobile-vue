@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="demo-drawer">
-      <t-drawer :sidebar="baseSidebar" v-model="open" :showIcon="showIcon"></t-drawer>
+      <t-drawer v-model="open" :sidebar="baseSidebar" :show-icon="showIcon"></t-drawer>
       <div class="demo-drawer-content">
         <div class="demo-drawer-text">基础抽屉</div>
         <t-button size="large" @click="openDrawer(false)">基础抽屉（左侧弹出）</t-button>

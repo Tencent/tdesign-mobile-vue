@@ -2,18 +2,19 @@
   <div class="cell-base">
 
     <t-cell-group title="禁用状态">
-      <t-stepper label="失效" v-model.number="number" :step="1" :min="0" :max="100"
+      <t-stepper v-model.number="number" label="失效" :step="1" :min="0" :max="100"
                  disabled/>
     </t-cell-group>
   </div>
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
   setup() {
     return {
-      number: 0,
+      number: ref(0),
     };
   },
-};
+});
 </script>

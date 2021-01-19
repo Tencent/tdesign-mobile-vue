@@ -1,20 +1,20 @@
 <template>
   <div :class="rootClassName">
-    <div :class="`${baseClassName}__inner`">
-      <div :class="`${baseClassName}-icon`" @click="onClickIcon">
+    <div :class="`${name}__inner`">
+      <div :class="`${name}-icon`" @click="onClickIcon">
         <slot name="icon" >
-          <span v-if="isDot" :class="`${baseClassName}-icon__dot`"></span>
-          <span v-else :class="`${baseClassName}-icon__number`">{{index + 1}}</span>
+          <span v-if="isDot" :class="`${name}-icon__dot`"></span>
+          <span v-else :class="`${name}-icon__number`">{{index + 1}}</span>
         </slot>
       </div>
-      <div :class="`${baseClassName}-content`">
-        <div :class="`${baseClassName}-title`">
+      <div :class="`${name}-content`">
+        <div :class="`${name}-title`">
           <slot name="title">{{ title }}</slot>
         </div>
-        <div :class="`${baseClassName}-description`">
+        <div :class="`${name}-description`">
           <slot name="content">{{ content }}</slot>
         </div>
-        <div :class="`${baseClassName}-extra`">
+        <div :class="`${name}-extra`">
           <slot name="extra"></slot>
         </div>
       </div>
@@ -23,23 +23,21 @@
 </template>
 
 <script lang="ts">
-import { computed, ref, inject, SetupContext } from 'vue';
-import { StepItemProps } from './steps.interface';
+import { computed, ref, inject, SetupContext, defineComponent } from 'vue';
+import { StepItemProps, StepStatusEnum } from './steps.interface';
 import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-steps-item`;
 
-export default {
+export default defineComponent({
   name,
   props: StepItemProps,
-  setup(props: StepItemProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const { attrs } = context;
     const index = ref(attrs.index);
 
     const stepsProvide: any = inject('stepsProvide', undefined);
-
-    const baseClassName = computed(() => name);
 
     const parentType = computed(() => stepsProvide.type);
     const current = computed(() => (stepsProvide?.modelValue?.value || stepsProvide?.current?.value || 0));
@@ -49,17 +47,18 @@ export default {
 
     const isDot = computed(() => parentType.value === 'dot' && stepsProvide.direction === 'vertical');
 
-    let { status } = props;
     const curStatus = computed(() => {
+      let { status } = props;
       if (props.status) {
         return props.status;
       }
       if (index.value === current.value) {
-        status = 'process';
-      } else if (index.value < current.value) {
-        status = 'finish';
+        status = StepStatusEnum.Process;
+        // TODO: corret type，暂时写成 any 为了打包编译通过
+      } else if ((index.value as any) < current.value) {
+        status = StepStatusEnum.Finish;
       } else {
-        status = '';
+        status = StepStatusEnum.Empty;
       }
       return status || '';
     });
@@ -77,7 +76,7 @@ export default {
     };
 
     return {
-      baseClassName,
+      name,
       current,
       curStatus,
       index,
@@ -89,5 +88,5 @@ export default {
       isDot,
     };
   },
-};
+});
 </script>

@@ -3,32 +3,33 @@
     :visible="currentVisible"
     position="center"
     :mask-transparent="!showOverlay"
+    :teleport-disabled="true"
     @opened="afterEnter"
     @closed="afterLeave"
     @close="handleClosed"
   >
     <div
-      :class="dClassName"
       id="root"
+      :class="dClassName"
       :style="rootStyles">
-      <div :class="dHeaderClassName" v-if="showHeader">
+      <div v-if="showHeader" :class="dHeaderClassName">
         <slot name="header">
           <div :class="dTitleClassName">{{header}}</div>
         </slot>
       </div>
       <div :class="dBodyClassName">
         <slot name="content">
-          <div :class="dTextClassName" v-if="content">{{content}}</div>
+          <div v-if="content" :class="dTextClassName">{{content}}</div>
         </slot>
         <input
-          v-model="innerValue"
+          v-if="isInput"
           id="input"
+          v-model="innerValue"
           :class="dInputClassName"
           type="text"
-          :placeholder="placeholderText"
-          v-if="isInput">
+          :placeholder="placeholderText">
       </div>
-      <div :class="dFooterClassName" v-if="type=='confirm'">
+      <div v-if="type=='confirm'" :class="dFooterClassName">
         <div :class="dDefaultBtnClassName" @click="handleCancel">
           <slot name="footer-cancel">
             {{cancelContent}}
@@ -40,7 +41,7 @@
           </slot>
         </div>
       </div>
-      <div :class="dFooterClassName" v-if="showFooter&&type!='confirm'">
+      <div v-if="showFooter&&type!='confirm'" :class="dFooterClassName">
         <div :class="dDefaultBtnClassName" @click="handleConfirm">
           <slot name="footer">
             {{knowContent}}
@@ -63,6 +64,7 @@ export default defineComponent({
   name,
   components: { TPopup },
   props: DialogProps,
+  emits: ['update:modelValue', 'confirm', 'clickoverlay', 'cancel', 'visible-change', 'closed', 'opened'],
   setup(props, context: SetupContext) {
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);

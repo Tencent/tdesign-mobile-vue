@@ -3,7 +3,7 @@
     <slot></slot>
   </div>
 </template>
-<script lang='ts'>
+<script lang="ts">
 import { computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -18,10 +18,7 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const classes = computed(() => [
-      `${name}`,
-      `${name}--${props.type}`,
-    ]);
+    const classes = computed(() => [`${name}`, `${name}--${props.type}`]);
     return { classes };
   },
 });

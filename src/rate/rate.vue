@@ -1,27 +1,22 @@
 <template>
   <div :class="`${name}`">
-    <ul
-      :class="`${name}--list`"
-      ref="rateWrapper"
-      @touchstart="onTouchstart"
-      @touchmove="onTouchmove"
-    >
-      <li :class="classes(n)" v-for="n in count" :key="n">
+    <ul ref="rateWrapper" :class="`${name}--list`" @touchstart="onTouchstart" @touchmove="onTouchmove">
+      <li v-for="n in count" :key="n" :class="classes(n)">
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
-              <t-icon name="star_fill" />
+              <t-star-icon :size="size" :style="iconHalfStyle(n)" />
             </slot>
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
             <slot name="icon">
-              <t-icon name="star_fill" />
+              <t-star-icon :size="size" :style="iconFullStyle(n)" />
             </slot>
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
           <slot name="icon">
-            <t-icon name="star_fill" />
+            <t-star-icon :size="size" :style="iconFullStyle(n)" />
           </slot>
         </span>
       </li>
@@ -29,16 +24,17 @@
     <span
       v-if="showText"
       :style="{
-        color: textColor
+        color: textColor,
       }"
       :class="`${name}--text`"
-    >{{rateText}}</span>
+      >{{ rateText }}</span
+    >
   </div>
 </template>
 
 <script lang="ts">
 import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
-import TIcon from '../icon';
+import TStarIcon from '../icon/star-filled.vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -110,14 +106,6 @@ const rateProps = {
    */
   textColor: String,
   /**
-   * @description 评分图标的class类名
-   * @attribute icon
-   */
-  icon: {
-    type: String,
-    default: 'start',
-  },
-  /**
    * @description 评分图标的大小
    * @attribute size
    */
@@ -133,8 +121,9 @@ interface RangeTypes {
 
 export default defineComponent({
   name,
-  components: { TIcon },
+  components: { TStarIcon },
   props: rateProps,
+  emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
     const actualVal = computed(() => props.modelValue || props.value) as ComputedRef<number>;
@@ -144,6 +133,13 @@ export default defineComponent({
       }
 
       return actualVal.value > 0 ? `${actualVal.value} 分` : '';
+    });
+
+    const iconHalfStyle = (n: number) => ({
+      color: actualVal.value + 0.5 === n || actualVal.value >= n ? props.color : null
+    });
+    const iconFullStyle = (n: number) => ({
+      color: actualVal.value >= n ? props.color : null
     });
 
     const classes = (n: number) => ({
@@ -171,10 +167,7 @@ export default defineComponent({
         Array.from(items).forEach((node, index) => {
           const { left, width } = node.getBoundingClientRect();
           if (props.allowHalf) {
-            ranges.push(
-              { score: index + 0.5, left },
-              { score: index + 1, left: left + (width / 2) },
-            );
+            ranges.push({ score: index + 0.5, left }, { score: index + 1, left: left + width / 2 });
           } else {
             ranges.push({ score: index + 1, left });
           }
@@ -206,6 +199,8 @@ export default defineComponent({
       classes,
       rateWrapper,
       actualVal,
+      iconHalfStyle,
+      iconFullStyle,
       rateText,
       onClick,
       onTouchstart,

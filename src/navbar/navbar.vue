@@ -1,18 +1,18 @@
 <template>
-  <div :class="nClassName">
-    <div :class="nBackClass" >
-      <t-icon v-if="leftArrow" @click="handleBack" :class="`${nBackClass}--arrow`" name="arrow-left"></t-icon>
+  <div :class="name">
+    <div :class="`${name}__back`" >
+      <t-icon v-if="leftArrow" :class="`${nBackClass}--arrow`" name="arrow-left" @click="handleBack"></t-icon>
       <slot name="left">
       </slot>
     </div>
 
-    <div :class="nTitleClass" @click="clickText">
+    <div :class="`${name}__text`" @click="clickText">
       <slot>{{ nTitleContent }}</slot>
     </div>
 
-    <div :class="nRightClass" @click="handleMore">
+    <div :class="`${name}__right`" @click="handleMore">
       <slot name="right">
-        <i :class="`${nRightClass}--more`"></i>
+        <i :class="`$${name}__right--more`"></i>
       </slot>
     </div>
   </div>
@@ -20,13 +20,15 @@
 <script lang='ts'>
 import config from '../config';
 import { computed, defineComponent, SetupContext } from 'vue';
-import { NavbarProps, IDNavbarProps } from './navbar.interface';
+import TIcon from '../icon';
+import { NavbarProps } from './navbar.interface';
 
 const { prefix } = config;
 const name = `${prefix}-navbar`;
 
 export default defineComponent({
   name,
+  components: { TIcon },
   props: NavbarProps,
   emits: ['on-click-right', 'on-click-text'],
   setup(props: IDNavbarProps, context: SetupContext) {
@@ -38,7 +40,7 @@ export default defineComponent({
     const nTitleContent = computed(() => {
       const { title, maxLen } = props;
       if (title && title.trim().length > maxLen) {
-        return `${title.split(0, maxLen)}...`;
+        return `${title.slice(0, maxLen)}...`;
       }
       return title;
     });
@@ -49,24 +51,20 @@ export default defineComponent({
       }
     };
 
-    const handleMore = (evt) => {
-      context.emit('on-click-right', evt);
+    const handleMore = (evt: TouchEvent) => {
+      context.emit('click-right', evt);
     };
 
-    const clickText = (evt) => {
-      context.emit('on-click-text', evt);
+    const clickText = (evt: TouchEvent) => {
+      context.emit('click-text', evt);
     };
 
     return {
-      nClassName,
-      nBackClass,
-      nTitleClass,
-      nRightClass,
+      name,
       nTitleContent,
       handleBack,
       handleMore,
       clickText,
-      nCloseClass,
     };
   },
 });

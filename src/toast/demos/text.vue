@@ -8,12 +8,13 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue';
 import Toast from '../index';
-export default {
-  methods: {
-    onClick(text) {
-      Toast(text);
-    },
+export default defineComponent({
+  setup() {
+    return {
+      onClick: (text) => Toast(text),
+    };
   },
-};
+});
 </script>
