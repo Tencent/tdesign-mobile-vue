@@ -3,9 +3,6 @@
 ::: demo 基础分段器 ./demos/index.vue
 :::
 
-::: demo 分段器多选 ./demos/multiple.vue
-:::
-
 ## Props
 
 | 属性       | 类型          | 默认值   | 必传         | 说明       |

@@ -16,40 +16,27 @@
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
 import config from '../config';
-import { ModelValueProps, ItemsProps } from './segment-control.interface';
+import { ModelValueProps, ItemsProps } from './segmented-control.interface';
 const { prefix } = config;
-const name = `${prefix}-segment-control`;
+const name = `${prefix}-segmented-control`;
 
 export default defineComponent({
   name,
   props: {
     modelValue: {
-      type: [Array, Number, String],
+      type: [Number, String] as ModelValueProps,
       default: '',
     },
     items: {
       type: Array as ItemsProps,
       default: () => [],
     },
-    isMultiple: {
-      type: Boolean,
-      default: false,
-    },
   },
   emits: ['change', 'update:modelValue'],
   setup(props, { emit }) {
-    const initActive = (modelValue: ModelValueProps, isMultiple: boolean) => {
-      const concatValue = modelValue ? ([] as any[]).concat(modelValue) : [];
-      return !isMultiple && concatValue.length > 1 ? [concatValue[0]] : concatValue;
-    };
-    const currentActive = ref(initActive(props.modelValue as ModelValueProps, props.isMultiple));
+    const currentActive = ref(props.modelValue);
     const selectChild = (value: string | number) => {
-      const isIncluded = currentActive.value.includes(value);
-      if (isIncluded) {
-        props.isMultiple && (currentActive.value = currentActive.value.filter((i) => i !== value));
-      } else {
-        currentActive.value = props.isMultiple ? [...currentActive.value, value] : [value];
-      }
+      currentActive.value !== value && (currentActive.value = value);
     };
 
     watch(currentActive, (newValue) => {

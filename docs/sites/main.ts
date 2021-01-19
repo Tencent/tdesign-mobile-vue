@@ -4,7 +4,7 @@ import router from './router';
 import TDesignDemo from './components/demo.vue';
 import ComponentContributors from './components/component-contributors.vue';
 import HeaderLink from './components/header-link.vue';
-//@ts-ignore
+// @ts-ignore
 import TDesign from '@/index';
 
 import '../../common/style/mobile/index.less';
