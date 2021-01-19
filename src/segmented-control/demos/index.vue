@@ -1,22 +1,28 @@
 <template>
   <div class="demo-segmented-control">
-    <t-segmented-control
-      v-model="defaultValue"
-      :items="items.slice(0,2)"
-      @change="change"
-    ></t-segmented-control>
-    <t-segmented-control
-      v-model="defaultValue"
-      :items="items.slice(0,3)"
-      class="mt-24"
-      @change="change"
-    ></t-segmented-control>
-    <t-segmented-control
-      v-model="defaultValue"
-      :items="items"
-      class="mt-24"
-      @change="change"
-    ></t-segmented-control>
+    <div class="demo-segmented-control__wrap">
+      <t-cell>
+        <t-segmented-control
+          v-model="defaultValue"
+          :items="items.slice(0,2)"
+          @change="change"
+        ></t-segmented-control>
+      </t-cell>
+      <t-cell>
+        <t-segmented-control
+          v-model="defaultValue"
+          :items="items.slice(0,3)"
+          @change="change"
+        ></t-segmented-control>
+      </t-cell>
+      <t-cell>
+        <t-segmented-control
+          v-model="defaultValue"
+          :items="items"
+          @change="change"
+        ></t-segmented-control>
+      </t-cell>
+    </div>
   </div>
 </template>
 
@@ -25,7 +31,7 @@ import { defineComponent, ref, watch } from 'vue';
 import { ModelValueProps } from '../segmented-control.interface';
 export default defineComponent({
   setup() {
-    const defaultValue = ref([null]);
+    const defaultValue = ref('item_1');
     watch(defaultValue, (newValue) => {
       console.log(`当前值为：${newValue}`);
     });
@@ -60,9 +66,17 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .demo-segmented-control{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+  padding: 40px 0;
+}
+.demo-segmented-control__wrap{
   width: 375px;
 }
-.mt-24{
-  margin-top: 24px;
+.t-cell{
+  margin: 12px 0;
 }
 </style>
