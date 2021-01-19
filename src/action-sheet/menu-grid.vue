@@ -72,7 +72,6 @@ export default defineComponent({
     let startOffset = 0;
     let canMove = true;
 
-    const currentVisible = computed(() => props.modelValue || props.visible);
     const wrapperStyle = computed(() => ({
       transform: `translate3d(${moveOffset.value}px, 0, 0)`,
       transition: useTransition.value ? 'transform 300ms' : null,
@@ -148,7 +147,6 @@ export default defineComponent({
       actionItems,
       currentIndex,
       containerWrapper,
-      currentVisible,
       wrapperStyle,
       handleSelect,
       handleTouchstart,
