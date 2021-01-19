@@ -53,27 +53,10 @@ const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
   props: {
-    modelValue: Boolean,
-    /**
-     * @description 菜单项
-     * @attribute items
-     */
-    /**
-     * @description 是否显示
-     * @attribute visible
-     */
-    visible: {
-      type: Boolean,
-      default: false,
-    },
     items: {
       type: Array,
       required: true,
     },
-    /**
-     * @description grid时每页显示的数量
-     * @attribute count
-     */
     count: {
       type: Number,
       default: 8,

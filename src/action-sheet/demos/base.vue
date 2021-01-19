@@ -31,7 +31,7 @@
       @cancel="handleCancel"
     >
       <template #cell="slotProps">
-        <div class="meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
+        <div class="action-sheet-meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
         <div>{{ slotProps.item.label }}</div>
       </template>
     </t-action-sheet>
@@ -84,14 +84,12 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-.action-sheet-base {
-  .meun-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 4px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.action-sheet-meun-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 4px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>
