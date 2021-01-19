@@ -13,7 +13,7 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
     if (docType === type) {
       let { children } = item;
       if (item.type === 'component') {
-        children = item.children.sort((a, b) => {
+        children = item.children.sort((a: any, b: any) => {
           const nameA = a.name.toUpperCase();
           const nameB = b.name.toUpperCase();
           if (nameA < nameB) {
@@ -47,7 +47,7 @@ const routes: Array<RouteRecordRaw> = [
   ...getDocsRoutes(navs.components.docs, 'component'),
 ];
 const router = createRouter({
-  // history: createWebHistory('vue-mobile'),
+  //history: createWebHistory('/'),
   history: createWebHashHistory('/'),
   routes,
 });
