@@ -15,11 +15,17 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent, ref } from 'vue';
+import config from '@/config';
+const { prefix } = config;
+const name = `${prefix}-steps-demo`;
+export default defineComponent({
+  name,
   setup() {
+    const current = ref(0);
     return {
-      current: 0,
+      current,
     };
   },
-};
+});
 </script>
