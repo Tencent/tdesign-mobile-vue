@@ -90,7 +90,7 @@ export default {
               component: () => import('@/stepper/stepper.md'),
             },
             {
-              title: 'Steps 步进器',
+              title: 'Steps 步骤条',
               name: 'steps',
               component: () => import('@/steps/steps.md'),
             },
