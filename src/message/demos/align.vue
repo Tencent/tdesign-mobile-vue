@@ -8,11 +8,11 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      visible: false,
-    };
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
+    const visible = ref(false);
+    return { visible };
   },
-};
+});
 </script>

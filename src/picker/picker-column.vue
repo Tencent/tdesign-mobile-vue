@@ -1,8 +1,8 @@
 <template>
-  <div :class="className" ref="root">
+  <div ref="root" :class="className">
     <ul :class="wrapperClassName">
-      <li :class="itemClassName" v-for="(option, index) in options" :key="index" >
-        {{formatter(optionKey ? option[optionKey] : option)}}
+      <li v-for="(option, index) in options" :key="index" :class="itemClassName">
+        {{ formatter(optionKey ? option[optionKey] : option) }}
       </li>
     </ul>
   </div>
@@ -19,8 +19,9 @@ const name = `${prefix}-picker-column`;
 
 export default defineComponent({
   props: pickerColumnProps,
+  emits: ['change'],
   setup(props, context: SetupContext) {
-    let picker: Picker|null = null;
+    let picker: Picker | null = null;
     const el = document.createElement('div');
     const root = ref(el);
     const curIndex = ref(props.defaultIndex);
@@ -57,7 +58,6 @@ export default defineComponent({
       wrapperClassName,
       itemClassName,
       curIndex,
-      formatter: pickerColumnProps.formatter,
       ...toRefs(props),
     };
   },

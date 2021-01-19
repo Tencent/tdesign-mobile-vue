@@ -1,10 +1,10 @@
 <template>
   <div :class="name">
-    <slot/>
+    <slot />
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent, ref, provide, watch, Ref } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -18,9 +18,10 @@ export default defineComponent({
       default: 0,
     },
   },
+  emits: ['change', 'update:modelValue'],
   setup(props, { emit }) {
     const activeValue = ref(props.modelValue || 0);
-    const defaultIndex:Ref<number> = ref(-1);
+    const defaultIndex: Ref<number> = ref(-1);
 
     const updateChild = (currentValue: number | string) => {
       activeValue.value = currentValue;

@@ -1,16 +1,16 @@
 <template>
-  <div :class="containerClass" ref="refContainer">
+  <div ref="refContainer" :class="containerClass">
     <slot />
   </div>
 </template>
 
 <script>
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, defineComponent } from 'vue';
 
 const componentName = 'dropdown-menu';
 const name = `tdesign-demo-${componentName}`;
 
-export default {
+export default defineComponent({
   name,
   setup() {
     const refContainer = ref(null);
@@ -29,5 +29,5 @@ export default {
       containerClass,
     };
   },
-};
+});
 </script>

@@ -1,10 +1,9 @@
 <template>
   <span :class="classes">
-    <span :class="textClasses" v-if="text">
-      {{text}}
+    <span v-if="text" :class="textClasses">
+      {{ text }}
     </span>
-    <span :class="nodeClasses" @click="toggle">
-    </span>
+    <span :class="nodeClasses" @click="toggle"> </span>
   </span>
 </template>
 
@@ -61,15 +60,16 @@ export type SwitchPropsType = ExtractPropTypes<typeof switchProps>;
 export default defineComponent({
   name,
   props: switchProps,
+  emits: ['update:modelValue', 'change'],
   setup(props, context: SetupContext) {
-    const _value = ref(false);
+    const switchValue = ref(false);
     const currentValue = computed({
       set(val) {
-        _value.value = val as boolean;
+        switchValue.value = val as boolean;
         context.emit('update:modelValue', val);
       },
       get() {
-        return props.modelValue || _value.value;
+        return props.modelValue || switchValue.value;
       },
     });
 
@@ -97,14 +97,13 @@ export default defineComponent({
     ]);
 
     function handleToggle() {
-      const checked = currentValue.value === props.activeValue
-        ? props.inactiveValue : props.activeValue;
+      const checked = currentValue.value === props.activeValue ? props.inactiveValue : props.activeValue;
 
       currentValue.value = checked;
       context.emit('change', checked);
     }
 
-    function toggle(event:Event) {
+    function toggle(event: Event) {
       event.preventDefault();
       if (props.disabled) {
         return false;

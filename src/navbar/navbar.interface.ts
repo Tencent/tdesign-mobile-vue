@@ -1,7 +1,7 @@
-export interface IDNavbarProps {
-  title?: String,
-  maxLen?: Number,
-  leftArrow?: Boolean,
+export interface DNavbarProps {
+  title?: string,
+  maxLen?: number,
+  leftArrow?: boolean,
 };
 
 export const NavbarProps = {

@@ -19,14 +19,14 @@
       <t-cell>
         <t-progress
           :percentage="50"
-          :showText="false"
+          :show-text="false"
         />
       </t-cell>
       <t-cell>
         <t-progress
           type="error"
           :percentage="88"
-          :showText="false"
+          :show-text="false"
         />
       </t-cell>
     </t-cell-group>
@@ -36,8 +36,8 @@
         <t-progress
           :percentage="50"
           color="#FF00FF"
-          bgColor="#000000"
-          textColor="#00FFFF"
+          bg-color="#000000"
+          text-color="#00FFFF"
         />
       </t-cell>
     </t-cell-group>

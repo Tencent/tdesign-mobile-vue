@@ -9,7 +9,7 @@ const { prefix } = config;
 const name = `${prefix}-mask`;
 
 export interface MaskProps {
-  transparent: Boolean;
+  transparent: boolean;
 }
 
 export default defineComponent({
@@ -20,6 +20,7 @@ export default defineComponent({
       default: false,
     },
   },
+  emits: ['click'],
   setup(props: MaskProps, context: SetupContext) {
     const classes = computed(() => ({
       [`${name}`]: !props.transparent,

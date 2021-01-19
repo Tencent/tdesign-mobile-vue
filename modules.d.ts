@@ -7,9 +7,8 @@ declare module '*.json' {
   const content: string;
   export default content;
 }
-
-declare module 'clipboard';
-
-declare module 'vfile-message' {
-  export type VFileMessage = any;
+declare module '*.vue' {
+  import { defineComponent } from 'vue';
+  const Component: ReturnType<typeof defineComponent>;
+  export default Component;
 }

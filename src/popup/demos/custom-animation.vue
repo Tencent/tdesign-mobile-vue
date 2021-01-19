@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <t-button @click="bottom = true">1.5s的slide-fade动画</t-button>
 
     <t-popup
@@ -12,33 +11,25 @@
       @close="close"
       @closed="closed"
     >
-      <div style="height: 200px; background: #fff;"></div>
+      <div style="height: 200px; background: #fff"></div>
     </t-popup>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
+    const bottom = ref(false);
     return {
-      bottom: false,
+      bottom,
+      open: () => console.log('open--------'),
+      opened: () => console.log('opened--------'),
+      close: () => console.log('close--------'),
+      closed: () => console.log('closed--------'),
     };
   },
-  methods: {
-    open() {
-      console.log('open--------');
-    },
-    opened() {
-      console.log('opened--------');
-    },
-    close() {
-      console.log('close--------');
-    },
-    closed() {
-      console.log('closed--------');
-    },
-  },
-};
+});
 </script>
 
 <style lang="less">

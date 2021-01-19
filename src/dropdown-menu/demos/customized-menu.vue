@@ -5,13 +5,13 @@
       <t-dropdown-item title="自定义内容">
         <t-cell-group>
           <t-cell label="开关 1">
-            <t-switch text="描述信息" v-model="switch1"></t-switch>
+            <t-switch v-model="switch1" text="描述信息"></t-switch>
           </t-cell>
           <t-cell label="开关 2">
-            <t-switch text="描述信息" v-model="switch2"></t-switch>
+            <t-switch v-model="switch2" text="描述信息"></t-switch>
           </t-cell>
           <t-cell label="开关 3">
-            <t-switch disabled text="描述信息" v-model="switch3"></t-switch>
+            <t-switch v-model="switch3" disabled text="描述信息"></t-switch>
           </t-cell>
         </t-cell-group>
       </t-dropdown-item>

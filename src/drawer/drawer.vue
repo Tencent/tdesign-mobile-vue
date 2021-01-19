@@ -3,8 +3,8 @@
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
         <div v-if="showIcon">
-          <img :src="item.iconImg" :class="dSideBarItemIconClassName" v-if="item.iconImg">
-          <t-icon :name="item.iconName" :class="dSideBarItemIconClassName" v-if="item.iconName"/>
+          <img v-if="item.iconImg" :src="item.iconImg" :class="dSideBarItemIconClassName">
+          <t-icon v-if="item.iconName" :name="item.iconName" :class="dSideBarItemIconClassName"/>
         </div>
         <div :class="dSideBarItemNameClassName">{{item.name}}</div>
       </div>

@@ -12,12 +12,13 @@
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
     return {
-      value: 2,
-      value1: 3,
+      value: ref(2),
+      value1: ref(3),
     };
   },
-};
+});
 </script>
