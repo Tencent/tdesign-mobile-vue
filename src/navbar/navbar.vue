@@ -1,7 +1,7 @@
 <template>
   <div :class="name">
     <div :class="`${name}__back`" >
-      <t-icon v-if="leftArrow" :class="`${nBackClass}--arrow`" name="arrow-left" @click="handleBack"></t-icon>
+      <t-icon v-if="leftArrow" :class="`${name}__back--arrow`" name="arrow-left" @click="handleBack"></t-icon>
       <slot name="left">
       </slot>
     </div>
@@ -30,13 +30,8 @@ export default defineComponent({
   name,
   components: { TIcon },
   props: NavbarProps,
-  emits: ['on-click-right', 'on-click-text'],
+  emits: ['click-right', 'click-text'],
   setup(props: IDNavbarProps, context: SetupContext) {
-    const nClassName = computed(() => `${name}`);
-    const nBackClass = computed(() => `${name}__back`);
-    const nCloseClass = computed(() => `${name}__close`);
-    const nTitleClass = computed(() => `${name}__text`);
-    const nRightClass = computed(() => `${name}__right`);
     const nTitleContent = computed(() => {
       const { title, maxLen } = props;
       if (title && title.trim().length > maxLen) {
