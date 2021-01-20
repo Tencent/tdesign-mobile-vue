@@ -126,7 +126,7 @@ export default {
         },
         {
           title: 'TabBar 标签栏',
-          name: 'tabbar',
+          name: 'tab-bar',
           component: () => import('@/tab-bar/demos/base.vue'),
         },
         {

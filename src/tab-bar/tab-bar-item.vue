@@ -12,7 +12,7 @@
         <t-icon :name="icon"></t-icon>
       </div>
       <div :class="`${componentName}__text`">
-        <div v-if="children" :class="`${componentName}__icon-menu`"></div>
+        <div v-if="children && children.length > 0" :class="`${componentName}__icon-menu`"></div>
         <slot />
       </div>
     </div>

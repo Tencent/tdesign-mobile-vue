@@ -65,17 +65,6 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.demo-segmented-control{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F5F5F5;
-  padding: 40px 0;
-}
-.demo-segmented-control__wrap{
-  width: 375px;
-}
 .t-cell{
   margin: 12px 0;
 }
