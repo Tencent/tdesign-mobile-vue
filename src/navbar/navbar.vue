@@ -31,7 +31,7 @@ export default defineComponent({
   components: { TIcon },
   props: NavbarProps,
   emits: ['click-right', 'click-text'],
-  setup(props: IDNavbarProps, context: SetupContext) {
+  setup(props: NavbarProps, context: SetupContext) {
     const nTitleContent = computed(() => {
       const { title, maxLen } = props;
       if (title && title.trim().length > maxLen) {
