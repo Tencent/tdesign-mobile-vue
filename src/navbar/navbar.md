@@ -1,5 +1,11 @@
 # Navbar 导航栏
 
+::: demo 导航栏 ./demos/index.vue
+:::
+
+::: demo 事件反馈 ./demos/event.vue
+:::
+
 ## Props
 
 | 属性      | 类型    | 默认值 | 必传 | 说明                        |
