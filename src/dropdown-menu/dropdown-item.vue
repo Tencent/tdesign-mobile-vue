@@ -279,7 +279,8 @@ export default defineComponent({
             options: props.options,
             selectList: treeState.selectList,
           }),
-        async (val, oldVal) => {
+        //   async (val, oldVal) => {
+        async () => {
           //   console.log(`${oldVal}\n =>\n${val}`);
           // fix: 这次微任务结束后，再重建选项。否则 oldVal 无法更新，导致无限调用
           await nextTick();
