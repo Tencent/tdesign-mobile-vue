@@ -132,7 +132,7 @@ export default {
           children: [
             {
               title: 'TabBar 标签栏',
-              name: 'tab-bar',
+              name: 'tabbar',
               component: () => import('@/tab-bar/tab-bar.md'),
             },
             {
