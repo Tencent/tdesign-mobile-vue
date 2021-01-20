@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, defineComponent, PropType } from 'vue';
+import { computed, SetupContext, defineComponent, PropType } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-cell`;
@@ -52,7 +52,7 @@ export default defineComponent({
       return alignLeft;
     });
 
-    const onClick = (e) => context.emit('click', e);
+    const onClick = (e: Event) => context.emit('click', e);
 
     return {
       name,
