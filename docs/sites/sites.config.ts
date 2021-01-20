@@ -124,6 +124,11 @@ export default {
               name: 'collapse',
               component: () => import('@/collapse/collapse.md'),
             },
+            {
+              title: 'Cell 单元格',
+              name: 'cell',
+              component: () => import('@/cell/cell.md'),
+            },
           ],
         },
         {
