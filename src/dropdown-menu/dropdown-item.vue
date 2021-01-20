@@ -110,7 +110,7 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, reactive, inject, watch, defineComponent, SetupContext } from 'vue';
+import { computed, toRefs, ref, reactive, inject, watch, defineComponent, nextTick, SetupContext } from 'vue';
 
 import { DropdownMenuPropsType, DropdownItemProps, DropdownItemPropsType } from './dropdown.interface';
 import config from '../config';
@@ -279,7 +279,12 @@ export default defineComponent({
             options: props.options,
             selectList: treeState.selectList,
           }),
-        buildTreeOptions,
+        async (val, oldVal) => {
+          //   console.log(`${oldVal}\n =>\n${val}`);
+          // fix: 这次微任务结束后，再重建选项。否则 oldVal 无法更新，导致无限调用
+          await nextTick();
+          buildTreeOptions();
+        },
       );
       buildTreeOptions();
     }
