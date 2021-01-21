@@ -1,6 +1,6 @@
 <template>
-  <div :class="styleWrapper">
-    <div v-if="hasLabel" :class="styleLabel">
+  <div :class="name" @click="onClick">
+    <div v-if="hasLabel" :class="`${name}__label`">
       <slot name="label">
         <div v-if="label">{{ label }}</div>
       </slot>
@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, defineComponent, PropType } from 'vue';
+import { computed, SetupContext, defineComponent, PropType } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-cell`;
@@ -37,10 +37,8 @@ export default defineComponent({
       default: 'right',
     },
   },
+  emits: ['click'],
   setup(props, context: SetupContext) {
-    const styleLabel = ref(`${name}__label`);
-    const styleWrapper = computed(() => [`${name}`]);
-
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;
@@ -54,11 +52,13 @@ export default defineComponent({
       return alignLeft;
     });
 
+    const onClick = (e: Event) => context.emit('click', e);
+
     return {
-      styleWrapper,
-      styleLabel,
+      name,
       styleValue,
       hasLabel,
+      onClick,
     };
   },
 });
