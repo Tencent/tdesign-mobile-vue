@@ -1,9 +1,13 @@
 # Navbar 导航栏
 
-::: demo 导航栏 ./demos/index.vue
+## 导航栏
+
+::: demo ./demos/index.vue
 :::
 
-::: demo 事件反馈 ./demos/event.vue
+## 事件反馈
+
+::: demo ./demos/event.vue
 :::
 
 ## Props

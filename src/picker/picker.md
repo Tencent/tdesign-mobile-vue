@@ -1,24 +1,38 @@
-# 选择器 Picker
+# Picker 选择器
 
-::: demo 单列选择 ./demos/base.vue
+## 单列选择
+
+::: demo ./demos/base.vue
 :::
 
-::: demo 对象数组 ./demos/object-array.vue
+## 对象数组
+
+::: demo ./demos/object-array.vue
 :::
 
-::: demo 默认选中 ./demos/default-selected.vue
+## 默认选中
+
+::: demo ./demos/default-selected.vue
 :::
 
-::: demo 自定义展示内容 ./demos/custom.vue
+## 自定义展示内容
+
+::: demo ./demos/custom.vue
 :::
 
-::: demo 多列选择 ./demos/multiple.vue
+## 多列选择
+
+::: demo ./demos/multiple.vue
 :::
 
-::: demo 联动选择 ./demos/cascade.vue
+## 联动选择
+
+::: demo ./demos/cascade.vue
 :::
 
-::: demo 弹窗层的 Picker ./demos/popup-picker.vue
+## 弹窗层的 Picker
+
+::: demo ./demos/popup-picker.vue
 :::
 
 ## Props

@@ -193,6 +193,11 @@ export default {
           type: 'component',
           children: [
             {
+              title: 'Input 输入框',
+              name: 'input',
+              component: () => import('@/input/input.md'),
+            },
+            {
               title: 'Fab 悬浮按钮',
               name: 'fab',
               component: () => import('@/fab/fab.md'),
