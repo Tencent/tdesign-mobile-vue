@@ -1,5 +1,5 @@
 <template>
-  <div class="input-base" style="padding-bottom: 20px">
+  <div style="padding-bottom: 20px">
     <t-cell-group title="基础输入框">
       <t-input v-model="text" label="标准五个字" placeholder="预设文本(非必填)" right-icon="circle_help" />
       <t-input label="一个很长的标题需换行" placeholder="预设文本保持上下居中" >
