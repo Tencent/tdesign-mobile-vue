@@ -124,7 +124,11 @@ export default defineComponent({
       changeValue(e);
     };
     const hasLabel = computed(() => {
-      if (props.label) return true;
+      if (props.label) {
+        return true;
+      } else {
+        return false;
+      }
     });
     return {
       name,
