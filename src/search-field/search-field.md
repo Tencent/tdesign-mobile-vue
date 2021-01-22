@@ -1,6 +1,8 @@
 # SearchField 搜索框
 
-::: demo 示例用法 ./demos/base.vue
+## 基础用法
+
+::: demo ./demos/base.vue
 :::
 
 ## Props

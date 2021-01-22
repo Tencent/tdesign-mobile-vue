@@ -1,24 +1,38 @@
-# 评分
+# Rate 评分
 
-::: demo 基础用法 ./demos/index.vue
+## 基础用法
+
+::: demo ./demos/index.vue
 :::
 
-::: demo 允许半选 ./demos/allowHalf.vue
+## 允许半选
+
+::: demo ./demos/allowHalf.vue
 :::
 
-::: demo 辅助文本 ./demos/text.vue
+## 辅助文本
+
+::: demo ./demos/text.vue
 :::
 
-::: demo 自定义数量 ./demos/count.vue
+## 自定义数量
+
+::: demo ./demos/count.vue
 :::
 
-::: demo 只读 ./demos/readonly.vue
+## 只读
+
+::: demo ./demos/readonly.vue
 :::
 
-::: demo 自定义颜色 ./demos/color.vue
+## 自定义颜色
+
+::: demo ./demos/color.vue
 :::
 
-::: demo 自定义图标 ./demos/icon.vue
+## 自定义图标
+
+::: demo ./demos/icon.vue
 :::
 
 ## Props

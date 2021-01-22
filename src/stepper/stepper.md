@@ -1,14 +1,23 @@
-# 步进器 Stepper
+# Stepper 步进器
 
-::: demo 基础用法 ./demos/index.vue
+## 基础用法
+
+::: demo ./demos/index.vue
 :::
 
-::: demo 禁用 ./demos/disabled.vue
+## 禁用
+
+::: demo ./demos/disabled.vue
 :::
 
-::: demo 禁止输入 ./demos/disableInput.vue
+## 禁止输入
+
+::: demo ./demos/disableInput.vue
 :::
-::: demo 绑定事件 ./demos/event.vue
+
+## 绑定事件
+
+::: demo ./demos/event.vue
 :::
 
 ## Props
