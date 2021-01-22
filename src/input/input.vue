@@ -6,39 +6,39 @@
       </slot>
     </template>
     <template #default>
-      <div :class="styleValueWrap">
+      <div :class="`${name}-wrap`">
         <input v-model="innerValue" v-bind="$attrs" :class="styleControl" :type="type" :disabled="disabled" />
-        <div v-if="clearable && innerValue.length > 0" :class="styleIcon" @click="handleClear">
-          <t-icon name="circle_clear" />
+        <div v-if="clearable && innerValue.length > 0" :class="`${name}-wrap--icon`" @click="handleClear">
+          <t-icon name="clear-circle-filled" />
         </div>
-        <div v-if="hasSuffix" :class="styleSuffix">
+        <div v-if="hasSuffix" :class="`${name}-wrap--suffix`">
           <slot name="suffix"></slot>
         </div>
-        <div v-if="hasRightIcon" :class="styleIcon">
+        <div v-if="hasRightIcon" :class="`${name}-wrap--icon`">
           <slot name="rightIcon">
             <div v-if="suffix">{{ suffix }}</div>
             <t-icon v-if="rightIcon" :name="rightIcon" @click="handleClickIcon" />
           </slot>
         </div>
       </div>
-      <div v-if="errorMessage" :class="styleErrMsg">{{ errorMessage }}</div>
+      <div v-if="errorMessage" :class="`${name}__error-msg`">{{ errorMessage }}</div>
     </template>
   </t-cell>
   <div v-else>
-    <div v-if="hasLabel" :class="styleTextareaLabel">
+    <div v-if="hasLabel" :class="`${name}--textarea-label`">
       <slot name="label">
         <div v-if="label">{{ label }}</div>
       </slot>
     </div>
-    <div :class="styleTextarea">
+    <div :class="`${name}--textarea`">
       <textarea ref="textarea" v-model="innerValue" v-bind="$attrs" :maxlength="maxlength" :disabled="disabled" />
-      <div :class="styleCount">{{ `${innerValue.length} / ${maxlength}` }}</div>
+      <div :class="`${name}--count`">{{ `${innerValue.length} / ${maxlength}` }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, reactive, toRefs, computed, watch, onMounted, SetupContext, defineComponent } from 'vue';
+import { ref, computed, watch, onMounted, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-input`;
@@ -86,36 +86,24 @@ export default defineComponent({
     clearable: Boolean,
     disabled: Boolean,
   },
+  emits: ['update:modelValue', 'click-icon'],
   setup(props, context: SetupContext) {
-    const { emit } = context;
-    const textarea = ref();
-    const state = reactive({
-      styleValueWrap: `${name}-wrap`,
-      styleErrMsg: `${name}__error-msg`,
-      styleSuffix: `${name}-wrap--suffix`,
-      styleIcon: `${name}-wrap--icon`,
-      styleTextarea: `${name}--textarea`,
-      styleTextareaLabel: `${name}--textarea-label`,
-      styleCount: `${name}--count`,
-      styleDisabled: `${name}__disabled`,
-      cacheValue: '',
-    });
-    const styleControl = computed(() => {
-      if (props.suffix) {
-        return `${name}--control ${name}--control__right`;
-      }
-      return `${name}--control`;
-    });
-    const styleWrapper = computed(() => {
-      if (!!props.errorMessage || props.error) {
-        return `${name} ${name}__error`;
-      }
-      return name;
-    });
-    const styleLabel = computed(() => {
-      if (props.disabled) return `${name}--label ${name}__disabled`;
-      return `${name}--label`;
-    });
+    const textarea = ref(null);
+    const cacheValue = ref('');
+
+    const styleControl = computed(() => ({
+      [`${name}--control`]: true,
+      [`${name}--control__right`]: props.suffix
+    }));
+    const styleWrapper = computed(() => ({
+      [name]: true,
+      [`${name}__error`]: !!props.errorMessage || props.error
+    }));
+    const styleLabel = computed(() => ({
+      [`${name}--label`]: true,
+      [`${name}__disabled`]: props.disabled
+    }));
+
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;
@@ -130,15 +118,15 @@ export default defineComponent({
 
     const innerValue = computed({
       get() {
-        return props.modelValue || state.cacheValue;
+        return props.modelValue || cacheValue.value;
       },
       set(val: string) {
-        emit('update:modelValue', val);
-        state.cacheValue = val;
+        cacheValue.value = val;
+        context.emit('update:modelValue', val);
       },
     });
     const handleClickIcon = () => {
-      emit('click-icon');
+      context.emit('click-icon');
     };
     const handleClear = () => {
       innerValue.value = '';
@@ -166,7 +154,7 @@ export default defineComponent({
       }
     });
     return {
-      ...toRefs(state),
+      name,
       styleLabel,
       styleWrapper,
       styleControl,
