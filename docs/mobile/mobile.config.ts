@@ -169,6 +169,11 @@ export default {
           name: 'search-field',
           component: () => import('@/search-field/demos/base.vue'),
         },
+        {
+          title: 'Cell 单元格',
+          name: 'cell',
+          component: () => import('@/cell/demos/base.vue'),
+        },
       ],
     },
   },

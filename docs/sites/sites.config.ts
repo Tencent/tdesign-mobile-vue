@@ -90,7 +90,7 @@ export default {
               component: () => import('@/stepper/stepper.md'),
             },
             {
-              title: 'Steps 步进器',
+              title: 'Steps 步骤条',
               name: 'steps',
               component: () => import('@/steps/steps.md'),
             },
@@ -124,6 +124,11 @@ export default {
               name: 'collapse',
               component: () => import('@/collapse/collapse.md'),
             },
+            {
+              title: 'Cell 单元格',
+              name: 'cell',
+              component: () => import('@/cell/cell.md'),
+            },
           ],
         },
         {
@@ -132,7 +137,7 @@ export default {
           children: [
             {
               title: 'TabBar 标签栏',
-              name: 'tab-bar',
+              name: 'tabbar',
               component: () => import('@/tab-bar/tab-bar.md'),
             },
             {
@@ -187,6 +192,11 @@ export default {
           title: '输入类组件',
           type: 'component',
           children: [
+            {
+              title: 'Input 输入框',
+              name: 'input',
+              component: () => import('@/input/input.md'),
+            },
             {
               title: 'Fab 悬浮按钮',
               name: 'fab',

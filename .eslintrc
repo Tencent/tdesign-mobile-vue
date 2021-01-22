@@ -31,6 +31,7 @@
     "no-underscore-dangle": 0,
     "func-style": 0,
     "no-console": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-unused-vars": ["error"],
     "@typescript-eslint/ban-ts-comment": 0,

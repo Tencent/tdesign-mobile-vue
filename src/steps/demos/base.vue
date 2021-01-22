@@ -3,14 +3,13 @@
     <t-cell-group title="横向不可操作">
       <t-cell >
         <t-steps
-          v-model="current"
-          :readonly="false">
+          v-model="current">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
         </t-steps>
       </t-cell>
       <t-cell>
-        <t-steps v-model="current1" :readonly="false">
+        <t-steps v-model="current1">
           <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
           <t-step title="选中步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="未完成" content="辅助信息文字最多两行"></t-step>
@@ -73,7 +72,7 @@
         <t-steps v-model="current7" direction="vertical">
           <t-step title="已完成步骤" content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。">
             <template #extra>
-              <img src="//0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png" alt="">
+              <img src="https://0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png" alt="">
             </template>
           </t-step>
           <t-step title="当前步骤" content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。"></t-step>
