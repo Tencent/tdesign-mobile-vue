@@ -88,7 +88,7 @@ export default defineComponent({
   },
   emits: ['update:modelValue', 'click-icon'],
   setup(props, context: SetupContext) {
-    const textarea = ref(null);
+    const textarea = ref();
     const cacheValue = ref('');
 
     const styleControl = computed(() => ({
