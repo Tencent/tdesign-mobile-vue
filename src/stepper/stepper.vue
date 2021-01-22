@@ -126,9 +126,8 @@ export default defineComponent({
     const hasLabel = computed(() => {
       if (props.label) {
         return true;
-      } else {
-        return false;
       }
+      return false;
     });
     return {
       name,
