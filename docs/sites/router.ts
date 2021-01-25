@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
+import { RouteRecordRaw, createRouter, createWebHistory, createWebHashHistory, RouterOptions } from 'vue-router';
 import config from './sites.config';
 
 // const demoReq = require.context("@/", true, /demos[/\\][\w-]+\.vue$/im);
@@ -46,10 +46,16 @@ const routes: Array<RouteRecordRaw> = [
   ...getDocsRoutes(navs.components.docs, 'document'),
   ...getDocsRoutes(navs.components.docs, 'component'),
 ];
-const router = createRouter({
-  history: createWebHistory(process.env.NODE_ENV === 'development' ? '/' : '/vue-mobile/'),
-  //history: createWebHashHistory('/'),
+
+const routerConfig: RouterOptions = {
+  history: createWebHashHistory('/'),
   routes,
-});
+};
+
+if(process.env.NODE_ENV === 'production') {
+  routerConfig.history = createWebHistory('/vue-mobile/');
+}
+
+const router = createRouter(routerConfig);
 
 export default router;
