@@ -34,9 +34,9 @@
 
     <t-cell-group title="图标按钮">
       <t-cell value-align="left">
-        <t-button theme="text" icon="books">带图标文字按钮</t-button><br/>
-        <t-button theme="primary" icon="books">带图标的按钮</t-button><br/>
-        <t-button theme="primary" icon="books"></t-button><br/>
+        <t-button theme="text" icon="user-filled">带图标文字按钮</t-button><br/>
+        <t-button theme="primary" icon="user-filled">带图标的按钮</t-button><br/>
+        <t-button theme="primary" icon="user-filled"></t-button><br/>
       </t-cell>
     </t-cell-group>
 
@@ -44,7 +44,7 @@
       <t-button :loading="loading" >带图标的按钮-加载</t-button><br/>
     </t-cell>
 
-    <t-button icon="books" block>文本按钮</t-button><br/>
+    <t-button icon="user-filled" block>文本按钮</t-button><br/>
   </div>
 </template>
 <script lang="ts">
