@@ -18,7 +18,7 @@
     </div>
 
     <transition name="spread">
-      <ul v-if="children && isSpread" :class="`${componentName}__spread`">
+      <ul v-if="children && children.length > 0 && isSpread" :class="`${componentName}__spread`">
         <li
           v-for="(child, index) in children"
           :key="child.name || index"

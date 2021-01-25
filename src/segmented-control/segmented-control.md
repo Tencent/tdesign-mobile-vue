@@ -6,7 +6,7 @@
 
 ### 1.1.基础分段器
 使用场景：同一性质内容体不同类型/状态/视图的页面切换
-::: demo 基础分段器 ./demos/index.vue
+::: demo ./demos/index.vue
 :::
 
 ## Props
