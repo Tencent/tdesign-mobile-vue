@@ -7,7 +7,15 @@
     </template>
     <template #default>
       <div :class="`${name}-wrap`">
-        <input v-model="innerValue" v-bind="$attrs" :class="styleControl" :type="type" :disabled="disabled" />
+        <input
+          v-model="innerValue"
+          v-bind="$attrs"
+          :class="styleControl"
+          :type="type"
+          :disabled="disabled"
+          @focus="handleFocus"
+          @blur="handleBlur"
+        />
         <div v-if="clearable && innerValue.length > 0" :class="`${name}-wrap--icon`" @click="handleClear">
           <t-icon name="clear-circle-filled" />
         </div>
@@ -31,7 +39,15 @@
       </slot>
     </div>
     <div :class="`${name}--textarea`">
-      <textarea ref="textarea" v-model="innerValue" v-bind="$attrs" :maxlength="maxlength" :disabled="disabled" />
+      <textarea
+        ref="textarea"
+        v-model="innerValue"
+        v-bind="$attrs"
+        :maxlength="maxlength"
+        :disabled="disabled"
+        @focus="handleFocus"
+        @blur="handleBlur"
+      />
       <div :class="`${name}--count`">{{ `${innerValue.length} / ${maxlength}` }}</div>
     </div>
   </div>
@@ -86,22 +102,22 @@ export default defineComponent({
     clearable: Boolean,
     disabled: Boolean,
   },
-  emits: ['update:modelValue', 'click-icon'],
+  emits: ['update:modelValue', 'click-icon', 'focus', 'blur', 'change'],
   setup(props, context: SetupContext) {
     const textarea = ref();
     const cacheValue = ref('');
 
     const styleControl = computed(() => ({
       [`${name}--control`]: true,
-      [`${name}--control__right`]: props.suffix
+      [`${name}--control__right`]: props.suffix,
     }));
     const styleWrapper = computed(() => ({
       [name]: true,
-      [`${name}__error`]: !!props.errorMessage || props.error
+      [`${name}__error`]: !!props.errorMessage || props.error,
     }));
     const styleLabel = computed(() => ({
       [`${name}--label`]: true,
-      [`${name}__disabled`]: props.disabled
+      [`${name}__disabled`]: props.disabled,
     }));
 
     const hasLabel = computed(() => {
@@ -123,6 +139,7 @@ export default defineComponent({
       set(val: string) {
         cacheValue.value = val;
         context.emit('update:modelValue', val);
+        context.emit('change', val);
       },
     });
     const handleClickIcon = () => {
@@ -130,6 +147,12 @@ export default defineComponent({
     };
     const handleClear = () => {
       innerValue.value = '';
+    };
+    const handleFocus = () => {
+      context.emit('focus');
+    };
+    const handleBlur = () => {
+      context.emit('blur');
     };
 
     const MIN_HEIGHT = 22 * props.rows; // 默认四行
@@ -166,6 +189,8 @@ export default defineComponent({
       textarea,
       handleClickIcon,
       handleClear,
+      handleFocus,
+      handleBlur,
     };
   },
 });
