@@ -96,7 +96,7 @@ export default defineComponent({
     },
     showCustom(message: string | undefined) {
       Toast({
-        icon: 'user_fill',
+        icon: 'user-filled',
         message,
       });
     },
