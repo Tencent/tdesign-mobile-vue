@@ -14,9 +14,6 @@
         <t-badge content="···" class="badge-item">
           <t-button size="small">小按钮</t-button>
         </t-badge>
-        <t-badge :count="2" class="badge-item">
-          <t-icon name="user-filled"/>
-        </t-badge>
       </div>
     </t-cell-group>
     <t-cell-group title="列表带徽标">
