@@ -19,7 +19,7 @@ import { defineComponent, reactive } from 'vue';
 export default defineComponent({
   setup() {
     const state = reactive({
-      indexLists: ['A', 'B', 'C', 'D', 'E', 'F'],
+      indexLists: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V','W', 'X', 'Y', 'Z'],
     });
 
     const handleClick = (event: Event) => {
