@@ -1,8 +1,31 @@
 <template>
   <div class="cell-base">
-    <t-cell-group title="基本用法">
+    <t-cell-group title="基础进度条">
+      <t-cell>
+        <t-progress :percentage="0" />
+      </t-cell>
       <t-cell>
         <t-progress :percentage="30" />
+      </t-cell>
+       <t-cell>
+         <t-progress :percentage="100" />
+      </t-cell>
+      <t-cell>
+         <t-progress type="error" :percentage="88" />
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group title="隐藏数值进度条">
+      <t-cell>
+        <t-progress :percentage="0" :show-text="false" />
+      </t-cell>
+      <t-cell>
+        <t-progress :percentage="30" :show-text="false" />
+      </t-cell>
+      <t-cell>
+        <t-progress :percentage="100" :show-text="false" />
+      </t-cell>
+      <t-cell>
+        <t-progress type="error" :percentage="88" :show-text="false" />
       </t-cell>
     </t-cell-group>
 
@@ -14,23 +37,7 @@
         <t-progress type="error" :percentage="88" />
       </t-cell>
     </t-cell-group>
-
-    <t-cell-group title="隐藏文本">
-      <t-cell>
-        <t-progress
-          :percentage="50"
-          :show-text="false"
-        />
-      </t-cell>
-      <t-cell>
-        <t-progress
-          type="error"
-          :percentage="88"
-          :show-text="false"
-        />
-      </t-cell>
-    </t-cell-group>
-
+    
     <t-cell-group title="自定义样式">
       <t-cell>
         <t-progress
