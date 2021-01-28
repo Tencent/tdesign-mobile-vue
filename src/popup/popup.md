@@ -1,14 +1,50 @@
-# Popup 弹出层
+# Popup 弹出层-Popup
+定义：由其他控件触发，屏幕滑出或弹出一块自定义内容区域
 
-## 弹出位置
 
-::: demo ./demos/position.vue
+## 1. 组件类型
+TDesign中，拥有两种不同类型的弹出层：中部弹出、底部弹出、顶部弹出、左侧弹出、右侧弹出
+
+###  1.1 中部弹出
+使用场景：常用于轻提示场景
+
+::: demo ./demos/positionCenter.vue
 :::
 
-## 自定义动画
+###  1.2底部弹出
+使用场景：常用于较重要的操作反馈提示场景或不打断主任务的临时操作
+
+::: demo ./demos/positionBottom.vue
+:::
+
+
+###  1.3顶部弹出
+使用场景：常用于及时反馈
+
+::: demo ./demos/positionTop.vue
+:::
+
+### 1.4左侧弹出
+使用场景：常用于页面导航场景
+
+::: demo ./demos/positionLeft.vue
+:::
+
+###  1.5右侧弹出
+使用场景：常用于页面导航场景
+
+::: demo ./demos/positionRight.vue
+:::
+
+
+
+### 1.6.自定义动画
 
 ::: demo ./demos/custom-animation.vue
 :::
+
+## 2.样式
+
 
 ## Props
 
