@@ -1,9 +1,9 @@
 <template>
   <div class="tdesign-demo-block">
-    <t-button theme="primary" @click="onClick('提示内容')">文字提示</t-button>
+    <t-button theme="primary" @click="onClick('提示内容')">短文本</t-button>
     <t-button theme="primary"
               @click="onClick('这是一条长文字提示，超过一定字数就会换行。这是一条长文字提示，超过一定字数就会换行')"
-    >文字长提示</t-button>
+    >长文本</t-button>
   </div>
 </template>
 

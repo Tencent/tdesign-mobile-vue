@@ -22,7 +22,7 @@
       </t-cell>
     </t-cell-group>
 
-    <t-cell-group title="文本加图标轻提示">
+    <t-cell-group title="图标加文本轻提示">
       <t-cell value-align="left">
         <t-button size="large" @click="showSuccess(success)">成功</t-button>
       </t-cell>
