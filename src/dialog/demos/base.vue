@@ -1,109 +1,153 @@
 <template>
-  <div :class="`${name}`">
-    <t-cell-group title="方式一：组件调用">
-      <t-cell-group class="dialog-type-title" title="反馈类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(2)">
-            含header含footer，宽度、层级自定义
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog"
-            :content="content"
-            :z-index="zIndex"
-            :width="width">
-            <template #header>
-              <div style="color:red;font-size:18px;">特此警告</div>
-            </template>
-          </t-dialog>
-        </t-cell>
+  <div :class="`${name}`" class="tdesign-dialog-btn">
+    <t-cell-group title="反馈类对话框">
+      <t-cell value-align="left">
+        <t-button theme="primary" size="middle"   @click="changeDialogVisible(1)">
+          单行标题
+        </t-button>
+        <t-button theme="primary" size="middle" @click="changeDialogVisible(2)">
+          多行标题
+        </t-button>
+        <t-button theme="primary" size="middle"  @click="changeDialogVisible(3)">
+          短文本
+        </t-button>
+        <t-button theme="primary" size="middle" class="long-text-item" @click="changeDialogVisible(4)">
+          长文本
+        </t-button>
+      </t-cell>
+      <!-- 单行标题  -->
+      <t-dialog
+        v-model="isShowDialog1"
+        :header="singleHeader"
+        :show-footer="showFooter"
+        @clickoverlay="clickoverlay"
+        @confirm="onConfirm"
+        @opened="openDialog"
+        @closed="closeDialog"
+        @visible-change="changeVisible"
+      />
+      <!-- 多行标题 -->
+      <t-dialog
+        v-model="isShowDialog2"
+        :header="header"
+        @clickoverlay="clickoverlay"
+        @confirm="onConfirm"
+        @opened="openDialog"
+        @closed="closeDialog"
+        @visible-change="changeVisible"
+      >
+      </t-dialog>
+      <!-- 短文本 -->
+      <t-dialog
+        v-model="isShowDialog3"
+        :content="content"
+        @clickoverlay="clickoverlay"
+        @confirm="onConfirm"
+        @opened="openDialog"
+        @closed="closeDialog"
+        @visible-change="changeVisible"
+      >
+      </t-dialog>
+      <!-- 长文本 -->
+      <t-dialog
+          v-model="isShowDialog4"
+          :content="content"
+          :show-header="showHeader"
+      >
+      </t-dialog>
+    </t-cell-group>
+    <t-cell-group title="确认类对话框">
+      <t-cell value-align="left">
+        <t-button theme="primary" size="middle"  class="buttom-item" @click="changeDialogVisible(5)">
+            双操作对话框
+        </t-button>
+        <t-button theme="primary" size="middle" @click="changeDialogVisible(6)">
+            带警示操作对话框
+        </t-button>
+      </t-cell>
+      <t-dialog
+          v-model="isShowDialog5"
+          :show-overlay="showOverlay"
+          type="confirm"
+          :header="header"
+          :content="content"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel">
+          <template #footer-cancel>
+            <div style="color:#000000;font-size:18px;">我不同意</div>
+          </template>
+          <template #footer-confirm>
+            <div style="color:#0052D9;font-size:18px;">我同意</div>
+          </template>
+      </t-dialog>
+      <t-dialog
+          v-model="isShowDialog6"
+          :show-overlay="showOverlay"
+          type="confirm"
+          :header="header"
+          :content="content"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel">
+          <template #footer-cancel>
+            <div style="color:#000000;font-size:18px;">我不同意</div>
+          </template>
+          <template #footer-confirm>
+            <div style="color:#FF3E00;font-size:18px;">我同意</div>
+          </template>
+      </t-dialog>
+    </t-cell-group>
 
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(7)">
-            含默认header/宽度/层级,事件调用
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog7"
-            :show-footer="showFooter"
-            :content="content"
-            @clickoverlay="clickoverlay"
-            @confirm="onConfirm"
-            @opened="openDialog"
-            @closed="closeDialog"
-            @visible-change="changeVisible"></t-dialog>
-        </t-cell>
-
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(3)">
-            含默认footer，宽度、层级默认
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog3"
-            :show-header="showHeader"
-            :content="content">
-            <template #footer>
-              <div style="color:pink;font-size:18px;">我同意</div>
-            </template>
-          </t-dialog>
-        </t-cell>
-      </t-cell-group>
-
-      <t-cell-group class="dialog-type-title" title="确认类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(4)">
-            含标题含input含底部
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog4"
-            :show-overlay="showOverlay"
-            type="confirm"
-            :is-input="isInput"
-            :header="header"
-            :content="content"
-            :placeholder-text="placeholderText"
-            :cancel-button-text="cancelButtonText"
-            :confirm-button-text="confirmButtonText"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-            <template #footer-cancel>
-              <div style="color:grey;font-size:18px;">我不同意</div>
-            </template>
-            <template #footer-confirm>
-              <div style="color:blue;font-size:18px;">我同意</div>
-            </template>
-          </t-dialog>
-        </t-cell>
-
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(5)">
-            含标题
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog5"
-            type="confirm"
-            :show-footer="showFooter"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-            <template #content>
-              <div style="color:red;">这是一个含标题的确认对话框，请确认你的操作！</div>
-            </template>
-          </t-dialog>
-        </t-cell>
-
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(6)">
-            含input
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog6"
-            type="confirm"
-            :show-header="showHeader"
-            :content="content"
-            :is-input="isInput"
-            :show-footer="showFooter"
-            @confirm="onConfirm"
-            @cancel="onCancel"></t-dialog>
-        </t-cell>
-      </t-cell-group>
+    <t-cell-group title="输入对话框">
+      <t-cell value-align="left">
+      <t-button theme="primary" size="middle" class="buttom-item" @click="changeDialogVisible(7)">
+        单行标题
+      </t-button>
+      <t-button theme="primary" size="middle" @click="changeDialogVisible(8)">
+        带说明文本
+      </t-button>
+    
+    </t-cell>
+    <t-dialog
+        v-model="isShowDialog7"
+        :show-overlay="showOverlay"
+        type="confirm"
+        :is-input="isInput"
+        :header="header"
+        :placeholder-text="placeholderText"
+        :cancel-button-text="cancelButtonText"
+        :confirm-button-text="confirmButtonText"
+        @confirm="onConfirm"
+        @cancel="onCancel">
+        <template #footer-cancel>
+          <div style="color:#000000;font-size:18px;">我不同意</div>
+        </template>
+        <template #footer-confirm>
+          <div style="color:#0052D9;font-size:18px;">我同意</div>
+        </template>
+    </t-dialog>
+     <t-dialog
+        v-model="isShowDialog8"
+        :show-overlay="showOverlay"
+        type="confirm"
+        :is-input="isInput"
+        :header="header"
+        :content="content"
+        :placeholder-text="placeholderText"
+        :cancel-button-text="cancelButtonText"
+        :confirm-button-text="confirmButtonText"
+        @confirm="onConfirm"
+        @cancel="onCancel">
+        <template #footer-cancel>
+          <div style="color:#000000;font-size:18px;">我不同意</div>
+        </template>
+        <template #footer-confirm>
+          <div style="color:#0052D9;font-size:18px;">我同意</div>
+        </template>
+    </t-dialog>
     </t-cell-group>
 
     <t-cell-group title="方式二：函数调用">
@@ -162,7 +206,8 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '标题',
+      header: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      singleHeader:'最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
@@ -174,68 +219,105 @@ export default defineComponent({
       showOverlay: false,
       isInput: true,
       isShowDialog: false,
+      isShowDialog1: false,
+      isShowDialog2: false,
       isShowDialog3: false,
       isShowDialog4: false,
       isShowDialog5: false,
       isShowDialog6: false,
       isShowDialog7: false,
+      isShowDialog8: false,
     };
   },
   methods: {
     changeDialogVisible(idx: number) {
       switch (idx) {
-        case 2: {
-          this.isShowDialog = true;
+        case 1: {
+          this.isShowDialog1 = true;
+          this.isShowDialog2 = false;
           this.isShowDialog3 = false;
           this.isShowDialog4 = false;
           this.isShowDialog5 = false;
           this.isShowDialog6 = false;
           this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
+          break;
+        }
+        case 2: {
+          this.isShowDialog2 = true;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+           this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 3: {
           this.isShowDialog3 = true;
-          this.isShowDialog = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog4 = false;
           this.isShowDialog5 = false;
           this.isShowDialog6 = false;
-          this.isShowDialog7 = false;
+           this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 4: {
           this.isShowDialog4 = true;
-          this.isShowDialog = false;
+          this.isShowDialog1 = false;
           this.isShowDialog3 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog5 = false;
           this.isShowDialog6 = false;
-          this.isShowDialog7 = false;
+           this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 5: {
-          this.isShowDialog5 = true;
-          this.isShowDialog = false;
           this.isShowDialog4 = false;
+          this.isShowDialog1 = false;
           this.isShowDialog3 = false;
+          this.isShowDialog2 = false;
+          this.isShowDialog5 = true;
           this.isShowDialog6 = false;
-          this.isShowDialog7 = false;
+           this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 6: {
-          this.isShowDialog6 = true;
-          this.isShowDialog = false;
-          this.isShowDialog3 = false;
           this.isShowDialog4 = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog5 = false;
-          this.isShowDialog7 = false;
+          this.isShowDialog6 = true;
+           this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 7: {
-          this.isShowDialog7 = true;
-          this.isShowDialog = false;
-          this.isShowDialog3 = false;
           this.isShowDialog4 = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog5 = false;
           this.isShowDialog6 = false;
+           this.isShowDialog7 = true;
+          this.isShowDialog8 = false;
+          break;
+        }
+        case 8: {
+          this.isShowDialog4 = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog2 = false;
+          this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+           this.isShowDialog7 = false;
+          this.isShowDialog8 = true;
           break;
         }
         default: {
@@ -336,6 +418,14 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
+.tdesign-dialog-btn{
+  .long-text-item{
+    margin-top: 20px;
+  }
+  .t-button:not(:last-child){
+    margin-right: 20px;
+  }
+}
 .tdesign-demo--dialog {
   padding-bottom: 20px;
   text-align: center;

@@ -1,7 +1,7 @@
 <template>
   <div :class="`${name}`">
     <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="changeFunctionVisible()">
+      <t-button theme="primary" size="middle" @click="changeFunctionVisible()">
         反馈类弹出框
       </t-button>
     </t-cell>

@@ -1,13 +1,34 @@
 <template>
   <div :class="`${name}`">
     <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="isShowDialog = true">
-        确认类弹出框
+      <t-button theme="primary" size="middle" class="buttom-item" @click="changeDialogVisible(1)">
+        单行标题
+      </t-button>
+      <t-button theme="primary" size="middle" @click="changeDialogVisible(2)">
+        带说明文本
       </t-button>
     
     </t-cell>
     <t-dialog
-        v-model="isShowDialog"
+        v-model="isShowDialog1"
+        :show-overlay="showOverlay"
+        type="confirm"
+        :is-input="isInput"
+        :header="header"
+        :placeholder-text="placeholderText"
+        :cancel-button-text="cancelButtonText"
+        :confirm-button-text="confirmButtonText"
+        @confirm="onConfirm"
+        @cancel="onCancel">
+        <template #footer-cancel>
+          <div style="color:#000000;font-size:18px;">我不同意</div>
+        </template>
+        <template #footer-confirm>
+          <div style="color:#0052D9;font-size:18px;">我同意</div>
+        </template>
+    </t-dialog>
+     <t-dialog
+        v-model="isShowDialog2"
         :show-overlay="showOverlay"
         type="confirm"
         :is-input="isInput"
@@ -19,10 +40,10 @@
         @confirm="onConfirm"
         @cancel="onCancel">
         <template #footer-cancel>
-          <div style="color:grey;font-size:18px;">我不同意</div>
+          <div style="color:#000000;font-size:18px;">我不同意</div>
         </template>
         <template #footer-confirm>
-          <div style="color:blue;font-size:18px;">我同意</div>
+          <div style="color:#0052D9;font-size:18px;">我同意</div>
         </template>
     </t-dialog>
   </div>
@@ -54,10 +75,28 @@ export default defineComponent({
       showFooter: false,
       showOverlay: false,
       isInput: true,
-      isShowDialog: false,
+      isShowDialog1: false,
+      isShowDialog2: false,
     };
   },
   methods: {
+    changeDialogVisible(idx: number) {
+      switch (idx) {
+        case 1: {
+            this.isShowDialog1 = true;
+            this.isShowDialog2 = false;
+          break;
+        }
+        case 2: {
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = true;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    },
     onConfirm(e: string)  {
       console.log('dialog:confirm', e);
     },
@@ -86,6 +125,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
+.buttom-item{
+    margin-right: 20px;
+}
 .tdesign-demo--dialog {
   padding-bottom: 20px;
   text-align: center;
