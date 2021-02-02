@@ -15,10 +15,22 @@ import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     const baseSidebar = ref([{
-      name: 'test',
+      name: '菜单一',
       path: '//www.qq.com/',
     }, {
-      name: 'test2',
+      name: '菜单二',
+      path: '//www.qq.com/',
+    }, {
+      name: '菜单三',
+      path: '//www.qq.com/',
+    }, {
+      name: '菜单四',
+      path: '//www.qq.com/',
+    }, {
+      name: '菜单五',
+      path: '//www.qq.com/',
+    }, {
+      name: '菜单六',
       path: '//www.qq.com/',
     }]);
     const open = ref(false);
