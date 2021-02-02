@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
+import { RouteRecordRaw, createRouter, createWebHistory, createWebHashHistory, RouterOptions } from 'vue-router';
 import config from './sites.config';
 
 // const demoReq = require.context("@/", true, /demos[/\\][\w-]+\.vue$/im);
@@ -11,8 +11,22 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   docs.forEach((item) => {
     const docType = item.type || type;
     if (docType === type) {
-      if (item.children) {
-        docsRoutes = docsRoutes.concat(getDocsRoutes(item.children, docType));
+      let { children } = item;
+      if (item.type === 'component') {
+        children = item.children.sort((a: any, b: any) => {
+          const nameA = a.name.toUpperCase();
+          const nameB = b.name.toUpperCase();
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+          return 0;
+        });
+      }
+      if (children) {
+        docsRoutes = docsRoutes.concat(getDocsRoutes(children, docType));
       } else {
         docsRoutes.push({
           path: `/components/${item.name}`,
@@ -32,10 +46,16 @@ const routes: Array<RouteRecordRaw> = [
   ...getDocsRoutes(navs.components.docs, 'document'),
   ...getDocsRoutes(navs.components.docs, 'component'),
 ];
-console.log(process.env.BASE_URL);
-const router = createRouter({
-  history: createWebHistory('vue-mobile'),
+
+const routerConfig: RouterOptions = {
+  history: createWebHashHistory('/'),
   routes,
-});
+};
+
+if(process.env.NODE_ENV === 'production') {
+  routerConfig.history = createWebHistory('/vue-mobile/');
+}
+
+const router = createRouter(routerConfig);
 
 export default router;

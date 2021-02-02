@@ -5,15 +5,13 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue';
 import Toast from '../index';
-export default {
-  methods: {
-    onClick() {
-      Toast({
-        showOverlay: true,
-        message: '提示内容',
-      });
-    },
+export default defineComponent({
+  setup() {
+    return {
+      onClick: () => Toast({ showOverlay: true, message: '提示内容' }),
+    };
   },
-};
+});
 </script>

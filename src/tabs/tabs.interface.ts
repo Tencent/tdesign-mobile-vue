@@ -1,6 +1,6 @@
 export type TabsDirection = 'vertical' | 'horizontal';
 
-export interface ITabsProps {
+export interface TabsProps {
   activeName: string | number;
   scrollable?: boolean;
   direction?: TabsDirection;
@@ -31,7 +31,7 @@ export const TabsProps = {
     default: 'vertical',
   },
 };
-export interface ITabPanelProps {
+export interface TabPanelProps {
   name: string;
   label?: string;
   disabled?: boolean;

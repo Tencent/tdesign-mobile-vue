@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${name}__menu-wrapper`" ref="containerWrapper">
+  <div ref="containerWrapper" :class="`${name}__menu-wrapper`">
     <div
       :class="`${name}__menu-slider`"
       :style="wrapperStyle"
@@ -7,10 +7,10 @@
       @touchmove="handleTouchmove"
       @touchend="handleTouchend"
     >
-      <div :class="`${name}__menu`" v-for="(items, i) in actionItems" :key="i">
+      <div v-for="(Items, i) in actionItems" :key="i" :class="`${name}__menu`">
         <div>
           <button
-            v-for="(item, index) in items"
+            v-for="(item, index) in Items"
             :key="index"
             :class="`${name}__cell`"
             :disabled="item.disabled"
@@ -29,7 +29,7 @@
       </div>
 
     </div>
-    <div :class="`${name}__indicator`" v-if="pageNum > 1">
+    <div v-if="pageNum > 1" :class="`${name}__indicator`">
       <div
         v-for="index in pageNum"
         :key="index"
@@ -53,32 +53,16 @@ const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
   props: {
-    modelValue: Boolean,
-    /**
-     * @description 菜单项
-     * @attribute items
-     */
-    /**
-     * @description 是否显示
-     * @attribute visible
-     */
-    visible: {
-      type: Boolean,
-      default: false,
-    },
     items: {
       type: Array,
       required: true,
     },
-    /**
-     * @description grid时每页显示的数量
-     * @attribute count
-     */
     count: {
       type: Number,
       default: 8,
     },
   },
+  emits: ['select'],
   setup(props, context: SetupContext) {
     const containerWrapper = ref<HTMLElement | null>(null);
     const moveOffset = ref(0);
@@ -88,7 +72,6 @@ export default defineComponent({
     let startOffset = 0;
     let canMove = true;
 
-    const currentVisible = computed(() => props.modelValue || props.visible);
     const wrapperStyle = computed(() => ({
       transform: `translate3d(${moveOffset.value}px, 0, 0)`,
       transition: useTransition.value ? 'transform 300ms' : null,
@@ -164,7 +147,6 @@ export default defineComponent({
       actionItems,
       currentIndex,
       containerWrapper,
-      currentVisible,
       wrapperStyle,
       handleSelect,
       handleTouchstart,

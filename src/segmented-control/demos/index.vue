@@ -1,0 +1,68 @@
+<template>
+  <div class="demo-segmented-control">
+    <t-segmented-control
+      v-model="defaultValue"
+      :items="items.slice(0,2)"
+      @change="change"
+    ></t-segmented-control>
+    <t-segmented-control
+      v-model="defaultValue"
+      :items="items.slice(0,3)"
+      class="mt-24"
+      @change="change"
+    ></t-segmented-control>
+    <t-segmented-control
+      v-model="defaultValue"
+      :items="items"
+      class="mt-24"
+      @change="change"
+    ></t-segmented-control>
+  </div>
+</template>
+
+<script lang='ts'>
+import { defineComponent, ref, watch } from 'vue';
+import { ModelValueProps } from '../segmented-control.interface';
+export default defineComponent({
+  setup() {
+    const defaultValue = ref([null]);
+    watch(defaultValue, (newValue) => {
+      console.log(`当前值为：${newValue}`);
+    });
+    const change = (value: ModelValueProps) => {
+      console.log(`值已改变为：${value}`);
+    };
+    return {
+      defaultValue,
+      change,
+      items: [
+        {
+          value: 'item_1',
+          text: '项目一',
+        },
+        {
+          value: 'item_2',
+          text: '项目二',
+        },
+        {
+          value: 'item_3',
+          text: '项目三',
+        },
+        {
+          value: 'item_4',
+          text: '项目四',
+        },
+      ],
+    };
+  },
+});
+</script>
+
+<style lang="less" scoped>
+.demo-segmented-control{
+  width: 375px;
+}
+.mt-24{
+  margin-top: 24px;
+}
+</style>

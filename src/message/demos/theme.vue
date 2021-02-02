@@ -14,14 +14,20 @@
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
+    const visible = ref(false);
+    const visible1 = ref(false);
+    const visible2 = ref(false);
+    const visible3 = ref(false);
+
     return {
-      visible: false,
-      visible1: false,
-      visible2: false,
-      visible3: false,
+      visible,
+      visible1,
+      visible2,
+      visible3,
     };
   },
-};
+});
 </script>

@@ -1,11 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-11-26 12:07:57
- * @LastEditors: angelaguo
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/docs/sites/sites.config.ts
- */
 export default {
   navs: {
     components: {
@@ -84,8 +76,8 @@ export default {
             },
             {
               title: 'CheckBox 复选框',
-              name: 'check-box',
-              component: () => import('@/check-box/check-box.md'),
+              name: 'checkbox',
+              component: () => import('@/checkbox/checkbox.md'),
             },
             // {
             //   title: 'Mask',
@@ -96,6 +88,11 @@ export default {
               title: 'Stepper 步进器',
               name: 'stepper',
               component: () => import('@/stepper/stepper.md'),
+            },
+            {
+              title: 'Steps 步骤条',
+              name: 'steps',
+              component: () => import('@/steps/steps.md'),
             },
             {
               title: 'Slider 滑动选择器',
@@ -127,6 +124,11 @@ export default {
               name: 'collapse',
               component: () => import('@/collapse/collapse.md'),
             },
+            {
+              title: 'Cell 单元格',
+              name: 'cell',
+              component: () => import('@/cell/cell.md'),
+            },
           ],
         },
         {
@@ -135,13 +137,13 @@ export default {
           children: [
             {
               title: 'TabBar 标签栏',
-              name: 'tab-bar',
+              name: 'tabbar',
               component: () => import('@/tab-bar/tab-bar.md'),
             },
             {
-              title: 'SegmentControl 分段器',
-              name: 'segment-control',
-              component: () => import('@/segment-control/segment-control.md'),
+              title: 'SegmentedControl 分段器',
+              name: 'segmented-control',
+              component: () => import('@/segmented-control/segmented-control.md'),
             },
             {
               title: 'ImageViewer 图片预览',
@@ -157,6 +159,11 @@ export default {
               title: 'Tabs 选项卡',
               name: 'tabs',
               component: () => import('@/tabs/tabs.md'),
+            },
+            {
+              title: 'Navbar 导航条',
+              name: 'navbar',
+              component: () => import('@/navbar/navbar.md'),
             },
           ],
         },
@@ -186,9 +193,19 @@ export default {
           type: 'component',
           children: [
             {
+              title: 'Input 输入框',
+              name: 'input',
+              component: () => import('@/input/input.md'),
+            },
+            {
               title: 'Fab 悬浮按钮',
               name: 'fab',
               component: () => import('@/fab/fab.md'),
+            },
+            {
+              title: 'SearchField 搜索框',
+              name: 'search-field',
+              component: () => import('@/search-field/search-field.md'),
             },
           ],
         },

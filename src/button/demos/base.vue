@@ -2,8 +2,8 @@
   <div class="tdesign-demo-button-base">
     <t-cell-group title="基础按钮">
       <t-cell value-align="left">
-        <t-button theme="primary" size="large">主按钮</t-button>
-        <t-button theme="primary" size="large" disabled>主按钮-禁用</t-button>
+        <t-button theme="primary" size="large" @click="onClick">主按钮</t-button>
+        <t-button theme="primary" size="large" disabled @click="onClick">主按钮-禁用</t-button>
         <t-button size="large" >次要按钮</t-button>
         <t-button size="large" disabled>次要按钮-禁用</t-button>
         <t-button theme="ghost" size="large" >幽灵按钮</t-button>
@@ -34,9 +34,9 @@
 
     <t-cell-group title="图标按钮">
       <t-cell value-align="left">
-        <t-button theme="text" icon="books">带图标文字按钮</t-button><br/>
-        <t-button theme="primary" icon="books">带图标的按钮</t-button><br/>
-        <t-button theme="primary" icon="books"></t-button><br/>
+        <t-button theme="text" icon="user-filled">带图标文字按钮</t-button><br/>
+        <t-button theme="primary" icon="user-filled">带图标的按钮</t-button><br/>
+        <t-button theme="primary" icon="user-filled"></t-button><br/>
       </t-cell>
     </t-cell-group>
 
@@ -44,7 +44,7 @@
       <t-button :loading="loading" >带图标的按钮-加载</t-button><br/>
     </t-cell>
 
-    <t-button icon="books" block>文本按钮</t-button><br/>
+    <t-button icon="user-filled" block>文本按钮</t-button><br/>
   </div>
 </template>
 <script lang="ts">
@@ -55,11 +55,8 @@ export default defineComponent({
     const onClick = () => {
       console.log('ttt');
     };
-    const onTouchStart = () => {
-      console.log('touch start');
-    };
     const loading = ref(true);
-    return { onClick, onTouchStart, loading };
+    return { onClick, loading };
   },
 });
 </script>

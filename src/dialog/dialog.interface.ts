@@ -1,20 +1,21 @@
-export interface IDialogProps {
-  modelValue?: boolean,
-  showHeader?: boolean,
-  header?: string,
-  content: string,
-  type?: string,
-  showFooter?: boolean,
-  placeholderText?: string,
-  confirmContent?: string,
-  cancelContent?: string,
-  isInput?: boolean,
-  visible?: boolean,
-  knowContent?: string,
-  zIndex?: number,
-  showOverlay?: boolean,
-  width?: [Number, String],
-};
+export type DialogType = 'alert' | 'confirm' | 'show';
+export interface DialogPropsType {
+  modelValue?: boolean;
+  showHeader?: boolean;
+  header?: string;
+  content: string;
+  type?: string;
+  showFooter?: boolean;
+  placeholderText?: string;
+  confirmContent?: string;
+  cancelContent?: string;
+  isInput?: boolean;
+  visible?: boolean;
+  knowContent?: string;
+  zIndex?: number;
+  showOverlay?: boolean;
+  width?: [number, string];
+}
 
 export const DialogPropsDefault = {
   showHeader: true,
