@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import { VueClipboard }from '@soerenmartius/vue3-clipboard'
 import app from './app.vue';
 import router from './router';
 import TDesignDemo from './components/demo.vue';
@@ -14,6 +15,7 @@ import 'prismjs/themes/prism.css';
 createApp(app)
   .use(TDesign)
   .use(router)
+  .use(VueClipboard)
   .component('tdesign-demo', TDesignDemo)
   .component('tdesign-component-contributors', ComponentContributors)
   .component('header-link', HeaderLink)
