@@ -3,15 +3,11 @@
     <t-checkbox
       v-model="checked1"
       name="1"
-      title="单行标题"
-      content-disabled>
-    </t-checkbox>
+      title="单行标题">一段很长很长的内容文字。</t-checkbox>
     <t-checkbox
       v-model="checked2"
-      name="1"
-      title="单行标题"
-      content-disabled>
-    </t-checkbox>
+      name="2"
+      title="单行标题">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
   </div>
 </template>
 <script>
