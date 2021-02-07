@@ -9,7 +9,7 @@
       </t-input>
       <t-input placeholder="请输入手机号码">
         <template #suffix>
-          <t-button theme="text">发送验证码</t-button>
+          <t-button theme="default">发送验证码</t-button>
         </template>
       </t-input>
       <t-input label="价格" placeholder="0.00" suffix="元" />
