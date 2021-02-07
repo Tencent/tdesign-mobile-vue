@@ -19,6 +19,7 @@ export default defineComponent({
 
     return {
       onChange,
+      value: '',
     };
   },
 });
