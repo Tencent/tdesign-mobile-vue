@@ -23,6 +23,7 @@ const name = `${prefix}-button`;
 
 export default defineComponent({
   name,
+  components: { TIconLoading },
   props: {
     /** 组件主题风格，默认、主色、危险 */
     theme: {
@@ -71,7 +72,6 @@ export default defineComponent({
     ghost: Boolean,
   },
   emits: ['click'],
-  component: { TIconLoading },
   setup(props: TdButtonProps, context) {
     const buttonClass = computed(() => [
       `${name}`,
