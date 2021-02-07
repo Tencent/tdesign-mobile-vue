@@ -40,6 +40,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { ItemType } from '../action-sheet.interface';
 
 export default defineComponent({
   data() {
@@ -69,7 +70,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected, selectedIndex) {
+    handleSelect(selected: ItemType, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel(): void {
