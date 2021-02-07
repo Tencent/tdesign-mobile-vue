@@ -9,14 +9,14 @@ export default {
           type: 'document', // 普通文档
           children: [
             {
-              title: '如何开始',
-              name: 'install',
-              component: () => import('@/../docs/install.md'),
+              title: '说明',
+              name: 'readme',
+              component: () => import('@/../README.md'),
             },
             {
               title: '贡献指南',
-              name: 'develop',
-              component: () => import('@/../docs/develop.md'),
+              name: 'contributing',
+              component: () => import('@/../CONTRIBUTING.md'),
             },
             {
               title: '更新日志',
@@ -50,7 +50,7 @@ export default {
               component: () => import('@/rate/rate.md'),
             },
             {
-              title: 'Switch 选择器',
+              title: 'Switch 开关',
               name: 'switch',
               component: () => import('@/switch/switch.md'),
             },
