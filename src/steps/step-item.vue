@@ -35,7 +35,7 @@ export default defineComponent({
   props: StepItemProps,
   setup(props, context: SetupContext) {
     const { attrs } = context;
-    const index = ref(attrs.index);
+    const index = ref(attrs.index as number);
 
     const stepsProvide: any = inject('stepsProvide', undefined);
 

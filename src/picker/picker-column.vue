@@ -9,10 +9,10 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, onMounted, watch, nextTick, toRefs, defineComponent } from 'vue';
-import { pickerColumnProps } from './picker.interface';
+import { ref, computed, onMounted, watch, nextTick, toRefs, defineComponent } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
+import { pickerColumnProps } from './picker.interface';
 
 const { prefix } = config;
 const name = `${prefix}-picker-column`;
@@ -20,7 +20,7 @@ const name = `${prefix}-picker-column`;
 export default defineComponent({
   props: pickerColumnProps,
   emits: ['change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     let picker: Picker | null = null;
     const el = document.createElement('div');
     const root = ref(el);

@@ -4,6 +4,7 @@ export type ActionSheetType = 'list' | 'grid';
 export type ItemType = {
   label: string,
   color?: string
+  disabled?: boolean
 }
 
 export interface PopupProps {
