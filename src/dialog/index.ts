@@ -25,10 +25,12 @@ function create(props: DialogPropsType): DefineComponent{
     render: (): VNode => h(Dialog, {
       ...propsObject,
       visible: visible.value,
-      onConfirm: () => {
+      onConfirm: (inputValue: string) => {
+        propsObject?.onConfirm(inputValue);
         visible.value = false;
       },
       onCancel: () => {
+        propsObject?.onCancel();
         visible.value = false;
       },
       onClickoverlay: () => {
