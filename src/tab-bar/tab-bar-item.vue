@@ -33,10 +33,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef } from 'vue';
+import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef, PropType } from 'vue';
 import TIcon from '../icon';
 import config from '../config';
 import { initName } from './useTabBar';
+import { TabBarItemSpreadProps } from './tab-bar.interface';
+
 const { prefix } = config;
 const componentName = `${prefix}-tab-bar-item`;
 
@@ -53,7 +55,7 @@ export default defineComponent({
       default: '',
     },
     children: {
-      type: Array,
+      type: Array as PropType<TabBarItemSpreadProps[]>,
       default: () => [],
     },
   },

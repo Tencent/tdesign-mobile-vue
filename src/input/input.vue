@@ -54,7 +54,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, onMounted, SetupContext, defineComponent } from 'vue';
+import { ref, computed, watch, onMounted, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-input`;
@@ -103,7 +103,7 @@ export default defineComponent({
     disabled: Boolean,
   },
   emits: ['update:modelValue', 'click-icon', 'focus', 'blur', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const textarea = ref();
     const cacheValue = ref('');
 

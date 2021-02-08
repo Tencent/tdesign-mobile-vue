@@ -7,3 +7,8 @@
     <t-tag theme="info">信息</t-tag>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({});
+</script>

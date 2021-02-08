@@ -18,7 +18,7 @@
     </div>
     <div class="tdesign-demo-block">
       <t-button theme="primary" size="small" @click="toggleSelect(true)">全选</t-button>
-      <t-button theme="success" size="small" @click="toggleSelect(false)">取消</t-button>
+      <t-button theme="primary" size="small" @click="toggleSelect(false)">取消</t-button>
     </div>
   </div>
 </template>

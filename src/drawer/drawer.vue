@@ -14,17 +14,20 @@
 
 <script lang="ts">
 import {
-  defineComponent,
-  SetupContext,
+  ref,
   watch,
   toRefs,
-  ref,
   computed,
+  PropType,
+  SetupContext,
+  defineComponent,
 } from 'vue';
 import config from '../config';
+import { SidebarItemType } from './drawer.interface';
 
 const { prefix } = config;
 const name = `${prefix}-drawer`;
+
 export default defineComponent({
   name,
   props: {
@@ -37,7 +40,7 @@ export default defineComponent({
       default: false,
     },
     sidebar: {
-      type: Array,
+      type: Array as PropType<SidebarItemType[]>,
       default: () => [],
     },
   },
@@ -45,26 +48,30 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const { modelValue } = toRefs(props);
     const open = ref(false) || modelValue;
+
     const dSideBarClassName = computed(() => `${name}__sidebar`);
     const dSideBarItemClassName = computed(() => `${name}__sidebar-item`);
     const dSideBarItemIconClassName = computed(() => `${name}__sidebar-item-icon`);
     const dSideBarItemNameClassName = computed(() => `${name}__sidebar-item-name`);
+
     const takePath = (path: string) => {
       window.location.href = path;
     };
+
     watch(open, () => {
       context.emit('update:modelValue', open.value);
     });
     watch(modelValue, () => {
       open.value = modelValue.value;
     });
+
     return {
+      open,
+      takePath,
       dSideBarClassName,
       dSideBarItemClassName,
       dSideBarItemIconClassName,
       dSideBarItemNameClassName,
-      takePath,
-      open,
     };
   },
 });

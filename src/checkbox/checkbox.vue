@@ -15,6 +15,7 @@
     </span>
   </div>
 </template>
+
 <script lang="ts">
 import TIcon from '../icon';
 import { ref, inject, onMounted, onUnmounted, computed, SetupContext, defineComponent } from 'vue';
@@ -223,8 +224,8 @@ export default defineComponent({
       default: '#0052D9',
     },
   },
-  setup(props, content: SetupContext) {
-    const flagName: string = name;
+  setup(props, content) {
+    const flagName = name;
     const hasSlot = ref(false);
     const rootGroup: any = inject('rootGroup', undefined);
     const limitTitleRow = Number(props?.limitTitleRow) || 0;
