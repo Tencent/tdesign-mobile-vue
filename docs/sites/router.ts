@@ -41,7 +41,7 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/components/install',
+    redirect: '/components/readme',
   },
   ...getDocsRoutes(navs.components.docs, 'document'),
   ...getDocsRoutes(navs.components.docs, 'component'),
@@ -52,9 +52,9 @@ const routerConfig: RouterOptions = {
   routes,
 };
 
-if(process.env.NODE_ENV === 'production') {
-  routerConfig.history = createWebHistory('/vue-mobile/');
-}
+// if(process.env.NODE_ENV === 'production') {
+//   routerConfig.history = createWebHistory('/vue-mobile/');
+// }
 
 const router = createRouter(routerConfig);
 

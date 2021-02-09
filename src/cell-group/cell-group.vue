@@ -13,6 +13,11 @@
     >
       <slot></slot>
     </div>
+    <div v-if="summary" :class="`${name}--summary`">
+      <slot name="summary">
+        {{ summary }}
+      </slot>
+    </div>
   </div>
 </template>
 
@@ -29,6 +34,10 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    summary: {
+      type: String,
+      default: '',
+    },
     border: {
       type: Boolean,
       default: true,
@@ -36,6 +45,6 @@ export default defineComponent({
   },
   setup() {
     return { name };
-  }
+  },
 });
 </script>
