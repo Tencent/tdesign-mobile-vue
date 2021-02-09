@@ -34,6 +34,7 @@ const name = `${prefix}-cell`;
 
 export default defineComponent({
   name,
+  components: { TIconChevronRight },
   props: {
     label: {
       type: String,
@@ -65,7 +66,6 @@ export default defineComponent({
     },
   },
   emits: ['click'],
-  components: { TIconChevronRight },
   setup(props, context: SetupContext) {
     const hasLabel = computed(() => {
       if (props.label) return true;
