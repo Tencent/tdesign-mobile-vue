@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-demo-button-base">
     <t-cell-group title="基础按钮">
-      <t-cell value-align="left" style="background: #f5f5f5">
+      <t-cell value-align="left">
         <t-button theme="primary" size="large" @click="onClick">主要按钮</t-button>
         <t-button theme="primary" size="large" disabled>失效状态</t-button>
         <t-button variant="outline" size="large">次要按钮</t-button>
@@ -18,7 +18,7 @@
     </t-cell-group>
 
     <t-cell-group title="其他尺寸">
-      <t-cell value-align="left" style="background: #f5f5f5">
+      <t-cell value-align="left">
         <t-button theme="primary">主要按钮</t-button>
         <t-button theme="primary" size="small" style="margin-left: 16px">小按钮</t-button><br />
         <t-button variant="outline">次要按钮</t-button>
@@ -33,14 +33,16 @@
     </t-cell-group>
 
     <t-cell-group title="图标按钮">
-      <t-cell style="background: #f5f5f5">
+      <t-cell>
         <t-button variant="outline" size="large" :icon="iconFunc">
           <template #icon>
             <TIconStar />
           </template>
           按钮
         </t-button>
-        <t-button variant="text" block>
+      </t-cell>
+      <t-cell style="background-color:#fff">
+        <t-button theme="primary" variant="text" block style="margin-bottom:0">
           <template #icon>
             <TIconStar />
           </template>
