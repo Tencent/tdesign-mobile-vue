@@ -52,9 +52,9 @@ const routerConfig: RouterOptions = {
   routes,
 };
 
-// if(process.env.NODE_ENV === 'production') {
-//   routerConfig.history = createWebHistory('/vue-mobile/');
-// }
+if(process.env.NODE_ENV === 'production') {
+  routerConfig.history = createWebHistory('/vue-mobile/');
+}
 
 const router = createRouter(routerConfig);
 
