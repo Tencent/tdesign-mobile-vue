@@ -51,6 +51,9 @@ export default defineComponent({
     valueAlign: {
       type: String as PropType<TdCellProps['valueAlign']>,
       default: 'right',
+      validator(val: string): boolean {
+        return ['left', 'right'].includes(val);
+      },
     },
     icon: {
       type: Function as PropType<TdCellProps['icon']>,
@@ -66,7 +69,7 @@ export default defineComponent({
     },
   },
   emits: ['click'],
-  setup(props, context: SetupContext) {
+  setup(props: TdCellProps, context: SetupContext) {
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;

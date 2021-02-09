@@ -1,18 +1,18 @@
 <template>
   <button :class="buttonClass" :disabled="disabled" @click="onClick">
-    <TIconLoading v-if="loading" />
-    <component :is="icon()" v-else-if="icon">
-    </component>
-    <slot v-else name="icon">
-    </slot>
-    <span :class="`${name}__text`">
-      <slot />
-    </span>
+    <div :class="`${name}__content`">
+      <TIconLoading v-if="loading" />
+      <component :is="icon()" v-else-if="icon"> </component>
+      <slot v-else name="icon"> </slot>
+      <span :class="`${name}__text`">
+        <slot />
+      </span>
+    </div>
   </button>
 </template>
 
 <script lang="ts">
-import CLASSNAMES from "../shared/consts";
+import CLASSNAMES from '../shared/consts';
 import { TdButtonProps } from './button.interface';
 import TIconLoading from '../icon/loading.vue';
 import { computed, toRefs, defineComponent, PropType } from 'vue';
@@ -63,7 +63,7 @@ export default defineComponent({
       type: String as PropType<TdButtonProps['variant']>,
       default: 'base',
       validator(val: string): boolean {
-        return ['base', 'outline','text'].includes(val);
+        return ['base', 'outline', 'text'].includes(val);
       },
     },
     /** 是否禁用按钮。该属性是 button 的原生属性 */
