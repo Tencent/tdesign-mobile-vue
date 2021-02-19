@@ -63,6 +63,7 @@ import { ref, defineComponent } from 'vue';
 
 import Toast from '../index';
 import config from '@/config';
+import { ToastPositionType } from '../toast.interface';
 
 const { prefix } = config;
 const name = `${prefix}-toast-base-demo`;
@@ -105,7 +106,7 @@ export default defineComponent({
     showLoading(message?: string) {
       Toast.loading(message);
     },
-    showPosition(position: string) {
+    showPosition(position: ToastPositionType) {
       Toast({
         type: 'success',
         position,

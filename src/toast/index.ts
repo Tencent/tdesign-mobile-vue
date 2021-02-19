@@ -1,13 +1,13 @@
 import vueToast from './toast.vue';
 import { PolySymbol } from '../_utils';
-
 import { createApp, App, DefineComponent } from 'vue';
-import { ToastProps, ToastPropsDefault } from './toast.interface';
+import { ToastProps, ToastPropsDefault, ToastType } from './toast.interface';
 
 let instance: any = null;
 
-function Toast(props: ToastProps): DefineComponent {
-  const root: HTMLElement = document.createElement('div');
+/** 展示提示 */
+function Toast(props?: ToastProps | string): DefineComponent<ToastProps> {
+  const root = document.createElement('div');
   document.body.appendChild(root);
 
   const propsObject = {
@@ -28,9 +28,7 @@ function Toast(props: ToastProps): DefineComponent {
   };
 
   if (propsObject.duration && propsObject.duration > 0) {
-    instance.timer = setTimeout(() => {
-      instance.clear();
-    }, propsObject.duration);
+    instance.timer = setTimeout(instance.clear, propsObject.duration);
   }
 
   createApp(instance, { ...propsObject }).mount(root);
@@ -44,12 +42,9 @@ Toast.clear = () => {
   }
 };
 
-['loading', 'success', 'fail'].forEach((type: string): void => {
+(['loading', 'success', 'fail'] as ToastType[]).forEach((type): void => {
   Toast[type] = (options: ToastProps | string) => {
-    let props: ToastProps = {
-      message: '',
-      type,
-    };
+    let props = { message: '', type };
 
     if (typeof options === 'string') {
       props.message = options;
@@ -61,7 +56,7 @@ Toast.clear = () => {
   };
 });
 
-function parseOptions(message: any) {
+function parseOptions(message?: ToastProps | string) {
   if (typeof message === 'string') {
     return { message };
   }
@@ -74,4 +69,15 @@ Toast.install = (app: App) => {
   app.provide(toastKey, Toast);
 };
 
-export default Toast;
+type ToastApi = typeof Toast & {
+  /** 展示加载提示 */
+  loading: (options?: ToastProps | string) => void,
+  /** 展示成功提示 */
+  success: (options?: ToastProps | string) => void,
+  /** 展示失败提示 */
+  fail: (options?: ToastProps | string) => void,
+  /** 关闭提示 */
+  clear: () => void,
+};
+
+export default (Toast as unknown) as (Plugin & ToastApi);
