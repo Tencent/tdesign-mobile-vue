@@ -90,7 +90,7 @@ Dialog.install = (app: App) => {
   app.config.globalProperties.$dialog = Dialog;
 };
 
-type DialogApi = Plugin & {
+type DialogApi = {
   /** 通用对话框 */
   show: (options: DialogFnType | string) => void,
   /** 基础对话框 */
@@ -99,7 +99,7 @@ type DialogApi = Plugin & {
   confirm: (options: DialogFnType | string) => void,
 };
 
-export default (Dialog as unknown) as DialogApi;
+export default (Dialog as unknown) as (Plugin & DialogApi);
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword

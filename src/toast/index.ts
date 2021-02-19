@@ -1,5 +1,5 @@
 import vueToast from './toast.vue';
-import { createApp, App, DefineComponent } from 'vue';
+import { createApp, App, DefineComponent, Plugin } from 'vue';
 import { ToastProps, ToastPropsDefault, ToastType } from './toast.interface';
 
 let instance: any = null;
@@ -68,7 +68,7 @@ Toast.install = (app: App) => {
   app.config.globalProperties.$toast = Toast;
 };
 
-type ToastApi = Plugin & typeof Toast & {
+type ToastApi = typeof Toast & {
   /** 展示加载提示 */
   loading: (options?: ToastProps | string) => void,
   /** 展示成功提示 */
@@ -79,7 +79,7 @@ type ToastApi = Plugin & typeof Toast & {
   clear: () => void,
 };
 
-export default (Toast as unknown) as ToastApi;
+export default (Toast as unknown) as (Plugin & ToastApi);
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword

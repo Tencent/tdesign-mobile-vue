@@ -28,7 +28,8 @@
 import { computed, SetupContext, defineComponent, PropType, toRefs } from 'vue';
 import config from '../config';
 import { TdCellProps } from './cell.interface';
-import TIconChevronRight from '@/icon/chevron-right.vue';
+import TIconChevronRight from '../icon/chevron-right.vue';
+
 const { prefix } = config;
 const name = `${prefix}-cell`;
 

@@ -51,7 +51,7 @@ function create(props: MessageProps): void {
   app.config.globalProperties.$message = MessageComp;
 };
 
-type MessageApi = Plugin & {
+type MessageApi = {
   /** 展示普通消息 */
   info: (options?: MessageProps | string) => void,
   /** 展示成功消息 */
@@ -62,7 +62,7 @@ type MessageApi = Plugin & {
   error: (options?: MessageProps | string) => void,
 };
 
-export default (MessageComp as unknown) as MessageApi;
+export default (MessageComp as unknown) as (Plugin & MessageApi);
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
