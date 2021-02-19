@@ -1,5 +1,4 @@
 import vueToast from './toast.vue';
-import { PolySymbol } from '../_utils';
 import { createApp, App, DefineComponent } from 'vue';
 import { ToastProps, ToastPropsDefault, ToastType } from './toast.interface';
 
@@ -65,11 +64,11 @@ function parseOptions(message?: ToastProps | string) {
 
 Toast.install = (app: App) => {
   // 添加插件入口
-  const toastKey = PolySymbol<typeof Toast>('toast');
-  app.provide(toastKey, Toast);
+  // eslint-disable-next-line no-param-reassign
+  app.config.globalProperties.$toast = Toast;
 };
 
-type ToastApi = typeof Toast & {
+type ToastApi = Plugin & typeof Toast & {
   /** 展示加载提示 */
   loading: (options?: ToastProps | string) => void,
   /** 展示成功提示 */
@@ -80,4 +79,11 @@ type ToastApi = typeof Toast & {
   clear: () => void,
 };
 
-export default (Toast as unknown) as (Plugin & ToastApi);
+export default (Toast as unknown) as ToastApi;
+
+declare module "@vue/runtime-core" {
+  // Bind to `this` keyword
+  interface ComponentCustomProperties {
+    $toast: ToastApi;
+  }
+}
