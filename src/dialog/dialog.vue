@@ -64,7 +64,7 @@ export default defineComponent({
   name,
   components: { TPopup },
   props: DialogProps,
-  emits: ['update:modelValue', 'confirm', 'clickoverlay', 'cancel', 'visible-change', 'closed', 'opened'],
+  emits: ['update:modelValue', 'confirm', 'click-overlay', 'cancel', 'visible-change', 'closed', 'opened'],
   setup(props, context) {
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);
@@ -97,7 +97,7 @@ export default defineComponent({
 
     const handleClosed = () => {
       context.emit('update:modelValue', false);
-      context.emit('clickoverlay');
+      context.emit('click-overlay');
       innerValue.value = '';
     };
 

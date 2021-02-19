@@ -25,10 +25,10 @@
             v-model="isShowDialog7"
             :show-footer="showFooter"
             :content="content"
-            @clickoverlay="clickoverlay"
             @confirm="onConfirm"
             @opened="openDialog"
             @closed="closeDialog"
+            @click-overlay="clickOverlay"
             @visible-change="changeVisible"></t-dialog>
         </t-cell>
 
@@ -264,8 +264,8 @@ export default defineComponent({
       console.log('dialog:visible-change', e);
     },
 
-    clickoverlay() {
-      console.log('dialog:clickoverlay');
+    clickOverlay() {
+      console.log('dialog:clickOverlay');
     },
 
     changeFunctionVisible(idx: number) {
@@ -307,8 +307,8 @@ export default defineComponent({
             onCancel: () => {
               console.log('dialog:cancel');
             },
-            onClickoverlay: () => {
-              console.log('dialog:clickoverlay');
+            onClickOverlay: () => {
+              console.log('dialog:clickOverlay');
             },
           });
           break;

@@ -6,7 +6,7 @@ import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.
 interface DialogFnType extends DialogPropsType {
   onCancel?: () => void,
   onConfirm?: (inputValue: string) => void,
-  onClickoverlay?: () => void,
+  onClickOverlay?: () => void,
 }
 
 let instance: DefineComponent<DialogPropsType>;
@@ -43,9 +43,9 @@ function create(props: DialogFnType | string): DefineComponent{
         }
         visible.value = false;
       },
-      onClickoverlay: () => {
-        if (typeof propsObject?.onClickoverlay === 'function') {
-          propsObject?.onClickoverlay();
+      onClickOverlay: () => {
+        if (typeof propsObject?.onClickOverlay === 'function') {
+          propsObject?.onClickOverlay();
         }
         visible.value = false;
       },

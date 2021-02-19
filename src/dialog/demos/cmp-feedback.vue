@@ -7,10 +7,10 @@
       <t-dialog
         v-model="isShowDialog"
         :content="content"
-        @clickoverlay="clickoverlay"
         @confirm="onConfirm"
         @opened="openDialog"
         @closed="closeDialog"
+        @click-overlay="clickOverlay"
         @visible-change="changeVisible"></t-dialog>
     </t-cell>
   </div>
@@ -62,8 +62,8 @@ export default defineComponent({
       console.log('dialog:visible-change', e);
     },
 
-    clickoverlay() {
-      console.log('dialog:clickoverlay');
+    clickOverlay() {
+      console.log('dialog:clickOverlay');
     },
   },
 });
