@@ -64,7 +64,7 @@ type MessageApi = Plugin & {
 
 export default (MessageComp as unknown) as MessageApi;
 
-declare module "@vue/runtime-core" {
+declare module '@vue/runtime-core' {
   // Bind to `this` keyword
   interface ComponentCustomProperties {
     $message: MessageApi;

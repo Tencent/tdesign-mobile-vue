@@ -81,7 +81,7 @@ type ToastApi = Plugin & typeof Toast & {
 
 export default (Toast as unknown) as ToastApi;
 
-declare module "@vue/runtime-core" {
+declare module '@vue/runtime-core' {
   // Bind to `this` keyword
   interface ComponentCustomProperties {
     $toast: ToastApi;
