@@ -1,10 +1,11 @@
 export type DialogType = 'alert' | 'confirm' | 'show';
+
 export interface DialogPropsType {
   modelValue?: boolean;
   showHeader?: boolean;
   header?: string;
   content: string;
-  type?: string;
+  type?: DialogType;
   showFooter?: boolean;
   placeholderText?: string;
   confirmContent?: string;
@@ -14,7 +15,7 @@ export interface DialogPropsType {
   knowContent?: string;
   zIndex?: number;
   showOverlay?: boolean;
-  width?: [number, string];
+  width?: number | string;
 }
 
 export const DialogPropsDefault = {

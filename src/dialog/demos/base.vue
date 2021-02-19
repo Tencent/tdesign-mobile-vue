@@ -244,7 +244,7 @@ export default defineComponent({
       }
     },
 
-    onConfirm(e: string)  {
+    onConfirm(e: string) {
       console.log('dialog:confirm', e);
     },
 

@@ -46,7 +46,7 @@ export default defineComponent({
     };
   },
   methods: {
-    onConfirm(e: string)  {
+    onConfirm(e: string) {
       console.log('dialog:confirm', e);
     },
 

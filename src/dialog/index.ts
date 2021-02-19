@@ -1,18 +1,24 @@
 import Dialog from './dialog.vue';
-import { PolySymbol } from '../_utils';
 
 import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTick } from 'vue';
 import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
 
-let instance: DefineComponent;
-function create(props: DialogPropsType): DefineComponent{
+interface DialogFnType extends DialogPropsType {
+  onCancel?: () => void,
+  onConfirm?: (inputValue: string) => void,
+  onClickoverlay?: () => void,
+}
+
+let instance: DefineComponent<DialogPropsType>;
+
+function create(props: DialogFnType | string): DefineComponent{
   const visible = ref(false);
-  const root: HTMLElement = document.createElement('div');
+  const root = document.createElement('div');
   document.body.appendChild(root);
 
   const propsObject = {
     ...DialogPropsDefault,
-    ...parseOptions(props),
+    ...(typeof props === 'string' ? { content: props } : props),
   };
 
   if (instance) {
@@ -26,14 +32,21 @@ function create(props: DialogPropsType): DefineComponent{
       ...propsObject,
       visible: visible.value,
       onConfirm: (inputValue: string) => {
-        propsObject?.onConfirm(inputValue);
+        if (typeof propsObject?.onConfirm === 'function') {
+          propsObject?.onConfirm(inputValue);
+        }
         visible.value = false;
       },
       onCancel: () => {
-        propsObject?.onCancel();
+        if (typeof propsObject?.onCancel === 'function') {
+          propsObject?.onCancel();
+        }
         visible.value = false;
       },
       onClickoverlay: () => {
+        if (typeof propsObject?.onClickoverlay === 'function') {
+          propsObject?.onClickoverlay();
+        }
         visible.value = false;
       },
       onClosed: () => {
@@ -58,11 +71,8 @@ function create(props: DialogPropsType): DefineComponent{
 
 
 (['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
-  Dialog[type] = (options: DialogPropsType | string) => {
-    let props: DialogPropsType = {
-      content: '',
-      type,
-    };
+  Dialog[type] = (options: DialogFnType | string) => {
+    let props = { content: '', type };
 
     if (typeof options === 'string') {
       props.content = options;
@@ -74,20 +84,26 @@ function create(props: DialogPropsType): DefineComponent{
   };
 });
 
-function parseOptions(op: any) {
-  if (typeof op === 'string') {
-    return { op };
-  }
-  return op;
-}
-
 Dialog.install = (app: App) => {
   // 添加插件入口
-  const dialogKey = PolySymbol<typeof Dialog>('dialog');
-  app.provide(dialogKey, Dialog);
+  // eslint-disable-next-line no-param-reassign
+  app.config.globalProperties.$dialog = Dialog;
 };
 
-type DialogFnType = {
-  [k in DialogType]: (options:  DialogPropsType  | string) => void;
+type DialogApi = Plugin & {
+  /** 通用对话框 */
+  show: (options: DialogFnType | string) => void,
+  /** 基础对话框 */
+  alert: (options: DialogFnType | string) => void,
+  /** 选择对话框 */
+  confirm: (options: DialogFnType | string) => void,
 };
-export default (Dialog as unknown) as Plugin & DialogFnType;
+
+export default (Dialog as unknown) as DialogApi;
+
+declare module '@vue/runtime-core' {
+  // Bind to `this` keyword
+  interface ComponentCustomProperties {
+    $dialog: DialogApi;
+  }
+}

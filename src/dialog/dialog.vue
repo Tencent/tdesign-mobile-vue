@@ -52,7 +52,7 @@
   </t-popup>
 </template>
 <script lang="ts">
-import { SetupContext, computed, ref, toRefs, watch, defineComponent } from 'vue';
+import { computed, ref, toRefs, watch, defineComponent } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
 import { DialogProps } from './dialog.interface';
@@ -65,7 +65,7 @@ export default defineComponent({
   components: { TPopup },
   props: DialogProps,
   emits: ['update:modelValue', 'confirm', 'clickoverlay', 'cancel', 'visible-change', 'closed', 'opened'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);
     const dBoxClassName = computed(() => `${name}__box`);
