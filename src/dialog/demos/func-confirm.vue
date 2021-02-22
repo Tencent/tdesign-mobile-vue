@@ -50,8 +50,8 @@ export default defineComponent({
         onCancel: () => {
           console.log('dialog:cancel');
         },
-        onClickoverlay: () => {
-          console.log('dialog:clickoverlay');
+        onClickOverlay: () => {
+          console.log('dialog:clickOverlay');
         },
       });
     },

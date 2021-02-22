@@ -1,11 +1,10 @@
 import { createApp, defineComponent, ref, h, VNode, App, Plugin, nextTick } from 'vue';
 import { MessageProps, MessageType } from './message.interface';
-import { PolySymbol } from '../_utils';
 import MessageComp from './message.vue';
 
 function create(props: MessageProps): void {
   const visible = ref(false);
-  const root: HTMLElement = document.createElement('div');
+  const root = document.createElement('div');
   document.body.appendChild(root);
 
   const component = defineComponent({
@@ -31,7 +30,7 @@ function create(props: MessageProps): void {
 
 (['info', 'success', 'warning', 'error'] as MessageType[]).forEach((type: MessageType): void => {
   MessageComp[type] = (options: MessageProps | string) => {
-    let props: MessageProps = {
+    let props = {
       content: '',
       theme: type,
     };
@@ -48,11 +47,26 @@ function create(props: MessageProps): void {
 
 ((MessageComp as unknown) as Plugin).install = (app: App) => {
   // 添加插件入口
-  const messageKey = PolySymbol<typeof MessageComp & Plugin>('message');
-  app.provide(messageKey, MessageComp);
+  // eslint-disable-next-line no-param-reassign
+  app.config.globalProperties.$message = MessageComp;
 };
 
-type MessageFnType = {
-  [k in MessageType]: (options: MessageProps | string) => void;
+type MessageApi = {
+  /** 展示普通消息 */
+  info: (options?: MessageProps | string) => void,
+  /** 展示成功消息 */
+  success: (options?: MessageProps | string) => void,
+  /** 展示警示消息 */
+  warning: (options?: MessageProps | string) => void,
+  /** 展示错误消息 */
+  error: (options?: MessageProps | string) => void,
 };
-export default (MessageComp as unknown) as Plugin & MessageFnType;
+
+export default (MessageComp as unknown) as (Plugin & MessageApi);
+
+declare module '@vue/runtime-core' {
+  // Bind to `this` keyword
+  interface ComponentCustomProperties {
+    $message: MessageApi;
+  }
+}

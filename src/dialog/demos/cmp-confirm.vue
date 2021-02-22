@@ -57,7 +57,7 @@ export default defineComponent({
     };
   },
   methods: {
-    onConfirm(e: string)  {
+    onConfirm(e: string) {
       console.log('dialog:confirm', e);
     },
 
@@ -77,8 +77,8 @@ export default defineComponent({
       console.log('dialog:visible-change', e);
     },
 
-    clickoverlay() {
-      console.log('dialog:clickoverlay');
+    clickOverlay() {
+      console.log('dialog:clickOverlay');
     },
   },
 });
@@ -109,4 +109,3 @@ export default defineComponent({
   }
 }
 </style>
-
