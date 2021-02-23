@@ -17,7 +17,7 @@
           @blur="handleBlur"
         />
         <div v-if="clearable && innerValue.length > 0" :class="`${name}-wrap--icon`" @click="handleClear">
-          <t-icon name="clear-circle-filled" />
+          <TIconClearCircleFilled />
         </div>
         <div v-if="hasSuffix" :class="`${name}-wrap--suffix`">
           <slot name="suffix"></slot>
@@ -25,7 +25,7 @@
         <div v-if="hasRightIcon" :class="`${name}-wrap--icon`">
           <slot name="rightIcon">
             <div v-if="suffix">{{ suffix }}</div>
-            <t-icon v-if="rightIcon" :name="rightIcon" @click="handleClickIcon" />
+            <TIconChevronRight v-if="rightIcon" @click="handleClickIcon" />
           </slot>
         </div>
       </div>
@@ -48,12 +48,14 @@
         @focus="handleFocus"
         @blur="handleBlur"
       />
-      <div :class="`${name}--count`">{{ `${innerValue.length} / ${maxlength}` }}</div>
+      <div :class="`${name}--count`">{{ `${innerValue.length}/${maxlength}` }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import TIconChevronRight from "@/icon/chevron-right.vue";
+import TIconClearCircleFilled from "@/icon/clear-circle-filled.vue";
 import { ref, computed, watch, onMounted, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -61,6 +63,10 @@ const name = `${prefix}-input`;
 
 export default defineComponent({
   name,
+  components: {
+    TIconChevronRight,
+    TIconClearCircleFilled
+  },
   props: {
     label: {
       type: String,
@@ -76,8 +82,8 @@ export default defineComponent({
       default: '',
     },
     rightIcon: {
-      type: String,
-      default: '',
+      type: Function,
+      default: undefined,
     },
     suffix: {
       type: String,
@@ -127,7 +133,7 @@ export default defineComponent({
 
     const hasSuffix = computed(() => !!context.slots.suffix);
     const hasRightIcon = computed(() => {
-      if (props.rightIcon || props.suffix) return true;
+      if (props.suffix) return true;
       return !!context.slots.rightIcon;
     });
     const valueAlign = computed(() => (hasLabel.value ? 'right' : 'left'));
