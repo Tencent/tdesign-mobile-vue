@@ -249,7 +249,7 @@ export default defineComponent({
     };
     const onCancel = () => {
       console.log('取消');
-      for (let showItem in show) {
+      for (const showItem in show) {
         show[showItem] = false;
       }
       visible.value = false;
