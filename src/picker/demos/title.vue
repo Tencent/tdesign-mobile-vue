@@ -102,7 +102,7 @@ export default defineComponent({
 
     const onCancel = () => {
       console.log('取消');
-      show.city = false;
+      Object.keys(show).forEach(item => show[item] = false);
     };
 
     return {
