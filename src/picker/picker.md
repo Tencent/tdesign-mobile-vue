@@ -1,9 +1,14 @@
 # Picker 选择器
 
-## 单列选择
+## 基础选择器
 
 ::: demo ./demos/base.vue
 :::
+
+## 带标题选择器
+::: demo ./demos/title.vue
+:::
+
 
 ## 对象数组
 
