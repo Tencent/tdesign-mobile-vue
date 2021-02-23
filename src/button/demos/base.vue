@@ -8,10 +8,10 @@
         <t-button variant="outline" size="large" disabled>失效状态</t-button>
         <t-button theme="danger" size="large">警告按钮</t-button>
         <t-button theme="danger" size="large" disabled>失效状态</t-button>
+        <t-button theme="danger" variant="outline" size="large">次要警告按钮</t-button>
+        <t-button theme="danger" variant="outline" size="large" disabled>失效状态</t-button>
         <t-button theme="primary" variant="outline" size="large" ghost>幽灵按钮</t-button>
         <t-button theme="primary" variant="outline" size="large" ghost disabled>失效状态</t-button>
-        <t-button theme="danger" variant="outline" size="large">警告按钮</t-button>
-        <t-button theme="danger" variant="outline" size="large" disabled>失效状态</t-button>
         <t-button variant="text" block>文字按钮</t-button>
         <t-button variant="text" block disabled>失效状态</t-button>
       </t-cell>
@@ -51,7 +51,7 @@
       </t-cell>
     </t-cell-group>
 
-    <t-cell-group title="块状风格">
+    <t-cell-group title="块状风格" style="background-color:transparent">
       <t-button-group style="margin-bottom: 12px">
         <t-button theme="primary">置底按钮</t-button>
       </t-button-group>
@@ -71,6 +71,16 @@
         <t-button variant="outline">置底按钮</t-button>
       </t-button-group>
       <t-button-group type="menu" style="margin-bottom: 12px">
+        <t-button variant="outline" disabled>置底按钮</t-button>
+        <t-button variant="outline" disabled>置底按钮</t-button>
+      </t-button-group>
+      <t-button-group type="menu" style="margin-bottom: 12px">
+        <t-button variant="outline">置底按钮</t-button>
+        <t-button variant="outline">置底按钮</t-button>
+        <t-button variant="outline">置底按钮</t-button>
+      </t-button-group>
+      <t-button-group type="menu" style="margin-bottom: 12px">
+        <t-button variant="outline" disabled>置底按钮</t-button>
         <t-button variant="outline" disabled>置底按钮</t-button>
         <t-button variant="outline" disabled>置底按钮</t-button>
       </t-button-group>
