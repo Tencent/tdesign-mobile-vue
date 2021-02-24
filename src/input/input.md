@@ -9,6 +9,7 @@
 
 ::: demo ./demos/other.vue
 :::
+W
 
 ## 文本域
 
@@ -17,20 +18,20 @@
 
 ## Props
 
-| 属性          | 类型    | 默认值 | 必传 | 说明                                |
-| ------------- | ------- | ------ | ---- | ----------------------------------- |
-| label         | string  | -      | N    | 标题                                |
-| v-model       | string  | -      | N    | 单元格的内容                        |
-| error         | boolean | false  | N    | 是否为警告模式                      |
-| error-message | string  | -      | N    | 警告文本                            |
-| right-icon    | string  | -      | N    | 输入框右侧的图标名称                |
-| suffix        | string  | -      | N    | 输入框后缀内容                      |
-| type          | string  | input  | N    | 输入框类型，input/textarea/password |
-| maxlength     | number  | 500    | N    | 允许输入最大长度                    |
-| rows          | number  | 4      | N    | 默认的行数，仅 textarea 有效        |
-| max-rows      | number  | 12     | N    | 允许最大的行数，仅 textarea 有效    |
-| clearable     | boolean | false  | N    | 是否显示清除按钮                    |
-| disabled      | boolean | false  | N    | 是否禁用                            |
+| 属性          | 类型        | 默认值 | 必传 | 说明                                |
+| ------------- | ----------- | ------ | ---- | ----------------------------------- |
+| label         | string      | -      | N    | 标题                                |
+| v-model       | string      | -      | N    | 单元格的内容                        |
+| error         | boolean     | false  | N    | 是否为警告模式                      |
+| error-message | string      | -      | N    | 警告文本                            |
+| rightIcon     | Slot        | -      | N    | 输入框右侧的图标                    |
+| suffix        | string/Slot | -      | N    | 输入框后缀内容                      |
+| type          | string      | input  | N    | 输入框类型，input/textarea/password |
+| maxlength     | number      | 500    | N    | 允许输入最大长度                    |
+| rows          | number      | 4      | N    | 默认的行数，仅 textarea 有效        |
+| max-rows      | number      | 12     | N    | 允许最大的行数，仅 textarea 有效    |
+| clearable     | boolean     | false  | N    | 是否显示清除按钮                    |
+| disabled      | boolean     | false  | N    | 是否禁用                            |
 
 ## Events
 
