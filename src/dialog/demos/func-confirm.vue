@@ -62,27 +62,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
-  }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+.dialog-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
 }
 </style>

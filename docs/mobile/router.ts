@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
   ...getDocsRoutes(navs.components.docs),
 ];
 const router = createRouter({
-  history: createWebHashHistory(`${process.env.BASE_URL}mobile.html`),
+  history: createWebHashHistory(`mobile.html`),
   routes,
 });
 
