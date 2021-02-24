@@ -46,7 +46,7 @@
 
 | 属性              | 类型   | 默认值  | 必传 | 说明         |
 | ----------------- | ------ | ------- | ---- | ------------ |
-| theme             | String | defaykt | N    | picker 主题  |
+| theme             | String | default | N    | picker 主题  |
 | title             | String | -       | N    | 标题         |
 | confirmButtonText | String | 确定    | N    | 确定按钮文字 |
 | cancelButtonText  | String | 取消    | N    | 取消按钮文字 |
