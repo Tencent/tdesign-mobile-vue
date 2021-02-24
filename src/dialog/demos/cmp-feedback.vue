@@ -1,23 +1,59 @@
 <template>
-  <div :class="`${name}`">
-    <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="isShowDialog = true">
-        反馈类弹出框
-      </t-button>
-      <t-dialog
-        v-model="isShowDialog"
-        :content="content"
-        @confirm="onConfirm"
-        @opened="openDialog"
-        @closed="closeDialog"
-        @click-overlay="clickOverlay"
-        @visible-change="changeVisible"></t-dialog>
-    </t-cell>
+  <div class="dialog-base">
+    <div class="tdesign-demo-block">
+      <t-cell-group title="组件调用: 反馈类弹框——默认">
+        <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(1)">
+            默认反馈弹框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog1"
+            :content="content">
+          </t-dialog>
+        </t-cell>
+      </t-cell-group>
+
+      <t-cell-group title="组件调用: 反馈类弹框——自定义宽度、层级、header">
+        <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(2)">
+            自定义反馈弹框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog2"
+            :content="content"
+            :z-index="zIndex"
+            :width="width">
+            <template #header>
+              <div style="color:red;font-size:18px;">特此警告</div>
+            </template>
+          </t-dialog>
+        </t-cell>
+      </t-cell-group>
+
+      <t-cell-group title="组件调用: 反馈类弹框——事件调用">
+        <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(3)">
+            事件调用反馈弹框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog3"
+            :content="content"
+            @confirm="onConfirm"
+            @opened="openDialog"
+            @closed="closeDialog"
+            @click-overlay="clickOverlay"
+            @visible-change="changeVisible">
+          </t-dialog>
+        </t-cell>
+      </t-cell-group>
+    </div>
   </div>
 </template>
+
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 
+import Dialog from '../index';
 import config from '@/config';
 
 const { prefix } = config;
@@ -42,12 +78,44 @@ export default defineComponent({
       showFooter: false,
       showOverlay: false,
       isInput: true,
-      isShowDialog: false,
+      isShowDialog1: false,
+      isShowDialog2: false,
+      isShowDialog3: false,
     };
   },
   methods: {
+    changeDialogVisible(idx: number) {
+      switch (idx) {
+        case 1: {
+          this.isShowDialog1 = true;
+          this.isShowDialog2 = false;
+          this.isShowDialog3 = false;
+          break;
+        }
+        case 2: {
+          this.isShowDialog2 = true;
+          this.isShowDialog1 = false;
+          this.isShowDialog3 = false;
+          break;
+        }
+        case 3: {
+          this.isShowDialog3 = true;
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    },
+
     onConfirm(e: string) {
       console.log('dialog:confirm', e);
+    },
+
+    onCancel() {
+      console.log('dialog:cancel');
     },
 
     openDialog() {
@@ -69,28 +137,10 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less" scoped>
-.tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
-  }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+<style lang="less">
+.dialog-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
 }
 </style>

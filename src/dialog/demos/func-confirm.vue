@@ -1,10 +1,12 @@
 <template>
   <div :class="`${name}`">
-    <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="changeFunctionVisible">
-        确认类弹出框
-      </t-button>
-    </t-cell>
+    <t-cell-group title="函数调用: 反馈类弹框">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeFunctionVisible()">
+          反馈类弹出框
+        </t-button>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 <script lang="ts">
@@ -35,15 +37,15 @@ export default defineComponent({
       showFooter: false,
       showOverlay: false,
       isInput: true,
-      isShowDialog: false,
     };
   },
   methods: {
     changeFunctionVisible() {
-      Dialog.alert({
-        showHeader: false,
+      Dialog.confirm({
+        isInput: true,
         content: '我的家里有个人很酷',
         knowContent: 'i know',
+        placeholderText: '请输入您的名字',
         onConfirm: (e: string) => {
           console.log('dialog:confirm', e);
         },
