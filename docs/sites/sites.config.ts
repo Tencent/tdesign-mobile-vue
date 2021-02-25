@@ -100,11 +100,6 @@ export default {
               component: () => import('@/slider/slider.md'),
             },
             {
-              title: 'Dialog 弹出框',
-              name: 'dialog',
-              component: () => import('@/dialog/dialog.md'),
-            },
-            {
               title: 'DropdownMenu 下拉菜单',
               name: 'dropdown-menu',
               component: () => import('@/dropdown-menu/dropdown-menu.md'),
@@ -186,6 +181,11 @@ export default {
               name: 'noticebar',
               component: () => import('@/noticebar/noticebar.md'),
             },
+            {
+              title: 'Dialog 弹出框',
+              name: 'dialog',
+              component: () => import('@/dialog/dialog.md'),
+            }
           ],
         },
         {

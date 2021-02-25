@@ -1,13 +1,23 @@
 <template>
-  <div :class="`${name}`">
-    <t-cell-group title="方式一：组件调用">
-      <t-cell-group class="dialog-type-title" title="反馈类弹框">
+  <div class="dialog-base">
+    <div class="tdesign-demo-block">
+      <t-cell-group title="组件调用: 反馈类弹框">
         <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(2)">
-            含header含footer，宽度、层级自定义
+          <t-button theme="primary" @click="changeDialogVisible(1)">
+            默认反馈弹框
           </t-button>
           <t-dialog
-            v-model="isShowDialog"
+            v-model="isShowDialog1"
+            :content="content">
+          </t-dialog>
+        </t-cell>
+
+        <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(2)">
+            自定义反馈弹框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog2"
             :content="content"
             :z-index="zIndex"
             :width="width">
@@ -18,138 +28,88 @@
         </t-cell>
 
         <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(7)">
-            含默认header/宽度/层级,事件调用
+          <t-button theme="primary" @click="changeDialogVisible(3)">
+            事件调用反馈弹框
           </t-button>
           <t-dialog
-            v-model="isShowDialog7"
-            :show-footer="showFooter"
+            v-model="isShowDialog3"
             :content="content"
             @confirm="onConfirm"
             @opened="openDialog"
             @closed="closeDialog"
             @click-overlay="clickOverlay"
-            @visible-change="changeVisible"></t-dialog>
-        </t-cell>
-
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(3)">
-            含默认footer，宽度、层级默认
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog3"
-            :show-header="showHeader"
-            :content="content">
-            <template #footer>
-              <div style="color:pink;font-size:18px;">我同意</div>
-            </template>
+            @visible-change="changeVisible">
           </t-dialog>
         </t-cell>
       </t-cell-group>
 
-      <t-cell-group class="dialog-type-title" title="确认类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(4)">
-            含标题含input含底部
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog4"
-            :show-overlay="showOverlay"
-            type="confirm"
-            :is-input="isInput"
-            :header="header"
-            :content="content"
-            :placeholder-text="placeholderText"
-            :cancel-button-text="cancelButtonText"
-            :confirm-button-text="confirmButtonText"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-            <template #footer-cancel>
-              <div style="color:grey;font-size:18px;">我不同意</div>
-            </template>
-            <template #footer-confirm>
-              <div style="color:blue;font-size:18px;">我同意</div>
-            </template>
-          </t-dialog>
-        </t-cell>
+      <t-cell-group title="组件调用: 确认类弹框">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeDialogVisible(4)">
+          默认用法
+        </t-button>
+        <t-dialog
+          v-model="isShowDialog4"
+          type="confirm"
+          :header="header"
+          :content="content"
+          :placeholder-text="placeholderText"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel">
+        </t-dialog>
+      </t-cell>
 
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(5)">
-            含标题
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog5"
-            type="confirm"
-            :show-footer="showFooter"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-            <template #content>
-              <div style="color:red;">这是一个含标题的确认对话框，请确认你的操作！</div>
-            </template>
-          </t-dialog>
-        </t-cell>
-
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeDialogVisible(6)">
-            含input
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog6"
-            type="confirm"
-            :show-header="showHeader"
-            :content="content"
-            :is-input="isInput"
-            :show-footer="showFooter"
-            @confirm="onConfirm"
-            @cancel="onCancel"></t-dialog>
-        </t-cell>
-      </t-cell-group>
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeDialogVisible(5)">
+          input用法
+        </t-button>
+        <t-dialog
+          v-model="isShowDialog5"
+          type="confirm"
+          :is-input="isInput"
+          :header="header"
+          :content="content"
+          :placeholder-text="placeholderText"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel">
+          <template #footer-cancel>
+            <div style="color:grey;font-size:18px;">我不同意</div>
+          </template>
+          <template #footer-confirm>
+            <div style="color:blue;font-size:18px;">我同意</div>
+          </template>
+        </t-dialog>
+      </t-cell>
     </t-cell-group>
 
-    <t-cell-group title="方式二：函数调用">
-      <t-cell-group class="dialog-type-title" title="反馈类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible(1)">
-            含标题含底部
-          </t-button>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible(2)">
-            含标题
-          </t-button>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible(3)">
-            含底部
-          </t-button>
-        </t-cell>
-      </t-cell-group>
-
-      <t-cell-group class="dialog-type-title" title="确认类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible(4)">
-            含标题含底部含input
-          </t-button>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible(5)">
-            含标题含底部
-          </t-button>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="changeFunctionVisible(6)">
-            含input含底部
-          </t-button>
-        </t-cell>
-      </t-cell-group>
+    <t-cell-group title="函数调用: 反馈类弹框">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeFunctionVisible1()">
+          反馈类弹出框
+        </t-button>
+      </t-cell>
     </t-cell-group>
+
+    <t-cell-group title="函数调用: 反馈类弹框">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeFunctionVisible2">
+          反馈类弹出框
+        </t-button>
+      </t-cell>
+    </t-cell-group>
+    </div>
   </div>
 </template>
+
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 
-import Dialog from '../index';
 import config from '@/config';
+import Dialog from '../index';
 
 const { prefix } = config;
 const name = `${prefix}-demo--dialog`;
@@ -173,69 +133,54 @@ export default defineComponent({
       showFooter: false,
       showOverlay: false,
       isInput: true,
-      isShowDialog: false,
+      isShowDialog1: false,
+      isShowDialog2: false,
       isShowDialog3: false,
       isShowDialog4: false,
       isShowDialog5: false,
-      isShowDialog6: false,
-      isShowDialog7: false,
     };
   },
   methods: {
     changeDialogVisible(idx: number) {
       switch (idx) {
-        case 2: {
-          this.isShowDialog = true;
+        case 1: {
+          this.isShowDialog1 = true;
+          this.isShowDialog2 = false;
           this.isShowDialog3 = false;
           this.isShowDialog4 = false;
           this.isShowDialog5 = false;
-          this.isShowDialog6 = false;
-          this.isShowDialog7 = false;
+          break;
+        }
+        case 2: {
+          this.isShowDialog2 = true;
+          this.isShowDialog1 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = false;
+          this.isShowDialog5 = false;
           break;
         }
         case 3: {
           this.isShowDialog3 = true;
-          this.isShowDialog = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog4 = false;
           this.isShowDialog5 = false;
-          this.isShowDialog6 = false;
-          this.isShowDialog7 = false;
           break;
         }
         case 4: {
           this.isShowDialog4 = true;
-          this.isShowDialog = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog3 = false;
           this.isShowDialog5 = false;
-          this.isShowDialog6 = false;
-          this.isShowDialog7 = false;
           break;
         }
         case 5: {
           this.isShowDialog5 = true;
-          this.isShowDialog = false;
-          this.isShowDialog4 = false;
-          this.isShowDialog3 = false;
-          this.isShowDialog6 = false;
-          this.isShowDialog7 = false;
-          break;
-        }
-        case 6: {
-          this.isShowDialog6 = true;
-          this.isShowDialog = false;
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog3 = false;
           this.isShowDialog4 = false;
-          this.isShowDialog5 = false;
-          this.isShowDialog7 = false;
-          break;
-        }
-        case 7: {
-          this.isShowDialog7 = true;
-          this.isShowDialog = false;
-          this.isShowDialog3 = false;
-          this.isShowDialog4 = false;
-          this.isShowDialog5 = false;
-          this.isShowDialog6 = false;
           break;
         }
         default: {
@@ -268,95 +213,49 @@ export default defineComponent({
       console.log('dialog:clickOverlay');
     },
 
-    changeFunctionVisible(idx: number) {
-      switch (idx) {
-        case 1: {
-          Dialog.show({
-            showOverlay: false,
-            content: '我的家里有个人很酷',
-            knowContent: 'i know',
-          });
-          break;
-        }
-        case 2: {
-          Dialog.show({
-            width: '350px',
-            showFooter: false,
-            content: '我的家里有个人很酷!',
-            knowContent: 'i know',
-          });
-          break;
-        }
-        case 3: {
-          Dialog.alert({
-            showHeader: false,
-            content: '我的家里有个人很酷',
-            knowContent: 'i know',
-          });
-          break;
-        }
-        case 4: {
-          Dialog.confirm({
-            isInput: true,
-            content: '我的家里有个人很酷',
-            knowContent: 'i know',
-            placeholderText: '请输入您的名字',
-            onConfirm: (e:any) => {
-              console.log('dialog:confirm', e);
-            },
-            onCancel: () => {
-              console.log('dialog:cancel');
-            },
-            onClickOverlay: () => {
-              console.log('dialog:clickOverlay');
-            },
-          });
-          break;
-        }
-        case 5: {
-          Dialog.confirm({
-            content: '我的家里有个人很酷',
-            knowContent: 'i know',
-          });
-          break;
-        }
-        case 6: {
-          Dialog.confirm({
-            isInput: true,
-            showHeader: false,
-            content: '我的家里有个人很酷',
-            knowContent: 'i know',
-          });
-          break;
-        }
-      }
+    changeFunctionVisible2() {
+      Dialog.confirm({
+        isInput: true,
+        content: '我的家里有个人很酷',
+        knowContent: 'i know',
+        placeholderText: '请输入您的名字',
+        onConfirm: (e: string) => {
+          console.log('dialog:confirm', e);
+        },
+        onCancel: () => {
+          console.log('dialog:cancel');
+        },
+        onClickOverlay: () => {
+          console.log('dialog:clickOverlay');
+        },
+      });
     },
+
+    changeFunctionVisible1() {
+      Dialog.alert({
+        showHeader: false,
+        content: '我的家里有个人很酷',
+        knowContent: 'i know',
+        onConfirm: (e: string) => {
+          console.log('dialog:confirm', e);
+        },
+        onCancel: () => {
+          console.log('dialog:cancel');
+        },
+        onClickOverlay: () => {
+          console.log('dialog:clickOverlay');
+        },
+      });
+    },
+    
   },
 });
 </script>
 
-<style lang="less" scoped>
-.tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
-  }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+<style lang="less">
+.dialog-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
 }
 </style>
