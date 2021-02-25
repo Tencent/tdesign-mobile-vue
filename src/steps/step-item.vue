@@ -42,8 +42,8 @@ export default defineComponent({
     const parentType = computed(() => stepsProvide.type);
     const current = computed(() => (stepsProvide?.modelValue?.value || stepsProvide?.current?.value || 0));
     const stepsStatus = computed(() => stepsProvide.status);
-    const rootClassName = computed(() => [name, curStatus.value ? `${name}--${curStatus.value}` : '']);
     const readonly = computed(() => stepsProvide.readonly);
+    const rootClassName = computed(() => [name, readonly.value ? '' : `${name}--default`, curStatus.value ? `${name}--${curStatus.value}` : '']);
 
     const isDot = computed(() => parentType.value === 'dot' && stepsProvide.direction === 'vertical');
 
@@ -64,9 +64,7 @@ export default defineComponent({
     });
 
     const onClickIcon  = () => {
-      if (
-        stepsProvide.direction === 'vertical'
-        || parentType.value !== 'default') {
+      if (parentType.value !== 'default') {
         return;
       }
 
