@@ -19,16 +19,13 @@ export default defineComponent({
     // 是否独立使用
     const isIndependent = computed(() => !context.slots.default);
 
-    // 是否绸带
-    const isRibbon = computed(() => props.shape === 'ribbon');
-
     // 是否展示徽标
     const showBadge = computed(() => props.content || props.showZero || props.count !== 0);
 
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
       [`${name}`]: true,
-      [`${name}__ribbon--outer`]: isRibbon.value,
+      [`${name}__ribbon--outer`]: props.shape === 'ribbon',
     }));
 
     // 徽标内层样式类
