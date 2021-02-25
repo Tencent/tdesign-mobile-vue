@@ -2,9 +2,9 @@
   <div class="action-sheet-base">
     <t-cell-group title="列表型">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="visible = true">显示</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="visible1 = true">隐藏取消选项</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="visible2 = true">自定义颜色</t-button>
+        <t-button theme="primary" size="large" @click="visible = true">显示</t-button>
+        <t-button theme="primary" size="large" @click="visible1 = true">隐藏取消选项</t-button>
+        <t-button theme="primary" size="large" @click="visible2 = true">自定义颜色</t-button>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="宫格型">
@@ -40,6 +40,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { ItemType } from '../action-sheet.interface';
 
 export default defineComponent({
   data() {
@@ -69,7 +70,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected, selectedIndex) {
+    handleSelect(selected: ItemType, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel(): void {

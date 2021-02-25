@@ -109,7 +109,7 @@
       <t-button theme="primary" size="middle" @click="changeDialogVisible(8)">
         带说明文本
       </t-button>
-    
+
     </t-cell>
     <t-dialog
         v-model="isShowDialog7"
@@ -326,7 +326,7 @@ export default defineComponent({
       }
     },
 
-    onConfirm(e: string)  {
+    onConfirm(e: string) {
       console.log('dialog:confirm', e);
     },
 
@@ -346,8 +346,8 @@ export default defineComponent({
       console.log('dialog:visible-change', e);
     },
 
-    clickoverlay() {
-      console.log('dialog:clickoverlay');
+    clickOverlay() {
+      console.log('dialog:clickOverlay');
     },
 
     changeFunctionVisible(idx: number) {
@@ -389,8 +389,8 @@ export default defineComponent({
             onCancel: () => {
               console.log('dialog:cancel');
             },
-            onClickoverlay: () => {
-              console.log('dialog:clickoverlay');
+            onClickOverlay: () => {
+              console.log('dialog:clickOverlay');
             },
           });
           break;

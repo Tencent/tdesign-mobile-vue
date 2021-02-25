@@ -80,11 +80,13 @@ export default defineComponent({
         name: 'label_1',
         text: '标签一',
         icon: 'location-filled',
+        children: [],
       },
       {
         name: 'label_2',
         text: '标签二',
         icon: 'check-circle-filled',
+        children: [],
       },
     ];
     const list_2 = [
@@ -93,6 +95,7 @@ export default defineComponent({
         name: 'label_3',
         text: '标签三',
         icon: 'help-circle-filled',
+        children: [],
       },
     ];
     const list_3 = [
@@ -101,6 +104,7 @@ export default defineComponent({
         name: 'label_4',
         text: '标签四',
         icon: 'clear-circle-filled',
+        children: [],
       },
     ];
     const list_4 = [
@@ -109,6 +113,7 @@ export default defineComponent({
         name: 'label_5',
         text: '标签五',
         icon: 'star-filled',
+        children: [],
       },
     ];
 

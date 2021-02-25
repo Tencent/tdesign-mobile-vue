@@ -1,6 +1,7 @@
 import { PropType } from 'vue';
 
-export type ItemsProps = PropType<Array<string | number>>;
+export type ItemType = { value?: string | number, text: string }
+export type ItemsProps = PropType<ItemType[]>;
 
 export type ModelValueProps = PropType<number | string>;
 export interface SegmentedControlProps {

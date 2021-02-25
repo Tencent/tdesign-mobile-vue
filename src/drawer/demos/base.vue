@@ -17,13 +17,29 @@ import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     const baseSidebar = ref([{
-      name: 'test',
-      path: '//www.qq.com/',
-      iconName: 'location_fill',
-    }, {
-      name: 'test2',
+      name: '菜单一',
       path: '//www.qq.com/',
       iconImg: '//img.yangshipin.cn/assets/图标占位-kiydhrokdxjg.png',
+    }, {
+      name: '菜单二',
+      path: '//www.qq.com/',
+      iconImg: '//img.yangshipin.cn/assets/图标占位-kiydhrokdxjg.png',
+    }, {
+      name: '菜单三',
+      path: '//www.qq.com/',
+      iconImg: '//img.yangshipin.cn/assets/图标占位-kiydhrokdxjg.png',
+    }, {
+      name: '菜单四',
+      path: '//www.qq.com/',
+      iconImg: '//img.yangshipin.cn/assets/图标占位-kiydhrokdxjg.png',
+    }, {
+      name: '菜单五',
+      path: '//www.qq.com/',
+      iconImg: '//img.yangshipin.cn/assets/图标占位-kiydhrokdxjg.png',
+    }, {
+      name: '菜单六',
+      path: '//www.qq.com/',
+      iconName: 'search',
     }]);
     const open = ref(false);
     const showIcon = ref(false);

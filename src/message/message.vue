@@ -18,6 +18,7 @@ import { MessageType, MessageAlignType } from './message.interface';
 import TCheckIcon from '../icon/check-circle-filled.vue';
 import TErrorIcon from '../icon/error-circle-filled.vue';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-message`;
 

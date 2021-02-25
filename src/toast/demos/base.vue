@@ -63,8 +63,11 @@ import { ref, defineComponent } from 'vue';
 
 import Toast from '../index';
 import config from '@/config';
+import { ToastPositionType } from '../toast.interface';
+
 const { prefix } = config;
 const name = `${prefix}-toast-base-demo`;
+
 export default defineComponent({
   setup() {
     return {
@@ -82,28 +85,28 @@ export default defineComponent({
     };
   },
   methods: {
-    showText(message: string | undefined) {
+    showText(message?: string) {
       Toast(message);
     },
-    showSuccess(message: string | undefined) {
+    showSuccess(message?: string) {
       Toast.success(message);
     },
-    showFail(message: string | undefined) {
+    showFail(message?: string) {
       Toast({
         type: 'fail',
         message,
       });
     },
-    showCustom(message: string | undefined) {
+    showCustom(message?: string) {
       Toast({
-        icon: 'user_fill',
+        icon: 'user-filled',
         message,
       });
     },
-    showLoading(message: string | undefined) {
+    showLoading(message?: string) {
       Toast.loading(message);
     },
-    showPosition(position: string) {
+    showPosition(position: ToastPositionType) {
       Toast({
         type: 'success',
         position,

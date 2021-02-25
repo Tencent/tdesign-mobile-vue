@@ -19,20 +19,20 @@
 
     <!-- pickers -->
     <t-popup v-model="show.city" position="bottom">
-      <t-picker @change="onChange" @confirm="onCityConfirm" @cancel="onCancel">
+      <t-picker title="选择城市" @change="onChange" @confirm="onCityConfirm" @cancel="onCancel">
         <t-picker-column :options="cityOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
     <t-popup v-model="show.yearAndSeason" position="bottom">
-      <t-picker @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
+      <t-picker title="选择年份和季节" @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
         <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
         <t-picker-column :options="seasonOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
     <t-popup v-model="show.date" position="bottom">
-      <t-picker @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
+      <t-picker title="选择日期" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
         <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
         <t-picker-column :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
         <t-picker-column :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />

@@ -25,7 +25,7 @@
       @closed="closeDialog"
       @visible-change="changeVisible"
     />
-   
+
     <!-- 多行标题 -->
     <t-dialog
       v-model="isShowDialog2"
@@ -143,8 +143,8 @@ export default defineComponent({
       console.log('dialog:visible-change', e);
     },
 
-    clickoverlay() {
-      console.log('dialog:clickoverlay');
+    clickOverlay() {
+      console.log('dialog:clickOverlay');
     },
   },
 });
@@ -176,6 +176,6 @@ export default defineComponent({
     font-size: 14px;
     line-height: 16px;
   }
-  
+
 }
 </style>

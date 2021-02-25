@@ -36,7 +36,9 @@ export default defineComponent({
   setup(props, { emit }) {
     const currentActive = ref(props.modelValue);
     const selectChild = (value: string | number) => {
-      currentActive.value !== value && (currentActive.value = value);
+      if (currentActive.value !== value) {
+        currentActive.value = value;
+      }
     };
 
     watch(currentActive, (newValue) => {

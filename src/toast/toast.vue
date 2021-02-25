@@ -9,11 +9,11 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, defineComponent } from 'vue';
+import { computed, toRefs, ref, defineComponent, PropType } from 'vue';
 
 import TIcon from '../icon';
 import TMask from '../mask';
-import { ToastPosition, ToastTypeIcon } from './toast.interface';
+import { ToastPositionType, ToastType, ToastTypeIcon } from './toast.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-toast`;
@@ -35,7 +35,7 @@ export default defineComponent({
      * @attribute type
      */
     type: {
-      type: String,
+      type: String as PropType<ToastType>,
       default: '',
     },
     /**
@@ -43,15 +43,15 @@ export default defineComponent({
      * @attribute position
      */
     position: {
-      type: String,
-      default: ToastPosition.Middle,
+      type: String as PropType<ToastPositionType>,
+      default: 'middle',
     },
     /**
      * @description 自定义图标
      * @attribute icon
      */
     icon: {
-      type: [String, Function],
+      type: String,
       default: '',
     },
     /**
@@ -70,8 +70,13 @@ export default defineComponent({
   },
   setup(props) {
     const computedIcon = computed(() => {
-      let icon = props.type && ToastTypeIcon[props.type];
-      if (props.icon) icon = props.icon;
+      let icon = '';
+      if (props.type) {
+        icon = ToastTypeIcon[props.type];
+      }
+      if (props.icon) {
+        icon = props.icon
+      };
       return icon;
     });
 
@@ -80,9 +85,9 @@ export default defineComponent({
       {
         [`${name}--text`]: !computedIcon.value,
         [`${name}--icononly`]: !props.message && computedIcon.value,
-        [`${name}--middle`]: props.position === ToastPosition.Middle.valueOf(),
-        [`${name}--top`]: props.position === ToastPosition.Top.valueOf(),
-        [`${name}--bottom`]: props.position === ToastPosition.Bottom.valueOf(),
+        [`${name}--top`]: props.position === 'top',
+        [`${name}--middle`]: props.position === 'middle',
+        [`${name}--bottom`]: props.position === 'bottom',
       },
     ]);
 
