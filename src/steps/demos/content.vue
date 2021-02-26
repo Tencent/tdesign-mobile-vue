@@ -5,7 +5,7 @@
         <t-step title="已完成步骤" content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。">
           <template #extra>
             <div class="extra-img">
-              <img src="//0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png" alt="">
+              <img src="https://0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png" alt="">
             </div>
           </template>
         </t-step>
