@@ -1,17 +1,13 @@
 <template>
   <div :data-value="state.value" :class="state.componentName" @click="handleClick">
-    {{state.title}}</div>
+    {{state.title}}
+  </div>
 </template>
 
 <script lang="ts">
-import { reactive, defineComponent, SetupContext } from 'vue';
+import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
-
-interface IndexesCellProps{
-  title: string,
-  value?: string
-}
 
 export default defineComponent({
   props: {
@@ -24,13 +20,13 @@ export default defineComponent({
       default: '',
     },
   },
-  setup(props: IndexesCellProps, context: SetupContext) {
+  setup(props, context) {
     const currentSidebar = '';
     const { emit } = context;
     const state = reactive({
       componentName: `${prefix}-indexes__cell`,
-      title: props?.title,
-      value: props?.value,
+      title: props.title,
+      value: props.value,
     });
 
     const handleClick = () => {

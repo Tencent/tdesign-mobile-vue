@@ -1,11 +1,4 @@
-import { ExtractPropTypes } from 'vue';
-
-export interface PickerPropsType {
-  theme: string;
-  title: string;
-  confirmButtonText: string;
-  cancelButtonText: string;
-}
+import { PropType } from 'vue';
 
 export const PickerProps = {
   /**
@@ -42,15 +35,13 @@ export const PickerProps = {
   },
 };
 
-export type PickerColumnPropsType = ExtractPropTypes<typeof pickerColumnProps>;
-
 export const pickerColumnProps = {
   /**
    * @description 可选项，类似select的列表项
    * @property options
    */
   options: {
-    type: Array,
+    type: Array as PropType<any[]>,
     default: [],
   },
   /**
@@ -67,7 +58,7 @@ export const pickerColumnProps = {
    */
   formatter: {
     type: Function,
-    default: (value: string): string  => value,
+    default: (value: string): string => value,
   },
   /**
    * @description 默认选中的索引，默认值为0

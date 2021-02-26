@@ -5,3 +5,8 @@
     <t-tag size="small" theme="primary" shape="circle">圆角</t-tag>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({});
+</script>

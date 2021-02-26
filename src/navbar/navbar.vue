@@ -1,7 +1,7 @@
 <template>
   <div :class="name">
     <div :class="`${name}__back`" >
-      <t-icon v-if="leftArrow" :class="`${nBackClass}--arrow`" name="arrow-left" @click="handleBack"></t-icon>
+      <t-icon v-if="leftArrow" :class="`${name}__back--arrow`" name="arrow-left" @click="handleBack"></t-icon>
       <slot name="left">
       </slot>
     </div>

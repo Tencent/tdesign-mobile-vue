@@ -1,9 +1,13 @@
-# 弹出层
+# Popup 弹出层
 
-::: demo 弹出位置 ./demos/position.vue
+## 弹出位置
+
+::: demo ./demos/position.vue
 :::
 
-::: demo 自定义内容区的动画 ./demos/custom-animation.vue
+## 自定义动画
+
+::: demo ./demos/custom-animation.vue
 :::
 
 ## Props

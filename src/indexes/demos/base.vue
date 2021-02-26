@@ -6,7 +6,7 @@
         <t-indexes-cell
           v-for="n in 10"
           :key="n"
-          :value="n"
+          :value="String(n)"
           :title="`此处使用列表样式${n}`"
           @click="handleClick"></t-indexes-cell>
       </div>

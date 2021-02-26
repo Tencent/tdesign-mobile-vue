@@ -1,6 +1,8 @@
 # Fab 悬浮按钮
 
-::: demo 示例用法 ./demos/display.vue
+## 示例用法
+
+::: demo ./demos/display.vue
 :::
 
 ## Props

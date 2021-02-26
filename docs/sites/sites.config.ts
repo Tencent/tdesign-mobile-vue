@@ -9,14 +9,14 @@ export default {
           type: 'document', // 普通文档
           children: [
             {
-              title: '如何开始',
-              name: 'install',
-              component: () => import('@/../docs/install.md'),
+              title: '说明',
+              name: 'readme',
+              component: () => import('@/../README.md'),
             },
             {
               title: '贡献指南',
-              name: 'develop',
-              component: () => import('@/../docs/develop.md'),
+              name: 'contributing',
+              component: () => import('@/../CONTRIBUTING.md'),
             },
             {
               title: '更新日志',
@@ -50,7 +50,7 @@ export default {
               component: () => import('@/rate/rate.md'),
             },
             {
-              title: 'Switch 选择器',
+              title: 'Switch 开关',
               name: 'switch',
               component: () => import('@/switch/switch.md'),
             },
@@ -100,11 +100,6 @@ export default {
               component: () => import('@/slider/slider.md'),
             },
             {
-              title: 'Dialog 弹出框',
-              name: 'dialog',
-              component: () => import('@/dialog/dialog.md'),
-            },
-            {
               title: 'DropdownMenu 下拉菜单',
               name: 'dropdown-menu',
               component: () => import('@/dropdown-menu/dropdown-menu.md'),
@@ -124,6 +119,11 @@ export default {
               name: 'collapse',
               component: () => import('@/collapse/collapse.md'),
             },
+            {
+              title: 'Cell 单元格',
+              name: 'cell',
+              component: () => import('@/cell/cell.md'),
+            },
           ],
         },
         {
@@ -132,7 +132,7 @@ export default {
           children: [
             {
               title: 'TabBar 标签栏',
-              name: 'tab-bar',
+              name: 'tabbar',
               component: () => import('@/tab-bar/tab-bar.md'),
             },
             {
@@ -181,12 +181,22 @@ export default {
               name: 'noticebar',
               component: () => import('@/noticebar/noticebar.md'),
             },
+            {
+              title: 'Dialog 弹出框',
+              name: 'dialog',
+              component: () => import('@/dialog/dialog.md'),
+            }
           ],
         },
         {
           title: '输入类组件',
           type: 'component',
           children: [
+            {
+              title: 'Input 输入框',
+              name: 'input',
+              component: () => import('@/input/input.md'),
+            },
             {
               title: 'Fab 悬浮按钮',
               name: 'fab',

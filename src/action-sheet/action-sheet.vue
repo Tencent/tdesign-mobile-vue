@@ -23,8 +23,8 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch, defineComponent, PropType, ComputedRef } from 'vue';
-import { ActionSheetType } from './action-sheet.interface';
+import { ref, computed, watch, defineComponent, PropType, ComputedRef } from 'vue';
+import { ActionSheetType, ItemType } from './action-sheet.interface';
 import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
@@ -55,7 +55,7 @@ export default defineComponent({
      * @attribute items
      */
     items: {
-      type: Array,
+      type: Array as PropType<Array<ItemType | string>>,
       required: true,
     },
     /**
@@ -92,7 +92,7 @@ export default defineComponent({
     },
   },
   emits: ['select', 'update:modelValue', 'cancel', 'close'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const actionItems = ref([]);
 
     const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;

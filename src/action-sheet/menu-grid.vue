@@ -53,27 +53,10 @@ const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
   props: {
-    modelValue: Boolean,
-    /**
-     * @description 菜单项
-     * @attribute items
-     */
-    /**
-     * @description 是否显示
-     * @attribute visible
-     */
-    visible: {
-      type: Boolean,
-      default: false,
-    },
     items: {
       type: Array,
       required: true,
     },
-    /**
-     * @description grid时每页显示的数量
-     * @attribute count
-     */
     count: {
       type: Number,
       default: 8,
@@ -89,7 +72,6 @@ export default defineComponent({
     let startOffset = 0;
     let canMove = true;
 
-    const currentVisible = computed(() => props.modelValue || props.visible);
     const wrapperStyle = computed(() => ({
       transform: `translate3d(${moveOffset.value}px, 0, 0)`,
       transition: useTransition.value ? 'transform 300ms' : null,
@@ -165,7 +147,6 @@ export default defineComponent({
       actionItems,
       currentIndex,
       containerWrapper,
-      currentVisible,
       wrapperStyle,
       handleSelect,
       handleTouchstart,

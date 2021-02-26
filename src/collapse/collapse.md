@@ -1,9 +1,13 @@
 # Collapse 折叠面板
 
-::: demo 折叠面板 ./demos/index.vue
+## 折叠面板
+
+::: demo ./demos/index.vue
 :::
 
-## Collapse Props
+## Props
+
+### Collapse Props
 
 | 属性名称            | 类型                  | 默认值 | 必传 | 说明                                  |
 | ------------------- | --------------------- | ------ | ---- | ------------------------------------- |
@@ -13,13 +17,7 @@
 | defaultExpandAll    | Boolean               | False  | N    | 默认`false`。若为`true`，默认展开全部 |
 | labelWidth          | Number                |        | N    | 面板内列表标签宽度                    |
 
-## Collapse Events
-
-| 事件名称 | 说明                         | 参数                           |
-| -------- | ---------------------------- | ------------------------------ |
-| change   | 切换面板时触发，返回变化的值 | (value: Array, String, Number) |
-
-## Collapse Panel Props
+### Collapse Panel Props
 
 | 属性名称        | 类型                  | 默认值 | 必传 | 说明                                        |
 | --------------- | --------------------- | ------ | ---- | ------------------------------------------- |
@@ -31,7 +29,15 @@
 | labelWidth      | Number                |        |      | 面板内列表标签宽度，单项设置优先级高        |
 | headerClickable | Boolean               | true   |      | 若为 true`，面板头部可点，触发展开/折叠事件 |
 
-## Collapse Events
+## Events
+
+### Collapse Events
+
+| 事件名称 | 说明                         | 参数                           |
+| -------- | ---------------------------- | ------------------------------ |
+| change   | 切换面板时触发，返回变化的值 | (value: Array, String, Number) |
+
+### Collapse Panel Events
 
 | 事件名称 | 说明               | 参数                   |
 | -------- | ------------------ | ---------------------- |

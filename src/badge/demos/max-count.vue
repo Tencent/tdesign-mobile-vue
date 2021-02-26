@@ -6,7 +6,7 @@
     <t-badge :count="104" class="badge-item">
       <t-button size="small">104</t-button>
     </t-badge>
-    <t-badge :count="104" max-count="44" class="badge-item">
+    <t-badge :count="104" :max-count="44" class="badge-item">
       <t-button size="small">max:44</t-button>
     </t-badge>
   </div>

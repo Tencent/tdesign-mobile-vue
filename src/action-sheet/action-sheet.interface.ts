@@ -1,16 +1,17 @@
 
 export type ActionSheetType = 'list' | 'grid';
 
-export type Items = {
+export type ItemType = {
   label: string,
   color?: string
+  disabled?: boolean
 }
 
 export interface PopupProps {
   modelValue: boolean;
   visible:boolean;
   count: number;
-  items: Array<Items | string>;
+  items: Array<ItemType | string>;
   type: ActionSheetType;
   showCancel: boolean;
   cancelText: string;

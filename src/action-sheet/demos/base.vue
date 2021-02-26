@@ -2,9 +2,9 @@
   <div class="action-sheet-base">
     <t-cell-group title="基础用法">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="visible = true">显示</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="visible1 = true">隐藏取消选项</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="visible2 = true">自定义颜色</t-button>
+        <t-button theme="primary" size="large" @click="visible = true">显示</t-button>
+        <t-button theme="primary" size="large" @click="visible1 = true">隐藏取消选项</t-button>
+        <t-button theme="primary" size="large" @click="visible2 = true">自定义颜色</t-button>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="表格型展示">
@@ -31,7 +31,7 @@
       @cancel="handleCancel"
     >
       <template #cell="slotProps">
-        <div class="meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
+        <div class="action-sheet-meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
         <div>{{ slotProps.item.label }}</div>
       </template>
     </t-action-sheet>
@@ -40,6 +40,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { ItemType } from '../action-sheet.interface';
 
 export default defineComponent({
   data() {
@@ -69,7 +70,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected, selectedIndex) {
+    handleSelect(selected: ItemType, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel(): void {
@@ -84,14 +85,12 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-.action-sheet-base {
-  .meun-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 4px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.action-sheet-meun-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 4px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

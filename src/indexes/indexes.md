@@ -1,6 +1,8 @@
-# mobile vue 索引
+# Indexes 索引
 
-::: demo 示例用法 ./demos/base.vue
+## 基础用法
+
+::: demo ./demos/base.vue
 :::
 
 ## indexes Props

@@ -1,24 +1,43 @@
-# 选择器 Picker
+# Picker 选择器
 
-::: demo 单列选择 ./demos/base.vue
+## 基础选择器
+
+::: demo ./demos/base.vue
 :::
 
-::: demo 对象数组 ./demos/object-array.vue
+## 带标题选择器
+::: demo ./demos/title.vue
 :::
 
-::: demo 默认选中 ./demos/default-selected.vue
+
+## 对象数组
+
+::: demo ./demos/object-array.vue
 :::
 
-::: demo 自定义展示内容 ./demos/custom.vue
+## 默认选中
+
+::: demo ./demos/default-selected.vue
 :::
 
-::: demo 多列选择 ./demos/multiple.vue
+## 自定义展示内容
+
+::: demo ./demos/custom.vue
 :::
 
-::: demo 联动选择 ./demos/cascade.vue
+## 多列选择
+
+::: demo ./demos/multiple.vue
 :::
 
-::: demo 弹窗层的 Picker ./demos/popup-picker.vue
+## 联动选择
+
+::: demo ./demos/cascade.vue
+:::
+
+## 弹窗层的 Picker
+
+::: demo ./demos/popup-picker.vue
 :::
 
 ## Props
@@ -27,7 +46,7 @@
 
 | 属性              | 类型   | 默认值  | 必传 | 说明         |
 | ----------------- | ------ | ------- | ---- | ------------ |
-| theme             | String | defaykt | N    | picker 主题  |
+| theme             | String | default | N    | picker 主题  |
 | title             | String | -       | N    | 标题         |
 | confirmButtonText | String | 确定    | N    | 确定按钮文字 |
 | cancelButtonText  | String | 取消    | N    | 取消按钮文字 |
