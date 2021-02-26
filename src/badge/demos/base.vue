@@ -33,7 +33,7 @@
         <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="文本加图标标签栏" style="position: fixed; bottom: 0; width: 100%;">
+    <t-cell-group title="标签栏带徽标" style="position: fixed; bottom: 0; width: 100%;">
       <t-tab-bar>
         <t-badge class="tab-badge" :offset="[5, 30]" :count="16">
           <t-tab-bar-item>
