@@ -1,16 +1,10 @@
 <template>
   <div class="action-sheet-base">
-    <t-cell-group title="列表型">
+    <t-cell-group>
       <t-cell value-align="left">
-        <t-button theme="primary" size="large" @click="visible = true">显示</t-button>
-        <t-button theme="primary" size="large" @click="visible1 = true">隐藏取消选项</t-button>
-        <t-button theme="primary" size="large" @click="visible2 = true">自定义颜色</t-button>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="宫格型">
-      <t-cell value-align="left">
-        <t-button theme="primary" @click="handleShowGrid(8)">显示</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="handleShowGrid(4)">每页显示4个</t-button>
+        <t-button theme="primary" size="large" @click="visible = true">列表型</t-button>
+        <t-button theme="primary" size="large"  @click="handleShowGridLine(8)">宫格型-单页宫格</t-button>
+        <t-button theme="primary" size="large" @click="handleShowGrid(8)">宫格型-多页宫格</t-button>
       </t-cell>
     </t-cell-group>
     <t-action-sheet v-model="visible" :items="items" @select="handleSelect" @cancel="handleCancel" />
@@ -21,11 +15,23 @@
       @select="handleSelect"
       @cancel="handleCancel"
     />
-    <t-action-sheet v-model="visible2" :items="items1" @select="handleSelect" @cancel="handleCancel" />
+    <t-action-sheet
+      v-model="visible2"
+      type="grid"
+      :items="items2"
+      :count="count"
+      @select="handleSelect"
+      @cancel="handleCancel"
+    >
+      <template #cell="slotProps">
+        <div class="action-sheet-meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
+        <div>{{ slotProps.item.label }}</div>
+      </template>
+    </t-action-sheet>
     <t-action-sheet
       v-model="visible3"
       type="grid"
-      :items="items2"
+      :items="items3"
       :count="count"
       @select="handleSelect"
       @cancel="handleCancel"
@@ -63,6 +69,16 @@ export default defineComponent({
         { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
         { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
         { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
+      ],
+      items3: [
+        { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
+        { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
+        { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
+        { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
+        { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
+        { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
+        { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
+        { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
         { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
         { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
       ],
@@ -75,6 +91,10 @@ export default defineComponent({
     },
     handleCancel(): void {
       console.log('cancel');
+    },
+    handleShowGridLine(count: number){
+       this.count = count;
+      this.visible2 = true;
     },
     handleShowGrid(count: number) {
       this.count = count;
@@ -92,5 +112,9 @@ export default defineComponent({
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+.action-sheet-base button{
+  margin-bottom: 16px;
+
 }
 </style>
