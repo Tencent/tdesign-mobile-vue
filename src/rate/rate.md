@@ -1,36 +1,51 @@
 # Rate 评分
 
-## 基础用法
+定义：用户对某行为/事物进行打分
+
+## 1. 组件类型
+
+在TDesign中，拥有两种不同类型的评分：基础评分、带描述评分
+
+### 1.1. 基础评分
+
+使用场景：简单的星级评定，不涉及具体分数
 
 ::: demo ./demos/index.vue
 :::
 
-## 允许半选
 
-::: demo ./demos/allowHalf.vue
-:::
+### 1.2. 带描述评分
 
-## 辅助文本
+使用场景：较为严谨的星级评定，展示具体分数或具体等级
 
 ::: demo ./demos/text.vue
 :::
 
-## 自定义数量
+
+## 2. 组件样式
+
+### 2.1. 允许半选
+
+::: demo ./demos/allowHalf.vue
+:::
+
+
+### 2.2. 自定义数量
 
 ::: demo ./demos/count.vue
 :::
 
-## 只读
+### 2.3. 只读状态
 
 ::: demo ./demos/readonly.vue
 :::
 
-## 自定义颜色
+### 2.4. 自定义颜色
 
 ::: demo ./demos/color.vue
 :::
 
-## 自定义图标
+### 2.5. 自定义图标
 
 ::: demo ./demos/icon.vue
 :::

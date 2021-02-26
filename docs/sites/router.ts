@@ -7,7 +7,6 @@ const navs = config.navs;
 
 function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   let docsRoutes: Array<RouteRecordRaw> = [];
-
   docs.forEach((item) => {
     const docType = item.type || type;
     if (docType === type) {

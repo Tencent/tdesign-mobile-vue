@@ -32,12 +32,41 @@
         <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
       </t-cell>
     </t-cell-group>
+    <!-- <t-cell-group title="文本加图标标签栏">
+      <t-tab-bar>
+        <t-tab-bar-item
+          v-for="(item, i) in list_1"
+          :key="item.name || i"
+          :icon="item.icon"
+          :name="item.name"
+        >
+          {{ item.text }}
+        </t-tab-bar-item>
+      </t-tab-bar>
+    </t-cell-group> -->
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-export default defineComponent({});
+export default defineComponent({
+  setup() {
+    const list_1 = [
+      {
+        name: 'label_1',
+        text: '标签一',
+        icon: 'location-filled',
+      },
+      {
+        name: 'label_2',
+        text: '标签二',
+        icon: 'check-circle-filled',
+      },
+    ];
+
+    return {list_1}
+  }
+});
 </script>
 
 <style lang="less" scoped>

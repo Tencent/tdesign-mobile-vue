@@ -2,6 +2,7 @@
   <div class="tag-base tdesign-demo-tag">
     <t-cell-group title="展示型标签">
       <t-cell>
+        <t-tag theme="default">默认</t-tag>
         <t-tag theme="primary">重要</t-tag>
         <t-tag theme="danger">危险</t-tag>
         <t-tag theme="warning">警告</t-tag>
@@ -30,6 +31,13 @@
         <t-tag size="small" theme="primary" shape="circle">圆角</t-tag>
       </t-cell>
     </t-cell-group>
+    <!-- <t-cell-group>
+      <t-cell>
+        <t-tag size="large" theme="primary" shape="square">大圆角</t-tag>
+        <t-tag size="medium" theme="primary" shape="round">大圆角</t-tag>
+        <t-tag size="small" theme="primary" shape="mark">大圆角</t-tag>
+      </t-cell>
+    </t-cell-group> -->
     <t-cell-group title="点击型标签">
       <t-cell>
         <t-check-tag

@@ -88,3 +88,11 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="less">
+// 体验css
+.tdesign-demo-tag .t-tag{
+  margin-bottom: 8px;
+  margin-left: 0 !important;
+  margin-right: 8px;
+}
+</style>

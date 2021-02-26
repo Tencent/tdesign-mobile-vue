@@ -1,41 +1,42 @@
 # Picker 选择器
 
-## 基础选择器
+定义：在一组预设数据中进行选择
+
+## 1. 组件类型
+
+TDesign目前只提供一种基础类型
+
+### 1.1. 基础类型
 
 ::: demo ./demos/base.vue
 :::
 
-## 带标题选择器
-::: demo ./demos/title.vue
-:::
-
-
-## 对象数组
+### 1.2. 对象数组
 
 ::: demo ./demos/object-array.vue
 :::
 
-## 默认选中
+### 1.3. 默认选中
 
 ::: demo ./demos/default-selected.vue
 :::
 
-## 自定义展示内容
+### 1.4. 自定义展示内容
 
 ::: demo ./demos/custom.vue
 :::
 
-## 多列选择
+### 1.5. 多列选择
 
 ::: demo ./demos/multiple.vue
 :::
 
-## 联动选择
+### 1.6. 联动选择
 
 ::: demo ./demos/cascade.vue
 :::
 
-## 弹窗层的 Picker
+### 1.7. 弹窗层的 Picker
 
 ::: demo ./demos/popup-picker.vue
 :::
