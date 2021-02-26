@@ -3,47 +3,72 @@
     <t-cell-group title="按钮带徽标">
       <div class="badge-wrap">
         <t-badge :count="16" class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
         <t-badge dot class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
         <t-badge content="NEW" class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
         <t-badge content="···" class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
       </div>
     </t-cell-group>
-    <t-cell-group title="列表带徽标">
-      <t-cell label="单行标题">
+    <t-cell-group title="列表带徽标" style="overflow: hidden">
+      <t-cell label="单行标题" link>
         <t-badge dot />
       </t-cell>
-      <t-cell label="单行标题">
+      <t-cell label="单行标题" link>
         <t-badge :count="16"/>
       </t-cell>
-      <t-cell label="单行标题">
+      <t-cell label="单行标题" link>
         <t-badge content="NEW" shape="round" class="cell-badge"/>
         <t-badge content="NEW" shape="round" class="cell-badge"/>
-        <t-badge content="NEW" shape="round" class="cell-badge"/>
+        <t-badge content="NEW" class="cell-badge"/>
+        <t-badge content="NEW" class="cell-badge"/>
       </t-cell>
       <t-cell label="单行标题">
         <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
       </t-cell>
     </t-cell-group>
-    <!-- <t-cell-group title="文本加图标标签栏">
+    <t-cell-group title="文本加图标标签栏" style="position: fixed; bottom: 0; width: 100%;">
       <t-tab-bar>
-        <t-tab-bar-item
-          v-for="(item, i) in list_1"
-          :key="item.name || i"
-          :icon="item.icon"
-          :name="item.name"
-        >
-          {{ item.text }}
-        </t-tab-bar-item>
+        <t-badge class="tab-badge" :offset="[5, 30]" :count="16">
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
+        <t-badge class="tab-badge" :offset="[5, 30]" dot>
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
+        <t-badge class="tab-badge" :offset="[5, 30]" content="NEW">
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
+        <t-badge class="tab-badge" :offset="[5, 30]" content="···">
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
       </t-tab-bar>
-    </t-cell-group> -->
+    </t-cell-group>
   </div>
 </template>
 
@@ -51,20 +76,10 @@
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
-    const list_1 = [
-      {
-        name: 'label_1',
-        text: '标签一',
-        icon: 'location-filled',
-      },
-      {
-        name: 'label_2',
-        text: '标签二',
-        icon: 'check-circle-filled',
-      },
-    ];
 
-    return {list_1}
+    return {
+      iconUrl: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+    }
   }
 });
 </script>
@@ -78,6 +93,9 @@ export default defineComponent({
   }
 }
 .cell-badge {
-  margin-left: 10px;
+  margin-left: 8px;
+}
+.tab-badge {
+  flex: 1;
 }
 </style>
