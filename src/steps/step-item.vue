@@ -2,10 +2,9 @@
   <div :class="rootClassName">
     <div :class="`${name}__inner`">
       <div :class="`${name}-icon`" @click="onClickIcon">
-        <slot name="icon" >
-          <span v-if="isDot" :class="`${name}-icon__dot`"></span>
-          <span v-else :class="`${name}-icon__number`">{{index + 1}}</span>
-        </slot>
+        <span v-if="isDot" :class="`${name}-icon__dot`"></span>
+        <div v-else :class="`${name}-icon__number`">
+          <slot name="icon" >{{index + 1}}</slot></div>
       </div>
       <div :class="`${name}-content`">
         <div :class="`${name}-title`">
@@ -24,7 +23,8 @@
 
 <script lang="ts">
 import { computed, ref, inject, SetupContext, defineComponent } from 'vue';
-import { StepItemProps, StepStatusEnum } from './steps.interface';
+import { StepItemProps, StepStatusEnum, TypeEnum } from './steps.interface';
+
 import config from '../config';
 
 const { prefix } = config;
@@ -42,8 +42,8 @@ export default defineComponent({
     const parentType = computed(() => stepsProvide.type);
     const current = computed(() => (stepsProvide?.modelValue?.value || stepsProvide?.current?.value || 0));
     const stepsStatus = computed(() => stepsProvide.status);
-    const rootClassName = computed(() => [name, curStatus.value ? `${name}--${curStatus.value}` : '']);
     const readonly = computed(() => stepsProvide.readonly);
+    const rootClassName = computed(() => [name, readonly.value ? '' : `${name}--default`, curStatus.value ? `${name}--${curStatus.value}` : '']);
 
     const isDot = computed(() => parentType.value === 'dot' && stepsProvide.direction === 'vertical');
 
@@ -64,9 +64,7 @@ export default defineComponent({
     });
 
     const onClickIcon  = () => {
-      if (
-        stepsProvide.direction === 'vertical'
-        || parentType.value !== 'default') {
+      if (parentType.value === TypeEnum.Dot) {
         return;
       }
 
