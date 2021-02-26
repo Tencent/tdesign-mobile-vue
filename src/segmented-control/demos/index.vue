@@ -1,22 +1,28 @@
 <template>
   <div class="demo-segmented-control">
-    <t-segmented-control
-      v-model="defaultValue"
-      :items="items.slice(0,2)"
-      @change="change"
-    ></t-segmented-control>
-    <t-segmented-control
-      v-model="defaultValue"
-      :items="items.slice(0,3)"
-      class="mt-24"
-      @change="change"
-    ></t-segmented-control>
-    <t-segmented-control
-      v-model="defaultValue"
-      :items="items"
-      class="mt-24"
-      @change="change"
-    ></t-segmented-control>
+    <div class="demo-segmented-control__wrap">
+      <t-cell>
+        <t-segmented-control
+          v-model="defaultValue"
+          :items="items.slice(0,2)"
+          @change="change"
+        ></t-segmented-control>
+      </t-cell>
+      <t-cell>
+        <t-segmented-control
+          v-model="defaultValue"
+          :items="items.slice(0,3)"
+          @change="change"
+        ></t-segmented-control>
+      </t-cell>
+      <t-cell>
+        <t-segmented-control
+          v-model="defaultValue"
+          :items="items"
+          @change="change"
+        ></t-segmented-control>
+      </t-cell>
+    </div>
   </div>
 </template>
 
@@ -59,10 +65,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.demo-segmented-control{
-  width: 375px;
-}
-.mt-24{
-  margin-top: 24px;
+.t-cell{
+  margin: 12px 0;
 }
 </style>

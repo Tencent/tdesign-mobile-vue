@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="demo-segmented-control">
     <t-cell-group title="基础分段器">
       <t-cell>
         <t-segmented-control
@@ -63,3 +63,21 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less" scoped>
+.t-cell-group{
+  min-height: calc(100vh - 50px);
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+.t-cell{
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+</style>
+
+<style lang="less">
+.demo-segmented-control .t-cell-group-container{
+  background-color: transparent;
+}
+</style>

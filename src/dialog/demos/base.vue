@@ -122,7 +122,8 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '标题',
+      header: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      singleHeader:'最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
@@ -172,6 +173,7 @@ export default defineComponent({
           this.isShowDialog1 = false;
           this.isShowDialog2 = false;
           this.isShowDialog3 = false;
+          this.isShowDialog2 = false;
           this.isShowDialog5 = false;
           break;
         }
@@ -247,7 +249,7 @@ export default defineComponent({
         },
       });
     },
-    
+
   },
 });
 </script>

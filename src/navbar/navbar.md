@@ -1,18 +1,21 @@
 # Navbar 导航栏
 
-## 导航栏
+## 1. 组件类型
+主要用于展示当前位置和返回上一层极，也可用于管理当前屏幕的内容
+
+### 1.1 导航栏 - 基础
 
 ::: demo ./demos/index.vue
 :::
 
-## 事件反馈
+### 1.2 导航栏 - 带icon
 
-::: demo ./demos/event.vue
+::: demo ./demos/index-icon.vue
 :::
 
-## 自定义Icon
+### 1.3 事件反馈
 
-::: demo ./demos/custom-icon.vue
+::: demo ./demos/event.vue
 :::
 
 ## Props

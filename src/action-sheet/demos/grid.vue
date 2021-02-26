@@ -1,11 +1,9 @@
 <template>
   <div class="action-sheet-base">
-    <t-cell-group title="表格型展示">
-      <t-cell value-align="left">
+     <t-cell value-align="left">
         <t-button theme="primary" @click="handleShowGrid(8)">显示</t-button>
         <t-button theme="primary" style="margin-left: 8px" @click="handleShowGrid(4)">每页显示4个</t-button>
       </t-cell>
-    </t-cell-group>
     <t-action-sheet
       v-model="visible"
       type="grid"
