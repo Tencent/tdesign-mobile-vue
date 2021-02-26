@@ -1,16 +1,19 @@
 <template>
-  <div :class="componentName">
+  <div :class="[componentName, icon && `${prefix}-no-border`]">
     <div
       :class="{
         [`${componentName}__content`]: true,
         [`${prefix}-is-checked`]: isChecked,
-        [`${prefix}-size-s`]: icon,
+        [`${prefix}-size-s`]: icon || $slots.icon,
       }"
       @click="toggle"
     >
-      <div v-if="icon" :class="`${componentName}__icon`">
+
+      <slot name="icon" :is-checked="isChecked" />
+      <div v-if="icon && !$slots.icon" :class="`${componentName}__icon`">
         <t-icon :name="icon"></t-icon>
       </div>
+
       <div :class="`${componentName}__text`">
         <div v-if="children && children.length > 0" :class="`${componentName}__icon-menu`"></div>
         <slot />
