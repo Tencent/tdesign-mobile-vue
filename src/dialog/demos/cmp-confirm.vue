@@ -1,30 +1,49 @@
 <template>
   <div :class="`${name}`">
-    <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="isShowDialog = true">
-        确认类弹出框
-      </t-button>
-    
-    </t-cell>
-    <t-dialog
-        v-model="isShowDialog"
-        :show-overlay="showOverlay"
-        type="confirm"
-        :is-input="isInput"
-        :header="header"
-        :content="content"
-        :placeholder-text="placeholderText"
-        :cancel-button-text="cancelButtonText"
-        :confirm-button-text="confirmButtonText"
-        @confirm="onConfirm"
-        @cancel="onCancel">
-        <template #footer-cancel>
-          <div style="color:grey;font-size:18px;">我不同意</div>
-        </template>
-        <template #footer-confirm>
-          <div style="color:blue;font-size:18px;">我同意</div>
-        </template>
-    </t-dialog>
+    <t-cell-group title="组件调用: 确认类弹框——默认">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeDialogVisible(1)">
+          默认用法
+        </t-button>
+        <t-dialog
+          v-model="isShowDialog1"
+          type="confirm"
+          :header="header"
+          :content="content"
+          :placeholder-text="placeholderText"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel">
+        </t-dialog>
+      </t-cell>
+    </t-cell-group>
+
+    <t-cell-group title="组件调用: 确认类弹框——input用法">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeDialogVisible(2)">
+          input用法
+        </t-button>
+        <t-dialog
+          v-model="isShowDialog2"
+          type="confirm"
+          :is-input="isInput"
+          :header="header"
+          :content="content"
+          :placeholder-text="placeholderText"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel">
+          <template #footer-cancel>
+            <div style="color:grey;font-size:18px;">我不同意</div>
+          </template>
+          <template #footer-confirm>
+            <div style="color:blue;font-size:18px;">我同意</div>
+          </template>
+        </t-dialog>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 <script lang="ts">
@@ -52,12 +71,30 @@ export default defineComponent({
       width: 250,
       showHeader: false,
       showFooter: false,
-      showOverlay: false,
       isInput: true,
-      isShowDialog: false,
+      isShowDialog1: false,
+      isShowDialog2: false,
     };
   },
   methods: {
+    changeDialogVisible(idx: number) {
+      switch (idx) {
+        case 1: {
+          this.isShowDialog1 = true;
+          this.isShowDialog2 = false;
+          break;
+        }
+        case 2: {
+          this.isShowDialog2 = true;
+          this.isShowDialog1 = false;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    },
+
     onConfirm(e: string) {
       console.log('dialog:confirm', e);
     },
@@ -86,27 +123,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
-  }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+.dialog-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
   <div :class="`${name}`">
-    <t-cell value-align="left">
-      <t-button theme="primary" size="middle" @click="changeFunctionVisible">
-        确认类弹出框
-      </t-button>
-    </t-cell>
+    <t-cell-group title="函数调用: 反馈类弹框">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeFunctionVisible()">
+          反馈类弹出框
+        </t-button>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 <script lang="ts">
@@ -35,15 +37,15 @@ export default defineComponent({
       showFooter: false,
       showOverlay: false,
       isInput: true,
-      isShowDialog: false,
     };
   },
   methods: {
     changeFunctionVisible() {
-      Dialog.alert({
-        showHeader: false,
+      Dialog.confirm({
+        isInput: true,
         content: '我的家里有个人很酷',
         knowContent: 'i know',
+        placeholderText: '请输入您的名字',
         onConfirm: (e: string) => {
           console.log('dialog:confirm', e);
         },
@@ -60,27 +62,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
-  }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+.dialog-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
 }
 </style>

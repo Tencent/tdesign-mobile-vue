@@ -17,26 +17,19 @@
       </div>
     </t-cell-group>
     <t-cell-group title="列表带徽标">
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <t-badge dot :offset="[10, 0]" class="list-item-badge"/>
+      <t-cell label="单行标题">
+        <t-badge dot />
       </t-cell>
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <t-badge :count="16" :offset="[10, 0]" class="list-item-badge"/>
+      <t-cell label="单行标题">
+        <t-badge :count="16"/>
       </t-cell>
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <div class="badge-tag-wrap">
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-        </div>
+      <t-cell label="单行标题">
+        <t-badge content="NEW" shape="round" class="cell-badge"/>
+        <t-badge content="NEW" shape="round" class="cell-badge"/>
+        <t-badge content="NEW" shape="round" class="cell-badge"/>
       </t-cell>
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <t-badge content="NEW" :offset="[-5, -15]" shape="ribbon" class="list-item-badge"/>
+      <t-cell label="单行标题">
+        <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
       </t-cell>
     </t-cell-group>
     <!-- <t-cell-group title="文本加图标标签栏">
@@ -84,23 +77,8 @@ export default defineComponent({
   .badge-item {
     margin: 0 10px;
   }
-
-  .custom {
-    background-color: '#fff';
-    color: '#999';
-    box-shadow: '0 0 0 1px #d9d9d9 inset';
-  }
 }
-.list-item-badge {
-  float: right;
-  vertical-align: middle;
-}
-.badge-tag-wrap {
-  float: right;
-  margin-right: 10px;
-}
-.badge-tag {
-  width: 50px;
-  height: 20px;
+.cell-badge {
+  margin-left: 10px;
 }
 </style>
