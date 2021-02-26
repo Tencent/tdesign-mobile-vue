@@ -48,10 +48,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
-    const value = ref(null);
     const list_1 = [
       {
         name: 'label_1',
