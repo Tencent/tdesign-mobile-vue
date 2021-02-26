@@ -24,7 +24,7 @@
       双层级纯文本标签栏
     </h2>
 
-    <t-tab-bar v-model="value" @change="change" class="mt-12">
+    <t-tab-bar v-model="value" class="mt-12" @change="change">
       <t-tab-bar-item
         v-for="(item, index) in list_5"
         :key="item.name || index"

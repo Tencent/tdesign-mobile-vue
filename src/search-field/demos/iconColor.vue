@@ -2,7 +2,7 @@
   <div>
     <t-search-field
       v-model="value"
-      iconColor="#0052d9"
+      icon-color="#0052d9"
       placeholder="请输入关键字"
       @change="onChange"
     ></t-search-field>
