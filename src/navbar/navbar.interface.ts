@@ -29,4 +29,12 @@ export const NavbarProps = {
     type: Number,
     default: 6,
   },
+  /**
+   * @description 展示更多按钮
+   * @property rightMore
+   */
+  rightShow: {
+    type: Boolean,
+    default: true,
+  },
 };
