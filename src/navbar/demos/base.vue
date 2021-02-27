@@ -5,11 +5,7 @@
     <p class="divide-line"></p>
     <t-navbar :right-show="false">
       <template #left>
-        <span class="close-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="design-iconfont">
-            <path d="M18.7692308,4 L20,5.23076923 L13.23,12 L20,18.7692308 L18.7692308,20 L12,13.23 L5.23076923,20 L4,18.7692308 L10.77,12 L4,5.23076923 L5.23076923,4 L12,10.77 L18.7692308,4 Z" fill="#444444" fill-rule="evenodd"/>
-          </svg>
-        </span>
+        <t-icon name="close"/>
       </template>
       界面标题
       <template #right>
