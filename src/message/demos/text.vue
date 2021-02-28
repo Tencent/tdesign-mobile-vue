@@ -2,9 +2,9 @@
   <div>
     <div class="tdesign-demo-block">
       <t-button theme="primary" @click="visible = true">纯文本</t-button>
-      <t-button theme="success" @click="visible8 = true">纯文本</t-button>
-      <t-button theme="warning" @click="visible9 = true">纯文本</t-button>
-      <t-button theme="danger" @click="visible10 = true">纯文本</t-button>
+      <t-button theme="primary" @click="visible8 = true">纯文本</t-button>
+      <t-button theme="primary" @click="visible9 = true">纯文本</t-button>
+      <t-button theme="primary" @click="visible10 = true">纯文本</t-button>
     </div>
     <t-message v-model="visible" >纯文本，不带icon</t-message>
     <t-message v-model="visible8" theme="success">纯文本，不带icon</t-message>

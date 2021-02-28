@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="badge-wrap">
-      <t-badge :count="12" max-count="44" class="badge-item">
+      <t-badge :count="12" :max-count="44" class="badge-item">
         <t-button size="small">14</t-button>
       </t-badge>
       <t-badge :count="109" class="badge-item">
         <t-button size="small">默认max：99</t-button>
       </t-badge>
-      <t-badge :count="45" max-count="44" class="badge-item">
+      <t-badge :count="45" :max-count="44" class="badge-item">
         <t-button size="small">max:44</t-button>
       </t-badge>
-      <t-badge :count="106" max-count="105" class="badge-item">
+      <t-badge :count="106" :max-count="105" class="badge-item">
         <t-button size="small">max:105</t-button>
       </t-badge>
     </div>
