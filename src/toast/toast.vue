@@ -69,6 +69,7 @@ export default defineComponent({
     },
   },
   setup(props) {
+    // TODO: 需要改成TNODE(function/slot)
     const computedIcon = computed(() => {
       let icon = '';
       if (props.type) {

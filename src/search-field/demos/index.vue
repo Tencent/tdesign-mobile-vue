@@ -1,16 +1,11 @@
 <template>
   <div>
-    <t-search-field
-      v-model="value"
-      :clearable="true"
-      placeholder="请输入关键字"
-      @change="onChange"
-    ></t-search-field>
+    <t-search-field v-model="value" :clearable="true" placeholder="请输入关键字" @change="onChange"></t-search-field>
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   setup() {
@@ -18,12 +13,14 @@ export default defineComponent({
       console.log('change: ', val);
     };
 
+    const value = ref('');
+
     return {
       onChange,
+      value,
     };
   },
 });
 </script>
 
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>

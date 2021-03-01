@@ -1,6 +1,6 @@
 <template>
   <t-cell-group title="单选下拉">
-    <t-cell>
+    <t-cell value-align="left">
         <demo-container>
           <t-dropdown-menu>
             <t-dropdown-item v-model="valueS" title="单选菜单" :options="optionsN" />
@@ -18,7 +18,7 @@
     </t-cell>
   </t-cell-group>
   <t-cell-group title="多选下拉">
-    <t-cell>
+    <t-cell value-align="left">
       <demo-container>
         <t-dropdown-menu>
           <t-dropdown-item 
@@ -61,7 +61,7 @@
     </t-cell>
   </t-cell-group>
   <t-cell-group title="树形下拉">
-    <t-cell>
+    <t-cell value-align="left">
       <demo-container>
         <t-dropdown-menu>
           <t-dropdown-item
