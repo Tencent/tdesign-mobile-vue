@@ -2,9 +2,9 @@
   <div>
     <div class="tdesign-demo-block">
       <t-button size="large" variant="outline" @click="visible = true">普通</t-button>
-      <t-button size="large" variant="outline" @click="visible8 = true" style="margin-top: 8px">成功</t-button>
-      <t-button size="large" variant="outline" @click="visible9 = true" style="margin-top: 8px">警示</t-button>
-      <t-button size="large" variant="outline" @click="visible10 = true" style="margin-top: 8px">错误</t-button>
+      <t-button size="large" variant="outline" style="margin-top: 8px" @click="visible8 = true">成功</t-button>
+      <t-button size="large" variant="outline" style="margin-top: 8px" @click="visible9 = true">警示</t-button>
+      <t-button size="large" variant="outline" style="margin-top: 8px" @click="visible10 = true">错误</t-button>
     </div>
     <t-message v-model="visible" >纯文本，不带icon</t-message>
     <t-message v-model="visible8" theme="success">纯文本，不带icon</t-message>
