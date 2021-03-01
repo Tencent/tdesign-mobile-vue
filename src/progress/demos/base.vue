@@ -28,26 +28,6 @@
         <t-progress type="error" :percentage="88" :show-text="false" />
       </t-cell>
     </t-cell-group>
-
-    <t-cell-group title="类型">
-      <t-cell>
-        <t-progress type="info" :percentage="50" />
-      </t-cell>
-      <t-cell>
-        <t-progress type="error" :percentage="88" />
-      </t-cell>
-    </t-cell-group>
-    
-    <t-cell-group title="自定义样式">
-      <t-cell>
-        <t-progress
-          :percentage="50"
-          color="#FF00FF"
-          bg-color="#000000"
-          text-color="#00FFFF"
-        />
-      </t-cell>
-    </t-cell-group>
   </div>
 </template>
 
