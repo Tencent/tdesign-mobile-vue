@@ -1,6 +1,8 @@
-# 分段器
+# SegmentedControl 分段器
 
-::: demo 基础分段器 ./demos/index.vue
+## 基础用法
+
+::: demo ./demos/index.vue
 :::
 
 ## Props
