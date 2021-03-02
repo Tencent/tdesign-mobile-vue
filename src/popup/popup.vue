@@ -1,6 +1,6 @@
 <template>
   <teleport :to="to" :disabled="teleportDisabled">
-    <div :class="rootClasses" @touchmove="handleMove">
+    <div :class="[rootClasses, $attrs.class]" @touchmove="handleMove">
       <transition name="fade">
         <t-mask v-show="currentVisible" :transparent="maskTransparent" @click="handleMaskClick" />
       </transition>

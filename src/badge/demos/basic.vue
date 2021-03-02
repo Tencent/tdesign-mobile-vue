@@ -12,6 +12,9 @@
     <t-badge content="···" class="badge-item">
       <t-button size="small">省略号</t-button>
     </t-badge>
+    <t-badge :count="2" class="badge-item">
+      <t-icon name="user-filled"/>
+    </t-badge>
   </div>
 </template>
 

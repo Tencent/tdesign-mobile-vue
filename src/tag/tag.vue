@@ -98,9 +98,7 @@ const Tag = defineComponent({
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--size-${size.value}`]: size.value,
-        [`${baseClass}--square`]: shape.valueOf() === TagShape.Square.valueOf(),
-        [`${baseClass}--round`]: shape.valueOf() === TagShape.Round.valueOf(),
-        [`${baseClass}--circle`]: shape.valueOf() === TagShape.Circle.valueOf(),
+        [`${baseClass}--${shape.value}`]: true,
       },
     ]);
 

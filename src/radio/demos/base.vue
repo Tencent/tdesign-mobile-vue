@@ -74,8 +74,8 @@
           v-model="radio5"
           name="3"
           title="双行标题，长文本自动换行，该选项的描述是一段很长的内容"
-          limit-content-row="1"
-          limit-title-row="1"
+          :limit-content-row="1"
+          :limit-title-row="1"
           @change="testChange5">
           一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字
         </t-radio>

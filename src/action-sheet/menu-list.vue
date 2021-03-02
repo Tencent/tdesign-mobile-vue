@@ -15,8 +15,10 @@
 </template>
 
 <script lang="ts">
-import { ref, SetupContext, defineComponent } from 'vue';
+import { ref, SetupContext, defineComponent, PropType } from 'vue';
+
 import config from '../config';
+import { ItemType } from './action-sheet.interface';
 
 const { prefix } = config;
 
@@ -25,7 +27,7 @@ const name = `${prefix}-action-sheet`;
 export default defineComponent({
   props: {
     items: {
-      type: Array,
+      type: Array as PropType<ItemType[]>,
       required: true,
     },
   },

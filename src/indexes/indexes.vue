@@ -30,14 +30,12 @@
     <slot></slot>
   </div>
 </template>
+
 <script lang="ts">
 import { ref, reactive, defineComponent, PropType, onMounted, watchEffect } from 'vue';
 import config from '../config';
 const { prefix } = config;
 
-interface IndexesProps {
-  indexList?: Array<string>;
-}
 interface Touch {
   startX: number;
   startY: number;
@@ -73,13 +71,13 @@ export default defineComponent({
       default: [],
     },
   },
-  setup(props: IndexesProps) {
+  setup(props) {
     let timeOut: number;
     let rootScrollMask = false;
     const indexesRoot = ref(null);
     const state: State = reactive({
       componentName,
-      indexList: props?.indexList || [],
+      indexList: props.indexList,
       showCurrentSidebar: false,
       currentSidebar: '',
       children: [],

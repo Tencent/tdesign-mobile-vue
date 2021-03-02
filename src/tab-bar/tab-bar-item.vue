@@ -1,24 +1,27 @@
 <template>
-  <div :class="componentName">
+  <div :class="[componentName, icon && `${prefix}-no-border`]">
     <div
       :class="{
         [`${componentName}__content`]: true,
         [`${prefix}-is-checked`]: isChecked,
-        [`${prefix}-size-s`]: icon,
+        [`${prefix}-size-s`]: icon || $slots.icon,
       }"
       @click="toggle"
     >
-      <div v-if="icon" :class="`${componentName}__icon`">
+
+      <slot name="icon" :is-checked="isChecked" />
+      <div v-if="icon && !$slots.icon" :class="`${componentName}__icon`">
         <t-icon :name="icon"></t-icon>
       </div>
+
       <div :class="`${componentName}__text`">
-        <div v-if="children" :class="`${componentName}__icon-menu`"></div>
+        <div v-if="children && children.length > 0" :class="`${componentName}__icon-menu`"></div>
         <slot />
       </div>
     </div>
 
     <transition name="spread">
-      <ul v-if="children && isSpread" :class="`${componentName}__spread`">
+      <ul v-if="children && children.length > 0 && isSpread" :class="`${componentName}__spread`">
         <li
           v-for="(child, index) in children"
           :key="child.name || index"
@@ -33,10 +36,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef } from 'vue';
+import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef, PropType } from 'vue';
 import TIcon from '../icon';
 import config from '../config';
 import { initName } from './useTabBar';
+import { TabBarItemSpreadProps } from './tab-bar.interface';
+
 const { prefix } = config;
 const componentName = `${prefix}-tab-bar-item`;
 
@@ -53,7 +58,7 @@ export default defineComponent({
       default: '',
     },
     children: {
-      type: Array,
+      type: Array as PropType<TabBarItemSpreadProps[]>,
       default: () => [],
     },
   },

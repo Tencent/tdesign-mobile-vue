@@ -1,16 +1,26 @@
 <template>
   <div class="action-sheet-base">
-    <t-cell-group title="基础用法">
-      <t-cell value-align="left">
-        <t-button theme="primary" @click="visible = true">显示</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="visible1 = true">隐藏取消选项</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="visible2 = true">自定义颜色</t-button>
+    <t-cell-group title="列表型">
+      <t-cell>
+        <t-button variant="outline" size="large" @click="visible = true">显示</t-button>
+      </t-cell>
+      <t-cell>
+        <t-button variant="outline" size="large" @click="visible1 = true">隐藏取消选项</t-button>
+      </t-cell>
+      <t-cell>
+        <t-button variant="outline" size="large" @click="visible2 = true">自定义颜色</t-button>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="表格型展示">
+    <t-cell-group title="宫格型">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="handleShowGrid(8)">显示</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="handleShowGrid(4)">每页显示4个</t-button>
+        <t-cell>
+          <t-button variant="outline" size="large" @click="handleShowGrid(8)">显示</t-button>
+        </t-cell>
+        <t-cell>
+          <t-button variant="outline" size="large" @click="handleShowGrid(4)"
+            >每页显示4个</t-button
+          >
+        </t-cell>
       </t-cell>
     </t-cell-group>
     <t-action-sheet v-model="visible" :items="items" @select="handleSelect" @cancel="handleCancel" />
@@ -40,9 +50,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { ItemType } from '../action-sheet.interface';
 
 export default defineComponent({
   data() {
+
     return {
       visible: false,
       visible1: false,
@@ -54,22 +66,20 @@ export default defineComponent({
         { label: '删除', color: 'red' },
       ],
       items2: [
-        { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
-        { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
-        { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
-        { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
-        { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
-        { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
-        { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
-        { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
-        { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
-        { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
       ],
       count: 8,
     };
   },
   methods: {
-    handleSelect(selected, selectedIndex) {
+    handleSelect(selected: ItemType, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel(): void {

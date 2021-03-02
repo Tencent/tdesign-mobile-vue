@@ -4,7 +4,7 @@
       <li
         v-for="(item, index) in items"
         :key="item.value || index"
-        :class="[`${name}__item`, currentActive.includes(item.value || index) && `${prefix}-is-active`]"
+        :class="[`${name}__item`, currentActive === (item.value || index) && `${prefix}-is-active`]"
         @click="selectChild(item.value || index)"
       >
         {{ item.text }}
@@ -36,7 +36,9 @@ export default defineComponent({
   setup(props, { emit }) {
     const currentActive = ref(props.modelValue);
     const selectChild = (value: string | number) => {
-      currentActive.value !== value && (currentActive.value = value);
+      if (currentActive.value !== value) {
+        currentActive.value = value;
+      }
     };
 
     watch(currentActive, (newValue) => {

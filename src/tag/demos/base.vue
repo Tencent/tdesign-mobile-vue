@@ -1,7 +1,8 @@
 <template>
   <div class="tag-base tdesign-demo-tag">
     <t-cell-group title="展示型标签">
-      <t-cell>
+      <t-cell value-align="left">
+        <t-tag theme="default">默认</t-tag>
         <t-tag theme="primary">重要</t-tag>
         <t-tag theme="danger">危险</t-tag>
         <t-tag theme="warning">警告</t-tag>
@@ -10,28 +11,35 @@
       </t-cell>
     </t-cell-group>
     <t-cell-group>
-      <t-cell>
+      <t-cell value-align="left">
         <t-tag theme="primary" effect="dark">深色</t-tag>
         <t-tag theme="primary" effect="light">浅色</t-tag>
         <t-tag theme="primary" effect="plain">朴素</t-tag>
       </t-cell>
     </t-cell-group>
     <t-cell-group>
-      <t-cell>
+      <t-cell value-align="left">
         <t-tag size="large" theme="primary">大号</t-tag>
         <t-tag size="medium" theme="primary">中号</t-tag>
         <t-tag size="small" theme="primary">小号</t-tag>
       </t-cell>
     </t-cell-group>
     <t-cell-group>
-      <t-cell>
+      <t-cell value-align="left">
         <t-tag size="large" theme="primary" shape="circle">圆角</t-tag>
         <t-tag size="medium" theme="primary" shape="circle">圆角</t-tag>
         <t-tag size="small" theme="primary" shape="circle">圆角</t-tag>
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="点击型标签">
+    <!-- <t-cell-group>
       <t-cell>
+        <t-tag size="large" theme="primary" shape="square">大圆角</t-tag>
+        <t-tag size="medium" theme="primary" shape="round">大圆角</t-tag>
+        <t-tag size="small" theme="primary" shape="mark">大圆角</t-tag>
+      </t-cell>
+    </t-cell-group> -->
+    <t-cell-group title="点击型标签">
+      <t-cell value-align="left">
         <t-check-tag
           v-for="(fruit, index) in fruits"
           :key="fruit.name"
@@ -43,7 +51,7 @@
       </t-cell>
     </t-cell-group>
     <t-cell-group>
-      <t-cell>
+      <t-cell value-align="left">
         <t-check-tag
           v-for="(fruit, index) in fruits2"
           :key="fruit.name"
@@ -54,11 +62,11 @@
       </t-cell>
     </t-cell-group>
     <t-cell-group>
-      <t-cell>
+      <t-cell value-align="left">
         <t-tag
           v-for="(tag,index) in closableTags"
           :key="tag"
-          :closable="true"
+          closable
           :disabled="tag.disabled"
           theme="primary"
           :size="tag.size"

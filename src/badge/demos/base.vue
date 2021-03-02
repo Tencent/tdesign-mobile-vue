@@ -3,48 +3,85 @@
     <t-cell-group title="按钮带徽标">
       <div class="badge-wrap">
         <t-badge :count="16" class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
         <t-badge dot class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
         <t-badge content="NEW" class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
         <t-badge content="···" class="badge-item">
-          <t-button size="small">小按钮</t-button>
+          <t-button size="small" variant="outline">小按钮</t-button>
         </t-badge>
       </div>
     </t-cell-group>
-    <t-cell-group title="列表带徽标">
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <t-badge dot :offset="[10, 0]" class="list-item-badge"/>
+    <t-cell-group title="列表带徽标" style="overflow: hidden">
+      <t-cell label="单行标题" link>
+        <t-badge dot />
       </t-cell>
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <t-badge :count="16" :offset="[10, 0]" class="list-item-badge"/>
+      <t-cell label="单行标题" link>
+        <t-badge :count="16"/>
       </t-cell>
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <div class="badge-tag-wrap">
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-          <t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-        </div>
+      <t-cell label="单行标题" link>
+        <t-badge content="NEW" shape="round" class="cell-badge"/>
+        <t-badge content="NEW" shape="round" class="cell-badge"/>
+        <t-badge content="NEW" class="cell-badge"/>
+        <t-badge content="NEW" class="cell-badge"/>
       </t-cell>
-      <t-cell value-align="left">
-        <span>单行标题</span>
-        <t-badge content="NEW" :offset="[-5, -15]" shape="ribbon" class="list-item-badge"/>
+      <t-cell label="单行标题">
+        <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
       </t-cell>
+    </t-cell-group>
+    <t-cell-group title="标签栏带徽标" style="position: fixed; bottom: 0; width: 100%;">
+      <t-tab-bar>
+        <t-badge class="tab-badge" :offset="[5, 30]" :count="16">
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
+        <t-badge class="tab-badge" :offset="[5, 30]" dot>
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
+        <t-badge class="tab-badge" :offset="[5, 30]" content="NEW">
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
+        <t-badge class="tab-badge" :offset="[5, 30]" content="···">
+          <t-tab-bar-item>
+            <template #icon="">
+              <img :src="iconUrl" alt="">
+            </template>
+            文本
+          </t-tab-bar-item>
+        </t-badge>
+      </t-tab-bar>
     </t-cell-group>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-export default defineComponent({});
+export default defineComponent({
+  setup() {
+
+    return {
+      iconUrl: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+    }
+  }
+});
 </script>
 
 <style lang="less" scoped>
@@ -54,23 +91,11 @@ export default defineComponent({});
   .badge-item {
     margin: 0 10px;
   }
-
-  .custom {
-    background-color: '#fff';
-    color: '#999';
-    box-shadow: '0 0 0 1px #d9d9d9 inset';
-  }
 }
-.list-item-badge {
-  float: right;
-  vertical-align: middle;
+.cell-badge {
+  margin-left: 8px;
 }
-.badge-tag-wrap {
-  float: right;
-  margin-right: 10px;
-}
-.badge-tag {
-  width: 50px;
-  height: 20px;
+.tab-badge {
+  flex: 1;
 }
 </style>

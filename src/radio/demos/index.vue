@@ -1,11 +1,8 @@
 <template>
   <div>
-    <t-radio v-model="radio" name="1" title="单行标题">这是内容</t-radio>
-    <t-radio v-model="radio" name="2" title="单行标题">这是内容</t-radio>
-    <t-radio v-model="radio" name="3" :title="tilte" limit-title-row="1" limit-content-row="1">
-      这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容
-      这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容这是内容
-    </t-radio>
+    <t-radio v-model="radio" name="1">单行标题</t-radio>
+    <t-radio v-model="radio" name="2">单行标题</t-radio>
+    <t-radio v-model="radio" name="3">双行标题，长文本自动换行，该选项的描述是一段很长的内容</t-radio>
   </div>
 </template>
 <script>
@@ -14,7 +11,7 @@ export default defineComponent({
   setup() {
     const radio = ref('1');
     const title = ref(
-      '这是很长的标题，这是很长的标题，这是很长的标题，这是很长的标题，这是很长的标题，这是很长的标题，这是很长的标题，这是很长的标题',
+      '双行标题，长文本自动换行，该选项的描述是一段很长的内容',
     );
 
     watch(

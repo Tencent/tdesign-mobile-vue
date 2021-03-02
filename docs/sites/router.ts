@@ -7,7 +7,6 @@ const navs = config.navs;
 
 function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   let docsRoutes: Array<RouteRecordRaw> = [];
-
   docs.forEach((item) => {
     const docType = item.type || type;
     if (docType === type) {
@@ -41,7 +40,7 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/components/install',
+    redirect: '/components/readme',
   },
   ...getDocsRoutes(navs.components.docs, 'document'),
   ...getDocsRoutes(navs.components.docs, 'component'),
