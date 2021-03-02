@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="tdesign-demo-block">
-      <t-button theme="primary" @click="visible = true">纯文本</t-button>
-      <t-button theme="primary" @click="visible8 = true">纯文本</t-button>
-      <t-button theme="primary" @click="visible9 = true">纯文本</t-button>
-      <t-button theme="primary" @click="visible10 = true">纯文本</t-button>
-    </div>
+    <t-cell value-align="left" class="tdesign-text-message-btn">
+      <t-button size="large" variant="outline" @click="visible = true">普通</t-button>
+      <t-button size="large" variant="outline" @click="visible8 = true">成功</t-button>
+      <t-button size="large" variant="outline" @click="visible9 = true">警示</t-button>
+      <t-button size="large" variant="outline" @click="visible10 = true">错误</t-button>
+    </t-cell>
     <t-message v-model="visible" >纯文本，不带icon</t-message>
     <t-message v-model="visible8" theme="success">纯文本，不带icon</t-message>
     <t-message v-model="visible9" theme="warning">纯文本，不带icon</t-message>
@@ -25,3 +25,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less" scoped>
+.tdesign-text-message-btn{
+  background: transparent;
+  .t-button:not(:last-child){
+    margin-right: 20px;
+    margin-bottom: 12px;
+  }
+}
+</style>
