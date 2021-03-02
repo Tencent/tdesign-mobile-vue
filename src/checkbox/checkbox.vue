@@ -2,7 +2,7 @@
   <div :class="`${flagName}`">
     <span :class="iconClasses" :style="iconStyle" @click="checkBoxChange">
       <slot name="icon" :checked="isChecked">
-        <t-icon v-if="isChecked" name="check-circle-filled" />
+        <t-icon v-if="isChecked" name="check-circle-filled" size="1em" :class="circleFilled"/>
       </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="checkBoxChange('content')">
@@ -231,6 +231,7 @@ export default defineComponent({
     const limitContentRow = Number(props?.limitContentRow) || 0;
     const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
     const contentStyle = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
+    const circleFilled = `${name}__icon`;
 
     hasSlot.value = !!content.slots.default; // 判断是否有default slot
     if (!content.slots.default || !props?.title) {
@@ -260,6 +261,7 @@ export default defineComponent({
       titleStyle,
       contentStyle,
       iconStyle,
+      circleFilled
     };
   },
 });
