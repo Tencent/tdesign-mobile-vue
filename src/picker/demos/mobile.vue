@@ -249,7 +249,7 @@ export default defineComponent({
     };
     const onCancel = () => {
       console.log('取消');
-      Object.keys(show).forEach(item => show[item] = false);
+      Object.keys(show).forEach((item) => (show[item] = false));
       visible.value = false;
     };
 
@@ -274,6 +274,10 @@ export default defineComponent({
       show.dateTitle = false;
     };
 
+    const onConfirm = () => {
+      console.log('confirm');
+    };
+
     return {
       cityOptions,
       yearOptions,
@@ -292,6 +296,7 @@ export default defineComponent({
       onCancel,
       onCityConfirm,
       onYearAndSeasonConfirm,
+      onConfirm,
       onDateConfirm,
       show,
       text,
