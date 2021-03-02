@@ -16,7 +16,7 @@
                     :class="styleDropRadio(option.value)"
                   >
                     <template #checkedIcon>
-                      <t-check v-if="isCheckedRadio(option.value)" />
+                      <t-icon-check v-if="isCheckedRadio(option.value)" />
                     </template>
                   </t-radio>
                 </t-cell>
@@ -73,7 +73,7 @@
                         :class="styleTreeRadio(option.value, level)"
                       >
                         <template #checkedIcon>
-                          <t-check v-if="option.value === treeState.selectList[level]" />
+                          <t-icon-check v-if="option.value === treeState.selectList[level]" />
                         </template>
                       </t-radio>
                     </t-cell>
@@ -111,7 +111,7 @@
 
 <script lang="ts">
 import { computed, toRefs, ref, reactive, inject, watch, defineComponent, nextTick, SetupContext } from 'vue';
-import TCheck from '../icon/check.vue';
+import TIconCheck from '../icon/check.vue';
 import { DropdownMenuPropsType, DropdownItemProps, DropdownItemPropsType } from './dropdown.interface';
 import config from '../config';
 import TransAniControl from './trans-ani-control';
@@ -121,7 +121,7 @@ const name = `${prefix}-dropdown-item`;
 
 export default defineComponent({
   name,
-  components: { TCheck },
+  components: { TIconCheck },
   props: DropdownItemProps,
   emits: ['update:modelValue', 'change', 'open', 'opened', 'close', 'closed'],
   setup(props: DropdownItemPropsType, context: SetupContext) {
