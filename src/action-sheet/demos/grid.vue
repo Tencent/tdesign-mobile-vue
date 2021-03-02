@@ -1,8 +1,10 @@
 <template>
   <div class="action-sheet-base">
-     <t-cell value-align="left">
-        <t-button theme="primary" @click="handleShowGrid(8)">显示</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="handleShowGrid(4)">每页显示4个</t-button>
+     <t-cell>
+        <t-button variant="outline" size="large"  @click="handleShowGrid(8)">显示</t-button>
+     </t-cell>
+     <t-cell>
+        <t-button variant="outline" size="large"  @click="handleShowGrid(4)">每页显示4个</t-button>
       </t-cell>
     <t-action-sheet
       v-model="visible"

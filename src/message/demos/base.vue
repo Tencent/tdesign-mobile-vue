@@ -98,7 +98,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .message-base {
   .t-button:not(:last-child) {
     margin-right: 20px;

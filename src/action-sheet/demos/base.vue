@@ -1,16 +1,26 @@
 <template>
   <div class="action-sheet-base">
     <t-cell-group title="列表型">
-      <t-cell value-align="left">
-        <t-button size="large" variant="outline" @click="visible = true">列表型</t-button>
-        <t-button size="large" variant="outline" style="margin-top: 8px;" @click="visible1 = true">隐藏取消选项</t-button>
-        <t-button size="large" variant="outline" style="margin-top: 8px;" @click="visible2 = true">自定义颜色</t-button>
+      <t-cell>
+        <t-button variant="outline" size="large" @click="visible = true">显示</t-button>
+      </t-cell>
+      <t-cell>
+        <t-button variant="outline" size="large" @click="visible1 = true">隐藏取消选项</t-button>
+      </t-cell>
+      <t-cell>
+        <t-button variant="outline" size="large" @click="visible2 = true">自定义颜色</t-button>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="宫格型">
       <t-cell value-align="left">
-        <t-button size="large" variant="outline" @click="handleShowGrid(8)">单页宫格</t-button>
-        <t-button size="large" variant="outline" style="margin-top: 8px" @click="handleShowGrid(4)">多页宫格</t-button>
+        <t-cell>
+          <t-button variant="outline" size="large" @click="handleShowGrid(8)">显示</t-button>
+        </t-cell>
+        <t-cell>
+          <t-button variant="outline" size="large" @click="handleShowGrid(4)"
+            >每页显示4个</t-button
+          >
+        </t-cell>
       </t-cell>
     </t-cell-group>
     <t-action-sheet v-model="visible" :items="items" @select="handleSelect" @cancel="handleCancel" />
