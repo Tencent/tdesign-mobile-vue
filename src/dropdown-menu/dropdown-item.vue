@@ -16,7 +16,7 @@
                     :class="styleDropRadio(option.value)"
                   >
                     <template #checkedIcon>
-                      <t-icon v-if="isCheckedRadio(option.value)" name="tick" />
+                      <t-icon v-if="isCheckedRadio(option.value)" name="check" />
                     </template>
                   </t-radio>
                 </t-cell>
@@ -73,7 +73,7 @@
                         :class="styleTreeRadio(option.value, level)"
                       >
                         <template #checkedIcon>
-                          <t-icon v-if="option.value === treeState.selectList[level]" name="tick" />
+                          <t-icon v-if="option.value === treeState.selectList[level]" name="check" />
                         </template>
                       </t-radio>
                     </t-cell>
@@ -102,7 +102,7 @@
         </slot>
       </div>
       <div v-if="selectMode === 'multi' || optionsLayout === 'tree'" :class="`${name}__ft`">
-        <t-button theme="default" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
+        <t-button variant="outline" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
         <t-button theme="primary" :disabled="isBtnDisabled" @click="confirmSelect">确定</t-button>
       </div>
     </div>
