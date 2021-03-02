@@ -9,7 +9,7 @@
     <t-message v-model="visible" >纯文本，不带icon</t-message>
     <t-message v-model="visible8" theme="success">纯文本，不带icon</t-message>
     <t-message v-model="visible9" theme="warning">纯文本，不带icon</t-message>
-    <t-message v-model="visible10" theme="danger">纯文本，不带icon</t-message>
+    <t-message v-model="visible10" theme="error">纯文本，不带icon</t-message>
   </div>
 </template>
 
