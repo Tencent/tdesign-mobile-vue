@@ -1,9 +1,14 @@
 <template>
   <div :class="outerClasses">
     <span :class="shapeClasses" @click="radioChange">
-      <slot name="checkedIcon">
-        <span v-if="isChecked" :class="iconClasses" :style="{ backgroundColor: checkedColor }"></span>
-      </slot>
+      <input
+          :class="`${flagName}__former`"
+          type="radio"
+          name=""
+          :disabled="disabled"
+          :checked="isChecked"
+        >
+      <span v-if="isChecked" :class="iconClasses" :style="{ backgroundColor: checkedColor }"></span>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="radioChange('content')">
       <span v-if="title" :class="titleClasses" :style="titleStyle">
@@ -184,6 +189,7 @@ export default defineComponent({
       content.emit('update:modelValue', props?.name); // 改变自身的v-model值
       content.emit('change', props?.name); // 自身组件广播事件
     };
+
     return {
       flagName,
       hasSlot,
