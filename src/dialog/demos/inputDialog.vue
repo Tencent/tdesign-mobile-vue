@@ -1,13 +1,12 @@
 <template>
   <div :class="`${name}`">
-    <t-cell value-align="left">
+    <t-cell value-align="left" class="tdesign-demo--dialog">
       <t-button theme="primary" size="middle" class="buttom-item" @click="changeDialogVisible(1)">
         单行标题
       </t-button>
       <t-button theme="primary" size="middle" @click="changeDialogVisible(2)">
         带说明文本
       </t-button>
-    
     </t-cell>
     <t-dialog
         v-model="isShowDialog1"
@@ -125,30 +124,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.buttom-item{
-    margin-right: 20px;
-}
 .tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
-  }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+  .t-button:not(:last-child){
+    margin-right: 20px;
   }
 }
 </style>

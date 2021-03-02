@@ -1,25 +1,19 @@
 <template>
-  <t-cell-group title="单选下拉">
-    <t-cell>
-        <demo-container>
-          <t-dropdown-menu>
-            <t-dropdown-item v-model="valueS" title="单选菜单" :options="optionsN" />
-            <t-dropdown-item v-model="valueS" title="多选菜单" :options="optionsC" />
-          </t-dropdown-menu>
-          <p>
-            单选菜单 选中项:
-            <strong>{{valueS}}</strong>
-          </p>
-          <p>
-            多选菜单 选中项:
-            <strong>{{valueM.join(', ')}}</strong>
-          </p>
-        </demo-container>
-    </t-cell>
-  </t-cell-group>
-  <t-cell-group title="多选下拉">
-    <t-cell>
-      <demo-container>
+  <div class="dropdown-menu-wrap">
+    <t-cell-group title="下拉菜单样式" >
+      <t-cell>
+        <t-dropdown-menu>
+          <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsN" />
+          <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsC" />
+        </t-dropdown-menu>
+      </t-cell>
+      <t-cell>
+        <t-dropdown-menu>
+          <t-dropdown-item v-model="valueS" disabled title="菜单名称" :options="optionsN" />
+          <t-dropdown-item v-model="valueS" disabled title="菜单名称" :options="optionsC" />
+        </t-dropdown-menu>
+      </t-cell>
+      <t-cell>
         <t-dropdown-menu>
           <t-dropdown-item 
             v-model="valueM" 
@@ -45,30 +39,64 @@
             options-columns="3"
           />
         </t-dropdown-menu>
-        <p>
-          单列菜单 选中项:
-          <strong>{{valueM1.join(', ')}}</strong>
-        </p>
-        <p>
-          两栏菜单 选中项:
-          <strong>{{valueM1.join(', ')}}</strong>
-        </p>
-        <p>
-          三栏菜单 选中项:
-          <strong>{{valueM2.join(', ')}}</strong>
-        </p>
-      </demo-container>
-    </t-cell>
-  </t-cell-group>
-  <t-cell-group title="树形下拉">
-    <t-cell>
-      <demo-container>
+      </t-cell>
+      <t-cell>
+        <t-dropdown-menu>
+          <t-dropdown-item 
+            v-model="valueM" 
+            title="单列" 
+            :options="optionsN" 
+            select-mode="multi" 
+            options-columns="1"
+            disabled
+          />
+          <t-dropdown-item
+            v-model="valueM1"
+            title="双列"
+            :options="optionsN"
+            select-mode="multi"
+            options-layout="columns"
+            options-columns="2"
+            disabled
+          />
+          <t-dropdown-item
+            v-model="valueM2"
+            title="三列"
+            :options="optionsC"
+            select-mode="multi"
+            options-layout="columns"
+            options-columns="3"
+            disabled
+          />
+        </t-dropdown-menu>
+      </t-cell>
+      <t-cell>
+        <DemoContainer>
+          <t-dropdown-menu>
+            <t-dropdown-item
+              v-model="treeValue1"
+              title="单选树形菜单"
+              :options="optionsT"
+              options-layout="tree"
+            />
+            <t-dropdown-item
+              v-model="treeValue2"
+              title="多选树形菜单"
+              :options="optionsT2"
+              options-layout="tree"
+              select-mode="multi"
+            />
+          </t-dropdown-menu>
+        </DemoContainer>
+      </t-cell>
+       <t-cell>
         <t-dropdown-menu>
           <t-dropdown-item
             v-model="treeValue1"
             title="单选树形菜单"
             :options="optionsT"
             options-layout="tree"
+            disabled
           />
           <t-dropdown-item
             v-model="treeValue2"
@@ -76,23 +104,12 @@
             :options="optionsT2"
             options-layout="tree"
             select-mode="multi"
+            disabled
           />
         </t-dropdown-menu>
-        <p>
-          单选树形菜单 选中路径:
-          <strong>{{JSON.stringify(treeValue1)}}</strong>
-        </p>
-        <p>
-          多选树形菜单 选中路径:
-          <strong>{{JSON.stringify(treeValue2)}}</strong>
-        </p>
-      </demo-container>
-    </t-cell>
-  </t-cell-group>
-
-  <!-- <t-cell-group title="树形下拉">
-  </t-cell-group> -->
-
+      </t-cell>
+    </t-cell-group>
+  </div>
 
   
 </template>
@@ -118,7 +135,7 @@ export default defineComponent({
         value: `options_${char}`,
       };
     });
-      const tree = [{
+    const tree = [{
       title: '北京市',
       value: 'beijing',
       options: [{
@@ -206,3 +223,21 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less" scoped>
+  .dropdown-menu-wrap{
+    background: #f5f5f5;
+    .t-cell{
+      padding: 0;
+
+      // background: #f5f5f5;
+      &:not(:last-child){
+        margin-bottom: 16px;
+        &::after{
+          display: none;
+        }
+      }
+      
+    }
+  }
+</style>
