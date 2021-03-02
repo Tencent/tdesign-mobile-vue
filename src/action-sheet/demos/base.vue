@@ -3,8 +3,8 @@
     <t-cell-group title="列表型">
       <t-cell value-align="left">
         <t-button size="large" variant="outline" @click="visible = true">列表型</t-button>
-        <t-button size="large" variant="outline" @click="visible1 = true" style="margin-top: 8px;">隐藏取消选项</t-button>
-        <t-button size="large" variant="outline" @click="visible2 = true" style="margin-top: 8px;">自定义颜色</t-button>
+        <t-button size="large" variant="outline" style="margin-top: 8px;" @click="visible1 = true">隐藏取消选项</t-button>
+        <t-button size="large" variant="outline" style="margin-top: 8px;" @click="visible2 = true">自定义颜色</t-button>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="宫格型">
