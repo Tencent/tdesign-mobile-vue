@@ -1,35 +1,28 @@
 <template>
   <div class="dialog-base">
     <div class="tdesign-demo-block">
-      <t-cell-group title="组件调用: 反馈类弹框">
-        <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(1)">
-            默认反馈弹框
+      <t-cell-group title="反馈类对话框">
+         <t-cell value-align="left">
+          <t-button  variant="outline" size="large" @click="changeDialogVisible(1)">
+            单行标题对话框
           </t-button>
           <t-dialog
             v-model="isShowDialog1"
-            :content="content">
+            :header="singleHeader">
           </t-dialog>
         </t-cell>
-
         <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(2)">
-            自定义反馈弹框
+          <t-button variant="outline" size="large" @click="changeDialogVisible(2)">
+            多行标题对话框
           </t-button>
           <t-dialog
             v-model="isShowDialog2"
-            :content="content"
-            :z-index="zIndex"
-            :width="width">
-            <template #header>
-              <div style="color:red;font-size:18px;">特此警告</div>
-            </template>
+            :header="moreTextHeader">
           </t-dialog>
         </t-cell>
-
         <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(3)">
-            事件调用反馈弹框
+          <t-button variant="outline" size="large" @click="changeDialogVisible(3)">
+            短文本对话框
           </t-button>
           <t-dialog
             v-model="isShowDialog3"
@@ -38,35 +31,100 @@
             @opened="openDialog"
             @closed="closeDialog"
             @click-overlay="clickOverlay"
-            @visible-change="changeVisible">
+            @visible-change="changeVisible"
+          >
+          </t-dialog>
+        </t-cell>
+         <t-cell value-align="left">
+          <t-button variant="outline" size="large" @click="changeDialogVisible(4)">
+            长文本对话框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog4"
+            :header="header">
           </t-dialog>
         </t-cell>
       </t-cell-group>
 
-      <t-cell-group title="组件调用: 确认类弹框">
+      <t-cell-group title="确认类对话框">
+        <t-cell value-align="left">
+          <t-button  variant="outline" size="large" @click="changeDialogVisible(5)">
+            双操作对话框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog5"
+            type="confirm"
+            :header="header"
+            :content="content"
+            :placeholder-text="placeholderText"
+            :cancel-button-text="cancelButtonText"
+            :confirm-button-text="confirmButtonText"
+            @confirm="onConfirm"
+            @cancel="onCancel">
+          </t-dialog>
+        </t-cell>
+        <t-cell value-align="left">
+          <t-button  variant="outline" size="large" @click="changeDialogVisible(6)">
+            带警示操作对话框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog6"
+            type="confirm"
+            :header="header"
+            :content="moreTextContent"
+            :cancel-button-text="cancelButtonText"
+            :confirm-button-text="confirmButtonText"
+            @confirm="onConfirm"
+            @cancel="onCancel">
+            <template #footer-cancel>
+              <div style="color:#000;font-size:18px;">辅助操作</div>
+            </template>
+            <template #footer-confirm>
+              <div style="color:#E34D59;font-size:18px;">我同意</div>
+            </template>
+          </t-dialog>
+        </t-cell>
+      </t-cell-group> 
+
+    <!-- <t-cell-group title="函数调用: 反馈类弹框">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeDialogVisible(4)">
-          默认用法
+        <t-button theme="primary" @click="changeFunctionVisible1()">
+          反馈类弹出框
+        </t-button>
+      </t-cell>
+    </t-cell-group> -->
+   
+    
+
+    <t-cell-group title="输入对话框">
+      <t-cell value-align="left">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(7)">
+          单行标题对话框
         </t-button>
         <t-dialog
-          v-model="isShowDialog4"
+          v-model="isShowDialog7"
           type="confirm"
-          :header="header"
-          :content="content"
+          :is-input="isInput"
+          :header="singleHeader"
           :placeholder-text="placeholderText"
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
           @confirm="onConfirm"
           @cancel="onCancel">
+          <template #footer-cancel>
+            <div style="color:#000000;font-size:18px;">我不同意</div>
+          </template>
+          <template #footer-confirm>
+            <div style="color:#0052D9;font-size:18px;">我同意</div>
+          </template>
         </t-dialog>
       </t-cell>
-
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeDialogVisible(5)">
-          input用法
+        <t-button variant="outline" size="large" @click="changeDialogVisible(8)">
+          带说明文本对话框
         </t-button>
         <t-dialog
-          v-model="isShowDialog5"
+          v-model="isShowDialog8"
           type="confirm"
           :is-input="isInput"
           :header="header"
@@ -77,29 +135,19 @@
           @confirm="onConfirm"
           @cancel="onCancel">
           <template #footer-cancel>
-            <div style="color:grey;font-size:18px;">我不同意</div>
+            <div style="color:#000000;font-size:18px;">我不同意</div>
           </template>
           <template #footer-confirm>
-            <div style="color:blue;font-size:18px;">我同意</div>
+            <div style="color:#0052D9;font-size:18px;">我同意</div>
           </template>
         </t-dialog>
       </t-cell>
-    </t-cell-group>
 
-    <t-cell-group title="函数调用: 反馈类弹框">
-      <t-cell value-align="left">
-        <t-button theme="primary" @click="changeFunctionVisible1()">
-          反馈类弹出框
-        </t-button>
-      </t-cell>
-    </t-cell-group>
-
-    <t-cell-group title="函数调用: 反馈类弹框">
-      <t-cell value-align="left">
+      <!-- <t-cell value-align="left">
         <t-button theme="primary" @click="changeFunctionVisible2">
-          反馈类弹出框
+          带说明文本对话框
         </t-button>
-      </t-cell>
+      </t-cell> -->
     </t-cell-group>
     </div>
   </div>
@@ -122,9 +170,10 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       singleHeader:'最小高度样式，文案上下居中',
-      content: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      content: '告知当前状态、信息和解决方法',
+      moreTextContent:'告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
       confirmButtonText: '继续',
@@ -139,6 +188,9 @@ export default defineComponent({
       isShowDialog3: false,
       isShowDialog4: false,
       isShowDialog5: false,
+      isShowDialog6: false,
+      isShowDialog7: false,
+      isShowDialog8: false,
     };
   },
   methods: {
@@ -150,39 +202,86 @@ export default defineComponent({
           this.isShowDialog3 = false;
           this.isShowDialog4 = false;
           this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+          this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 2: {
-          this.isShowDialog2 = true;
           this.isShowDialog1 = false;
+          this.isShowDialog2 = true;
           this.isShowDialog3 = false;
           this.isShowDialog4 = false;
           this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+          this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 3: {
-          this.isShowDialog3 = true;
           this.isShowDialog1 = false;
           this.isShowDialog2 = false;
+          this.isShowDialog3 = true;
           this.isShowDialog4 = false;
           this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+          this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 4: {
-          this.isShowDialog4 = true;
           this.isShowDialog1 = false;
           this.isShowDialog2 = false;
           this.isShowDialog3 = false;
-          this.isShowDialog2 = false;
+          this.isShowDialog4 = true;
           this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+          this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
           break;
         }
         case 5: {
-          this.isShowDialog5 = true;
           this.isShowDialog1 = false;
           this.isShowDialog2 = false;
           this.isShowDialog3 = false;
           this.isShowDialog4 = false;
+          this.isShowDialog5 = true;
+          this.isShowDialog6 = false;
+          this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
+          break;
+        }
+        case 6: {
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = false;
+          this.isShowDialog5 = false;
+          this.isShowDialog6 = true;
+          this.isShowDialog7 = false;
+          this.isShowDialog8 = false;
+          break;
+        }
+        case 7: {
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = false;
+          this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+          this.isShowDialog7 = true;
+          this.isShowDialog8 = false;
+          break;
+        }
+         case 8: {
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = false;
+          this.isShowDialog5 = false;
+          this.isShowDialog6 = false;
+          this.isShowDialog7 = false;
+          this.isShowDialog8 = true;
           break;
         }
         default: {

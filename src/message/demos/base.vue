@@ -47,15 +47,13 @@
 
     <t-message v-model="visible" content="普通消息"></t-message>
     <t-message v-model="visible1" content="成功消息" theme="success"></t-message>
-    <t-message v-model="visible2" content="警示消息" theme="warning"></t-message>
+    <t-message v-model="visible2" content="警示消息" theme="danger"></t-message>
     <t-message v-model="visible3" content="错误消息" theme="error"></t-message>
-    <t-message v-model="visible5" content="5000ms后消失" :duration="5000"></t-message>
-    <t-message v-model="visible6" content="居中对齐" align="center"></t-message>
     <t-message v-model="visible7" >纯文本，不带icon</t-message>
     <t-message v-model="visible8" theme="success">纯文本，不带icon</t-message>
     <t-message v-model="visible9" theme="warning">纯文本，不带icon</t-message>
     <t-message v-model="visible10" theme="error">纯文本，不带icon</t-message>
-    <t-message v-model="visible11" >偏移</t-message>
+    <t-message v-model="visible12" >提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述描述描述提示文字描述描描述描述描述提示文字描述</t-message>
   </div>
 </template>
 
@@ -77,6 +75,7 @@ export default defineComponent({
     const visible9 = ref(false);
     const visible10 = ref(false);
     const visible11 = ref(false);
+    const visible12 = ref(false);
 
 
     return {
@@ -92,21 +91,27 @@ export default defineComponent({
       visible9,
       visible10,
       visible11,
+      visible12,
       onClick: (type) => Message[type](type),
     };
   },
 });
 </script>
 
-<style lang="less" scoped>
-.message-base {
-  .t-button:not(:last-child) {
-    margin-right: 20px;
+<style lang="less">
+// .message-base {
+//   .t-button:not(:last-child) {
+//     margin-right: 20px;
+//   }
+// }
+.tdesign-demo-block{
+  .t-button:not(:last-child){
+    margin-bottom: 12px;
   }
 }
 .tdesign-text-message-btn{
   .t-button:not(:last-child){
-    margin-right: 20px;
+    margin-right: 6px;
     margin-bottom: 12px;
   }
 }

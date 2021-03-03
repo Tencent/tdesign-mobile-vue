@@ -130,4 +130,9 @@ export default defineComponent({
   position: relative;
   height: 100vh;
 }
+.toast-wrap{
+  .t-button:not(:last-child){
+    margin-bottom: 12px;
+  }
+}
 </style>
