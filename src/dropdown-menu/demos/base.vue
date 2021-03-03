@@ -39,24 +39,57 @@
             options-columns="3"
           />
         </t-dropdown-menu>
-        <p>
-          单列菜单 选中项:
-          <strong>{{valueM1.join(', ')}}</strong>
-        </p>
-        <p>
-          两栏菜单 选中项:
-          <strong>{{valueM1.join(', ')}}</strong>
-        </p>
-        <p>
-          三栏菜单 选中项:
-          <strong>{{valueM2.join(', ')}}</strong>
-        </p>
-      </demo-container>
-    </t-cell>
-  </t-cell-group>
-  <t-cell-group title="树形下拉">
-    <t-cell value-align="left">
-      <demo-container>
+      </t-cell>
+      <t-cell>
+        <t-dropdown-menu>
+          <t-dropdown-item
+            v-model="valueM"
+            title="单列"
+            :options="optionsN"
+            select-mode="multi"
+            options-columns="1"
+            disabled
+          />
+          <t-dropdown-item
+            v-model="valueM1"
+            title="双列"
+            :options="optionsN"
+            select-mode="multi"
+            options-layout="columns"
+            options-columns="2"
+            disabled
+          />
+          <t-dropdown-item
+            v-model="valueM2"
+            title="三列"
+            :options="optionsC"
+            select-mode="multi"
+            options-layout="columns"
+            options-columns="3"
+            disabled
+          />
+        </t-dropdown-menu>
+      </t-cell>
+      <t-cell>
+        <DemoContainer>
+          <t-dropdown-menu>
+            <t-dropdown-item
+              v-model="treeValue1"
+              title="单选树形菜单"
+              :options="optionsT"
+              options-layout="tree"
+            />
+            <t-dropdown-item
+              v-model="treeValue2"
+              title="多选树形菜单"
+              :options="optionsT2"
+              options-layout="tree"
+              select-mode="multi"
+            />
+          </t-dropdown-menu>
+        </DemoContainer>
+      </t-cell>
+       <t-cell>
         <t-dropdown-menu>
           <t-dropdown-item
             v-model="treeValue1"
