@@ -27,7 +27,12 @@ export default defineComponent({
         name: '可关闭',
       },
       {
+        name: '可关闭',
+        size: 'small',
+      },
+      {
         name: '失效标签',
+        size: 'small',
         disabled: true,
       },
     ]);
