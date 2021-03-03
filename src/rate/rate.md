@@ -35,17 +35,22 @@
 ::: demo ./demos/count.vue
 :::
 
-### 2.3. 只读状态
+### 2.3. 自定大小
+
+::: demo ./demos/size.vue
+:::
+
+### 2.4. 只读状态
 
 ::: demo ./demos/readonly.vue
 :::
 
-### 2.4. 自定义颜色
+### 2.5. 自定义颜色
 
 ::: demo ./demos/color.vue
 :::
 
-### 2.5. 自定义图标
+### 2.6. 自定义图标
 
 ::: demo ./demos/icon.vue
 :::

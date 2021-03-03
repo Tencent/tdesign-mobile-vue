@@ -1,5 +1,5 @@
 <template>
-	<t-cell-group title="单元格点击时触发" border="true">
+	<t-cell-group title="单元格点击时触发" border>
       <t-cell value-align="right" click>
         <template #label>
           <div>自定义标题</div>

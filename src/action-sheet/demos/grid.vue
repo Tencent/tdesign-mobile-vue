@@ -1,8 +1,10 @@
 <template>
   <div class="action-sheet-base">
-     <t-cell value-align="left">
-        <t-button theme="primary" @click="handleShowGrid(8)">显示</t-button>
-        <t-button theme="primary" style="margin-left: 8px" @click="handleShowGrid(4)">每页显示4个</t-button>
+     <t-cell>
+        <t-button variant="outline" size="large"  @click="handleShowGrid(8)">显示</t-button>
+     </t-cell>
+     <t-cell>
+        <t-button variant="outline" size="large"  @click="handleShowGrid(4)">每页显示4个</t-button>
       </t-cell>
     <t-action-sheet
       v-model="visible"
@@ -13,7 +15,7 @@
       @cancel="handleCancel"
     >
       <template #cell="slotProps">
-        <div class="meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
+        <div :style="meunIconStyle(slotProps.item.icon)"></div>
         <div>{{ slotProps.item.label }}</div>
       </template>
     </t-action-sheet>
@@ -29,16 +31,14 @@ export default defineComponent({
     return {
       visible: false,
       items: [
-        { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
-        { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
-        { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
-        { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
-        { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
-        { label: '好友', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_wJGhiFOIqj.png' },
-        { label: 'QQ空间', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_l52cYNXlSu.png' },
-        { label: '朋友圈', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185651_4juY5FhLUl.png' },
-        { label: '微信', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_viFbdQ0nOd.png' },
-        { label: '下载', icon: 'https://qzonestyle.gtimg.cn/aoi/sola/20200327185457_OkBzC8u4lX.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
+        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
       ],
       count: 8,
     };
@@ -54,6 +54,17 @@ export default defineComponent({
       this.count = count;
       this.visible = true;
     },
+    meunIconStyle(bg){
+      return {
+        'width': '36px',
+        'height': '36px',
+        'margin-bottom': '4px',
+        'background-size': 'contain',
+        'background-position': 'center',
+        'background-repeat': 'no-repeat',
+        'backgroundImage': `url(${bg})`
+      }
+    }
   },
 });
 </script>

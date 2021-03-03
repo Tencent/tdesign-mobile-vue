@@ -17,7 +17,7 @@
         <t-icon
           v-if="clearable && currentValue.length > 0"
           :class="`${name}__icon-close`"
-          name="close_fill"
+          name="clear-circle-filled"
           :style="iconStyle"
           @click="onClear"
         ></t-icon>

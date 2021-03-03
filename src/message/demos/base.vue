@@ -2,24 +2,47 @@
   <div class="message-base">
     <div class="tdesign-demo-block">
       <t-cell-group title="带图标消息通知">
-        <t-cell value-align="left">
-          <t-button theme="primary" size="large" @click="visible = true">普通</t-button>
-          <t-button variant="outline" size="large" @click="visible1 = true">成功</t-button>
-          <t-button theme="danger" size="large"  @click="visible3 = true">错误</t-button>
+        <t-cell value-align="left" class="tdesign-text-message-btn">
+          <t-button size="large" variant="outline" @click="visible = true">普通</t-button>
+          <t-button size="large" variant="outline" @click="visible1 = true">成功</t-button>
+          <t-button size="large" variant="outline" @click="visible2 = true">警示</t-button>
+          <t-button size="large" variant="outline" @click="visible3 = true">错误</t-button>
         </t-cell>
       </t-cell-group>
     </div>
-    <div class="tdesign-demo-block">
+    <t-cell-group title="纯文本消息">
+      <t-cell value-align="left"  class="tdesign-text-message-btn">
+        <t-button size="large" variant="outline" @click="visible7 = true">普通</t-button>
+        <t-button size="large" variant="outline" @click="visible8 = true">成功</t-button>
+        <t-button size="large" variant="outline" @click="visible9 = true">警示</t-button>
+        <t-button size="large" variant="outline" @click="visible10 = true">错误</t-button>
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group title="自定义配置">
+      <t-cell value-align="left">
+        <t-button variant="outline" @click="visible5 = true">自定义显示时间</t-button>
+      </t-cell>
+    </t-cell-group>
+    <t-cell-group title="对齐方式">
+      <t-cell value-align="left">
+        <t-button variant="outline" @click="visible6 = true">居中</t-button>
+      </t-cell>
+    </t-cell-group>
 
-      <t-cell-group title="纯文本消息">
-        <t-cell value-align="left" >
-          <t-button theme="primary" size="large" @click="visible7 = true">普通文本</t-button>
-          <t-button  variant="outline" size="large" @click="visible8 = true">成功文本</t-button>
-          <t-button theme="danger"   size="large" @click="visible10 = true">错误文本</t-button>
-          <t-button theme="primary" size="large" @click="visible12 = true">多文案</t-button>
-        </t-cell>
-      </t-cell-group>
-    </div>
+    <t-cell-group title="偏移">
+      <t-cell value-align="left">
+        <t-button variant="outline" @click="visible11 = true">普通</t-button>
+      </t-cell>
+    </t-cell-group>
+
+    <t-cell-group title="快捷调用">
+      <t-cell value-align="left" class="tdesign-text-message-btn">
+        <t-button size="large" variant="outline" @click="onClick('info')">普通</t-button>
+        <t-button size="large" variant="outline" @click="onClick('success')">成功</t-button>
+        <t-button size="large" variant="outline" @click="onClick('warning')">警示</t-button>
+        <t-button size="large" variant="outline" @click="onClick('error')">错误</t-button>
+      </t-cell>
+    </t-cell-group>
 
 
     <t-message v-model="visible" content="普通消息"></t-message>
@@ -53,7 +76,7 @@ export default defineComponent({
     const visible10 = ref(false);
     const visible11 = ref(false);
     const visible12 = ref(false);
-    
+
 
     return {
       visible,

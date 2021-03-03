@@ -50,6 +50,7 @@ import { ItemType } from '../action-sheet.interface';
 
 export default defineComponent({
   data() {
+
     return {
       visible: false,
       visible1: false,

@@ -2,7 +2,7 @@
   <button :class="buttonClass" :disabled="disabled" @click="onClick">
     <div :class="`${name}__content`">
       <TIconLoading v-if="loading" />
-      <component :is="icon()" v-else-if="icon"> </component>
+      <component :is="icon()" v-else-if="typeof icon === 'function'"> </component>
       <slot v-else name="icon"> </slot>
       <span :class="`${name}__text`">
         <slot />
@@ -95,14 +95,11 @@ export default defineComponent({
         e.stopPropagation();
       }
     };
-    const iconFunc = computed(() => (typeof props.icon === 'function' ? props.icon : () => ''));
-
     return {
       name,
       ...toRefs(props),
       buttonClass,
       onClick,
-      iconFunc,
     };
   },
 });

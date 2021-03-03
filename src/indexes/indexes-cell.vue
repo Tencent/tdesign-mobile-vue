@@ -1,6 +1,6 @@
 <template>
-  <div :data-value="state.value" :class="state.componentName" @click="handleClick">
-    {{state.title}}
+  <div :data-value="state.value" :class="`${name}__cell`" @click="handleClick">
+    <div :class="`${name}__cell-text`">{{state.title}}</div>
   </div>
 </template>
 
@@ -8,6 +8,8 @@
 import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
+
+const name = `${prefix}-indexes`;
 
 export default defineComponent({
   props: {
@@ -24,7 +26,6 @@ export default defineComponent({
     const currentSidebar = '';
     const { emit } = context;
     const state = reactive({
-      componentName: `${prefix}-indexes__cell`,
       title: props.title,
       value: props.value,
     });
@@ -36,6 +37,7 @@ export default defineComponent({
     };
 
     return {
+      name,
       state,
       handleClick,
       currentSidebar,
