@@ -1,76 +1,108 @@
-<!--
- * @Author: your name
- * @Date: 2020-05-25 16:40:09
- * @LastEditTime: 2020-05-25 17:20:55
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/src/cell/cell.vue
--->
 <template>
-  <div :class="styleWrapper">
-    <div v-if="hasLabel" :class="styleLabel">
+  <div :class="name" @click="onClick">
+    <div v-if="hasLeftIcon" :class="`${name}__left-icon`">
+      <component :is="leftIcon()" v-if="icon"> </component>
+      <slot v-else name="leftIcon"> </slot>
+    </div>
+    <div v-if="hasLabel" :class="`${name}__label`">
       <slot name="label">
-        <div v-if="label" >{{ label }}</div>
+        <div v-if="label">{{ label }}</div>
+        <div v-if="summary" :class="`${name}__summary`">{{ summary }}</div>
       </slot>
     </div>
-    <div :class="styleValue">
+    <div v-if="hasValue" :class="styleValue">
       <slot>
         <div v-if="value">{{ value }}</div>
+      </slot>
+    </div>
+    <div v-if="hasIcon" :class="`${name}__icon`">
+      <component :is="icon()" v-if="icon"> </component>
+      <slot v-else name="icon">
+        <TIconChevronRight v-if="link" />
       </slot>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, defineComponent, PropType } from 'vue';
+import { computed, SetupContext, defineComponent, PropType, toRefs } from 'vue';
 import config from '../config';
+import { TdCellProps } from './cell.interface';
+import TIconChevronRight from '../icon/chevron-right.vue';
+
 const { prefix } = config;
 const name = `${prefix}-cell`;
 
-export enum ValueAlign {
-  Left = 'left',
-  Right = 'right',
-}
-
 export default defineComponent({
   name,
+  components: { TIconChevronRight },
   props: {
-    theme: {
+    label: {
       type: String,
-      default: 'default',
+      default: '',
     },
-    label: String,
-    value: String,
+    value: {
+      type: String,
+      default: '',
+    },
+    summary: {
+      type: String,
+      default: '',
+    },
     valueAlign: {
-      type: String as PropType<ValueAlign>,
-      default: ValueAlign.Right,
+      type: String as PropType<TdCellProps['valueAlign']>,
+      default: 'right',
+      validator(val: string): boolean {
+        return ['left', 'right'].includes(val);
+      },
+    },
+    icon: {
+      type: Function as PropType<TdCellProps['icon']>,
+      default: undefined,
+    },
+    leftIcon: {
+      type: Function as PropType<TdCellProps['leftIcon']>,
+      default: undefined,
+    },
+    link: {
+      type: Boolean,
+      default: false,
     },
   },
-  setup(props, context: SetupContext) {
-    const styleLabel = ref(`${name}--label`);
-    const styleWrapper = computed(() => [
-      `${name}`,
-      `${name}--theme-${props.theme}`,
-    ]);
+  emits: ['click'],
+  setup(props: TdCellProps, context: SetupContext) {
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;
     });
 
-    const styleValue = computed(() => {
-      const alignLeft = `${name}__value ${name}__left`;
-      if (hasLabel) {
-        return props.valueAlign.valueOf() === ValueAlign.Right.valueOf() ? `${name}--value` : alignLeft;
-      }
-      // 没有label时默认左对齐
-      return alignLeft;
+    const hasValue = computed(() => {
+      if (props.value) return true;
+      return !!context.slots.default;
     });
 
+    const hasIcon = computed(() => props.icon !== undefined || !!context.slots.icon || props.link);
+
+    const hasLeftIcon = computed(() => props.leftIcon !== undefined || !!context.slots.leftIcon);
+
+    const styleValue = computed(() => [
+      `${name}__value`,
+      {
+        [`${name}__left`]: props.valueAlign === 'left',
+      },
+    ]);
+
+    const onClick = (e: Event) => context.emit('click', e);
+
     return {
-      styleWrapper,
-      styleLabel,
+      ...toRefs(props),
+      name,
       styleValue,
       hasLabel,
+      hasValue,
+      hasIcon,
+      hasLeftIcon,
+      onClick,
     };
   },
 });

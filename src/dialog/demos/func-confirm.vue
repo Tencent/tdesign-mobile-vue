@@ -1,22 +1,24 @@
 <template>
   <div :class="`${name}`">
-    <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="changeFunctionVisible">
-        确认类弹出框
-      </t-button>
-    </t-cell>
+    <t-cell-group title="函数调用: 反馈类弹框">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeFunctionVisible()">
+          反馈类弹出框
+        </t-button>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-import Dialog from '../index.func';
+import Dialog from '../index';
 import config from '@/config';
 
 const { prefix } = config;
 const name = `${prefix}-demo--dialog`;
 
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
@@ -35,52 +37,34 @@ export default {
       showFooter: false,
       showOverlay: false,
       isInput: true,
-      isShowDialog: false,
     };
   },
   methods: {
     changeFunctionVisible() {
-      Dialog.alert({
-        showHeader: false,
+      Dialog.confirm({
+        isInput: true,
         content: '我的家里有个人很酷',
         knowContent: 'i know',
-        onConfirm: (e:any) => {
+        placeholderText: '请输入您的名字',
+        onConfirm: (e: string) => {
           console.log('dialog:confirm', e);
         },
         onCancel: () => {
           console.log('dialog:cancel');
         },
-        onClickoverlay: () => {
-          console.log('dialog:clickoverlay');
+        onClickOverlay: () => {
+          console.log('dialog:clickOverlay');
         },
       });
     },
   },
-};
+});
 </script>
 
 <style lang="less" scoped>
-.tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
-  }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+.dialog-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
 }
 </style>

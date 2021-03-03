@@ -2,28 +2,28 @@
 <template>
   <div class="container tdesign-demo-tag">
     <t-check-tag
-      size="large"
       v-for="(fruit, index) in fruits"
-      @click="onClickFruit(index)"
       :key="fruit.name"
       v-model:checked="fruit.checked"
-      @change="change"
+      size="large"
       :disabled="fruit.disabled"
+      @click="onClickFruit(index)"
+      @change="change"
     >{{fruit.name}}</t-check-tag>
     <t-check-tag
       v-for="(fruit, index) in fruits2"
-      @click="onClickFruit2(index)"
       :key="fruit.name"
       :checked="fruit.checked"
       :disabled="fruit.disabled"
+      @click="onClickFruit2(index)"
     >{{fruit.name}}</t-check-tag>
   </div>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   setup() {
     const fruits = ref([
       {
@@ -74,7 +74,7 @@ export default {
       fruits2.value[index].checked = !fruits2.value[index].checked;
     }
 
-    function change(checked: Boolean) {
+    function change(checked: boolean) {
       console.log(checked);
     }
 
@@ -86,5 +86,13 @@ export default {
       onClickFruit2,
     };
   },
-};
+});
 </script>
+<style lang="less">
+// 体验css
+.tdesign-demo-tag .t-tag{
+  margin-bottom: 8px;
+  margin-left: 0 !important;
+  margin-right: 8px;
+}
+</style>

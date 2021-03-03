@@ -6,74 +6,93 @@
       </slot>
     </template>
     <template #default>
-      <div :class="styleValueWrap">
+      <div :class="`${name}-wrap`">
         <input
-          v-bind="$attrs"
           v-model="innerValue"
+          v-bind="$attrs"
           :class="styleControl"
           :type="type"
           :disabled="disabled"
+          @focus="handleFocus"
+          @blur="handleBlur"
         />
-        <div v-if="clearable && innerValue.length > 0" @click="handleClear" :class="styleIcon">
-          <t-icon name="circle_clear" />
+        <div v-if="clearable && innerValue.length > 0" :class="`${name}-wrap--icon`" @click="handleClear">
+          <TIconClearCircleFilled />
         </div>
-        <div v-if="hasSuffix" :class="styleSuffix">
+        <div v-if="hasSuffix" :class="`${name}-wrap--suffix`">
           <slot name="suffix"></slot>
         </div>
-        <div v-if="hasRightIcon" :class="styleIcon">
+        <div v-if="hasRightIcon" :class="`${name}-wrap--icon`">
           <slot name="rightIcon">
             <div v-if="suffix">{{ suffix }}</div>
-            <t-icon v-if="rightIcon" :name="rightIcon" @click="handleClickIcon" />
+            <TIconChevronRight v-if="rightIcon" @click="handleClickIcon" />
           </slot>
         </div>
       </div>
-      <div v-if="errorMessage" :class="styleErrMsg">{{ errorMessage}}</div>
+      <div v-if="errorMessage" :class="`${name}__error-msg`">{{ errorMessage }}</div>
     </template>
   </t-cell>
   <div v-else>
-    <div v-if="hasLabel" :class="styleTextareaLabel">
+    <div v-if="hasLabel" :class="`${name}--textarea-label`">
       <slot name="label">
         <div v-if="label">{{ label }}</div>
       </slot>
     </div>
-    <div :class="styleTextarea">
+    <div :class="`${name}--textarea`">
       <textarea
-        v-bind="$attrs"
         ref="textarea"
         v-model="innerValue"
+        v-bind="$attrs"
         :maxlength="maxlength"
         :disabled="disabled"
+        @focus="handleFocus"
+        @blur="handleBlur"
       />
-      <div :class="styleCount">{{ `${innerValue.length} / ${maxlength}` }}</div>
+      <div :class="`${name}--count`">{{ `${innerValue.length}/${maxlength}` }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  reactive,
-  toRefs,
-  computed,
-  watch,
-  onMounted,
-  SetupContext,
-  defineComponent,
-} from 'vue';
+import TIconChevronRight from "@/icon/chevron-right.vue";
+import TIconClearCircleFilled from "@/icon/clear-circle-filled.vue";
+import { ref, computed, watch, onMounted, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-input`;
 
 export default defineComponent({
   name,
+  components: {
+    TIconChevronRight,
+    TIconClearCircleFilled
+  },
   props: {
-    label: String,
-    modelValue: String,
+    label: {
+      type: String,
+      default: '',
+    },
+    modelValue: {
+      type: String,
+      default: '',
+    },
     error: Boolean,
-    errorMessage: String,
-    rightIcon: String,
-    suffix: String,
-    type: String,
+    errorMessage: {
+      type: String,
+      default: '',
+    },
+    rightIcon: {
+      type: Function,
+      default: undefined,
+    },
+    suffix: {
+      type: String,
+      default: '',
+    },
+    type: {
+      type: String,
+      default: '',
+    },
     maxlength: {
       type: Number,
       default: 500,
@@ -89,36 +108,24 @@ export default defineComponent({
     clearable: Boolean,
     disabled: Boolean,
   },
-  setup(props, context: SetupContext) {
-    const { emit } = context;
+  emits: ['update:modelValue', 'click-icon', 'focus', 'blur', 'change'],
+  setup(props, context) {
     const textarea = ref();
-    const state = reactive({
-      styleValueWrap: `${name}-wrap`,
-      styleErrMsg: `${name}__error-msg`,
-      styleSuffix: `${name}-wrap--suffix`,
-      styleIcon: `${name}-wrap--icon`,
-      styleTextarea: `${name}--textarea`,
-      styleTextareaLabel: `${name}--textarea-label`,
-      styleCount: `${name}--count`,
-      styleDisabled: `${name}__disabled`,
-      cacheValue: '',
-    });
-    const styleControl = computed(() => {
-      if (props.suffix) {
-        return `${name}--control ${name}--control__right`;
-      }
-      return `${name}--control`;
-    });
-    const styleWrapper = computed(() => {
-      if (!!props.errorMessage || props.error) {
-        return `${name} ${name}__error`;
-      }
-      return name;
-    });
-    const styleLabel = computed(() => {
-      if (props.disabled) return `${name}--label ${name}__disabled`;
-      return `${name}--label`;
-    });
+    const cacheValue = ref('');
+
+    const styleControl = computed(() => ({
+      [`${name}--control`]: true,
+      [`${name}--control__right`]: props.suffix,
+    }));
+    const styleWrapper = computed(() => ({
+      [name]: true,
+      [`${name}__error`]: !!props.errorMessage || props.error,
+    }));
+    const styleLabel = computed(() => ({
+      [`${name}--label`]: true,
+      [`${name}__disabled`]: props.disabled,
+    }));
+
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;
@@ -126,25 +133,32 @@ export default defineComponent({
 
     const hasSuffix = computed(() => !!context.slots.suffix);
     const hasRightIcon = computed(() => {
-      if (props.rightIcon || props.suffix) return true;
+      if (props.suffix) return true;
       return !!context.slots.rightIcon;
     });
     const valueAlign = computed(() => (hasLabel.value ? 'right' : 'left'));
 
     const innerValue = computed({
       get() {
-        return props.modelValue || state.cacheValue;
+        return props.modelValue || cacheValue.value;
       },
       set(val: string) {
-        emit('update:modelValue', val);
-        state.cacheValue = val;
+        cacheValue.value = val;
+        context.emit('update:modelValue', val);
+        context.emit('change', val);
       },
     });
     const handleClickIcon = () => {
-      emit('click-icon');
+      context.emit('click-icon');
     };
     const handleClear = () => {
       innerValue.value = '';
+    };
+    const handleFocus = () => {
+      context.emit('focus');
+    };
+    const handleBlur = () => {
+      context.emit('blur');
     };
 
     const MIN_HEIGHT = 22 * props.rows; // 默认四行
@@ -163,13 +177,13 @@ export default defineComponent({
         }
         if (height > MAX_HEIGHT) {
           // 如果只设置rows，且rows大于maxRows，则忽略maxRows
-          height =  MIN_HEIGHT > MAX_HEIGHT ? MIN_HEIGHT : MAX_HEIGHT;
+          height = MIN_HEIGHT > MAX_HEIGHT ? MIN_HEIGHT : MAX_HEIGHT;
         }
         textarea.value.style.height = `${height}px`;
       }
     });
     return {
-      ...toRefs(state),
+      name,
       styleLabel,
       styleWrapper,
       styleControl,
@@ -181,6 +195,8 @@ export default defineComponent({
       textarea,
       handleClickIcon,
       handleClear,
+      handleFocus,
+      handleBlur,
     };
   },
 });

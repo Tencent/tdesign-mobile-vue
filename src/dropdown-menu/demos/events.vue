@@ -2,12 +2,12 @@
   <demo-container>
     <t-dropdown-menu>
       <t-dropdown-item
+        v-model="valueS"
         title="单选菜单"
         :options="optionsN"
-        selectMode="multi"
-        optionsLayout="columns"
-        optionsColumns="2"
-        v-model="valueS"
+        select-mode="multi"
+        options-layout="columns"
+        options-columns="2"
         @change="log('[menu select] item: ', $event)"
         @open="log('[menu open] menu item 2N')"
         @opened="log('[menu opened] menu item 2N')"
@@ -15,12 +15,12 @@
         @closed="log('[menu closed] menu item 2N')"
       />
       <t-dropdown-item
+        v-model="valueM"
         title="多选菜单"
         :options="optionsC"
-        selectMode="multi"
-        optionsLayout="columns"
-        optionsColumns="3"
-        v-model="valueM"
+        select-mode="multi"
+        options-layout="columns"
+        options-columns="3"
         @change="log('[menu select] item: ', $event)"
         @open="log('[menu open] menu item 2C')"
         @opened="log('[menu opened] menu item 2C')"
@@ -65,8 +65,7 @@ export default defineComponent({
     const valueS = ref('option_2');
     const valueM = ref(['options_A', 'options_C']);
     return {
-      name,
-      log: (...args: []) => {
+      log: (...args: unknown[]) => {
         console.log(...args);
       },
       optionsN,

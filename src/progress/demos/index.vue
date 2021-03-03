@@ -1,8 +1,14 @@
 <template>
   <div class="cell-base">
     <t-cell-group>
-      <t-cell>
+     <t-cell>
+        <t-progress :percentage="0" />
+     
         <t-progress :percentage="30" />
+     
+         <t-progress :percentage="100" />
+      
+         <t-progress type="error" :percentage="88" />
       </t-cell>
     </t-cell-group>
   </div>
@@ -21,3 +27,11 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less" scoped>
+.cell-base{
+  .t-progress{
+    margin-bottom: 20px;
+  }
+}
+</style>

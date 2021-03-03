@@ -1,17 +1,14 @@
-/*
- * @Author: yuliangyang
- * @Date: 2020-05-25 23:24:58
- * @LastEditTime: 2020-05-26 12:11:33
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /tdesign-mobile-vue/docs/mobile/mobile.config.ts
- */
 export default {
   navs: {
     components: {
       title: 'TDesign',
       url: 'components',
       docs: [
+        {
+          title: 'Badge 徽标',
+          name: 'badge',
+          component: () => import('@/badge/demos/base.vue'),
+        },
         {
           title: 'Button 按钮',
           name: 'button',
@@ -33,14 +30,14 @@ export default {
           component: () => import('@/cell/demos/base.vue'),
         },
         {
-          title: 'Rate 评分',
-          name: 'rate',
-          component: () => import('@/rate/demos/base.vue'),
-        },
-        {
           title: 'Input 输入框',
           name: 'input',
           component: () => import('@/input/demos/base.vue'),
+        },
+        {
+          title: 'Rate 评分',
+          name: 'rate',
+          component: () => import('@/rate/demos/base.vue'),
         },
         {
           title: 'Switch 开关',
@@ -68,9 +65,9 @@ export default {
           component: () => import('@/tag/demos/base.vue'),
         },
         {
-          title: 'Check-box 多选框',
-          name: 'check-box',
-          component: () => import('@/check-box/demos/base.vue'),
+          title: 'CheckBox 多选框',
+          name: 'checkbox',
+          component: () => import('@/checkbox/demos/base.vue'),
         },
         {
           title: 'Progress 进度条',
@@ -88,8 +85,13 @@ export default {
           component: () => import('@/stepper/demos/base.vue'),
         },
         {
+          title: 'Steps 步骤条',
+          name: 'steps',
+          component: () => import('@/steps/demos/base.vue'),
+        },
+        {
           title: 'Slider 滑块',
-          name: 'Slider',
+          name: 'slider',
           component: () => import('@/slider/demos/base.vue'),
         },
         {
@@ -106,6 +108,71 @@ export default {
           title: 'DropdownMenu 下拉菜单',
           name: 'dropdown-menu',
           component: () => import('@/dropdown-menu/demos/base.vue'),
+        },
+        {
+          title: 'Popup 弹出层',
+          name: 'popup',
+          component: () => import('@/popup/demos/base.vue'),
+        },
+        {
+          title: 'ActionSheet 动作面板',
+          name: 'actionsheet',
+          component: () => import('@/action-sheet/demos/base.vue'),
+        },
+        {
+          title: 'Collapse 折叠面板',
+          name: 'collapse',
+          component: () => import('@/collapse/demos/index.vue'),
+        },
+        {
+          title: 'TabBar 标签栏',
+          name: 'tabbar',
+          component: () => import('@/tab-bar/demos/base.vue'),
+        },
+        {
+          title: 'Segmented Control 分段器',
+          name: 'segmented-control',
+          component: () => import('@/segmented-control/demos/base.vue'),
+        },
+        {
+          title: 'Fab 悬浮按钮',
+          name: 'fab',
+          component: () => import('@/fab/demos/base.vue'),
+        },
+        {
+          title: 'ImageViewer 图片预览',
+          name: 'image-viewer',
+          component: () => import('@/image-viewer/demos/base.vue'),
+        },
+        {
+          title: 'Drawer 抽屉',
+          name: 'drawer',
+          component: () => import('@/drawer/demos/base.vue'),
+        },
+        {
+          title: 'Indexes 索引',
+          name: 'indexes',
+          component: () => import('@/indexes/demos/base.vue'),
+        },
+        {
+          title: 'Tabs 选项卡',
+          name: 'tabs',
+          component: () => import('@/tabs/demos/base.vue'),
+        },
+        {
+          title: 'Navbar 导航条',
+          name: 'navbar',
+          component: () => import('@/navbar/demos/base.vue'),
+        },
+        {
+          title: 'SearchField 搜索框',
+          name: 'search-field',
+          component: () => import('@/search-field/demos/base.vue'),
+        },
+        {
+          title: 'Cell 单元格',
+          name: 'cell',
+          component: () => import('@/cell/demos/base.vue'),
         },
       ],
     },

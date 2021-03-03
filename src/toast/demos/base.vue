@@ -3,55 +3,58 @@
 
     <t-cell-group title="文本轻提示">
       <t-cell value-align="left">
-        <t-button size="large" @click="showText(text1)">短文本</t-button>
+        <t-button size="large" variant="outline" @click="showText(text1)">短文本轻提示</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showText(text2)">长文本</t-button>
+        <t-button size="large" variant="outline" @click="showText(text2)">长文本轻提示</t-button>
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="图标轻提示">
       <t-cell value-align="left">
-        <t-button size="large" @click="showSuccess()">成功</t-button>
+        <t-button size="large" variant="outline" @click="showSuccess()">成功</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showFail()">失败</t-button>
+        <t-button size="large" variant="outline" @click="showFail()">警告</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showCustom()">自定义图标</t-button>
+        <t-button size="large" variant="outline" @click="showLoading()">加载</t-button>
+      </t-cell>
+      <t-cell value-align="left">
+        <t-button size="large" variant="outline" @click="showCustom()">自定义图标</t-button>
       </t-cell>
     </t-cell-group>
 
-    <t-cell-group title="文本加图标轻提示">
+    <t-cell-group title="图标加文本轻提示">
       <t-cell value-align="left">
-        <t-button size="large" @click="showSuccess(success)">成功</t-button>
+        <t-button size="large" variant="outline" @click="showSuccess(success)">成功</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showFail(fail)">失败</t-button>
+        <t-button size="large" variant="outline" @click="showFail(fail)">警告</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showLoading(loading)">加载</t-button>
+        <t-button size="large" variant="outline" @click="showLoading(loading)">加载</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showCustom(custom)">自定义图标</t-button>
+        <t-button size="large" variant="outline" @click="showCustom(custom)">自定义图标</t-button>
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="提示位置">
       <t-cell value-align="left">
-        <t-button size="large" @click="showPosition('top')">顶部Top</t-button>
+        <t-button size="large" variant="outline" @click="showPosition('top')">顶部Top</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showPosition('middle')">中间Middle</t-button>
+        <t-button size="large" variant="outline" @click="showPosition('middle')">中间Middle</t-button>
       </t-cell>
       <t-cell value-align="left">
-        <t-button size="large" @click="showPosition('bottom')">底部Bottom</t-button>
+        <t-button size="large" variant="outline" @click="showPosition('bottom')">底部Bottom</t-button>
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="z遮罩">
       <t-cell value-align="left">
-        <t-button size="large" @click="showMask">带背景遮罩</t-button>
+        <t-button size="large" variant="outline" @click="showMask">带背景遮罩</t-button>
       </t-cell>
     </t-cell-group>
 
@@ -59,13 +62,16 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
 import Toast from '../index';
 import config from '@/config';
+import { ToastPositionType } from '../toast.interface';
+
 const { prefix } = config;
 const name = `${prefix}-toast-base-demo`;
-export default {
+
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
@@ -82,28 +88,28 @@ export default {
     };
   },
   methods: {
-    showText(message: string | undefined) {
+    showText(message?: string) {
       Toast(message);
     },
-    showSuccess(message: string | undefined) {
+    showSuccess(message?: string) {
       Toast.success(message);
     },
-    showFail(message: string | undefined) {
+    showFail(message?: string) {
       Toast({
         type: 'fail',
         message,
       });
     },
-    showCustom(message: string | undefined) {
+    showCustom(message?: string) {
       Toast({
-        icon: 'user_fill',
+        icon: 'user-filled',
         message,
       });
     },
-    showLoading(message: string | undefined) {
+    showLoading(message?: string) {
       Toast.loading(message);
     },
-    showPosition(position: string) {
+    showPosition(position: ToastPositionType) {
       Toast({
         type: 'success',
         position,
@@ -116,12 +122,17 @@ export default {
       });
     },
   },
-};
+});
 </script>
 <style lang="less" scoped>
 .t-toast-base-demo {
   background: #fff;
   position: relative;
   height: 100vh;
+}
+.toast-wrap{
+  .t-button:not(:last-child){
+    margin-bottom: 12px;
+  }
 }
 </style>

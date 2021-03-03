@@ -11,21 +11,22 @@
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref, watch } from 'vue';
+export default defineComponent({
+  setup() {
+    const radio = ref('1');
+
+    watch(
+      () => radio.value,
+      (val) => {
+        console.log(val);
+      },
+    );
+
     return {
-      radio: '1',
+      radio,
+      change: (val) => console.log(val),
     };
   },
-  watch: {
-    radio(val) {
-      console.log(val);
-    },
-  },
-  methods: {
-    change(val) {
-      console.log(val);
-    },
-  },
-};
+});
 </script>

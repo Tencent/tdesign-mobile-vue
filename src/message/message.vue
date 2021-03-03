@@ -2,8 +2,11 @@
   <transition name="message" @after-leave="afterLeave" @after-enter="afterEnter">
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
-        <t-icon name="circle_info" />
-        <span :class="`${name}--txt`">{{content}}</span>
+        <slot name="icon">
+          <t-check-icon v-if="theme === 'success'" />
+          <t-error-icon v-else />
+        </slot>
+        <span :class="`${name}--txt`">{{ content }}</span>
       </slot>
     </div>
   </transition>
@@ -11,17 +14,17 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { MessageType, MessageAlignType, IMessageOffset } from './message.interface';
-import TIcon from '../icon';
-
+import { MessageType, MessageAlignType } from './message.interface';
+import TCheckIcon from '../icon/check-circle-filled.vue';
+import TErrorIcon from '../icon/error-circle-filled.vue';
 import config from '../config';
-const { prefix } = config;
 
+const { prefix } = config;
 const name = `${prefix}-message`;
 
 export default defineComponent({
   name,
-  components: { TIcon },
+  components: { TCheckIcon, TErrorIcon },
   props: {
     modelValue: Boolean,
     /**
@@ -33,7 +36,10 @@ export default defineComponent({
      * @description 消息内容
      * @attribute content
      */
-    content: String,
+    content: {
+      type: String,
+      default: '',
+    },
     /**
      * @description 消息类型
      * @attribute theme
@@ -54,26 +60,20 @@ export default defineComponent({
      * @description 文本对齐方式
      * @attribute align
      */
-    align: String as PropType<MessageAlignType>,
-    /**
-     * @description 偏移量
-     * @attribute offset
-     */
-    offset: {
-      type: Object as PropType<IMessageOffset>,
-      default: () => {},
+    align: {
+      type: String as PropType<MessageAlignType>,
+      default: 'left',
     },
-    /**
-     * @description 自定义图标
-     * @attribute icon
-     */
-    icon: [String, Function],
     /**
      * @description 自定义层级
      * @attribute zIndex
      */
-    zIndex: Number,
+    zIndex: {
+      type: Number,
+      default: 5000,
+    },
   },
+  emits: ['update:modelValue', 'visible-change', 'open', 'opened', 'close', 'closed'],
   setup(props, context: SetupContext) {
     const root = ref(null);
     const currentVisible = computed(() => props.modelValue || props.visible);
@@ -84,7 +84,6 @@ export default defineComponent({
     }));
     const rootStyles = computed(() => ({
       zIndex: props.zIndex,
-      ...props.offset,
     }));
 
     watch(

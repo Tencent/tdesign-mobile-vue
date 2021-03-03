@@ -3,11 +3,12 @@
 </template>
 
 <script>
-export default {
-  data() {
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
     return {
-      value: 5,
+      value: ref(5),
     };
   },
-};
+});
 </script>

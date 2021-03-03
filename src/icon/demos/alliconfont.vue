@@ -5,21 +5,21 @@
     </p><br>
     <div class="tdesign-demo-row">
       <t-icon name="loading"/>
-      <t-icon name="close" @click.native="onIconClose"/>
-      <t-icon name="help_fill"/>
+      <t-icon name="close" @click="onIconClose"/>
+      <t-icon name="help-circle-filled"/>
     </div><br>
     <div class="tdesign-demo-row">
-      <t-icon name="help_fill" size="small"/>
-      <t-icon name="help_fill" />
-      <t-icon name="help_fill" size="middle"/>
-      <t-icon name="help_fill" size="large"/>
-      <t-icon name="help_fill" size="25px"/>
-      <t-icon name="help_fill" size="2em"/>
+      <t-icon name="help-circle-filled" size="small"/>
+      <t-icon name="help-circle-filled" />
+      <t-icon name="help-circle-filled" size="middle"/>
+      <t-icon name="help-circle-filled" size="large"/>
+      <t-icon name="help-circle-filled" size="25px"/>
+      <t-icon name="help-circle-filled" size="2em"/>
     </div><br>
     <div class="tdesign-demo-row">
-      <t-icon name="help_fill" style="color: red"/>
-      <t-icon name="help_fill" style="color: green"/>
-      <t-icon name="help_fill" style="color: orange"/>
+      <t-icon name="help-circle-filled" style="color: red"/>
+      <t-icon name="help-circle-filled" style="color: green"/>
+      <t-icon name="help-circle-filled" style="color: orange"/>
     </div>
   </div>
 </template>
@@ -34,10 +34,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less">
-  .tdesign-demo-iconfont {
-    .t-icon {
-      margin-right: 24px;
-    }
-  }
-</style>

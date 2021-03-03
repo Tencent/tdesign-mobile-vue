@@ -1,29 +1,63 @@
 <template>
-  <div :class="`${name}`">
-    <t-cell value-align="left">
-      <t-button theme="primary" size="large" @click="this.isShowDialog = true">
-        反馈类弹出框
-      </t-button>
-      <t-dialog
-        :content="content"
-        @clickoverlay="clickoverlay"
-        @confirm="onConfirm"
-        @opened="openDialog"
-        @closed="closeDialog"
-        @visible-change="changeVisible"
-        v-model="isShowDialog"></t-dialog>
-    </t-cell>
+  <div class="dialog-base">
+    <div class="tdesign-demo-block">
+      <t-cell-group title="反馈类对话框">
+        <t-cell value-align="left">
+          <t-button  theme="primary" @click="changeDialogVisible(1)">
+            单行标题对话框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog1"
+            :header="singleHeader">
+          </t-dialog>
+        </t-cell>
+        <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(2)">
+            多行标题对话框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog2"
+            :header="moreTextHeader">
+          </t-dialog>
+        </t-cell>
+        <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(3)">
+            短文本对话框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog3"
+            :content="content"
+            @confirm="onConfirm"
+            @opened="openDialog"
+            @closed="closeDialog"
+            @click-overlay="clickOverlay"
+            @visible-change="changeVisible"
+          >
+          </t-dialog>
+        </t-cell>
+         <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(4)">
+            长文本对话框
+          </t-button>
+          <t-dialog
+            v-model="isShowDialog4"
+            :header="header">
+          </t-dialog>
+        </t-cell>
+      </t-cell-group>
+    </div>
   </div>
 </template>
+
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
 import config from '@/config';
 
 const { prefix } = config;
 const name = `${prefix}-demo--dialog`;
 
-export default {
+export default defineComponent({
   setup() {
     return {
       name: ref(name),
@@ -31,8 +65,10 @@ export default {
   },
   data() {
     return {
-      header: '标题',
-      content: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      singleHeader:'最小高度样式，文案上下居中',
+      content: '告知当前状态、信息和解决方法',
+      moreTextContent:'告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
       confirmButtonText: '继续',
@@ -42,12 +78,55 @@ export default {
       showFooter: false,
       showOverlay: false,
       isInput: true,
-      isShowDialog: false,
+      isShowDialog1: false,
+      isShowDialog2: false,
+      isShowDialog3: false,
+      isShowDialog4: false,
     };
   },
   methods: {
-    onConfirm(e:any)  {
+    changeDialogVisible(idx: number) {
+      switch (idx) {
+        case 1: {
+          this.isShowDialog1 = true;
+          this.isShowDialog2 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = false;
+          break;
+        }
+        case 2: {
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = true;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = false;
+          break;
+        }
+        case 3: {
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
+          this.isShowDialog3 = true;
+          this.isShowDialog4 = false;
+          break;
+        }
+         case 4: {
+          this.isShowDialog1 = false;
+          this.isShowDialog2 = false;
+          this.isShowDialog3 = false;
+          this.isShowDialog4 = true;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    },
+
+    onConfirm(e: string) {
       console.log('dialog:confirm', e);
+    },
+
+    onCancel() {
+      console.log('dialog:cancel');
     },
 
     openDialog() {
@@ -58,39 +137,22 @@ export default {
       console.log('dialog:closed');
     },
 
-    changeVisible(e:any) {
+    changeVisible(e: boolean) {
       console.log('dialog:visible-change', e);
     },
 
-    clickoverlay() {
-      console.log('dialog:clickoverlay');
+    clickOverlay() {
+      console.log('dialog:clickOverlay');
     },
   },
-};
+});
 </script>
 
-<style lang="less" scoped>
-.tdesign-demo--dialog {
-  padding-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-  .dialog-type-title{
-    margin: 20px 0px;
-    color: #333;
-    font-size: 22px;
+<style lang="less">
+.dialog-base {
+  .t-button:not(:last-child) {
+    margin-right: 24px;
   }
-  .block + .block {
-    margin-top: 12px;
-    .block--title {
-      margin-top: 12px;
-    }
-  }
-  .block--title {
-    padding: 20px 16px;
-    color: rgba(69, 90, 100, 0.6);
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-  }
+
 }
 </style>

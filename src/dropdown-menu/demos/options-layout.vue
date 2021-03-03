@@ -1,23 +1,34 @@
 <template>
   <demo-container>
     <t-dropdown-menu>
-      <t-dropdown-item
-        title="两栏菜单"
-        :options="optionsN"
-        selectMode="multi"
-        optionsLayout="columns"
-        optionsColumns="2"
-        v-model="valueM1"
+      <t-dropdown-item 
+        v-model="valueS" 
+        title="单列" 
+        :options="optionsN" 
+        select-mode="multi" 
+        options-columns="1"
       />
       <t-dropdown-item
-        title="三栏菜单"
-        :options="optionsC"
-        selectMode="multi"
-        optionsLayout="columns"
-        optionsColumns="3"
+        v-model="valueM1"
+        title="双列"
+        :options="optionsN"
+        select-mode="multi"
+        options-layout="columns"
+        options-columns="2"
+      />
+      <t-dropdown-item
         v-model="valueM2"
+        title="三列"
+        :options="optionsC"
+        select-mode="multi"
+        options-layout="columns"
+        options-columns="3"
       />
     </t-dropdown-menu>
+    <p>
+      单列菜单 选中项:
+      <strong>{{valueM1.join(', ')}}</strong>
+    </p>
     <p>
       两栏菜单 选中项:
       <strong>{{valueM1.join(', ')}}</strong>
@@ -52,8 +63,8 @@ export default defineComponent({
     });
     const optionsN = ref(numberArr);
     const optionsC = ref(charArr);
-    const valueM1 = ref(['options_A', 'options_C']);
-    const valueM2 = ref([]);
+    const valueM1 = ref([]);
+    const valueM2 = ref(['options_A', 'options_C']);
     return {
       name,
       log: (...args: []) => {

@@ -1,16 +1,28 @@
 <template>
-  <div :class="styleWrapper">
-    <slot name="title">
-      <div v-if="title" :class="styleTitle">{{ title }}</div>
-    </slot>
-    <div :class="styleContainer">
+  <div :class="name">
+    <div v-if="title" :class="`${name}--title`">
+      <slot name="title">
+        {{ title }}
+      </slot>
+    </div>
+    <div
+      :class="{
+        [`${name}-container`]: true,
+        'border--top-bottom': border,
+      }"
+    >
       <slot></slot>
+    </div>
+    <div v-if="summary" :class="`${name}--summary`">
+      <slot name="summary">
+        {{ summary }}
+      </slot>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent } from 'vue';
+import { defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-cell-group`;
@@ -18,22 +30,21 @@ const name = `${prefix}-cell-group`;
 export default defineComponent({
   name,
   props: {
-    title: String,
+    title: {
+      type: String,
+      default: '',
+    },
+    summary: {
+      type: String,
+      default: '',
+    },
     border: {
       type: Boolean,
       default: true,
     },
   },
-  setup(props) {
-    const styleWrapper = ref(name);
-    const styleContainer = computed(() => (props.border ? `${name}-container border--top-bottom` : `${name}-container`));
-    const styleTitle = ref(`${name}--title`);
-
-    return {
-      styleWrapper,
-      styleContainer,
-      styleTitle,
-    };
+  setup() {
+    return { name };
   },
 });
 </script>

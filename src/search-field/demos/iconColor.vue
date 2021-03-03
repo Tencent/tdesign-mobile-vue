@@ -1,0 +1,27 @@
+<template>
+  <div>
+    <t-search-field v-model="value" icon-color="#0052d9" placeholder="请输入关键字" @change="onChange">
+    </t-search-field>
+  </div>
+</template>
+
+<script>
+import { defineComponent, ref } from 'vue';
+
+export default defineComponent({
+  setup() {
+    const onChange = (val) => {
+      console.log('change: ', val);
+    };
+
+    const value = ref('');
+
+    return {
+      onChange,
+      value,
+    };
+  },
+});
+</script>
+
+<style lang="less" scoped></style>

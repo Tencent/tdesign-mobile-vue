@@ -9,22 +9,14 @@
         <t-switch text="描述信息" >
         </t-switch>
       </t-cell>
-      <t-cell label="标题">
-        <t-switch v-model="disabledValue" disabled text="描述信息">
-        </t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch disabled text="描述信息">
-        </t-switch>
-      </t-cell>
     </t-cell-group>
   </div>
 </template>
 
 <script lang="ts">
-import { ref } from 'vue';
+import { ref, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   setup() {
     const checked = ref(true);
     const disabledValue = ref(true);
@@ -33,5 +25,5 @@ export default {
       disabledValue,
     };
   },
-};
+});
 </script>

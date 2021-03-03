@@ -1,9 +1,9 @@
 <template>
   <div :class="className">
     <div :class="toolbarClassName">
-      <button :class="cancelClassName" @click="handleCancel">{{cancelButtonText}}</button>
-      <div :class="titleClassName">{{title}}</div>
-      <button :class="confirmClassName" @click="handleConfirm">{{confirmButtonText}}</button>
+      <button :class="cancelClassName" @click="handleCancel">{{ cancelButtonText }}</button>
+      <div :class="titleClassName">{{ title }}</div>
+      <button :class="confirmClassName" @click="handleConfirm">{{ confirmButtonText }}</button>
     </div>
     <div :class="mainClassName">
       <div :class="groupClassName">
@@ -16,16 +16,17 @@
 </template>
 
 <script lang="ts">
-import { computed, SetupContext, mergeProps, defineComponent } from 'vue';
+import { computed, mergeProps, defineComponent } from 'vue';
 import config from '../config';
-import { PickerProps, IPickerProps } from './picker.interface';
+import { PickerProps } from './picker.interface';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
 
 export default defineComponent({
   props: PickerProps,
-  setup(props: IPickerProps,  context: SetupContext) {
+  emits: ['change', 'cancel', 'confirm'],
+  setup(props, context) {
     const className = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
     const groupClassName = computed(() => `${name}-column__group`);
     const maskClassName = computed(() => `${name}__mask`);
@@ -38,7 +39,7 @@ export default defineComponent({
     const confirmButtonText = computed(() => props.confirmButtonText || '确定');
     const cancelButtonText = computed(() => props.cancelButtonText || '取消');
 
-    const curData:any[] = [];
+    const curData: any[] = [];
     let columnLen = 0;
 
     const pickerColumns = () => {
@@ -71,11 +72,14 @@ export default defineComponent({
     const handleConfirm = () => {
       let emitData = columnLen > 1 ? curData : curData[0];
       if (Array.isArray(emitData)) {
-        emitData = emitData.reduce((acc, item) => {
-          acc.value.push(item.value);
-          acc.index.push(item.index);
-          return acc;
-        }, { value: [], index: [] });
+        emitData = emitData.reduce(
+          (acc, item) => {
+            acc.value.push(item.value);
+            acc.index.push(item.index);
+            return acc;
+          },
+          { value: [], index: [] },
+        );
       }
       context.emit('confirm', emitData);
     };

@@ -1,5 +1,6 @@
 <template>
   <div class="tdesign-demo-tag">
+    <t-tag theme="default">默认</t-tag>
     <t-tag theme="primary">重要</t-tag>
     <t-tag theme="danger">危险</t-tag>
     <t-tag theme="warning">警告</t-tag>
@@ -7,3 +8,8 @@
     <t-tag theme="info">信息</t-tag>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+export default defineComponent({});
+</script>

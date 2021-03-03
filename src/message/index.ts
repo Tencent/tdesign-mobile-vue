@@ -1,38 +1,36 @@
-import { createApp, defineComponent, ref, h, VNode, App, Plugin } from 'vue';
-import { IMessageProps, MessageType } from './message.interface';
-import { PolySymbol } from '../_utils';
+import { createApp, defineComponent, ref, h, VNode, App, Plugin, nextTick } from 'vue';
+import { MessageProps, MessageType } from './message.interface';
 import MessageComp from './message.vue';
 
-const Message = MessageComp as (typeof MessageComp & Plugin);
-
-function create(props: IMessageProps): void {
+function create(props: MessageProps): void {
   const visible = ref(false);
-  const root: HTMLElement = document.createElement('div');
+  const root = document.createElement('div');
   document.body.appendChild(root);
 
   const component = defineComponent({
-    render: (): VNode => h(MessageComp, {
-      ...props,
-      visible: visible.value,
-      onClose: () => {
-        visible.value = false;
-      },
-      onClosed: () => {
-        root.remove();
-      },
-    }),
+    render: (): VNode =>
+      h(MessageComp, {
+        ...props,
+        visible: visible.value,
+        onClose: () => {
+          visible.value = false;
+        },
+        onClosed: () => {
+          root.remove();
+        },
+      }),
   });
 
   createApp(component).mount(root);
 
-  setTimeout(() => {
+  nextTick(() => {
     visible.value = true;
-  }, 0);
+  });
 }
 
 (['info', 'success', 'warning', 'error'] as MessageType[]).forEach((type: MessageType): void => {
-  Message[type] = (options: IMessageProps | string) => {
-    let props: IMessageProps = {
+  MessageComp[type] = (options: MessageProps | string) => {
+    let props = {
       content: '',
       theme: type,
     };
@@ -47,10 +45,28 @@ function create(props: IMessageProps): void {
   };
 });
 
-Message.install = (app: App) => {
+((MessageComp as unknown) as Plugin).install = (app: App) => {
   // 添加插件入口
-  const messageKey = PolySymbol<typeof Message>('message');
-  app.provide(messageKey, Message);
+  // eslint-disable-next-line no-param-reassign
+  app.config.globalProperties.$message = MessageComp;
 };
 
-export default Message;
+type MessageApi = {
+  /** 展示普通消息 */
+  info: (options?: MessageProps | string) => void,
+  /** 展示成功消息 */
+  success: (options?: MessageProps | string) => void,
+  /** 展示警示消息 */
+  warning: (options?: MessageProps | string) => void,
+  /** 展示错误消息 */
+  error: (options?: MessageProps | string) => void,
+};
+
+export default (MessageComp as unknown) as (Plugin & MessageApi);
+
+declare module '@vue/runtime-core' {
+  // Bind to `this` keyword
+  interface ComponentCustomProperties {
+    $message: MessageApi;
+  }
+}
