@@ -55,7 +55,9 @@ export default defineComponent({
     const dSideBarItemNameClassName = computed(() => `${name}__sidebar-item-name`);
 
     const takePath = (path: string) => {
-      window.location.href = path;
+      if (path) {
+        window.location.href = path;
+      }
     };
 
     watch(open, () => {
