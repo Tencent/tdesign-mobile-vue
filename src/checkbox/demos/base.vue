@@ -21,19 +21,19 @@
         <t-cell value-align="left">
           <t-checkbox
             name="4"
-            title="单行标题--不可选"
+            title="单行标题"
             disabled></t-checkbox>
         </t-cell>
         <t-cell value-align="left">
           <t-checkbox
             name="5"
-            title="单行标题--不可选"
+            title="单行标题"
             disabled></t-checkbox>
         </t-cell>
         <t-cell value-align="left">
           <t-checkbox
             name="6"
-            title="双行标题，长文本自动换行，该选项的描述是一段很长的内容--不可选"
+            title="双行标题，长文本自动换行，该选项的描述是一段很长的内容"
             disabled></t-checkbox>
         </t-cell>
       </t-check-group>
@@ -54,19 +54,18 @@
           <t-checkbox
             name="3"
             title="双行标题，长文本自动换行，该选项的描述是一段很长的内容"
-            limit-content-row="2">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字，
-            一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
+            limit-content-row="2">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
         </t-cell>
         <t-cell value-align="left">
           <t-checkbox
             name="4"
-            title="单行标题--不可选"
+            title="单行标题"
             disabled>一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
         </t-cell>
         <t-cell value-align="left">
           <t-checkbox
             name="5"
-            title="单行标题--不可选"
+            title="单行标题"
             disabled>一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
         </t-cell>
         <t-cell value-align="left">
@@ -103,30 +102,27 @@
         <t-cell value-align="left">
           <t-checkbox
             name="1"
-            title="双行标题，长文本自动换行，该选项的描述是一段很长的内容">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字，
-            一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
+            title="双行标题，长文本自动换行，该选项的描述是一段很长的内容">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
         </t-cell>
         <t-cell value-align="left">
           <t-checkbox
             name="2"
             title="双行标题，长文本自动换行，该选项的描述是一段很长的内容"
             limit-title-row="1"
-            limit-content-row="1">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字，
-            一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
+            limit-content-row="1">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
         </t-cell>
         <t-cell value-align="left">
           <t-checkbox
             name="3"
             title="双行标题，长文本自动换行，该选项的描述是一段很长的内容"
-            limit-content-row="2">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字，
-            一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
+            limit-content-row="2">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</t-checkbox>
         </t-cell>
       </t-check-group>
     </t-cell-group>
 
     <t-cell-group title="自定义图标和设置颜色">
       <t-check-group v-model="checkBoxs4">
-        <t-cell value-align="left">
+        <!-- <t-cell value-align="left">
           <t-checkbox
             name="1"
             title="单行标题">
@@ -134,7 +130,7 @@
               <img class="my-icon" :src="props.checked ? activeIcon : inactiveIcon" />
             </template>
           </t-checkbox>
-        </t-cell>
+        </t-cell> -->
         <t-cell value-align="left">
           <t-checkbox
             name="2"
@@ -174,7 +170,7 @@
       </t-check-group>
     </t-cell-group>
 
-    <t-cell-group title="没有使用group">
+    <!-- <t-cell-group title="没有使用group">
       <t-cell value-align="left">
         <t-checkbox
           v-model="checked0"
@@ -196,20 +192,17 @@
           title="单行标题">
         </t-checkbox>
       </t-cell>
-    </t-cell-group>
+    </t-cell-group> -->
   </div>
 </template>
 <script lang="ts">
-import { ref, onMounted, watch, defineComponent } from 'vue';
+import { ref, watch, defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    let checkGroup:any = ref(null);
-    onMounted(() => {
-      checkGroup = checkGroup.value;
-    });
-    const activeIcon = ref('https://img.yzcdn.cn/vant/user-active.png');
-    const inactiveIcon = ref('https://img.yzcdn.cn/vant/user-inactive.png');
+    const checkGroup:any = ref(null);
+    // const activeIcon = ref('https://img.yzcdn.cn/vant/user-active.png');
+    // const inactiveIcon = ref('https://img.yzcdn.cn/vant/user-inactive.png');
     const checkBoxs0 = ref(['1', '2', '4', '5']);
     const checkBoxs1 = ref(['1', '2', '4', '5']);
     const checkBoxs2 = ref(['1', '2']);
@@ -298,8 +291,8 @@ export default defineComponent({
       checked0,
       checked1,
       checked2,
-      activeIcon,
-      inactiveIcon,
+      // activeIcon,
+      // inactiveIcon,
       toggleSelect,
     };
   },
