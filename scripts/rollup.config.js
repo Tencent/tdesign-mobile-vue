@@ -34,7 +34,10 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
      */
     // eslint(),
     vuePlugin(vueOpt),
-    typescript({ cacheRoot: `${tmpdir()}/.rpt2_cache` }),
+    typescript({
+      tsconfig: 'tsconfig.build.json',
+      cacheRoot: `${tmpdir()}/.rpt2_cache`,
+    }),
     babel({
       babelHelpers: 'bundled',
       extensions: [...DEFAULT_EXTENSIONS, 'vue', 'ts', 'tsx'],
