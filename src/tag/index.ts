@@ -1,7 +1,6 @@
-import Tag from './tag.vue';
-import CheckTag from './check-tag.vue';
+import { withInstall } from '../shared/';
+import LocalTag from './tag.vue';
+import LocalCheckTag from './check-tag.vue';
 
-// const _Tag:any = Tag;
-// _Tag.CheckTag = CheckTag;
-
-export { Tag, CheckTag };
+export const Tag = withInstall(LocalTag);
+export const CheckTag = withInstall(LocalCheckTag);

@@ -1,2 +1,4 @@
+import { withInstall } from '../shared/';
 import ActionSheet from './action-sheet.vue';
-export default ActionSheet;
+
+export default withInstall(ActionSheet);
