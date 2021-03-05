@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Navbar from './navbar.vue';
 
-export default Navbar;
+export default withInstall(Navbar);

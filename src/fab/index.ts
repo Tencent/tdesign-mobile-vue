@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Fab from './fab.vue';
 
-export default Fab;
+export default withInstall(Fab);
