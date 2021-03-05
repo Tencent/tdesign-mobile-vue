@@ -54,8 +54,8 @@
 </template>
 
 <script lang="ts">
-import TIconChevronRight from "@/icon/chevron-right.vue";
-import TIconClearCircleFilled from "@/icon/clear-circle-filled.vue";
+import TIconChevronRight from '../icon/chevron-right.vue';
+import TIconClearCircleFilled from '../icon/clear-circle-filled.vue';
 import { ref, computed, watch, onMounted, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
