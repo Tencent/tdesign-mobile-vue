@@ -1,2 +1,4 @@
+import { withInstall } from '../shared/';
 import CheckGroup from './check-group.vue';
-export default CheckGroup;
+
+export default withInstall(CheckGroup);

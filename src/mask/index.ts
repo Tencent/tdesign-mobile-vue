@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Mask from './mask.vue';
 
-export default Mask;
+export default withInstall(Mask);

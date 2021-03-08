@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import SearchField from './search-field.vue';
 
-export default SearchField;
+export default withInstall(SearchField);

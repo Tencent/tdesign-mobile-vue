@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Badge from './badge.vue';
 
-export default Badge;
+export default withInstall(Badge);

@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Popup from './popup.vue';
 
-export default Popup;
+export default withInstall(Popup);

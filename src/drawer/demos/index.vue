@@ -3,8 +3,8 @@
     <div class="demo-drawer">
       <t-drawer v-model="open" :sidebar="baseSidebar" :show-icon="showIcon"></t-drawer>
       <div class="demo-drawer-content">
-        <div class="demo-drawer-text">基础抽屉</div>
-        <t-button size="large" @click="openDrawer(false)">基础抽屉（左侧弹出）</t-button>
+        <div class="demo-drawer-text">单层级纯文本标签栏</div>
+        <t-button size="large" variant="outline" @click="openDrawer(false)">基础抽屉</t-button>
       </div>
     </div>
   </div>
@@ -16,22 +16,16 @@ export default defineComponent({
   setup() {
     const baseSidebar = ref([{
       name: '菜单一',
-      path: '//www.qq.com/',
     }, {
       name: '菜单二',
-      path: '//www.qq.com/',
     }, {
       name: '菜单三',
-      path: '//www.qq.com/',
     }, {
       name: '菜单四',
-      path: '//www.qq.com/',
     }, {
       name: '菜单五',
-      path: '//www.qq.com/',
     }, {
       name: '菜单六',
-      path: '//www.qq.com/',
     }]);
     const open = ref(false);
     const showIcon = ref(false);

@@ -3,6 +3,7 @@ import url from '@rollup/plugin-url';
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
 // import eslint from '@rollup/plugin-eslint';
+import esbuild from 'rollup-plugin-esbuild';
 import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
 import analyzer from 'rollup-plugin-analyzer';
@@ -26,7 +27,7 @@ const banner =
 `;
 
 const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
-  const plugins = [
+  let plugins = [
     /** TODO: 由于以下报错，暂时关闭 eslint
      * 0:0  error  Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
       The file does not match your project config: src/cell-group/cell-group.vue?vue&type=script&lang.ts.
@@ -34,7 +35,22 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
      */
     // eslint(),
     vuePlugin(vueOpt),
-    typescript({ cacheRoot: `${tmpdir()}/.rpt2_cache` }),
+  ];
+
+  if (isProd) {
+    plugins.push(typescript({
+      tsconfig: 'tsconfig.build.json',
+      cacheRoot: `${tmpdir()}/.rpt2_cache`,
+    }));
+  } else {
+    plugins.push(esbuild({
+      target: 'esnext',
+      minify: false,
+      tsconfig: 'tsconfig.build.json',
+    }));
+  }
+
+  plugins = plugins.concat([
     babel({
       babelHelpers: 'bundled',
       extensions: [...DEFAULT_EXTENSIONS, 'vue', 'ts', 'tsx'],
@@ -47,7 +63,7 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
     }),
     json(),
     url(),
-  ];
+  ])
 
   if (env) {
     plugins.push(replace({
