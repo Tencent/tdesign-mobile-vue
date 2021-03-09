@@ -1,3 +1,6 @@
-import Tabs from './tabs.vue';
-import TabPanel from './tab-panel.vue';
-export { Tabs, TabPanel };
+import { withInstall } from '../shared/';
+import LocalTabs from './tabs.vue';
+import LocalTabPanel from './tab-panel.vue';
+
+export const Tabs = withInstall(LocalTabs);
+export const TabPanel = withInstall(LocalTabPanel);

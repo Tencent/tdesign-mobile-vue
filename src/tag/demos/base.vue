@@ -2,7 +2,6 @@
   <div class="tag-base tdesign-demo-tag">
     <t-cell-group title="展示型标签">
       <t-cell value-align="left">
-        <t-tag theme="default">默认</t-tag>
         <t-tag theme="primary">重要</t-tag>
         <t-tag theme="danger">危险</t-tag>
         <t-tag theme="warning">警告</t-tag>

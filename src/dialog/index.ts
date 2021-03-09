@@ -1,6 +1,6 @@
-import Dialog from './dialog.vue';
-
 import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTick } from 'vue';
+
+import Dialog from './dialog.vue';
 import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
 
 interface DialogFnType extends DialogPropsType {
@@ -84,7 +84,9 @@ function create(props: DialogFnType | string): DefineComponent{
   };
 });
 
-Dialog.install = (app: App) => {
+Dialog.install = (app: App, name = '') => {
+  app.component(name || Dialog.name, Dialog);
+
   // 添加插件入口
   // eslint-disable-next-line no-param-reassign
   app.config.globalProperties.$dialog = Dialog;

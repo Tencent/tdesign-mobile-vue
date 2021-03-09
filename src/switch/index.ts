@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Switch from './switch.vue';
 
-export default Switch;
+export default withInstall(Switch);

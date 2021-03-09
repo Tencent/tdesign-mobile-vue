@@ -1,4 +1,6 @@
-import PickerColumn from './picker-column.vue';
-import Picker from './picker.vue';
+import { withInstall } from '../shared/';
+import LocalPicker from './picker.vue';
+import LocalPickerColumn from './picker-column.vue';
 
-export { PickerColumn, Picker };
+export const Picker = withInstall(LocalPicker);
+export const PickerColumn = withInstall(LocalPickerColumn);

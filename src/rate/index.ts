@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Rate from './rate.vue';
 
-export default Rate;
+export default withInstall(Rate);

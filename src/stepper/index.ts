@@ -1,2 +1,4 @@
+import { withInstall } from '../shared/';
 import Stepper from './stepper.vue';
-export default Stepper;
+
+export default withInstall(Stepper);

@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import CellGroup from './cell-group.vue';
 
-export default CellGroup;
+export default withInstall(CellGroup);
