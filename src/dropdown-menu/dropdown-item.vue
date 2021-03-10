@@ -15,9 +15,7 @@
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
                   >
-                    <template #checkedIcon>
-                      <t-icon-check v-if="isCheckedRadio(option.value)" />
-                    </template>
+                    <t-icon-check v-if="isCheckedRadio(option.value)" />
                   </t-radio>
                 </t-cell>
               </t-radio-group>
