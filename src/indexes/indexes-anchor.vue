@@ -1,5 +1,5 @@
 <template>
-  <div :class="state.componentName" :data-index="state.index">{{ state.title }}</div>
+  <t-cell-group :class="state.componentName" :data-index="state.index" :title="state.title" />
 </template>
 
 <script lang="ts">
