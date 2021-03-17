@@ -70,9 +70,7 @@
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
                       >
-                        <template #checkedIcon>
-                          <t-icon-check v-if="option.value === treeState.selectList[level]" />
-                        </template>
+                        <t-icon-check v-if="option.value === treeState.selectList[level]" />
                       </t-radio>
                     </t-cell>
                   </t-radio-group>
