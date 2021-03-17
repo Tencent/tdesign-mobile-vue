@@ -63,7 +63,7 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
     }),
     json(),
     url(),
-  ])
+  ]);
 
   if (env) {
     plugins.push(replace({
