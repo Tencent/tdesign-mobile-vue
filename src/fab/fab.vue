@@ -1,11 +1,12 @@
 <template>
   <t-button :class="classes" theme="primary" shape="round" @click="onClick">
-    <t-icon :name="icon" style="color: #fff;"></t-icon>
+    <component :is="icon" style="color: #fff"></component>
     <span v-if="text" :class="`${name}__text`">{{ text }}</span>
   </t-button>
 </template>
 
 <script lang="ts">
+import TIconAdd from '../icon/add.vue';
 import { computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -13,10 +14,11 @@ const name = `${prefix}-fab`;
 
 export default defineComponent({
   name,
+  components: { TIconAdd },
   props: {
     icon: {
-      type: String,
-      default: '',
+      type: Function,
+      default: ()=> TIconAdd,
     },
     text: {
       type: String,
