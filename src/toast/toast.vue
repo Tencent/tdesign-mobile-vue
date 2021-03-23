@@ -2,25 +2,27 @@
   <div>
     <t-mask v-show="showOverlay" />
     <div :class="classes">
-      <t-icon v-if="computedIcon" :name="computedIcon" :class="`${name}__icon`" />
+      <component :is="computedIcon" :class="`${name}__icon`"> </component>
       <div :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import TIconLoading from '../icon/loading.vue';
+import TIconCheck from '../icon/check.vue';
+import TIconWarning from '../icon/warning.vue';
 import { computed, toRefs, ref, defineComponent, PropType } from 'vue';
-
-import TIcon from '../icon';
 import TMask from '../mask';
-import { ToastPositionType, ToastType, ToastTypeIcon } from './toast.interface';
+import { ToastPositionType, ToastProps, ToastType } from './toast.interface';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-toast`;
 
+// FUNCTION > SLOT > TYPE
 export default defineComponent({
   name,
-  components: { TIcon, TMask },
+  components: { TMask, TIconLoading, TIconCheck, TIconWarning },
   props: {
     /**
      * @description 消息内容
@@ -51,8 +53,8 @@ export default defineComponent({
      * @attribute icon
      */
     icon: {
-      type: String,
-      default: '',
+      type: Function as PropType<ToastProps['icon']>,
+      default: undefined,
     },
     /**
      * @description 是否显示背景遮罩
@@ -68,17 +70,23 @@ export default defineComponent({
       default: 2000,
     },
   },
-  setup(props) {
-    // TODO: 需要改成TNODE(function/slot)
+  setup(props, context) {
+    const toastTypeIcon = {
+      loading: TIconLoading,
+      success: TIconCheck,
+      fail: TIconWarning,
+    };
     const computedIcon = computed(() => {
-      let icon = '';
-      if (props.type) {
-        icon = ToastTypeIcon[props.type];
+      if (!!props.icon) {
+        return props.icon();
       }
-      if (props.icon) {
-        icon = props.icon
-      };
-      return icon;
+      if (!!context.slots.icon) {
+        return context.slots.icon;
+      }
+      if (props.type) {
+        return toastTypeIcon[props.type];
+      }
+      return undefined;
     });
 
     const classes = computed(() => [

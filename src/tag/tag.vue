@@ -1,12 +1,13 @@
 <template>
   <span :class="classes" :style="style">
-    <t-icon v-if="icon" :class="`${baseClass}__icon`" :name="icon" />
+    <component :is="computedIcon" :class="`${baseClass}__icon`"> </component>
     <slot :class="`${baseClass}__text`" />
-    <t-icon v-if="closable && !disabled" :class="`${baseClass}__close`" name="close" @click="onClickClose" />
+    <t-icon-close v-if="closable && !disabled" :class="`${baseClass}__close`" @click="onClickClose" />
   </span>
 </template>
 
 <script lang="ts">
+import TIconClose from '../icon/close.vue';
 import { defineComponent, computed, toRefs } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -32,7 +33,7 @@ export enum TagSize {
   Medium = 'medium',
   Small = 'small',
 }
- 
+
 export enum TagShape {
   Square = 'square',
   Round = 'round',
@@ -43,6 +44,7 @@ export enum TagShape {
 
 const Tag = defineComponent({
   name,
+  components: { TIconClose },
   props: {
     theme: {
       type: String,
@@ -57,8 +59,8 @@ const Tag = defineComponent({
       default: TagSize.Medium,
     },
     icon: {
-      type: String,
-      default: '',
+      type: Function,
+      default: undefined,
     },
     shape: {
       type: String,
@@ -102,6 +104,16 @@ const Tag = defineComponent({
       },
     ]);
 
+    const computedIcon = computed(() => {
+      if (!!props.icon) {
+        return props.icon();
+      }
+      if (!!context.slots.icon) {
+        return context.slots.icon;
+      }
+      return undefined;
+    });
+
     function onClickClose(e: Event) {
       if (props.disabled) {
         e.stopPropagation();
@@ -115,6 +127,7 @@ const Tag = defineComponent({
       classes,
       style,
       onClickClose,
+      computedIcon,
     };
   },
 });

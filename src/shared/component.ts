@@ -1,7 +1,7 @@
-import { VNode, App, Plugin } from 'vue';
+import { VNodeChild, App, Plugin } from 'vue';
 
-// TNode 类型表示该字段类型支持 Function | String, 以及同名作用域插槽（Slot / ScopedSlot ）。其中，Function 优先级大于 Slot。
-export type TNode = (...args: any[]) => VNode;
+// TNode 类型表示该字段类型支持 Function , 以及同名作用域插槽（Slot / ScopedSlot ）。其中，Function 优先级大于 Slot。
+export type TNode = (...args: any[]) => VNodeChild;
 
 // size 默认值固定为：small/medium/large。
 export type SizeEnum = 'small' | 'medium' | 'large';
