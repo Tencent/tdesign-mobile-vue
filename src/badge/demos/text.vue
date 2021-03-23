@@ -13,10 +13,10 @@
         <t-cell value-align="left">
           <span>单行标题</span>
 					<div class="badge-tag-wrap">
-						<t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-						<t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-						<t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
-						<t-badge content="NEW" :offset="[10, 0]" shape="round" class="badge-tag"/>
+						<t-badge content="NEW" shape="round" class="badge-tag"/>
+						<t-badge content="NEW" shape="round" class="badge-tag"/>
+						<t-badge content="NEW" shape="circle" class="badge-tag"/>
+						<t-badge content="NEW" shape="circle" class="badge-tag"/>
 					</div>
         </t-cell>
       </t-cell-group>
@@ -34,7 +34,7 @@ export default defineComponent({});
   padding: 10px 0;
 
   .badge-item {
-    margin: 0 20px;
+    margin-right: 20px;
   }
 }
 .list-item-badge {
@@ -46,7 +46,6 @@ export default defineComponent({});
 	margin-right: 10px;
 }
 .badge-tag {
-  width: 50px;
-  height: 20px;
+  margin-right: 8px;
 }
 </style>
