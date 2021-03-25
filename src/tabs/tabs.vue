@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount, readonly } from 'vue';
+import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount, readonly, Fragment } from 'vue';
 import config from '../config';
 import { TabsProps } from './tabs.interface';
 
@@ -33,6 +33,7 @@ const { prefix } = config;
 const name = `${prefix}-tabs`;
 
 export default defineComponent({
+  name,
   props: TabsProps,
   emits: ['change'],
   setup(props, { emit, slots }) {
@@ -42,8 +43,16 @@ export default defineComponent({
     const currentName = ref(props.activeName);
 
     const { itemProps } = (() => {
-      const children = (slots.default ? slots.default() : [])
-        .filter((child: any) => child.type.name === `${prefix}-tab-panel`);
+      let children: any[] = (slots.default ? slots.default() : []);
+      const res: any[] = [];
+      children.forEach(child => {
+        if (child.type === Fragment) {
+          res.push(...child.children);
+        } else {
+          res.push(child);
+        }
+      });
+      children = res.filter((child: any) => child.type.name === `${prefix}-tab-panel`);
       const itemProps = children.map((item: any) => ({
         ...item.props,
       }));
