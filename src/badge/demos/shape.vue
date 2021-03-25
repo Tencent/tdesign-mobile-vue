@@ -27,7 +27,7 @@ export default defineComponent({});
   padding: 20px 0;
 
   .badge-item {
-    margin: 20px;
+    margin-right: 20px;
   }
 }
 </style>
