@@ -1,6 +1,5 @@
 <template>
   <div :class="`${name}`">
-
     <t-cell-group title="文本轻提示">
       <t-cell value-align="left">
         <t-button size="large" variant="outline" @click="showText(text1)">短文本轻提示</t-button>
@@ -57,13 +56,12 @@
         <t-button size="large" variant="outline" @click="showMask">带背景遮罩</t-button>
       </t-cell>
     </t-cell-group>
-
   </div>
 </template>
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-
+import TIconUserFilled from '@/icon/user-filled.vue';
 import Toast from '../index';
 import config from '@/config';
 import { ToastPositionType } from '../toast.interface';
@@ -102,7 +100,7 @@ export default defineComponent({
     },
     showCustom(message?: string) {
       Toast({
-        icon: 'user-filled',
+        icon: TIconUserFilled,
         message,
       });
     },
@@ -130,8 +128,8 @@ export default defineComponent({
   position: relative;
   height: 100vh;
 }
-.toast-wrap{
-  .t-button:not(:last-child){
+.toast-wrap {
+  .t-button:not(:last-child) {
     margin-bottom: 12px;
   }
 }
