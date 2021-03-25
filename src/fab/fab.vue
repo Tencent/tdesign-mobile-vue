@@ -1,6 +1,6 @@
 <template>
   <t-button :class="classes" theme="primary" shape="round" @click="onClick">
-    <component :is="icon" style="color: #fff"></component>
+    <component :is="computedIcon" style="color: #fff"></component>
     <span v-if="text" :class="`${name}__text`">{{ text }}</span>
   </t-button>
 </template>
@@ -14,7 +14,6 @@ const name = `${prefix}-fab`;
 
 export default defineComponent({
   name,
-  components: { TIconAdd },
   props: {
     icon: {
       type: Function,
@@ -36,10 +35,21 @@ export default defineComponent({
       context.emit('click', e);
     };
 
+    const computedIcon = computed(() => {
+      if (!!props.icon) {
+        return props.icon();
+      }
+      if (!!context.slots.icon) {
+        return context.slots.icon;
+      }
+      return undefined;
+    });
+
     return {
       name,
       classes,
       onClick,
+      computedIcon
     };
   },
 });
