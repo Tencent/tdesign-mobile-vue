@@ -84,6 +84,7 @@
 
 <script lang='ts'>
 import { defineComponent, ref } from 'vue';
+import { ModelValueProps } from '../tab-bar.interface';
 export default defineComponent({
   setup() {
     const value = ref(null);
@@ -91,13 +92,11 @@ export default defineComponent({
       {
         name: 'label_1',
         text: '标签一',
-        icon: 'location-filled',
         children: [],
       },
       {
         name: 'label_2',
         text: '标签二',
-        icon: 'check-circle-filled',
         children: [],
       },
     ];
@@ -106,7 +105,6 @@ export default defineComponent({
       {
         name: 'label_3',
         text: '标签三',
-        icon: 'help-circle-filled',
         children: [],
       },
     ];
@@ -115,7 +113,6 @@ export default defineComponent({
       {
         name: 'label_4',
         text: '标签四',
-        icon: 'clear-circle-filled',
         children: [],
       },
     ];
@@ -124,7 +121,6 @@ export default defineComponent({
       {
         name: 'label_5',
         text: '标签五',
-        icon: 'star-filled',
         children: [],
       },
     ];
@@ -151,7 +147,7 @@ export default defineComponent({
       },
     ];
 
-    const change = (changeValue) => {
+    const change = (changeValue: ModelValueProps) => {
       console.log('TabBar 值改变为：', changeValue);
     };
 
