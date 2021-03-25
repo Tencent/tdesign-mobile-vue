@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-fab class="demo-fab-button" icon="add"></t-fab>
+    <t-fab class="demo-fab-button"></t-fab>
   </div>
 </template>
 
@@ -12,9 +12,5 @@ export default defineComponent({});
 <style lang="less" scoped>
 .demo-fab-button {
   position: relative;
-
-  & + & {
-    margin-left: 20px;
-  }
 }
 </style>

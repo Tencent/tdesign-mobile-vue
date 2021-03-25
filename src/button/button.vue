@@ -1,9 +1,7 @@
 <template>
   <button :class="buttonClass" :disabled="disabled" @click="onClick">
     <div :class="`${name}__content`">
-      <TIconLoading v-if="loading" />
-      <component :is="icon()" v-else-if="typeof icon === 'function'"> </component>
-      <slot v-else name="icon"> </slot>
+      <component :is="computedIcon"> </component>
       <span :class="`${name}__text`">
         <slot />
       </span>
@@ -87,6 +85,15 @@ export default defineComponent({
       },
     ]);
 
+    const computedIcon = computed(() => {
+      if (props.loading){
+        return TIconLoading;
+      }
+      if (typeof props.icon === 'function') {
+        return props.icon();
+      } 
+      return context.slots?.icon;
+    });
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
         // 既不是加载也不是禁用时触发事件
@@ -100,6 +107,7 @@ export default defineComponent({
       ...toRefs(props),
       buttonClass,
       onClick,
+      computedIcon,
     };
   },
 });

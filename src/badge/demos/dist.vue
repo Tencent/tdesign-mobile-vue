@@ -24,10 +24,6 @@ export default defineComponent({});
 <style lang="less" scoped>
 .badge-wrap {
   padding: 10px 0;
-
-  .badge-item {
-    margin: 0 20px;
-  }
 }
 .list-item-badge {
   float: right;

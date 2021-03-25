@@ -1,14 +1,14 @@
 <template>
   <button :class="classes" :disabled="disabled">
-    <t-icon v-if="icon" :class="`${baseClass}__icon`" :name="icon" />
+    <component :is="computedIcon" :class="`${baseClass}__icon`"> </component>
     <slot :class="`${baseClass}__text`" />
-    <t-icon v-if="closable && !disabled" :class="`${baseClass}__close`" name="clear" @click="onClickClose" />
+    <t-icon-clear v-if="closable && !disabled" :class="`${baseClass}__close`" @click="onClickClose" />
   </button>
 </template>
 
 <script lang="ts">
+import TIconClear from '../icon/clear-circle-filled.vue'
 import { defineComponent, computed, toRefs, watch } from 'vue';
-import TIcon from '../icon';
 import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -30,7 +30,7 @@ export enum TagShape {
 const CheckTag = defineComponent({
   name,
   components: {
-    TIcon,
+    TIconClear,
   },
   props: {
     size: {
@@ -38,8 +38,8 @@ const CheckTag = defineComponent({
       default: TagSize.Default,
     },
     icon: {
-      type: String,
-      default: '',
+      type: Function,
+      default: undefined,
     },
     shape: {
       type: String,
@@ -78,6 +78,13 @@ const CheckTag = defineComponent({
       },
     ]);
 
+    const computedIcon = computed(() => {
+      if (typeof props.icon === 'function') {
+        return props.icon();
+      }
+      return context.slots?.icon;
+    });
+
     function onClickClose(e: Event): void {
       if (props.disabled) {
         e.stopPropagation();
@@ -94,6 +101,7 @@ const CheckTag = defineComponent({
       baseClass,
       classes,
       onClickClose,
+      computedIcon
     };
   },
 });

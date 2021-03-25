@@ -31,7 +31,7 @@ import { defineComponent, ref, watch } from 'vue';
 import { ModelValueProps } from '../segmented-control.interface';
 export default defineComponent({
   setup() {
-    const defaultValue = ref(null);
+    const defaultValue = ref('item_1');
     watch(defaultValue, (newValue) => {
       console.log(`当前值为：${newValue}`);
     });
