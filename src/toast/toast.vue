@@ -77,7 +77,7 @@ export default defineComponent({
       fail: TIconWarning,
     };
     const computedIcon = computed(() => {
-      if (!!props.icon) {
+      if (typeof props.icon === 'function') {
         return props.icon();
       }
       if (!!context.slots.icon) {

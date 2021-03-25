@@ -1,7 +1,6 @@
 <template>
   <button :class="buttonClass" :disabled="disabled" @click="onClick">
     <div :class="`${name}__content`">
-      <TIconLoading v-if="loading" />
       <component :is="computedIcon"> </component>
       <span :class="`${name}__text`">
         <slot />
@@ -87,13 +86,13 @@ export default defineComponent({
     ]);
 
     const computedIcon = computed(() => {
-      if (!!props.icon) {
+      if (props.loading){
+        return TIconLoading;
+      }
+      if (typeof props.icon === 'function') {
         return props.icon();
-      }
-      if (!!context.slots.icon) {
-        return context.slots.icon;
-      }
-      return undefined;
+      } 
+      return context.slots?.icon;
     });
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {

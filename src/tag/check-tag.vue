@@ -79,13 +79,10 @@ const CheckTag = defineComponent({
     ]);
 
     const computedIcon = computed(() => {
-      if (!!props.icon) {
+      if (typeof props.icon === 'function') {
         return props.icon();
       }
-      if (!!context.slots.icon) {
-        return context.slots.icon;
-      }
-      return undefined;
+      return context.slots?.icon;
     });
 
     function onClickClose(e: Event): void {
