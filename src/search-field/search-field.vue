@@ -2,11 +2,7 @@
   <div :class="classes">
     <form :class="`${name}__form`">
       <div :class="`${name}__box`">
-        <t-icon
-          :class="`${name}__icon-search`"
-          name="search"
-          :style="iconStyle"
-        ></t-icon>
+        <t-icon-search :class="`${name}__icon-search`" :style="iconStyle"></t-icon-search>
         <input
           v-model="currentValue"
           :class="`${name}__input`"
@@ -14,38 +10,27 @@
           :autofocus="autofocus"
           :placeholder="placeholder"
         />
-        <t-icon
+        <t-icon-clear-circle-filled
           v-if="clearable && currentValue.length > 0"
           :class="`${name}__icon-close`"
-          name="clear-circle-filled"
           :style="iconStyle"
           @click="onClear"
-        ></t-icon>
+        ></t-icon-clear-circle-filled>
       </div>
-      <label
-        v-show="state.labelActive"
-        :class="`${name}__label`"
-        @click="onClick"
-      >
-        <t-icon
-          :class="`${name}__label-icon-search`"
-          name="search"
-          :style="iconStyle"
-        ></t-icon>
+      <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">
+        <t-icon-search :class="`${name}__label-icon-search`" :style="iconStyle"></t-icon-search>
         <span :class="`${name}__label-text`">{{ placeholder }}</span>
       </label>
     </form>
-    <button
-      v-show="!state.labelActive"
-      :class="`${name}__cancel-button`"
-      @click="onCancel"
-    >
+    <button v-show="!state.labelActive" :class="`${name}__cancel-button`" @click="onCancel">
       {{ cancelButtonText }}
     </button>
   </div>
 </template>
 
 <script lang="ts">
+import TIconSearch from '../icon/search.vue';
+import TIconClearCircleFilled from '../icon/clear-circle-filled.vue';
 import { ref, reactive, computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -53,6 +38,7 @@ const name = `${prefix}-search-field`;
 
 export default defineComponent({
   name,
+  components: { TIconSearch, TIconClearCircleFilled },
   props: {
     autofocus: {
       type: Boolean,
@@ -86,8 +72,7 @@ export default defineComponent({
       [`${prefix}-is-focused`]: !state.labelActive,
     }));
 
-    const iconStyle = computed(() => (
-      props.iconColor ? `color:${props.iconColor};` : ''));
+    const iconStyle = computed(() => (props.iconColor ? `color:${props.iconColor};` : ''));
 
     const state = reactive({
       labelActive: true,

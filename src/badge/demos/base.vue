@@ -33,42 +33,6 @@
         <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="标签栏带徽标" style="position: fixed; bottom: 0; width: 100%;">
-      <t-tab-bar>
-        <t-badge class="tab-badge" :offset="[5, 30]" :count="16">
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-        <t-badge class="tab-badge" :offset="[5, 30]" dot>
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-        <t-badge class="tab-badge" :offset="[5, 30]" content="NEW">
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-        <t-badge class="tab-badge" :offset="[5, 30]" content="···">
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-      </t-tab-bar>
-    </t-cell-group>
   </div>
 </template>
 
@@ -94,8 +58,5 @@ export default defineComponent({
 }
 .cell-badge {
   margin-left: 8px;
-}
-.tab-badge {
-  flex: 1;
 }
 </style>

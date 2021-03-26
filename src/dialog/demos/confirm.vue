@@ -13,7 +13,6 @@
             type="confirm"
             :header="header"
             :content="content"
-            :placeholder-text="placeholderText"
             :cancel-button-text="cancelButtonText"
             :confirm-button-text="confirmButtonText"
             @confirm="onConfirm"
@@ -55,7 +54,7 @@ export default defineComponent({
   },
   data() {
     return {
-        singleHeader:'最小高度样式，文案上下居中',
+        header:'对话框标题',
         content: '告知当前状态、信息和解决方法',
         moreTextContent:'告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
         cancelButtonText: '我再想想',

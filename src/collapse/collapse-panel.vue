@@ -8,7 +8,7 @@
         <div v-if="extra || $slots.extra" :class="`${baseClass}__header-extra`">
           <slot name="extra">{{ extra }}</slot>
         </div>
-        <t-icon :class="`${baseClass}__header-icon`" :name="rightIcon" />
+        <component :is="rightIcon" :class="`${baseClass}__header-icon`"> </component>
       </div>
     </div>
     <div ref="bodyDOM" :class="`${baseClass}__body`">
@@ -50,20 +50,20 @@ import {
   CollapseStateType,
   CollapsePanelPropsType,
   CollapsePanelProps,
-  CollapseIcon,
   onChangeEvent,
 } from './collapse.interface';
+import TIconArrowDown from '../icon/arrow-down.vue';
+import TIconArrowUp from '../icon/arrow-up.vue';
 import config from '../config';
-import TIcon from '../icon';
 import { findIndex, isFalsy, toArray } from './util';
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 function getExpandIconName(isActive: boolean) {
-  return isActive ? CollapseIcon.active : CollapseIcon.inactive;
+  return isActive ? TIconArrowDown : TIconArrowUp;
 }
 export default defineComponent({
   name,
-  components: { TIcon },
+  components: { TIconArrowDown, TIconArrowUp },
   props: CollapsePanelProps,
   emits: ['click'],
   setup(props: CollapsePanelPropsType, context: SetupContext) {

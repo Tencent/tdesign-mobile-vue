@@ -35,7 +35,7 @@ export default defineComponent({});
   padding: 10px 0;
 
   .badge-item {
-    margin: 0 20px;
+    margin-right: 20px;
   }
 }
 .list-item-badge {
