@@ -2,7 +2,7 @@
   <t-popup v-model="open" position="left">
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
-        <component :is="computedIcon(item.icon)" :img="item.icon" v-if="item.icon"></component>
+        <component :is="computedIcon(item.icon)" v-if="item.icon" :img="item.icon"></component>
         <div :class="dSideBarItemNameClassName">{{ item.name }}</div>
       </div>
     </div>
@@ -21,6 +21,7 @@ const name = `${prefix}-drawer`;
 
 export default defineComponent({
   name,
+  components: { ImgIcon },
   props: {
     modelValue: {
       type: Boolean,
@@ -31,7 +32,6 @@ export default defineComponent({
       default: () => [],
     },
   },
-  components: { ImgIcon },
   emits: ['update:modelValue'],
   setup(props, context: SetupContext) {
     const { modelValue } = toRefs(props);
