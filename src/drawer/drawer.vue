@@ -2,10 +2,7 @@
   <t-popup v-model="open" position="left">
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
-        <template v-if="item.icon">
-          <img v-if="typeof item.icon === 'string'" :src="item.icon" :class="dSideBarItemIconClassName" />
-          <component :is="computedIcon(item.icon)" v-else></component>
-        </template>
+        <component :is="computedIcon(item.icon)" :img="item.icon" v-if="item.icon"></component>
         <div :class="dSideBarItemNameClassName">{{ item.name }}</div>
       </div>
     </div>
@@ -16,7 +13,8 @@
 import { TNode } from '@/shared';
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent } from 'vue';
 import config from '../config';
-import { SidebarItemType } from './drawer.interface';
+import { SidebarItem } from './drawer.interface';
+import ImgIcon from './imageIcon.vue';
 
 const { prefix } = config;
 const name = `${prefix}-drawer`;
@@ -28,15 +26,12 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    icon: {
-      type: Function as PropType<SidebarItemType['icon']>,
-      default: undefined,
-    },
     sidebar: {
-      type: Array as PropType<SidebarItemType[]>,
+      type: Array as PropType<SidebarItem[]>,
       default: () => [],
     },
   },
+  components: { ImgIcon },
   emits: ['update:modelValue'],
   setup(props, context: SetupContext) {
     const { modelValue } = toRefs(props);
@@ -56,10 +51,13 @@ export default defineComponent({
       if (typeof icon === 'function') {
         return icon();
       }
-      if (typeof icon === 'string') {
-        return icon;
+      if (!!context.slots.icon) {
+        return context.slots.icon;
       }
-      return context.slots?.icon;
+      if (typeof icon === 'string') {
+        return ImgIcon;
+      }
+      return undefined;
     };
     watch(open, () => {
       context.emit('update:modelValue', open.value);
