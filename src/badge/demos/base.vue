@@ -40,11 +40,10 @@
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
-
     return {
       iconUrl: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
-    }
-  }
+    };
+  },
 });
 </script>
 

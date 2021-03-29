@@ -19,9 +19,9 @@ export const findRelativeRect = (dom: any) => {
   const containerRect = container
     ? container.getBoundingClientRect()
     : {
-        top: 0,
-        left: 0,
-      };
+      top: 0,
+      left: 0,
+    };
   const { top, left, bottom, right, width, height } = dom.getBoundingClientRect();
   return {
     top: top - containerRect.top,

@@ -17,7 +17,7 @@ export default defineComponent({
   props: {
     icon: {
       type: Function,
-      default: ()=> TIconAdd,
+      default: () => TIconAdd,
     },
     text: {
       type: String,
@@ -46,7 +46,7 @@ export default defineComponent({
       name,
       classes,
       onClick,
-      computedIcon
+      computedIcon,
     };
   },
 });

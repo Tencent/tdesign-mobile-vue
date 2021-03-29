@@ -32,7 +32,7 @@ export default defineComponent({
       console.log(Array.from(val));
     });
 
-    return { checkBoxs }
-  }
+    return { checkBoxs };
+  },
 });
 </script>

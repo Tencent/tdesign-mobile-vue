@@ -50,7 +50,6 @@ import { ItemType } from '../action-sheet.interface';
 
 export default defineComponent({
   data() {
-
     return {
       visible: false,
       visible1: false,
@@ -91,8 +90,8 @@ export default defineComponent({
     handleCancel(): void {
       console.log('cancel');
     },
-    handleShowGridLine(count: number){
-       this.count = count;
+    handleShowGridLine(count: number) {
+      this.count = count;
       this.visible2 = true;
     },
     handleShowGrid(count: number) {

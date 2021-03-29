@@ -200,7 +200,7 @@ import { ref, watch, defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    const checkGroup:any = ref(null);
+    const checkGroup: any = ref(null);
     // const activeIcon = ref('https://img.yzcdn.cn/vant/user-active.png');
     // const inactiveIcon = ref('https://img.yzcdn.cn/vant/user-inactive.png');
     const checkBoxs0 = ref(['1', '2', '4', '5']);

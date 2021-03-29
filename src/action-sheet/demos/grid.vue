@@ -54,17 +54,17 @@ export default defineComponent({
       this.count = count;
       this.visible = true;
     },
-    meunIconStyle(bg){
+    meunIconStyle(bg) {
       return {
-        'width': '36px',
-        'height': '36px',
+        width: '36px',
+        height: '36px',
         'margin-bottom': '4px',
         'background-size': 'contain',
         'background-position': 'center',
         'background-repeat': 'no-repeat',
-        'backgroundImage': `url(${bg})`
-      }
-    }
+        backgroundImage: `url(${bg})`,
+      };
+    },
   },
 });
 </script>

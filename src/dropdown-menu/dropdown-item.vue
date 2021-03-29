@@ -271,11 +271,10 @@ export default defineComponent({
     };
     if (props.optionsLayout === 'tree') {
       watch(
-        () =>
-          JSON.stringify({
-            options: props.options,
-            selectList: treeState.selectList,
-          }),
+        () => JSON.stringify({
+          options: props.options,
+          selectList: treeState.selectList,
+        }),
         //   async (val, oldVal) => {
         async () => {
           //   console.log(`${oldVal}\n =>\n${val}`);

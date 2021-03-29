@@ -14,7 +14,7 @@ import Message from '../index';
 export default defineComponent({
   setup() {
     return {
-      onClick: (type) => Message[type](type)
+      onClick: type => Message[type](type),
     };
   },
   methods: {

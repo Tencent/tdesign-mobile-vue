@@ -8,17 +8,16 @@ function create(props: MessageProps): void {
   document.body.appendChild(root);
 
   const component = defineComponent({
-    render: (): VNode =>
-      h(Message, {
-        ...props,
-        visible: visible.value,
-        onClose: () => {
-          visible.value = false;
-        },
-        onClosed: () => {
-          root.remove();
-        },
-      }),
+    render: (): VNode => h(Message, {
+      ...props,
+      visible: visible.value,
+      onClose: () => {
+        visible.value = false;
+      },
+      onClosed: () => {
+        root.remove();
+      },
+    }),
   });
 
   createApp(component).mount(root);

@@ -1,11 +1,11 @@
 <template>
   <demo-container>
     <t-dropdown-menu>
-      <t-dropdown-item 
-        v-model="valueS" 
-        title="单列" 
-        :options="optionsN" 
-        select-mode="multi" 
+      <t-dropdown-item
+        v-model="valueS"
+        title="单列"
+        :options="optionsN"
+        select-mode="multi"
         options-columns="1"
       />
       <t-dropdown-item

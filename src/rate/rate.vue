@@ -136,10 +136,10 @@ export default defineComponent({
     });
 
     const iconHalfStyle = (n: number) => ({
-      color: actualVal.value + 0.5 === n || actualVal.value >= n ? props.color : null
+      color: actualVal.value + 0.5 === n || actualVal.value >= n ? props.color : null,
     });
     const iconFullStyle = (n: number) => ({
-      color: actualVal.value >= n ? props.color : null
+      color: actualVal.value >= n ? props.color : null,
     });
 
     const classes = (n: number) => ({

@@ -84,7 +84,7 @@
             </template>
           </t-dialog>
         </t-cell>
-      </t-cell-group> 
+      </t-cell-group>
 
     <!-- <t-cell-group title="函数调用: 反馈类弹框">
       <t-cell value-align="left">
@@ -93,8 +93,7 @@
         </t-button>
       </t-cell>
     </t-cell-group> -->
-   
-    
+
 
     <t-cell-group title="输入对话框">
       <t-cell value-align="left">
@@ -170,11 +169,11 @@ export default defineComponent({
   },
   data() {
     return {
-      header:'对话框标题',
+      header: '对话框标题',
       moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-      singleHeader:'最小高度样式，文案上下居中',
+      singleHeader: '最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法',
-      moreTextContent:'告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      moreTextContent: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
       confirmButtonText: '继续',
@@ -274,7 +273,7 @@ export default defineComponent({
           this.isShowDialog8 = false;
           break;
         }
-         case 8: {
+        case 8: {
           this.isShowDialog1 = false;
           this.isShowDialog2 = false;
           this.isShowDialog3 = false;
