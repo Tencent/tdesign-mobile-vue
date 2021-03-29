@@ -1,4 +1,4 @@
-import { TNode } from "@/shared";
+import { TNode } from '@/shared';
 
 export type SidebarItemType = {
   /* 菜单名称 */
@@ -7,7 +7,7 @@ export type SidebarItemType = {
   path: string,
   /* 图标 */
   icon: TNode | string;
-}
+};
 
 export interface SidebarItem {
   sidebar: Array<SidebarItemType>;

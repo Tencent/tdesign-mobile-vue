@@ -37,7 +37,7 @@ export default defineComponent({
     return {
       checkBoxs,
       checkGroup,
-      toggleSelect: (check) => checkGroup.value.toggleAll(check),
+      toggleSelect: check => checkGroup.value.toggleAll(check),
     };
   },
 });

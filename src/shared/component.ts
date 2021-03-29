@@ -15,7 +15,7 @@ export type VerticalAlignEnum = 'top' | 'middle' | 'bottom';
 export const withInstall = <T>(comp: T): T & Plugin => {
   const c = comp as any;
 
-  c.install = function(app: App, name = '') {
+  c.install = function (app: App, name = '') {
     app.component(name || c.name, comp);
   };
 

@@ -84,8 +84,8 @@ export default defineComponent({
       if (!!context.slots.icon) {
         return context.slots.icon;
       }
-      if(props.link){
-        return TIconChevronRight
+      if (props.link) {
+        return TIconChevronRight;
       }
       return undefined;
     });

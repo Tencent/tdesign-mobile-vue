@@ -35,7 +35,7 @@
             </template>
           </t-dialog>
         </t-cell>
-      </t-cell-group> 
+      </t-cell-group>
   </div>
 </template>
 <script lang="ts">
@@ -54,31 +54,31 @@ export default defineComponent({
   },
   data() {
     return {
-        header:'对话框标题',
-        content: '告知当前状态、信息和解决方法',
-        moreTextContent:'告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-        cancelButtonText: '我再想想',
-        confirmButtonText: '继续',
-        width: 250,
-        showHeader: false,
-        showFooter: false,
-        showOverlay: false,
-        isInput: true,
-        isShowDialog5: false,
-        isShowDialog6: false,
+      header: '对话框标题',
+      content: '告知当前状态、信息和解决方法',
+      moreTextContent: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      cancelButtonText: '我再想想',
+      confirmButtonText: '继续',
+      width: 250,
+      showHeader: false,
+      showFooter: false,
+      showOverlay: false,
+      isInput: true,
+      isShowDialog5: false,
+      isShowDialog6: false,
     };
   },
   methods: {
     changeDialogVisible(idx: number) {
       switch (idx) {
-          case 5: {
-            this.isShowDialog5 = true;
-            this.isShowDialog6 = false;
+        case 5: {
+          this.isShowDialog5 = true;
+          this.isShowDialog6 = false;
           break;
         }
         case 6: {
-            this.isShowDialog5 = false;
-            this.isShowDialog6 = true;
+          this.isShowDialog5 = false;
+          this.isShowDialog6 = true;
           break;
         }
         default: {

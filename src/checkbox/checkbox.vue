@@ -50,22 +50,21 @@ const getIconClasses = (
   content: SetupContext,
   props: CheckBoxProps,
   rootGroup: any,
-) =>
-  computed(() => {
-    const classes: Array<string> = [];
-    classes.push(`${flagName}__icon-left`);
-    if (!isChecked.value) {
-      if (!content.slots.icon) {
-        classes.push(`${flagName}__icon-left--default`);
-      }
-    } else {
-      classes.push(`${prefix}-is-checked`);
+) => computed(() => {
+  const classes: Array<string> = [];
+  classes.push(`${flagName}__icon-left`);
+  if (!isChecked.value) {
+    if (!content.slots.icon) {
+      classes.push(`${flagName}__icon-left--default`);
     }
-    if (rootGroup?.disabled || props?.disabled) {
-      classes.push(`${prefix}-is-disabled`);
-    }
-    return classes;
-  });
+  } else {
+    classes.push(`${prefix}-is-checked`);
+  }
+  if (rootGroup?.disabled || props?.disabled) {
+    classes.push(`${prefix}-is-disabled`);
+  }
+  return classes;
+});
 /**
  * @description: 返回标题对应的类名
  * @param {flagName} 类名前缀
@@ -73,44 +72,38 @@ const getIconClasses = (
  * @param {rootGroup} Group注入的对象
  * @return: 返回TitleClass对象
  */
-const getTitleClasses = (flagName: string, props: CheckBoxProps, rootGroup: any) =>
-  computed(() => {
-    const classes: Array<string> = [];
-    classes.push(`${flagName}__content-title`);
-    if (rootGroup?.disabled || props.disabled) {
-      classes.push(`${prefix}-is-disabled`);
-    }
-    return classes;
-  });
+const getTitleClasses = (flagName: string, props: CheckBoxProps, rootGroup: any) => computed(() => {
+  const classes: Array<string> = [];
+  classes.push(`${flagName}__content-title`);
+  if (rootGroup?.disabled || props.disabled) {
+    classes.push(`${prefix}-is-disabled`);
+  }
+  return classes;
+});
 /**
  * @description: 返回 Icon对应的样式
  * @param {isChecked} 是否选中
  * @param {props} props属性对象
  * @return: 返回Icon对应的养生
  */
-const getIconStyle = (isChecked: any, props: CheckBoxProps) =>
-  computed(() => {
-    const resStyle: {
-      color?: string;
-    } = {
-      color: '#0052D9', // TODO: 目前是这样的，默认是#0052D9这个颜色，支持自定义，没有跟着主题色变，后面会在common基于less生成的js，是token内容的，引用这个来解决
-    };
-    if (isChecked.value) {
-      resStyle.color = props.checkedColor;
-    }
-    return resStyle;
-  });
+const getIconStyle = (isChecked: any, props: CheckBoxProps) => computed(() => {
+  const resStyle: {
+    color?: string;
+  } = {
+    color: '#0052D9', // TODO: 目前是这样的，默认是#0052D9这个颜色，支持自定义，没有跟着主题色变，后面会在common基于less生成的js，是token内容的，引用这个来解决
+  };
+  if (isChecked.value) {
+    resStyle.color = props.checkedColor;
+  }
+  return resStyle;
+});
 /**
  * @description: 判断当前checkbox是否选中
  * @param {props} props属性对象
  * @param {rootGroup} Group注入的对象
  * @return: 返回是否选中的对象
  */
-const getIsCheck = (props: CheckBoxProps, rootGroup: any) =>
-  computed(
-    () =>
-      props?.modelValue === props?.name || (rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.name) !== -1),
-  );
+const getIsCheck = (props: CheckBoxProps, rootGroup: any) => computed(() => props?.modelValue === props?.name || (rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.name) !== -1));
 
 /**
  * @description: 设置checkbox点击回调
@@ -119,9 +112,7 @@ const getIsCheck = (props: CheckBoxProps, rootGroup: any) =>
  * @param {rootGroup} Group注入的对象
  * @return: 返回点击函数
  */
-const setCheckBoxChange = (props: CheckBoxProps, rootGroup: any, content: SetupContext, isChecked: any) => (
-  area: string,
-) => {
+const setCheckBoxChange = (props: CheckBoxProps, rootGroup: any, content: SetupContext, isChecked: any) => (area: string) => {
   if (props.disabled) {
     return;
   }
@@ -156,7 +147,7 @@ interface CheckBoxProps {
 export default defineComponent({
   name,
   components: {
-    TIconCheckCircleFilled
+    TIconCheckCircleFilled,
   },
   props: {
     /**
@@ -262,7 +253,7 @@ export default defineComponent({
       titleStyle,
       contentStyle,
       iconStyle,
-      circleFilled
+      circleFilled,
     };
   },
 });

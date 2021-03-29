@@ -86,12 +86,12 @@ export default defineComponent({
     ]);
 
     const computedIcon = computed(() => {
-      if (props.loading){
+      if (props.loading) {
         return TIconLoading;
       }
       if (typeof props.icon === 'function') {
         return props.icon();
-      } 
+      }
       return context.slots?.icon;
     });
     const onClick = (e: Event) => {

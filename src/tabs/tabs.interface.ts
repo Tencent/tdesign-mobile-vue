@@ -4,7 +4,7 @@ export interface TabsProps {
   activeName: string | number;
   scrollable?: boolean;
   direction?: TabsDirection;
-};
+}
 export const TabsProps = {
   /**
    * @description 初始化激活的选项卡name
@@ -36,7 +36,7 @@ export interface TabPanelProps {
   label?: string;
   disabled?: boolean;
   forceRender?: boolean;
-};
+}
 export const TabPanelProps = {
   /**
    * @description 选项板name

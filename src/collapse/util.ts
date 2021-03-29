@@ -8,7 +8,7 @@ export function findIndex(v: unknown, set: unknown): number {
 
   // 转数组统一处理
   const arr = toArray(set);
-  return arr.findIndex((s) => reg.test(s));
+  return arr.findIndex(s => reg.test(s));
 }
 
 /**
