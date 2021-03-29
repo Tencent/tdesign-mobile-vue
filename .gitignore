@@ -20,4 +20,6 @@ package-lock.json
 .idea/
 .vscode/
 .history/
+
 Dockerfile
+robotMsg.json

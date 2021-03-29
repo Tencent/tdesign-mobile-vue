@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig",
+  "exclude": [
+    "docs",
+    "common",
+    "scripts",
+    "node_modules",
+    "vite.config.ts"
+  ]
+}

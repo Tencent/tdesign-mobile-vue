@@ -1,4 +1,6 @@
-import TabBar from './tab-bar.vue';
-import TabBarItem from './tab-bar-item.vue';
+import { withInstall } from '../shared/';
+import LocalTabBar from './tab-bar.vue';
+import LocalTabBarItem from './tab-bar-item.vue';
 
-export { TabBar, TabBarItem };
+export const TabBar = withInstall(LocalTabBar);
+export const TabBarItem = withInstall(LocalTabBarItem);

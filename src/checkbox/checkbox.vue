@@ -2,7 +2,7 @@
   <div :class="`${flagName}`">
     <span :class="iconClasses" :style="iconStyle" @click="checkBoxChange">
       <slot name="icon" :checked="isChecked">
-        <t-icon v-if="isChecked" name="check-circle-filled" />
+        <TIconCheckCircleFilled v-if="isChecked" :class="circleFilled"/>
       </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="checkBoxChange('content')">
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import TIcon from '../icon';
+import TIconCheckCircleFilled from '../icon/check-circle-filled.vue';
 import { ref, inject, onMounted, onUnmounted, computed, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 
@@ -156,7 +156,7 @@ interface CheckBoxProps {
 export default defineComponent({
   name,
   components: {
-    [TIcon.name]: TIcon,
+    TIconCheckCircleFilled
   },
   props: {
     /**
@@ -232,6 +232,7 @@ export default defineComponent({
     const limitContentRow = Number(props?.limitContentRow) || 0;
     const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
     const contentStyle = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
+    const circleFilled = `${name}__icon`;
 
     hasSlot.value = !!content.slots.default; // 判断是否有default slot
     if (!content.slots.default || !props?.title) {
@@ -261,6 +262,7 @@ export default defineComponent({
       titleStyle,
       contentStyle,
       iconStyle,
+      circleFilled
     };
   },
 });

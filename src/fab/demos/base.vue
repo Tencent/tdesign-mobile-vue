@@ -1,7 +1,7 @@
 <template>
   <div>
-    <t-fab class="demo-fab-button" icon="add"></t-fab>
-    <t-fab class="demo-fab-button" icon="add" text="按钮文案"></t-fab>
+    <t-fab class="demo-fab-button" />
+    <t-fab class="demo-fab-button" text="按钮文案"></t-fab>
   </div>
 </template>
 

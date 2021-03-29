@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import SegmentedControl from './segmented-control.vue';
 
-export default SegmentedControl;
+export default withInstall(SegmentedControl);

@@ -3,14 +3,14 @@
     <t-check-group v-model="checkBoxs">
       <t-checkbox
         name="1"
-        title="选择框1">
+        title="单行标题">
         <template #icon="props">
           <img class="my-icon" :src="props.checked ? activeIcon : inactiveIcon" />
         </template>
       </t-checkbox>
       <t-checkbox
         name="2"
-        title="选择框2">
+        title="单行标题">
         <template #icon="props">
           <img class="my-icon" :src="props.checked ? activeIcon : inactiveIcon" />
         </template>

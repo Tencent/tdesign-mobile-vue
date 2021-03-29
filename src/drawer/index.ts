@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Drawer from './drawer.vue';
 
-export default Drawer;
+export default withInstall(Drawer);

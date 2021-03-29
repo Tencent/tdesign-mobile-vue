@@ -1,77 +1,90 @@
 <template>
   <div class="demo-tab-bar">
-    <t-cell-group title="单层级纯文本标签栏">
-      <t-tab-bar
-        v-for="(list, index) in demoList_1"
-        :key="index"
-        v-model="value"
-        class="mt-12"
-        @change="change"
+    <h2 class="demo-tab-bar__title">
+      单层级纯文本标签栏
+    </h2>
+
+    <t-tab-bar
+      v-for="(list, index) in demoList_1"
+      :key="index"
+      v-model="value"
+      class="mt-12"
+      @change="change"
+    >
+      <t-tab-bar-item
+        v-for="(item, i) in list"
+        :key="item.name || i"
+        :name="item.name"
       >
-        <t-tab-bar-item
-          v-for="(item, i) in list"
-          :key="item.name || i"
-          :name="item.name"
-        >
-          {{ item.text }}
-        </t-tab-bar-item>
-      </t-tab-bar>
-    </t-cell-group>
+        {{ item.text }}
+      </t-tab-bar-item>
+    </t-tab-bar>
 
-    <t-cell-group title="双层级纯文本标签栏">
-      <t-tab-bar v-model="value" @change="change">
-        <t-tab-bar-item
-          v-for="(item, index) in list_5"
-          :key="item.name || index"
-          :name="item.name"
-          :children="item.children"
-        >
-          {{ item.text }}
-        </t-tab-bar-item>
-      </t-tab-bar>
-    </t-cell-group>
+    <h2 class="demo-tab-bar__title">
+      双层级纯文本标签栏
+    </h2>
 
-    <t-cell-group title="文本加图标标签栏">
-      <t-tab-bar
-        v-for="(list, index) in demoList_2"
-        :key="index"
-        v-model="value"
-        class="mt-12"
-        @change="change"
+    <t-tab-bar v-model="value" class="mt-12" @change="change">
+      <t-tab-bar-item
+        v-for="(item, index) in list_5"
+        :key="item.name || index"
+        :name="item.name"
+        :children="item.children"
       >
-        <t-tab-bar-item
-          v-for="(item, i) in list"
-          :key="item.name || i"
-          :icon="item.icon"
-          :name="item.name"
-        >
-          {{ item.text }}
-        </t-tab-bar-item>
-      </t-tab-bar>
-    </t-cell-group>
+        {{ item.text }}
+      </t-tab-bar-item>
+    </t-tab-bar>
 
-    <t-cell-group title="纯图标标签栏">
-      <t-tab-bar
-        v-for="(list, index) in demoList_2"
-        :key="index"
-        v-model="value"
-        class="mt-12"
-        @change="change"
+    <h2 class="demo-tab-bar__title">
+      文本加图标标签栏
+    </h2>
+
+    <t-tab-bar
+      v-for="(list, index) in demoList_2"
+      :key="index"
+      v-model="value"
+      class="mt-12"
+      @change="change"
+    >
+      <t-tab-bar-item
+        v-for="(item, i) in list"
+        :key="item.name || i"
+        :name="item.name"
       >
-        <t-tab-bar-item
-          v-for="(item, i) in list"
-          :key="item.name || i"
-          :icon="item.icon"
-          :name="item.name"
-        ></t-tab-bar-item>
-      </t-tab-bar>
-    </t-cell-group>
+        <template #icon="props">
+          <img :src="props.isChecked ? icons.active : icons.inactive" alt="">
+        </template>
+        {{ item.text }}
+      </t-tab-bar-item>
+    </t-tab-bar>
 
+    <h2 class="demo-tab-bar__title">
+      纯图标标签栏
+    </h2>
+
+    <t-tab-bar
+      v-for="(list, index) in demoList_2"
+      :key="index"
+      v-model="value"
+      class="mt-12"
+      @change="change"
+    >
+      <t-tab-bar-item
+        v-for="(item, i) in list"
+        :key="item.name || i"
+        :name="item.name"
+      >
+        <template #icon="props">
+          <img :src="props.isChecked ? icons.active : icons.inactive" alt="">
+        </template>
+      </t-tab-bar-item>
+    </t-tab-bar>
   </div>
 </template>
 
 <script lang='ts'>
 import { defineComponent, ref } from 'vue';
+import { ModelValueProps } from '../tab-bar.interface';
 export default defineComponent({
   setup() {
     const value = ref(null);
@@ -79,13 +92,11 @@ export default defineComponent({
       {
         name: 'label_1',
         text: '标签一',
-        icon: 'location-filled',
         children: [],
       },
       {
         name: 'label_2',
         text: '标签二',
-        icon: 'check-circle-filled',
         children: [],
       },
     ];
@@ -94,7 +105,6 @@ export default defineComponent({
       {
         name: 'label_3',
         text: '标签三',
-        icon: 'help-circle-filled',
         children: [],
       },
     ];
@@ -103,7 +113,6 @@ export default defineComponent({
       {
         name: 'label_4',
         text: '标签四',
-        icon: 'clear-circle-filled',
         children: [],
       },
     ];
@@ -112,7 +121,6 @@ export default defineComponent({
       {
         name: 'label_5',
         text: '标签五',
-        icon: 'star-filled',
         children: [],
       },
     ];
@@ -139,7 +147,7 @@ export default defineComponent({
       },
     ];
 
-    const change = (changeValue) => {
+    const change = (changeValue: ModelValueProps) => {
       console.log('TabBar 值改变为：', changeValue);
     };
 
@@ -157,7 +165,12 @@ export default defineComponent({
       ],
       list_5,
       value,
-      change
+      change,
+
+      icons: {
+        inactive: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        active: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/1097e5e8-a21a-4614-864b-98dec13a0aa5.svg',
+      },
     };
   },
 });
@@ -166,12 +179,13 @@ export default defineComponent({
 <style lang="less" scoped>
 .demo-tab-bar{
   background-color: #fbfbfb;
+  &__title{
+    padding: 24px 16px 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
-
 .mt-12{
   margin-top: 12px;
-}
-::v-deep(.t-cell-group-container){
-  background-color: #fbfbfb;
 }
 </style>

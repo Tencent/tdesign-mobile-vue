@@ -9,14 +9,6 @@
         <t-switch text="描述信息" >
         </t-switch>
       </t-cell>
-      <t-cell label="标题">
-        <t-switch v-model="disabledValue" disabled text="描述信息">
-        </t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch disabled text="描述信息">
-        </t-switch>
-      </t-cell>
     </t-cell-group>
   </div>
 </template>

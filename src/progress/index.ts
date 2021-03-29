@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Progress from './progress.vue';
 
-export default Progress;
+export default withInstall(Progress);

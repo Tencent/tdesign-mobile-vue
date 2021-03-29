@@ -2,45 +2,33 @@
   <t-popup v-model="open" position="left">
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
-        <div v-if="showIcon">
-          <img v-if="item.iconImg" :src="item.iconImg" :class="dSideBarItemIconClassName">
-          <t-icon v-if="item.iconName" :name="item.iconName" :class="dSideBarItemIconClassName"/>
-        </div>
-        <div :class="dSideBarItemNameClassName">{{item.name}}</div>
+        <component :is="computedIcon(item.icon)" v-if="item.icon" :img="item.icon"></component>
+        <div :class="dSideBarItemNameClassName">{{ item.name }}</div>
       </div>
     </div>
   </t-popup>
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  watch,
-  toRefs,
-  computed,
-  PropType,
-  SetupContext,
-  defineComponent,
-} from 'vue';
+import { TNode } from '@/shared';
+import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent } from 'vue';
 import config from '../config';
-import { SidebarItemType } from './drawer.interface';
+import { SidebarItem } from './drawer.interface';
+import ImgIcon from './imageIcon.vue';
 
 const { prefix } = config;
 const name = `${prefix}-drawer`;
 
 export default defineComponent({
   name,
+  components: { ImgIcon },
   props: {
     modelValue: {
       type: Boolean,
       default: false,
     },
-    showIcon: {
-      type: Boolean,
-      default: false,
-    },
     sidebar: {
-      type: Array as PropType<SidebarItemType[]>,
+      type: Array as PropType<SidebarItem[]>,
       default: () => [],
     },
   },
@@ -55,9 +43,22 @@ export default defineComponent({
     const dSideBarItemNameClassName = computed(() => `${name}__sidebar-item-name`);
 
     const takePath = (path: string) => {
-      window.location.href = path;
+      if (path) {
+        window.location.href = path;
+      }
     };
-
+    const computedIcon = (icon: TNode) => {
+      if (typeof icon === 'function') {
+        return icon();
+      }
+      if (!!context.slots.icon) {
+        return context.slots.icon;
+      }
+      if (typeof icon === 'string') {
+        return ImgIcon;
+      }
+      return undefined;
+    };
     watch(open, () => {
       context.emit('update:modelValue', open.value);
     });
@@ -68,6 +69,7 @@ export default defineComponent({
     return {
       open,
       takePath,
+      computedIcon,
       dSideBarClassName,
       dSideBarItemClassName,
       dSideBarItemIconClassName,

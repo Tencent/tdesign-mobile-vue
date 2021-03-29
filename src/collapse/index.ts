@@ -1,4 +1,6 @@
-import Collapse from './collapse.vue';
-import CollapsePanel from './collapse-panel.vue';
+import { withInstall } from '../shared/';
+import LocalCollapse from './collapse.vue';
+import LocalCollapsePanel from './collapse-panel.vue';
 
-export { Collapse, CollapsePanel };
+export const Collapse = withInstall(LocalCollapse);
+export const CollapsePanel = withInstall(LocalCollapsePanel);

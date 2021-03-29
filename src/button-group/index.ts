@@ -1,2 +1,4 @@
+import { withInstall } from '../shared/';
 import ButtonGroup from './button-group.vue';
-export default ButtonGroup;
+
+export default withInstall(ButtonGroup);

@@ -15,9 +15,7 @@
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
                   >
-                    <template #checkedIcon>
-                      <t-icon v-if="isCheckedRadio(option.value)" name="tick" />
-                    </template>
+                    <t-icon-check v-if="isCheckedRadio(option.value)" />
                   </t-radio>
                 </t-cell>
               </t-radio-group>
@@ -72,9 +70,7 @@
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
                       >
-                        <template #checkedIcon>
-                          <t-icon v-if="option.value === treeState.selectList[level]" name="tick" />
-                        </template>
+                        <t-icon-check v-if="option.value === treeState.selectList[level]" />
                       </t-radio>
                     </t-cell>
                   </t-radio-group>
@@ -102,7 +98,7 @@
         </slot>
       </div>
       <div v-if="selectMode === 'multi' || optionsLayout === 'tree'" :class="`${name}__ft`">
-        <t-button theme="default" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
+        <t-button variant="outline" :disabled="isBtnDisabled" @click="resetSelect">重置</t-button>
         <t-button theme="primary" :disabled="isBtnDisabled" @click="confirmSelect">确定</t-button>
       </div>
     </div>
@@ -111,7 +107,7 @@
 
 <script lang="ts">
 import { computed, toRefs, ref, reactive, inject, watch, defineComponent, nextTick, SetupContext } from 'vue';
-
+import TIconCheck from '../icon/check.vue';
 import { DropdownMenuPropsType, DropdownItemProps, DropdownItemPropsType } from './dropdown.interface';
 import config from '../config';
 import TransAniControl from './trans-ani-control';
@@ -121,6 +117,7 @@ const name = `${prefix}-dropdown-item`;
 
 export default defineComponent({
   name,
+  components: { TIconCheck },
   props: DropdownItemProps,
   emits: ['update:modelValue', 'change', 'open', 'opened', 'close', 'closed'],
   setup(props: DropdownItemPropsType, context: SetupContext) {

@@ -1,2 +1,4 @@
+import { withInstall } from '../shared/';
 import CheckBox from './checkbox.vue';
-export default CheckBox;
+
+export default withInstall(CheckBox);

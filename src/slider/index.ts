@@ -1,3 +1,4 @@
+import { withInstall } from '../shared/';
 import Slider from './slider.vue';
 
-export default Slider;
+export default withInstall(Slider);
