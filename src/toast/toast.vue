@@ -53,7 +53,7 @@ export default defineComponent({
      * @attribute icon
      */
     icon: {
-      type: Function as PropType<ToastProps['icon']>,
+      type: Function as unknown as PropType<ToastProps['icon']>,
       default: undefined,
     },
     /**
