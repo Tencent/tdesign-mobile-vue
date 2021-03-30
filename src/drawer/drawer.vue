@@ -13,7 +13,7 @@
 import { TNode } from '@/shared';
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent } from 'vue';
 import config from '../config';
-import { SidebarItem } from './drawer.interface';
+import { SidebarItemType } from './drawer.interface';
 import ImgIcon from './imageIcon.vue';
 
 const { prefix } = config;
@@ -28,7 +28,7 @@ export default defineComponent({
       default: false,
     },
     sidebar: {
-      type: Array as PropType<SidebarItem[]>,
+      type: Array as PropType<SidebarItemType[]>,
       default: () => [],
     },
   },
