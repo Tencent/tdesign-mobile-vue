@@ -26,7 +26,7 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
 import { ModelValueProps } from '../segmented-control.interface';
 export default defineComponent({
