@@ -21,8 +21,8 @@ export default defineComponent({
     const visible8 = ref(false);
     const visible9 = ref(false);
     const visible10 = ref(false);
-      const visible12 = ref(false);
-    return { visible,visible8,visible9,visible10,visible12 };
+    const visible12 = ref(false);
+    return { visible, visible8, visible9, visible10, visible12 };
   },
 });
 </script>

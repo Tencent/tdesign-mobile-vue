@@ -77,16 +77,6 @@ export const CollapsePanelProps = {
   },
 };
 
-/**
- * @description: 折叠面板按钮图标
- */
-export enum CollapseIcon {
-  active = 'arrow-up',
-  // 非展开态
-  inactive = 'arrow-down',
-  right = 'arror-right',
-}
-
 export interface CollapseStateType {
   /**
    * @description 折叠面板 class类

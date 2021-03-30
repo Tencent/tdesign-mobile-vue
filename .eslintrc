@@ -8,11 +8,7 @@
   "extends": [
     "@tencent/eslint-config-tencent",
     "@tencent/eslint-config-tencent/ts",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:vue/vue3-recommended",
-    "prettier",
-    "prettier/vue",
-    "prettier/@typescript-eslint"
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": ["vue", "@typescript-eslint"],
   "parser": "vue-eslint-parser",

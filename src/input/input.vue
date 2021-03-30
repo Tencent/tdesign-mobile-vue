@@ -65,7 +65,7 @@ export default defineComponent({
   name,
   components: {
     TIconChevronRight,
-    TIconClearCircleFilled
+    TIconClearCircleFilled,
   },
   props: {
     label: {

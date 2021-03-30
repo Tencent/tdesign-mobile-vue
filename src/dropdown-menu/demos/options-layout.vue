@@ -1,11 +1,11 @@
 <template>
   <demo-container>
     <t-dropdown-menu>
-      <t-dropdown-item 
-        v-model="valueS" 
-        title="单列" 
-        :options="optionsN" 
-        select-mode="multi" 
+      <t-dropdown-item
+        v-model="valueS"
+        title="单列"
+        :options="optionsN"
+        select-mode="multi"
         options-columns="1"
       />
       <t-dropdown-item
@@ -27,7 +27,7 @@
     </t-dropdown-menu>
     <p>
       单列菜单 选中项:
-      <strong>{{valueM1.join(', ')}}</strong>
+      <strong>{{valueS.join(', ')}}</strong>
     </p>
     <p>
       两栏菜单 选中项:
@@ -64,9 +64,9 @@ export default defineComponent({
     const optionsN = ref(numberArr);
     const optionsC = ref(charArr);
     const valueM1 = ref([]);
+    const valueS = ref([]);
     const valueM2 = ref(['options_A', 'options_C']);
     return {
-      name,
       log: (...args: []) => {
         console.log(...args);
       },
@@ -74,6 +74,7 @@ export default defineComponent({
       optionsC,
       valueM1,
       valueM2,
+      valueS,
     };
   },
 });

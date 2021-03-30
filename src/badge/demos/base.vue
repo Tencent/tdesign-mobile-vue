@@ -33,42 +33,6 @@
         <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
       </t-cell>
     </t-cell-group>
-    <t-cell-group title="标签栏带徽标" style="position: fixed; bottom: 0; width: 100%;">
-      <t-tab-bar>
-        <t-badge class="tab-badge" :offset="[5, 30]" :count="16">
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-        <t-badge class="tab-badge" :offset="[5, 30]" dot>
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-        <t-badge class="tab-badge" :offset="[5, 30]" content="NEW">
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-        <t-badge class="tab-badge" :offset="[5, 30]" content="···">
-          <t-tab-bar-item>
-            <template #icon="">
-              <img :src="iconUrl" alt="">
-            </template>
-            文本
-          </t-tab-bar-item>
-        </t-badge>
-      </t-tab-bar>
-    </t-cell-group>
   </div>
 </template>
 
@@ -76,11 +40,10 @@
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
-
     return {
       iconUrl: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
-    }
-  }
+    };
+  },
 });
 </script>
 
@@ -94,8 +57,5 @@ export default defineComponent({
 }
 .cell-badge {
   margin-left: 8px;
-}
-.tab-badge {
-  flex: 1;
 }
 </style>

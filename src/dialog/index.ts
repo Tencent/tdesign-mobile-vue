@@ -11,7 +11,7 @@ interface DialogFnType extends DialogPropsType {
 
 let instance: DefineComponent<DialogPropsType>;
 
-function create(props: DialogFnType | string): DefineComponent{
+function create(props: DialogFnType | string): DefineComponent {
   const visible = ref(false);
   const root = document.createElement('div');
   document.body.appendChild(root);

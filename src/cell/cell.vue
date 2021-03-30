@@ -1,8 +1,7 @@
 <template>
   <div :class="name" @click="onClick">
-    <div v-if="hasLeftIcon" :class="`${name}__left-icon`">
-      <component :is="leftIcon()" v-if="icon"> </component>
-      <slot v-else name="leftIcon"> </slot>
+    <div v-if="computedLeftIcon !== undefined" :class="`${name}__left-icon`">
+      <component :is="computedLeftIcon"> </component>
     </div>
     <div v-if="hasLabel" :class="`${name}__label`">
       <slot name="label">
@@ -15,11 +14,8 @@
         <div v-if="value">{{ value }}</div>
       </slot>
     </div>
-    <div v-if="hasIcon" :class="`${name}__icon`">
-      <component :is="icon()" v-if="icon"> </component>
-      <slot v-else name="icon">
-        <TIconChevronRight v-if="link" />
-      </slot>
+    <div v-if="computedIcon !== undefined" :class="`${name}__icon`">
+      <component :is="computedIcon" > </component>
     </div>
   </div>
 </template>
@@ -81,9 +77,28 @@ export default defineComponent({
       return !!context.slots.default;
     });
 
-    const hasIcon = computed(() => props.icon !== undefined || !!context.slots.icon || props.link);
+    const computedIcon = computed(() => {
+      if (typeof props.icon === 'function') {
+        return props.icon();
+      }
+      if (!!context.slots.icon) {
+        return context.slots.icon;
+      }
+      if (props.link) {
+        return TIconChevronRight;
+      }
+      return undefined;
+    });
 
-    const hasLeftIcon = computed(() => props.leftIcon !== undefined || !!context.slots.leftIcon);
+    const computedLeftIcon = computed(() => {
+      if (!!props.leftIcon) {
+        return props.leftIcon();
+      }
+      if (!!context.slots.leftIcon) {
+        return context.slots.leftIcon;
+      }
+      return undefined;
+    });
 
     const styleValue = computed(() => [
       `${name}__value`,
@@ -100,8 +115,8 @@ export default defineComponent({
       styleValue,
       hasLabel,
       hasValue,
-      hasIcon,
-      hasLeftIcon,
+      computedIcon,
+      computedLeftIcon,
       onClick,
     };
   },

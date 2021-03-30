@@ -46,8 +46,7 @@ interface RadioProps {
  * @return: 返回是否选中的对象
  */
 // eslint-disable-next-line max-len
-const getIsCheck = (props: RadioProps, rootGroupProps: any) =>
-  computed(() => rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name);
+const getIsCheck = (props: RadioProps, rootGroupProps: any) => computed(() => rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name);
 
 /**
  * @description: 命名类逻辑处理

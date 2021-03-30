@@ -65,14 +65,11 @@ export default defineComponent({
   },
   data() {
     return {
+      header: '对话框标题',
       moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-      singleHeader:'最小高度样式，文案上下居中',
+      singleHeader: '最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法',
-      moreTextContent:'告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-      placeholderText: '输入框提示文字',
-      cancelButtonText: '我再想想',
-      confirmButtonText: '继续',
-      zIndex: 3000,
+      moreTextContent: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       width: 250,
       showHeader: false,
       showFooter: false,
@@ -108,7 +105,7 @@ export default defineComponent({
           this.isShowDialog4 = false;
           break;
         }
-         case 4: {
+        case 4: {
           this.isShowDialog1 = false;
           this.isShowDialog2 = false;
           this.isShowDialog3 = false;

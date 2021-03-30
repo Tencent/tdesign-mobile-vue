@@ -127,10 +127,7 @@ export default defineComponent({
       setCurrentSidebar(currentTarget);
     }
 
-    const getTitleNode = () =>
-      Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter(
-        (x): x is HTMLElement => x instanceof HTMLElement,
-      );
+    const getTitleNode = () => Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter((x): x is HTMLElement => x instanceof HTMLElement);
 
     const setCurrentSidebar = (index: string) => {
       state.currentSidebar = index;

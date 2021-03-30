@@ -1,11 +1,12 @@
 <template>
   <t-button :class="classes" theme="primary" shape="round" @click="onClick">
-    <t-icon :name="icon" style="color: #fff;"></t-icon>
+    <component :is="computedIcon" style="color: #fff"></component>
     <span v-if="text" :class="`${name}__text`">{{ text }}</span>
   </t-button>
 </template>
 
 <script lang="ts">
+import TIconAdd from '../icon/add.vue';
 import { computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -15,8 +16,8 @@ export default defineComponent({
   name,
   props: {
     icon: {
-      type: String,
-      default: '',
+      type: Function,
+      default: () => TIconAdd,
     },
     text: {
       type: String,
@@ -34,10 +35,18 @@ export default defineComponent({
       context.emit('click', e);
     };
 
+    const computedIcon = computed(() => {
+      if (typeof props.icon === 'function') {
+        return props.icon();
+      }
+      return context.slots?.icon;
+    });
+
     return {
       name,
       classes,
       onClick,
+      computedIcon,
     };
   },
 });

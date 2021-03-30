@@ -1,4 +1,4 @@
-# 分段器-SegmentedControl
+# SegmentedControl 分段器
 定义：用于同类型内容不同视图的展示切换
 
 ## 1.组件类型

@@ -10,9 +10,7 @@ import { defineComponent, ref, watch } from 'vue';
 export default defineComponent({
   setup() {
     const radio = ref('1');
-    const title = ref(
-      '双行标题，长文本自动换行，该选项的描述是一段很长的内容',
-    );
+    const title = ref('双行标题，长文本自动换行，该选项的描述是一段很长的内容');
 
     watch(
       () => radio.value,

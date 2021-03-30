@@ -82,8 +82,8 @@ export default defineComponent({
     changeDialogVisible(idx: number) {
       switch (idx) {
         case 1: {
-            this.isShowDialog1 = true;
-            this.isShowDialog2 = false;
+          this.isShowDialog1 = true;
+          this.isShowDialog2 = false;
           break;
         }
         case 2: {

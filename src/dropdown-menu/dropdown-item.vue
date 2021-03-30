@@ -15,9 +15,7 @@
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
                   >
-                    <template #checkedIcon>
-                      <t-icon-check v-if="isCheckedRadio(option.value)" />
-                    </template>
+                    <t-icon-check v-if="isCheckedRadio(option.value)" />
                   </t-radio>
                 </t-cell>
               </t-radio-group>
@@ -72,9 +70,7 @@
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
                       >
-                        <template #checkedIcon>
-                          <t-icon-check v-if="option.value === treeState.selectList[level]" />
-                        </template>
+                        <t-icon-check v-if="option.value === treeState.selectList[level]" />
                       </t-radio>
                     </t-cell>
                   </t-radio-group>
@@ -275,11 +271,10 @@ export default defineComponent({
     };
     if (props.optionsLayout === 'tree') {
       watch(
-        () =>
-          JSON.stringify({
-            options: props.options,
-            selectList: treeState.selectList,
-          }),
+        () => JSON.stringify({
+          options: props.options,
+          selectList: treeState.selectList,
+        }),
         //   async (val, oldVal) => {
         async () => {
           //   console.log(`${oldVal}\n =>\n${val}`);
