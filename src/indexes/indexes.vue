@@ -66,6 +66,7 @@ let children: Array<HTMLElement> = [];
 const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
+  name: componentName,
   props: {
     indexList: {
       type: Array as PropType<Array<string>>,

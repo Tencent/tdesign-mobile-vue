@@ -12,9 +12,10 @@ import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 
-const name = `${prefix}-indexes`;
+const name = `${prefix}-indexes-cell`;
 
 export default defineComponent({
+  name,
   props: {
     title: {
       type: String,
@@ -52,7 +53,6 @@ export default defineComponent({
     };
 
     return {
-      name,
       state,
       handleClick,
       currentSidebar,

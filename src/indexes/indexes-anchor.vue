@@ -8,6 +8,7 @@ import config from '../config';
 const { prefix } = config;
 
 export default defineComponent({
+  name: `${prefix}-indexes-anchor`,
   props: {
     index: {
       type: String,
