@@ -1,5 +1,5 @@
 <template>
-  <div :class="state.componentName" :data-index="state.index">{{ state.title }}</div>
+  <t-cell-group :class="state.componentName" :data-index="state.index" :title="state.title" />
 </template>
 
 <script lang="ts">
@@ -8,6 +8,7 @@ import config from '../config';
 const { prefix } = config;
 
 export default defineComponent({
+  name: `${prefix}-indexes-anchor`,
   props: {
     index: {
       type: String,
