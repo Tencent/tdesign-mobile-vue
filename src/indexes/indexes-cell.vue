@@ -32,7 +32,7 @@ export default defineComponent({
     link: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   setup(props, context) {
     const currentSidebar = '';

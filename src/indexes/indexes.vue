@@ -87,21 +87,21 @@ export default defineComponent({
     });
 
     const inertiaScroll = () => {
-      const target: null | HTMLElement = indexesRoot?.value
-      const { scrollTop } = target || { scrollTop: 0 }
-      cacheTimer && clearTimeout(cacheTimer)
+      const target: null | HTMLElement = indexesRoot?.value;
+      const { scrollTop } = target || { scrollTop: 0 };
+      cacheTimer && clearTimeout(cacheTimer);
       cacheTimer = window.setTimeout(() => {
-        const currentTarget = indexesRoot?.value
-        const { scrollTop: currentScrollTop } = currentTarget || { scrollTop: 0 }
-        if(scrollTop === currentScrollTop){
+        const currentTarget = indexesRoot?.value;
+        const { scrollTop: currentScrollTop } = currentTarget || { scrollTop: 0 };
+        if (scrollTop === currentScrollTop) {
           // 停止滚动
         } else {
           // 继续滚动
-          inertiaScroll()
-          calcChildPosition(scrollTop)
+          inertiaScroll();
+          calcChildPosition(scrollTop);
         }
-      }, 100)
-    }
+      }, 100);
+    };
 
     const scrollToView = (): void => {
       const targets = children.filter((ele: HTMLElement) => {
@@ -125,7 +125,7 @@ export default defineComponent({
       });
 
       setCurrentSidebar(currentTarget);
-    }
+    };
 
     const getTitleNode = () => Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter((x): x is HTMLElement => x instanceof HTMLElement);
 
@@ -181,7 +181,7 @@ export default defineComponent({
       }
 
       const { scrollTop } = event.target;
-      calcChildPosition(scrollTop)
+      calcChildPosition(scrollTop);
     };
 
     const handleRootTouchstart = () => {
