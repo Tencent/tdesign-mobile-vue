@@ -6,7 +6,7 @@
 import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
-const componentName = `${prefix}-indexes__anchor`
+const componentName = `${prefix}-indexes__anchor`;
 
 export default defineComponent({
   name: componentName,
