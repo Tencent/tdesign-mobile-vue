@@ -28,7 +28,8 @@
   "include": [
     "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.vue"
+    "./**/*.vue",
+    "scripts/rollup.config.js"
   ],
   "exclude": ["node_modules", "common"]
 }

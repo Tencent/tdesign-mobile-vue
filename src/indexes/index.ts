@@ -3,6 +3,8 @@ import LocalIndexes from './indexes.vue';
 import LocalIndexesCell from './indexes-cell.vue';
 import LocalIndexesAnchor from './indexes-anchor.vue';
 
+import './style/';
+
 export const Indexes = withInstall(LocalIndexes);
 export const IndexesCell = withInstall(LocalIndexesCell);
 export const IndexesAnchor = withInstall(LocalIndexesAnchor);
