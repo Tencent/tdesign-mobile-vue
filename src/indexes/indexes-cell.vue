@@ -12,7 +12,7 @@ import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 
-const name = `${prefix}-indexes-cell`;
+const name = `${prefix}-indexes__cell`;
 
 export default defineComponent({
   name,
