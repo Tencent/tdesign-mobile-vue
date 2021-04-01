@@ -6,9 +6,10 @@
 import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
+const componentName = `${prefix}-indexes__anchor`
 
 export default defineComponent({
-  name: `${prefix}-indexes-anchor`,
+  name: componentName,
   props: {
     index: {
       type: String,
@@ -21,7 +22,7 @@ export default defineComponent({
   },
   setup(props) {
     const state = reactive({
-      componentName: `${prefix}-indexes__anchor`,
+      componentName,
       index: props.index || '',
       title: props.title ? props.title : props.index,
     });

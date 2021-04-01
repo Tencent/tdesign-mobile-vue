@@ -104,11 +104,15 @@ export default defineComponent({
     };
 
     const scrollToView = (): void => {
+      const children = getTitleNode();
+      // console.log('children', children)
       const targets = children.filter((ele: HTMLElement) => {
         const { dataset } = ele;
+        // console.log("dataset", dataset)
         return dataset && dataset.index === state.currentSidebar;
       });
-      targets?.[0].scrollIntoView();
+      // console.log('targets', targets)
+      targets[0]?.scrollIntoView();
     };
 
     const calcChildPosition = (scrollTop: number) => {
@@ -142,7 +146,7 @@ export default defineComponent({
 
     onMounted(() => {
       children = getTitleNode();
-      if (children) {
+      if (children.length > 0) {
         const { index } = children[0].dataset;
         if (index !== undefined) {
           state.currentSidebar = index;
