@@ -1,10 +1,8 @@
-import { VNode } from 'vue';
-
 /** Vue3 特有全局变量 */
 declare const VERSION: string;
 
 // TNode 类型表示该字段类型支持 Function , 以及同名作用域插槽（Slot / ScopedSlot ）。其中，Function 优先级大于 Slot。
-declare type TNode = (...args: any[]) => VNode;
+declare type TNode = (...args: any[]) => import('vue').VNode;
 
 /** 通用全局变量 */
 
