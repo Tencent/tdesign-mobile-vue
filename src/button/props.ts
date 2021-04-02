@@ -1,6 +1,6 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-04-02 16:45:36
+ * updated at 2021-04-02 22:07:31
  * */
 
 import { TdButtonProps } from '@TdTypes/button/TdButtonProps';
@@ -9,11 +9,6 @@ import { PropType } from 'vue';
 export default {
   /** 是否为块级元素 */
   block: Boolean,
-  /** 按钮内容 */
-  default: {
-    type: [String, Number, Function] as PropType<TdButtonProps['default']>,
-    default: undefined,
-  },
   /** 是否禁用按钮 */
   disabled: Boolean,
   /** 是否为幽灵按钮 */
@@ -21,7 +16,6 @@ export default {
   /** 按钮内部图标，可完全自定义 */
   icon: {
     type: Function as PropType<TdButtonProps['icon']>,
-    default: undefined,
   },
   /** 是否显示为加载状态 */
   loading: Boolean,
