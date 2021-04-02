@@ -10,7 +10,6 @@
 </template>
 
 <script lang="ts">
-import { TNode } from '@/shared';
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 import { SidebarItem } from './drawer.interface';

@@ -1,5 +1,3 @@
-import { TNode } from '@/shared';
-
 export type SidebarItemType = {
   /* 菜单名称 */
   name: string,
