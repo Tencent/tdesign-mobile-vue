@@ -27,7 +27,7 @@ export default defineComponent({
   setup(props, context) {
     const buttonClass = computed(() => [
       `${name}`,
-      CLASSNAMES.SIZE[props.size],
+      props.size ? CLASSNAMES.SIZE[props.size] : '',
       `${name}--theme-${props.theme}`,
       `${name}--variant-${props.variant}`,
       {

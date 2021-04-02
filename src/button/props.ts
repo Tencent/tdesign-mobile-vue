@@ -1,6 +1,6 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-04-02 16:35:29
+ * updated at 2021-04-02 16:45:36
  * */
 
 import { TdButtonProps } from '@TdTypes/button/TdButtonProps';
@@ -37,7 +37,6 @@ export default {
   size: {
     type: String as PropType<TdButtonProps['size']>,
     default: 'medium',
-    required: true,
     validator(val: string): boolean {
       return ['small', 'medium', 'large'].includes(val);
     },
