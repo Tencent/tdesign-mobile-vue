@@ -23,7 +23,7 @@ const name = `${prefix}-button`;
 export default defineComponent({
   name,
   components: { TIconLoading },
-  props: ButtonProps,
+  props: { ...ButtonProps },
   emits: ['click'],
   setup(props: TdButtonProps, context) {
     const buttonClass = computed(() => [
