@@ -3,6 +3,8 @@ import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, 
 import Dialog from './dialog.vue';
 import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
 
+import './style/';
+
 interface DialogFnType extends DialogPropsType {
   onCancel?: () => void,
   onConfirm?: (inputValue: string) => void,
@@ -11,7 +13,7 @@ interface DialogFnType extends DialogPropsType {
 
 let instance: DefineComponent<DialogPropsType>;
 
-function create(props: DialogFnType | string): DefineComponent{
+function create(props: DialogFnType | string): DefineComponent {
   const visible = ref(false);
   const root = document.createElement('div');
   document.body.appendChild(root);

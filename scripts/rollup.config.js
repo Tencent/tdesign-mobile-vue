@@ -1,3 +1,4 @@
+// @ts-check
 import { tmpdir } from 'os';
 import url from '@rollup/plugin-url';
 import json from '@rollup/plugin-json';
@@ -11,22 +12,19 @@ import vuePlugin from 'rollup-plugin-vue';
 import multiInput from 'rollup-plugin-multi-input';
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
+import staticImport from 'rollup-plugin-static-import';
+import ignoreImport from 'rollup-plugin-ignore-import';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 
 import pkg from '../package.json';
 
-const name = 'tdesign';
-const externalDeps = Object.keys(pkg.dependencies || {});
-const externalPeerDeps = Object.keys(pkg.peerDependencies || {});
-const banner =
-`/**
- * ${name} v${pkg.version}
- * (c) ${new Date().getFullYear()} ${pkg.author}
- * @license ${pkg.license}
- */
-`;
-
-const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
+const getPlugins = ({
+  env,
+  isProd = false,
+  analyze = false,
+  ignoreLess = true,
+  extractCss = false,
+} = {}) => {
   let plugins = [
     /** TODO: 由于以下报错，暂时关闭 eslint
      * 0:0  error  Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
@@ -34,7 +32,7 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
       The file must be included in at least one of the projects provided
      */
     // eslint(),
-    vuePlugin(vueOpt),
+    vuePlugin(),
   ];
 
   if (isProd) {
@@ -55,15 +53,30 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
       babelHelpers: 'bundled',
       extensions: [...DEFAULT_EXTENSIONS, 'vue', 'ts', 'tsx'],
     }),
-    postcss({
-      extract: `${isProd ? `${name}.min` : name}.css`,
-      minimize: isProd,
-      sourceMap: true,
-      extensions: ['.sass', '.scss', '.css'],
-    }),
     json(),
     url(),
   ]);
+
+  if (extractCss) {
+    plugins.push(postcss({
+      extract: `${isProd ? `${name}.min` : name}.css`,
+      minimize: isProd,
+      sourceMap: true,
+      extensions: ['.sass', '.scss', '.css', '.less'],
+    }));
+  } else {
+    if (ignoreLess) {
+      plugins.push(ignoreImport({ extensions: ['*.less'] }));
+    } else {
+      plugins.push(
+        staticImport({ include: ['src/**/style/*'] }),
+        ignoreImport({
+          include: ['src/*/style/*'],
+          body: 'import "../style/index.js";',
+        }),
+      );
+    }
+  }
 
   if (env) {
     plugins.push(replace({
@@ -90,69 +103,88 @@ const getPlugins = ({ env, isProd, analyze, vueOpt = { css: false } }) => {
   return plugins;
 };
 
-const commonConfig = {
-  multi: {
-    input: [
-      'src/**/*.ts',
-      '!src/dist.ts',
-      '!src/**/demos',
-      '!src/**/__tests__',
-      '!src/**/*.interface.ts',
-    ],
-    external: externalDeps.concat(externalPeerDeps),
-    plugins: [multiInput()].concat(getPlugins({ isProd: false, vueOpt: { css: true } })),
-    output: { banner, sourcemap: true },
-  },
-  bundle: {
-    input: 'src/dist.ts',
-    external: externalPeerDeps,
-    output: {
-      name: 'TDesign',
-      banner,
-      format: 'umd',
-      exports: 'named',
-      globals: { vue: 'Vue' },
-      sourcemap: true,
-    },
+const name = 'tdesign';
+const externalDeps = Object.keys(pkg.dependencies || {});
+const externalPeerDeps = Object.keys(pkg.peerDependencies || {});
+const banner = `/**
+ * ${name} v${pkg.version}
+ * (c) ${new Date().getFullYear()} ${pkg.author}
+ * @license ${pkg.license}
+ */
+`;
+const input = 'src/index.ts';
+const inputList = [
+  'src/**/*.ts',
+  '!src/**/demos',
+  '!src/**/style',
+  '!src/**/__tests__',
+  '!src/**/*.interface.ts',
+];
+
+/** @type {import('rollup').RollupOptions} */
+const esmConfig = {
+  input: inputList,
+  external: externalDeps.concat(externalPeerDeps),
+  plugins: [multiInput()].concat(getPlugins({ ignoreLess: false })),
+  output: {
+    banner,
+    dir: 'es/',
+    format: 'esm',
+    sourcemap: true,
+    preserveModules: true,
   },
 };
 
-export default [
-  // esm
-  {
-    ...commonConfig.multi,
-    output: {
-      ...commonConfig.multi.output,
-      dir: 'es/',
-      format: 'esm',
-    },
+/** @type {import('rollup').RollupOptions} */
+const cjsConfig = {
+  input: inputList,
+  external: externalDeps.concat(externalPeerDeps),
+  plugins: [multiInput()].concat(getPlugins()),
+  output: {
+    banner,
+    dir: 'lib/',
+    format: 'cjs',
+    sourcemap: true,
+    exports: 'named',
+    preserveModules: true,
   },
-  // cjs
-  {
-    ...commonConfig.multi,
-    output: {
-      ...commonConfig.multi.output,
-      dir: 'lib/',
-      format: 'cjs',
-      exports: 'named',
-    },
+};
+
+/** @type {import('rollup').RollupOptions} */
+const umdConfig = {
+  input,
+  external: externalPeerDeps,
+  plugins: getPlugins({ env: 'development', extractCss: true }),
+  output: {
+    name: 'TDesign',
+    banner,
+    format: 'umd',
+    exports: 'named',
+    globals: { vue: 'Vue' },
+    sourcemap: true,
+    file: `dist/${name}.js`,
   },
-  // umd
-  {
-    ...commonConfig.bundle,
-    plugins: getPlugins({ isProd: false, env: 'development' }),
-    output: {
-      ...commonConfig.bundle.output,
-      file: `dist/${name}.js`,
-    },
+};
+
+/** @type {import('rollup').RollupOptions} */
+const umdMinConfig = {
+  input,
+  external: externalPeerDeps,
+  plugins: getPlugins({
+    isProd: true,
+    analyze: true,
+    env: 'production',
+    extractCss: true,
+  }),
+  output: {
+    name: 'TDesign',
+    banner,
+    format: 'umd',
+    exports: 'named',
+    globals: { vue: 'Vue' },
+    sourcemap: true,
+    file: `dist/${name}.min.js`,
   },
-  // umd.min
-  {
-    ...commonConfig.bundle,
-    plugins: getPlugins({ isProd: true, env: 'production', analyze: true }),
-    output: {
-      ...commonConfig.bundle.output,
-      file: `dist/${name}.min.js`,
-    },
-  },
-];
+};
+
+export default [esmConfig, cjsConfig, umdConfig, umdMinConfig];

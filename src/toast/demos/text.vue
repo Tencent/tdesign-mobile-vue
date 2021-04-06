@@ -17,7 +17,7 @@ export default defineComponent({
     };
   },
   methods: {
-    useThisToast (text: string) {
+    useThisToast(text: string) {
       this.$toast(text);
     },
   },

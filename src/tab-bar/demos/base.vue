@@ -82,7 +82,7 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent, ref } from 'vue';
 import { ModelValueProps } from '../tab-bar.interface';
 export default defineComponent({

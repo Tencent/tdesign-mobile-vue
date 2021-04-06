@@ -12,7 +12,7 @@ import Toast from '../index';
 export default defineComponent({
   setup() {
     return {
-      onClick: (position) => Toast({ position, icon: 'check' }),
+      onClick: position => Toast({ position, icon: 'check' }),
     };
   },
 });

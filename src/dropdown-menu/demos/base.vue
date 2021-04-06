@@ -218,7 +218,7 @@ export default defineComponent({
       optionsT,
       optionsT2,
       treeValue1,
-      treeValue2
+      treeValue2,
     };
   },
 });

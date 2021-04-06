@@ -46,7 +46,7 @@ export default defineComponent({
     const value = ref(true);
     const disabledValue = ref(true);
     const checked = ref(true);
-    function onChange($event:string|number|boolean) {
+    function onChange($event: string|number|boolean) {
       console.log(`change to ${$event}`);
     }
     return {

@@ -45,7 +45,7 @@ export default defineComponent({
     const { itemProps } = (() => {
       let children: any[] = (slots.default ? slots.default() : []);
       const res: any[] = [];
-      children.forEach(child => {
+      children.forEach((child) => {
         if (child.type === Fragment) {
           res.push(...child.children);
         } else {

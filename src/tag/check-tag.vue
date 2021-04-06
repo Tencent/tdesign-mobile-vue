@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import TIconClear from '../icon/clear-circle-filled.vue'
+import TIconClear from '../icon/clear-circle-filled.vue';
 import { defineComponent, computed, toRefs, watch } from 'vue';
 import config from '../config';
 const { prefix } = config;
@@ -101,7 +101,7 @@ const CheckTag = defineComponent({
       baseClass,
       classes,
       onClickClose,
-      computedIcon
+      computedIcon,
     };
   },
 });
