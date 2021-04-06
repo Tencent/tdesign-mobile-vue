@@ -6,7 +6,7 @@
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
