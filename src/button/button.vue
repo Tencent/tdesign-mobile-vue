@@ -13,7 +13,6 @@
 import CLASSNAMES from '../shared/consts';
 import TIconLoading from '../icon/loading.vue';
 import { computed, toRefs, defineComponent } from 'vue';
-import { TdButtonProps } from '@TdTypes/button/TdButtonProps';
 import ButtonProps from './props';
 
 import config from '../config';
@@ -25,7 +24,7 @@ export default defineComponent({
   components: { TIconLoading },
   props: ButtonProps,
   emits: ['click'],
-  setup(props: TdButtonProps, context) {
+  setup(props, context) {
     const buttonClass = computed(() => [
       `${name}`,
       props.size ? CLASSNAMES.SIZE[props.size] : '',

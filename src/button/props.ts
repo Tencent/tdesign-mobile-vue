@@ -1,6 +1,6 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-04-06 10:53:39
+ * updated at 2021-04-06 14:15:58
  * */
 
 import { TdButtonProps } from '@TdTypes/button/TdButtonProps';
@@ -16,7 +16,6 @@ export default {
   /** 按钮内部图标，可完全自定义 */
   icon: {
     type: Function as PropType<TdButtonProps['icon']>,
-    default: undefined,
   },
   /** 是否显示为加载状态 */
   loading: Boolean,
