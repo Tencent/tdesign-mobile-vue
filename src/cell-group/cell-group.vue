@@ -24,25 +24,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import config from '../config';
+import CellGroupProps from './props';
 const { prefix } = config;
 const name = `${prefix}-cell-group`;
 
 export default defineComponent({
   name,
-  props: {
-    title: {
-      type: String,
-      default: '',
-    },
-    summary: {
-      type: String,
-      default: '',
-    },
-    border: {
-      type: Boolean,
-      default: true,
-    },
-  },
+  props: CellGroupProps,
   setup() {
     return { name };
   },
