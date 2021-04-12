@@ -22,7 +22,7 @@ export enum TagTheme {
   Success = 'success',
 }
 
-export enum TagEffect {
+export enum TagVariant {
   Dark = 'dark',
   Light = 'light',
   Plain = 'plain',
@@ -50,9 +50,9 @@ const Tag = defineComponent({
       type: String,
       default: TagTheme.Default,
     },
-    effect: {
+    variant: {
       type: String,
-      default: TagEffect.Dark,
+      default: TagVariant.Dark,
     },
     size: {
       type: String,
@@ -82,7 +82,7 @@ const Tag = defineComponent({
   emits: ['close'],
   setup(props, context) {
     const baseClass = name;
-    const { size, shape, theme, effect, maxWidth, disabled, closable } = toRefs(props);
+    const { size, shape, theme, variant, maxWidth, disabled, closable } = toRefs(props);
 
     const style: { maxWidth?: string } = {};
     if (maxWidth.value) {
@@ -93,7 +93,7 @@ const Tag = defineComponent({
       `${baseClass}`,
       `${baseClass}--theme-${theme.value}`,
       {
-        [`${baseClass}--effect-${effect.value}`]: theme.value,
+        [`${baseClass}--variant-${variant.value}`]: theme.value,
         [`${prefix}-is-error`]: theme.value === 'danger',
         [`${prefix}-is-success`]: theme.value === 'success',
         [`${prefix}-is-warnging`]: theme.value === 'warnging',
