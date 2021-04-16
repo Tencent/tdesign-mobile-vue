@@ -3,17 +3,18 @@ import { tmpdir } from 'os';
 import url from '@rollup/plugin-url';
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
+import vuePlugin from 'rollup-plugin-vue';
 import esbuild from 'rollup-plugin-esbuild';
 import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
 import analyzer from 'rollup-plugin-analyzer';
-import vuePlugin from 'rollup-plugin-vue';
+import { terser } from 'rollup-plugin-terser';
+import { DEFAULT_EXTENSIONS } from '@babel/core';
 import multiInput from 'rollup-plugin-multi-input';
 import typescript from 'rollup-plugin-typescript2';
-import { terser } from 'rollup-plugin-terser';
 import staticImport from 'rollup-plugin-static-import';
 import ignoreImport from 'rollup-plugin-ignore-import';
-import { DEFAULT_EXTENSIONS } from '@babel/core';
+import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 
 import pkg from '../package.json';
 
@@ -80,11 +81,16 @@ const getPlugins = ({
   }
 
   if (isProd) {
-    plugins.push(terser({
-      output: {
-        ascii_only: true, // eslint-disable
-      },
-    }));
+    plugins.push(
+      sizeSnapshot(),
+      terser({
+        output: {
+          /* eslint-disable */
+          ascii_only: true,
+          /* eslint-enable */
+        },
+      }),
+    );
   }
 
   return plugins;
@@ -165,8 +171,8 @@ const umdMinConfig = {
   external: externalPeerDeps,
   plugins: getPlugins({
     isProd: true,
-    env: 'production',
     extractCss: true,
+    env: 'production',
   }),
   output: {
     name: 'TDesign',
