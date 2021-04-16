@@ -80,7 +80,10 @@ const getPlugins = ({
 
   if (env) {
     plugins.push(replace({
-      'process.env.NODE_ENV': JSON.stringify(env),
+      preventAssignment: true,
+      values: {
+        'process.env.NODE_ENV': JSON.stringify(env),
+      },
     }));
   }
 
