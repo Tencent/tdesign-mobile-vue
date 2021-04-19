@@ -11,9 +11,9 @@
     </t-cell-group>
     <t-cell-group>
       <t-cell value-align="left">
-        <t-tag theme="primary" effect="dark">深色</t-tag>
-        <t-tag theme="primary" effect="light">浅色</t-tag>
-        <t-tag theme="primary" effect="plain">朴素</t-tag>
+        <t-tag theme="primary" variant="dark">深色</t-tag>
+        <t-tag theme="primary" variant="light">浅色</t-tag>
+        <t-tag theme="primary" variant="plain">朴素</t-tag>
       </t-cell>
     </t-cell-group>
     <t-cell-group>

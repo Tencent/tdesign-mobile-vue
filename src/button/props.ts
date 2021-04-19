@@ -1,6 +1,6 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-04-06 14:15:58
+ * updated at 2021-04-12 23:32:26
  * */
 
 import { TdButtonProps } from '@TdTypes/button/TdButtonProps';
@@ -43,12 +43,12 @@ export default {
       return ['default', 'primary', 'danger'].includes(val);
     },
   },
-  /** 按钮形式，基础、线框、虚线、文字 */
+  /** 按钮形式，基础、线框、文字 */
   variant: {
     type: String as PropType<TdButtonProps['variant']>,
     default: 'base',
     validator(val: string): boolean {
-      return ['base', 'outline', 'dashed', 'text'].includes(val);
+      return ['base', 'outline', 'text'].includes(val);
     },
   },
 };
