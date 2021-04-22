@@ -8,7 +8,7 @@
       @touchend="handleTouchend"
     >
       <div v-for="(Items, i) in actionItems" :key="i" :class="`${name}__menu`">
-        <div>
+        <div :class="`${name}__menu-page`">
           <button
             v-for="(item, index) in Items"
             :key="index"
