@@ -3,20 +3,20 @@
     <t-cell-group title="弹出位置">
       <t-cell value-align="left">
         <div style="">
-          <t-button theme="primary" size="large" @click="top = true">顶部弹出</t-button>
-          <t-button theme="primary" size="large" @click="bottom = true">底部弹出</t-button>
-          <t-button theme="primary" size="large" @click="center = true">中部弹出</t-button>
-          <t-button theme="primary" size="large" @click="left = true">左侧弹出</t-button>
-          <t-button theme="primary" size="large" @click="right = true">右侧弹出</t-button>
+          <t-button variant="outline" size="large" @click="top = true">顶部弹出</t-button>
+          <t-button variant="outline" size="large" @click="bottom = true">底部弹出</t-button>
+          <t-button variant="outline" size="large" @click="center = true">中部弹出</t-button>
+          <t-button variant="outline" size="large" @click="left = true">左侧弹出</t-button>
+          <t-button variant="outline" size="large" @click="right = true">右侧弹出</t-button>
         </div>
       </t-cell>
     </t-cell-group>
 
-    <!-- <t-cell-group title="自定义内容区的动画">
+    <t-cell-group title="自定义内容区的动画">
       <t-cell value-align="left">
-        <t-button @click="bottom1 = true">1.5s的slide-fade动画</t-button>
+        <t-button variant="outline" size="large" @click="bottom1 = true">1.5s的slide-fade动画</t-button>
       </t-cell>
-    </t-cell-group> -->
+    </t-cell-group>
 
     <t-popup v-model="left" position="left">
       <div style="width: 200px; height: 100%; background: #fff"></div>

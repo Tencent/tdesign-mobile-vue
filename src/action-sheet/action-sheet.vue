@@ -15,7 +15,7 @@
       </menu-grid>
 
       <template v-if="showCancel">
-        <div :class="`${name}__separation`"></div>
+        <div :class="`${name}__separation`" v-if="type === 'list'"></div>
         <button :class="`${name}__action`" @click="handleCancel">{{ cancelText }}</button>
       </template>
     </div>
