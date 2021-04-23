@@ -2,9 +2,9 @@
   <div class="action-sheet-base">
     <t-cell-group>
       <t-cell value-align="left">
-        <t-button theme="primary" size="large" @click="visible = true">列表型</t-button>
-        <t-button theme="primary" size="large"  @click="handleShowGridLine(8)">宫格型-单页宫格</t-button>
-        <t-button theme="primary" size="large" @click="handleShowGrid(4)">宫格型-多页宫格</t-button>
+        <t-button variant="outline" size="large" @click="visible = true">列表型</t-button>
+        <t-button variant="outline" size="large"  @click="handleShowGridLine(6)">宫格型-单页宫格</t-button>
+        <t-button variant="outline" size="large" @click="handleShowGrid(6)">宫格型-多页宫格</t-button>
       </t-cell>
     </t-cell-group>
     <t-action-sheet v-model="visible" :items="items" @select="handleSelect" @cancel="handleCancel" />
@@ -22,12 +22,7 @@
       :count="count"
       @select="handleSelect"
       @cancel="handleCancel"
-    >
-      <template #cell="slotProps">
-        <div class="action-sheet-meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
-        <div>{{ slotProps.item.label }}</div>
-      </template>
-    </t-action-sheet>
+    />
     <t-action-sheet
       v-model="visible3"
       type="grid"
@@ -35,12 +30,7 @@
       :count="count"
       @select="handleSelect"
       @cancel="handleCancel"
-    >
-      <template #cell="slotProps">
-        <div class="action-sheet-meun-icon" :style="{ backgroundImage: `url(${slotProps.item.icon})` }"></div>
-        <div>{{ slotProps.item.label }}</div>
-      </template>
-    </t-action-sheet>
+    />
   </div>
 </template>
 
@@ -55,14 +45,12 @@ export default defineComponent({
       visible1: false,
       visible2: false,
       visible3: false,
-      items: ['按钮一', '按钮二', { label: '失效按钮', disabled: true }, { label: '告警按钮', color: 'red' }],
+      items: ['默认按钮', { label: '自定义按钮', color: '#0052D9' }, { label: '失效按钮', disabled: true }, { label: '告警按钮', color: '#E34D59' }],
       items1: [
         { label: '确定', color: '#0052d9' },
         { label: '删除', color: 'red' },
       ],
       items2: [
-        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
-        { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
         { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
         { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
         { label: '文字', icon: 'https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png' },
@@ -103,14 +91,6 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-.action-sheet-meun-icon {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 4px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .action-sheet-base button{
   margin-bottom: 16px;
 
