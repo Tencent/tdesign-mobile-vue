@@ -19,6 +19,7 @@
           `${state.componentName}__sidebar-item`,
           state.currentSidebar === item ? `${state.componentName}__sidebar-item--active` : '',
         ]"
+        :data-index="item"
         @click.prevent="handleSidebarItemClick(item)"
       >
         {{ item }}
@@ -65,6 +66,7 @@ let children: Array<HTMLElement> = [];
 const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
+  name: componentName,
   props: {
     indexList: {
       type: Array as PropType<Array<string>>,
@@ -73,8 +75,9 @@ export default defineComponent({
   },
   setup(props) {
     let timeOut: number;
+    let cacheTimer: number;
     let rootScrollMask = false;
-    const indexesRoot = ref(null);
+    const indexesRoot = ref<null | HTMLElement>(null);
     const state: State = reactive({
       componentName,
       indexList: props.indexList,
@@ -83,12 +86,49 @@ export default defineComponent({
       children: [],
     });
 
+    const inertiaScroll = () => {
+      const target: null | HTMLElement = indexesRoot?.value;
+      const { scrollTop } = target || { scrollTop: 0 };
+      cacheTimer && clearTimeout(cacheTimer);
+      cacheTimer = window.setTimeout(() => {
+        const currentTarget = indexesRoot?.value;
+        const { scrollTop: currentScrollTop } = currentTarget || { scrollTop: 0 };
+        if (scrollTop === currentScrollTop) {
+          // 停止滚动
+        } else {
+          // 继续滚动
+          inertiaScroll();
+          calcChildPosition(scrollTop);
+        }
+      }, 100);
+    };
+
     const scrollToView = (): void => {
+      const children = getTitleNode();
+      // console.log('children', children)
       const targets = children.filter((ele: HTMLElement) => {
         const { dataset } = ele;
+        // console.log("dataset", dataset)
         return dataset && dataset.index === state.currentSidebar;
       });
-      targets?.[0].scrollIntoView();
+      // console.log('targets', targets)
+      targets[0]?.scrollIntoView();
+    };
+
+    const calcChildPosition = (scrollTop: number) => {
+      const children = getTitleNode();
+      let currentTarget = '';
+      children.forEach((ele) => {
+        const { offsetTop, clientHeight } = ele;
+        const targetClientVertical = offsetTop - clientHeight;
+        if (currentTarget === '' && targetClientVertical > 0) {
+          currentTarget = children[0].dataset.index ?? '';
+        } else if (targetClientVertical < scrollTop) {
+          currentTarget = ele.dataset.index ?? '';
+        }
+      });
+
+      setCurrentSidebar(currentTarget);
     };
 
     const getTitleNode = () => Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter((x): x is HTMLElement => x instanceof HTMLElement);
@@ -106,7 +146,7 @@ export default defineComponent({
 
     onMounted(() => {
       children = getTitleNode();
-      if (children) {
+      if (children.length > 0) {
         const { index } = children[0].dataset;
         if (index !== undefined) {
           state.currentSidebar = index;
@@ -145,20 +185,7 @@ export default defineComponent({
       }
 
       const { scrollTop } = event.target;
-      const children = getTitleNode();
-      let currentTarget = '';
-
-      children.forEach((ele) => {
-        const { offsetTop, clientHeight } = ele;
-        const targetClientVertical = offsetTop - clientHeight;
-        if (currentTarget === '' && targetClientVertical > 0) {
-          currentTarget = children[0].dataset.index ?? '';
-        } else if (targetClientVertical < scrollTop) {
-          currentTarget = ele.dataset.index ?? '';
-        }
-      });
-
-      setCurrentSidebar(currentTarget);
+      calcChildPosition(scrollTop);
     };
 
     const handleRootTouchstart = () => {
@@ -166,6 +193,7 @@ export default defineComponent({
     };
     const handleRootTouchend = () => {
       rootScrollMask = false;
+      inertiaScroll();
     };
 
     const clearCurrentSidebarToast = (): void => {

@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="demo-drawer">
-      <t-drawer v-model="open" :sidebar="baseSidebar"></t-drawer>
+      <t-drawer v-model="open" :sidebar="baseSidebar" shape="round"></t-drawer>
       <div class="demo-drawer-content">
         <div class="demo-drawer-text">单层级纯文本标签栏</div>
-        <t-button size="large" variant="outline" @click="openDrawer()">带图标抽屉</t-button>
+        <t-button size="large" variant="outline" @click="openDrawer()" shape="round">带图标抽屉</t-button>
       </div>
     </div>
   </div>

@@ -2,6 +2,8 @@ import { createApp, defineComponent, ref, h, VNode, App, Plugin, nextTick } from
 import Message from './message.vue';
 import { MessageProps, MessageType } from './message.interface';
 
+import './style/';
+
 function create(props: MessageProps): void {
   const visible = ref(false);
   const root = document.createElement('div');

@@ -101,7 +101,7 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import config from '@/config';
 import { defineComponent } from 'vue';
 const { prefix } = config;

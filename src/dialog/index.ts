@@ -3,6 +3,8 @@ import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, 
 import Dialog from './dialog.vue';
 import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
 
+import './style/';
+
 interface DialogFnType extends DialogPropsType {
   onCancel?: () => void,
   onConfirm?: (inputValue: string) => void,

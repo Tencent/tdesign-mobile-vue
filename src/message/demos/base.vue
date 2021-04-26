@@ -20,12 +20,12 @@
     </t-cell-group>
     <t-cell-group title="自定义配置">
       <t-cell value-align="left">
-        <t-button variant="outline" @click="visible5 = true">自定义显示时间</t-button>
+        <t-button size="large" variant="outline" @click="visible5 = true">自定义显示时间</t-button>
       </t-cell>
     </t-cell-group>
     <t-cell-group title="对齐方式">
       <t-cell value-align="left">
-        <t-button variant="outline" @click="visible6 = true">居中</t-button>
+        <t-button size="large" variant="outline" @click="visible6 = true">居中</t-button>
       </t-cell>
     </t-cell-group>
 

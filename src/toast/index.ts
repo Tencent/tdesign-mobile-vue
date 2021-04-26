@@ -2,6 +2,8 @@ import vueToast from './toast.vue';
 import { createApp, App, DefineComponent, Plugin } from 'vue';
 import { ToastProps, ToastPropsDefault, ToastType } from './toast.interface';
 
+import './style/';
+
 let instance: any = null;
 
 /** 展示提示 */

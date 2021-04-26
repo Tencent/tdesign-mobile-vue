@@ -20,15 +20,17 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@TdTypes/*": ["./types/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
   },
   "rules": { "trailing-comma": false },
   "include": [
     "./**/*.ts",
     "./**/*.tsx",
-    "./**/*.vue"
+    "./**/*.vue",
+    "scripts/rollup.config.js"
   ],
   "exclude": ["node_modules", "common"]
 }
