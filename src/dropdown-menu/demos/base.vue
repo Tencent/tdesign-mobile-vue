@@ -116,7 +116,7 @@
 import { ref, defineComponent } from 'vue';
 import DemoContainer from './demo-container.vue';
 
-const buildTree = (length: Number, ...childLengthes: Number[]) => {
+const buildTree = (length: number, ...childLengthes: number[]) => {
   const tree: any[] = [];
   for (let i = 0; i < length; i++) {
     const item: any = {
