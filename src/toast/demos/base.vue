@@ -33,7 +33,7 @@
       </t-cell>
     </t-cell-group>
 
-    <t-cell-group title="z遮罩">
+    <t-cell-group title="遮罩">
       <t-cell value-align="left">
         <t-button size="large" variant="outline" @click="showMask">带背景遮罩</t-button>
       </t-cell>
