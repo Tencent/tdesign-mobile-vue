@@ -65,7 +65,8 @@ type MessageApi = {
   error: (options?: MessageProps | string) => void,
 };
 
-export default (Message as unknown) as (Plugin & MessageApi);
+export const MessagePlugin = (Message as unknown) as (Plugin & MessageApi);
+export default MessagePlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
