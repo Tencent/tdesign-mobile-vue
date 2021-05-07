@@ -30,7 +30,7 @@
     <t-cell-group title="长文本输入框">
       <t-input type="textarea" placeholder="长文本预设内容，文本默认容纳四行" />
     </t-cell-group>
-    <t-cell-group>
+    <t-cell-group title=" ">
       <t-input label="标题文字" type="textarea" placeholder="长文本预设内容，文本默认容纳四行" />
     </t-cell-group>
   </div>
