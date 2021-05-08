@@ -123,9 +123,6 @@ export default defineComponent({
 .demo-tab-bar{
   background-color: #fbfbfb;
 }
-.t-tabs{
-  margin-bottom: 12px;
-}
 .t-tabs__panel p{
   height: 200px;
   align-items: center;
