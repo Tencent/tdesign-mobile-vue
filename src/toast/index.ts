@@ -81,7 +81,8 @@ type ToastApi = typeof Toast & {
   clear: () => void,
 };
 
-export default (Toast as unknown) as (Plugin & ToastApi);
+export const ToastPlugin = (Toast as unknown) as (Plugin & ToastApi);
+export default ToastPlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
