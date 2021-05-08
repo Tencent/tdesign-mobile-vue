@@ -121,7 +121,10 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .demo-tab-bar{
-  background-color: #fbfbfb;
+  background-color: #fff;
+}
+.t-tabs {
+    margin-bottom: 12px;
 }
 .t-tabs__panel p{
   height: 200px;
