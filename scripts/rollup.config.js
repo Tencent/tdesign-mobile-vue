@@ -24,7 +24,12 @@ const getPlugins = ({
   ignoreLess = true,
   extractCss = false,
 } = {}) => {
-  let plugins = [vuePlugin()];
+  let plugins = [
+    vuePlugin(),
+    replace({
+      __VERSION__: JSON.stringify(pkg.version),
+    })
+  ];
 
   // ts
   if (isProd) {
