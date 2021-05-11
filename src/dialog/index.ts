@@ -71,7 +71,6 @@ function create(props: DialogFnType | string): DefineComponent {
   return instance;
 }
 
-
 (['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
   Dialog[type] = (options: DialogFnType | string) => {
     let props = { content: '', type };
@@ -103,7 +102,8 @@ type DialogApi = {
   confirm: (options: DialogFnType | string) => void,
 };
 
-export default (Dialog as unknown) as (Plugin & DialogApi);
+export const DialogPlugin = (Dialog as unknown) as (Plugin & DialogApi);
+export default DialogPlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword

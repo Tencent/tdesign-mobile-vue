@@ -7,6 +7,7 @@ import ComponentContributors from './components/component-contributors.vue';
 import HeaderLink from './components/header-link.vue';
 import TDesign from '@/index';
 
+import '../../common/style/mobile/_reset.less';
 import '../../common/style/mobile/index.less';
 import '../../common/style/site/index.less';
 import '../styles/sites/index.less';

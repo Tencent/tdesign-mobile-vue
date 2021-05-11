@@ -3,38 +3,38 @@ import { tmpdir } from 'os';
 import url from '@rollup/plugin-url';
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
-// import eslint from '@rollup/plugin-eslint';
+import vuePlugin from 'rollup-plugin-vue';
 import esbuild from 'rollup-plugin-esbuild';
 import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
 import analyzer from 'rollup-plugin-analyzer';
-import vuePlugin from 'rollup-plugin-vue';
+import { terser } from 'rollup-plugin-terser';
+import { DEFAULT_EXTENSIONS } from '@babel/core';
 import multiInput from 'rollup-plugin-multi-input';
 import typescript from 'rollup-plugin-typescript2';
-import { terser } from 'rollup-plugin-terser';
 import staticImport from 'rollup-plugin-static-import';
 import ignoreImport from 'rollup-plugin-ignore-import';
-import { DEFAULT_EXTENSIONS } from '@babel/core';
+import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 
 import pkg from '../package.json';
 
 const getPlugins = ({
   env,
   isProd = false,
-  analyze = false,
   ignoreLess = true,
   extractCss = false,
 } = {}) => {
   let plugins = [
-    /** TODO: 由于以下报错，暂时关闭 eslint
-     * 0:0  error  Parsing error: "parserOptions.project" has been set for @typescript-eslint/parser.
-      The file does not match your project config: src/cell-group/cell-group.vue?vue&type=script&lang.ts.
-      The file must be included in at least one of the projects provided
-     */
-    // eslint(),
     vuePlugin(),
+    replace({
+      preventAssignment: true,
+      values: {
+        '__VERSION__': JSON.stringify(pkg.version),
+      },
+    })
   ];
 
+  // ts
   if (isProd) {
     plugins.push(typescript({
       tsconfig: 'tsconfig.build.json',
@@ -57,6 +57,7 @@ const getPlugins = ({
     url(),
   ]);
 
+  // css
   if (extractCss) {
     plugins.push(postcss({
       extract: `${isProd ? `${name}.min` : name}.css`,
@@ -80,24 +81,24 @@ const getPlugins = ({
 
   if (env) {
     plugins.push(replace({
-      'process.env.NODE_ENV': JSON.stringify(env),
-    }));
-  }
-
-  if (analyze) {
-    plugins.push(analyzer({
-      limit: 5,
-      summaryOnly: true,
-      ...analyze,
+      preventAssignment: true,
+      values: {
+        'process.env.NODE_ENV': JSON.stringify(env),
+      },
     }));
   }
 
   if (isProd) {
-    plugins.push(terser({
-      output: {
-        ascii_only: true, // eslint-disable
-      },
-    }));
+    plugins.push(
+      sizeSnapshot(),
+      terser({
+        output: {
+          /* eslint-disable */
+          ascii_only: true,
+          /* eslint-enable */
+        },
+      }),
+    );
   }
 
   return plugins;
@@ -154,7 +155,13 @@ const cjsConfig = {
 const umdConfig = {
   input,
   external: externalPeerDeps,
-  plugins: getPlugins({ env: 'development', extractCss: true }),
+  plugins: getPlugins({
+    env: 'development',
+    extractCss: true,
+  }).concat(analyzer({
+    limit: 5,
+    summaryOnly: true,
+  })),
   output: {
     name: 'TDesign',
     banner,
@@ -172,9 +179,8 @@ const umdMinConfig = {
   external: externalPeerDeps,
   plugins: getPlugins({
     isProd: true,
-    analyze: true,
-    env: 'production',
     extractCss: true,
+    env: 'production',
   }),
   output: {
     name: 'TDesign',

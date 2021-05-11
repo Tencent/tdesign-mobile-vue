@@ -5,9 +5,9 @@
       <t-drawer v-model="openIcon" :sidebar="iconSidebar"></t-drawer>
       <div class="demo-drawer-content">
         <div class="demo-drawer-text">单层级纯文本标签栏</div>
-        <t-button size="large" variant="outline" @click="openDrawer(false)">基础抽屉</t-button>
+        <t-button size="large" variant="outline" shape="round" @click="openDrawer(false)">基础抽屉</t-button>
         <div class="demo-drawer-text">单层级纯文本标签栏</div>
-        <t-button size="large" variant="outline" @click="openDrawer(true)">带图标抽屉</t-button>
+        <t-button size="large" variant="outline" shape="round" @click="openDrawer(true)">带图标抽屉</t-button>
       </div>
     </div>
   </div>

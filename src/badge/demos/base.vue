@@ -18,16 +18,22 @@
     </t-cell-group>
     <t-cell-group title="列表带徽标" style="overflow: hidden">
       <t-cell label="单行标题" link>
-        <t-badge dot />
+        <div class="cell-badge-wrap">
+          <t-badge dot />
+        </div>
       </t-cell>
       <t-cell label="单行标题" link>
-        <t-badge :count="16"/>
+        <div class="cell-badge-wrap">
+          <t-badge :count="16"/>
+        </div>
       </t-cell>
       <t-cell label="单行标题" link>
-        <t-badge content="NEW" shape="round" class="cell-badge"/>
-        <t-badge content="NEW" shape="round" class="cell-badge"/>
-        <t-badge content="NEW" class="cell-badge"/>
-        <t-badge content="NEW" class="cell-badge"/>
+        <div class="cell-badge-wrap">
+          <t-badge content="NEW" shape="round" class="cell-badge"/>
+          <t-badge content="NEW" shape="round" class="cell-badge"/>
+          <t-badge content="NEW" class="cell-badge"/>
+          <t-badge content="NEW" class="cell-badge"/>
+        </div>
       </t-cell>
       <t-cell label="单行标题">
         <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
@@ -49,13 +55,16 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .badge-wrap {
-  padding: 20px 0;
+  padding: 20px 16px;
 
   .badge-item {
-    margin: 0 10px;
+    margin-right: 10px;
   }
 }
 .cell-badge {
   margin-left: 8px;
+}
+.cell-badge-wrap {
+  padding-bottom: 4px;
 }
 </style>
