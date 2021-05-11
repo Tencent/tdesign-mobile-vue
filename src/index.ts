@@ -22,7 +22,7 @@ const install = function (app: App, option?: Record<string, unknown>): void {
 //   install(window.Vue);
 // }
 
-const version = typeof VERSION === "undefined" ? "" : VERSION // eslint-disable-line
+const version = typeof __VERSION__ === "undefined" ? "" : __VERSION__;
 
 export { install, version };
 export * from './plugins';
