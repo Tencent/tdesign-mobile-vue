@@ -27,7 +27,10 @@ const getPlugins = ({
   let plugins = [
     vuePlugin(),
     replace({
-      __VERSION__: JSON.stringify(pkg.version),
+      preventAssignment: true,
+      values: {
+        '__VERSION__': JSON.stringify(pkg.version),
+      },
     })
   ];
 
