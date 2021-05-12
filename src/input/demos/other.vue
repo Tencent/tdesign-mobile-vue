@@ -24,7 +24,7 @@ export default defineComponent({
   setup() {
     const passwd = ref('12345678');
     return {
-      passwd
+      passwd,
     };
   },
 });

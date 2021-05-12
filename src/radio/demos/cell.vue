@@ -28,7 +28,7 @@ export default defineComponent({
 
     return {
       radio,
-      change: (val) => console.log(val),
+      change: val => console.log(val),
     };
   },
 });

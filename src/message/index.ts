@@ -2,23 +2,24 @@ import { createApp, defineComponent, ref, h, VNode, App, Plugin, nextTick } from
 import Message from './message.vue';
 import { MessageProps, MessageType } from './message.interface';
 
+import './style/';
+
 function create(props: MessageProps): void {
   const visible = ref(false);
   const root = document.createElement('div');
   document.body.appendChild(root);
 
   const component = defineComponent({
-    render: (): VNode =>
-      h(Message, {
-        ...props,
-        visible: visible.value,
-        onClose: () => {
-          visible.value = false;
-        },
-        onClosed: () => {
-          root.remove();
-        },
-      }),
+    render: (): VNode => h(Message, {
+      ...props,
+      visible: visible.value,
+      onClose: () => {
+        visible.value = false;
+      },
+      onClosed: () => {
+        root.remove();
+      },
+    }),
   });
 
   createApp(component).mount(root);
@@ -64,7 +65,8 @@ type MessageApi = {
   error: (options?: MessageProps | string) => void,
 };
 
-export default (Message as unknown) as (Plugin & MessageApi);
+export const MessagePlugin = (Message as unknown) as (Plugin & MessageApi);
+export default MessagePlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword

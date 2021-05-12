@@ -9,9 +9,9 @@
       @click="toggle"
     >
 
-      <slot name="icon" :is-checked="isChecked" />
-      <div v-if="icon && !$slots.icon" :class="`${componentName}__icon`">
-        <t-icon :name="icon"></t-icon>
+      <slot v-if="$slots.icon" name="icon" :is-checked="isChecked" />
+      <div v-else-if="typeof icon === 'function'" :class="`${componentName}__icon`">
+        <component :is="icon()"></component>
       </div>
 
       <div :class="`${componentName}__text`">
@@ -37,7 +37,6 @@
 
 <script lang="ts">
 import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef, PropType } from 'vue';
-import TIcon from '../icon';
 import config from '../config';
 import { initName } from './useTabBar';
 import { TabBarItemSpreadProps } from './tab-bar.interface';
@@ -47,15 +46,14 @@ const componentName = `${prefix}-tab-bar-item`;
 
 export default defineComponent({
   name: componentName,
-  components: { TIcon },
   props: {
     name: {
       type: [Number, String],
       default: '',
     },
     icon: {
-      type: String,
-      default: '',
+      type: Function,
+      default: undefined,
     },
     children: {
       type: Array as PropType<TabBarItemSpreadProps[]>,

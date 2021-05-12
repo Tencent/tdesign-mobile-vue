@@ -98,10 +98,10 @@ class Picker {
   }
 
   bindEvent(): void {
-    this.holder.addEventListener('touchstart', (e) => this.touchStartHandler(e as TouchEvent), false);
-    this.holder.addEventListener('touchmove', (e) => this.touchMoveHandler(e as TouchEvent), false);
-    this.holder.addEventListener('touchend', (e) => this.touchEndHandler(e as TouchEvent), false);
-    this.holder.addEventListener('touchcancel', (e) => this.touchEndHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchstart', e => this.touchStartHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchmove', e => this.touchMoveHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchend', e => this.touchEndHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchcancel', e => this.touchEndHandler(e as TouchEvent), false);
   }
 
   touchStartHandler(event: TouchEvent): void {

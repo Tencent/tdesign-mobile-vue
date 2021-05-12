@@ -10,9 +10,3 @@ export interface TabBarItemSpreadProps {
   name: number | string;
   text: string;
 }
-
-export interface TabBarItemProps {
-  name?: number | string;
-  icon?: string;
-  children?: Array<TabBarItemSpreadProps>;
-}

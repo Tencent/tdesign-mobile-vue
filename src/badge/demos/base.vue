@@ -18,16 +18,22 @@
     </t-cell-group>
     <t-cell-group title="列表带徽标" style="overflow: hidden">
       <t-cell label="单行标题" link>
-        <t-badge dot />
+        <div class="cell-badge-wrap">
+          <t-badge dot />
+        </div>
       </t-cell>
       <t-cell label="单行标题" link>
-        <t-badge :count="16"/>
+        <div class="cell-badge-wrap">
+          <t-badge :count="16"/>
+        </div>
       </t-cell>
       <t-cell label="单行标题" link>
-        <t-badge content="NEW" shape="round" class="cell-badge"/>
-        <t-badge content="NEW" shape="round" class="cell-badge"/>
-        <t-badge content="NEW" class="cell-badge"/>
-        <t-badge content="NEW" class="cell-badge"/>
+        <div class="cell-badge-wrap">
+          <t-badge content="NEW" shape="round" class="cell-badge"/>
+          <t-badge content="NEW" shape="round" class="cell-badge"/>
+          <t-badge content="NEW" class="cell-badge"/>
+          <t-badge content="NEW" class="cell-badge"/>
+        </div>
       </t-cell>
       <t-cell label="单行标题">
         <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
@@ -40,23 +46,25 @@
 import { defineComponent } from 'vue';
 export default defineComponent({
   setup() {
-
     return {
       iconUrl: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
-    }
-  }
+    };
+  },
 });
 </script>
 
 <style lang="less" scoped>
 .badge-wrap {
-  padding: 20px 0;
+  padding: 20px 16px;
 
   .badge-item {
-    margin: 0 10px;
+    margin-right: 10px;
   }
 }
 .cell-badge {
   margin-left: 8px;
+}
+.cell-badge-wrap {
+  padding-bottom: 4px;
 }
 </style>

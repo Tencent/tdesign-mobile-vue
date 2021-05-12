@@ -3,6 +3,8 @@ import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, 
 import Dialog from './dialog.vue';
 import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
 
+import './style/';
+
 interface DialogFnType extends DialogPropsType {
   onCancel?: () => void,
   onConfirm?: (inputValue: string) => void,
@@ -11,7 +13,7 @@ interface DialogFnType extends DialogPropsType {
 
 let instance: DefineComponent<DialogPropsType>;
 
-function create(props: DialogFnType | string): DefineComponent{
+function create(props: DialogFnType | string): DefineComponent {
   const visible = ref(false);
   const root = document.createElement('div');
   document.body.appendChild(root);
@@ -69,7 +71,6 @@ function create(props: DialogFnType | string): DefineComponent{
   return instance;
 }
 
-
 (['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
   Dialog[type] = (options: DialogFnType | string) => {
     let props = { content: '', type };
@@ -101,7 +102,8 @@ type DialogApi = {
   confirm: (options: DialogFnType | string) => void,
 };
 
-export default (Dialog as unknown) as (Plugin & DialogApi);
+export const DialogPlugin = (Dialog as unknown) as (Plugin & DialogApi);
+export default DialogPlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword

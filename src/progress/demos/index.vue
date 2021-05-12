@@ -3,11 +3,11 @@
     <t-cell-group>
      <t-cell>
         <t-progress :percentage="0" />
-     
+
         <t-progress :percentage="30" />
-     
+
          <t-progress :percentage="100" />
-      
+
          <t-progress type="error" :percentage="88" />
       </t-cell>
     </t-cell-group>

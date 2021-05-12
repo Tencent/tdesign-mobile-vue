@@ -4,9 +4,10 @@ import vue from '@vitejs/plugin-vue';
 
 module.exports = {
   base: process.env.NODE_ENV === 'development' ? './' : '/vue-mobile/',
-  resolve:{
+  resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      '@TdTypes': path.resolve(__dirname, 'types'),
     },
   },
   server: {

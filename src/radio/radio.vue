@@ -1,20 +1,30 @@
 <template>
   <div :class="outerClasses">
-    <span :class="shapeClasses" @click="radioChange">
-      <input
-          :class="`${flagName}__former`"
-          type="radio"
-          name=""
-          :disabled="disabled"
-          :checked="isChecked"
-        >
-      <span v-if="isChecked" :class="iconClasses" :style="{ backgroundColor: checkedColor }"></span>
-    </span>
     <span :class="`${flagName}__content-wrap`" @click="radioChange('content')">
       <span v-if="title" :class="titleClasses" :style="titleStyle">
+        <span :class="shapeClasses" @click="radioChange">
+          <input
+              :class="`${flagName}__former`"
+              type="radio"
+              name=""
+              :disabled="disabled"
+              :checked="isChecked"
+            >
+          <span v-if="isChecked" :class="iconClasses" :style="{ backgroundColor: checkedColor }"></span>
+        </span>
         {{ title }}
       </span>
       <div v-if="hasSlot" :class="`${flagName}__content-inner`" :style="contentStyle">
+        <span :class="shapeClasses" @click="radioChange" v-if="!title">
+          <input
+              :class="`${flagName}__former`"
+              type="radio"
+              name=""
+              :disabled="disabled"
+              :checked="isChecked"
+            >
+          <span v-if="isChecked" :class="iconClasses" :style="{ backgroundColor: checkedColor }"></span>
+        </span>
         <slot></slot>
       </div>
     </span>
@@ -46,8 +56,7 @@ interface RadioProps {
  * @return: 返回是否选中的对象
  */
 // eslint-disable-next-line max-len
-const getIsCheck = (props: RadioProps, rootGroupProps: any) =>
-  computed(() => rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name);
+const getIsCheck = (props: RadioProps, rootGroupProps: any) => computed(() => rootGroupProps?.modelValue === props?.name || props?.modelValue === props?.name);
 
 /**
  * @description: 命名类逻辑处理

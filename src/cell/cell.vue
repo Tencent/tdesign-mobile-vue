@@ -21,10 +21,10 @@
 </template>
 
 <script lang="ts">
-import { computed, SetupContext, defineComponent, PropType, toRefs } from 'vue';
+import { computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
-import { TdCellProps } from './cell.interface';
 import TIconChevronRight from '../icon/chevron-right.vue';
+import CellProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-cell`;
@@ -32,41 +32,9 @@ const name = `${prefix}-cell`;
 export default defineComponent({
   name,
   components: { TIconChevronRight },
-  props: {
-    label: {
-      type: String,
-      default: '',
-    },
-    value: {
-      type: String,
-      default: '',
-    },
-    summary: {
-      type: String,
-      default: '',
-    },
-    valueAlign: {
-      type: String as PropType<TdCellProps['valueAlign']>,
-      default: 'right',
-      validator(val: string): boolean {
-        return ['left', 'right'].includes(val);
-      },
-    },
-    icon: {
-      type: Function as PropType<TdCellProps['icon']>,
-      default: undefined,
-    },
-    leftIcon: {
-      type: Function as PropType<TdCellProps['leftIcon']>,
-      default: undefined,
-    },
-    link: {
-      type: Boolean,
-      default: false,
-    },
-  },
+  props: CellProps,
   emits: ['click'],
-  setup(props: TdCellProps, context: SetupContext) {
+  setup(props, context) {
     const hasLabel = computed(() => {
       if (props.label) return true;
       return !!context.slots.label;
@@ -84,8 +52,8 @@ export default defineComponent({
       if (!!context.slots.icon) {
         return context.slots.icon;
       }
-      if(props.link){
-        return TIconChevronRight
+      if (props.link) {
+        return TIconChevronRight;
       }
       return undefined;
     });

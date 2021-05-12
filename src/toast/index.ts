@@ -2,6 +2,8 @@ import vueToast from './toast.vue';
 import { createApp, App, DefineComponent, Plugin } from 'vue';
 import { ToastProps, ToastPropsDefault, ToastType } from './toast.interface';
 
+import './style/';
+
 let instance: any = null;
 
 /** 展示提示 */
@@ -79,7 +81,8 @@ type ToastApi = typeof Toast & {
   clear: () => void,
 };
 
-export default (Toast as unknown) as (Plugin & ToastApi);
+export const ToastPlugin = (Toast as unknown) as (Plugin & ToastApi);
+export default ToastPlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
