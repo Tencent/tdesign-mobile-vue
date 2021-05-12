@@ -1,6 +1,6 @@
 <template>
   <div class="demo-tab-bar">
-    <t-cell-group title="横向选项卡">
+    <t-cell-group title="横向选项卡" :border="false">
       <t-tabs active-name="first" @change="onChange">
         <t-tab-panel name="first" label="标签页一">
         </t-tab-panel>
@@ -30,7 +30,7 @@
         </t-tab-panel>
       </t-tabs>
     </t-cell-group>
-    <t-cell-group title="横向可滑动选项卡">
+    <t-cell-group title="横向可滑动选项卡" :border="false">
       <t-tabs active-name="1" :scrollable="true" @change="onChange">
         <t-tab-panel name="1" label="标签页一">
           <p>标签一内容区</p>
@@ -61,7 +61,7 @@
         </t-tab-panel>
       </t-tabs>
     </t-cell-group>
-    <t-cell-group title="竖向选项卡">
+    <t-cell-group title="竖向选项卡" :border="false">
       <t-tabs active-name="1" direction="horizontal"
               @change="onChange" >
         <t-tab-panel name="1" label="标签页一">
@@ -75,7 +75,7 @@
         </t-tab-panel>
       </t-tabs>
     </t-cell-group>
-    <t-cell-group title="竖向可滑动选项卡">
+    <t-cell-group title="竖向可滑动选项卡" :border="false">
       <t-tabs active-name="1" :scrollable="true"
               direction="horizontal" @change="onChange">
         <t-tab-panel name="1" label="标签页一">
@@ -121,9 +121,9 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .demo-tab-bar{
-  background-color: #fbfbfb;
+  background-color: #F5F5F5;
 }
-.t-tabs{
+.t-tabs {
   margin-bottom: 12px;
 }
 .t-tabs__panel p{
@@ -132,6 +132,7 @@ export default defineComponent({
   justify-content: center;
   display: flex;
   color: rgba(#000000, .16);
+  margin: 0;
 }
 .t-tabs--horizontal{
   height: 270px;
