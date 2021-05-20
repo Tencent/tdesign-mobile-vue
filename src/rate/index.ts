@@ -1,6 +1,7 @@
-import { withInstall } from '../shared/';
 import Rate from './rate.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
 import './style/';
 
-export default withInstall(Rate);
+const _Rate: WithInstallType<typeof Rate> = withInstall(Rate);
+export default _Rate;

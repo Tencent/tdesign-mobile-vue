@@ -1,5 +1,6 @@
-import { createApp, defineComponent, ref, h, VNode, App, Plugin, nextTick } from 'vue';
+import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message.vue';
+import { WithInstallType } from '../shared/';
 import { MessageProps, MessageType } from './message.interface';
 
 import './style/';
@@ -65,7 +66,7 @@ type MessageApi = {
   error: (options?: MessageProps | string) => void,
 };
 
-export const MessagePlugin = (Message as unknown) as (Plugin & MessageApi);
+export const MessagePlugin: WithInstallType<typeof Message> = Message as any;
 export default MessagePlugin;
 
 declare module '@vue/runtime-core' {
