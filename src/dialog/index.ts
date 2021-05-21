@@ -1,6 +1,7 @@
 import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTick } from 'vue';
 
 import Dialog from './dialog.vue';
+import { WithInstallType } from '../shared/';
 import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
 
 import './style/';
@@ -102,7 +103,7 @@ type DialogApi = {
   confirm: (options: DialogFnType | string) => void,
 };
 
-export const DialogPlugin = (Dialog as unknown) as (Plugin & DialogApi);
+export const DialogPlugin: Plugin & DialogApi & WithInstallType<typeof Dialog> = Dialog as any;
 export default DialogPlugin;
 
 declare module '@vue/runtime-core' {

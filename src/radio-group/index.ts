@@ -1,4 +1,5 @@
-import { withInstall } from '../shared/';
 import RadioGroup from './radio-group.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(RadioGroup);
+const _RadioGroup: WithInstallType<typeof RadioGroup> = withInstall(RadioGroup);
+export default _RadioGroup;

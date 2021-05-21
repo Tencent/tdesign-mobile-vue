@@ -1,4 +1,5 @@
-import { withInstall } from '../shared/';
 import CheckGroup from './check-group.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(CheckGroup);
+const _CheckGroup: WithInstallType<typeof CheckGroup> = withInstall(CheckGroup);
+export default _CheckGroup;

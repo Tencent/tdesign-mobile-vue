@@ -29,9 +29,9 @@ const getPlugins = ({
     replace({
       preventAssignment: true,
       values: {
-        '__VERSION__': JSON.stringify(pkg.version),
+        __VERSION__: JSON.stringify(pkg.version),
       },
-    })
+    }),
   ];
 
   // ts
@@ -51,7 +51,7 @@ const getPlugins = ({
   plugins = plugins.concat([
     babel({
       babelHelpers: 'bundled',
-      extensions: [...DEFAULT_EXTENSIONS, 'vue', 'ts', 'tsx'],
+      extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
     }),
     json(),
     url(),
