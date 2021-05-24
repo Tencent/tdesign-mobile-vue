@@ -1,5 +1,5 @@
 <template>
-  <div :class="[componentName, icon && `${prefix}-no-border`]">
+  <div :class="[componentName, (icon || $slots.icon) && `${prefix}-no-border`]">
     <div
       :class="{
         [`${componentName}__content`]: true,
