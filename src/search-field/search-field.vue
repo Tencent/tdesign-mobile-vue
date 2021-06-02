@@ -47,7 +47,7 @@ export default defineComponent({
     },
     iconColor: {
       type: String,
-      default: '#888888',
+      default: '#CCCCCC',
     },
     clearable: {
       type: Boolean,
