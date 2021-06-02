@@ -4,6 +4,7 @@
       <div :class="`${name}__box`">
         <t-icon-search :class="`${name}__icon-search`" :style="iconStyle"></t-icon-search>
         <input
+          ref="searchInput"
           v-model="currentValue"
           :class="`${name}__input`"
           type="text"
@@ -99,20 +100,19 @@ export default defineComponent({
       },
     });
 
+    const searchInput = ref<null | HTMLElement>(null);
+
     const onClick = () => {
       curLabelActive.value = state.labelActive;
+      searchInput.value.focus();
     };
 
     const onCancel = (e: Event) => {
       curLabelActive.value = state.labelActive;
       currentValue.value = '';
+      searchInput.value.blur();
       emit('cancel', e);
     };
-
-    // no use
-    // const onInput = (e: Event) => {
-    //   currentValue.value = e?.target?.value ?? '';
-    // };
 
     const onClear = (e: Event) => {
       currentValue.value = '';
@@ -128,6 +128,7 @@ export default defineComponent({
       onClear,
       state,
       currentValue,
+      searchInput,
     };
   },
 });
