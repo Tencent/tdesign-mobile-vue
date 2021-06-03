@@ -1,6 +1,7 @@
-import { withInstall } from '../shared/';
+import { withInstall, WithInstallType } from '../shared/';
 import Progress from './progress.vue';
 
 import './style/';
 
-export default withInstall(Progress);
+const _Progress: WithInstallType<typeof Progress> = withInstall(Progress);
+export default _Progress;

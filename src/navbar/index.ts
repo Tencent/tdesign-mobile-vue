@@ -1,6 +1,7 @@
-import { withInstall } from '../shared/';
 import Navbar from './navbar.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
 import './style/';
 
-export default withInstall(Navbar);
+const _Navbar: WithInstallType<typeof Navbar> = withInstall(Navbar);
+export default _Navbar;

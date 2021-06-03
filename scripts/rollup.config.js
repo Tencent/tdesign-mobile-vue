@@ -24,7 +24,15 @@ const getPlugins = ({
   ignoreLess = true,
   extractCss = false,
 } = {}) => {
-  let plugins = [vuePlugin()];
+  let plugins = [
+    vuePlugin(),
+    replace({
+      preventAssignment: true,
+      values: {
+        __VERSION__: JSON.stringify(pkg.version),
+      },
+    }),
+  ];
 
   // ts
   if (isProd) {
@@ -43,7 +51,7 @@ const getPlugins = ({
   plugins = plugins.concat([
     babel({
       babelHelpers: 'bundled',
-      extensions: [...DEFAULT_EXTENSIONS, 'vue', 'ts', 'tsx'],
+      extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
     }),
     json(),
     url(),

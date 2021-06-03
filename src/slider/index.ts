@@ -1,6 +1,7 @@
-import { withInstall } from '../shared/';
 import Slider from './slider.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
 import './style/';
 
-export default withInstall(Slider);
+const _Slider: WithInstallType<typeof Slider> = withInstall(Slider);
+export default _Slider;

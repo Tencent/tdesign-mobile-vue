@@ -1,6 +1,7 @@
-import { withInstall } from '../shared/';
 import SearchField from './search-field.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
 import './style/';
 
-export default withInstall(SearchField);
+const _SearchField: WithInstallType<typeof SearchField> = withInstall(SearchField);
+export default _SearchField;
