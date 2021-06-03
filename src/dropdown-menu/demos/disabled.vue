@@ -25,7 +25,6 @@ export default defineComponent({
     }));
     const optionsN = ref(numberArr);
     return {
-      name,
       optionsN,
     };
   },
