@@ -101,7 +101,6 @@ export default defineComponent({
     const treeValue1 = ref(null);
     const treeValue2 = ref(['tianjin', 'tianjin', ['hedong', 'hexi']]);
     return {
-      name,
       optionsT,
       optionsT2,
       treeValue1,

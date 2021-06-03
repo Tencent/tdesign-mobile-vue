@@ -37,7 +37,6 @@ export default defineComponent({
     const valueS = ref('option_2');
     const valueM = ref(['options_A', 'options_C']);
     return {
-      name,
       optionsN,
       optionsC,
       valueS,

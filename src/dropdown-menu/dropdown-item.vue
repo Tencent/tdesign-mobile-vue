@@ -106,7 +106,7 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, reactive, inject, watch, defineComponent, nextTick, SetupContext } from 'vue';
+import { computed, toRefs, ref, reactive, inject, watch, defineComponent, nextTick, onBeforeMount, SetupContext } from 'vue';
 import TIconCheck from '../icon/check.vue';
 import { DropdownMenuPropsType, DropdownItemProps, DropdownItemPropsType } from './dropdown.interface';
 import config from '../config';
@@ -126,6 +126,7 @@ export default defineComponent({
     const menuState = inject('dropdownMenuState') as any;
     const { expandMenu, collapseMenu } = inject('dropdownMenuControl') as any;
     const menuAniControl = inject('dropdownAniControl') as TransAniControl;
+
     // 组件样式
     const classes = computed(() => [
       `${name}`,
@@ -133,6 +134,13 @@ export default defineComponent({
         [`${prefix}-is-expanded`]: state.isExpanded,
       },
     ]);
+
+    const itemId = ref(0);
+    onBeforeMount(() => {
+      itemId.value = menuState.childCount;
+      menuState.childCount += 1;
+    });
+
     const state = reactive({
       showOverlay: computed(() => menuProps.overlay),
       isShowItems: false,
@@ -180,7 +188,7 @@ export default defineComponent({
         zIndex: menuProps.zIndex,
         top: `${bottom}px`,
       };
-      // console.log(`dropdown-item(${props.itemId}) changing state: `, val);
+      // console.log(`dropdown-item(${itemId.value}) changing state: `, val);
       const duration = menuProps.duration;
       // 动画状态控制
       menuAniControl.setTo(
@@ -209,7 +217,7 @@ export default defineComponent({
 
     // 根据父组件状态，判断当前是否展开
     watch(
-      () => menuState.activeId === props.itemId,
+      () => menuState.activeId === itemId.value,
       (val: boolean) => setExpand(val),
     );
 
@@ -275,8 +283,8 @@ export default defineComponent({
           options: props.options,
           selectList: treeState.selectList,
         }),
-        //   async (val, oldVal) => {
         async () => {
+          // async (val, oldVal) => {
           //   console.log(`${oldVal}\n =>\n${val}`);
           // fix: 这次微任务结束后，再重建选项。否则 oldVal 无法更新，导致无限调用
           await nextTick();
