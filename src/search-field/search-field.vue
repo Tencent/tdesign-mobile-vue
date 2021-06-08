@@ -100,17 +100,17 @@ export default defineComponent({
       },
     });
 
-    const searchInput = ref<null | HTMLElement>(null);
+    const searchInput = ref<null | HTMLInputElement>(null);
 
     const onClick = () => {
       curLabelActive.value = state.labelActive;
-      searchInput.value.focus();
+      searchInput.value?.focus();
     };
 
     const onCancel = (e: Event) => {
       curLabelActive.value = state.labelActive;
       currentValue.value = '';
-      searchInput.value.blur();
+      searchInput.value?.blur();
       emit('cancel', e);
     };
 
