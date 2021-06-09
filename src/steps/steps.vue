@@ -1,6 +1,6 @@
 <template>
   <div :class="baseClass">
-    <component :is="stepItemsComponent"></component>
+    <slot></slot>
   </div>
 </template>
 
@@ -10,9 +10,10 @@ import {
   provide,
   computed,
   SetupContext,
-  mergeProps,
   defineComponent,
   Component,
+  reactive,
+  ComponentInternalInstance,
 } from 'vue';
 import { StepsProps } from './steps.interface';
 import config from '../config';
@@ -30,18 +31,16 @@ export default defineComponent({
       `${name}--${props.type}-anchor`,
     ]);
 
+    const state = reactive({
+      children: [] as ComponentInternalInstance[]
+    });
+
     const modelValue = computed(() => props.modelValue);
 
-    const stepItemsComponent = () => {
-      const defaults = context.slots.default ? context.slots.default() : [];
-      return defaults
-        .filter(item => (item.type as Component).name === `${prefix}-steps-item`)
-        .map((comp: any, index: number) => {
-          const newComp = comp;
-          newComp.props = mergeProps(comp.props, { index });
-          return newComp;
-        });
+    const relation = (child: ComponentInternalInstance) => {
+      child && state.children.push(child);
     };
+
 
     const onClickItem = (curIndex: number) => {
       if (typeof props.modelValue !== 'undefined') {
@@ -52,12 +51,13 @@ export default defineComponent({
 
     provide('stepsProvide', {
       ...props,
+      state,
+      relation,
       modelValue,
       onClickItem,
     });
 
     return {
-      stepItemsComponent,
       baseClass,
       onClickItem,
       ...toRefs(props),

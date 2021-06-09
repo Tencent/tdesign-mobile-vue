@@ -22,7 +22,15 @@
 </template>
 
 <script lang="ts">
-import { computed, ref, inject, SetupContext, defineComponent } from 'vue';
+import {
+  computed,
+  ref,
+  inject,
+  SetupContext,
+  defineComponent,
+  getCurrentInstance,
+  ComponentInternalInstance,
+} from 'vue';
 import { StepItemProps, StepStatusEnum, TypeEnum } from './steps.interface';
 
 import config from '../config';
@@ -34,10 +42,10 @@ export default defineComponent({
   name,
   props: StepItemProps,
   setup(props, context: SetupContext) {
-    const { attrs } = context;
-    const index = ref(attrs.index as number);
-
-    const stepsProvide: any = inject('stepsProvide', undefined);
+    const { proxy } = getCurrentInstance() as ComponentInternalInstance;
+    const stepsProvide: any = inject('stepsProvide');
+    stepsProvide['relation'](proxy)
+    const index = computed(() => stepsProvide.state.children.indexOf(proxy));
 
     const parentType = computed(() => stepsProvide.type);
     const current = computed(() => (stepsProvide?.modelValue?.value || stepsProvide?.current?.value || 0));
