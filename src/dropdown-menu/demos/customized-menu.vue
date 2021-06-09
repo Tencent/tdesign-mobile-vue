@@ -44,7 +44,6 @@ export default defineComponent({
     const switch2 = ref(true);
     const switch3 = ref(false);
     return {
-      name,
       switch1,
       switch2,
       switch3,

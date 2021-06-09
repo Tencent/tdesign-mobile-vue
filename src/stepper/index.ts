@@ -1,6 +1,7 @@
-import { withInstall } from '../shared/';
 import Stepper from './stepper.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
 import './style/';
 
-export default withInstall(Stepper);
+const _Stepper: WithInstallType<typeof Stepper> = withInstall(Stepper);
+export default _Stepper;
