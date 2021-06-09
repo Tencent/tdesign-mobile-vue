@@ -11,7 +11,6 @@ import {
   computed,
   SetupContext,
   defineComponent,
-  Component,
   reactive,
   ComponentInternalInstance,
 } from 'vue';
@@ -32,7 +31,7 @@ export default defineComponent({
     ]);
 
     const state = reactive({
-      children: [] as ComponentInternalInstance[]
+      children: [] as ComponentInternalInstance[],
     });
 
     const modelValue = computed(() => props.modelValue);

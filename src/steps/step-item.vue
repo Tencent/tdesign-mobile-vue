@@ -24,9 +24,7 @@
 <script lang="ts">
 import {
   computed,
-  ref,
   inject,
-  SetupContext,
   defineComponent,
   getCurrentInstance,
   ComponentInternalInstance,
@@ -41,10 +39,10 @@ const name = `${prefix}-steps-item`;
 export default defineComponent({
   name,
   props: StepItemProps,
-  setup(props, context: SetupContext) {
+  setup(props) {
     const { proxy } = getCurrentInstance() as ComponentInternalInstance;
     const stepsProvide: any = inject('stepsProvide');
-    stepsProvide['relation'](proxy)
+    stepsProvide.relation(proxy);
     const index = computed(() => stepsProvide.state.children.indexOf(proxy));
 
     const parentType = computed(() => stepsProvide.type);
