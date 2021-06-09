@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import ActionSheet from './action-sheet.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(ActionSheet);
+import './style/';
+
+const _ActionSheet: WithInstallType<typeof ActionSheet> = withInstall(ActionSheet);
+export default _ActionSheet;

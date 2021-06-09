@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import Badge from './badge.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(Badge);
+import './style/';
+
+const _Badge: WithInstallType<typeof Badge> = withInstall(Badge);
+export default _Badge;

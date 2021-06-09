@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
+import { withInstall, WithInstallType } from '../shared/';
 import Mask from './mask.vue';
 
-export default withInstall(Mask);
+import './style/';
+
+const _Mask: WithInstallType<typeof Mask> = withInstall(Mask);
+export default _Mask;

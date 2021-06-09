@@ -1,8 +1,10 @@
-import { withInstall } from '../shared/';
+import { withInstall, WithInstallType } from '../shared/';
 import LocalIndexes from './indexes.vue';
 import LocalIndexesCell from './indexes-cell.vue';
 import LocalIndexesAnchor from './indexes-anchor.vue';
 
-export const Indexes = withInstall(LocalIndexes);
-export const IndexesCell = withInstall(LocalIndexesCell);
-export const IndexesAnchor = withInstall(LocalIndexesAnchor);
+import './style/';
+
+export const Indexes: WithInstallType<typeof LocalIndexes> = withInstall(LocalIndexes);
+export const IndexesCell: WithInstallType<typeof LocalIndexesCell> = withInstall(LocalIndexesCell);
+export const IndexesAnchor: WithInstallType<typeof LocalIndexesAnchor> = withInstall(LocalIndexesAnchor);

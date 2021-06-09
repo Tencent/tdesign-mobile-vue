@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import Fab from './fab.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(Fab);
+import './style/';
+
+const _Fab: WithInstallType<typeof Fab> = withInstall(Fab);
+export default _Fab;

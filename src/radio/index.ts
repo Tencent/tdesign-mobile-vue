@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import Radio from './radio.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(Radio);
+import './style/';
+
+const _Radio: WithInstallType<typeof Radio> = withInstall(Radio);
+export default _Radio;

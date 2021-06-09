@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import CheckBox from './checkbox.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(CheckBox);
+import './style/';
+
+const _CheckBox: WithInstallType<typeof CheckBox> = withInstall(CheckBox);
+export default _CheckBox;

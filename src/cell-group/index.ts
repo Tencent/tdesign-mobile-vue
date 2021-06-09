@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import CellGroup from './cell-group.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(CellGroup);
+import './style/';
+
+const _CellGroup: WithInstallType<typeof CellGroup> = withInstall(CellGroup);
+export default _CellGroup;

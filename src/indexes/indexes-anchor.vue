@@ -1,13 +1,15 @@
 <template>
-  <div :class="state.componentName" :data-index="state.index">{{ state.title }}</div>
+  <t-cell-group :class="state.componentName" :data-index="state.index" :title="state.title" />
 </template>
 
 <script lang="ts">
 import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
+const componentName = `${prefix}-indexes__anchor`;
 
 export default defineComponent({
+  name: componentName,
   props: {
     index: {
       type: String,
@@ -20,7 +22,7 @@ export default defineComponent({
   },
   setup(props) {
     const state = reactive({
-      componentName: `${prefix}-indexes__anchor`,
+      componentName,
       index: props.index || '',
       title: props.title ? props.title : props.index,
     });

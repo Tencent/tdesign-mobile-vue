@@ -1,25 +1,12 @@
-export type DropdownMenuControl = {
-  expandMenu: (itemProps?: any) => void;
-  collapseMenu: (itemProps?: any) => void;
-};
-
-export enum DropdownMenuState {
-  expanded = 'expanded',
-  collapsed = 'collapsed',
-}
+import { DropdownMenuControl, DropdownMenuExpandState, DropdownMenuContext } from './dropdown.interface';
 
 let oldOverflow: string | null = null;
 
-type DropdownMenuContext = {
-  expandedMenuControl: DropdownMenuControl | null;
-  recordMenuExpanded(container: any, menuControl: DropdownMenuControl, action: DropdownMenuState): void;
-};
-
 export const context: DropdownMenuContext = {
   expandedMenuControl: null,
-  recordMenuExpanded(container: any, menuControl: DropdownMenuControl, action: DropdownMenuState) {
+  recordMenuExpanded(container: any, menuControl: DropdownMenuControl, action: DropdownMenuExpandState) {
     const containerDom = container;
-    if (action === DropdownMenuState.expanded) {
+    if (action === DropdownMenuExpandState.expanded) {
       const { expandedMenuControl } = this;
       if (expandedMenuControl && expandedMenuControl !== menuControl) {
         expandedMenuControl.collapseMenu();
@@ -29,7 +16,7 @@ export const context: DropdownMenuContext = {
         oldOverflow = container.style.overflow;
         containerDom.style.overflow = 'hidden';
       }
-    } else if (action === DropdownMenuState.collapsed) {
+    } else if (action === DropdownMenuExpandState.collapsed) {
       if (this.expandedMenuControl === menuControl) {
         this.expandedMenuControl = null;
       }

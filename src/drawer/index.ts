@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import Drawer from './drawer.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(Drawer);
+import './style/';
+
+const _Drawer: WithInstallType<typeof Drawer> = withInstall(Drawer);
+export default _Drawer;

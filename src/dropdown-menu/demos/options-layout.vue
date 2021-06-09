@@ -64,10 +64,9 @@ export default defineComponent({
     const optionsN = ref(numberArr);
     const optionsC = ref(charArr);
     const valueM1 = ref([]);
-    const valueS = ref('');
+    const valueS = ref([]);
     const valueM2 = ref(['options_A', 'options_C']);
     return {
-      name,
       log: (...args: []) => {
         console.log(...args);
       },

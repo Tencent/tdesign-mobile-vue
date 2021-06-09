@@ -1,6 +1,8 @@
-import { withInstall } from '../shared/';
 import LocalTabBar from './tab-bar.vue';
 import LocalTabBarItem from './tab-bar-item.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export const TabBar = withInstall(LocalTabBar);
-export const TabBarItem = withInstall(LocalTabBarItem);
+import './style/';
+
+export const TabBar: WithInstallType<typeof LocalTabBar> = withInstall(LocalTabBar);
+export const TabBarItem: WithInstallType<typeof LocalTabBarItem> = withInstall(LocalTabBarItem);

@@ -1,4 +1,7 @@
-import { withInstall } from '../shared/';
 import ButtonGroup from './button-group.vue';
+import { withInstall, WithInstallType } from '../shared/';
 
-export default withInstall(ButtonGroup);
+import './style/';
+
+const _ButtonGroup: WithInstallType<typeof ButtonGroup> = withInstall(ButtonGroup);
+export default _ButtonGroup;
