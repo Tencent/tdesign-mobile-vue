@@ -26,9 +26,9 @@ export default defineComponent({
     const gameLevelOptions = ref([
       '3A大作',
       '精品游戏',
-      '换皮游戏',
-      '氪金游戏',
-      '辣鸡游戏',
+      '动作游戏',
+      '冒险游戏',
+      '射击游戏',
     ]);
 
     const onColumnChange = (e: any) => {
