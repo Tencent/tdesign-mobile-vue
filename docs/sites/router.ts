@@ -1,9 +1,7 @@
 import { RouteRecordRaw, createRouter, createWebHistory, createWebHashHistory, RouterOptions } from 'vue-router';
-import config from './sites.config';
+import siteConfig from './sites.config';
 
-// const demoReq = require.context("@/", true, /demos[/\\][\w-]+\.vue$/im);
-
-const navs = config.navs;
+const { docs } = siteConfig;
 
 function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   let docsRoutes: Array<RouteRecordRaw> = [];
@@ -28,7 +26,7 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
         docsRoutes = docsRoutes.concat(getDocsRoutes(children, docType));
       } else {
         docsRoutes.push({
-          path: `/components/${item.name}`,
+          path: item.path,
           name: item.name,
           component: item.component,
         });
@@ -40,20 +38,21 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/components/readme',
+    redirect: '/vue-mobile/components/button',
   },
-  ...getDocsRoutes(navs.components.docs, 'document'),
-  ...getDocsRoutes(navs.components.docs, 'component'),
+  {
+    path: "/:catchAll(.*)",
+    redirect: '/vue-mobile/components/button',
+  },
+  ...getDocsRoutes(docs, 'document'),
+  ...getDocsRoutes(docs, 'component'),
 ];
 
 const routerConfig: RouterOptions = {
-  history: createWebHashHistory('/'),
   routes,
+  history: createWebHistory('/'),
+  // history: createWebHashHistory('/'),
 };
-
-if(process.env.NODE_ENV === 'production') {
-  routerConfig.history = createWebHistory('/vue-mobile/');
-}
 
 const router = createRouter(routerConfig);
 
