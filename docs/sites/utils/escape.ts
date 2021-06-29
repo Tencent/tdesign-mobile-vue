@@ -1,12 +1,12 @@
 export const html2Escape = (sHtml: string) => {
-    return sHtml.replace(/[<>&"]/g, (c) => {
-      return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
-    });
-   }
+  return sHtml.replace(/[<>&"]/g, (c) => {
+    return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c];
+  });
+};
 
-export const escape2Html = (str: string): string =>  {
-    const arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"'};
-    return str.replace(/&(lt|gt|nbsp|amp|quot);/ig,function(all,t){
-        return arrEntities[t];
-    });
-}
+export const escape2Html = (str: string): string => {
+  const arrEntities = { 'lt': '<', 'gt': '>', 'nbsp': ' ', 'amp': '&', 'quot': '"' };
+  return str.replace(/&(lt|gt|nbsp|amp|quot);/ig, (all, t) => {
+    return arrEntities[t];
+  });
+};

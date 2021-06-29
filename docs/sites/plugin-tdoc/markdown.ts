@@ -36,7 +36,7 @@ const createTDesiginSegmentedMarkdown = (id: string, source: string): TDesignSeg
   res.title = source.slice(2, titleLocation)
   res.describe = source.slice(titleLocation, describeLocation).trim();
   res.docMd = source.slice(describeLocation, res.propsRegLocation);
-  
+
   if (res.propsRegLocation !== -1) {
     // component_coverage = coverage[camelCase(name)];
     demoMd = source.slice(describeLocation, res.propsRegLocation);
@@ -47,22 +47,22 @@ const createTDesiginSegmentedMarkdown = (id: string, source: string): TDesignSeg
 
     // 新增设计指南内容
     const name = path.basename(id, '.md');
-    const designDocPath = path.resolve(__dirname, `../../../common/docs/mobile/design/${name}.md`)
+    const designDocPath = path.resolve(__dirname, `../../../common/docs/mobile/design/${name}.md`);
     if (fs.existsSync(designDocPath)) {
       designMd = fs.readFileSync(designDocPath, 'utf-8');
     }
     res.designMd = designMd;
 
     const prefix = process.env.NODE_ENV === 'development' ? `/mobile.html` : `/vue-mobile/mobile.html`;
-    mobileUrl = `${prefix}#/${name}`
+    mobileUrl = `${prefix}#/${name}`;
     res.mobileUrl = mobileUrl;
   }
 
-
   return res;
-}
+};
+
 // markdown 配置
-export interface MarkdownOptions extends MarkdownIt.Options {}
+export interface MarkdownOptions extends MarkdownIt.Options { }
 
 // 创建markdown render
 export const markdownRenderer = (source: string, id: string, options: MarkdownOptions = {}): TransformResult => {
@@ -76,7 +76,7 @@ export const markdownRenderer = (source: string, id: string, options: MarkdownOp
     permalink: true,
     permalinkSymbol: ""
   }).use(markdownItTocDoneRight, {
-    level: [2,3],
+    level: [2, 3],
     containerClass: "tdesign-toc_container",
     listClass: "tdesign-toc_list",
     itemClass: "tdesign-toc_list_item",
@@ -130,12 +130,12 @@ export const markdownRenderer = (source: string, id: string, options: MarkdownOp
   // avoid env variables being replaced by vite
   html = html
     .replace(/import\.meta/g, 'import.<wbr/>meta')
-    .replace(/process\.env/g, 'process.<wbr/>env')
+    .replace(/process\.env/g, 'process.<wbr/>env');
 
-  mdSegment.docMd = render.call(md, mdSegment.docMd)
-  mdSegment.demoMd = render.call(md, mdSegment.demoMd)
-  mdSegment.apiMd = render.call(md, mdSegment.apiMd)
-  mdSegment.designMd = render.call(md, mdSegment.designMd)
+  mdSegment.docMd = render.call(md, mdSegment.docMd);
+  mdSegment.demoMd = render.call(md, mdSegment.demoMd);
+  mdSegment.apiMd = render.call(md, mdSegment.apiMd);
+  mdSegment.designMd = render.call(md, mdSegment.designMd);
 
   const component = createTDesignComponent(source, id, html, mdSegment);
   debug('------component------\n', component);

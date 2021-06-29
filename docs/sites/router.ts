@@ -51,8 +51,12 @@ const routes: Array<RouteRecordRaw> = [
 const routerConfig: RouterOptions = {
   routes,
   history: createWebHistory('/'),
-  // history: createWebHashHistory('/'),
 };
+
+// 本地开发用hash路由
+if (process.env.NODE_ENV === 'development') {
+  routerConfig.history = createWebHashHistory('/');
+}
 
 const router = createRouter(routerConfig);
 
