@@ -116,7 +116,7 @@ export default {
         },
         {
           title: 'ActionSheet 动作面板',
-          name: 'actionsheet',
+          name: 'action-sheet',
           component: () => import('@/action-sheet/demos/base.vue'),
         },
         {
@@ -126,7 +126,7 @@ export default {
         },
         {
           title: 'TabBar 标签栏',
-          name: 'tabbar',
+          name: 'tab-bar',
           component: () => import('@/tab-bar/demos/base.vue'),
         },
         {
