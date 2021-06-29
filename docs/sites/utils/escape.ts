@@ -1,5 +1,5 @@
-export const html2Escape = (sHtml: string) =>  {
-    return sHtml.replace(/[<>&"]/g,function(c){
+export const html2Escape = (sHtml: string) => {
+    return sHtml.replace(/[<>&"]/g, (c) => {
       return {'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c];
     });
    }
