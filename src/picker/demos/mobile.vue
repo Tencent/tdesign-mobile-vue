@@ -97,7 +97,7 @@
       <!-- 单列 -->
       <div class="block--title">自定义展示内容</div>
       <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-        <t-picker-column :options="roleOptions" :formatter="(val) => `辣鸡${val}`" @change="onColumnChange" />
+        <t-picker-column :options="roleOptions" :formatter="(val) => `自定义 — ${val}`" @change="onColumnChange" />
       </t-picker>
     </div>
     <div class="block">
@@ -234,7 +234,7 @@ export default defineComponent({
     const roleOptions = ref(cities);
     const rolesObjOptions = ref(rolesObjs);
     const gameOptions = ref(['端游', '手游', 'PS4', 'NS']);
-    const gameLevelOptions = ref(['3A大作', '精品游戏', '换皮游戏', '氪金游戏', '辣鸡游戏']);
+    const gameLevelOptions = ref(['3A大作', '精品游戏', '动作游戏', '冒险游戏', '射击游戏']);
     const visible = ref(false);
     const heroOptions = computed(() => heros[curRoleIndex.value]);
     const onColumnChange = (e: any) => {
