@@ -74,7 +74,8 @@ export const markdownRenderer = (source: string, id: string, options: MarkdownOp
     ...options,
   }).use(markdownItAnchor, {
     permalink: true,
-    permalinkSymbol: ""
+    permalinkSymbol: '',
+    permalinkClass: 'tdesign-header-anchor',
   }).use(markdownItTocDoneRight, {
     level: [2, 3],
     containerClass: "tdesign-toc_container",
