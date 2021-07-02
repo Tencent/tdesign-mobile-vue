@@ -74,7 +74,8 @@ export const markdownRenderer = (source: string, id: string, options: MarkdownOp
     ...options,
   }).use(markdownItAnchor, {
     permalink: true,
-    permalinkSymbol: ""
+    permalinkSymbol: '',
+    permalinkClass: 'tdesign-header-anchor',
   }).use(markdownItTocDoneRight, {
     level: [2, 3],
     containerClass: "tdesign-toc_container",
@@ -109,9 +110,7 @@ export const markdownRenderer = (source: string, id: string, options: MarkdownOp
         debug(`output demo code ->${demoCode}`);
 
         const tpl = `
-          <td-doc-demo data-demo=${demoName} demo-name="${demoName}" language="html" code="${html2Escape(demoCode)}">
-            <${demoDefName} />
-          </td-doc-demo>
+          <td-doc-demo language="html" show-code code="${html2Escape(demoCode)}"></td-doc-demo>
         `;
         tokens.tttpl = tpl;
         return `<div class="tdesign-demo-wrapper tdesign-demo-item--${demoName}">`;
