@@ -1,3 +1,4 @@
+// @ts-ignore
 import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTick } from 'vue';
 
 import Dialog from './dialog.vue';
