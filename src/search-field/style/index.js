@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/search-field/_index.less';
+import '../../common/style/mobile/components/search-field/_index.less';

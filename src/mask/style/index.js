@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/mask/_index.less';
+import '../../common/style/mobile/components/mask/_index.less';

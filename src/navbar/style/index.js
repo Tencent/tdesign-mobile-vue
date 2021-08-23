@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/navbar/_index.less';
+import '../../common/style/mobile/components/navbar/_index.less';

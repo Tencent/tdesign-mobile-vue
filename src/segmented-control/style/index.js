@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/segmented-control/_index.less';
+import '../../common/style/mobile/components/segmented-control/_index.less';

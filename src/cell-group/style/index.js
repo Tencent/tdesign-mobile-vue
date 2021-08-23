@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/cell-group/_index.less';
+import '../../common/style/mobile/components/cell-group/_index.less';

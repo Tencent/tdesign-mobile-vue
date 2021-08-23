@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/stepper/_index.less';
+import '../../common/style/mobile/components/stepper/_index.less';

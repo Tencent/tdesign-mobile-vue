@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/drawer/_index.less';
+import '../../common/style/mobile/components/drawer/_index.less';

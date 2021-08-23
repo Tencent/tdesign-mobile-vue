@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/rate/_index.less';
+import '../../common/style/mobile/components/rate/_index.less';

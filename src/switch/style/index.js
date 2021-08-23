@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/switch/_index.less';
+import '../../common/style/mobile/components/switch/_index.less';
