@@ -8,37 +8,37 @@ TDesign目前只提供一种基础类型
 
 ### 1.1. 基础类型
 
-::: demo ./demos/base.vue
+::: demo demos/base
 :::
 
 ### 1.2. 对象数组
 
-::: demo ./demos/object-array.vue
+::: demo demos/object-array
 :::
 
 ### 1.3. 默认选中
 
-::: demo ./demos/default-selected.vue
+::: demo demos/default-selected
 :::
 
 ### 1.4. 自定义展示内容
 
-::: demo ./demos/custom.vue
+::: demo demos/custom
 :::
 
 ### 1.5. 多列选择
 
-::: demo ./demos/multiple.vue
+::: demo demos/multiple
 :::
 
 ### 1.6. 联动选择
 
-::: demo ./demos/cascade.vue
+::: demo demos/cascade
 :::
 
 ### 1.7. 弹窗层的 Picker
 
-::: demo ./demos/popup-picker.vue
+::: demo demos/popup-picker
 :::
 
 ## Props

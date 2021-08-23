@@ -5,17 +5,17 @@
 
 ### 1.1 导航栏 - 基础
 
-::: demo ./demos/index.vue
+::: demo demos/index
 :::
 
 ### 1.2 导航栏 - 带icon
 
-::: demo ./demos/index-icon.vue
+::: demo demos/index-icon
 :::
 
 ### 1.3 事件反馈
 
-::: demo ./demos/event.vue
+::: demo demos/event
 :::
 
 ## Props

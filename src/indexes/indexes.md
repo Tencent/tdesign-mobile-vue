@@ -5,7 +5,7 @@
 
 ### 1.1 基础型
 
-::: demo ./demos/base.vue
+::: demo demos/base
 :::
 
 ## indexes Props

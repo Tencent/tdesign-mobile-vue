@@ -10,26 +10,26 @@ TDesign只提供一种基础步进器类型
 
 使用场景：在表单中需要用户输入数量时可以使用
 
-::: demo ./demos/index.vue
+::: demo demos/index
 :::
 
 ## 2. 组件样式
 
 ### 2.1. 禁止点击
 
-::: demo ./demos/disabled.vue
+::: demo demos/disabled
 :::
 
 ### 2.2. 禁止输入
 
-::: demo ./demos/disableInput.vue
+::: demo demos/disableInput
 :::
 
 ## 3. 组件使用
 
 ### 3.1 绑定事件
 
-::: demo ./demos/event.vue
+::: demo demos/event
 :::
 
 ## Props

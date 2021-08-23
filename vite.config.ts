@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { createTDesignPlugin } from './docs/sites/plugin-tdoc/';
+import createTDesignPlugin from './docs/sites/plugin-tdoc/';
 import vue from '@vitejs/plugin-vue';
 
 module.exports = {
@@ -32,5 +32,5 @@ module.exports = {
         isCustomElement: tag => tag.startsWith('td-')
       }
     }
-  }), ...createTDesignPlugin()],
+  }), createTDesignPlugin()],
 };

@@ -6,12 +6,12 @@
 
 ### 1.1 基础用法
 
-::: demo ./demos/index.vue
+::: demo demos/index
 :::
 
 ### 1.2 带图标抽屉
 
-::: demo ./demos/iconDrawer.vue
+::: demo demos/iconDrawer
 :::
 
 ## Props

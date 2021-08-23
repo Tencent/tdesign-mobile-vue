@@ -10,14 +10,14 @@
 
 使用场景：当功能使用图标即可表意清楚时，可使用纯图标悬浮按钮，例如：添加、发布
 
-::: demo ./demos/display.vue
+::: demo demos/display
 :::
 
 ### 1.2. 图标加文字悬浮按钮
 
 使用场景：当功能使用图标无法表意清楚需要文字辅助描述时，可使用图标加文字悬浮按钮
 
-::: demo ./demos/text.vue
+::: demo demos/text
 :::
 
 ## Props

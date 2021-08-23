@@ -10,14 +10,14 @@
 
 使用场景：常用于全局内容搜索，位于搜索内容上方
 
-::: demo ./demos/index.vue
+::: demo demos/index
 :::
 
 ## 2. 组件样式
 
 ### 2.1. 自定义 Icon 颜色
 
-::: demo ./demos/iconColor.vue
+::: demo demos/iconColor
 :::
 
 ## Props
