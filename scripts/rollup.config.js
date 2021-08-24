@@ -122,7 +122,6 @@ const esmConfig = {
     dir: 'es/',
     format: 'esm',
     sourcemap: true,
-    preserveModules: true,
   },
 };
 
@@ -137,7 +136,6 @@ const cjsConfig = {
     format: 'cjs',
     sourcemap: true,
     exports: 'named',
-    preserveModules: true,
   },
 };
 

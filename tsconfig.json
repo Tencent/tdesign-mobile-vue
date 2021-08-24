@@ -11,7 +11,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "moduleResolution": "node",
     "jsx": "preserve",
     "experimentalDecorators": true,
@@ -32,5 +32,5 @@
     "./**/*.vue",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "vite.config.ts"]
+  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "vite.config.ts", "docs"]
 }
