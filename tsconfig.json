@@ -30,6 +30,7 @@
     "./**/*.ts",
     "./**/*.tsx",
     "./**/*.vue",
+    "babel.config.js",
     "scripts/rollup.config.js"
   ],
   "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "vite.config.ts", "docs"]

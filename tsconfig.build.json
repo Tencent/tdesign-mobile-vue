@@ -2,8 +2,8 @@
   "extends": "./tsconfig",
   "exclude": [
     "docs",
-    "common",
     "scripts",
+    "src/_common",
     "node_modules",
     "vite.config.ts"
   ]

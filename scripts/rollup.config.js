@@ -1,4 +1,5 @@
 // @ts-check
+import { tmpdir } from 'os';
 import url from '@rollup/plugin-url';
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
@@ -10,6 +11,7 @@ import analyzer from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import multiInput from 'rollup-plugin-multi-input';
+import typescript from 'rollup-plugin-typescript2';
 import staticImport from 'rollup-plugin-static-import';
 import ignoreImport from 'rollup-plugin-ignore-import';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
@@ -22,7 +24,7 @@ const getPlugins = ({
   ignoreLess = true,
   extractCss = false,
 } = {}) => {
-  const plugins = [
+  let plugins = [
     vuePlugin(),
     replace({
       preventAssignment: true,
@@ -30,18 +32,30 @@ const getPlugins = ({
         __VERSION__: JSON.stringify(pkg.version),
       },
     }),
-    esbuild({
+  ];
+
+  // ts
+  if (isProd) {
+    plugins.push(typescript({
+      tsconfig: 'tsconfig.build.json',
+      cacheRoot: `${tmpdir()}/.rpt2_cache`,
+    }));
+  } else {
+    plugins.push(esbuild({
       target: 'esnext',
       minify: false,
       tsconfig: 'tsconfig.build.json',
-    }),
+    }));
+  }
+
+  plugins = plugins.concat([
     babel({
       babelHelpers: 'bundled',
       extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
     }),
     json(),
     url(),
-  ];
+  ]);
 
   // css
   if (extractCss) {
