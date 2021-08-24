@@ -10,7 +10,7 @@
 
 使用场景：简单的星级评定，不涉及具体分数
 
-::: demo ./demos/index.vue
+::: demo demos/index
 :::
 
 
@@ -18,7 +18,7 @@
 
 使用场景：较为严谨的星级评定，展示具体分数或具体等级
 
-::: demo ./demos/text.vue
+::: demo demos/text
 :::
 
 
@@ -26,33 +26,33 @@
 
 ### 2.1. 允许半选
 
-::: demo ./demos/allowHalf.vue
+::: demo demos/allowHalf
 :::
 
 
 ### 2.2. 自定义数量
 
-::: demo ./demos/count.vue
+::: demo demos/count
 :::
 
 ### 2.3. 自定大小
 
-::: demo ./demos/size.vue
+::: demo demos/size
 :::
 
 ### 2.4. 只读状态
 
-::: demo ./demos/readonly.vue
+::: demo demos/readonly
 :::
 
 ### 2.5. 自定义颜色
 
-::: demo ./demos/color.vue
+::: demo demos/color
 :::
 
 ### 2.6. 自定义图标
 
-::: demo ./demos/icon.vue
+::: demo demos/icon
 :::
 
 ## API

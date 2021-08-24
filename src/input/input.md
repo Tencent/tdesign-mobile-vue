@@ -10,14 +10,14 @@
 
 使用场景：最常规的文字填写，且需填写的文字字数较少时可以使用
 
-::: demo ./demos/normal.vue
+::: demo demos/normal
 :::
 
 ### 1.2. 特殊输入框
 
 使用场景：较复杂场景的文字填写，主要运用于密码输入、手机验证码输入、价格数量重量输入等场景
 
-::: demo ./demos/other.vue
+::: demo demos/other
 :::
 W
 
@@ -25,7 +25,7 @@ W
 
 使用场景：当需要输入文字较多时，使用多行输入框
 
-::: demo ./demos/textarea.vue
+::: demo demos/textarea
 :::
 
 ## Props

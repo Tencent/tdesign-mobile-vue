@@ -7,11 +7,9 @@ import TDesign from '@/index';
 import '@common/style/mobile/_reset.less';
 import '@common/style/mobile/index.less';
 
-import '../styles/sites/index.less';
-
 // import site webcomponents
 import '@common/site/lib/site.es.js';
-import '@common/site/lib/style.css';
+import '@common/site/src/styles/main.less';
 
 createApp(app)
   .use(TDesign)
