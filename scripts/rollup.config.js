@@ -136,6 +136,7 @@ const esmConfig = {
     dir: 'es/',
     format: 'esm',
     sourcemap: true,
+    chunkFileNames: '_chunks/dep-[hash].js',
   },
 };
 
@@ -150,6 +151,7 @@ const cjsConfig = {
     format: 'cjs',
     sourcemap: true,
     exports: 'named',
+    chunkFileNames: '_chunks/dep-[hash].js',
   },
 };
 
