@@ -1,3 +1,5 @@
+import { TNode } from '../common';
+
 export type SidebarItemType = {
   /* 菜单名称 */
   name: string,

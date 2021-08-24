@@ -8,7 +8,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      '@common': path.resolve(__dirname, 'src/common'),
+      '@common': path.resolve(__dirname, 'src/_common'),
       '@TdTypes': path.resolve(__dirname, 'src/types'),
     },
   },

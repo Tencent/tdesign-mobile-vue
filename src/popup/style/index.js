@@ -1,1 +1,1 @@
-import '../../common/style/mobile/components/popup/_index.less';
+import '../../_common/style/mobile/components/popup/_index.less';

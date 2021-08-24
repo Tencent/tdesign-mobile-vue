@@ -32,5 +32,5 @@
     "./**/*.vue",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "common"]
+  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "vite.config.ts"]
 }

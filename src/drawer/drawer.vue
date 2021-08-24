@@ -14,6 +14,7 @@ import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent }
 import config from '../config';
 import { SidebarItem } from './drawer.interface';
 import ImgIcon from './imageIcon.vue';
+import { TNode } from '../common';
 
 const { prefix } = config;
 const name = `${prefix}-drawer`;

@@ -36,7 +36,7 @@ function customRenderInfo(source, id, md) {
 
   // 设计指南内容
   const name = path.basename(id, '.md');
-  const designDocPath = path.resolve(__dirname, `../../../common/docs/mobile/design/${name}.md`);
+  const designDocPath = path.resolve(__dirname, `../../../src/_common/docs/mobile/design/${name}.md`);
 
   if (fs.existsSync(designDocPath)) {
     mdSegment.designMd = fs.readFileSync(designDocPath, 'utf-8');
