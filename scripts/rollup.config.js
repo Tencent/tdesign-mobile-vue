@@ -106,10 +106,10 @@ const banner = `/**
 const input = 'src/index.ts';
 const inputList = [
   'src/**/*.ts',
+  'src/**/*.vue',
   '!src/**/demos',
   '!src/**/style',
   '!src/**/__tests__',
-  '!src/**/*.interface.ts',
 ];
 
 /** @type {import('rollup').RollupOptions} */
