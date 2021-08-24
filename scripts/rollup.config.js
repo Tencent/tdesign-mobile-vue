@@ -70,7 +70,7 @@ const getPlugins = ({
       plugins.push(ignoreImport({ extensions: ['*.less'] }));
     } else {
       plugins.push(
-        staticImport({ include: ['src/**/style/*'] }),
+        staticImport({ include: ['src/**/style/index.js'] }),
         ignoreImport({
           include: ['src/*/style/*'],
           body: 'import "../style/index.js";',
