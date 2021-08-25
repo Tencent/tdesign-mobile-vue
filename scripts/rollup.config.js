@@ -73,11 +73,14 @@ const getPlugins = ({
     } else {
       plugins.push(
         staticImport({
-          include: ['src/**/style/index.js'],
+          include: [
+            'src/**/style/index.js',
+            'src/_common/style/mobile/**/*.less',
+          ],
         }),
         ignoreImport({
           include: ['src/*/style/*'],
-          body: 'import "../style/index.js";',
+          body: 'import "./style/index.js";',
         }),
       );
     }
