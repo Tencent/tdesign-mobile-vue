@@ -14,7 +14,6 @@ import multiInput from 'rollup-plugin-multi-input';
 import typescript from 'rollup-plugin-typescript2';
 import staticImport from 'rollup-plugin-static-import';
 import ignoreImport from 'rollup-plugin-ignore-import';
-import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 
 import pkg from '../package.json';
 
@@ -96,16 +95,13 @@ const getPlugins = ({
   }
 
   if (isProd) {
-    plugins.push(
-      sizeSnapshot(),
-      terser({
-        output: {
-          /* eslint-disable */
+    plugins.push(terser({
+      output: {
+        /* eslint-disable */
           ascii_only: true,
           /* eslint-enable */
-        },
-      }),
-    );
+      },
+    }));
   }
 
   return plugins;
