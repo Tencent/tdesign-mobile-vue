@@ -1,9 +1,11 @@
+/* eslint-disable */
+
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-04-12 16:32:20
+ * updated at 2021-08-25 11:35:55
  * */
 
-import { TdRateProps } from '@TdTypes/rate/TdRateProps';
+import { TdRateProps } from './type';
 import { PropType } from 'vue';
 
 export default {
@@ -14,12 +16,22 @@ export default {
   /** 评分图标的颜色 */
   color: {
     type: String,
-    default: '',
+    default: '#ffc51c',
   },
   /** 评分的数量 */
   count: {
     type: Number,
     default: 5,
+  },
+  /** 默认值 */
+  defaultValue: {
+    type: Number,
+    default: 3,
+  },
+  /** 默认值，非受控属性 */
+  defaultDefaultValue: {
+    type: Number,
+    default: 3,
   },
   /** 是否为只读 */
   readonly: Boolean,
@@ -28,7 +40,7 @@ export default {
   /** 评分图标的大小 */
   size: {
     type: String,
-    default: '',
+    default: '48',
   },
   /** 自定义评分等级对应的辅助文字 */
   texts: {
@@ -37,13 +49,11 @@ export default {
   /** 选择评分的值 */
   value: {
     type: Number,
-    default: 0,
     required: true,
   },
   /** 选择评分的值，非受控属性 */
   defaultValue: {
     type: Number,
-    default: 0,
     required: true,
   },
   /** 评分数改变时触发 */
