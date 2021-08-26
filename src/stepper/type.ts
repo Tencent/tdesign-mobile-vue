@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-26 17:27:38
+ * updated at 2021-08-26 17:33:46
  * */
 
 export interface TdStepperProps {
@@ -32,7 +32,7 @@ export interface TdStepperProps {
   max: number;
   /**
    * 最小值
-   * @default 100
+   * @default 0
    */
   min: number;
   /**
@@ -47,6 +47,7 @@ export interface TdStepperProps {
   step: number;
   /**
    * 值
+   * @default 0
    */
   value: string | number;
 };

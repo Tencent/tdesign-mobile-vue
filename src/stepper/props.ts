@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-26 17:27:38
+ * updated at 2021-08-26 17:33:46
  * */
 
 import { TdStepperProps } from './type';
@@ -30,7 +30,7 @@ export default {
   /** 最小值 */
   min: {
     type: Number,
-    default: 100,
+    default: 0,
   },
   /** 简洁模式 */
   pureMode: Boolean,
@@ -42,6 +42,6 @@ export default {
   /** 值 */
   value: {
     type: [String, Number] as PropType<TdStepperProps['value']>,
-    required: true,
+    default: 0,
   },
 };
