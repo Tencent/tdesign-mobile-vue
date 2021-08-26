@@ -64,8 +64,6 @@ allowHalf | Boolean | false | 是否允许半选 | N
 clearable | Boolean | false | 是否允许取消选择 | N
 color | String | #ffc51c | 评分图标的颜色 | N
 count | Number | 5 | 评分的数量 | N
-defaultValue | Number | 3 | 默认值。支持语法糖 | N
-defaultDefaultValue | Number | 3 | 默认值。非受控属性 | N
 readonly | Boolean | false | 是否为只读 | N
 showText | Boolean | false | 是否显示辅助文字 | N
 size | String | 48 | 评分图标的大小 | N

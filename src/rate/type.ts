@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-25 11:35:55
+ * updated at 2021-08-25 19:07:29
  * */
 
 export interface TdRateProps {
@@ -26,16 +26,6 @@ export interface TdRateProps {
    * @default 5
    */
   count: number;
-  /**
-   * 默认值
-   * @default 3
-   */
-  defaultValue: number;
-  /**
-   * 默认值，非受控属性
-   * @default 3
-   */
-  defaultDefaultValue: number;
   /**
    * 是否为只读
    * @default false
