@@ -32,7 +32,7 @@ TDesign只提供一种基础步进器类型
 ::: demo demos/event
 :::
 
-## Props
+## API
 
 ### Stepper Props
 名称 | 类型 | 默认值 | 说明 | 必传
@@ -43,6 +43,6 @@ inputWidth | Number | - | 输入框宽度 | N
 label | String | - | 标签 | N
 max | Number | 100 | 最大值 | N
 min | Number | 0 | 最小值 | N
-pureMode | Boolean | false | 简洁模式 | N
 step | Number | 1 | 步进 | N
+theme | String | normal | 组件风格。可选项：normal/mode | N
 value | String / Number | 0 | 值 | N

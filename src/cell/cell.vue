@@ -5,7 +5,7 @@
     </div>
     <div v-if="hasTitle" :class="`${name}__title`">
       <slot name="title">
-        <div v-if="title">{{ title }}</div>
+        <div v-if="title">{{ title }}<span v-if="required" :class="`${name}--required`">&nbsp;*</span></div>
         <div v-if="description" :class="`${name}__description`">{{ description }}</div>
       </slot>
     </div>
@@ -69,12 +69,13 @@ export default defineComponent({
       return undefined;
     });
 
-    const styleCell = computed(()=>[
+    const styleCell = computed(() => [
       `${name}`,
+      `${name}--${props.align}`,
       {
         [`${name}--hover`]: props.hover,
-        [`${name}--${props.align}`]: props.align,
-      }
+        [`${name}--bordered`]: props.bordered,
+      },
     ]);
 
     const onClick = (e: Event) => context.emit('click', e);

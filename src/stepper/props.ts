@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-26 17:33:46
+ * updated at 2021-08-27 17:34:36
  * */
 
 import { TdStepperProps } from './type';
@@ -32,12 +32,18 @@ export default {
     type: Number,
     default: 0,
   },
-  /** 简洁模式 */
-  pureMode: Boolean,
   /** 步进 */
   step: {
     type: Number,
     default: 1,
+  },
+  /** 组件风格 */
+  theme: {
+    type: String as PropType<TdStepperProps['theme']>,
+    default: 'normal' as TdStepperProps['theme'],
+    validator(val: TdStepperProps['theme']): boolean {
+      return ['normal', 'mode'].includes(val);
+    },
   },
   /** 值 */
   value: {
