@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-25 11:32:31
+ * updated at 2021-08-27 10:35:01
  * */
 
 import { TNode } from '../common';
@@ -32,10 +32,6 @@ export interface TdCellProps {
    */
   hover: boolean;
   /**
-   * 主图
-   */
-  image: string | TNode;
-  /**
    * 左侧图标，出现在单元格标题的左侧
    */
   leftIcon: TNode;
@@ -56,11 +52,6 @@ export interface TdCellProps {
    * 标题
    */
   title: string | TNode;
-  /**
-   * 点击后跳转链接地址。如果值为空，则表示不需要跳转
-   * @default ''
-   */
-  url: string;
   /**
    * 右侧内容
    */

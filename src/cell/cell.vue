@@ -1,21 +1,21 @@
 <template>
-  <div :class="name" @click="onClick">
+  <div :class="styleCell" @click="onClick">
     <div v-if="computedLeftIcon !== undefined" :class="`${name}__left-icon`">
       <component :is="computedLeftIcon"> </component>
     </div>
-    <div v-if="hasLabel" :class="`${name}__label`">
-      <slot name="label">
-        <div v-if="label">{{ label }}</div>
-        <div v-if="summary" :class="`${name}__summary`">{{ summary }}</div>
+    <div v-if="hasTitle" :class="`${name}__title`">
+      <slot name="title">
+        <div v-if="title">{{ title }}</div>
+        <div v-if="description" :class="`${name}__description`">{{ description }}</div>
       </slot>
     </div>
-    <div v-if="hasValue" :class="styleValue">
-      <slot>
-        <div v-if="value">{{ value }}</div>
+    <div v-if="hasNote" :class="`${name}__note`">
+      <slot name="note">
+        <div v-if="note">{{ note }}</div>
       </slot>
     </div>
-    <div v-if="computedIcon !== undefined" :class="`${name}__icon`">
-      <component :is="computedIcon" > </component>
+    <div v-if="computedRightIcon !== undefined" :class="`${name}__right-icon`">
+      <component :is="computedRightIcon" > </component>
     </div>
   </div>
 </template>
@@ -25,6 +25,7 @@ import { computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
 import TIconChevronRight from '../icon/chevron-right.vue';
 import CellProps from './props';
+import CLASSNAMES from '@/shared/consts';
 
 const { prefix } = config;
 const name = `${prefix}-cell`;
@@ -35,24 +36,24 @@ export default defineComponent({
   props: CellProps,
   emits: ['click'],
   setup(props, context) {
-    const hasLabel = computed(() => {
-      if (props.label) return true;
-      return !!context.slots.label;
+    const hasTitle = computed(() => {
+      if (props.title) return true;
+      return !!context.slots.title;
     });
 
-    const hasValue = computed(() => {
-      if (props.value) return true;
-      return !!context.slots.default;
+    const hasNote = computed(() => {
+      if (props.note) return true;
+      return !!context.slots.note;
     });
 
-    const computedIcon = computed(() => {
-      if (typeof props.icon === 'function') {
-        return props.icon();
+    const computedRightIcon = computed(() => {
+      if (typeof props.rightIcon === 'function') {
+        return props.rightIcon();
       }
-      if (!!context.slots.icon) {
-        return context.slots.icon;
+      if (!!context.slots.rightIcon) {
+        return context.slots.rightIcon;
       }
-      if (props.link) {
+      if (props.arrow) {
         return TIconChevronRight;
       }
       return undefined;
@@ -68,11 +69,12 @@ export default defineComponent({
       return undefined;
     });
 
-    const styleValue = computed(() => [
-      `${name}__value`,
+    const styleCell = computed(()=>[
+      `${name}`,
       {
-        [`${name}__left`]: props.valueAlign === 'left',
-      },
+        [`${name}--hover`]: props.hover,
+        [`${name}--${props.align}`]: props.align,
+      }
     ]);
 
     const onClick = (e: Event) => context.emit('click', e);
@@ -80,12 +82,12 @@ export default defineComponent({
     return {
       ...toRefs(props),
       name,
-      styleValue,
-      hasLabel,
-      hasValue,
-      computedIcon,
+      hasTitle,
+      hasNote,
+      computedRightIcon,
       computedLeftIcon,
       onClick,
+      styleCell,
     };
   },
 });

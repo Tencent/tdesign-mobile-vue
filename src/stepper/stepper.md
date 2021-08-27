@@ -32,7 +32,7 @@ TDesign只提供一种基础步进器类型
 ::: demo demos/event
 :::
 
-## API
+## Props
 
 ### Stepper Props
 名称 | 类型 | 默认值 | 说明 | 必传
