@@ -1,49 +1,74 @@
 <template>
-  <div>
-    <t-cell-group title="按钮带徽标">
-      <div class="badge-wrap">
-        <t-badge :count="16" class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
-        </t-badge>
-        <t-badge dot class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
-        </t-badge>
-        <t-badge content="NEW" class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
-        </t-badge>
-        <t-badge content="···" class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
+  <div class='tdesign-mobile-demo'>
+    <h1 class='com-title'>Badge 徽标</h1>
+    <p class='com-summary'>展示新增内容的提示，用警示红色为主色，包含数字或文字提示内容</p>
+    <h2 class='com-group-title'>01 类型</h2>
+    <p class='com-summary'>徽标主要分红点、数字、文字和角标提醒</p>
+    <div class='badge-demo'>
+      <div class='badge-item'>
+        <t-badge :count='16'>消息</t-badge>
+      </div>
+      <div class='badge-item'>
+        <t-badge dot>消息</t-badge>
+      </div>
+      <div class='badge-item'>
+        <t-badge content='NEW'>消息</t-badge>
+      </div>
+      <div class='badge-item'>
+        <t-badge content='···'>消息</t-badge>
+      </div>
+    </div>
+    <div class='badge-demo'>
+      <div class='badge-item'>
+        <t-badge :count='16'>
+          <t-button size='small' variant='outline'>小按钮</t-button>
         </t-badge>
       </div>
-    </t-cell-group>
-    <t-cell-group title="列表带徽标" style="overflow: hidden">
-      <t-cell label="单行标题" link>
-        <div class="cell-badge-wrap">
-          <t-badge dot />
-        </div>
+      <div class='badge-item'>
+        <t-badge dot>
+          <t-button size='small' variant='outline'>小按钮</t-button>
+        </t-badge>
+      </div>
+      <div class='badge-item'>
+        <t-badge content='NEW'>
+          <t-button size='small' variant='outline'>小按钮</t-button>
+        </t-badge>
+      </div>
+      <div class='badge-item'>
+        <t-badge content='···'>
+          <t-button size='small' variant='outline'>小按钮</t-button>
+        </t-badge>
+      </div>
+    </div>
+    <t-cell-group style='overflow: hidden'>
+      <t-cell title='单行标题' arrow>
+        <template #note>
+          <t-badge dot></t-badge>
+        </template>
       </t-cell>
-      <t-cell label="单行标题" link>
-        <div class="cell-badge-wrap">
-          <t-badge :count="16"/>
-        </div>
+      <t-cell title='单行标题' arrow>
+        <template #note>
+          <t-badge :count='16'></t-badge>
+        </template>
       </t-cell>
-      <t-cell label="单行标题" link>
-        <div class="cell-badge-wrap">
-          <t-badge content="NEW" shape="round" class="cell-badge"/>
-          <t-badge content="NEW" shape="round" class="cell-badge"/>
-          <t-badge content="NEW" class="cell-badge"/>
-          <t-badge content="NEW" class="cell-badge"/>
-        </div>
+      <t-cell title='单行标题' arrow>
+        <template #note>
+          <t-badge content='NEW' shape='round' />
+          <t-badge content='NEW' />
+        </template>
       </t-cell>
-      <t-cell label="单行标题">
-        <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
+      <t-cell title='单行标题'>
+        <template #note>
+          <t-badge content='NEW' :offset='[5, 0]' shape='ribbon' />
+        </template>
       </t-cell>
     </t-cell-group>
   </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { defineComponent } from 'vue';
+
 export default defineComponent({
   setup() {
     return {
@@ -52,19 +77,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="less" scoped>
-.badge-wrap {
-  padding: 20px 16px;
-
-  .badge-item {
-    margin-right: 10px;
-  }
-}
-.cell-badge {
-  margin-left: 8px;
-}
-.cell-badge-wrap {
-  padding-bottom: 4px;
-}
-</style>

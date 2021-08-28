@@ -1,20 +1,21 @@
 <template>
-  <div class="badge-wrap">
-    <t-badge :count="12" class="badge-item">
-      <t-button size="small">按钮</t-button>
-    </t-badge>
-    <t-badge dot class="badge-item">
-      <t-button size="small">小红点</t-button>
-    </t-badge>
-    <t-badge content="NEW" class="badge-item">
-      <t-button size="small">NEW</t-button>
-    </t-badge>
-    <t-badge content="···" class="badge-item">
-      <t-button size="small">省略号</t-button>
-    </t-badge>
-    <t-badge :count="2" class="badge-item">
-      <t-icon name="user-filled"/>
-    </t-badge>
+  <div class="tdesign-mobile-demo">
+    <t-cell-group>
+      <div class='badge-demo'>
+        <div class='badge-item'>
+          <t-badge :count='16'>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge dot>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge content='NEW'>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge content='···'>消息</t-badge>
+        </div>
+      </div>
+    </t-cell-group>
   </div>
 </template>
 
@@ -22,13 +23,3 @@
 import { defineComponent } from 'vue';
 export default defineComponent({});
 </script>
-
-<style lang="less" scoped>
-.badge-wrap {
-  padding: 20px 0;
-
-  .badge-item {
-    margin: 0 20px;
-  }
-}
-</style>

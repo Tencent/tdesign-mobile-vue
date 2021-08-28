@@ -1,21 +1,22 @@
 <template>
-  <div v-if="showBadge" :class="badgeClasses">
-    <div :class="badgeInnerClasses" :style="badgeStyles">{{ value }}</div>
+  <div v-if='showBadge' :class='badgeClasses'>
+    <div :class='badgeInnerClasses' :style='badgeStyles'>{{ value }}</div>
     <slot />
   </div>
 </template>
 
-<script lang="ts">
-import { computed, defineComponent, SetupContext, toRefs } from 'vue';
-import { badgeProps } from './badge.interface';
+<script lang='ts'>
+import { computed, defineComponent, toRefs } from 'vue';
+import BadgeProps from './props';
 
 import config from '../config';
+
 const name = `${config.prefix}-badge`;
 
 export default defineComponent({
   name,
-  props: badgeProps,
-  setup(props, context: SetupContext) {
+  props: BadgeProps,
+  setup(props, context) {
     // 是否独立使用
     const isIndependent = computed(() => !context.slots.default);
 
@@ -40,11 +41,17 @@ export default defineComponent({
     }));
 
     // 徽标自定义样式
-    const badgeStyles = computed(() => ({
-      background: props.color,
-      top: `${props.offset[0]}px`,
-      right: `${props.offset[1]}px`,
-    }));
+    const badgeStyles = computed(() => {
+      if (!props.offset) return {};
+      let [xOffset, yOffset]: Array<string | number> = props.offset;
+      xOffset = isNaN(Number(xOffset)) ? xOffset : `${xOffset}px`;
+      yOffset = isNaN(Number(yOffset)) ? yOffset : `${yOffset}px`;
+      return {
+        background: props.color,
+        right: `${xOffset}px`,
+        top: `${yOffset}px`,
+      };
+    });
 
     // 徽标内展示的内容
     const value = computed(() => {

@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-25 11:26:27
+ * updated at 2021-08-27 20:03:35
  * */
 
 import { TdButtonProps } from './type';
