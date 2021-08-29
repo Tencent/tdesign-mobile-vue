@@ -1,6 +1,7 @@
 import * as path from 'path';
 import createTDesignPlugin from './docs/sites/plugin-tdoc/';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 module.exports = {
   base: process.env.NODE_ENV === 'production' ? '/vue-mobile/' : './',
@@ -26,11 +27,15 @@ module.exports = {
       },
     },
   },
-  plugins: [vue({
-    template: {
-      compilerOptions: {
-        isCustomElement: tag => tag.startsWith('td-')
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag.startsWith('td-')
+        }
       }
-    }
-  }), createTDesignPlugin()],
+    }),
+    createTDesignPlugin(),
+    vueJsx(),
+  ],
 };
