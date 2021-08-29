@@ -1,9 +1,9 @@
 <template>
   <div class='tdesign-mobile-demo'>
-    <h1 class='com-title'>Badge 徽标</h1>
-    <p class='com-summary'>展示新增内容的提示，用警示红色为主色，包含数字或文字提示内容</p>
-    <h2 class='com-group-title'>01 类型</h2>
-    <p class='com-summary'>徽标主要分红点、数字、文字和角标提醒</p>
+    <h1 class='title'>Badge 徽标</h1>
+    <p class='summary'>展示新增内容的提示，用警示红色为主色，包含数字或文字提示内容</p>
+    <h2 class='group-title'>01 类型</h2>
+    <p class='summary'>徽标主要分红点、数字、文字和角标提醒</p>
     <div class='badge-demo'>
       <div class='badge-item'>
         <t-badge :count='16'>消息</t-badge>

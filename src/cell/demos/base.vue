@@ -1,8 +1,8 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <h1 class='com-title'>Cell 单元格</h1>
-    <p class='com-summary'>一行内容/功能的垂直排列方式。一行项目左侧为主要内容展示区域，右侧可增加更多操作内容</p>
-    <h2 class='com-group-title'>01 类型</h2>
+    <h1 class='title'>Cell 单元格</h1>
+    <p class='summary'>一行内容/功能的垂直排列方式。一行项目左侧为主要内容展示区域，右侧可增加更多操作内容</p>
+    <h2 class='group-title'>01 类型</h2>
     <t-cell-group title="单行单元格">
       <t-cell title="单行标题" />
       <t-cell title="单行标题" required />

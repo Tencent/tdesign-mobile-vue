@@ -10,71 +10,33 @@
 import TIconClear from '../icon/clear-circle-filled.vue';
 import { defineComponent, computed, toRefs, watch } from 'vue';
 import config from '../config';
+import CheckTagProps from './check-tag-props';
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
-
-export enum TagSize {
-  Large = 'large',
-  Default = 'default',
-  Small = 'small',
-}
-
-export enum TagShape {
-  Square = 'square',
-  Round = 'round',
-  Circle = 'circle',
-}
-
-// export type TagProps = {};
 
 const CheckTag = defineComponent({
   name,
   components: {
     TIconClear,
   },
-  props: {
-    size: {
-      type: String,
-      default: TagSize.Default,
-    },
-    icon: {
-      type: Function,
-      default: undefined,
-    },
-    shape: {
-      type: String,
-      default: TagShape.Square,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    closable: {
-      type: Boolean,
-      default: false,
-    },
-    checked: {
-      type: Boolean,
-      default: false,
-    },
-  },
+  props: CheckTagProps,
   emits: ['change', 'close'],
   setup(props, context) {
     const baseClass = `${prefix}-tag`;
 
     const { size, shape, checked, disabled, closable } = toRefs(props);
 
+    checked.value = props.defaultChecked;
+
     const classes = computed(() => [
       `${baseClass}`,
       `${baseClass}--checkable`,
+      `${baseClass}--${shape.value}`,
       {
         [`${baseClass}--size-${size.value}`]: size.value,
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
         [`${prefix}-is-checked ${baseClass}--checked`]: checked.value,
-        [`${baseClass}--square`]: shape.value.valueOf() === TagShape.Square.valueOf(),
-        [`${baseClass}--round`]: shape.value.valueOf() === TagShape.Round.valueOf(),
-        [`${baseClass}--circle`]: shape.value.valueOf() === TagShape.Circle.valueOf(),
       },
     ]);
 

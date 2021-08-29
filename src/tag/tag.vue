@@ -10,75 +10,14 @@
 import TIconClose from '../icon/close.vue';
 import { defineComponent, computed, toRefs } from 'vue';
 import config from '../config';
+import TagProps from './props';
 const { prefix } = config;
 const name = `${prefix}-tag`;
-
-export enum TagTheme {
-  Default = 'default',
-  Primary = 'primary',
-  Info = 'info',
-  Warning = 'warning',
-  Danger = 'danger',
-  Success = 'success',
-}
-
-export enum TagVariant {
-  Dark = 'dark',
-  Light = 'light',
-  Plain = 'plain',
-}
-
-export enum TagSize {
-  Large = 'large',
-  Medium = 'medium',
-  Small = 'small',
-}
-
-export enum TagShape {
-  Square = 'square',
-  Round = 'round',
-  Circle = 'circle',
-}
-
-// export type TagProps = {};
 
 const Tag = defineComponent({
   name,
   components: { TIconClose },
-  props: {
-    theme: {
-      type: String,
-      default: TagTheme.Default,
-    },
-    variant: {
-      type: String,
-      default: TagVariant.Dark,
-    },
-    size: {
-      type: String,
-      default: TagSize.Medium,
-    },
-    icon: {
-      type: Function,
-      default: undefined,
-    },
-    shape: {
-      type: String,
-      default: TagShape.Square,
-    },
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    closable: {
-      type: Boolean,
-      default: false,
-    },
-    maxWidth: {
-      type: [String, Number],
-      default: '',
-    },
-  },
+  props: TagProps,
   emits: ['close'],
   setup(props, context) {
     const baseClass = name;
@@ -96,7 +35,7 @@ const Tag = defineComponent({
         [`${baseClass}--variant-${variant.value}`]: theme.value,
         [`${prefix}-is-error`]: theme.value === 'danger',
         [`${prefix}-is-success`]: theme.value === 'success',
-        [`${prefix}-is-warnging`]: theme.value === 'warnging',
+        [`${prefix}-is-warning`]: theme.value === 'warning',
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--size-${size.value}`]: size.value,

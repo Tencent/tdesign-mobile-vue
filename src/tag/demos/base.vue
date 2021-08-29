@@ -1,78 +1,53 @@
 <template>
-  <div class="tag-base tdesign-demo-tag">
-    <t-cell-group title="展示型标签">
-      <t-cell value-align="left">
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">Tag 标签</h1>
+    <p class="summary">用于标记表示主体属性、类型、状态等，由底部图形和标签文字组成</p>
+    <tdesign-demo-block title="01 类型" summary="展示型标签">
+      <div class="tag-demo">
         <t-tag theme="primary">重要</t-tag>
         <t-tag theme="danger">危险</t-tag>
         <t-tag theme="warning">警告</t-tag>
         <t-tag theme="success">成功</t-tag>
         <t-tag theme="info">信息</t-tag>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group>
-      <t-cell value-align="left">
+      </div>
+      <div class="tag-demo">
         <t-tag theme="primary" variant="dark">深色</t-tag>
         <t-tag theme="primary" variant="light">浅色</t-tag>
         <t-tag theme="primary" variant="plain">朴素</t-tag>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group>
-      <t-cell value-align="left">
-        <t-tag size="large" theme="primary">大号</t-tag>
-        <t-tag size="medium" theme="primary">中号</t-tag>
-        <t-tag size="small" theme="primary">小号</t-tag>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group>
-      <t-cell value-align="left">
-        <t-tag size="large" theme="primary" shape="circle">圆角</t-tag>
-        <t-tag size="medium" theme="primary" shape="circle">圆角</t-tag>
-        <t-tag size="small" theme="primary" shape="circle">圆角</t-tag>
-      </t-cell>
-    </t-cell-group>
-    <!-- <t-cell-group>
-      <t-cell>
-        <t-tag size="large" theme="primary" shape="square">大圆角</t-tag>
-        <t-tag size="medium" theme="primary" shape="round">大圆角</t-tag>
-        <t-tag size="small" theme="primary" shape="mark">大圆角</t-tag>
-      </t-cell>
-    </t-cell-group> -->
-    <t-cell-group title="点击型标签">
-      <t-cell value-align="left">
-        <t-check-tag
-          v-for="(fruit, index) in fruits"
-          :key="fruit.name"
-          size="large"
-          :checked="fruit.checked"
-          :disabled="fruit.disabled"
-          @click="onClickFruit(index)"
-        >{{fruit.name}}</t-check-tag>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group>
-      <t-cell value-align="left">
-        <t-check-tag
-          v-for="(fruit, index) in fruits2"
-          :key="fruit.name"
-          :checked="fruit.checked"
-          :disabled="fruit.disabled"
-          @click="onClickFruit2(index)"
-        >{{fruit.name}}</t-check-tag>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group>
-      <t-cell value-align="left">
+      </div>
+      <div class="tag-demo">
+        <t-tag theme="primary" shape="”round">圆角标签</t-tag>
+        <t-tag theme="primary" shape="mark">半圆角标签</t-tag>
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="点击型标签">
+      <div class="tag-demo">
         <t-tag
-          v-for="(tag,index) in closableTags"
+          v-for="(tag, index) in closableTags"
           :key="tag"
           closable
           :disabled="tag.disabled"
           theme="primary"
           :size="tag.size"
           @close="onClickClose(index)"
-        >{{tag.name}}</t-tag>
-      </t-cell>
-    </t-cell-group>
+          >{{ tag.name }}</t-tag
+        >
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block title="02 状态" summary="标签状态">
+      <div class="tag-demo">
+        <t-check-tag :checked="true">已点击</t-check-tag>
+        <t-check-tag :checked="false">未点击</t-check-tag>
+        <t-check-tag :checked="false">不可点击</t-check-tag>
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block title="03 规格" summary="标签规格">
+      <div class="tag-demo">
+        <t-tag size="large" theme="primary">大号</t-tag>
+        <t-tag size="medium" theme="primary">中号</t-tag>
+        <t-tag size="small" theme="primary">小号</t-tag>
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -127,20 +102,15 @@ export default defineComponent({
 
     const closableTags = ref([
       {
-        name: '可关闭',
+        name: '标签',
         size: 'large',
       },
       {
-        name: '可关闭',
+        name: '标签',
       },
       {
-        name: '可关闭',
+        name: '标签',
         size: 'small',
-      },
-      {
-        name: '失效标签',
-        size: 'small',
-        disabled: true,
       },
     ]);
 
@@ -167,18 +137,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less" >
-.tag-base {
-  background: #fbfbfb;
-  .t-tag + .t-tag {
-    margin-left: 8px;
-  }
-  .intro {
-    font-size: 14px;
-    color: #555;
-  }
-  .t-cell--value {
-    text-align: left;
-  }
-}
-</style>
