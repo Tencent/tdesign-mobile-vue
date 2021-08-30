@@ -1,68 +1,68 @@
 <template>
   <div class='tdesign-mobile-demo'>
-    <h1 class='title'>Badge 徽标</h1>
-    <p class='summary'>展示新增内容的提示，用警示红色为主色，包含数字或文字提示内容</p>
-    <h2 class='group-title'>01 类型</h2>
-    <p class='summary'>徽标主要分红点、数字、文字和角标提醒</p>
-    <div class='badge-demo'>
-      <div class='badge-item'>
-        <t-badge :count='16'>消息</t-badge>
+    <h1 class='title'>Tag 标签</h1>
+    <p class='summary'>用于标记表示主体属性、类型、状态等，由底部图形和标签文字组成</p>
+    <tdesign-demo-block title='01 类型' summary='徽标主要分红点、数字、文字和角标提醒'>
+      <div class='badge-demo'>
+        <div class='badge-item'>
+          <t-badge :count='16'>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge dot>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge content='NEW'>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge content='···'>消息</t-badge>
+        </div>
       </div>
-      <div class='badge-item'>
-        <t-badge dot>消息</t-badge>
+      <div class='badge-demo'>
+        <div class='badge-item'>
+          <t-badge :count='16'>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge dot>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge content='NEW'>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge content='···'>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
+        </div>
       </div>
-      <div class='badge-item'>
-        <t-badge content='NEW'>消息</t-badge>
-      </div>
-      <div class='badge-item'>
-        <t-badge content='···'>消息</t-badge>
-      </div>
-    </div>
-    <div class='badge-demo'>
-      <div class='badge-item'>
-        <t-badge :count='16'>
-          <t-button size='small' variant='outline'>小按钮</t-button>
-        </t-badge>
-      </div>
-      <div class='badge-item'>
-        <t-badge dot>
-          <t-button size='small' variant='outline'>小按钮</t-button>
-        </t-badge>
-      </div>
-      <div class='badge-item'>
-        <t-badge content='NEW'>
-          <t-button size='small' variant='outline'>小按钮</t-button>
-        </t-badge>
-      </div>
-      <div class='badge-item'>
-        <t-badge content='···'>
-          <t-button size='small' variant='outline'>小按钮</t-button>
-        </t-badge>
-      </div>
-    </div>
-    <t-cell-group style='overflow: hidden'>
-      <t-cell title='单行标题' arrow>
-        <template #note>
-          <t-badge dot></t-badge>
-        </template>
-      </t-cell>
-      <t-cell title='单行标题' arrow>
-        <template #note>
-          <t-badge :count='16'></t-badge>
-        </template>
-      </t-cell>
-      <t-cell title='单行标题' arrow>
-        <template #note>
-          <t-badge content='NEW' shape='round' />
-          <t-badge content='NEW' />
-        </template>
-      </t-cell>
-      <t-cell title='单行标题'>
-        <template #note>
-          <t-badge content='NEW' :offset='[5, 0]' shape='ribbon' />
-        </template>
-      </t-cell>
-    </t-cell-group>
+      <t-cell-group style='overflow: hidden'>
+        <t-cell title='单行标题' arrow>
+          <template #note>
+            <t-badge dot></t-badge>
+          </template>
+        </t-cell>
+        <t-cell title='单行标题' arrow>
+          <template #note>
+            <t-badge :count='16'></t-badge>
+          </template>
+        </t-cell>
+        <t-cell title='单行标题' arrow>
+          <template #note>
+            <t-badge content='NEW' shape='round' />
+            <t-badge content='NEW' />
+          </template>
+        </t-cell>
+        <t-cell title='单行标题'>
+          <template #note>
+            <t-badge content='NEW' :offset='[5, 0]' shape='ribbon' />
+          </template>
+        </t-cell>
+      </t-cell-group>
+    </tdesign-demo-block>
   </div>
 </template>
 

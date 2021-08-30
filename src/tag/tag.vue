@@ -31,6 +31,7 @@ const Tag = defineComponent({
     const classes = computed(() => [
       `${baseClass}`,
       `${baseClass}--theme-${theme.value}`,
+      `${baseClass}--${shape.value}`,
       {
         [`${baseClass}--variant-${variant.value}`]: theme.value,
         [`${prefix}-is-error`]: theme.value === 'danger',
@@ -39,7 +40,6 @@ const Tag = defineComponent({
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
         [`${baseClass}--size-${size.value}`]: size.value,
-        [`${baseClass}--${shape.value}`]: true,
       },
     ]);
 

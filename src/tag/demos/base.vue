@@ -8,7 +8,7 @@
         <t-tag theme="danger">危险</t-tag>
         <t-tag theme="warning">警告</t-tag>
         <t-tag theme="success">成功</t-tag>
-        <t-tag theme="info">信息</t-tag>
+        <t-tag theme="default">信息</t-tag>
       </div>
       <div class="tag-demo">
         <t-tag theme="primary" variant="dark">深色</t-tag>
@@ -16,7 +16,7 @@
         <t-tag theme="primary" variant="plain">朴素</t-tag>
       </div>
       <div class="tag-demo">
-        <t-tag theme="primary" shape="”round">圆角标签</t-tag>
+        <t-tag theme="primary" shape="round">圆角标签</t-tag>
         <t-tag theme="primary" shape="mark">半圆角标签</t-tag>
       </div>
     </tdesign-demo-block>

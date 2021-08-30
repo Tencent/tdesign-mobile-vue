@@ -1,6 +1,6 @@
 import vueToast from './toast.vue';
-import { createApp, App, DefineComponent, Plugin } from 'vue';
-import { ToastProps, ToastPropsDefault, ToastType } from './toast.interface';
+import { createApp, defineComponent ,App, DefineComponent, Plugin } from 'vue';
+import ToastProps from './props';
 
 import './style/';
 
@@ -12,16 +12,15 @@ function Toast(props?: ToastProps | string): DefineComponent<ToastProps> {
   document.body.appendChild(root);
 
   const propsObject = {
-    ...ToastPropsDefault,
+    duration: 2000,
     ...parseOptions(props),
   };
 
   if (instance) {
     instance.clear();
   }
-  // XXX: 实例化问题
-  // instance = defineComponent(vueToast);
-  instance = vueToast;
+
+  instance = defineComponent(vueToast);
 
   instance.clear = () => {
     clearTimeout(instance.timer);
