@@ -1,17 +1,23 @@
+/* eslint-disable */
+
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-04-12 23:32:26
+ * updated at 2021-08-27 20:03:35
  * */
 
-import { TdButtonProps } from '@TdTypes/button/TdButtonProps';
+import { TdButtonProps } from './type';
 import { PropType } from 'vue';
 
 export default {
   /** 是否为块级元素 */
   block: Boolean,
+  /** 按钮内容 */
+  content: {
+    type: [String, Function] as PropType<TdButtonProps['content']>,
+  },
   /** 是否禁用按钮 */
   disabled: Boolean,
-  /** 是否为幽灵按钮 */
+  /** 是否为幽灵按钮（镂空按钮） */
   ghost: Boolean,
   /** 按钮内部图标，可完全自定义 */
   icon: {
@@ -22,32 +28,32 @@ export default {
   /** 按钮形状，有二种：方形、圆角方形 */
   shape: {
     type: String as PropType<TdButtonProps['shape']>,
-    default: 'square',
-    validator(val: string): boolean {
+    default: 'square' as TdButtonProps['shape'],
+    validator(val: TdButtonProps['shape']): boolean {
       return ['square', 'round'].includes(val);
     },
   },
   /** 组件子元素（默认插槽） */
   size: {
     type: String as PropType<TdButtonProps['size']>,
-    default: 'medium',
-    validator(val: string): boolean {
+    default: 'medium' as TdButtonProps['size'],
+    validator(val: TdButtonProps['size']): boolean {
       return ['small', 'medium', 'large'].includes(val);
     },
   },
-  /** 组件主题风格，默认、主色、危险 */
+  /** 组件风格，依次为品牌色、危险色 */
   theme: {
     type: String as PropType<TdButtonProps['theme']>,
-    default: 'default',
-    validator(val: string): boolean {
+    default: undefined as TdButtonProps['theme'],
+    validator(val: TdButtonProps['theme']): boolean {
       return ['default', 'primary', 'danger'].includes(val);
     },
   },
   /** 按钮形式，基础、线框、文字 */
   variant: {
     type: String as PropType<TdButtonProps['variant']>,
-    default: 'base',
-    validator(val: string): boolean {
+    default: 'base' as TdButtonProps['variant'],
+    validator(val: TdButtonProps['variant']): boolean {
       return ['base', 'outline', 'text'].includes(val);
     },
   },

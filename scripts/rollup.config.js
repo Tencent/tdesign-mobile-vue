@@ -14,7 +14,6 @@ import multiInput from 'rollup-plugin-multi-input';
 import typescript from 'rollup-plugin-typescript2';
 import staticImport from 'rollup-plugin-static-import';
 import ignoreImport from 'rollup-plugin-ignore-import';
-import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 
 import pkg from '../package.json';
 
@@ -67,13 +66,20 @@ const getPlugins = ({
     }));
   } else {
     if (ignoreLess) {
-      plugins.push(ignoreImport({ extensions: ['*.less'] }));
+      plugins.push(ignoreImport({
+        extensions: ['*.less'],
+      }));
     } else {
       plugins.push(
-        staticImport({ include: ['src/**/style/*'] }),
+        staticImport({
+          include: [
+            'src/**/style/index.js',
+            'src/_common/style/mobile/**/*.less',
+          ],
+        }),
         ignoreImport({
           include: ['src/*/style/*'],
-          body: 'import "../style/index.js";',
+          body: 'import "./style/index.js";',
         }),
       );
     }
@@ -89,23 +95,20 @@ const getPlugins = ({
   }
 
   if (isProd) {
-    plugins.push(
-      sizeSnapshot(),
-      terser({
-        output: {
-          /* eslint-disable */
+    plugins.push(terser({
+      output: {
+        /* eslint-disable */
           ascii_only: true,
           /* eslint-enable */
-        },
-      }),
-    );
+      },
+    }));
   }
 
   return plugins;
 };
 
 const name = 'tdesign';
-const externalDeps = Object.keys(pkg.dependencies || {});
+const externalDeps = Object.keys(pkg.dependencies || {}).concat(/lodash/);
 const externalPeerDeps = Object.keys(pkg.peerDependencies || {});
 const banner = `/**
  * ${name} v${pkg.version}
@@ -116,10 +119,10 @@ const banner = `/**
 const input = 'src/index.ts';
 const inputList = [
   'src/**/*.ts',
+  'src/**/*.vue',
   '!src/**/demos',
   '!src/**/style',
   '!src/**/__tests__',
-  '!src/**/*.interface.ts',
 ];
 
 /** @type {import('rollup').RollupOptions} */
@@ -132,7 +135,7 @@ const esmConfig = {
     dir: 'es/',
     format: 'esm',
     sourcemap: true,
-    preserveModules: true,
+    chunkFileNames: '_chunks/dep-[hash].js',
   },
 };
 
@@ -147,7 +150,7 @@ const cjsConfig = {
     format: 'cjs',
     sourcemap: true,
     exports: 'named',
-    preserveModules: true,
+    chunkFileNames: '_chunks/dep-[hash].js',
   },
 };
 

@@ -1,15 +1,15 @@
 <template>
   <div class="cell-base">
-    <t-cell label="单行标题" />
-    <t-cell label="单行标题">
+    <t-cell title="单行标题" />
+    <t-cell title="单行标题">
       <TIconChevronRight />
     </t-cell>
-    <t-cell label="单行标题" value="辅助信息" link></t-cell>
+    <t-cell title="单行标题" note="辅助信息" arrow></t-cell>
     <t-cell>
       <template #leftIcon>
         <TIconUserFilled />
       </template>
-      <template #label>
+      <template #title>
         <span>单行标题</span>
       </template>
     </t-cell>

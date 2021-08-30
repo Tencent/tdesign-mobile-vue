@@ -14,7 +14,7 @@ export default {
 
     // 统一换成 common 文档内容
     if (name && source.includes(':: BASE_DOC ::')) {
-      const docPath = path.resolve(__dirname, `../../common/docs/mobile/api/${name}.md`);
+      const docPath = path.resolve(__dirname, `../../src/_common/docs/mobile/api/${name}.md`);
       if (fs.existsSync(docPath)) {
         const baseDoc = fs.readFileSync(docPath, 'utf-8');
         source = source.replace(':: BASE_DOC ::', baseDoc);
@@ -33,7 +33,7 @@ export default {
 
       return `\n::: demo demos/${demoFileName} ${name}\n:::\n`;
     });
-    
+
     // 解析 api 占位符
     if (source.includes(':: BASE_PROPS ::')) {
       const apiDoc = fs.readFileSync(path.resolve(resouceDir, './api.md'), 'utf-8');
