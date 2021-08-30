@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-30 00:08:59
+ * updated at 2021-08-30 13:35:05
  * */
 
 import { TdCheckTagProps } from '../tag/type';
@@ -15,18 +15,22 @@ export default {
   defaultChecked: Boolean,
   /** 标签是否可关闭 */
   closable: Boolean,
+  /** 组件子元素 */
+  content: {
+    type: [String, Number, Function] as PropType<TdCheckTagProps['content']>,
+  },
   /** 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态 */
   disabled: Boolean,
   /** 标签中的图标，可自定义图标呈现 */
   icon: {
     type: Function as PropType<TdCheckTagProps['icon']>,
   },
-  /** 标签类型，有三种：方形、圆角方形、圆形 */
+  /** 标签类型，有三种：方形、圆角方形、标记型 */
   shape: {
     type: String as PropType<TdCheckTagProps['shape']>,
     default: 'square' as TdCheckTagProps['shape'],
     validator(val: TdCheckTagProps['shape']): boolean {
-      return ['square', 'round', 'circle'].includes(val);
+      return ['square', 'round', 'mark'].includes(val);
     },
   },
   /** 标签尺寸 */

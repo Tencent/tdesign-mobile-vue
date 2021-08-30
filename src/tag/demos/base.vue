@@ -37,8 +37,8 @@
     <tdesign-demo-block title="02 状态" summary="标签状态">
       <div class="tag-demo">
         <t-check-tag :checked="true">已点击</t-check-tag>
-        <t-check-tag :checked="false">未点击</t-check-tag>
-        <t-check-tag :checked="false">不可点击</t-check-tag>
+        <t-check-tag :defaultChecked='false'>未点击</t-check-tag>
+        <t-check-tag disabled>不可点击</t-check-tag>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="03 规格" summary="标签规格">

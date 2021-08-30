@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-30 00:08:59
+ * updated at 2021-08-30 13:35:05
  * */
 
 import { TNode, SizeEnum } from '../common';
@@ -77,6 +77,10 @@ export interface TdCheckTagProps {
    */
   closable: boolean;
   /**
+   * 组件子元素
+   */
+  content: string | number | TNode;
+  /**
    * 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态
    * @default false
    */
@@ -86,10 +90,10 @@ export interface TdCheckTagProps {
    */
   icon: TNode;
   /**
-   * 标签类型，有三种：方形、圆角方形、圆形
+   * 标签类型，有三种：方形、圆角方形、标记型
    * @default square
    */
-  shape: 'square' | 'round' | 'circle';
+  shape: 'square' | 'round' | 'mark';
   /**
    * 标签尺寸
    * @default medium
