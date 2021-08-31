@@ -21,7 +21,7 @@ type ParsedPropOption = {
 
 
 function getPropOptionMap(props: (string | PropOption)[]):
-  { [name: string]: ParsedPropOption } {
+{ [name: string]: ParsedPropOption } {
   const propOptionMap = {};
 
   function parseProp(propOption: PropOption): ParsedPropOption {
@@ -108,7 +108,7 @@ export default function (props: (string | PropOption)[]): any {
       };
 
       // watch alias
-      alias.forEach((aliasItem) => {
+      alias?.forEach((aliasItem) => {
         defineWatches[aliasItem] = {
           handler(v: any): void {
             const { props } = this.$.vnode;
