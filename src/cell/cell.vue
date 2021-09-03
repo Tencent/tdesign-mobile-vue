@@ -25,7 +25,7 @@ import { computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
 import TIconChevronRight from '../icon/chevron-right.vue';
 import CellProps from './props';
-import CLASSNAMES from '@/shared/consts';
+import CLASSNAMES from '@/shared/constants';
 
 const { prefix } = config;
 const name = `${prefix}-cell`;
