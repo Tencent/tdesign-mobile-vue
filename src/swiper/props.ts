@@ -46,7 +46,7 @@ export default {
   /** 轮播间隔时间 */
   interval: {
     type: Number,
-    default: 5000,
+    default: 3000,
   },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,

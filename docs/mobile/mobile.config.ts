@@ -174,6 +174,11 @@ export default {
           name: 'cell',
           component: () => import('@/cell/demos/base.vue'),
         },
+        {
+          title: 'Swiper 轮播',
+          name: 'swiper',
+          component: () => import('@/swiper/demos/base.vue'),
+        },
       ],
     },
   },
