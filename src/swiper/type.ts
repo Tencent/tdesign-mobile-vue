@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-29 23:00:13
+ * updated at 2021-09-05 17:04:02
  * */
 
 export interface TdSwiperProps {
@@ -39,6 +39,11 @@ export interface TdSwiperProps {
    * @default 5000
    */
   interval: number;
+  /**
+   * 分页器样式类型‘bullets’  圆点（默认） ‘fraction’  分式
+   * @default bullets
+   */
+  paginationType: 'bullets' | 'fraction';
   /**
    * 轮播切换时触发
    */

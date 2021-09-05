@@ -11,19 +11,31 @@
     >
       <slot></slot>
     </div>
-    <p>{{state.activeIndex}}</p>
+    <!-- <p>{{state.activeIndex}}</p> -->
     <span>
       <span @click="prev" class="swiperbtn btn-prev">
-        <t-icon name="chevron-left" size="small"/>
+        <t-icon size="12px" name="chevron-left" />
       </span>
       <span @click="next" class="swiperbtn btn-next">
-        <t-icon name="chevron-right" size="small"/>
+        <t-icon size="12px" name="chevron-right" />
       </span>
+    </span>
+    <span class="t-swiper-pagination" :class="'t-swiper-pagination--' + paginationType">
+      <template v-if="paginationType === 'bullets'">
+        <span class="t-swiper-pagination-dot"
+          :class="{active: index === state.activeIndex}"
+          v-for="(item, index) in paginationList"
+          :key="'page' + index"></span>
+      </template>
+      <span v-if="paginationType === 'fraction'">
+        {{showPageNum +  '/' + state.itemLength}}
+      </span>
+      <!-- {{paginationType + paginationList}} -->
     </span>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, ComponentInternalInstance, onMounted } from 'vue'
+import { defineComponent, reactive, getCurrentInstance, ComponentInternalInstance, onMounted, computed } from 'vue'
 import SwiperProps from './props';
 import { setOffset } from './tools';
 export default defineComponent({
@@ -32,7 +44,7 @@ export default defineComponent({
   setup(props, context) {
     const self = getCurrentInstance();
     
-    const { autoplay, interval, duration } = props;
+    const { autoplay, interval, duration, paginationType } = props;
     const state: {
       activeIndex: number;
       itemLength: number;
@@ -43,6 +55,17 @@ export default defineComponent({
       itemWidth: 0,
 
     });
+    // 分页数组--任意数组，用于循环分页点
+    const paginationList = computed(() => {
+      return new Array(state.itemLength).fill(1);
+    });
+    // 限制的分页值（hike循环播放添加的节点数量）
+    const showPageNum = computed(() => {
+      const { activeIndex, itemLength } = state;
+      if (activeIndex > itemLength - 1) return itemLength;
+      if (activeIndex < 0) return 1;
+      return activeIndex + 1; 
+    })
     // 获取容器节点（实时获取，才能获取到最新的节点）
     const getContainer = (): HTMLDivElement => {
       // return self?.refs.swiperContainer as HTMLDivElement;
@@ -53,9 +76,12 @@ export default defineComponent({
       const _swiperContainer = getContainer();
       const items = _swiperContainer.querySelectorAll('.t-swiper-item');
       console.log(items);
-      // 把第一个元素复制到最后面，以供循环轮播使用
       let first = items[0].cloneNode(true);
+      let last = items[items.length - 1].cloneNode(true);
+      // 把第一个元素复制到最后面，以供循环轮播使用
       _swiperContainer.appendChild(first);
+      // // 把最后一个元素复制到最前面
+      // _swiperContainer.insertBefore(last, items[0]);
     }
     
     // 勾子函数初始化部分数据
@@ -90,12 +116,18 @@ export default defineComponent({
     }
     //确认是否已经移动到最后一个元素，每次transitionend事件后即检查
     const checkLast = () => {
-      if(state.activeIndex >= state.itemLength) {
-        console.log('到了最后一个元素',state.activeIndex, state.itemLength);
+      if (state.activeIndex >= state.itemLength) {
+        console.log('到了最后一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = 0;
         removeAnimation();
         move(0);
       }
+      // if (state.activeIndex <= -1) {
+      //   console.log('到了第一个元素', state.activeIndex, state.itemLength);
+      //   state.activeIndex = state.itemLength -1;
+      //   removeAnimation();
+      //   move(state.itemLength - 1);
+      // }
     }
     // 停止自动播放
     const stopAutoplay = () => {
@@ -175,6 +207,8 @@ export default defineComponent({
       onTouchEnd,
       checkLast,
       state,
+      paginationList,
+      showPageNum,
       prev,
       next,
     }
