@@ -1,15 +1,22 @@
 <template>
-  <div class="t-swiper-item">
+  <div :class="compnentName">
     <slot/>
   </div>
 </template>
 <script lang="ts">
 
 import config from '@/config';
-import { defineComponent } from 'vue';
+import { computed, defineComponent } from 'vue';
 const { prefix } = config;
+const name = `${prefix}-swiper-item`;
 
 export default defineComponent({
-  name: `${prefix}-swiper-item`,
+  name,
+  setup() {
+    const compnentName = computed(() => name);
+    return {
+      compnentName,
+    };
+  },
 });
 </script>

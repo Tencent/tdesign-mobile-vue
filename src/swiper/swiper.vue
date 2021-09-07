@@ -1,8 +1,8 @@
 <template>
-  <div ref="swiper" class="t-swiper">
+  <div ref="swiper" :class="`${name}`">
     <div
       ref="swiperContainer"
-      class="t-swiper-container"
+      :class="`${name}-container`"
       @transitionend='checkLast'
       @touchstart="onTouchStart"
       @touchmove.prevent="onTouchMove"
@@ -20,10 +20,10 @@
         <t-icon size="12px" name="chevron-right" />
       </span>
     </span>
-    <span class="t-swiper-pagination" :class="'t-swiper-pagination--' + paginationType">
+    <span :class="`${name}-pagination ${name}-pagination--${paginationType}`">
       <template v-if="paginationType === 'bullets'">
-        <span class="t-swiper-pagination-dot"
-          :class="{active: index === state.activeIndex}"
+        <span
+          :class="{[`${name}-pagination-dot`]: true, active: index === state.activeIndex}"
           v-for="(item, index) in paginationList"
           :key="'page' + index"></span>
       </template>
@@ -80,8 +80,8 @@ export default defineComponent({
       const last = items[items.length - 1].cloneNode(true);
       // 把第一个元素复制到最后面，以供循环轮播使用
       _swiperContainer.appendChild(first);
-      // // 把最后一个元素复制到最前面
-      // _swiperContainer.insertBefore(last, items[0]);
+      // 把最后一个元素复制到最前面
+      _swiperContainer.insertBefore(last, items[0]);
     };
 
     // 勾子函数初始化部分数据
@@ -102,7 +102,7 @@ export default defineComponent({
       const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
       const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transform = `translateX(-${state.itemWidth * (targetIndex)}px)`;
+      _swiperContainer.style.transform = `translateX(-${state.itemWidth * (targetIndex + 1)}px)`;
     };
     // 添加动画
     const addAnimation = () => {
@@ -122,12 +122,12 @@ export default defineComponent({
         removeAnimation();
         move(0);
       }
-      // if (state.activeIndex <= -1) {
-      //   console.log('到了第一个元素', state.activeIndex, state.itemLength);
-      //   state.activeIndex = state.itemLength -1;
-      //   removeAnimation();
-      //   move(state.itemLength - 1);
-      // }
+      if (state.activeIndex <= -1) {
+        console.log('到了第一个元素', state.activeIndex, state.itemLength);
+        state.activeIndex = state.itemLength - 1;
+        removeAnimation();
+        move(state.itemLength - 1);
+      }
     };
     // 停止自动播放
     const stopAutoplay = () => {
@@ -148,9 +148,9 @@ export default defineComponent({
     const prev = () => {
       stopAutoplay();
       state.activeIndex -= 1;
-      if (state.activeIndex < 0) {
-        state.activeIndex = state.itemLength - 1;
-      }
+      // if (state.activeIndex < 0) {
+      //   state.activeIndex = state.itemLength - 1;
+      // }
       addAnimation();
       move(state.activeIndex);
       startAutoplay();
