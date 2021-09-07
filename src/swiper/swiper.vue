@@ -67,10 +67,7 @@ export default defineComponent({
       return activeIndex + 1;
     });
     // 获取容器节点（实时获取，才能获取到最新的节点）
-    const getContainer = (): HTMLDivElement =>
-      // return self?.refs.swiperContainer as HTMLDivElement;
-      self?.proxy?.$el.querySelector('.t-swiper-container')
-    ;
+    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
     // 初始化轮播图元素
     const initSwiper = () => {
       const _swiperContainer = getContainer();
@@ -99,8 +96,8 @@ export default defineComponent({
      * 移动节点
      */
     const move = (targetIndex: number) => {
-      const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
-      const firstItem: HTMLDivElement = allItems[0];
+      // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
+      // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
       _swiperContainer.style.transform = `translateX(-${state.itemWidth * (targetIndex + 1)}px)`;
     };
@@ -164,19 +161,19 @@ export default defineComponent({
       startAutoplay();
     };
     let touchStartX = 0;
-    let touchStartY = 0;
+    // let touchStartY = 0;
     // 按下鼠标或屏幕开始滑动
     const onTouchStart = (event: TouchEvent) => {
       stopAutoplay();
       // console.log('touch start', state?.itemLength);
-      touchStartY = event.touches[0].clientY;
+      // touchStartY = event.touches[0].clientY;
       touchStartX = event.touches[0].clientX;
     };
     // 滑动过程中位移容器
     const onTouchMove = (event: TouchEvent) => {
       // console.log('touch move');
       const { activeIndex, itemWidth } = state;
-      const endY = event.changedTouches[0].clientY;
+      // const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
       const distanceX = endX - touchStartX;
       const _container = getContainer();
@@ -186,7 +183,7 @@ export default defineComponent({
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。
     const onTouchEnd = (event: TouchEvent) => {
       // console.log('touch end', event);
-      const endY = event.changedTouches[0].clientY;
+      // const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
       const distanceX = endX - touchStartX;
       addAnimation();
