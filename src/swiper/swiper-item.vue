@@ -4,12 +4,12 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+
+import config from '@/config';
+import { defineComponent } from 'vue';
+const { prefix } = config;
 
 export default defineComponent({
-  name: 'SwiperItem',
-  setup() {
-    
-  },
-})
+  name: `${prefix}-swiper-item`,
+});
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h3>基本用法</h3>
     <t-swiper>
       <t-swiper-item  class="swiper-item--demo">
         item1
