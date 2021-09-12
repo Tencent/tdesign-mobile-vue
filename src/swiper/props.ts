@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-09-05 17:04:02
+ * updated at 2021-09-12 00:01:49
  * */
 
 import { TdSwiperProps } from './type';
@@ -43,16 +43,21 @@ export default {
     type: Number,
     default: 300,
   },
+  /** 当使用垂直方向滚动时，必须指定高度 */
+  height: {
+    type: Number,
+    default: 200,
+  },
   /** 轮播间隔时间 */
   interval: {
     type: Number,
     default: 5000,
   },
   /** 分页器样式类型‘bullets’  圆点（默认） ‘fraction’  分式 */
-  paginationType: {
-    type: String as PropType<TdSwiperProps['paginationType']>,
-    default: 'bullets' as TdSwiperProps['paginationType'],
-    validator(val: TdSwiperProps['paginationType']): boolean {
+  pagination: {
+    type: String as PropType<TdSwiperProps['pagination']>,
+    default: 'bullets' as TdSwiperProps['pagination'],
+    validator(val: TdSwiperProps['pagination']): boolean {
       return ['bullets', 'fraction'].includes(val);
     },
   },

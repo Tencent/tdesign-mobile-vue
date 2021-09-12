@@ -1,8 +1,13 @@
 <template>
-  <div ref="swiper" :class="`${name}`">
+  <div ref="swiper" :style="{height: height, overflow: 'hidden'}" :class="`${name}`">
     <div
       ref="swiperContainer"
       :class="`${name}-container`"
+      :style="{
+        height: height,
+        flexDirection: direction === 'horizontal' ? 'row' : 'column',
+        height: '180px'
+      }"
       @transitionend='checkLast'
       @touchstart="onTouchStart"
       @touchmove.prevent="onTouchMove"
@@ -12,25 +17,25 @@
       <slot></slot>
     </div>
     <!-- <p>{{state.activeIndex}}</p> -->
-    <span>
-      <span @click="prev" class="swiperbtn btn-prev">
+    <span v-if="direction === 'horizontal'">
+      <span @click="prev" class="t-swiper-btn btn-prev">
         <t-icon size="12px" name="chevron-left" />
       </span>
-      <span @click="next" class="swiperbtn btn-next">
+      <span @click="next" class="t-swiper-btn btn-next">
         <t-icon size="12px" name="chevron-right" />
       </span>
     </span>
-    <span :class="`${name}-pagination ${name}-pagination--${paginationType}`">
-      <template v-if="paginationType === 'bullets'">
+    <span :class="`${name}-pagination ${name}-pagination--${pagination}`">
+      <template v-if="pagination === 'bullets'">
         <span
           :class="{[`${name}-pagination-dot`]: true, active: index === state.activeIndex}"
           v-for="(item, index) in paginationList"
           :key="'page' + index"></span>
       </template>
-      <span v-if="paginationType === 'fraction'">
+      <span v-if="pagination === 'fraction'">
         {{showPageNum +  '/' + state.itemLength}}
       </span>
-      <!-- {{paginationType + paginationList}} -->
+      <!-- {{pagination + paginationList}} -->
     </span>
   </div>
 </template>
@@ -46,7 +51,7 @@ export default defineComponent({
   props: SwiperProps,
   setup(props) {
     const self = getCurrentInstance();
-    const { autoplay, interval, duration } = props;
+    const { autoplay, interval, duration, direction = 'horizontal', height = 180 } = props;
     const state: {
       activeIndex: number;
       itemLength: number;
@@ -72,21 +77,23 @@ export default defineComponent({
     const initSwiper = () => {
       const _swiperContainer = getContainer();
       const items = _swiperContainer.querySelectorAll('.t-swiper-item');
-      console.log(items);
       const first = items[0].cloneNode(true);
       const last = items[items.length - 1].cloneNode(true);
       // 把第一个元素复制到最后面，以供循环轮播使用
       _swiperContainer.appendChild(first);
       // 把最后一个元素复制到最前面
       _swiperContainer.insertBefore(last, items[0]);
+      // 默认前移一格(因为前面增加了最后一个元素)
+      move(0);
     };
 
     // 勾子函数初始化部分数据
     onMounted(() => {
-      console.log('组件实例', self);
+      // console.log('组件实例', self);
       const _swiperContainer = getContainer();
       state.itemLength = _swiperContainer.children?.length || 0;
-      state.itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
+      const itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
+      state.itemWidth = itemWidth;
 
       initSwiper();
       startAutoplay();
@@ -99,7 +106,9 @@ export default defineComponent({
       // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
       // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transform = `translateX(-${state.itemWidth * (targetIndex + 1)}px)`;
+      const moveDirection = direction === 'horizontal' ? 'X' : 'Y';
+      const moveLength = direction === 'vertical' ? height : state.itemWidth;
+      _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
     // 添加动画
     const addAnimation = () => {
@@ -114,13 +123,13 @@ export default defineComponent({
     // 确认是否已经移动到最后一个元素，每次transitionend事件后即检查
     const checkLast = () => {
       if (state.activeIndex >= state.itemLength) {
-        console.log('到了最后一个元素', state.activeIndex, state.itemLength);
+        // console.log('到了最后一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = 0;
         removeAnimation();
         move(0);
       }
       if (state.activeIndex <= -1) {
-        console.log('到了第一个元素', state.activeIndex, state.itemLength);
+        // console.log('到了第一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = state.itemLength - 1;
         removeAnimation();
         move(state.itemLength - 1);
@@ -161,40 +170,45 @@ export default defineComponent({
       startAutoplay();
     };
     let touchStartX = 0;
-    // let touchStartY = 0;
+    let touchStartY = 0;
     // 按下鼠标或屏幕开始滑动
     const onTouchStart = (event: TouchEvent) => {
       stopAutoplay();
       // console.log('touch start', state?.itemLength);
-      // touchStartY = event.touches[0].clientY;
+      touchStartY = event.touches[0].clientY;
       touchStartX = event.touches[0].clientX;
     };
     // 滑动过程中位移容器
     const onTouchMove = (event: TouchEvent) => {
       // console.log('touch move');
       const { activeIndex, itemWidth } = state;
-      // const endY = event.changedTouches[0].clientY;
+      const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
       const distanceX = endX - touchStartX;
+      const distanceY = endY - touchStartY;
       const _container = getContainer();
       removeAnimation();
-      setOffset(_container, - activeIndex * itemWidth + distanceX);
+      if (direction === 'horizontal') {
+        setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
+      } else {
+        setOffset(_container, -((activeIndex + 1) * height - distanceY), 'Y');
+      }
     };
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。
     const onTouchEnd = (event: TouchEvent) => {
       // console.log('touch end', event);
-      // const endY = event.changedTouches[0].clientY;
+      const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
       const distanceX = endX - touchStartX;
+      const distanceY = endY - touchStartY;
       addAnimation();
-      if (distanceX > 100) {
+      if ((direction === 'horizontal' && distanceX > 100) || (direction === 'vertical' && distanceY > 100)) {
         prev();
-      } else if (distanceX < -100) {
+      } else if ((direction === 'horizontal' && distanceX < -100) || (direction === 'vertical' && distanceY < -100)) {
         next();
       } else {
         move(state.activeIndex);
       }
-
       startAutoplay();
     };
     return {
@@ -212,6 +226,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less" src="./swiper.less">
-
-</style>
