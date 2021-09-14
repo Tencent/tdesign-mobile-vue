@@ -50,17 +50,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts" setup>
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import TIconChevronRight from '@/icon/chevron-right.vue';
 import TIconUserFilled from '@/icon/user-filled.vue';
-import { defineComponent } from 'vue';
-import Message from '../../message';
 import TSwitch from '../../switch';
 import TBadge from '../../badge';
-
-export default defineComponent({
-  components: { TIconChevronRight, TIconUserFilled, TSwitch, TBadge },
-  setup() {
-  },
-});
 </script>

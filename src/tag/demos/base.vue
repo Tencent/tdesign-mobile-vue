@@ -29,7 +29,7 @@
           :disabled="tag.disabled"
           theme="primary"
           :size="tag.size"
-          @close="onClickClose(index)"
+          @onClose="onClickClose(index)"
           >{{ tag.name }}</t-tag
         >
       </div>

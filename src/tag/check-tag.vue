@@ -1,16 +1,21 @@
 <template>
-  <button :class="classes" :disabled="disabled">
-    <component :is="computedIcon" :class="`${baseClass}__icon`"> </component>
-    <slot :class="`${baseClass}__text`" />
-    <t-icon-clear v-if="closable && !disabled" :class="`${baseClass}__close`" @click="onClickClose" />
+  <button :class="classes" :disabled="disabled" @click="handleClick">
+    <div :class="`${baseClass}__icon`">
+      <TNode :content="iconContent"></TNode>
+    </div>
+    <div :class="`${baseClass}__text`">
+      <TNode :content="tagContent"></TNode>
+    </div>
+    <t-icon-clear v-if="closable && !disabled" :class="`${baseClass}__close`" @click="handleClickClose" />
   </button>
 </template>
 
 <script lang="ts">
 import TIconClear from '../icon/clear-circle-filled.vue';
-import { defineComponent, computed, toRefs, watch } from 'vue';
+import { defineComponent, computed, toRefs, watch, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
+import { renderContent, renderTNode, TNode } from '@/shared';
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
 
@@ -18,15 +23,18 @@ const CheckTag = defineComponent({
   name,
   components: {
     TIconClear,
+    TNode,
   },
   props: CheckTagProps,
-  emits: ['change', 'close'],
+  emits: ['change','click', 'close'],
   setup(props, context) {
     const baseClass = `${prefix}-tag`;
 
     const { size, shape, checked, disabled, closable } = toRefs(props);
 
-    checked.value = props.defaultChecked;
+    const internalInstance = getCurrentInstance();
+    const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
+    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
 
     const classes = computed(() => [
       `${baseClass}`,
@@ -40,14 +48,7 @@ const CheckTag = defineComponent({
       },
     ]);
 
-    const computedIcon = computed(() => {
-      if (typeof props.icon === 'function') {
-        return props.icon();
-      }
-      return context.slots?.icon;
-    });
-
-    function onClickClose(e: Event): void {
+    function handleClickClose(e: Event): void {
       if (props.disabled) {
         e.stopPropagation();
       } else {
@@ -55,15 +56,22 @@ const CheckTag = defineComponent({
       }
     }
 
-    watch(checked, (checked) => {
-      context.emit('change', checked);
-    });
+    const handleClick = (e: MouseEvent): void => {
+      if (!disabled.value) {
+        context.emit('click', { e });
+        context.emit('change', !checked.value);
+        if (typeof props.onClick === 'function') props.onClick({ e });
+        if (typeof props.onChange === 'function') props.onChange(!checked.value);
+      }
+    };
 
     return {
       baseClass,
       classes,
-      onClickClose,
-      computedIcon,
+      handleClickClose,
+      handleClick,
+      iconContent,
+      tagContent,
     };
   },
 });

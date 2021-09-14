@@ -1,25 +1,33 @@
 <template>
-  <span :class="classes" :style="style">
-    <component :is="computedIcon" :class="`${baseClass}__icon`"> </component>
-    <slot :class="`${baseClass}__text`" />
+  <span :class="classes" :style="style" @click="handleClick">
+    <div :class="`${baseClass}__icon`">
+      <TNode :content="iconContent"></TNode>
+    </div>
+    <div :class="`${baseClass}__text`">
+      <TNode :content="tagContent"></TNode>
+    </div>
     <t-icon-close v-if="closable && !disabled" :class="`${baseClass}__close`" @click="onClickClose" />
   </span>
 </template>
 
 <script lang="ts">
 import TIconClose from '../icon/close.vue';
-import { defineComponent, computed, toRefs } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
+import { renderContent, renderTNode, TNode } from '@/shared';
 const { prefix } = config;
 const name = `${prefix}-tag`;
 
 const Tag = defineComponent({
   name,
-  components: { TIconClose },
+  components: { TIconClose, TNode },
   props: TagProps,
-  emits: ['close'],
+  emits: ['close', 'click'],
   setup(props, context) {
+    const internalInstance = getCurrentInstance();
+    const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
+    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
     const baseClass = name;
     const { size, shape, theme, variant, maxWidth, disabled, closable } = toRefs(props);
 
@@ -43,27 +51,30 @@ const Tag = defineComponent({
       },
     ]);
 
-    const computedIcon = computed(() => {
-      if (typeof props.icon === 'function') {
-        return props.icon();
-      }
-      return context.slots?.icon;
-    });
-
     function onClickClose(e: Event) {
       if (props.disabled) {
         e.stopPropagation();
       } else {
         context.emit('close', e);
+        if (typeof props.onClose === 'function') props.onClose({ e });
       }
     }
+
+    const handleClick = (e: MouseEvent): void => {
+      if (!disabled.value) {
+        context.emit('click', { e });
+        if (typeof props.onClick === 'function') props.onClick({ e });
+      }
+    };
 
     return {
       baseClass,
       classes,
       style,
       onClickClose,
-      computedIcon,
+      handleClick,
+      iconContent,
+      tagContent,
     };
   },
 });
