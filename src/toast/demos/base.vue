@@ -62,14 +62,14 @@ export default defineComponent({
     showSuccessRow(message?: string) {
       Toast({
         type: 'success',
-        direction:'row',
+        direction: 'row',
         message,
       });
     },
     showFailRow(message?: string) {
       Toast({
         type: 'fail',
-        direction:'row',
+        direction: 'row',
         message,
       });
     },

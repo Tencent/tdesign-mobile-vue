@@ -1,13 +1,13 @@
 import vueToast from './toast.vue';
-import { createApp, defineComponent ,App, DefineComponent, Plugin } from 'vue';
-import ToastProps from './props';
+import { createApp, defineComponent, App, DefineComponent, Plugin } from 'vue';
+import { TdToastProps } from './type';
 
 import './style/';
 
 let instance: any = null;
 
 /** 展示提示 */
-function Toast(props?: ToastProps | string): DefineComponent<ToastProps> {
+function Toast(props?: TdToastProps | string): DefineComponent<TdToastProps> {
   const root = document.createElement('div');
   document.body.appendChild(root);
 
@@ -42,9 +42,9 @@ Toast.clear = () => {
   }
 };
 
-(['loading', 'success', 'fail'] as ToastType[]).forEach((type): void => {
-  Toast[type] = (options: ToastProps | string) => {
-    let props = { message: '', type };
+(['loading', 'success', 'fail'] as TdToastProps['type'][]).forEach((type): void => {
+  Toast[type] = (options: TdToastProps | string) => {
+    let props = { message: '', type } as unknown as TdToastProps;
 
     if (typeof options === 'string') {
       props.message = options;
@@ -56,7 +56,7 @@ Toast.clear = () => {
   };
 });
 
-function parseOptions(message?: ToastProps | string) {
+function parseOptions(message?: TdToastProps | string) {
   if (typeof message === 'string') {
     return { message };
   }
@@ -71,11 +71,11 @@ Toast.install = (app: App) => {
 
 type ToastApi = typeof Toast & {
   /** 展示加载提示 */
-  loading: (options?: ToastProps | string) => void,
+  loading: (options?: TdToastProps | string) => void,
   /** 展示成功提示 */
-  success: (options?: ToastProps | string) => void,
+  success: (options?: TdToastProps | string) => void,
   /** 展示失败提示 */
-  fail: (options?: ToastProps | string) => void,
+  fail: (options?: TdToastProps | string) => void,
   /** 关闭提示 */
   clear: () => void,
 };
