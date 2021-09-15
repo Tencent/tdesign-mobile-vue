@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import TIconClear from '../icon/clear-circle-filled.vue';
-import { defineComponent, computed, toRefs, watch, getCurrentInstance } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
 import { renderContent, renderTNode, TNode } from '@/shared';
@@ -26,7 +26,7 @@ const CheckTag = defineComponent({
     TNode,
   },
   props: CheckTagProps,
-  emits: ['change','click', 'close'],
+  emits: ['change', 'click', 'close'],
   setup(props, context) {
     const baseClass = `${prefix}-tag`;
 

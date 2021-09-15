@@ -44,7 +44,7 @@ export default {
   /** 组件风格，依次为品牌色、危险色 */
   theme: {
     type: String as PropType<TdButtonProps['theme']>,
-    default: undefined as TdButtonProps['theme'],
+    default: undefined as unknown as TdButtonProps['theme'],
     validator(val: TdButtonProps['theme']): boolean {
       return ['default', 'primary', 'danger'].includes(val);
     },

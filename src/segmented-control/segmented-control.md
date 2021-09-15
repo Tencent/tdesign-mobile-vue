@@ -9,7 +9,7 @@
 ::: demo demos/index
 :::
 
-## Props
+## API
 | 属性 | 类型 | 默认值 | 必传 | 说明 |
 |-----|-----|-----|-----|-----|
 |v-model|<code>String &#124; Number &#124; Array<Number &#124; String></code>|0|N|当前选中的值|

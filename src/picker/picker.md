@@ -41,7 +41,7 @@ TDesign目前只提供一种基础类型
 ::: demo demos/popup-picker
 :::
 
-## Props
+## API
 
 ### Picker Props
 
