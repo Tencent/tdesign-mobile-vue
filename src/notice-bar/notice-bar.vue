@@ -2,7 +2,7 @@
   <div v-if="visible" ref="root" :class="rootClasses" :style="bgColorCustom">
     <div :class="`${name}__inner`">
       <div v-if="computedLeftIcon !== undefined" :class="`${name}__hd`">
-        <TNode :content="computedLeftIcon"></TNode>
+        <TNode :content="computedLeftIcon" :style="iconColorCustom"></TNode>
       </div>
       <div :class="`${name}__bd`">
         <div ref="listDOM" :class="`${name}__list ${scrollable ? `${name}__list--scrolling` : ''}`">
@@ -14,7 +14,7 @@
           >
             <span :class="`${name}__text`" :style="colorCustom"
               >{{ content
-              }}<span v-if="showDetailText" :class="`${name}__text-detail`" @click="handleDetailLink">{{
+              }}<span v-if="showDetailText" :class="`${name}__text-detail`" :style="colorCustom" @click="handleDetailLink">{{
                 detailText
               }}</span>
             </span>
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div v-if="computedRightIcon !== undefined" :class="`${name}__ft`" @click="handleClickIcon">
-        <TNode :content="computedRightIcon"></TNode>
+        <TNode :content="computedRightIcon" :style="iconColorCustom"></TNode>
       </div>
     </div>
   </div>

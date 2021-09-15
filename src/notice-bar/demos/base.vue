@@ -6,81 +6,46 @@
       <t-notice-bar content="提示文字描述提示文字描述提示文字描述" />
     </tdesign-demo-block>
     <tdesign-demo-block summary="带图标静态消息栏">
-      <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :leftIcon="() => TIconErrorCircleFilled" />
+      <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc" />
     </tdesign-demo-block>
     <tdesign-demo-block summary="带操作消息栏">
-      <t-notice-bar mode="link" content="提示文字描述提示文字描述提示文字描述" />
-      <t-notice-bar mode="closeable" content="提示文字描述提示文字描述提示文字描述" />
+      <t-notice-bar mode="link" content="提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc" />
+      <t-notice-bar mode="closeable" content="提示文字描述提示文字描述" detailText="详情" :leftIcon="iconFunc" />
     </tdesign-demo-block>
-    <t-cell-group title="带操作消息栏">
-      <t-cell value-align="left">
-        <t-notice-bar content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" mode="link" />
-        <t-notice-bar content="提示文字描述提示文字描述" mode="link" type="error" @click="handleLinkNoticeBar" />
-        <t-notice-bar
-          v-model="closeableVisible"
-          content="提示文字描述提示文字描述"
-          mode="detail"
-          @close="handleCloseableNoticeBar"
-        />
-        <t-notice-bar
-          v-model="detailVisible"
-          content="提示文字描述提示文字描述提示文字描述提示文字描述提示"
-          mode="detail"
-          @close="handleDetailNoticeBar"
-          @detail="handleDetail"
-        />
-        <t-notice-bar
-          content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-          mode="link"
-          type="error"
-        />
-        <t-notice-bar content="提示文字描述提示文字描述" mode="link" type="error" @click="handleLinkNoticeBar" />
-        <t-notice-bar
-          v-model="closeableVisible"
-          content="提示文字描述提示文字描述"
-          mode="detail"
-          type="error"
-          @close="handleCloseableNoticeBar"
-        />
-        <t-notice-bar
-          v-model="detailVisible"
-          content="提示文字描述提示文字描述提示文字描述提示文字描述提示"
-          mode="detail"
-          type="error"
-          @close="handleDetailNoticeBar"
-          @detail="handleDetail"
-        />
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="滚动消息栏">
-      <t-cell value-align="left">
-        <t-notice-bar
-          v-model="scrollVisible"
-          mode="closeable"
-          content="提示文字描述提示文字描述提示文字描述提示文字描述"
-          :left-icon="() => TIconSoundFilled"
-          scrollable
-          @close="handleScrollNoticeBar"
-        />
-        <t-notice-bar
-          mode="closeable"
-          content="提示文字描述提示文字描述提示文字描述提示文字描述"
-          :left-icon="() => TIconSoundFilled"
-          scrollable
-          type="error"
-          :delay="2"
-        />
-      </t-cell>
-    </t-cell-group>
+    <tdesign-demo-block summary="滚动消息栏">
+      <t-notice-bar mode="link" scrollable content="提示文字描述提示文字描述" >
+        <template #leftIcon>
+          <TIconSoundFilled />
+        </template>
+      </t-notice-bar>
+      <t-notice-bar scrollable content="提示文字描述提示文字描述从右至左轮播从右至左轮">
+        <template #leftIcon>
+          <TIconSoundFilled />
+        </template>
+      </t-notice-bar>
+    </tdesign-demo-block>
+     <tdesign-demo-block title="02 状态" summary="多文字消息栏">
+       <t-notice-bar content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" />
+       <t-notice-bar content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc"/>
+       <t-notice-bar mode="link" content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述" :leftIcon="iconFunc"/>
+       <t-notice-bar mode="closeable" content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" detailText="详情" :leftIcon="iconFunc"/>
+     </tdesign-demo-block>
+     <tdesign-demo-block summary="红色背景消息栏">
+       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" content="提示文字描述提示文字描述提示文字描述" />
+       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" iconColor="#E34D59" content="提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc"/>
+       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" iconColor="#E34D59" content="提示文字描述提示文字描述提示文字描述" mode="link" :leftIcon="iconFunc"/>
+       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" iconColor="#E34D59" content="提示文字描述提示文字描述" detailText="详情" mode="closeable" :leftIcon="iconFunc"/>
+     </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts">
-import { reactive, defineComponent, toRefs, ref } from 'vue';
+import { reactive, defineComponent, toRefs, ref, h } from 'vue';
 import TIconSoundFilled from '@/icon/sound-filled.vue';
 import TIconErrorCircleFilled from '@/icon/error-circle-filled.vue';
 
 export default defineComponent({
+  components: { TIconErrorCircleFilled, TIconSoundFilled },
   setup() {
     const state = reactive({
       visible: true,
@@ -118,6 +83,8 @@ export default defineComponent({
       scrollVisible.value = false;
     }
 
+    const iconFunc = () => h(TIconErrorCircleFilled);
+
     return {
       ...toRefs(state),
       handleClick,
@@ -129,8 +96,7 @@ export default defineComponent({
       handleDetailNoticeBar,
       scrollVisible,
       handleScrollNoticeBar,
-      TIconSoundFilled,
-      TIconErrorCircleFilled,
+      iconFunc,
     };
   },
 });
