@@ -1,5 +1,5 @@
 import vueToast from './toast.vue';
-import { createApp, defineComponent, App, DefineComponent, Plugin } from 'vue';
+import { createApp, App, DefineComponent, Plugin } from 'vue';
 import { TdToastProps } from './type';
 
 import './style/';
@@ -20,7 +20,7 @@ function Toast(props?: TdToastProps | string): DefineComponent<TdToastProps> {
     instance.clear();
   }
 
-  instance = defineComponent(vueToast);
+  instance = vueToast;
 
   instance.clear = () => {
     clearTimeout(instance.timer);
