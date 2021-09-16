@@ -1,16 +1,16 @@
 <template>
   <div class="cell-base">
-    <t-cell label="单行标题" summary="一段很长很长的内容文字"></t-cell>
-    <t-cell label="单行标题" summary="一段很长很长的内容文字" link></t-cell>
-    <t-cell label="单行标题" summary="一段很长很长的内容文字">
+    <t-cell title="单行标题" description="一段很长很长的内容文字"></t-cell>
+    <t-cell title="单行标题" description="一段很长很长的内容文字" arrow></t-cell>
+    <t-cell title="单行标题" description="一段很长很长的内容文字">
       <t-button theme="primary" variant="outline" size="small">小按钮</t-button>
     </t-cell>
     <t-cell
-      label="单行标题"
-      summary="一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字"
+      title="单行标题"
+      description="一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字"
     ></t-cell>
 
-    <t-cell label="单行标题" summary="一段很长很长的内容文字">
+    <t-cell title="单行标题" description="一段很长很长的内容文字">
       <template #leftIcon>
         <img
           src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
@@ -18,7 +18,7 @@
         />
       </template>
     </t-cell>
-    <t-cell label="双行标题，长文本自动换行，该选项的描述是一段很长的内容" summary="一段很长很长的内容文字"></t-cell>
+    <t-cell title="双行标题，长文本自动换行，该选项的描述是一段很长的内容" description="一段很长很长的内容文字"></t-cell>
   </div>
 </template>
 

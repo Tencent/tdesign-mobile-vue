@@ -1,27 +1,28 @@
 <template>
-  <div :class="name" @click="onClick">
-    <div v-if="computedLeftIcon !== undefined" :class="`${name}__left-icon`">
-      <component :is="computedLeftIcon"> </component>
+  <div :class="styleCell" @click="onClick">
+    <div v-if="leftIconContent !== undefined" :class="`${name}__left-icon`">
+      <TNode :content="leftIconContent"></TNode>
     </div>
-    <div v-if="hasLabel" :class="`${name}__label`">
-      <slot name="label">
-        <div v-if="label">{{ label }}</div>
-        <div v-if="summary" :class="`${name}__summary`">{{ summary }}</div>
-      </slot>
+    <div v-if="titleContent !== undefined" :class="`${name}__title`">
+      <div>
+        <TNode :content="titleContent"></TNode><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
+      </div>
+      <div v-if="descriptionContent !== undefined" :class="`${name}__description`">
+        <TNode :content="descriptionContent"></TNode>
+      </div>
     </div>
-    <div v-if="hasValue" :class="styleValue">
-      <slot>
-        <div v-if="value">{{ value }}</div>
-      </slot>
+    <div v-if="noteContent !== undefined" :class="`${name}__note`">
+      <TNode :content="noteContent"></TNode>
     </div>
-    <div v-if="computedIcon !== undefined" :class="`${name}__icon`">
-      <component :is="computedIcon" > </component>
+    <div v-if="rightIconContent !== undefined" :class="`${name}__right-icon`">
+      <TNode :content="rightIconContent"></TNode>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, toRefs } from 'vue';
+import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
+import { renderTNode, TNode } from '@/shared';
 import config from '../config';
 import TIconChevronRight from '../icon/chevron-right.vue';
 import CellProps from './props';
@@ -31,47 +32,29 @@ const name = `${prefix}-cell`;
 
 export default defineComponent({
   name,
-  components: { TIconChevronRight },
+  components: { TNode },
   props: CellProps,
   emits: ['click'],
   setup(props, context) {
-    const hasLabel = computed(() => {
-      if (props.label) return true;
-      return !!context.slots.label;
+    const internalInstance = getCurrentInstance();
+    const noteContent = computed(() => renderTNode(internalInstance, 'note'));
+    const titleContent = computed(() => renderTNode(internalInstance, 'title'));
+    const descriptionContent = computed(() => renderTNode(internalInstance, 'description'));
+    const rightIconContent = computed(() => {
+      if (props.arrow) {
+        return h(TIconChevronRight);
+      }
+      return renderTNode(internalInstance, 'rightIcon');
     });
 
-    const hasValue = computed(() => {
-      if (props.value) return true;
-      return !!context.slots.default;
-    });
+    const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon'));
 
-    const computedIcon = computed(() => {
-      if (typeof props.icon === 'function') {
-        return props.icon();
-      }
-      if (!!context.slots.icon) {
-        return context.slots.icon;
-      }
-      if (props.link) {
-        return TIconChevronRight;
-      }
-      return undefined;
-    });
-
-    const computedLeftIcon = computed(() => {
-      if (!!props.leftIcon) {
-        return props.leftIcon();
-      }
-      if (!!context.slots.leftIcon) {
-        return context.slots.leftIcon;
-      }
-      return undefined;
-    });
-
-    const styleValue = computed(() => [
-      `${name}__value`,
+    const styleCell = computed(() => [
+      `${name}`,
+      `${name}--${props.align}`,
       {
-        [`${name}__left`]: props.valueAlign === 'left',
+        [`${name}--hover`]: props.hover,
+        [`${name}--bordered`]: props.bordered,
       },
     ]);
 
@@ -80,12 +63,13 @@ export default defineComponent({
     return {
       ...toRefs(props),
       name,
-      styleValue,
-      hasLabel,
-      hasValue,
-      computedIcon,
-      computedLeftIcon,
       onClick,
+      styleCell,
+      rightIconContent,
+      leftIconContent,
+      noteContent,
+      titleContent,
+      descriptionContent,
     };
   },
 });

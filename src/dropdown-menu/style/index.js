@@ -1,1 +1,1 @@
-import '../../../common/style/mobile/components/dropdown-menu/_index.less';
+import '../../_common/style/mobile/components/dropdown-menu/_index.less';

@@ -2,46 +2,46 @@
 
 定义：在一组预设数据中进行选择
 
-## 1. 组件类型
+## 组件类型
 
 TDesign目前只提供一种基础类型
 
-### 1.1. 基础类型
+### 基础类型
 
 ::: demo demos/base
 :::
 
-### 1.2. 对象数组
+### 对象数组
 
 ::: demo demos/object-array
 :::
 
-### 1.3. 默认选中
+### 默认选中
 
 ::: demo demos/default-selected
 :::
 
-### 1.4. 自定义展示内容
+### 自定义展示内容
 
 ::: demo demos/custom
 :::
 
-### 1.5. 多列选择
+### 多列选择
 
 ::: demo demos/multiple
 :::
 
-### 1.6. 联动选择
+### 联动选择
 
 ::: demo demos/cascade
 :::
 
-### 1.7. 弹窗层的 Picker
+### 弹窗层的 Picker
 
 ::: demo demos/popup-picker
 :::
 
-## Props
+## API
 
 ### Picker Props
 

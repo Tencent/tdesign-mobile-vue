@@ -21,7 +21,7 @@ function customRenderInfo(source, id, md) {
   };
   const titleLocation = source.search(/[\r\n]/);
   const describeLocation = source.split(/[\r\n]#+\s|:::\s/)[0].length || titleLocation;
-  const propsRegLocation = source.search(/#+\s*属性配置\n|(#+\s*\S*\s*props\n)/i);
+  const propsRegLocation = source.search(/#+\s*属性配置\n|(#+\s*\S*\s*API\n)/i);
 
   mdSegment.title = source.slice(2, titleLocation) || '';
   mdSegment.description = source.slice(titleLocation, describeLocation).trim() || '';
@@ -36,7 +36,7 @@ function customRenderInfo(source, id, md) {
 
   // 设计指南内容
   const name = path.basename(id, '.md');
-  const designDocPath = path.resolve(__dirname, `../../../common/docs/mobile/design/${name}.md`);
+  const designDocPath = path.resolve(__dirname, `../../../src/_common/docs/mobile/design/${name}.md`);
 
   if (fs.existsSync(designDocPath)) {
     mdSegment.designMd = fs.readFileSync(designDocPath, 'utf-8');

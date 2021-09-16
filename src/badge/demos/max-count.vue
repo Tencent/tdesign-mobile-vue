@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="badge-wrap">
+  <div class='tdesign-mobile-demo'>
+    <div class="badge-demo">
       <t-badge :count="12" :max-count="44" class="badge-item">
         <t-button size="small">14</t-button>
       </t-badge>
@@ -14,7 +14,7 @@
         <t-button size="small">max:105</t-button>
       </t-badge>
     </div>
-    <div class="badge-wrap">
+    <div class="badge-demo">
       <t-cell-group>
         <t-cell value-align="left">
           <span>单行标题</span>
@@ -29,17 +29,3 @@
 import { defineComponent } from 'vue';
 export default defineComponent({});
 </script>
-
-<style lang="less" scoped>
-.badge-wrap {
-  padding: 10px 0;
-
-  .badge-item {
-    margin-right: 20px;
-  }
-}
-.list-item-badge {
-  float: right;
-  vertical-align: middle;
-}
-</style>

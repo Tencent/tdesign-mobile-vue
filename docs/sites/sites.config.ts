@@ -260,10 +260,10 @@ export default {
         },
         {
           title: 'NoticeBar 公告栏',
-          name: 'noticebar',
+          name: 'notice-bar',
           meta: { docType: 'message' },
-          path: '/vue-mobile/components/noticebar',
-          component: () => import('@/noticebar/noticebar.md'),
+          path: '/vue-mobile/components/notice-bar',
+          component: () => import('@/notice-bar/notice-bar.md'),
         },
         {
           title: 'Dialog 弹出框',

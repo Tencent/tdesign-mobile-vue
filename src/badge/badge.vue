@@ -1,26 +1,38 @@
 <template>
   <div v-if="showBadge" :class="badgeClasses">
-    <div :class="badgeInnerClasses" :style="badgeStyles">{{ value }}</div>
-    <slot />
+    <div :class="badgeInnerClasses" :style="badgeStyles">
+      <TNode :content="countContent"></TNode>
+    </div>
+    <TNode :content="badgeContent"></TNode>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, SetupContext, toRefs } from 'vue';
-import { badgeProps } from './badge.interface';
-
+import { computed, defineComponent, getCurrentInstance, toRefs } from 'vue';
+import { renderContent, renderTNode, TNode } from '@/shared';
+import BadgeProps from './props';
 import config from '../config';
+
 const name = `${config.prefix}-badge`;
 
 export default defineComponent({
   name,
-  props: badgeProps,
-  setup(props, context: SetupContext) {
+  components: { TNode },
+  props: BadgeProps,
+  setup(props) {
+    const internalInstance = getCurrentInstance();
+    const badgeContent = computed(() => renderContent(internalInstance, 'default', 'content'));
+    const countContent = computed(() => {
+      if (props.dot) {
+        return '';
+      }
+      return renderTNode(internalInstance, 'count');
+    });
     // 是否独立使用
-    const isIndependent = computed(() => !context.slots.default);
+    const isIndependent = computed(() => badgeContent.value === undefined);
 
     // 是否展示徽标
-    const showBadge = computed(() => props.content || props.showZero || props.count !== 0);
+    const showBadge = computed(() => badgeContent.value !== undefined || props.showZero || props.count !== 0);
 
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
@@ -40,30 +52,26 @@ export default defineComponent({
     }));
 
     // 徽标自定义样式
-    const badgeStyles = computed(() => ({
-      background: props.color,
-      top: `${props.offset[0]}px`,
-      right: `${props.offset[1]}px`,
-    }));
-
-    // 徽标内展示的内容
-    const value = computed(() => {
-      if (props.dot) {
-        return '';
-      }
-      if (props.content) {
-        return props.content;
-      }
-      return props.count > props.maxCount ? `${props.maxCount}+` : props.count;
+    const badgeStyles = computed(() => {
+      if (!props.offset) return {};
+      let [xOffset, yOffset]: Array<string | number> = props.offset;
+      xOffset = isNaN(Number(xOffset)) ? xOffset : `${xOffset}px`;
+      yOffset = isNaN(Number(yOffset)) ? yOffset : `${yOffset}px`;
+      return {
+        background: props.color,
+        right: `${xOffset}px`,
+        top: `${yOffset}px`,
+      };
     });
 
     return {
+      badgeContent,
       showBadge,
       badgeStyles,
       badgeClasses,
       badgeInnerClasses,
       ...toRefs(props),
-      value,
+      countContent,
     };
   },
 });

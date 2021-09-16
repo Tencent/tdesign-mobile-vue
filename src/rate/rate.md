@@ -2,11 +2,11 @@
 
 定义：用户对某行为/事物进行打分
 
-## 1. 组件类型
+## 组件类型
 
 在TDesign中，拥有两种不同类型的评分：基础评分、带描述评分
 
-### 1.1. 基础评分
+### 基础评分
 
 使用场景：简单的星级评定，不涉及具体分数
 
@@ -14,7 +14,7 @@
 :::
 
 
-### 1.2. 带描述评分
+### 带描述评分
 
 使用场景：较为严谨的星级评定，展示具体分数或具体等级
 
@@ -22,35 +22,35 @@
 :::
 
 
-## 2. 组件样式
+## 组件样式
 
-### 2.1. 允许半选
+### 允许半选
 
 ::: demo demos/allowHalf
 :::
 
 
-### 2.2. 自定义数量
+### 自定义数量
 
 ::: demo demos/count
 :::
 
-### 2.3. 自定大小
+### 自定大小
 
 ::: demo demos/size
 :::
 
-### 2.4. 只读状态
+### 只读状态
 
 ::: demo demos/readonly
 :::
 
-### 2.5. 自定义颜色
+### 自定义颜色
 
 ::: demo demos/color
 :::
 
-### 2.6. 自定义图标
+### 自定义图标
 
 ::: demo demos/icon
 :::
@@ -62,13 +62,13 @@
 -- | -- | -- | -- | --
 allowHalf | Boolean | false | 是否允许半选 | N
 clearable | Boolean | false | 是否允许取消选择 | N
-color | String | - | 评分图标的颜色 | N
+color | String | #ffc51c | 评分图标的颜色 | N
 count | Number | 5 | 评分的数量 | N
 readonly | Boolean | false | 是否为只读 | N
 showText | Boolean | false | 是否显示辅助文字 | N
-size | String | - | 评分图标的大小 | N
+size | String | 48 | 评分图标的大小 | N
 texts | Array | - | 自定义评分等级对应的辅助文字。TS 类型：`Array<string>` | N
-value | Number | - | 必需。选择评分的值。支持语法糖：v-model | Y
+value | Number | - | 必需。选择评分的值。支持语法糖 | Y
 defaultValue | Number | - | 必需。选择评分的值。非受控属性 | Y
 onChange | Function |  | 评分数改变时触发。`(value: number) => {}` | N
 

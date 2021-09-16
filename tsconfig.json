@@ -11,7 +11,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "moduleResolution": "node",
     "jsx": "preserve",
     "experimentalDecorators": true,
@@ -21,7 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@TdTypes/*": ["./types/*"]
+      "@TdTypes/*": ["./src/types/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
   },
@@ -31,7 +31,9 @@
     "./**/*.tsx",
     "./**/*.vue",
     "src/**/*.js",
+    "babel.config.js",
+    "src/style/index.js",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "common"]
+  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "vite.config.ts", "docs"]
 }

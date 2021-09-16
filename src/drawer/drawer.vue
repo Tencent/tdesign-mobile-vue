@@ -2,7 +2,7 @@
   <t-popup v-model="open" position="left">
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
-        <component :is="computedIcon(item.icon)" v-if="item.icon" :img="item.icon"></component>
+        <TNode :content="computedIcon"></TNode>
         <div :class="dSideBarItemNameClassName">{{ item.name }}</div>
       </div>
     </div>
@@ -10,17 +10,18 @@
 </template>
 
 <script lang="ts">
-import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent } from 'vue';
+import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent, getCurrentInstance } from 'vue';
 import config from '../config';
 import { SidebarItem } from './drawer.interface';
 import ImgIcon from './imageIcon.vue';
+import { TNode, renderTNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-drawer`;
 
 export default defineComponent({
   name,
-  components: { ImgIcon },
+  components: { ImgIcon, TNode },
   props: {
     modelValue: {
       type: Boolean,
@@ -33,6 +34,7 @@ export default defineComponent({
   },
   emits: ['update:modelValue'],
   setup(props, context: SetupContext) {
+    const internalInstance = getCurrentInstance();
     const { modelValue } = toRefs(props);
     const open = ref(false) || modelValue;
 
@@ -46,18 +48,7 @@ export default defineComponent({
         window.location.href = path;
       }
     };
-    const computedIcon = (icon: TNode) => {
-      if (typeof icon === 'function') {
-        return icon();
-      }
-      if (!!context.slots.icon) {
-        return context.slots.icon;
-      }
-      if (typeof icon === 'string') {
-        return ImgIcon;
-      }
-      return undefined;
-    };
+    const computedIcon = renderTNode(internalInstance, 'icon');
     watch(open, () => {
       context.emit('update:modelValue', open.value);
     });
