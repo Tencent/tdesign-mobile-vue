@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-25 19:07:29
+ * updated at 2021-09-19 22:39:42
  * */
 
 export interface TdRateProps {
@@ -18,7 +18,7 @@ export interface TdRateProps {
   clearable: boolean;
   /**
    * 评分图标的颜色
-   * @default #ffc51c
+   * @default #ED7B2F
    */
   color: string;
   /**
@@ -42,7 +42,7 @@ export interface TdRateProps {
    */
   size: string;
   /**
-   * 自定义评分等级对应的辅助文字
+   * 自定义评分等级对应的辅助文字，组件内部默认为：['极差', '失望', '一般', '满意', '惊喜']
    */
   texts: Array<string>;
   /**
@@ -53,6 +53,11 @@ export interface TdRateProps {
    * 选择评分的值，非受控属性
    */
   defaultValue: number;
+  /**
+   * 形状类型，有描边类型和填充类型两种
+   * @default outline
+   */
+  variant: 'outline' | 'filled';
   /**
    * 评分数改变时触发
    */

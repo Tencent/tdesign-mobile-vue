@@ -62,14 +62,15 @@
 -- | -- | -- | -- | --
 allowHalf | Boolean | false | 是否允许半选 | N
 clearable | Boolean | false | 是否允许取消选择 | N
-color | String | #ffc51c | 评分图标的颜色 | N
+color | String | #ED7B2F | 评分图标的颜色 | N
 count | Number | 5 | 评分的数量 | N
 readonly | Boolean | false | 是否为只读 | N
 showText | Boolean | false | 是否显示辅助文字 | N
 size | String | 48 | 评分图标的大小 | N
-texts | Array | - | 自定义评分等级对应的辅助文字。TS 类型：`Array<string>` | N
+texts | Array | - | 自定义评分等级对应的辅助文字，组件内部默认为：['极差', '失望', '一般', '满意', '惊喜']。TS 类型：`Array<string>` | N
 value | Number | - | 必需。选择评分的值。支持语法糖 | Y
 defaultValue | Number | - | 必需。选择评分的值。非受控属性 | Y
+variant | String | outline | 形状类型，有描边类型和填充类型两种。可选项：outline/filled | N
 onChange | Function |  | 评分数改变时触发。`(value: number) => {}` | N
 
 ### Rate Events
