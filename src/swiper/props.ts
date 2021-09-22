@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-09-12 00:01:49
+ * updated at 2021-09-22 23:19:50
  * */
 
 import { TdSwiperProps } from './type';
@@ -25,10 +25,12 @@ export default {
   /** 当前轮播在哪一项（下标） */
   current: {
     type: Number,
+    default: 0,
   },
   /** 当前轮播在哪一项（下标），非受控属性 */
   defaultCurrent: {
     type: Number,
+    default: 0,
   },
   /** 轮播滑动方向，包括横向滑动和纵向滑动两个方向 */
   direction: {
@@ -43,23 +45,18 @@ export default {
     type: Number,
     default: 300,
   },
-  /** 当使用垂直方向滚动时，必须指定高度 */
+  /** 当使用垂直方向滚动时的高度 */
   height: {
     type: Number,
-    default: 200,
   },
   /** 轮播间隔时间 */
   interval: {
     type: Number,
     default: 5000,
   },
-  /** 分页器样式类型‘bullets’  圆点（默认） ‘fraction’  分式 */
-  pagination: {
-    type: String as PropType<TdSwiperProps['pagination']>,
-    default: 'bullets' as TdSwiperProps['pagination'],
-    validator(val: TdSwiperProps['pagination']): boolean {
-      return ['bullets', 'fraction'].includes(val);
-    },
+  /** 导航配置。`navigation.type` 表示导航器风格，圆点/分式等，没有值则不显示。`navigation.minShowNum` 表示小于这个数字不会显示导航器。`navigation.showSlideBtn` 表示是否显示两侧的滑动控制按钮 */
+  navigation: {
+    type: Object as PropType<TdSwiperProps['navigation']>,
   },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,
