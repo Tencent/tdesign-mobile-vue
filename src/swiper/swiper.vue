@@ -8,7 +8,7 @@
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
         height: '180px'
       }"
-      @transitionend='checkLast'
+      @transitionend='handleAnimationEnd'
       @touchstart="onTouchStart"
       @touchmove.prevent="onTouchMove"
       @touchend="onTouchEnd"
@@ -16,8 +16,8 @@
     >
       <slot></slot>
     </div>
-    <!-- <p>{{state.activeIndex}}</p> -->
-    <span v-if="direction === 'horizontal'">
+    <!-- 左右侧的按钮 -->
+    <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
       <span @click="prev" class="t-swiper-btn btn-prev">
         <t-icon size="12px" name="chevron-left" />
       </span>
@@ -25,17 +25,17 @@
         <t-icon size="12px" name="chevron-right" />
       </span>
     </span>
-    <span :class="`${name}-pagination ${name}-pagination--${pagination}`">
-      <template v-if="pagination === 'bullets'">
+    <!-- 分页器 -->
+    <span v-if="navigation.type" :class="`${name}-pagination ${name}-pagination--${navigation.type}`">
+      <template v-if="navigation.type === 'bullets'">
         <span
           :class="{[`${name}-pagination-dot`]: true, active: index === state.activeIndex}"
           v-for="(item, index) in paginationList"
           :key="'page' + index"></span>
       </template>
-      <span v-if="pagination === 'fraction'">
+      <span v-if="navigation.type === 'fraction'">
         {{showPageNum +  '/' + state.itemLength}}
       </span>
-      <!-- {{pagination + paginationList}} -->
     </span>
   </div>
 </template>
@@ -49,7 +49,7 @@ const name = `${prefix}-swiper`;
 export default defineComponent({
   name,
   props: SwiperProps,
-  setup(props) {
+  setup(props, context) {
     const self = getCurrentInstance();
     const { autoplay, interval, duration, direction = 'horizontal', height = 180 } = props;
     const state: {
@@ -121,7 +121,7 @@ export default defineComponent({
       _swiperContainer.style.transition = 'none';
     };
     // 确认是否已经移动到最后一个元素，每次transitionend事件后即检查
-    const checkLast = () => {
+    const handleAnimationEnd = () => {
       if (state.activeIndex >= state.itemLength) {
         // console.log('到了最后一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = 0;
@@ -134,6 +134,7 @@ export default defineComponent({
         removeAnimation();
         move(state.itemLength - 1);
       }
+      context.emit('change', state.activeIndex);
     };
     // 停止自动播放
     const stopAutoplay = () => {
@@ -216,7 +217,7 @@ export default defineComponent({
       onTouchStart,
       onTouchMove,
       onTouchEnd,
-      checkLast,
+      handleAnimationEnd,
       state,
       paginationList,
       showPageNum,

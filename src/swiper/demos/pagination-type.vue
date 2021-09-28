@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-swiper pagination-type="fraction">
+    <t-swiper :navigation="{type: 'fraction', showSlideBtn: true}">
       <t-swiper-item class="swiper-item--demo">
         itme1
       </t-swiper-item>

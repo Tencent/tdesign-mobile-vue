@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>基本用法</h3>
-    <t-swiper :interval="10000" :autoplay="false">
+    <t-swiper @change="handleChange" :interval="3000" :autoplay="true" :navigation="{type: 'dot', showSlideBtn: false}">
       <t-swiper-item  class="swiper-item--demo">
         item1
       </t-swiper-item>
@@ -27,6 +27,14 @@ export default defineComponent({
   components: {
     'pagination-type': PaginationType,
     'demo-direction': Direction,
+  },
+  setup() {
+    const handleChange = (index: number) => {
+      console.log(index);
+    };
+    return {
+      handleChange,
+    };
   },
 });
 </script>
