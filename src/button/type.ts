@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-25 11:26:27
+ * updated at 2021-09-03 18:49:44
  * */
 
 import { TNode, SizeEnum } from '../common';
@@ -42,7 +42,7 @@ export interface TdButtonProps {
    */
   shape: 'square' | 'round';
   /**
-   * 组件子元素（默认插槽）
+   * 组件尺寸
    * @default medium
    */
   size: SizeEnum;

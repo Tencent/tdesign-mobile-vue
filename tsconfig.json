@@ -30,6 +30,7 @@
     "./**/*.ts",
     "./**/*.tsx",
     "./**/*.vue",
+    "src/**/*.js",
     "babel.config.js",
     "src/style/index.js",
     "scripts/rollup.config.js"

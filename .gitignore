@@ -7,10 +7,12 @@ coverage
 test-report.html
 *.zip
 
-# output
+# build files
 es/
+esm/
 lib/
 dist/
+typings/
 
 # lock
 yarn.lock

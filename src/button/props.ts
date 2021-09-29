@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-25 11:26:27
+ * updated at 2021-09-03 18:49:44
  * */
 
 import { TdButtonProps } from './type';
@@ -33,7 +33,7 @@ export default {
       return ['square', 'round'].includes(val);
     },
   },
-  /** 组件子元素（默认插槽） */
+  /** 组件尺寸 */
   size: {
     type: String as PropType<TdButtonProps['size']>,
     default: 'medium' as TdButtonProps['size'],
@@ -44,7 +44,7 @@ export default {
   /** 组件风格，依次为品牌色、危险色 */
   theme: {
     type: String as PropType<TdButtonProps['theme']>,
-    default: undefined as TdButtonProps['theme'],
+    default: undefined as unknown as TdButtonProps['theme'],
     validator(val: TdButtonProps['theme']): boolean {
       return ['default', 'primary', 'danger'].includes(val);
     },

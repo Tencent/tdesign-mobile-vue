@@ -1,11 +1,11 @@
 <template>
-  <t-cell :label="label" :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`]">
-    <template v-if="hasLabel" #label>
+  <t-cell :title="label" :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`]">
+    <template v-if="hasLabel" #title>
       <slot name="label">
         <div v-if="label" :class="`${name}__label`">{{ label }}</div>
       </slot>
     </template>
-    <template #default>
+    <template #note>
       <span
         :class="[`${name}__minus`, `${disabled || currentValue <= min ? 't-is-disabled' : ''}`]"
         @click="minusValue"

@@ -1,49 +1,78 @@
 <template>
-  <div>
-    <t-cell-group title="按钮带徽标">
-      <div class="badge-wrap">
-        <t-badge :count="16" class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
-        </t-badge>
-        <t-badge dot class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
-        </t-badge>
-        <t-badge content="NEW" class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
-        </t-badge>
-        <t-badge content="···" class="badge-item">
-          <t-button size="small" variant="outline">小按钮</t-button>
-        </t-badge>
+  <div class='tdesign-mobile-demo'>
+    <h1 class='title'>Tag 标签</h1>
+    <p class='summary'>用于标记表示主体属性、类型、状态等，由底部图形和标签文字组成</p>
+    <tdesign-demo-block title='01 类型' summary='徽标主要分红点、数字、文字和角标提醒'>
+      <div class='badge-demo'>
+        <div class='badge-item'>
+          <t-badge count='16'>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge dot>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge count='NEW'>消息</t-badge>
+        </div>
+        <div class='badge-item'>
+          <t-badge count='···'>消息</t-badge>
+        </div>
       </div>
-    </t-cell-group>
-    <t-cell-group title="列表带徽标" style="overflow: hidden">
-      <t-cell label="单行标题" link>
-        <div class="cell-badge-wrap">
-          <t-badge dot />
+      <div class='badge-demo'>
+        <div class='badge-item'>
+          <t-badge count='16'>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
         </div>
-      </t-cell>
-      <t-cell label="单行标题" link>
-        <div class="cell-badge-wrap">
-          <t-badge :count="16"/>
+        <div class='badge-item'>
+          <t-badge dot>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
         </div>
-      </t-cell>
-      <t-cell label="单行标题" link>
-        <div class="cell-badge-wrap">
-          <t-badge content="NEW" shape="round" class="cell-badge"/>
-          <t-badge content="NEW" shape="round" class="cell-badge"/>
-          <t-badge content="NEW" class="cell-badge"/>
-          <t-badge content="NEW" class="cell-badge"/>
+        <div class='badge-item'>
+          <t-badge count='NEW'>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
         </div>
-      </t-cell>
-      <t-cell label="单行标题">
-        <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
-      </t-cell>
-    </t-cell-group>
+        <div class='badge-item'>
+          <t-badge count='···'>
+            <t-button size='small' variant='outline'>小按钮</t-button>
+          </t-badge>
+        </div>
+      </div>
+      <t-cell-group style='overflow: hidden'>
+        <t-cell title='单行标题' arrow>
+          <template #note>
+            <t-badge dot></t-badge>
+          </template>
+        </t-cell>
+        <t-cell title='单行标题' arrow>
+          <template #note>
+            <t-badge count='16'></t-badge>
+          </template>
+        </t-cell>
+        <t-cell title='单行标题' arrow>
+          <template #note>
+            <t-badge count='NEW' shape='round' />
+            <t-badge count='NEW' />
+          </template>
+        </t-cell>
+        <t-cell title='单行标题'>
+          <template #note>
+            <t-badge :offset='[5, 0]' shape='ribbon' >
+              <template #count>
+                New
+              </template>
+            </t-badge>
+          </template>
+        </t-cell>
+      </t-cell-group>
+    </tdesign-demo-block>
   </div>
 </template>
 
-<script lang="ts">
+<script lang='ts'>
 import { defineComponent } from 'vue';
+
 export default defineComponent({
   setup() {
     return {
@@ -52,19 +81,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="less" scoped>
-.badge-wrap {
-  padding: 20px 16px;
-
-  .badge-item {
-    margin-right: 10px;
-  }
-}
-.cell-badge {
-  margin-left: 8px;
-}
-.cell-badge-wrap {
-  padding-bottom: 4px;
-}
-</style>

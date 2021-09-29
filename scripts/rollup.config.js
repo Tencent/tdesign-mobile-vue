@@ -4,6 +4,7 @@ import url from '@rollup/plugin-url';
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
 import vuePlugin from 'rollup-plugin-vue';
+import styles from 'rollup-plugin-styles';
 import esbuild from 'rollup-plugin-esbuild';
 import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
@@ -21,7 +22,8 @@ const getPlugins = ({
   env,
   isProd = false,
   ignoreLess = true,
-  extractCss = false,
+  extractOneCss = false,
+  extractMultiCss = false,
 } = {}) => {
   let plugins = [
     vuePlugin(),
@@ -38,11 +40,19 @@ const getPlugins = ({
     plugins.push(typescript({
       tsconfig: 'tsconfig.build.json',
       cacheRoot: `${tmpdir()}/.rpt2_cache`,
+      tsconfigOverride: {
+        compilerOptions: {
+          declaration: true,
+          declarationDir: './typings',
+        },
+      },
+      useTsconfigDeclarationDir: true,
     }));
   } else {
     plugins.push(esbuild({
       target: 'esnext',
       minify: false,
+      jsx: 'preserve',
       tsconfig: 'tsconfig.build.json',
     }));
   }
@@ -57,32 +67,40 @@ const getPlugins = ({
   ]);
 
   // css
-  if (extractCss) {
+  if (extractOneCss) {
     plugins.push(postcss({
       extract: `${isProd ? `${name}.min` : name}.css`,
       minimize: isProd,
       sourceMap: true,
       extensions: ['.sass', '.scss', '.css', '.less'],
     }));
+  } else if (extractMultiCss) {
+    plugins.push(
+      staticImport({
+        include: [
+          'src/**/style/css.js',
+        ],
+      }),
+      ignoreImport({
+        include: ['src/*/style/*'],
+        body: 'import "./style/css.js";',
+      }),
+    );
+  } else if (ignoreLess) {
+    plugins.push(ignoreImport({ extensions: ['*.less'] }));
   } else {
-    if (ignoreLess) {
-      plugins.push(ignoreImport({
-        extensions: ['*.less'],
-      }));
-    } else {
-      plugins.push(
-        staticImport({
-          include: [
-            'src/**/style/index.js',
-            'src/_common/style/mobile/**/*.less',
-          ],
-        }),
-        ignoreImport({
-          include: ['src/*/style/*'],
-          body: 'import "./style/index.js";',
-        }),
-      );
-    }
+    plugins.push(
+      staticImport({
+        include: [
+          'src/**/style/index.js',
+          'src/_common/style/mobile/**/*.less',
+        ],
+      }),
+      ignoreImport({
+        include: ['src/*/style/*'],
+        body: 'import "./style/index.js";',
+      }),
+    );
   }
 
   if (env) {
@@ -126,13 +144,43 @@ const inputList = [
 ];
 
 /** @type {import('rollup').RollupOptions} */
+const cssConfig = {
+  input: ['src/**/style/index.js'],
+  plugins: [
+    multiInput(),
+    styles({ mode: 'extract' }),
+  ],
+  output: {
+    banner,
+    dir: 'es/',
+    sourcemap: true,
+    assetFileNames: '[name].css',
+  },
+};
+/** @type {import('rollup').RollupOptions} */
+const esConfig = {
+  input: inputList,
+  // 为了保留 style/css.js
+  treeshake: false,
+  external: externalDeps.concat(externalPeerDeps),
+  plugins: [multiInput()].concat(getPlugins({ extractMultiCss: true })),
+  output: {
+    banner,
+    dir: 'es/',
+    format: 'esm',
+    sourcemap: true,
+    chunkFileNames: '_chunks/dep-[hash].js',
+  },
+};
+
+/** @type {import('rollup').RollupOptions} */
 const esmConfig = {
   input: inputList,
   external: externalDeps.concat(externalPeerDeps),
   plugins: [multiInput()].concat(getPlugins({ ignoreLess: false })),
   output: {
     banner,
-    dir: 'es/',
+    dir: 'esm/',
     format: 'esm',
     sourcemap: true,
     chunkFileNames: '_chunks/dep-[hash].js',
@@ -160,7 +208,7 @@ const umdConfig = {
   external: externalPeerDeps,
   plugins: getPlugins({
     env: 'development',
-    extractCss: true,
+    extractOneCss: true,
   }).concat(analyzer({
     limit: 5,
     summaryOnly: true,
@@ -182,7 +230,7 @@ const umdMinConfig = {
   external: externalPeerDeps,
   plugins: getPlugins({
     isProd: true,
-    extractCss: true,
+    extractOneCss: true,
     env: 'production',
   }),
   output: {
@@ -196,4 +244,4 @@ const umdMinConfig = {
   },
 };
 
-export default [esmConfig, cjsConfig, umdConfig, umdMinConfig];
+export default [cssConfig, esConfig, esmConfig, cjsConfig, umdConfig, umdMinConfig];
