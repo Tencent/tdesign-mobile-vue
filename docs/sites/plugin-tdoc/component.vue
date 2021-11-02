@@ -64,7 +64,7 @@
          Prismjs.highlightAll();
       }
       
-      tdDocHeader.docType = info.docType;
+      tdDocHeader.docType = this.docType;
       tdDocHeader.docInfo = { title: info.title, desc: info.description };
 
       document.querySelector('td-doc-content').initAnchorHighlight();
