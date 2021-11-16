@@ -1,6 +1,6 @@
 <template>
   <td-doc-content ref="tdDocContent" page-status="hidden" platform="mobile">
-    <td-doc-header slot="doc-header" ref="tdDocHeader"></td-doc-header>
+    <td-doc-header slot="doc-header" ref="tdDocHeader" platform="mobile"></td-doc-header>
     <template v-if="info.isComponent">
       <td-doc-tabs ref="tdDocTabs" :tab="tab"></td-doc-tabs>
       <div v-show="tab === 'demo'">
@@ -15,7 +15,7 @@
       <div v-show="tab === 'design'" name="DESIGN" v-html="info.designMd"></div>
     </template>
     <div name="DOC" v-else v-html="info.docMd"></div>
-    <td-doc-footer slot="doc-footer"></td-doc-footer>
+    <td-doc-footer slot="doc-footer" platform="mobile"></td-doc-footer>
   </td-doc-content>
 </template>
 
