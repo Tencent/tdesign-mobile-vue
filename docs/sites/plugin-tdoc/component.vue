@@ -9,7 +9,7 @@
         <td-doc-phone ref="tdDocPhone">
           <iframe :src="info.mobileUrl" frameborder="0" width="100%" height="100%" style="border-radius: 0 0 6px 6px;"></iframe>
         </td-doc-phone>
-        <td-contributors ref="tdContributors"></td-contributors>
+        <td-contributors-gpl ref="tdContributors"></td-contributors-gpl>
       </div>
       <div v-show="tab === 'api'" name="API" v-html="info.apiMd"></div>
       <div v-show="tab === 'design'" name="DESIGN" v-html="info.designMd"></div>
@@ -24,8 +24,8 @@
   import Prismjs from 'prismjs';
   import 'prismjs/components/prism-bash.js';
   import 'prismjs/components/prism-javascript.js';
-  import '@common/site/src/styles/prism-theme.less';
-  import '@common/site/src/styles/prism-theme-dark.less';
+  import 'tdesign-site-components/lib/styles/prism-theme.less';
+  import 'tdesign-site-components/lib/styles/prism-theme-dark.less';
 
   export default defineComponent({
     props: {
