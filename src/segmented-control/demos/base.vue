@@ -1,29 +1,22 @@
 <template>
-  <div class="demo-segmented-control">
-    <t-cell-group title="基础分段器">
-      <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items.slice(0,2)"
-          @change="change"
-        ></t-segmented-control>
-      </t-cell>
-      <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items.slice(0,3)"
-          @change="change"
-        ></t-segmented-control>
-      </t-cell>
-      <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items"
-          @change="change"
-        ></t-segmented-control>
-      </t-cell>
-    </t-cell-group>
-  </div>
+  <div class="tdesign-mobile-demo">
+      <h1 class="title">SegmentedControl 分段器</h1>
+      <tdesign-demo-block title="01 类型" summary="两列分段器">
+        <div class="segmented-control-demo">
+          <t-segmented-control v-model="defaultValue" :items="items.slice(0, 2)" @change="change"></t-segmented-control>
+        </div>
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="两列分段器">
+        <div class="segmented-control-demo">
+          <t-segmented-control v-model="defaultValue" :items="items.slice(0, 3)" @change="change"></t-segmented-control>
+        </div>
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="两列分段器">
+        <div class="segmented-control-demo">
+          <t-segmented-control v-model="defaultValue" :items="items" @change="change"></t-segmented-control>
+        </div>
+      </tdesign-demo-block>
+    </div>
 </template>
 
 <script lang="ts">
@@ -64,20 +57,3 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less" scoped>
-.t-cell-group{
-  min-height: calc(100vh - 50px);
-  background-color: #F5F5F5;
-  overflow: hidden;
-}
-.t-cell{
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-</style>
-
-<style lang="less">
-.demo-segmented-control .t-cell-group-container{
-  background-color: transparent;
-}
-</style>

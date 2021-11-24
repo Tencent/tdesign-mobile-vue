@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount, readonly, Fragment } from 'vue';
+import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount, readonly, Fragment, watch } from 'vue';
 import config from '../config';
 import { TabsProps } from './tabs.interface';
 
@@ -41,6 +41,13 @@ export default defineComponent({
     const navClasses = computed(() => [`${name}__nav`, { [`${name}__nav--scroll`]: props.scrollable }]);
 
     const currentName = ref(props.activeName);
+    watch(() => props.activeName, (newValue) => {
+      setCurrentName(newValue);
+      nextTick(() => {
+        moveToActiveTab();
+      });
+    });
+
 
     const { itemProps } = (() => {
       let children: any[] = (slots.default ? slots.default() : []);
@@ -85,11 +92,11 @@ export default defineComponent({
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
     });
-    const setCurrentName = (val: string)  => {
+    const setCurrentName = (val: string | number)  => {
       emit('change', val);
       currentName.value = val;
     };
-    const tabChange = (event: Event, name: string) => {
+    const tabChange = (event: Event, name: string | number) => {
       setCurrentName(name);
     };
     const tabClick = (event: Event, item: Record<string, unknown>) => {
