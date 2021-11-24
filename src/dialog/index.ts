@@ -12,7 +12,7 @@ interface DialogFnType extends DialogPropsType {
   onClickOverlay?: () => void,
 }
 
-let instance: DefineComponent<DialogPropsType>;
+let instance: DefineComponent;
 
 function create(props: DialogFnType | string): DefineComponent {
   const visible = ref(false);

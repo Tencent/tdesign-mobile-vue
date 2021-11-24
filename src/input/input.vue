@@ -1,11 +1,14 @@
 <template>
-  <t-cell v-if="type !== 'textarea'" :class="styleWrapper" :value-align="valueAlign">
-    <template v-if="hasLabel" #label>
+  <t-cell v-if="type !== 'textarea'" :class="styleWrapper">
+    <template v-if="hasLabel" #title>
       <slot name="label">
         <div v-if="label" :class="styleLabel">{{ label }}</div>
       </slot>
     </template>
-    <template #default>
+     <template #leftIcon>
+            <TIconUserFilled />
+          </template>
+    <template #note>
       <div :class="`${name}-wrap`">
         <input
           v-model="innerValue"
@@ -32,7 +35,7 @@
       <div v-if="errorMessage" :class="`${name}__error-msg`">{{ errorMessage }}</div>
     </template>
   </t-cell>
-  <div v-else>
+  <div v-else :class="styleWrapper">
     <div v-if="hasLabel" :class="`${name}--textarea-label`">
       <slot name="label">
         <div v-if="label">{{ label }}</div>
@@ -136,7 +139,7 @@ export default defineComponent({
       if (props.suffix) return true;
       return !!context.slots.rightIcon;
     });
-    const valueAlign = computed(() => (hasLabel.value ? 'right' : 'left'));
+    // const valueAlign = computed(() => (hasLabel.value ? 'right' : 'left'));
 
     const innerValue = computed({
       get() {
@@ -191,7 +194,7 @@ export default defineComponent({
       hasRightIcon,
       hasSuffix,
       innerValue,
-      valueAlign,
+      // valueAlign,
       textarea,
       handleClickIcon,
       handleClear,
