@@ -1,7 +1,7 @@
 <template>
   <div class="demo-tab-bar">
     <t-cell-group title="横向选项卡" :border="false">
-      <t-tabs active-name="first" @change="onChange">
+      <t-tabs :active-name="currentName" @change="onChange">
         <t-tab-panel name="first" label="标签页一">
         </t-tab-panel>
         <t-tab-panel name="second" label="标签页二">
@@ -103,7 +103,7 @@
 
 <script lang="ts">
 import config from '@/config';
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 const { prefix } = config;
 const name = `${prefix}-tabs-demo`;
 export default defineComponent({
@@ -112,8 +112,10 @@ export default defineComponent({
     const onChange = ($event: number) => {
       console.log(`change to ${$event}`);
     };
+    const currentName = ref('first');
     return {
       onChange,
+      currentName,
     };
   },
 });

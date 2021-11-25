@@ -1,37 +1,27 @@
 <template>
-  <div class="cell-base">
-    <t-cell-group title="基础滑动选择器">
-      <t-cell label="选择器标题">
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">Slider 滑动选择器</h1>
+    <p class="summary">滑动滑块来选择一个数值，在具体场景中也可以增加来刻度和展示数值来方便用户使用</p>
+    <tdesign-demo-block title="01 类型" summary="基础滑动选择器">
+      <div class="slider-demo">
         <t-slider v-model="value" @change="onChange"> </t-slider>
-      </t-cell>
-      <t-cell label="禁用选择器">
-        <t-slider v-model="value" disabled> </t-slider>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="带数字滑动选择器">
-      <t-cell label="选择器标题">
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带数值滑动选择器">
+      <div class="slider-demo">
         <t-slider v-model="value1" show-value> </t-slider>
-      </t-cell>
-      <t-cell label="禁用选择器">
-        <t-slider v-model="value1" disabled show-value> </t-slider>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="带刻度滑动选择器">
-      <t-cell label="选择器标题">
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带刻度滑动选择器">
+      <div class="slider-demo">
         <t-slider v-model="value2" :marks="marks"> </t-slider>
-      </t-cell>
-      <t-cell label="禁用选择器">
-        <t-slider v-model="value2" disabled :marks="marks"> </t-slider>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="区间滑动选择器">
-      <t-cell label="选择器标题">
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="区间滑动选择器">
+      <div class="slider-demo">
         <t-slider v-model="rangeValue" show-value range @change="onChange"> </t-slider>
-      </t-cell>
-      <t-cell label="禁用选择器">
-        <t-slider v-model="rangeValue" range disabled> </t-slider>
-      </t-cell>
-    </t-cell-group>
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 

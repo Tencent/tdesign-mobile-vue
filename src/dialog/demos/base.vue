@@ -1,105 +1,74 @@
 <template>
-  <div class="dialog-base">
-    <div class="tdesign-demo-block">
-      <t-cell-group title="反馈类对话框">
-         <t-cell value-align="left">
-          <t-button  variant="outline" size="large" @click="changeDialogVisible(1)">
-            单行标题对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog1"
-            :header="singleHeader">
-          </t-dialog>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button variant="outline" size="large" @click="changeDialogVisible(2)">
-            多行标题对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog2"
-            :header="moreTextHeader">
-          </t-dialog>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button variant="outline" size="large" @click="changeDialogVisible(3)">
-            短文本对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog3"
-            :content="content"
-            @confirm="onConfirm"
-            @opened="openDialog"
-            @closed="closeDialog"
-            @click-overlay="clickOverlay"
-            @visible-change="changeVisible"
-          >
-          </t-dialog>
-        </t-cell>
-         <t-cell value-align="left">
-          <t-button variant="outline" size="large" @click="changeDialogVisible(4)">
-            长文本对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog4"
-            :header="header">
-          </t-dialog>
-        </t-cell>
-      </t-cell-group>
-
-      <t-cell-group title="确认类对话框">
-        <t-cell value-align="left">
-          <t-button  variant="outline" size="large" @click="changeDialogVisible(5)">
-            双操作对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog5"
-            type="confirm"
-            :header="header"
-            :content="content"
-            :placeholder-text="placeholderText"
-            :cancel-button-text="cancelButtonText"
-            :confirm-button-text="confirmButtonText"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-          </t-dialog>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button  variant="outline" size="large" @click="changeDialogVisible(6)">
-            带警示操作对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog6"
-            type="confirm"
-            :header="header"
-            :content="moreTextContent"
-            :cancel-button-text="cancelButtonText"
-            :confirm-button-text="confirmButtonText"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-            <template #footer-cancel>
-              <div style="color:#000;font-size:18px;">辅助操作</div>
-            </template>
-            <template #footer-confirm>
-              <div style="color:#E34D59;font-size:18px;">我同意</div>
-            </template>
-          </t-dialog>
-        </t-cell>
-      </t-cell-group>
-
-    <!-- <t-cell-group title="函数调用: 反馈类弹框">
-      <t-cell value-align="left">
-        <t-button theme="primary" @click="changeFunctionVisible1()">
-          反馈类弹出框
-        </t-button>
-      </t-cell>
-    </t-cell-group> -->
-
-
-    <t-cell-group title="输入对话框">
-      <t-cell value-align="left">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(7)">
-          单行标题对话框
-        </t-button>
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">Dialog 对话框</h1>
+    <p class="summary">用于显示重要提示或请求用户进行重要操作，一种打断当前操作的模态视图。</p>
+    <tdesign-demo-block title="01 类型" summary="反馈类对话框">
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
+        <t-dialog v-model="isShowDialog1" :header="singleHeader"> </t-dialog>
+      </div>
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
+        <t-dialog v-model="isShowDialog2" :header="moreTextHeader"> </t-dialog>
+      </div>
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
+        <t-dialog
+          v-model="isShowDialog3"
+          :content="content"
+          @confirm="onConfirm"
+          @opened="openDialog"
+          @closed="closeDialog"
+          @click-overlay="clickOverlay"
+          @visible-change="changeVisible"
+        >
+        </t-dialog>
+      </div>
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
+        <t-dialog v-model="isShowDialog4" :header="header"> </t-dialog>
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="确认类对话框">
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
+        <t-dialog
+          v-model="isShowDialog5"
+          type="confirm"
+          :header="header"
+          :content="content"
+          :placeholder-text="placeholderText"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        >
+        </t-dialog>
+      </div>
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示操作对话框 </t-button>
+        <t-dialog
+          v-model="isShowDialog6"
+          type="confirm"
+          :header="header"
+          :content="moreTextContent"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        >
+          <template #footer-cancel>
+            <div style="color: #000; font-size: 18px">辅助操作</div>
+          </template>
+          <template #footer-confirm>
+            <div style="color: #e34d59; font-size: 18px">我同意</div>
+          </template>
+        </t-dialog>
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="输入对话框">
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
         <t-dialog
           v-model="isShowDialog7"
           type="confirm"
@@ -109,19 +78,18 @@
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
           @confirm="onConfirm"
-          @cancel="onCancel">
+          @cancel="onCancel"
+        >
           <template #footer-cancel>
-            <div style="color:#000000;font-size:18px;">我不同意</div>
+            <div style="color: #000000; font-size: 18px">我不同意</div>
           </template>
           <template #footer-confirm>
-            <div style="color:#0052D9;font-size:18px;">我同意</div>
+            <div style="color: #0052d9; font-size: 18px">我同意</div>
           </template>
         </t-dialog>
-      </t-cell>
-      <t-cell value-align="left">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(8)">
-          带说明文本对话框
-        </t-button>
+      </div>
+      <div class="dialog-demo">
+        <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog
           v-model="isShowDialog8"
           type="confirm"
@@ -132,23 +100,17 @@
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
           @confirm="onConfirm"
-          @cancel="onCancel">
+          @cancel="onCancel"
+        >
           <template #footer-cancel>
-            <div style="color:#000000;font-size:18px;">我不同意</div>
+            <div style="color: #000000; font-size: 18px">我不同意</div>
           </template>
           <template #footer-confirm>
-            <div style="color:#0052D9;font-size:18px;">我同意</div>
+            <div style="color: #0052d9; font-size: 18px">我同意</div>
           </template>
         </t-dialog>
-      </t-cell>
-
-      <!-- <t-cell value-align="left">
-        <t-button theme="primary" @click="changeFunctionVisible2">
-          带说明文本对话框
-        </t-button>
-      </t-cell> -->
-    </t-cell-group>
-    </div>
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -348,7 +310,6 @@ export default defineComponent({
         },
       });
     },
-
   },
 });
 </script>
