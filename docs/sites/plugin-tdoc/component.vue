@@ -9,7 +9,7 @@
         <td-doc-phone ref="tdDocPhone">
           <iframe :src="info.mobileUrl" frameborder="0" width="100%" height="100%" style="border-radius: 0 0 6px 6px;"></iframe>
         </td-doc-phone>
-        <td-contributors-gpl ref="tdContributors"></td-contributors-gpl>
+        <td-contributors ref="tdContributors"></td-contributors>
       </div>
       <div v-show="tab === 'api'" name="API" v-html="info.apiMd"></div>
       <div v-show="tab === 'design'" name="DESIGN" v-html="info.designMd"></div>
