@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { getContributors } from './utils';
 
 const componentPath = path.join(__dirname, './component.vue');
 
@@ -65,7 +64,7 @@ export default {
       mobileUrl,
       isComponent,
       issueInfo: {},
-      contributors: getContributors(componentName),
+      componentName,
       docMd: md.render.call(md, docMd),
       apiMd: md.render.call(md, apiMd),
       demoMd: md.render.call(md, demoMd),

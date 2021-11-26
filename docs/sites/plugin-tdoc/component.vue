@@ -9,7 +9,7 @@
         <td-doc-phone ref="tdDocPhone">
           <iframe :src="info.mobileUrl" frameborder="0" width="100%" height="100%" style="border-radius: 0 0 6px 6px;"></iframe>
         </td-doc-phone>
-        <td-contributors ref="tdContributors"></td-contributors>
+        <td-contributors platform="mobile" framework="vue" :component-name="info.componentName"></td-contributors>
       </div>
       <div v-show="tab === 'api'" name="API" v-html="info.apiMd"></div>
       <div v-show="tab === 'design'" name="DESIGN" v-html="info.designMd"></div>
@@ -49,13 +49,12 @@
 
     mounted() {
       const { info } = this;
-      const { tdDocContent, tdDocHeader, tdDocPhone, tdDocTabs, tdContributors } = this.$refs;
+      const { tdDocContent, tdDocHeader, tdDocPhone, tdDocTabs } = this.$refs;
       const completeUrl = location.origin + info.mobileUrl;
 
       if (info.isComponent) {
         tdDocTabs.onchange = ({ detail: currentTab }) => this.tab = currentTab;
         tdDocHeader.issueInfo = info.issueInfo || {};
-        tdContributors.contributors = info.contributors || [];
         document.querySelectorAll('td-doc-demo').forEach(item => {
           const { demo } = item.dataset;
           item.code = this.demos[demo];
