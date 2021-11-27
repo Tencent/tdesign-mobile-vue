@@ -11,12 +11,11 @@
 
 <script lang="ts">
 import { defineComponent, computed, toRefs, ref, reactive, onBeforeMount, provide } from 'vue';
-
-import { DropdownMenuState, DropdownMenuControl, DropdownMenuExpandState, DropdownMenuProps, DropdownMenuPropsType } from './dropdown.interface';
 import config from '../config';
-import { context as menuContext } from './context';
+import { context as menuContext, DropdownMenuState, DropdownMenuControl, DropdownMenuExpandState } from './context';
 import TransAniControl from './trans-ani-control';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
+import { default as DropdownMenuProps } from './props';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
@@ -24,7 +23,7 @@ const name = `${prefix}-dropdown-menu`;
 export default defineComponent({
   name,
   props: DropdownMenuProps,
-  setup(props: DropdownMenuPropsType, { slots }) {
+  setup(props, { slots }) {
     // 菜单状态
     const state = reactive<DropdownMenuState>({
       activeId: null,
