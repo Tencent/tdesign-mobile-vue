@@ -174,7 +174,6 @@ export default defineComponent({
     };
     // 移动到下一个
     const next = (step = 1) => {
-      console.error('点击了下一页', step);
       stopAutoplay();
       state.activeIndex += step;
       addAnimation();
