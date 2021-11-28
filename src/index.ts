@@ -1,26 +1,17 @@
 import { App } from 'vue';
 
-import config from './config';
 import * as plugins from './plugins';
 import * as components from './components';
 
 const install = function (app: App, option?: Record<string, unknown>): void {
-  const newConfig = { ...config, ...option };
-
   Object.keys(components).forEach((key) => {
-    // console.log(newConfig.prefix + key);
-    app.component(newConfig.prefix + key, components[key]);
+    app.use(components[key], option);
   });
 
   Object.keys(plugins).forEach((key) => {
     app.use(plugins[key]);
   });
 };
-
-// install
-// if (typeof window !== 'undefined' && window.Vue) {
-//   install(window.Vue);
-// }
 
 const version = typeof __VERSION__ === 'undefined' ? '' : __VERSION__;
 

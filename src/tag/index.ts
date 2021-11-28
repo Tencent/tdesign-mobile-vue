@@ -8,6 +8,7 @@ const LocalCheckTag = mapProps([
   {
     name: 'checked',
     event: 'change',
+    alias: ['modelValue'],
   },
 ])(_LocalCheckTag);
 

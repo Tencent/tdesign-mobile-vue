@@ -24,6 +24,7 @@ const { prefix } = config;
 const name = `${prefix}-picker`;
 
 export default defineComponent({
+  name,
   props: PickerProps,
   emits: ['change', 'cancel', 'confirm'],
   setup(props, context) {

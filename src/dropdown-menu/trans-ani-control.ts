@@ -1,6 +1,6 @@
 import { nextTick } from 'vue';
 import { NOOP } from '../shared/functions';
-import { DropdownMenuDo } from './dropdown.interface';
+import { DropdownMenuDo } from './context';
 
 export default class TransAniControl {
   timeout: number | null;
