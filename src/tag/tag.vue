@@ -32,7 +32,7 @@ const Tag = defineComponent({
     const { size, shape, theme, variant, maxWidth, disabled, closable } = toRefs(props);
 
     const style: { maxWidth?: string } = {};
-    if (maxWidth.value) {
+    if (maxWidth?.value) {
       style.maxWidth = `${maxWidth.value}px`;
     }
 

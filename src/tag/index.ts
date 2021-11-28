@@ -12,4 +12,4 @@ const LocalCheckTag = mapProps([
 ])(_LocalCheckTag);
 
 export const Tag: WithInstallType<typeof LocalTag> = withInstall(LocalTag);
-export const CheckTag: WithInstallType<typeof LocalCheckTag> = withInstall(LocalCheckTag);
+export const CheckTag: WithInstallType<typeof _LocalCheckTag> = withInstall(LocalCheckTag);
