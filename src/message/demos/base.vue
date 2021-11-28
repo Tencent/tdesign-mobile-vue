@@ -68,7 +68,7 @@ export default defineComponent({
       visible10,
       visible11,
       visible12,
-      onClick: (type) => TMessage[type](type),
+      onClick: type => TMessage[type](type),
     };
   },
 });
