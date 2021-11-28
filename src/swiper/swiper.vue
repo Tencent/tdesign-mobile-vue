@@ -41,7 +41,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref } from 'vue';
+import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch } from 'vue';
 import SwiperProps from './props';
 import { setOffset } from './tools';
 import config from '@/config';
