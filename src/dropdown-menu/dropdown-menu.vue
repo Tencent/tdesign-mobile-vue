@@ -37,7 +37,7 @@ export default defineComponent({
       if (slots.default) {
         const itemName = `${prefix}-dropdown-item`;
         menuItems.value = slots.default()
-          .filter((child: any) => child.type.name === itemName);
+          .filter((child: any) => child.type.name.includes(itemName));
       }
     };
     onBeforeMount(updateItems);
