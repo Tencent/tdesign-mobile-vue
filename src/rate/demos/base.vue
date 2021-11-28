@@ -35,17 +35,18 @@
     </tdesign-demo-block>
     <tdesign-demo-block>
       <p class="tdesign-mobile-demo-block__summary rate">展示型评分</p>
-      <div style="padding: 12px 16px;">
+      <div class="rate-demo-cell">
+        <div class="rate-demo-cell__label">纯展示</div>
         <t-rate v-model="current5" readonly />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 规格" summary="评价规格" style="padding-bottom: 16px;">
       <div class="rate-demo-cell">
-        <div class="rate-demo-cell__label">评分30</div>
+        <div class="rate-demo-cell__label">评分 30</div>
         <t-rate v-model="current5" size="30px" clearable />
       </div>
       <div class="rate-demo-cell">
-        <div class="rate-demo-cell__label">评分18</div>
+        <div class="rate-demo-cell__label">评分 18</div>
         <t-rate v-model="current5" size="18px" clearable />
       </div>
     </tdesign-demo-block>
