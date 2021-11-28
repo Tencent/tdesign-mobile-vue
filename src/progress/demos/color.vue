@@ -1,28 +1,8 @@
 <template>
   <div class="cell-base">
-    <t-cell-group title="自定义样式">
-      <t-cell>
-        <t-progress
-          :percentage="50"
-          color="#FF00FF"
-          bg-color="#000000"
-          text-color="#00FFFF"
-        />
-      </t-cell>
-    </t-cell-group>
+    <t-progress :percentage="50" color="#FF00FF" bg-color="#000000" text-color="#00FFFF" />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import config from '@/config';
-const { prefix } = config;
-const name = `${prefix}-progress-demo`;
-
-export default defineComponent({
-  name,
-  setup() {
-    return {};
-  },
-});
+<script lang="ts" setup>
 </script>

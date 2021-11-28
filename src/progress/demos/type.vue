@@ -1,13 +1,7 @@
 <template>
   <div class="cell-base">
-    <t-cell-group title="类型">
-      <t-cell>
-        <t-progress type="info" :percentage="50" />
-      </t-cell>
-      <t-cell>
-        <t-progress type="error" :percentage="88" />
-      </t-cell>
-    </t-cell-group>
+    <t-progress type="info" :percentage="50" />
+    <t-progress type="error" :percentage="88" />
   </div>
 </template>
 
@@ -23,7 +17,7 @@ export default defineComponent({
     const value = ref(true);
     const disabledValue = ref(true);
     const checked = ref(true);
-    function onChange($event: string|number|boolean) {
+    function onChange($event: string | number | boolean) {
       console.log(`change to ${$event}`);
     }
     return {
