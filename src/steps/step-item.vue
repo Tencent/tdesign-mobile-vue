@@ -34,7 +34,7 @@ import { StepItemProps, StepStatusEnum, TypeEnum } from './steps.interface';
 import config from '../config';
 
 const { prefix } = config;
-const name = `${prefix}-steps-item`;
+const name = `${prefix}-step`;
 
 export default defineComponent({
   name,
