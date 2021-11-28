@@ -1,6 +1,6 @@
 <template>
-  <td-doc-content ref="tdDocContent" slot="doc-content" page-status="hidden" platform="mobile">
-    <td-doc-header slot="doc-header" ref="tdDocHeader"></td-doc-header>
+  <td-doc-content ref="tdDocContent" page-status="hidden" platform="mobile">
+    <td-doc-header slot="doc-header" ref="tdDocHeader" platform="mobile"></td-doc-header>
     <template v-if="info.isComponent">
       <td-doc-tabs ref="tdDocTabs" :tab="tab"></td-doc-tabs>
       <div v-show="tab === 'demo'">
@@ -9,13 +9,13 @@
         <td-doc-phone ref="tdDocPhone">
           <iframe :src="info.mobileUrl" frameborder="0" width="100%" height="100%" style="border-radius: 0 0 6px 6px;"></iframe>
         </td-doc-phone>
-        <td-contributors ref="tdContributors"></td-contributors>
+        <td-contributors platform="mobile" framework="vue" :component-name="info.componentName"></td-contributors>
       </div>
       <div v-show="tab === 'api'" name="API" v-html="info.apiMd"></div>
       <div v-show="tab === 'design'" name="DESIGN" v-html="info.designMd"></div>
     </template>
     <div name="DOC" v-else v-html="info.docMd"></div>
-    <td-doc-footer slot="doc-footer"></td-doc-footer>
+    <td-doc-footer slot="doc-footer" platform="mobile"></td-doc-footer>
   </td-doc-content>
 </template>
 
@@ -24,7 +24,8 @@
   import Prismjs from 'prismjs';
   import 'prismjs/components/prism-bash.js';
   import 'prismjs/components/prism-javascript.js';
-  import './prism-theme.css';
+  import 'tdesign-site-components/lib/styles/prism-theme.less';
+  import 'tdesign-site-components/lib/styles/prism-theme-dark.less';
 
   export default defineComponent({
     props: {
@@ -48,13 +49,12 @@
 
     mounted() {
       const { info } = this;
-      const { tdDocContent, tdDocHeader, tdDocPhone, tdDocTabs, tdContributors } = this.$refs;
+      const { tdDocContent, tdDocHeader, tdDocPhone, tdDocTabs } = this.$refs;
       const completeUrl = location.origin + info.mobileUrl;
 
       if (info.isComponent) {
         tdDocTabs.onchange = ({ detail: currentTab }) => this.tab = currentTab;
         tdDocHeader.issueInfo = info.issueInfo || {};
-        tdContributors.contributors = info.contributors || [];
         document.querySelectorAll('td-doc-demo').forEach(item => {
           const { demo } = item.dataset;
           item.code = this.demos[demo];
@@ -63,7 +63,7 @@
          Prismjs.highlightAll();
       }
       
-      tdDocHeader.docType = info.docType;
+      tdDocHeader.docType = this.docType;
       tdDocHeader.docInfo = { title: info.title, desc: info.description };
 
       document.querySelector('td-doc-content').initAnchorHighlight();

@@ -8,8 +8,8 @@ import '@common/style/mobile/_reset.less';
 import '@common/style/mobile/index.less';
 
 // import site webcomponents
-import '@common/site/lib/site.es.js';
-import '@common/site/src/styles/main.less';
+import 'tdesign-site-components';
+import 'tdesign-site-components/lib/styles/style.css';
 
 createApp(app)
   .use(TDesign)

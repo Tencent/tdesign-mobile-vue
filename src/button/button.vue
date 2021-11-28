@@ -1,5 +1,5 @@
 <template>
-  <button :class="buttonClass" :disabled="disabled" @click="onClick">
+  <button :class="buttonClass" :disabled="disabled" @click="onClick" role="button" :aria-disabled="disabled">
     <div :class="`${name}__content`">
       <TNode :content="iconContent"></TNode>
       <span :class="`${name}__text`">
