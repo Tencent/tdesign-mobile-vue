@@ -18,10 +18,10 @@
     </div>
     <!-- 左右侧的按钮 -->
     <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
-      <span @click="prev" class="t-swiper-btn btn-prev">
+      <span @click="prev(1)" class="t-swiper-btn btn-prev">
         <t-icon size="12px" name="chevron-left" />
       </span>
-      <span @click="next" class="t-swiper-btn btn-next">
+      <span @click="next(1)" class="t-swiper-btn btn-next">
         <t-icon size="12px" name="chevron-right" />
       </span>
     </span>
@@ -37,10 +37,11 @@
         {{showPageNum +  '/' + state.itemLength}}
       </span>
     </span>
+    {{defaultCurrent}}
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, onMounted, computed } from 'vue';
+import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref } from 'vue';
 import SwiperProps from './props';
 import { setOffset } from './tools';
 import config from '@/config';
@@ -48,19 +49,22 @@ const { prefix } = config;
 const name = `${prefix}-swiper`;
 export default defineComponent({
   name,
-  props: SwiperProps,
+  props: {
+    ...SwiperProps,
+  },
   setup(props, context) {
     const self = getCurrentInstance();
-    const { autoplay, interval, duration, direction = 'horizontal', height = 180 } = props;
+    const { autoplay, interval, duration, direction = 'horizontal', height = 180, current = null } = props;
     const state: {
       activeIndex: number;
       itemLength: number;
       itemWidth: number;
+      isControl: boolean;
     } = reactive({
       activeIndex: 0,
       itemLength: 0,
       itemWidth: 0,
-
+      isControl: false,
     });
     // 分页数组--任意数组，用于循环分页点
     const paginationList = computed(() => new Array(state.itemLength).fill(1));
@@ -94,9 +98,12 @@ export default defineComponent({
       state.itemLength = _swiperContainer.children?.length || 0;
       const itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
-
       initSwiper();
       startAutoplay();
+      if (typeof current === 'number') {
+        state.isControl = true;
+        next(current);
+      }
     });
     let autoplayTimer: NodeJS.Timeout | null = null;
     /**
@@ -144,6 +151,8 @@ export default defineComponent({
     };
     // 自动播放
     const startAutoplay = () => {
+      // 如果是受控组件，永远不自动播放
+      if (typeof current === 'number') return false;
       if (!autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
       autoplayTimer = setInterval(() => {
         state.activeIndex += 1;
@@ -152,22 +161,25 @@ export default defineComponent({
       }, interval);
     };
     // 移动到上一个
-    const prev = () => {
+    const prev = (step = 1) => {
       stopAutoplay();
-      state.activeIndex -= 1;
+      state.activeIndex -= step;
       // if (state.activeIndex < 0) {
       //   state.activeIndex = state.itemLength - 1;
       // }
       addAnimation();
       move(state.activeIndex);
+      context.emit('update:current', state.activeIndex);
       startAutoplay();
     };
     // 移动到下一个
-    const next = () => {
+    const next = (step = 1) => {
+      console.error('点击了下一页', step);
       stopAutoplay();
-      state.activeIndex += 1;
+      state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
+      context.emit('update:current', state.activeIndex);
       startAutoplay();
     };
     let touchStartX = 0;
@@ -204,14 +216,25 @@ export default defineComponent({
       const distanceY = endY - touchStartY;
       addAnimation();
       if ((direction === 'horizontal' && distanceX > 100) || (direction === 'vertical' && distanceY > 100)) {
-        prev();
+        prev(1);
       } else if ((direction === 'horizontal' && distanceX < -100) || (direction === 'vertical' && distanceY < -100)) {
-        next();
+        next(1);
       } else {
         move(state.activeIndex);
       }
       startAutoplay();
     };
+    watch(
+      () => props.current,
+      (newPage, oldPage) => {
+        console.info(`受控页数变化,从${oldPage}->${newPage}`);
+        if (state.isControl) {
+          state.activeIndex = newPage ? newPage : 0;
+          addAnimation();
+          move(state.activeIndex);
+        }
+      },
+    );
     return {
       name,
       onTouchStart,

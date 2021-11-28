@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-09-22 23:19:50
+ * updated at 2021-11-28 14:42:54
  * */
 
 export interface TdSwiperProps {
@@ -18,12 +18,10 @@ export interface TdSwiperProps {
   autoplay: boolean;
   /**
    * 当前轮播在哪一项（下标）
-   * @default 0
    */
   current: number;
   /**
    * 当前轮播在哪一项（下标），非受控属性
-   * @default 0
    */
   defaultCurrent: number;
   /**

@@ -1,4 +1,25 @@
-import { DropdownMenuControl, DropdownMenuExpandState, DropdownMenuContext } from './dropdown.interface';
+export type DropdownMenuDo = () => void;
+
+export type DropdownMenuState = {
+  activeId: number | null;
+  barRect: any;
+  childCount: number;
+};
+
+export type DropdownMenuControl = {
+  expandMenu: (item: any, idx: number) => void;
+  collapseMenu: () => void;
+};
+
+export enum DropdownMenuExpandState {
+  expanded = 'expanded',
+  collapsed = 'collapsed',
+}
+
+export type DropdownMenuContext = {
+  expandedMenuControl: DropdownMenuControl | null;
+  recordMenuExpanded(container: any, menuControl: DropdownMenuControl, action: DropdownMenuExpandState): void;
+};
 
 let oldOverflow: string | null = null;
 

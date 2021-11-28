@@ -1,114 +1,61 @@
 <template>
-  <div class="dropdown-menu-wrap">
-    <t-cell-group title="下拉菜单样式">
-      <t-cell>
-        <t-dropdown-menu>
-          <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsN" />
-          <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsC" />
-        </t-dropdown-menu>
-      </t-cell>
-      <t-cell>
-        <t-dropdown-menu>
-          <t-dropdown-item v-model="valueS" disabled title="菜单名称" :options="optionsN" />
-          <t-dropdown-item v-model="valueS" disabled title="菜单名称" :options="optionsC" />
-        </t-dropdown-menu>
-      </t-cell>
-      <t-cell>
-        <t-dropdown-menu>
-          <t-dropdown-item v-model="valueM" title="单列" :options="optionsN" select-mode="multi" options-columns="1" />
-          <t-dropdown-item
-            v-model="valueM1"
-            title="双列"
-            :options="optionsN"
-            select-mode="multi"
-            options-layout="columns"
-            options-columns="2"
-          />
-          <t-dropdown-item
-            v-model="valueM2"
-            title="三列"
-            :options="optionsC"
-            select-mode="multi"
-            options-layout="columns"
-            options-columns="3"
-          />
-        </t-dropdown-menu>
-      </t-cell>
-      <t-cell>
-        <t-dropdown-menu>
-          <t-dropdown-item
-            v-model="valueM"
-            title="单列"
-            :options="optionsN"
-            select-mode="multi"
-            options-columns="1"
-            disabled
-          />
-          <t-dropdown-item
-            v-model="valueM1"
-            title="双列"
-            :options="optionsN"
-            select-mode="multi"
-            options-layout="columns"
-            options-columns="2"
-            disabled
-          />
-          <t-dropdown-item
-            v-model="valueM2"
-            title="三列"
-            :options="optionsC"
-            select-mode="multi"
-            options-layout="columns"
-            options-columns="3"
-            disabled
-          />
-        </t-dropdown-menu>
-      </t-cell>
-      <t-cell>
-        <DemoContainer>
-          <t-dropdown-menu>
-            <t-dropdown-item
-              v-model="treeValue1"
-              title="菜单"
-              :options="optionsT1"
-              options-layout="tree"
-              select-mode="multi"
-            />
-            <t-dropdown-item
-              v-model="treeValue2"
-              title="菜单"
-              :options="optionsT2"
-              options-layout="tree"
-              select-mode="multi"
-            />
-            <t-dropdown-item v-model="treeValue3" title="菜单" :options="optionsT3" options-layout="tree" />
-            <t-dropdown-item v-model="treeValue4" title="菜单" :options="optionsT4" options-layout="tree" />
-          </t-dropdown-menu>
-        </DemoContainer>
-      </t-cell>
-      <t-cell>
-        <t-dropdown-menu>
-          <t-dropdown-item
-            v-model="treeValue1"
-            title="菜单"
-            :options="optionsT1"
-            options-layout="tree"
-            select-mode="multi"
-            disabled
-          />
-          <t-dropdown-item
-            v-model="treeValue2"
-            title="菜单"
-            :options="optionsT2"
-            options-layout="tree"
-            select-mode="multi"
-            disabled
-          />
-          <t-dropdown-item v-model="treeValue3" title="菜单" :options="optionsT3" options-layout="tree" disabled />
-          <t-dropdown-item v-model="treeValue4" title="菜单" :options="optionsT4" options-layout="tree" disabled />
-        </t-dropdown-menu>
-      </t-cell>
-    </t-cell-group>
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">DropdownMenu 下拉菜单</h1>
+    <p class="summary">向下弹出的菜单列表</p>
+    <tdesign-demo-block title="01 类型" summary="单选下拉菜单">
+      <t-dropdown-menu>
+        <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsN" />
+        <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsC" />
+      </t-dropdown-menu>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="多选下拉菜单">
+      <t-dropdown-menu>
+        <t-dropdown-item v-model="valueM" title="单列" :options="optionsN" select-mode="multi" options-columns="1" />
+        <t-dropdown-item
+          v-model="valueM1"
+          title="双列"
+          :options="optionsN"
+          select-mode="multi"
+          options-layout="columns"
+          options-columns="2"
+        />
+        <t-dropdown-item
+          v-model="valueM2"
+          title="三列"
+          :options="optionsC"
+          select-mode="multi"
+          options-layout="columns"
+          options-columns="3"
+        />
+      </t-dropdown-menu>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="单选下拉菜单">
+      <t-dropdown-menu>
+        <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsN" />
+        <t-dropdown-item v-model="valueS" title="菜单名称" :options="optionsC" />
+      </t-dropdown-menu>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="树形下拉菜单">
+      <t-dropdown-menu>
+        <t-dropdown-item
+          v-model="treeValue1"
+          title="菜单"
+          :options="optionsT1"
+          options-layout="tree"
+          select-mode="multi"
+        />
+        <t-dropdown-item
+          v-model="treeValue2"
+          title="菜单"
+          :options="optionsT2"
+          options-layout="tree"
+          select-mode="multi"
+        />
+        <t-dropdown-item v-model="treeValue3" title="菜单" :options="optionsT3" options-layout="tree" />
+        <t-dropdown-item v-model="treeValue4" title="菜单" :options="optionsT4" options-layout="tree" />
+      </t-dropdown-menu>
+    </tdesign-demo-block>
+    <div style="height: 300px" />
   </div>
 </template>
 
@@ -185,6 +132,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
+.t-dropdown-menu{
+  padding-top:16px;
+}
 .dropdown-menu-wrap {
   background: #f5f5f5;
   .t-cell {

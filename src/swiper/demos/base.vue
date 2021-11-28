@@ -16,21 +16,24 @@
     <pagination-type />
     <h3>垂直方向</h3>
     <demo-direction />
+    <h3>受控模式</h3>
+    <demo-control />
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
 import PaginationType from './pagination-type.vue';
 import Direction from './direction.vue';
-
+import Control from './control.vue';
 export default defineComponent({
   components: {
     'pagination-type': PaginationType,
     'demo-direction': Direction,
+    'demo-control': Control,
   },
   setup() {
     const handleChange = (index: number) => {
-      console.log(index);
+      console.log('基础示例,页数变化到》》》', index);
     };
     return {
       handleChange,
