@@ -18,6 +18,7 @@ const { prefix } = config;
 const name = `${prefix}-picker-column`;
 
 export default defineComponent({
+  name,
   props: pickerColumnProps,
   emits: ['change'],
   setup(props, context) {

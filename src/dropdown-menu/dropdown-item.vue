@@ -148,7 +148,7 @@ export default defineComponent({
   name,
   components: { TIconCheck },
   props: DropdownItemProps,
-  emits: ['update:value', 'change', 'open', 'opened', 'close', 'closed'],
+  emits: ['change', 'open', 'opened', 'close', 'closed'],
   setup(props, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
@@ -395,7 +395,7 @@ export default defineComponent({
           break;
       }
       values = JSON.parse(JSON.stringify(values));
-      context.emit('update:value', values);
+      // context.emit('update:value', values);
       context.emit('change', values);
       collapseMenu();
     };
@@ -405,7 +405,7 @@ export default defineComponent({
       if (!state.isShowItems) return;
       const value = props.value || [];
       if (value[0] === val) return;
-      context.emit('update:value', val);
+      // context.emit('update:value', val);
       context.emit('change', val);
       collapseMenu();
     });
