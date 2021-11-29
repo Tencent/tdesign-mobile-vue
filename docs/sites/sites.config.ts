@@ -197,11 +197,11 @@ export default {
           component: () => import('@/segmented-control/segmented-control.md'),
         },
         {
-          title: 'ImageViewer 图片预览',
-          name: 'image-viewer',
+          title: 'Preview 图片预览',
+          name: 'preview',
           meta: { docType: 'navigation' },
-          path: '/vue-mobile/components/image-viewer',
-          component: () => import('@/image-viewer/image-viewer.md'),
+          path: '/vue-mobile/components/preview',
+          component: () => import('@/preview/preview.md'),
         },
         {
           title: 'Drawer 抽屉',
