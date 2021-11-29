@@ -1,12 +1,11 @@
 <template>
-  <div ref="swiper" :style="{height: height, overflow: 'hidden'}" :class="`${name}`">
+  <div ref="swiper" :style="{height: `${height}px`, overflow: 'hidden'}" :class="`${name}`">
     <div
       ref="swiperContainer"
       :class="`${name}-container`"
       :style="{
-        height: height,
+        height: `${height}px`,
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
-        height: '180px'
       }"
       @transitionend='handleAnimationEnd'
       @touchstart="onTouchStart"
@@ -18,10 +17,10 @@
     </div>
     <!-- 左右侧的按钮 -->
     <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
-      <span @click="prev(1)" class="t-swiper-btn btn-prev">
+      <span @click="prev(1)" :class="`${name}-btn btn-prev`">
         <t-icon size="12px" name="chevron-left" />
       </span>
-      <span @click="next(1)" class="t-swiper-btn btn-next">
+      <span @click="next(1)" :class="`${name}-btn btn-next`">
         <t-icon size="12px" name="chevron-right" />
       </span>
     </span>
@@ -43,15 +42,19 @@
 <script lang="ts">
 import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch } from 'vue';
 import SwiperProps from './props';
-import { setOffset } from './tools';
 import config from '@/config';
 const { prefix } = config;
 const name = `${prefix}-swiper`;
+const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): void => {
+  // eslint-disable-next-line no-param-reassign
+  element.style.transform = `translate${direction}(${offset}px)`;
+};
 export default defineComponent({
   name,
   props: {
     ...SwiperProps,
   },
+  emits: ['change', 'update:current'],
   setup(props, context) {
     const self = getCurrentInstance();
     const { autoplay, interval, duration, direction = 'horizontal', height = 180, current = null } = props;
@@ -114,7 +117,7 @@ export default defineComponent({
       // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
       const moveDirection = direction === 'horizontal' ? 'X' : 'Y';
-      const moveLength = direction === 'vertical' ? height : state.itemWidth;
+      const moveLength: number = direction === 'vertical' ? height : state.itemWidth;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
     // 添加动画

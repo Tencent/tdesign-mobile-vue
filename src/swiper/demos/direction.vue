@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-swiper :autoplay="false" height="180" direction="vertical" :navigation="{type: 'fraction'}">
+    <t-swiper :autoplay="false" :height="180" direction="vertical" :navigation="{type: 'fraction'}">
       <t-swiper-item class="swiper-item--demo">
         itme1
       </t-swiper-item>
