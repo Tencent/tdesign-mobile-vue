@@ -34,3 +34,4 @@ export { TabBar, TabBarItem } from './tab-bar';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';
 export { Collapse, CollapsePanel } from './collapse';
 export { Tabs, TabPanel } from './tabs';
+export { Swiper, SwiperItem } from './swiper';

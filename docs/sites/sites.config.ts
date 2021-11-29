@@ -86,6 +86,13 @@ export default {
           path: '/vue-mobile/components/cell',
           component: () => import('@/cell/cell.md'),
         },
+        {
+          title: 'Swiper 轮播',
+          name: 'swiper',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/swiper',
+          component: () => import('@/swiper/swiper.md'),
+        }
       ],
     },
     {

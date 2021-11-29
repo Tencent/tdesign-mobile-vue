@@ -18,12 +18,10 @@ export interface TdSwiperProps {
   autoplay: boolean;
   /**
    * 当前轮播在哪一项（下标）
-   * @default 0
    */
   current: number;
   /**
    * 当前轮播在哪一项（下标），非受控属性
-   * @default 0
    */
   defaultCurrent: number;
   /**
