@@ -61,15 +61,12 @@
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
 allowHalf | Boolean | false | 是否允许半选 | N
-clearable | Boolean | false | 是否允许取消选择 | N
-color | String | #ffc51c | 评分图标的颜色 | N
+color | String | - | 评分图标的颜色，样式中默认为 #ED7B2F。TS 类型：`string | Array<string>` | N
 count | Number | 5 | 评分的数量 | N
-readonly | Boolean | false | 是否为只读 | N
-showText | Boolean | false | 是否显示辅助文字 | N
-size | String | 48 | 评分图标的大小 | N
-texts | Array | - | 自定义评分等级对应的辅助文字。TS 类型：`Array<string>` | N
-value | Number | - | 必需。选择评分的值。支持语法糖 | Y
-defaultValue | Number | - | 必需。选择评分的值。非受控属性 | Y
+showText | Boolean | false | 是否显示对应的辅助文字 | N
+size | String | - | 评分图标的大小，示例：`20` | N
+texts | Array | - | 自定义评分等级对应的辅助文字。组件内置默认值为：['极差', '失望', '一般', '满意', '惊喜']。自定义值示例：['1分', '2分', '3分', '4分', '5分']。TS 类型：`Array<string>` | N
+value | Number | 0 | 必需。选择评分的值。支持语法糖 | Y
 onChange | Function |  | 评分数改变时触发。`(value: number) => {}` | N
 
 ### Rate Events

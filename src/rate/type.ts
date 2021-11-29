@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-25 19:07:29
+ * updated at 2021-11-28 18:56:29
  * */
 
 export interface TdRateProps {
@@ -12,45 +12,37 @@ export interface TdRateProps {
    */
   allowHalf: boolean;
   /**
-   * 是否允许取消选择
-   * @default false
+   * 评分图标的颜色，样式中默认为 #ED7B2F
+   * @default ''
    */
-  clearable: boolean;
-  /**
-   * 评分图标的颜色
-   * @default #ffc51c
-   */
-  color: string;
+  color: string | Array<string>;
   /**
    * 评分的数量
    * @default 5
    */
   count: number;
   /**
-   * 是否为只读
-   * @default false
-   */
-  readonly: boolean;
-  /**
-   * 是否显示辅助文字
+   * 是否显示对应的辅助文字
    * @default false
    */
   showText: boolean;
   /**
-   * 评分图标的大小
-   * @default 48
+   * 评分图标的大小，示例：`20`
+   * @default ''
    */
   size: string;
   /**
-   * 自定义评分等级对应的辅助文字
+   * 自定义评分等级对应的辅助文字。组件内置默认值为：['极差', '失望', '一般', '满意', '惊喜']。自定义值示例：['1分', '2分', '3分', '4分', '5分']
    */
   texts: Array<string>;
   /**
    * 选择评分的值
+   * @default 0
    */
   value: number;
   /**
    * 选择评分的值，非受控属性
+   * @default 0
    */
   defaultValue: number;
   /**
