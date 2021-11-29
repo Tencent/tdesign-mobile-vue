@@ -1,7 +1,8 @@
 <template>
   <div>
     <h3>基本用法</h3>
-    <t-swiper @change="handleChange" :interval="3000" :autoplay="true" :navigation="{type: 'dot', showSlideBtn: false}">
+    <t-swiper @change="handleChange" :interval="3000" :autoplay="true"
+      :navigation="{type: 'bullets', showSlideBtn: false}">
       <t-swiper-item  class="swiper-item--demo">
         item1
       </t-swiper-item>
@@ -44,5 +45,8 @@ export default defineComponent({
 <style lang="less">
   h3{
     margin: 10px 0;
+    color: #666;
+    padding: 0 10px;
+    font-size: 14px;
   }
 </style>

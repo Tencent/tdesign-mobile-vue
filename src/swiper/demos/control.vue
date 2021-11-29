@@ -4,7 +4,7 @@
       :interval="3000"
       :autoplay="true"
       v-model:current="state.currentPage"
-      :navigation="{type: 'dot', showSlideBtn: true}">
+      :navigation="{type: 'bullets', showSlideBtn: true}">
       <t-swiper-item  class="swiper-item--demo">
         item1
       </t-swiper-item>
@@ -50,8 +50,13 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less">
+<style lang="less" scoped>
   h3{
     margin: 10px 0;
+  }
+  p{
+    padding: 10px;
+    color: #666;
+    font-size: 14px;
   }
 </style>
