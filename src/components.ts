@@ -21,7 +21,7 @@ export { default as ActionSheet } from './action-sheet';
 export { default as Badge } from './badge';
 export { default as SegmentedControl } from './segmented-control';
 export { default as Fab } from './fab';
-export { default as ImageViewer } from './image-viewer';
+export { default as Preview } from './preview';
 export { default as Drawer } from './drawer';
 export { default as Navbar } from './navbar';
 export { default as Message } from './message';
