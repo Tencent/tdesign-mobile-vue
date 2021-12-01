@@ -55,10 +55,11 @@ export default defineComponent({
       child && state.children.push(child);
     };
 
-    const onClickItem = (curIndex: number) => {
+    const onClickItem = (current: number | string, previous: number | string, e: MouseEvent) => {
       if (typeof props.modelValue !== 'undefined') {
-        context.emit('update:modelValue', curIndex);
-        context.emit('change', curIndex);
+        context.emit('update:modelValue', current);
+        context.emit('change', current, previous, e);
+        if (typeof props.onChange === 'function') props.onChange(current, previous, e);
       }
     };
 

@@ -4,7 +4,7 @@
     <p class="summary">用于用户对某个任务的时间节点</p>
     <tdesign-demo-block title="01 类型" summary="横向可操作步骤条">
       <div class="step-demo">
-        <t-steps v-model="current" :readonly="false">
+        <t-steps :onChange="onChange" v-model="current" :readonly="false">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
         </t-steps>
@@ -306,6 +306,10 @@ export default defineComponent({
       },
     ]);
 
+
+    const onChange = (cur, prev, evt) => {
+      console.log(cur, prev, evt);
+    };
     watch(current6, (now, pre) => {
       console.log(now, pre);
     });
@@ -330,6 +334,7 @@ export default defineComponent({
       current16,
       current17,
       stepData,
+      onChange,
     };
   },
 });

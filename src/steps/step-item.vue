@@ -75,13 +75,13 @@ export default defineComponent({
       return status || '';
     });
 
-    const onClickIcon  = () => {
+    const onClickIcon  = (e: MouseEvent) => {
       if (parentType.value === TypeEnum.Dot) {
         return;
       }
 
       if (!readonly.value) {
-        stepsProvide.onClickItem(index.value);
+        stepsProvide.onClickItem(index.value, current.value, e);
       }
     };
 
