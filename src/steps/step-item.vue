@@ -46,12 +46,18 @@ export default defineComponent({
     const index = computed(() => stepsProvide.state.children.indexOf(proxy));
 
     const parentType = computed(() => stepsProvide.type);
-    const current = computed(() => (stepsProvide?.modelValue?.value || stepsProvide?.current?.value || 0));
+
+    const current = computed(() => (
+      stepsProvide?.modelValue?.value
+      || stepsProvide?.current?.value
+      || stepsProvide?.defaultCurrent?.value
+      || 0));
+
     const stepsStatus = computed(() => stepsProvide.status);
     const readonly = computed(() => stepsProvide.readonly);
     const rootClassName = computed(() => [name, readonly.value ? '' : `${name}--default`, curStatus.value ? `${name}--${curStatus.value}` : '']);
 
-    const isDot = computed(() => parentType.value === 'dot' && stepsProvide.direction === 'vertical');
+    const isDot = computed(() => parentType.value === 'dot' && stepsProvide.layout === 'vertical');
 
     const curStatus = computed(() => {
       let { status } = props;
