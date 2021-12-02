@@ -46,19 +46,29 @@ TDesign中，拥有两种不同类型的弹出层：中部弹出、底部弹出�
 
 ## API
 
-| 属性             | 类型    | 默认值 | 必传 | 说明                                              |
-| ---------------- | ------- | ------ | ---- | ------------------------------------------------- |
-| v-model/visible  | Boolean | false  | Y    | 显示与隐藏                                        |
-| mask-transparent | Boolean | false  | N    | 遮罩层是否透明                                    |
-| position         | String  | bottom | N    | 弹出层的位置，可选值 top/right/bottom/left/center |
-| transition-name  | String  | -      | N    | 弹出层动画名，等价于 transition 组件的 name 属性  |
-| lock-scroll      | Boolean | true   | N    | 是否锁定内容滚动                                  |
+### Popup Props
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+lockScroll | Boolean | true | 是否锁定内容滚动 | N
+placement | String | top | 浮层出现位置。可选项：top/left/right/bottom/center | N
+showOverlay | Boolean | true | 是否显示遮罩层 | N
+teleportDisabled | Boolean | false | 是否禁用teleport | N
+to | String | body | 透传给teleport组件的to属性 | N
+transitionName | String | - | 弹出层内容区的动画名，等价于transition组件的name属性 | N
+visible | Boolean | false | 是否显示浮层。支持语法糖。TS 类型：`boolean` | N
+defaultVisible | Boolean | false | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
+zIndex | Number | - | 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 | N
+onClose | Function |  | 组件准备关闭时触发。`() => {}` | N
+onClosed | Function |  | 组件关闭且动画结束后执行。`() => {}` | N
+onOpen | Function |  | 组件准备展示时触发。`() => {}` | N
+onOpened | Function |  | 组件展示且动画结束后执行。`() => {}` | N
+onVisibleChange | Function |  | 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发。`(visible: boolean, context: PopupVisibleChangeContext) => {}` | N
 
-## Events
-
-| 事件名称 | 回调参数 | 说明                         |
-| -------- | -------- | ---------------------------- |
-| open     | -        | 打开弹出层时触发             |
-| opened   | -        | 打开弹出层并且动画结束后触发 |
-| close    | -        | 关闭弹出层时触发             |
-| closed   | -        | 关闭弹出层并且动画结束后触发 |
+### Popup Events
+名称 | 参数 | 描述
+-- | -- | --
+close | - | 组件准备关闭时触发
+closed | - | 组件关闭且动画结束后执行
+open | - | 组件准备展示时触发
+opened | - | 组件展示且动画结束后执行
+visible-change | `(visible: boolean, context: PopupVisibleChangeContext)` | 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发

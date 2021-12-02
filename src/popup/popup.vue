@@ -1,6 +1,6 @@
 <template>
   <teleport :to="to" :disabled="teleportDisabled">
-    <div :class="[rootClasses, $attrs.class]" @touchmove="handleMove">
+    <div :class="[rootClasses, $attrs.class]" :style="rootStyles" @touchmove="handleMove">
       <transition name="fade">
         <t-mask v-show="currentVisible" :transparent="!showOverlay" @click="handleMaskClick" />
       </transition>
@@ -56,7 +56,7 @@ export default defineComponent({
      */
     showOverlay: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * @description 是否锁定内容滚动
@@ -85,12 +85,23 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    /**
+     * @description 自定义层级
+     * @attribute zIndex
+     */
+    zIndex: {
+      type: Number,
+      default: 1500,
+    },
   },
   emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
   setup(props: PopupProps, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);
+    const rootStyles = computed(() => ({
+      zIndex: props.zIndex,
+    }));
 
     const contentClasses = computed(() => ({
       [`${name}--content`]: true,
@@ -136,6 +147,7 @@ export default defineComponent({
       name: ref(name),
       currentVisible,
       rootClasses,
+      rootStyles,
       contentClasses,
       contentTransitionName,
       afterEnter,
