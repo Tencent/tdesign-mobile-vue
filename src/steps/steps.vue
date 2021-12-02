@@ -45,6 +45,8 @@ export default defineComponent({
 
     const options = computed(() => props.options);
 
+    const current = computed(() => props.current);
+
     const state = reactive({
       children: [] as ComponentInternalInstance[],
     });
@@ -57,12 +59,12 @@ export default defineComponent({
       context.emit('update:current', cur);
       context.emit('change', cur, prev, { e });
       if (typeof props.onChange === 'function') props.onChange(cur, prev, { e });
-      console.log('props current', props.current, 'cur', cur);
     };
 
     provide('stepsProvide', {
       ...props,
       state,
+      current,
       relation,
       onClickItem,
     });

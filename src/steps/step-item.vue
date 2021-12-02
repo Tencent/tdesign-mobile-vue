@@ -46,7 +46,7 @@ export default defineComponent({
 
     const theme = computed(() => stepsProvide.theme);
 
-    const current = computed(() => (stepsProvide.current || stepsProvide.defaultCurrent || 0));
+    const current = computed(() => (stepsProvide.current.value || stepsProvide.defaultCurrent || 0));
 
     const stepsStatus = computed(() => stepsProvide.status);
     const readonly = computed(() => stepsProvide.readonly);
