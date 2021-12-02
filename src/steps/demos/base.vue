@@ -4,7 +4,7 @@
     <p class="summary">用于用户对某个任务的时间节点</p>
     <tdesign-demo-block title="01 类型" summary="横向可操作步骤条">
       <div class="step-demo">
-        <t-steps :onChange="onChange" v-model="current" :readonly="false">
+        <t-steps v-model="current" :readonly="false">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
         </t-steps>
@@ -48,7 +48,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="横向带图标可操作步骤条">
       <div class="step-demo">
-        <t-steps v-model="current6" :readonly="false" type="icon">
+        <t-steps v-model="current6" :readonly="false">
           <t-step title="步骤描述" content="辅助信息文字最多两行">
             <template #icon>
               <div class="step-icon">
@@ -135,7 +135,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="竖向简化只读步骤条">
       <div class="step-demo">
-        <t-steps v-model="current12" type="dot" layout="vertical">
+        <t-steps v-model="current12" theme="dot" layout="vertical">
           <t-step title="事件描述"></t-step>
           <t-step title="事件描述"></t-step>
           <t-step title="事件描述"></t-step>
@@ -306,10 +306,6 @@ export default defineComponent({
       },
     ]);
 
-
-    const onChange = (cur, prev, evt) => {
-      console.log(cur, prev, evt);
-    };
     watch(current6, (now, pre) => {
       console.log(now, pre);
     });
@@ -334,7 +330,6 @@ export default defineComponent({
       current16,
       current17,
       stepData,
-      onChange,
     };
   },
 });

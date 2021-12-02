@@ -23,7 +23,7 @@ import {
   reactive,
   ComponentInternalInstance,
 } from 'vue';
-import { StepsProps } from './steps.interface';
+import StepsProps from './props';
 import TStepItem from './step-item.vue';
 import config from '../config';
 
@@ -35,12 +35,12 @@ export default defineComponent({
     TStepItem,
   },
   props: StepsProps,
-  emits: ['change', 'update:modelValue'],
+  emits: ['update:current', 'change'],
   setup(props, context: SetupContext) {
     const baseClass = computed(() => [
       name,
       `${name}--${props.layout}`,
-      `${name}--${props.type}-anchor`,
+      `${name}--${props.theme}-anchor`,
     ]);
 
     const options = computed(() => props.options);
@@ -49,25 +49,21 @@ export default defineComponent({
       children: [] as ComponentInternalInstance[],
     });
 
-    const modelValue = computed(() => props.modelValue);
-
     const relation = (child: ComponentInternalInstance) => {
       child && state.children.push(child);
     };
 
-    const onClickItem = (current: number | string, previous: number | string, e: MouseEvent) => {
-      if (typeof props.modelValue !== 'undefined') {
-        context.emit('update:modelValue', current);
-        context.emit('change', current, previous, e);
-        if (typeof props.onChange === 'function') props.onChange(current, previous, e);
-      }
+    const onClickItem = (cur: TdStepsProps['current'], prev: TdStepsProps['current'], e: MouseEvent) => {
+      context.emit('update:current', cur);
+      context.emit('change', cur, prev, { e });
+      if (typeof props.onChange === 'function') props.onChange(cur, prev, { e });
+      console.log('props current', props.current, 'cur', cur);
     };
 
     provide('stepsProvide', {
       ...props,
       state,
       relation,
-      modelValue,
       onClickItem,
     });
 

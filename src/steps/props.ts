@@ -16,6 +16,7 @@ export default {
   /** 当前步骤，非受控属性 */
   defaultCurrent: {
     type: [String, Number] as PropType<TdStepsProps['defaultCurrent']>,
+    default: 0,
   },
   /** 步骤条方向，有两种：横向和纵向 */
   layout: {

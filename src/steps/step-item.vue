@@ -29,8 +29,7 @@ import {
   getCurrentInstance,
   ComponentInternalInstance,
 } from 'vue';
-import { StepItemProps, StepStatusEnum, TypeEnum } from './steps.interface';
-
+import StepItemProps from './step-item-props';
 import config from '../config';
 
 const { prefix } = config;
@@ -45,42 +44,31 @@ export default defineComponent({
     stepsProvide.relation(proxy);
     const index = computed(() => stepsProvide.state.children.indexOf(proxy));
 
-    const parentType = computed(() => stepsProvide.type);
+    const theme = computed(() => stepsProvide.theme);
 
-    const current = computed(() => (
-      stepsProvide?.modelValue?.value
-      || stepsProvide?.current?.value
-      || stepsProvide?.defaultCurrent?.value
-      || 0));
+    const current = computed(() => (stepsProvide.current || stepsProvide.defaultCurrent || 0));
 
     const stepsStatus = computed(() => stepsProvide.status);
     const readonly = computed(() => stepsProvide.readonly);
-    const rootClassName = computed(() => [name, readonly.value ? '' : `${name}--default`, curStatus.value ? `${name}--${curStatus.value}` : '']);
 
-    const isDot = computed(() => parentType.value === 'dot' && stepsProvide.layout === 'vertical');
+    const rootClassName = computed(() => [
+      name,
+      { [`${name}--default`]: !readonly.value },
+      { [`${name}--${curStatus.value}`]: curStatus.value },
+    ]);
+
+    const isDot = computed(() => theme.value === 'dot' && stepsProvide.layout === 'vertical');
 
     const curStatus = computed(() => {
-      let { status } = props;
-      if (props.status) {
-        return props.status;
-      }
-      if (index.value === current.value) {
-        status = StepStatusEnum.Process;
-        // TODO: corret type，暂时写成 any 为了打包编译通过
-      } else if ((index.value as any) < current.value) {
-        status = StepStatusEnum.Finish;
-      } else {
-        status = StepStatusEnum.Empty;
-      }
-      return status || '';
+      const { status } = props;
+      if (status !== 'default') return status;
+      if (index.value < current.value) return 'finish';
+      if (index.value === current.value) return 'process';
+      return '';
     });
 
     const onClickIcon  = (e: MouseEvent) => {
-      if (parentType.value === TypeEnum.Dot) {
-        return;
-      }
-
-      if (!readonly.value) {
+      if (!readonly.value && theme.value !== 'dot') {
         stepsProvide.onClickItem(index.value, current.value, e);
       }
     };
@@ -91,7 +79,7 @@ export default defineComponent({
       curStatus,
       index,
       onClickIcon,
-      parentType,
+      theme,
       rootClassName,
       stepsStatus,
       readonly,
