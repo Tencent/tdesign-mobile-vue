@@ -1,10 +1,10 @@
-export type PositionType = 'top' | 'bottom' | 'left' | 'right' | 'center';
+export type PlacementType = 'top' | 'bottom' | 'left' | 'right' | 'center';
 
 export interface PopupProps {
   modelValue?: boolean;
   visible?: boolean;
-  maskTransparent?: boolean;
+  showOverlay?: boolean;
   lockScroll?: boolean;
-  position?: PositionType;
+  placement?: PlacementType;
   transitionName?: string;
 }

@@ -6,23 +6,23 @@
     <t-button theme="primary" @click="right = true">右侧</t-button>
     <t-button theme="primary" @click="center = true">中间</t-button>
 
-    <t-popup v-model="left" position="left">
+    <t-popup v-model="left" placement="left">
       <div style="width: 200px; height: 100%; background: #fff"></div>
     </t-popup>
 
-    <t-popup v-model="right" position="right">
+    <t-popup v-model="right" placement="right">
       <div style="width: 200px; height: 100%; background: #fff"></div>
     </t-popup>
 
-    <t-popup v-model="top" position="top">
+    <t-popup v-model="top" placement="top">
       <div style="height: 200px; background: #fff"></div>
     </t-popup>
 
-    <t-popup v-model="bottom" position="bottom">
+    <t-popup v-model="bottom" placement="bottom">
       <div style="height: 200px; background: #fff"></div>
     </t-popup>
 
-    <t-popup v-model="center" position="center">
+    <t-popup v-model="center" placement="center">
       <div style="width: 200px; height: 200px; background: #fff"></div>
     </t-popup>
   </div>

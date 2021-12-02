@@ -8,32 +8,32 @@ TDesign中，拥有两种不同类型的弹出层：中部弹出、底部弹出�
 ###  中部弹出
 使用场景：常用于轻提示场景
 
-::: demo demos/positionCenter
+::: demo demos/placementCenter
 :::
 
 ### 底部弹出
 使用场景：常用于较重要的操作反馈提示场景或不打断主任务的临时操作
 
-::: demo demos/positionBottom
+::: demo demos/placementBottom
 :::
 
 
 ### 顶部弹出
 使用场景：常用于及时反馈
 
-::: demo demos/positionTop
+::: demo demos/placementTop
 :::
 
 ### 左侧弹出
 使用场景：常用于页面导航场景
 
-::: demo demos/positionLeft
+::: demo demos/placementLeft
 :::
 
 ### 右侧弹出
 使用场景：常用于页面导航场景
 
-::: demo demos/positionRight
+::: demo demos/placementRight
 :::
 
 

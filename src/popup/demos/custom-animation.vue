@@ -4,7 +4,7 @@
 
     <t-popup
       v-model="bottom"
-      position="bottom"
+      placement="bottom"
       transition-name="slide-fade"
       @open="open"
       @opened="opened"
