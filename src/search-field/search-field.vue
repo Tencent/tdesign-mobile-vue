@@ -30,8 +30,7 @@
 </template>
 
 <script lang="ts">
-import TIconSearch from '../icon/search.vue';
-import TIconClearCircleFilled from '../icon/clear-circle-filled.vue';
+import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TIconClearCircleFilled } from 'tdesign-icons-vue-next';
 import { ref, reactive, computed, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;

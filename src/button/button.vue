@@ -1,11 +1,9 @@
 <template>
   <button :class="buttonClass" :disabled="disabled" @click="onClick" role="button" :aria-disabled="disabled">
-    <div :class="`${name}__content`">
-      <TNode :content="iconContent"></TNode>
-      <span :class="`${name}__text`">
-        <TNode :content="buttonContent"></TNode>
-      </span>
-    </div>
+    <TNode :content="iconContent"></TNode>
+    <span :class="`${name}__text`">
+      <TNode :content="buttonContent"></TNode>
+    </span>
   </button>
 </template>
 
@@ -13,7 +11,7 @@
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
 import { renderContent, renderTNode, TNode } from '@/shared';
 import CLASSNAMES from '../shared/constants';
-import TIconLoading from '../icon/loading.vue';
+import { LoadingIcon } from 'tdesign-icons-vue-next';
 import ButtonProps from './props';
 import config from '../config';
 const { prefix } = config;
@@ -40,7 +38,7 @@ export default defineComponent({
       },
     ]);
     const buttonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const iconContent = computed(() => (props.loading ? h(TIconLoading) : renderTNode(internalInstance, 'icon')));
+    const iconContent = computed(() => (props.loading ? h(LoadingIcon) : renderTNode(internalInstance, 'icon')));
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
         // 既不是加载也不是禁用时触发事件

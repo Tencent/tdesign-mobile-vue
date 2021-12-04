@@ -3,7 +3,7 @@
     <t-swiper
       :interval="3000"
       :autoplay="true"
-      v-model:current="state.currentPage"
+      :defaultCurrent=2
       :navigation="{type: 'bullets', showSlideBtn: true}">
       <t-swiper-item  class="swiper-item--demo">
         item1
@@ -15,12 +15,6 @@
         item3
       </t-swiper-item>
     </t-swiper>
-    <p>当前页 {{state.currentPage}}</p>
-    <p style="margin-bottom: 20px">手动指定页数：
-      <t-button size="small" theme="primary" @click="handleSwitch(0)">第一页</t-button>
-      <t-button size="small" theme="default" @click="handleSwitch(1)">第二页</t-button>
-      <t-button size="small" theme="primary" @click="handleSwitch(2)">第三页</t-button>
-    </p>
   </div>
 </template>
 <script lang="ts">

@@ -6,12 +6,12 @@
     <div :class="`${baseClass}__text`">
       <TNode :content="tagContent"></TNode>
     </div>
-    <t-icon-clear v-if="closable && !disabled" :class="`${baseClass}__close`" @click="handleClickClose" />
+    <CloseIcon v-if="closable && !disabled" :class="`${baseClass}__close`" @click="handleClickClose" />
   </button>
 </template>
 
 <script lang="ts">
-import TIconClear from '../icon/clear-circle-filled.vue';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
@@ -22,7 +22,7 @@ const name = `${prefix}-check-tag`;
 const CheckTag = defineComponent({
   name,
   components: {
-    TIconClear,
+    CloseIcon,
     TNode,
   },
   props: CheckTagProps,

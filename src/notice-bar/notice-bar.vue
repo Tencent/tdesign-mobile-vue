@@ -1,5 +1,5 @@
 <template>
-  <div v-if="visible" ref="root" :class="rootClasses" :style="bgColorCustom">
+  <div :class="rootClasses" :style="bgColorCustom">
     <div :class="`${name}__inner`">
       <div v-if="computedLeftIcon !== undefined" :class="`${name}__hd`">
         <TNode :content="computedLeftIcon" :style="iconColorCustom"></TNode>
@@ -14,9 +14,13 @@
           >
             <span :class="`${name}__text`" :style="colorCustom"
               >{{ content
-              }}<span v-if="showDetailText" :class="`${name}__text-detail`" :style="colorCustom" @click="handleDetailLink">{{
-                detailText
-              }}</span>
+              }}<span
+                v-if="showDetailText"
+                :class="`${name}__text-detail`"
+                :style="colorCustom"
+                @click="handleDetailLink"
+                >{{ detailText }}</span
+              >
             </span>
           </div>
         </div>
@@ -42,8 +46,7 @@ import {
   getCurrentInstance,
 } from 'vue';
 import NoticeBarProps from './props';
-import TIconClose from '../icon/close.vue';
-import TIconChevronRight from '../icon/chevron-right.vue';
+import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import { renderTNode, TNode } from '@/shared';
@@ -52,7 +55,7 @@ const name = `${prefix}-notice-bar`;
 
 export default defineComponent({
   name,
-  components: { TIconClose, TIconChevronRight, TNode },
+  components: { CloseIcon, ChevronRightIcon, TNode },
   props: NoticeBarProps,
   emits: ['click', 'close', 'detail'],
   setup(props, context: SetupContext) {
@@ -66,11 +69,10 @@ export default defineComponent({
       nextTimer: null,
     });
 
-    const root = ref(null);
     const rootClasses = computed(() => [`${name}`, `${name}--info`]);
     const iconType = {
-      ['link']: TIconChevronRight,
-      ['closeable']: TIconClose,
+      ['link']: ChevronRightIcon,
+      ['closeable']: CloseIcon,
     };
     const computedLeftIcon = computed(() => renderTNode(internalInstance, 'leftIcon'));
     const computedRightIcon = computed(() => {
@@ -88,12 +90,17 @@ export default defineComponent({
     const iconColorCustom = computed(() => (props.iconColor ? `color:${props.iconColor};` : ''));
 
     function handleClose() {
-      context.emit('update:visible', props.visible);
-      context.emit('close', props.visible);
+      context.emit('close');
+      if (props.onClose) {
+        props.onClose();
+      }
     }
 
     function handleClick() {
       context.emit('click');
+      if (props.onClick) {
+        props.onClick();
+      }
     }
 
     const handleClickIcon = computed(() => {
@@ -105,6 +112,9 @@ export default defineComponent({
 
     function handleDetailLink() {
       context.emit('detail');
+      if (props.onDetail) {
+        props.onDetail();
+      }
     }
 
     const animateStyle = computed(() => ({
@@ -160,7 +170,6 @@ export default defineComponent({
       name,
       ...toRefs(props),
       ...toRefs(state),
-      root,
       rootClasses,
       computedLeftIcon,
       computedRightIcon,

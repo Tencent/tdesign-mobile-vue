@@ -2,7 +2,7 @@
   <div :class="name">
     <div :class="`${name}__back`">
       <span v-if="leftArrow" :class="`${name}__back--arrow`" @click="handleBack">
-        <t-icon-chevron-left />
+        <t-chevron-left-icon />
       </span>
       <slot name="left"> </slot>
     </div>
@@ -36,8 +36,8 @@
 </template>
 <script lang="ts">
 import config from '../config';
-import TIconChevronLeft from '../icon/chevron-left.vue';
 import { computed, defineComponent, SetupContext } from 'vue';
+import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
 import { NavbarProps } from './navbar.interface';
 
 const { prefix } = config;
@@ -45,7 +45,7 @@ const name = `${prefix}-navbar`;
 
 export default defineComponent({
   name,
-  components: { TIconChevronLeft },
+  components: { TChevronLeftIcon },
   props: NavbarProps,
   emits: ['click-right', 'click-text'],
   setup(props, context: SetupContext) {

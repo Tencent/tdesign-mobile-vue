@@ -1,5 +1,5 @@
 <template>
-  <div ref="swiper" :style="{height: `${height}px`, overflow: 'hidden'}" :class="`${name}`">
+  <div ref="swiper" :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
     <div
       ref="swiperContainer"
       :class="`${name}-container`"
@@ -7,7 +7,7 @@
         height: `${height}px`,
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
       }"
-      @transitionend='handleAnimationEnd'
+      @transitionend="handleAnimationEnd"
       @touchstart="onTouchStart"
       @touchmove.prevent="onTouchMove"
       @touchend="onTouchEnd"
@@ -18,31 +18,32 @@
     <!-- 左右侧的按钮 -->
     <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
       <span @click="prev(1)" :class="`${name}-btn btn-prev`">
-        <t-icon size="12px" name="chevron-left" />
+        <ChevronLeftIcon size="12px" name="chevron-left" />
       </span>
       <span @click="next(1)" :class="`${name}-btn btn-next`">
-        <t-icon size="12px" name="chevron-right" />
+        <ChevronRightIcon size="12px" name="chevron-right" />
       </span>
     </span>
     <!-- 分页器 -->
     <span v-if="navigation.type" :class="`${name}-pagination ${name}-pagination--${navigation.type}`">
       <template v-if="navigation.type === 'bullets'">
         <span
-          :class="{[`${name}-pagination-dot`]: true, active: index === state.activeIndex}"
+          :class="{ [`${name}-pagination-dot`]: true, active: index === state.activeIndex }"
           v-for="(item, index) in paginationList"
-          :key="'page' + index"></span>
+          :key="'page' + index"
+        ></span>
       </template>
       <span v-if="navigation.type === 'fraction'">
-        {{showPageNum +  '/' + state.itemLength}}
+        {{ showPageNum + '/' + state.itemLength }}
       </span>
     </span>
-    {{defaultCurrent}}
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch } from 'vue';
 import SwiperProps from './props';
 import config from '@/config';
+import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 const { prefix } = config;
 const name = `${prefix}-swiper`;
 const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): void => {
@@ -54,7 +55,8 @@ export default defineComponent({
   props: {
     ...SwiperProps,
   },
-  emits: ['change', 'update:current'],
+  components: { ChevronLeftIcon, ChevronRightIcon },
+  emits: ['change'],
   setup(props, context) {
     const self = getCurrentInstance();
     const { autoplay, interval, duration, direction = 'horizontal', height = 180, current = null } = props;
@@ -172,7 +174,7 @@ export default defineComponent({
       // }
       addAnimation();
       move(state.activeIndex);
-      context.emit('update:current', state.activeIndex);
+      context.emit('change', state.activeIndex);
       startAutoplay();
     };
     // 移动到下一个
@@ -181,7 +183,7 @@ export default defineComponent({
       state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
-      context.emit('update:current', state.activeIndex);
+      context.emit('change', state.activeIndex);
       startAutoplay();
     };
     let touchStartX = 0;

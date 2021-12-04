@@ -4,18 +4,18 @@
     <p class="summary">按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</p>
     <tdesign-demo-block title="01 类型" summary="基础按钮">
       <div class="button-demo" style="margin: 0 16px">
-        <t-button theme="primary" size="large" @click="onClick">强按钮</t-button>
-        <t-button theme="primary" variant="outline" size="large">弱按钮</t-button>
-        <t-button variant="outline" size="large">次按钮</t-button>
-        <t-button theme="primary" variant="outline" size="large" :icon="iconFunc">带图标按钮</t-button>
-        <t-button theme="danger" size="large">警告按钮</t-button>
-        <t-button theme="danger" variant="outline" size="large">弱警告按钮</t-button>
+        <t-button theme="primary"  @click="onClick">强按钮</t-button>
+        <t-button theme="primary" variant="outline" >弱按钮</t-button>
+        <t-button variant="outline" >次按钮</t-button>
+        <t-button theme="primary" variant="outline"  :icon="iconFunc">带图标按钮</t-button>
+        <t-button theme="danger" >警告按钮</t-button>
+        <t-button theme="danger" variant="outline" >弱警告按钮</t-button>
         <t-button theme="primary" variant="text">文字按钮</t-button>
       </div>
       <div style="padding: 16px; background: #a6a6a6">
-        <t-button variant="outline" size="large" ghost style="margin: 0; padding: 0 16px">幽灵按钮</t-button>
+        <t-button variant="outline" block ghost style="margin: 0; padding: 0 16px">幽灵按钮</t-button>
       </div>
-      <t-button theme="primary" size="large" block style="margin: 8px 0">通栏按钮</t-button>
+      <t-button theme="primary"  block style="margin: 8px 0">通栏按钮</t-button>
       <t-button-group>
         <t-button variant="outline">次按钮</t-button>
         <t-button theme="primary">主按钮</t-button>
@@ -23,18 +23,18 @@
     </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="按钮禁用态">
       <div class="button-demo" style="margin: 0 16px">
-        <t-button theme="primary" size="large" @click="onClick" disabled>强按钮</t-button>
-        <t-button theme="primary" variant="outline" size="large" disabled>弱按钮</t-button>
-        <t-button variant="outline" size="large" disabled>次按钮</t-button>
-        <t-button theme="primary" variant="outline" size="large" :icon="iconFunc" disabled>带图标按钮</t-button>
-        <t-button theme="danger" size="large" disabled>警告按钮</t-button>
-        <t-button theme="danger" variant="outline" size="large" disabled>弱警告按钮</t-button>
+        <t-button theme="primary"  @click="onClick" disabled>强按钮</t-button>
+        <t-button theme="primary" variant="outline"  disabled>弱按钮</t-button>
+        <t-button variant="outline"  disabled>次按钮</t-button>
+        <t-button theme="primary" variant="outline"  :icon="iconFunc" disabled>带图标按钮</t-button>
+        <t-button theme="danger"  disabled>警告按钮</t-button>
+        <t-button theme="danger" variant="outline"  disabled>弱警告按钮</t-button>
         <t-button theme="primary" variant="text" disabled>文字按钮</t-button>
       </div>
       <div style="padding: 16px; background: #a6a6a6">
-        <t-button variant="outline" size="large" ghost disabled style="margin: 0; padding: 0 16px">幽灵按钮</t-button>
+        <t-button variant="outline" block  ghost disabled style="margin: 0; padding: 0 16px">幽灵按钮</t-button>
       </div>
-      <t-button theme="primary" size="large" block disabled style="margin: 8px 0">通栏按钮</t-button>
+      <t-button theme="primary"  block disabled style="margin: 8px 0">通栏按钮</t-button>
       <t-button-group style="margin-top: 8px">
         <t-button variant="outline" disabled>次按钮</t-button>
         <t-button theme="primary" disabled>主按钮</t-button>
@@ -42,16 +42,16 @@
     </tdesign-demo-block>
     <tdesign-demo-block title="03 规格" summary="文字按钮尺寸">
       <div class="button-demo" style="margin: 0 16px">
-        <t-button theme="primary" size="large">按钮 40</t-button>
-        <t-button theme="primary">按钮 36</t-button><br />
-        <t-button theme="primary" size="small">按钮 28</t-button>
+        <t-button theme="primary" size="large">按钮 44</t-button>
+        <t-button theme="primary" style="width:240px">按钮 40</t-button><br />
+        <t-button theme="primary" size="small" style="width:90px">按钮 36</t-button>
       </div>
     </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts">
 import { ref, defineComponent, h } from 'vue';
-import TIconStar from '@/icon/star-filled.vue';
+import { StarIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
@@ -59,8 +59,15 @@ export default defineComponent({
       console.log('强按钮');
     };
     const loading = ref(true);
-    const iconFunc = () => h(TIconStar);
+    const iconFunc = () => h(StarIcon);
     return { onClick, loading, iconFunc };
   },
 });
 </script>
+<style lang="less" scoped>
+.button-demo{
+  .t-button{
+    width: 100%;
+  }
+}
+</style>

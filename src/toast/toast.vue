@@ -3,15 +3,13 @@
     <t-mask v-show="showOverlay" />
     <div :class="classes">
       <TNode :content="iconContent"></TNode>
-      <div v-if='message' :class="`${name}__text`">{{ message }}</div>
+      <div v-if="message" :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import TIconLoading from '../icon/loading.vue';
-import TIconCheck from '../icon/check.vue';
-import TIconWarning from '../icon/warning.vue';
+import { LoadingIcon, CheckIcon, ErrorIcon } from 'tdesign-icons-vue-next';
 import { renderTNode, TNode } from '@/shared';
 import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
 import TMask from '../mask';
@@ -22,13 +20,13 @@ const name = `${prefix}-toast`;
 
 export default defineComponent({
   name,
-  components: { TMask, TIconLoading, TIconCheck, TIconWarning, TNode },
+  components: { TMask, LoadingIcon, CheckIcon, ErrorIcon, TNode },
   props: ToastProps,
   setup(props) {
     const toastTypeIcon = {
-      loading: TIconLoading,
-      success: TIconCheck,
-      fail: TIconWarning,
+      loading: LoadingIcon,
+      success: CheckIcon,
+      fail: ErrorIcon,
     };
     const internalInstance = getCurrentInstance();
     const iconContent = computed(() => {

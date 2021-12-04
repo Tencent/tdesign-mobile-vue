@@ -5,9 +5,7 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-export default defineComponent({});
+<script lang="ts" setup>
 </script>
 
 <style lang="less" scoped>

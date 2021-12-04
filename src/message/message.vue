@@ -3,8 +3,8 @@
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
         <slot name="icon">
-          <t-check-icon v-if="theme === 'success'" />
-          <t-error-icon v-else />
+          <CheckCircleFilledIcon v-if="theme === 'success'" />
+          <ErrorCircleFilledIcon v-else />
         </slot>
         <span :class="`${name}--txt`">{{ content }}</span>
       </slot>
@@ -15,8 +15,7 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
 import { MessageType, MessageAlignType } from './message.interface';
-import TCheckIcon from '../icon/check-circle-filled.vue';
-import TErrorIcon from '../icon/error-circle-filled.vue';
+import { CheckCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 
 const { prefix } = config;
@@ -24,7 +23,7 @@ const name = `${prefix}-message`;
 
 export default defineComponent({
   name,
-  components: { TCheckIcon, TErrorIcon },
+  components: { CheckCircleFilledIcon, ErrorCircleFilledIcon },
   props: {
     modelValue: Boolean,
     /**
