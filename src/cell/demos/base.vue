@@ -51,9 +51,7 @@
 </template>
 
 <script lang="ts" setup>
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import TIconChevronRight from '@/icon/chevron-right.vue';
-import TIconUserFilled from '@/icon/user-filled.vue';
+import { ChevronRightIcon as TIconChevronRight, UserAvatarIcon as TIconUserFilled} from 'tdesign-icons-vue-next';
 import TSwitch from '../../switch';
 import TBadge from '../../badge';
 </script>

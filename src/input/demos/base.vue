@@ -11,7 +11,7 @@
     <tdesign-demo-block summary="带提示信息文本框">
       <t-input v-model="text" label="标准五个字" placeholder="预设文本(非必填)">
         <template #rightIcon>
-          <TIconHelpCircleFilled />
+          <icon name="help-circle-filled" />
         </template>
       </t-input>
     </tdesign-demo-block>
@@ -48,12 +48,10 @@
   </div>
 </template>
 <script lang="ts">
+import { Icon } from 'tdesign-icons-vue-next';
 import { reactive, toRefs, defineComponent } from 'vue';
-import TIconHelpCircleFilled from '@/icon/help-circle-filled.vue';
 export default defineComponent({
-  components: {
-    TIconHelpCircleFilled,
-  },
+  components: { Icon },
   setup() {
     const state = reactive({
       text: '',

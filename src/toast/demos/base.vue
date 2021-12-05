@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-import TIconUserFilled from '@/icon/user-filled.vue';
+import { UserIcon } from 'tdesign-icons-vue-next';
 import Toast from '../index';
 import config from '@/config';
 import { ToastPositionType } from '../toast.interface';
@@ -75,7 +75,7 @@ export default defineComponent({
     },
     showCustom(message?: string) {
       Toast({
-        icon: TIconUserFilled,
+        icon: UserIcon,
         message,
       });
     },
