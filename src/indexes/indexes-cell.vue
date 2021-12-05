@@ -1,7 +1,7 @@
 <template>
   <t-cell
     :data-key="state.key"
-    :label="state.title"
+    :title="state.title"
     :value="state.value"
     :link="state.link"
     @click="handleClick" />
@@ -12,7 +12,7 @@ import { reactive, defineComponent } from 'vue';
 import config from '../config';
 const { prefix } = config;
 
-const name = `${prefix}-indexes__cell`;
+const name = `${prefix}-indexes-cell`;
 
 export default defineComponent({
   name,

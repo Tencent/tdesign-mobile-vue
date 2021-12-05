@@ -81,3 +81,15 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="less" scoped>
+.badge-demo {
+  display: flex;
+  padding: 16px 0;
+  width: 100%;
+
+  .badge-item {
+    width: 25%;
+    text-align: center;
+  }
+}
+</style>

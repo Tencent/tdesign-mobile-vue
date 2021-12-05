@@ -9,7 +9,7 @@
           :value="String(n)"
           :title="`此处使用列表样式${n}`"
           :link="true"
-          @click="handleClick"></t-indexes-cell>
+          @click="handleClick" />
       </div>
     </t-indexes>
   </div>

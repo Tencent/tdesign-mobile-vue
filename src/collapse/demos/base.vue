@@ -102,8 +102,3 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="less">
-.accordion-demo {
-  background-color: #f9f9f9;
-}
-</style>
