@@ -2,7 +2,7 @@
   <div :class="`${flagName}`">
     <span :class="iconClasses" :style="iconStyle" @click="checkBoxChange">
       <slot name="icon" :checked="isChecked">
-        <TIconCheckCircleFilled v-if="isChecked" :class="circleFilled"/>
+        <CheckCircleFilledIcon v-if="isChecked" :class="circleFilled" />
       </slot>
     </span>
     <span :class="`${flagName}__content-wrap`" @click="checkBoxChange('content')">
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import TIconCheckCircleFilled from '../icon/check-circle-filled.vue';
+import { CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { ref, inject, onMounted, onUnmounted, computed, SetupContext, defineComponent } from 'vue';
 import config from '../config';
 
@@ -112,7 +112,7 @@ const getIsCheck = (props: CheckBoxProps, rootGroup: any) => computed(() => prop
  * @param {rootGroup} Group注入的对象
  * @return: 返回点击函数
  */
-const setCheckBoxChange = (props: CheckBoxProps, rootGroup: any, content: SetupContext, isChecked: any) => (area: string) => {
+const setCheckBoxChange =  (props: CheckBoxProps, rootGroup: any, content: SetupContext, isChecked: any) => (area: string) => {
   if (props.disabled) {
     return;
   }
@@ -147,7 +147,7 @@ interface CheckBoxProps {
 export default defineComponent({
   name,
   components: {
-    TIconCheckCircleFilled,
+    CheckCircleFilledIcon,
   },
   props: {
     /**

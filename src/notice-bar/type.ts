@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-09-15 09:49:14
+ * updated at 2021-12-04 22:11:58
  * */
 
 import { TNode } from '../common';
@@ -65,25 +65,15 @@ export interface TdNoticeBarProps {
    */
   speed: number;
   /**
-   * 显示与隐藏
-   * @default true
-   */
-  visible: boolean;
-  /**
-   * 显示与隐藏，非受控属性
-   * @default true
-   */
-  defaultVisible: boolean;
-  /**
-   * null
+   * 点击事件
    */
   onClick: () => void;
   /**
-   * null
+   * 关闭
    */
   onClose: () => void;
   /**
-   * null
+   * 详情点击
    */
   onDetail: () => void;
 };

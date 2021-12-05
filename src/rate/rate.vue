@@ -5,18 +5,18 @@
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
-              <t-star-icon :size="size" :style="iconHalfStyle(n)" />
+              <StarFilledIcon :size="size" :style="iconHalfStyle(n)" />
             </slot>
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
             <slot name="icon">
-              <t-star-icon :size="size" :style="iconFullStyle(n)" />
+              <StarFilledIcon :size="size" :style="iconFullStyle(n)" />
             </slot>
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
           <slot name="icon">
-            <t-star-icon :size="size" :style="iconFullStyle(n)" />
+            <StarFilledIcon :size="size" :style="iconFullStyle(n)" />
           </slot>
         </span>
       </li>
@@ -34,7 +34,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
-import TStarIcon from '../icon/star-filled.vue';
+import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 
 const { prefix } = config;
@@ -121,7 +121,7 @@ interface RangeTypes {
 
 export default defineComponent({
   name,
-  components: { TStarIcon },
+  components: { StarFilledIcon },
   props: rateProps,
   emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {

@@ -4,7 +4,6 @@ export { default as Cell } from './cell';
 export { default as CellGroup } from './cell-group';
 export { default as Checkbox } from './checkbox';
 export { default as CheckGroup } from './check-group';
-export { default as Icon } from './icon';
 export { default as Input } from './input';
 export { default as Mask } from './mask';
 export { default as Progress } from './progress';

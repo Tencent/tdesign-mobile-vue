@@ -15,12 +15,12 @@
     <tdesign-demo-block summary="滚动消息栏">
       <t-notice-bar mode="link" scrollable content="提示文字描述提示文字描述" >
         <template #leftIcon>
-          <TIconSoundFilled />
+          <icon name="error-circle-filled" />
         </template>
       </t-notice-bar>
       <t-notice-bar scrollable content="提示文字描述提示文字描述从右至左轮播从右至左轮">
         <template #leftIcon>
-          <TIconSoundFilled />
+          <icon name="sound" />
         </template>
       </t-notice-bar>
     </tdesign-demo-block>
@@ -41,11 +41,10 @@
 
 <script lang="ts">
 import { reactive, defineComponent, toRefs, ref, h } from 'vue';
-import TIconSoundFilled from '@/icon/sound-filled.vue';
-import TIconErrorCircleFilled from '@/icon/error-circle-filled.vue';
+import { Icon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
-  components: { TIconErrorCircleFilled, TIconSoundFilled },
+  components: { Icon, ErrorCircleFilledIcon },
   setup() {
     const state = reactive({
       visible: true,
@@ -83,7 +82,7 @@ export default defineComponent({
       scrollVisible.value = false;
     }
 
-    const iconFunc = () => h(TIconErrorCircleFilled);
+    const iconFunc = () => h(ErrorCircleFilledIcon);
 
     return {
       ...toRefs(state),

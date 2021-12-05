@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-09-15 09:49:14
+ * updated at 2021-12-04 22:11:58
  * */
 
 import { TdNoticeBarProps } from './type';
@@ -66,20 +66,10 @@ export default {
     type: Number,
     default: 50,
   },
-  /** 显示与隐藏 */
-  visible: {
-    type: Boolean,
-    default: true,
-  },
-  /** 显示与隐藏，非受控属性 */
-  defaultVisible: {
-    type: Boolean,
-    default: true,
-  },
-  /** null */
+  /** 点击事件 */
   onClick: Function as PropType<TdNoticeBarProps['onClick']>,
-  /** null */
+  /** 关闭 */
   onClose: Function as PropType<TdNoticeBarProps['onClose']>,
-  /** null */
+  /** 详情点击 */
   onDetail: Function as PropType<TdNoticeBarProps['onDetail']>,
 };

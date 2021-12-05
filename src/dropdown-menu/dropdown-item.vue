@@ -15,7 +15,7 @@
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
                   >
-                    <t-icon-check v-if="isCheckedRadio(option.value)" />
+                    <CheckIcon v-if="isCheckedRadio(option.value)" />
                   </t-radio>
                 </div>
               </t-radio-group>
@@ -70,7 +70,7 @@
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
                       >
-                        <t-icon-check v-if="option.value === treeState.selectList[level]" />
+                        <CheckIcon v-if="option.value === treeState.selectList[level]" />
                       </t-radio>
                     </div>
                   </t-radio-group>
@@ -118,7 +118,7 @@ import {
   onBeforeMount,
   SetupContext,
 } from 'vue';
-import TIconCheck from '../icon/check.vue';
+import { CheckIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import TransAniControl from './trans-ani-control';
 import { default as DropdownItemProps } from './dropdown-item-props';
@@ -146,7 +146,7 @@ type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOpt
 
 export default defineComponent({
   name,
-  components: { TIconCheck },
+  components: { CheckIcon },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed'],
   setup(props, context: SetupContext) {

@@ -1,41 +1,72 @@
-import { h, createTextVNode, ComponentInternalInstance, Slots } from 'vue';
+import { h, ComponentInternalInstance, Slots, VNode } from 'vue';
+
+interface JSXRenderContext {
+  defaultNode?: VNode;
+  params?: Record<string, any>;
+}
 
 /**
  * 渲染 TNode，props 和 插槽同时处理。与 renderTNodeJSX 区别在于 属性值为 undefined 时会渲染默认节点
  * @param instance 组件示例
  * @param name 插槽和属性名称
- * @param defaultNode 缺省插槽内容
+ * @param options 缺省插槽内容
  * @example renderTNode(getCurrentInstance(), 'closeBtn')
  * @example renderTNode(getCurrentInstance(), 'closeBtn', <t-icon-close />)。this.closeBtn 为空时，则兜底渲染 <t-icon-close />
  */
 export const renderTNode = (
   instance: ComponentInternalInstance | null,
   name: string,
-  defaultNode?: Slots | JSX.Element,
+  options?: Slots | JSXRenderContext | JSX.Element,
 ): any => {
   if (instance === null) {
     return h('', null);
   }
-  const propsNode = instance.props[name];
-  if (propsNode) {
-    if (typeof propsNode === 'function') {
-      return propsNode(h);
-    }
-    if (typeof propsNode === 'string') {
-      return createTextVNode(propsNode);
-    }
+  const params = typeof options === 'object' && 'params' in options ? options.params : null;
+  const defaultNode = typeof options === 'object' && 'defaultNode' in options ? options.defaultNode : options;
+  let propsNode: any;
+  if (name in instance.props) {
+    propsNode = instance.props[name];
   }
-  return instance.slots[name] ? instance.slots[name]?.call(null) : defaultNode;
+  // if (propsNode === false) return;
+
+  // 同名优先处理插槽
+  if (instance.slots[name]) {
+    return instance.slots[name]?.call(params);
+  }
+
+  if (propsNode === true && defaultNode) {
+    return instance.slots[name] ? instance.slots[name]?.call(params) : defaultNode;
+  }
+  if (typeof propsNode === 'function') return propsNode(h, params);
+  const isPropsEmpty = [undefined, params, ''].includes(propsNode);
+  if (isPropsEmpty && instance.slots[name]) return instance.slots[name]?.call(params);
+  return propsNode;
 };
 
-// content 优先级控制：name1 优先级高于 name2
-export const renderContent = (instance: ComponentInternalInstance | null, name1: string, name2: string): any => {
+/**
+ * 用于处理相同名称的 TNode 渲染
+ * @param vm 组件实例
+ * @param name1 第一个名称，优先级高于 name2
+ * @param name2 第二个名称
+ * @param defaultNode 默认渲染内容：当 name1 和 name2 都为空时会启动默认内容渲染
+ * @example renderContent(this, 'default', 'content')
+ * @example renderContent(this, 'default', 'content', '我是默认内容')
+ * @example renderContent(this, 'default', 'content', { defaultNode: '我是默认内容', params })
+ */
+export const renderContent = (
+  instance: ComponentInternalInstance | null,
+  name1: string,
+  name2: string,
+  options?: VNode | JSXRenderContext | JSX.Element,
+): any => {
   if (instance === null) {
     return h('', null);
   }
-  let nodeContent = renderTNode(instance, name1);
-  if ([undefined, null, ''].includes(nodeContent)) {
-    nodeContent = renderTNode(instance, name2);
-  }
-  return nodeContent;
+  const params = typeof options === 'object' && 'params' in options ? options.params : null;
+  const defaultNode = typeof options === 'object' && 'defaultNode' in options ? options.defaultNode : options;
+  const toParams = params ? { params } : undefined;
+  const node1 = renderTNode(instance, name1, toParams);
+  const node2 = renderTNode(instance, name2, toParams);
+  const r = [undefined, null, ''].includes(node1) ? node2 : node1;
+  return [undefined, null, ''].includes(r) ? defaultNode : r;
 };

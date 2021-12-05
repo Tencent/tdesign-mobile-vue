@@ -6,12 +6,12 @@
     <div :class="`${baseClass}__text`">
       <TNode :content="tagContent"></TNode>
     </div>
-    <t-icon-close v-if="closable && !disabled" :class="`${baseClass}__close`" @click="onClickClose" />
+    <CloseIcon v-if="closable && !disabled" :class="`${baseClass}__close`" @click="onClickClose" />
   </span>
 </template>
 
 <script lang="ts">
-import TIconClose from '../icon/close.vue';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
@@ -21,7 +21,7 @@ const name = `${prefix}-tag`;
 
 const Tag = defineComponent({
   name,
-  components: { TIconClose, TNode },
+  components: { CloseIcon, TNode },
   props: TagProps,
   emits: ['close', 'click'],
   setup(props, context) {

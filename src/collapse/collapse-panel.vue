@@ -52,18 +52,17 @@ import {
   CollapsePanelProps,
   onChangeEvent,
 } from './collapse.interface';
-import TIconArrowDown from '../icon/arrow-down.vue';
-import TIconArrowUp from '../icon/arrow-up.vue';
+import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import { findIndex, isFalsy, toArray } from './util';
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 function getExpandIconName(isActive: boolean) {
-  return isActive ? TIconArrowDown : TIconArrowUp;
+  return isActive ? ChevronDownIcon : ChevronUpIcon;
 }
 export default defineComponent({
   name,
-  components: { TIconArrowDown, TIconArrowUp },
+  components: { ChevronDownIcon, ChevronUpIcon },
   props: CollapsePanelProps,
   emits: ['click'],
   setup(props: CollapsePanelPropsType, context: SetupContext) {

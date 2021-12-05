@@ -24,7 +24,7 @@
 import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
 import { renderTNode, TNode } from '@/shared';
 import config from '../config';
-import TIconChevronRight from '../icon/chevron-right.vue';
+import { ChevronRightIcon } from 'tdesign-icons-vue-next';
 import CellProps from './props';
 
 const { prefix } = config;
@@ -42,7 +42,7 @@ export default defineComponent({
     const descriptionContent = computed(() => renderTNode(internalInstance, 'description'));
     const rightIconContent = computed(() => {
       if (props.arrow) {
-        return h(TIconChevronRight);
+        return h(ChevronRightIcon);
       }
       return renderTNode(internalInstance, 'rightIcon');
     });
