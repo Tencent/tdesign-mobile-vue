@@ -919,7 +919,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
 import { Icon } from 'tdesign-icons-vue-next';
 
 import { defineComponent } from 'vue';
