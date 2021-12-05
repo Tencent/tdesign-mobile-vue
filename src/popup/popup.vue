@@ -1,8 +1,8 @@
 <template>
   <teleport :to="to" :disabled="teleportDisabled">
-    <div :class="[rootClasses, $attrs.class]" @touchmove="handleMove">
+    <div :class="[rootClasses, $attrs.class]" :style="rootStyles" @touchmove="handleMove">
       <transition name="fade">
-        <t-mask v-show="currentVisible" :transparent="maskTransparent" @click="handleMaskClick" />
+        <t-mask v-show="currentVisible" :transparent="!showOverlay" @click="handleMaskClick" />
       </transition>
       <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
         <div v-show="currentVisible" :class="contentClasses">
@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { PositionType, PopupProps } from './popup.interface';
+import { PlacementType, PopupProps } from './popup.interface';
 
 import TMask from '../mask';
 
@@ -35,10 +35,6 @@ export default defineComponent({
      */
     visible: Boolean,
     /**
-     * @description 遮罩层是否透明
-     * @attribute mask-transparent
-     */
-    /**
      * @description 将popup放在哪个el下，该el在createApp前必须存在
      * @attribute to
      */
@@ -54,9 +50,13 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
-    maskTransparent: {
+    /**
+     * @description 是否显示遮罩层
+     * @attribute show-overlay
+     */
+    showOverlay: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     /**
      * @description 是否锁定内容滚动
@@ -68,12 +68,12 @@ export default defineComponent({
     },
     /**
      * @description 弹出层的位置
-     * @attribute position
+     * @attribute placement
      * @enum ["top", "right", "bottom", "left", "center"]
      * @default bottom
      */
-    position: {
-      type: String as PropType<PositionType>,
+    placement: {
+      type: String as PropType<PlacementType>,
       default: 'bottom',
       validator: (val: string) => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
     },
@@ -85,23 +85,34 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    /**
+     * @description 自定义层级
+     * @attribute zIndex
+     */
+    zIndex: {
+      type: Number,
+      default: 1500,
+    },
   },
   emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
   setup(props: PopupProps, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);
+    const rootStyles = computed(() => ({
+      zIndex: props.zIndex,
+    }));
 
     const contentClasses = computed(() => ({
       [`${name}--content`]: true,
-      [`${name}--content-${props.position}`]: true,
+      [`${name}--content-${props.placement}`]: true,
     }));
 
     const contentTransitionName = computed(() => {
-      const { transitionName, position } = props;
+      const { transitionName, placement } = props;
       if (transitionName) return transitionName;
-      if (position === 'center') return 'fade-zoom';
-      return `slide-${position}`;
+      if (placement === 'center') return 'fade-zoom';
+      return `slide-${placement}`;
     });
 
     watch(
@@ -136,6 +147,7 @@ export default defineComponent({
       name: ref(name),
       currentVisible,
       rootClasses,
+      rootStyles,
       contentClasses,
       contentTransitionName,
       afterEnter,

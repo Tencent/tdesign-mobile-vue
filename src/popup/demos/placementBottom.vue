@@ -1,11 +1,9 @@
 <template>
   <div class="popup-base">
-    <t-button theme="primary" @click="top = true">顶部弹出</t-button>
-    <t-popup v-model="top" position="top">
+    <t-button theme="primary" @click="bottom = true">底部弹出</t-button>
+    <t-popup v-model="bottom" placement="bottom">
       <div style="height: 200px; background: #fff"></div>
     </t-popup>
-
-
   </div>
 </template>
 
@@ -13,10 +11,10 @@
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
   setup() {
-    const top = ref(false);
+    const bottom = ref(false);
 
     return {
-      top,
+      bottom,
     };
   },
 });
