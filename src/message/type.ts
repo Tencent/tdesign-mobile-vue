@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-11-28 18:51:59
+ * updated at 2021-12-05 15:52:17
  * */
 
 export interface TdMessageProps {
@@ -10,7 +10,7 @@ export interface TdMessageProps {
    * 文本对齐方式
    * @default left
    */
-  align: 'left' | 'center';
+  align: MessageAlignType;
   /**
    * 用于自定义消息弹出内容
    * @default ''
@@ -56,5 +56,7 @@ export interface TdMessageProps {
    */
   onVisibleChange: (visible: boolean) => void;
 };
+
+export type MessageAlignType = 'left' | 'center';
 
 export type MessageThemeList = 'info' | 'success' | 'warning' | 'error';
