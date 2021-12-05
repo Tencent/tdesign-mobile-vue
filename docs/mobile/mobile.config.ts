@@ -122,7 +122,7 @@ export default {
         {
           title: 'Collapse 折叠面板',
           name: 'collapse',
-          component: () => import('@/collapse/demos/index.vue'),
+          component: () => import('@/collapse/demos/base.vue'),
         },
         {
           title: 'TabBar 标签栏',

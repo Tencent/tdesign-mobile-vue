@@ -1,19 +1,16 @@
 <template>
-  <div class="demo-tab-bar">
-    <t-cell-group title="横向选项卡" :border="false">
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">Tabs 选项卡</h1>
+    <p class="summary">用作一组平行关系页面/内容的切换器</p>
+    <tdesign-demo-block title="01 类型" summary="横向选项卡">
       <t-tabs :active-name="currentName" @change="onChange">
-        <t-tab-panel name="first" label="标签页一">
-        </t-tab-panel>
-        <t-tab-panel name="second" label="标签页二">
-        </t-tab-panel>
+        <t-tab-panel name="first" label="标签页一"> </t-tab-panel>
+        <t-tab-panel name="second" label="标签页二"> </t-tab-panel>
       </t-tabs>
       <t-tabs active-name="first" @change="onChange">
-        <t-tab-panel name="first" label="标签页一">
-        </t-tab-panel>
-        <t-tab-panel name="second" label="标签页二">
-        </t-tab-panel>
-        <t-tab-panel name="third" label="标签页三">
-        </t-tab-panel>
+        <t-tab-panel name="first" label="标签页一"> </t-tab-panel>
+        <t-tab-panel name="second" label="标签页二"> </t-tab-panel>
+        <t-tab-panel name="third" label="标签页三"> </t-tab-panel>
       </t-tabs>
       <t-tabs active-name="first" @change="onChange">
         <t-tab-panel name="first" label="标签页一">
@@ -29,8 +26,8 @@
           <p>标签四内容区</p>
         </t-tab-panel>
       </t-tabs>
-    </t-cell-group>
-    <t-cell-group title="横向可滑动选项卡" :border="false">
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="超过屏幕滑动">
       <t-tabs active-name="1" :scrollable="true" @change="onChange">
         <t-tab-panel name="1" label="标签页一">
           <p>标签一内容区</p>
@@ -60,10 +57,22 @@
           <p>标签九内容区</p>
         </t-tab-panel>
       </t-tabs>
-    </t-cell-group>
-    <t-cell-group title="竖向选项卡" :border="false">
-      <t-tabs active-name="1" direction="horizontal"
-              @change="onChange" >
+    </tdesign-demo-block>
+    <tdesign-demo-block title="02 状态" summary="选项卡状态">
+      <t-tabs active-name="first" >
+        <t-tab-panel name="first" label="标签页一">
+          <p>标签一内容区</p>
+        </t-tab-panel>
+        <t-tab-panel name="second" label="标签页二">
+          <p>标签二内容区</p>
+        </t-tab-panel>
+        <t-tab-panel name="third"  :disabled="true" label="标签页三">
+          <p>标签三内容区</p>
+        </t-tab-panel>
+      </t-tabs>
+    </tdesign-demo-block>
+    <tdesign-demo-block title="03 特殊类型" summary="横向选项卡">
+      <t-tabs active-name="1" direction="horizontal" @change="onChange">
         <t-tab-panel name="1" label="标签页一">
           <p>标签一内容区</p>
         </t-tab-panel>
@@ -74,10 +83,7 @@
           <p>标签三内容区</p>
         </t-tab-panel>
       </t-tabs>
-    </t-cell-group>
-    <t-cell-group title="竖向可滑动选项卡" :border="false">
-      <t-tabs active-name="1" :scrollable="true"
-              direction="horizontal" @change="onChange">
+      <t-tabs active-name="1" :scrollable="true" direction="horizontal" @change="onChange">
         <t-tab-panel name="1" label="标签页一">
           <p>标签一内容区</p>
         </t-tab-panel>
@@ -97,7 +103,7 @@
           <p>标签六内容区</p>
         </t-tab-panel>
       </t-tabs>
-    </t-cell-group>
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -122,24 +128,21 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.demo-tab-bar{
-  background-color: #F5F5F5;
-}
 .t-tabs {
-  margin-bottom: 12px;
+  margin: 16px 0;
 }
-.t-tabs__panel p{
+.t-tabs__panel p {
   height: 200px;
   align-items: center;
   justify-content: center;
   display: flex;
-  color: rgba(#000000, .16);
+  color: rgba(#000000, 0.16);
   margin: 0;
 }
-.t-tabs--horizontal{
+.t-tabs--horizontal {
   height: 270px;
 }
-.t-tabs--horizontal .t-tabs__panel p{
+.t-tabs--horizontal .t-tabs__panel p {
   height: 270px;
 }
 </style>

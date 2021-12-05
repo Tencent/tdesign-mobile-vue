@@ -4,9 +4,7 @@
       <TNode :content="leftIconContent"></TNode>
     </div>
     <div v-if="titleContent !== undefined" :class="`${name}__title`">
-      <div>
-        <TNode :content="titleContent"></TNode><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
-      </div>
+      <TNode :content="titleContent"></TNode><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
       <div v-if="descriptionContent !== undefined" :class="`${name}__description`">
         <TNode :content="descriptionContent"></TNode>
       </div>
