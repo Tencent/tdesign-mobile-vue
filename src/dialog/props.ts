@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-05 23:40:32
+ * updated at 2021-12-06 01:32:01
  * */
 
 import { TdDialogProps } from './type';
@@ -60,6 +60,10 @@ export default {
   visible: Boolean,
   /** 控制对话框是否显示，非受控属性 */
   defaultVisible: Boolean,
+  /** 对话框宽度，示例：320, '500px', '80%' */
+  width: {
+    type: [String, Number] as PropType<TdDialogProps['width']>,
+  },
   /** 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 */
   zIndex: {
     type: Number,
@@ -68,8 +72,8 @@ export default {
   onCancel: Function as PropType<TdDialogProps['onCancel']>,
   /** 关闭事件，点击 取消按钮 或 点击蒙层 时触发 */
   onClose: Function as PropType<TdDialogProps['onClose']>,
-  /** 对话框消失动画效果结束后触发 */
-  onClosed: Function as PropType<TdDialogProps['onClosed']>,
+  /** 如果“确认”按钮存在，则点击“确认”按钮时触发 */
+  onConfirm: Function as PropType<TdDialogProps['onConfirm']>,
   /** 如果蒙层存在，点击蒙层时触发 */
   onOverlayClick: Function as PropType<TdDialogProps['onOverlayClick']>,
 };
