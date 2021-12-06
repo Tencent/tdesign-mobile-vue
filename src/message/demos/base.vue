@@ -28,7 +28,6 @@
     <t-message v-model="visible5" content="这是一条需要成功的提示消息" theme="success"></t-message>
     <t-message v-model="visible6" content="这是一条需要用户关注到的警示通知" theme="warning"></t-message>
     <t-message v-model="visible7" content="这是一条错误提示通知" theme="error"></t-message>
-
   </div>
 </template>
 
@@ -68,7 +67,7 @@ export default defineComponent({
       visible10,
       visible11,
       visible12,
-      onClick: type => TMessage[type](type),
+      onClick: (type) => TMessage[type](type),
     };
   },
 });

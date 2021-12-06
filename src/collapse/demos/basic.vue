@@ -2,13 +2,7 @@
   <div class="accordion-demo">
     <!-- v-model:value="valueBase"  -->
     <t-collapse :value="valueBase" title="基础型">
-      <t-collapse-panel
-        v-for="(p, i) in panels"
-        :key="i"
-        :name="i"
-        v-bind="p"
-      >
-      </t-collapse-panel>
+      <t-collapse-panel v-for="(p, i) in panels" :key="i" :name="i" v-bind="p"> </t-collapse-panel>
     </t-collapse>
   </div>
 </template>
@@ -22,7 +16,8 @@ export default defineComponent({
       {
         title: '基础面板',
         name: '0',
-        content: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字',
+        content:
+          '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字',
       },
       {
         title: '内容列表',
@@ -35,7 +30,10 @@ export default defineComponent({
         content: [
           { label: '标题1', content: '预设文本' },
           { label: '类目标题2', content: '预设文本' },
-          { label: '很长很长很长的内容标题', content: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字' },
+          {
+            label: '很长很长很长的内容标题',
+            content: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字',
+          },
         ],
       },
       {
@@ -44,7 +42,10 @@ export default defineComponent({
         labelWidth: 80,
         content: [
           { label: '标题1', content: '预设文本' },
-          { label: '很长很长很长的内容标题', content: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字' },
+          {
+            label: '很长很长很长的内容标题',
+            content: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字',
+          },
         ],
       },
     ];

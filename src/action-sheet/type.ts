@@ -52,4 +52,4 @@ export interface TdActionSheetProps {
    * 选择菜单项时触发
    */
   onSelect: (selected: Item | String, index) => void;
-};
+}

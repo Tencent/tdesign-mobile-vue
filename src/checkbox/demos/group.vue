@@ -9,13 +9,17 @@
 </template>
 <script>
 import { ref, defineComponent, watch } from 'vue';
+
 export default defineComponent({
   setup() {
     const checked = ref(['1']);
 
-    watch(() => checked.value, (val) => {
-      console.log(val);
-    });
+    watch(
+      () => checked.value,
+      (val) => {
+        console.log(val);
+      },
+    );
 
     return {
       checked,

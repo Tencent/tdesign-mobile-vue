@@ -17,12 +17,12 @@ type i18nContext = {
   t: (pattern: string, placement: Placement) => string;
 };
 
-const i18nSymbol = Symbol();
+const i18nSymbol = Symbol('i18nSymbol');
 
 const loadLocales = () => {
   // XXX：需要考虑这里加载的问题
   // eslint-disable-next-line @typescript-eslint/dot-notation
-  const locales = require['context']('./lang/', true, /[\w-]+\.ts$/i);
+  const locales = require.context('./lang/', true, /[\w-]+\.ts$/i);
   return locales
     .keys()
     .reduce((locs: Array<string>, loc: string) => ({ ...locs, [loc.replace(/\.|\/|ts/g, '')]: locales(loc) }), {});

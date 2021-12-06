@@ -2,12 +2,12 @@
   <div class="cell-base">
     <t-cell title="单行标题" />
     <t-cell title="单行标题">
-      <TIconChevronRight />
+      <t-icon-chevron-right />
     </t-cell>
     <t-cell title="单行标题" note="辅助信息" arrow></t-cell>
     <t-cell>
       <template #leftIcon>
-        <TIconUserFilled />
+        <t-icon-user-filled />
       </template>
       <template #title>
         <span>单行标题</span>
@@ -17,9 +17,10 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from 'vue';
 import TIconChevronRight from '@/icon/chevron-right.vue';
 import TIconUserFilled from '@/icon/user-filled.vue';
-import { defineComponent } from 'vue';
+
 export default defineComponent({
   components: { TIconChevronRight, TIconUserFilled },
 });

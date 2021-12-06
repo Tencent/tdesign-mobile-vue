@@ -1,49 +1,47 @@
 <template>
   <div :class="`${name}`">
     <t-cell value-align="left" class="tdesign-demo--dialog">
-      <t-button theme="primary" size="middle" class="buttom-item" @click="changeDialogVisible(1)">
-        单行标题
-      </t-button>
-      <t-button theme="primary" size="middle" @click="changeDialogVisible(2)">
-        带说明文本
-      </t-button>
+      <t-button theme="primary" size="middle" class="buttom-item" @click="changeDialogVisible(1)"> 单行标题 </t-button>
+      <t-button theme="primary" size="middle" @click="changeDialogVisible(2)"> 带说明文本 </t-button>
     </t-cell>
     <t-dialog
-        v-model="isShowDialog1"
-        :show-overlay="showOverlay"
-        type="confirm"
-        :is-input="isInput"
-        :header="header"
-        :placeholder-text="placeholderText"
-        :cancel-button-text="cancelButtonText"
-        :confirm-button-text="confirmButtonText"
-        @confirm="onConfirm"
-        @cancel="onCancel">
-        <template #footer-cancel>
-          <div style="color:#000000;font-size:18px;">我不同意</div>
-        </template>
-        <template #footer-confirm>
-          <div style="color:#0052D9;font-size:18px;">我同意</div>
-        </template>
+      v-model="isShowDialog1"
+      :show-overlay="showOverlay"
+      type="confirm"
+      :is-input="isInput"
+      :header="header"
+      :placeholder-text="placeholderText"
+      :cancel-button-text="cancelButtonText"
+      :confirm-button-text="confirmButtonText"
+      @confirm="onConfirm"
+      @cancel="onCancel"
+    >
+      <template #footer-cancel>
+        <div style="color: #000000; font-size: 18px">我不同意</div>
+      </template>
+      <template #footer-confirm>
+        <div style="color: #0052d9; font-size: 18px">我同意</div>
+      </template>
     </t-dialog>
-     <t-dialog
-        v-model="isShowDialog2"
-        :show-overlay="showOverlay"
-        type="confirm"
-        :is-input="isInput"
-        :header="header"
-        :content="content"
-        :placeholder-text="placeholderText"
-        :cancel-button-text="cancelButtonText"
-        :confirm-button-text="confirmButtonText"
-        @confirm="onConfirm"
-        @cancel="onCancel">
-        <template #footer-cancel>
-          <div style="color:#000000;font-size:18px;">我不同意</div>
-        </template>
-        <template #footer-confirm>
-          <div style="color:#0052D9;font-size:18px;">我同意</div>
-        </template>
+    <t-dialog
+      v-model="isShowDialog2"
+      :show-overlay="showOverlay"
+      type="confirm"
+      :is-input="isInput"
+      :header="header"
+      :content="content"
+      :placeholder-text="placeholderText"
+      :cancel-button-text="cancelButtonText"
+      :confirm-button-text="confirmButtonText"
+      @confirm="onConfirm"
+      @cancel="onCancel"
+    >
+      <template #footer-cancel>
+        <div style="color: #000000; font-size: 18px">我不同意</div>
+      </template>
+      <template #footer-confirm>
+        <div style="color: #0052d9; font-size: 18px">我同意</div>
+      </template>
     </t-dialog>
   </div>
 </template>
@@ -96,7 +94,7 @@ export default defineComponent({
         }
       }
     },
-    onConfirm(e: string)  {
+    onConfirm(e: string) {
       console.log('dialog:confirm', e);
     },
 
@@ -125,9 +123,8 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .tdesign-demo--dialog {
-  .t-button:not(:last-child){
+  .t-button:not(:last-child) {
     margin-right: 20px;
   }
 }
 </style>
-

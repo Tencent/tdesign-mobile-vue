@@ -39,4 +39,4 @@ export interface TdToastProps {
    * 提示类型
    */
   type: 'loading' | 'success' | 'fail';
-};
+}

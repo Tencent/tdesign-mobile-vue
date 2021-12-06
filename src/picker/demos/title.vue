@@ -43,6 +43,7 @@
 
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue';
+
 export default defineComponent({
   setup() {
     const show = reactive({
@@ -102,7 +103,7 @@ export default defineComponent({
 
     const onCancel = () => {
       console.log('取消');
-      Object.keys(show).forEach(item => show[item] = false);
+      Object.keys(show).forEach((item) => (show[item] = false));
     };
 
     return {
@@ -124,4 +125,3 @@ export default defineComponent({
   },
 });
 </script>
-

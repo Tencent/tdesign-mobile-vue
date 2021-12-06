@@ -1,22 +1,21 @@
 <template>
-  <div class='tdesign-mobile-demo'>
-    <div class='tag-demo'>
+  <div class="tdesign-mobile-demo">
+    <div class="tag-demo">
       <t-tag
-        v-for='(tag,index) in closableTags'
-        :key='tag'
-        :closable='true'
-        :disabled='tag.disabled'
-        theme='primary'
-        :size='tag.size'
-        @close='onClickClose(index)'
-      >{{ tag.name }}
+        v-for="(tag, index) in closableTags"
+        :key="tag"
+        :closable="true"
+        :disabled="tag.disabled"
+        theme="primary"
+        :size="tag.size"
+        @close="onClickClose(index)"
+        >{{ tag.name }}
       </t-tag>
     </div>
   </div>
-
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { ref, defineComponent } from 'vue';
 
 export default defineComponent({

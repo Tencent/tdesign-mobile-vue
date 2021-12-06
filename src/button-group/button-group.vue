@@ -6,6 +6,7 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-button-group`;
 

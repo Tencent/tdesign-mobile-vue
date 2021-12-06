@@ -10,6 +10,7 @@
 <script lang="ts">
 import { ref, computed, toRefs, SetupContext, defineComponent, ExtractPropTypes } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-switch`;
 

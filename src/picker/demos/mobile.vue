@@ -66,6 +66,7 @@
 </template>
 <script lang="ts">
 import { ref, defineComponent, reactive } from 'vue';
+
 export default defineComponent({
   setup() {
     const show = reactive({
@@ -102,7 +103,7 @@ export default defineComponent({
     };
     const onCancel = () => {
       console.log('取消');
-      Object.keys(show).forEach(item => show[item] = false);
+      Object.keys(show).forEach((item) => (show[item] = false));
       visible.value = false;
     };
 
@@ -146,8 +147,8 @@ export default defineComponent({
 });
 </script>
 <style lang="less" scoped>
-.tdesign-mobile-demo-block > .t-input{
-  margin:16px 0;
+.tdesign-mobile-demo-block > .t-input {
+  margin: 16px 0;
   background: #fff;
 }
 </style>

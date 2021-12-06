@@ -1,5 +1,5 @@
 <template>
-  <div class='tdesign-mobile-demo'>
+  <div class="tdesign-mobile-demo">
     <div class="badge-demo">
       <t-badge :count="12" :max-count="44" class="badge-item">
         <t-button size="small">14</t-button>
@@ -18,7 +18,7 @@
       <t-cell-group>
         <t-cell value-align="left">
           <span>单行标题</span>
-          <t-badge :count="16" :offset="[10, 0]" class="list-item-badge"/>
+          <t-badge :count="16" :offset="[10, 0]" class="list-item-badge" />
         </t-cell>
       </t-cell-group>
     </div>
@@ -27,5 +27,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 export default defineComponent({});
 </script>

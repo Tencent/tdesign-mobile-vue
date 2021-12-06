@@ -57,7 +57,7 @@ export default defineComponent({
         }
         newPickerColumn.props = mergeProps(newPickerColumn.props, {
           onChange(e: any) {
-            const newEvent = Object.assign({ column: columnIndex }, e);
+            const newEvent = { column: columnIndex, ...e };
             curData[columnIndex] = {
               value: e.value,
               index: e.index,

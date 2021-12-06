@@ -25,6 +25,7 @@
 import { defineComponent } from 'vue';
 import config from '../config';
 import CellGroupProps from './props';
+
 const { prefix } = config;
 const name = `${prefix}-cell-group`;
 

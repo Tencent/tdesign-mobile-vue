@@ -33,6 +33,7 @@
 import { toRefs, computed, reactive, defineComponent } from 'vue';
 import config from '../config';
 import StepperProps from './props';
+
 const { prefix } = config;
 const name = `${prefix}-stepper`;
 
@@ -58,7 +59,8 @@ export default defineComponent({
     const { min, max, inputWidth } = toRefs(props);
     const inputStyle = inputWidth ? { width: `${inputWidth.value}px` } : '';
     console.log(inputStyle);
-    const format = (val: number) => Math.min(Math.max(min.value, val, Number.MIN_SAFE_INTEGER), max.value, Number.MAX_SAFE_INTEGER);
+    const format = (val: number) =>
+      Math.min(Math.max(min.value, val, Number.MIN_SAFE_INTEGER), max.value, Number.MAX_SAFE_INTEGER);
     currentValue.value = format(Number(props.value));
     const plusValue = () => {
       if (state.cacheValue + props.step > props.max || props.disabled) return;

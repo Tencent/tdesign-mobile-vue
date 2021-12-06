@@ -1,64 +1,65 @@
-import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTick } from 'vue';
+import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTick } from 'vue';
 
-import Dialog from './dialog.vue';
-import { WithInstallType } from '../shared/';
-import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
+import Dialog from './dialog.vue';
+import { WithInstallType } from '../shared';
+import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
 
-import './style/';
+import './style';
 
 interface DialogFnType extends DialogPropsType {
-  onCancel?: () => void,
-  onConfirm?: (inputValue: string) => void,
-  onClickOverlay?: () => void,
+  onCancel?: () => void;
+  onConfirm?: (inputValue: string) => void;
+  onClickOverlay?: () => void;
 }
 
-let instance: DefineComponent;
+let instance: DefineComponent;
 
-function create(props: DialogFnType | string): DefineComponent {
+function create(props: DialogFnType | string): DefineComponent {
   const visible = ref(false);
-  const root = document.createElement('div');
+  const root = document.createElement('div');
   document.body.appendChild(root);
 
-  const propsObject = {
+  const propsObject = {
     ...DialogPropsDefault,
     ...(typeof props === 'string' ? { content: props } : props),
   };
 
-  if (instance) {
+  if (instance) {
     instance.clear();
     // instance = null;
   }
 
   // eslint-disable-next-line vue/one-component-per-file
-  instance = defineComponent({
-    render: (): VNode => h(Dialog, {
-      ...propsObject,
-      visible: visible.value,
-      onConfirm: (inputValue: string) => {
-        if (typeof propsObject?.onConfirm === 'function') {
-          propsObject?.onConfirm(inputValue);
-        }
-        visible.value = false;
-      },
-      onCancel: () => {
-        if (typeof propsObject?.onCancel === 'function') {
-          propsObject?.onCancel();
-        }
-        visible.value = false;
-      },
-      onClickOverlay: () => {
-        if (typeof propsObject?.onClickOverlay === 'function') {
-          propsObject?.onClickOverlay();
-        }
-        visible.value = false;
-      },
-      onClosed: () => {
-        root.remove();
-      },
-    }),
+  instance = defineComponent({
+    render: (): VNode =>
+      h(Dialog, {
+        ...propsObject,
+        visible: visible.value,
+        onConfirm: (inputValue: string) => {
+          if (typeof propsObject?.onConfirm === 'function') {
+            propsObject?.onConfirm(inputValue);
+          }
+          visible.value = false;
+        },
+        onCancel: () => {
+          if (typeof propsObject?.onCancel === 'function') {
+            propsObject?.onCancel();
+          }
+          visible.value = false;
+        },
+        onClickOverlay: () => {
+          if (typeof propsObject?.onClickOverlay === 'function') {
+            propsObject?.onClickOverlay();
+          }
+          visible.value = false;
+        },
+        onClosed: () => {
+          root.remove();
+        },
+      }),
   });
 
-  instance.clear = () => {
+  instance.clear = () => {
     root.remove();
   };
 
@@ -69,38 +70,36 @@ function create(props: DialogFnType | string): DefineComponent {
     visible.value = true;
   });
 
-  return instance;
+  return instance;
 }
 
-(['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
-  Dialog[type] = (options: DialogFnType | string) => {
-    let props = { content: '', type };
+(['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
+  Dialog[type] = (options: DialogFnType | string) => {
+    let props = { content: '', type };
 
-    if (typeof options === 'string') {
-      props.content = options;
-    } else {
-      props = { ...props, ...options };
+    if (typeof options === 'string') {
+      props.content = options;
+    } else {
+      props = { ...props, ...options };
     }
 
-    return create(props);
+    return create(props);
   };
 });
 
-Dialog.install = (app: App, name = '') => {
+Dialog.install = (app: App, name = '') => {
   app.component(name || Dialog.name, Dialog);
-
-  // 添加插件入口
   // eslint-disable-next-line no-param-reassign
   app.config.globalProperties.$dialog = Dialog;
 };
 
 type DialogApi = {
   /** 通用对话框 */
-  show: (options: DialogFnType | string) => void,
+  show: (options: DialogFnType | string) => void;
   /** 基础对话框 */
-  alert: (options: DialogFnType | string) => void,
+  alert: (options: DialogFnType | string) => void;
   /** 选择对话框 */
-  confirm: (options: DialogFnType | string) => void,
+  confirm: (options: DialogFnType | string) => void;
 };
 
 export const DialogPlugin: Plugin & DialogApi & WithInstallType<typeof Dialog> = Dialog as any;

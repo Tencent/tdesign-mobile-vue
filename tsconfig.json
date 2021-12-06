@@ -23,7 +23,7 @@
       "@/*": ["./src/*"],
       "@TdTypes/*": ["./src/types/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "rules": { "trailing-comma": false },
   "include": [

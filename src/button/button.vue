@@ -1,19 +1,20 @@
 <template>
-  <button :class="buttonClass" :disabled="disabled" @click="onClick" role="button" :aria-disabled="disabled">
-    <TNode :content="iconContent"></TNode>
+  <button :class="buttonClass" :disabled="disabled" role="button" :aria-disabled="disabled" @click="onClick">
+    <t-node :content="iconContent"></t-node>
     <span :class="`${name}__text`">
-      <TNode :content="buttonContent"></TNode>
+      <t-node :content="buttonContent"></t-node>
     </span>
   </button>
 </template>
 
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
+import { LoadingIcon } from 'tdesign-icons-vue-next';
 import { renderContent, renderTNode, TNode } from '@/shared';
 import CLASSNAMES from '../shared/constants';
-import { LoadingIcon } from 'tdesign-icons-vue-next';
 import ButtonProps from './props';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-button`;
 

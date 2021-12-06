@@ -1,12 +1,12 @@
 <template>
   <button :class="classes" :disabled="disabled" @click="handleClick">
     <div :class="`${baseClass}__icon`">
-      <TNode :content="iconContent"></TNode>
+      <t-node :content="iconContent"></t-node>
     </div>
     <div :class="`${baseClass}__text`">
-      <TNode :content="tagContent"></TNode>
+      <t-node :content="tagContent"></t-node>
     </div>
-    <CloseIcon v-if="closable && !disabled" :class="`${baseClass}__close`" @click="handleClickClose" />
+    <close-icon v-if="closable && !disabled" :class="`${baseClass}__close`" @click="handleClickClose" />
   </button>
 </template>
 
@@ -16,6 +16,7 @@ import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
 import { renderContent, renderTNode, TNode } from '@/shared';
+
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
 

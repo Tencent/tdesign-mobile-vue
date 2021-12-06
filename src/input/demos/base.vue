@@ -23,8 +23,8 @@
       <t-input label="标题文字" type="textarea" placeholder="长文本预设内容，文本默认容纳四行" />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="文本框状态">
-      <t-cell-group style="margin-top:16px;">
-        <t-input label="标签文字" v-model="text1"></t-input>
+      <t-cell-group style="margin-top: 16px">
+        <t-input v-model="text1" label="标签文字"></t-input>
         <!-- <t-input v-model="text3" label="未填写警告" placeholder="警告文本" :error="text3.length === 0" /> -->
         <t-input v-model="text1" label="填写错误" error-message="提示信息" />
         <t-input v-model="text2" label="不可编辑" disabled />
@@ -50,6 +50,7 @@
 <script lang="ts">
 import { Icon } from 'tdesign-icons-vue-next';
 import { reactive, toRefs, defineComponent } from 'vue';
+
 export default defineComponent({
   components: { Icon },
   setup() {
@@ -68,9 +69,8 @@ export default defineComponent({
 </script>
 <style scoped>
 .tdesign-mobile-demo-block > .t-input,
-.tdesign-mobile-demo-block > .t-input--textarea{
-  margin:16px 0;
+.tdesign-mobile-demo-block > .t-input--textarea {
+  margin: 16px 0;
   background: #fff;
 }
-
 </style>

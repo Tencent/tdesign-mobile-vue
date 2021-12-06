@@ -8,18 +8,15 @@
     @closed="afterLeave"
     @close="handleClosed"
   >
-    <div
-      id="root"
-      :class="dClassName"
-      :style="rootStyles">
+    <div id="root" :class="dClassName" :style="rootStyles">
       <div v-if="showHeader" :class="dHeaderClassName">
         <slot name="header">
-          <div :class="dTitleClassName">{{header}}</div>
+          <div :class="dTitleClassName">{{ header }}</div>
         </slot>
       </div>
       <div :class="dBodyClassName">
         <slot name="content">
-          <div v-if="content" :class="dTextClassName">{{content}}</div>
+          <div v-if="content" :class="dTextClassName">{{ content }}</div>
         </slot>
         <input
           v-if="isInput"
@@ -27,24 +24,25 @@
           v-model="innerValue"
           :class="dInputClassName"
           type="text"
-          :placeholder="placeholderText">
+          :placeholder="placeholderText"
+        />
       </div>
-      <div v-if="type=='confirm'" :class="dFooterClassName">
+      <div v-if="type == 'confirm'" :class="dFooterClassName">
         <div :class="dDefaultBtnClassName" @click="handleCancel">
           <slot name="footer-cancel">
-            {{cancelContent}}
+            {{ cancelContent }}
           </slot>
         </div>
         <div :class="dConformBtnClassName" @click="handleConfirm">
           <slot name="footer-confirm">
-            {{confirmContent}}
+            {{ confirmContent }}
           </slot>
         </div>
       </div>
-      <div v-if="showFooter&&type!='confirm'" :class="dFooterClassName">
+      <div v-if="showFooter && type != 'confirm'" :class="dFooterClassName">
         <div :class="dDefaultBtnClassName" @click="handleConfirm">
           <slot name="footer">
-            {{knowContent}}
+            {{ knowContent }}
           </slot>
         </div>
       </div>

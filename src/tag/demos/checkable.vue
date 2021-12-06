@@ -1,29 +1,29 @@
 <template>
-  <div class='tdesign-mobile-demo'>
-    <div class='tag-demo'>
+  <div class="tdesign-mobile-demo">
+    <div class="tag-demo">
       <t-check-tag
-        v-for='(fruit, index) in fruits'
-        :key='fruit.name'
-        v-model:checked='fruit.checked'
-        size='large'
-        :disabled='fruit.disabled'
-        @click='onClickFruit(index)'
-        @change='change'
-      >{{ fruit.name }}
+        v-for="(fruit, index) in fruits"
+        :key="fruit.name"
+        v-model:checked="fruit.checked"
+        size="large"
+        :disabled="fruit.disabled"
+        @click="onClickFruit(index)"
+        @change="change"
+        >{{ fruit.name }}
       </t-check-tag>
       <t-check-tag
-        v-for='(fruit, index) in fruits2'
-        :key='fruit.name'
-        :checked='fruit.checked'
-        :disabled='fruit.disabled'
-        @click='onClickFruit2(index)'
-      >{{ fruit.name }}
+        v-for="(fruit, index) in fruits2"
+        :key="fruit.name"
+        :checked="fruit.checked"
+        :disabled="fruit.disabled"
+        @click="onClickFruit2(index)"
+        >{{ fruit.name }}
       </t-check-tag>
     </div>
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
@@ -67,7 +67,6 @@ export default defineComponent({
         disabled: true,
       },
     ]);
-
 
     function onClickFruit(index: number) {
       fruits.value[index].checked = !fruits.value[index].checked;

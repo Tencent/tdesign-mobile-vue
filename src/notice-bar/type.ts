@@ -76,4 +76,4 @@ export interface TdNoticeBarProps {
    * 详情点击
    */
   onDetail: () => void;
-};
+}

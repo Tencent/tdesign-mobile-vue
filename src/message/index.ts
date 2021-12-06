@@ -1,9 +1,9 @@
 import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message.vue';
-import { WithInstallType } from '../shared/';
+import { WithInstallType } from '../shared';
 import { MessageProps, MessageType } from './message.interface';
 
-import './style/';
+import './style';
 
 function create(props: MessageProps): void {
   const visible = ref(false);
@@ -11,16 +11,17 @@ function create(props: MessageProps): void {
   document.body.appendChild(root);
 
   const component = defineComponent({
-    render: (): VNode => h(Message, {
-      ...props,
-      visible: visible.value,
-      onClose: () => {
-        visible.value = false;
-      },
-      onClosed: () => {
-        root.remove();
-      },
-    }),
+    render: (): VNode =>
+      h(Message, {
+        ...props,
+        visible: visible.value,
+        onClose: () => {
+          visible.value = false;
+        },
+        onClosed: () => {
+          root.remove();
+        },
+      }),
   });
 
   createApp(component).mount(root);
@@ -47,7 +48,7 @@ function create(props: MessageProps): void {
   };
 });
 
-Message.install = (app: App, name = '') => {
+Message.install = (app: App, name = '') => {
   app.component(name || Message.name, Message);
 
   // 添加插件入口
@@ -57,13 +58,13 @@ Message.install = (app: App, name = '') => {
 
 type MessageApi = {
   /** 展示普通消息 */
-  info: (options?: MessageProps | string) => void,
+  info: (options?: MessageProps | string) => void;
   /** 展示成功消息 */
-  success: (options?: MessageProps | string) => void,
+  success: (options?: MessageProps | string) => void;
   /** 展示警示消息 */
-  warning: (options?: MessageProps | string) => void,
+  warning: (options?: MessageProps | string) => void;
   /** 展示错误消息 */
-  error: (options?: MessageProps | string) => void,
+  error: (options?: MessageProps | string) => void;
 };
 
 export const MessagePlugin: WithInstallType<typeof Message> = Message as any;

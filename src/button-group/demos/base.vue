@@ -1,6 +1,5 @@
 <template>
   <div class="button-group-base">
-
     <t-cell-group title="块状风格">
       <t-button-group>
         <t-button theme="ghost">置底按钮</t-button>
@@ -28,5 +27,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 export default defineComponent({});
 </script>

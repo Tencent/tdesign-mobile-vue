@@ -35,6 +35,7 @@
 <script lang="ts">
 import { ref, reactive, defineComponent, PropType, onMounted, watchEffect } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 
 interface Touch {
@@ -70,7 +71,7 @@ export default defineComponent({
   props: {
     indexList: {
       type: Array as PropType<Array<string>>,
-      default: [],
+      default: () => [],
     },
   },
   setup(props) {
@@ -131,7 +132,10 @@ export default defineComponent({
       setCurrentSidebar(currentTarget);
     };
 
-    const getTitleNode = () => Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter((x): x is HTMLElement => x instanceof HTMLElement);
+    const getTitleNode = () =>
+      Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter(
+        (x): x is HTMLElement => x instanceof HTMLElement,
+      );
 
     const setCurrentSidebar = (index: string) => {
       state.currentSidebar = index;

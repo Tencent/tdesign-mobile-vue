@@ -18,15 +18,15 @@
     </t-dropdown-menu>
     <p>
       开关 1:
-      <strong>{{switch1}}</strong>
+      <strong>{{ switch1 }}</strong>
     </p>
     <p>
       开关 2:
-      <strong>{{switch2}}</strong>
+      <strong>{{ switch2 }}</strong>
     </p>
     <p>
       开关 3:
-      <strong>{{switch3}}</strong>
+      <strong>{{ switch3 }}</strong>
     </p>
   </demo-container>
 </template>

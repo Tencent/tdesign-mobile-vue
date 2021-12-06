@@ -24,10 +24,10 @@
 </template>
 
 <script lang="ts">
-
 import { defineComponent } from 'vue';
 
 import { IconFont } from 'tdesign-icons-vue-next';
+
 export default defineComponent({
   components: { IconFont },
 });

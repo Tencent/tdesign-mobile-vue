@@ -2,14 +2,13 @@
   <div>
     <t-cell-group class="dialog-type-title" title="backgroundColor: 设置遮罩的背景颜色">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="toggle">
-          显示
-        </t-button>
+        <t-button theme="primary" @click="toggle"> 显示 </t-button>
         <t-image-viewer
           v-model="showViewer"
           :images="images"
           :initial-index="1"
-          :background-color="color"></t-image-viewer>
+          :background-color="color"
+        ></t-image-viewer>
       </t-cell>
     </t-cell-group>
   </div>

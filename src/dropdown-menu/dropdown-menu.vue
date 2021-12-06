@@ -15,7 +15,7 @@ import config from '../config';
 import { context as menuContext, DropdownMenuState, DropdownMenuControl, DropdownMenuExpandState } from './context';
 import TransAniControl from './trans-ani-control';
 import { findRelativeRect, findRelativeContainer } from './dom-utils';
-import { default as DropdownMenuProps } from './props';
+import DropdownMenuProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-menu`;
@@ -36,24 +36,21 @@ export default defineComponent({
     const updateItems = () => {
       if (slots.default) {
         const itemName = `${prefix}-dropdown-item`;
-        menuItems.value = slots.default()
-          .filter((child: any) => child.type.name.includes(itemName));
+        menuItems.value = slots.default().filter((child: any) => child.type.name.includes(itemName));
       }
     };
     onBeforeMount(updateItems);
 
     // 通过 slots.default 子成员，计算标题栏选项
-    const menuTitles = computed(() => menuItems.value
-      .map((item: any) => {
-        const {
-          title,
-          disabled,
-        } = item.props;
+    const menuTitles = computed(() =>
+      menuItems.value.map((item: any) => {
+        const { title, disabled } = item.props;
         return {
           title,
           disabled: disabled !== undefined && disabled !== false,
         };
-      }));
+      }),
+    );
 
     const aniControl = new TransAniControl();
     // 提供子组件访问

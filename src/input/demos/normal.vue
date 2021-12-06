@@ -10,7 +10,7 @@
         @change="onChange"
       >
         <template #rightIcon>
-          <TIconHelpCircleFilled />
+          <t-icon-help-circle-filled />
         </template>
       </t-input>
       <t-input label="一个很长的标题需换行" placeholder="预设文本保持上下居中"></t-input>
@@ -25,6 +25,7 @@
 <script>
 import { reactive, toRefs, defineComponent } from 'vue';
 import TIconHelpCircleFilled from '@/icon/help-circle-filled.vue';
+
 export default defineComponent({
   components: {
     TIconHelpCircleFilled,

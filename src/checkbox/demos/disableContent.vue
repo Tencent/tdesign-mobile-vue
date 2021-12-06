@@ -1,21 +1,12 @@
 <template>
   <div>
-    <t-checkbox
-      v-model="checked1"
-      name="1"
-      title="单行标题"
-      content-disabled>
-    </t-checkbox>
-    <t-checkbox
-      v-model="checked2"
-      name="1"
-      title="单行标题"
-      content-disabled>
-    </t-checkbox>
+    <t-checkbox v-model="checked1" name="1" title="单行标题" content-disabled> </t-checkbox>
+    <t-checkbox v-model="checked2" name="1" title="单行标题" content-disabled> </t-checkbox>
   </div>
 </template>
 <script>
 import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
   setup() {
     const checked1 = ref('1');

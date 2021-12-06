@@ -1,7 +1,7 @@
 <template>
   <div v-show="showViewer" :class="`${prefix}-preview`">
     <div :class="`${prefix}-image-mask`" :style="{ background: backgroundColor }"></div>
-    <div class="preview-container"  >
+    <div class="preview-container">
       <div
         :ref="myRef"
         :class="classes"
@@ -12,7 +12,11 @@
       >
         <div :class="`${prefix}-swiper-box`">
           <div :class="`${prefix}-swiper-container`">
-            <div v-for="(item, index) in images" :key="index" :class="`${prefix}-swiper-item preview-item-wrap`">
+            <div
+              v-for="(item, itemIndex) in images"
+              :key="itemIndex"
+              :class="`${prefix}-swiper-item preview-item-wrap`"
+            >
               <div class="item">
                 <img :src="item" />
               </div>
@@ -29,6 +33,7 @@
 import { computed, toRefs, ref, defineComponent, reactive, watch, nextTick } from 'vue';
 import config from '../config';
 import { DragState } from './preview.interface';
+
 const { prefix } = config;
 const name = `${prefix}-preview`;
 
@@ -180,7 +185,7 @@ export default defineComponent({
       moveLock = true;
       const dragDuration = Math.min(new Date().getTime() - dragState.startTime, 500);
       const offsetLeft = dragState.currentLeft - dragState.startLeft;
-      const itemWidth = dragState.itemWidth;
+      const { itemWidth } = dragState;
       const isFastDrag = dragDuration < PAGING_DURATION;
       let action = '';
       if (isFastDrag && dragState.currentLeft === -1) {

@@ -1,11 +1,12 @@
 <template>
   <div :class="name">
-    <slot/>
+    <slot />
   </div>
 </template>
 <script lang="ts">
-import config from '@/config';
 import { defineComponent } from 'vue';
+import config from '@/config';
+
 const { prefix } = config;
 const name = `${prefix}-swiper-item`;
 

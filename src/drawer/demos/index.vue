@@ -14,19 +14,26 @@ import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    const baseSidebar = ref([{
-      name: '菜单一',
-    }, {
-      name: '菜单二',
-    }, {
-      name: '菜单三',
-    }, {
-      name: '菜单四',
-    }, {
-      name: '菜单五',
-    }, {
-      name: '菜单六',
-    }]);
+    const baseSidebar = ref([
+      {
+        name: '菜单一',
+      },
+      {
+        name: '菜单二',
+      },
+      {
+        name: '菜单三',
+      },
+      {
+        name: '菜单四',
+      },
+      {
+        name: '菜单五',
+      },
+      {
+        name: '菜单六',
+      },
+    ]);
     const open = ref(false);
     const openDrawer = () => {
       open.value = true;
@@ -41,7 +48,6 @@ export default defineComponent({
 });
 </script>
 <style lang="less" scoped>
-
 .demo-drawer {
   &-text {
     margin: 24px 0 12px 0;

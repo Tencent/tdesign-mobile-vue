@@ -8,7 +8,6 @@
       }"
       @click="toggle"
     >
-
       <slot v-if="$slots.icon" name="icon" :is-checked="isChecked" />
       <div v-else-if="typeof icon === 'function'" :class="`${componentName}__icon`">
         <component :is="icon()"></component>

@@ -37,24 +37,28 @@ const getPlugins = ({
 
   // ts
   if (isProd) {
-    plugins.push(typescript({
-      tsconfig: 'tsconfig.build.json',
-      cacheRoot: `${tmpdir()}/.rpt2_cache`,
-      tsconfigOverride: {
-        compilerOptions: {
-          declaration: true,
-          declarationDir: './typings',
+    plugins.push(
+      typescript({
+        tsconfig: 'tsconfig.build.json',
+        cacheRoot: `${tmpdir()}/.rpt2_cache`,
+        tsconfigOverride: {
+          compilerOptions: {
+            declaration: true,
+            declarationDir: './typings',
+          },
         },
-      },
-      useTsconfigDeclarationDir: true,
-    }));
+        useTsconfigDeclarationDir: true,
+      }),
+    );
   } else {
-    plugins.push(esbuild({
-      target: 'esnext',
-      minify: false,
-      jsx: 'preserve',
-      tsconfig: 'tsconfig.build.json',
-    }));
+    plugins.push(
+      esbuild({
+        target: 'esnext',
+        minify: false,
+        jsx: 'preserve',
+        tsconfig: 'tsconfig.build.json',
+      }),
+    );
   }
 
   plugins = plugins.concat([
@@ -68,18 +72,18 @@ const getPlugins = ({
 
   // css
   if (extractOneCss) {
-    plugins.push(postcss({
-      extract: `${isProd ? `${name}.min` : name}.css`,
-      minimize: isProd,
-      sourceMap: true,
-      extensions: ['.sass', '.scss', '.css', '.less'],
-    }));
+    plugins.push(
+      postcss({
+        extract: `${isProd ? `${name}.min` : name}.css`,
+        minimize: isProd,
+        sourceMap: true,
+        extensions: ['.sass', '.scss', '.css', '.less'],
+      }),
+    );
   } else if (extractMultiCss) {
     plugins.push(
       staticImport({
-        include: [
-          'src/**/style/css.js',
-        ],
+        include: ['src/**/style/css.js'],
       }),
       ignoreImport({
         include: ['src/*/style/*'],
@@ -91,10 +95,7 @@ const getPlugins = ({
   } else {
     plugins.push(
       staticImport({
-        include: [
-          'src/**/style/index.js',
-          'src/_common/style/mobile/**/*.less',
-        ],
+        include: ['src/**/style/index.js', 'src/_common/style/mobile/**/*.less'],
       }),
       ignoreImport({
         include: ['src/*/style/*'],
@@ -104,22 +105,26 @@ const getPlugins = ({
   }
 
   if (env) {
-    plugins.push(replace({
-      preventAssignment: true,
-      values: {
-        'process.env.NODE_ENV': JSON.stringify(env),
-      },
-    }));
+    plugins.push(
+      replace({
+        preventAssignment: true,
+        values: {
+          'process.env.NODE_ENV': JSON.stringify(env),
+        },
+      }),
+    );
   }
 
   if (isProd) {
-    plugins.push(terser({
-      output: {
-        /* eslint-disable */
+    plugins.push(
+      terser({
+        output: {
+          /* eslint-disable */
           ascii_only: true,
           /* eslint-enable */
-      },
-    }));
+        },
+      }),
+    );
   }
 
   return plugins;
@@ -135,21 +140,12 @@ const banner = `/**
  */
 `;
 const input = 'src/index.ts';
-const inputList = [
-  'src/**/*.ts',
-  'src/**/*.vue',
-  '!src/**/demos',
-  '!src/**/style',
-  '!src/**/__tests__',
-];
+const inputList = ['src/**/*.ts', 'src/**/*.vue', '!src/**/demos', '!src/**/style', '!src/**/__tests__'];
 
 /** @type {import('rollup').RollupOptions} */
 const cssConfig = {
   input: ['src/**/style/index.js'],
-  plugins: [
-    multiInput(),
-    styles({ mode: 'extract' }),
-  ],
+  plugins: [multiInput(), styles({ mode: 'extract' })],
   output: {
     banner,
     dir: 'es/',
@@ -209,10 +205,12 @@ const umdConfig = {
   plugins: getPlugins({
     env: 'development',
     extractOneCss: true,
-  }).concat(analyzer({
-    limit: 5,
-    summaryOnly: true,
-  })),
+  }).concat(
+    analyzer({
+      limit: 5,
+      summaryOnly: true,
+    }),
+  ),
   output: {
     name: 'TDesign',
     banner,

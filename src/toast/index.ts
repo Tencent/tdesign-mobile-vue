@@ -1,8 +1,8 @@
-import vueToast from './toast.vue';
 import { createApp, App, DefineComponent, Plugin } from 'vue';
+import vueToast from './toast.vue';
 import { TdToastProps } from './type';
 
-import './style/';
+import './style';
 
 let instance: any = null;
 
@@ -71,16 +71,16 @@ Toast.install = (app: App) => {
 
 type ToastApi = typeof Toast & {
   /** 展示加载提示 */
-  loading: (options?: TdToastProps | string) => void,
+  loading: (options?: TdToastProps | string) => void;
   /** 展示成功提示 */
-  success: (options?: TdToastProps | string) => void,
+  success: (options?: TdToastProps | string) => void;
   /** 展示失败提示 */
-  fail: (options?: TdToastProps | string) => void,
+  fail: (options?: TdToastProps | string) => void;
   /** 关闭提示 */
-  clear: () => void,
+  clear: () => void;
 };
 
-export const ToastPlugin = (Toast as unknown) as (Plugin & ToastApi);
+export const ToastPlugin = Toast as unknown as Plugin & ToastApi;
 export default ToastPlugin;
 
 declare module '@vue/runtime-core' {

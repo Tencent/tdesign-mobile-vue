@@ -33,6 +33,7 @@
 import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TIconClearCircleFilled } from 'tdesign-icons-vue-next';
 import { ref, reactive, computed, defineComponent } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-search-field`;
 

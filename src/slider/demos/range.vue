@@ -13,6 +13,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
   setup() {
     const rangeValue = ref([30, 80]);

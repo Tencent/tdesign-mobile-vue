@@ -20,6 +20,7 @@ import { PlacementType, PopupProps } from './popup.interface';
 import TMask from '../mask';
 
 import config from '../config';
+
 const { prefix } = config;
 
 const name = `${prefix}-popup`;

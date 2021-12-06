@@ -4,13 +4,12 @@
     <t-popup v-model="top" placement="top">
       <div style="height: 200px; background: #fff"></div>
     </t-popup>
-
-
   </div>
 </template>
 
 <script>
 import { defineComponent, ref } from 'vue';
+
 export default defineComponent({
   setup() {
     const top = ref(false);

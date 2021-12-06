@@ -1,10 +1,5 @@
 <template>
-  <div
-    v-if="forceRender || isActive"
-    v-show="isActive"
-    :class="`${prefix}-tabs__panel`"
-    :name="name"
-  >
+  <div v-if="forceRender || isActive" v-show="isActive" :class="`${prefix}-tabs__panel`" :name="name">
     <slot></slot>
   </div>
 </template>
@@ -13,6 +8,7 @@
 import { defineComponent, inject, toRefs, Ref, computed } from 'vue';
 import config from '../config';
 import { TabPanelProps } from './tabs.interface';
+
 const { prefix } = config;
 
 export default defineComponent({

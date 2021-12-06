@@ -2,8 +2,7 @@
   <div class="cell-base">
     <t-cell-group title="基础开关">
       <t-cell label="标题">
-        <t-switch v-model="checked" @change="onChange" >
-        </t-switch>
+        <t-switch v-model="checked" @change="onChange"> </t-switch>
       </t-cell>
       <t-cell label="标题">
         <t-switch></t-switch>

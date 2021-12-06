@@ -1,9 +1,9 @@
 <template>
   <div v-if="showBadge" :class="badgeClasses">
     <div :class="badgeInnerClasses" :style="badgeStyles">
-      <TNode :content="countContent"></TNode>
+      <t-node :content="countContent"></t-node>
     </div>
-    <TNode :content="badgeContent"></TNode>
+    <t-node :content="badgeContent"></t-node>
   </div>
 </template>
 

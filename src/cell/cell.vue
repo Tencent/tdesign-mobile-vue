@@ -1,28 +1,28 @@
 <template>
   <div :class="styleCell" @click="onClick">
     <div v-if="leftIconContent !== undefined" :class="`${name}__left-icon`">
-      <TNode :content="leftIconContent"></TNode>
+      <t-node :content="leftIconContent"></t-node>
     </div>
     <div v-if="titleContent !== undefined" :class="`${name}__title`">
-      <TNode :content="titleContent"></TNode><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
+      <t-node :content="titleContent"></t-node><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
       <div v-if="descriptionContent !== undefined" :class="`${name}__description`">
-        <TNode :content="descriptionContent"></TNode>
+        <t-node :content="descriptionContent"></t-node>
       </div>
     </div>
     <div v-if="noteContent !== undefined" :class="`${name}__note`">
-      <TNode :content="noteContent"></TNode>
+      <t-node :content="noteContent"></t-node>
     </div>
     <div v-if="rightIconContent !== undefined" :class="`${name}__right-icon`">
-      <TNode :content="rightIconContent"></TNode>
+      <t-node :content="rightIconContent"></t-node>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
+import { ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { renderTNode, TNode } from '@/shared';
 import config from '../config';
-import { ChevronRightIcon } from 'tdesign-icons-vue-next';
 import CellProps from './props';
 
 const { prefix } = config;

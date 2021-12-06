@@ -2,13 +2,8 @@
   <div>
     <t-cell-group class="dialog-type-title" title="initialIndex: 默认展示第二张图片">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="toggle(1)">
-          默认展示
-        </t-button>
-        <t-image-viewer
-          v-model="showViewer"
-          :images="images"
-          :initial-index="initialIndex"></t-image-viewer>
+        <t-button theme="primary" @click="toggle(1)"> 默认展示 </t-button>
+        <t-image-viewer v-model="showViewer" :images="images" :initial-index="initialIndex"></t-image-viewer>
       </t-cell>
     </t-cell-group>
   </div>

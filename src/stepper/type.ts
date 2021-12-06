@@ -55,4 +55,4 @@ export interface TdStepperProps {
    * @default 0
    */
   defaultValue: string | number;
-};
+}

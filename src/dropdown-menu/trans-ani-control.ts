@@ -4,11 +4,14 @@ import { DropdownMenuDo } from './context';
 
 export default class TransAniControl {
   timeout: number | null;
+
   finallyDo: DropdownMenuDo;
+
   constructor() {
     this.timeout = null;
     this.finallyDo = NOOP;
   }
+
   setTo(duration: number, nowDo: DropdownMenuDo, nextTickDo: DropdownMenuDo, finallyDo: DropdownMenuDo): void {
     if (this.timeout) {
       window.clearTimeout(this.timeout);

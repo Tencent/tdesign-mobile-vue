@@ -15,4 +15,4 @@ export interface TdCellGroupProps {
    * @default ''
    */
   title: string;
-};
+}

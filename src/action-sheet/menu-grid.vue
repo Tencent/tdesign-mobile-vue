@@ -17,17 +17,12 @@
             @click="handleSelect(index)"
           >
             <slot name="cell" :item="item">
-              <div
-                v-if="item.icon"
-                :class="`${name}__cell-icon`"
-                :style="{backgroundImage: `url(${item.icon})`}"
-              />
-              <div :class="`${name}__cell-text`" :style="{color: item.color}">{{ item.label }}</div>
+              <div v-if="item.icon" :class="`${name}__cell-icon`" :style="{ backgroundImage: `url(${item.icon})` }" />
+              <div :class="`${name}__cell-text`" :style="{ color: item.color }">{{ item.label }}</div>
             </slot>
           </button>
         </div>
       </div>
-
     </div>
     <div v-if="pageNum > 1" :class="`${name}__indicator`">
       <div
@@ -35,11 +30,10 @@
         :key="index"
         :class="{
           [`${name}__indicator-item`]: true,
-          on: currentIndex === index -1,
+          on: currentIndex === index - 1,
         }"
       />
     </div>
-
   </div>
 </template>
 
@@ -134,9 +128,7 @@ export default defineComponent({
       if (!canMove) return;
 
       const distance = e.changedTouches[0].clientX - startX;
-      const targetIndex = Math.abs(distance) > 50
-        ? currentIndex.value + (distance < 0 ? 1 : -1)
-        : currentIndex.value;
+      const targetIndex = Math.abs(distance) > 50 ? currentIndex.value + (distance < 0 ? 1 : -1) : currentIndex.value;
       currentIndex.value = targetIndex;
       moveByIndex(targetIndex);
     };

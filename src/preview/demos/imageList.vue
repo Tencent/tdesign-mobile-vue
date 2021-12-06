@@ -2,15 +2,14 @@
   <div>
     <t-cell-group class="dialog-type-title" title="图片数组：images">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="toggle">
-          图片列表
-        </t-button>
+        <t-button theme="primary" @click="toggle"> 图片列表 </t-button>
         <t-image-viewer
           v-model="showViewer"
           v-model:images="images"
           :initial-index="0"
           @input="input"
-          @change="change"></t-image-viewer>
+          @change="change"
+        ></t-image-viewer>
       </t-cell>
     </t-cell-group>
   </div>

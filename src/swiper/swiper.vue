@@ -17,20 +17,20 @@
     </div>
     <!-- 左右侧的按钮 -->
     <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
-      <span @click="prev(1)" :class="`${name}-btn btn-prev`">
-        <ChevronLeftIcon size="12px" name="chevron-left" />
+      <span :class="`${name}-btn btn-prev`" @click="prev(1)">
+        <chevron-left-icon size="12px" name="chevron-left" />
       </span>
-      <span @click="next(1)" :class="`${name}-btn btn-next`">
-        <ChevronRightIcon size="12px" name="chevron-right" />
+      <span :class="`${name}-btn btn-next`" @click="next(1)">
+        <chevron-right-icon size="12px" name="chevron-right" />
       </span>
     </span>
     <!-- 分页器 -->
     <span v-if="navigation.type" :class="`${name}-pagination ${name}-pagination--${navigation.type}`">
       <template v-if="navigation.type === 'bullets'">
         <span
-          :class="{ [`${name}-pagination-dot`]: true, active: index === state.activeIndex }"
           v-for="(item, index) in paginationList"
           :key="'page' + index"
+          :class="{ [`${name}-pagination-dot`]: true, active: index === state.activeIndex }"
         ></span>
       </template>
       <span v-if="navigation.type === 'fraction'">
@@ -40,10 +40,11 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch } from 'vue';
+import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, toRefs } from 'vue';
+import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
 import config from '@/config';
-import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
+
 const { prefix } = config;
 const name = `${prefix}-swiper`;
 const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): void => {
@@ -52,14 +53,14 @@ const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): vo
 };
 export default defineComponent({
   name,
+  components: { ChevronLeftIcon, ChevronRightIcon },
   props: {
     ...SwiperProps,
   },
-  components: { ChevronLeftIcon, ChevronRightIcon },
   emits: ['change'],
   setup(props, context) {
+    const { autoplay, interval, duration, direction, height, current } = toRefs(props);
     const self = getCurrentInstance();
-    const { autoplay, interval, duration, direction = 'horizontal', height = 180, current = null } = props;
     const state: {
       activeIndex: number;
       itemLength: number;
@@ -110,7 +111,8 @@ export default defineComponent({
         next(current);
       }
     });
-    let autoplayTimer: NodeJS.Timeout | null = null;
+    // eslint-disable-next-line no-undef
+    let autoplayTimer: Number | NodeJS.Timeout | null = null;
     /**
      * 移动节点
      */
@@ -118,8 +120,8 @@ export default defineComponent({
       // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
       // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
-      const moveDirection = direction === 'horizontal' ? 'X' : 'Y';
-      const moveLength: number = direction === 'vertical' ? height : state.itemWidth;
+      const moveDirection = direction.value === 'horizontal' ? 'X' : 'Y';
+      const moveLength: number = direction.value === 'vertical' ? Number(height) : state.itemWidth;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
     // 添加动画
@@ -163,7 +165,7 @@ export default defineComponent({
         state.activeIndex += 1;
         addAnimation();
         move(state.activeIndex);
-      }, interval);
+      }, interval.value);
     };
     // 移动到上一个
     const prev = (step = 1) => {
@@ -205,10 +207,10 @@ export default defineComponent({
       const distanceY = endY - touchStartY;
       const _container = getContainer();
       removeAnimation();
-      if (direction === 'horizontal') {
+      if (direction.value === 'horizontal') {
         setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
       } else {
-        setOffset(_container, -((activeIndex + 1) * height - distanceY), 'Y');
+        setOffset(_container, -((activeIndex + 1) * height.value - distanceY), 'Y');
       }
     };
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。
@@ -219,9 +221,15 @@ export default defineComponent({
       const distanceX = endX - touchStartX;
       const distanceY = endY - touchStartY;
       addAnimation();
-      if ((direction === 'horizontal' && distanceX > 100) || (direction === 'vertical' && distanceY > 100)) {
+      if (
+        (direction.value === 'horizontal' && distanceX > 100) ||
+        (direction.value === 'vertical' && distanceY > 100)
+      ) {
         prev(1);
-      } else if ((direction === 'horizontal' && distanceX < -100) || (direction === 'vertical' && distanceY < -100)) {
+      } else if (
+        (direction.value === 'horizontal' && distanceX < -100) ||
+        (direction.value === 'vertical' && distanceY < -100)
+      ) {
         next(1);
       } else {
         move(state.activeIndex);
@@ -233,7 +241,7 @@ export default defineComponent({
       (newPage, oldPage) => {
         console.info(`受控页数变化,从${oldPage}->${newPage}`);
         if (state.isControl) {
-          state.activeIndex = newPage ? newPage : 0;
+          state.activeIndex = newPage || 0;
           addAnimation();
           move(state.activeIndex);
         }

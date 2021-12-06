@@ -39,7 +39,7 @@ export interface TdStepsProps {
    * 当前步骤发生变化时触发
    */
   onChange: (current: string | number, previous: string | number, context?: { e?: MouseEvent }) => void;
-};
+}
 
 export interface TdStepItemProps {
   /**
@@ -62,6 +62,6 @@ export interface TdStepItemProps {
    * @default ''
    */
   title: string | TNode;
-};
+}
 
 export type StepStatus = 'default' | 'process' | 'finish' | 'error';

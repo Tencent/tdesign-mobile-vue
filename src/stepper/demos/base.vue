@@ -13,18 +13,16 @@
         @change="onChange"
       />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="带单位步进器">
-    </tdesign-demo-block>
-    <tdesign-demo-block summary="纯步进器">
-    </tdesign-demo-block>
-    <tdesign-demo-block title="02 类型" summary="步进器状态">
-    </tdesign-demo-block>
+    <tdesign-demo-block summary="带单位步进器"> </tdesign-demo-block>
+    <tdesign-demo-block summary="纯步进器"> </tdesign-demo-block>
+    <tdesign-demo-block title="02 类型" summary="步进器状态"> </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts">
 import { reactive, toRefs, defineComponent } from 'vue';
 import config from '@/config';
+
 const { prefix } = config;
 const name = `${prefix}-stepper-demo`;
 

@@ -7,6 +7,7 @@
 <script lang="ts">
 import { defineComponent, ref, provide, watch, Ref } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-tab-bar`;
 

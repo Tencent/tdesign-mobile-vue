@@ -6,14 +6,14 @@
       <t-notice-bar content="提示文字描述提示文字描述提示文字描述" />
     </tdesign-demo-block>
     <tdesign-demo-block summary="带图标静态消息栏">
-      <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc" />
+      <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :left-icon="iconFunc" />
     </tdesign-demo-block>
     <tdesign-demo-block summary="带操作消息栏">
-      <t-notice-bar mode="link" content="提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc" />
-      <t-notice-bar mode="closeable" content="提示文字描述提示文字描述" detailText="详情" :leftIcon="iconFunc" />
+      <t-notice-bar mode="link" content="提示文字描述提示文字描述提示文字描述" :left-icon="iconFunc" />
+      <t-notice-bar mode="closeable" content="提示文字描述提示文字描述" detail-text="详情" :left-icon="iconFunc" />
     </tdesign-demo-block>
     <tdesign-demo-block summary="滚动消息栏">
-      <t-notice-bar mode="link" scrollable content="提示文字描述提示文字描述" >
+      <t-notice-bar mode="link" scrollable content="提示文字描述提示文字描述">
         <template #leftIcon>
           <icon name="error-circle-filled" />
         </template>
@@ -24,18 +24,51 @@
         </template>
       </t-notice-bar>
     </tdesign-demo-block>
-     <tdesign-demo-block title="02 状态" summary="多文字消息栏">
-       <t-notice-bar content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" />
-       <t-notice-bar content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc"/>
-       <t-notice-bar mode="link" content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述" :leftIcon="iconFunc"/>
-       <t-notice-bar mode="closeable" content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" detailText="详情" :leftIcon="iconFunc"/>
-     </tdesign-demo-block>
-     <tdesign-demo-block summary="红色背景消息栏">
-       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" content="提示文字描述提示文字描述提示文字描述" />
-       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" iconColor="#E34D59" content="提示文字描述提示文字描述提示文字描述" :leftIcon="iconFunc"/>
-       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" iconColor="#E34D59" content="提示文字描述提示文字描述提示文字描述" mode="link" :leftIcon="iconFunc"/>
-       <t-notice-bar bgColor="#F9D7D9" color="#E34D59" iconColor="#E34D59" content="提示文字描述提示文字描述" detailText="详情" mode="closeable" :leftIcon="iconFunc"/>
-     </tdesign-demo-block>
+    <tdesign-demo-block title="02 状态" summary="多文字消息栏">
+      <t-notice-bar content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" />
+      <t-notice-bar
+        content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
+        :left-icon="iconFunc"
+      />
+      <t-notice-bar
+        mode="link"
+        content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述"
+        :left-icon="iconFunc"
+      />
+      <t-notice-bar
+        mode="closeable"
+        content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
+        detail-text="详情"
+        :left-icon="iconFunc"
+      />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="红色背景消息栏">
+      <t-notice-bar bg-color="#F9D7D9" color="#E34D59" content="提示文字描述提示文字描述提示文字描述" />
+      <t-notice-bar
+        bg-color="#F9D7D9"
+        color="#E34D59"
+        icon-color="#E34D59"
+        content="提示文字描述提示文字描述提示文字描述"
+        :left-icon="iconFunc"
+      />
+      <t-notice-bar
+        bg-color="#F9D7D9"
+        color="#E34D59"
+        icon-color="#E34D59"
+        content="提示文字描述提示文字描述提示文字描述"
+        mode="link"
+        :left-icon="iconFunc"
+      />
+      <t-notice-bar
+        bg-color="#F9D7D9"
+        color="#E34D59"
+        icon-color="#E34D59"
+        content="提示文字描述提示文字描述"
+        detail-text="详情"
+        mode="closeable"
+        :left-icon="iconFunc"
+      />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -44,7 +77,7 @@ import { reactive, defineComponent, toRefs, ref, h } from 'vue';
 import { Icon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
-  components: { Icon, ErrorCircleFilledIcon },
+  components: { Icon },
   setup() {
     const state = reactive({
       visible: true,

@@ -35,9 +35,9 @@
   </div>
 </template>
 <script lang="ts">
-import config from '../config';
 import { computed, defineComponent, SetupContext } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
+import config from '../config';
 import { NavbarProps } from './navbar.interface';
 
 const { prefix } = config;

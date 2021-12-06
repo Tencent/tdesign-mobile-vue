@@ -1,18 +1,17 @@
 <template>
-
-  <div class='tdesign-mobile-demo'>
-    <h1 class='title'>Toast 轻提示</h1>
-    <p class='summary'>一种轻量级反馈或提示，不会打断用户操作。</p>
-    <tdesign-demo-block title='01 类型' summary='基础提示'>
-      <div class='toast-demo'>
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">Toast 轻提示</h1>
+    <p class="summary">一种轻量级反馈或提示，不会打断用户操作。</p>
+    <tdesign-demo-block title="01 类型" summary="基础提示">
+      <div class="toast-demo">
         <t-button size="large" variant="outline" @click="showText(text1)">纯文本</t-button>
         <t-button size="large" variant="outline" @click="showText(text2)">带图标-横向</t-button>
         <t-button size="large" variant="outline" @click="showText(text2)">带图标-竖向</t-button>
         <t-button size="large" variant="outline" @click="showText(text2)">纯文本最大高度</t-button>
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block summary='默认提示'>
-      <div class='toast-demo'>
+    <tdesign-demo-block summary="默认提示">
+      <div class="toast-demo">
         <t-button size="large" variant="outline" @click="showSuccessRow(success)">成功-横向</t-button>
         <t-button size="large" variant="outline" @click="showFailRow(fail)">警告-横向</t-button>
         <t-button size="large" variant="outline" @click="showSuccess(success)">成功-竖向</t-button>

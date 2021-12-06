@@ -1,12 +1,9 @@
 <template>
   <div class="tdesign-demo-block">
-    <t-button theme="primary" style="margin-left: 20px;" @click="visible = true">
-      结合Popup组件</t-button>
+    <t-button theme="primary" style="margin-left: 20px" @click="visible = true"> 结合Popup组件</t-button>
     <t-popup v-model="visible">
       <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-        <t-picker-column
-          :options="roleOptions"
-          @change="onColumnChange" />
+        <t-picker-column :options="roleOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
   </div>
@@ -14,6 +11,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
   setup() {
     const roles = ['战士', '法师', '射手', '刺客', '坦克', '辅助'];
@@ -56,4 +54,3 @@ export default defineComponent({
   },
 });
 </script>
-

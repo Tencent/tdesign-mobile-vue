@@ -1,7 +1,6 @@
 <template>
   <t-popup :class="name" :visible="currentVisible" position="bottom" @close="handleClose">
     <div :class="rootClasses">
-
       <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect">
         <template #cell="slotProps">
           <slot name="cell" :item="slotProps.item"></slot>
@@ -15,7 +14,7 @@
       </menu-grid>
 
       <template v-if="showCancel">
-        <div :class="`${name}__separation`" v-if="type === 'list'"></div>
+        <div v-if="type === 'list'" :class="`${name}__separation`"></div>
         <button :class="`${name}__action`" @click="handleCancel">{{ cancelText }}</button>
       </template>
     </div>

@@ -25,14 +25,13 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 <style lang="less" scoped>
-.progress-demo{
-  margin-top:16px;
-  padding:16px;
+.progress-demo {
+  margin-top: 16px;
+  padding: 16px;
   background: #fff;
-  .t-progress{
+  .t-progress {
     margin: 16px 0;
   }
 }

@@ -12,6 +12,7 @@
 
 <script>
 import { defineComponent, ref, watch } from 'vue';
+
 export default defineComponent({
   setup() {
     const radio = ref('1');
@@ -25,7 +26,7 @@ export default defineComponent({
 
     return {
       radio,
-      change: val => console.log(val),
+      change: (val) => console.log(val),
     };
   },
 });

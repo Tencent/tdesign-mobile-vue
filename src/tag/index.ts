@@ -1,8 +1,8 @@
 import LocalTag from './tag.vue';
 import _LocalCheckTag from './check-tag.vue';
-import { withInstall, WithInstallType, mapProps } from '../shared/';
+import { withInstall, WithInstallType, mapProps } from '../shared';
 
-import './style/';
+import './style';
 
 const LocalCheckTag = mapProps([
   {

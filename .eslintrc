@@ -6,9 +6,10 @@
     "es6": true
   },
   "extends": [
-    "@tencent/eslint-config-tencent",
-    "@tencent/eslint-config-tencent/ts",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-airbnb-base",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended"
   ],
   "plugins": ["vue", "@typescript-eslint"],
   "parser": "vue-eslint-parser",
@@ -16,21 +17,53 @@
     "project": ["./tsconfig.json"],
     "parser": "@typescript-eslint/parser",
     "extraFileExtensions": [".vue"],
+    "allowImportExportEverywhere": true,
     "sourceType": "module"
+  },
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
   },
   "rules": {
     "camelcase": 0,
-    "no-new": 1,
-    "new-cap": 0,
-    "max-len": 0,
-    "prefer-destructuring": 0,
-    "no-underscore-dangle": 0,
-    "func-style": 0,
-    "no-console": 0,
-    "@typescript-eslint/ban-ts-ignore": 0,
-    "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/no-unused-vars": ["error"],
+    // code style config
+    "no-continue": "off",
+    "no-console": "off",
+    "no-restricted-syntax": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off",
+    "no-unused-expressions": "off",
+    "no-return-assign": "off",
+    "no-use-before-define": "off",
+    "func-names": "off",
+    "guard-for-in": "off",
+    "consistent-return": "off",
+    "no-restricted-globals": "off",
+    "default-param-last": "off",
+    "default-case": "off",
+    "prefer-spread": "off",
+
+    // import config
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/no-relative-packages": "off",
+
+    // typescript config
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-require-imports": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/prefer-for-of": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-unused-vars": 0,
+    "@typescript-eslint/no-empty-function": 0,
     "@typescript-eslint/ban-ts-comment": 0,
+    "vue/require-default-prop": 0,
+
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -42,5 +75,38 @@
         }
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "vue/component-name-in-template-casing": [2, "kebab-case"],
+        "vue/require-default-prop": 0,
+        "vue/multi-word-component-names": 0,
+        "vue/no-reserved-props": 0
+      }
+    },
+    {
+      "files": ["**/demos/*", "script/**/*", "script/*", "*.js", "site/**/*", "site/*"],
+      "rules": {
+        "no-var-requires": 0,
+        "no-console": 0,
+        "no-unused-expressions": 0,
+        "no-alert": 0
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": 0
+      }
+    },
+    {
+      "files": ["*.test.js"],
+      "rules": {
+        "import/no-dynamic-require": "off",
+        "global-require": "off"
+      }
+    }
+  ]
 }

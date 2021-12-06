@@ -7,6 +7,7 @@
 <script>
 import { defineComponent } from 'vue';
 import Toast from '../index';
+
 export default defineComponent({
   setup() {
     return {

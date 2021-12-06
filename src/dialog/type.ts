@@ -91,11 +91,14 @@ export interface TdDialogProps {
    * 如果蒙层存在，点击蒙层时触发
    */
   onOverlayClick: (context: { e: MouseEvent }) => void;
-};
+}
 
 export type DialogEventSource = 'cancel' | 'overlay';
 
-export interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent };
+export interface DialogCloseContext {
+  trigger: DialogEventSource;
+  e: MouseEvent;
+}
 
 export type DialogMethod = (options?: DialogOptions) => DialogInstance;
 

@@ -1,10 +1,10 @@
 export type TabsDirection = 'vertical' | 'horizontal';
 
-export interface TabsProps {
-  activeName: string | number;
-  scrollable?: boolean;
-  direction?: TabsDirection;
-}
+// export interface TabsProps {
+//   activeName: string | number;
+//   scrollable?: boolean;
+//   direction?: TabsDirection;
+// }
 export const TabsProps = {
   /**
    * @description 初始化激活的选项卡name
@@ -31,12 +31,12 @@ export const TabsProps = {
     default: 'vertical',
   },
 };
-export interface TabPanelProps {
-  name: string;
-  label?: string;
-  disabled?: boolean;
-  forceRender?: boolean;
-}
+// export interface TabPanelProps {
+//   name: string;
+//   label?: string;
+//   disabled?: boolean;
+//   forceRender?: boolean;
+// }
 export const TabPanelProps = {
   /**
    * @description 选项板name

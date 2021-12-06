@@ -8,6 +8,7 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 import config from '@/config';
+
 const { prefix } = config;
 const name = `${prefix}-progress-demo`;
 

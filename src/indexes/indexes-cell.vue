@@ -1,15 +1,11 @@
 <template>
-  <t-cell
-    :data-key="state.key"
-    :title="state.title"
-    :value="state.value"
-    :link="state.link"
-    @click="handleClick" />
+  <t-cell :data-key="state.key" :title="state.title" :value="state.value" :link="state.link" @click="handleClick" />
 </template>
 
 <script lang="ts">
 import { reactive, defineComponent } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 
 const name = `${prefix}-indexes-cell`;

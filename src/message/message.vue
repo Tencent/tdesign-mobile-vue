@@ -3,8 +3,8 @@
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
       <slot>
         <slot name="icon">
-          <CheckCircleFilledIcon v-if="theme === 'success'" />
-          <ErrorCircleFilledIcon v-else />
+          <check-circle-filled-icon v-if="theme === 'success'" />
+          <error-circle-filled-icon v-else />
         </slot>
         <span :class="`${name}--txt`">{{ content }}</span>
       </slot>
@@ -14,8 +14,8 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { MessageType, MessageAlignType } from './message.interface';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { MessageType, MessageAlignType } from './message.interface';
 import config from '../config';
 
 const { prefix } = config;

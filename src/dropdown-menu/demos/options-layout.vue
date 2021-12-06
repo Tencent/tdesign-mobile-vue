@@ -1,13 +1,7 @@
 <template>
   <demo-container>
     <t-dropdown-menu>
-      <t-dropdown-item
-        v-model="valueS"
-        title="单列"
-        :options="optionsN"
-        select-mode="multi"
-        options-columns="1"
-      />
+      <t-dropdown-item v-model="valueS" title="单列" :options="optionsN" select-mode="multi" options-columns="1" />
       <t-dropdown-item
         v-model="valueM1"
         title="双列"
@@ -27,15 +21,15 @@
     </t-dropdown-menu>
     <p>
       单列菜单 选中项:
-      <strong>{{valueS.join(', ')}}</strong>
+      <strong>{{ valueS.join(', ') }}</strong>
     </p>
     <p>
       两栏菜单 选中项:
-      <strong>{{valueM1.join(', ')}}</strong>
+      <strong>{{ valueM1.join(', ') }}</strong>
     </p>
     <p>
       三栏菜单 选中项:
-      <strong>{{valueM2.join(', ')}}</strong>
+      <strong>{{ valueM2.join(', ') }}</strong>
     </p>
   </demo-container>
 </template>
@@ -90,6 +84,6 @@ export default defineComponent({
 p {
   font-size: 14px;
   line-height: 1.4;
-  margin: 1em .5em;
+  margin: 1em 0.5em;
 }
 </style>

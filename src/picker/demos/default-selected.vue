@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
   setup() {
     const roles = ['战士', '法师', '射手', '刺客', '坦克', '辅助'];

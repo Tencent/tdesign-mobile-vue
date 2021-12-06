@@ -2,18 +2,9 @@
   <div>
     <div class="tdesign-demo-block">
       <t-check-group ref="checkGroup" v-model="checkBoxs">
-        <t-checkbox
-          name="1"
-          title="单行标题">
-        </t-checkbox>
-        <t-checkbox
-          name="2"
-          title="单行标题">
-        </t-checkbox>
-        <t-checkbox
-          name="3"
-          title="单行标题">
-        </t-checkbox>
+        <t-checkbox name="1" title="单行标题"> </t-checkbox>
+        <t-checkbox name="2" title="单行标题"> </t-checkbox>
+        <t-checkbox name="3" title="单行标题"> </t-checkbox>
       </t-check-group>
     </div>
     <div class="tdesign-demo-block">
@@ -25,19 +16,23 @@
 
 <script>
 import { ref, defineComponent, watch } from 'vue';
+
 export default defineComponent({
   setup() {
     const checkGroup = ref(null);
     const checkBoxs = ref(['1']);
 
-    watch(() => checkBoxs.value, (val) => {
-      console.log(Array.from(val));
-    });
+    watch(
+      () => checkBoxs.value,
+      (val) => {
+        console.log(Array.from(val));
+      },
+    );
 
     return {
       checkBoxs,
       checkGroup,
-      toggleSelect: check => checkGroup.value.toggleAll(check),
+      toggleSelect: (check) => checkGroup.value.toggleAll(check),
     };
   },
 });

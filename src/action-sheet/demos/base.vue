@@ -9,7 +9,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="宫格型">
       <div class="button-demo" style="margin: 0 16px">
-        <t-button variant="outline" size="large"  @click="handleShowGridLine(6)">宫格型-单页宫格</t-button>
+        <t-button variant="outline" size="large" @click="handleShowGridLine(6)">宫格型-单页宫格</t-button>
         <t-button variant="outline" size="large" @click="handleShowGrid(6)">宫格型-多页宫格</t-button>
       </div>
     </tdesign-demo-block>
@@ -52,7 +52,12 @@ export default defineComponent({
       visible1: false,
       visible2: false,
       visible3: false,
-      items: ['默认按钮', { label: '自定义按钮', color: '#0052D9' }, { label: '失效按钮', disabled: true }, { label: '告警按钮', color: '#E34D59' }],
+      items: [
+        '默认按钮',
+        { label: '自定义按钮', color: '#0052D9' },
+        { label: '失效按钮', disabled: true },
+        { label: '告警按钮', color: '#E34D59' },
+      ],
       items1: [
         { label: '确定', color: '#0052d9' },
         { label: '删除', color: 'red' },
@@ -98,8 +103,7 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-.action-sheet-base button{
+.action-sheet-base button {
   margin-bottom: 16px;
-
 }
 </style>

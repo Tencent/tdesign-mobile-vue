@@ -2,7 +2,7 @@
   <div :class="rootClasses" :style="bgColorCustom">
     <div :class="`${name}__inner`">
       <div v-if="computedLeftIcon !== undefined" :class="`${name}__hd`">
-        <TNode :content="computedLeftIcon" :style="iconColorCustom"></TNode>
+        <t-node :content="computedLeftIcon" :style="iconColorCustom"></t-node>
       </div>
       <div :class="`${name}__bd`">
         <div ref="listDOM" :class="`${name}__list ${scrollable ? `${name}__list--scrolling` : ''}`">
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div v-if="computedRightIcon !== undefined" :class="`${name}__ft`" @click="handleClickIcon">
-        <TNode :content="computedRightIcon" :style="iconColorCustom"></TNode>
+        <t-node :content="computedRightIcon" :style="iconColorCustom"></t-node>
       </div>
     </div>
   </div>
@@ -45,17 +45,18 @@ import {
   h,
   getCurrentInstance,
 } from 'vue';
-import NoticeBarProps from './props';
 import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
+import NoticeBarProps from './props';
 
 import config from '../config';
 import { renderTNode, TNode } from '@/shared';
+
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;
 
 export default defineComponent({
   name,
-  components: { CloseIcon, ChevronRightIcon, TNode },
+  components: { TNode },
   props: NoticeBarProps,
   emits: ['click', 'close', 'detail'],
   setup(props, context: SetupContext) {
@@ -71,8 +72,8 @@ export default defineComponent({
 
     const rootClasses = computed(() => [`${name}`, `${name}--info`]);
     const iconType = {
-      ['link']: ChevronRightIcon,
-      ['closeable']: CloseIcon,
+      link: ChevronRightIcon,
+      closeable: CloseIcon,
     };
     const computedLeftIcon = computed(() => renderTNode(internalInstance, 'leftIcon'));
     const computedRightIcon = computed(() => {

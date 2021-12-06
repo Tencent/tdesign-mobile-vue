@@ -10,30 +10,14 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
+
 export default defineComponent({
   setup() {
     const curRoleIndex = ref(0);
-    const gamePlatOptions = ref([
-      '端游',
-      '手游',
-      'PS4',
-      'NS',
-    ]);
-    const gameLevelOptions = ref([
-      '3A大作',
-      '精品游戏',
-      '动作游戏',
-      '冒险游戏',
-      '射击游戏',
-    ]);
+    const gamePlatOptions = ref(['端游', '手游', 'PS4', 'NS']);
+    const gameLevelOptions = ref(['3A大作', '精品游戏', '动作游戏', '冒险游戏', '射击游戏']);
 
-    const gameOptions = ref([
-      '塞尔达传说',
-      '只狼',
-      '荒野大嫖客',
-      '王者荣耀',
-      '和平精英',
-    ]);
+    const gameOptions = ref(['塞尔达传说', '只狼', '荒野大嫖客', '王者荣耀', '和平精英']);
 
     const onColumnChange = (e: any) => {
       console.log('column:change', e);

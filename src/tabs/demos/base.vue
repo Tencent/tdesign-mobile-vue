@@ -59,14 +59,14 @@
       </t-tabs>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="选项卡状态">
-      <t-tabs active-name="first" >
+      <t-tabs active-name="first">
         <t-tab-panel name="first" label="标签页一">
           <p>标签一内容区</p>
         </t-tab-panel>
         <t-tab-panel name="second" label="标签页二">
           <p>标签二内容区</p>
         </t-tab-panel>
-        <t-tab-panel name="third"  :disabled="true" label="标签页三">
+        <t-tab-panel name="third" :disabled="true" label="标签页三">
           <p>标签三内容区</p>
         </t-tab-panel>
       </t-tabs>
@@ -108,8 +108,9 @@
 </template>
 
 <script lang="ts">
-import config from '@/config';
 import { defineComponent, ref } from 'vue';
+import config from '@/config';
+
 const { prefix } = config;
 const name = `${prefix}-tabs-demo`;
 export default defineComponent({

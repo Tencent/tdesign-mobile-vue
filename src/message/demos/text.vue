@@ -6,7 +6,7 @@
       <t-button size="large" variant="outline" @click="visible9 = true">警示</t-button>
       <t-button size="large" variant="outline" @click="visible10 = true">错误</t-button>
     </t-cell>
-    <t-message v-model="visible" >纯文本，不带icon</t-message>
+    <t-message v-model="visible">纯文本，不带icon</t-message>
     <t-message v-model="visible8" theme="success">纯文本，不带icon</t-message>
     <t-message v-model="visible9" theme="warning">纯文本，不带icon</t-message>
     <t-message v-model="visible10" theme="error">纯文本，不带icon</t-message>
@@ -15,6 +15,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue';
+
 export default defineComponent({
   setup() {
     const visible = ref(false);
@@ -28,9 +29,9 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.tdesign-text-message-btn{
+.tdesign-text-message-btn {
   background: transparent;
-  .t-button:not(:last-child){
+  .t-button:not(:last-child) {
     margin-right: 20px;
     margin-bottom: 12px;
   }

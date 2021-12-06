@@ -45,6 +45,7 @@ import {
   SetupContext,
   defineComponent,
 } from 'vue';
+import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
 import {
   CollapsePropsType,
   CollapseStateType,
@@ -52,9 +53,9 @@ import {
   CollapsePanelProps,
   onChangeEvent,
 } from './collapse.interface';
-import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import { findIndex, isFalsy, toArray } from './util';
+
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 function getExpandIconName(isActive: boolean) {

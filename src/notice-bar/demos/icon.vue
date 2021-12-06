@@ -23,11 +23,11 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .noticebar-demo {
-  background-color:#F5F5F5;
+  background-color: #f5f5f5;
 
   .t-cell {
-    background-color:transparent;
-    padding:0;
+    background-color: transparent;
+    padding: 0;
   }
 }
 </style>

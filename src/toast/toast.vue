@@ -2,7 +2,7 @@
   <div>
     <t-mask v-show="showOverlay" />
     <div :class="classes">
-      <TNode :content="iconContent"></TNode>
+      <t-node :content="iconContent"></t-node>
       <div v-if="message" :class="`${name}__text`">{{ message }}</div>
     </div>
   </div>
@@ -10,17 +10,18 @@
 
 <script lang="ts">
 import { LoadingIcon, CheckIcon, ErrorIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, TNode } from '@/shared';
 import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
+import { renderTNode, TNode } from '@/shared';
 import TMask from '../mask';
 import ToastProps from './props';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-toast`;
 
 export default defineComponent({
   name,
-  components: { TMask, LoadingIcon, CheckIcon, ErrorIcon, TNode },
+  components: { TMask, TNode },
   props: ToastProps,
   setup(props) {
     const toastTypeIcon = {

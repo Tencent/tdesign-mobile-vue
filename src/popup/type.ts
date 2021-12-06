@@ -70,4 +70,4 @@ export interface TdPopupProps {
    * 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发
    */
   onVisibleChange: (visible: boolean, context: PopupVisibleChangeContext) => void;
-};
+}

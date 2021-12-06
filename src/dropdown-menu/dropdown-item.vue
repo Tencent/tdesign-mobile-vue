@@ -15,7 +15,7 @@
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
                   >
-                    <CheckIcon v-if="isCheckedRadio(option.value)" />
+                    <check-icon v-if="isCheckedRadio(option.value)" />
                   </t-radio>
                 </div>
               </t-radio-group>
@@ -35,7 +35,7 @@
               <t-radio-group
                 v-if="level < treeState.leafLevel"
                 :model-value="treeState.selectList[level]"
-                @update:modelValue="selectTreeNode(level, $event)"
+                @update:model-value="selectTreeNode(level, $event)"
               >
                 <!-- 树形列表 - 父级节点 ST -->
                 <div
@@ -61,7 +61,7 @@
                     v-for="option in treeOptions[level]"
                     :key="option.value"
                     :model-value="treeState.selectList[level]"
-                    @update:modelValue="selectTreeNode(level, $event)"
+                    @update:model-value="selectTreeNode(level, $event)"
                   >
                     <div :class="`${name}__cell`">
                       <t-radio
@@ -70,7 +70,7 @@
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
                       >
-                        <CheckIcon v-if="option.value === treeState.selectList[level]" />
+                        <check-icon v-if="option.value === treeState.selectList[level]" />
                       </t-radio>
                     </div>
                   </t-radio-group>
@@ -82,7 +82,7 @@
                     v-for="option in treeOptions[level]"
                     :key="option.value"
                     :model-value="treeState.selectList[level]"
-                    @update:modelValue="selectTreeNode(level, $event)"
+                    @update:model-value="selectTreeNode(level, $event)"
                   >
                     <div :class="`${name}__cell`">
                       <t-checkbox :name="option.value" :title="option.title" :disabled="option.disabled"></t-checkbox>
@@ -121,7 +121,7 @@ import {
 import { CheckIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import TransAniControl from './trans-ani-control';
-import { default as DropdownItemProps } from './dropdown-item-props';
+import DropdownItemProps from './dropdown-item-props';
 import { TdDropdownMenuProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 
@@ -192,8 +192,8 @@ export default defineComponent({
       },
     ];
     const styleContent = computed(() => {
-      const selectMode = props.selectMode;
-      const optionsLayout = props.optionsLayout;
+      const { selectMode } = props;
+      const { optionsLayout } = props;
       const layoutCol = +(props.optionsColumns ?? 0);
       const isTree = optionsLayout === 'tree';
       const treeCol = isTree ? treeState.leafLevel + 1 : 0;
@@ -218,7 +218,7 @@ export default defineComponent({
         top: `${bottom}px`,
       };
       // console.log(`dropdown-item(${itemId.value}) changing state: `, val);
-      const duration = menuProps.duration;
+      const { duration } = menuProps;
       // 动画状态控制
       menuAniControl.setTo(
         +duration,
@@ -304,13 +304,13 @@ export default defineComponent({
             selectTreeNode(level, selectMode === 'multi' ? [] : undefined, false);
             break;
           }
+        } else if (!Array.isArray(thisValue)) {
+          const child: TdDropdownItemOption | undefined = list.find(
+            (child: TdDropdownItemOption) => child.value === thisValue,
+          );
+          node = child;
         } else {
-          if (!Array.isArray(thisValue)) {
-            const child: TdDropdownItemOption | undefined = list.find((child: TdDropdownItemOption) => child.value === thisValue);
-            node = child;
-          } else {
-            node = undefined;
-          }
+          node = undefined;
         }
       }
       treeState.leafLevel = Math.max(0, level);
@@ -318,9 +318,10 @@ export default defineComponent({
     };
     if (props.optionsLayout === 'tree') {
       watch(
-        () => JSON.stringify({
-          options: props.options,
-        }),
+        () =>
+          JSON.stringify({
+            options: props.options,
+          }),
         async () => {
           // fix: 这次微任务结束后，再重建选项。否则 oldVal 无法更新，导致无限调用
           await nextTick();
@@ -330,7 +331,9 @@ export default defineComponent({
       buildTreeOptions();
     }
     // 根据传入值更新当前选中
-    const updateSelectValue = (val: TdDropdownItemOptionValueType | TdDropdownItemOptionValueType[] | TdDropdownTreeValueType[] | undefined) => {
+    const updateSelectValue = (
+      val: TdDropdownItemOptionValueType | TdDropdownItemOptionValueType[] | TdDropdownTreeValueType[] | undefined,
+    ) => {
       const mode = props.selectMode;
       const layout = props.optionsLayout;
       if (layout === 'tree') {
@@ -353,7 +356,7 @@ export default defineComponent({
     // 跟踪 modelValue 更新选项
     watch(
       () => props.value,
-      val => updateSelectValue(val),
+      (val) => updateSelectValue(val),
     );
 
     // 底部按键是否可用

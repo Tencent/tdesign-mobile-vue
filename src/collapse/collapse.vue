@@ -10,6 +10,7 @@ import { toRefs, provide, reactive, SetupContext, defineComponent, watch } from 
 import { CollapsePropsType, CollapseProps, onChangeEvent } from './collapse.interface';
 import config from '../config';
 import { toggleElem } from './util';
+
 const { prefix } = config;
 const name = `${prefix}-collapse`;
 export default defineComponent({

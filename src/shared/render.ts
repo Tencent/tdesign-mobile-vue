@@ -16,7 +16,7 @@ interface JSXRenderContext {
 export const renderTNode = (
   instance: ComponentInternalInstance | null,
   name: string,
-  options?: Slots | JSXRenderContext | JSX.Element,
+  options?: Slots | JSXRenderContext,
 ): any => {
   if (instance === null) {
     return h('', null);
@@ -57,7 +57,7 @@ export const renderContent = (
   instance: ComponentInternalInstance | null,
   name1: string,
   name2: string,
-  options?: VNode | JSXRenderContext | JSX.Element,
+  options?: VNode | JSXRenderContext,
 ): any => {
   if (instance === null) {
     return h('', null);

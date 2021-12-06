@@ -1,4 +1,3 @@
-
 export function isArray(x: unknown): boolean {
   return Array.isArray(x);
 }

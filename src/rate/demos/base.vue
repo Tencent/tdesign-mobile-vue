@@ -40,7 +40,7 @@
         <t-rate v-model="current5" readonly />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 规格" summary="评价规格" style="padding-bottom: 16px;">
+    <tdesign-demo-block title="02 规格" summary="评价规格" style="padding-bottom: 16px">
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">评分 30</div>
         <t-rate v-model="current5" size="30px" clearable />
@@ -55,14 +55,8 @@
 
 <script>
 import { defineComponent, ref } from 'vue';
-import TCell from '../../cell';
-import TCellGroup from '../../cell-group';
 
 export default defineComponent({
-  components: {
-    TCell,
-    TCellGroup,
-  },
   setup() {
     const current = ref(3);
     const current1 = ref(3);

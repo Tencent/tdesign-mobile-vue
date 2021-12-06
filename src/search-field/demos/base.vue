@@ -1,10 +1,6 @@
 <template>
   <div>
-    <t-search-field
-      v-model="value"
-      placeholder="请输入关键字"
-      @change="onChange"
-    ></t-search-field>
+    <t-search-field v-model="value" placeholder="请输入关键字" @change="onChange"></t-search-field>
   </div>
 </template>
 
@@ -25,5 +21,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less" scoped>
-</style>
+<style lang="less" scoped></style>

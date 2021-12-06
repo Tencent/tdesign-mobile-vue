@@ -15,6 +15,7 @@
 import { SetupContext, defineComponent, computed } from 'vue';
 import { progressProps, ProgressPropsType } from './progress.interface';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-progress`;
 

@@ -4,7 +4,8 @@
       <div :class="`${name}-icon`" @click="onClickIcon">
         <span v-if="isDot" :class="`${name}-icon__dot`"></span>
         <div v-else :class="`${name}-icon__number`">
-          <slot name="icon" >{{index + 1}}</slot></div>
+          <slot name="icon">{{ index + 1 }}</slot>
+        </div>
       </div>
       <div :class="`${name}-content`">
         <div :class="`${name}-title`">
@@ -22,13 +23,7 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  inject,
-  defineComponent,
-  getCurrentInstance,
-  ComponentInternalInstance,
-} from 'vue';
+import { computed, inject, defineComponent, getCurrentInstance, ComponentInternalInstance } from 'vue';
 import StepItemProps from './step-item-props';
 import config from '../config';
 
@@ -46,7 +41,7 @@ export default defineComponent({
 
     const theme = computed(() => stepsProvide.theme);
 
-    const current = computed(() => (stepsProvide.current.value || stepsProvide.defaultCurrent || 0));
+    const current = computed(() => stepsProvide.current.value || stepsProvide.defaultCurrent || 0);
 
     const stepsStatus = computed(() => stepsProvide.status);
     const readonly = computed(() => stepsProvide.readonly);
@@ -67,7 +62,7 @@ export default defineComponent({
       return '';
     });
 
-    const onClickIcon  = (e: MouseEvent) => {
+    const onClickIcon = (e: MouseEvent) => {
       if (!readonly.value && theme.value !== 'dot') {
         stepsProvide.onClickItem(index.value, current.value, e);
       }

@@ -14,15 +14,19 @@
       <template #leftIcon>
         <img
           src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
-          style="width: 50px; height: 50px; margin-right: 8px;float:left;"
+          style="width: 50px; height: 50px; margin-right: 8px; float: left"
         />
       </template>
     </t-cell>
-    <t-cell title="双行标题，长文本自动换行，该选项的描述是一段很长的内容" description="一段很长很长的内容文字"></t-cell>
+    <t-cell
+      title="双行标题，长文本自动换行，该选项的描述是一段很长的内容"
+      description="一段很长很长的内容文字"
+    ></t-cell>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 export default defineComponent({});
 </script>

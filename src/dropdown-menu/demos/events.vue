@@ -30,11 +30,11 @@
     </t-dropdown-menu>
     <p>
       单选菜单 选中项:
-      <strong>{{valueS}}</strong>
+      <strong>{{ valueS }}</strong>
     </p>
     <p>
       多选菜单 选中项:
-      <strong>{{valueM.join(', ')}}</strong>
+      <strong>{{ valueM.join(', ') }}</strong>
     </p>
   </demo-container>
 </template>

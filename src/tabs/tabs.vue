@@ -8,24 +8,34 @@
           :class="{
             [`${name}__nav-item`]: true,
             [`${prefix}-is-active`]: item.name === currentName,
-            [`${prefix}-is-disabled`]: item.disabled
-          }" @click="(e) => tabClick(e, item)"
+            [`${prefix}-is-disabled`]: item.disabled,
+          }"
+          @click="(e) => tabClick(e, item)"
         >
-          {{item.label}}
+          {{ item.label }}
         </div>
-        <div ref="navLine" :class="`${name}__nav-line`"
-             :style="lineStyle"></div>
+        <div ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
       </div>
     </div>
-    <div :class="`${name}__content`" >
+    <div :class="`${name}__content`">
       <slot />
     </div>
   </div>
-
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, provide, ref, nextTick, onBeforeUnmount, readonly, Fragment, watch } from 'vue';
+import {
+  computed,
+  defineComponent,
+  onMounted,
+  provide,
+  ref,
+  nextTick,
+  onBeforeUnmount,
+  readonly,
+  Fragment,
+  watch,
+} from 'vue';
 import config from '../config';
 import { TabsProps } from './tabs.interface';
 
@@ -41,16 +51,18 @@ export default defineComponent({
     const navClasses = computed(() => [`${name}__nav`, { [`${name}__nav--scroll`]: props.scrollable }]);
 
     const currentName = ref(props.activeName);
-    watch(() => props.activeName, (newValue) => {
-      setCurrentName(newValue);
-      nextTick(() => {
-        moveToActiveTab();
-      });
-    });
-
+    watch(
+      () => props.activeName,
+      (newValue) => {
+        setCurrentName(newValue);
+        nextTick(() => {
+          moveToActiveTab();
+        });
+      },
+    );
 
     const { itemProps } = (() => {
-      let children: any[] = (slots.default ? slots.default() : []);
+      let children: any[] = slots.default ? slots.default() : [];
       const res: any[] = [];
       children.forEach((child) => {
         if (child.type === Fragment) {
@@ -77,11 +89,11 @@ export default defineComponent({
         const tab = navWrap.value.querySelector<HTMLElement>('.t-is-active');
         const line = navLine.value;
         if (props.direction === 'horizontal' && tab) {
-          lineStyle.value = `transform: translateY(${tab.offsetTop}px)`
-          ;
+          lineStyle.value = `transform: translateY(${tab.offsetTop}px)`;
         } else if (tab) {
-          lineStyle.value = `transform: translateX(${Number(tab.offsetLeft) + (Number(tab.offsetWidth) / 2) - (line.offsetWidth / 2)}px)`
-          ;
+          lineStyle.value = `transform: translateX(${
+            Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2
+          }px)`;
         }
       }
     };
@@ -92,7 +104,7 @@ export default defineComponent({
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
     });
-    const setCurrentName = (val: string | number)  => {
+    const setCurrentName = (val: string | number) => {
       emit('change', val);
       currentName.value = val;
     };

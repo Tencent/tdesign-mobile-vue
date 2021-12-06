@@ -29,7 +29,7 @@
           :disabled="tag.disabled"
           theme="primary"
           :size="tag.size"
-          @onClose="onClickClose(index)"
+          @on-close="onClickClose(index)"
           >{{ tag.name }}</t-tag
         >
       </div>
@@ -37,7 +37,7 @@
     <tdesign-demo-block title="02 状态" summary="标签状态">
       <div class="tag-demo">
         <t-check-tag :checked="true">已点击</t-check-tag>
-        <t-check-tag :defaultChecked='false'>未点击</t-check-tag>
+        <t-check-tag :default-checked="false">未点击</t-check-tag>
         <t-check-tag disabled>不可点击</t-check-tag>
       </div>
     </tdesign-demo-block>
@@ -54,6 +54,7 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 import config from '@/config';
+
 const { prefix } = config;
 const name = `${prefix}-tag-base-demo`;
 

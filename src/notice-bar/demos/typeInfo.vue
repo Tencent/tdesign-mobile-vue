@@ -2,10 +2,7 @@
   <div class="noticebar-demo">
     <t-cell-group>
       <t-cell value-align="left">
-        <t-notice-bar
-          content="提示文字描述提示文字描述提示文字描述"
-          type="info"
-        />
+        <t-notice-bar content="提示文字描述提示文字描述提示文字描述" type="info" />
       </t-cell>
     </t-cell-group>
   </div>
@@ -23,11 +20,11 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .noticebar-demo {
-  background-color:#F5F5F5;
+  background-color: #f5f5f5;
 
   .t-cell {
-    background-color:transparent;
-    padding:0;
+    background-color: transparent;
+    padding: 0;
   }
 }
 </style>

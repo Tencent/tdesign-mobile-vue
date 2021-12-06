@@ -5,6 +5,5 @@ export default {
   delete: 'Delete',
   complete: 'Complete',
   loading: 'Loading...',
-  button: {
-  },
+  button: {},
 };

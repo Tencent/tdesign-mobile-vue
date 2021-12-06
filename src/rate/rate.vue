@@ -5,18 +5,18 @@
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
             <slot name="icon">
-              <StarFilledIcon :size="size" :style="iconHalfStyle(n)" />
+              <star-filled-icon :size="size" :style="iconHalfStyle(n)" />
             </slot>
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
             <slot name="icon">
-              <StarFilledIcon :size="size" :style="iconFullStyle(n)" />
+              <star-filled-icon :size="size" :style="iconFullStyle(n)" />
             </slot>
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
           <slot name="icon">
-            <StarFilledIcon :size="size" :style="iconFullStyle(n)" />
+            <star-filled-icon :size="size" :style="iconFullStyle(n)" />
           </slot>
         </span>
       </li>

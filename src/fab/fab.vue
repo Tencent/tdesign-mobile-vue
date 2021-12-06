@@ -9,6 +9,7 @@
 import { computed, defineComponent } from 'vue';
 import { AddIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-fab`;
 

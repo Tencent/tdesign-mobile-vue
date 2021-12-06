@@ -1,8 +1,9 @@
 <template>
-  <img :src="img" alt="">
+  <img :src="img" alt="" />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 export default defineComponent({
   props: {
     img: {

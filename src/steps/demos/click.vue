@@ -1,11 +1,7 @@
 <template>
   <div class="cell-base">
     <t-steps v-model="current" :readonly="false" class="demo-steps">
-      <t-step
-        v-for="(item, index) in stepData"
-        :key="index"
-        :title="item.title"
-        :content="item.content"></t-step>
+      <t-step v-for="(item, index) in stepData" :key="index" :title="item.title" :content="item.content"></t-step>
     </t-steps>
   </div>
 </template>
@@ -13,6 +9,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import config from '@/config';
+
 const { prefix } = config;
 const name = `${prefix}-steps-demo`;
 export default defineComponent({

@@ -61,7 +61,6 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-import DemoContainer from './demo-container.vue';
 
 const buildTree = (length: number, ...childLengthes: number[]) => {
   const tree: any[] = [];
@@ -80,9 +79,6 @@ const buildTree = (length: number, ...childLengthes: number[]) => {
 };
 
 export default defineComponent({
-  components: {
-    DemoContainer,
-  },
   setup() {
     const emptyArr = new Array(20).fill(null);
     const numberArr = emptyArr.map((_, i) => ({
@@ -132,8 +128,8 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.t-dropdown-menu{
-  padding-top:16px;
+.t-dropdown-menu {
+  padding-top: 16px;
 }
 .dropdown-menu-wrap {
   background: #f5f5f5;

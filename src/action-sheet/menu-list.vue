@@ -8,7 +8,7 @@
       @click="handleSelect(index)"
     >
       <slot name="cell" :item="item">
-        <div :class="`${name}__cell-text`" :style="{color: item.color}">{{ item.label }}</div>
+        <div :class="`${name}__cell-text`" :style="{ color: item.color }">{{ item.label }}</div>
       </slot>
     </button>
   </div>

@@ -2,25 +2,13 @@
   <div class="demo-segmented-control">
     <div class="demo-segmented-control__wrap">
       <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items.slice(0,2)"
-          @change="change"
-        ></t-segmented-control>
+        <t-segmented-control v-model="defaultValue" :items="items.slice(0, 2)" @change="change"></t-segmented-control>
       </t-cell>
       <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items.slice(0,3)"
-          @change="change"
-        ></t-segmented-control>
+        <t-segmented-control v-model="defaultValue" :items="items.slice(0, 3)" @change="change"></t-segmented-control>
       </t-cell>
       <t-cell>
-        <t-segmented-control
-          v-model="defaultValue"
-          :items="items"
-          @change="change"
-        ></t-segmented-control>
+        <t-segmented-control v-model="defaultValue" :items="items" @change="change"></t-segmented-control>
       </t-cell>
     </div>
   </div>
@@ -29,6 +17,7 @@
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
 import { ModelValueProps } from '../segmented-control.interface';
+
 export default defineComponent({
   setup() {
     const defaultValue = ref('item_1');
@@ -65,7 +54,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.t-cell{
+.t-cell {
   margin: 12px 0;
 }
 </style>

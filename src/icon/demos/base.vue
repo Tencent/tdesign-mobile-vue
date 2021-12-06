@@ -923,6 +923,7 @@
 import { Icon } from 'tdesign-icons-vue-next';
 
 import { defineComponent } from 'vue';
+
 export default defineComponent({
   components: { Icon },
 });

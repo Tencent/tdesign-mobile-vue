@@ -5,6 +5,7 @@
 <script lang="ts">
 import { reactive, defineComponent } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 const componentName = `${prefix}-indexes-anchor`;
 

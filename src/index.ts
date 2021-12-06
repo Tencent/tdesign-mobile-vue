@@ -13,6 +13,7 @@ const install = function (app: App, option?: Record<string, unknown>): void {
   });
 };
 
+// eslint-disable-next-line no-undef
 const version = typeof __VERSION__ === 'undefined' ? '' : __VERSION__;
 
 export { install, version };

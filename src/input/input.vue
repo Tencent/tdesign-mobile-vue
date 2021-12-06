@@ -5,8 +5,7 @@
         <div v-if="label" :class="styleLabel">{{ label }}</div>
       </slot>
     </template>
-    <template #leftIcon>
-    </template>
+    <template #leftIcon> </template>
     <template #note>
       <div :class="`${name}-wrap`">
         <input
@@ -19,7 +18,7 @@
           @blur="handleBlur"
         />
         <div v-if="clearable && innerValue.length > 0" :class="`${name}-wrap--icon`" @click="handleClear">
-          <CloseCircleFilledIcon />
+          <close-circle-filled-icon />
         </div>
         <div v-if="hasSuffix" :class="`${name}-wrap--suffix`">
           <slot name="suffix"></slot>
@@ -27,7 +26,7 @@
         <div v-if="hasRightIcon" :class="`${name}-wrap--icon`">
           <slot name="rightIcon">
             <div v-if="suffix">{{ suffix }}</div>
-            <ChevronRightIcon v-if="rightIcon" @click="handleClickIcon" />
+            <chevron-right-icon v-if="rightIcon" @click="handleClickIcon" />
           </slot>
         </div>
       </div>
@@ -59,6 +58,7 @@
 import { ChevronRightIcon, CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { ref, computed, watch, onMounted, defineComponent } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-input`;
 

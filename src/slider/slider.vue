@@ -59,6 +59,7 @@
 <script lang="ts">
 import { ref, computed, SetupContext, reactive, defineComponent, ExtractPropTypes, PropType } from 'vue';
 import config from '../config';
+
 const { prefix } = config;
 const name = `${prefix}-slider`;
 
@@ -254,21 +255,15 @@ export default defineComponent({
           value.value = value.value.sort((a, b) => a - b);
           context.emit('update:modelValue', value);
           context.emit('change', value);
-        } else {
-          if (formatValue !== touchData.startValue) {
-            value.value[index] = formatValue;
-          }
+        } else if (formatValue !== touchData.startValue) {
+          value.value[index] = formatValue;
         }
-      } else {
-        if (end && formatValue !== touchData.startValue) {
-          value.value = [formatValue];
-          context.emit('update:modelValue', formatValue);
-          context.emit('change', formatValue);
-        } else {
-          if (formatValue !== touchData.startValue) {
-            value.value = [formatValue];
-          }
-        }
+      } else if (end && formatValue !== touchData.startValue) {
+        value.value = [formatValue];
+        context.emit('update:modelValue', formatValue);
+        context.emit('change', formatValue);
+      } else if (formatValue !== touchData.startValue) {
+        value.value = [formatValue];
       }
     }
 

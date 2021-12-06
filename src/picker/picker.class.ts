@@ -25,27 +25,47 @@ const ANIMATION_TIME = 460;
  */
 class Picker {
   holder: HTMLElement | HTMLDivElement | HTMLUListElement;
+
   options: PickerOptions;
+
   list: HTMLUListElement | null = null;
+
   elementItems: HTMLLIElement[] = [];
+
   height: number = DEFAULT_HOLDER_HEIGHT;
+
   curIndex = 0;
+
   itemClassName = '';
+
   itemSelectedClassName = '';
+
   itemHeight: number = DEFAULT_ITEM_HEIGHT;
+
   lastMoveTime = 0;
+
   lastMoveStart = 0;
+
   stopInertiaMove = false;
+
   startY = 0;
+
   isPicking = false;
+
   offsetYOfStartBound: number = OFFSET_OF_BOUND;
+
   offsetYOfEndBound: number = -OFFSET_OF_BOUND;
+
   offsetY = 0;
+
   offsetYOfStart = 0;
+
   offsetYOfEnd = 0;
+
   onChange: (index: number) => void;
+
   constructor(options: PickerOptions) {
-    if (!options.el) throw 'options el needed!';
+    if (!options.el) throw new Error('options el needed!');
     this.holder = options.el;
     this.options = options || {};
     this.onChange = options.onChange;
@@ -98,10 +118,10 @@ class Picker {
   }
 
   bindEvent(): void {
-    this.holder.addEventListener('touchstart', e => this.touchStartHandler(e as TouchEvent), false);
-    this.holder.addEventListener('touchmove', e => this.touchMoveHandler(e as TouchEvent), false);
-    this.holder.addEventListener('touchend', e => this.touchEndHandler(e as TouchEvent), false);
-    this.holder.addEventListener('touchcancel', e => this.touchEndHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchstart', (e) => this.touchStartHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchmove', (e) => this.touchMoveHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchend', (e) => this.touchEndHandler(e as TouchEvent), false);
+    this.holder.addEventListener('touchcancel', (e) => this.touchEndHandler(e as TouchEvent), false);
   }
 
   touchStartHandler(event: TouchEvent): void {

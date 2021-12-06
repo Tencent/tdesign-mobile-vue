@@ -8,24 +8,17 @@
         :content="item.content"
         :icon="item.icon"
         :status="item.status"
-        ></t-step-item>
+      ></t-step-item>
     </slot>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  toRefs,
-  provide,
-  computed,
-  SetupContext,
-  defineComponent,
-  reactive,
-  ComponentInternalInstance,
-} from 'vue';
+import { toRefs, provide, computed, SetupContext, defineComponent, reactive, ComponentInternalInstance } from 'vue';
 import StepsProps from './props';
 import TStepItem from './step-item.vue';
 import config from '../config';
+import { TdStepsProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-steps`;
@@ -37,11 +30,7 @@ export default defineComponent({
   props: StepsProps,
   emits: ['update:current', 'change'],
   setup(props, context: SetupContext) {
-    const baseClass = computed(() => [
-      name,
-      `${name}--${props.layout}`,
-      `${name}--${props.theme}-anchor`,
-    ]);
+    const baseClass = computed(() => [name, `${name}--${props.layout}`, `${name}--${props.theme}-anchor`]);
 
     const options = computed(() => props.options);
 

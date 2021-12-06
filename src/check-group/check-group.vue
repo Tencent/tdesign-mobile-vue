@@ -110,7 +110,7 @@ export default defineComponent({
     const toggleAll = (checked: boolean) => {
       const names = Object.keys(children.value).filter((name: string) => {
         const child = children.value[name];
-        const isChecked = !!~checkedValues?.value?.indexOf(name);
+        const isChecked = !!checkedValues?.value?.indexOf(name);
         if (child.disabled) {
           return isChecked;
         }

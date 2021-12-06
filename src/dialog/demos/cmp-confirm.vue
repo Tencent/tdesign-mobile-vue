@@ -2,9 +2,7 @@
   <div :class="`${name}`">
     <t-cell-group title="组件调用: 确认类弹框——默认">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeDialogVisible(1)">
-          默认用法
-        </t-button>
+        <t-button theme="primary" @click="changeDialogVisible(1)"> 默认用法 </t-button>
         <t-dialog
           v-model="isShowDialog1"
           type="confirm"
@@ -14,16 +12,15 @@
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
           @confirm="onConfirm"
-          @cancel="onCancel">
+          @cancel="onCancel"
+        >
         </t-dialog>
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="组件调用: 确认类弹框——input用法">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeDialogVisible(2)">
-          input用法
-        </t-button>
+        <t-button theme="primary" @click="changeDialogVisible(2)"> input用法 </t-button>
         <t-dialog
           v-model="isShowDialog2"
           type="confirm"
@@ -34,12 +31,13 @@
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
           @confirm="onConfirm"
-          @cancel="onCancel">
+          @cancel="onCancel"
+        >
           <template #footer-cancel>
-            <div style="color:grey;font-size:18px;">我不同意</div>
+            <div style="color: grey; font-size: 18px">我不同意</div>
           </template>
           <template #footer-confirm>
-            <div style="color:blue;font-size:18px;">我同意</div>
+            <div style="color: blue; font-size: 18px">我同意</div>
           </template>
         </t-dialog>
       </t-cell>

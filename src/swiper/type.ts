@@ -51,9 +51,13 @@ export interface TdSwiperProps {
    * 轮播切换时触发
    */
   onChange: (current: number, context: { source: SwiperChangeSource }) => void;
-};
+}
 
-export interface Navigation { type?: NavigationVariant; minShowNum?: number; showSlideBtn?: boolean  };
+export interface Navigation {
+  type?: NavigationVariant;
+  minShowNum?: number;
+  showSlideBtn?: boolean;
+}
 
 export type NavigationVariant = 'dots' | 'dots-bar' | 'fraction';
 

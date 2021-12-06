@@ -2,7 +2,7 @@
   <t-popup v-model="open" position="left">
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
-        <TNode :content="computedIcon"></TNode>
+        <t-node :content="computedIcon"></t-node>
         <div :class="dSideBarItemNameClassName">{{ item.name }}</div>
       </div>
     </div>
@@ -13,7 +13,6 @@
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent, getCurrentInstance } from 'vue';
 import config from '../config';
 import { SidebarItem } from './drawer.interface';
-import ImgIcon from './imageIcon.vue';
 import { TNode, renderTNode } from '../shared';
 
 const { prefix } = config;
@@ -21,7 +20,7 @@ const name = `${prefix}-drawer`;
 
 export default defineComponent({
   name,
-  components: { ImgIcon, TNode },
+  components: { TNode },
   props: {
     modelValue: {
       type: Boolean,
