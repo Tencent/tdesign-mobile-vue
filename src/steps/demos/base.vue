@@ -33,6 +33,11 @@
           <t-step title="步骤描述"></t-step>
           <t-step title="步骤描述"></t-step>
         </t-steps>
+        <t-steps
+          v-model="current5"
+          :readonly="false"
+          :options="stepData">
+        </t-steps>
         <t-steps v-model="current5" :readonly="false">
           <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
           <t-step title="选中步骤" content="辅助信息文字最多两行"></t-step>
@@ -41,9 +46,9 @@
         </t-steps>
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block summary="横向可操作步骤条">
+    <tdesign-demo-block summary="横向带图标可操作步骤条">
       <div class="step-demo">
-        <t-steps v-model="current6" :readonly="false" type="icon">
+        <t-steps v-model="current6" :readonly="false">
           <t-step title="步骤描述" content="辅助信息文字最多两行">
             <template #icon>
               <div class="step-icon">
@@ -107,12 +112,12 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="竖向只读步骤条">
       <div class="step-demo">
-        <t-steps v-model="current10" direction="vertical">
+        <t-steps v-model="current10" layout="vertical">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="当前步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
         </t-steps>
-        <t-steps v-model="current11" direction="vertical">
+        <t-steps v-model="current11" layout="vertical">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="错误步骤" content="辅助信息文字最多两行" status="error"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
@@ -121,7 +126,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="竖向可操作步骤条">
       <div class="step-demo">
-        <t-steps v-model="current14" direction="vertical" :readonly="false">
+        <t-steps v-model="current14" layout="vertical" :readonly="false">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="当前步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
@@ -130,7 +135,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="竖向简化只读步骤条">
       <div class="step-demo">
-        <t-steps v-model="current12" type="dot" direction="vertical">
+        <t-steps v-model="current12" theme="dot" layout="vertical">
           <t-step title="事件描述"></t-step>
           <t-step title="事件描述"></t-step>
           <t-step title="事件描述"></t-step>
@@ -139,7 +144,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="竖向带图标只读步骤条">
       <div class="step-demo">
-        <t-steps v-model="current15" direction="vertical">
+        <t-steps v-model="current15" layout="vertical">
           <t-step title="已完成步骤" content="辅助信息文字最多两行">
             <template #icon>
               <div class="step-icon">
@@ -185,7 +190,7 @@
         </t-steps>
       </div>
       <div class="step-demo">
-        <t-steps v-model="current16" direction="vertical">
+        <t-steps v-model="current16" layout="vertical">
           <t-step title="已完成步骤" content="辅助信息文字最多两行">
             <template #icon>
               <div class="step-icon">
@@ -230,8 +235,10 @@
           </t-step>
         </t-steps>
       </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="自定义内容步骤条">
       <div class="step-demo">
-        <t-steps v-model="current13" direction="vertical">
+        <t-steps v-model="current13" layout="vertical">
           <t-step
             title="已完成步骤"
             content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。"
@@ -278,6 +285,26 @@ export default defineComponent({
     const current14 = ref(1);
     const current15 = ref(1);
     const current16 = ref(1);
+    const current17 = ref(0);
+
+    const stepData = ref([
+      {
+        title: '步骤描述',
+        content: '辅助信息文字最多两行',
+      },
+      {
+        title: '选中步骤',
+        content: '辅助信息文字最多两行',
+      },
+      {
+        title: '未完成',
+        content: '辅助信息文字最多两行',
+      },
+      {
+        title: '未完成',
+        content: '辅助信息文字最多两行',
+      },
+    ]);
 
     watch(current6, (now, pre) => {
       console.log(now, pre);
@@ -301,6 +328,8 @@ export default defineComponent({
       current14,
       current15,
       current16,
+      current17,
+      stepData,
     };
   },
 });

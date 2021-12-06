@@ -1,6 +1,6 @@
 <template>
   <div class="cell-base">
-    <t-steps v-model="current" direction="vertical" class="demo-steps">
+    <t-steps v-model="current" layout="vertical" class="demo-steps">
       <t-step title="已完成步骤" content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。">
         <template #extra>
           <div class="extra-img">
