@@ -1,5 +1,5 @@
 <template>
-  <t-popup :class="name" :visible="currentVisible" position="bottom" @close="handleClose">
+  <t-popup :class="name" :visible="currentVisible" placement="bottom" @close="handleClose">
     <div :class="rootClasses">
       <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect">
         <template #cell="slotProps">
@@ -23,7 +23,8 @@
 
 <script lang="ts">
 import { ref, computed, watch, defineComponent, PropType, ComputedRef } from 'vue';
-import { ActionSheetType, ItemType } from './action-sheet.interface';
+import { emitEvent } from '@/shared/emit';
+import { ActionSheetType, ActionSheetProps, ItemType } from './action-sheet.interface';
 import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
@@ -91,7 +92,7 @@ export default defineComponent({
     },
   },
   emits: ['select', 'update:modelValue', 'cancel', 'close'],
-  setup(props, context) {
+  setup(props: ActionSheetProps, context) {
     const actionItems = ref([]);
 
     const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
@@ -122,16 +123,16 @@ export default defineComponent({
     );
 
     const handleCancel = () => {
-      context.emit('cancel');
+      emitEvent(props, context, 'cancel');
       context.emit('update:modelValue', false);
     };
 
     const handleSelect = (index: number) => {
-      context.emit('select', props.items[index], index);
+      emitEvent(props, context, 'select', props.items[index], index);
     };
 
     const handleClose = () => {
-      context.emit('close');
+      emitEvent(props, context, 'close');
       context.emit('update:modelValue', false);
     };
 

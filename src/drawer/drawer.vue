@@ -1,5 +1,5 @@
 <template>
-  <t-popup v-model="open" position="left">
+  <t-popup v-model="open" placement="left">
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
         <t-node :content="computedIcon"></t-node>

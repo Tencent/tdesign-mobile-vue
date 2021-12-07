@@ -15,10 +15,9 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
+import { emitEvent } from '@/shared/emit';
 import { PlacementType, PopupProps } from './popup.interface';
-
 import TMask from '../mask';
-
 import config from '../config';
 
 const { prefix } = config;
@@ -119,11 +118,11 @@ export default defineComponent({
     watch(
       () => currentVisible.value,
       (val) => {
-        context.emit('visible-change', val);
+        emitEvent(props, context, 'visible-change', val);
         const cls = `${prefix}-overflow-hidden`;
         if (val) {
           document.body.classList.add(cls);
-          context.emit('open');
+          emitEvent(props, context, 'open');
         } else {
           document.body.classList.remove(cls);
         }
@@ -131,7 +130,7 @@ export default defineComponent({
     );
 
     const handleMaskClick = () => {
-      context.emit('close');
+      emitEvent(props, context, 'close');
       context.emit('update:modelValue', false);
     };
 
@@ -141,8 +140,8 @@ export default defineComponent({
       }
     };
 
-    const afterLeave = () => context.emit('closed');
-    const afterEnter = () => context.emit('opened');
+    const afterLeave = () => emitEvent(props, context, 'closed');
+    const afterEnter = () => emitEvent(props, context, 'opened');
 
     return {
       name: ref(name),

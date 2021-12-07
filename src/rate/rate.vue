@@ -36,6 +36,7 @@
 import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
 import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
+import { emitEvent } from '@/shared/emit';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;
@@ -149,7 +150,7 @@ export default defineComponent({
     });
 
     function emit(val: number) {
-      context.emit('change', val);
+      emitEvent(props, context, 'change', val);
       context.emit('update:modelValue', val);
     }
 

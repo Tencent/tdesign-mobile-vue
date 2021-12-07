@@ -6,7 +6,7 @@ export type ItemType = {
   disabled?: boolean;
 };
 
-export interface PopupProps {
+export interface ActionSheetProps {
   modelValue: boolean;
   visible: boolean;
   count: number;

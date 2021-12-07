@@ -1,7 +1,7 @@
 <template>
   <td-doc-layout>
     <td-header slot="header" platform="mobile" framework="vue"></td-header>
-    <td-doc-aside ref="tdDocAside" title="Vue for Mobile"></td-doc-aside>
+    <td-doc-aside ref="tdDocAside" title="Vue3 for Mobile"></td-doc-aside>
 
     <router-view :style="contentStyle" @loaded="contentLoaded" :docType="docType" />
   </td-doc-layout>
