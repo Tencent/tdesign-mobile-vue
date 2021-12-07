@@ -17,7 +17,7 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, getCurrentInstance, PropType } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
-import { MessageType, MessageAlignType } from './message.interface';
+import { TdMessageProps, MessageAlignType, MessageThemeList } from './type';
 import config from '../config';
 import { emitEvent } from '@/shared/emit';
 import { renderTNode, TNode } from '@/shared';
@@ -48,7 +48,7 @@ export default defineComponent({
      * @attribute theme
      */
     theme: {
-      type: String as PropType<MessageType>,
+      type: String as PropType<MessageThemeList>,
       default: 'info',
     },
     /**
@@ -82,7 +82,7 @@ export default defineComponent({
     },
   },
   emits: ['update:modelValue', 'visible-change', 'open', 'opened', 'close', 'closed'],
-  setup(props, context: SetupContext) {
+  setup(props: TdMessageProps, context: SetupContext) {
     const root = ref(null);
     const internalInstance = getCurrentInstance();
     const closeBtnContent = computed(() => renderTNode(internalInstance, 'closeBtn'));

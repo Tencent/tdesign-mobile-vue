@@ -5,6 +5,12 @@
  * updated at 2021-09-19 22:44:46
  * */
 
+ export type Item = {
+  label: string;
+  color?: string;
+  disabled?: boolean;
+};
+
 export interface TdActionSheetProps {
   /**
    * 设置取消按钮的文本
@@ -51,5 +57,5 @@ export interface TdActionSheetProps {
   /**
    * 选择菜单项时触发
    */
-  onSelect: (selected: Item | String, index) => void;
+  onSelect: (selected: Item | String, index: number) => void;
 }
