@@ -62,7 +62,7 @@ onClose | Function |  | 组件准备关闭时触发。`() => {}` | N
 onClosed | Function |  | 组件关闭且动画结束后执行。`() => {}` | N
 onOpen | Function |  | 组件准备展示时触发。`() => {}` | N
 onOpened | Function |  | 组件展示且动画结束后执行。`() => {}` | N
-onVisibleChange | Function |  | 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发。`(visible: boolean, context: PopupVisibleChangeContext) => {}` | N
+onVisibleChange | Function |  | 当浮层隐藏或显示时触发。`(visible: boolean) => {}` | N
 
 ### Popup Events
 名称 | 参数 | 描述
@@ -71,4 +71,4 @@ close | - | 组件准备关闭时触发
 closed | - | 组件关闭且动画结束后执行
 open | - | 组件准备展示时触发
 opened | - | 组件展示且动画结束后执行
-visible-change | `(visible: boolean, context: PopupVisibleChangeContext)` | 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发
+visible-change | `(visible: boolean)` | 当浮层隐藏或显示时触发

@@ -36,6 +36,7 @@
 import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
 import { StarFilledIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
+import { TdRateProps } from './type';
 import { emitEvent } from '@/shared/emit';
 
 const { prefix } = config;
@@ -125,7 +126,7 @@ export default defineComponent({
   components: { StarFilledIcon },
   props: rateProps,
   emits: ['change', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props: TdRateProps, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
     const actualVal = computed(() => props.modelValue || props.value) as ComputedRef<number>;
     const rateText = computed(() => {
