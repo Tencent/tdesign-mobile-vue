@@ -2,14 +2,8 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-09-19 22:44:46
+ * updated at 2021-12-07 19:30:36
  * */
-
- export type Item = {
-  label: string;
-  color?: string;
-  disabled?: boolean;
-};
 
 export interface TdActionSheetProps {
   /**
@@ -25,7 +19,7 @@ export interface TdActionSheetProps {
   /**
    * 菜单项
    */
-  items: Array<string | { label: string; color: string; disable: boolean }>;
+  items: Array<string | ActionSheetItem>;
   /**
    * 是否显示取消按钮
    * @default true
@@ -57,5 +51,7 @@ export interface TdActionSheetProps {
   /**
    * 选择菜单项时触发
    */
-  onSelect: (selected: Item | String, index: number) => void;
-}
+  onSelect: (selected: ActionSheetItem | String, index: number) => void;
+};
+
+export interface ActionSheetItem {label: string; color?: string; disabled?: boolean };
