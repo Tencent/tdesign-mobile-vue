@@ -5,14 +5,19 @@ export default {
       url: 'components',
       docs: [
         {
+          title: 'Button 按钮',
+          name: 'button',
+          component: () => import('@/button/demos/base.vue'),
+        },
+        {
           title: 'Badge 徽标',
           name: 'badge',
           component: () => import('@/badge/demos/base.vue'),
         },
         {
-          title: 'Button 按钮',
-          name: 'button',
-          component: () => import('@/button/demos/base.vue'),
+          title: 'Divider 分隔符',
+          name: 'divider',
+          component: () => import('@/divider/demos/base.vue'),
         },
         {
           title: 'ButtonGroup 按钮组',
