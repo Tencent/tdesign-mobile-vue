@@ -7,8 +7,8 @@
           <error-circle-filled-icon v-else />
         </slot>
         <span :class="`${name}--txt`">{{ content }}</span>
-        <CloseIcon v-if="closeBtn === true" @click="onClose" />
-        <TNode v-else :content="closeBtnContent"></TNode>
+        <close-icon v-if="closeBtn === true" @click="onClose" />
+        <t-node v-else :content="closeBtnContent" />
       </slot>
     </div>
   </transition>
