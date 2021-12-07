@@ -6,7 +6,7 @@
   <t-message
     v-model="visible"
     content="这是一条带关闭的消息通知，常驻可关闭"
-    :closeBtn="true"
+    :close-btn="true"
     :duration="0"
   ></t-message>
   <t-message v-model="visible1" content="这是一条带操作的消息通知">
