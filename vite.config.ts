@@ -21,8 +21,8 @@ module.exports = {
   build: {
     rollupOptions: {
       input: {
-        sites: './docs/index.html',
-        mobile: './docs/mobile.html',
+        sites: 'index.html',
+        mobile: 'mobile.html',
       },
     },
   },
