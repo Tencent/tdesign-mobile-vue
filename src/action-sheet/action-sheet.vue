@@ -28,7 +28,7 @@ import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
 import config from '../config';
-import { TdActionSheetProps, Item } from './type';
+import { TdActionSheetProps, ActionSheetItem } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-action-sheet`;
@@ -55,7 +55,7 @@ export default defineComponent({
      * @attribute items
      */
     items: {
-      type: Array as PropType<Array<Item | string>>,
+      type: Array as PropType<Array<ActionSheetItem | string>>,
       required: true,
     },
     /**
