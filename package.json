@@ -1,8 +1,8 @@
 {
-  "name": "tdesign-vue-mobile",
+  "name": "tdesign-mobile-vue",
   "purename": "tdesign",
   "version": "0.3.6",
-  "description": "tdesign-vue-mobile",
+  "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "homepage": "http://tdesign.tencent.com/vue-mobile/",
   "bugs": {
@@ -40,7 +40,7 @@
     "mobile",
     "tdesign"
   ],
-  "title": "tdesign-vue-mobile",
+  "title": "tdesign-mobile-vue",
   "types": "dist/index.d.ts",
   "main": "lib/index-lib.js",
   "module": "es/index.js",
