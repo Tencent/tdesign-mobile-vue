@@ -1,5 +1,5 @@
 <template>
-  <span :class="classes" :style="style" @click="handleClick">
+  <span :class="classes" :style="style" :aria-disabled="disabled" role="button" @click="handleClick">
     <span :class="`${baseClass}__icon`">
       <t-node :content="iconContent"></t-node>
     </span>
