@@ -29,7 +29,7 @@
           :disabled="tag.disabled"
           theme="primary"
           :size="tag.size"
-          @on-close="onClickClose(index)"
+          @close="onClickClose(index)"
           >{{ tag.name }}</t-tag
         >
       </div>
@@ -116,6 +116,7 @@ export default defineComponent({
     ]);
 
     function onClickClose(index: number) {
+      console.log(index);
       closableTags.value.splice(index, 1);
     }
 

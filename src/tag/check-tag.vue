@@ -1,5 +1,12 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="handleClick">
+  <button
+    :class="classes"
+    :disabled="disabled"
+    role="button"
+    :aria-disabled="disabled"
+    :aria-checked="checked"
+    @click="handleClick"
+  >
     <div :class="`${baseClass}__icon`">
       <t-node :content="iconContent"></t-node>
     </div>
