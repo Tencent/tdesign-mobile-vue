@@ -58,7 +58,7 @@
         </t-cell>
         <t-cell title="单行标题">
           <template #note>
-            <t-badge :offset="[5, 0]" shape="ribbon">
+            <t-badge shape="ribbon">
               <template #count> New </template>
             </t-badge>
           </template>
@@ -68,18 +68,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  setup() {
-    return {
-      iconUrl:
-        'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
-    };
-  },
-});
-</script>
 <style lang="less" scoped>
 .badge-demo {
   display: flex;

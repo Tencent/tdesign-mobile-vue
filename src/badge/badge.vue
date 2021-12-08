@@ -59,8 +59,8 @@ export default defineComponent({
       yOffset = isNaN(Number(yOffset)) ? yOffset : `${yOffset}px`;
       return {
         background: props.color,
-        right: `${xOffset}px`,
-        top: `${yOffset}px`,
+        right: xOffset,
+        top: yOffset,
       };
     });
 
