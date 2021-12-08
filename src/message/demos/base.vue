@@ -83,11 +83,6 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-// .message-base {
-//   .t-button:not(:last-child) {
-//     margin-right: 20px;
-//   }
-// }
 .tdesign-demo-block {
   .t-button:not(:last-child) {
     margin-bottom: 12px;

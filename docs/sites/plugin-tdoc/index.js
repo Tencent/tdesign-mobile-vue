@@ -50,7 +50,6 @@ function customRenderInfo(source, id, md) {
 }
 
 export default function createTDesignPlugin() {
-
   const vuePlugin = createVuePlugin({
     ssr: false,
     include: [/\.md$/],

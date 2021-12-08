@@ -28,7 +28,7 @@ import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
 import config from '../config';
-import { TdActionSheetProps, ActionSheetItem } from './type';
+import { ActionSheetItem } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-action-sheet`;
@@ -92,7 +92,7 @@ export default defineComponent({
     },
   },
   emits: ['select', 'update:modelValue', 'cancel', 'close'],
-  setup(props: TdActionSheetProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const actionItems = ref([]);
 
     const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;

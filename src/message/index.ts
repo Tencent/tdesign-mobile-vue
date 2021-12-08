@@ -31,11 +31,26 @@ function create(props: TdMessageProps): void {
   });
 }
 
-(['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((type: MessageThemeList): void => {
-  Message[type] = (options: TdMessageProps | string) => {
-    let props = {
-      content: '',
-      theme: type,
+const defaultProps: TdMessageProps = {
+  align: 'left',
+  closeBtn: '',
+  content: '',
+  duration: 3000,
+  theme: 'info',
+  visible: false,
+  zIndex: 5000,
+  onClose: () => {},
+  onClosed: () => {},
+  onOpen: () => {},
+  onOpened: () => {},
+  onVisibleChange: () => {},
+};
+
+(['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((theme: MessageThemeList): void => {
+  Message[theme] = (options: TdMessageProps | string) => {
+    let props: TdMessageProps = {
+      ...defaultProps,
+      theme,
     };
 
     if (typeof options === 'string') {
