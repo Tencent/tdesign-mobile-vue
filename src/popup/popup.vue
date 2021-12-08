@@ -16,7 +16,6 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
 import { emitEvent } from '@/shared/emit';
-import { TdPopupProps } from './type';
 import TMask from '../mask';
 import config from '../config';
 
@@ -95,7 +94,7 @@ export default defineComponent({
     },
   },
   emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
-  setup(props: TdPopupProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);
