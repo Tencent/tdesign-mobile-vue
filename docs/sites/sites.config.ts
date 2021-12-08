@@ -32,19 +32,26 @@ export default {
       type: 'component', // 组件文档
       children: [
         {
-          title: 'Icon 图标',
-          name: 'icon',
-          meta: { docType: 'base' },
-          path: '/vue-mobile/components/icon',
-          component: () => import('@/icon/icon.md'),
-        },
-        {
           title: 'Button 按钮',
           name: 'button',
           meta: { docType: 'base' },
           path: '/vue-mobile/components/button',
           component: () => import('@/button/button.md'),
         },
+        {
+          title: 'Divider 分割符',
+          name: 'divider',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/divider',
+          component: () => import('@/divider/divider.md'),
+        },
+        {
+          title: 'Icon 图标',
+          name: 'icon',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/icon',
+          component: () => import('@/icon/icon.md'),
+        }
       ],
     },
     {
