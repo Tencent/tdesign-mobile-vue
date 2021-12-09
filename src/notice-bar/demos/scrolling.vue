@@ -6,14 +6,14 @@
           v-model="scrollVisible"
           mode="closeable"
           content="提示文字描述提示文字描述提示文字描述提示文字描述"
-          :left-icon="() => TIconSoundFilled"
+          :left-icon="() => SoundIcon"
           scrollable
           @close="handleScrollNoticeBar"
         />
         <t-notice-bar
           mode="closeable"
           content="提示文字描述提示文字描述提示文字描述提示文字描述"
-          :left-icon="() => TIconSoundFilled"
+          :left-icon="() => SoundIcon"
           scrollable
           type="error"
           :delay="2"
@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import TIconSoundFilled from '@/icon/sound-filled.vue';
+import { SoundIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
@@ -51,7 +51,7 @@ export default defineComponent({
       handleScrollNoticeBar,
       scrollVisible2,
       handleScrollNoticeBar2,
-      TIconSoundFilled,
+      SoundIcon,
     };
   },
 });
