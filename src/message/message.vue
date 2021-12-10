@@ -8,7 +8,7 @@
         </slot>
         <span :class="`${name}--txt`">{{ content }}</span>
         <close-icon v-if="closeBtn === true" @click="onClose" />
-        <t-node v-else :content="closeBtnContent"></t-node>
+        <t-node v-else :content="closeBtnContent" />
       </slot>
     </div>
   </transition>
@@ -17,7 +17,7 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, getCurrentInstance, PropType } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
-import { MessageType, MessageAlignType } from './message.interface';
+import { MessageAlignType, MessageThemeList } from './type';
 import config from '../config';
 import { emitEvent } from '@/shared/emit';
 import { renderTNode, TNode } from '@/shared';
@@ -48,7 +48,7 @@ export default defineComponent({
      * @attribute theme
      */
     theme: {
-      type: String as PropType<MessageType>,
+      type: String as PropType<MessageThemeList>,
       default: 'info',
     },
     /**
@@ -71,7 +71,9 @@ export default defineComponent({
      * @description 关闭按钮
      * @attribute close-btn
      */
-    closeBtn: [String, Boolean, TNode],
+    closeBtn: {
+      type: [String, Boolean, Object] as PropType<string | boolean | typeof TNode>,
+    },
     /**
      * @description 自定义层级
      * @attribute zIndex
@@ -82,7 +84,7 @@ export default defineComponent({
     },
   },
   emits: ['update:modelValue', 'visible-change', 'open', 'opened', 'close', 'closed'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const root = ref(null);
     const internalInstance = getCurrentInstance();
     const closeBtnContent = computed(() => renderTNode(internalInstance, 'closeBtn'));

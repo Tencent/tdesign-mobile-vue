@@ -16,7 +16,6 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
 import { emitEvent } from '@/shared/emit';
-import { PlacementType, PopupProps } from './popup.interface';
 import TMask from '../mask';
 import config from '../config';
 
@@ -73,7 +72,7 @@ export default defineComponent({
      * @default bottom
      */
     placement: {
-      type: String as PropType<PlacementType>,
+      type: String,
       default: 'bottom',
       validator: (val: string) => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
     },
@@ -95,7 +94,7 @@ export default defineComponent({
     },
   },
   emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
-  setup(props: PopupProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);
