@@ -51,7 +51,7 @@ export default defineComponent({
   name,
   setup() {
     const state = reactive({
-      number1: 10,
+      number1: 1,
       number2: 9999,
       number3: 3,
       number4: 0,
