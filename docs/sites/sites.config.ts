@@ -5,11 +5,11 @@ export default {
       type: 'document', // 普通文档
       children: [
         {
-          title: '说明',
-          name: 'readme',
+          title: '快速开始',
+          name: 'getting-started',
           meta: { docType: 'explain' },
-          path: '/vue-mobile/components/readme',
-          component: () => import('@/../README.md'),
+          path: '/vue-mobile/components/getting-started',
+          component: () => import('@/../getting-started.md'),
         },
         {
           title: '贡献指南',
