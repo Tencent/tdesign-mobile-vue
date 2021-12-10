@@ -22,7 +22,12 @@
 
     <t-message v-model="visible">这是一条纯文字的消息通知</t-message>
     <t-message v-model="visible1" content="这是一条带图标的消息通知"></t-message>
-    <t-message v-model="visible2" content="这是一条带关闭的消息通知，常驻可关闭" :closeBtn="true" :duration="0"></t-message>
+    <t-message
+      v-model="visible2"
+      content="这是一条带关闭的消息通知，常驻可关闭"
+      :close-btn="true"
+      :duration="0"
+    ></t-message>
     <t-message v-model="visible3" content="这是一条带操作的消息通知">
       <template #closeBtn>
         <t-button theme="primary" variant="outline" size="small" shape="round">按钮</t-button>
