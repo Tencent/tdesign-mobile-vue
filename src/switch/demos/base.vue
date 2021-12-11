@@ -1,33 +1,74 @@
 <template>
-  <div class="cell-base">
-    <t-cell-group title="基础开关">
-      <t-cell label="标题">
-        <t-switch v-model="checked" @change="onChange"> </t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch></t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch v-model="disabledValue" disabled> </t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch disabled> </t-switch>
-      </t-cell>
-    </t-cell-group>
-    <t-cell-group title="带描述开关">
-      <t-cell label="标题">
-        <t-switch v-model="value" text="描述信息"> </t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch text="描述信息"> </t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch v-model="disabledValue" disabled text="描述信息"> </t-switch>
-      </t-cell>
-      <t-cell label="标题">
-        <t-switch disabled text="描述信息"> </t-switch>
-      </t-cell>
-    </t-cell-group>
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">Switch 开关</h1>
+    <p class="summary">开关用于切换当个设置项的状态，开启、关闭为两个互斥的操作</p>
+    <tdesign-demo-block title="01 类型" summary="基础开关">
+      <t-cell-group>
+        <t-cell title="开关">
+          <template #note>
+            <t-switch v-model="checked" @change="onChange"> </t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="开关">
+          <template #note>
+            <t-switch @change="onChange"> </t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="自定义颜色">
+          <template #note>
+            <t-switch v-model="checked" :colors="['gray', 'green']" @change="onChange"></t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="异步操作">
+          <template #note>
+            <t-switch v-model="checked" @change="onChange"> </t-switch>
+          </template>
+        </t-cell>
+      </t-cell-group>
+    </tdesign-demo-block>
+    <tdesign-demo-block>
+      <t-cell-group>
+        <t-cell title="开关">
+          <template #note>
+            <t-switch v-model="value" label="描述信息"> </t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="开关">
+          <template #note>
+            <t-switch label="描述信息"> </t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="自定义颜色">
+          <template #note>
+            <t-switch disabled label="描述信息"> </t-switch>
+          </template>
+        </t-cell>
+      </t-cell-group>
+    </tdesign-demo-block>
+    <tdesign-demo-block title="02 状态" summary="开关状态">
+      <t-cell-group>
+        <t-cell title="开关开启禁用">
+          <template #note>
+            <t-switch v-model="value" disabled> </t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="开关关闭禁用">
+          <template #note>
+            <t-switch></t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="开关开启禁用">
+          <template #note>
+            <t-switch v-model="value" disabled label="描述信息"> </t-switch>
+          </template>
+        </t-cell>
+        <t-cell title="开关关闭禁用">
+          <template #note>
+            <t-switch label="描述信息"></t-switch>
+          </template>
+        </t-cell>
+      </t-cell-group>
+    </tdesign-demo-block>
   </div>
 </template>
 

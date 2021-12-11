@@ -1,83 +1,35 @@
 <template>
   <span :class="classes">
-    <span v-if="text" :class="textClasses">
-      {{ text }}
+    <span v-if="label" :class="textClasses">
+      {{ label }}
     </span>
-    <span :class="nodeClasses" @click="toggle"> </span>
+    <span :class="nodeClasses" :style="backgroundColor" @click="handleToggle"> </span>
   </span>
 </template>
 
 <script lang="ts">
-import { ref, computed, toRefs, SetupContext, defineComponent, ExtractPropTypes } from 'vue';
+import { computed, toRefs, defineComponent, h } from 'vue';
+import { useToggle } from '@/shared';
 import config from '../config';
+import SwitchProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-switch`;
 
-export const switchProps = {
-  /**
-   * @description 当前选择的值
-   * @attribute modelValue
-   */
-  modelValue: {
-    type: [String, Number, Boolean],
-    default: false,
-  },
-  /**
-   * @description 打开的值
-   * @attribute activeValue
-   */
-  activeValue: {
-    type: [String, Number, Boolean],
-    default: true,
-  },
-  /**
-   * @description 关闭的值
-   * @attribute inactiveValue
-   */
-  inactiveValue: {
-    type: [String, Number, Boolean],
-    default: false,
-  },
-  /**
-   * @description 是否禁用
-   * @attribute disabled
-   */
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-  /**
-   * @description 描述文字
-   * @attribute text
-   */
-  text: {
-    type: String,
-    default: '',
-  },
-};
-export type SwitchPropsType = ExtractPropTypes<typeof switchProps>;
-
 export default defineComponent({
   name,
-  props: switchProps,
-  emits: ['update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
-    const switchValue = ref(false);
-    const currentValue = computed({
-      set(val) {
-        switchValue.value = val as boolean;
-        context.emit('update:modelValue', val);
-      },
-      get() {
-        return props.modelValue || switchValue.value;
-      },
-    });
+  props: SwitchProps,
+  emits: ['change'],
+  setup(props, context) {
+    const switchValues = props.customValue || [false, true];
+    const { state, toggle } = useToggle(switchValues, props.value);
+
+    const checked = computed(() => state.value === switchValues[1]);
 
     const classes = computed(() => [
       `${name}`,
       {
-        [`${name}--checked`]: currentValue.value === props.activeValue,
+        [`${name}--checked`]: checked.value,
         [`${prefix}-is-disabled`]: props.disabled,
       },
     ]);
@@ -92,33 +44,34 @@ export default defineComponent({
     const nodeClasses = computed(() => [
       `${name}__node`,
       {
-        [`${name}__node--checked`]: currentValue.value === props.activeValue,
+        [`${name}__node--checked`]: checked.value,
         [`${prefix}-is-disabled`]: props.disabled,
       },
     ]);
 
-    function handleToggle() {
-      const checked = currentValue.value === props.activeValue ? props.inactiveValue : props.activeValue;
+    const backgroundColor = computed(() => {
+      if (!props.disabled && props.colors) {
+        return `background-color: ${checked.value ? props.colors[1] : props.colors[0]}`;
+      }
+      return ``;
+    });
 
-      currentValue.value = checked;
-      context.emit('change', checked);
-    }
-
-    function toggle(event: Event) {
+    function handleToggle(event: Event) {
       event.preventDefault();
       if (props.disabled) {
         return false;
       }
-      handleToggle();
+      toggle();
+      context.emit('change', state.value);
     }
-
     return {
+      name,
       classes,
       textClasses,
       nodeClasses,
-      toggle,
-      currentValue,
+      backgroundColor,
       ...toRefs(props),
+      handleToggle,
     };
   },
 });
