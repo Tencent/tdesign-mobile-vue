@@ -135,8 +135,7 @@
     "vite-plugin-tdoc": "^1.0.4",
     "vue": "^3.2.4",
     "vue-eslint-parser": "^8.0.1",
-    "vue-router": "4.0.11",
-    "vue-type-check": "^1.1.0"
+    "vue-router": "4.0.11"
   },
   "config": {
     "commitizen": {
