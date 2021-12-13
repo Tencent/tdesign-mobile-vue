@@ -8,15 +8,3 @@
   </div>
 </template>
 <script lang="ts" setup></script>
-<style lang="less">
-.swiper-item--demo {
-  width: 100%;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f33;
-  font-size: 20px;
-  color: #fff;
-}
-</style>
