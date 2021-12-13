@@ -69,7 +69,7 @@ export default {
           title: 'CountDown 倒计时',
           name: 'CountDown',
           meta: { docType: 'data' },
-          path: '/vue-mobile/components/badge',
+          path: '/vue-mobile/components/count-down',
           component: () => import('@/count-down/count-down.md'),
         },
         {

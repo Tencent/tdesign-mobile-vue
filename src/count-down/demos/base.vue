@@ -1,13 +1,13 @@
 <template>
- <t-countdown
+  <t-countdown
     content="ok"
     time="200000"
     millisecond="true"
+    :auto-start="false"
+    format="HH:mm:ss:sss"
     @Change="onChange"
     @Finish="onFinish"
-    :autoStart="false"
-    format="HH:mm:ss:sss"
-  >
+  />
 </template>
 
 <script lang="ts">
@@ -31,5 +31,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less">
-</style>
+<style lang="less"></style>
