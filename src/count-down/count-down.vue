@@ -25,21 +25,27 @@ export default defineComponent({
   },
   setup(props) {
     const { format, millisecond, onFinish, onChange } = props || {};
+    const interval = millisecond ? 1 : 1000;
+    console.log('millisecond', typeof millisecond);
     //
     const time = ref(Number(props?.time || 0));
     const showTimes = reactive(getShowTimes(getRemainTimes(time?.value), format));
 
     // 开始倒记时函数
     const StartCountdown = () => {
-      const interval = !millisecond ? 1 : 1000;
       timer = setInterval(() => {
-        const times = getRemainTimes(time.value);
         if (time.value <= 0) {
           onFinish?.();
           return clearInterval(timer);
         }
+        //
+        const times = getRemainTimes(time.value);
         onChange?.(times);
-        time.value -= 1;
+        if (millisecond) {
+          time.value -= 1;
+        } else {
+          time.value -= 1000;
+        }
         return getShowTimes(times, format)?.forEach?.((i, idx) => {
           // showTimes[idx].mark = i?.mark;
           showTimes[idx].value = i?.value;
