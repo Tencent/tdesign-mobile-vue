@@ -1,7 +1,6 @@
-import Countdown from './count-down.vue';
+import _Countdown from './count-down.vue';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
 
-const _Countdown: WithInstallType<typeof Countdown> = withInstall(Countdown);
-export default _Countdown;
+export const Countdown: WithInstallType<typeof _Countdown> = withInstall(_Countdown);

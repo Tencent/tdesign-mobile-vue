@@ -8,7 +8,8 @@
     format="HH:mm:ss:sss"
     @Change="onChange"
     @Finish="onFinish"
-  />
+  ></t-countdown>
+  <t-button type="button" theme="default"> default按钮 </t-button>
 </template>
 
 <script lang="ts">
