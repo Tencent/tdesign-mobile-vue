@@ -4,12 +4,11 @@
     content="ok"
     time="200000"
     millisecond="true"
-    :auto-start="false"
+    auto-start="true"
     format="HH:mm:ss:sss"
-    @Change="onChange"
-    @Finish="onFinish"
-  ></t-countdown>
-  <t-button type="button" theme="default"> default按钮 </t-button>
+    @change="onChange"
+    @finish="onFinish"
+  />
 </template>
 
 <script lang="ts">
