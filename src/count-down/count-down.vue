@@ -31,7 +31,7 @@ export default defineComponent({
 
     // 开始倒记时函数
     const StartCountdown = () => {
-      const interval = millisecond ? 1 : 1000;
+      const interval = !millisecond ? 1 : 1000;
       timer = setInterval(() => {
         const times = getRemainTimes(time.value);
         if (time.value <= 0) {
