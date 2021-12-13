@@ -4,10 +4,10 @@
     content="ok"
     time="200000"
     millisecond="true"
-    :auto-start="false"
+    auto-start="true"
     format="HH:mm:ss:sss"
-    @Change="onChange"
-    @Finish="onFinish"
+    @change="onChange"
+    @finish="onFinish"
   />
 </template>
 

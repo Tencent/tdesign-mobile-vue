@@ -59,6 +59,7 @@ export default defineComponent({
     );
     // return
     return {
+      name,
       time,
       showTimes,
       content: props?.content,
