@@ -16,7 +16,7 @@ import { getRemainTimes, getShowTimes } from './utils';
 
 let timer: any = 0; // 定时器
 const { prefix } = config;
-const name = `${prefix}-collapse`;
+const name = `${prefix}-countdown`;
 
 export default defineComponent({
   name,
@@ -39,7 +39,7 @@ export default defineComponent({
           return clearInterval(timer);
         }
         onChange?.(times);
-        time.value = time.value - 1;
+        time.value -= 1;
         return getShowTimes(times, format)?.forEach?.((i, idx) => {
           // showTimes[idx].mark = i?.mark;
           showTimes[idx].value = i?.value;
@@ -72,4 +72,3 @@ export default defineComponent({
   },
 });
 </script>
-

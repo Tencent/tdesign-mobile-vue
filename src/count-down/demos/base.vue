@@ -1,4 +1,5 @@
 <template>
+  <div>基本用法</div>
   <t-countdown
     content="ok"
     time="200000"
