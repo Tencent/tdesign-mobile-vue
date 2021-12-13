@@ -1,6 +1,11 @@
-# Progress 进度条
+---
+title: Progress 进度条
+description: 用于需要准确告知某个任务的当前进度
+spline: base
+isComponent: true
+toc: false
+---
 
-用于需要准确告知某个任务的当前进度
 
 ## 组件类型
 

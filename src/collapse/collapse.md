@@ -1,4 +1,10 @@
-# Collapse 折叠面板
+---
+title: Collapse 折叠面板
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 

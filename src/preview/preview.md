@@ -1,4 +1,10 @@
-# Preview 图片预览
+---
+title: Preview 图片预览
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 基础用法
 

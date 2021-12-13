@@ -1,6 +1,11 @@
-# Picker 选择器
+---
+title: Picker 选择器
+description: 定义：在一组预设数据中进行选择
+spline: base
+isComponent: true
+toc: false
+---
 
-定义：在一组预设数据中进行选择
 
 ## 组件类型
 
@@ -67,12 +72,12 @@ TDesign目前只提供一种基础类型
 
 | 事件名  | 说明                 | 回调参数               |
 | ------- | -------------------- | ---------------------- |
-| change  | 选中变化时候触发     | [{value, index}]       |
-| confirm | 点击确定按钮时候触发 | {value: [], index: []} |
+| change  | 选中变化时候触发     | `[{value, index}]`       |
+| confirm | 点击确定按钮时候触发 | `{value: [], index: []}` |
 | cancel  | 点击取消时候触发     | -                      |
 
 ### PickerItem Events
 
 | 事件名 | 说明                   | 回调参数       |
 | ------ | ---------------------- | -------------- |
-| change | 候选项滚动变化时候触发 | {value, index} |
+| change | 候选项滚动变化时候触发 | `{value, index}` |

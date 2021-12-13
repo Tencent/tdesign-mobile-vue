@@ -1,6 +1,10 @@
-# Input 输入框
-
-定义：用于单行或多行文本信息输入
+---
+title: Input 输入框
+description: 定义：用于单行或多行文本信息输入
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 

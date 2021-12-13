@@ -1,6 +1,10 @@
-# Rate 评分
-
-定义：用户对某行为/事物进行打分
+---
+title: Rate 评分
+description: 定义：用户对某行为/事物进行打分
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 

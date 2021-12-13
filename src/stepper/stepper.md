@@ -1,6 +1,10 @@
-# Stepper 步进器
-
-定义：带加减按钮的数字输入框
+---
+title: Stepper 步进器
+description: 定义：带加减按钮的数字输入框
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 

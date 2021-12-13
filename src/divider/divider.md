@@ -1,5 +1,10 @@
-# Divider 分割符
-用于分割、组织、细化有一定逻辑的组织元素内容和页面结构。
+---
+title: Divider 分割符
+description: 用于分割、组织、细化有一定逻辑的组织元素内容和页面结构。
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 基础分割线
 基础分割线是没有文字的独立线条，又分为水平分割线和垂直分割线。

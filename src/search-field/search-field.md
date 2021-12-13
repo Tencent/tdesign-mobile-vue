@@ -1,6 +1,10 @@
-# SearchField 搜索框
-
-定义：用于用户输入搜索信息，并进行页面内容搜索
+---
+title: SearchField 搜索框
+description: 定义：用于用户输入搜索信息，并进行页面内容搜索
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 
