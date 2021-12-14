@@ -1,5 +1,5 @@
 <template>
-  <div ref="swiper" :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
+  <div :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
     <div
       ref="swiperContainer"
       :class="`${name}-container`"
@@ -61,6 +61,7 @@ export default defineComponent({
   emits: ['change', 'update:current'],
   setup(props, context) {
     const self = getCurrentInstance();
+    const swiperContainer = ref(null);
     // eslint-disable-next-line vue/no-setup-props-destructure
     const { height = 180, current = null } = props;
     const state: {
@@ -85,6 +86,7 @@ export default defineComponent({
     });
     // 获取容器节点（实时获取，才能获取到最新的节点）
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
+    // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     // 初始化轮播图元素
     const initSwiper = () => {
       const _swiperContainer = getContainer();
@@ -101,7 +103,7 @@ export default defineComponent({
 
     // 勾子函数初始化部分数据
     onMounted(() => {
-      // console.log('组件实例', self);
+      console.log('组件实例', swiperContainer.value);
       const _swiperContainer = getContainer();
       state.itemLength = _swiperContainer.children?.length || 0;
       const itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
@@ -138,19 +140,20 @@ export default defineComponent({
     };
     // 确认是否已经移动到最后一个元素，每次transitionend事件后即检查
     const handleAnimationEnd = () => {
+      removeAnimation();
       if (state.activeIndex >= state.itemLength) {
         console.log('到了最后一个元素', state.activeIndex, state.itemLength);
-        removeAnimation();
+        // removeAnimation();
         state.activeIndex = 0;
         move(0);
       }
       if (state.activeIndex <= -1) {
         // console.log('到了第一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = state.itemLength - 1;
-        removeAnimation();
+        // removeAnimation();
         move(state.itemLength - 1);
       }
-      context.emit('change', state.activeIndex);
+      state.isControl && context.emit('change', state.activeIndex);
     };
     // 停止自动播放
     const stopAutoplay = () => {
@@ -178,7 +181,7 @@ export default defineComponent({
       // }
       addAnimation();
       move(state.activeIndex);
-      context.emit('update:current', state.activeIndex);
+      // state.isControl && context.emit('update:current', state.activeIndex);
       startAutoplay();
     };
     // 移动到下一个
@@ -187,7 +190,7 @@ export default defineComponent({
       state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
-      context.emit('update:current', state.activeIndex);
+      // state.isControl && context.emit('update:current', state.activeIndex);
       startAutoplay();
     };
     let touchStartX = 0;
@@ -244,12 +247,13 @@ export default defineComponent({
         console.info(`受控页数变化,从${oldPage}->${newPage}`);
         if (state.isControl) {
           state.activeIndex = newPage || 0;
-          addAnimation();
+          // addAnimation();
           move(state.activeIndex);
         }
       },
     );
     return {
+      swiperContainer,
       name,
       onTouchStart,
       onTouchMove,

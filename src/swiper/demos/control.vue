@@ -21,14 +21,14 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import PaginationType from './pagination-type.vue';
-import Direction from './direction.vue';
+// import PaginationType from './pagination-type.vue';
+// import Direction from './direction.vue';
 
 export default defineComponent({
-  components: {
-    'pagination-type': PaginationType,
-    'demo-direction': Direction,
-  },
+  // components: {
+  //   'pagination-type': PaginationType,
+  //   'demo-direction': Direction,
+  // },
   setup() {
     const state: {
       currentPage: number;
