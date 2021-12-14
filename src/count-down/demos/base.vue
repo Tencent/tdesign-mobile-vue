@@ -79,7 +79,7 @@
           @change="onChange"
           @finish="onFinish"
         />
-        <p class="format">带单位</p>
+        <p class="format">无底色带单位</p>
       </div>
     </tdesign-demo-block>
 
