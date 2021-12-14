@@ -43,7 +43,7 @@
 import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, toRefs } from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
-import config from '@/config';
+import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -112,7 +112,7 @@ export default defineComponent({
       }
     });
     // eslint-disable-next-line no-undef
-    let autoplayTimer: Number | NodeJS.Timeout | null = null;
+    let autoplayTimer: Number | undefined;
     /**
      * 移动节点
      */
@@ -153,15 +153,15 @@ export default defineComponent({
     // 停止自动播放
     const stopAutoplay = () => {
       if (!autoplayTimer) return;
-      clearInterval(autoplayTimer);
-      autoplayTimer = null;
+      window.clearInterval(+autoplayTimer);
+      autoplayTimer = undefined;
     };
     // 自动播放
     const startAutoplay = () => {
       // 如果是受控组件，永远不自动播放
       if (typeof current === 'number') return false;
-      if (!autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
-      autoplayTimer = setInterval(() => {
+      if (!autoplay || autoplayTimer !== undefined) return false; // 防止多次创建定时器
+      autoplayTimer = window.setInterval(() => {
         state.activeIndex += 1;
         addAnimation();
         move(state.activeIndex);
@@ -210,7 +210,7 @@ export default defineComponent({
       if (direction.value === 'horizontal') {
         setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
       } else {
-        setOffset(_container, -((activeIndex + 1) * height.value - distanceY), 'Y');
+        setOffset(_container, -((activeIndex + 1) * (height.value || 180) - distanceY), 'Y');
       }
     };
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。

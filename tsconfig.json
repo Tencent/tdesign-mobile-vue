@@ -21,7 +21,6 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@TdTypes/*": ["./src/types/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },

@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-02 17:06:42
+ * updated at 2021-12-14 00:39:24
  * */
 
 import { TdSliderProps } from './type';
@@ -11,7 +11,7 @@ import { PropType } from 'vue';
 export default {
   /** 是否禁用组件 */
   disabled: Boolean,
-  /** 刻度标记，示例：[0, 10, 40, 200] 或者 { 5:  '5¥', 10: '10%' } */
+  /** 刻度标记，示例：`[0, 10, 40, 200]` 或者 `{ 5:  '5¥', 10: '10%' }` */
   marks: {
     type: [Object, Array] as PropType<TdSliderProps['marks']>,
     default: () => ({}),
@@ -34,6 +34,14 @@ export default {
   step: {
     type: Number,
     default: 1,
+  },
+  /** 滑块值 */
+  value: {
+    type: [Number, Array] as PropType<TdSliderProps['value']>,
+  },
+  /** 滑块值，非受控属性 */
+  defaultValue: {
+    type: [Number, Array] as PropType<TdSliderProps['defaultValue']>,
   },
   /** 滑块值变化时触发 */
   onChange: Function as PropType<TdSliderProps['onChange']>,

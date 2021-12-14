@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
-import { renderContent, TNode } from '@/shared';
+import { renderContent, TNode } from '../shared';
 import DividerProps from './props';
 import config from '../config';
 
