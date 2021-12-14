@@ -1,11 +1,13 @@
 <template>
-  <p v-if="!time">{{ content }}</p>
-  <template v-if="time">
-    <template v-for="item in showTimes" :key="item.mark">
-      <span>{{ item.value }}</span>
-      <label v-if="item.mark">{{ item.mark }}</label>
+  <div :class="`${name}`">
+    <p v-if="!time">{{ content }}</p>
+    <template v-if="time">
+      <template v-for="item in showTimes" :key="item.mark">
+        <span>{{ item.value }}</span>
+        <label v-if="item.mark">{{ item.mark }}</label>
+      </template>
     </template>
-  </template>
+  </div>
 </template>
 
 <script lang="ts">
@@ -25,8 +27,7 @@ export default defineComponent({
   },
   setup(props) {
     const { format, millisecond, onFinish, onChange } = props || {};
-    const interval = millisecond ? 1 : 1000;
-    console.log('millisecond', typeof millisecond);
+    const interval = millisecond ? 1 : 1000; // 间隔
     //
     const time = ref(Number(props?.time || 0));
     const showTimes = reactive(getShowTimes(getRemainTimes(time?.value), format));
