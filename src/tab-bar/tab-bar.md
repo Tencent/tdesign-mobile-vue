@@ -1,14 +1,10 @@
 ---
 title: TabBar 标签栏
-description: 位于页面底部，用于在不同功能模块之间进行快速切换
+description: 用于在不同功能模块之间进行快速切换，位于页面底部。
 spline: base
 isComponent: true
 toc: false
 ---
-
-
-## 组件类型
-在TDesign中，拥有三种不同类型的标签栏：纯文本标签栏、文本加图标标签栏、纯图标标签栏
 
 ### 纯文本标签栏
 

@@ -1,15 +1,10 @@
 ---
 title: Button 按钮
-description: 定义：按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+description: 按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
 spline: base
 isComponent: true
 toc: false
 ---
-
-
-## 组件类型
-
-在TDesign中，拥有 3 种不同形式的按钮：基础按钮、图标按钮、吸底按钮。
 
 ### 基础按钮
 

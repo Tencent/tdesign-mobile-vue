@@ -1,14 +1,10 @@
 ---
 title: Badge 徽标
-# description: 
+description: 用于告知用户，该区域的状态变化或者待处理任务的数量。
 spline: base
 isComponent: true
 toc: false
 ---
-
-## 组件类型
-
-图标右上角的红点、数字或者文字，用于告知用户，该区域的状态变化或者待处理任务的数量。
 
 ### 小红点
 ::: demo demos/dist

@@ -1,13 +1,11 @@
 ---
 title: Navbar 导航栏
-# description: 
+description: 用于不同页面之间切换或者跳转，位于内容区的上方，系统状态栏的下方。
 spline: base
 isComponent: true
 toc: false
 ---
 
-## 组件类型
-主要用于展示当前位置和返回上一层极，也可用于管理当前屏幕的内容
 
 ### 导航栏 - 基础
 

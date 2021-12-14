@@ -1,14 +1,10 @@
 ---
 title: Collapse 折叠面板
-# description: 
+description: 可以折叠/展开的内容区域。
 spline: base
 isComponent: true
 toc: false
 ---
-
-## 组件类型
-
-在 TDesign 中，拥有两种不同类型的折叠面板：基本型、手风琴模式型
 
 ### 基础型
 
