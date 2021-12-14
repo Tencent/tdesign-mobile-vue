@@ -1,4 +1,10 @@
-# Steps 步骤条
+---
+title: Steps 步骤条
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 

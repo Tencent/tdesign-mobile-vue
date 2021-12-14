@@ -1,5 +1,11 @@
-# DropdownMenu 下拉菜单
-菜单呈现数个并列的选项类目，用于整个页面的内容筛选，由菜单面板和菜单选项组成。
+---
+title: DropdownMenu 下拉菜单
+description: 菜单呈现数个并列的选项类目，用于整个页面的内容筛选，由菜单面板和菜单选项组成。
+spline: base
+isComponent: true
+toc: false
+---
+
 
 ## 组件类型
 在TDesign中，拥有三种不同类型的下拉菜单：单选下拉菜单、多选下拉菜单、树形下拉菜单

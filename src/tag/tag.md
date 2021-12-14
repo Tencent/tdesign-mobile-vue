@@ -1,4 +1,10 @@
-# Tag 标签
+---
+title: Tag 标签
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 在TDesign中，拥有两种不同类型的标签：展示型标签、点击型标签

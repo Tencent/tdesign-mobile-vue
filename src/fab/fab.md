@@ -1,6 +1,11 @@
-# Fab 悬浮按钮
+---
+title: Fab 悬浮按钮
+description: 定义：用于承载用户快速执行某个重要/高频的操作
+spline: base
+isComponent: true
+toc: false
+---
 
-定义：用于承载用户快速执行某个重要/高频的操作
 
 ## 组件类型
 

@@ -1,6 +1,10 @@
-# Toast 轻提示
-
-一种轻量级反馈或提示，不会打断用户操作。
+---
+title: Toast 轻提示
+description: 一种轻量级反馈或提示，不会打断用户操作。
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 

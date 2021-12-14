@@ -1,4 +1,10 @@
-# Indexes 索引
+---
+title: Indexes 索引
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 在TDesign中，拥有两种不同类型的索引：基础型、自定义索引列表
