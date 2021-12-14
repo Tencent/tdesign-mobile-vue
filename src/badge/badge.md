@@ -1,4 +1,10 @@
-# Badge 徽标
+---
+title: Badge 徽标
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 

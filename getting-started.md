@@ -1,6 +1,9 @@
-# Vue3 for Mobile
+---
+title: Vue3 for Mobile
+description: TDesign 适配移动端的组件库，适合在 vue 3 技术栈项目中使用。
+spline: explain
+---
 
-TDesign 适配移动端的组件库，适合在 vue 3 技术栈项目中使用。
 
 ## 安装
 

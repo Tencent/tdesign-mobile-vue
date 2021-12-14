@@ -1,4 +1,11 @@
-# Icon 图标
+---
+title: Icon 图标
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
+
 
 ## 安装独立 Icon 包
 

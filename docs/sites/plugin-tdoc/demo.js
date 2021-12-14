@@ -1,8 +1,8 @@
+/* eslint-disable */
 import path from 'path';
-import mdContainer from 'markdown-it-container';
 
-export default function renderDemo(md) {
-  md.use(mdContainer, 'demo', {
+export default function renderDemo(md, container) {
+  md.use(container, 'demo', {
     validate(params) {
       return params.trim().match(/^demo\s+([\\/.\w-]+)(\s+(.+?))?(\s+--dev)?$/);
     },
@@ -15,7 +15,7 @@ export default function renderDemo(md) {
         const demoCodeDefName = `Demo${demoPathOnlyLetters}Code`;
 
         const tpl = `
-          <td-doc-demo data-demo="${demoCodeDefName}" language="html" show-code mode="open" demo-name="${demoName}" component-name="${componentName}"></td-doc-demo>
+          <td-doc-demo :code="${demoCodeDefName}" language="markup" show-code mode="open" demo-name="${demoName}" component-name="${componentName}"></td-doc-demo>
         `;
 
         // eslint-disable-next-line no-param-reassign

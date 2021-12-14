@@ -1,5 +1,10 @@
-# SegmentedControl 分段器
-定义：用于同类型内容不同视图的展示切换
+---
+title: SegmentedControl 分段器
+description: 定义：用于同类型内容不同视图的展示切换
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 在TDesign中只提供一种类型分段器

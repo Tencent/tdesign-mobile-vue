@@ -1,6 +1,11 @@
-# Switch 开关
+---
+title: Switch 开关
+description: 定义：控制某个功能的开启和关闭
+spline: base
+isComponent: true
+toc: false
+---
 
-定义：控制某个功能的开启和关闭
 
 ## 组件类型
 

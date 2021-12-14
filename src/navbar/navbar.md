@@ -1,4 +1,10 @@
-# Navbar 导航栏
+---
+title: Navbar 导航栏
+# description: 
+spline: base
+isComponent: true
+toc: false
+---
 
 ## 组件类型
 主要用于展示当前位置和返回上一层极，也可用于管理当前屏幕的内容
