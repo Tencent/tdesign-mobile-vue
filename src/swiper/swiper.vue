@@ -37,10 +37,11 @@
         {{ showPageNum + '/' + state.itemLength }}
       </span>
     </span>
+    {{ defaultCurrent }}
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, toRefs } from 'vue';
+import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref } from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
 import config from '@/config';
@@ -57,10 +58,12 @@ export default defineComponent({
   props: {
     ...SwiperProps,
   },
-  emits: ['change'],
+  emits: ['change', 'update:current'],
   setup(props, context) {
-    const { autoplay, interval, duration, direction, height, current } = toRefs(props);
     const self = getCurrentInstance();
+    const swiperContainer = ref(null);
+    // eslint-disable-next-line vue/no-setup-props-destructure
+    const { height = 180, current = null } = props;
     const state: {
       activeIndex: number;
       itemLength: number;
@@ -82,7 +85,8 @@ export default defineComponent({
       return activeIndex + 1;
     });
     // 获取容器节点（实时获取，才能获取到最新的节点）
-    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
+    // const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
+    const getContainer = (): any => swiperContainer;
     // 初始化轮播图元素
     const initSwiper = () => {
       const _swiperContainer = getContainer();
@@ -112,7 +116,7 @@ export default defineComponent({
       }
     });
     // eslint-disable-next-line no-undef
-    let autoplayTimer: Number | NodeJS.Timeout | null = null;
+    let autoplayTimer: number | NodeJS.Timeout | null = null;
     /**
      * 移动节点
      */
@@ -120,26 +124,26 @@ export default defineComponent({
       // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
       // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
-      const moveDirection = direction.value === 'horizontal' ? 'X' : 'Y';
-      const moveLength: number = direction.value === 'vertical' ? Number(height) : state.itemWidth;
+      const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
+      const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
     // 添加动画
     const addAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = `transform ${duration}ms`;
+      _swiperContainer.style.transition = `transform ${props?.duration}ms`;
     };
     // 移除动画（轮播时用到）
     const removeAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = 'none';
+      _swiperContainer.style.transition = 'transform 0s';
     };
     // 确认是否已经移动到最后一个元素，每次transitionend事件后即检查
     const handleAnimationEnd = () => {
       if (state.activeIndex >= state.itemLength) {
-        // console.log('到了最后一个元素', state.activeIndex, state.itemLength);
-        state.activeIndex = 0;
+        console.log('到了最后一个元素', state.activeIndex, state.itemLength);
         removeAnimation();
+        state.activeIndex = 0;
         move(0);
       }
       if (state.activeIndex <= -1) {
@@ -153,19 +157,19 @@ export default defineComponent({
     // 停止自动播放
     const stopAutoplay = () => {
       if (!autoplayTimer) return;
-      clearInterval(autoplayTimer);
+      clearInterval(autoplayTimer as number);
       autoplayTimer = null;
     };
     // 自动播放
     const startAutoplay = () => {
       // 如果是受控组件，永远不自动播放
       if (typeof current === 'number') return false;
-      if (!autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
+      if (!props?.autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
       autoplayTimer = setInterval(() => {
         state.activeIndex += 1;
         addAnimation();
         move(state.activeIndex);
-      }, interval.value);
+      }, props?.interval);
     };
     // 移动到上一个
     const prev = (step = 1) => {
@@ -176,7 +180,7 @@ export default defineComponent({
       // }
       addAnimation();
       move(state.activeIndex);
-      context.emit('change', state.activeIndex);
+      context.emit('update:current', state.activeIndex);
       startAutoplay();
     };
     // 移动到下一个
@@ -185,7 +189,7 @@ export default defineComponent({
       state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
-      context.emit('change', state.activeIndex);
+      context.emit('update:current', state.activeIndex);
       startAutoplay();
     };
     let touchStartX = 0;
@@ -207,10 +211,10 @@ export default defineComponent({
       const distanceY = endY - touchStartY;
       const _container = getContainer();
       removeAnimation();
-      if (direction.value === 'horizontal') {
+      if (props?.direction === 'horizontal') {
         setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
       } else {
-        setOffset(_container, -((activeIndex + 1) * height.value - distanceY), 'Y');
+        setOffset(_container, -((activeIndex + 1) * height - distanceY), 'Y');
       }
     };
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。
@@ -222,13 +226,13 @@ export default defineComponent({
       const distanceY = endY - touchStartY;
       addAnimation();
       if (
-        (direction.value === 'horizontal' && distanceX > 100) ||
-        (direction.value === 'vertical' && distanceY > 100)
+        (props?.direction === 'horizontal' && distanceX > 100) ||
+        (props?.direction === 'vertical' && distanceY > 100)
       ) {
         prev(1);
       } else if (
-        (direction.value === 'horizontal' && distanceX < -100) ||
-        (direction.value === 'vertical' && distanceY < -100)
+        (props?.direction === 'horizontal' && distanceX < -100) ||
+        (props?.direction === 'vertical' && distanceY < -100)
       ) {
         next(1);
       } else {
