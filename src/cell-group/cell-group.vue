@@ -8,7 +8,7 @@
     <div
       :class="{
         [`${name}-container`]: true,
-        'border--top-bottom': border,
+        'border--top-bottom': bordered,
       }"
     >
       <slot></slot>

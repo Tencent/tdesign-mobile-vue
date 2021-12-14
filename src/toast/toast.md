@@ -1,10 +1,10 @@
-# Toast 轻提示
-
-一种轻量级反馈或提示，不会打断用户操作。
-
-## 组件类型
-
-在TDesign中，拥有三种不同类型的轻提示：文本轻提示、图标轻提示、文本加图标轻提示
+---
+title: Toast 轻提示
+description: 用于轻量级反馈或提示，不会打断用户操作。
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 文本轻提示
 

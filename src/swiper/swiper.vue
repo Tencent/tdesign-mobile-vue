@@ -44,7 +44,7 @@
 import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref } from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
-import config from '@/config';
+import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;

@@ -2,18 +2,17 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-06 01:32:01
+ * updated at 2021-12-14 13:07:02
  * */
 
-import { TdButtonProps } from '@Button';
-import { ButtonProps } from '@Button';
+import { ButtonProps } from '../Button';
 import { TNode } from '../common';
 
 export interface TdDialogProps {
   /**
    * 操作栏
    */
-  actions: Array<TdButtonProps>;
+  actions: Array<ButtonProps>;
   /**
    * 多按钮排列方式
    * @default horizontal
@@ -91,14 +90,43 @@ export interface TdDialogProps {
    * 如果蒙层存在，点击蒙层时触发
    */
   onOverlayClick: (context: { e: MouseEvent }) => void;
-}
+};
+
+export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
+  /**
+   * 弹框类名，示例：'t-class-dialog-first t-class-dialog-second'
+   * @default ''
+   */
+  className: string;
+  /**
+   * 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
+   * @default ''
+   */
+  style: string;
+};
+
+export interface DialogInstance {
+  /**
+   * 销毁弹框
+   */
+  destroy: () => void;
+  /**
+   * 隐藏弹框
+   */
+  hide: () => void;
+  /**
+   * 显示弹框
+   */
+  show: () => void;
+  /**
+   * 更新弹框内容
+   */
+  update: (props: DialogOptions) => void;
+};
 
 export type DialogEventSource = 'cancel' | 'overlay';
 
-export interface DialogCloseContext {
-  trigger: DialogEventSource;
-  e: MouseEvent;
-}
+export interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent };
 
 export type DialogMethod = (options?: DialogOptions) => DialogInstance;
 

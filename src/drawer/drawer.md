@@ -1,8 +1,10 @@
-# Drawer 抽屉
-
-## 组件类型
-
-抽屉从父窗体边缘滑入，覆盖住部分父窗体内容。用户在抽屉内操作时不必离开当前任务，操作完成后，可以平滑地回到到原任务，常用于侧边栏导航
+---
+title: Drawer 抽屉
+description: 屏幕边缘滑出的浮层面板。 
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 基础用法
 

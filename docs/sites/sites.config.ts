@@ -12,13 +12,6 @@ export default {
           component: () => import('@/../getting-started.md'),
         },
         {
-          title: '贡献指南',
-          name: 'contributing',
-          meta: { docType: 'explain' },
-          path: '/vue-mobile/components/contributing',
-          component: () => import('@/../CONTRIBUTING.md'),
-        },
-        {
           title: '更新日志',
           name: 'changelog',
           meta: { docType: 'explain' },

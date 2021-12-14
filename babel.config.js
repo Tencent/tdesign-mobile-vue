@@ -12,9 +12,8 @@ module.exports = {
             'Edge >= 12',
           ],
         },
-        modules: false,
       },
     ],
   ],
-  plugins: ['@babel/plugin-proposal-class-properties'],
+  plugins: ['@babel/plugin-transform-runtime', '@babel/plugin-proposal-class-properties'],
 };
