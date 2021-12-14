@@ -123,7 +123,6 @@ export default defineComponent({
     font-size: 12px;
     line-height: 20px;
     span {
-      font-size: 12px;
       min-width: 20px;
       border-radius: 4px;
       text-align: center;
@@ -149,7 +148,6 @@ export default defineComponent({
     font-size: 14px;
     line-height: 24px;
     span {
-      font-size: 12px;
       min-width: 24px;
       border-radius: 4px;
       text-align: center;
@@ -173,10 +171,9 @@ export default defineComponent({
   // large 有底
   .t-countdown__large-square {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 28px;
     span {
-      font-size: 12px;
       min-width: 28px;
       border-radius: 4px;
       text-align: center;
