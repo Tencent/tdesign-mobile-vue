@@ -103,7 +103,6 @@ export default defineComponent({
 
     // 勾子函数初始化部分数据
     onMounted(() => {
-      console.log('组件实例', swiperContainer.value);
       const _swiperContainer = getContainer();
       state.itemLength = _swiperContainer.children?.length || 0;
       const itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
@@ -120,12 +119,13 @@ export default defineComponent({
     /**
      * 移动节点
      */
-    const move = (targetIndex: number) => {
+    const move = (targetIndex: number, isTrust = true) => {
       // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
       // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
       const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
+      _swiperContainer.dataset.isTrust = `${isTrust}`;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
     // 添加动画
@@ -142,18 +142,15 @@ export default defineComponent({
     const handleAnimationEnd = () => {
       removeAnimation();
       if (state.activeIndex >= state.itemLength) {
-        console.log('到了最后一个元素', state.activeIndex, state.itemLength);
-        // removeAnimation();
+        // console.log('到了最后一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = 0;
         move(0);
       }
       if (state.activeIndex <= -1) {
         // console.log('到了第一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = state.itemLength - 1;
-        // removeAnimation();
         move(state.itemLength - 1);
       }
-      state.isControl && context.emit('change', state.activeIndex);
     };
     // 停止自动播放
     const stopAutoplay = () => {
@@ -172,17 +169,22 @@ export default defineComponent({
         move(state.activeIndex);
       }, props?.interval);
     };
+    // 通知父组件更新页数（受控模式）
+    const emitCurrentChange = (index: number) => {
+      if (!state.isControl) return false;
+      let resultIndex = index;
+      if (index >= state.itemLength) resultIndex = 0;
+      if (index < 0) resultIndex = state.itemLength - 1;
+      context.emit('change', resultIndex);
+    };
     // 移动到上一个
     const prev = (step = 1) => {
       stopAutoplay();
       state.activeIndex -= step;
-      // if (state.activeIndex < 0) {
-      //   state.activeIndex = state.itemLength - 1;
-      // }
       addAnimation();
       move(state.activeIndex);
-      // state.isControl && context.emit('update:current', state.activeIndex);
       startAutoplay();
+      emitCurrentChange(state.activeIndex);
     };
     // 移动到下一个
     const next = (step = 1) => {
@@ -190,21 +192,19 @@ export default defineComponent({
       state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
-      // state.isControl && context.emit('update:current', state.activeIndex);
       startAutoplay();
+      emitCurrentChange(state.activeIndex);
     };
     let touchStartX = 0;
     let touchStartY = 0;
     // 按下鼠标或屏幕开始滑动
     const onTouchStart = (event: TouchEvent) => {
       stopAutoplay();
-      // console.log('touch start', state?.itemLength);
       touchStartY = event.touches[0].clientY;
       touchStartX = event.touches[0].clientX;
     };
     // 滑动过程中位移容器
     const onTouchMove = (event: TouchEvent) => {
-      // console.log('touch move');
       const { activeIndex, itemWidth } = state;
       const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
@@ -220,7 +220,6 @@ export default defineComponent({
     };
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。
     const onTouchEnd = (event: TouchEvent) => {
-      // console.log('touch end', event);
       const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
       const distanceX = endX - touchStartX;
@@ -239,6 +238,7 @@ export default defineComponent({
       } else {
         move(state.activeIndex);
       }
+      emitCurrentChange(state.activeIndex);
       startAutoplay();
     };
     watch(
@@ -247,8 +247,8 @@ export default defineComponent({
         console.info(`受控页数变化,从${oldPage}->${newPage}`);
         if (state.isControl) {
           state.activeIndex = newPage || 0;
-          // addAnimation();
-          move(state.activeIndex);
+          addAnimation();
+          move(state.activeIndex, false);
         }
       },
     );
