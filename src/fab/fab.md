@@ -1,15 +1,10 @@
 ---
 title: Fab 悬浮按钮
-description: 定义：用于承载用户快速执行某个重要/高频的操作
+description: 用于承载用户快速执行某个重要/高频的操作
 spline: base
 isComponent: true
 toc: false
 ---
-
-
-## 组件类型
-
-在TDesign中，拥有两种不同类型的悬浮按钮：纯图标悬浮按钮、图标加文字悬浮按钮
 
 ### 纯图标悬浮按钮
 

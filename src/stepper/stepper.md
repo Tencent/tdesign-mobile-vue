@@ -1,14 +1,10 @@
 ---
 title: Stepper 步进器
-description: 定义：带加减按钮的数字输入框
+description: 用于数量的增减。
 spline: base
 isComponent: true
 toc: false
 ---
-
-## 组件类型
-
-TDesign只提供一种基础步进器类型
 
 ### 基础步进器
 

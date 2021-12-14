@@ -1,15 +1,10 @@
 ---
 title: Picker 选择器
-description: 定义：在一组预设数据中进行选择
+description: 用于一组预设数据中的选择。
 spline: base
 isComponent: true
 toc: false
 ---
-
-
-## 组件类型
-
-TDesign目前只提供一种基础类型
 
 ### 基础类型
 

@@ -1,14 +1,10 @@
 ---
 title: Input 输入框
-description: 定义：用于单行或多行文本信息输入
+description: 用于单行文本信息输入。
 spline: base
 isComponent: true
 toc: false
 ---
-
-## 组件类型
-
-在TDesign中，拥有 3种不同形式的输入框：基础输入框、特殊输入框、多行输入框
 
 ### 基础单选框
 
