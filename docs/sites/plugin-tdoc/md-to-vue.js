@@ -103,11 +103,7 @@ export default function mdToVue(options) {
           }
 
           if (tdDocPhone) {
-            tdDocPhone.QRCode.toCanvas(
-              tdDocPhone.qrCanvas,
-              completeUrl,
-              { width: 84, height: 84 }
-            );
+            tdDocPhone.qrcodeUrl = completeUrl;
           }
 
           Prismjs.highlightAll();
