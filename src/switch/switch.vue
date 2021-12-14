@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { computed, toRefs, defineComponent, h } from 'vue';
-import { useToggle } from '@/shared';
+import { useToggle } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
 

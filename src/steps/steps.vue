@@ -32,8 +32,6 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const baseClass = computed(() => [name, `${name}--${props.layout}`, `${name}--${props.theme}-anchor`]);
 
-    const options = computed(() => props.options);
-
     const current = computed(() => props.current);
 
     const state = reactive({
@@ -59,7 +57,6 @@ export default defineComponent({
     });
 
     return {
-      options,
       baseClass,
       onClickItem,
       ...toRefs(props),

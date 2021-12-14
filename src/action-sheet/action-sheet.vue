@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import { ref, computed, watch, defineComponent, PropType, ComputedRef, SetupContext } from 'vue';
-import { emitEvent } from '@/shared/emit';
+import { emitEvent } from '../shared/emit';
 import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';

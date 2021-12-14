@@ -10,7 +10,7 @@ spline: explain
 目前组件库已发布一期组件的测试版本，还在快速迭代，注意留意版本变化
 
 ```bash
-yarn add tdesign-mobile-vue
+npm i tdesign-mobile-vue
 ```
 
 ## 基础使用

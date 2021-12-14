@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { emitEvent } from '@/shared/emit';
+import { emitEvent } from '../shared/emit';
 import TMask from '../mask';
 import config from '../config';
 
