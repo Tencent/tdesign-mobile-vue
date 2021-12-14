@@ -55,7 +55,7 @@
         <t-countdown
           content="ok"
           :time="111120000"
-          :auto-start="false"
+          :auto-start="true"
           :millisecond="false"
           format="DD天HH时mm分ss秒"
           @change="onChange"
