@@ -19,7 +19,6 @@
     "build": "cross-env NODE_ENV=production rollup -c scripts/rollup.config.js",
     "site": "vite build",
     "site:preview": "vite build --mode staging",
-    "build:docs": "vite build",
     "update:icon": "node src/icon/generate/index.js clear && node src/icon/generate/index.js && node src/icon/generate/index.js demo",
     "update:coverage-badge": "",
     "test:unit": "jest --config script/test/jest.unit.conf.js",

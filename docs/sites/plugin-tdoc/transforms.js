@@ -12,9 +12,9 @@ export default {
     const name = reg && reg[1];
     demoCodesImports = {};
 
-    // 统一换成 iwiki 文档内容
+    // 统一换成 common 文档内容
     if (name && source.includes(':: BASE_DOC ::')) {
-      const docPath = path.resolve(__dirname, `../_common/docs/web/api/${name}.md`);
+      const docPath = path.resolve(__dirname, `../_common/docs/mobile/api/${name}.md`);
       if (fs.existsSync(docPath)) {
         const baseDoc = fs.readFileSync(docPath, 'utf-8');
         source = source.replace(':: BASE_DOC ::', baseDoc);
