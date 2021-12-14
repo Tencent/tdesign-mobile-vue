@@ -61,7 +61,6 @@ export default defineComponent({
   emits: ['change', 'update:current'],
   setup(props, context) {
     const self = getCurrentInstance();
-    const swiperContainer = ref(null);
     // eslint-disable-next-line vue/no-setup-props-destructure
     const { height = 180, current = null } = props;
     const state: {
@@ -85,8 +84,7 @@ export default defineComponent({
       return activeIndex + 1;
     });
     // 获取容器节点（实时获取，才能获取到最新的节点）
-    // const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
-    const getContainer = (): any => swiperContainer;
+    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
     // 初始化轮播图元素
     const initSwiper = () => {
       const _swiperContainer = getContainer();
