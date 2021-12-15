@@ -18,7 +18,7 @@
 import { ref, SetupContext, defineComponent, PropType } from 'vue';
 
 import config from '../config';
-import { Item } from './type';
+import { ActionSheetItem } from './type';
 
 const { prefix } = config;
 
@@ -27,7 +27,7 @@ const name = `${prefix}-action-sheet`;
 export default defineComponent({
   props: {
     items: {
-      type: Array as PropType<Item[]>,
+      type: Array as PropType<ActionSheetItem[]>,
       required: true,
     },
   },

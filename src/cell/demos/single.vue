@@ -18,8 +18,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TIconChevronRight from '@/icon/chevron-right.vue';
-import TIconUserFilled from '@/icon/user-filled.vue';
+import { ChevronRightIcon as TIconChevronRight, UserIcon as TIconUserFilled } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   components: { TIconChevronRight, TIconUserFilled },

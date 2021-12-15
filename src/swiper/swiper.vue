@@ -62,8 +62,9 @@ export default defineComponent({
   setup(props, context) {
     const self = getCurrentInstance();
     const swiperContainer = ref(null);
-    // eslint-disable-next-line vue/no-setup-props-destructure
-    const { height = 180, current = null } = props;
+
+   // const { height = 180, current = null } = props;
+    const height = props.height || ref(180);
     const state: {
       activeIndex: number;
       itemLength: number;

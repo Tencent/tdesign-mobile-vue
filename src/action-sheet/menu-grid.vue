@@ -40,6 +40,7 @@
 <script lang="ts">
 import { ref, SetupContext, defineComponent, computed } from 'vue';
 import config from '../config';
+import { ActionSheetItem } from './type';
 
 const { prefix } = config;
 
@@ -68,12 +69,12 @@ export default defineComponent({
 
     const wrapperStyle = computed(() => ({
       transform: `translate3d(${moveOffset.value}px, 0, 0)`,
-      transition: useTransition.value ? 'transform 300ms' : null,
+      transition: useTransition.value ? 'transform 300ms' : 'all',
     }));
     const pageNum = computed(() => Math.ceil(props.items.length / props.count));
     // 分页数据处理
     const actionItems = computed(() => {
-      const res = [];
+      const res: any = [];
       for (let i = 0; i < pageNum.value; i++) {
         const temp = props.items.slice(i * props.count, (i + 1) * props.count);
         res.push(temp);
