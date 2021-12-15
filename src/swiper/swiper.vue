@@ -63,7 +63,7 @@ export default defineComponent({
     const self = getCurrentInstance();
     const swiperContainer = ref(null);
 
-   // const { height = 180, current = null } = props;
+    // const { height = 180, current = null } = props;
     const height = props.height || ref(180);
     const state: {
       activeIndex: number;
@@ -110,9 +110,9 @@ export default defineComponent({
       state.itemWidth = itemWidth;
       initSwiper();
       startAutoplay();
-      if (typeof current === 'number') {
+      if (typeof props.current === 'number') {
         state.isControl = true;
-        next(current);
+        next(props.current);
       }
     });
     // eslint-disable-next-line no-undef
@@ -124,6 +124,7 @@ export default defineComponent({
       // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
       // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
+      const { height = 180 } = props;
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
       const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
@@ -162,7 +163,7 @@ export default defineComponent({
     // 自动播放
     const startAutoplay = () => {
       // 如果是受控组件，永远不自动播放
-      if (typeof current === 'number') return false;
+      if (typeof props.current === 'number') return false;
       if (!props?.autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
       autoplayTimer = setInterval(() => {
         state.activeIndex += 1;
@@ -216,6 +217,7 @@ export default defineComponent({
       if (props?.direction === 'horizontal') {
         setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
       } else {
+        const { height = 180 } = props;
         setOffset(_container, -((activeIndex + 1) * height - distanceY), 'Y');
       }
     };
