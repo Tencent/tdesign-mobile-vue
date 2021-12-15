@@ -9,7 +9,6 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@common': path.resolve(__dirname, 'src/_common'),
-      '@TdTypes': path.resolve(__dirname, 'src/types'),
     },
   },
   server: {
@@ -30,9 +29,9 @@ module.exports = {
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: tag => tag.startsWith('td-')
-        }
-      }
+          isCustomElement: (tag) => tag.startsWith('td-'),
+        },
+      },
     }),
     createTDesignPlugin(),
   ],

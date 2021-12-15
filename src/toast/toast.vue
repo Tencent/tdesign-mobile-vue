@@ -11,7 +11,7 @@
 <script lang="ts">
 import { LoadingIcon, CheckIcon, ErrorIcon } from 'tdesign-icons-vue-next';
 import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
-import { renderTNode, TNode } from '@/shared';
+import { renderTNode, TNode } from '../shared';
 import TMask from '../mask';
 import ToastProps from './props';
 import config from '../config';

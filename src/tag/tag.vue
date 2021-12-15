@@ -15,7 +15,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-tag`;

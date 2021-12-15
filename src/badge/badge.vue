@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs } from 'vue';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 import BadgeProps from './props';
 import config from '../config';
 

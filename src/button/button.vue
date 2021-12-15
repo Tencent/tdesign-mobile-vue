@@ -10,7 +10,7 @@
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import ButtonProps from './props';
 import config from '../config';

@@ -1,10 +1,10 @@
-# Rate 评分
-
-定义：用户对某行为/事物进行打分
-
-## 组件类型
-
-在TDesign中，拥有两种不同类型的评分：基础评分、带描述评分
+---
+title: Rate 评分
+description: 用于对某行为/事物进行打分。
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 基础评分
 
