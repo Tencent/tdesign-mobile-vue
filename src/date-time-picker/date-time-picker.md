@@ -16,10 +16,10 @@ cancelBtn | String | 取消 | 取消按钮文字 | N
 confirmBtn | String | - | 确定按钮文字 | N
 disableDate | Object / Array / Function | - | 禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用。TS 类型：`DisableDate`。[详细类型定义](https://git.code.oa.com/TDesign/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 format | String | 'YYYY-MM-DD' | 用于格式化日期，[详细文档](https://day.js.org/docs/en/display/format) | N
-mode | String / Array | 'date' | 选择器模式，用于表示可以选择到哪一个层级。【示例一】year 或者 ['year'] 表示纯日期选择器，只能选择到年份，只显示年份。【示例二】'hour' 或 ['hour'] 表示纯时间选择器，只能选择到小时维度。【示例三】['date', 'minutes'] 表示，日期和时间 混合选择器，可以选择到具体哪一分钟，显示全部时间：年/月/日/时/分。可选项：year/month/date/hour/minutes/second。TS 类型：`DateTimePickerMode`。[详细类型定义](https://git.code.oa.com/TDesign/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
+mode | String / Array | 'date' | 选择器模式，用于表示可以选择到哪一个层级。【示例一】year 或者 ['year'] 表示纯日期选择器，只能选择到年份，只显示年份。【示例二】'hour' 或 ['hour'] 表示纯时间选择器，只能选择到小时维度。【示例三】['date', 'minutes'] 表示，日期和时间 混合选择器，可以选择到具体哪一分钟，显示全部时间：年/月/日/时/分。TS 类型：`DateTimePickerMode`。[详细类型定义](https://git.code.oa.com/TDesign/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 showWeek | Boolean | false | 是否在日期旁边显示周几（如周一，周二，周日等） | N
 title | String | - | 标题 | N
-value | String / Number | - | 选中值。TS 类型：`Array<DateValue>`。[详细类型定义](https://git.code.oa.com/TDesign/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
+value | String / Number / Array | - | 选中值。TS 类型：`DateValue`。[详细类型定义](https://git.code.oa.com/TDesign/tdesign-mobile-vue/tree/develop/src/date-time-picker/type.ts) | N
 visible | Boolean | false | 是否显示 | N
 onCancel | Function |  | 取消按钮点击时触发。`(context: { e: MouseEvent }) => {}` | N
 onChange | Function |  | 选中值发生变化时触发。`(value: DateValue) => {}` | N
