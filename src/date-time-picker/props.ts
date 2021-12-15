@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-15 16:46:59
+ * updated at 2021-12-15 20:06:30
  * */
 
 import { TdDateTimePickerProps } from './type';
@@ -31,7 +31,7 @@ export default {
   /** 选择器模式，用于表示可以选择到哪一个层级。【示例一】year 或者 ['year'] 表示纯日期选择器，只能选择到年份，只显示年份。【示例二】'hour' 或 ['hour'] 表示纯时间选择器，只能选择到小时维度。【示例三】['date', 'minutes'] 表示，日期和时间 混合选择器，可以选择到具体哪一分钟，显示全部时间：年/月/日/时/分 */
   mode: {
     type: [String, Array] as PropType<TdDateTimePickerProps['mode']>,
-    default: 'date' as TdDateTimePickerProps['mode'],
+    default: 'date',
   },
   /** 是否在日期旁边显示周几（如周一，周二，周日等） */
   showWeek: Boolean,
@@ -42,7 +42,7 @@ export default {
   },
   /** 选中值 */
   value: {
-    type: [String, Number] as unknown as PropType<TdDateTimePickerProps['value']>,
+    type: [String, Number, Array] as PropType<TdDateTimePickerProps['value']>,
   },
   /** 是否显示 */
   visible: Boolean,

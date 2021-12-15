@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-15 16:46:59
+ * updated at 2021-12-15 20:06:30
  * */
 
 export interface TdDateTimePickerProps {
@@ -43,7 +43,7 @@ export interface TdDateTimePickerProps {
   /**
    * 选中值
    */
-  value: Array<DateValue>;
+  value: DateValue;
   /**
    * 是否显示
    * @default false
@@ -67,7 +67,7 @@ export interface TdDateTimePickerProps {
   onConfirm: (context: { value: DateValue; e: MouseEvent }) => void;
 };
 
-export type DisableDate = Array<DateValue> | DisableDateObj | ((date: DateValue) => boolean);
+export type DisableDate = DateValue | DisableDateObj | ((date: DateValue) => boolean);
 
 export interface DisableDateObj { from?: string; to?: string; before?: string; after?: string };
 
@@ -75,6 +75,6 @@ export type DateTimePickerMode = TimeModeValues | Array<TimeModeValues> ;
 
 export type TimeModeValues = 'year' | 'month' | 'date' | 'hour' | 'minutes' | 'second';
 
-export type DateValue = string | number;
+export type DateValue = string | number | Array<DateValue>;
 
 export interface DatePickerColumnChangeContext { value: DateValue; index: number };
