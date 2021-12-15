@@ -11,12 +11,11 @@
 </template>
 
 <script lang="ts">
-import { watch, defineComponent, ref, reactive } from 'vue';
+import { defineComponent } from 'vue';
 import config from '../config';
 import CountDownProps from './props';
-import { getRemainTimes, getShowTimes } from './utils';
+import { useCountDown } from '../shared/useCountDown';
 
-let timer: any = 0; // 定时器
 const { prefix } = config;
 const name = `${prefix}-countdown`;
 
@@ -26,57 +25,15 @@ export default defineComponent({
     ...CountDownProps,
   },
   setup(props) {
-    const { format, millisecond, onFinish, onChange } = props || {};
-    const interval = millisecond ? 1 : 1000; // 间隔
+    const { content, ...other } = props || {};
     //
-    const time = ref(Number(props?.time || 0));
-    const showTimes = reactive(getShowTimes(getRemainTimes(time?.value), format));
-
-    // 开始倒记时函数
-    const StartCountdown = () => {
-      timer = setInterval(() => {
-        if (time.value <= 0) {
-          onFinish?.();
-          return clearInterval(timer);
-        }
-        //
-        const times = getRemainTimes(time.value);
-        onChange?.(times);
-        if (millisecond) {
-          time.value -= 1;
-        } else {
-          time.value -= 1000;
-        }
-        return getShowTimes(times, format)?.forEach?.((i, idx) => {
-          // showTimes[idx].mark = i?.mark;
-          showTimes[idx].value = i?.value;
-        });
-      }, interval);
-    };
-
-    // autoStart为true开始倒计时
-    props?.autoStart && StartCountdown();
-
-    // 监听autoStart
-    watch(
-      () => props?.autoStart,
-      (cur) => {
-        cur && StartCountdown();
-      },
-    );
+    const { showTimes } = useCountDown(other);
     // return
     return {
       name,
-      time,
       showTimes,
       content: props?.content,
     };
-  },
-  /**
-   * 卸载前清定时器
-   */
-  beforeUnmount() {
-    timer && clearInterval(timer);
   },
 });
 </script>

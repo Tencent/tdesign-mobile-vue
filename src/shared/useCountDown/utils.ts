@@ -1,4 +1,4 @@
-import { TimeData } from './type';
+import { TimeData, TdUseCountDownShowTimes } from './type';
 
 /**
  * getRemainTimes
@@ -45,10 +45,9 @@ export const getMark = (format: string, type: string): string => format?.split?.
  * @param time
  * @returns
  */
-type IShowTimes = Array<{ mark?: string; value?: string | number }>;
-export const getShowTimes = (times: TimeData, format: string): IShowTimes => {
+export const getShowTimes = (times: TimeData, format: string): TdUseCountDownShowTimes => {
   format = (format || 'DD:HH:mm:ss')?.toUpperCase?.();
-  const showTimes: IShowTimes = [];
+  const showTimes: TdUseCountDownShowTimes = [];
   if (format?.indexOf('DD') > -1) {
     showTimes?.push({
       mark: getMark(format, 'DD'),
