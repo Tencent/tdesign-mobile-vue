@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TIconErrorCircleFilled from '@/icon/error-circle-filled.vue';
+import { ErrorCircleFilledIcon as TIconErrorCircleFilled } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {

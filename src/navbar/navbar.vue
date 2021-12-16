@@ -63,11 +63,11 @@ export default defineComponent({
       }
     };
 
-    const handleMore = (evt: TouchEvent) => {
+    const handleMore = (evt: MouseEvent) => {
       context.emit('click-right', evt);
     };
 
-    const clickText = (evt: TouchEvent) => {
+    const clickText = (evt: MouseEvent) => {
       context.emit('click-text', evt);
     };
 

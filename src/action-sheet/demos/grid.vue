@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { ItemType } from '../action-sheet.interface';
+import { ActionSheetItem } from '../type';
 
 export default defineComponent({
   data() {
@@ -44,7 +44,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected: ItemType, selectedIndex: number) {
+    handleSelect(selected: ActionSheetItem, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel() {

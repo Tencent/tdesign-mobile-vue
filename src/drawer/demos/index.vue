@@ -4,7 +4,7 @@
       <t-drawer v-model="open" :sidebar="baseSidebar"></t-drawer>
       <div class="demo-drawer-content">
         <div class="demo-drawer-text">单层级纯文本标签栏</div>
-        <t-button size="large" variant="outline" shape="round" @click="openDrawer(false)">基础抽屉</t-button>
+        <t-button size="large" variant="outline" shape="round" @click="openDrawer()">基础抽屉</t-button>
       </div>
     </div>
   </div>

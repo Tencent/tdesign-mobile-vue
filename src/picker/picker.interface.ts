@@ -41,7 +41,7 @@ export const pickerColumnProps = {
    * @property options
    */
   options: {
-    type: Array as PropType<any[]>,
+    type: Array as PropType<PickerOptions[]>,
     default: [],
   },
   /**
