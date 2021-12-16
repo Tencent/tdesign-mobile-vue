@@ -27,10 +27,11 @@ export default defineComponent({
   setup(props) {
     const { content, ...other } = props || {};
     //
-    const { showTimes } = useCountDown(other);
+    const { time, showTimes } = useCountDown(other);
     // return
     return {
       name,
+      time,
       showTimes,
       content: props?.content,
     };

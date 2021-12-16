@@ -20,8 +20,8 @@ export const getRemainTimes = (time?: number): TimeData => {
     days: Math.floor(stime / 3600 / 24),
     hours: Math.floor((stime / 3600) % 24),
     minutes: Math.floor((stime / 60) % 60),
-    seconds: Math.floor(stime % 60),
-    milliseconds: Math.floor(time % 1000),
+    seconds: stime % 60,
+    milliseconds: time % 1000,
   };
 };
 

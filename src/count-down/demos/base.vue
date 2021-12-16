@@ -72,9 +72,9 @@
       <div class="demo__box t-countdown__has-unit2">
         <t-countdown
           content="ok"
-          :time="111120000"
+          :time="4000"
           :auto-start="true"
-          :millisecond="false"
+          :millisecond="true"
           format="DD天HH时mm分ss秒"
           @change="onChange"
           @finish="onFinish"

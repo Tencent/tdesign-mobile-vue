@@ -10,7 +10,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
   const showTimes = reactive(getShowTimes(getRemainTimes(time?.value), format));
 
   // 开始倒计时 处理
-  const interval = millisecond ? 1 : 1000; // 间隔
+  const interval = millisecond ? 200 : 1000; // 间隔
   const StartCountdown = () => {
     const timer: any = setInterval(() => {
       if (time.value <= 0) {
@@ -21,7 +21,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
       const times = getRemainTimes(time.value);
       onChange?.(times);
       if (millisecond) {
-        time.value -= 1;
+        time.value -= 200;
       } else {
         time.value -= 1000;
       }
@@ -38,6 +38,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
    * return
    */
   return {
+    time,
     showTimes,
   };
 }
