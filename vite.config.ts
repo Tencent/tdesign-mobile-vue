@@ -18,6 +18,7 @@ module.exports = {
     https: false,
   },
   build: {
+    outDir: './_site',
     rollupOptions: {
       input: {
         sites: 'index.html',
