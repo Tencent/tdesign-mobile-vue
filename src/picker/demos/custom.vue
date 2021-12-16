@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-demo-block">
     <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-      <t-picker-column :options="roleOptions" :formatter="(val) => val" @change="onColumnChange" />
+      <t-picker-column :options="roleOptions" @change="onColumnChange" />
     </t-picker>
   </div>
 </template>

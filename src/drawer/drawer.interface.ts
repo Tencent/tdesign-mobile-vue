@@ -1,16 +1,10 @@
 import { TNode } from '../common';
 
-export type SidebarItemType = {
+export type SidebarItem = {
   /* 菜单名称 */
   name: string;
   /* 跳转历路径 */
   path: string;
   /* 图标 */
-  icon: TNode | string;
+  icon: TNode;
 };
-
-export interface SidebarItem {
-  sidebar: Array<SidebarItemType>;
-  /* 图标 */
-  icon: TNode | string;
-}

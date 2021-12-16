@@ -54,5 +54,6 @@ export type TdUseCountDownShowTimes = Array<{ mark?: string; value?: string | nu
  * TdUseCountDown
  */
 export interface TdUseCountDown {
+  time: { value: number };
   showTimes: TdUseCountDownShowTimes;
 }

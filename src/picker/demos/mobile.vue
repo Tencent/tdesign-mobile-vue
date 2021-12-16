@@ -56,9 +56,9 @@
 
       <t-popup v-model="show.dateTitle" position="bottom">
         <t-picker title="选择日期" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
-          <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-          <t-picker-column :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
-          <t-picker-column :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
+          <t-picker-column :options="yearOptions" :formatter="(val: any) => `${val}年`" @change="onColumnChange" />
+          <t-picker-column :options="monthOptions" :formatter="(val: any) => `${val}月`" @change="onColumnChange" />
+          <t-picker-column :options="dayOptions" :formatter="(val: any) => `${val}日`" @change="onColumnChange" />
         </t-picker>
       </t-popup>
     </tdesign-demo-block>

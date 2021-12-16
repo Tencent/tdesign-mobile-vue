@@ -31,12 +31,13 @@ export default defineComponent({
   setup(props) {
     const { content, ...other } = props || {};
     //
-    const { showTimes } = useCountDown(other);
+    const { time, showTimes } = useCountDown(other);
     const internalInstance = getCurrentInstance();
     const contentLayout = computed(() => renderTNode(internalInstance, 'content'));
     // return
     return {
       name,
+      time,
       showTimes,
       contentLayout,
     };

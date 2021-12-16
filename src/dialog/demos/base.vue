@@ -5,28 +5,30 @@
     <tdesign-demo-block title="01 类型" summary="反馈类对话框">
       <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
-        <t-dialog v-model="isShowDialog1" :header="singleHeader"> </t-dialog>
+        <t-dialog 
+          v-model="isShowDialog1" 
+          :title="singleHeader" 
+          :confirm-btn="confirmButtonText"
+          :show-overlay="showOverlay"> </t-dialog>
       </div>
       <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
-        <t-dialog v-model="isShowDialog2" :header="moreTextHeader"> </t-dialog>
+        <t-dialog v-model="isShowDialog2" :title="moreTextHeader" :confirm-btn="confirmButtonText"> </t-dialog>
       </div>
       <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
         <t-dialog
           v-model="isShowDialog3"
           :content="content"
+          :confirm-btn="confirmButtonText"
           @confirm="onConfirm"
-          @opened="openDialog"
-          @closed="closeDialog"
-          @click-overlay="clickOverlay"
-          @visible-change="changeVisible"
+          @overlay-click="onClickOverlay"
         >
         </t-dialog>
       </div>
       <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
-        <t-dialog v-model="isShowDialog4" :header="header"> </t-dialog>
+        <t-dialog v-model="isShowDialog4" :title="title" :confirm-btn="confirmButtonText"></t-dialog>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="确认类对话框">
@@ -35,11 +37,11 @@
         <t-dialog
           v-model="isShowDialog5"
           type="confirm"
-          :header="header"
+          :title="title"
           :content="content"
           :placeholder-text="placeholderText"
-          :cancel-button-text="cancelButtonText"
-          :confirm-button-text="confirmButtonText"
+          :cancel-btn="cancelButtonText"
+          :confirm-btn="confirmButtonText"
           @confirm="onConfirm"
           @cancel="onCancel"
         >
@@ -50,19 +52,14 @@
         <t-dialog
           v-model="isShowDialog6"
           type="confirm"
-          :header="header"
+          :title="title"
           :content="moreTextContent"
-          :cancel-button-text="cancelButtonText"
-          :confirm-button-text="confirmButtonText"
+          :cancel-btn="cancelButtonText"
+          :confirm-btn="confirmButtonText"
           @confirm="onConfirm"
           @cancel="onCancel"
+          @close="onClose"
         >
-          <template #footer-cancel>
-            <div style="color: #000; font-size: 18px">辅助操作</div>
-          </template>
-          <template #footer-confirm>
-            <div style="color: #e34d59; font-size: 18px">我同意</div>
-          </template>
         </t-dialog>
       </div>
     </tdesign-demo-block>
@@ -71,15 +68,18 @@
         <t-button variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
         <t-dialog
           v-model="isShowDialog7"
-          type="confirm"
-          :is-input="isInput"
-          :header="singleHeader"
-          :placeholder-text="placeholderText"
-          :cancel-button-text="cancelButtonText"
-          :confirm-button-text="confirmButtonText"
+          :title="singleHeader"
+          :cancel-btn="cancelButtonText"
+          :confirm-btn="confirmButtonText"
           @confirm="onConfirm"
           @cancel="onCancel"
+          @change="onChange"
         >
+          <template #other-content>
+            <t-input
+            type="text"
+            placeholder="输入文案"/>
+          </template>
           <template #footer-cancel>
             <div style="color: #000000; font-size: 18px">我不同意</div>
           </template>
@@ -92,16 +92,20 @@
         <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog
           v-model="isShowDialog8"
-          type="confirm"
-          :is-input="isInput"
-          :header="header"
+          :title="title"
           :content="content"
-          :placeholder-text="placeholderText"
-          :cancel-button-text="cancelButtonText"
-          :confirm-button-text="confirmButtonText"
+          :cancel-btn="cancelButtonText"
+          :confirm-btn="confirmButtonText"
+          :button-layout="buttonLayout"
           @confirm="onConfirm"
           @cancel="onCancel"
+          @change="onChange"
         >
+          <template #other-content>
+            <t-input
+            type="text"
+            placeholder="输入文案"/>
+          </template>
           <template #footer-cancel>
             <div style="color: #000000; font-size: 18px">我不同意</div>
           </template>
@@ -131,7 +135,7 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '对话框标题',
+      title: '对话框标题',
       moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       singleHeader: '最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法',
@@ -139,6 +143,7 @@ export default defineComponent({
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
       confirmButtonText: '继续',
+      buttonLayout: 'vertical',
       zIndex: 3000,
       width: 250,
       showHeader: false,
@@ -252,64 +257,25 @@ export default defineComponent({
       }
     },
 
-    onConfirm(e: string) {
-      console.log('dialog:confirm', e);
+    onConfirm() {
+      console.log('dialog:confirm');
     },
 
     onCancel() {
       console.log('dialog:cancel');
     },
 
-    openDialog() {
-      console.log('dialog:opened');
+    onClose(e: string) {
+      console.log('dialog:close', e);
     },
 
-    closeDialog() {
-      console.log('dialog:closed');
-    },
-
-    changeVisible(e: boolean) {
-      console.log('dialog:visible-change', e);
-    },
-
-    clickOverlay() {
+    onClickOverlay() {
       console.log('dialog:clickOverlay');
     },
 
-    changeFunctionVisible2() {
-      Dialog.confirm({
-        isInput: true,
-        content: '我的家里有个人很酷',
-        knowContent: 'i know',
-        placeholderText: '请输入您的名字',
-        onConfirm: (e: string) => {
-          console.log('dialog:confirm', e);
-        },
-        onCancel: () => {
-          console.log('dialog:cancel');
-        },
-        onClickOverlay: () => {
-          console.log('dialog:clickOverlay');
-        },
-      });
-    },
-
-    changeFunctionVisible1() {
-      Dialog.alert({
-        showHeader: false,
-        content: '我的家里有个人很酷',
-        knowContent: 'i know',
-        onConfirm: (e: string) => {
-          console.log('dialog:confirm', e);
-        },
-        onCancel: () => {
-          console.log('dialog:cancel');
-        },
-        onClickOverlay: () => {
-          console.log('dialog:clickOverlay');
-        },
-      });
-    },
+    onChange(e: boolean) {
+      console.log('dialog:value change', e)
+    }
   },
 });
 </script>
