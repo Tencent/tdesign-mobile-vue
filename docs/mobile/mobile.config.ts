@@ -184,6 +184,11 @@ export default {
           name: 'swiper',
           component: () => import('@/swiper/demos/base.vue'),
         },
+        {
+          title: 'CountDown',
+          name: 'count-down',
+          component: () => import('@/count-down/demos/base.vue'),
+        },
       ],
     },
   },
