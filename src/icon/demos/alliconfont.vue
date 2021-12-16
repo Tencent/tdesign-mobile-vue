@@ -2,7 +2,7 @@
   <div class="t-demo-iconfont">
     <div class="t-demo-row">
       <icon-font name="loading" />
-      <icon-font name="close" @click="onIconClose" />
+      <icon-font name="close" />
       <icon-font name="check-circle-filled" />
     </div>
     <br />

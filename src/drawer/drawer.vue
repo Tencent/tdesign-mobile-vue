@@ -2,7 +2,7 @@
   <t-popup v-model="open" placement="left">
     <div :class="dSideBarClassName">
       <div v-for="item in sidebar" :key="item.name" :class="dSideBarItemClassName" @click="takePath(item.path)">
-        <t-node :content="computedIcon"></t-node>
+        <t-node :content="computedIcon(item.icon)"></t-node>
         <div :class="dSideBarItemNameClassName">{{ item.name }}</div>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default defineComponent({
         window.location.href = path;
       }
     };
-    const computedIcon = renderTNode(internalInstance, 'icon');
+    const computedIcon = (itemIcon: any) => renderTNode(internalInstance, itemIcon);
     watch(open, () => {
       context.emit('update:modelValue', open.value);
     });

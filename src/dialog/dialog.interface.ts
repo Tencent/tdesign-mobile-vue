@@ -2,13 +2,12 @@ export type DialogType = 'alert' | 'confirm' | 'show';
 
 export interface DialogPropsType {
   modelValue?: boolean;
-  showHeader?: boolean;
-  header?: string;
+  title?: string;
   content: string;
   type?: DialogType;
   showFooter?: boolean;
   placeholderText?: string;
-  confirmContent?: string;
+  confirmBtn?: string;
   cancelContent?: string;
   isInput?: boolean;
   visible?: boolean;
@@ -19,13 +18,12 @@ export interface DialogPropsType {
 }
 
 export const DialogPropsDefault = {
-  showHeader: true,
-  header: '温馨提醒',
+  title: '温馨提醒',
   content: '',
   type: '',
   showFooter: true,
   placeholderText: '',
-  confirmContent: '确认',
+  confirmBtn: '确认',
   cancelContent: '取消',
   isInput: false,
   visible: false,
@@ -46,18 +44,10 @@ export const DialogProps = {
     default: true,
   },
   /**
-   * @description 是否显示标题
-   * @property showHeader
-   */
-  showHeader: {
-    type: Boolean,
-    default: true,
-  },
-  /**
    * @description 标题
-   * @property header
+   * @property title
    */
-  header: {
+  title: {
     type: String,
     default: '温馨提醒',
   },
@@ -103,9 +93,9 @@ export const DialogProps = {
   },
   /**
    * @description 确定按钮文字
-   * @property confirmContent
+   * @property confirmBtn
    */
-  confirmContent: {
+  confirmBtn: {
     type: String,
     default: '确认',
   },

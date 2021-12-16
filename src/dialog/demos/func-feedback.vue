@@ -2,7 +2,9 @@
   <div :class="`${name}`">
     <t-cell-group title="函数调用: 反馈类弹框">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeFunctionVisible"> 反馈类弹出框 </t-button>
+        <t-button theme="primary" @click="changeFunctionVisible">
+          反馈类弹出框
+        </t-button>
       </t-cell>
     </t-cell-group>
   </div>
@@ -24,7 +26,7 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '标题',
+      title: '标题',
       content: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
