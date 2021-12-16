@@ -2,12 +2,14 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-05 23:18:55
+ * updated at 2021-12-12 01:00:48
  * */
 
-import { TNode } from '../common';
-
 export interface TdSwitchProps {
+  /**
+   * 自定义颜色，[打开时的颜色，关闭时的颜色]。组件默认颜色为 ['#0052d9', 'rgba(0, 0, 0, .26']。示例：[blue, gray]
+   */
+  colors: string[];
   /**
    * 开关内容，[打开时的值，关闭时的值]。默认为 [true, false]。示例：[1, 0]
    */
@@ -18,20 +20,10 @@ export interface TdSwitchProps {
    */
   disabled: boolean;
   /**
-   * 开关内容，[开启时内容，关闭时内容]。示例：['开', '关'] 或 (value) => value ? '开' : '关'
-   * @default []
+   * 开关的标签
+   * @default ''
    */
-  label: Array<string | TNode> | TNode<{ value: SwitchValue }>;
-  /**
-   * 是否处于加载中状态
-   * @default false
-   */
-  loading: boolean;
-  /**
-   * 开关尺寸
-   * @default medium
-   */
-  size: 'small' | 'medium' | 'large';
+  label: string;
   /**
    * 开关值
    * @default false
@@ -46,6 +38,6 @@ export interface TdSwitchProps {
    * 数据发生变化时触发
    */
   onChange: (value: SwitchValue) => void;
-}
+};
 
 export type SwitchValue = string | number | boolean;

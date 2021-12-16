@@ -1,48 +1,48 @@
 <template>
   <t-popup
-    :visible="currentVisible"
+    :visible="visible"
     position="center"
     :mask-transparent="!showOverlay"
     :teleport-disabled="true"
-    @opened="afterEnter"
-    @closed="afterLeave"
-    @close="handleClosed"
+    @close="handleOverlayClick"
   >
-    <div id="root" :class="dClassName" :style="rootStyles">
-      <div v-if="showHeader" :class="dHeaderClassName">
+    <div
+      id="root"
+      :class="dClassName"
+      :style="rootStyles">
+      <div v-if="title" :class="dHeaderClassName">
         <slot name="header">
-          <div :class="dTitleClassName">{{ header }}</div>
+          <div :class="dTitleClassName">{{title}}</div>
         </slot>
       </div>
       <div :class="dBodyClassName">
         <slot name="content">
-          <div v-if="content" :class="dTextClassName">{{ content }}</div>
+          <div v-if="content" :class="dTextClassName">{{content}}</div>
         </slot>
-        <input
-          v-if="isInput"
-          id="input"
-          v-model="innerValue"
-          :class="dInputClassName"
-          type="text"
-          :placeholder="placeholderText"
-        />
+        <slot name="other-content">
+        </slot>
       </div>
-      <div v-if="type == 'confirm'" :class="dFooterClassName">
-        <div :class="dDefaultBtnClassName" @click="handleCancel">
+      <div :class="dFooterClassName" v-if="buttonLayout!='vertical'">
+        <div v-if="cancelBtn" :class="dDefaultBtnClassName" @click="handleCancel">
           <slot name="footer-cancel">
-            {{ cancelContent }}
+            {{cancelBtn}}
           </slot>
         </div>
-        <div :class="dConformBtnClassName" @click="handleConfirm">
+        <div v-if="confirmBtn" :class="dConformBtnClassName" @click="handleConfirm">
           <slot name="footer-confirm">
-            {{ confirmContent }}
+            {{confirmBtn}}
           </slot>
         </div>
       </div>
-      <div v-if="showFooter && type != 'confirm'" :class="dFooterClassName">
-        <div :class="dDefaultBtnClassName" @click="handleConfirm">
-          <slot name="footer">
-            {{ knowContent }}
+      <div :class="dFooterVerticalClassName" v-if="buttonLayout=='vertical'">
+        <div v-if="confirmBtn" :class="dVerticalDefaultBtnClassName" @click="handleConfirm">
+          <slot name="footer-confirm">
+            {{confirmBtn}}
+          </slot>
+        </div>
+        <div v-if="cancelBtn" :class="dVerticalConformBtnClassName" @click="handleCancel">
+          <slot name="footer-cancel">
+            {{cancelBtn}}
           </slot>
         </div>
       </div>
@@ -53,7 +53,7 @@
 import { computed, ref, toRefs, watch, defineComponent } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
-import { DialogProps } from './dialog.interface';
+import DialogProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-dialog`;
@@ -62,7 +62,7 @@ export default defineComponent({
   name,
   components: { TPopup },
   props: DialogProps,
-  emits: ['update:modelValue', 'confirm', 'click-overlay', 'cancel', 'visible-change', 'closed', 'opened'],
+  emits: ['update:modelValue', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
   setup(props, context) {
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);
@@ -73,9 +73,12 @@ export default defineComponent({
     const dTextClassName = computed(() => `${name}__text`);
     const dInputClassName = computed(() => `${name}__input`);
     const dFooterClassName = computed(() => `${name}__footer`);
-    const dDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`]);
-    const dConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`]);
-    const currentVisible = computed(() => props.modelValue || props.visible);
+    const dFooterVerticalClassName = computed(() => [`${name}__vertical-footer`, `${name}__footer`]);
+    const dDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`, `${name}__horizontal-btn`]);
+    const dConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`, `${name}__horizontal-btn`]);
+    const dVerticalDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`, `${name}__vertical-btn`]);
+    const dVerticalConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`, `${name}__vertical-btn`]);
+    const visible = computed(() => props.modelValue || props.visible);
     const rootStyles = computed(() => ({
       zIndex: props.zIndex,
       width: typeof props.width === 'string' ? props.width : `${props.width}px`,
@@ -83,39 +86,30 @@ export default defineComponent({
 
     const handleConfirm = () => {
       context.emit('update:modelValue', false);
-      context.emit('confirm', innerValue.value);
-      innerValue.value = '';
+      context.emit('confirm');
     };
 
     const handleCancel = () => {
       context.emit('update:modelValue', false);
+      context.emit('close', "cancel");
       context.emit('cancel');
-      innerValue.value = '';
     };
 
-    const handleClosed = () => {
+    const handleOverlayClick = () => {
       context.emit('update:modelValue', false);
-      context.emit('click-overlay');
-      innerValue.value = '';
-    };
-
-    const afterEnter = () => {
-      context.emit('opened');
-    };
-
-    const afterLeave = () => {
-      context.emit('closed');
+      context.emit('close', "overlay");
+      context.emit('overlay-click');
     };
 
     watch(
-      () => currentVisible.value,
-      (val) => {
-        context.emit('visible-change', val);
+      () => visible.value,
+      (val:boolean) => {
+        context.emit('change', val);
       },
     );
 
     return {
-      currentVisible,
+      visible,
       innerValue,
       dClassName,
       dBoxClassName,
@@ -125,15 +119,16 @@ export default defineComponent({
       dTextClassName,
       dInputClassName,
       dFooterClassName,
+      dFooterVerticalClassName,
       dDefaultBtnClassName,
       dConformBtnClassName,
+      dVerticalDefaultBtnClassName, 
+      dVerticalConformBtnClassName,
       handleConfirm,
       handleCancel,
-      handleClosed,
+      handleOverlayClick,
       rootStyles,
       ...toRefs(props),
-      afterEnter,
-      afterLeave,
     };
   },
 });

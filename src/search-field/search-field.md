@@ -1,10 +1,10 @@
-# SearchField 搜索框
-
-定义：用于用户输入搜索信息，并进行页面内容搜索
-
-## 组件类型
-
-在TDesign中，只提供一种不同类型的搜索框
+---
+title: SearchField 搜索框
+description: 用于用户输入搜索信息，并进行页面内容搜索
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 基础搜索框
 

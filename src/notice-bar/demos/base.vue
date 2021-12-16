@@ -15,12 +15,12 @@
     <tdesign-demo-block summary="滚动消息栏">
       <t-notice-bar mode="link" scrollable content="提示文字描述提示文字描述">
         <template #leftIcon>
-          <icon name="error-circle-filled" />
+          <icon name="error-circle-filled" size="22px" />
         </template>
       </t-notice-bar>
       <t-notice-bar scrollable content="提示文字描述提示文字描述从右至左轮播从右至左轮">
         <template #leftIcon>
-          <icon name="sound" />
+          <icon name="sound" size="22px" />
         </template>
       </t-notice-bar>
     </tdesign-demo-block>

@@ -5,18 +5,11 @@ export default {
       type: 'document', // 普通文档
       children: [
         {
-          title: '说明',
-          name: 'readme',
+          title: '快速开始',
+          name: 'getting-started',
           meta: { docType: 'explain' },
-          path: '/vue-mobile/components/readme',
-          component: () => import('@/../README.md'),
-        },
-        {
-          title: '贡献指南',
-          name: 'contributing',
-          meta: { docType: 'explain' },
-          path: '/vue-mobile/components/contributing',
-          component: () => import('@/../CONTRIBUTING.md'),
+          path: '/vue-mobile/components/getting-started',
+          component: () => import('@/../getting-started.md'),
         },
         {
           title: '更新日志',
@@ -32,19 +25,26 @@ export default {
       type: 'component', // 组件文档
       children: [
         {
-          title: 'Icon 图标',
-          name: 'icon',
-          meta: { docType: 'base' },
-          path: '/vue-mobile/components/icon',
-          component: () => import('@/icon/icon.md'),
-        },
-        {
           title: 'Button 按钮',
           name: 'button',
           meta: { docType: 'base' },
           path: '/vue-mobile/components/button',
           component: () => import('@/button/button.md'),
         },
+        {
+          title: 'Divider 分割符',
+          name: 'divider',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/divider',
+          component: () => import('@/divider/divider.md'),
+        },
+        {
+          title: 'Icon 图标',
+          name: 'icon',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/icon',
+          component: () => import('@/icon/icon.md'),
+        }
       ],
     },
     {
@@ -57,6 +57,13 @@ export default {
           meta: { docType: 'data' },
           path: '/vue-mobile/components/badge',
           component: () => import('@/badge/badge.md'),
+        },
+        {
+          title: 'CountDown 倒计时',
+          name: 'CountDown',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/count-down',
+          component: () => import('@/count-down/count-down.md'),
         },
         {
           title: 'Tag 标签',

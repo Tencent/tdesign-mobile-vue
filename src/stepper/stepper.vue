@@ -1,32 +1,37 @@
 <template>
-  <t-cell :title="label" :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`]">
+  <!-- <t-cell :title="label" :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`]">
     <template v-if="hasLabel" #title>
       <slot name="label">
         <div v-if="label" :class="`${name}__label`">{{ label }}</div>
       </slot>
-    </template>
-    <template #note>
-      <span
-        :class="[`${name}__minus`, `${disabled || currentValue <= min ? 't-is-disabled' : ''}`]"
-        @click="minusValue"
-      ></span>
-      <input
-        v-model="currentValue"
-        :class="`${name}__input`"
-        type="tel"
-        :style="inputStyle"
-        pattern="[0-9]*"
-        :disabled="disableInput || disabled"
-        :readonly="disableInput"
-        @input="onInput"
-        @blur="onBlur"
-      />
-      <span
-        :class="[`${name}__plus`, `${disabled || currentValue >= max ? 't-is-disabled' : ''}`]"
-        @click="plusValue"
-      ></span>
-    </template>
-  </t-cell>
+    </template> -->
+  <!-- <template #note> -->
+  <div :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`, `${isPureMode ? `${name}__pure` : ''}`]">
+    <slot name="label">
+      <div v-if="label" :class="`${name}__label`">{{ label }}</div>
+    </slot>
+    <span
+      :class="[`${name}__minus`, `${disabled || currentValue <= min ? 't-is-disabled' : ''}`]"
+      @click="minusValue"
+    ></span>
+    <input
+      v-model="currentValue"
+      :class="`${name}__input`"
+      type="tel"
+      :style="inputStyle"
+      pattern="[0-9]*"
+      :disabled="disableInput || disabled"
+      :readonly="disableInput"
+      @input="onInput"
+      @blur="onBlur"
+    />
+    <span
+      :class="[`${name}__plus`, `${disabled || currentValue >= max ? 't-is-disabled' : ''}`]"
+      @click="plusValue"
+    ></span>
+  </div>
+  <!-- </template>
+  </t-cell> -->
 </template>
 
 <script lang="ts">
@@ -56,7 +61,11 @@ export default defineComponent({
         state.cacheValue = val;
       },
     });
-    const { min, max, inputWidth } = toRefs(props);
+
+    const { min, max, inputWidth, theme } = toRefs(props);
+    const isPureMode = theme.value === 'mode';
+    console.log(theme.value);
+    console.log(isPureMode, 'isPureMode');
     const inputStyle = inputWidth ? { width: `${inputWidth.value}px` } : '';
     console.log(inputStyle);
     const format = (val: number) =>
@@ -96,6 +105,7 @@ export default defineComponent({
       inputStyle,
       hasLabel,
       onBlur,
+      isPureMode,
       ...toRefs(props),
     };
   },

@@ -7,23 +7,27 @@
           <error-circle-filled-icon v-else />
         </slot>
         <span :class="`${name}--txt`">{{ content }}</span>
+        <close-icon v-if="closeBtn === true" @click="onClose" />
+        <t-node v-else :content="closeBtnContent" />
       </slot>
     </div>
   </transition>
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { CheckCircleFilledIcon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { MessageType, MessageAlignType } from './message.interface';
+import { ref, computed, SetupContext, watch, defineComponent, getCurrentInstance, PropType } from 'vue';
+import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
+import { MessageAlignType, MessageThemeList } from './type';
 import config from '../config';
+import { emitEvent } from '../shared/emit';
+import { renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-message`;
 
 export default defineComponent({
   name,
-  components: { CheckCircleFilledIcon, ErrorCircleFilledIcon },
+  components: { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon, TNode },
   props: {
     modelValue: Boolean,
     /**
@@ -44,7 +48,7 @@ export default defineComponent({
      * @attribute theme
      */
     theme: {
-      type: String as PropType<MessageType>,
+      type: String as PropType<MessageThemeList>,
       default: 'info',
     },
     /**
@@ -64,6 +68,13 @@ export default defineComponent({
       default: 'left',
     },
     /**
+     * @description 关闭按钮
+     * @attribute close-btn
+     */
+    closeBtn: {
+      type: [String, Boolean, Object] as PropType<string | boolean | typeof TNode>,
+    },
+    /**
      * @description 自定义层级
      * @attribute zIndex
      */
@@ -73,8 +84,10 @@ export default defineComponent({
     },
   },
   emits: ['update:modelValue', 'visible-change', 'open', 'opened', 'close', 'closed'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const root = ref(null);
+    const internalInstance = getCurrentInstance();
+    const closeBtnContent = computed(() => renderTNode(internalInstance, 'closeBtn'));
     const currentVisible = computed(() => props.modelValue || props.visible);
     const rootClasses = computed(() => ({
       [name]: true,
@@ -85,16 +98,21 @@ export default defineComponent({
       zIndex: props.zIndex,
     }));
 
+    const onClose = () => {
+      context.emit('update:modelValue', false);
+      emitEvent(props, context, 'close');
+    };
+
     watch(
       () => currentVisible.value,
       (val) => {
-        context.emit('visible-change', val);
-        if (val) {
-          context.emit('open');
-          setTimeout(() => {
-            context.emit('update:modelValue', false);
-            context.emit('close');
-          }, props.duration);
+        emitEvent(props, context, 'visible-change', val);
+
+        if (val === false) return;
+
+        emitEvent(props, context, 'open');
+        if (props.duration > 0) {
+          setTimeout(onClose, props.duration);
         }
       },
     );
@@ -105,8 +123,10 @@ export default defineComponent({
       currentVisible,
       rootClasses,
       rootStyles,
-      afterEnter: () => context.emit('opened'),
-      afterLeave: () => context.emit('closed'),
+      closeBtnContent,
+      onClose,
+      afterEnter: () => emitEvent(props, context, 'opened'),
+      afterLeave: () => emitEvent(props, context, 'closed'),
     };
   },
 });

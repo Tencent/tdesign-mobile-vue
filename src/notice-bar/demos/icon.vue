@@ -2,7 +2,7 @@
   <div class="noticebar-demo">
     <t-cell-group>
       <t-cell value-align="left">
-        <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :left-icon="() => TIconErrorCircleFilled" />
+        <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :left-icon="() => SoundIcon" />
       </t-cell>
     </t-cell-group>
   </div>
@@ -10,12 +10,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TIconErrorCircleFilled from '@/icon/error-circle-filled.vue';
+import { SoundIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
     return {
-      TIconErrorCircleFilled,
+      SoundIcon,
     };
   },
 });

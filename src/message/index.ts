@@ -1,11 +1,11 @@
 import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message.vue';
 import { WithInstallType } from '../shared';
-import { MessageProps, MessageType } from './message.interface';
+import { TdMessageProps, MessageThemeList } from './type';
 
 import './style';
 
-function create(props: MessageProps): void {
+function create(props: TdMessageProps): void {
   const visible = ref(false);
   const root = document.createElement('div');
   document.body.appendChild(root);
@@ -31,11 +31,26 @@ function create(props: MessageProps): void {
   });
 }
 
-(['info', 'success', 'warning', 'error'] as MessageType[]).forEach((type: MessageType): void => {
-  Message[type] = (options: MessageProps | string) => {
-    let props = {
-      content: '',
-      theme: type,
+const defaultProps: TdMessageProps = {
+  align: 'left',
+  closeBtn: '',
+  content: '',
+  duration: 3000,
+  theme: 'info',
+  visible: false,
+  zIndex: 5000,
+  onClose: () => {},
+  onClosed: () => {},
+  onOpen: () => {},
+  onOpened: () => {},
+  onVisibleChange: () => {},
+};
+
+(['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((theme: MessageThemeList): void => {
+  Message[theme] = (options: TdMessageProps | string) => {
+    let props: TdMessageProps = {
+      ...defaultProps,
+      theme,
     };
 
     if (typeof options === 'string') {
@@ -58,13 +73,13 @@ Message.install = (app: App, name = '') => {
 
 type MessageApi = {
   /** 展示普通消息 */
-  info: (options?: MessageProps | string) => void;
+  info: (options?: TdMessageProps | string) => void;
   /** 展示成功消息 */
-  success: (options?: MessageProps | string) => void;
+  success: (options?: TdMessageProps | string) => void;
   /** 展示警示消息 */
-  warning: (options?: MessageProps | string) => void;
+  warning: (options?: TdMessageProps | string) => void;
   /** 展示错误消息 */
-  error: (options?: MessageProps | string) => void;
+  error: (options?: TdMessageProps | string) => void;
 };
 
 export const MessagePlugin: WithInstallType<typeof Message> = Message as any;

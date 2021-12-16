@@ -18,20 +18,20 @@
     </t-cell-group>
 
     <!-- pickers -->
-    <t-popup v-model="show.city" position="bottom">
+    <t-popup v-model="show.city" placement="bottom">
       <t-picker @change="onChange" @confirm="onCityConfirm" @cancel="onCancel">
         <t-picker-column :options="cityOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
-    <t-popup v-model="show.yearAndSeason" position="bottom">
+    <t-popup v-model="show.yearAndSeason" placement="bottom">
       <t-picker @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
         <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
         <t-picker-column :options="seasonOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
-    <t-popup v-model="show.date" position="bottom">
+    <t-popup v-model="show.date" placement="bottom">
       <t-picker @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
         <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
         <t-picker-column :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />

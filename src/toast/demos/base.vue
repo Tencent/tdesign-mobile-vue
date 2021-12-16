@@ -5,8 +5,8 @@
     <tdesign-demo-block title="01 类型" summary="基础提示">
       <div class="toast-demo">
         <t-button size="large" variant="outline" @click="showText(text1)">纯文本</t-button>
-        <t-button size="large" variant="outline" @click="showText(text2)">带图标-横向</t-button>
-        <t-button size="large" variant="outline" @click="showText(text2)">带图标-竖向</t-button>
+        <t-button size="large" variant="outline" @click="showWithIcon(text1, 'row')">带图标-横向</t-button>
+        <t-button size="large" variant="outline" @click="showWithIcon(text1, 'column')">带图标-竖向</t-button>
         <t-button size="large" variant="outline" @click="showText(text2)">纯文本最大高度</t-button>
       </div>
     </tdesign-demo-block>
@@ -23,11 +23,10 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { ref, h, defineComponent } from 'vue';
 import { UserIcon } from 'tdesign-icons-vue-next';
 import Toast from '../index';
 import config from '@/config';
-import { ToastPositionType } from '../toast.interface';
 
 const { prefix } = config;
 const name = `${prefix}-toast-base-demo`;
@@ -49,51 +48,46 @@ export default defineComponent({
     };
   },
   methods: {
-    showText(message?: string) {
+    showText(message: string) {
       Toast(message);
     },
     showSuccess(message?: string) {
       Toast.success(message);
     },
-    showFail(message?: string) {
+    showFail(message: string) {
       Toast.fail(message);
     },
-    showSuccessRow(message?: string) {
+    showSuccessRow(message: string) {
       Toast({
         type: 'success',
         direction: 'row',
         message,
       });
     },
-    showFailRow(message?: string) {
+    showFailRow(message: string) {
       Toast({
         type: 'fail',
         direction: 'row',
         message,
       });
     },
-    showCustom(message?: string) {
+    showWithIcon(message: string, direction: any) {
       Toast({
-        icon: UserIcon,
+        icon: () => h(UserIcon),
+        direction,
         message,
       });
     },
-    showLoading(message?: string) {
+    showCustom(message?: string) {
+      Toast({
+        icon: () => h(UserIcon),
+        message,
+      });
+    },
+    showLoading(message: string) {
       Toast({
         type: 'loading',
         message,
-      });
-    },
-    showPosition(position: ToastPositionType) {
-      Toast({
-        type: 'success',
-        position,
-      });
-    },
-    showMask() {
-      Toast({
-        showOverlay: true,
-        message: this.text1,
       });
     },
   },

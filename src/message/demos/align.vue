@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <div class="tdesign-demo-block">
-      <t-button variant="outline" @click="visible = true">居中对齐</t-button>
-    </div>
-    <t-message v-model="visible" content="居中对齐" align="center" />
+  <div class="tdesign-demo-block">
+    <t-button variant="outline" @click="visible = true">居中对齐</t-button>
   </div>
+  <t-message v-model="visible" content="居中对齐" align="center" />
 </template>
 
 <script>

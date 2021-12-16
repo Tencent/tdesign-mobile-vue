@@ -10,6 +10,8 @@ import '@common/style/mobile/index.less';
 // import site webcomponents
 import 'tdesign-site-components';
 import 'tdesign-site-components/lib/styles/style.css';
+import 'tdesign-site-components/lib/styles/prism-theme.less';
+import 'tdesign-site-components/lib/styles/prism-theme-dark.less';
 
 createApp(app)
   .use(TDesign)

@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs } from 'vue';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 import BadgeProps from './props';
 import config from '../config';
 
@@ -59,8 +59,8 @@ export default defineComponent({
       yOffset = isNaN(Number(yOffset)) ? yOffset : `${yOffset}px`;
       return {
         background: props.color,
-        right: `${xOffset}px`,
-        top: `${yOffset}px`,
+        right: xOffset,
+        top: yOffset,
       };
     });
 

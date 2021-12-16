@@ -8,15 +8,10 @@
     <div
       :class="{
         [`${name}-container`]: true,
-        'border--top-bottom': border,
+        'border--top-bottom': bordered,
       }"
     >
       <slot></slot>
-    </div>
-    <div v-if="summary" :class="`${name}--summary`">
-      <slot name="summary">
-        {{ summary }}
-      </slot>
     </div>
   </div>
 </template>

@@ -22,9 +22,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { reactive, toRefs, defineComponent } from 'vue';
-import TIconHelpCircleFilled from '@/icon/help-circle-filled.vue';
+import { HelpCircleFilledIcon as TIconHelpCircleFilled } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   components: {
@@ -43,7 +43,7 @@ export default defineComponent({
     const onBlur = () => {
       console.log('blur');
     };
-    const onChange = (val) => {
+    const onChange = (val: any) => {
       console.log(val);
     };
     return {

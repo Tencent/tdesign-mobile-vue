@@ -1,5 +1,12 @@
 <template>
-  <button :class="classes" :disabled="disabled" @click="handleClick">
+  <button
+    :class="classes"
+    :disabled="disabled"
+    role="button"
+    :aria-disabled="disabled"
+    :aria-checked="checked"
+    @click="handleClick"
+  >
     <div :class="`${baseClass}__icon`">
       <t-node :content="iconContent"></t-node>
     </div>
@@ -15,7 +22,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-tag`;

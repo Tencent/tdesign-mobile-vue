@@ -22,8 +22,17 @@
 
     <t-message v-model="visible">这是一条纯文字的消息通知</t-message>
     <t-message v-model="visible1" content="这是一条带图标的消息通知"></t-message>
-    <t-message v-model="visible2" content="警示消息"></t-message>
-    <t-message v-model="visible3" content="错误消息"></t-message>
+    <t-message
+      v-model="visible2"
+      content="这是一条带关闭的消息通知，常驻可关闭"
+      :close-btn="true"
+      :duration="0"
+    ></t-message>
+    <t-message v-model="visible3" content="这是一条带操作的消息通知">
+      <template #closeBtn>
+        <t-button theme="primary" variant="outline" size="small" shape="round">按钮</t-button>
+      </template>
+    </t-message>
     <t-message v-model="visible4" content="这是一条普通的通知信息" theme="info"></t-message>
     <t-message v-model="visible5" content="这是一条需要成功的提示消息" theme="success"></t-message>
     <t-message v-model="visible6" content="这是一条需要用户关注到的警示通知" theme="warning"></t-message>
@@ -74,11 +83,6 @@ export default defineComponent({
 </script>
 
 <style lang="less">
-// .message-base {
-//   .t-button:not(:last-child) {
-//     margin-right: 20px;
-//   }
-// }
 .tdesign-demo-block {
   .t-button:not(:last-child) {
     margin-bottom: 12px;

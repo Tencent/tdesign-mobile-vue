@@ -1,10 +1,10 @@
-# Steps 步骤条
-
-## 组件类型
-
-在TDesign中，拥有两种不同类型的步骤条：横向步骤条、竖向步骤条
-
-### 横向步骤条
+---
+title: Steps 步骤条
+description: 用于任务步骤展示或任务进度展示。
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 横向只读步骤条
 

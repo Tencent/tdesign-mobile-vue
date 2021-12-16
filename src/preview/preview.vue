@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, defineComponent, reactive, watch, nextTick } from 'vue';
+import { computed, toRefs, ref, defineComponent, reactive, watch, nextTick, PropType } from 'vue';
 import config from '../config';
 import { DragState } from './preview.interface';
 
@@ -45,7 +45,7 @@ export default defineComponent({
       default: false,
     },
     images: {
-      type: Array,
+      type: Array as PropType<Array<string>>,
       default: () => [],
     },
     visible: {
@@ -87,7 +87,7 @@ export default defineComponent({
 
     let element: HTMLDivElement;
 
-    const myRef = (el: HTMLDivElement) => {
+    const myRef = (el: any) => {
       element = el;
     };
     const showViewer = computed(() => props.modelValue || props.visible);

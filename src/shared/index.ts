@@ -5,3 +5,6 @@ export * from './constants';
 export { default as mapProps } from './map-props';
 export * from './render';
 export { default as TNode } from './render-tnode';
+
+/* Vue3 use */
+export * from './useToggle';

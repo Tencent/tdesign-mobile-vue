@@ -1,10 +1,10 @@
-# Noticebar 公告栏
-
-在导航栏下方，用于给用户显示提示消息
-
-## 组件类型
-
-在 TDesign 中，拥有四种不同类型的消息栏：静态消息栏、带图标静态消息栏、带操作消息栏、滚动消息栏
+---
+title: Noticebar 公告栏
+description: 在导航栏下方，用于给用户显示提示消息
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 静态消息栏
 

@@ -73,6 +73,7 @@ export interface TdDropdownItemProps {
 
 export interface TdDropdownItemOption {
   title: string;
+  disabled: boolean;
   value: TdDropdownItemOptionValueType;
   [key: string]: any;
 }

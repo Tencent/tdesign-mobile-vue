@@ -15,10 +15,8 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
-import { PlacementType, PopupProps } from './popup.interface';
-
+import { emitEvent } from '../shared/emit';
 import TMask from '../mask';
-
 import config from '../config';
 
 const { prefix } = config;
@@ -74,7 +72,7 @@ export default defineComponent({
      * @default bottom
      */
     placement: {
-      type: String as PropType<PlacementType>,
+      type: String,
       default: 'bottom',
       validator: (val: string) => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
     },
@@ -96,7 +94,7 @@ export default defineComponent({
     },
   },
   emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
-  setup(props: PopupProps, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
     const rootClasses = computed(() => name);
@@ -119,11 +117,11 @@ export default defineComponent({
     watch(
       () => currentVisible.value,
       (val) => {
-        context.emit('visible-change', val);
+        emitEvent(props, context, 'visible-change', val);
         const cls = `${prefix}-overflow-hidden`;
         if (val) {
           document.body.classList.add(cls);
-          context.emit('open');
+          emitEvent(props, context, 'open');
         } else {
           document.body.classList.remove(cls);
         }
@@ -131,7 +129,7 @@ export default defineComponent({
     );
 
     const handleMaskClick = () => {
-      context.emit('close');
+      emitEvent(props, context, 'close');
       context.emit('update:modelValue', false);
     };
 
@@ -141,8 +139,8 @@ export default defineComponent({
       }
     };
 
-    const afterLeave = () => context.emit('closed');
-    const afterEnter = () => context.emit('opened');
+    const afterLeave = () => emitEvent(props, context, 'closed');
+    const afterEnter = () => emitEvent(props, context, 'opened');
 
     return {
       name: ref(name),

@@ -7,8 +7,9 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent, h } from 'vue';
+import { UserIcon } from 'tdesign-icons-vue-next';
 import Toast from '../index';
 
 export default defineComponent({
@@ -17,7 +18,7 @@ export default defineComponent({
       showSuccess: () => Toast.success(),
       showFail: () => Toast.fail(),
       showLoading: () => Toast.loading(),
-      showCustom: () => Toast({ icon: 'user-filled' }),
+      showCustom: () => Toast({ icon: () => h(UserIcon) }),
     };
   },
 });

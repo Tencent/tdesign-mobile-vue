@@ -1,11 +1,11 @@
 <template>
-  <span :class="classes" :style="style" @click="handleClick">
-    <div :class="`${baseClass}__icon`">
+  <span :class="classes" :style="style" :aria-disabled="disabled" role="button" @click="handleClick">
+    <span :class="`${baseClass}__icon`">
       <t-node :content="iconContent"></t-node>
-    </div>
-    <div :class="`${baseClass}__text`">
+    </span>
+    <span :class="`${baseClass}__text`">
       <t-node :content="tagContent"></t-node>
-    </div>
+    </span>
     <close-icon v-if="closable && !disabled" :class="`${baseClass}__close`" @click="onClickClose" />
   </span>
 </template>
@@ -15,7 +15,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-tag`;
@@ -53,18 +53,22 @@ const Tag = defineComponent({
     ]);
 
     function onClickClose(e: Event) {
-      if (props.disabled) {
-        e.stopPropagation();
-      } else {
-        context.emit('close', e);
-        if (typeof props.onClose === 'function') props.onClose({ e });
+      if (!props.disabled) {
+        if (typeof props.onClose === 'function') {
+          props.onClose({ e });
+        } else {
+          context.emit('close', e);
+        }
       }
     }
 
     const handleClick = (e: MouseEvent): void => {
-      if (!disabled.value) {
-        context.emit('click', { e });
-        if (typeof props.onClick === 'function') props.onClick({ e });
+      if (!props.disabled) {
+        if (typeof props.onClick === 'function') {
+          props.onClick({ e });
+        } else {
+          context.emit('click', { e });
+        }
       }
     };
 

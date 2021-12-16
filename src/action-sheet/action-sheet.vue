@@ -1,5 +1,5 @@
 <template>
-  <t-popup :class="name" :visible="currentVisible" position="bottom" @close="handleClose">
+  <t-popup :class="name" :visible="currentVisible" placement="bottom" @close="handleClose">
     <div :class="rootClasses">
       <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect">
         <template #cell="slotProps">
@@ -22,12 +22,13 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, defineComponent, PropType, ComputedRef } from 'vue';
-import { ActionSheetType, ItemType } from './action-sheet.interface';
+import { ref, computed, watch, defineComponent, PropType, ComputedRef, SetupContext } from 'vue';
+import { emitEvent } from '../shared/emit';
 import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
 import config from '../config';
+import { ActionSheetItem } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-action-sheet`;
@@ -54,7 +55,7 @@ export default defineComponent({
      * @attribute items
      */
     items: {
-      type: Array as PropType<Array<ItemType | string>>,
+      type: Array as PropType<Array<ActionSheetItem | string>>,
       required: true,
     },
     /**
@@ -62,7 +63,7 @@ export default defineComponent({
      * @attribute type
      */
     type: {
-      type: String as PropType<ActionSheetType>,
+      type: String,
       default: 'list',
     },
     /**
@@ -91,7 +92,7 @@ export default defineComponent({
     },
   },
   emits: ['select', 'update:modelValue', 'cancel', 'close'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
     const actionItems = ref([]);
 
     const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
@@ -122,16 +123,16 @@ export default defineComponent({
     );
 
     const handleCancel = () => {
-      context.emit('cancel');
+      emitEvent(props, context, 'cancel');
       context.emit('update:modelValue', false);
     };
 
     const handleSelect = (index: number) => {
-      context.emit('select', props.items[index], index);
+      emitEvent(props, context, 'select', props.items[index], index);
     };
 
     const handleClose = () => {
-      context.emit('close');
+      emitEvent(props, context, 'close');
       context.emit('update:modelValue', false);
     };
 

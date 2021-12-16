@@ -1,9 +1,10 @@
-# Popup 弹出层
-定义：由其他控件触发，屏幕滑出或弹出一块自定义内容区域
-
-
-## 组件类型
-TDesign中，拥有两种不同类型的弹出层：中部弹出、底部弹出、顶部弹出、左侧弹出、右侧弹出
+---
+title: Popup 弹出层
+description: 由其他控件触发，屏幕滑出或弹出一块自定义内容区域。
+spline: base
+isComponent: true
+toc: false
+---
 
 ###  中部弹出
 使用场景：常用于轻提示场景
@@ -62,7 +63,7 @@ onClose | Function |  | 组件准备关闭时触发。`() => {}` | N
 onClosed | Function |  | 组件关闭且动画结束后执行。`() => {}` | N
 onOpen | Function |  | 组件准备展示时触发。`() => {}` | N
 onOpened | Function |  | 组件展示且动画结束后执行。`() => {}` | N
-onVisibleChange | Function |  | 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发。`(visible: boolean, context: PopupVisibleChangeContext) => {}` | N
+onVisibleChange | Function |  | 当浮层隐藏或显示时触发。`(visible: boolean) => {}` | N
 
 ### Popup Events
 名称 | 参数 | 描述
@@ -71,4 +72,4 @@ close | - | 组件准备关闭时触发
 closed | - | 组件关闭且动画结束后执行
 open | - | 组件准备展示时触发
 opened | - | 组件展示且动画结束后执行
-visible-change | `(visible: boolean, context: PopupVisibleChangeContext)` | 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发
+visible-change | `(visible: boolean)` | 当浮层隐藏或显示时触发
