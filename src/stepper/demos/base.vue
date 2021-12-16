@@ -52,7 +52,7 @@ export default defineComponent({
   setup() {
     const state = reactive({
       number1: 1,
-      number2: 9999,
+      number2: 99,
       number3: 3,
       number4: 0,
       number5: 0,

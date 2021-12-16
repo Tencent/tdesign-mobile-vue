@@ -1,7 +1,10 @@
-# Indexes 索引
-
-## 组件类型
-在TDesign中，拥有两种不同类型的索引：基础型、自定义索引列表
+---
+title: Indexes 索引
+description: 用于页面中信息快速检索，可以根据目录中的页码快速找到所需的内容。
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 基础型
 

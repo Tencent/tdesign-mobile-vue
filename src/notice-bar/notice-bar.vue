@@ -49,7 +49,7 @@ import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import NoticeBarProps from './props';
 
 import config from '../config';
-import { renderTNode, TNode } from '@/shared';
+import { renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;

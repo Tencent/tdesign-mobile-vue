@@ -19,8 +19,8 @@ import { ref, computed, SetupContext, watch, defineComponent, getCurrentInstance
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { MessageAlignType, MessageThemeList } from './type';
 import config from '../config';
-import { emitEvent } from '@/shared/emit';
-import { renderTNode, TNode } from '@/shared';
+import { emitEvent } from '../shared/emit';
+import { renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-message`;

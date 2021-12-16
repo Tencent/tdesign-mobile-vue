@@ -935,7 +935,7 @@ export default defineComponent({
   flex-direction: row;
   flex-wrap: wrap;
   .t-demo-icon {
-    width: 75px;
+    width: 70px;
     height: 90px;
     text-align: center;
     vertical-align: top;

@@ -6,11 +6,8 @@
   </div>
 </template>
 <script lang="ts" setup>
-const props = defineProps({
-  title: String,
-  summary: {
-    type: String,
-    required: false,
-  },
-});
+const props = defineProps<{
+  title?: String;
+  summary?: String;
+}>();
 </script>

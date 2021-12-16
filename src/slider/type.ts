@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-02 17:06:42
+ * updated at 2021-12-14 00:39:24
  * */
 
 export interface TdSliderProps {
@@ -12,7 +12,7 @@ export interface TdSliderProps {
    */
   disabled: boolean;
   /**
-   * 刻度标记，示例：[0, 10, 40, 200] 或者 { 5:  '5¥', 10: '10%' }
+   * 刻度标记，示例：`[0, 10, 40, 200]` 或者 `{ 5:  '5¥', 10: '10%' }`
    * @default {}
    */
   marks: Record<number, string> | Array<number>;
@@ -42,6 +42,14 @@ export interface TdSliderProps {
    */
   step: number;
   /**
+   * 滑块值
+   */
+  value: SliderValue;
+  /**
+   * 滑块值，非受控属性
+   */
+  defaultValue: SliderValue;
+  /**
    * 滑块值变化时触发
    */
   onChange: (value: SliderValue) => void;
@@ -53,4 +61,6 @@ export interface TdSliderProps {
    * 开始拖动时触发
    */
   onDragStart: () => void;
-}
+};
+
+export type SliderValue = number | Array<number>;
