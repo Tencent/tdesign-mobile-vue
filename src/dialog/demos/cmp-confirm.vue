@@ -2,42 +2,44 @@
   <div :class="`${name}`">
     <t-cell-group title="组件调用: 确认类弹框——默认">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeDialogVisible(1)"> 默认用法 </t-button>
+        <t-button theme="primary" @click="changeDialogVisible(1)">
+          默认用法
+        </t-button>
         <t-dialog
           v-model="isShowDialog1"
           type="confirm"
-          :header="header"
+          :title="title"
           :content="content"
           :placeholder-text="placeholderText"
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
           @confirm="onConfirm"
-          @cancel="onCancel"
-        >
+          @cancel="onCancel">
         </t-dialog>
       </t-cell>
     </t-cell-group>
 
     <t-cell-group title="组件调用: 确认类弹框——input用法">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeDialogVisible(2)"> input用法 </t-button>
+        <t-button theme="primary" @click="changeDialogVisible(2)">
+          input用法
+        </t-button>
         <t-dialog
           v-model="isShowDialog2"
           type="confirm"
           :is-input="isInput"
-          :header="header"
+          :title="title"
           :content="content"
           :placeholder-text="placeholderText"
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
           @confirm="onConfirm"
-          @cancel="onCancel"
-        >
+          @cancel="onCancel">
           <template #footer-cancel>
-            <div style="color: grey; font-size: 18px">我不同意</div>
+            <div style="color:grey;font-size:18px;">我不同意</div>
           </template>
           <template #footer-confirm>
-            <div style="color: blue; font-size: 18px">我同意</div>
+            <div style="color:blue;font-size:18px;">我同意</div>
           </template>
         </t-dialog>
       </t-cell>
@@ -60,7 +62,7 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '标题',
+      title: '标题',
       content: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',

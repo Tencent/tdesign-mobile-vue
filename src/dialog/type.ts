@@ -5,14 +5,15 @@
  * updated at 2021-12-14 13:07:02
  * */
 
-import { ButtonProps } from '../Button';
+import { TdButtonProps } from '@Button';
+import { ButtonProps } from '@Button';
 import { TNode } from '../common';
 
 export interface TdDialogProps {
   /**
    * 操作栏
    */
-  actions: Array<ButtonProps>;
+  actions: Array<TdButtonProps>;
   /**
    * 多按钮排列方式
    * @default horizontal
