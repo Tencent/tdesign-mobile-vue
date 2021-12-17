@@ -5,10 +5,10 @@
  * updated at 2021-12-16 09:17:45
  * */
 
-import { TdPickerProps } from './type';
+import { TdPickerProps, TdPickerItemProps } from './type';
 import { PropType } from 'vue';
 
-export default {
+export const PickerProps = {
   /** 取消按钮文字 */
   cancelBtn: {
     type: String,
@@ -28,6 +28,10 @@ export default {
   value: {
     type: Array as PropType<TdPickerProps['value']>,
   },
+  /** 选中值，非受控属性 */
+  defaultValue: {
+    type: Array as PropType<TdPickerProps['defaultValue']>,
+  },
   /** 是否显示 */
   visible: Boolean,
   /** 点击取消按钮时触发 */
@@ -36,4 +40,21 @@ export default {
   onChange: Function as PropType<TdPickerProps['onChange']>,
   /** 点击确认确认按钮时触发 */
   onConfirm: Function as PropType<TdPickerProps['onConfirm']>,
+};
+
+export const PickerItemProps = {
+  /** 数据源 */
+  options: {
+    type: Array as PropType<TdPickerItemProps['options']>,
+    default: () => [],
+  },
+  /** 选中的值 */
+  value: {
+    type: [String, Number] as PropType<TdPickerItemProps['value']>,
+  },
+  /** 格式化选项 */
+  formatter: {
+    type: Function as PropType<TdPickerItemProps['formatter']>,
+    default: (value: string): string => value,
+  },
 };

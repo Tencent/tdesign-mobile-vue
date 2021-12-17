@@ -26,6 +26,10 @@ export interface TdPickerProps {
    */
   value: Array<PickerValue>;
   /**
+   * 选中值，非受控属性
+   */
+  defaultValue: Array<PickerValue>;
+  /**
    * 是否显示
    * @default false
    */
@@ -45,7 +49,7 @@ export interface TdPickerProps {
    * @default ''
    */
   onConfirm: ({ e: MouseEvent }) => void;
-};
+}
 
 export interface TdPickerItemProps {
   /**
@@ -57,8 +61,13 @@ export interface TdPickerItemProps {
    * 默认选中的侯选项
    */
   value: string | number;
-};
+  /**
+   * 格式化选项
+   * @default (value: string): string => value
+   */
+  formatter: Function;
+}
 
 export type PickerValue = string | number;
-
-export interface PickerItemOption { label: string; value: string | number };
+export type PickerItemOptionObject = { label: string; value: string | number };
+export type PickerItemOption = PickerItemOptionObject | string | number;
