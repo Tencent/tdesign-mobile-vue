@@ -119,10 +119,10 @@ export default defineComponent({
 
 <style lang="less">
 .demo-count-down {
-  padding: 0 18px;
+  padding: 0 16px;
   font-family: 'PingFang SC';
   .demo__box {
-    margin-top: 18px;
+    margin-top: 16px;
     display: flex;
     font-size: 14px;
     align-items: center;

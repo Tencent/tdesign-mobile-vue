@@ -2,7 +2,6 @@
 @import "../mixins/index.less";
 
 .button-demo {
-  padding: 16px 0;
 
   .t-button {
     margin-bottom: 16px;
@@ -34,16 +33,21 @@
 .tag-demo {
   background-color: #fff;
   padding: 16px;
-  margin: 16px 0;
   display: flex;
+  margin-top: 16px;
 
   .t-tag+.t-tag {
     margin-left: 8px;
   }
 }
+.tdesign-mobile-demo-block{
+  .tag-demo:first-child{
+    margin-top:0;
+  }
+}
 
 .segmented-control-demo {
-  margin: 16px 0;
+  margin-bottom: 8px;
   background-color: #fff;
   padding: 12px 16px;
 }

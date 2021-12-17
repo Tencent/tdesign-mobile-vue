@@ -6,43 +6,39 @@
     :teleport-disabled="true"
     @close="handleOverlayClick"
   >
-    <div
-      id="root"
-      :class="dClassName"
-      :style="rootStyles">
+    <div id="root" :class="dClassName" :style="rootStyles">
       <div v-if="title" :class="dHeaderClassName">
         <slot name="header">
-          <div :class="dTitleClassName">{{title}}</div>
+          <div :class="dTitleClassName">{{ title }}</div>
         </slot>
       </div>
       <div :class="dBodyClassName">
         <slot name="content">
-          <div v-if="content" :class="dTextClassName">{{content}}</div>
+          <div v-if="content" :class="dTextClassName">{{ content }}</div>
         </slot>
-        <slot name="other-content">
-        </slot>
+        <slot name="other-content"> </slot>
       </div>
-      <div :class="dFooterClassName" v-if="buttonLayout!='vertical'">
+      <div v-if="buttonLayout != 'vertical'" :class="dFooterClassName">
         <div v-if="cancelBtn" :class="dDefaultBtnClassName" @click="handleCancel">
           <slot name="footer-cancel">
-            {{cancelBtn}}
+            {{ cancelBtn }}
           </slot>
         </div>
         <div v-if="confirmBtn" :class="dConformBtnClassName" @click="handleConfirm">
           <slot name="footer-confirm">
-            {{confirmBtn}}
+            {{ confirmBtn }}
           </slot>
         </div>
       </div>
-      <div :class="dFooterVerticalClassName" v-if="buttonLayout=='vertical'">
+      <div v-if="buttonLayout == 'vertical'" :class="dFooterVerticalClassName">
         <div v-if="confirmBtn" :class="dVerticalDefaultBtnClassName" @click="handleConfirm">
           <slot name="footer-confirm">
-            {{confirmBtn}}
+            {{ confirmBtn }}
           </slot>
         </div>
         <div v-if="cancelBtn" :class="dVerticalConformBtnClassName" @click="handleCancel">
           <slot name="footer-cancel">
-            {{cancelBtn}}
+            {{ cancelBtn }}
           </slot>
         </div>
       </div>
@@ -76,9 +72,17 @@ export default defineComponent({
     const dFooterVerticalClassName = computed(() => [`${name}__vertical-footer`, `${name}__footer`]);
     const dDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`, `${name}__horizontal-btn`]);
     const dConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`, `${name}__horizontal-btn`]);
-    const dVerticalDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`, `${name}__vertical-btn`]);
-    const dVerticalConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`, `${name}__vertical-btn`]);
-    const visible = computed(() => props.modelValue || props.visible);
+    const dVerticalDefaultBtnClassName = computed(() => [
+      `${name}__btn`,
+      `${name}__btn--default`,
+      `${name}__vertical-btn`,
+    ]);
+    const dVerticalConformBtnClassName = computed(() => [
+      `${name}__btn`,
+      `${name}__btn--primary`,
+      `${name}__vertical-btn`,
+    ]);
+
     const rootStyles = computed(() => ({
       zIndex: props.zIndex,
       width: typeof props.width === 'string' ? props.width : `${props.width}px`,
@@ -91,25 +95,24 @@ export default defineComponent({
 
     const handleCancel = () => {
       context.emit('update:modelValue', false);
-      context.emit('close', "cancel");
+      context.emit('close', 'cancel');
       context.emit('cancel');
     };
 
     const handleOverlayClick = () => {
       context.emit('update:modelValue', false);
-      context.emit('close', "overlay");
+      context.emit('close', 'overlay');
       context.emit('overlay-click');
     };
 
     watch(
-      () => visible.value,
-      (val:boolean) => {
+      () => props.visible,
+      (val: boolean) => {
         context.emit('change', val);
       },
     );
 
     return {
-      visible,
       innerValue,
       dClassName,
       dBoxClassName,
@@ -122,7 +125,7 @@ export default defineComponent({
       dFooterVerticalClassName,
       dDefaultBtnClassName,
       dConformBtnClassName,
-      dVerticalDefaultBtnClassName, 
+      dVerticalDefaultBtnClassName,
       dVerticalConformBtnClassName,
       handleConfirm,
       handleCancel,
