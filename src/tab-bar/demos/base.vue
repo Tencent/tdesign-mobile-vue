@@ -3,14 +3,14 @@
     <h1 class="title">TabBar 标签栏</h1>
     <p class="summary">移动端的主导航，用做功能模块之间的切换</p>
     <tdesign-demo-block title="01 类型" summary="单层级纯文本标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_1" :key="index" v-model="value" class="mt-12" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_1" :key="index" v-model="value" @change="change">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name">
           {{ item.text }}
         </t-tab-bar-item>
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="文本加图标标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_2" :key="index" v-model="value" class="mt-12" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_2" :key="index" v-model="value" @change="change">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name">
           <template #icon="props">
             <img :src="props.isChecked ? icons.active : icons.inactive" alt="" />
@@ -20,7 +20,7 @@
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯图标标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_2" :key="index" v-model="value" class="mt-12" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_2" :key="index" v-model="value" @change="change">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name">
           <template #icon="props">
             <img :src="props.isChecked ? icons.active : icons.inactive" alt="" />
@@ -29,7 +29,7 @@
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="双层级纯文本标签栏">
-      <t-tab-bar v-model="value" class="mt-12" @change="change">
+      <t-tab-bar v-model="value" @change="change">
         <t-tab-bar-item
           v-for="(item, index) in list_5"
           :key="item.name || index"
@@ -139,8 +139,5 @@ export default defineComponent({
     font-size: 14px;
     color: rgba(0, 0, 0, 0.3);
   }
-}
-.mt-12 {
-  margin-top: 12px;
 }
 </style>

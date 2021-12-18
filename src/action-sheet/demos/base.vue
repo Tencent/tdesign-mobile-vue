@@ -3,12 +3,12 @@
     <h1 class="title">ActionSheet 动作面板</h1>
     <p class="summary">从底部弹出的模态框，提供和当前场景相关的操作动作，也支持提供信息输入和描述。</p>
     <tdesign-demo-block title="类型" summary="列表型">
-      <div class="button-demo" style="margin: 0 16px">
+      <div class="action-sheet-demo">
         <t-button variant="outline" size="large" @click="visible = true">列表型</t-button>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="宫格型">
-      <div class="button-demo" style="margin: 0 16px">
+      <div class="action-sheet-demo">
         <t-button variant="outline" size="large" @click="handleShowGridLine(6)">宫格型-单页宫格</t-button>
         <t-button variant="outline" size="large" @click="handleShowGrid(6)">宫格型-多页宫格</t-button>
       </div>
@@ -101,9 +101,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="less">
-.action-sheet-base button {
-  margin-bottom: 16px;
-}
-</style>

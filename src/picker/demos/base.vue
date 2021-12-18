@@ -4,7 +4,7 @@
     <t-cell-group>
       <t-input v-model="text.city" label="城市" placeholder="选择城市" @click="show.city = true" />
     </t-cell-group>
-    <t-cell-group style="margin-top: 20px">
+    <t-cell-group>
       <t-input
         v-model="text.yearAndSeason"
         label="年份和季节"
@@ -12,7 +12,7 @@
         @click="show.yearAndSeason = true"
       />
     </t-cell-group>
-    <t-cell-group style="margin-top: 20px">
+    <t-cell-group>
       <t-input v-model="text.date" label="日期" placeholder="选择日期" @click="show.date = true" />
       <span style="color: #888; padding: 5px 10px; font-size: 12px">仅做展示，年月日关联关系由自己实现</span>
     </t-cell-group>

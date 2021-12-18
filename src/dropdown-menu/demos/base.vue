@@ -128,9 +128,6 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.t-dropdown-menu {
-  padding-top: 16px;
-}
 .dropdown-menu-wrap {
   background: #f5f5f5;
   .t-cell {
