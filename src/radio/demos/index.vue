@@ -1,17 +1,19 @@
 <template>
   <div>
-    <t-radio v-model="radio" name="1">单行标题</t-radio>
-    <t-radio v-model="radio" name="2">单行标题</t-radio>
-    <t-radio v-model="radio" name="3">双行标题，长文本自动换行，该选项的描述是一段很长的内容</t-radio>
+    <t-radio name="radio1" value="1" label="单选" :icon="circleFilledIcons" :onChange="onChangeFn"></t-radio>
+    <t-radio name="radio1" value="2" label="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选" :icon="circleFilledIcons" :onChange="onChangeFn"></t-radio>
+    <t-radio name="radio1" value="3" label="单选" content="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选" :icon="circleFilledIcons" :onChange="onChangeFn"></t-radio>
   </div>
 </template>
-<script>
-import { defineComponent, ref, watch } from 'vue';
+<script lang="ts">
+import { ref, defineComponent, h, watch } from 'vue';
+import { CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
     const radio = ref('1');
-    const title = ref('双行标题，长文本自动换行，该选项的描述是一段很长的内容');
+    const TIconCircleFilled = h(CheckCircleFilledIcon);
+    const TIconCircle = h(CircleIcon);
 
     watch(
       () => radio.value,
@@ -20,9 +22,14 @@ export default defineComponent({
       },
     );
 
+    const onChangeFn = (checked: boolean, context: { e: Event }) => {
+      console.log(checked, context);
+    };
+
     return {
       radio,
-      title,
+      circleFilledIcons:  [TIconCircleFilled, TIconCircle],
+      onChangeFn
     };
   },
 });

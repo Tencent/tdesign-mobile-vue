@@ -121,7 +121,7 @@ export default defineComponent({
       }
       props?.onChange && props?.onChange(true, props?.value);
       rootGroupChange(props?.value); // 往group组件调用
-      content.emit('update:modelValue', props?.value); // 改变自身的v-model值
+      content.emit('update:value', props?.value); // 改变自身的v-model值
       content.emit('change', props?.value); // 自身组件广播事件
     };
     /**
