@@ -5,10 +5,10 @@
     <tdesign-demo-block title="01 类型" summary="徽标主要分红点、数字、文字和角标提醒">
       <div class="badge-demo">
         <div class="badge-item">
-          <t-badge count="16">消息</t-badge>
+          <t-badge dot>消息</t-badge>
         </div>
         <div class="badge-item">
-          <t-badge dot>消息</t-badge>
+          <t-badge count="16">消息</t-badge>
         </div>
         <div class="badge-item">
           <t-badge count="NEW">消息</t-badge>
@@ -19,12 +19,12 @@
       </div>
       <div class="badge-demo">
         <div class="badge-item">
-          <t-badge count="16">
+          <t-badge dot>
             <t-button size="small" variant="outline">小按钮</t-button>
           </t-badge>
         </div>
         <div class="badge-item">
-          <t-badge dot>
+          <t-badge count="16">
             <t-button size="small" variant="outline">小按钮</t-button>
           </t-badge>
         </div>
@@ -53,7 +53,7 @@
         <t-cell title="单行标题" arrow>
           <template #note>
             <t-badge count="NEW" shape="round" />
-            <t-badge count="NEW" />
+            <t-badge count="NEW" style="margin-left: 8px" />
           </template>
         </t-cell>
         <t-cell title="单行标题">
@@ -67,16 +67,3 @@
     </tdesign-demo-block>
   </div>
 </template>
-
-<style lang="less" scoped>
-.badge-demo {
-  display: flex;
-  padding: 16px 0;
-  width: 100%;
-
-  .badge-item {
-    width: 25%;
-    text-align: center;
-  }
-}
-</style>
