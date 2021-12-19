@@ -3,10 +3,9 @@
     <span :class="[`${flagName}__content-wrap`]">
       <span :class="`${flagName}__icon-wrap`" v-if="align === 'left'">
         <input type="radio" :name="name" :class="`${flagName}__original-left`" @click="radioOrgChange" :value="value"/>
-        <span>
-          <TNode :content="icon && icon[0]"  v-if="isChecked" :style="{color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'}" size="20px"></TNode>
-          <TNode :content="icon && icon[1]" v-else :style="{color: !disabled? '#DCDCDC' : '#DCDCDC'}" size="20px"></TNode>
-        </span>
+        <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
+        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="{color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'}" size="20px"></TNode>
+        <TNode :content="icon && icon[1]" v-else :style="{color: !disabled? '#DCDCDC' : '#DCDCDC'}" size="20px"></TNode>
       </span>
       <span :class="[`${flagName}__label-wrap`]">
         <span v-if="labelContent" :class="titleClasses">
@@ -20,10 +19,9 @@
       </span>
       <span :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`" v-if="align === 'right'">
         <input type="radio" :name="name" :class="`${flagName}__original-right`" @click="radioOrgChange" :value="value"/>
-        <span>
-          <TNode :content="icon && icon[0]"  v-if="isChecked" :style="{color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'}" size="20px"></TNode>
-          <TNode :content="icon && icon[1]" v-else :style="{color: !disabled? '#DCDCDC' : '#DCDCDC'}" size="20px"></TNode>
-        </span>
+        <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
+        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="{color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'}" size="20px"></TNode>
+        <TNode :content="icon && icon[1]" v-else :style="{color: !disabled? '#DCDCDC' : '#DCDCDC'}" size="20px"></TNode>
       </span>
     </span>
   </div>
