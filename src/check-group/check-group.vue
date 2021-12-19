@@ -1,13 +1,17 @@
 <template>
   <div :class="`${prefix}-check-group`">
-    <slot></slot>
+    <slot v-if="!(options && options.length)"></slot>
+    <span v-else>
+      <checkbox v-for="(item, idx) in options" :name="item.name" :label="item.label" :value="item.value" :checkAll="item.checkAll" :key="idx"></checkbox>
+    </span>
   </div>
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed, defineComponent, PropType } from 'vue';
+import { SetupContext, provide, ref, computed, defineComponent, watch } from 'vue';
 import config from '../config';
-import CheckboxProps from '../checkbox/checkbox-group-props'
+import CheckboxProps from '../checkbox/checkbox-group-props';
+import checkbox from '../checkbox/checkbox.vue';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
@@ -19,6 +23,9 @@ export interface Child {
 export default defineComponent({
   name,
   props: CheckboxProps,
+  components: {
+    checkbox,
+  },
   emits: ['update:value', 'change'],
   setup(props: any, content: SetupContext) {
     const children = ref({});
@@ -31,6 +38,23 @@ export default defineComponent({
     const register = (child: Child) => {
       child?.value && (children.value[child.value] = child);
     };
+
+    // watch(
+    //   () => props.options,
+    //   (val) => {
+    //     if (val && val.length) {
+    //       val = val.map((ops: any) => {
+    //         if (!ops.value && ops.checkAll) {
+    //           ops.value = 'checkAll';
+    //         }
+    //         return ops;
+    //       })
+    //       val.forEach((item: Child) => {
+    //         register(item);
+    //       });
+    //     }
+    //   }
+    // )
 
     /**
      * @description: 为checkbox取消注册

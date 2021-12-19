@@ -4,11 +4,6 @@
       <h1 class="title">Checkbox 多选框</h1>
       <p class="summary">描述文字</p>
       <tdesign-demo-block title="01 类型" summary="基础多选框">
-        <t-checkbox name="checkbox0" value="1" label="多选" @change="changeFn"></t-checkbox>
-        <t-checkbox name="checkbox0" value="2" label="多选" @change="changeFn"></t-checkbox>
-        <t-checkbox name="checkbox0" value="3" label="多选" @change="changeFn"></t-checkbox>
-      </tdesign-demo-block>
-      <tdesign-demo-block title="01 类型" summary="基础多选框">
         <t-check-group v-model:value="checkBoxs1" @change="changeFn">
           <t-checkbox name="checkbox1" value="1" label="多选"></t-checkbox>
           <t-checkbox name="checkbox1" value="2" label="多选" :icon="circleFilledIcons"></t-checkbox>
