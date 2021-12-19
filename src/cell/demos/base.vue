@@ -18,12 +18,9 @@
             <t-switch></t-switch>
           </template>
         </t-cell>
-        <t-cell>
+        <t-cell title="单行标题">
           <template #leftIcon>
-            <TIconUserFilled />
-          </template>
-          <template #title>
-            <span>单行标题</span>
+            <AppIcon />
           </template>
         </t-cell>
       </t-cell-group>
@@ -33,7 +30,7 @@
         <t-cell title="多行标题" description="一段很长很长的内容文字"></t-cell>
         <t-cell title="多行带图标" description="一段很长很长的内容文字" arrow>
           <template #leftIcon>
-            <TIconUserFilled />
+            <AppIcon />
           </template>
         </t-cell>
         <t-cell title="多行带图片" description="一段很长很长的内容文字">
@@ -58,7 +55,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ChevronRightIcon as TIconChevronRight, UserAvatarIcon as TIconUserFilled } from 'tdesign-icons-vue-next';
+import { ChevronRightIcon as TIconChevronRight, AppIcon } from 'tdesign-icons-vue-next';
 import TSwitch from '../../switch';
 import TBadge from '../../badge';
 </script>
