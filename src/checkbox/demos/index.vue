@@ -1,20 +1,20 @@
 <template>
   <div>
-    <t-checkbox v-model="checked1" name="1" title="单行标题"> </t-checkbox>
-    <t-checkbox v-model="checked2" name="1" title="单行标题"> </t-checkbox>
+    <t-checkbox name="checkbox1" value="1" label="多选" @change="changeFn"></t-checkbox>
+    <t-checkbox name="checkbox1" value="2" label="多选" @change="changeFn"></t-checkbox>
   </div>
 </template>
-<script>
+<script lang="ts">
 import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    const checked1 = ref('1');
-    const checked2 = ref('2');
-
+    const changeFn = (check: boolean,  context: { e: Event }) => {
+      console.log('check: ', check);
+      console.log('context: ', context);
+    }
     return {
-      checked1,
-      checked2,
+      changeFn,
     };
   },
 });
