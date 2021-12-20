@@ -15,6 +15,7 @@ const name = `${prefix}-radio-group`;
 export default defineComponent({
   name,
   props: RadioGroupProps,
+  emits: ['update:value', 'change'],
   setup(props: any, content: SetupContext) {
     /**
      * @description: radio 事件change回调
