@@ -19,7 +19,7 @@
 
     <!-- pickers -->
     <t-popup v-model="showCity" placement="bottom">
-      <t-picker v-model="cityText" @change="onChange" @confirm="onCityConfirm" @cancel="showCity.value = false">
+      <t-picker v-model="cityText" @change="onCityChange" @confirm="onCityConfirm" @cancel="showCity.value = false">
         <t-picker-column :options="cityOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
@@ -70,7 +70,9 @@ export default defineComponent({
     };
 
     const onChange = (e: any) => {
-      console.log('picker:change', e, cityText);
+      console.log('xxxx')
+      console.log('picker:change', e);
+      console.log({ cityText: typeof cityText })
     };
 
     const onCityConfirm = (e: any) => {
@@ -101,6 +103,7 @@ export default defineComponent({
       onDateConfirm,
       cityText,
       yearAndSeasonText,
+      dateText,
       showCity,
       showYearAndSeason,
       showDate,

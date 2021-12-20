@@ -27,7 +27,7 @@ const name = `${prefix}-picker`;
 export default defineComponent({
   name,
   props: PickerProps,
-  emits: ['change', 'cancel', 'confirm', 'update:value'],
+  emits: ['change', 'cancel', 'confirm', 'update:modelValue'],
   setup(props, context) {
     const className = computed(() => [`${name}`]);
     const groupClassName = computed(() => `${name}-column__group`);
@@ -68,8 +68,7 @@ export default defineComponent({
         acc.push(item);
         return acc;
       }, [] as Array<PickerValue>);
-      context.emit('update:value', emitData);
-      console.log({ emitData });
+      context.emit('update:modelValue', emitData);
       context.emit('confirm', { e });
     };
 

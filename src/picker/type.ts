@@ -24,7 +24,7 @@ export interface TdPickerProps {
   /**
    * 选中值
    */
-  value: Array<PickerValue>;
+  modelValue: Array<PickerValue>;
   /**
    * 选中值，非受控属性
    */

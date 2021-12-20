@@ -25,8 +25,8 @@ export const PickerProps = {
     default: '',
   },
   /** 选中值 */
-  value: {
-    type: Array as PropType<TdPickerProps['value']>,
+  modelValue: {
+    type: Array as PropType<TdPickerProps['modelValue']>,
   },
   /** 选中值，非受控属性 */
   defaultValue: {
