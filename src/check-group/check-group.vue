@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed, defineComponent, watch } from 'vue';
+import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
