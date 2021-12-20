@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-17 16:43:20
+ * updated at 2021-12-21 00:07:08
  * */
 
 import { TdCheckboxGroupProps } from '../checkbox/type';
@@ -14,7 +14,7 @@ export default {
   /** 支持最多选中的数量 */
   max: {
     type: Number,
-    default: 5,
+    default: undefined,
   },
   /** 统一设置内部复选框 HTML 属性 */
   name: {

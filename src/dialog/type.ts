@@ -2,9 +2,10 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-17 00:11:49
+ * updated at 2021-12-21 00:06:59
  * */
 
+import { TdButtonProps } from '../button';
 import { ButtonProps } from '../button';
 import { TNode } from '../common';
 
@@ -12,7 +13,7 @@ export interface TdDialogProps {
   /**
    * 操作栏
    */
-  actions: Array<ButtonProps>;
+  actions: Array<TdButtonProps>;
   /**
    * 多按钮排列方式
    * @default horizontal
