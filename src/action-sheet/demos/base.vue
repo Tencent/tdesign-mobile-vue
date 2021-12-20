@@ -30,7 +30,14 @@
     :count="count"
     @select="handleSelect"
     @cancel="handleCancel"
-  />
+  >
+    <template #cell>
+      <div class="action-sheet-grid-demo">
+        <app-icon size="28px" />
+        <div>文字</div>
+      </div>
+    </template>
+  </t-action-sheet>
   <t-action-sheet
     v-model="visible3"
     type="grid"
@@ -38,14 +45,23 @@
     :count="count"
     @select="handleSelect"
     @cancel="handleCancel"
-  />
+  >
+    <template #cell="{ item }">
+      <div class="action-sheet-grid-demo">
+        <app-icon size="28px" />
+        <div>{{ item.label }}</div>
+      </div>
+    </template>
+  </t-action-sheet>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { AppIcon } from 'tdesign-icons-vue-next';
 import { ActionSheetItem } from '../type';
 
 export default defineComponent({
+  components: { AppIcon },
   data() {
     return {
       visible: false,
@@ -101,3 +117,12 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less">
+.action-sheet-grid-demo {
+  color: rgba(0, 0, 0, 0.3);
+  > div {
+    margin-top: 8px;
+  }
+}
+</style>
