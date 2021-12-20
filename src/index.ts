@@ -8,9 +8,9 @@ const install = function (app: App, option?: Record<string, unknown>): void {
     app.use(components[key], option);
   });
 
-  // Object.keys(plugins).forEach((key) => {
-  //   app.use(plugins[key]);
-  // });
+  Object.keys(plugins).forEach((key) => {
+    app.use(plugins[key]);
+  });
 };
 
 // eslint-disable-next-line no-undef

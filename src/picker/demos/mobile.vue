@@ -147,8 +147,9 @@ export default defineComponent({
 });
 </script>
 <style lang="less" scoped>
-.tdesign-mobile-demo-block > .t-input {
-  margin: 16px 0;
-  background: #fff;
+.tdesign-mobile-demo-block {
+  .t-input + .t-input {
+    margin-top: 16px;
+  }
 }
 </style>

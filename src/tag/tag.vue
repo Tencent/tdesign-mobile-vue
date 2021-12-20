@@ -42,7 +42,7 @@ const Tag = defineComponent({
       `${baseClass}--theme-${theme.value}`,
       `${baseClass}--${shape.value}`,
       {
-        [`${baseClass}--variant-${variant.value}`]: theme.value,
+        [`${baseClass}--variant-${variant.value}`]: variant.value,
         [`${prefix}-is-error`]: theme.value === 'danger',
         [`${prefix}-is-success`]: theme.value === 'success',
         [`${prefix}-is-warning`]: theme.value === 'warning',

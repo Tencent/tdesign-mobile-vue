@@ -22,7 +22,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
-import { renderContent, renderTNode, TNode } from '../shared';
+import { renderContent, renderTNode, TNode, useToggle } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -34,11 +34,15 @@ const CheckTag = defineComponent({
     TNode,
   },
   props: CheckTagProps,
-  emits: ['change', 'click', 'close'],
+  emits: ['change', 'click', 'close', 'update:checked'],
   setup(props, context) {
     const baseClass = `${prefix}-tag`;
 
-    const { size, shape, checked, disabled, closable } = toRefs(props);
+    const { size, shape, disabled, closable } = toRefs(props);
+
+    const switchValues = [false, true];
+    const { state, toggle } = useToggle(switchValues, props.checked || props.defaultChecked);
+    const checked = computed(() => state.value === switchValues[1]);
 
     const internalInstance = getCurrentInstance();
     const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
@@ -52,11 +56,11 @@ const CheckTag = defineComponent({
         [`${baseClass}--size-${size.value}`]: size.value,
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
-        [`${prefix}-is-checked ${baseClass}--checked`]: checked.value,
+        [`${prefix}-is-checked ${baseClass}--checked`]: state.value,
       },
     ]);
 
-    function handleClickClose(e: Event): void {
+    function handleClickClose(e: MouseEvent): void {
       if (props.disabled) {
         e.stopPropagation();
       } else {
@@ -66,10 +70,12 @@ const CheckTag = defineComponent({
 
     const handleClick = (e: MouseEvent): void => {
       if (!disabled.value) {
+        toggle();
         context.emit('click', { e });
-        context.emit('change', !checked.value);
+        context.emit('change', state.value);
+        context.emit('update:checked', state.value);
         if (typeof props.onClick === 'function') props.onClick({ e });
-        if (typeof props.onChange === 'function') props.onChange(!checked.value);
+        if (typeof props.onChange === 'function') props.onChange(state.value);
       }
     };
 
@@ -80,6 +86,7 @@ const CheckTag = defineComponent({
       handleClick,
       iconContent,
       tagContent,
+      checked,
     };
   },
 });

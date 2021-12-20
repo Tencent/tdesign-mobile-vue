@@ -5,18 +5,17 @@
     <tdesign-demo-block title="01 类型" summary="反馈类对话框">
       <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
-        <t-dialog 
-          v-model="isShowDialog1" 
-          :title="singleHeader" 
-          :confirm-btn="confirmButtonText"
-          :show-overlay="showOverlay"> </t-dialog>
-      </div>
-      <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
-        <t-dialog v-model="isShowDialog2" :title="moreTextHeader" :confirm-btn="confirmButtonText"> </t-dialog>
-      </div>
-      <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
+        <t-dialog
+          v-model="isShowDialog1"
+          :title="singleHeader"
+          :confirm-btn="confirmButtonText"
+          :show-overlay="showOverlay"
+        >
+        </t-dialog>
+        <t-dialog v-model="isShowDialog2" :title="moreTextHeader" :confirm-btn="confirmButtonText"> </t-dialog>
         <t-dialog
           v-model="isShowDialog3"
           :content="content"
@@ -25,15 +24,13 @@
           @overlay-click="onClickOverlay"
         >
         </t-dialog>
-      </div>
-      <div class="dialog-demo">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
         <t-dialog v-model="isShowDialog4" :title="title" :confirm-btn="confirmButtonText"></t-dialog>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="确认类对话框">
       <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示操作对话框 </t-button>
         <t-dialog
           v-model="isShowDialog5"
           type="confirm"
@@ -46,9 +43,6 @@
           @cancel="onCancel"
         >
         </t-dialog>
-      </div>
-      <div class="dialog-demo">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示操作对话框 </t-button>
         <t-dialog
           v-model="isShowDialog6"
           type="confirm"
@@ -66,6 +60,7 @@
     <tdesign-demo-block summary="输入对话框">
       <div class="dialog-demo">
         <t-button variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog
           v-model="isShowDialog7"
           :title="singleHeader"
@@ -76,9 +71,7 @@
           @change="onChange"
         >
           <template #other-content>
-            <t-input
-            type="text"
-            placeholder="输入文案"/>
+            <t-input type="text" placeholder="输入文案" />
           </template>
           <template #footer-cancel>
             <div style="color: #000000; font-size: 18px">我不同意</div>
@@ -87,9 +80,6 @@
             <div style="color: #0052d9; font-size: 18px">我同意</div>
           </template>
         </t-dialog>
-      </div>
-      <div class="dialog-demo">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog
           v-model="isShowDialog8"
           :title="title"
@@ -102,9 +92,7 @@
           @change="onChange"
         >
           <template #other-content>
-            <t-input
-            type="text"
-            placeholder="输入文案"/>
+            <t-input type="text" placeholder="输入文案" />
           </template>
           <template #footer-cancel>
             <div style="color: #000000; font-size: 18px">我不同意</div>
@@ -274,16 +262,8 @@ export default defineComponent({
     },
 
     onChange(e: boolean) {
-      console.log('dialog:value change', e)
-    }
+      console.log('dialog:value change', e);
+    },
   },
 });
 </script>
-
-<style lang="less">
-.dialog-base {
-  .t-button:not(:last-child) {
-    margin-right: 24px;
-  }
-}
-</style>

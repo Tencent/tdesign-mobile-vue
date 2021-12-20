@@ -19,10 +19,10 @@ const name = `${prefix}-switch`;
 export default defineComponent({
   name,
   props: SwitchProps,
-  emits: ['change'],
+  emits: ['change', 'update:value'],
   setup(props, context) {
     const switchValues = props.customValue || [false, true];
-    const { state, toggle } = useToggle(switchValues, props.value);
+    const { state, toggle } = useToggle(switchValues, props.value || props.defaultValue);
 
     const checked = computed(() => state.value === switchValues[1]);
 
@@ -51,7 +51,7 @@ export default defineComponent({
 
     const backgroundColor = computed(() => {
       if (!props.disabled && props.colors) {
-        return `background-color: ${checked.value ? props.colors[1] : props.colors[0]}`;
+        return `background-color: ${checked.value === switchValues[1] ? props.colors[1] : props.colors[0]}`;
       }
       return ``;
     });
@@ -62,7 +62,9 @@ export default defineComponent({
         return false;
       }
       toggle();
+      context.emit('update:value', state.value);
       context.emit('change', state.value);
+      if (typeof props.onChange === 'function') props.onChange(state.value);
     }
     return {
       name,

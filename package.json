@@ -148,6 +148,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^6.0.0",
+    "rollup-pluginutils": "^2.8.2",
     "tdesign-icons-vue-next": "^0.0.2",
     "tdesign-publish-cli": "0.0.8",
     "tdesign-site-components": "^0.5.1",
@@ -159,7 +160,8 @@
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
     "vue-tsc": "^0.29.8",
-    "vue3-jest": "^27.0.0-alpha.1"
+    "vue3-jest": "^27.0.0-alpha.1",
+    "@babel/core": ">=7.13.0 <8.0.0"
   },
   "config": {
     "commitizen": {
