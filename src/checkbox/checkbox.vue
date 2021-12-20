@@ -12,11 +12,9 @@
       <!-- 文本区域 -->
       <span :class="[`${flagName}__label-wrap`, align === 'right' ? `${flagName}__label-wrap-left`: '']" @click="checkBoxChange('content')">
         <span v-if="labelContent" :class="titleClasses">
-          <span :style="titleStyle">
-            <TNode :content="labelContent"></TNode>
-          </span>
+          <TNode :content="labelContent"></TNode>
         </span>
-        <div v-if="checkboxContent" :class="`${flagName}__content-inner`" :style="contentStyle">
+        <div v-if="checkboxContent" :class="`${flagName}__content-inner`">
           <TNode :content="checkboxContent"></TNode>
         </div>
       </span>
@@ -46,12 +44,12 @@ const name = `${prefix}-checkbox`;
  * @param {number} 行数
  * @return: 返回样式对象
  */
-const getLimitRow = (row?: number) => ({
-  display: '-webkit-box',
-  overflow: 'hidden',
-  '-webkit-box-orient': 'vertical',
-  '-webkit-line-clamp': row,
-});
+// const getLimitRow = (row?: number) => ({
+//   display: '-webkit-box',
+//   overflow: 'hidden',
+//   '-webkit-box-orient': 'vertical',
+//   '-webkit-line-clamp': row,
+// });
 
 /**
  * @description: 返回 Icon 的对应的类名
@@ -169,14 +167,14 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const flagName = name;
     const rootGroup: any = inject('rootGroup', undefined);
-    const maxLabelRow = Number(props?.maxLabelRow) || 0;
-    const maxContentRow = Number(props?.maxContentRow) || 0;
+    // const maxLabelRow = Number(props?.maxLabelRow) || 0;
+    // const maxContentRow = Number(props?.maxContentRow) || 0;
     const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
     const checkboxContent = computed(() => renderContent(internalInstance, 'content', 'content'));
-    const titleStyle = maxLabelRow !== 0 ? getLimitRow(maxLabelRow) : {};
-    const contentStyle = maxContentRow !== 0 ? getLimitRow(maxContentRow) : {};
+    // const titleStyle = maxLabelRow !== 0 ? getLimitRow(maxLabelRow) : {};
+    // const contentStyle = maxContentRow !== 0 ? getLimitRow(maxContentRow) : {};
     const TMinusCircleFilledIcon = h(MinusCircleFilledIcon);
-    const singleChecked = ref(false);
+    const singleChecked = props.checked || ref(false);
     onMounted(() => {
       rootGroup?.register(props);
     });
@@ -231,8 +229,8 @@ export default defineComponent({
       checkBoxChange,
       iconClasses,
       titleClasses,
-      titleStyle,
-      contentStyle,
+      // titleStyle,
+      // contentStyle,
       iconStyle,
       TMinusCircleFilledIcon,
       defaultCheck,

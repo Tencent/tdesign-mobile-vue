@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, defineComponent } from 'vue';
+import { SetupContext, provide, defineComponent, onMounted } from 'vue';
 import config from '../config';
 import RadioGroupProps from '../radio/radio-group-props';
 

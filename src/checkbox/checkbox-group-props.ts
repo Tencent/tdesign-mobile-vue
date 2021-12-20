@@ -14,7 +14,6 @@ export default {
   /** 支持最多选中的数量 */
   max: {
     type: Number,
-    default: 5,
   },
   /** 统一设置内部复选框 HTML 属性 */
   name: {

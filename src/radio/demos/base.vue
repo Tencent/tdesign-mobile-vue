@@ -3,9 +3,6 @@
     <h1 class="title">Radio 单选框</h1>
     <p class="summary">描述文字</p>
     <tdesign-demo-block title="01 类型" summary="左侧圆形单选框">
-      <t-radio name="radio1" value="1" label="123" :icon="circleFilledIcons" :onChange="onChangeFn" alin></t-radio>
-    </tdesign-demo-block>
-    <tdesign-demo-block title="01 类型" summary="左侧圆形单选框">
       <t-radio-group v-model:value="radio" @change="testChange" defaultValue="1">
         <t-cell-group>
           <t-cell @click="radio = '1'">
@@ -40,36 +37,32 @@
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="右侧圆形单选框">
-      <t-radio-group v-model:value="radio" @change="testChange">
-        <t-radio-group v-model:value="radio" @change="testChange" defaultValue="1">
-          <t-cell-group>
-            <t-cell @click="radio = '1'">
-              <template #rightIcon>
-                <t-radio name="radio2" value="1" :icon="circleFilledIcons"></t-radio>
-              </template>
-              <template #title>
-                <span>单选</span>
-              </template>
-            </t-cell>
-            <t-cell @click="radio = '2'">
-              <template #rightIcon>
-                <t-radio name="radio2" value="2" :icon="circleFilledIcons"></t-radio>
-              </template>
-              <template #title>
-                <span>单选</span>
-              </template>
-            </t-cell>
-            <t-cell @click="radio = '3'">
-              <template #rightIcon>
-                <t-radio name="radio2" value="3" :icon="circleFilledIcons"></t-radio>
-              </template>
-              <template #title>
-                <span>单选</span>
-              </template>
-            </t-cell>
-          </t-cell-group>
-        </t-radio-group>
-      </t-radio-group>
+      <t-cell-group>
+        <t-cell @click="radio = '1'">
+          <template #rightIcon>
+            <t-radio v-model="radio" name="radio2" value="1" :icon="circleFilledIcons"></t-radio>
+          </template>
+          <template #title>
+            <span>单选</span>
+          </template>
+        </t-cell>
+        <t-cell @click="radio = '2'">
+          <template #rightIcon>
+            <t-radio v-model="radio"  name="radio2" value="2" :icon="circleFilledIcons"></t-radio>
+          </template>
+          <template #title>
+            <span>单选</span>
+          </template>
+        </t-cell>
+        <t-cell @click="radio = '3'">
+          <template #rightIcon>
+            <t-radio v-model="radio" name="radio2" value="3" :icon="circleFilledIcons"></t-radio>
+          </template>
+          <template #title>
+            <span>单选</span>
+          </template>
+        </t-cell>
+      </t-cell-group>
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="左侧勾形单选框">
@@ -107,11 +100,10 @@
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="右侧勾形单选框">
-      <t-radio-group v-model:value="radio">
         <t-cell-group>
           <t-cell @click="radio = '1'">
             <template #rightIcon>
-              <t-radio name="radio4" value="1" :icon="TIconChecks"></t-radio>
+              <t-radio v-model="radio" name="radio4" value="1" :icon="TIconChecks"></t-radio>
             </template>
             <template #title>
               <span>单选</span>
@@ -119,7 +111,7 @@
           </t-cell>
           <t-cell @click="radio = '2'">
             <template #rightIcon>
-              <t-radio name="radio4" value="2" :icon="TIconChecks"></t-radio>
+              <t-radio v-model="radio" name="radio4" value="2" :icon="TIconChecks"></t-radio>
             </template>
             <template #title>
               <span>单选</span>
@@ -127,7 +119,7 @@
           </t-cell>
           <t-cell @click="radio = '3'">
             <template #rightIcon>
-              <t-radio name="radio4" value="3" :icon="TIconChecks"></t-radio>
+              <t-radio v-model="radio" name="radio4" value="3" :icon="TIconChecks"></t-radio>
             </template>
             <template #title>
               <span>单选</span>
@@ -135,14 +127,13 @@
           </t-cell>
           <t-cell @click="radio = '4'">
             <template #rightIcon>
-              <t-radio name="radio4" value="4" :icon="TIconChecks"></t-radio>
+              <t-radio v-model="radio" name="radio4" value="4" :icon="TIconChecks"></t-radio>
             </template>
             <template #title>
               <span>单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选</span>
             </template>
           </t-cell>
         </t-cell-group>
-      </t-radio-group>
     </tdesign-demo-block>
 
     <tdesign-demo-block title="02 状态" summary="单选框禁用态">
@@ -177,55 +168,51 @@
         </t-radio-group>
       </div>
       <div style="margin-top: 10px">
-        <t-radio-group v-model:value="radio">
-          <t-cell-group>
-            <t-cell>
-              <template #rightIcon>
-                <t-radio name="radio7" value="1" disabled :icon="circleFilledIcons"></t-radio>
-              </template>
-              <template #title>
-                <span>单选</span>
-              </template>
-            </t-cell>
-            <t-cell>
-              <template #rightIcon>
-                <t-radio name="radio7" value="2" disabled :icon="circleFilledIcons"></t-radio>
-              </template>
-              <template #title>
-                <span>单选</span>
-              </template>
-            </t-cell>
-          </t-cell-group>
-        </t-radio-group>
+        <t-cell-group>
+          <t-cell>
+            <template #rightIcon>
+              <t-radio v-model="radio" name="radio7" value="1" disabled :icon="circleFilledIcons"></t-radio>
+            </template>
+            <template #title>
+              <span>单选</span>
+            </template>
+          </t-cell>
+          <t-cell>
+            <template #rightIcon>
+              <t-radio v-model="radio" name="radio7" value="2" disabled :icon="circleFilledIcons"></t-radio>
+            </template>
+            <template #title>
+              <span>单选</span>
+            </template>
+          </t-cell>
+        </t-cell-group>
       </div>
       <div style="margin-top: 10px">
-        <t-radio-group v-model:value="radio">
-          <t-cell-group>
-            <t-cell>
-              <template #rightIcon>
-                <t-radio name="radio8" value="1" disabled :icon="TIconChecks"></t-radio>
-              </template>
-              <template #title>
-                <span>单选</span>
-              </template>
-            </t-cell>
-            <t-cell>
-              <template #rightIcon>
-                <t-radio name="radio8" value="2" disabled :icon="TIconChecks"></t-radio>
-              </template>
-              <template #title>
-                <span>单选</span>
-              </template>
-            </t-cell>
-          </t-cell-group>
-        </t-radio-group>
+        <t-cell-group>
+          <t-cell>
+            <template #rightIcon>
+              <t-radio v-model="radio" name="radio8" value="1" disabled :icon="TIconChecks"></t-radio>
+            </template>
+            <template #title>
+              <span>单选</span>
+            </template>
+          </t-cell>
+          <t-cell>
+            <template #rightIcon>
+              <t-radio v-model="radio" name="radio8" value="2" disabled :icon="TIconChecks"></t-radio>
+            </template>
+            <template #title>
+              <span>单选</span>
+            </template>
+          </t-cell>
+        </t-cell-group>
       </div>
     </tdesign-demo-block>
 
     <tdesign-demo-block title="03 特殊类型" summary="自定义图标多选框">
       <t-radio-group v-model:value="radio">
         <t-cell-group>
-          <t-cell @click="radio = '1'">
+          <t-cell @click="radio = '1'" :class="`cell-inden--bordered`">
             <template #leftIcon>
               <t-radio name="radio9" value="1" :icon="checkRectangle"></t-radio>
             </template>
@@ -233,7 +220,7 @@
                 <span>单选</span>
               </template>
           </t-cell>
-          <t-cell @click="radio = '2'">
+          <t-cell @click="radio = '2'" :class="`cell-inden--bordered`">
             <template #leftIcon>
               <t-radio name="radio9" value="2" :icon="checkRectangle"></t-radio>
             </template>
@@ -248,7 +235,7 @@
     <tdesign-demo-block title="04 规格" summary="单选框尺寸规格">
       <t-radio-group v-model:value="radio">
         <t-cell-group>
-          <t-cell @click="radio = '1'">
+          <t-cell @click="radio = '1'" :class="`cell-inden--bordered`">
             <template #leftIcon>
               <t-radio name="radio10" value="1" :icon="circleFilledIcons"></t-radio>
             </template>
@@ -258,22 +245,8 @@
           </t-cell>
         </t-cell-group>
       </t-radio-group>
-      <t-radio-group v-model:value="radio">
-        <t-cell-group>
-          <t-cell @click="radio = '2'">
-            <template #leftIcon>
-              <t-radio name="radio11" value="2" :icon="circleFilledIcons"></t-radio>
-            </template>
-            <template #title>
-              <span>单选 H56</span>
-            </template>
-          </t-cell>
-        </t-cell-group>
-      </t-radio-group>
     </tdesign-demo-block>
   </div>
-
-
 </template>
 
 <script lang="ts">
@@ -295,7 +268,7 @@ export default defineComponent({
       console.log('testChange', name);
     };
 
-    const onChangeFn = (checked: boolean, context: { e: Event }) => {
+    const onChangeFn = (checked: any, context: { e: Event }) => {
       console.log(checked, context);
     };
 
