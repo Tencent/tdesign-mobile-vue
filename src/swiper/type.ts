@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-11-28 12:23:24
+ * updated at 2021-12-21 00:06:52
  * */
 
 export interface TdSwiperProps {
@@ -44,21 +44,37 @@ export interface TdSwiperProps {
    */
   interval: number;
   /**
-   * 导航配置。`navigation.type` 表示导航器风格，圆点/分式等，没有值则不显示。`navigation.minShowNum` 表示小于这个数字不会显示导航器。`navigation.showSlideBtn` 表示是否显示两侧的滑动控制按钮
+   * 是否循环播放
+   * @default true
    */
-  navigation: Navigation;
+  loop: boolean;
+  /**
+   * 导航器全部配置
+   */
+  navigation: SwiperNavigation;
   /**
    * 轮播切换时触发
    */
   onChange: (current: number, context: { source: SwiperChangeSource }) => void;
-}
+};
 
-export interface Navigation {
-  type?: NavigationVariant;
-  minShowNum?: number;
-  showSlideBtn?: boolean;
-}
-
-export type NavigationVariant = 'dots' | 'dots-bar' | 'fraction';
+export interface SwiperNavigation {
+  /**
+   * 小于这个数字不会显示导航器
+   */
+  minShowNum: number;
+  /**
+   * 是否显示两侧的滑动控制按钮
+   * @default false
+   */
+  showSlideBtn: boolean;
+  /**
+   * 导航器类型，点状(dots)、点条状(dots-bar)、分式(fraction)等
+   * @default ''
+   */
+  type: SwiperNavigationType;
+};
 
 export type SwiperChangeSource = 'autoplay' | 'touch' | '';
+
+export type SwiperNavigationType = 'dots' | 'dots-bar' | 'fraction';

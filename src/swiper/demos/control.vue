@@ -4,7 +4,7 @@
       v-model:current="state.currentPage"
       :interval="3000"
       :autoplay="true"
-      :navigation="{ type: 'bullets', showSlideBtn: true }"
+      :navigation="{ type: 'dots-bar', showSlideBtn: true }"
     >
       <t-swiper-item class="swiper-item--demo"> item1 </t-swiper-item>
       <t-swiper-item style="background: blue" class="swiper-item--demo"> item2 </t-swiper-item>

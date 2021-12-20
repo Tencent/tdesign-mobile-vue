@@ -6,7 +6,7 @@
       <t-swiper
         :interval="3000"
         :autoplay="true"
-        :navigation="{ type: 'bullets', showSlideBtn: false }"
+        :navigation="{ type: 'dots', showSlideBtn: false }"
         @change="handleChange"
       >
         <t-swiper-item class="swiper-item--demo"> item1 </t-swiper-item>

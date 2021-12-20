@@ -15,12 +15,12 @@
     </tdesign-demo-block>
   </div>
 
-  <t-action-sheet v-model="visible" :items="items" @select="handleSelect" @cancel="handleCancel" />
+  <t-action-sheet v-model="visible" :items="items" @selected="handleSelected" @cancel="handleCancel" />
   <t-action-sheet
     v-model="visible1"
     :items="items"
     :show-cancel="false"
-    @select="handleSelect"
+    @selected="handleSelected"
     @cancel="handleCancel"
   />
   <t-action-sheet
@@ -28,24 +28,40 @@
     type="grid"
     :items="items2"
     :count="count"
-    @select="handleSelect"
+    @selected="handleSelected"
     @cancel="handleCancel"
-  />
+  >
+    <template #cell>
+      <div class="action-sheet-grid-demo">
+        <app-icon size="28px" />
+        <div>文字</div>
+      </div>
+    </template>
+  </t-action-sheet>
   <t-action-sheet
     v-model="visible3"
     type="grid"
     :items="items3"
     :count="count"
-    @select="handleSelect"
+    @selected="handleSelected"
     @cancel="handleCancel"
-  />
+  >
+    <template #cell="{ item }">
+      <div class="action-sheet-grid-demo">
+        <app-icon size="28px" />
+        <div>{{ item.label }}</div>
+      </div>
+    </template>
+  </t-action-sheet>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { AppIcon } from 'tdesign-icons-vue-next';
 import { ActionSheetItem } from '../type';
 
 export default defineComponent({
+  components: { AppIcon },
   data() {
     return {
       visible: false,
@@ -84,7 +100,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected: ActionSheetItem, selectedIndex: number) {
+    handleSelected(selected: ActionSheetItem, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel(): void {
@@ -101,3 +117,12 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less">
+.action-sheet-grid-demo {
+  color: rgba(0, 0, 0, 0.3);
+  > div {
+    margin-top: 8px;
+  }
+}
+</style>
