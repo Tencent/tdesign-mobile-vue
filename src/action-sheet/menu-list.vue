@@ -5,7 +5,7 @@
       :key="index"
       :class="`${name}__cell`"
       :disabled="item.disabled"
-      @click="handleSelect(index)"
+      @click="handleSelected(index)"
     >
       <slot name="cell" :item="item">
         <div :class="`${name}__cell-text`" :style="{ color: item.color }">{{ item.label }}</div>
@@ -31,15 +31,15 @@ export default defineComponent({
       required: true,
     },
   },
-  emits: ['select'],
+  emits: ['selected'],
   setup(props, context: SetupContext) {
-    const handleSelect = (index: number) => {
-      context.emit('select', index);
+    const handleSelected = (index: number) => {
+      context.emit('selected', index);
     };
 
     return {
       name: ref(name),
-      handleSelect,
+      handleSelected,
     };
   },
 });
