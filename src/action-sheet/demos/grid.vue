@@ -11,7 +11,7 @@
       type="grid"
       :items="items"
       :count="count"
-      @select="handleSelect"
+      @selected="handleSelected"
       @cancel="handleCancel"
     >
       <template #cell="slotProps">
@@ -44,7 +44,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected: ActionSheetItem, selectedIndex: number) {
+    handleSelected(selected: ActionSheetItem, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel() {
@@ -54,7 +54,7 @@ export default defineComponent({
       this.count = count;
       this.visible = true;
     },
-    meunIconStyle(bg) {
+    meunIconStyle(bg: string) {
       return {
         width: '36px',
         height: '36px',

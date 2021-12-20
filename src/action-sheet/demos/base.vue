@@ -15,12 +15,12 @@
     </tdesign-demo-block>
   </div>
 
-  <t-action-sheet v-model="visible" :items="items" @select="handleSelect" @cancel="handleCancel" />
+  <t-action-sheet v-model="visible" :items="items" @selected="handleSelected" @cancel="handleCancel" />
   <t-action-sheet
     v-model="visible1"
     :items="items"
     :show-cancel="false"
-    @select="handleSelect"
+    @selected="handleSelected"
     @cancel="handleCancel"
   />
   <t-action-sheet
@@ -28,7 +28,7 @@
     type="grid"
     :items="items2"
     :count="count"
-    @select="handleSelect"
+    @selected="handleSelected"
     @cancel="handleCancel"
   >
     <template #cell>
@@ -43,7 +43,7 @@
     type="grid"
     :items="items3"
     :count="count"
-    @select="handleSelect"
+    @selected="handleSelected"
     @cancel="handleCancel"
   >
     <template #cell="{ item }">
@@ -100,7 +100,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected: ActionSheetItem, selectedIndex: number) {
+    handleSelected(selected: ActionSheetItem, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel(): void {
