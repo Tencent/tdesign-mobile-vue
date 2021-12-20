@@ -130,6 +130,7 @@ export default defineComponent({
       if (rootGroupProps?.disabled || props?.disabled) {
         return;
       }
+      console.log('e:', e);
       props?.onChange && props?.onChange(true, { e });
       rootGroupChange(target?._value); // 往group组件调用
       content.emit('update:modelValue', target?._value); // 改变自身的v-model值

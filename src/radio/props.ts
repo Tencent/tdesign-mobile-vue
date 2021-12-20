@@ -58,4 +58,9 @@ export default {
   },
   /** 选中状态变化时触发 */
   onChange: Function as PropType<TdRadioProps['onChange']>,
+
+  modelValue: {
+    type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
+    default: undefined,
+  }
 };

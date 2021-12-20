@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${prefix}-check-group`">
+  <div :class="`${prefix}-checkbox-group`">
     <slot v-if="!(options && options.length)"></slot>
     <span v-else>
       <checkbox v-for="(item, idx) in options" :name="item.name" :label="item.label" :value="item.value" :checkAll="item.checkAll" :key="idx"></checkbox>
@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed, defineComponent, watch } from 'vue';
+import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
@@ -39,23 +39,6 @@ export default defineComponent({
       child?.value && (children.value[child.value] = child);
     };
 
-    // watch(
-    //   () => props.options,
-    //   (val) => {
-    //     if (val && val.length) {
-    //       val = val.map((ops: any) => {
-    //         if (!ops.value && ops.checkAll) {
-    //           ops.value = 'checkAll';
-    //         }
-    //         return ops;
-    //       })
-    //       val.forEach((item: Child) => {
-    //         register(item);
-    //       });
-    //     }
-    //   }
-    // )
-
     /**
      * @description: 为checkbox取消注册
      * @param {object}
@@ -71,7 +54,7 @@ export default defineComponent({
      */
     const check = (value: string, e: Event) => {
       const index = checkedValues.value.indexOf(value);
-      const inMax = props?.max < 1 || checkedValues?.value?.length < props?.max;
+      const inMax = props?.max === undefined || checkedValues?.value?.length < props?.max;
       if (index !== undefined && index === -1 && inMax) {
         const tempValues = checkedValues?.value?.concat(value);
         const resultValues = [...Array.from(tempValues)]
