@@ -2,7 +2,14 @@
   <div :class="`${prefix}-checkbox-group`">
     <slot v-if="!(options && options.length)"></slot>
     <span v-else>
-      <checkbox v-for="(item, idx) in options" :name="item.name" :label="item.label" :value="item.value" :checkAll="item.checkAll" :key="idx"></checkbox>
+      <checkbox
+        v-for="(item, idx) in options"
+        :key="idx"
+        :name="item.name"
+        :label="item.label"
+        :value="item.value"
+        :check-all="item.checkAll"
+      ></checkbox>
     </span>
   </div>
 </template>
@@ -22,10 +29,10 @@ export interface Child {
 
 export default defineComponent({
   name,
-  props: CheckboxProps,
   components: {
     checkbox,
   },
+  props: CheckboxProps,
   emits: ['update:value', 'change'],
   setup(props: any, content: SetupContext) {
     const children = ref({});
@@ -57,7 +64,7 @@ export default defineComponent({
       const inMax = props?.max === undefined || checkedValues?.value?.length < props?.max;
       if (index !== undefined && index === -1 && inMax) {
         const tempValues = checkedValues?.value?.concat(value);
-        const resultValues = [...Array.from(tempValues)]
+        const resultValues = [...Array.from(tempValues)];
         content.emit('update:value', resultValues);
         content.emit('change', resultValues, { e });
         props?.onChange && props?.onChange(resultValues, { e });

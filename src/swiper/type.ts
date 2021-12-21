@@ -56,7 +56,7 @@ export interface TdSwiperProps {
    * 轮播切换时触发
    */
   onChange: (current: number, context: { source: SwiperChangeSource }) => void;
-};
+}
 
 export interface SwiperNavigation {
   /**
@@ -73,7 +73,7 @@ export interface SwiperNavigation {
    * @default ''
    */
   type: SwiperNavigationType;
-};
+}
 
 export type SwiperChangeSource = 'autoplay' | 'touch' | '';
 

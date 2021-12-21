@@ -61,6 +61,6 @@ export interface TdSliderProps {
    * 开始拖动时触发
    */
   onDragStart: () => void;
-};
+}
 
 export type SliderValue = number | Array<number>;

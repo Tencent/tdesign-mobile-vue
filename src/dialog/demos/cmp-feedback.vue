@@ -3,27 +3,15 @@
     <div class="tdesign-demo-block">
       <t-cell-group title="反馈类对话框">
         <t-cell value-align="left">
-          <t-button  theme="primary" @click="changeDialogVisible(1)">
-            单行标题对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog1"
-            :title="singleHeader">
-          </t-dialog>
+          <t-button theme="primary" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
+          <t-dialog v-model="isShowDialog1" :title="singleHeader"> </t-dialog>
         </t-cell>
         <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(2)">
-            多行标题对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog2"
-            :title="moreTextHeader">
-          </t-dialog>
+          <t-button theme="primary" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
+          <t-dialog v-model="isShowDialog2" :title="moreTextHeader"> </t-dialog>
         </t-cell>
         <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(3)">
-            短文本对话框
-          </t-button>
+          <t-button theme="primary" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
           <t-dialog
             v-model="isShowDialog3"
             :content="content"
@@ -35,14 +23,9 @@
           >
           </t-dialog>
         </t-cell>
-         <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(4)">
-            长文本对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog4"
-            :title="title">
-          </t-dialog>
+        <t-cell value-align="left">
+          <t-button theme="primary" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
+          <t-dialog v-model="isShowDialog4" :title="title"> </t-dialog>
         </t-cell>
       </t-cell-group>
     </div>
@@ -150,6 +133,5 @@ export default defineComponent({
   .t-button:not(:last-child) {
     margin-right: 24px;
   }
-
 }
 </style>

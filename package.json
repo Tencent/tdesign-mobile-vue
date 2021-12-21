@@ -13,6 +13,7 @@
     "url": "/tdesign-mobile-vue.git"
   },
   "scripts": {
+    "prepare": "husky install .husky",
     "dev": "cross-env NODE_ENV=development vite",
     "dev:debug": "cross-env NODE_ENV=development vite --debug",
     "prebuild": "rimraf dist/* lib/* es/* esm/* typings/*",
@@ -167,17 +168,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "eslint --fix"
-    ]
   }
 }

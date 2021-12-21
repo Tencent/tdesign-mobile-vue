@@ -61,7 +61,7 @@ export interface TdMessageProps {
    * 可见性变化时触发
    */
   onVisibleChange: (visible: boolean) => void;
-};
+}
 
 export type MessageAlignType = 'left' | 'center';
 

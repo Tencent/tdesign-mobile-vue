@@ -50,7 +50,8 @@
                 <span>多选</span>
               </template>
               <template #description>
-                <span>多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选
+                <span
+                  >多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选
                   多选多选多选多选多选多选多选多选多选多选多选
                 </span>
               </template>
@@ -89,17 +90,19 @@
               <t-checkbox name="checkbox2" value="4" :icon="circleFilledIcons"></t-checkbox>
             </template>
             <template #title>
-              <span>多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选</span>
+              <span
+                >多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选</span
+              >
             </template>
           </t-cell>
         </t-cell-group>
       </tdesign-demo-block>
       <tdesign-demo-block summary="带全选多选框">
-        <t-check-group v-model:value="checkBoxs2" >
+        <t-check-group v-model:value="checkBoxs2">
           <t-cell-group>
             <t-cell>
               <template #leftIcon>
-                <t-checkbox name="checkbox3" value="1" checkAll :icon="circleFilledIcons"></t-checkbox>
+                <t-checkbox name="checkbox3" value="1" check-all :icon="circleFilledIcons"></t-checkbox>
               </template>
               <template #title>
                 <span>全选</span>
@@ -254,8 +257,8 @@ export default defineComponent({
       () => checkBoxs2.value,
       (val) => {
         console.log('checkBoxs2:', val);
-      }
-    )
+      },
+    );
 
     const TIconCircleFilled = h(CheckCircleFilledIcon);
     const TIconCircle = h(CircleIcon);
@@ -264,7 +267,7 @@ export default defineComponent({
     const changeFn = (value: any, context: { e: Event }) => {
       console.log('value:', value);
       console.log('Event:', context);
-    }
+    };
 
     return {
       checkGroup,
@@ -273,7 +276,7 @@ export default defineComponent({
       checkBoxs3,
       circleFilledIcons: [TIconCircleFilled, TIconCircle],
       CheckRectangleFilledIcons: [TCheckRectangleFilledIcon, TRectangleIcon],
-      changeFn
+      changeFn,
     };
   },
 });
