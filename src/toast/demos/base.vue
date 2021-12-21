@@ -19,6 +19,18 @@
         <t-button size="large" variant="outline" @click="showLoading('加载中...')">加载</t-button>
       </div>
     </tdesign-demo-block>
+    <tdesign-demo-block title="02 展示位置和展示时间" summary="弹窗展示位置为顶部、中部、底部三种，展示时间可自定义">
+      <div class="toast-demo">
+        <t-button size="large" variant="outline" @click="showPosition('top')">顶部Top</t-button>
+        <t-button size="large" variant="outline" @click="showPosition('middle')">中间Middle</t-button>
+        <t-button size="large" variant="outline" @click="showPosition('bottom')">底部Bottom</t-button>
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block title="03 显示遮罩" summary="弹窗可显示遮罩，禁止滑动和点击">
+      <div class="toast-demo">
+        <t-button size="large" variant="outline" @click="showOverlay">禁止滑动和点击</t-button>
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -27,6 +39,7 @@ import { ref, h, defineComponent } from 'vue';
 import { UserIcon } from 'tdesign-icons-vue-next';
 import Toast from '../index';
 import config from '@/config';
+import { TdToastProps } from '../type';
 
 const { prefix } = config;
 const name = `${prefix}-toast-base-demo`;
@@ -39,7 +52,7 @@ export default defineComponent({
   },
   data() {
     return {
-      text1: '轻提示内容',
+      text1: '轻提示文字内容',
       text2: '最多一行展示十个汉字宽度限制最多不超过三行文字行文字行文字',
       success: '成功文案',
       fail: '失败文案',
@@ -89,6 +102,12 @@ export default defineComponent({
         type: 'loading',
         message,
       });
+    },
+    showPosition(position: TdToastProps['position']) {
+      Toast({ position, message: '轻提示内容' });
+    },
+    showOverlay() {
+      Toast({ type: 'loading', message: '加载中...', showOverlay: true });
     },
   },
 });
