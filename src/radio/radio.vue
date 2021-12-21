@@ -1,25 +1,55 @@
 <template>
   <div :class="outerClasses">
     <span :class="[`${flagName}__content-wrap`]">
-      <span :class="`${flagName}__icon-wrap`" v-if="align === 'left'">
-        <input type="radio" :name="name" :class="`${flagName}__original-left`" @click="radioOrgChange" :value="value" :aria-checked="isChecked" :aria-disabled="disabled" />
+      <span v-if="align === 'left'" :class="`${flagName}__icon-wrap`">
+        <input type="radio" :name="name" :class="`${flagName}__original-left`" :value="value" @click="radioOrgChange" />
         <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
-        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="checkedIconStyle" size="20px"></TNode>
-        <TNode :content="icon && icon[1]" v-else :style="unCheckedIconStyle" size="20px"></TNode>
+        <t-node
+          v-if="isChecked"
+          :content="icon && icon[0]"
+          :style="checkedIconStyle"
+          size="20px"
+        ></t-node>
+        <t-node
+          v-else
+          :content="icon && icon[1]"
+          :style="unCheckedIconStyle"
+          size="20px"
+        ></t-node>
       </span>
       <span :class="[`${flagName}__label-wrap`]">
         <span v-if="labelContent" :class="titleClasses">
-          <TNode :content="labelContent"></TNode>
+          <t-node :content="labelContent"></t-node>
         </span>
-        <div v-if="radioContent" :class="`${flagName}__content-inner`" @click="radioContentChange" >
-          <TNode :content="radioContent"></TNode>
+        <div
+          v-if="radioContent"
+          :class="`${flagName}__content-inner`"
+          @click="radioContentChange"
+        >
+          <t-node :content="radioContent"></t-node>
         </div>
       </span>
-      <span :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`" v-if="align === 'right'">
-        <input type="radio" :name="name" :class="`${flagName}__original-right`" @click="radioOrgChange" :value="value" :aria-disabled="disabled" :aria-checked="checked"/>
+      <span v-if="align === 'right'" :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`">
+        <input
+          type="radio"
+          :name="name"
+          :class="`${flagName}__original-right`"
+          :value="value"
+          @click="radioOrgChange"
+        />
         <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
-        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="checkedIconStyle" size="20px"></TNode>
-        <TNode :content="icon && icon[1]" v-else :style="unCheckedIconStyle" size="20px"></TNode>
+        <t-node
+          v-if="isChecked"
+          :content="icon && icon[0]"
+          :style="checkedIconStyle"
+          size="20px"
+        ></t-node>
+        <t-node
+          v-else
+          :content="icon && icon[1]"
+          :style="unCheckedIconStyle"
+          size="20px"
+        ></t-node>
       </span>
     </span>
   </div>
@@ -41,7 +71,8 @@ const name = `${prefix}-radio`;
  * @return: 返回是否选中的对象
  */
 // eslint-disable-next-line max-len
-const getIsCheck = (props: any, rootGroupProps: any) => computed(() => rootGroupProps?.value === props?.value || props?.modelValue === props?.value);
+const getIsCheck = (props: any, rootGroupProps: any) =>
+  computed(() => rootGroupProps?.value === props?.value || props?.modelValue === props?.value);
 
 /**
  * @description: 命名类逻辑处理
@@ -84,9 +115,9 @@ const getUnCheckedIconStyle = (disabled: boolean) => computed(() => {
 
 export default defineComponent({
   name,
-  props: RadioProps,
   components: { TNode },
-  emits: ['update:modelValue', 'change'],
+  props: RadioProps,
+  emits: ['update:modelValue', 'change', 'update:value'],
   setup(props: any, context: SetupContext) {
     const hasSlot = ref(false);
     const internalInstance = getCurrentInstance();
@@ -121,7 +152,7 @@ export default defineComponent({
      * @description: 原生radio事件处理
      * */
     const radioOrgChange = (e: Event) => {
-      const target: any = e.target;
+      const { target } = e;
       if (rootGroupProps?.disabled || props?.disabled) {
         return;
       }
