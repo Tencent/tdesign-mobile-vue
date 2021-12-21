@@ -189,7 +189,7 @@ export default defineComponent({
   components: { TNode },
   props: CheckboxProps,
   emits: ['update:value', 'change'],
-  setup(props: any, content) {
+  setup(props: any, context) {
     const defaultCheck = h(CheckCircleFilledIcon);
     const defaultUncheck = h(CircleIcon);
     const internalInstance = getCurrentInstance();
@@ -207,9 +207,9 @@ export default defineComponent({
       rootGroup?.unregister(props);
     });
     const isChecked = getIsCheck(props, rootGroup);
-    const iconClasses = getIconClasses(flagName, isChecked, content, props, rootGroup);
+    const iconClasses = getIconClasses(flagName, isChecked, context, props, rootGroup);
     const titleClasses = getTitleClasses(flagName, props, rootGroup);
-    const checkBoxChange = setCheckBoxChange(props, rootGroup, content, isChecked);
+    const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
     const checkedIconStyle = getCheckedIconStyle(isChecked, singleChecked, rootGroup?.disabled || props?.disabled);
     const unCheckedIconStyle = getUnCheckedIconStyle(rootGroup?.disabled || props?.disabled);
 
@@ -219,10 +219,10 @@ export default defineComponent({
         return;
       }
       if (singleChecked.value || (rootGroup && isChecked.value)) {
-        content.emit('update:value', '');
-        content.emit('change', '');
+        context.emit('update:value', '');
+        context.emit('change', '');
         if (rootGroup) {
-          rootGroup?.uncheck(target?._value, { e });
+          rootGroup?.uncheck(target?.value, { e });
         } else {
           singleChecked.value = false;
         }
@@ -231,11 +231,11 @@ export default defineComponent({
         }
         props?.onChange && props?.onChange(false, { e });
       } else {
-        content.emit('update:value', target?._value, { e });
-        content.emit('change', target?._value, { e });
+        context.emit('update:value', target?.value, { e });
+        context.emit('change', target?.value, { e });
         props?.onChange && props?.onChange(true, { e });
         if (rootGroup) {
-          rootGroup?.check(target?._value, { e });
+          rootGroup?.check(target?.value, { e });
         } else {
           singleChecked.value = true;
         }
