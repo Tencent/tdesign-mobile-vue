@@ -2,26 +2,24 @@
   <div :class="outerClasses">
     <span :class="[`${flagName}__content-wrap`]">
       <span :class="`${flagName}__icon-wrap`" v-if="align === 'left'">
-        <input type="radio" :name="name" :class="`${flagName}__original-left`" @click="radioOrgChange" :value="value"/>
+        <input type="radio" :name="name" :class="`${flagName}__original-left`" @click="radioOrgChange" :value="value" :aria-checked="isChecked" :aria-disabled="disabled" />
         <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
-        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="{color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'}" size="20px"></TNode>
-        <TNode :content="icon && icon[1]" v-else :style="{color: !disabled? '#DCDCDC' : '#DCDCDC'}" size="20px"></TNode>
+        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="checkedIconStyle" size="20px"></TNode>
+        <TNode :content="icon && icon[1]" v-else :style="unCheckedIconStyle" size="20px"></TNode>
       </span>
       <span :class="[`${flagName}__label-wrap`]">
         <span v-if="labelContent" :class="titleClasses">
-          <span :style="titleStyle">
-            <TNode :content="labelContent"></TNode>
-          </span>
+          <TNode :content="labelContent"></TNode>
         </span>
-        <div v-if="radioContent" :class="`${flagName}__content-inner`" :style="contentStyle" @click="radioContentChange" >
+        <div v-if="radioContent" :class="`${flagName}__content-inner`" @click="radioContentChange" >
           <TNode :content="radioContent"></TNode>
         </div>
       </span>
       <span :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`" v-if="align === 'right'">
-        <input type="radio" :name="name" :class="`${flagName}__original-right`" @click="radioOrgChange" :value="value"/>
+        <input type="radio" :name="name" :class="`${flagName}__original-right`" @click="radioOrgChange" :value="value" :aria-disabled="disabled" :aria-checked="checked"/>
         <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
-        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="{color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'}" size="20px"></TNode>
-        <TNode :content="icon && icon[1]" v-else :style="{color: !disabled? '#DCDCDC' : '#DCDCDC'}" size="20px"></TNode>
+        <TNode :content="icon && icon[0]"  v-if="isChecked" :style="checkedIconStyle" size="20px"></TNode>
+        <TNode :content="icon && icon[1]" v-else :style="unCheckedIconStyle" size="20px"></TNode>
       </span>
     </span>
   </div>
@@ -73,16 +71,15 @@ const getClasses = (props: any, rootGroupProps: any) => {
     iconClasses,
   };
 };
-/**
- * @description: 限制行数样式
- * @param {number} 行数
- * @return: 返回样式对象
- */
-const getLimitRow = (row?: number) => ({
-  display: '-webkit-box',
-  overflow: 'hidden',
-  '-webkit-box-orient': 'vertical',
-  '-webkit-line-clamp': row,
+
+const getCheckedIconStyle = (isChecked: any, disabled: boolean) => computed(() => {
+  const checkedIconStyle = {color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'};
+  return checkedIconStyle
+})
+
+const getUnCheckedIconStyle = (disabled: boolean) => computed(() => {
+  const unCheckStyle = { color: !disabled? '#DCDCDC' : '#DCDCDC' };
+  return unCheckStyle;
 });
 
 export default defineComponent({
@@ -90,21 +87,19 @@ export default defineComponent({
   props: RadioProps,
   components: { TNode },
   emits: ['update:modelValue', 'change'],
-  setup(props: any, content: SetupContext) {
+  setup(props: any, context: SetupContext) {
     const hasSlot = ref(false);
     const internalInstance = getCurrentInstance();
     const flagName: string = name;
     const rootGroupProps: any = inject('rootGroupProps', {});
     const rootGroupChange: any = inject('rootGroupChange', () => ({}));
-    const limitTitleRow: number = props?.maxLabelRow || 3;
-    const limitContentRow: number = props?.maxContentRow || 5;
-    const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
-    const contentStyle = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
     const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
     const radioContent = computed(() => renderContent(internalInstance, 'content', 'content'));
     const disabled = rootGroupProps?.disabled || props?.disabled;
     const classes = getClasses(props, rootGroupProps);
     const isChecked = getIsCheck(props, rootGroupProps);
+    const checkedIconStyle = getCheckedIconStyle(isChecked, disabled);
+    const unCheckedIconStyle = getUnCheckedIconStyle(disabled);
     /**
      * @description: 处理内容点击
      * @param {string}
@@ -119,8 +114,8 @@ export default defineComponent({
       }
       props?.onChange && props?.onChange(true, props?.value);
       rootGroupChange(props?.value); // 往group组件调用
-      content.emit('update:value', props?.value); // 改变自身的v-model值
-      content.emit('change', props?.value); // 自身组件广播事件
+      context.emit('update:value', props?.value); // 改变自身的v-model值
+      context.emit('change', props?.value); // 自身组件广播事件
     };
     /**
      * @description: 原生radio事件处理
@@ -132,9 +127,9 @@ export default defineComponent({
       }
       console.log('e:', e);
       props?.onChange && props?.onChange(true, { e });
-      rootGroupChange(target?._value); // 往group组件调用
-      content.emit('update:modelValue', target?._value); // 改变自身的v-model值
-      content.emit('change', true, { e }); // 自身组件广播事件
+      rootGroupChange(target?.value); // 往group组件调用
+      context.emit('update:modelValue', target?.value); // 改变自身的v-model值
+      context.emit('change', true, { e }); // 自身组件广播事件
     };
 
     return {
@@ -144,10 +139,10 @@ export default defineComponent({
       hasSlot,
       radioContentChange,
       radioOrgChange,
-      titleStyle,
-      contentStyle,
       isChecked,
       disabled,
+      checkedIconStyle,
+      unCheckedIconStyle,
       ...classes,
     };
   },

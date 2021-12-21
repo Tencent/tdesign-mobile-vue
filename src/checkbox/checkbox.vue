@@ -101,9 +101,9 @@ const getTitleClasses = (flagName: string, props: any, rootGroup: any) =>
  * @return: 返回是否选中的对象
  */
 const getIsCheck = (props: any, rootGroup: any) =>
-  computed(
-    () =>(rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.value) !== -1),
-  );
+computed(
+  () =>(rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.value) !== -1),
+);
 
 const getCheckedIconStyle = (isChecked: any, singleChecked: boolean, disabled: boolean) => computed(() => {
   const checkStyle = { color: ((singleChecked || isChecked) && !disabled)? '#0052D9' : '#DCDCDC' };
@@ -187,7 +187,7 @@ export default defineComponent({
         content.emit('update:value', '');
         content.emit('change', '');
         if (rootGroup) {
-          rootGroup?.uncheck(target?._value, { e });
+          rootGroup?.uncheck(target?.value, { e });
         } else {
           singleChecked.value = false;
         }
@@ -196,11 +196,11 @@ export default defineComponent({
         }
         props?.onChange && props?.onChange(false, { e });
       } else {
-        content.emit('update:value', target?._value, { e });
-        content.emit('change', target?._value, { e });
+        content.emit('update:value', target?.value, { e });
+        content.emit('change', target?.value, { e });
         props?.onChange && props?.onChange(true, { e });
         if (rootGroup) {
-          rootGroup?.check(target?._value, { e });
+          rootGroup?.check(target?.value, { e });
         } else {
           singleChecked.value = true;
         }
