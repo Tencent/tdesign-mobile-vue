@@ -2,8 +2,8 @@
   <div class="tdesign-demo-block">
     <!-- 联动选择 -->
     <t-picker title="王者荣耀" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-      <t-picker-column :options="roleOptions" @change="onRoleChange" />
-      <t-picker-column :options="heroOptions" @change="onColumnChange" />
+      <t-picker-item :options="roleOptions" @change="onRoleChange" />
+      <t-picker-item :options="heroOptions" @change="onColumnChange" />
     </t-picker>
   </div>
 </template>

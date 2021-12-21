@@ -28,7 +28,7 @@ export { default as Message } from './message';
 export { default as SearchField } from './search-field';
 export { Steps, Step } from './steps';
 export { Indexes, IndexesCell, IndexesAnchor } from './indexes';
-export { Picker, PickerColumn } from './picker';
+export { Picker, PickerItem } from './picker';
 export { Tag, CheckTag } from './tag';
 export { TabBar, TabBarItem } from './tab-bar';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';
