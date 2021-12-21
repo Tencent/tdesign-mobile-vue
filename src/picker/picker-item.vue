@@ -15,7 +15,7 @@ import Picker from './picker.class';
 import { PickerItemProps } from './props';
 
 const { prefix } = config;
-const name = `${prefix}-picker-column`;
+const name = `${prefix}-picker-item`;
 
 export default defineComponent({
   name,
@@ -45,8 +45,10 @@ export default defineComponent({
         defaultIndex: props.value,
         onChange: (index: number) => {
           curIndex.value = index;
+          const curItem = props.options[index];
+          const curValue = typeof curItem === 'object' ? curItem.value : curItem;
           context.emit('change', {
-            value: props.options[index],
+            value: curValue,
             index,
           });
         },

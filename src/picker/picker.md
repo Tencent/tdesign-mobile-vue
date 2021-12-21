@@ -8,38 +8,9 @@ toc: false
 
 ### 基础类型
 
-::: demo demos/base
+::: demo demos/mobile
 :::
 
-### 对象数组
-
-::: demo demos/object-array
-:::
-
-### 默认选中
-
-::: demo demos/default-selected
-:::
-
-### 自定义展示内容
-
-::: demo demos/custom
-:::
-
-### 多列选择
-
-::: demo demos/multiple
-:::
-
-### 联动选择
-
-::: demo demos/cascade
-:::
-
-### 弹窗层的 Picker
-
-::: demo demos/popup-picker
-:::
 
 ## API
 ### Picker Props

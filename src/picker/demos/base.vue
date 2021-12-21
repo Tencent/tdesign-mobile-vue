@@ -20,22 +20,22 @@
     <!-- pickers -->
     <t-popup v-model="showCity" placement="bottom">
       <t-picker v-model="cityText" @change="onCityChange" @confirm="onCityConfirm" @cancel="showCity.value = false">
-        <t-picker-column :options="cityOptions" @change="onColumnChange" />
+        <t-picker-item :options="cityOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
     <t-popup v-model="showYearAndSeason" placement="bottom">
       <t-picker v-model="yearAndSeasonText" @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
-        <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-        <t-picker-column :options="seasonOptions" @change="onColumnChange" />
+        <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+        <t-picker-item :options="seasonOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
     <t-popup v-model="showDate" placement="bottom">
       <t-picker v-model="dateText" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
-        <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-        <t-picker-column :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
-        <t-picker-column :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
+        <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+        <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
+        <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
       </t-picker>
     </t-popup>
   </div>
@@ -70,9 +70,7 @@ export default defineComponent({
     };
 
     const onChange = (e: any) => {
-      console.log('xxxx')
       console.log('picker:change', e);
-      console.log({ cityText: typeof cityText })
     };
 
     const onCityConfirm = (e: any) => {
