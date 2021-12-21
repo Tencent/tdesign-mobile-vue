@@ -8,44 +8,40 @@
         <t-rate v-model="current" clearable />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block>
-      <p class="tdesign-mobile-demo-block__summary rate">自定义数量评分</p>
+    <tdesign-demo-block summary="自定义数量评分">
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">自定义数量评分</div>
         <t-rate v-model="current1" :count="6" clearable />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block>
-      <p class="tdesign-mobile-demo-block__summary rate">半星评分</p>
+    <tdesign-demo-block summary="半星评分">
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">半星评分</div>
         <t-rate v-model="current2" clearable allow-half />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block>
-      <p class="tdesign-mobile-demo-block__summary rate">带描述评分</p>
+    <tdesign-demo-block summary="带描述评分">
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
         <t-rate v-model="current3" clearable show-text />
       </div>
-      <div class="rate-demo-cell">
+      <div class="rate-demo-cell" style="margin-top: 16px">
         <div class="rate-demo-cell__label">请点击评分</div>
         <t-rate v-model="current4" clearable show-text :texts="texts" />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block>
-      <p class="tdesign-mobile-demo-block__summary rate">展示型评分</p>
+    <tdesign-demo-block summary="展示型评分">
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">纯展示</div>
         <t-rate v-model="current5" readonly />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 规格" summary="评价规格" style="padding-bottom: 16px">
+    <tdesign-demo-block title="02 规格" summary="评价规格">
       <div class="rate-demo-cell">
-        <div class="rate-demo-cell__label">评分 30</div>
-        <t-rate v-model="current5" size="30px" clearable />
+        <div class="rate-demo-cell__label">评分 20</div>
+        <t-rate v-model="current5" size="20px" clearable />
       </div>
-      <div class="rate-demo-cell">
+      <div class="rate-demo-cell" style="margin-top: 16px">
         <div class="rate-demo-cell__label">评分 18</div>
         <t-rate v-model="current5" size="18px" clearable />
       </div>
@@ -53,7 +49,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
@@ -85,7 +81,6 @@ export default defineComponent({
 .rate-demo-cell {
   background-color: #fff;
   padding: 12px 16px;
-  margin-top: 8px;
   line-height: 1;
   display: flex;
   align-items: center;

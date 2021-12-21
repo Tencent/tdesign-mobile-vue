@@ -4,11 +4,11 @@
       <t-cell-group title="反馈类对话框">
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
-          <t-dialog v-model="isShowDialog1" :header="singleHeader"> </t-dialog>
+          <t-dialog v-model="isShowDialog1" :title="singleHeader"> </t-dialog>
         </t-cell>
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
-          <t-dialog v-model="isShowDialog2" :header="moreTextHeader"> </t-dialog>
+          <t-dialog v-model="isShowDialog2" :title="moreTextHeader"> </t-dialog>
         </t-cell>
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
@@ -18,14 +18,14 @@
             @confirm="onConfirm"
             @opened="openDialog"
             @closed="closeDialog"
-            @click-overlay="clickOverlay"
+            @overlay-click="clickOverlay"
             @visible-change="changeVisible"
           >
           </t-dialog>
         </t-cell>
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
-          <t-dialog v-model="isShowDialog4" :header="header"> </t-dialog>
+          <t-dialog v-model="isShowDialog4" :title="title"> </t-dialog>
         </t-cell>
       </t-cell-group>
     </div>
@@ -48,7 +48,7 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '对话框标题',
+      title: '对话框标题',
       moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       singleHeader: '最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法',

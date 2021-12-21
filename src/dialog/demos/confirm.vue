@@ -7,7 +7,7 @@
         <t-dialog
           v-model="isShowDialog5"
           type="confirm"
-          :header="header"
+          :title="title"
           :content="content"
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
@@ -18,7 +18,7 @@
         <t-dialog
           v-model="isShowDialog6"
           type="confirm"
-          :header="header"
+          :title="title"
           :content="moreTextContent"
           :cancel-button-text="cancelButtonText"
           :confirm-button-text="confirmButtonText"
@@ -52,7 +52,7 @@ export default defineComponent({
   },
   data() {
     return {
-      header: '对话框标题',
+      title: '对话框标题',
       content: '告知当前状态、信息和解决方法',
       moreTextContent: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       cancelButtonText: '我再想想',

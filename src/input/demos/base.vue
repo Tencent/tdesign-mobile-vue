@@ -67,10 +67,3 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-.tdesign-mobile-demo-block > .t-input,
-.tdesign-mobile-demo-block > .t-input--textarea {
-  margin: 16px 0;
-  background: #fff;
-}
-</style>

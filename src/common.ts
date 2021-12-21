@@ -7,7 +7,7 @@ export interface TVNode extends VNode {
   name: string;
 }
 export type TNodeReturnValue = SlotReturnValue;
-export type TNode<T = any> = (h: typeof import('vue').h, props?: T) => import('vue').VNodeChild;
+export type TNode<T=any> = (h: typeof import('vue').h, props?: T) => import('vue').VNodeChild;
 
 export type AttachNodeReturnValue = HTMLElement | Element | Document;
 export type AttachNode = CSSSelector | (() => AttachNodeReturnValue);
@@ -44,7 +44,4 @@ export type ClassName = { [className: string]: any } | ClassName[] | string;
 
 export type CSSSelector = string;
 
-export type TableRowData = {
-  [key: string]: any;
-  children?: TableRowData[];
-};
+export interface KeysType { value?: string; label?: string };

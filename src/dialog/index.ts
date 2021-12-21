@@ -89,7 +89,8 @@ function create(props: DialogFnType | string): DefineComponent {
 
 Dialog.install = (app: App, name = '') => {
   app.component(name || Dialog.name, Dialog);
-  // eslint-disable-next-line no-param-reassign
+
+  // 添加插件入口
   app.config.globalProperties.$dialog = Dialog;
 };
 

@@ -2,10 +2,10 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-06 13:58:33
+ * updated at 2021-12-21 00:07:39
  * */
 
- import { TNode } from '../common';
+import { TNode } from '../common';
 
 export interface TdMessageProps {
   /**
@@ -16,7 +16,7 @@ export interface TdMessageProps {
   /**
    * 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮
    */
-   closeBtn: string | boolean | TNode;
+  closeBtn: string | boolean | TNode;
   /**
    * 用于自定义消息弹出内容
    * @default ''

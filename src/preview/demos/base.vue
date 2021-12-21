@@ -71,7 +71,7 @@ export default defineComponent({
 </script>
 <style lang="less" scoped>
 .preview-demo {
-  margin: 16px;
+  margin: 0 16px;
   .t-button {
     margin-bottom: 16px;
   }

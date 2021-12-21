@@ -2,7 +2,7 @@
   <t-rate v-model="value" size="36px" allow-half clearable />
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({

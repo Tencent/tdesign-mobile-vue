@@ -5,7 +5,7 @@
       分割线是一个呈线状的轻量化组件，起到分割、组织、细化的作用，用于有逻辑的组织元素内容和页面结构。
     </p>
     <tdesign-demo-block title="01 类型" summary="分割符主要是由直线和文字组成">
-      <div style="background: #fff; margin-top: 16px">
+      <div style="background: #fff">
         <h3>直线拉通</h3>
         <t-divider></t-divider>
 

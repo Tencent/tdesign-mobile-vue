@@ -2,7 +2,7 @@
   <div :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
     <div
       ref="swiperContainer"
-      :class="`${name}-container`"
+      :class="`${name}__container`"
       :style="{
         height: `${height}px`,
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
@@ -15,29 +15,30 @@
     >
       <slot></slot>
     </div>
-    <!-- 左右侧的按钮 -->
-    <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
-      <span :class="`${name}-btn btn-prev`" @click="prev(1)">
-        <chevron-left-icon size="12px" name="chevron-left" />
+    <template v-if="navigation">
+      <!-- 左右侧的按钮 -->
+      <span v-if="direction === 'horizontal' && navigation.showSlideBtn">
+        <span :class="`${name}__btn btn-prev`" @click="prev(1)">
+          <chevron-left-icon size="20px" />
+        </span>
+        <span :class="`${name}__btn btn-next`" @click="next(1)">
+          <chevron-right-icon size="20px" />
+        </span>
       </span>
-      <span :class="`${name}-btn btn-next`" @click="next(1)">
-        <chevron-right-icon size="12px" name="chevron-right" />
+      <!-- 分页器 -->
+      <span v-if="navigation.type" :class="`${name}__pagination ${name}__pagination-${navigation.type}`">
+        <template v-if="['dots', 'dots-bar'].includes(navigation.type)">
+          <span
+            v-for="(item, index) in paginationList"
+            :key="'page' + index"
+            :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
+          ></span>
+        </template>
+        <span v-if="navigation.type === 'fraction'">
+          {{ showPageNum + '/' + state.itemLength }}
+        </span>
       </span>
-    </span>
-    <!-- 分页器 -->
-    <span v-if="navigation.type" :class="`${name}-pagination ${name}-pagination--${navigation.type}`">
-      <template v-if="navigation.type === 'bullets'">
-        <span
-          v-for="(item, index) in paginationList"
-          :key="'page' + index"
-          :class="{ [`${name}-pagination-dot`]: true, active: index === state.activeIndex }"
-        ></span>
-      </template>
-      <span v-if="navigation.type === 'fraction'">
-        {{ showPageNum + '/' + state.itemLength }}
-      </span>
-    </span>
-    {{ defaultCurrent }}
+    </template>
   </div>
 </template>
 <script lang="ts">
@@ -86,7 +87,7 @@ export default defineComponent({
       return activeIndex + 1;
     });
     // 获取容器节点（实时获取，才能获取到最新的节点）
-    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
+    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     // 初始化轮播图元素
     const initSwiper = () => {

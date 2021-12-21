@@ -35,3 +35,4 @@ export { DropdownMenu, DropdownItem } from './dropdown-menu';
 export { Collapse, CollapsePanel } from './collapse';
 export { Tabs, TabPanel } from './tabs';
 export { Swiper, SwiperItem } from './swiper';
+export { Countdown } from './count-down';
