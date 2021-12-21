@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref, defineComponent, watch } from 'vue';
 
 export default defineComponent({

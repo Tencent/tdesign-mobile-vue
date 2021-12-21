@@ -5,25 +5,25 @@
       <span :class="iconClasses" v-if="align === 'left'">
         <input type="checkbox" :name="name" :class="`${flagName}__original-left`" @click="checkBoxOrgChange" :value="value" :checked="(singleChecked || isChecked)"/>
         <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span>
-        <TNode :content="icon && icon[0] || defaultCheck"  v-if="(singleChecked || isChecked) && !indeterminate" :style="checkedIconStyle" size="20px"></TNode>
-        <TNode :content="icon && icon[1] || defaultUncheck" v-else-if="!(singleChecked || isChecked) && !indeterminate" :style="unCheckedIconStyle" size="20px"></TNode>
-        <TNode :content="TMinusCircleFilledIcon" v-else-if="indeterminate" size="20px"></TNode>
+        <t-node :content="icon && icon[0] || defaultCheck"  v-if="(singleChecked || isChecked) && !indeterminate" :style="checkedIconStyle" size="20px"></t-node>
+        <t-node :content="icon && icon[1] || defaultUncheck" v-else-if="!(singleChecked || isChecked) && !indeterminate" :style="unCheckedIconStyle" size="20px"></t-node>
+        <t-node :content="TMinusCircleFilledIcon" v-else-if="indeterminate" size="20px"></t-node>
       </span>
       <!-- 文本区域 -->
       <span :class="{[`${flagName}__label-wrap`]: true, [`${flagName}__label-wrap-left`]: align === 'right'}" @click="checkBoxChange('content')">
         <span v-if="labelContent" :class="titleClasses">
-          <TNode :content="labelContent"></TNode>
+          <t-node :content="labelContent"></t-node>
         </span>
         <div v-if="checkboxContent" :class="`${flagName}__content-inner`">
-          <TNode :content="checkboxContent"></TNode>
+          <t-node :content="checkboxContent"></t-node>
         </div>
       </span>
       <!-- 按钮区域 -->
       <span :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`" v-if="align === 'right'">
         <input type="checkbox" :name="name" :class="`${flagName}__original-right`" @click="checkBoxOrgChange" :value="value" :checked="(singleChecked || isChecked)"/>
         <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span>
-        <TNode :content="icon && icon[0] || defaultCheck"  v-if="(singleChecked || isChecked)" :style="checkedIconStyle" size="20px"></TNode>
-        <TNode :content="icon && icon[1] || defaultUncheck" v-else :style="unCheckedIconStyle" size="20px"></TNode>
+        <t-node :content="icon && icon[0] || defaultCheck"  v-if="(singleChecked || isChecked)" :style="checkedIconStyle" size="20px"></t-node>
+        <t-node :content="icon && icon[1] || defaultUncheck" v-else :style="unCheckedIconStyle" size="20px"></t-node>
       </span>
     </div>
   </div>
@@ -101,9 +101,9 @@ const getTitleClasses = (flagName: string, props: any, rootGroup: any) =>
  * @return: 返回是否选中的对象
  */
 const getIsCheck = (props: any, rootGroup: any) =>
-  computed(
-    () =>(rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.value) !== -1),
-  );
+computed(
+  () =>(rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.value) !== -1),
+);
 
 const getCheckedIconStyle = (isChecked: any, singleChecked: boolean, disabled: boolean) => computed(() => {
   const checkStyle = { color: ((singleChecked || isChecked) && !disabled)? '#0052D9' : '#DCDCDC' };
@@ -154,7 +154,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: CheckboxProps,
-  setup(props: any, content) {
+  setup(props: any, context) {
     const defaultCheck = h(CheckCircleFilledIcon);
     const defaultUncheck = h(CircleIcon);
     const internalInstance = getCurrentInstance();
@@ -172,9 +172,9 @@ export default defineComponent({
       rootGroup?.unregister(props);
     });
     const isChecked = getIsCheck(props, rootGroup);
-    const iconClasses = getIconClasses(flagName, isChecked, content, props, rootGroup);
+    const iconClasses = getIconClasses(flagName, isChecked, context, props, rootGroup);
     const titleClasses = getTitleClasses(flagName, props, rootGroup);
-    const checkBoxChange = setCheckBoxChange(props, rootGroup, content, isChecked);
+    const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
     const checkedIconStyle = getCheckedIconStyle(isChecked, singleChecked, rootGroup?.disabled || props?.disabled);
     const unCheckedIconStyle = getUnCheckedIconStyle(rootGroup?.disabled || props?.disabled);
 
@@ -184,10 +184,10 @@ export default defineComponent({
         return;
       }
       if (singleChecked.value || (rootGroup && isChecked.value)) {
-        content.emit('update:value', '');
-        content.emit('change', '');
+        context.emit('update:value', '');
+        context.emit('change', '');
         if (rootGroup) {
-          rootGroup?.uncheck(target?._value, { e });
+          rootGroup?.uncheck(target?.value, { e });
         } else {
           singleChecked.value = false;
         }
@@ -196,11 +196,11 @@ export default defineComponent({
         }
         props?.onChange && props?.onChange(false, { e });
       } else {
-        content.emit('update:value', target?._value, { e });
-        content.emit('change', target?._value, { e });
+        context.emit('update:value', target?.value, { e });
+        context.emit('change', target?.value, { e });
         props?.onChange && props?.onChange(true, { e });
         if (rootGroup) {
-          rootGroup?.check(target?._value, { e });
+          rootGroup?.check(target?.value, { e });
         } else {
           singleChecked.value = true;
         }
