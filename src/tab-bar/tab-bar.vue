@@ -1,11 +1,11 @@
 <template>
-  <div :class="name" role="tablist">
+  <div :class="tabbarClass" role="tablist">
     <slot />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, provide, watch, Ref } from 'vue';
+import { defineComponent, ref, provide, watch, Ref, computed } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
 
@@ -24,6 +24,14 @@ export default defineComponent({
       activeValue.value = currentValue;
     };
 
+    const tabbarClass = computed(() => [
+      `${name}`,
+      {
+        [`${name}--bordered`]: props.bordered,
+        [`${name}--fixed`]: props.fixed,
+      },
+    ]);
+
     watch(activeValue, (newValue) => {
       emit('update:value', newValue);
       emit('change', newValue);
@@ -36,7 +44,7 @@ export default defineComponent({
     });
 
     return {
-      name,
+      tabbarClass,
     };
   },
 });

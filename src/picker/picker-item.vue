@@ -42,7 +42,7 @@ export default defineComponent({
     onMounted(() => {
       picker = new Picker({
         el: root.value,
-        defaultIndex: props.value,
+        defaultIndex: +(props.value || 0),
         onChange: (index: number) => {
           curIndex.value = index;
           const curItem = props.options[index];

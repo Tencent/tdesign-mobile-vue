@@ -1,7 +1,12 @@
-import { PickerOptions } from './picker.interface';
 import config from '../config';
 
 const { prefix } = config;
+
+export interface PickerOptions {
+  defaultIndex?: number;
+  el: HTMLElement | HTMLDivElement | HTMLUListElement;
+  onChange: (index: number) => void;
+}
 
 const quartEaseOut = function (t: number, b: number, c: number, d: number) {
   let tempT = t;

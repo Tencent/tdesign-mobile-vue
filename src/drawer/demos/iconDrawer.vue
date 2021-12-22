@@ -10,34 +10,35 @@
   </div>
 </template>
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { ref, defineComponent, h } from 'vue';
+import { AppIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
     const baseSidebar = ref([
       {
         name: '菜单一',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单二',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单三',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单四',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单五',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单六',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
     ]);
     const open = ref(false);
