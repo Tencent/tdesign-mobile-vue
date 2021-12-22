@@ -32,7 +32,7 @@
 
 <script lang="ts">
 import { SearchIcon as TIconSearch, CloseIcon } from 'tdesign-icons-vue-next';
-import { ref, reactive, computed, defineComponent } from 'vue';
+import { ref, reactive, computed, defineComponent, nextTick } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -119,6 +119,13 @@ export default defineComponent({
       currentValue.value = '';
       emit('clear', e);
     };
+
+  
+    if(props.autofocus){
+      nextTick(()=>{
+        onClick()
+      });
+    }
 
     return {
       name: ref(name),
