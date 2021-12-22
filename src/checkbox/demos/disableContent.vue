@@ -4,7 +4,7 @@
     <t-checkbox v-model="checked2" name="1" title="单行标题" content-disabled> </t-checkbox>
   </div>
 </template>
-<script>
+<script lang="ts">
 import { ref, defineComponent } from 'vue';
 
 export default defineComponent({

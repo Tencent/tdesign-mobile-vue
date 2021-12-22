@@ -1,13 +1,21 @@
-# Vue3 for Mobile
+---
+title: Vue3 for Mobile
+description: TDesign 适配移动端的组件库，适合在 vue 3 技术栈项目中使用。
+spline: explain
+---
 
-TDesign 适配移动端的组件库，适合在 vue 3 技术栈项目中使用。
+
+<div style="background: #d4e3fc; display: flex; align-items: center; line-height: 20px; padding: 14px 24px; border-radius: 3px; color: #555a65">
+  <svg fill="none" viewBox="0 0 16 16" width="16px" height="16px" style="margin-right: 5px">
+    <path fill="rgb(0, 82, 217)" d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z" fillOpacity="0.9"></path>
+  </svg>
+  目前组件库处于 Alpha 阶段，快速迭代中，请留意版本变化。
+</div>
 
 ## 安装
 
-目前组件库已发布一期组件的测试版本，还在快速迭代，注意留意版本变化
-
 ```bash
-yarn add tdesign-mobile-vue
+npm i tdesign-mobile-vue
 ```
 
 ## 基础使用

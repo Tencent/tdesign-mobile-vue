@@ -1,21 +1,27 @@
-# Preview 图片预览
+---
+title: Preview 图片预览
+description: 相册读取或拉起拍照的图片上传功能。
+spline: base
+isComponent: true
+toc: false
+---
 
-## 基础用法
+### 基础用法
 
 ::: demo demos/index
 :::
 
-## 图片列表
+### 图片列表
 
 ::: demo demos/imageList
 :::
 
-## 默认展示
+### 默认展示
 
 ::: demo demos/initialIndex
 :::
 
-## 遮罩颜色
+### 遮罩颜色
 
 ::: demo demos/background
 :::

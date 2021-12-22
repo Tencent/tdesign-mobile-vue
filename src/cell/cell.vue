@@ -21,7 +21,7 @@
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, TNode } from '@/shared';
+import { renderTNode, TNode } from '../shared';
 import config from '../config';
 import CellProps from './props';
 

@@ -10,7 +10,7 @@
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import ButtonProps from './props';
 import config from '../config';
@@ -28,10 +28,10 @@ export default defineComponent({
     const buttonClass = computed(() => [
       `${name}`,
       props.size ? CLASSNAMES.SIZE[props.size] : '',
-      `${name}--variant-${props.variant}`,
+      `${name}--${props.variant}`,
       {
-        [`${name}--theme-${props.theme}`]: props.theme,
-        [`${name}--shape-${props.shape}`]: props.shape !== 'round',
+        [`${name}--${props.theme}`]: props.theme,
+        [`${name}--${props.shape}`]: props.shape !== 'round',
         [`${name}--ghost`]: props.ghost,
         [`${prefix}-size-full-width`]: props.block,
         [`${prefix}-is-disabled`]: props.disabled,

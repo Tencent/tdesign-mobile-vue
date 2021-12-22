@@ -1,10 +1,10 @@
-# Progress 进度条
-
-用于需要准确告知某个任务的当前进度
-
-## 组件类型
-
-在 TDesign 中，拥有两种不同类型的进度条：基础进度条、赢藏数值进度条
+---
+title: Progress 进度条
+description: 用于需要准确告知某个任务的当前进度
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 基础进度条
 
@@ -20,14 +20,14 @@
 ::: demo demos/text
 :::
 
-## 样式
+### 样式
 
 ### 颜色
 
 ::: demo demos/type
 :::
 
-## 自定义样式
+### 自定义样式
 
 ::: demo demos/color
 :::

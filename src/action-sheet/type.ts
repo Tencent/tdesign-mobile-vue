@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-07 19:30:36
+ * updated at 2021-12-20 18:41:35
  * */
 
 export interface TdActionSheetProps {
@@ -51,7 +51,11 @@ export interface TdActionSheetProps {
   /**
    * 选择菜单项时触发
    */
-  onSelect: (selected: ActionSheetItem | String, index: number) => void;
-};
+  onSelected: (selected: ActionSheetItem | String, index: number) => void;
+}
 
-export interface ActionSheetItem {label: string; color?: string; disabled?: boolean };
+export interface ActionSheetItem {
+  label: string;
+  color?: string;
+  disabled?: boolean;
+}

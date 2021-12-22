@@ -1,11 +1,11 @@
 <template>
-  <div role="separator" :class="dividerClass">
+  <div role="separator" :class="dividerClass" :style="`border-color:${lineColor}`">
     <t-node :content="dividerContent" />
   </div>
 </template>
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
-import { renderContent, TNode } from '@/shared';
+import { renderContent, TNode } from '../shared';
 import DividerProps from './props';
 import config from '../config';
 
@@ -16,7 +16,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: DividerProps,
-  setup(props, context) {
+  setup(props) {
     const internalInstance = getCurrentInstance();
     const dividerContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const dividerClass = computed(() => [
@@ -30,6 +30,7 @@ export default defineComponent({
     ]);
 
     return {
+      ...toRefs(props),
       dividerContent,
       dividerClass,
     };

@@ -1,28 +1,23 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <h1 class="title">Swiper 轮播图</h1>
+    <h1 class="title">Swiper 轮播</h1>
     <p class="summary">用于循环轮播一组图片或内容，也可以滑动进行切换，轮播动效时间可以设置</p>
-    <tdesign-demo-block title="01 类型" summary="基本用法">
+    <tdesign-demo-block title="01 类型" summary="轮播图的多种样式">
       <t-swiper
         :interval="3000"
         :autoplay="true"
-        :default-current="1"
-        :navigation="{ type: 'bullets', showSlideBtn: false }"
+        :navigation="{ type: 'dots', showSlideBtn: false }"
         @change="handleChange"
       >
         <t-swiper-item class="swiper-item--demo"> item1 </t-swiper-item>
         <t-swiper-item style="background: blue" class="swiper-item--demo"> item2 </t-swiper-item>
         <t-swiper-item style="background: green" class="swiper-item--demo"> item3 </t-swiper-item>
       </t-swiper>
-      <tdesign-demo-block summary="指定分页器类型">
-        <pagination-type />
-      </tdesign-demo-block>
-      <tdesign-demo-block summary="垂直方向">
-        <demo-direction />
-      </tdesign-demo-block>
-      <tdesign-demo-block summary="受控模式">
-        <demo-control />
-      </tdesign-demo-block>
+      <pagination-type />
+
+      <demo-direction />
+
+      <demo-control />
     </tdesign-demo-block>
   </div>
 </template>
@@ -50,6 +45,6 @@ export default defineComponent({
 </script>
 <style lang="less">
 .t-swiper {
-  margin-top: 16px;
+  margin-bottom: 24px;
 }
 </style>

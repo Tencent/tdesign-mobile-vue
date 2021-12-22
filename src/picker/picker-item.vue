@@ -2,7 +2,7 @@
   <div ref="root" :class="className">
     <ul :class="wrapperClassName">
       <li v-for="(option, index) in options" :key="index" :class="itemClassName">
-        {{ formatter(optionKey ? option[optionKey] : option) }}
+        {{ formatter(typeof option === 'object' ? option.label : option) }}
       </li>
     </ul>
   </div>
@@ -12,20 +12,20 @@
 import { ref, computed, onMounted, watch, nextTick, toRefs, defineComponent } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
-import { pickerColumnProps } from './picker.interface';
+import { PickerItemProps } from './props';
 
 const { prefix } = config;
-const name = `${prefix}-picker-column`;
+const name = `${prefix}-picker-item`;
 
 export default defineComponent({
   name,
-  props: pickerColumnProps,
+  props: PickerItemProps,
   emits: ['change'],
   setup(props, context) {
     let picker: Picker | null = null;
     const el = document.createElement('div');
     const root = ref(el);
-    const curIndex = ref(props.defaultIndex);
+    const curIndex = ref(props.value);
     const className = computed(() => `${name}`);
     const wrapperClassName = computed(() => [`${name}__wrapper`]);
     const itemClassName = computed(() => [`${name}__item`]);
@@ -42,11 +42,13 @@ export default defineComponent({
     onMounted(() => {
       picker = new Picker({
         el: root.value,
-        defaultIndex: props.defaultIndex,
+        defaultIndex: +(props.value || 0),
         onChange: (index: number) => {
           curIndex.value = index;
+          const curItem = props.options[index];
+          const curValue = typeof curItem === 'object' ? curItem.value : curItem;
           context.emit('change', {
-            value: props.options[index],
+            value: curValue,
             index,
           });
         },

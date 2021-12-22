@@ -9,21 +9,21 @@
     <t-cell>
       <t-button variant="outline" size="large" @click="visible2 = true">自定义颜色</t-button>
     </t-cell>
-    <t-action-sheet v-model="visible" :items="items" @select="handleSelect" @cancel="handleCancel" />
+    <t-action-sheet v-model="visible" :items="items" @selected="handleSelected" @cancel="handleCancel" />
     <t-action-sheet
       v-model="visible1"
       :items="items"
       :show-cancel="false"
-      @select="handleSelect"
+      @selected="handleSelected"
       @cancel="handleCancel"
     />
-    <t-action-sheet v-model="visible2" :items="items1" @select="handleSelect" @cancel="handleCancel" />
+    <t-action-sheet v-model="visible2" :items="items1" @selected="handleSelected" @cancel="handleCancel" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { ItemType } from '../action-sheet.interface';
+import { ActionSheetItem } from '../type';
 
 export default defineComponent({
   data() {
@@ -39,7 +39,7 @@ export default defineComponent({
     };
   },
   methods: {
-    handleSelect(selected: ItemType, selectedIndex: number) {
+    handleSelected(selected: ActionSheetItem, selectedIndex: number) {
       console.log(selected, selectedIndex);
     },
     handleCancel() {

@@ -5,7 +5,7 @@
       :key="index"
       :class="`${name}__cell`"
       :disabled="item.disabled"
-      @click="handleSelect(index)"
+      @click="handleSelected(index)"
     >
       <slot name="cell" :item="item">
         <div :class="`${name}__cell-text`" :style="{ color: item.color }">{{ item.label }}</div>
@@ -18,7 +18,7 @@
 import { ref, SetupContext, defineComponent, PropType } from 'vue';
 
 import config from '../config';
-import { Item } from './type';
+import { ActionSheetItem } from './type';
 
 const { prefix } = config;
 
@@ -27,19 +27,19 @@ const name = `${prefix}-action-sheet`;
 export default defineComponent({
   props: {
     items: {
-      type: Array as PropType<Item[]>,
+      type: Array as PropType<ActionSheetItem[]>,
       required: true,
     },
   },
-  emits: ['select'],
+  emits: ['selected'],
   setup(props, context: SetupContext) {
-    const handleSelect = (index: number) => {
-      context.emit('select', index);
+    const handleSelected = (index: number) => {
+      context.emit('selected', index);
     };
 
     return {
       name: ref(name),
-      handleSelect,
+      handleSelected,
     };
   },
 });

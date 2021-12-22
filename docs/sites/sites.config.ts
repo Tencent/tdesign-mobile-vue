@@ -12,13 +12,6 @@ export default {
           component: () => import('@/../getting-started.md'),
         },
         {
-          title: '贡献指南',
-          name: 'contributing',
-          meta: { docType: 'explain' },
-          path: '/vue-mobile/components/contributing',
-          component: () => import('@/../CONTRIBUTING.md'),
-        },
-        {
           title: '更新日志',
           name: 'changelog',
           meta: { docType: 'explain' },
@@ -64,6 +57,13 @@ export default {
           meta: { docType: 'data' },
           path: '/vue-mobile/components/badge',
           component: () => import('@/badge/badge.md'),
+        },
+        {
+          title: 'CountDown 倒计时',
+          name: 'CountDown',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/count-down',
+          component: () => import('@/count-down/count-down.md'),
         },
         {
           title: 'Tag 标签',

@@ -7,8 +7,9 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent, h } from 'vue';
+import { UserIcon } from 'tdesign-icons-vue-next';
 import Toast from '../index';
 
 export default defineComponent({
@@ -17,7 +18,7 @@ export default defineComponent({
       showSuccess: () => Toast.success('成功'),
       showFail: () => Toast.fail('失败'),
       showLoading: () => Toast.loading('加载'),
-      showCustom: () => Toast({ icon: 'user-filled', message: '自定义图标' }),
+      showCustom: () => Toast({ icon: () => h(UserIcon), message: '自定义图标' }),
     };
   },
 });

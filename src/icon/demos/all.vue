@@ -2,7 +2,7 @@
   <div class="t-demo-iconfont">
     <div class="t-demo-row">
       <icon name="loading" style="color: #999999" />
-      <icon name="close" @click="onIconClose" />
+      <icon name="close" />
       <icon name="check-circle-filled" />
     </div>
     <br />

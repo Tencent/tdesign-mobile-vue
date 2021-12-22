@@ -7,7 +7,7 @@ import './style';
 let instance: any = null;
 
 /** 展示提示 */
-function Toast(props?: TdToastProps | string): DefineComponent<TdToastProps> {
+function Toast(props: string | Partial<TdToastProps>): DefineComponent<TdToastProps> {
   const root = document.createElement('div');
   document.body.appendChild(root);
 
@@ -56,7 +56,7 @@ Toast.clear = () => {
   };
 });
 
-function parseOptions(message?: TdToastProps | string) {
+function parseOptions(message?: Partial<TdToastProps> | string) {
   if (typeof message === 'string') {
     return { message };
   }

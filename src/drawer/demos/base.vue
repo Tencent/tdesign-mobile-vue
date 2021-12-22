@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <div class="demo-drawer">
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">Drawer 抽屉</h1>
+    <p class="summary">用作一组平行关系页面/内容的切换器，相较于Tab，同屏可展示更多的选项数量。</p>
+    <tdesign-demo-block title="01 类型" summary="基础抽屉">
       <t-drawer v-model="openBase" :sidebar="baseSidebar"></t-drawer>
+      <t-button size="large" variant="outline" shape="round" @click="openDrawer(false)">基础抽屉</t-button>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带图标抽屉">
       <t-drawer v-model="openIcon" :sidebar="iconSidebar"></t-drawer>
-      <div class="demo-drawer-content">
-        <div class="demo-drawer-text">单层级纯文本标签栏</div>
-        <t-button size="large" variant="outline" shape="round" @click="openDrawer(false)">基础抽屉</t-button>
-        <div class="demo-drawer-text">单层级纯文本标签栏</div>
-        <t-button size="large" variant="outline" shape="round" @click="openDrawer(true)">带图标抽屉</t-button>
-      </div>
-    </div>
+      <t-button size="large" variant="outline" shape="round" @click="openDrawer(true)">带图标抽屉</t-button>
+    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { ref, defineComponent, h } from 'vue';
+import { AppIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
@@ -40,27 +41,27 @@ export default defineComponent({
     const iconSidebar = ref([
       {
         name: '菜单一',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单二',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单三',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单四',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单五',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单六',
-        icon: 'https://imgcache.qq.com/qcloud/tcloud_dtc/static/static_source_business/7bd23b57-07c1-493b-a482-de78f9874a4f.svg',
+        icon: () => h(AppIcon),
       },
     ]);
     const openBase = ref(false);

@@ -6,14 +6,15 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts">
+import { defineComponent, h } from 'vue';
+import { CheckIcon } from 'tdesign-icons-vue-next';
 import Toast from '../index';
 
 export default defineComponent({
   setup() {
     return {
-      onClick: (position) => Toast({ position, icon: 'check' }),
+      onClick: (position: any) => Toast({ position, icon: () => h(CheckIcon) }),
     };
   },
 });

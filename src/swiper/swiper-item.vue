@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import config from '@/config';
+import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-swiper-item`;

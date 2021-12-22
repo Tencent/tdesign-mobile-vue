@@ -28,7 +28,6 @@
 <script lang="ts" setup></script>
 <style lang="less" scoped>
 .progress-demo {
-  margin-top: 16px;
   padding: 16px;
   background: #fff;
   .t-progress {

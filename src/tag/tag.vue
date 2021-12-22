@@ -15,7 +15,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-tag`;
@@ -42,7 +42,7 @@ const Tag = defineComponent({
       `${baseClass}--theme-${theme.value}`,
       `${baseClass}--${shape.value}`,
       {
-        [`${baseClass}--variant-${variant.value}`]: theme.value,
+        [`${baseClass}--variant-${variant.value}`]: variant.value,
         [`${prefix}-is-error`]: theme.value === 'danger',
         [`${prefix}-is-success`]: theme.value === 'success',
         [`${prefix}-is-warning`]: theme.value === 'warning',

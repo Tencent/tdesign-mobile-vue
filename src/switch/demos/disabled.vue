@@ -17,12 +17,8 @@ import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     const disabledValue = ref(true);
-    function onChange($event) {
-      console.log(`change to ${$event}`);
-    }
     return {
       disabledValue,
-      onChange,
     };
   },
 });

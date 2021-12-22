@@ -1,13 +1,14 @@
 <template>
   <t-popup :class="name" :visible="currentVisible" placement="bottom" @close="handleClose">
     <div :class="rootClasses">
-      <menu-list v-if="type === 'list'" :items="actionItems" @select="handleSelect">
+      <!-- @ts-ignore -->
+      <menu-list v-if="type === 'list'" :items="actionItems" @selected="handleSelected">
         <template #cell="slotProps">
           <slot name="cell" :item="slotProps.item"></slot>
         </template>
       </menu-list>
 
-      <menu-grid v-else :items="actionItems" :count="count" @select="handleSelect">
+      <menu-grid v-else :items="actionItems" :count="count" @selected="handleSelected">
         <template #cell="slotProps">
           <slot name="cell" :item="slotProps.item"></slot>
         </template>
@@ -23,7 +24,7 @@
 
 <script lang="ts">
 import { ref, computed, watch, defineComponent, PropType, ComputedRef, SetupContext } from 'vue';
-import { emitEvent } from '@/shared/emit';
+import { emitEvent } from '../shared/emit';
 import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
@@ -91,7 +92,7 @@ export default defineComponent({
       default: '取消',
     },
   },
-  emits: ['select', 'update:modelValue', 'cancel', 'close'],
+  emits: ['selected', 'update:modelValue', 'cancel', 'close'],
   setup(props, context: SetupContext) {
     const actionItems = ref([]);
 
@@ -127,8 +128,8 @@ export default defineComponent({
       context.emit('update:modelValue', false);
     };
 
-    const handleSelect = (index: number) => {
-      emitEvent(props, context, 'select', props.items[index], index);
+    const handleSelected = (index: number) => {
+      emitEvent(props, context, 'selected', props.items[index], index);
     };
 
     const handleClose = () => {
@@ -142,7 +143,7 @@ export default defineComponent({
       actionItems,
       currentVisible,
       handleCancel,
-      handleSelect,
+      handleSelected,
       handleClose,
     };
   },

@@ -1,59 +1,49 @@
 <template>
-  <div :class="`${prefix}-check-group`">
-    <slot> </slot>
+  <div :class="`${prefix}-checkbox-group`">
+    <slot v-if="!(options && options.length)"></slot>
+    <span v-else>
+      <checkbox
+        v-for="(item, idx) in options"
+        :key="idx"
+        :name="item.name"
+        :label="item.label"
+        :value="item.value"
+        :check-all="item.checkAll"
+      ></checkbox>
+    </span>
   </div>
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed, defineComponent, PropType } from 'vue';
+import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
+import CheckboxProps from '../checkbox/checkbox-group-props';
+import checkbox from '../checkbox/checkbox.vue';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
 
 export interface Child {
-  name: string;
+  value: string | number;
 }
 
 export default defineComponent({
   name,
-  props: {
-    /**
-     * @description check-group 当前的值checkbox的值
-     * @attribute modelValue
-     */
-    modelValue: {
-      type: Array as PropType<string[]>,
-      default: () => [],
-    },
-    /**
-     * @description check-group 当前的值checkbox组是否能被点击
-     * @attribute disabled
-     */
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * @description check-group 当前组最大的选择项
-     * @attribute max
-     */
-    max: {
-      type: [String, Number],
-      default: 0,
-    },
+  components: {
+    checkbox,
   },
-  emits: ['update:modelValue', 'change'],
-  setup(props, content: SetupContext) {
+  props: CheckboxProps,
+  emits: ['update:value', 'change'],
+  setup(props: any, content: SetupContext) {
     const children = ref({});
-    const checkedValues = computed(() => props.modelValue || []);
+    const checkedValues = computed(() => props.value || []);
     /**
      * @description: 为checkbox注册
      * @param {object}
      * @return: void
      */
     const register = (child: Child) => {
-      child?.name && (children.value[child.name] = child);
+      child?.value && (children.value[child.value] = child);
     };
 
     /**
@@ -62,19 +52,22 @@ export default defineComponent({
      * @return: void
      */
     const unregister = (child: Child) => {
-      child.name && delete children.value[child.name];
+      child.value && delete children.value[child.value];
     };
     /**
      * @description: 为checkbox选中
      * @param {string}
      * @return: void
      */
-    const check = (name: string) => {
-      const index = checkedValues.value.indexOf(name);
-      const inMax = props?.max < 1 || checkedValues?.value?.length < props?.max;
+    const check = (value: string, e: Event) => {
+      const index = checkedValues.value.indexOf(value);
+      const inMax = props?.max === undefined || checkedValues?.value?.length < props?.max;
       if (index !== undefined && index === -1 && inMax) {
-        const tempValues = checkedValues?.value?.concat(name);
-        content.emit('update:modelValue', [...Array.from(tempValues)]);
+        const tempValues = checkedValues?.value?.concat(value);
+        const resultValues = [...Array.from(tempValues)];
+        content.emit('update:value', resultValues);
+        content.emit('change', resultValues, { e });
+        props?.onChange && props?.onChange(resultValues, { e });
       }
     };
     /**
@@ -82,11 +75,14 @@ export default defineComponent({
      * @param {string}
      * @return: void
      */
-    const uncheck = (name: string) => {
+    const uncheck = (name: string, e: Event) => {
       const index = checkedValues?.value.indexOf(name);
       if (index !== undefined && index !== -1) {
         const tempValues = checkedValues?.value.slice(0, index);
-        content.emit('update:modelValue', tempValues.concat(checkedValues?.value.slice(index + 1)));
+        const resultValues = tempValues.concat(checkedValues?.value.slice(index + 1));
+        content.emit('update:value', resultValues);
+        content.emit('change', resultValues, { e });
+        props?.onChange && props?.onChange(resultValues, { e });
       }
     };
     /**
@@ -117,7 +113,7 @@ export default defineComponent({
         // eslint-disable-next-line no-nested-ternary
         return checked === false ? false : !checked ? !isChecked : true;
       });
-      content.emit('update:modelValue', names);
+      content.emit('update:value', names);
       content.emit('change', names);
     };
     provide('rootGroup', {
@@ -127,6 +123,8 @@ export default defineComponent({
       unregister,
       check,
       uncheck,
+      toggle,
+      toggleAll,
     });
     return {
       prefix,

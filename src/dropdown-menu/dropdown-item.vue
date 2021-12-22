@@ -183,8 +183,8 @@ export default defineComponent({
       optionsLayout: computed(() => props.optionsLayout),
       options: computed(() => props.options),
     });
-    const isCheckedRadio = (value: string) => value === radioSelect.value;
-    const styleDropRadio = (value: string) => [
+    const isCheckedRadio = (value: TdDropdownItemOptionValueType) => value === radioSelect.value;
+    const styleDropRadio = (value: TdDropdownItemOptionValueType) => [
       `${name}__radio`,
       {
         [`${prefix}-is-tick`]: props.selectMode === 'single',
@@ -275,7 +275,7 @@ export default defineComponent({
       }
     };
     // 处理后的树形选项列表
-    const treeOptions = ref([]);
+    const treeOptions = ref(<TdDropdownItemOption[]>[]);
     const buildTreeOptions = () => {
       const { options, selectMode } = props;
       const { selectList } = treeState;
@@ -284,6 +284,7 @@ export default defineComponent({
       let node: TdDropdownItemOption | undefined = {
         title: '',
         value: '',
+        disabled: false,
         options,
       };
       while (node?.options) {

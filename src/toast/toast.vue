@@ -9,9 +9,9 @@
 </template>
 
 <script lang="ts">
-import { LoadingIcon, CheckIcon, ErrorIcon } from 'tdesign-icons-vue-next';
+import { LoadingIcon, CheckCircleIcon, ErrorCircleIcon } from 'tdesign-icons-vue-next';
 import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
-import { renderTNode, TNode } from '@/shared';
+import { renderTNode, TNode } from '../shared';
 import TMask from '../mask';
 import ToastProps from './props';
 import config from '../config';
@@ -26,8 +26,8 @@ export default defineComponent({
   setup(props) {
     const toastTypeIcon = {
       loading: LoadingIcon,
-      success: CheckIcon,
-      fail: ErrorIcon,
+      success: CheckCircleIcon,
+      fail: ErrorCircleIcon,
     };
     const internalInstance = getCurrentInstance();
     const iconContent = computed(() => {

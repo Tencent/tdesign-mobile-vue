@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs } from 'vue';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 import BadgeProps from './props';
 import config from '../config';
 
@@ -44,11 +44,9 @@ export default defineComponent({
     const badgeInnerClasses = computed(() => ({
       [`${name}--basic`]: true,
       [`${name}--has-children`]: !isIndependent.value,
+      [`${name}--${props.size}`]: props.size,
+      [`${name}--${props.shape}`]: props.shape && !props.dot,
       [`${name}--dot`]: props.dot,
-      [`${name}--small`]: props.size === 'small',
-      [`${name}--circle`]: props.shape === 'circle',
-      [`${name}--round`]: props.shape === 'round',
-      [`${name}--ribbon`]: props.shape === 'ribbon',
     }));
 
     // 徽标自定义样式

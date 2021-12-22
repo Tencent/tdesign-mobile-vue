@@ -1,8 +1,8 @@
 <template>
-  <div ref="swiper" :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
+  <div :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
     <div
       ref="swiperContainer"
-      :class="`${name}-container`"
+      :class="`${name}__container`"
       :style="{
         height: `${height}px`,
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
@@ -15,35 +15,37 @@
     >
       <slot></slot>
     </div>
-    <!-- 左右侧的按钮 -->
-    <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
-      <span :class="`${name}-btn btn-prev`" @click="prev(1)">
-        <chevron-left-icon size="12px" name="chevron-left" />
+    <template v-if="navigation">
+      <!-- 左右侧的按钮 -->
+      <span v-if="direction === 'horizontal' && navigation.showSlideBtn">
+        <span :class="`${name}__btn btn-prev`" @click="prev(1)">
+          <chevron-left-icon size="20px" />
+        </span>
+        <span :class="`${name}__btn btn-next`" @click="next(1)">
+          <chevron-right-icon size="20px" />
+        </span>
       </span>
-      <span :class="`${name}-btn btn-next`" @click="next(1)">
-        <chevron-right-icon size="12px" name="chevron-right" />
+      <!-- 分页器 -->
+      <span v-if="navigation.type" :class="`${name}__pagination ${name}__pagination-${navigation.type}`">
+        <template v-if="['dots', 'dots-bar'].includes(navigation.type)">
+          <span
+            v-for="(item, index) in paginationList"
+            :key="'page' + index"
+            :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
+          ></span>
+        </template>
+        <span v-if="navigation.type === 'fraction'">
+          {{ showPageNum + '/' + state.itemLength }}
+        </span>
       </span>
-    </span>
-    <!-- 分页器 -->
-    <span v-if="navigation.type" :class="`${name}-pagination ${name}-pagination--${navigation.type}`">
-      <template v-if="navigation.type === 'bullets'">
-        <span
-          v-for="(item, index) in paginationList"
-          :key="'page' + index"
-          :class="{ [`${name}-pagination-dot`]: true, active: index === state.activeIndex }"
-        ></span>
-      </template>
-      <span v-if="navigation.type === 'fraction'">
-        {{ showPageNum + '/' + state.itemLength }}
-      </span>
-    </span>
+    </template>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, toRefs } from 'vue';
+import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref } from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
-import config from '@/config';
+import config from '../config';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -57,10 +59,13 @@ export default defineComponent({
   props: {
     ...SwiperProps,
   },
-  emits: ['change'],
+  emits: ['change', 'update:current'],
   setup(props, context) {
-    const { autoplay, interval, duration, direction, height, current } = toRefs(props);
     const self = getCurrentInstance();
+    const swiperContainer = ref(null);
+
+    // const { height = 180, current = null } = props;
+    const height = props.height || ref(180);
     const state: {
       activeIndex: number;
       itemLength: number;
@@ -82,7 +87,8 @@ export default defineComponent({
       return activeIndex + 1;
     });
     // 获取容器节点（实时获取，才能获取到最新的节点）
-    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
+    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
+    // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     // 初始化轮播图元素
     const initSwiper = () => {
       const _swiperContainer = getContainer();
@@ -99,85 +105,89 @@ export default defineComponent({
 
     // 勾子函数初始化部分数据
     onMounted(() => {
-      // console.log('组件实例', self);
       const _swiperContainer = getContainer();
       state.itemLength = _swiperContainer.children?.length || 0;
       const itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       initSwiper();
       startAutoplay();
-      if (typeof current === 'number') {
+      if (typeof props.current === 'number') {
         state.isControl = true;
-        next(current);
+        next(props.current);
       }
     });
     // eslint-disable-next-line no-undef
-    let autoplayTimer: Number | NodeJS.Timeout | null = null;
+    let autoplayTimer: number | NodeJS.Timeout | null = null;
     /**
      * 移动节点
      */
-    const move = (targetIndex: number) => {
+    const move = (targetIndex: number, isTrust = true) => {
       // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
       // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
-      const moveDirection = direction.value === 'horizontal' ? 'X' : 'Y';
-      const moveLength: number = direction.value === 'vertical' ? Number(height) : state.itemWidth;
+      const { height = 180 } = props;
+      const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
+      const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
+      _swiperContainer.dataset.isTrust = `${isTrust}`;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
     // 添加动画
     const addAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = `transform ${duration}ms`;
+      _swiperContainer.style.transition = `transform ${props?.duration}ms`;
     };
     // 移除动画（轮播时用到）
     const removeAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = 'none';
+      _swiperContainer.style.transition = 'transform 0s';
     };
     // 确认是否已经移动到最后一个元素，每次transitionend事件后即检查
     const handleAnimationEnd = () => {
+      removeAnimation();
       if (state.activeIndex >= state.itemLength) {
         // console.log('到了最后一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = 0;
-        removeAnimation();
         move(0);
       }
       if (state.activeIndex <= -1) {
         // console.log('到了第一个元素', state.activeIndex, state.itemLength);
         state.activeIndex = state.itemLength - 1;
-        removeAnimation();
         move(state.itemLength - 1);
       }
-      context.emit('change', state.activeIndex);
     };
     // 停止自动播放
     const stopAutoplay = () => {
       if (!autoplayTimer) return;
-      clearInterval(autoplayTimer);
+      clearInterval(autoplayTimer as number);
       autoplayTimer = null;
     };
     // 自动播放
     const startAutoplay = () => {
       // 如果是受控组件，永远不自动播放
-      if (typeof current === 'number') return false;
-      if (!autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
+      if (typeof props.current === 'number') return false;
+      if (!props?.autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
       autoplayTimer = setInterval(() => {
         state.activeIndex += 1;
         addAnimation();
         move(state.activeIndex);
-      }, interval.value);
+      }, props?.interval);
+    };
+    // 通知父组件更新页数（受控模式）
+    const emitCurrentChange = (index: number) => {
+      if (!state.isControl) return false;
+      let resultIndex = index;
+      if (index >= state.itemLength) resultIndex = 0;
+      if (index < 0) resultIndex = state.itemLength - 1;
+      context.emit('change', resultIndex);
     };
     // 移动到上一个
     const prev = (step = 1) => {
       stopAutoplay();
       state.activeIndex -= step;
-      // if (state.activeIndex < 0) {
-      //   state.activeIndex = state.itemLength - 1;
-      // }
       addAnimation();
       move(state.activeIndex);
-      context.emit('change', state.activeIndex);
       startAutoplay();
+      emitCurrentChange(state.activeIndex);
     };
     // 移动到下一个
     const next = (step = 1) => {
@@ -185,21 +195,19 @@ export default defineComponent({
       state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
-      context.emit('change', state.activeIndex);
       startAutoplay();
+      emitCurrentChange(state.activeIndex);
     };
     let touchStartX = 0;
     let touchStartY = 0;
     // 按下鼠标或屏幕开始滑动
     const onTouchStart = (event: TouchEvent) => {
       stopAutoplay();
-      // console.log('touch start', state?.itemLength);
       touchStartY = event.touches[0].clientY;
       touchStartX = event.touches[0].clientX;
     };
     // 滑动过程中位移容器
     const onTouchMove = (event: TouchEvent) => {
-      // console.log('touch move');
       const { activeIndex, itemWidth } = state;
       const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
@@ -207,33 +215,34 @@ export default defineComponent({
       const distanceY = endY - touchStartY;
       const _container = getContainer();
       removeAnimation();
-      if (direction.value === 'horizontal') {
+      if (props?.direction === 'horizontal') {
         setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
       } else {
-        setOffset(_container, -((activeIndex + 1) * height.value - distanceY), 'Y');
+        const { height = 180 } = props;
+        setOffset(_container, -((activeIndex + 1) * height - distanceY), 'Y');
       }
     };
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。
     const onTouchEnd = (event: TouchEvent) => {
-      // console.log('touch end', event);
       const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
       const distanceX = endX - touchStartX;
       const distanceY = endY - touchStartY;
       addAnimation();
       if (
-        (direction.value === 'horizontal' && distanceX > 100) ||
-        (direction.value === 'vertical' && distanceY > 100)
+        (props?.direction === 'horizontal' && distanceX > 100) ||
+        (props?.direction === 'vertical' && distanceY > 100)
       ) {
         prev(1);
       } else if (
-        (direction.value === 'horizontal' && distanceX < -100) ||
-        (direction.value === 'vertical' && distanceY < -100)
+        (props?.direction === 'horizontal' && distanceX < -100) ||
+        (props?.direction === 'vertical' && distanceY < -100)
       ) {
         next(1);
       } else {
         move(state.activeIndex);
       }
+      emitCurrentChange(state.activeIndex);
       startAutoplay();
     };
     watch(
@@ -243,11 +252,12 @@ export default defineComponent({
         if (state.isControl) {
           state.activeIndex = newPage || 0;
           addAnimation();
-          move(state.activeIndex);
+          move(state.activeIndex, false);
         }
       },
     );
     return {
+      swiperContainer,
       name,
       onTouchStart,
       onTouchMove,

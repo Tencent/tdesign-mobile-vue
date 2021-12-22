@@ -26,7 +26,6 @@
           v-for="(tag, index) in closableTags"
           :key="tag"
           closable
-          :disabled="tag.disabled"
           theme="primary"
           :size="tag.size"
           @close="onClickClose(index)"
@@ -61,46 +60,6 @@ const name = `${prefix}-tag-base-demo`;
 export default defineComponent({
   name,
   setup() {
-    const fruits = ref([
-      {
-        name: '苹果',
-        checked: true,
-      },
-      {
-        name: '香蕉',
-        checked: false,
-      },
-      {
-        name: '桃子',
-        checked: false,
-      },
-      {
-        name: '火龙果',
-        checked: false,
-        disabled: true,
-      },
-    ]);
-
-    const fruits2 = ref([
-      {
-        name: '苹果',
-        checked: true,
-      },
-      {
-        name: '香蕉',
-        checked: false,
-      },
-      {
-        name: '桃子',
-        checked: false,
-      },
-      {
-        name: '火龙果',
-        checked: false,
-        disabled: true,
-      },
-    ]);
-
     const closableTags = ref([
       {
         name: '标签',
@@ -120,20 +79,8 @@ export default defineComponent({
       closableTags.value.splice(index, 1);
     }
 
-    function onClickFruit(index: number) {
-      fruits.value[index].checked = !fruits.value[index].checked;
-    }
-
-    function onClickFruit2(index: number) {
-      fruits2.value[index].checked = !fruits2.value[index].checked;
-    }
-
     return {
-      fruits,
-      fruits2,
       closableTags,
-      onClickFruit,
-      onClickFruit2,
       onClickClose,
     };
   },

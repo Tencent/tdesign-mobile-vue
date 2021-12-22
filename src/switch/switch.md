@@ -1,10 +1,10 @@
-# Switch 开关
-
-定义：控制某个功能的开启和关闭
-
-## 组件类型
-
-在TDesign中，拥有两种不同类型的开关：基础开关、带描述开关
+---
+title: Switch 开关
+description: 用于控制某个功能的开启和关闭。
+spline: base
+isComponent: true
+toc: false
+---
 
 ### 基础开关
 
@@ -20,7 +20,7 @@
 ::: demo demos/desc
 :::
 
-## 组件样式
+### 组件样式
 
 ### 禁用状态
 

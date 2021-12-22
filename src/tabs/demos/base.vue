@@ -129,9 +129,6 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.t-tabs {
-  margin: 16px 0;
-}
 .t-tabs__panel p {
   height: 200px;
   align-items: center;
