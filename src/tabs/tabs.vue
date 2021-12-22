@@ -4,21 +4,21 @@
       <div ref="navWrap" :class="`${name}__nav-wrap`">
         <div
           v-for="item in itemProps"
-          :key="item.name"
+          :key="item.value"
           :class="{
             [`${name}__nav-item`]: true,
-            [`${prefix}-is-active`]: item.name === currentName,
+            [`${prefix}-is-active`]: item.value === currentValue,
             [`${prefix}-is-disabled`]: item.disabled,
           }"
           @click="(e) => tabClick(e, item)"
         >
-          {{ item.label }}
+          <!-- <t-node :content="item.labelContent"></t-node> -->
         </div>
-        <div ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
+        <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
       </div>
     </div>
     <div :class="`${name}__content`">
-      <slot />
+      <slot> </slot>
     </div>
   </div>
 </template>
@@ -35,9 +35,10 @@ import {
   readonly,
   Fragment,
   watch,
+  getCurrentInstance,
 } from 'vue';
 import config from '../config';
-import { TabsProps } from './tabs.interface';
+import TabsProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
@@ -45,16 +46,18 @@ const name = `${prefix}-tabs`;
 export default defineComponent({
   name,
   props: TabsProps,
-  emits: ['change'],
+  emits: ['onChange'],
   setup(props, { emit, slots }) {
-    const classes = computed(() => [`${name}`, { [`${name}--horizontal`]: props.direction === 'horizontal' }]);
-    const navClasses = computed(() => [`${name}__nav`, { [`${name}__nav--scroll`]: props.scrollable }]);
-
-    const currentName = ref(props.activeName);
+    const placement = computed(() => props.placement);
+    const showBottomLine = computed(() => props.showBottomLine);
+    const classes = computed(() => [`${name}`, `${name}--${placement.value}`]);
+    const navClasses = ref([`${name}__nav`]);
+    const isScroll = ref(false);
+    const currentValue = ref(props.value ? props.value : props.defaultValue);
     watch(
-      () => props.activeName,
+      () => props.value,
       (newValue) => {
-        setCurrentName(newValue);
+        setValue(newValue);
         nextTick(() => {
           moveToActiveTab();
         });
@@ -62,6 +65,11 @@ export default defineComponent({
     );
 
     const { itemProps } = (() => {
+      if (props.list) {
+        return {
+          itemProps: props.list,
+        };
+      }
       let children: any[] = slots.default ? slots.default() : [];
       const res: any[] = [];
       children.forEach((child) => {
@@ -71,6 +79,7 @@ export default defineComponent({
           res.push(child);
         }
       });
+      const internalInstance = getCurrentInstance();
       children = res.filter((child: any) => child.type.name === `${prefix}-tab-panel`);
       const itemProps = children.map((item: any) => ({
         ...item.props,
@@ -85,18 +94,20 @@ export default defineComponent({
     const navLine = ref<HTMLElement | null>(null);
     const lineStyle = ref('');
     const moveToActiveTab = () => {
-      if (navWrap.value && navLine.value) {
+      if (navWrap.value && navLine.value && !showBottomLine.value) {
         const tab = navWrap.value.querySelector<HTMLElement>('.t-is-active');
+        if (!tab) return;
         const line = navLine.value;
-        if (props.direction === 'horizontal' && tab) {
+        if (placement.value === 'left' || placement.value === 'right') {
           lineStyle.value = `transform: translateY(${tab.offsetTop}px)`;
-        } else if (tab) {
+        } else {
           lineStyle.value = `transform: translateX(${
             Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2
           }px)`;
         }
       }
     };
+
     onMounted(() => {
       moveToActiveTab();
       window.addEventListener('resize', moveToActiveTab, false);
@@ -104,31 +115,34 @@ export default defineComponent({
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
     });
-    const setCurrentName = (val: string | number) => {
-      emit('change', val);
-      currentName.value = val;
+    const setValue = (val: string | number) => {
+      emit('onChange', val);
+      currentValue.value = val;
     };
-    const tabChange = (event: Event, name: string | number) => {
-      setCurrentName(name);
+    const tabChange = (event: Event, value: string | number) => {
+      setValue(value);
     };
     const tabClick = (event: Event, item: Record<string, unknown>) => {
-      const { name, disabled } = item as any;
-      if (disabled || currentName.value === name) {
+      const { value, disabled } = item as any;
+      if (disabled || currentValue.value === value) {
         return false;
       }
-      tabChange(event, name);
+      tabChange(event, value);
       nextTick(() => {
         moveToActiveTab();
+        isScroll.value = navWrap.value.offsetWidth > navScroll.value.offsetWidth;
+        navClasses.value = computed(() => [`${name}__nav`, { 't-is-scrollable': isScroll.value }]);
       });
     };
-    provide('currentName', readonly(currentName));
+    provide('currentValue', readonly(currentValue));
 
     return {
       name,
       prefix,
       classes,
       navClasses,
-      currentName,
+      currentValue,
+      showBottomLine,
       tabClick,
       itemProps,
       navScroll,
