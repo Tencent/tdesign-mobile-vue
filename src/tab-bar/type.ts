@@ -2,10 +2,10 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-11-26 22:06:31
+ * updated at 2021-12-21 19:16:47
  * */
 
-import { TdBadgeProps } from '../Badge';
+import { BadgeProps } from '../Badge';
 import { TNode } from '../common';
 
 export interface TdTabBarProps {
@@ -23,7 +23,7 @@ export interface TdTabBarProps {
    * 当前选中标签的索引
    * @default 0
    */
-  value: string | number;
+  value: string | number | Array<string | number>;
   /**
    * 选中标签切换时触发
    */
@@ -34,11 +34,11 @@ export interface TdTabBarItemProps {
   /**
    * 图标右上角提示信息
    */
-  badgeProps: TdBadgeProps;
+  badgeProps: BadgeProps;
   /**
    * 图标名称
    */
-  icon: string | TNode;
+  icon: TNode;
   /**
    * 二级菜单
    */

@@ -1,11 +1,4 @@
 <template>
-  <!-- <t-cell :title="label" :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`]">
-    <template v-if="hasLabel" #title>
-      <slot name="label">
-        <div v-if="label" :class="`${name}__label`">{{ label }}</div>
-      </slot>
-    </template> -->
-  <!-- <template #note> -->
   <div :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`, `${isPureMode ? `${name}__pure` : ''}`]">
     <slot name="label">
       <div v-if="label" :class="`${name}__label`">{{ label }}</div>
@@ -22,7 +15,6 @@
       pattern="[0-9]*"
       :disabled="disableInput || disabled"
       :readonly="disableInput"
-      @input="onInput"
       @blur="onBlur"
     />
     <span
@@ -45,10 +37,11 @@ const name = `${prefix}-stepper`;
 export default defineComponent({
   name,
   props: StepperProps,
+  emits: ['update:value', 'change'],
   setup(props, context) {
     const { emit } = context;
     const state = reactive({
-      cacheValue: Number(props.value),
+      cacheValue: Number(props.value || props.defaultValue),
     });
     const currentValue = computed({
       get() {

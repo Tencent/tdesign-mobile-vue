@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * uupdated at 2021-12-06 13:58:33
+ * updated at 2021-12-21 00:07:39
  * */
 
 import { TdMessageProps } from './type';

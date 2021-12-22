@@ -28,10 +28,10 @@ export default defineComponent({
     const buttonClass = computed(() => [
       `${name}`,
       props.size ? CLASSNAMES.SIZE[props.size] : '',
-      `${name}--variant-${props.variant}`,
+      `${name}--${props.variant}`,
       {
-        [`${name}--theme-${props.theme}`]: props.theme,
-        [`${name}--shape-${props.shape}`]: props.shape !== 'round',
+        [`${name}--${props.theme}`]: props.theme,
+        [`${name}--${props.shape}`]: props.shape !== 'round',
         [`${name}--ghost`]: props.ghost,
         [`${prefix}-size-full-width`]: props.block,
         [`${prefix}-is-disabled`]: props.disabled,

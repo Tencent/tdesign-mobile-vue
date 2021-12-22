@@ -1,7 +1,15 @@
 import Radio from './radio.vue';
-import { withInstall, WithInstallType } from '../shared';
+import { mapProps, withInstall, WithInstallType } from '../shared';
 
 import './style';
 
-const _Radio: WithInstallType<typeof Radio> = withInstall(Radio);
+const _Radio: WithInstallType<typeof Radio> = withInstall(
+  mapProps([
+    {
+      name: 'checked',
+      event: 'change',
+      alias: ['modelValue'],
+    },
+  ])(Radio),
+);
 export default _Radio;

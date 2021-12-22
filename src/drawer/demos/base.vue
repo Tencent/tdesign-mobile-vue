@@ -14,7 +14,7 @@
 </template>
 <script lang="ts">
 import { ref, defineComponent, h } from 'vue';
-import { UserAvatarIcon } from 'tdesign-icons-vue-next';
+import { AppIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
@@ -41,27 +41,27 @@ export default defineComponent({
     const iconSidebar = ref([
       {
         name: '菜单一',
-        icon: () => h(UserAvatarIcon),
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单二',
-        icon: () => h(UserAvatarIcon),
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单三',
-        icon: () => h(UserAvatarIcon),
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单四',
-        icon: () => h(UserAvatarIcon),
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单五',
-        icon: () => h(UserAvatarIcon),
+        icon: () => h(AppIcon),
       },
       {
         name: '菜单六',
-        icon: () => h(UserAvatarIcon),
+        icon: () => h(AppIcon),
       },
     ]);
     const openBase = ref(false);

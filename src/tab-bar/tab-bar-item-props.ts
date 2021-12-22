@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-11-26 22:06:31
+ * updated at 2021-12-21 19:16:47
  * */
 
 import { TdTabBarItemProps } from '../tab-bar/type';
@@ -15,7 +15,7 @@ export default {
   },
   /** 图标名称 */
   icon: {
-    type: [String, Function] as PropType<TdTabBarItemProps['icon']>,
+    type: Function as PropType<TdTabBarItemProps['icon']>,
   },
   /** 二级菜单 */
   subTabBar: {

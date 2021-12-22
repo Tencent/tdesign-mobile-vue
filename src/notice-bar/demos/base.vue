@@ -83,51 +83,10 @@ export default defineComponent({
       visible: true,
     });
 
-    function handleClick() {
-      console.log('handleClick base');
-    }
-
-    function handleLinkNoticeBar() {
-      alert('查看更多');
-    }
-
-    const closeableVisible = ref(true);
-    function handleCloseableNoticeBar() {
-      console.log('handleCloseableNoticeBar start');
-      closeableVisible.value = false;
-      // state.visible = false;
-      console.log('handleCloseableNoticeBar end');
-    }
-
-    const detailVisible = ref(true);
-
-    function handleDetail() {
-      alert('详情');
-    }
-
-    function handleDetailNoticeBar() {
-      console.log('handleDetailNoticeBar');
-      detailVisible.value = false;
-    }
-
-    const scrollVisible = ref(true);
-    function handleScrollNoticeBar() {
-      scrollVisible.value = false;
-    }
-
     const iconFunc = () => h(ErrorCircleFilledIcon);
 
     return {
       ...toRefs(state),
-      handleClick,
-      handleLinkNoticeBar,
-      closeableVisible,
-      handleCloseableNoticeBar,
-      detailVisible,
-      handleDetail,
-      handleDetailNoticeBar,
-      scrollVisible,
-      handleScrollNoticeBar,
       iconFunc,
     };
   },

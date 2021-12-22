@@ -16,7 +16,11 @@
         </t-cell>
         <t-cell title="自定义颜色">
           <template #note>
-            <t-switch v-model="checked" :colors="['gray', 'green']" @change="onChange"></t-switch>
+            <t-switch
+              :default-value="true"
+              :colors="['rgba(0,0,0,0.26)', 'rgba(0,168,112,1)']"
+              @change="onChange"
+            ></t-switch>
           </template>
         </t-cell>
         <t-cell title="异步操作">
@@ -26,7 +30,7 @@
         </t-cell>
       </t-cell-group>
     </tdesign-demo-block>
-    <tdesign-demo-block>
+    <tdesign-demo-block summary="带描述信息开关">
       <t-cell-group>
         <t-cell title="开关">
           <template #note>
@@ -40,7 +44,8 @@
         </t-cell>
         <t-cell title="自定义颜色">
           <template #note>
-            <t-switch disabled label="描述信息"> </t-switch>
+            <t-switch v-model="checked" :colors="['rgba(0,0,0,0.26)', 'rgba(0,168,112,1)']" label="描述信息">
+            </t-switch>
           </template>
         </t-cell>
       </t-cell-group>

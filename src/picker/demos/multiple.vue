@@ -1,9 +1,9 @@
 <template>
   <div class="tdesign-demo-block">
     <t-picker title="游戏" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-      <t-picker-column :options="gamePlatOptions" @change="onColumnChange" />
-      <t-picker-column :options="gameLevelOptions" @change="onColumnChange" />
-      <t-picker-column :options="gameOptions" @change="onColumnChange" />
+      <t-picker-item :options="gamePlatOptions" @change="onColumnChange" />
+      <t-picker-item :options="gameLevelOptions" @change="onColumnChange" />
+      <t-picker-item :options="gameOptions" @change="onColumnChange" />
     </t-picker>
   </div>
 </template>
