@@ -14,10 +14,7 @@
           :placeholder="placeholder"
         />
         <div :class="`${name}__icon-close`" :style="iconStyle">
-          <close-icon
-            v-if="clearable && currentValue.length > 0"
-            @click="onClear"
-          ></close-icon>
+          <close-icon v-if="clearable && currentValue.length > 0" @click="onClear"></close-icon>
         </div>
       </div>
       <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">

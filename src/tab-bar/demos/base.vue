@@ -29,7 +29,7 @@
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="双层级纯文本标签栏">
-      <t-tab-bar v-model="value" @change="change" fixed :bordered="false">
+      <t-tab-bar v-model="value" fixed :bordered="false" @change="change">
         <t-tab-bar-item
           v-for="(item, index) in list_5"
           :key="item.name || index"
