@@ -30,7 +30,7 @@ export default defineComponent({
   emits: ['change', 'cancel', 'confirm', 'update:modelValue'],
   setup(props, context) {
     const className = computed(() => [`${name}`]);
-    const groupClassName = computed(() => `${name}-column__group`);
+    const groupClassName = computed(() => `${name}-item__group`);
     const maskClassName = computed(() => `${name}__mask`);
     const indicatorClassName = computed(() => `${name}__indicator`);
     const mainClassName = computed(() => `${name}__main`);
