@@ -1,7 +1,7 @@
 <template>
   <t-popup
     :visible="visible"
-    position="center"
+    placement="center"
     :mask-transparent="!showOverlay"
     :teleport-disabled="true"
     @close="handleOverlayClick"
