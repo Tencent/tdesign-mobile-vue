@@ -1,151 +1,122 @@
 <template>
-  <t-cell v-if="type !== 'textarea'" :class="styleWrapper">
-    <template v-if="hasLabel" #title>
-      <slot name="label">
-        <div v-if="label" :class="styleLabel">{{ label }}</div>
-      </slot>
+  <t-cell v-if="type !== 'textarea'" :required="required" :class="styleWrapper">
+    <template v-if="labelContent" #title>
+      <div :class="styleLabel">
+        <t-node :content="labelContent"></t-node>
+      </div>
     </template>
-    <template #leftIcon> </template>
+    <template #leftIcon>
+      <t-node :content="prefixIconContent"></t-node>
+    </template>
     <template #note>
-      <div :class="`${name}-wrap`">
+      <div :class="`${componentName}__wrap`">
         <input
+          ref="inputRef"
           v-model="innerValue"
-          v-bind="$attrs"
+          :name="name"
           :class="styleControl"
           :type="type"
           :disabled="disabled"
+          :autocomplete="autocomplete ? 'On' : 'Off'"
+          :placeholder="placeholder"
+          :readonly="readonly"
           @focus="handleFocus"
           @blur="handleBlur"
         />
-        <div v-if="clearable && innerValue.length > 0" :class="`${name}-wrap--icon`" @click="handleClear">
+        <div v-if="clearable && innerValue.length > 0" :class="`${componentName}__wrap--icon`" @click="handleClear">
           <close-circle-filled-icon />
         </div>
-        <div v-if="hasSuffix" :class="`${name}-wrap--suffix`">
-          <slot name="suffix"></slot>
-        </div>
-        <div v-if="hasRightIcon" :class="`${name}-wrap--icon`">
-          <slot name="rightIcon">
-            <div v-if="suffix">{{ suffix }}</div>
-            <chevron-right-icon v-if="rightIcon" @click="handleClickIcon" />
-          </slot>
+        <div v-if="suffixContent" :class="`${componentName}__wrap--suffix`">
+          <t-node :content="suffixContent" />
         </div>
       </div>
-      <div v-if="errorMessage" :class="`${name}__error-msg`">{{ errorMessage }}</div>
+      <div v-if="errorMessage" :class="`${componentName}__error-msg`">{{ errorMessage }}</div>
+    </template>
+    <template #rightIcon>
+      <t-node :content="suffixIconContent"></t-node>
     </template>
   </t-cell>
   <div v-else :class="styleWrapper">
-    <div v-if="hasLabel" :class="`${name}--textarea-label`">
-      <slot name="label">
-        <div v-if="label">{{ label }}</div>
-      </slot>
+    <div v-if="labelContent" :class="`${componentName}--textarea-label`">
+      <t-node :content="labelContent"></t-node>
     </div>
-    <div :class="`${name}--textarea`">
+    <div :class="`${componentName}--textarea`">
       <textarea
-        ref="textarea"
+        ref="inputRef"
         v-model="innerValue"
-        v-bind="$attrs"
-        :maxlength="maxlength"
+        :name="name"
+        :maxlength="maxlength || -1"
         :disabled="disabled"
+        :autocomplete="autocomplete ? 'On' : 'Off'"
+        :placeholder="placeholder"
+        :readonly="readonly"
         @focus="handleFocus"
         @blur="handleBlur"
       />
-      <div :class="`${name}--count`">{{ `${innerValue.length}/${maxlength}` }}</div>
+      <div v-if="maxlength" :class="`${componentName}--count`">{{ `${innerValue.length}/${maxlength}` }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ChevronRightIcon, CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { ref, computed, watch, onMounted, defineComponent } from 'vue';
+import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { ref, computed, watch, onMounted, defineComponent, getCurrentInstance, toRefs } from 'vue';
+import { getCharacterLength, renderTNode, TNode } from '@/shared';
+import ClASSNAMES from '@/shared/constants';
 import config from '../config';
+import InputProps from './props';
+import { InputValue } from './type';
 
 const { prefix } = config;
-const name = `${prefix}-input`;
+const componentName = `${prefix}-input`;
 
 export default defineComponent({
-  name,
+  name: componentName,
   components: {
-    ChevronRightIcon,
     CloseCircleFilledIcon,
+    TNode,
   },
-  props: {
-    label: {
-      type: String,
-      default: '',
-    },
-    modelValue: {
-      type: String,
-      default: '',
-    },
-    error: Boolean,
-    errorMessage: {
-      type: String,
-      default: '',
-    },
-    rightIcon: {
-      type: Function,
-      default: undefined,
-    },
-    suffix: {
-      type: String,
-      default: '',
-    },
-    type: {
-      type: String,
-      default: '',
-    },
-    maxlength: {
-      type: Number,
-      default: 500,
-    },
-    rows: {
-      type: Number,
-      default: 4,
-    },
-    maxRows: {
-      type: Number,
-      default: 12,
-    },
-    clearable: Boolean,
-    disabled: Boolean,
-  },
-  emits: ['update:modelValue', 'click-icon', 'focus', 'blur', 'change'],
+  props: InputProps,
+  emits: ['update:value', 'click-icon', 'focus', 'blur', 'change'],
   setup(props, context) {
-    const textarea = ref();
+    const inputRef = ref<null | HTMLElement>(null);
+    const internalInstance = getCurrentInstance();
     const cacheValue = ref('');
 
-    const styleControl = computed(() => ({
-      [`${name}--control`]: true,
-      [`${name}--control__right`]: props.suffix,
-    }));
-    const styleWrapper = computed(() => ({
-      [name]: true,
-      [`${name}__error`]: !!props.errorMessage || props.error,
-    }));
     const styleLabel = computed(() => ({
-      [`${name}--label`]: true,
-      [`${name}__disabled`]: props.disabled,
+      [`${componentName}--label`]: true,
+      [ClASSNAMES.STATUS.disabled]: props.disabled,
     }));
 
-    const hasLabel = computed(() => {
-      if (props.label) return true;
-      return !!context.slots.label;
-    });
+    const labelContent = computed(() => renderTNode(internalInstance, 'label'));
+    const suffixIconContent = computed(() => renderTNode(internalInstance, 'suffixIcon'));
+    const prefixIconContent = computed(() => renderTNode(internalInstance, 'prefixIcon'));
+    const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
 
-    const hasSuffix = computed(() => !!context.slots.suffix);
-    const hasRightIcon = computed(() => {
-      if (props.suffix) return true;
-      return !!context.slots.rightIcon;
-    });
-    // const valueAlign = computed(() => (hasLabel.value ? 'right' : 'left'));
+    const styleControl = computed(() => ({
+      [`${componentName}__control`]: true,
+      [`${componentName}__control--right`]: suffixIconContent.value,
+    }));
+
+    const styleWrapper = computed(() => ({
+      [componentName]: true,
+      [`${componentName}__error`]: !!props.errorMessage,
+    }));
 
     const innerValue = computed({
       get() {
-        return props.modelValue || cacheValue.value;
+        return String(props.value) || cacheValue.value;
       },
       set(val: string) {
-        cacheValue.value = val;
-        context.emit('update:modelValue', val);
+        if (props.maxcharacter && props.maxcharacter >= 0) {
+          const stringInfo = getCharacterLength(String(val), props.maxcharacter);
+          if (typeof stringInfo === 'object') {
+            cacheValue.value = stringInfo.characters;
+          }
+        } else {
+          cacheValue.value = val;
+        }
+        context.emit('update:value', val);
         context.emit('change', val);
       },
     });
@@ -162,38 +133,28 @@ export default defineComponent({
       context.emit('blur');
     };
 
-    const MIN_HEIGHT = 22 * props.rows; // 默认四行
-    const MAX_HEIGHT = 22 * props.maxRows; // 默认12行
     onMounted(() => {
-      if (props.type === 'textarea') {
-        textarea.value.style.height = `${MIN_HEIGHT}px`;
+      if (props.autofocus) {
+        inputRef.value?.focus();
       }
     });
     watch(innerValue, () => {
-      if (props.type === 'textarea') {
-        textarea.value.style.height = 'auto';
-        let height = textarea.value.scrollHeight;
-        if (height < MIN_HEIGHT) {
-          height = MIN_HEIGHT;
-        }
-        if (height > MAX_HEIGHT) {
-          // 如果只设置rows，且rows大于maxRows，则忽略maxRows
-          height = MIN_HEIGHT > MAX_HEIGHT ? MIN_HEIGHT : MAX_HEIGHT;
-        }
-        textarea.value.style.height = `${height}px`;
+      if (props.type === 'textarea' && inputRef.value) {
+        inputRef.value.style.height = 'auto';
       }
     });
     return {
-      name,
+      componentName,
+      ...toRefs(props),
       styleLabel,
       styleWrapper,
       styleControl,
-      hasLabel,
-      hasRightIcon,
-      hasSuffix,
+      suffixContent,
+      suffixIconContent,
+      prefixIconContent,
+      labelContent,
       innerValue,
-      // valueAlign,
-      textarea,
+      inputRef,
       handleClickIcon,
       handleClear,
       handleFocus,

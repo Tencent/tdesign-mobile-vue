@@ -1,6 +1,6 @@
 ---
 title: Input 输入框
-description: 用于单行文本信息输入。
+description: 用于文本信息输入。
 spline: base
 isComponent: true
 toc: false
@@ -28,35 +28,39 @@ toc: false
 :::
 
 ## API
+### Input Props
 
-| 属性          | 类型        | 默认值 | 必传 | 说明                                |
-| ------------- | ----------- | ------ | ---- | ----------------------------------- |
-| label         | string      | -      | N    | 标题                                |
-| v-model       | string      | -      | N    | 单元格的内容                        |
-| error         | boolean     | false  | N    | 是否为警告模式                      |
-| error-message | string      | -      | N    | 警告文本                            |
-| rightIcon     | Slot        | -      | N    | 输入框右侧的图标                    |
-| suffix        | string/Slot | -      | N    | 输入框后缀内容                      |
-| type          | string      | input  | N    | 输入框类型，input/textarea/password |
-| maxlength     | number      | 500    | N    | 允许输入最大长度                    |
-| rows          | number      | 4      | N    | 默认的行数，仅 textarea 有效        |
-| max-rows      | number      | 12     | N    | 允许最大的行数，仅 textarea 有效    |
-| clearable     | boolean     | false  | N    | 是否显示清除按钮                    |
-| disabled      | boolean     | false  | N    | 是否禁用                            |
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+align | String | left | 文本内容位置，居左/居中/居右。可选项：left/center/right | N
+autocomplete | Boolean | false | 是否开启自动填充功能 | N
+autofocus | Boolean | false | 自动聚焦 | N
+clearable | Boolean | false | 是否可清空 | N
+disabled | Boolean | false | 是否禁用输入框 | N
+errorMessage | String | - | 错误提示文本，值为空不显示 | N
+label | Slot / Function | - | 左侧文本。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 | N
+maxlength | Number | - | 用户最多可以输入的文本长度。值小于等于 0 的时候，则不限制输入长度 | N
+name | String | - | 名称 | N
+placeholder | String | - | 占位符 | N
+prefixIcon | Slot / Function | - | 组件前置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+readonly | Boolean | false | 输入框是否只读 | N
+required | Boolean | false | 是否显示表单必填星号 | N
+suffix | Slot / Function | - | 后置图标前的后置内容。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+suffixIcon | Slot / Function | - | 组件后置图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+type | String | text | 输入框类型。可选项：textarea/text/number/url/tel/password/search/submit/hidden | N
+value | String / Number | - | 输入框的值。支持语法糖。TS 类型：`InputValue`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
+defaultValue | String / Number | - | 输入框的值。非受控属性。TS 类型：`InputValue`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/input/type.ts) | N
+onBlur | Function |  | 失去焦点时触发。`(value: InputValue, context: { e: FocusEvent }) => {}` | N
+onChange | Function |  | 输入框值发生变化时触发。`(value: InputValue, context?: { e?: InputEvent | MouseEvent }) => {}` | N
+onClear | Function |  | 清空按钮点击时触发。`(context: { e: MouseEvent }) => {}` | N
+onFocus | Function |  | 获得焦点时触发。`(value: InputValue, context: { e: FocusEvent }) => {}` | N
 
-## Events
+### Input Events
 
-| 事件名称   | 回调参数      | 说明                 |
-| ---------- | ------------- | -------------------- |
-| click-icon | -             | 点击右侧 icon 时触发 |
-| focus      | -             | 聚焦时触发           |
-| blur       | -             | 失焦时触发           |
-| change     | (val: string) | 内容改变时触发       |
-
-## Slots
-
-| 名称       | 说明                 |
-| ---------- | -------------------- |
-| label      | 标题插槽             |
-| suffix     | 输入框后缀内容插槽   |
-| right-icon | 输入框右侧的图标插槽 |
+名称 | 参数 | 描述
+-- | -- | --
+blur | `(value: InputValue, context: { e: FocusEvent })` | 失去焦点时触发
+change | `(value: InputValue, context?: { e?: InputEvent | MouseEvent })` | 输入框值发生变化时触发
+clear | `(context: { e: MouseEvent })` | 清空按钮点击时触发
+focus | `(value: InputValue, context: { e: FocusEvent })` | 获得焦点时触发

@@ -120,10 +120,9 @@ export default defineComponent({
       emit('clear', e);
     };
 
-  
-    if(props.autofocus){
-      nextTick(()=>{
-        onClick()
+    if (props.autofocus) {
+      nextTick(() => {
+        onClick();
       });
     }
 
