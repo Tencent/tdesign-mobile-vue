@@ -20,7 +20,7 @@ toc: false
 ::: demo demos/desc
 :::
 
-## 组件样式
+### 组件样式
 
 ### 禁用状态
 

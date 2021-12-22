@@ -2,7 +2,9 @@
   <div :class="classes">
     <form :class="`${name}__form`">
       <div :class="`${name}__box`">
-        <t-icon-search :class="`${name}__icon-search`" :style="iconStyle"></t-icon-search>
+        <div :class="`${name}__icon-search`" :style="iconStyle">
+          <t-icon-search></t-icon-search>
+        </div>
         <input
           ref="searchInput"
           v-model="currentValue"
@@ -11,15 +13,17 @@
           :autofocus="autofocus"
           :placeholder="placeholder"
         />
-        <t-icon-clear-circle-filled
-          v-if="clearable && currentValue.length > 0"
-          :class="`${name}__icon-close`"
-          :style="iconStyle"
-          @click="onClear"
-        ></t-icon-clear-circle-filled>
+        <div :class="`${name}__icon-close`" :style="iconStyle">
+          <close-icon
+            v-if="clearable && currentValue.length > 0"
+            @click="onClear"
+          ></close-icon>
+        </div>
       </div>
       <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">
-        <t-icon-search :class="`${name}__label-icon-search`" :style="iconStyle"></t-icon-search>
+        <div :class="`${name}__label-icon-search`" :style="iconStyle">
+          <t-icon-search></t-icon-search>
+        </div>
         <span :class="`${name}__label-text`">{{ placeholder }}</span>
       </label>
     </form>
@@ -30,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TIconClearCircleFilled } from 'tdesign-icons-vue-next';
+import { SearchIcon as TIconSearch, CloseIcon } from 'tdesign-icons-vue-next';
 import { ref, reactive, computed, defineComponent } from 'vue';
 import config from '../config';
 
@@ -39,7 +43,7 @@ const name = `${prefix}-search-field`;
 
 export default defineComponent({
   name,
-  components: { TIconSearch, TIconClearCircleFilled },
+  components: { TIconSearch, CloseIcon },
   props: {
     autofocus: {
       type: Boolean,

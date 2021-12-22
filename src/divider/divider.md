@@ -18,7 +18,7 @@ toc: false
 ::: demo demos/vertical
 :::
 
-## 带文字的分割线
+### 带文字的分割线
 带文字的分割线是在分割线中嵌入文字，在需要对分割内容进行解释说明时使用
 
 ::: demo demos/align
