@@ -185,7 +185,7 @@ export default {
           component: () => import('@/swiper/demos/base.vue'),
         },
         {
-          title: 'CountDown',
+          title: 'CountDown 倒计时',
           name: 'count-down',
           component: () => import('@/count-down/demos/base.vue'),
         },
