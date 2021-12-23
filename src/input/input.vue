@@ -53,7 +53,9 @@
         @focus="handleFocus"
         @blur="handleBlur"
       />
-      <div v-if="maxlength" :class="`${componentName}--count`">{{ `${innerValue.length}/${maxlength}` }}</div>
+      <div v-if="maxlength" :class="`${componentName}--count`">
+        {{ `${innerValue.length}/${maxlength}` }}
+      </div>
     </div>
   </div>
 </template>
@@ -61,11 +63,10 @@
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { ref, computed, watch, onMounted, defineComponent, getCurrentInstance, toRefs } from 'vue';
-import { getCharacterLength, renderTNode, TNode } from '@/shared';
+import { renderTNode, TNode } from '@/shared';
 import ClASSNAMES from '@/shared/constants';
 import config from '../config';
 import InputProps from './props';
-import { InputValue } from './type';
 
 const { prefix } = config;
 const componentName = `${prefix}-input`;
@@ -77,7 +78,7 @@ export default defineComponent({
     TNode,
   },
   props: InputProps,
-  emits: ['update:value', 'click-icon', 'focus', 'blur', 'change'],
+  emits: ['update:value', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context) {
     const inputRef = ref<null | HTMLElement>(null);
     const internalInstance = getCurrentInstance();
@@ -105,32 +106,27 @@ export default defineComponent({
 
     const innerValue = computed({
       get() {
-        return String(props.value) || cacheValue.value;
+        return String(props.value || cacheValue.value);
       },
       set(val: string) {
-        if (props.maxcharacter && props.maxcharacter >= 0) {
-          const stringInfo = getCharacterLength(String(val), props.maxcharacter);
-          if (typeof stringInfo === 'object') {
-            cacheValue.value = stringInfo.characters;
-          }
-        } else {
-          cacheValue.value = val;
-        }
+        cacheValue.value = val;
         context.emit('update:value', val);
         context.emit('change', val);
+        props?.onChange && props?.onChange(val);
       },
     });
-    const handleClickIcon = () => {
-      context.emit('click-icon');
-    };
     const handleClear = () => {
       innerValue.value = '';
+      context.emit('clear');
+      props?.onClear && props?.onClear();
     };
     const handleFocus = () => {
-      context.emit('focus');
+      context.emit('focus', innerValue.value);
+      props?.onFocus && props?.onFocus(innerValue.value);
     };
     const handleBlur = () => {
-      context.emit('blur');
+      context.emit('blur', innerValue.value);
+      props?.onBlur && props?.onBlur(innerValue.value);
     };
 
     onMounted(() => {
@@ -155,7 +151,6 @@ export default defineComponent({
       labelContent,
       innerValue,
       inputRef,
-      handleClickIcon,
       handleClear,
       handleFocus,
       handleBlur,

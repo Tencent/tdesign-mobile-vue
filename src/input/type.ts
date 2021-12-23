@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-23 01:28:35
+ * updated at 2021-12-23 10:17:14
  * */
 
 import { TNode } from '../common';
@@ -41,7 +41,7 @@ export interface TdInputProps {
   /**
    * 左侧文本
    */
-  label: TNode;
+  label: string | TNode;
   /**
    * 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度
    */
@@ -77,7 +77,7 @@ export interface TdInputProps {
   /**
    * 后置图标前的后置内容
    */
-  suffix: TNode;
+  suffix: string | TNode;
   /**
    * 组件后置图标
    */
@@ -111,6 +111,6 @@ export interface TdInputProps {
    * 获得焦点时触发
    */
   onFocus: (value: InputValue, context: { e: FocusEvent }) => void;
-};
+}
 
 export type InputValue = string | number;

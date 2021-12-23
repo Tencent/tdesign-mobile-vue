@@ -26,7 +26,14 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="长文本输入文本框">
       <t-input type="textarea" placeholder="预设文本" />
-      <t-input maxlength="140" label="标签文字" type="textarea" placeholder="预设文本" style="margin-top: 16px" />
+      <t-input
+        :maxlength="140"
+        label="标签文字"
+        type="textarea"
+        placeholder="预设文本"
+        style="margin-top: 16px"
+        @change="changeText"
+      />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="文本框状态">
       <t-cell-group>
@@ -66,8 +73,12 @@ export default defineComponent({
       text3: '',
       passwd: '12345678',
     });
+    const changeText = function (val: string) {
+      console.log('change', val);
+    };
     return {
       ...toRefs(state),
+      changeText,
     };
   },
 });

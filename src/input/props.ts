@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-23 01:28:35
+ * updated at 2021-12-23 10:17:14
  * */
 
 import { TdInputProps } from './type';
@@ -32,7 +32,7 @@ export default {
   },
   /** 左侧文本 */
   label: {
-    type: Function as PropType<TdInputProps['label']>,
+    type: [String, Function] as PropType<TdInputProps['label']>,
   },
   /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 */
   maxcharacter: {
@@ -62,7 +62,7 @@ export default {
   required: Boolean,
   /** 后置图标前的后置内容 */
   suffix: {
-    type: Function as PropType<TdInputProps['suffix']>,
+    type: [String, Function] as PropType<TdInputProps['suffix']>,
   },
   /** 组件后置图标 */
   suffixIcon: {
