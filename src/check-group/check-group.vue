@@ -83,12 +83,12 @@ export default defineComponent({
      * @param {string}
      * @return: void
      */
-    const toggle = (name: string) => {
+    const toggle = (name: string, e: Event) => {
       const index = checkedValues?.value.indexOf(name);
       if (index === -1) {
-        check(name);
+        check(name, e);
       } else {
-        uncheck(name);
+        uncheck(name, e);
       }
     };
     /**

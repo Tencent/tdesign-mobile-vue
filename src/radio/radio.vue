@@ -3,7 +3,7 @@
     <span :class="[`${flagName}__content-wrap`]">
       <span v-if="align === 'left'" :class="`${flagName}__icon-wrap`">
         <input type="radio" :name="name" :class="`${flagName}__original-left`" :value="value" @click="radioOrgChange" />
-        <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
+        <!-- <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span> -->
         <t-node
           v-if="isChecked"
           :content="icon && icon[0]"
@@ -37,7 +37,7 @@
           :value="value"
           @click="radioOrgChange"
         />
-        <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span>
+        <!-- <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span> -->
         <t-node
           v-if="isChecked"
           :content="icon && icon[0]"

@@ -4,7 +4,7 @@
       <!-- 按钮区域 -->
       <span :class="iconClasses" v-if="align === 'left'">
         <input type="checkbox" :name="name" :class="`${flagName}__original-left`" @click="checkBoxOrgChange" :value="value" :checked="(singleChecked || isChecked)"/>
-        <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span>
+        <!-- <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span> -->
         <t-node :content="icon && icon[0] || defaultCheck"  v-if="(singleChecked || isChecked) && !indeterminate" :style="checkedIconStyle" size="20px"></t-node>
         <t-node :content="icon && icon[1] || defaultUncheck" v-else-if="!(singleChecked || isChecked) && !indeterminate" :style="unCheckedIconStyle" size="20px"></t-node>
         <t-node :content="TMinusCircleFilledIcon" v-else-if="indeterminate" size="20px"></t-node>
@@ -21,7 +21,7 @@
       <!-- 按钮区域 -->
       <span :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`" v-if="align === 'right'">
         <input type="checkbox" :name="name" :class="`${flagName}__original-right`" @click="checkBoxOrgChange" :value="value" :checked="(singleChecked || isChecked)"/>
-        <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span>
+        <!-- <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span> -->
         <t-node :content="icon && icon[0] || defaultCheck"  v-if="(singleChecked || isChecked)" :style="checkedIconStyle" size="20px"></t-node>
         <t-node :content="icon && icon[1] || defaultUncheck" v-else :style="unCheckedIconStyle" size="20px"></t-node>
       </span>
