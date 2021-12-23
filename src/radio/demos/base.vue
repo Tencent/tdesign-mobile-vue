@@ -144,7 +144,7 @@
               <t-radio name="radio5" value="1" disabled :icon="circleFilledIcons"></t-radio>
             </template>
             <template #title>
-              <span>单选</span>
+              <span style="color: rgba(0,0,0,0.26)">单选</span>
             </template>
           </t-cell>
           <t-cell>
@@ -152,7 +152,7 @@
               <t-radio name="radio5" value="2" disabled :icon="circleFilledIcons"></t-radio>
             </template>
             <template #title>
-              <span>单选</span>
+              <span style="color: rgba(0,0,0,0.26)">单选</span>
             </template>
           </t-cell>
         </t-cell-group>
@@ -165,15 +165,15 @@
                 <t-radio name="radio6" value="1" disabled :icon="TIconChecks"></t-radio>
               </template>
               <template #title>
-                <span>单选</span>
+                <span style="color: rgba(0,0,0,0.26)">单选</span>
               </template>
             </t-cell>
             <t-cell>
               <template #leftIcon>
-                <t-radio name="radio6" value="2" label="单选" disabled :icon="TIconChecks"></t-radio>
+                <t-radio name="radio6" value="2" disabled :icon="TIconChecks"></t-radio>
               </template>
               <template #title>
-                <span>单选</span>
+                <span style="color: rgba(0,0,0,0.26)">单选</span>
               </template>
             </t-cell>
           </t-cell-group>
