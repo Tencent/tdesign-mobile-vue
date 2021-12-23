@@ -72,13 +72,13 @@ Toast.install = (app: App) => {
 
 type ToastApi = {
   /** 展示提示 */
-  (options?: TdToastProps | string): void;
+  (options?: Partial<TdToastProps> | string): void;
   /** 展示加载提示 */
-  loading: (options?: TdToastProps | string) => void;
+  loading: (options?: Partial<TdToastProps> | string) => void;
   /** 展示成功提示 */
-  success: (options?: TdToastProps | string) => void;
+  success: (options?: Partial<TdToastProps> | string) => void;
   /** 展示失败提示 */
-  fail: (options?: TdToastProps | string) => void;
+  fail: (options?: Partial<TdToastProps> | string) => void;
   /** 关闭提示 */
   clear: () => void;
 };
