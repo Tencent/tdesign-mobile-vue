@@ -1,22 +1,24 @@
 <template>
   <div :class="classes">
-    <div ref="navScroll" :class="navClasses">
-      <div ref="navWrap" :class="`${name}__nav-wrap`">
-        <div
-          v-for="item in itemProps"
-          :key="item.value"
-          :class="{
-            [`${name}__nav-item`]: true,
-            [`${prefix}-is-active`]: item.value === currentValue,
-            [`${prefix}-is-disabled`]: item.disabled,
-          }"
-          @click="(e) => tabClick(e, item)"
-        >
-          <!-- <t-node :content="item.labelContent"></t-node> -->
+    <div :class="navClasses">
+      <div ref="navScroll" :class="`${name}__nav-container`">
+        <div ref="navWrap" :class="`${name}__nav-wrap`">
+          <tab-nav-item
+            v-for="item in itemProps"
+            :key="item.value"
+            :label="item.label"
+            :class="{
+              [`${name}__nav-item`]: true,
+              [activeClass]: item.value === currentValue,
+              [disabledClass]: item.disabled,
+            }"
+            @click="(e) => tabClick(e, item)"
+          />
+          <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
         </div>
-        <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
       </div>
     </div>
+
     <div :class="`${name}__content`">
       <slot> </slot>
     </div>
@@ -39,18 +41,28 @@ import {
 } from 'vue';
 import config from '../config';
 import TabsProps from './props';
+import TabNavItem from './tab-nav-item.vue';
+import { renderContent, renderTNode, TNode } from '../shared';
+import CLASSNAMES from '../shared/constants';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
 
 export default defineComponent({
   name,
+  components: { TabNavItem },
   props: TabsProps,
   emits: ['onChange'],
   setup(props, { emit, slots }) {
     const placement = computed(() => props.placement);
     const showBottomLine = computed(() => props.showBottomLine);
-    const classes = computed(() => [`${name}`, `${name}--${placement.value}`]);
+    const activeClass = CLASSNAMES.STATUS.active;
+    const disabledClass = CLASSNAMES.STATUS.disabled;
+    const classes = computed(() => [
+      `${name}`,
+      `${prefix}-is-${placement.value}`,
+      props.size ? CLASSNAMES.SIZE[props.size] : '',
+    ]);
     const navClasses = ref([`${name}__nav`]);
     const isScroll = ref(false);
     const currentValue = ref(props.value ? props.value : props.defaultValue);
@@ -79,7 +91,6 @@ export default defineComponent({
           res.push(child);
         }
       });
-      const internalInstance = getCurrentInstance();
       children = res.filter((child: any) => child.type.name === `${prefix}-tab-panel`);
       const itemProps = children.map((item: any) => ({
         ...item.props,
@@ -94,21 +105,27 @@ export default defineComponent({
     const navLine = ref<HTMLElement | null>(null);
     const lineStyle = ref('');
     const moveToActiveTab = () => {
-      if (navWrap.value && navLine.value && !showBottomLine.value) {
-        const tab = navWrap.value.querySelector<HTMLElement>('.t-is-active');
+      console.log(props.animation);
+      if (navWrap.value && navLine.value && showBottomLine.value) {
+        const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
+        console.log(tab);
         if (!tab) return;
         const line = navLine.value;
         if (placement.value === 'left' || placement.value === 'right') {
-          lineStyle.value = `transform: translateY(${tab.offsetTop}px)`;
+          lineStyle.value = `transform: translateY(${tab.offsetTop}px);${
+            props.animation ? `transition-duration:${props.animation.duration}ms` : ''
+          }`;
         } else {
           lineStyle.value = `transform: translateX(${
             Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2
-          }px)`;
+          }px);${props.animation ? `transition-duration:${props.animation.duration}ms` : ''}`;
         }
       }
     };
 
     onMounted(() => {
+      isScroll.value = navWrap.value.offsetWidth > navScroll.value.offsetWidth;
+      isScroll.value && navClasses.value.push(`${prefix}-is-scrollable`);
       moveToActiveTab();
       window.addEventListener('resize', moveToActiveTab, false);
     });
@@ -130,8 +147,6 @@ export default defineComponent({
       tabChange(event, value);
       nextTick(() => {
         moveToActiveTab();
-        isScroll.value = navWrap.value.offsetWidth > navScroll.value.offsetWidth;
-        navClasses.value = computed(() => [`${name}__nav`, { 't-is-scrollable': isScroll.value }]);
       });
     };
     provide('currentValue', readonly(currentValue));
@@ -141,6 +156,8 @@ export default defineComponent({
       prefix,
       classes,
       navClasses,
+      activeClass,
+      disabledClass,
       currentValue,
       showBottomLine,
       tabClick,

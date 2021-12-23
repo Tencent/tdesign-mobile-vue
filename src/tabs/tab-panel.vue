@@ -22,7 +22,7 @@ export default defineComponent({
     const currentValue = inject('currentValue', '') as unknown as Ref<string>;
     const isActive = computed(() => currentValue.value === props.value);
     const internalInstance = getCurrentInstance();
-    const panelContent = computed(() => renderContent(internalInstance, 'panel'));
+    const panelContent = computed(() => renderContent(internalInstance, 'default', 'panel'));
     return {
       prefix,
       isActive,
