@@ -63,8 +63,8 @@
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { ref, computed, watch, onMounted, defineComponent, getCurrentInstance, toRefs } from 'vue';
-import { renderTNode, TNode } from '@/shared';
-import ClASSNAMES from '@/shared/constants';
+import { renderTNode, TNode } from '../shared';
+import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import InputProps from './props';
 

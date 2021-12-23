@@ -76,7 +76,7 @@ import {
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { renderContent, TNode } from '@/shared';
+import { renderContent, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;

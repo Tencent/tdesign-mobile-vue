@@ -17,7 +17,7 @@ import { computed, defineComponent, getCurrentInstance } from 'vue';
 import config from '../config';
 import CountDownProps from './props';
 import { useCountDown } from '../shared/useCountDown';
-import { renderTNode, TNode } from '@/shared';
+import { renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-countdown`;
