@@ -3,18 +3,8 @@
     <span :class="[`${flagName}__content-wrap`]">
       <span v-if="align === 'left'" :class="`${flagName}__icon-wrap`">
         <input type="radio" :name="name" :class="`${flagName}__original-left`" :value="value" @click="radioOrgChange" />
-        <t-node
-          v-if="isChecked"
-          :content="icon && icon[0]"
-          :style="checkedIconStyle"
-          size="20px"
-        ></t-node>
-        <t-node
-          v-else
-          :content="icon && icon[1]"
-          :style="unCheckedIconStyle"
-          size="20px"
-        ></t-node>
+        <t-node v-if="isChecked" :content="icon && icon[0]" :style="checkedIconStyle" size="20px"></t-node>
+        <t-node v-else :content="icon && icon[1]" :style="unCheckedIconStyle" size="20px"></t-node>
       </span>
       <span :class="[`${flagName}__label-wrap`]">
         <span v-if="labelContent" :class="titleClasses">
@@ -33,18 +23,8 @@
           @click="radioOrgChange"
         />
         <!-- <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span> -->
-        <t-node
-          v-if="isChecked"
-          :content="icon && icon[0]"
-          :style="checkedIconStyle"
-          size="20px"
-        ></t-node>
-        <t-node
-          v-else
-          :content="icon && icon[1]"
-          :style="unCheckedIconStyle"
-          size="20px"
-        ></t-node>
+        <t-node v-if="isChecked" :content="icon && icon[0]" :style="checkedIconStyle" size="20px"></t-node>
+        <t-node v-else :content="icon && icon[1]" :style="unCheckedIconStyle" size="20px"></t-node>
       </span>
     </span>
   </div>

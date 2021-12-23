@@ -43,7 +43,7 @@ export interface TdTabsProps {
    * 激活的选项卡发生变化时触发
    */
   onChange: (value: TabValue) => void;
-};
+}
 
 export interface TdTabPanelProps {
   /**
@@ -68,7 +68,7 @@ export interface TdTabPanelProps {
    * 选项卡的值，唯一标识
    */
   value: TabValue;
-};
+}
 
 export type TabAnimation = { duration: number } & Record<string, any>;
 
