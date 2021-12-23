@@ -173,7 +173,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
-      "prettier && eslint --fix"
+      "eslint --fix"
     ]
   }
 }
