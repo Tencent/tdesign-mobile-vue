@@ -38,7 +38,7 @@ export interface TdPickerProps {
    * 点击取消按钮时触发
    * @default ''
    */
-  onCancel: ({ e: MouseEvent }) => void;
+  onCancel: ({ e }: { e: MouseEvent }) => void;
   /**
    * 选中变化时候触发
    * @default ''
@@ -48,7 +48,7 @@ export interface TdPickerProps {
    * 点击确认确认按钮时触发
    * @default ''
    */
-  onConfirm: ({ e: MouseEvent }) => void;
+  onConfirm: ({ e }: { e: MouseEvent }) => void;
 }
 
 export interface TdPickerItemProps {

@@ -1,6 +1,7 @@
-import { withInstall } from '../shared';
+import { withInstall, WithInstallType } from '../shared';
 import SegmentedControl from './segmented-control.vue';
 
 import './style';
 
-export default withInstall(SegmentedControl);
+const _SegmentedControl: WithInstallType<typeof SegmentedControl> = withInstall(SegmentedControl);
+export default _SegmentedControl;

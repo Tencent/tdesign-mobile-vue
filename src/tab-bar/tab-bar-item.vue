@@ -55,7 +55,7 @@ import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef, getCur
 import TabBarItemProps from './tab-bar-item-props';
 import config from '../config';
 import { initName } from './useTabBar';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const componentName = `${prefix}-tab-bar-item`;

@@ -33,7 +33,7 @@
 
 <script lang="ts">
 import { ref, inject, computed, SetupContext, defineComponent, getCurrentInstance } from 'vue';
-import { renderContent, TNode } from '@/shared';
+import { renderContent, TNode } from '../shared';
 import config from '../config';
 import RadioProps from './props';
 

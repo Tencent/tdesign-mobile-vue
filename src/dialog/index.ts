@@ -103,12 +103,12 @@ type DialogApi = {
   confirm: (options: DialogFnType | string) => void;
 };
 
-export const DialogPlugin: Plugin & DialogApi & WithInstallType<typeof Dialog> = Dialog as any;
+export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;
 export default DialogPlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
-  interface ComponentCustomProperties {
+  export interface ComponentCustomProperties {
     $dialog: DialogApi;
   }
 }

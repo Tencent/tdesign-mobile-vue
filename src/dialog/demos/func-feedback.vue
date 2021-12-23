@@ -41,7 +41,6 @@ export default defineComponent({
   methods: {
     changeFunctionVisible() {
       Dialog.alert({
-        showHeader: false,
         content: '我的家里有个人很酷',
         knowContent: 'i know',
         onConfirm: (e: string) => {
