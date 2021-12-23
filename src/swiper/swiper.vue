@@ -63,7 +63,6 @@ export default defineComponent({
   setup(props, context) {
     const self = getCurrentInstance();
     const swiperContainer = ref(null);
-
     // const { height = 180, current = null } = props;
     const height = props.height || ref(180);
     const state: {
@@ -71,11 +70,13 @@ export default defineComponent({
       itemLength: number;
       itemWidth: number;
       isControl: boolean;
+      btnDisabled: boolean;
     } = reactive({
       activeIndex: 0,
       itemLength: 0,
       itemWidth: 0,
       isControl: false,
+      btnDisabled: false,
     });
     // 分页数组--任意数组，用于循环分页点
     const paginationList = computed(() => new Array(state.itemLength).fill(1));
@@ -118,6 +119,7 @@ export default defineComponent({
     });
     // eslint-disable-next-line no-undef
     let autoplayTimer: number | NodeJS.Timeout | null = null;
+    let actionIsTrust = true;
     /**
      * 移动节点
      */
@@ -128,6 +130,7 @@ export default defineComponent({
       const { height = 180 } = props;
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
       const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
+      actionIsTrust = isTrust;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
@@ -139,10 +142,11 @@ export default defineComponent({
     // 移除动画（轮播时用到）
     const removeAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = 'transform 0s';
+      _swiperContainer.style.transition = 'none';
     };
     // 确认是否已经移动到最后一个元素，每次transitionend事件后即检查
     const handleAnimationEnd = () => {
+      state.btnDisabled = false;
       removeAnimation();
       if (state.activeIndex >= state.itemLength) {
         // console.log('到了最后一个元素', state.activeIndex, state.itemLength);
@@ -154,6 +158,9 @@ export default defineComponent({
         state.activeIndex = state.itemLength - 1;
         move(state.itemLength - 1);
       }
+      setTimeout(() => {
+        actionIsTrust && emitCurrentChange(state.activeIndex);
+      }, 0);
     };
     // 停止自动播放
     const stopAutoplay = () => {
@@ -182,21 +189,23 @@ export default defineComponent({
     };
     // 移动到上一个
     const prev = (step = 1) => {
+      if (state.btnDisabled) return false;
       stopAutoplay();
       state.activeIndex -= step;
       addAnimation();
       move(state.activeIndex);
       startAutoplay();
-      emitCurrentChange(state.activeIndex);
+      state.btnDisabled = true;
     };
     // 移动到下一个
     const next = (step = 1) => {
+      if (state.btnDisabled) return false;
       stopAutoplay();
       state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
       startAutoplay();
-      emitCurrentChange(state.activeIndex);
+      state.btnDisabled = true;
     };
     let touchStartX = 0;
     let touchStartY = 0;
@@ -208,6 +217,7 @@ export default defineComponent({
     };
     // 滑动过程中位移容器
     const onTouchMove = (event: TouchEvent) => {
+      event.preventDefault();
       const { activeIndex, itemWidth } = state;
       const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
@@ -242,7 +252,6 @@ export default defineComponent({
       } else {
         move(state.activeIndex);
       }
-      emitCurrentChange(state.activeIndex);
       startAutoplay();
     };
     watch(
