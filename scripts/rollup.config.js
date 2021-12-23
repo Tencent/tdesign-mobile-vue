@@ -1,5 +1,3 @@
-// @ts-check
-import { tmpdir } from 'os';
 import url from '@rollup/plugin-url';
 import json from '@rollup/plugin-json';
 import babel from '@rollup/plugin-babel';
@@ -10,13 +8,27 @@ import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
 import analyzer from 'rollup-plugin-analyzer';
 import { terser } from 'rollup-plugin-terser';
+import commonjs from '@rollup/plugin-commonjs';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import multiInput from 'rollup-plugin-multi-input';
-import typescript from 'rollup-plugin-typescript2';
+import nodeResolve from '@rollup/plugin-node-resolve';
 import staticImport from 'rollup-plugin-static-import';
 import ignoreImport from 'rollup-plugin-ignore-import';
 
 import pkg from '../package.json';
+
+const name = 'tdesign';
+const externalDeps = Object.keys(pkg.dependencies || {}).concat([/lodash/, /@babel\/runtime/]);
+const externalPeerDeps = Object.keys(pkg.peerDependencies || {});
+const banner = `/**
+ * ${name} v${pkg.version}
+ * (c) ${new Date().getFullYear()} ${pkg.author}
+ * @license ${pkg.license}
+ */
+`;
+
+const input = 'src/index.ts';
+const inputList = ['src/**/*.ts', 'src/**/*.vue', '!src/**/demos', '!src/**/*.d.ts', '!src/**/__tests__'];
 
 const getPlugins = ({
   env,
@@ -25,8 +37,22 @@ const getPlugins = ({
   extractOneCss = false,
   extractMultiCss = false,
 } = {}) => {
-  let plugins = [
+  const plugins = [
     vuePlugin(),
+    nodeResolve(),
+    commonjs(),
+    esbuild({
+      target: 'esnext',
+      minify: false,
+      jsx: 'preserve',
+      tsconfig: 'tsconfig.build.json',
+    }),
+    babel({
+      babelHelpers: 'runtime',
+      extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
+    }),
+    json(),
+    url(),
     replace({
       preventAssignment: true,
       values: {
@@ -34,41 +60,6 @@ const getPlugins = ({
       },
     }),
   ];
-
-  // ts
-  if (isProd) {
-    plugins.push(
-      typescript({
-        tsconfig: 'tsconfig.build.json',
-        cacheRoot: `${tmpdir()}/.rpt2_cache`,
-        tsconfigOverride: {
-          compilerOptions: {
-            declaration: true,
-            declarationDir: './typings',
-          },
-        },
-        useTsconfigDeclarationDir: true,
-      }),
-    );
-  } else {
-    plugins.push(
-      esbuild({
-        target: 'esnext',
-        minify: false,
-        jsx: 'preserve',
-        tsconfig: 'tsconfig.build.json',
-      }),
-    );
-  }
-
-  plugins = plugins.concat([
-    babel({
-      babelHelpers: 'bundled',
-      extensions: [...DEFAULT_EXTENSIONS, '.vue', '.ts', '.tsx'],
-    }),
-    json(),
-    url(),
-  ]);
 
   // css
   if (extractOneCss) {
@@ -130,18 +121,6 @@ const getPlugins = ({
   return plugins;
 };
 
-const name = 'tdesign';
-const externalDeps = Object.keys(pkg.dependencies || {}).concat(/lodash/);
-const externalPeerDeps = Object.keys(pkg.peerDependencies || {});
-const banner = `/**
- * ${name} v${pkg.version}
- * (c) ${new Date().getFullYear()} ${pkg.author}
- * @license ${pkg.license}
- */
-`;
-const input = 'src/index.ts';
-const inputList = ['src/**/*.ts', 'src/**/*.vue', '!src/**/demos', '!src/**/style', '!src/**/__tests__'];
-
 /** @type {import('rollup').RollupOptions} */
 const cssConfig = {
   input: ['src/**/style/index.js'],
@@ -155,7 +134,7 @@ const cssConfig = {
 };
 /** @type {import('rollup').RollupOptions} */
 const esConfig = {
-  input: inputList,
+  input: inputList.concat('!src/index-lib.ts'),
   // 为了保留 style/css.js
   treeshake: false,
   external: externalDeps.concat(externalPeerDeps),
@@ -171,7 +150,9 @@ const esConfig = {
 
 /** @type {import('rollup').RollupOptions} */
 const esmConfig = {
-  input: inputList,
+  input: inputList.concat('!src/index-lib.ts'),
+  // 为了保留 style/index.js
+  treeshake: false,
   external: externalDeps.concat(externalPeerDeps),
   plugins: [multiInput()].concat(getPlugins({ ignoreLess: false })),
   output: {
@@ -205,18 +186,13 @@ const umdConfig = {
   plugins: getPlugins({
     env: 'development',
     extractOneCss: true,
-  }).concat(
-    analyzer({
-      limit: 5,
-      summaryOnly: true,
-    }),
-  ),
+  }).concat(analyzer({ limit: 5, summaryOnly: true })),
   output: {
     name: 'TDesign',
     banner,
     format: 'umd',
     exports: 'named',
-    globals: { vue: 'Vue' },
+    globals: { vue: 'Vue', lodash: '_' },
     sourcemap: true,
     file: `dist/${name}.js`,
   },
@@ -236,7 +212,7 @@ const umdMinConfig = {
     banner,
     format: 'umd',
     exports: 'named',
-    globals: { vue: 'Vue' },
+    globals: { vue: 'Vue', lodash: '_' },
     sourcemap: true,
     file: `dist/${name}.min.js`,
   },

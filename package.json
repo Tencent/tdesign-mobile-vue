@@ -13,10 +13,15 @@
     "url": "/tdesign-mobile-vue.git"
   },
   "scripts": {
+    "prepare": "husky install .husky",
     "dev": "cross-env NODE_ENV=development vite",
     "dev:debug": "cross-env NODE_ENV=development vite --debug",
     "prebuild": "rimraf dist/* lib/* es/* esm/* typings/*",
-    "build": "cross-env NODE_ENV=production rollup -c scripts/rollup.config.js",
+    "build": "cross-env NODE_ENV=production rollup -c scripts/rollup.config.js && npm run build:tsc",
+    "build:tsc": "concurrently \"npm:build:tsc-*\"",
+    "build:tsc-es": "tsc --emitDeclarationOnly -d --outDir es/",
+    "build:tsc-esm": "tsc --emitDeclarationOnly -d --outDir esm/",
+    "build:tsc-lib": " tsc --emitDeclarationOnly -d --outDir lib/",
     "site": "vite build",
     "site:preview": "vite build --mode staging",
     "update:icon": "node src/icon/generate/index.js clear && node src/icon/generate/index.js && node src/icon/generate/index.js demo",
@@ -49,10 +54,9 @@
     "tdesign"
   ],
   "title": "tdesign-mobile-vue",
-  "types": "dist/index.d.ts",
   "main": "lib/index-lib.js",
   "module": "es/index.js",
-  "typings": "typings/src/index.d.ts",
+  "typings": "es/index.d.ts",
   "unpkg": "dist/tdesign.min.js",
   "jsdelivr": "dist/tdesign.min.js",
   "files": [
@@ -72,10 +76,15 @@
     "esm/**/style/**"
   ],
   "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.16.5",
+    "tdesign-icons-vue-next": "^0.0.4"
+  },
   "peerDependencies": {
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@babel/core": ">=7.13.0 <8.0.0",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.12.11",
@@ -84,8 +93,10 @@
     "@commitlint/config-conventional": "^12.0.1",
     "@popperjs/core": "^2.6.0",
     "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-eslint": "^8.0.1",
     "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.1.1",
     "@rollup/plugin-replace": "^2.3.4",
     "@rollup/plugin-url": "^6.0.0",
     "@soerenmartius/vue3-clipboard": "^0.1.1",
@@ -100,11 +111,13 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.2.4",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "@vue/runtime-core": "^3.2.26",
     "@vue/test-utils": "^2.0.0-rc.17",
     "autoprefixer": "^10.2.4",
     "axios": "^0.21.0",
     "babel-jest": "^27.4.4",
     "commitizen": "^4.2.3",
+    "concurrently": "^6.5.1",
     "cross-env": "^7.0.3",
     "cypress": "^9.1.1",
     "cz-conventional-changelog": "3.3.0",
@@ -146,10 +159,8 @@
     "rollup-plugin-static-import": "^0.1.1",
     "rollup-plugin-styles": "^3.14.1",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^6.0.0",
     "rollup-pluginutils": "^2.8.2",
-    "tdesign-icons-vue-next": "^0.0.2",
     "tdesign-publish-cli": "0.0.8",
     "tdesign-site-components": "^0.5.1",
     "ts-jest": "^27.1.1",
@@ -160,24 +171,11 @@
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
     "vue-tsc": "^0.29.8",
-    "vue3-jest": "^27.0.0-alpha.1",
-    "@babel/core": ">=7.13.0 <8.0.0"
+    "vue3-jest": "^27.0.0-alpha.1"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "eslint --fix"
-    ]
   }
 }

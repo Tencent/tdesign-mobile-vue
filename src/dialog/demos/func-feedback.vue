@@ -2,9 +2,7 @@
   <div :class="`${name}`">
     <t-cell-group title="函数调用: 反馈类弹框">
       <t-cell value-align="left">
-        <t-button theme="primary" @click="changeFunctionVisible">
-          反馈类弹出框
-        </t-button>
+        <t-button theme="primary" @click="changeFunctionVisible"> 反馈类弹出框 </t-button>
       </t-cell>
     </t-cell-group>
   </div>
@@ -43,7 +41,6 @@ export default defineComponent({
   methods: {
     changeFunctionVisible() {
       Dialog.alert({
-        showHeader: false,
         content: '我的家里有个人很酷',
         knowContent: 'i know',
         onConfirm: (e: string) => {

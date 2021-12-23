@@ -3,7 +3,6 @@
     <span :class="[`${flagName}__content-wrap`]">
       <span v-if="align === 'left'" :class="`${flagName}__icon-wrap`">
         <input type="radio" :name="name" :class="`${flagName}__original-left`" :value="value" @click="radioOrgChange" />
-        <!-- <span v-if="disabled && !isChecked" :class="`${flagName}__icon-disable-center`"></span> -->
         <t-node
           v-if="isChecked"
           :content="icon && icon[0]"
@@ -21,11 +20,7 @@
         <span v-if="labelContent" :class="titleClasses">
           <t-node :content="labelContent"></t-node>
         </span>
-        <div
-          v-if="radioContent"
-          :class="`${flagName}__content-inner`"
-          @click="radioContentChange"
-        >
+        <div v-if="radioContent" :class="`${flagName}__content-inner`" @click="radioContentChange">
           <t-node :content="radioContent"></t-node>
         </div>
       </span>
@@ -57,7 +52,7 @@
 
 <script lang="ts">
 import { ref, inject, computed, SetupContext, defineComponent, getCurrentInstance } from 'vue';
-import { renderContent, TNode } from '@/shared';
+import { renderContent, TNode } from '../shared';
 import config from '../config';
 import RadioProps from './props';
 
@@ -103,15 +98,17 @@ const getClasses = (props: any, rootGroupProps: any) => {
   };
 };
 
-const getCheckedIconStyle = (isChecked: any, disabled: boolean) => computed(() => {
-  const checkedIconStyle = {color: (isChecked && !disabled)? '#0052D9' : '#DCDCDC'};
-  return checkedIconStyle
-})
+const getCheckedIconStyle = (isChecked: any, disabled: boolean) =>
+  computed(() => {
+    const checkedIconStyle = { color: isChecked && !disabled ? '#0052D9' : '#DCDCDC' };
+    return checkedIconStyle;
+  });
 
-const getUnCheckedIconStyle = (disabled: boolean) => computed(() => {
-  const unCheckStyle = { color: !disabled? '#DCDCDC' : '#DCDCDC' };
-  return unCheckStyle;
-});
+const getUnCheckedIconStyle = (disabled: boolean) =>
+  computed(() => {
+    const unCheckStyle = { color: !disabled ? '#DCDCDC' : '#DCDCDC' };
+    return unCheckStyle;
+  });
 
 export default defineComponent({
   name,
@@ -152,7 +149,7 @@ export default defineComponent({
      * @description: 原生radio事件处理
      * */
     const radioOrgChange = (e: Event) => {
-      const { target } = e;
+      const { target }: { target: any } = e;
       if (rootGroupProps?.disabled || props?.disabled) {
         return;
       }

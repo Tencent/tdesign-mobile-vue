@@ -21,7 +21,7 @@
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, TNode } from '../shared';
+import { renderTNode, renderContent, TNode } from '../shared';
 import config from '../config';
 import CellProps from './props';
 
@@ -35,7 +35,7 @@ export default defineComponent({
   emits: ['click'],
   setup(props, context) {
     const internalInstance = getCurrentInstance();
-    const noteContent = computed(() => renderTNode(internalInstance, 'note'));
+    const noteContent = computed(() => renderContent(internalInstance, 'default', 'note'));
     const titleContent = computed(() => renderTNode(internalInstance, 'title'));
     const descriptionContent = computed(() => renderTNode(internalInstance, 'description'));
     const rightIconContent = computed(() => {

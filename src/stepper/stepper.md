@@ -13,7 +13,7 @@ toc: false
 ::: demo demos/index
 :::
 
-## 组件样式
+### 组件样式
 
 ### 禁止点击
 
@@ -25,7 +25,7 @@ toc: false
 ::: demo demos/disableInput
 :::
 
-## 组件使用
+### 组件使用
 
 ### 绑定事件
 

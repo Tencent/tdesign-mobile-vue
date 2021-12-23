@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-demo-block">
     <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-      <t-picker-column :options="roleOptions" :default-index="2" @change="onColumnChange" />
+      <t-picker-item :options="roleOptions" :default-index="2" @change="onColumnChange" />
     </t-picker>
   </div>
 </template>

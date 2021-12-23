@@ -1,8 +1,21 @@
 <template>
   <div>
-    <t-radio name="radio1" value="1" label="单选" :icon="circleFilledIcons" :onChange="onChangeFn"></t-radio>
-    <t-radio name="radio1" value="2" label="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选" :icon="circleFilledIcons" :onChange="onChangeFn"></t-radio>
-    <t-radio name="radio1" value="3" label="单选" content="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选" :icon="circleFilledIcons" :onChange="onChangeFn"></t-radio>
+    <t-radio name="radio1" value="1" label="单选" :icon="circleFilledIcons" :on-change="onChangeFn"></t-radio>
+    <t-radio
+      name="radio1"
+      value="2"
+      label="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选"
+      :icon="circleFilledIcons"
+      :on-change="onChangeFn"
+    ></t-radio>
+    <t-radio
+      name="radio1"
+      value="3"
+      label="单选"
+      content="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选"
+      :icon="circleFilledIcons"
+      :on-change="onChangeFn"
+    ></t-radio>
   </div>
 </template>
 <script lang="ts">
@@ -28,8 +41,8 @@ export default defineComponent({
 
     return {
       radio,
-      circleFilledIcons:  [TIconCircleFilled, TIconCircle],
-      onChangeFn
+      circleFilledIcons: [TIconCircleFilled, TIconCircle],
+      onChangeFn,
     };
   },
 });

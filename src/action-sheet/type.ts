@@ -52,6 +52,10 @@ export interface TdActionSheetProps {
    * 选择菜单项时触发
    */
   onSelected: (selected: ActionSheetItem | String, index: number) => void;
-};
+}
 
-export interface ActionSheetItem {label: string; color?: string; disabled?: boolean };
+export interface ActionSheetItem {
+  label: string;
+  color?: string;
+  disabled?: boolean;
+}

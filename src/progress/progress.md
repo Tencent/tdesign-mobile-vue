@@ -20,14 +20,14 @@ toc: false
 ::: demo demos/text
 :::
 
-## 样式
+### 样式
 
 ### 颜色
 
 ::: demo demos/type
 :::
 
-## 自定义样式
+### 自定义样式
 
 ::: demo demos/color
 :::

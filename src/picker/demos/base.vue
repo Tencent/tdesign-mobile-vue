@@ -2,14 +2,14 @@
   <div class="tdesign-demo-block">
     <!-- demos -->
     <t-cell-group>
-      <t-input v-model="text.city" label="城市" placeholder="选择城市" @click="show.city = true" />
+      <t-input :value="cityText.join(',')" label="城市" placeholder="选择城市" @click="showCity.value = true" />
     </t-cell-group>
     <t-cell-group>
       <t-input
-        v-model="text.yearAndSeason"
+        :value="yearAndSeasonText"
         label="年份和季节"
         placeholder="选择城年份和季节"
-        @click="show.yearAndSeason = true"
+        @click="showYearAndSeason = true"
       />
     </t-cell-group>
     <t-cell-group>
@@ -18,24 +18,24 @@
     </t-cell-group>
 
     <!-- pickers -->
-    <t-popup v-model="show.city" placement="bottom">
-      <t-picker @change="onChange" @confirm="onCityConfirm" @cancel="onCancel">
-        <t-picker-column :options="cityOptions" @change="onColumnChange" />
+    <t-popup v-model="showCity" placement="bottom">
+      <t-picker v-model="cityText" @change="onCityChange" @confirm="onCityConfirm" @cancel="showCity.value = false">
+        <t-picker-item :options="cityOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
-    <t-popup v-model="show.yearAndSeason" placement="bottom">
-      <t-picker @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
-        <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-        <t-picker-column :options="seasonOptions" @change="onColumnChange" />
+    <t-popup v-model="showYearAndSeason" placement="bottom">
+      <t-picker v-model="yearAndSeasonText" @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
+        <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+        <t-picker-item :options="seasonOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
 
-    <t-popup v-model="show.date" placement="bottom">
-      <t-picker @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
-        <t-picker-column :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-        <t-picker-column :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
-        <t-picker-column :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
+    <t-popup v-model="showDate" placement="bottom">
+      <t-picker v-model="dateText" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
+        <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+        <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
+        <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
       </t-picker>
     </t-popup>
   </div>
@@ -46,19 +46,14 @@ import { ref, defineComponent, reactive } from 'vue';
 
 export default defineComponent({
   setup() {
-    const show = reactive({
-      city: false,
-      yearAndSeason: false,
-      date: false,
-    });
-    const text = reactive({
-      city: '',
-      yearAndSeason: '',
-      date: '',
-    });
-    const cities = ['广州市', '韶关市', '深圳市', '珠海市', '汕头市'];
-    const curCityIndex = ref(0);
+    const showCity = ref(false);
+    const showYearAndSeason = ref(false);
+    const showDate = ref(false);
+    const cityText = reactive([]);
+    const yearAndSeasonText = reactive([]);
+    const dateText = reactive([]);
 
+    const cities = ['广州市', '韶关市', '深圳市', '珠海市', '汕头市'];
     const years = [2021, 2020, 2019, 2018, 2017, 2016, 2015];
     const seasons = ['春', '夏', '秋', '冬'];
     const months = Array.from(new Array(12), (_, index) => index + 1);
@@ -74,36 +69,23 @@ export default defineComponent({
       console.log('column:change', e);
     };
 
-    const onRoleChange = (e: any) => {
-      console.log('column:change', e);
-      curCityIndex.value = e.index;
-    };
-
     const onChange = (e: any) => {
       console.log('picker:change', e);
     };
 
     const onCityConfirm = (e: any) => {
-      console.log('picker:confirm', e);
-      text.city = e.value;
-      show.city = false;
+      console.log('picker:confirm', e, cityText);
+      showCity.value = false;
     };
 
     const onYearAndSeasonConfirm = (e: any) => {
       console.log('picker:confirm', e);
-      text.yearAndSeason = JSON.stringify(e.value);
-      show.yearAndSeason = false;
+      showYearAndSeason.value = false;
     };
 
     const onDateConfirm = (e: any) => {
       console.log('picker:confirm', e);
-      text.date = JSON.stringify(e.value);
-      show.date = false;
-    };
-
-    const onCancel = () => {
-      console.log('取消');
-      Object.keys(show).forEach((item) => (show[item] = false));
+      showDate.value = false;
     };
 
     return {
@@ -113,14 +95,16 @@ export default defineComponent({
       monthOptions,
       dayOptions,
       onColumnChange,
-      onRoleChange,
       onChange,
       onCityConfirm,
       onYearAndSeasonConfirm,
       onDateConfirm,
-      onCancel,
-      show,
-      text,
+      cityText,
+      yearAndSeasonText,
+      dateText,
+      showCity,
+      showYearAndSeason,
+      showDate,
     };
   },
 });

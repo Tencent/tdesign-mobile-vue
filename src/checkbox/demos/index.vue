@@ -9,10 +9,10 @@ import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    const changeFn = (check: boolean,  context: { e: Event }) => {
+    const changeFn = (check: boolean, context: { e: Event }) => {
       console.log('check: ', check);
       console.log('context: ', context);
-    }
+    };
     return {
       changeFn,
     };

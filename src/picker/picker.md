@@ -8,71 +8,35 @@ toc: false
 
 ### 基础类型
 
-::: demo demos/base
+::: demo demos/mobile
 :::
 
-### 对象数组
-
-::: demo demos/object-array
-:::
-
-### 默认选中
-
-::: demo demos/default-selected
-:::
-
-### 自定义展示内容
-
-::: demo demos/custom
-:::
-
-### 多列选择
-
-::: demo demos/multiple
-:::
-
-### 联动选择
-
-::: demo demos/cascade
-:::
-
-### 弹窗层的 Picker
-
-::: demo demos/popup-picker
-:::
 
 ## API
-
 ### Picker Props
 
-| 属性              | 类型   | 默认值  | 必传 | 说明         |
-| ----------------- | ------ | ------- | ---- | ------------ |
-| theme             | String | default | N    | picker 主题  |
-| title             | String | -       | N    | 标题         |
-| confirmButtonText | String | 确定    | N    | 确定按钮文字 |
-| cancelButtonText  | String | 取消    | N    | 取消按钮文字 |
-
-### PickerItem Props
-
-| 属性         | 类型     | 默认值               | 必传 | 说明                                              |
-| ------------ | -------- | -------------------- | ---- | ------------------------------------------------- |
-| options      | Array    | []                   | Y    | 列的候选项                                        |
-| optionKey    | String   | -                    | N    | options 为 ObjectArray 的时候，指定显示对象的 key |
-| formatter    | Function | (val: string) => val | N    | 格式化显示的候选项                                |
-| defaultIndex | Number   | 0                    | N    | 默认选中的候选项                                  |
-
-## Events
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+cancelBtn | String | 取消 | 取消按钮文字 | N
+confirmBtn | String | 确认 | 确定按钮文字 | N
+title | String | '' | 标题 | N
+value | Array | - | 选中值。TS 类型：`Array<PickerValue>`。[详细类型定义]() | N
+visible | Boolean | false | 是否显示 | N
+onCancel | Function |  | 点击取消按钮时触发。`({ e: MouseEvent }) => {}` | N
+onChange | Function |  | 选中变化时候触发。`(value: Array<PickerValue>) => {}` | N
+onConfirm | Function |  | 点击确认确认按钮时触发。`({ e: MouseEvent }) => {}` | N
 
 ### Picker Events
 
-| 事件名  | 说明                 | 回调参数               |
-| ------- | -------------------- | ---------------------- |
-| change  | 选中变化时候触发     | `[{value, index}]`       |
-| confirm | 点击确定按钮时候触发 | `{value: [], index: []}` |
-| cancel  | 点击取消时候触发     | -                      |
+名称 | 参数 | 描述
+-- | -- | --
+cancel | `({ e: MouseEvent })` | 点击取消按钮时触发
+change | `(value: Array<PickerValue>)` | 选中变化时候触发
+confirm | `({ e: MouseEvent })` | 点击确认确认按钮时触发
 
-### PickerItem Events
+### PickerItem Props
 
-| 事件名 | 说明                   | 回调参数       |
-| ------ | ---------------------- | -------------- |
-| change | 候选项滚动变化时候触发 | `{value, index}` |
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+options | Array | [] | 数据源。TS 类型：`Array<PickerItemOption>`。[详细类型定义]() | N
+value | String / Number | - | 默认选中的侯选项 | N

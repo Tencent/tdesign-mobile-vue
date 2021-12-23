@@ -62,5 +62,5 @@ export default {
   modelValue: {
     type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
     default: undefined,
-  }
+  },
 };

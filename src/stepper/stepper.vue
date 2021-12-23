@@ -1,5 +1,5 @@
 <template>
-  <div :class="[`${name}`, `${disabled ? 't-is-disabled' : ''}`, `${isPureMode ? `${name}__pure` : ''}`]">
+  <div :class="[`${name}`, `${disabled ? disabledClass : ''}`, `${isPureMode ? `${name}__pure` : ''}`]">
     <slot name="label">
       <div v-if="label" :class="`${name}__label`">{{ label }}</div>
     </slot>
@@ -22,18 +22,17 @@
       @click="plusValue"
     ></span>
   </div>
-  <!-- </template>
-  </t-cell> -->
 </template>
 
 <script lang="ts">
 import { toRefs, computed, reactive, defineComponent } from 'vue';
 import config from '../config';
 import StepperProps from './props';
+import CLASSNAMES from '../shared/constants';
 
 const { prefix } = config;
 const name = `${prefix}-stepper`;
-
+const disabledClass = CLASSNAMES.STATUS.disabled;
 export default defineComponent({
   name,
   props: StepperProps,
@@ -91,6 +90,7 @@ export default defineComponent({
     });
     return {
       name,
+      disabledClass,
       minusValue,
       currentValue,
       plusValue,
