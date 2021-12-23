@@ -4,19 +4,6 @@
       <t-checkbox name="checkbox1" value="1" label="多选"></t-checkbox>
       <t-checkbox name="checkbox1" value="2" label="多选"></t-checkbox>
       <t-checkbox name="checkbox1" value="3" label="多选"></t-checkbox>
-      <t-checkbox
-        name="checkbox1"
-        value="4"
-        label="多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选"
-        :icon="circleFilledIcons"
-      ></t-checkbox>
-      <t-checkbox
-        name="checkbox1"
-        value="5"
-        label="多选"
-        content="多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选"
-        :icon="circleFilledIcons"
-      ></t-checkbox>
     </t-check-group>
   </div>
 </template>

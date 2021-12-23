@@ -1,9 +1,9 @@
 <template>
   <div :class="`${prefix}-checkbox-group`">
-    <slot v-if="!(options && options.length)"></slot>
+    <slot v-if="!(optionObjArr && optionObjArr.length)"></slot>
     <span v-else>
       <checkbox
-        v-for="(item, idx) in options"
+        v-for="(item, idx) in optionObjArr"
         :key="idx"
         :name="item.name"
         :label="item.label"
@@ -19,6 +19,7 @@ import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
+import { CheckboxOptionObj } from '../checkbox/type';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
@@ -37,6 +38,7 @@ export default defineComponent({
   setup(props: any, content: SetupContext) {
     const children = ref({});
     const checkedValues = computed(() => props.value || []);
+    const optionObjArr: Array<CheckboxOptionObj> = props.options;
     /**
      * @description: 为checkbox注册
      * @param {object}
@@ -134,6 +136,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
+      optionObjArr
     };
   },
 });
