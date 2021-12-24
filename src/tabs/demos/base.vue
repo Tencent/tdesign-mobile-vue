@@ -173,7 +173,7 @@ const name = `${prefix}-tabs-demo`;
 export default defineComponent({
   name,
   setup() {
-    const onChange = (value) => {
+    const onChange = (value: string) => {
       console.log(`onChange to ${value}`);
     };
     const animation = { duration: 500 };

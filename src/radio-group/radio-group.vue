@@ -22,9 +22,9 @@ export default defineComponent({
      * @param {string}
      * @return: void
      */
-    const change = (val: string) => {
-      content.emit('update:value', val); // 改变自身的v-model值
-      content.emit('update:modelValue', val);
+    const change = (val: any) => {
+      content.emit('update:value', val);
+      content.emit('update:modelValue', val); // 改变自身的v-model值
       content.emit('change', val);
     };
     provide('rootGroupProps', props);
