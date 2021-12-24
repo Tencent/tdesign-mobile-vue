@@ -3,11 +3,11 @@
     <h1 class="title">Radio 单选框</h1>
     <p class="summary">描述文字</p>
     <tdesign-demo-block title="01 类型" summary="左侧圆形单选框">
-      <t-radio-group v-model:value="radio" default-value="1" @change="testChange">
+      <t-radio-group v-model="radio" default-value="1" @change="testChange">
         <t-cell-group>
           <t-cell @click="radio = '1'">
             <template #leftIcon>
-              <t-radio name="radio1" value="1" :icon="circleFilledIcons" :on-change="onChangeFn"></t-radio>
+              <t-radio name="radio1" value="1" :icon="circleFilledIcons"  @change="onChangeFn" :on-change="onChangeFn"></t-radio>
             </template>
             <template #title>
               <span>单选</span>
@@ -286,8 +286,8 @@ export default defineComponent({
       console.log('testChange', name);
     };
 
-    const onChangeFn = (checked: any, context: { e: Event }) => {
-      console.log(checked, context);
+    const onChangeFn = (checked: boolean, context: { e: Event }) => {
+      console.log('checked', checked);
     };
 
     const TIconCircleFilled = h(CheckCircleFilledIcon);

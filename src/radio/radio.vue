@@ -120,11 +120,11 @@ export default defineComponent({
       if (props?.contentDisabled) {
         return;
       }
-      props?.onChange && props?.onChange(true, props?.value);
       rootGroupChange(props?.value); // 往group组件调用
       context.emit('update:modelValue', props?.value); // 改变自身的v-model值
       context.emit('update:value', props?.value);
-      context.emit('change', props?.value); // 自身组件广播事件
+      props?.onChange && props?.onChange(true, props?.value);
+      context.emit('change', true); // 自身组件广播事件
     };
     /**
      * @description: 原生radio事件处理
@@ -134,7 +134,6 @@ export default defineComponent({
       if (rootGroupProps?.disabled || props?.disabled) {
         return;
       }
-      console.log('e:', e);
       props?.onChange && props?.onChange(true, { e });
       rootGroupChange(target?.value); // 往group组件调用
       context.emit('update:modelValue', target?.value); // 改变自身的v-model值
