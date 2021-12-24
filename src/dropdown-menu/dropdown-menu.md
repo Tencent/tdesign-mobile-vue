@@ -43,8 +43,8 @@ toc: false
 **注意：同时指定了 `options` 属性和内部自定义内容时，将优先展示自定义内容。**
 
 ## API
-
 ### DropdownMenu Props
+
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
 activeColor | String | - | 菜单标题和选项的选中态颜色 | N
@@ -53,15 +53,15 @@ duration | String / Number | 200 | 动画时长 | N
 overlay | Boolean | true | 是否显示遮罩层 | N
 zIndex | Number | - | 菜单栏 z-index 层级 | N
 
-
 ### DropdownItem Props
+
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
 disabled | Boolean | false | 是否禁用 | N
-options | Array | - | 选项数据。TS 类型：`Array<TdDropdownItemOption>`。[详细类型定义](/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+label | String | - | 标题 | N
+multiple | Boolean | false | 是否多选 | N
+options | Array | - | 选项数据。TS 类型：`Array<TdDropdownItemOption>`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 optionsColumns | String / Number | - | 选项分栏（1-3） | N
 optionsLayout | String | columns | 选项排列。可选项：columns/tree | N
-selectMode | String | single | 选取模式。可选项：single/multi | N
-title | String | - | 标题 | N
-value | String / Number / Array | - | 选中值。支持语法糖。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> `。[详细类型定义](/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
-defaultValue | String / Number / Array | - | 选中值。非受控属性。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> `。[详细类型定义](/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+value | String / Number / Array | - | 选中值。支持语法糖。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> `。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+defaultValue | String / Number / Array | - | 选中值。非受控属性。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> `。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
