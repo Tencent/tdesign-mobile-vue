@@ -390,7 +390,7 @@ export default defineComponent({
           break;
       }
       values = JSON.parse(JSON.stringify(values));
-      // context.emit('update:value', values);
+      context.emit('update:value', values);
       context.emit('change', values);
       collapseMenu();
     };
@@ -400,7 +400,7 @@ export default defineComponent({
       if (!state.isShowItems) return;
       const value = props.value || [];
       if (value[0] === val) return;
-      // context.emit('update:value', val);
+      context.emit('update:value', val);
       context.emit('change', val);
       collapseMenu();
     });
