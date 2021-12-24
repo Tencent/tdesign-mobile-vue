@@ -15,7 +15,7 @@ const name = `${prefix}-radio-group`;
 export default defineComponent({
   name,
   props: RadioGroupProps,
-  emits: ['update:value', 'change'],
+  emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: any, content: SetupContext) {
     /**
      * @description: radio 事件change回调
@@ -24,6 +24,7 @@ export default defineComponent({
      */
     const change = (val: string) => {
       content.emit('update:value', val); // 改变自身的v-model值
+      content.emit('update:modelValue', val);
       content.emit('change', val);
     };
     provide('rootGroupProps', props);
