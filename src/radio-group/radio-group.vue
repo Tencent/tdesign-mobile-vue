@@ -16,13 +16,13 @@ export default defineComponent({
   name,
   props: RadioGroupProps,
   emits: ['update:value', 'change'],
-  setup(props: any, content: SetupContext) {
+  setup(props, content) {
     /**
      * @description: radio 事件change回调
      * @param {string}
      * @return: void
      */
-    const change = (val: string) => {
+    const change = (val: any) => {
       content.emit('update:value', val); // 改变自身的v-model值
       content.emit('change', val);
     };

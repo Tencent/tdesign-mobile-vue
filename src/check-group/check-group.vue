@@ -38,6 +38,7 @@ export default defineComponent({
   setup(props: any, content: SetupContext) {
     const children = ref({});
     const checkedValues = computed(() => props.value || []);
+    // eslint-disable-next-line vue/no-setup-props-destructure
     const optionObjArr: Array<CheckboxOptionObj> = props.options;
     /**
      * @description: 为checkbox注册
@@ -136,7 +137,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
-      optionObjArr
+      optionObjArr,
     };
   },
 });
