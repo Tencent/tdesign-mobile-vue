@@ -94,10 +94,12 @@ export default defineComponent({
     const prefixIconContent = computed(() => renderTNode(internalInstance, 'prefixIcon'));
     const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
 
-    const styleControl = computed(() => ({
-      [`${componentName}__control`]: true,
-      [`${componentName}__control--right`]: suffixIconContent.value,
-    }));
+    const styleControl = computed(() => [
+      `${componentName}__control`,
+      {
+        [`${componentName}__control--${props.align}`]: props.align !== 'left',
+      },
+    ]);
 
     const styleWrapper = computed(() => ({
       [componentName]: true,

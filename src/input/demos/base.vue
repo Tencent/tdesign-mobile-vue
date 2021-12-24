@@ -54,8 +54,8 @@
           <t-button theme="primary" variant="text" size="small" style="height: 24px">发送验证码</t-button>
         </template>
       </t-input>
-      <t-input label="价格" placeholder="0.00" suffix="元" />
-      <t-input label="个数" placeholder="填写个数" suffix="个" />
+      <t-input label="价格" align="right" placeholder="0.00" suffix="元" />
+      <t-input label="个数" align="right" placeholder="填写个数" suffix="个" />
     </tdesign-demo-block>
   </div>
 </template>
