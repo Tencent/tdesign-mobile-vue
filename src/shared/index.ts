@@ -8,3 +8,4 @@ export { default as TNode } from './render-tnode';
 
 /* Vue3 use */
 export * from './useToggle';
+export * from './useCountDown';
