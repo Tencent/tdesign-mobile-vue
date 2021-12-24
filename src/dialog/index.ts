@@ -32,6 +32,7 @@ function create(props: DialogFnType | string): DefineComponent {
   // eslint-disable-next-line vue/one-component-per-file
   instance = defineComponent({
     render: (): VNode =>
+      // @ts-ignore
       h(Dialog, {
         ...propsObject,
         visible: visible.value,

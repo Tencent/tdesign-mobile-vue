@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-11-28 18:56:29
+ * updated at 2021-12-24 14:31:45
  * */
 
 export interface TdRateProps {
@@ -11,6 +11,11 @@ export interface TdRateProps {
    * @default false
    */
   allowHalf: boolean;
+  /**
+   * 是否允许取消选择
+   * @default false
+   */
+  clearable: boolean;
   /**
    * 评分图标的颜色，样式中默认为 #ED7B2F
    * @default ''
@@ -21,6 +26,11 @@ export interface TdRateProps {
    * @default 5
    */
   count: number;
+  /**
+   * 是否为只读
+   * @default false
+   */
+  readonly: boolean;
   /**
    * 是否显示对应的辅助文字
    * @default false
@@ -49,4 +59,4 @@ export interface TdRateProps {
    * 评分数改变时触发
    */
   onChange: (value: number) => void;
-}
+};
