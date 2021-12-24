@@ -14,12 +14,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref, defineComponent, watch } from 'vue';
 
 export default defineComponent({
   setup() {
-    const checkGroup = ref(null);
+    const checkGroup: any = ref(null);
     const checkBoxs = ref(['1']);
 
     watch(
@@ -32,7 +32,7 @@ export default defineComponent({
     return {
       checkBoxs,
       checkGroup,
-      toggleSelect: (check) => checkGroup.value.toggleAll(check),
+      toggleSelect: (check: boolean) => checkGroup?.value?.toggleAll(check),
     };
   },
 });

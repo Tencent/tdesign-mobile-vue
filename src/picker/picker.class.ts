@@ -1,7 +1,12 @@
-import { PickerOptions } from './picker.interface';
 import config from '../config';
 
 const { prefix } = config;
+
+export interface PickerOptions {
+  defaultIndex?: number;
+  el: HTMLElement | HTMLDivElement | HTMLUListElement;
+  onChange: (index: number) => void;
+}
 
 const quartEaseOut = function (t: number, b: number, c: number, d: number) {
   let tempT = t;
@@ -19,7 +24,7 @@ const ANIMATION_TIME = 460;
 /**
  * @name picker
  * @description 阻尼参数来源iscroll5，灵感来自mui.picker
- * @param {[HTMLDivElement]} el   [picker-column的DOM元素]
+ * @param {[HTMLDivElement]} el   [picker-item的DOM元素]
  * @param {[Function]} onChange   [发生change事件时候的回调]
  * @param {[Number]} defaultIndex [picker-item开始的索引值]
  */
@@ -100,8 +105,8 @@ class Picker {
     this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
     this.curIndex = this.options.defaultIndex || 0;
-    this.itemClassName = `${prefix}-picker-column__item`;
-    this.itemSelectedClassName = `${prefix}-picker-column__item--selected`;
+    this.itemClassName = `${prefix}-picker-item__item`;
+    this.itemSelectedClassName = `${prefix}-picker-item__item--selected`;
     this.itemHeight = DEFAULT_ITEM_HEIGHT;
     this.startY = 0;
     this.isPicking = false;

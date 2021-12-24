@@ -1,6 +1,7 @@
-import { createApp, App, DefineComponent, Plugin } from 'vue';
+import { createApp, App, DefineComponent } from 'vue';
 import vueToast from './toast.vue';
 import { TdToastProps } from './type';
+import { WithInstallType } from '../shared';
 
 import './style';
 
@@ -69,23 +70,25 @@ Toast.install = (app: App) => {
   app.config.globalProperties.$toast = Toast;
 };
 
-type ToastApi = typeof Toast & {
+type ToastApi = {
+  /** 展示提示 */
+  (options?: Partial<TdToastProps> | string): void;
   /** 展示加载提示 */
-  loading: (options?: TdToastProps | string) => void;
+  loading: (options?: Partial<TdToastProps> | string) => void;
   /** 展示成功提示 */
-  success: (options?: TdToastProps | string) => void;
+  success: (options?: Partial<TdToastProps> | string) => void;
   /** 展示失败提示 */
-  fail: (options?: TdToastProps | string) => void;
+  fail: (options?: Partial<TdToastProps> | string) => void;
   /** 关闭提示 */
   clear: () => void;
 };
 
-export const ToastPlugin = Toast as unknown as Plugin & ToastApi;
+export const ToastPlugin: WithInstallType<typeof vueToast> & ToastApi = Toast as any;
 export default ToastPlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
-  interface ComponentCustomProperties {
+  export interface ComponentCustomProperties {
     $toast: ToastApi;
   }
 }

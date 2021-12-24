@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-14 00:39:24
+ * updated at 2021-12-21 00:06:45
  * */
 
 import { TdSliderProps } from './type';

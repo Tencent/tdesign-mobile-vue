@@ -2,7 +2,7 @@
   <div :class="classes">
     <div ref="refBar" :class="styleBar">
       <div v-for="(item, idx) in menuTitles" :key="idx" :class="styleBarItem(item, idx)" @click="expandMenu(item, idx)">
-        <div :class="`${name}__title`">{{ item.title }}</div>
+        <div :class="`${name}__title`">{{ item.label }}</div>
       </div>
     </div>
     <slot />
@@ -44,9 +44,9 @@ export default defineComponent({
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
       menuItems.value.map((item: any) => {
-        const { title, disabled } = item.props;
+        const { label, disabled } = item.props;
         return {
-          title,
+          label,
           disabled: disabled !== undefined && disabled !== false,
         };
       }),

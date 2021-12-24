@@ -36,4 +36,4 @@ export interface TdDividerProps {
    * @default ''
    */
   lineColor: string;
-};
+}

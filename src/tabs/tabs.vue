@@ -1,24 +1,26 @@
 <template>
   <div :class="classes">
-    <div ref="navScroll" :class="navClasses">
-      <div ref="navWrap" :class="`${name}__nav-wrap`">
-        <div
-          v-for="item in itemProps"
-          :key="item.name"
-          :class="{
-            [`${name}__nav-item`]: true,
-            [`${prefix}-is-active`]: item.name === currentName,
-            [`${prefix}-is-disabled`]: item.disabled,
-          }"
-          @click="(e) => tabClick(e, item)"
-        >
-          {{ item.label }}
+    <div :class="navClasses">
+      <div ref="navScroll" :class="`${name}__nav-container`">
+        <div ref="navWrap" :class="`${name}__nav-wrap`">
+          <tab-nav-item
+            v-for="item in itemProps"
+            :key="item.value"
+            :label="item.label"
+            :class="{
+              [`${name}__nav-item`]: true,
+              [activeClass]: item.value === currentValue,
+              [disabledClass]: item.disabled,
+            }"
+            @click="(e) => tabClick(e, item)"
+          />
+          <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
         </div>
-        <div ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
       </div>
     </div>
+
     <div :class="`${name}__content`">
-      <slot />
+      <slot> </slot>
     </div>
   </div>
 </template>
@@ -35,26 +37,39 @@ import {
   readonly,
   Fragment,
   watch,
+  getCurrentInstance,
 } from 'vue';
 import config from '../config';
-import { TabsProps } from './tabs.interface';
+import TabsProps from './props';
+import TabNavItem from './tab-nav-item.vue';
+import { renderContent, renderTNode, TNode } from '../shared';
+import CLASSNAMES from '../shared/constants';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
 
 export default defineComponent({
   name,
+  components: { TabNavItem },
   props: TabsProps,
-  emits: ['change'],
+  emits: ['onChange'],
   setup(props, { emit, slots }) {
-    const classes = computed(() => [`${name}`, { [`${name}--horizontal`]: props.direction === 'horizontal' }]);
-    const navClasses = computed(() => [`${name}__nav`, { [`${name}__nav--scroll`]: props.scrollable }]);
-
-    const currentName = ref(props.activeName);
+    const placement = computed(() => props.placement);
+    const showBottomLine = computed(() => props.showBottomLine);
+    const activeClass = CLASSNAMES.STATUS.active;
+    const disabledClass = CLASSNAMES.STATUS.disabled;
+    const classes = computed(() => [
+      `${name}`,
+      `${prefix}-is-${placement.value}`,
+      props.size ? CLASSNAMES.SIZE[props.size] : '',
+    ]);
+    const navClasses = ref([`${name}__nav`]);
+    const isScroll = ref(false);
+    const currentValue = ref(props.value ? props.value : props.defaultValue);
     watch(
-      () => props.activeName,
+      () => props.value,
       (newValue) => {
-        setCurrentName(newValue);
+        newValue && setValue(newValue);
         nextTick(() => {
           moveToActiveTab();
         });
@@ -62,6 +77,11 @@ export default defineComponent({
     );
 
     const { itemProps } = (() => {
+      if (props.list) {
+        return {
+          itemProps: props.list,
+        };
+      }
       let children: any[] = slots.default ? slots.default() : [];
       const res: any[] = [];
       children.forEach((child) => {
@@ -85,50 +105,61 @@ export default defineComponent({
     const navLine = ref<HTMLElement | null>(null);
     const lineStyle = ref('');
     const moveToActiveTab = () => {
-      if (navWrap.value && navLine.value) {
-        const tab = navWrap.value.querySelector<HTMLElement>('.t-is-active');
+      console.log(props.animation);
+      if (navWrap.value && navLine.value && showBottomLine.value) {
+        const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
+        console.log(tab);
+        if (!tab) return;
         const line = navLine.value;
-        if (props.direction === 'horizontal' && tab) {
-          lineStyle.value = `transform: translateY(${tab.offsetTop}px)`;
-        } else if (tab) {
+        if (placement.value === 'left' || placement.value === 'right') {
+          lineStyle.value = `transform: translateY(${tab.offsetTop}px);${
+            props.animation ? `transition-duration:${props.animation.duration}ms` : ''
+          }`;
+        } else {
           lineStyle.value = `transform: translateX(${
             Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2
-          }px)`;
+          }px);${props.animation ? `transition-duration:${props.animation.duration}ms` : ''}`;
         }
       }
     };
+
     onMounted(() => {
+      isScroll.value = (navWrap.value?.offsetWidth || 0) > (navScroll.value?.offsetWidth || 0);
+      isScroll.value && navClasses.value.push(`${prefix}-is-scrollable`);
       moveToActiveTab();
       window.addEventListener('resize', moveToActiveTab, false);
     });
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
     });
-    const setCurrentName = (val: string | number) => {
-      emit('change', val);
-      currentName.value = val;
+    const setValue = (val: string | number) => {
+      emit('onChange', val);
+      currentValue.value = val;
     };
-    const tabChange = (event: Event, name: string | number) => {
-      setCurrentName(name);
+    const tabChange = (event: Event, value: string | number) => {
+      setValue(value);
     };
     const tabClick = (event: Event, item: Record<string, unknown>) => {
-      const { name, disabled } = item as any;
-      if (disabled || currentName.value === name) {
+      const { value, disabled } = item as any;
+      if (disabled || currentValue.value === value) {
         return false;
       }
-      tabChange(event, name);
+      tabChange(event, value);
       nextTick(() => {
         moveToActiveTab();
       });
     };
-    provide('currentName', readonly(currentName));
+    provide('currentValue', readonly(currentValue));
 
     return {
       name,
       prefix,
       classes,
       navClasses,
-      currentName,
+      activeClass,
+      disabledClass,
+      currentValue,
+      showBottomLine,
       tabClick,
       itemProps,
       navScroll,

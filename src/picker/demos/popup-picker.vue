@@ -3,7 +3,7 @@
     <t-button theme="primary" style="margin-left: 20px" @click="visible = true"> 结合Popup组件</t-button>
     <t-popup v-model="visible">
       <t-picker title="标题" @change="onChange" @confirm="onConfirm" @cancel="onCancel">
-        <t-picker-column :options="roleOptions" @change="onColumnChange" />
+        <t-picker-item :options="roleOptions" @change="onColumnChange" />
       </t-picker>
     </t-popup>
   </div>

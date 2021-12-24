@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-17 16:40:38
+ * updated at 2021-12-21 00:07:22
  * */
 
 import { TNode } from '../common';
@@ -51,16 +51,6 @@ export interface TdRadioProps {
    */
   label: string | TNode;
   /**
-   * 内容最大行数限制
-   * @default 5
-   */
-  maxContentRow: number;
-  /**
-   * 主文案最大行数限制
-   * @default 3
-   */
-  maxLabelRow: number;
-  /**
    * HTM 元素原生属性
    * @default ''
    */
@@ -73,7 +63,7 @@ export interface TdRadioProps {
    * 选中状态变化时触发
    */
   onChange: (checked: boolean, context: { e: Event }) => void;
-};
+}
 
 export interface TdRadioGroupProps {
   /**
@@ -101,10 +91,14 @@ export interface TdRadioGroupProps {
    * 选中值发生变化时触发
    */
   onChange: (value: RadioValue, context: { e: Event }) => void;
-};
+}
 
 export type RadioValue = string | number | boolean;
 
 export type RadioOption = string | number | RadioOptionObj;
 
-export interface RadioOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean };
+export interface RadioOptionObj {
+  label?: string | TNode;
+  value?: string | number;
+  disabled?: boolean;
+}

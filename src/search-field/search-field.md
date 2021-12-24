@@ -13,7 +13,7 @@ toc: false
 ::: demo demos/index
 :::
 
-## 组件样式
+### 组件样式
 
 ### 自定义 Icon 颜色
 

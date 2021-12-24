@@ -1,5 +1,13 @@
 import RadioGroup from './radio-group.vue';
-import { withInstall, WithInstallType } from '../shared';
+import { mapProps, withInstall, WithInstallType } from '../shared';
 
-const _RadioGroup: WithInstallType<typeof RadioGroup> = withInstall(RadioGroup);
+const _RadioGroup: WithInstallType<typeof RadioGroup> = withInstall(
+  mapProps([
+    {
+      name: 'value',
+      event: 'change',
+      alias: ['modelValue'],
+    },
+  ])(RadioGroup),
+);
 export default _RadioGroup;

@@ -83,12 +83,12 @@ type MessageApi = {
   error: (options?: TdMessageProps | string) => void;
 };
 
-export const MessagePlugin: WithInstallType<typeof Message> = Message as any;
+export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;
 export default MessagePlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
-  interface ComponentCustomProperties {
+  export interface ComponentCustomProperties {
     $message: MessageApi;
   }
 }

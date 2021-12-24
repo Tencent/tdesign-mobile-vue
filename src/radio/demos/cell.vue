@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
 
 export default defineComponent({
@@ -29,7 +29,7 @@ export default defineComponent({
 
     return {
       radio,
-      change: (val) => console.log(val),
+      change: (val: any) => console.log(val),
     };
   },
 });

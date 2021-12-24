@@ -32,6 +32,7 @@ function create(props: DialogFnType | string): DefineComponent {
   // eslint-disable-next-line vue/one-component-per-file
   instance = defineComponent({
     render: (): VNode =>
+      // @ts-ignore
       h(Dialog, {
         ...propsObject,
         visible: visible.value,
@@ -103,12 +104,12 @@ type DialogApi = {
   confirm: (options: DialogFnType | string) => void;
 };
 
-export const DialogPlugin: Plugin & DialogApi & WithInstallType<typeof Dialog> = Dialog as any;
+export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;
 export default DialogPlugin;
 
 declare module '@vue/runtime-core' {
   // Bind to `this` keyword
-  interface ComponentCustomProperties {
+  export interface ComponentCustomProperties {
     $dialog: DialogApi;
   }
 }

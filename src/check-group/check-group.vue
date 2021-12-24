@@ -1,17 +1,25 @@
 <template>
-  <div :class="`${prefix}-check-group`">
-    <slot v-if="!(options && options.length)"></slot>
+  <div :class="`${prefix}-checkbox-group`">
+    <slot v-if="!(optionObjArr && optionObjArr.length)"></slot>
     <span v-else>
-      <checkbox v-for="(item, idx) in options" :name="item.name" :label="item.label" :value="item.value" :checkAll="item.checkAll" :key="idx"></checkbox>
+      <checkbox
+        v-for="(item, idx) in optionObjArr"
+        :key="idx"
+        :name="item.name"
+        :label="item.label"
+        :value="item.value"
+        :check-all="item.checkAll"
+      ></checkbox>
     </span>
   </div>
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed, defineComponent, watch } from 'vue';
+import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
+import { CheckboxOptionObj } from '../checkbox/type';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
@@ -22,14 +30,16 @@ export interface Child {
 
 export default defineComponent({
   name,
-  props: CheckboxProps,
   components: {
     checkbox,
   },
+  props: CheckboxProps,
   emits: ['update:value', 'change'],
   setup(props: any, content: SetupContext) {
     const children = ref({});
     const checkedValues = computed(() => props.value || []);
+    // eslint-disable-next-line vue/no-setup-props-destructure
+    const optionObjArr: Array<CheckboxOptionObj> = props.options;
     /**
      * @description: 为checkbox注册
      * @param {object}
@@ -38,23 +48,6 @@ export default defineComponent({
     const register = (child: Child) => {
       child?.value && (children.value[child.value] = child);
     };
-
-    // watch(
-    //   () => props.options,
-    //   (val) => {
-    //     if (val && val.length) {
-    //       val = val.map((ops: any) => {
-    //         if (!ops.value && ops.checkAll) {
-    //           ops.value = 'checkAll';
-    //         }
-    //         return ops;
-    //       })
-    //       val.forEach((item: Child) => {
-    //         register(item);
-    //       });
-    //     }
-    //   }
-    // )
 
     /**
      * @description: 为checkbox取消注册
@@ -71,10 +64,10 @@ export default defineComponent({
      */
     const check = (value: string, e: Event) => {
       const index = checkedValues.value.indexOf(value);
-      const inMax = props?.max < 1 || checkedValues?.value?.length < props?.max;
+      const inMax = props?.max === undefined || checkedValues?.value?.length < props?.max;
       if (index !== undefined && index === -1 && inMax) {
         const tempValues = checkedValues?.value?.concat(value);
-        const resultValues = [...Array.from(tempValues)]
+        const resultValues = [...Array.from(tempValues)];
         content.emit('update:value', resultValues);
         content.emit('change', resultValues, { e });
         props?.onChange && props?.onChange(resultValues, { e });
@@ -100,12 +93,12 @@ export default defineComponent({
      * @param {string}
      * @return: void
      */
-    const toggle = (name: string) => {
+    const toggle = (name: string, e: Event) => {
       const index = checkedValues?.value.indexOf(name);
       if (index === -1) {
-        check(name);
+        check(name, e);
       } else {
-        uncheck(name);
+        uncheck(name, e);
       }
     };
     /**
@@ -144,6 +137,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
+      optionObjArr,
     };
   },
 });

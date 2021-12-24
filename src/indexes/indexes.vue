@@ -74,7 +74,7 @@ export default defineComponent({
       default: () => [],
     },
   },
-  setup(props) {
+  setup(props, context) {
     let timeOut: number;
     let cacheTimer: number;
     let rootScrollMask = false;
@@ -183,13 +183,13 @@ export default defineComponent({
       }
     };
 
-    const handleRootScroll = (event: Event & { target: HTMLElement }) => {
+    const handleRootScroll = (event: UIEvent) => {
       if (!rootScrollMask) {
         return;
       }
-
-      const { scrollTop } = event.target;
-      calcChildPosition(scrollTop);
+      if (indexesRoot.value) {
+        calcChildPosition(indexesRoot.value.scrollTop);
+      }
     };
 
     const handleRootTouchstart = () => {
