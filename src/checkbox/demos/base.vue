@@ -8,7 +8,7 @@
           <t-cell-group>
             <t-cell>
               <template #leftIcon>
-                <t-checkbox name="checkbox1" value="1"></t-checkbox>
+                <t-checkbox name="checkbox1" value="1" @change="checkboxChange"></t-checkbox>
               </template>
               <template #title>
                 <span>多选</span>
@@ -269,6 +269,10 @@ export default defineComponent({
       console.log('Event:', context);
     };
 
+    const checkboxChange = (val: boolean) => {
+      console.log('val:', val);
+    }
+
     return {
       checkGroup,
       checkBoxs1,
@@ -277,6 +281,7 @@ export default defineComponent({
       circleFilledIcons: [TIconCircleFilled, TIconCircle],
       CheckRectangleFilledIcons: [TCheckRectangleFilledIcon, TRectangleIcon],
       changeFn,
+      checkboxChange,
     };
   },
 });

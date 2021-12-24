@@ -76,7 +76,7 @@ import {
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { renderContent, TNode } from '../shared';
+import { renderContent, TNode, useToggle } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
@@ -199,6 +199,7 @@ export default defineComponent({
     const checkboxContent = computed(() => renderContent(internalInstance, 'content', 'content'));
     const TMinusCircleFilledIcon = h(MinusCircleFilledIcon);
     const singleChecked = props.checked || ref(false);
+    const checkboxCheckVal = [false, true];
     onMounted(() => {
       rootGroup?.register(props);
     });
@@ -212,6 +213,7 @@ export default defineComponent({
     const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
     const checkedIconStyle = getCheckedIconStyle(isChecked, singleChecked, rootGroup?.disabled || props?.disabled);
     const unCheckedIconStyle = getUnCheckedIconStyle(rootGroup?.disabled || props?.disabled);
+    const { state, toggle } = useToggle(checkboxCheckVal, isChecked.value);
 
     const checkBoxOrgChange = (e: Event) => {
       const { target }: { target: any } = e;
@@ -219,8 +221,8 @@ export default defineComponent({
         return;
       }
       if (singleChecked.value || (rootGroup && isChecked.value)) {
+        toggle();
         context.emit('update:value', '');
-        context.emit('change', '');
         if (rootGroup) {
           rootGroup?.uncheck(target?.value, { e });
         } else {
@@ -229,11 +231,11 @@ export default defineComponent({
         if (props.checkAll) {
           rootGroup.toggleAll(false);
         }
-        props?.onChange && props?.onChange(false, { e });
+        props?.onChange && props?.onChange(state.value, { e });
       } else {
+        toggle();
         context.emit('update:value', target?.value, { e });
-        context.emit('change', target?.value, { e });
-        props?.onChange && props?.onChange(true, { e });
+        props?.onChange && props?.onChange(state.value, { e });
         if (rootGroup) {
           rootGroup?.check(target?.value, { e });
         } else {
