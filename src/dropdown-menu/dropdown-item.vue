@@ -141,7 +141,7 @@ type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOpt
 export default defineComponent({
   name,
   props: DropdownItemProps,
-  emits: ['change', 'open', 'opened', 'close', 'closed'],
+  emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value'],
   setup(props, context: SetupContext) {
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;

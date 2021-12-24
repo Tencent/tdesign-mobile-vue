@@ -12,6 +12,7 @@ import { computed, toRefs, defineComponent, h } from 'vue';
 import { useToggle } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
+import { emitEvent } from '@/shared/emit';
 
 const { prefix } = config;
 const name = `${prefix}-switch`;
@@ -22,7 +23,7 @@ export default defineComponent({
   emits: ['change', 'update:value'],
   setup(props, context) {
     const switchValues = props.customValue || [false, true];
-    const { state, toggle } = useToggle(switchValues, props.value || props.defaultValue);
+    const { state, toggle } = useToggle(switchValues, props.value);
 
     const checked = computed(() => state.value === switchValues[1]);
 
@@ -63,7 +64,7 @@ export default defineComponent({
       }
       toggle();
       context.emit('update:value', state.value);
-      context.emit('change', state.value);
+      emitEvent(props, context, 'change', state.value);
       if (typeof props.onChange === 'function') props.onChange(state.value);
     }
     return {
