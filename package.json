@@ -74,6 +74,15 @@
     "esm/**/style/**"
   ],
   "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.16.5",
+    "@types/lodash": "^4.14.178",
+    "lodash": "^4.17.21",
+    "tdesign-icons-vue-next": "^0.0.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.4"
+  },
   "devDependencies": {
     "@babel/core": ">=7.13.0 <8.0.0",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
@@ -128,7 +137,7 @@
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
     "jest-watch-typeahead": "^1.0.0",
-    "less": "^4.0.0",
+    "less": "^4.1.2",
     "lint-staged": "^10.5.4",
     "lru-cache": "^6.0.0",
     "markdown-it": "^10.0.0",

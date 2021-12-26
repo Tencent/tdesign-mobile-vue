@@ -1,18 +1,18 @@
 <template>
   <span :class="classes">
-    <span v-if="label" :class="textClasses">
+    <span v-if="label" :class="`${name}__text`">
       {{ label }}
     </span>
-    <span :class="nodeClasses" :style="backgroundColor" @click="handleToggle"> </span>
+    <span :class="`${name}__node`" :style="backgroundColor" @click="handleToggle"> </span>
   </span>
 </template>
 
 <script lang="ts">
 import { computed, toRefs, defineComponent, h } from 'vue';
-import { useToggle } from '../shared';
+import { useToggle, emitEvent } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
-import { emitEvent } from '@/shared/emit';
+import ClASSNAMES from '../shared/constants';
 
 const { prefix } = config;
 const name = `${prefix}-switch`;
@@ -30,23 +30,8 @@ export default defineComponent({
     const classes = computed(() => [
       `${name}`,
       {
-        [`${name}--checked`]: checked.value,
-        [`${prefix}-is-disabled`]: props.disabled,
-      },
-    ]);
-
-    const textClasses = computed(() => [
-      `${name}__text`,
-      {
-        [`${prefix}-is-disabled`]: props.disabled,
-      },
-    ]);
-
-    const nodeClasses = computed(() => [
-      `${name}__node`,
-      {
-        [`${name}__node--checked`]: checked.value,
-        [`${prefix}-is-disabled`]: props.disabled,
+        [ClASSNAMES.STATUS.checked]: checked.value,
+        [ClASSNAMES.STATUS.disabled]: props.disabled,
       },
     ]);
 
@@ -65,13 +50,10 @@ export default defineComponent({
       toggle();
       context.emit('update:value', state.value);
       emitEvent(props, context, 'change', state.value);
-      if (typeof props.onChange === 'function') props.onChange(state.value);
     }
     return {
       name,
       classes,
-      textClasses,
-      nodeClasses,
       backgroundColor,
       ...toRefs(props),
       handleToggle,

@@ -59,7 +59,7 @@
         </t-cell>
         <t-cell title="开关关闭禁用">
           <template #note>
-            <t-switch></t-switch>
+            <t-switch disabled></t-switch>
           </template>
         </t-cell>
         <t-cell title="开关开启禁用">
@@ -69,7 +69,7 @@
         </t-cell>
         <t-cell title="开关关闭禁用">
           <template #note>
-            <t-switch label="描述信息"></t-switch>
+            <t-switch label="描述信息" disabled></t-switch>
           </template>
         </t-cell>
       </t-cell-group>
