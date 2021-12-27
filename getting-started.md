@@ -12,61 +12,26 @@ spline: explain
   目前组件库处于 Alpha 阶段，快速迭代中，请留意版本变化。
 </div>
 
-## 安装
+# 安装
+
+目前组件库已发布一期组件的测试版本，还在快速迭代，注意留意版本变化
 
 ```bash
 npm i tdesign-mobile-vue
 ```
 
-## 基础使用
+# 基础使用
 
-- 【推荐】直接用解构的方式使用（支持 js 和 css 代码的 tree-shaking）
-
-```js
-import { createApp } from 'vue';
-import { Button, Cell } from 'tdesign-mobile-vue';
-// <- 注意：这里不需要引入样式文件
-
-createApp()
-  .use(Button)
-  // 支持传递自定义名称
-  .use(Cell, 'my-cell');
-```
-
-- 【推荐】引入原始样式代码（适用于需要修改样式变量的场景）
-
-> 由于原始样式基于 less 编写，需要自行处理 less 文件的编译（例如安装 less、less-loader）
-
-```js
-import { createApp } from 'vue';
-import { Button, Cell } from 'tdesign-mobile-vue/esm/';
-// <- 注意：这里不需要引入样式文件
-
-createApp()
-  .use(Button)
-  // 支持传递自定义名称
-  .use(Cell, 'my-cell');
-```
-
-- 【不推荐】引入完整组件库，这样会将整个组件库的代码一起打包
+推荐使用 Webpack 或 Rollup 等支持 tree-shaking 特性的构建工具，无需额外配置即可实现组件按需引入：
 
 ```js
 import { createApp } from 'vue';
 import TDesign from 'tdesign-mobile-vue';
-// <- 注意：这里不需要引入样式文件
 
-createApp().use(TDesign);
+const app = createApp(App);
+app.use(TDesign);
 ```
 
-- 分别引入组件库代码和样式
-
-```js
-import { createApp } from 'vue';
-import TDesign from 'tdesign-mobile-vue/dist/tdesign.js';
-import 'tdesign-mobile-vue/dist/tdesign.css';
-
-createApp().use(TDesign);
-```
 
 ## 浏览器兼容性
 
