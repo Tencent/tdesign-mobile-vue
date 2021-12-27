@@ -12,7 +12,7 @@ spline: explain
   目前组件库处于 Alpha 阶段，快速迭代中，请留意版本变化。
 </div>
 
-# 安装
+## 安装
 
 目前组件库已发布一期组件的测试版本，还在快速迭代，注意留意版本变化
 
@@ -20,7 +20,7 @@ spline: explain
 npm i tdesign-mobile-vue
 ```
 
-# 基础使用
+## 基础使用
 
 推荐使用 Webpack 或 Rollup 等支持 tree-shaking 特性的构建工具，无需额外配置即可实现组件按需引入：
 
