@@ -163,7 +163,7 @@
     "rollup-plugin-vue": "^6.0.0",
     "rollup-pluginutils": "^2.8.2",
     "tdesign-icons-vue-next": "^0.0.4",
-    "tdesign-publish-cli": "0.0.8",
+    "tdesign-publish-cli": "^0.0.9",
     "tdesign-site-components": "^0.5.1",
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.1",
