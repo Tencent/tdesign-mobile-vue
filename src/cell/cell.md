@@ -1,36 +1,4 @@
----
-title: Cell 单元格
-description: 用于各个类别行的信息展示。
-spline: base
-isComponent: true
-toc: false
----
-
-
-### 单行单元格
-
-::: demo demos/single
-:::
-
-### 多行单元格
-
-::: demo demos/multiple
-:::
-
-### 组合单元格
-
-::: demo demos/group
-:::
-
-### 显示组边框
-
-::: demo demos/border
-:::
-
-### 单元格点击时触发
-
-::: demo demos/click
-:::
+:: BASE_DOC ::
 
 ## API
 ### Cell Props

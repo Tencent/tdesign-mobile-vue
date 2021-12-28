@@ -1,26 +1,4 @@
----
-title: Navbar 导航栏
-description: 用于不同页面之间切换或者跳转，位于内容区的上方，系统状态栏的下方。
-spline: base
-isComponent: true
-toc: false
----
-
-
-### 导航栏 - 基础
-
-::: demo demos/index
-:::
-
-### 导航栏 - 带icon
-
-::: demo demos/index-icon
-:::
-
-### 事件反馈
-
-::: demo demos/event
-:::
+:: BASE_DOC ::
 
 ## API
 

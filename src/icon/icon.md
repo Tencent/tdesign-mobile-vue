@@ -1,11 +1,4 @@
----
-title: Icon 图标
-# description: 
-spline: base
-isComponent: true
-toc: false
----
-
+:: BASE_DOC ::
 
 ### 安装独立 Icon 包
 
