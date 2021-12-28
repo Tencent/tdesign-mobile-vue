@@ -1,39 +1,4 @@
----
-title: Badge 徽标
-description: 用于告知用户，该区域的状态变化或者待处理任务的数量。
-spline: base
-isComponent: true
-toc: false
----
-
-### 小红点
-::: demo demos/dist
-:::
-
-### 数字型
-
-::: demo demos/max-count
-:::
-
-### 文字型
-
-::: demo demos/text
-:::
-
-### 角标
-
-::: demo demos/shape
-:::
-
-### 颜色
-
-::: demo demos/color
-:::
-
-### 偏移用法 
-
-::: demo demos/offset
-:::
+:: BASE_DOC ::
 
 ## API
 
