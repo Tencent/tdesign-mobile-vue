@@ -175,11 +175,6 @@ export default {
           component: () => import('@/search-field/demos/base.vue'),
         },
         {
-          title: 'Cell 单元格',
-          name: 'cell',
-          component: () => import('@/cell/demos/base.vue'),
-        },
-        {
           title: 'Swiper 轮播',
           name: 'swiper',
           component: () => import('@/swiper/demos/base.vue'),
