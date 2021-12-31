@@ -52,6 +52,13 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Avatar 头像',
+          name: 'avatar',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/avatar',
+          component: () => import('@/avatar/avatar.md'),
+        },
+        {
           title: 'Badge 徽标',
           name: 'badge',
           meta: { docType: 'data' },
