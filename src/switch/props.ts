@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-12 01:00:48
+ * updated at 2021-12-31 10:22:30
  * */
 
 import { TdSwitchProps } from './type';
@@ -27,7 +27,7 @@ export default {
   /** 开关值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
-    default: false,
+    default: undefined,
   },
   /** 开关值，非受控属性 */
   defaultValue: {

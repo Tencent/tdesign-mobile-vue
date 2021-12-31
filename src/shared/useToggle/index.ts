@@ -1,20 +1,19 @@
+import { toggleElem } from 'esm/collapse/util';
 import { isRef, Ref, ref } from 'vue';
 
-export type ToggleValueType = string | number | boolean | undefined | null;
+export type ToggleValueType = string | number | boolean | undefined;
 
-export function useToggle(
-  values: Array<ToggleValueType> = [false, true],
-  defaultValue?: ToggleValueType | Ref<ToggleValueType>,
-) {
-  let state = ref(defaultValue || values[0]) as Ref<ToggleValueType>;
+export function useToggle<T extends ToggleValueType>(values: Array<T>, defaultValue?: T | Ref<T>) {
+  const innerValues = values || [true, false];
+  let state = ref(defaultValue || innerValues[1]) as Ref<T>;
   if (isRef(defaultValue)) {
     state = defaultValue;
   }
-  const toggle = (value?: ToggleValueType) => {
+  const toggle = (value?: T) => {
     if (value !== undefined) {
       state.value = value;
     } else {
-      state.value = state.value === values[0] ? values[1] : values[0];
+      state.value = state.value === innerValues[1] ? innerValues[0] : innerValues[1];
     }
   };
   return {

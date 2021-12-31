@@ -6,21 +6,17 @@
       <t-cell-group>
         <t-cell title="开关">
           <template #note>
-            <t-switch v-model="checked" @change="onChange"> </t-switch>
+            <t-switch :value="checked" @change="onChange"> </t-switch>
           </template>
         </t-cell>
         <t-cell title="开关">
           <template #note>
-            <t-switch @change="onChange"> </t-switch>
+            <t-switch v-model:value="checked2"> </t-switch>
           </template>
         </t-cell>
         <t-cell title="自定义颜色">
           <template #note>
-            <t-switch
-              :default-value="true"
-              :colors="['rgba(0,0,0,0.26)', 'rgba(0,168,112,1)']"
-              @change="onChange"
-            ></t-switch>
+            <t-switch :default-value="true" :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']"></t-switch>
           </template>
         </t-cell>
         <t-cell title="异步操作">
@@ -44,8 +40,7 @@
         </t-cell>
         <t-cell title="自定义颜色">
           <template #note>
-            <t-switch v-model="checked" :colors="['rgba(0,0,0,0.26)', 'rgba(0,168,112,1)']" label="描述信息">
-            </t-switch>
+            <t-switch checked :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']" label="描述信息" />
           </template>
         </t-cell>
       </t-cell-group>
@@ -83,16 +78,20 @@ import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup() {
     const value = ref(true);
-    const disabledValue = ref(true);
     const checked = ref(true);
-    function onChange($event: string | number | boolean) {
-      console.log(`change to ${$event}`);
+    const checked2 = ref(true);
+    function onChange(value: any) {
+      console.log(`change to ${value}`);
+    }
+    function onChange2(value: any) {
+      checked2.value = value;
     }
     return {
       value,
-      disabledValue,
       checked,
+      checked2,
       onChange,
+      onChange2,
     };
   },
 });

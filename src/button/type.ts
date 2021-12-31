@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-09-03 18:49:44
+ * updated at 2021-12-31 11:49:32
  * */
 
 import { TNode, SizeEnum } from '../common';
@@ -48,6 +48,7 @@ export interface TdButtonProps {
   size: SizeEnum;
   /**
    * 组件风格，依次为品牌色、危险色
+   * @default default
    */
   theme: 'default' | 'primary' | 'danger';
   /**
@@ -55,4 +56,8 @@ export interface TdButtonProps {
    * @default base
    */
   variant: 'base' | 'outline' | 'text';
+  /**
+   * 点击时触发
+   */
+  onClick: (e: MouseEvent) => void;
 }

@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-29 01:28:22
+ * updated at 2021-12-29 23:45:12
  * */
 
 import { TdBadgeProps } from './type';
@@ -21,6 +21,7 @@ export default {
   /** 徽标右上角内容。可以是数字，也可以是文字。如：'new'/3/99+ */
   count: {
     type: [String, Number, Function] as PropType<TdBadgeProps['count']>,
+    default: 0,
   },
   /** 是否为红点 */
   dot: Boolean,
@@ -41,7 +42,7 @@ export default {
       return ['circle', 'round', 'ribbon'].includes(val);
     },
   },
-  /** 当数值为 0 时，是否展示徽标数字 */
+  /** 当数值为 0 时，是否展示徽标 */
   showZero: Boolean,
   /** 尺寸 */
   size: {
