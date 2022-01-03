@@ -28,8 +28,8 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
 
     const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const iconContent = renderTNode(internalInstance, 'icon');
-    const isIconOnly = computed(() => iconContent && !avatarContent);
+    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
+    const isIconOnly = iconContent && !avatarContent;
     const avatarClass = computed(() => [
       `${name}`,
       props.size ? CLASSNAMES.SIZE[props.size] : '',
@@ -55,7 +55,7 @@ export default defineComponent({
         width: sizeValue
       } : {};
     });
-    const isImgExist = computed(() => !props.hideOnLoadFailed);
+    const isImgExist = !props.hideOnLoadFailed || true;
     const handleImgLoadError = (e: Event) => {
       const { onError } = props;
       onError && onError();

@@ -189,6 +189,16 @@ export default {
           name: 'count-down',
           component: () => import('@/count-down/demos/base.vue'),
         },
+        {
+          title: 'Avatar 头像',
+          name: 'avatar',
+          component: () => import('@/avatar/demos/base.vue'),
+        },
+        {
+          title: 'AvatarGroup 按钮组',
+          name: 'avatar-group',
+          component: () => import('@/avatar-group/demos/base.vue'),
+        },
       ],
     },
   },
