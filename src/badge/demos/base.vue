@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <h1 class="title">Tag 标签</h1>
-    <p class="summary">用于标记表示主体属性、类型、状态等，由底部图形和标签文字组成</p>
+    <h1 class="title">Badge 徽标</h1>
+    <p class="summary">用于告知用户，该区域的状态变化或者待处理任务的数量。</p>
     <tdesign-demo-block title="01 类型" summary="徽标主要分红点、数字、文字和角标提醒">
       <div class="badge-demo">
         <div class="badge-item">

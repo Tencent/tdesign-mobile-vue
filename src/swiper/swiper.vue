@@ -108,7 +108,7 @@ export default defineComponent({
     onMounted(() => {
       const _swiperContainer = getContainer();
       state.itemLength = _swiperContainer.children?.length || 0;
-      const itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
+      const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       initSwiper();
       startAutoplay();

@@ -1,7 +1,8 @@
 import { createApp } from 'vue';
-import app from './app.vue';
+import App from './app.vue';
 import router from './router';
 import TDesign from '@/index';
+import CodeSandbox from './code-sandbox/index.vue';
 
 // import tdesign style
 import '@common/style/mobile/_reset.less';
@@ -13,7 +14,8 @@ import 'tdesign-site-components/lib/styles/style.css';
 import 'tdesign-site-components/lib/styles/prism-theme.less';
 import 'tdesign-site-components/lib/styles/prism-theme-dark.less';
 
-createApp(app)
-  .use(TDesign)
-  .use(router)
-  .mount('#app');
+const app = createApp(App);
+
+app.component('CodeSandbox', CodeSandbox);
+
+app.use(TDesign).use(router).mount('#app');
