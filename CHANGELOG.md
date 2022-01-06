@@ -9,11 +9,12 @@ spline: explain
 
 ### Bug Fixes
 
-* 修复Swiper宽度计算问题 cc2d012
+* Swiper: 修复Swiper宽度计算问题 cc2d012
 * typo e25903a
 
 ### Features
 
+* Avatar: 添加Avatar组件
 * 更新BEM规范 7c59f2b,5637f7e
 * 迁移 md & 优化细节 e4c28fa,048a9aa,799fc08
 * 添加 codesandbox 5fea71d, e93e416
