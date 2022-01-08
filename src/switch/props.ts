@@ -25,6 +25,11 @@ export default {
     default: '',
   },
   /** 开关值 */
+  modelValue: {
+    type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
+    default: undefined,
+  },
+  /** 开关值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
     default: undefined,

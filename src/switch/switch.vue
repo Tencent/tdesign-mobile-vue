@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, h, watch } from 'vue';
-import { useToggle, emitEvent, useVModel } from '../shared';
+import { computed, toRefs, defineComponent, h, watch, SetupContext } from 'vue';
+import { useToggle, useControlledAndUnControlled } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
 import ClASSNAMES from '../shared/constants';
@@ -22,9 +22,9 @@ export default defineComponent({
   name,
   props: SwitchProps,
   emits: ['change', 'update:value', 'update:modelValue'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
     const switchValues = props.customValue || [true, false];
-    const innerValue = useVModel(props, context, 'value', 'change');
+    const innerValue = useControlledAndUnControlled(props, context, 'value', 'change');
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
 
     const classes = computed(() => [
@@ -49,6 +49,7 @@ export default defineComponent({
       }
       toggle();
       innerValue.value = state.value;
+      console.log('state', state.value, 'innerValue', innerValue.value);
     }
     return {
       name,

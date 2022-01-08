@@ -6,22 +6,26 @@
       <t-cell-group>
         <t-cell title="开关">
           <template #note>
-            <t-switch :value="checked" @change="onChange"> </t-switch>
+            <t-switch :value="checked"></t-switch>
           </template>
         </t-cell>
         <t-cell title="开关">
           <template #note>
-            <t-switch v-model:value="checked2"> </t-switch>
+            <t-switch :value="checked2" @change="onChange2"> </t-switch>
           </template>
         </t-cell>
         <t-cell title="自定义颜色">
           <template #note>
-            <t-switch :default-value="true" :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']"></t-switch>
+            <t-switch
+              v-model="checked4"
+              :default-value="false"
+              :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']"
+            ></t-switch>
           </template>
         </t-cell>
         <t-cell title="异步操作">
           <template #note>
-            <t-switch v-model="checked" @change="onChange"> </t-switch>
+            <t-switch v-model="checked3"> </t-switch>
           </template>
         </t-cell>
       </t-cell-group>
@@ -40,7 +44,7 @@
         </t-cell>
         <t-cell title="自定义颜色">
           <template #note>
-            <t-switch checked :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']" label="描述信息" />
+            <t-switch :value="true" :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']" label="描述信息" />
           </template>
         </t-cell>
       </t-cell-group>
@@ -80,16 +84,23 @@ export default defineComponent({
     const value = ref(true);
     const checked = ref(true);
     const checked2 = ref(true);
-    function onChange(value: any) {
-      console.log(`change to ${value}`);
+    const checked3 = ref(true);
+    const checked4 = ref(false);
+
+    function onChange(val: any) {
+      console.log(`onChange to ${val}`);
+      checked.value = val;
     }
-    function onChange2(value: any) {
-      checked2.value = value;
+    function onChange2(val: any) {
+      console.log(`onChange2 to ${val}`);
+      checked2.value = val;
     }
     return {
       value,
       checked,
       checked2,
+      checked3,
+      checked4,
       onChange,
       onChange2,
     };
