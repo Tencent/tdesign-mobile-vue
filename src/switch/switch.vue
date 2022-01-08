@@ -8,11 +8,12 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, h } from 'vue';
-import { useToggle, emitEvent } from '../shared';
+import { computed, toRefs, defineComponent, h, watch, SetupContext } from 'vue';
+import { useToggle, useControlledAndUnControlled } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
 import ClASSNAMES from '../shared/constants';
+import { SwitchValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-switch`;
@@ -20,24 +21,23 @@ const name = `${prefix}-switch`;
 export default defineComponent({
   name,
   props: SwitchProps,
-  emits: ['change', 'update:value'],
-  setup(props, context) {
-    const switchValues = props.customValue || [false, true];
-    const { state, toggle } = useToggle(switchValues, props.value);
-
-    const checked = computed(() => state.value === switchValues[1]);
+  emits: ['change', 'update:value', 'update:modelValue'],
+  setup(props, context: SetupContext) {
+    const switchValues = props.customValue || [true, false];
+    const innerValue = useControlledAndUnControlled(props, context, 'value', 'change');
+    const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
 
     const classes = computed(() => [
       `${name}`,
       {
-        [ClASSNAMES.STATUS.checked]: checked.value,
+        [ClASSNAMES.STATUS.checked]: innerValue.value === true,
         [ClASSNAMES.STATUS.disabled]: props.disabled,
       },
     ]);
 
     const backgroundColor = computed(() => {
       if (!props.disabled && props.colors) {
-        return `background-color: ${checked.value === switchValues[1] ? props.colors[1] : props.colors[0]}`;
+        return `background-color: ${innerValue.value === switchValues[0] ? props.colors[0] : props.colors[1]}`;
       }
       return ``;
     });
@@ -45,11 +45,11 @@ export default defineComponent({
     function handleToggle(event: Event) {
       event.preventDefault();
       if (props.disabled) {
-        return false;
+        return;
       }
       toggle();
-      context.emit('update:value', state.value);
-      emitEvent(props, context, 'change', state.value);
+      innerValue.value = state.value;
+      console.log('state', state.value, 'innerValue', innerValue.value);
     }
     return {
       name,

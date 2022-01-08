@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-21 00:07:08
+ * updated at 2021-12-29 23:49:33
  * */
 
 import { TNode } from '../common';
@@ -125,12 +125,6 @@ export interface TdCheckboxGroupProps {
 
 export type CheckboxOption = string | number | CheckboxOptionObj;
 
-export interface CheckboxOptionObj {
-  label?: string | TNode;
-  value?: string | number;
-  disabled?: boolean;
-  name?: string;
-  checkAll?: true;
-}
+export interface CheckboxOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean; name?: string; checkAll?: true };
 
 export type CheckboxGroupValue = Array<string | number>;

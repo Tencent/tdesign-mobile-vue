@@ -2,9 +2,9 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-// import camelCase from 'camelcase';
+import camelCase from 'camelcase';
 
-// import testCoverage from '../test-coverage';
+import testCoverage from '../test-coverage';
 
 const DEAULT_TABS = [
   { tab: 'demo', name: '示例' },
@@ -16,10 +16,10 @@ export default function mdToVue(options) {
   const mdSegment = customRender(options);
   const { demoCodesDefsStr, demoCodeInstallStr } = options;
 
-  // let coverage = '';
-  // if (mdSegment.isComponent) {
-  //   coverage = testCoverage[camelCase(mdSegment.componentName)] || '0%';
-  // }
+  let coverage = '';
+  if (mdSegment.isComponent) {
+    coverage = testCoverage[camelCase(mdSegment.componentName)] || '0%';
+  }
 
   const sfc = `
     <template>
@@ -34,6 +34,7 @@ export default function mdToVue(options) {
             spline="${mdSegment.spline}"
             component-name="${mdSegment.isComponent ? mdSegment.componentName : ''}"
           >
+          ${mdSegment.isComponent ? `<td-doc-badge slot="badge" label="coverage" message="${coverage}" />` : ''}
           </td-doc-header>` : ''
         }
         ${

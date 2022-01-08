@@ -7,7 +7,7 @@
         <t-cell-group>
           <t-cell title="单选">
             <template #leftIcon>
-              <t-radio name="radio1" value="1" :on-change="onChangeFn" @change="onChangeFn"></t-radio>
+              <t-radio name="radio1" value="1" :on-change="onChangeFn"></t-radio>
             </template>
           </t-cell>
           <t-cell title="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选">
@@ -32,7 +32,7 @@
       <t-cell-group>
         <t-cell>
           <template #rightIcon>
-            <t-radio v-model="radio2" value="1"></t-radio>
+            <t-radio :checked="radio2" value="1" @change="onChangeFn"></t-radio>
           </template>
           <template #title>
             <span>单选</span>
@@ -287,6 +287,7 @@ export default defineComponent({
 
     const onChangeFn = (checked: boolean, context: { e: Event }) => {
       console.log('checked', checked);
+      radio2.value = checked;
     };
 
     const TiconCheckRectangleFilled = h(CheckRectangleFilledIcon);

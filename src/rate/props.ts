@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-24 14:31:45
+ * updated at 2021-12-31 11:51:01
  * */
 
 import { TdRateProps } from './type';
@@ -50,6 +50,4 @@ export default {
   },
   /** 评分数改变时触发 */
   onChange: Function as PropType<TdRateProps['onChange']>,
-
-  modelValue: Number,
 };

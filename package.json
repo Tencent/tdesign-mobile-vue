@@ -39,6 +39,7 @@
     "lint:fix-eslint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore --fix",
     "lint:fix-prettier": "prettier ./ --ignore-path .gitignore --ignore-path .eslintignore --write './*.{vue,ts,tsx}' --ignore-unknown",
     "lint:vue": "vue-tsc --noEmit",
+    "update:coverage-badge": "node scripts/test/generate-coverage.js",
     "changelog": "publish-cli changelog",
     "robot": "publish-cli robot-msg",
     "commit": "git-cz"
@@ -77,8 +78,7 @@
   "dependencies": {
     "@babel/runtime": "^7.16.5",
     "@types/lodash": "^4.14.178",
-    "lodash": "^4.17.21",
-    "tdesign-icons-vue-next": "^0.0.4"
+    "lodash": "^4.17.21"
   },
   "peerDependencies": {
     "vue": "^3.2.4"
@@ -123,6 +123,7 @@
     "cypress": "^9.1.1",
     "cz-conventional-changelog": "3.3.0",
     "debug": "^4.3.1",
+    "dom-parser": "^0.1.6",
     "esbuild": "^0.14.3",
     "eslint": "^8.4.0",
     "eslint-config-airbnb-base": "^15.0.0",
