@@ -108,9 +108,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-
 import config from '@/config';
-import Dialog from '../index';
 
 const { prefix } = config;
 const name = `${prefix}-demo--dialog`;

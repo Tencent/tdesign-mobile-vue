@@ -51,7 +51,7 @@ import { ref, defineComponent } from 'vue';
 import config from '@/config';
 
 const { prefix } = config;
-const name = `${prefix}-demo--dialog`;
+const name = `${prefix}-demo-dialog-input`;
 
 export default defineComponent({
   setup() {

@@ -16,11 +16,7 @@
         </t-cell>
         <t-cell title="自定义颜色">
           <template #note>
-            <t-switch
-              v-model="checked4"
-              :default-value="false"
-              :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']"
-            ></t-switch>
+            <t-switch :default-value="true" :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']"></t-switch>
           </template>
         </t-cell>
         <t-cell title="异步操作">
@@ -83,7 +79,7 @@ export default defineComponent({
   setup() {
     const value = ref(true);
     const checked = ref(true);
-    const checked2 = ref(true);
+    const checked2 = ref(false);
     const checked3 = ref(true);
     const checked4 = ref(false);
 
