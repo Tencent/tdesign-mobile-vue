@@ -41,7 +41,7 @@ export default {
         {
           title: 'Icon 图标',
           name: 'icon',
-          meta: { docType: 'base' },
+          meta: { docType: 'explain' },
           path: '/vue-mobile/components/icon',
           component: () => import('@/icon/icon.md'),
         }

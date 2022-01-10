@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { computed, toRefs, defineComponent, h, watch, SetupContext } from 'vue';
-import { useToggle, useControlledAndUnControlled } from '../shared';
+import { useToggle, useDefault } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
 import ClASSNAMES from '../shared/constants';
@@ -24,7 +24,7 @@ export default defineComponent({
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const switchValues = props.customValue || [true, false];
-    const innerValue = useControlledAndUnControlled(props, context, 'value', 'change');
+    const innerValue = useDefault(props, context, 'value', 'change');
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
 
     const classes = computed(() => [
