@@ -1,7 +1,7 @@
 <template>
   <div :class="avatarClass" :style="customAvatarSize">
-    <image :style="customImageSize" :src="image" :alt="alt" @error="handleImgLoadError" v-if="image && isImgExist"></image>
-    <div v-else-if="isIconOnly">
+    <image :src="image" :alt="alt" @error="handleImgLoadError" :style="customImageSize" v-if="image && !hideOnLoadFailed"></image>
+    <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
       <t-node :content="iconContent"></t-node>
     </div>
     <span v-else>
@@ -29,14 +29,12 @@ export default defineComponent({
 
     const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
-    const isIconOnly = iconContent && !avatarContent;
     const avatarClass = computed(() => [
       `${name}`,
       props.size ? CLASSNAMES.SIZE[props.size] : '',
       {
         [`${name}--circle`]: props.shape === 'circle',
-        [`${name}--round`]: props.shape === 'round',
-        [`${name}__icon`]: !!isIconOnly,
+        [`${name}--round`]: props.shape === 'round'
       },
     ]);
     
@@ -55,7 +53,6 @@ export default defineComponent({
         width: sizeValue
       } : {};
     });
-    const isImgExist = !props.hideOnLoadFailed || true;
     const handleImgLoadError = (e: Event) => {
       const { onError } = props;
       onError && onError();
@@ -66,11 +63,10 @@ export default defineComponent({
       name,
       ...toRefs(props),
       avatarContent,
-      isIconOnly,
+      iconContent,
       avatarClass,
       customAvatarSize,
       customImageSize,
-      isImgExist,
       handleImgLoadError
     };
   },

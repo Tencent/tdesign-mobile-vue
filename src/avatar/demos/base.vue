@@ -5,10 +5,14 @@
     <tdesign-demo-block title="01 头像类型" summary="头像样式可为默认头像、微信头像圆形、方形、自定义文字">
       <div class="avatar-demo">
         <t-avatar image="https://tdesign.gtimg.com/site/avatar.jpg" alt="示例图片" :hideOnLoadFailed="false"></t-avatar>
-        <t-avatar :icon="userIconFunc"></t-avatar>
-        <t-avatar>A</t-avatar>
-        <t-avatar shape="round">A</t-avatar>
-        <t-avatar>A</t-avatar>
+        <t-avatar>
+          <template #icon>
+            <user-icon/>
+          </template>
+        </t-avatar>
+        <t-avatar>U</t-avatar>
+        <t-avatar shape="round">U</t-avatar>
+        <t-avatar>U</t-avatar>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 特殊类型" summary="纯展示 从上往下">
@@ -47,13 +51,7 @@ import { defineComponent, h } from 'vue';
 import { UserIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
-    components: { UserIcon },
-    setup() {
-        const userIconFunc = () => h(UserIcon);
-        return {
-            userIconFunc
-        };
-    }
+    components: { UserIcon }
 });
 </script>
 
