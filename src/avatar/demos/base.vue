@@ -10,37 +10,73 @@
             <user-icon/>
           </template>
         </t-avatar>
-        <t-avatar>U</t-avatar>
-        <t-avatar shape="round">U</t-avatar>
-        <t-avatar>U</t-avatar>
+        <t-avatar>A</t-avatar>
+        <t-avatar shape="round">A</t-avatar>
+        <t-avatar>A</t-avatar>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 特殊类型" summary="纯展示 从上往下">
-      <div class="avatar-demo">
-        <t-avatar shape="circle">U</t-avatar>
-        <t-avatar shape="round">U</t-avatar>
+      <div class="avatar-group-demo">
+        <t-avatar-group cascading="right-up" max="3">
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+        </t-avatar-group>
+      </div>
+      <div class="avatar-group-demo">
+        <t-avatar-group cascading="right-up" max="3" collapseAvatar="...">
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+        </t-avatar-group>
+      </div>
+      <div class="avatar-group-demo">
+        <t-avatar-group cascading="right-up" max="3" collapseAvatar="more">
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+        </t-avatar-group>
+      </div>
+      <div class="avatar-group-demo">
+        <t-avatar-group cascading="left-up" max="4" collapseAvatar="more">
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+        </t-avatar-group>
+      </div>
+      <div class="avatar-group-demo">
+        <t-avatar-group cascading="left-up" max="5" collapseAvatar="...">
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+        </t-avatar-group>
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 规格" summary="头像大小尺寸及消息提醒">
+    <tdesign-demo-block title="03 规格" summary="头像大小尺寸">
       <div class="avatar-demo" style="margin-top:10px;">
-        <t-avatar shape="circle" size='large'>U</t-avatar>
-        <t-avatar shape="circle" size='medium'>U</t-avatar>
-        <t-avatar shape="circle" size='small'>U</t-avatar>
+        <t-avatar shape="circle" size='large'>A</t-avatar>
+        <t-avatar shape="circle" size='medium'>A</t-avatar>
+        <t-avatar shape="circle" size='small'>A</t-avatar>
       </div>
       <div class="avatar-demo" style="margin-top:10px;">
-        <t-avatar shape="circle" size='large'>U</t-avatar>
-        <t-avatar shape="circle" size='medium'>U</t-avatar>
-        <t-avatar shape="circle" size='small'>U</t-avatar>
+        <t-avatar shape="circle" size='large'>A</t-avatar>
+        <t-avatar shape="circle" size='medium'>A</t-avatar>
+        <t-avatar shape="circle" size='small'>A</t-avatar>
       </div>
       <div class="avatar-demo" style="margin-top:10px;">
-        <t-avatar shape="round" size='large'>U</t-avatar>
-        <t-avatar shape="round" size='medium'>U</t-avatar>
-        <t-avatar shape="round" size='small'>U</t-avatar>
+        <t-avatar shape="round" size='large'>A</t-avatar>
+        <t-avatar shape="round" size='medium'>A</t-avatar>
+        <t-avatar shape="round" size='small'>A</t-avatar>
       </div>
       <div class="avatar-demo" style="margin-top:10px;">
-        <t-avatar shape="circle" size='64px'>A</t-avatar>
-        <t-avatar shape="circle" size='48px'>A</t-avatar>
-        <t-avatar shape="circle" size='32px'>A</t-avatar>
+        <t-avatar shape="circle" size='large'>A</t-avatar>
+        <t-avatar shape="circle" size='medium'>A</t-avatar>
+        <t-avatar shape="circle" size='small'>A</t-avatar>
       </div>
     </tdesign-demo-block>
   </div>
@@ -61,9 +97,8 @@ export default defineComponent({
     .t-avatar {
       margin-right: 20px;
     }
-    .avatar-desc {
-      text-align: center;
-      font-size: 12px;
-    }
+  }
+  .avatar-group-demo{
+    margin-left: 10px;
   }
 </style>

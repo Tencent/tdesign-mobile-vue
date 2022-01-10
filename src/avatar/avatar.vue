@@ -1,6 +1,6 @@
 <template>
   <div :class="avatarClass" :style="customAvatarSize">
-    <image :src="image" :alt="alt" @error="handleImgLoadError" :style="customImageSize" v-if="image && !hideOnLoadFailed"></image>
+    <img :src="image" :alt="alt" @error="handleImgLoadError" :style="customImageSize" v-if="image && !hideOnLoadFailed"/>
     <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
       <t-node :content="iconContent"></t-node>
     </div>

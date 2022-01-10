@@ -194,11 +194,6 @@ export default {
           name: 'avatar',
           component: () => import('@/avatar/demos/base.vue'),
         },
-        {
-          title: 'AvatarGroup 按钮组',
-          name: 'avatar-group',
-          component: () => import('@/avatar-group/demos/base.vue'),
-        },
       ],
     },
   },
