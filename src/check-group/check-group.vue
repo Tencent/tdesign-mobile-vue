@@ -3,7 +3,7 @@
     <slot v-if="!(optionObjArr && optionObjArr.length)"></slot>
     <span v-else>
       <checkbox
-        v-for="(item, idx) in optionObjArr"
+        v-for="(item, idx) in groupOptions"
         :key="idx"
         :name="item.name"
         :label="item.label"
@@ -19,7 +19,7 @@ import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
-import { CheckboxOptionObj } from '../checkbox/type';
+import { CheckboxOption } from '../checkbox/type';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
@@ -39,7 +39,15 @@ export default defineComponent({
     const children = ref({});
     const checkedValues = computed(() => props.value || []);
     // eslint-disable-next-line vue/no-setup-props-destructure
-    const optionObjArr: Array<CheckboxOptionObj> = props.options;
+    const groupOptions = computed(() => {
+      return props.options?.map((option: CheckboxOption) => {
+        let opt = option as CheckboxOption;
+        if (typeof option === 'string' || typeof option === 'number') {
+          opt = { value: option, label: option.toString() };
+        }
+        return opt;
+      });
+    });
     /**
      * @description: 为checkbox注册
      * @param {object}
@@ -137,7 +145,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
-      optionObjArr,
+      groupOptions,
     };
   },
 });
