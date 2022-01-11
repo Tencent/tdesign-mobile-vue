@@ -18,26 +18,26 @@
     <tdesign-demo-block title="02 特殊类型" summary="纯展示 从上往下">
       <div class="avatar-group-demo">
         <t-avatar-group cascading="right-up" :max="3">
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='small' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='small' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='small' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='small' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
         <t-avatar-group cascading="right-up" :max="3" collapseAvatar="...">
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='medium' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='medium' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='medium' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='medium' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
         <t-avatar-group cascading="right-up" :max="3" collapseAvatar="more">
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
-          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='large' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='large' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='large' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" size='large' image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">

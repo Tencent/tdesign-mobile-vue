@@ -50,12 +50,15 @@ export default defineComponent({
       childrenShow = children;
     }
 
+    const size = childrenShow[0].props.size || 'medium';
+
     const avatarItems = () => {
       return childrenShow;
     };
 
     return { 
       classes,
+      size,
       icon,
       isShowEllipsisContent,
       ellipsisContent,
