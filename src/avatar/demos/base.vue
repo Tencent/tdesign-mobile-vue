@@ -5,14 +5,14 @@
     <tdesign-demo-block title="01 头像类型" summary="头像样式可为默认头像、微信头像圆形、方形、自定义文字">
       <div class="avatar-demo">
         <t-avatar image="https://tdesign.gtimg.com/site/avatar.jpg" alt="示例图片" :hideOnLoadFailed="false"></t-avatar>
+        <t-avatar :icon="userIcon"></t-avatar>
         <t-avatar>
           <template #icon>
-            <user-icon/>
+            <t-user-icon/>
           </template>
         </t-avatar>
         <t-avatar>A</t-avatar>
         <t-avatar shape="round">A</t-avatar>
-        <t-avatar>A</t-avatar>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 特殊类型" summary="纯展示 从上往下">
@@ -57,6 +57,14 @@
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
+        <t-avatar-group cascading="left-up" :max="2" :collapseAvatar="userIcon">
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+        </t-avatar-group>
+      </div>
+      <div class="avatar-group-demo">
         <t-avatar-group cascading="left-up" :max="4" collapseAvatar="...">
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
@@ -92,10 +100,14 @@
 
 <script lang="ts">
 import { defineComponent, h } from 'vue';
-import { UserIcon } from 'tdesign-icons-vue-next';
+import { UserIcon as TUserIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
-    components: { UserIcon }
+    components: { TUserIcon },
+    setup() {
+      const userIcon = () => h(TUserIcon);
+      return { userIcon };
+    }
 });
 </script>
 

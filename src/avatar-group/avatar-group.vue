@@ -2,7 +2,7 @@
   <div :class="classes">
     <component :is="avatarItems"/>
     <Avatar :size="size" :icon="icon" v-if="isShowEllipsisContent">
-      {{ellipsisContent}}
+      {{ ellipsisContent }}
     </Avatar>
   </div>
 </template>
@@ -23,7 +23,8 @@ export default defineComponent({
     Avatar
   },
   props: AvatarGroupProps,
-  setup(props, { slots }) {
+  setup(props, context) {
+    const { slots } = context
     const classes = computed(() => [
       `${name}`, 
       {
@@ -33,19 +34,20 @@ export default defineComponent({
     ]);
 
     const internalInstance = getCurrentInstance();
-    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
-    const icon = iconContent || null;
+    const collapseAvatar = computed(() => renderTNode(internalInstance, 'collapseAvatar'));
+    const isIcon = !!(props.collapseAvatar && typeof(props.collapseAvatar) === 'function');
+    const icon = collapseAvatar;
 
     let children: any[] = slots.default ? slots.default() : [];
     let childrenShow: any[] = [];
     const max = props.max || 0;
     let isShowEllipsisContent = false;
-    let ellipsisContent: any = icon;
+    let ellipsisContent: any = null;
 
     if(max && max < children.length) {
       childrenShow = children.slice(0, max);
       isShowEllipsisContent = true;
-      ellipsisContent = props.collapseAvatar ? props.collapseAvatar : `+${children.length - max}`;
+      ellipsisContent = !isIcon ? (props.collapseAvatar || `+${children.length - max}`) : null;
     } else {
       childrenShow = children;
     }
