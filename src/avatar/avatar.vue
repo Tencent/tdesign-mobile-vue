@@ -7,6 +7,18 @@
     <span v-else>
       <t-node :content="avatarContent"></t-node>
     </span>
+    <div :class="`${name}__badge`">
+      <t-badge
+        v-if="badgeProps && (badgeProps.dot || badgeProps.count)"
+        :count="badgeProps.count"
+        :max-count="badgeProps.maxCount"
+        :dot="badgeProps.dot"
+        :content="badgeProps.content"
+        :size="badgeProps.size"
+        :offset="badgeProps.offset"
+      >
+      </t-badge>
+    </div>
   </div>
 </template>
 
