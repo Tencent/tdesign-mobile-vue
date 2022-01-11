@@ -41,7 +41,7 @@
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="4" collapseAvatar="more">
+        <t-avatar-group cascading="left-up" :max="2">
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
@@ -49,7 +49,15 @@
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="5" collapseAvatar="...">
+        <t-avatar-group cascading="left-up" :max="2" collapseAvatar="...">
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+          <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
+        </t-avatar-group>
+      </div>
+      <div class="avatar-group-demo">
+        <t-avatar-group cascading="left-up" :max="4" collapseAvatar="...">
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>
           <t-avatar shape="circle" image="https://tdesign.gtimg.com/site/avatar.jpg">A</t-avatar>

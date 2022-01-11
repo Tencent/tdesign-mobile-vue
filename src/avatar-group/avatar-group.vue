@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <slot></slot>
+    <component :is="avatarItems"/>
     <Avatar :size="size" :icon="icon" v-if="isShowEllipsisContent">
       {{ellipsisContent}}
     </Avatar>
@@ -23,7 +23,7 @@ export default defineComponent({
     Avatar
   },
   props: AvatarGroupProps,
-  setup(props, { emit, slots }) {
+  setup(props, { slots }) {
     const classes = computed(() => [
       `${name}`, 
       {
@@ -37,23 +37,29 @@ export default defineComponent({
     const icon = iconContent || null;
 
     let children: any[] = slots.default ? slots.default() : [];
-    const max = props.max || 0;
     let childrenShow: any[] = [];
+    const max = props.max || 0;
     let isShowEllipsisContent = false;
     let ellipsisContent: any = icon;
+
     if(max && max < children.length) {
       childrenShow = children.slice(0, max);
       isShowEllipsisContent = true;
       ellipsisContent = props.collapseAvatar ? props.collapseAvatar : `+${children.length - max}`;
+    } else {
+      childrenShow = children;
     }
-    children = childrenShow;
 
+    const avatarItems = () => {
+      return childrenShow;
+    };
 
     return { 
       classes,
       icon,
       isShowEllipsisContent,
       ellipsisContent,
+      avatarItems
     };
   },
 });
