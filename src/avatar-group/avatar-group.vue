@@ -23,8 +23,7 @@ export default defineComponent({
     Avatar
   },
   props: AvatarGroupProps,
-  setup(props, context) {
-    const { slots } = context
+  setup(props, { slots }) {
     const classes = computed(() => [
       `${name}`, 
       {
