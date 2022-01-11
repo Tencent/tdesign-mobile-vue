@@ -334,8 +334,9 @@ export default defineComponent({
       } else if (layout === 'columns') {
         if (!props.multiple) {
           const list = props.options as TdDropdownItemOption[];
-          const firstChild = list[0] || {};
-          radioSelect.value = (val ?? firstChild.value) as TdDropdownItemOptionValueType;
+          const firstChild = list?.[0];
+          const newValue = val ?? firstChild?.value ?? null;
+          radioSelect.value = newValue as TdDropdownItemOptionValueType;
         } else if (props.multiple) {
           if (props.optionsLayout === 'columns') {
             checkSelect.value = (val ?? []) as TdDropdownItemOptionValueType[];
