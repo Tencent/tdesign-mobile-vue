@@ -5,7 +5,7 @@
  * updated at 2021-12-13 00:11:13
  * */
 
-import { TdBadgeProps } from '@Badge';
+import { TdBadgeProps } from '../Badge';
 import { TNode } from '../common';
 
 export interface TdAvatarProps {
