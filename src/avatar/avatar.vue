@@ -37,9 +37,10 @@ export default defineComponent({
   name,
   components: { TNode },
   props: AvatarProps,
+  emits: ['error'],
   setup(props, context) {
+    const { size } = toRefs(props);
     const internalInstance = getCurrentInstance();
-
     const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
     const avatarClass = computed(() => [
@@ -50,28 +51,32 @@ export default defineComponent({
         [`${name}--round`]: props.shape === 'round'
       },
     ]);
-    
-    const sizeValue = props.size;
+
+    const sizeValue = size.value;
     const isCustomSize = sizeValue && !CLASSNAMES.SIZE[sizeValue];
     const customAvatarSize = computed(() => {
-      return isCustomSize ? {
-        height: sizeValue,
-        width: sizeValue,
-        'font-size': `${Number.parseInt(sizeValue, 10) / 2}px`,
-      } : {};
+      return isCustomSize
+        ? {
+            height: sizeValue,
+            width: sizeValue,
+            'font-size': `${Number.parseInt(sizeValue, 10) / 2}px`,
+          }
+        : {};
     });
     const customImageSize = computed(() => {
-      return isCustomSize ? {
-        height: sizeValue,
-        width: sizeValue
-      } : {};
+      return isCustomSize
+        ? {
+            height: sizeValue,
+            width: sizeValue,
+          }
+        : {};
     });
     const handleImgLoadError = (e: Event) => {
       const { onError } = props;
       onError && onError();
-      context.emit('error', e)
+      context.emit('error', e);
     };
-    
+
     return {
       name,
       ...toRefs(props),

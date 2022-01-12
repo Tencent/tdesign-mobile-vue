@@ -36,7 +36,11 @@ export default defineComponent({
     const updateItems = () => {
       if (slots.default) {
         const itemName = `${prefix}-dropdown-item`;
-        menuItems.value = slots.default().filter((child: any) => child.type.name.includes(itemName));
+        const children = slots.default();
+        menuItems.value = children.filter((child: any) => {
+          const childTypeName = child?.type?.name;
+          return childTypeName?.includes && childTypeName.includes(itemName);
+        });
       }
     };
     onBeforeMount(updateItems);

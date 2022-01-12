@@ -1,43 +1,4 @@
----
-title: Steps 步骤条
-description: 用于任务步骤展示或任务进度展示。
-spline: base
-isComponent: true
-toc: false
----
-
-### 横向只读步骤条
-
-使用场景：常用于表单页，展示线性流程，且不能随意切回/跳过步骤
-
-::: demo demos/index
-:::
-
-### 横向可操作步骤条
-
-使用场景：常用于表单页，展示线性流程，且步骤支持随意切回/跳过
-
-::: demo demos/click
-:::
-
-### 横向带图标可操作
-
-使用场景：常用于表单页，展示线性流程，且步骤支持随意切回/跳过
-
-::: demo demos/icon
-:::
-
-### 竖向步骤条
-
-### 竖向基础展示
-
-::: demo demos/vertical
-:::
-
-### 竖向自定义内容
-
-::: demo demos/content
-:::
+:: BASE_DOC ::
 
 ## API
 

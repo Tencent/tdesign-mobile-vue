@@ -8,14 +8,14 @@ export default {
           title: '快速开始',
           name: 'getting-started',
           meta: { docType: 'explain' },
-          path: '/vue-mobile/components/getting-started',
+          path: '/vue-mobile/getting-started',
           component: () => import('@/../getting-started.md'),
         },
         {
           title: '更新日志',
           name: 'changelog',
           meta: { docType: 'explain' },
-          path: '/vue-mobile/components/changelog',
+          path: '/vue-mobile/changelog',
           component: () => import('@/../CHANGELOG.md'),
         },
       ],
@@ -41,7 +41,7 @@ export default {
         {
           title: 'Icon 图标',
           name: 'icon',
-          meta: { docType: 'base' },
+          meta: { docType: 'explain' },
           path: '/vue-mobile/components/icon',
           component: () => import('@/icon/icon.md'),
         }

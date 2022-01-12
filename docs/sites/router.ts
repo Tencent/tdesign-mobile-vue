@@ -50,11 +50,28 @@ const routerConfig: RouterOptions = {
   history: createWebHistory('/'),
 };
 
-// 本地开发用hash路由
-if (process.env.NODE_ENV === 'development') {
-  routerConfig.history = createWebHashHistory('/');
+if (process.env.NODE_ENV === 'preview') {
+  routerConfig.history = createWebHashHistory();
 }
 
 const router = createRouter(routerConfig);
+
+router.beforeEach((to, from, next) => {
+
+  // @ts-ignore
+  if (typeof NProgress !== 'undefined') {
+    // @ts-ignore
+    NProgress.start();
+  }
+  next();
+});
+
+router.afterEach(() => {
+  // @ts-ignore
+  if (typeof NProgress !== 'undefined') {
+    // @ts-ignore
+    NProgress.done();
+  }
+});
 
 export default router;
