@@ -1,12 +1,14 @@
 <template>
   <div :class="avatarClass" :style="customAvatarSize">
-    <img :src="image" :alt="alt" @error="handleImgLoadError" :style="customImageSize" v-if="image && !hideOnLoadFailed"/>
-    <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
-      <t-node :content="iconContent"></t-node>
+    <div class="t-avatar__inner">
+      <img :src="image" :alt="alt" @error="handleImgLoadError" :style="customImageSize" v-if="image && !hideOnLoadFailed"/>
+      <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
+        <t-node :content="iconContent"></t-node>
+      </div>
+      <span v-else>
+        <t-node :content="avatarContent"></t-node>
+      </span>
     </div>
-    <span v-else>
-      <t-node :content="avatarContent"></t-node>
-    </span>
     <div :class="`${name}__badge`" v-if="badgeProps && (badgeProps.dot || badgeProps.count)">
       <t-badge
         :count="badgeProps.count"
