@@ -182,7 +182,7 @@ export default {
         {
           title: 'Avatar 头像',
           name: 'avatar',
-          component: () => import('@/avatar/demos/base.vue'),
+          component: () => import('@/avatar/demos/mobile.vue'),
         },
       ],
     },

@@ -1,18 +1,29 @@
 import { computed, ref, SetupContext, watchEffect } from 'vue';
 import { toCamel } from '../util';
 
-// 基于Key键的受控和非受控逻辑
 export function useDefault<T, K extends keyof T, C extends SetupContext>(
   props: T,
   context: C,
   key: K,
   eventName: Parameters<C['emit']>[0],
-  ...arg: any[]
 ) {
-  const defaultModelValue = `modelValue`;
+  const modelValue = `modelValue`;
   const defaultName = `default${toCamel(String(key))}`;
-  const isUsedModelValue = props[defaultModelValue] !== undefined;
-  const innerValue = ref(props[key] || props[defaultModelValue] || props[defaultName]);
+
+  // XXX: warning or error when value is undefined
+  const isUsedModelValue = props[modelValue] !== undefined;
+  const isUsedKey = props[key] !== undefined;
+
+  const innerValue = ref();
+  // XXX: 绑定值为undefined如何解， 要么就明确避免
+
+  if (isUsedKey) {
+    innerValue.value = props[key];
+  } else if (isUsedModelValue) {
+    innerValue.value = props[modelValue];
+  } else {
+    innerValue.value = props[defaultName];
+  }
 
   const toCamelCase = (str: string) =>
     `on${str
@@ -20,42 +31,48 @@ export function useDefault<T, K extends keyof T, C extends SetupContext>(
       .map((char) => toCamel(char))
       .join('')}`;
 
-  const emitEvents = (value: any) => {
+  const emitEvents = (value: T[K], ...arg: any[]) => {
     console.log('trigger emitEvents', value, 'isUsedModelValue', isUsedModelValue);
-    // 接口层都是以value为主的v-model
     const updateKeys = [`update:${key}`];
     if (isUsedModelValue) {
-      // 支持vue3的绑定
-      updateKeys.push(`update:modelValue`, value, ...arg);
+      updateKeys.push(`update:modelValue`);
     }
     updateKeys.forEach((updateKey) => {
-      // 触发v-model相关事件
       context.emit(updateKey, value, ...arg);
     });
-    // onXXXX
     if (typeof props[toCamelCase(eventName)] === 'function') {
-      props[toCamelCase(eventName)](value);
+      props[toCamelCase(eventName)](value, ...arg);
     }
   };
 
   watchEffect(() => {
     if (isUsedModelValue) {
-      innerValue.value = props[defaultModelValue];
+      innerValue.value = props[modelValue];
     }
-    if (props[key] !== undefined) {
+    if (isUsedKey) {
       innerValue.value = props[key];
     }
   });
 
-  return computed<T[K]>({
-    get() {
-      return innerValue.value;
-    },
-    set(value) {
-      if (!(props[key] !== undefined || isUsedModelValue)) {
-        innerValue.value = value;
-      }
-      emitEvents(value);
-    },
-  });
+  const setInnerValue = (value: T[K], ...arg: any[]) => {
+    if (!isUsedKey && !isUsedModelValue) {
+      innerValue.value = value;
+    }
+    emitEvents(value, arg);
+  };
+
+  return {
+    innerValue: computed<T[K]>({
+      get() {
+        return innerValue.value;
+      },
+      set(value) {
+        if (!isUsedKey && !isUsedModelValue) {
+          innerValue.value = value;
+        }
+        emitEvents(value);
+      },
+    }),
+    setInnerValue,
+  };
 }

@@ -47,7 +47,7 @@ export default defineComponent({
   emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
-    const actualVal = computed(() => props.modelValue || props.value) as ComputedRef<number>;
+    const actualVal = computed(() => props.value) as ComputedRef<number>;
     const rateText = computed(() => {
       if (Array.isArray(props.texts) && props.texts.length > 0) {
         return props.texts[actualVal.value - 1];

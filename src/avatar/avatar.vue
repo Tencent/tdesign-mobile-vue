@@ -1,7 +1,13 @@
 <template>
   <div :class="avatarClass" :style="customAvatarSize">
     <div class="t-avatar__inner">
-      <img :src="image" :alt="alt" @error="handleImgLoadError" :style="customImageSize" v-if="image && !hideOnLoadFailed"/>
+      <img
+        v-if="image && !hideOnLoadFailed"
+        :src="image"
+        :alt="alt"
+        :style="customImageSize"
+        @error="handleImgLoadError"
+      />
       <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
         <t-node :content="iconContent"></t-node>
       </div>
@@ -9,7 +15,7 @@
         <t-node :content="avatarContent"></t-node>
       </span>
     </div>
-    <div :class="`${name}__badge`" v-if="badgeProps && (badgeProps.dot || badgeProps.count)">
+    <div v-if="badgeProps && (badgeProps.dot || badgeProps.count)" :class="`${name}__badge`">
       <t-badge
         :count="badgeProps.count"
         :max-count="badgeProps.maxCount"
@@ -48,7 +54,7 @@ export default defineComponent({
       props.size ? CLASSNAMES.SIZE[props.size] : '',
       {
         [`${name}--circle`]: props.shape === 'circle',
-        [`${name}--round`]: props.shape === 'round'
+        [`${name}--round`]: props.shape === 'round',
       },
     ]);
 
@@ -85,7 +91,7 @@ export default defineComponent({
       avatarClass,
       customAvatarSize,
       customImageSize,
-      handleImgLoadError
+      handleImgLoadError,
     };
   },
 });
