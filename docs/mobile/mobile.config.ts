@@ -179,6 +179,11 @@ export default {
           name: 'count-down',
           component: () => import('@/count-down/demos/mobile.vue'),
         },
+        {
+          title: 'Avatar 头像',
+          name: 'avatar',
+          component: () => import('@/avatar/demos/base.vue'),
+        },
       ],
     },
   },
