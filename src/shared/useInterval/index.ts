@@ -1,4 +1,4 @@
-import { isRef, Ref, ref } from 'vue';
+import { ref } from 'vue';
 import { NOOP } from '../functions';
 
 export function useInterval(callback = NOOP, interval = 1000) {

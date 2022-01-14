@@ -24,7 +24,7 @@ export default defineComponent({
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const switchValues = props.customValue || [true, false];
-    const innerValue = useDefault(props, context, 'value', 'change');
+    const { innerValue } = useDefault(props, context, 'value', 'change');
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
 
     const classes = computed(() => [

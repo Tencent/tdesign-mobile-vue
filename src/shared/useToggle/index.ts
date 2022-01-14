@@ -1,4 +1,3 @@
-import { toggleElem } from 'esm/collapse/util';
 import { isRef, Ref, ref } from 'vue';
 
 export type ToggleValueType = string | number | boolean | undefined;

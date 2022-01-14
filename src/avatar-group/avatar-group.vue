@@ -1,9 +1,9 @@
 <template>
   <div :class="classes">
-    <component :is="avatarItems"/>
-    <Avatar :size="size" :icon="icon" v-if="isShowEllipsisContent">
+    <component :is="avatarItems" />
+    <avatar v-if="isShowEllipsisContent" :size="size" :icon="icon">
       {{ ellipsisContent }}
-    </Avatar>
+    </avatar>
   </div>
 </template>
 
@@ -20,33 +20,33 @@ const name = `${prefix}-avatar-group`;
 export default defineComponent({
   name,
   components: {
-    Avatar
+    Avatar,
   },
   props: AvatarGroupProps,
   setup(props, { slots }) {
     const classes = computed(() => [
-      `${name}`, 
+      `${name}`,
       {
         [`${prefix}-avatar--offset-right`]: props.cascading === 'right-up',
         [`${prefix}-avatar--offset-left`]: props.cascading === 'left-up',
-      }
+      },
     ]);
 
     const internalInstance = getCurrentInstance();
     const collapseAvatar = computed(() => renderTNode(internalInstance, 'collapseAvatar'));
-    const isIcon = !!(props.collapseAvatar && typeof(props.collapseAvatar) === 'function');
+    const isIcon = !!(props.collapseAvatar && typeof props.collapseAvatar === 'function');
     const icon = collapseAvatar;
 
-    let children: any[] = slots.default ? slots.default() : [];
+    const children: any[] = slots.default ? slots.default() : [];
     let childrenShow: any[] = [];
     const max = props.max || 0;
     let isShowEllipsisContent = false;
     let ellipsisContent: any = null;
 
-    if(max && max < children.length) {
+    if (max && max < children.length) {
       childrenShow = children.slice(0, max);
       isShowEllipsisContent = true;
-      ellipsisContent = !isIcon ? (props.collapseAvatar || `+${children.length - max}`) : null;
+      ellipsisContent = !isIcon ? props.collapseAvatar || `+${children.length - max}` : null;
     } else {
       childrenShow = children;
     }
@@ -57,13 +57,13 @@ export default defineComponent({
       return childrenShow;
     };
 
-    return { 
+    return {
       classes,
       size,
       icon,
       isShowEllipsisContent,
       ellipsisContent,
-      avatarItems
+      avatarItems,
     };
   },
 });
