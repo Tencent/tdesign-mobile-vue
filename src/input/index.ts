@@ -3,13 +3,5 @@ import Input from './input.vue';
 
 import './style';
 
-const _Input: WithInstallType<typeof Input> = withInstall(
-  mapProps([
-    {
-      name: 'value',
-      event: 'change',
-      alias: ['modelValue'],
-    },
-  ])(Input),
-);
+const _Input: WithInstallType<typeof Input> = withInstall(Input);
 export default _Input;
