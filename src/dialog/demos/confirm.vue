@@ -3,7 +3,7 @@
     <t-cell-group class="tdesign-demo--dialog">
       <t-cell value-align="left">
         <t-button theme="primary" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
-        <t-button theme="primary" @click="changeDialogVisible(6)"> 带警示操作对话框 </t-button>
+        <t-button theme="primary" @click="eventDialog()"> 带警示操作对话框 </t-button>
         <t-dialog
           v-model="isShowDialog5"
           type="confirm"
@@ -39,17 +39,8 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 
-import config from '@/config';
-
-const { prefix } = config;
-const name = `${prefix}-demo--dialog`;
-
 export default defineComponent({
-  setup() {
-    return {
-      name: ref(name),
-    };
-  },
+  setup() {},
   data() {
     return {
       title: '对话框标题',
@@ -83,6 +74,9 @@ export default defineComponent({
           break;
         }
       }
+    },
+    eventDialog() {
+      this.$dialog.alert('event dialog');
     },
     onConfirm(e: string) {
       console.log('dialog:confirm', e);
