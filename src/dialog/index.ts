@@ -112,11 +112,11 @@ Dialog.install = (app: App, name = '') => {
 
 type DialogApi = {
   /** 通用对话框 */
-  show: (options: TdDialogProps | string) => void;
+  show: (options: Partial<TdDialogProps> | string) => void;
   /** 基础对话框 */
-  alert: (options: TdDialogProps | string) => void;
+  alert: (options: Partial<TdDialogProps> | string) => void;
   /** 选择对话框 */
-  confirm: (options: TdDialogProps | string) => void;
+  confirm: (options: Partial<TdDialogProps> | string) => void;
 };
 
 export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;
