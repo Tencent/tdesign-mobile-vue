@@ -40,7 +40,7 @@ const CheckTag = defineComponent({
 
     const { size, shape, disabled, closable } = toRefs(props);
 
-    const switchValues = [false, true];
+    const switchValues = [true, false];
     const { state, toggle } = useToggle(switchValues, props.checked || props.defaultChecked);
     const checked = computed(() => state.value === switchValues[1]);
 

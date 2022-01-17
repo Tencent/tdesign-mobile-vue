@@ -1,6 +1,6 @@
 <template>
   <div :class="`${prefix}-checkbox-group`">
-    <slot v-if="!(optionObjArr && optionObjArr.length)"></slot>
+    <slot v-if="!(groupOptions && groupOptions.length)"></slot>
     <span v-else>
       <checkbox
         v-for="(item, idx) in groupOptions"

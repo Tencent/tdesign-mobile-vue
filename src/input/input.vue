@@ -23,7 +23,11 @@
           @focus="handleFocus"
           @blur="handleBlur"
         />
-        <div v-if="clearable && innerValue.length > 0" :class="`${componentName}__wrap--icon`" @click="handleClear">
+        <div
+          v-if="clearable && String(innerValue).length > 0"
+          :class="`${componentName}__wrap--icon`"
+          @click="handleClear"
+        >
           <close-circle-filled-icon />
         </div>
         <div v-if="suffixContent" :class="`${componentName}__wrap--suffix`">
@@ -54,7 +58,7 @@
         @blur="handleBlur"
       />
       <div v-if="maxlength" :class="`${componentName}--count`">
-        {{ `${innerValue.length}/${maxlength}` }}
+        {{ `${String(innerValue).length}/${maxlength}` }}
       </div>
     </div>
   </div>
@@ -113,7 +117,7 @@ export default defineComponent({
     const handleFocus = (e: FocusEvent) => {
       emitEvent(props, context, 'focus', innerValue.value, { e });
     };
-    const handleBlur = (e: MouseEvent) => {
+    const handleBlur = (e: FocusEvent) => {
       emitEvent(props, context, 'blur', innerValue.value, { e });
     };
 
@@ -127,6 +131,7 @@ export default defineComponent({
         inputRef.value.style.height = 'auto';
       }
     });
+
     return {
       componentName,
       ...toRefs(props),
