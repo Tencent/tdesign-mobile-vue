@@ -14,7 +14,7 @@
         <t-node :content="iconContent"></t-node>
       </span>
       <span :class="[`${name}__label-wrap`]">
-        <span v-if="labelContent" :class="titleClasses">
+        <span v-if="labelContent" :class="titleClasses" @click="radioOrgChange">
           <t-node :content="labelContent"></t-node>
         </span>
         <div v-if="radioContent" :class="`${name}__content-inner`" @click="radioContentChange">
