@@ -25,7 +25,14 @@ export default defineComponent({
     let picker: Picker | null = null;
     const el = document.createElement('div');
     const root = ref(el);
-    const curIndex = ref(props.value);
+    let defaultIndex = 0;
+    if (props.value) {
+      defaultIndex =
+        typeof props.value === 'object'
+          ? props.options.findIndex((item: any) => item.value === props.value)
+          : props.options.indexOf(props.value);
+    }
+    const curIndex = ref(defaultIndex);
     const className = computed(() => `${name}`);
     const wrapperClassName = computed(() => [`${name}__wrapper`]);
     const itemClassName = computed(() => [`${name}__item`]);
@@ -39,10 +46,26 @@ export default defineComponent({
       },
     );
 
+    watch(
+      () => props.value,
+      (val) => {
+        nextTick(() => {
+          let defaultIndex = 0;
+          if (val) {
+            defaultIndex =
+              typeof val === 'object'
+                ? props.options.findIndex((item: any) => item.value === val)
+                : props.options.indexOf(val);
+          }
+          if (picker) picker.updateIndex(defaultIndex);
+        });
+      },
+    );
+
     onMounted(() => {
       picker = new Picker({
         el: root.value,
-        defaultIndex: +(props.value || 0),
+        defaultIndex: +(defaultIndex || 0),
         onChange: (index: number) => {
           curIndex.value = index;
           const curItem = props.options[index];
