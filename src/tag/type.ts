@@ -49,7 +49,7 @@ export interface TdTagProps {
    * 影响标签风格（theme）
    * @default dark
    */
-  variant: 'dark' | 'light' | 'plain';
+  variant: 'dark' | 'light' | 'outline' | 'light-outline';
   /**
    * 点击时触发
    */
