@@ -114,6 +114,7 @@ import {
 } from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
+import { emitEvent } from '../shared/emit';
 import TransAniControl from './trans-ani-control';
 import DropdownItemProps from './dropdown-item-props';
 import { TdDropdownMenuProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
@@ -216,7 +217,7 @@ export default defineComponent({
         +duration,
         () => {
           // Now do:
-          context.emit(val ? 'open' : 'close');
+          emitEvent(props, context, val ? 'open' : 'close');
           if (val) {
             state.isShowItems = val;
           }
@@ -231,7 +232,7 @@ export default defineComponent({
           if (!val) {
             state.isShowItems = val;
           }
-          context.emit(val ? 'opened' : 'closed');
+          emitEvent(props, context, val ? 'opened' : 'closed');
         },
       );
     };
@@ -391,18 +392,18 @@ export default defineComponent({
           break;
       }
       values = JSON.parse(JSON.stringify(values));
-      context.emit('update:value', values);
-      context.emit('change', values);
+      emitEvent(props, context, 'update:value', values);
+      emitEvent(props, context, 'change', values);
       collapseMenu();
     };
     // 单选值监控
     watch(radioSelect, (val) => {
-      if (!props.multiple || props.optionsLayout === 'tree') return;
+      if (props.multiple || props.optionsLayout === 'tree') return;
       if (!state.isShowItems) return;
       const value = props.value || [];
       if (value[0] === val) return;
-      context.emit('update:value', val);
-      context.emit('change', val);
+      emitEvent(props, context, 'update:value', val);
+      emitEvent(props, context, 'change', val);
       collapseMenu();
     });
     // 点击遮罩层
