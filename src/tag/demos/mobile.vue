@@ -4,21 +4,21 @@
     <p class="summary">用于标记表示主体属性、类型、状态等，由底部图形和标签文字组成</p>
     <tdesign-demo-block title="01 类型" summary="展示型标签">
       <div class="tag-demo">
-        <t-tag theme="primary">重要</t-tag>
-        <t-tag theme="danger">危险</t-tag>
-        <t-tag theme="warning">警告</t-tag>
-        <t-tag theme="success">成功</t-tag>
-        <t-tag theme="default">信息</t-tag>
+        <t-tag theme="primary">标签</t-tag>
+        <t-tag theme="danger">标签</t-tag>
+        <t-tag theme="warning">标签</t-tag>
+        <t-tag theme="success">标签</t-tag>
+        <t-tag theme="default">标签</t-tag>
       </div>
       <div class="tag-demo">
-        <t-tag theme="primary" variant="dark">深色</t-tag>
-        <t-tag theme="primary" variant="light">浅色</t-tag>
-        <t-tag theme="primary" variant="outline">描边</t-tag>
-        <t-tag theme="primary" variant="light-outline">浅色描边</t-tag>
+        <t-tag theme="primary" variant="dark">标签</t-tag>
+        <t-tag theme="primary" variant="light">标签</t-tag>
+        <t-tag theme="primary" variant="outline">标签</t-tag>
+        <t-tag theme="primary" variant="light-outline">标签</t-tag>
       </div>
       <div class="tag-demo">
-        <t-tag theme="primary" shape="round">圆角标签</t-tag>
-        <t-tag theme="primary" shape="mark">半圆角标签</t-tag>
+        <t-tag theme="primary" shape="round">标签</t-tag>
+        <t-tag theme="primary" shape="mark">标签</t-tag>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="点击型标签">
