@@ -1,15 +1,7 @@
 <template>
-  <div>
-    <div class="tdesign-demo-block">
-      <t-rate v-model="value" clearable show-text allow-half />
-    </div>
-    <div class="tdesign-demo-block">
-      <t-rate v-model="value1" clearable show-text allow-half text-color="#FA0" />
-    </div>
-    <div class="tdesign-demo-block">
-      <t-rate v-model="value2" clearable show-text :texts="texts" />
-    </div>
-  </div>
+  <t-rate v-model="value" clearable show-text allow-half />
+  <t-rate v-model="value1" clearable show-text allow-half text-color="#FA0" />
+  <t-rate v-model="value2" clearable show-text :texts="texts" />
 </template>
 
 <script lang="ts">
