@@ -75,7 +75,7 @@ import {
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { renderContent, TNode, useToggle } from '../shared';
+import { renderContent, renderTNode, TNode, useToggle } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
@@ -187,7 +187,7 @@ export default defineComponent({
     const flagName = name;
     const rootGroup: any = inject('rootGroup', undefined);
     const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
-    const checkboxContent = computed(() => renderContent(internalInstance, 'content', 'content'));
+    const checkboxContent = computed(() => renderTNode(internalInstance, 'content'));
     const TMinusCircleFilledIcon = h(MinusCircleFilledIcon);
     const singleChecked = props.checked || ref(false);
     const checkboxCheckVal = [false, true];

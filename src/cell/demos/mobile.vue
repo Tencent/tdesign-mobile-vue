@@ -33,12 +33,14 @@
             <AppIcon />
           </template>
         </t-cell>
+        <t-cell title="多行带头像" description="一段很长很长的内容文字">
+          <template #leftIcon>
+            <t-avatar shape="circle" image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" />
+          </template>
+        </t-cell>
         <t-cell title="多行带图片" description="一段很长很长的内容文字">
           <template #leftIcon>
-            <img
-              src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
-              style="width: 50px; height: 50px; margin-right: 8px; float: left"
-            />
+            <img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" style="width: 54px; height: 54px" />
           </template>
         </t-cell>
         <t-cell

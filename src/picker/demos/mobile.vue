@@ -2,88 +2,117 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Picker 选择器</h1>
     <p class="summary">用于选择一个地区的省、市、区、街道等，包含树形用于多层级地区选择以及行政区单层选择</p>
+    <!-- 基础选择器 -->
     <tdesign-demo-block title="01 类型" summary="基础选择器">
-      <t-input :value="text.city.join(',')" label="城市" placeholder="选择城市" @click="show.city = true" />
-      <t-input
-        :value="text.yearAndSeason.join(',')"
-        label="年份和季节"
-        placeholder="选择城年份和季节"
-        @click="show.yearAndSeason = true"
-      />
-      <t-input :value="text.date.join(',')" label="日期" placeholder="选择日期" @click="show.date = true" />
+      <t-cells>
+        <t-cell arrow title="城市" :note="text.city.join(',') || '选择城市'" @click="show.city = true"></t-cell>
+        <t-cell
+          arrow
+          title="年份和季节"
+          :note="text.yearAndSeason.join(',') || '选择城年份和季节'"
+          @click="show.yearAndSeason = true"
+        ></t-cell>
+        <t-cell arrow title="日期" :note="text.date.join(',') || '选择日期'" @click="show.date = true"></t-cell>
+      </t-cells>
 
-      <t-popup v-model="show.city" position="bottom">
-        <t-picker v-model="text.city" title="标题" @change="onChange" @confirm="onCityConfirm" @cancel="onCancel">
-          <t-picker-item :options="roleOptions" @change="onColumnChange" />
-        </t-picker>
-      </t-popup>
-      <t-popup v-model="show.yearAndSeason" position="bottom">
-        <t-picker v-model="text.yearAndSeason" @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
-          <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-          <t-picker-item :options="seasonOptions" @change="onColumnChange" />
-        </t-picker>
-      </t-popup>
-
-      <t-popup v-model="show.date" position="bottom">
-        <t-picker v-model="text.date" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
-          <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-          <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
-          <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
-        </t-picker>
-      </t-popup>
+      <div class="props-block">
+        <t-popup v-model="show.city" position="bottom">
+          <t-picker
+            v-model="text.city"
+            :defaultValue="['上海市']"
+            title="标题"
+            @change="onChange"
+            @confirm="onCityConfirm"
+            @cancel="onCancel"
+          >
+            <t-picker-item :options="roleOptions" @change="onColumnChange" />
+          </t-picker>
+        </t-popup>
+        <t-popup v-model="show.yearAndSeason" position="bottom">
+          <t-picker
+            v-model="text.yearAndSeason"
+            @change="onChange"
+            @confirm="onYearAndSeasonConfirm"
+            @cancel="onCancel"
+          >
+            <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+            <t-picker-item :options="seasonOptions" @change="onColumnChange" />
+          </t-picker>
+        </t-popup>
+        <t-popup v-model="show.date" position="bottom">
+          <t-picker v-model="text.date" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
+            <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+            <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
+            <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
+          </t-picker>
+        </t-popup>
+      </div>
     </tdesign-demo-block>
+
+    <!-- 带标题选择器 -->
     <tdesign-demo-block summary="带标题选择器">
-      <t-input
-        :value="text.cityTitle.map((item) => cityObjectOptions.find((citem) => citem.value === item).label).join(',')"
-        label="城市"
-        placeholder="选择城市"
-        @click="show.cityTitle = true"
-      />
-      <t-input
-        :value="text.yearAndSeasonTitle.join(',')"
-        label="年份和季节"
-        placeholder="选择城年份和季节"
-        @click="show.yearAndSeasonTitle = true"
-      />
-      <t-input :value="text.dateTitle.join(',')" label="日期" placeholder="选择日期" @click="show.dateTitle = true" />
-      <t-popup v-model="show.cityTitle" position="bottom">
-        <t-picker
-          v-model="text.cityTitle"
-          title="选择城市"
-          @change="onChange"
-          @confirm="onCityTitleConfirm"
-          @cancel="onCancel"
-        >
-          <t-picker-item :options="cityObjectOptions" @change="onColumnChange" />
-        </t-picker>
-      </t-popup>
+      <t-cells>
+        <t-cell
+          arrow
+          title="城市"
+          :note="
+            text.cityTitle.map((item) => cityObjectOptions.find((citem) => citem.value === item).label).join(',') ||
+            '选择城市'
+          "
+          @click="show.cityTitle = true"
+        ></t-cell>
+        <t-cell
+          arrow
+          title="年份和季节"
+          :note="text.yearAndSeasonTitle.join(',') || '选择城年份和季节'"
+          @click="show.yearAndSeasonTitle = true"
+        ></t-cell>
+        <t-cell
+          arrow
+          title="日期"
+          :note="text.dateTitle.join(',') || '选择日期'"
+          @click="show.dateTitle = true"
+        ></t-cell>
+      </t-cells>
 
-      <t-popup v-model="show.yearAndSeasonTitle" position="bottom">
-        <t-picker
-          v-model="text.yearAndSeasonTitle"
-          title="选择年份和季节"
-          @change="onChange"
-          @confirm="onYearAndSeasonTitleConfirm"
-          @cancel="onCancel"
-        >
-          <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-          <t-picker-item :options="seasonOptions" @change="onColumnChange" />
-        </t-picker>
-      </t-popup>
-
-      <t-popup v-model="show.dateTitle" position="bottom">
-        <t-picker
-          v-model="text.dateTitle"
-          title="选择日期"
-          @change="onChange"
-          @confirm="onDateTitleConfirm"
-          @cancel="onCancel"
-        >
-          <t-picker-item :options="yearOptions" :formatter="(val: any) => `${val}年`" @change="onColumnChange" />
-          <t-picker-item :options="monthOptions" :formatter="(val: any) => `${val}月`" @change="onColumnChange" />
-          <t-picker-item :options="dayOptions" :formatter="(val: any) => `${val}日`" @change="onColumnChange" />
-        </t-picker>
-      </t-popup>
+      <div class="props-block">
+        <t-popup v-model="show.cityTitle" position="bottom">
+          <t-picker
+            v-model="text.cityTitle"
+            title="选择城市"
+            @change="onChange"
+            @confirm="onCityTitleConfirm"
+            @cancel="onCancel"
+          >
+            <t-picker-item :options="cityObjectOptions" @change="onColumnChange" />
+          </t-picker>
+        </t-popup>
+        <t-popup v-model="show.yearAndSeasonTitle" position="bottom">
+          <t-picker
+            v-model="text.yearAndSeasonTitle"
+            title="选择年份和季节"
+            @change="onChange"
+            @confirm="onYearAndSeasonTitleConfirm"
+            @cancel="onCancel"
+          >
+            <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+            <t-picker-item :options="seasonOptions" @change="onColumnChange" />
+          </t-picker>
+        </t-popup>
+        <t-popup v-model="show.dateTitle" position="bottom">
+          <t-picker
+            v-model="text.dateTitle"
+            title="选择日期"
+            @change="onChange"
+            @confirm="onDateTitleConfirm"
+            @cancel="onCancel"
+          >
+            <t-picker-item :options="yearOptions" :formatter="(val: any) => `${val}年`" @change="onColumnChange" />
+            <t-picker-item :options="monthOptions" :formatter="(val: any) => `${val}月`" @change="onColumnChange" />
+            <t-picker-item :options="dayOptions" :formatter="(val: any) => `${val}日`" @change="onColumnChange" />
+          </t-picker>
+        </t-popup>
+      </div>
     </tdesign-demo-block>
   </div>
 </template>

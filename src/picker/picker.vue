@@ -16,7 +16,8 @@
 </template>
 
 <script lang="ts">
-import { computed, mergeProps, defineComponent } from 'vue';
+import { computed, mergeProps, defineComponent, SetupContext } from 'vue';
+import { useDefault } from '../shared';
 import config from '../config';
 import { PickerProps } from './props';
 import { PickerValue } from './type';
@@ -28,7 +29,7 @@ export default defineComponent({
   name,
   props: PickerProps,
   emits: ['change', 'cancel', 'confirm', 'update:modelValue'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
     const className = computed(() => [`${name}`]);
     const groupClassName = computed(() => `${name}-item__group`);
     const maskClassName = computed(() => `${name}__mask`);
@@ -42,16 +43,21 @@ export default defineComponent({
     const cancelButtonText = computed(() => props.cancelBtn || '取消');
 
     const curData: Array<PickerValue> = [];
+    const { innerValue: defaultVal } = useDefault(props, context, 'defaultValue', 'change');
+    const defaultValArr = defaultVal.value as any [];
 
     const pickerColumns = () => {
       let pickerColumnItems = context.slots.default ? context.slots.default() : [];
       pickerColumnItems = pickerColumnItems.map((pickerColumn: any, columnIndex: number) => {
         const newPickerColumn = pickerColumn;
-        const curIndex = newPickerColumn.props['default-index'] || newPickerColumn.props.defaultIndex || 0;
+        const curValue = defaultValArr[columnIndex] || newPickerColumn.props.value || newPickerColumn.props.options[0];
+        console.log({ curValue })
         if (!curData[columnIndex]) {
-          curData[columnIndex] = newPickerColumn.props.options[curIndex];
+          curData[columnIndex] = curValue;
         }
+
         newPickerColumn.props = mergeProps(newPickerColumn.props, {
+          value: curValue,
           onChange(e: any) {
             curData[columnIndex] = e.value;
             const changeData = [...curData];
