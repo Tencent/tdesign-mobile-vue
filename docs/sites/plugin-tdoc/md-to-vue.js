@@ -151,11 +151,7 @@ function customRender({ source, file, md }) {
   };
 
   // md filename
-<<<<<<< HEAD
-  const reg = file.match(/src\/([\w|\-]+)\/([\w|\-]+)\.md/);
-=======
   const reg = file.match(/src\/([\w-]+)\/([\w-]+)\.md/);
->>>>>>> develop
   const componentName = reg && reg[1];
 
   // split md
