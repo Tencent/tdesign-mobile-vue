@@ -11,20 +11,19 @@
           :checked="singleChecked || isChecked"
           @click="checkBoxOrgChange"
         />
-        <!-- <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span> -->
         <t-node
           v-if="(singleChecked || isChecked) && !indeterminate"
           :content="(icon && icon[0]) || defaultCheck"
-          :style="checkedIconStyle"
-          size="20px"
+          :class="checkedIconClass"
+          size="24px"
         ></t-node>
         <t-node
           v-else-if="!(singleChecked || isChecked) && !indeterminate"
           :content="(icon && icon[1]) || defaultUncheck"
-          :style="unCheckedIconStyle"
-          size="20px"
+          :class="unCheckedIconClass"
+          size="24px"
         ></t-node>
-        <t-node v-else-if="indeterminate" :content="TMinusCircleFilledIcon" size="20px"></t-node>
+        <t-node v-else-if="indeterminate" :content="TMinusCircleFilledIcon" size="24px"></t-node>
       </span>
       <!-- 文本区域 -->
       <span
@@ -52,10 +51,10 @@
         <t-node
           v-if="singleChecked || isChecked"
           :content="(icon && icon[0]) || defaultCheck"
-          :style="checkedIconStyle"
-          size="20px"
+          :class="checkedIconClass"
+          size="24px"
         ></t-node>
-        <t-node v-else :content="(icon && icon[1]) || defaultUncheck" :style="unCheckedIconStyle" size="20px"></t-node>
+        <t-node v-else :content="(icon && icon[1]) || defaultUncheck" :class="unCheckedIconClass" size="24px"></t-node>
       </span>
     </div>
   </div>
@@ -80,18 +79,6 @@ import { renderContent, TNode, useToggle } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
-
-/**
- * @description: 限制行数样式
- * @param {number} 行数
- * @return: 返回样式对象
- */
-// const getLimitRow = (row?: number) => ({
-//   display: '-webkit-box',
-//   overflow: 'hidden',
-//   '-webkit-box-orient': 'vertical',
-//   '-webkit-line-clamp': row,
-// });
 
 /**
  * @description: 返回 Icon 的对应的类名
@@ -138,17 +125,21 @@ const getTitleClasses = (flagName: string, props: any, rootGroup: any) =>
 const getIsCheck = (props: any, rootGroup: any) =>
   computed(() => rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.value) !== -1);
 
-const getCheckedIconStyle = (isChecked: any, singleChecked: boolean, disabled: boolean) =>
+const getCheckedIconClass = (flagName: string, isChecked: any, singleChecked: boolean, disabled: boolean) =>
   computed(() => {
-    const checkStyle = { color: (singleChecked || isChecked) && !disabled ? '#0052D9' : '#DCDCDC' };
-    return checkStyle;
+    let checkClass = '';
+    if ((singleChecked || isChecked) && !disabled) {
+      checkClass = `${flagName}__checked-icon`;
+    } else {
+      checkClass = `${flagName}__checked__disable-icon`;
+    }
+    return checkClass;
   });
 
-const getUnCheckedIconStyle = (disabled: boolean) =>
-  computed(() => {
-    const unCheckStyle = { color: !disabled ? '#DCDCDC' : '#DCDCDC' };
-    return unCheckStyle;
-  });
+const getUnCheckedIconClass = (flagName: string) => {
+  const unCheckClass = `${flagName}__unCheck-icon`;
+  return unCheckClass;
+};
 
 /**
  * @description: 设置checkbox点击回调
@@ -211,9 +202,15 @@ export default defineComponent({
     const iconClasses = getIconClasses(flagName, isChecked, context, props, rootGroup);
     const titleClasses = getTitleClasses(flagName, props, rootGroup);
     const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
-    const checkedIconStyle = getCheckedIconStyle(isChecked, singleChecked, rootGroup?.disabled || props?.disabled);
-    const unCheckedIconStyle = getUnCheckedIconStyle(rootGroup?.disabled || props?.disabled);
+    const checkedIconClass = getCheckedIconClass(
+      flagName,
+      isChecked,
+      singleChecked,
+      rootGroup?.disabled || props?.disabled,
+    );
+    const unCheckedIconClass = getUnCheckedIconClass(flagName);
     const { state, toggle } = useToggle(checkboxCheckVal, isChecked.value);
+    const isALlSelected = computed(() => rootGroup?.isALlSelected);
 
     const checkBoxOrgChange = (e: Event) => {
       const { target }: { target: any } = e;
@@ -260,8 +257,9 @@ export default defineComponent({
       defaultCheck,
       defaultUncheck,
       singleChecked,
-      checkedIconStyle,
-      unCheckedIconStyle,
+      isALlSelected,
+      unCheckedIconClass,
+      checkedIconClass,
     };
   },
 });
