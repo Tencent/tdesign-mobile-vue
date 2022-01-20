@@ -102,7 +102,13 @@
           <t-cell-group>
             <t-cell>
               <template #leftIcon>
-                <t-checkbox name="checkbox3" value="1" check-all :icon="circleFilledIcons"></t-checkbox>
+                <t-checkbox
+                  name="checkbox3"
+                  value="1"
+                  check-all
+                  :icon="circleFilledIcons"
+                  :indeterminate="indeterminate"
+                ></t-checkbox>
               </template>
               <template #title>
                 <span>全选</span>
@@ -143,7 +149,7 @@
                 <t-checkbox name="checkbox4" value="1" :icon="circleFilledIcons" disabled></t-checkbox>
               </template>
               <template #title>
-                <span>多选</span>
+                <span style="color: rgba(0, 0, 0, 0.26)">多选</span>
               </template>
             </t-cell>
             <t-cell>
@@ -151,7 +157,7 @@
                 <t-checkbox name="checkbox4" value="2" :icon="circleFilledIcons" disabled></t-checkbox>
               </template>
               <template #title>
-                <span>多选</span>
+                <span style="color: rgba(0, 0, 0, 0.26)">多选</span>
               </template>
             </t-cell>
           </t-cell-group>
@@ -162,7 +168,7 @@
               <t-checkbox name="checkbox4" value="3" checked :icon="circleFilledIcons" disabled></t-checkbox>
             </template>
             <template #title>
-              <span>多选</span>
+              <span style="color: rgba(0, 0, 0, 0.26)">多选</span>
             </template>
           </t-cell>
           <t-cell>
@@ -170,7 +176,7 @@
               <t-checkbox name="checkbox4" value="4" :icon="circleFilledIcons" disabled></t-checkbox>
             </template>
             <template #title>
-              <span>多选</span>
+              <span style="color: rgba(0, 0, 0, 0.26)">多选</span>
             </template>
           </t-cell>
         </t-cell-group>
@@ -233,6 +239,20 @@
           </t-cell-group>
         </t-check-group>
       </tdesign-demo-block>
+      <tdesign-demo-block style="margin-top: 16px">
+        <t-check-group v-model:value="checkBoxs1">
+          <t-cell-group>
+            <t-cell style="height: 56px">
+              <template #leftIcon>
+                <t-checkbox name="checkbox7" value="1" :icon="circleFilledIcons"></t-checkbox>
+              </template>
+              <template #title>
+                <span>多选 H56</span>
+              </template>
+            </t-cell>
+          </t-cell-group>
+        </t-check-group>
+      </tdesign-demo-block>
     </div>
   </div>
 </template>
@@ -246,6 +266,7 @@ export default defineComponent({
     const checkBoxs1 = ref(['1', '2', '4', '5']);
     const checkBoxs2 = ref(['1', '2']);
     const checkBoxs3 = ref(['1', '4']);
+    const indeterminate = ref(true);
     watch(
       () => checkBoxs1.value,
       (val) => {
@@ -256,7 +277,8 @@ export default defineComponent({
     watch(
       () => checkBoxs2.value,
       (val) => {
-        console.log('checkBoxs2:', val);
+        indeterminate.value = val.length < 4;
+        console.log('checkBoxs2:', val.length);
       },
     );
 
@@ -282,6 +304,7 @@ export default defineComponent({
       CheckRectangleFilledIcons: [TCheckRectangleFilledIcon, TRectangleIcon],
       changeFn,
       checkboxChange,
+      indeterminate,
     };
   },
 });

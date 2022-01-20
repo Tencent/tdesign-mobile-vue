@@ -37,6 +37,7 @@ export default defineComponent({
   emits: ['update:value', 'change'],
   setup(props: any, content: SetupContext) {
     const children = ref({});
+    const isALlSelected = ref(false);
     const checkedValues = computed(() => props.value || []);
     // eslint-disable-next-line vue/no-setup-props-destructure
     const groupOptions = computed(() => {
@@ -76,6 +77,7 @@ export default defineComponent({
       if (index !== undefined && index === -1 && inMax) {
         const tempValues = checkedValues?.value?.concat(value);
         const resultValues = [...Array.from(tempValues)];
+        isALlSelected.value = Object.keys(children?.value).length === resultValues.length;
         content.emit('update:value', resultValues);
         content.emit('change', resultValues, { e });
         props?.onChange && props?.onChange(resultValues, { e });
@@ -89,6 +91,7 @@ export default defineComponent({
     const uncheck = (name: string, e: Event) => {
       const index = checkedValues?.value.indexOf(name);
       if (index !== undefined && index !== -1) {
+        isALlSelected.value = false;
         const tempValues = checkedValues?.value.slice(0, index);
         const resultValues = tempValues.concat(checkedValues?.value.slice(index + 1));
         content.emit('update:value', resultValues);
@@ -124,9 +127,11 @@ export default defineComponent({
         // eslint-disable-next-line no-nested-ternary
         return checked === false ? false : !checked ? !isChecked : true;
       });
+      isALlSelected.value = !!names.length;
       content.emit('update:value', names);
       content.emit('change', names);
     };
+
     provide('rootGroup', {
       checkedValues,
       disabled: props.disabled,
@@ -136,6 +141,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
+      isALlSelected,
     });
     return {
       prefix,
