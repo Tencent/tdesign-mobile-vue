@@ -137,7 +137,7 @@ const getCheckedIconClass = (flagName: string, isChecked: any, singleChecked: bo
   });
 
 const getUnCheckedIconClass = (flagName: string) => {
-  const unCheckClass = `${flagName}__unCheck-icon`;
+  const unCheckClass = `${flagName}__uncheck-icon`;
   return unCheckClass;
 };
 
