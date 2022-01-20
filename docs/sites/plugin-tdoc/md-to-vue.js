@@ -20,7 +20,6 @@ export default function mdToVue(options) {
   // if (mdSegment.isComponent) {
   //   coverage = testCoverage[camelCase(mdSegment.componentName)] || '0%';
   // }
-
   const sfc = `
     <template>
       <td-doc-content ref="tdDocContent" page-status="hidden" platform="mobile">
@@ -144,7 +143,7 @@ function customRender({ source, file, md }) {
   };
 
   // md filename
-  const reg = file.match(/src\/(\w+-?\w+)\/(\w+-?\w+)\.md/);
+  const reg = file.match(/src\/([\w|\-]+)\/([\w|\-]+)\.md/);
   const componentName = reg && reg[1];
 
   // split md

@@ -5,7 +5,7 @@
  * updated at 2021-12-21 19:16:47
  * */
 
-import { BadgeProps } from '../Badge';
+import { BadgeProps } from '../badge';
 import { TNode } from '../common';
 
 export interface TdTabBarProps {

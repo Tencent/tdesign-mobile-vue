@@ -2,10 +2,9 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-15 20:06:30
  * */
 
-export interface TdDateTimePickerProps {
+ export interface TdDateTimePickerProps {
   /**
    * 取消按钮文字
    * @default 取消
@@ -26,7 +25,7 @@ export interface TdDateTimePickerProps {
    */
   format: string;
   /**
-   * 选择器模式，用于表示可以选择到哪一个层级。【示例一】year 或者 ['year'] 表示纯日期选择器，只能选择到年份，只显示年份。【示例二】'hour' 或 ['hour'] 表示纯时间选择器，只能选择到小时维度。【示例三】['date', 'minutes'] 表示，日期和时间 混合选择器，可以选择到具体哪一分钟，显示全部时间：年/月/日/时/分
+   * 选择器模式，用于表示可以选择到哪一个层级。【示例一】year 或者 ['year'] 表示纯日期选择器，只能选择到年份，只显示年份。【示例二】'hour' 或 ['hour'] 表示纯时间选择器，只能选择到小时维度。【示例三】['date', 'minute'] 表示，日期和时间 混合选择器，可以选择到具体哪一分钟，显示全部时间：年/月/日/时/分
    * @default 'date'
    */
   mode: DateTimePickerMode;
@@ -45,11 +44,6 @@ export interface TdDateTimePickerProps {
    */
   value: DateValue;
   /**
-   * 是否显示
-   * @default false
-   */
-  visible: boolean;
-  /**
    * 取消按钮点击时触发
    */
   onCancel: (context: { e: MouseEvent }) => void;
@@ -65,7 +59,7 @@ export interface TdDateTimePickerProps {
    * 确认按钮点击时触发
    */
   onConfirm: (context: { value: DateValue; e: MouseEvent }) => void;
-};
+}
 
 export type DisableDate = DateValue | DisableDateObj | ((date: DateValue) => boolean);
 
@@ -73,8 +67,8 @@ export interface DisableDateObj { from?: string; to?: string; before?: string; a
 
 export type DateTimePickerMode = TimeModeValues | Array<TimeModeValues> ;
 
-export type TimeModeValues = 'year' | 'month' | 'date' | 'hour' | 'minutes' | 'second';
+export type TimeModeValues = 'year' | 'month' | 'date' | 'hour' | 'minute' | 'second';
 
-export type DateValue = string | number | Array<DateValue>;
+export type DateValue = string | number;
 
 export interface DatePickerColumnChangeContext { value: DateValue; index: number };

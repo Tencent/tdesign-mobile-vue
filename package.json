@@ -78,6 +78,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.16.5",
+    "dayjs": "^1.10.7",
     "tdesign-icons-vue-next": "^0.0.4"
   },
   "peerDependencies": {
