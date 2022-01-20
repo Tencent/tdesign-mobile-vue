@@ -1,5 +1,5 @@
 <template>
-  <t-rate v-model="value" readonly />
+  <t-rate v-model="value" disabled />
 </template>
 
 <script lang="ts">

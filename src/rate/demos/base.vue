@@ -1,14 +1,7 @@
 <template>
-  <div>
-    <div class="tdesign-demo-block">
-      <t-rate v-model="value" />
-    </div>
-
-    <div class="tdesign-demo-block">
-      <!-- 允许清除 -->
-      <t-rate v-model="value1" clearable />
-    </div>
-  </div>
+  <t-rate v-model="value" />
+  <!-- 允许清除 -->
+  <t-rate v-model="value1" clearable />
 </template>
 
 <script lang="ts">

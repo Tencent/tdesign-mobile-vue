@@ -2,22 +2,19 @@
   <div :class="`${name}`">
     <ul ref="rateWrapper" :class="`${name}--list`" @touchstart="onTouchstart" @touchmove="onTouchmove">
       <li v-for="n in count" :key="n" :class="classes(n)">
+        <span :class="`${name}--placeholder`">
+          <component :is="startComponent" :size="size" :style="{ color: colors[1] }" />
+        </span>
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
-            <slot name="icon">
-              <star-filled-icon :size="size" :style="iconHalfStyle(n)" />
-            </slot>
+            <star-filled-icon :size="size" :style="iconHalfStyle(n)" />
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
-            <slot name="icon">
-              <star-filled-icon :size="size" :style="iconFullStyle(n)" />
-            </slot>
+            <star-filled-icon :size="size" :style="iconFullStyle(n)" />
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
-          <slot name="icon">
-            <star-filled-icon :size="size" :style="iconFullStyle(n)" />
-          </slot>
+          <star-filled-icon :size="size" :style="iconFullStyle(n)" />
         </span>
       </li>
     </ul>
@@ -27,7 +24,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
-import { StarFilledIcon } from 'tdesign-icons-vue-next';
+import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
 import rateProps from './props';
 import config from '../config';
 import { emitEvent } from '../shared/emit';
@@ -42,7 +39,7 @@ interface RangeTypes {
 
 export default defineComponent({
   name,
-  components: { StarFilledIcon },
+  components: { StarFilledIcon, StarIcon },
   props: rateProps,
   emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {
@@ -55,13 +52,20 @@ export default defineComponent({
 
       return actualVal.value > 0 ? `${actualVal.value} 分` : '';
     });
+    const colors = computed(() => {
+      if (Array.isArray(props.color)) return props.color;
+
+      return [props.color, null];
+    });
 
     const iconHalfStyle = (n: number) => ({
-      color: actualVal.value + 0.5 === n || actualVal.value >= n ? props.color : null,
+      color: actualVal.value + 0.5 === n || actualVal.value >= n ? colors.value[0] : 'transparent',
     });
     const iconFullStyle = (n: number) => ({
-      color: actualVal.value >= n ? props.color : null,
+      color: actualVal.value >= n ? colors.value[0] : 'transparent',
     });
+
+    const startComponent = props.variant === 'filled' ? StarFilledIcon : StarIcon;
 
     const classes = (n: number) => ({
       [`${name}--item`]: true,
@@ -75,7 +79,7 @@ export default defineComponent({
     }
 
     function onClick(current: number) {
-      if (props.readonly) return;
+      if (props.disabled) return;
       emit(props.clearable && actualVal.value === current ? 0 : current);
     }
 
@@ -97,7 +101,7 @@ export default defineComponent({
     }
 
     function onTouchmove(e: TouchEvent) {
-      if (props.readonly) return;
+      if (props.disabled) return;
 
       const { clientX } = e.touches[0];
 
@@ -122,6 +126,8 @@ export default defineComponent({
       actualVal,
       iconHalfStyle,
       iconFullStyle,
+      colors,
+      startComponent,
       rateText,
       onClick,
       onTouchstart,
