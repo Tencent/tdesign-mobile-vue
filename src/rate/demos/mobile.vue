@@ -5,11 +5,11 @@
     <tdesign-demo-block title="01 类型" summary="基础评分">
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
-          <t-rate v-model="current" size="16px" clearable />
+        <t-rate v-model="current" size="16px" clearable />
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
-          <t-rate v-model="current" clearable />
+        <t-rate v-model="current" clearable />
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
@@ -21,7 +21,7 @@
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">半星评分</div>
-        <t-rate v-model="current2" clearable allow-half  />
+        <t-rate v-model="current2" clearable allow-half />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="带描述评分">
@@ -39,7 +39,7 @@
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="展示型评分">
-      <t-rate v-model="current5" disabled style="margin-left: 32px;" />
+      <t-rate v-model="current5" disabled style="margin-left: 32px" />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 规格" summary="实心评分">
       <div class="rate-demo-cell">
