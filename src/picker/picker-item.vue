@@ -25,13 +25,19 @@ export default defineComponent({
     let picker: Picker | null = null;
     const el = document.createElement('div');
     const root = ref(el);
-    let defaultIndex = 0;
-    if (props.value) {
-      defaultIndex =
-        typeof props.value === 'object'
-          ? props.options.findIndex((item: any) => item.value === props.value)
-          : props.options.indexOf(props.value);
-    }
+
+    const getDefaultIndex = (val: number | string | undefined) => {
+      let defaultIndex = 0;
+      if (val !== undefined) {
+        defaultIndex =
+          typeof val === 'object'
+            ? props.options.findIndex((item: any) => item.value === val)
+            : props.options.indexOf(val);
+      }
+      return defaultIndex < 0 ? 0 : defaultIndex;
+    };
+
+    const defaultIndex: number = getDefaultIndex(props.value);
     const curIndex = ref(defaultIndex);
     const className = computed(() => `${name}`);
     const wrapperClassName = computed(() => [`${name}__wrapper`]);
@@ -50,14 +56,7 @@ export default defineComponent({
       () => props.value,
       (val) => {
         nextTick(() => {
-          let defaultIndex = 0;
-          if (val) {
-            defaultIndex =
-              typeof val === 'object'
-                ? props.options.findIndex((item: any) => item.value === val)
-                : props.options.indexOf(val);
-          }
-          if (picker) picker.updateIndex(defaultIndex);
+          if (picker) picker.updateIndex(getDefaultIndex(val));
         });
       },
     );
