@@ -12,11 +12,10 @@
           <div :class="dTitleClassName">{{ title }}</div>
         </slot>
       </div>
-      <div :class="dBodyClassName">
-        <slot name="content">
-          <div v-if="content" :class="dTextClassName">{{ content }}</div>
-        </slot>
-        <slot name="other-content"> </slot>
+      <div v-if="content" :class="dBodyClassName">
+        <div :class="dTextClassName">
+          <t-node :content="dialogContent"></t-node>
+        </div>
       </div>
       <div v-if="buttonLayout != 'vertical'" :class="dFooterClassName">
         <div v-if="cancelBtn" :class="dDefaultBtnClassName" @click="handleCancel">
@@ -31,14 +30,14 @@
         </div>
       </div>
       <div v-if="buttonLayout == 'vertical'" :class="dFooterVerticalClassName">
-        <div v-if="confirmBtn" :class="dVerticalDefaultBtnClassName" @click="handleConfirm">
-          <slot name="footer-confirm">
-            {{ confirmBtn }}
-          </slot>
-        </div>
-        <div v-if="cancelBtn" :class="dVerticalConformBtnClassName" @click="handleCancel">
+        <div v-if="cancelBtn" :class="dVerticalDefaultBtnClassName" @click="handleCancel">
           <slot name="footer-cancel">
             {{ cancelBtn }}
+          </slot>
+        </div>
+        <div v-if="confirmBtn" :class="dVerticalConformBtnClassName" @click="handleConfirm">
+          <slot name="footer-confirm">
+            {{ confirmBtn }}
           </slot>
         </div>
       </div>
@@ -46,24 +45,32 @@
   </t-popup>
 </template>
 <script lang="ts">
-import { computed, ref, toRefs, watch, defineComponent } from 'vue';
+import { computed, ref, toRefs, watch, defineComponent, getCurrentInstance } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
 import DialogProps from './props';
+import { renderContent, TNode } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-dialog`;
 
 export default defineComponent({
   name,
-  components: { TPopup },
+  components: { TPopup, TNode },
   props: DialogProps,
   emits: ['update:modelValue', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
   setup(props, context) {
+    const internalInstance = getCurrentInstance();
+    const dialogContent = renderContent(internalInstance, 'default', 'content');
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);
     const dBoxClassName = computed(() => `${name}__box`);
-    const dHeaderClassName = computed(() => `${name}__header`);
+    const dHeaderClassName = computed(() => [
+      `${name}__header`,
+      {
+        [`${name}__header--has-content`]: dialogContent,
+      },
+    ]);
     const dTitleClassName = computed(() => `${name}__title`);
     const dBodyClassName = computed(() => `${name}__body`);
     const dTextClassName = computed(() => `${name}__text`);
@@ -127,6 +134,7 @@ export default defineComponent({
       dConformBtnClassName,
       dVerticalDefaultBtnClassName,
       dVerticalConformBtnClassName,
+      dialogContent,
       handleConfirm,
       handleCancel,
       handleOverlayClick,

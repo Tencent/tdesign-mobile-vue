@@ -24,7 +24,12 @@
           @overlay-click="onClickOverlay"
         >
         </t-dialog>
-        <t-dialog v-model="isShowDialog4" :title="title" :confirm-btn="confirmButtonText"></t-dialog>
+        <t-dialog
+          v-model="isShowDialog4"
+          :title="title"
+          :content="moreTextContent"
+          :confirm-btn="confirmButtonText"
+        ></t-dialog>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="确认类对话框">
@@ -70,14 +75,11 @@
           @cancel="onCancel"
           @change="onChange"
         >
-          <template #other-content>
-            <t-input type="text" placeholder="输入文案" />
+          <template #footer-confirm>
+            <div>我同意</div>
           </template>
           <template #footer-cancel>
-            <div style="color: #000000; font-size: 18px">我不同意</div>
-          </template>
-          <template #footer-confirm>
-            <div style="color: #0052d9; font-size: 18px">我同意</div>
+            <div>我不同意</div>
           </template>
         </t-dialog>
         <t-dialog
@@ -94,11 +96,11 @@
           <template #other-content>
             <t-input type="text" placeholder="输入文案" />
           </template>
-          <template #footer-cancel>
-            <div style="color: #000000; font-size: 18px">我不同意</div>
-          </template>
           <template #footer-confirm>
-            <div style="color: #0052d9; font-size: 18px">我同意</div>
+            <div>我同意</div>
+          </template>
+          <template #footer-cancel>
+            <div>我不同意</div>
           </template>
         </t-dialog>
       </div>
@@ -122,13 +124,14 @@ export default defineComponent({
   data() {
     return {
       title: '对话框标题',
-      moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      moreTextHeader: '对话框标题告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
       singleHeader: '最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法',
-      moreTextContent: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
+      moreTextContent:
+        '告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很',
       placeholderText: '输入框提示文字',
       cancelButtonText: '我再想想',
-      confirmButtonText: '继续',
+      confirmButtonText: '我知道了',
       buttonLayout: 'vertical',
       zIndex: 3000,
       width: 250,

@@ -51,7 +51,7 @@
       </t-input>
       <t-input placeholder="请输入手机号码">
         <template #suffix>
-          <t-button theme="primary" variant="text" size="small" style="height: 24px">发送验证码</t-button>
+          <t-button theme="primary" variant="text" size="small" style="height: 24px; padding: 0">发送验证码</t-button>
         </template>
       </t-input>
       <t-input label="价格" align="right" placeholder="0.00" suffix="元" />
