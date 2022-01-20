@@ -2,19 +2,31 @@ import { createApp, defineComponent, h, VNode, App, ref, DefineComponent, nextTi
 
 import Dialog from './dialog.vue';
 import { WithInstallType } from '../shared';
-import { DialogType, DialogPropsType, DialogPropsDefault } from './dialog.interface';
+import { DialogCloseContext, TdDialogProps } from './type';
 
 import './style';
 
-interface DialogFnType extends DialogPropsType {
-  onCancel?: () => void;
-  onConfirm?: (inputValue: string) => void;
-  onClickOverlay?: () => void;
-}
+export type DialogType = 'alert' | 'confirm' | 'show';
+
+export const DialogPropsDefault = {
+  title: '温馨提醒',
+  content: '',
+  type: '',
+  showFooter: true,
+  placeholderText: '',
+  confirmBtn: '确认',
+  cancelContent: '取消',
+  isInput: false,
+  visible: false,
+  knowContent: '我知道了',
+  zIndex: 2500,
+  showOverlay: true,
+  width: '320px',
+};
 
 let instance: DefineComponent;
 
-function create(props: DialogFnType | string): DefineComponent {
+function create(props: Partial<TdDialogProps> | string): DefineComponent {
   const visible = ref(false);
   const root = document.createElement('div');
   document.body.appendChild(root);
@@ -32,29 +44,33 @@ function create(props: DialogFnType | string): DefineComponent {
   // eslint-disable-next-line vue/one-component-per-file
   instance = defineComponent({
     render: (): VNode =>
+      // @ts-ignore
       h(Dialog, {
         ...propsObject,
         visible: visible.value,
-        onConfirm: (inputValue: string) => {
-          if (typeof propsObject?.onConfirm === 'function') {
-            propsObject?.onConfirm(inputValue);
+        onConfirm: (context: { e: MouseEvent }) => {
+          if (typeof propsObject.onConfirm === 'function') {
+            propsObject.onConfirm(context);
           }
           visible.value = false;
         },
-        onCancel: () => {
-          if (typeof propsObject?.onCancel === 'function') {
-            propsObject?.onCancel();
+        onCancel: (context: { e: MouseEvent }) => {
+          if (typeof propsObject.onCancel === 'function') {
+            propsObject.onCancel(context);
           }
           visible.value = false;
         },
-        onClickOverlay: () => {
-          if (typeof propsObject?.onClickOverlay === 'function') {
-            propsObject?.onClickOverlay();
+        onOverlayClick: (context: { e: MouseEvent }) => {
+          if (typeof propsObject.onOverlayClick === 'function') {
+            propsObject.onOverlayClick(context);
           }
           visible.value = false;
         },
-        onClosed: () => {
+        onClose: (context: DialogCloseContext) => {
           root.remove();
+          if (typeof propsObject.onClose === 'function') {
+            propsObject.onClose(context);
+          }
         },
       }),
   });
@@ -74,8 +90,8 @@ function create(props: DialogFnType | string): DefineComponent {
 }
 
 (['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
-  Dialog[type] = (options: DialogFnType | string) => {
-    let props = { content: '', type };
+  Dialog[type] = (options: Partial<TdDialogProps> | string) => {
+    let props: any = { content: '', type };
 
     if (typeof options === 'string') {
       props.content = options;
@@ -96,11 +112,11 @@ Dialog.install = (app: App, name = '') => {
 
 type DialogApi = {
   /** 通用对话框 */
-  show: (options: DialogFnType | string) => void;
+  show: (options: Partial<TdDialogProps> | string) => void;
   /** 基础对话框 */
-  alert: (options: DialogFnType | string) => void;
+  alert: (options: Partial<TdDialogProps> | string) => void;
   /** 选择对话框 */
-  confirm: (options: DialogFnType | string) => void;
+  confirm: (options: Partial<TdDialogProps> | string) => void;
 };
 
 export const DialogPlugin: WithInstallType<typeof Dialog> & DialogApi = Dialog as any;

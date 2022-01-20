@@ -1,13 +1,13 @@
 <template>
   <div :class="name">
-    <div v-if="title" :class="`${name}--title`">
+    <div v-if="title" :class="`${name}__title`">
       <slot name="title">
         {{ title }}
       </slot>
     </div>
     <div
       :class="{
-        [`${name}-container`]: true,
+        [`${name}__container`]: true,
         'border--top-bottom': bordered,
       }"
     >

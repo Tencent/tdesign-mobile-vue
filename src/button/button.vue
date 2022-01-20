@@ -34,15 +34,14 @@ export default defineComponent({
         [`${name}--${props.shape}`]: props.shape !== 'round',
         [`${name}--ghost`]: props.ghost,
         [`${prefix}-size-full-width`]: props.block,
-        [`${prefix}-is-disabled`]: props.disabled,
-        [`${prefix}-is-loading`]: props.loading,
+        [CLASSNAMES.STATUS.disabled]: props.disabled,
+        [CLASSNAMES.STATUS.loading]: props.loading,
       },
     ]);
     const buttonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => (props.loading ? h(LoadingIcon) : renderTNode(internalInstance, 'icon')));
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
-        // 既不是加载也不是禁用时触发事件
         context.emit('click', e);
       } else {
         e.stopPropagation();

@@ -23,7 +23,11 @@
           @focus="handleFocus"
           @blur="handleBlur"
         />
-        <div v-if="clearable && innerValue.length > 0" :class="`${componentName}__wrap--icon`" @click="handleClear">
+        <div
+          v-if="clearable && String(innerValue).length > 0"
+          :class="`${componentName}__wrap--icon`"
+          @click="handleClear"
+        >
           <close-circle-filled-icon />
         </div>
         <div v-if="suffixContent" :class="`${componentName}__wrap--suffix`">
@@ -54,7 +58,7 @@
         @blur="handleBlur"
       />
       <div v-if="maxlength" :class="`${componentName}--count`">
-        {{ `${innerValue.length}/${maxlength}` }}
+        {{ `${String(innerValue).length}/${maxlength}` }}
       </div>
     </div>
   </div>
@@ -62,8 +66,8 @@
 
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { ref, computed, watch, onMounted, defineComponent, getCurrentInstance, toRefs } from 'vue';
-import { renderTNode, TNode } from '../shared';
+import { ref, computed, watch, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext } from 'vue';
+import { emitEvent, renderTNode, TNode, useDefault } from '../shared';
 import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import InputProps from './props';
@@ -79,10 +83,10 @@ export default defineComponent({
   },
   props: InputProps,
   emits: ['update:value', 'click-icon', 'focus', 'blur', 'change', 'clear'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
     const inputRef = ref<null | HTMLElement>(null);
     const internalInstance = getCurrentInstance();
-    const cacheValue = ref('');
+    const { innerValue } = useDefault(props, context, 'value', 'change');
 
     const styleLabel = computed(() => ({
       [`${componentName}--label`]: true,
@@ -94,39 +98,27 @@ export default defineComponent({
     const prefixIconContent = computed(() => renderTNode(internalInstance, 'prefixIcon'));
     const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
 
-    const styleControl = computed(() => ({
-      [`${componentName}__control`]: true,
-      [`${componentName}__control--right`]: suffixIconContent.value,
-    }));
+    const styleControl = computed(() => [
+      `${componentName}__control`,
+      {
+        [`${componentName}__control--${props.align}`]: props.align !== 'left',
+      },
+    ]);
 
     const styleWrapper = computed(() => ({
       [componentName]: true,
       [`${componentName}__error`]: !!props.errorMessage,
     }));
 
-    const innerValue = computed({
-      get() {
-        return String(props.value || cacheValue.value);
-      },
-      set(val: string) {
-        cacheValue.value = val;
-        context.emit('update:value', val);
-        context.emit('change', val);
-        props?.onChange && props?.onChange(val);
-      },
-    });
-    const handleClear = () => {
+    const handleClear = (e: MouseEvent) => {
       innerValue.value = '';
-      context.emit('clear');
-      props?.onClear && props?.onClear();
+      emitEvent(props, context, 'clear', { e });
     };
-    const handleFocus = () => {
-      context.emit('focus', innerValue.value);
-      props?.onFocus && props?.onFocus(innerValue.value);
+    const handleFocus = (e: FocusEvent) => {
+      emitEvent(props, context, 'focus', innerValue.value, { e });
     };
-    const handleBlur = () => {
-      context.emit('blur', innerValue.value);
-      props?.onBlur && props?.onBlur(innerValue.value);
+    const handleBlur = (e: FocusEvent) => {
+      emitEvent(props, context, 'blur', innerValue.value, { e });
     };
 
     onMounted(() => {
@@ -139,6 +131,7 @@ export default defineComponent({
         inputRef.value.style.height = 'auto';
       }
     });
+
     return {
       componentName,
       ...toRefs(props),

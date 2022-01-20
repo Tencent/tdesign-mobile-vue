@@ -22,7 +22,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
   },
   "rules": { "trailing-comma": false },
   "include": [
@@ -34,5 +34,5 @@
     "src/style/index.js",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "vite.config.ts", "docs"]
+  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "vite.config.ts", "docs", "./**/demos/*"]
 }

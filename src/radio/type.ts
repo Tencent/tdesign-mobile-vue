@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-21 00:07:22
+ * updated at 2021-12-26 22:44:45
  * */
 
 import { TNode } from '../common';
@@ -13,11 +13,6 @@ export interface TdRadioProps {
    * @default left
    */
   align: 'left' | 'right';
-  /**
-   * 【开发中】是否允许取消选中
-   * @default false
-   */
-  allowUncheck: boolean;
   /**
    * 是否选中
    */
@@ -44,6 +39,7 @@ export interface TdRadioProps {
   disabled: boolean;
   /**
    * 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。值为 fill-circle 表示图标为填充型图标，值为 stroke-line 表示图标为描边型图标
+   * @default 'fill-circle'
    */
   icon: 'fill-circle' | 'stroke-line' | Array<TNode>;
   /**
@@ -51,7 +47,7 @@ export interface TdRadioProps {
    */
   label: string | TNode;
   /**
-   * HTM 元素原生属性
+   * HTML 元素原生属性
    * @default ''
    */
   name: string;
@@ -97,8 +93,4 @@ export type RadioValue = string | number | boolean;
 
 export type RadioOption = string | number | RadioOptionObj;
 
-export interface RadioOptionObj {
-  label?: string | TNode;
-  value?: string | number;
-  disabled?: boolean;
-}
+export interface RadioOptionObj { label?: string | TNode; value?: string | number; disabled?: boolean };

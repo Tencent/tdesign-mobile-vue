@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-30 13:35:05
+ * updated at 2021-12-29 23:55:12
  * */
 
 import { TNode, SizeEnum } from '../common';
@@ -49,7 +49,7 @@ export interface TdTagProps {
    * 影响标签风格（theme）
    * @default dark
    */
-  variant: 'dark' | 'light' | 'plain';
+  variant: 'dark' | 'light' | 'outline' | 'light-outline';
   /**
    * 点击时触发
    */

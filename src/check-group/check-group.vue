@@ -1,9 +1,9 @@
 <template>
   <div :class="`${prefix}-checkbox-group`">
-    <slot v-if="!(optionObjArr && optionObjArr.length)"></slot>
+    <slot v-if="!(groupOptions && groupOptions.length)"></slot>
     <span v-else>
       <checkbox
-        v-for="(item, idx) in optionObjArr"
+        v-for="(item, idx) in groupOptions"
         :key="idx"
         :name="item.name"
         :label="item.label"
@@ -19,7 +19,7 @@ import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
-import { CheckboxOptionObj } from '../checkbox/type';
+import { CheckboxOption } from '../checkbox/type';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
@@ -37,8 +37,18 @@ export default defineComponent({
   emits: ['update:value', 'change'],
   setup(props: any, content: SetupContext) {
     const children = ref({});
+    const isALlSelected = ref(false);
     const checkedValues = computed(() => props.value || []);
-    const optionObjArr: Array<CheckboxOptionObj> = props.options;
+    // eslint-disable-next-line vue/no-setup-props-destructure
+    const groupOptions = computed(() => {
+      return props.options?.map((option: CheckboxOption) => {
+        let opt = option as CheckboxOption;
+        if (typeof option === 'string' || typeof option === 'number') {
+          opt = { value: option, label: option.toString() };
+        }
+        return opt;
+      });
+    });
     /**
      * @description: 为checkbox注册
      * @param {object}
@@ -67,6 +77,7 @@ export default defineComponent({
       if (index !== undefined && index === -1 && inMax) {
         const tempValues = checkedValues?.value?.concat(value);
         const resultValues = [...Array.from(tempValues)];
+        isALlSelected.value = Object.keys(children?.value).length === resultValues.length;
         content.emit('update:value', resultValues);
         content.emit('change', resultValues, { e });
         props?.onChange && props?.onChange(resultValues, { e });
@@ -80,6 +91,7 @@ export default defineComponent({
     const uncheck = (name: string, e: Event) => {
       const index = checkedValues?.value.indexOf(name);
       if (index !== undefined && index !== -1) {
+        isALlSelected.value = false;
         const tempValues = checkedValues?.value.slice(0, index);
         const resultValues = tempValues.concat(checkedValues?.value.slice(index + 1));
         content.emit('update:value', resultValues);
@@ -115,9 +127,11 @@ export default defineComponent({
         // eslint-disable-next-line no-nested-ternary
         return checked === false ? false : !checked ? !isChecked : true;
       });
+      isALlSelected.value = !!names.length;
       content.emit('update:value', names);
       content.emit('change', names);
     };
+
     provide('rootGroup', {
       checkedValues,
       disabled: props.disabled,
@@ -127,6 +141,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
+      isALlSelected,
     });
     return {
       prefix,
@@ -136,7 +151,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
-      optionObjArr
+      groupOptions,
     };
   },
 });

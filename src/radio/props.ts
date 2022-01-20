@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-21 00:07:22
+ * updated at 2021-12-26 22:44:45
  * */
 
 import { TdRadioProps } from './type';
@@ -17,8 +17,6 @@ export default {
       return ['left', 'right'].includes(val);
     },
   },
-  /** 【开发中】是否允许取消选中 */
-  allowUncheck: Boolean,
   /** 是否选中 */
   checked: Boolean,
   /** 是否选中，非受控属性 */
@@ -40,13 +38,14 @@ export default {
   },
   /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。值为 fill-circle 表示图标为填充型图标，值为 stroke-line 表示图标为描边型图标 */
   icon: {
-    type: Array as PropType<TdRadioProps['icon']>,
+    type: [String, Array] as PropType<TdRadioProps['icon']>,
+    default: 'fill-circle',
   },
   /** 主文案 */
   label: {
     type: [String, Function] as PropType<TdRadioProps['label']>,
   },
-  /** HTM 元素原生属性 */
+  /** HTML 元素原生属性 */
   name: {
     type: String,
     default: '',
@@ -58,9 +57,4 @@ export default {
   },
   /** 选中状态变化时触发 */
   onChange: Function as PropType<TdRadioProps['onChange']>,
-
-  modelValue: {
-    type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
-    default: undefined,
-  },
 };

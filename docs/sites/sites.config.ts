@@ -8,14 +8,14 @@ export default {
           title: '快速开始',
           name: 'getting-started',
           meta: { docType: 'explain' },
-          path: '/vue-mobile/components/getting-started',
+          path: '/vue-mobile/getting-started',
           component: () => import('@/../getting-started.md'),
         },
         {
           title: '更新日志',
           name: 'changelog',
           meta: { docType: 'explain' },
-          path: '/vue-mobile/components/changelog',
+          path: '/vue-mobile/changelog',
           component: () => import('@/../CHANGELOG.md'),
         },
       ],
@@ -41,7 +41,7 @@ export default {
         {
           title: 'Icon 图标',
           name: 'icon',
-          meta: { docType: 'base' },
+          meta: { docType: 'explain' },
           path: '/vue-mobile/components/icon',
           component: () => import('@/icon/icon.md'),
         }
@@ -51,6 +51,13 @@ export default {
       title: '信息展示',
       type: 'component',
       children: [
+        {
+          title: 'Avatar 头像',
+          name: 'avatar',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/avatar',
+          component: () => import('@/avatar/avatar.md'),
+        },
         {
           title: 'Badge 徽标',
           name: 'badge',
@@ -177,11 +184,11 @@ export default {
           component: () => import('@/fab/fab.md'),
         },
         {
-          title: 'SearchField 搜索框',
-          name: 'search-field',
+          title: 'Search 搜索框',
+          name: 'search',
           meta: { docType: 'form' },
-          path: '/vue-mobile/components/search-field',
-          component: () => import('@/search-field/search-field.md'),
+          path: '/vue-mobile/components/search',
+          component: () => import('@/search/search.md'),
         },
       ],
     },

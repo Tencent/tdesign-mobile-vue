@@ -69,7 +69,7 @@ export default defineComponent({
     watch(
       () => props.value,
       (newValue) => {
-        setValue(newValue);
+        newValue && setValue(newValue);
         nextTick(() => {
           moveToActiveTab();
         });
@@ -124,7 +124,7 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      isScroll.value = navWrap.value.offsetWidth > navScroll.value.offsetWidth;
+      isScroll.value = (navWrap.value?.offsetWidth || 0) > (navScroll.value?.offsetWidth || 0);
       isScroll.value && navClasses.value.push(`${prefix}-is-scrollable`);
       moveToActiveTab();
       window.addEventListener('resize', moveToActiveTab, false);

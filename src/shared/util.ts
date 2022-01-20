@@ -30,6 +30,10 @@ export function isFunction(x: unknown): boolean {
   return Object.prototype.toString.call(x) === '[object Function]';
 }
 
+export function toCamel(str: string): string {
+  return str.replace(/^\S/, (m) => m.toUpperCase());
+}
+
 /**
  * 计算字符串字符的长度并可以截取字符串。
  * @param str 传入字符串

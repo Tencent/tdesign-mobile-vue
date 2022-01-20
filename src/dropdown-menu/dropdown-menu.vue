@@ -2,7 +2,7 @@
   <div :class="classes">
     <div ref="refBar" :class="styleBar">
       <div v-for="(item, idx) in menuTitles" :key="idx" :class="styleBarItem(item, idx)" @click="expandMenu(item, idx)">
-        <div :class="`${name}__title`">{{ item.title }}</div>
+        <div :class="`${name}__title`">{{ item.label }}</div>
       </div>
     </div>
     <slot />
@@ -36,7 +36,11 @@ export default defineComponent({
     const updateItems = () => {
       if (slots.default) {
         const itemName = `${prefix}-dropdown-item`;
-        menuItems.value = slots.default().filter((child: any) => child.type.name.includes(itemName));
+        const children = slots.default();
+        menuItems.value = children.filter((child: any) => {
+          const childTypeName = child?.type?.name;
+          return childTypeName?.includes && childTypeName.includes(itemName);
+        });
       }
     };
     onBeforeMount(updateItems);
@@ -44,9 +48,9 @@ export default defineComponent({
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
       menuItems.value.map((item: any) => {
-        const { title, disabled } = item.props;
+        const { label, disabled } = item.props;
         return {
-          title,
+          label,
           disabled: disabled !== undefined && disabled !== false,
         };
       }),

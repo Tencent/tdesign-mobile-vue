@@ -8,13 +8,13 @@ let demoCodesImports = {};
 export default {
   before({ source, file }) {
     const resouceDir = path.dirname(file);
-    const reg = file.match(/src\/(\w+-?\w+)\/\w+-?\w+\.md/);
+    const reg = file.match(/src\/([\w-]+)\/([\w-]+)\.md/);
     const name = reg && reg[1];
     demoCodesImports = {};
 
     // 统一换成 common 文档内容
     if (name && source.includes(':: BASE_DOC ::')) {
-      const docPath = path.resolve(__dirname, `../_common/docs/mobile/api/${name}.md`);
+      const docPath = path.resolve(__dirname, `../../../src/_common/docs/mobile/api/${name}.md`);
       if (fs.existsSync(docPath)) {
         const baseDoc = fs.readFileSync(docPath, 'utf-8');
         source = source.replace(':: BASE_DOC ::', baseDoc);
@@ -26,7 +26,10 @@ export default {
     // 替换成对应 demo 文件
     source = source.replace(/\{\{\s+(.+)\s+\}\}/g, (demoStr, demoFileName) => {
       const demoPath = path.resolve(resouceDir, `./demos/${demoFileName}.vue`);
-      if (!fs.existsSync(demoPath)) return '\n<h3>DEMO (🚧建设中）...</h3>';
+      if (!fs.existsSync(demoPath)) {
+        console.log('\x1B[36m%s\x1B[0m', `${name} 组件需要实现 demos/${demoFileName}.vue 示例!`);
+        return '\n<h3>DEMO (🚧建设中）...</h3>';
+      }
 
       return `\n::: demo demos/${demoFileName} ${name}\n:::\n`;
     });

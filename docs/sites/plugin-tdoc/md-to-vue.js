@@ -2,9 +2,9 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-// import camelCase from 'camelcase';
+import camelCase from 'camelcase';
 
-// import testCoverage from '../test-coverage';
+import testCoverage from '../test-coverage';
 
 const DEAULT_TABS = [
   { tab: 'demo', name: '示例' },
@@ -16,10 +16,11 @@ export default function mdToVue(options) {
   const mdSegment = customRender(options);
   const { demoCodesDefsStr, demoCodeInstallStr } = options;
 
-  // let coverage = '';
-  // if (mdSegment.isComponent) {
-  //   coverage = testCoverage[camelCase(mdSegment.componentName)] || '0%';
-  // }
+  let coverage = '';
+  if (mdSegment.isComponent) {
+    coverage = testCoverage[camelCase(mdSegment.componentName)] || '0%';
+  }
+
   const sfc = `
     <template>
       <td-doc-content ref="tdDocContent" page-status="hidden" platform="mobile">
@@ -31,7 +32,9 @@ export default function mdToVue(options) {
             ref="tdDocHeader"
             platform="mobile"
             spline="${mdSegment.spline}"
+            component-name="${mdSegment.isComponent ? mdSegment.componentName : ''}"
           >
+          ${mdSegment.isComponent ? `<td-doc-badge slot="badge" label="coverage" message="${coverage}" />` : ''}
           </td-doc-header>` : ''
         }
         ${
@@ -54,8 +57,11 @@ export default function mdToVue(options) {
           <div v-show="tab === 'api'" name="API">${mdSegment.apiMd}</div>
           <div v-show="tab === 'design'" name="DESIGN">${mdSegment.designMd}</div>
         `
-            : `<div name="DOC">${mdSegment.docMd}</div>`
+            : `<div name="DOC" class="${mdSegment.docClass}">${mdSegment.docMd}</div>`
         }
+        <div style="margin-top: 48px;">
+          <td-doc-history time="${mdSegment.lastUpdated}"></td-doc-history>
+        </div>
         <td-doc-footer slot="doc-footer" platform="mobile"></td-doc-footer>
       </td-doc-content>
     </template>
@@ -138,12 +144,18 @@ function customRender({ source, file, md }) {
     isComponent: false,
     tdDocHeader: true,
     tdDocTabs: DEAULT_TABS,
-    apiFlag: /#+\s*API\n/i,
+    apiFlag: /#+\s*API/i,
+    docClass: '',
+    lastUpdated: Math.round(fs.statSync(file).mtimeMs),
     ...data,
   };
 
   // md filename
+<<<<<<< HEAD
   const reg = file.match(/src\/([\w|\-]+)\/([\w|\-]+)\.md/);
+=======
+  const reg = file.match(/src\/([\w-]+)\/([\w-]+)\.md/);
+>>>>>>> develop
   const componentName = reg && reg[1];
 
   // split md
@@ -174,7 +186,7 @@ function customRender({ source, file, md }) {
 
   // 设计指南内容 不展示 design Tab 则不解析
   if (pageData.isComponent && pageData.tdDocTabs.some((item) => item.tab === 'design')) {
-    const designDocPath = path.resolve(__dirname, `../_common/docs/mobile/design/${componentName}.md`);
+    const designDocPath = path.resolve(__dirname, `../../../src/_common/docs/mobile/design/${componentName}.md`);
 
     if (fs.existsSync(designDocPath)) {
       const designMd = fs.readFileSync(designDocPath, 'utf-8');

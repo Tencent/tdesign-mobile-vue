@@ -42,7 +42,7 @@ export default defineComponent({
 
     // 徽标内层样式类
     const badgeInnerClasses = computed(() => ({
-      [`${name}--basic`]: true,
+      [`${name}__inner`]: true,
       [`${name}--has-children`]: !isIndependent.value,
       [`${name}--${props.size}`]: props.size,
       [`${name}--${props.shape}`]: props.shape && !props.dot,

@@ -2,118 +2,35 @@
   <div :class="`${name}`">
     <ul ref="rateWrapper" :class="`${name}--list`" @touchstart="onTouchstart" @touchmove="onTouchmove">
       <li v-for="n in count" :key="n" :class="classes(n)">
+        <span :class="`${name}--placeholder`">
+          <component :is="startComponent" :size="size" :style="{ color: colors[1] }" />
+        </span>
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
-            <slot name="icon">
-              <star-filled-icon :size="size" :style="iconHalfStyle(n)" />
-            </slot>
+            <star-filled-icon :size="size" :style="iconHalfStyle(n)" />
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
-            <slot name="icon">
-              <star-filled-icon :size="size" :style="iconFullStyle(n)" />
-            </slot>
+            <star-filled-icon :size="size" :style="iconFullStyle(n)" />
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
-          <slot name="icon">
-            <star-filled-icon :size="size" :style="iconFullStyle(n)" />
-          </slot>
+          <star-filled-icon :size="size" :style="iconFullStyle(n)" />
         </span>
       </li>
     </ul>
-    <span
-      v-if="showText"
-      :style="{
-        color: textColor,
-      }"
-      :class="`${name}--text`"
-      >{{ rateText }}</span
-    >
+    <span v-if="showText" :class="`${name}--text`">{{ rateText }}</span>
   </div>
 </template>
 
 <script lang="ts">
 import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
-import { StarFilledIcon } from 'tdesign-icons-vue-next';
+import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
+import rateProps from './props';
 import config from '../config';
 import { emitEvent } from '../shared/emit';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;
-
-const rateProps = {
-  modelValue: Number,
-  /**
-   * @description 选择评分的值
-   * @attribute value
-   */
-  value: Number,
-  /**
-   * @description 评分的数量
-   * @attribute count
-   */
-  count: {
-    type: Number,
-    default: 5,
-  },
-  /**
-   * @description 是否为只读
-   * @attribute readonly
-   */
-  readonly: {
-    type: Boolean,
-    default: false,
-  },
-  /**
-   * @description 是否允许半选
-   * @attribute allow-half
-   */
-  allowHalf: {
-    type: Boolean,
-    default: false,
-  },
-  /**
-   * @description 是否允许取消选择
-   * @attribute clearable
-   */
-  clearable: {
-    type: Boolean,
-    default: false,
-  },
-  /**
-   * @description 评分图标的颜色
-   * @attribute color
-   */
-  color: String,
-  /**
-   * @description 是否显示辅助文字
-   * @attribute show-text
-   */
-  showText: {
-    type: Boolean,
-    default: false,
-  },
-  /**
-   * @description 评分等级对应的辅助文字
-   * @attribute texts
-   */
-  texts: {
-    type: Array as PropType<string[]>,
-    default: (): string[] => [],
-  },
-  /**
-   * @description 评分等级对应的辅助文字颜色
-   * @attribute textColor
-   */
-  textColor: String,
-  /**
-   * @description 评分图标的大小
-   * @attribute size
-   */
-  size: String,
-};
-
-export type RatePropsType = ExtractPropTypes<typeof rateProps>;
 
 interface RangeTypes {
   score: number;
@@ -122,26 +39,33 @@ interface RangeTypes {
 
 export default defineComponent({
   name,
-  components: { StarFilledIcon },
+  components: { StarFilledIcon, StarIcon },
   props: rateProps,
   emits: ['change', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
-    const actualVal = computed(() => props.modelValue || props.value) as ComputedRef<number>;
+    const actualVal = computed(() => props.value) as ComputedRef<number>;
     const rateText = computed(() => {
-      if (props.texts.length > 0) {
+      if (Array.isArray(props.texts) && props.texts.length > 0) {
         return props.texts[actualVal.value - 1];
       }
 
       return actualVal.value > 0 ? `${actualVal.value} 分` : '';
     });
+    const colors = computed(() => {
+      if (Array.isArray(props.color)) return props.color;
+
+      return [props.color, null];
+    });
 
     const iconHalfStyle = (n: number) => ({
-      color: actualVal.value + 0.5 === n || actualVal.value >= n ? props.color : null,
+      color: actualVal.value + 0.5 === n || actualVal.value >= n ? colors.value[0] : 'transparent',
     });
     const iconFullStyle = (n: number) => ({
-      color: actualVal.value >= n ? props.color : null,
+      color: actualVal.value >= n ? colors.value[0] : 'transparent',
     });
+
+    const startComponent = props.variant === 'filled' ? StarFilledIcon : StarIcon;
 
     const classes = (n: number) => ({
       [`${name}--item`]: true,
@@ -155,7 +79,7 @@ export default defineComponent({
     }
 
     function onClick(current: number) {
-      if (props.readonly) return;
+      if (props.disabled) return;
       emit(props.clearable && actualVal.value === current ? 0 : current);
     }
 
@@ -177,7 +101,7 @@ export default defineComponent({
     }
 
     function onTouchmove(e: TouchEvent) {
-      if (props.readonly) return;
+      if (props.disabled) return;
 
       const { clientX } = e.touches[0];
 
@@ -202,6 +126,8 @@ export default defineComponent({
       actualVal,
       iconHalfStyle,
       iconFullStyle,
+      colors,
+      startComponent,
       rateText,
       onClick,
       onTouchstart,

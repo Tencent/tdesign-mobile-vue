@@ -1,8 +1,5 @@
 import { ComponentOptions, defineComponent, ComponentPublicInstance, h } from 'vue';
-
-function toCamel(str: string): string {
-  return str.replace(/-([a-z])/gi, (m, letter) => letter.toUpperCase());
-}
+import { toCamel } from './util';
 
 type PropOption = {
   name: string;

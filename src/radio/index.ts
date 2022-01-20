@@ -12,4 +12,5 @@ const _Radio: WithInstallType<typeof Radio> = withInstall(
     },
   ])(Radio),
 );
+
 export default _Radio;

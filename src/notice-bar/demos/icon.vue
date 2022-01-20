@@ -2,7 +2,15 @@
   <div class="noticebar-demo">
     <t-cell-group>
       <t-cell value-align="left">
-        <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :left-icon="() => SoundIcon" />
+        <t-notice-bar content="提示文字描述提示文字描述提示文字描述" />
+        <t-notice-bar
+          content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
+        />
+        <t-notice-bar type="error" content="提示文字描述提示文字描述提示文字描述" />
+        <t-notice-bar
+          type="error"
+          content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
+        />
       </t-cell>
     </t-cell-group>
   </div>
@@ -10,13 +18,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { SoundIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
-    return {
-      SoundIcon,
-    };
+    return {};
   },
 });
 </script>
