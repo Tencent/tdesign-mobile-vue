@@ -165,9 +165,9 @@ export default {
           component: () => import('@/navbar/demos/mobile.vue'),
         },
         {
-          title: 'SearchField 搜索框',
-          name: 'search-field',
-          component: () => import('@/search-field/demos/mobile.vue'),
+          title: 'Search 搜索框',
+          name: 'search',
+          component: () => import('@/search/demos/mobile.vue'),
         },
         {
           title: 'Swiper 轮播',
