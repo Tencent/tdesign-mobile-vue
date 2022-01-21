@@ -58,9 +58,7 @@
         </t-cell>
         <t-cell title="单行标题">
           <template #note>
-            <t-badge shape="ribbon">
-              <template #count> New </template>
-            </t-badge>
+            <t-badge shape="ribbon" count="NEW"> </t-badge>
           </template>
         </t-cell>
       </t-cell-group>
