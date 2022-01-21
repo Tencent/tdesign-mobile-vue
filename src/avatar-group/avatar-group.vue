@@ -1,16 +1,17 @@
 <template>
   <div :class="classes">
     <component :is="avatarItems" />
-    <avatar v-if="isShowEllipsisContent" :size="size" :icon="icon">
-      {{ ellipsisContent }}
+    <avatar v-if="isShowEllipsisContent" :size="size">
+      <t-node :content="ellipsisContent"></t-node>
     </avatar>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance } from 'vue';
-import { renderTNode } from '../shared';
-import AvatarGroupProps from './props';
+import { computed, defineComponent, Fragment, getCurrentInstance, provide, ref } from 'vue';
+import { renderTNode, TNode } from '../shared';
+import AvatarGroupProps from '../avatar/avatar-group-props';
+import { TdAvatarProps } from '../avatar/type';
 import config from '../config';
 import Avatar from '../avatar/avatar.vue';
 
@@ -21,9 +22,11 @@ export default defineComponent({
   name,
   components: {
     Avatar,
+    TNode,
   },
   props: AvatarGroupProps,
   setup(props, { slots }) {
+    const internalInstance = getCurrentInstance();
     const classes = computed(() => [
       `${name}`,
       {
@@ -32,35 +35,40 @@ export default defineComponent({
       },
     ]);
 
-    const internalInstance = getCurrentInstance();
+    const isShowEllipsisContent = ref(false);
+    const ellipsisContent = ref(null);
+    const size = ref(props.size);
+
     const collapseAvatar = computed(() => renderTNode(internalInstance, 'collapseAvatar'));
-    const isIcon = !!(props.collapseAvatar && typeof props.collapseAvatar === 'function');
-    const icon = collapseAvatar;
-
-    const children: any[] = slots.default ? slots.default() : [];
-    let childrenShow: any[] = [];
-    const max = props.max || 0;
-    let isShowEllipsisContent = false;
-    let ellipsisContent: any = null;
-
-    if (max && max < children.length) {
-      childrenShow = children.slice(0, max);
-      isShowEllipsisContent = true;
-      ellipsisContent = !isIcon ? props.collapseAvatar || `+${children.length - max}` : null;
-    } else {
-      childrenShow = children;
-    }
-
-    const size = childrenShow[0].props.size || 'medium';
 
     const avatarItems = () => {
+      const childContent: any[] = slots.default ? slots.default() : [];
+      const children: TdAvatarProps[] = [];
+      childContent.forEach((child) => {
+        if (child.type === Fragment) {
+          children.push(...child.children);
+        } else {
+          children.push(child);
+        }
+      });
+      let childrenShow: TdAvatarProps[] = [];
+      const max = props.max || 0;
+      if (max && max < children.length) {
+        childrenShow = children.slice(0, max);
+        isShowEllipsisContent.value = true;
+        ellipsisContent.value = collapseAvatar.value || `+${children.length - max}`;
+      } else {
+        childrenShow = children;
+      }
+      size.value = childrenShow[0].size || props.size;
       return childrenShow;
     };
-
+    provide('avatarGroup', {
+      size,
+    });
     return {
       classes,
       size,
-      icon,
       isShowEllipsisContent,
       ellipsisContent,
       avatarItems,
