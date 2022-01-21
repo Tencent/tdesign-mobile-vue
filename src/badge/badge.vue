@@ -32,7 +32,9 @@ export default defineComponent({
     const isIndependent = computed(() => badgeContent.value === undefined);
 
     // 是否展示徽标
-    const showBadge = computed(() => badgeContent.value !== undefined || props.showZero || props.count !== 0);
+    const showBadge = computed(
+      () => badgeContent.value !== undefined || props.showZero || props.dot || props.count !== 0,
+    );
 
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
@@ -42,13 +44,11 @@ export default defineComponent({
 
     // 徽标内层样式类
     const badgeInnerClasses = computed(() => ({
-      [`${name}--basic`]: true,
+      [`${name}__inner`]: true,
       [`${name}--has-children`]: !isIndependent.value,
+      [`${name}--${props.size}`]: props.size,
+      [`${name}--${props.shape}`]: props.shape && !props.dot,
       [`${name}--dot`]: props.dot,
-      [`${name}--small`]: props.size === 'small',
-      [`${name}--circle`]: props.shape === 'circle',
-      [`${name}--round`]: props.shape === 'round',
-      [`${name}--ribbon`]: props.shape === 'ribbon',
     }));
 
     // 徽标自定义样式

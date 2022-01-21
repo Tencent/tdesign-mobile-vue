@@ -15,11 +15,7 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
-
-export default defineComponent({});
-</script>
+<script lang="ts" setup></script>
 <style lang="less">
 .accordion-demo {
   background-color: #f9f9f9;

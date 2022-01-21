@@ -1,21 +1,16 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <h1 class="title">SegmentedControl 分段器</h1>
-    <tdesign-demo-block title="01 类型" summary="两列分段器">
-      <div class="segmented-control-demo">
+  <div class="demo-segmented-control">
+    <div class="demo-segmented-control__wrap">
+      <t-cell>
         <t-segmented-control v-model="defaultValue" :items="items.slice(0, 2)" @change="change"></t-segmented-control>
-      </div>
-    </tdesign-demo-block>
-    <tdesign-demo-block summary="两列分段器">
-      <div class="segmented-control-demo">
+      </t-cell>
+      <t-cell>
         <t-segmented-control v-model="defaultValue" :items="items.slice(0, 3)" @change="change"></t-segmented-control>
-      </div>
-    </tdesign-demo-block>
-    <tdesign-demo-block summary="两列分段器">
-      <div class="segmented-control-demo">
+      </t-cell>
+      <t-cell>
         <t-segmented-control v-model="defaultValue" :items="items" @change="change"></t-segmented-control>
-      </div>
-    </tdesign-demo-block>
+      </t-cell>
+    </div>
   </div>
 </template>
 
@@ -57,3 +52,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="less" scoped>
+.t-cell {
+  margin: 12px 0;
+}
+</style>

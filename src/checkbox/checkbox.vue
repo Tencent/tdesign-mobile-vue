@@ -1,40 +1,84 @@
 <template>
   <div :class="`${flagName}`">
-    <span :class="iconClasses" :style="iconStyle" @click="checkBoxChange">
-      <slot name="icon" :checked="isChecked">
-        <check-circle-filled-icon v-if="isChecked" :class="circleFilled" />
-      </slot>
-    </span>
-    <span :class="`${flagName}__content-wrap`" @click="checkBoxChange('content')">
-      <span v-if="title" :class="titleClasses" :style="titleStyle">
-        {{ title }}
+    <div :class="`${flagName}__content-wrap`">
+      <!-- 按钮区域 -->
+      <span v-if="align === 'left'" :class="iconClasses">
+        <input
+          type="checkbox"
+          :name="name"
+          :class="`${flagName}__original-left`"
+          :value="value"
+          :checked="singleChecked || isChecked"
+          @click="checkBoxOrgChange"
+        />
+        <t-node
+          v-if="(singleChecked || isChecked) && !indeterminate"
+          :content="(icon && icon[0]) || defaultCheck"
+          :class="checkedIconClass"
+          size="24px"
+        ></t-node>
+        <t-node
+          v-else-if="!(singleChecked || isChecked) && !indeterminate"
+          :content="(icon && icon[1]) || defaultUncheck"
+          :class="unCheckedIconClass"
+          size="24px"
+        ></t-node>
+        <t-node v-else-if="indeterminate" :content="TMinusCircleFilledIcon" size="24px"></t-node>
       </span>
-      <div v-if="hasSlot" :class="`${flagName}__content-inner`" :style="contentStyle">
-        <slot></slot>
-      </div>
-    </span>
+      <!-- 文本区域 -->
+      <span
+        :class="{ [`${flagName}__label-wrap`]: true, [`${flagName}__label-wrap-left`]: align === 'right' }"
+        @click="checkBoxChange('content')"
+      >
+        <span v-if="labelContent" :class="titleClasses">
+          <t-node :content="labelContent"></t-node>
+        </span>
+        <div v-if="checkboxContent" :class="`${flagName}__content-inner`">
+          <t-node :content="checkboxContent"></t-node>
+        </div>
+      </span>
+      <!-- 按钮区域 -->
+      <span v-if="align === 'right'" :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`">
+        <input
+          type="checkbox"
+          :name="name"
+          :class="`${flagName}__original-right`"
+          :value="value"
+          :checked="singleChecked || isChecked"
+          @click="checkBoxOrgChange"
+        />
+        <!-- <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span> -->
+        <t-node
+          v-if="singleChecked || isChecked"
+          :content="(icon && icon[0]) || defaultCheck"
+          :class="checkedIconClass"
+          size="24px"
+        ></t-node>
+        <t-node v-else :content="(icon && icon[1]) || defaultUncheck" :class="unCheckedIconClass" size="24px"></t-node>
+      </span>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { ref, inject, onMounted, onUnmounted, computed, SetupContext, defineComponent } from 'vue';
+import {
+  inject,
+  onMounted,
+  onUnmounted,
+  computed,
+  SetupContext,
+  defineComponent,
+  getCurrentInstance,
+  h,
+  ref,
+} from 'vue';
+import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
+import CheckboxProps from './props';
+import { renderContent, renderTNode, TNode, useToggle } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
-
-/**
- * @description: 限制行数样式
- * @param {number} 行数
- * @return: 返回样式对象
- */
-const getLimitRow = (row?: number) => ({
-  display: '-webkit-box',
-  overflow: 'hidden',
-  '-webkit-box-orient': 'vertical',
-  '-webkit-line-clamp': row,
-});
 
 /**
  * @description: 返回 Icon 的对应的类名
@@ -44,21 +88,11 @@ const getLimitRow = (row?: number) => ({
  * @param {rootGroup} Group注入的对象
  * @return: 返回IconClass对象
  */
-const getIconClasses = (
-  flagName: string,
-  isChecked: any,
-  content: SetupContext,
-  props: CheckBoxProps,
-  rootGroup: any,
-) =>
+const getIconClasses = (flagName: string, isChecked: any, content: SetupContext, props: any, rootGroup: any) =>
   computed(() => {
     const classes: Array<string> = [];
     classes.push(`${flagName}__icon-left`);
-    if (!isChecked.value) {
-      if (!content.slots.icon) {
-        classes.push(`${flagName}__icon-left--default`);
-      }
-    } else {
+    if (isChecked.value) {
       classes.push(`${prefix}-is-checked`);
     }
     if (rootGroup?.disabled || props?.disabled) {
@@ -73,7 +107,7 @@ const getIconClasses = (
  * @param {rootGroup} Group注入的对象
  * @return: 返回TitleClass对象
  */
-const getTitleClasses = (flagName: string, props: CheckBoxProps, rootGroup: any) =>
+const getTitleClasses = (flagName: string, props: any, rootGroup: any) =>
   computed(() => {
     const classes: Array<string> = [];
     classes.push(`${flagName}__content-title`);
@@ -83,34 +117,29 @@ const getTitleClasses = (flagName: string, props: CheckBoxProps, rootGroup: any)
     return classes;
   });
 /**
- * @description: 返回 Icon对应的样式
- * @param {isChecked} 是否选中
- * @param {props} props属性对象
- * @return: 返回Icon对应的养生
- */
-const getIconStyle = (isChecked: any, props: CheckBoxProps) =>
-  computed(() => {
-    const resStyle: {
-      color?: string;
-    } = {
-      color: '#0052D9', // TODO: 目前是这样的，默认是#0052D9这个颜色，支持自定义，没有跟着主题色变，后面会在common基于less生成的js，是token内容的，引用这个来解决
-    };
-    if (isChecked.value) {
-      resStyle.color = props.checkedColor;
-    }
-    return resStyle;
-  });
-/**
  * @description: 判断当前checkbox是否选中
  * @param {props} props属性对象
  * @param {rootGroup} Group注入的对象
  * @return: 返回是否选中的对象
  */
-const getIsCheck = (props: CheckBoxProps, rootGroup: any) =>
-  computed(
-    () =>
-      props?.modelValue === props?.name || (rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.name) !== -1),
-  );
+const getIsCheck = (props: any, rootGroup: any) =>
+  computed(() => rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.value) !== -1);
+
+const getCheckedIconClass = (flagName: string, isChecked: any, singleChecked: boolean, disabled: boolean) =>
+  computed(() => {
+    let checkClass = '';
+    if ((singleChecked || isChecked) && !disabled) {
+      checkClass = `${flagName}__checked-icon`;
+    } else {
+      checkClass = `${flagName}__checked__disable-icon`;
+    }
+    return checkClass;
+  });
+
+const getUnCheckedIconClass = (flagName: string) => {
+  const unCheckClass = `${flagName}__uncheck-icon`;
+  return unCheckClass;
+};
 
 /**
  * @description: 设置checkbox点击回调
@@ -119,125 +148,49 @@ const getIsCheck = (props: CheckBoxProps, rootGroup: any) =>
  * @param {rootGroup} Group注入的对象
  * @return: 返回点击函数
  */
-const setCheckBoxChange =
-  (props: CheckBoxProps, rootGroup: any, content: SetupContext, isChecked: any) => (area: string) => {
-    if (props.disabled) {
-      return;
+const setCheckBoxChange = (props: any, rootGroup: any, content: SetupContext, isChecked: any) => (area: string) => {
+  if (props.disabled) {
+    return;
+  }
+  if (area === 'content' && props?.contentDisabled) {
+    return;
+  }
+  if (isChecked.value) {
+    content.emit('update:value', '');
+    content.emit('change', '');
+    if (rootGroup) {
+      rootGroup?.uncheck(props.value);
     }
-    if (area === 'content' && props?.contentDisabled) {
-      return;
+    if (props.checkAll) {
+      rootGroup.toggleAll(false);
     }
-    if (isChecked.value) {
-      content.emit('update:modelValue', '');
-      content.emit('change', '');
-      if (rootGroup) {
-        rootGroup?.uncheck(props.name);
-      }
-    } else {
-      content.emit('update:modelValue', props.name);
-      content.emit('change', props.name);
-      if (rootGroup) {
-        rootGroup?.check(props.name);
-      }
+  } else {
+    content.emit('update:value', props.value);
+    content.emit('change', props.value);
+    if (rootGroup) {
+      rootGroup?.check(props.value);
     }
-  };
-
-interface CheckBoxProps {
-  name?: string;
-  title?: string;
-  disabled?: boolean;
-  contentDisabled?: boolean;
-  modelValue?: string;
-  limitTitleRow?: number | string;
-  limitContentRow?: number | string;
-  checkedColor?: string;
-}
+    if (props.checkAll) {
+      rootGroup.toggleAll(true);
+    }
+  }
+};
 export default defineComponent({
   name,
-  components: {
-    CheckCircleFilledIcon,
-  },
-  props: {
-    /**
-     * @description checkbox 当前的值
-     * @attribute name
-     */
-    name: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description checkbox 当前的标题
-     * @attribute title
-     */
-    title: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description checkbox 当前checkbox是否能选中，整体是否能被点击
-     * @attribute disabled
-     */
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * @description checkbox 当前checkbox的文本部分能否被点击
-     * @attribute contentDisable
-     */
-    contentDisabled: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * @description checkbox 当没有用用group分组的时候派上用场
-     * @attribute modelValue
-     */
-    modelValue: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description checkbox 限制标题的行数，超出行数打省略号
-     * @attribute limitTitleRow
-     */
-    limitTitleRow: {
-      type: [Number, String],
-      default: 0,
-    },
-    /**
-     * @description checkbox 限制内容的行数，超出行数打省略号
-     * @attribute limitContentRow
-     */
-    limitContentRow: {
-      type: [Number, String],
-      default: 0,
-    },
-    /**
-     * @description checkbox 选中的颜色
-     * @attribute checkedColor
-     */
-    checkedColor: {
-      type: String,
-      default: '#0052D9',
-    },
-  },
-  setup(props, content) {
+  components: { TNode },
+  props: CheckboxProps,
+  emits: ['update:value', 'change'],
+  setup(props: any, context: SetupContext) {
+    const defaultCheck = h(CheckCircleFilledIcon);
+    const defaultUncheck = h(CircleIcon);
+    const internalInstance = getCurrentInstance();
     const flagName = name;
-    const hasSlot = ref(false);
     const rootGroup: any = inject('rootGroup', undefined);
-    const limitTitleRow = Number(props?.limitTitleRow) || 0;
-    const limitContentRow = Number(props?.limitContentRow) || 0;
-    const titleStyle = limitTitleRow !== 0 ? getLimitRow(limitTitleRow) : {};
-    const contentStyle = limitContentRow !== 0 ? getLimitRow(limitContentRow) : {};
-    const circleFilled = `${name}__icon`;
-
-    hasSlot.value = !!content.slots.default; // 判断是否有default slot
-    if (!content.slots.default || !props?.title) {
-      // 当没有title或者slot的时候去掉中间的margin-top
-      Object.assign(contentStyle, { marginTop: 0 });
-    }
+    const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
+    const checkboxContent = computed(() => renderTNode(internalInstance, 'content'));
+    const TMinusCircleFilledIcon = h(MinusCircleFilledIcon);
+    const singleChecked = props.checked || ref(false);
+    const checkboxCheckVal = [false, true];
     onMounted(() => {
       rootGroup?.register(props);
     });
@@ -246,22 +199,67 @@ export default defineComponent({
       rootGroup?.unregister(props);
     });
     const isChecked = getIsCheck(props, rootGroup);
-    const iconClasses = getIconClasses(flagName, isChecked, content, props, rootGroup);
+    const iconClasses = getIconClasses(flagName, isChecked, context, props, rootGroup);
     const titleClasses = getTitleClasses(flagName, props, rootGroup);
-    const iconStyle = getIconStyle(isChecked, props);
-    const checkBoxChange = setCheckBoxChange(props, rootGroup, content, isChecked);
+    const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
+    const checkedIconClass = getCheckedIconClass(
+      flagName,
+      isChecked,
+      singleChecked,
+      rootGroup?.disabled || props?.disabled,
+    );
+    const unCheckedIconClass = getUnCheckedIconClass(flagName);
+    const { state, toggle } = useToggle(checkboxCheckVal, isChecked.value);
+    const isALlSelected = computed(() => rootGroup?.isALlSelected);
+
+    const checkBoxOrgChange = (e: Event) => {
+      const { target }: { target: any } = e;
+      if (rootGroup?.disabled || props?.disabled) {
+        return;
+      }
+      if (singleChecked.value || (rootGroup && isChecked.value)) {
+        toggle();
+        context.emit('update:value', '');
+        if (rootGroup) {
+          rootGroup?.uncheck(target?.value, { e });
+        } else {
+          singleChecked.value = false;
+        }
+        if (props.checkAll) {
+          rootGroup.toggleAll(false);
+        }
+        props?.onChange && props?.onChange(state.value, { e });
+      } else {
+        toggle();
+        context.emit('update:value', target?.value, { e });
+        props?.onChange && props?.onChange(state.value, { e });
+        if (rootGroup) {
+          rootGroup?.check(target?.value, { e });
+        } else {
+          singleChecked.value = true;
+        }
+        if (props.checkAll) {
+          rootGroup.toggleAll(true);
+        }
+      }
+    };
 
     return {
+      checkboxContent,
+      labelContent,
+      checkBoxOrgChange,
       isChecked,
-      hasSlot,
       flagName,
       checkBoxChange,
       iconClasses,
       titleClasses,
-      titleStyle,
-      contentStyle,
-      iconStyle,
-      circleFilled,
+      TMinusCircleFilledIcon,
+      defaultCheck,
+      defaultUncheck,
+      singleChecked,
+      isALlSelected,
+      unCheckedIconClass,
+      checkedIconClass,
     };
   },
 });

@@ -1,17 +1,19 @@
 <template>
   <span :class="classes">
-    <span v-if="label" :class="textClasses">
+    <span v-if="label" :class="`${name}__text`">
       {{ label }}
     </span>
-    <span :class="nodeClasses" :style="backgroundColor" @click="handleToggle"> </span>
+    <span :class="`${name}__node`" :style="backgroundColor" @click="handleToggle"> </span>
   </span>
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, h } from 'vue';
-import { useToggle } from '../shared';
+import { computed, toRefs, defineComponent, h, watch, SetupContext } from 'vue';
+import { useToggle, useDefault } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
+import ClASSNAMES from '../shared/constants';
+import { SwitchValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-switch`;
@@ -19,39 +21,23 @@ const name = `${prefix}-switch`;
 export default defineComponent({
   name,
   props: SwitchProps,
-  emits: ['change'],
-  setup(props, context) {
-    const switchValues = props.customValue || [false, true];
-    const { state, toggle } = useToggle(switchValues, props.value);
-
-    const checked = computed(() => state.value === switchValues[1]);
+  emits: ['change', 'update:value', 'update:modelValue'],
+  setup(props, context: SetupContext) {
+    const switchValues = props.customValue || [true, false];
+    const { innerValue } = useDefault(props, context, 'value', 'change');
+    const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
 
     const classes = computed(() => [
       `${name}`,
       {
-        [`${name}--checked`]: checked.value,
-        [`${prefix}-is-disabled`]: props.disabled,
-      },
-    ]);
-
-    const textClasses = computed(() => [
-      `${name}__text`,
-      {
-        [`${prefix}-is-disabled`]: props.disabled,
-      },
-    ]);
-
-    const nodeClasses = computed(() => [
-      `${name}__node`,
-      {
-        [`${name}__node--checked`]: checked.value,
-        [`${prefix}-is-disabled`]: props.disabled,
+        [ClASSNAMES.STATUS.checked]: innerValue.value === true,
+        [ClASSNAMES.STATUS.disabled]: props.disabled,
       },
     ]);
 
     const backgroundColor = computed(() => {
       if (!props.disabled && props.colors) {
-        return `background-color: ${checked.value ? props.colors[1] : props.colors[0]}`;
+        return `background-color: ${innerValue.value === switchValues[0] ? props.colors[0] : props.colors[1]}`;
       }
       return ``;
     });
@@ -59,16 +45,15 @@ export default defineComponent({
     function handleToggle(event: Event) {
       event.preventDefault();
       if (props.disabled) {
-        return false;
+        return;
       }
       toggle();
-      context.emit('change', state.value);
+      innerValue.value = state.value;
+      console.log('state', state.value, 'innerValue', innerValue.value);
     }
     return {
       name,
       classes,
-      textClasses,
-      nodeClasses,
       backgroundColor,
       ...toRefs(props),
       handleToggle,

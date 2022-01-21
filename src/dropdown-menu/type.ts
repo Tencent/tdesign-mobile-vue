@@ -2,7 +2,7 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-11-27 00:06:44
+ * updated at 2021-12-24 15:44:37
  * */
 
 export interface TdDropdownMenuProps {
@@ -30,7 +30,7 @@ export interface TdDropdownMenuProps {
    * 菜单栏 z-index 层级
    */
   zIndex: number;
-}
+};
 
 export interface TdDropdownItemProps {
   /**
@@ -38,6 +38,16 @@ export interface TdDropdownItemProps {
    * @default false
    */
   disabled: boolean;
+  /**
+   * 标题
+   * @default ''
+   */
+  label: string;
+  /**
+   * 是否多选
+   * @default false
+   */
+  multiple: boolean;
   /**
    * 选项数据
    */
@@ -52,30 +62,15 @@ export interface TdDropdownItemProps {
    */
   optionsLayout: 'columns' | 'tree';
   /**
-   * 选取模式
-   * @default single
-   */
-  selectMode: 'single' | 'multi';
-  /**
-   * 标题
-   * @default ''
-   */
-  title: string;
-  /**
    * 选中值
    */
-  value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>;
+  value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ;
   /**
    * 选中值，非受控属性
    */
-  defaultValue: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>;
-}
+  defaultValue: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ;
+};
 
-export interface TdDropdownItemOption {
-  title: string;
-  disabled: boolean;
-  value: TdDropdownItemOptionValueType;
-  [key: string]: any;
-}
+export interface TdDropdownItemOption { title: string;disabled: boolean;value: TdDropdownItemOptionValueType; [key: string]: any };
 
-export type TdDropdownItemOptionValueType = string | number;
+export type TdDropdownItemOptionValueType = string | number;;

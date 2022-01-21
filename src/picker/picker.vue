@@ -7,7 +7,7 @@
     </div>
     <div :class="mainClassName">
       <div :class="groupClassName">
-        <component :is="pickerColumns" />
+        <component :is="pickerItems" />
       </div>
       <div :class="maskClassName"></div>
       <div :class="indicatorClassName"></div>
@@ -16,9 +16,11 @@
 </template>
 
 <script lang="ts">
-import { computed, mergeProps, defineComponent } from 'vue';
+import { computed, mergeProps, defineComponent, SetupContext } from 'vue';
+import { useDefault } from '../shared';
 import config from '../config';
-import { PickerProps } from './picker.interface';
+import { PickerProps } from './props';
+import { PickerValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
@@ -26,10 +28,10 @@ const name = `${prefix}-picker`;
 export default defineComponent({
   name,
   props: PickerProps,
-  emits: ['change', 'cancel', 'confirm'],
-  setup(props, context) {
-    const className = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
-    const groupClassName = computed(() => `${name}-column__group`);
+  emits: ['change', 'cancel', 'confirm', 'update:modelValue'],
+  setup(props, context: SetupContext) {
+    const className = computed(() => [`${name}`]);
+    const groupClassName = computed(() => `${name}-item__group`);
     const maskClassName = computed(() => `${name}__mask`);
     const indicatorClassName = computed(() => `${name}__indicator`);
     const mainClassName = computed(() => `${name}__main`);
@@ -37,55 +39,43 @@ export default defineComponent({
     const titleClassName = computed(() => `${name}__title`);
     const cancelClassName = computed(() => `${name}__cancel`);
     const confirmClassName = computed(() => `${name}__confirm`);
-    const confirmButtonText = computed(() => props.confirmButtonText || '确定');
-    const cancelButtonText = computed(() => props.cancelButtonText || '取消');
+    const confirmButtonText = computed(() => props.confirmBtn || '确定');
+    const cancelButtonText = computed(() => props.cancelBtn || '取消');
+    const curData: Array<PickerValue> = [];
 
-    const curData: any[] = [];
-    let columnLen = 0;
-
-    const pickerColumns = () => {
-      let pickerColumnItems = context.slots.default ? context.slots.default() : [];
-      columnLen = pickerColumnItems.length;
-      pickerColumnItems = pickerColumnItems.map((pickerColumn: any, columnIndex: number) => {
-        const newPickerColumn = pickerColumn;
-        const curIndex = newPickerColumn.props['default-index'] || newPickerColumn.props.defaultIndex || 0;
-        if (!curData[columnIndex]) {
-          curData[columnIndex] = {
-            value: newPickerColumn.props.options[curIndex],
-            index: curIndex,
-          };
+    const pickerItems = () => {
+      let pickerItems = context.slots.default ? context.slots.default() : [];
+      pickerItems = pickerItems.map((pickerItem: any, itemIndex: number) => {
+        const newPickerItem = pickerItem;
+        const pickerItemDefaultValue = Array.isArray(props.defaultValue) ? props.defaultValue[itemIndex] : newPickerItem.props.value || newPickerItem.props.options[0];
+        const curValue = pickerItemDefaultValue;
+        if (!curData[itemIndex]) {
+          curData[itemIndex] = curValue;
         }
-        newPickerColumn.props = mergeProps(newPickerColumn.props, {
+
+        newPickerItem.props = mergeProps(newPickerItem.props, {
+          value: curValue,
           onChange(e: any) {
-            const newEvent = { column: columnIndex, ...e };
-            curData[columnIndex] = {
-              value: e.value,
-              index: e.index,
-            };
-            context.emit('change', newEvent);
+            curData[itemIndex] = e.value;
+            const changeData = [...curData];
+            context.emit('change', changeData);
           },
         });
-        return newPickerColumn;
+        return newPickerItem;
       });
-      return pickerColumnItems;
+      return pickerItems;
     };
 
-    const handleConfirm = () => {
-      let emitData = columnLen > 1 ? curData : curData[0];
-      if (Array.isArray(emitData)) {
-        emitData = emitData.reduce(
-          (acc, item) => {
-            acc.value.push(item.value);
-            acc.index.push(item.index);
-            return acc;
-          },
-          { value: [], index: [] },
-        );
-      }
-      context.emit('confirm', emitData);
+    const handleConfirm = (e: MouseEvent) => {
+      const emitData = curData.reduce((acc, item) => {
+        acc.push(item);
+        return acc;
+      }, [] as Array<PickerValue>);
+      context.emit('update:modelValue', emitData);
+      context.emit('confirm', { e });
     };
 
-    const handleCancel = () => context.emit('cancel');
+    const handleCancel = (e: MouseEvent) => context.emit('cancel', { e });
 
     return {
       className,
@@ -101,7 +91,7 @@ export default defineComponent({
       indicatorClassName,
       handleConfirm,
       handleCancel,
-      pickerColumns,
+      pickerItems,
       curData,
     };
   },

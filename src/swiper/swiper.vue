@@ -2,7 +2,7 @@
   <div :style="{ height: `${height}px`, overflow: 'hidden' }" :class="`${name}`">
     <div
       ref="swiperContainer"
-      :class="`${name}-container`"
+      :class="`${name}__container`"
       :style="{
         height: `${height}px`,
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
@@ -15,29 +15,30 @@
     >
       <slot></slot>
     </div>
-    <!-- 左右侧的按钮 -->
-    <span v-if="direction === 'horizontal' && navigation?.showSlideBtn">
-      <span :class="`${name}-btn btn-prev`" @click="prev(1)">
-        <chevron-left-icon size="12px" name="chevron-left" />
+    <template v-if="navigation">
+      <!-- 左右侧的按钮 -->
+      <span v-if="direction === 'horizontal' && navigation.showSlideBtn">
+        <span :class="`${name}__btn btn-prev`" @click="prev(1)">
+          <chevron-left-icon size="20px" />
+        </span>
+        <span :class="`${name}__btn btn-next`" @click="next(1)">
+          <chevron-right-icon size="20px" />
+        </span>
       </span>
-      <span :class="`${name}-btn btn-next`" @click="next(1)">
-        <chevron-right-icon size="12px" name="chevron-right" />
+      <!-- 分页器 -->
+      <span v-if="navigation.type" :class="`${name}__pagination ${name}__pagination-${navigation.type}`">
+        <template v-if="['dots', 'dots-bar'].includes(navigation.type)">
+          <span
+            v-for="(item, index) in paginationList"
+            :key="'page' + index"
+            :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
+          ></span>
+        </template>
+        <span v-if="navigation.type === 'fraction'">
+          {{ showPageNum + '/' + state.itemLength }}
+        </span>
       </span>
-    </span>
-    <!-- 分页器 -->
-    <span v-if="navigation.type" :class="`${name}-pagination ${name}-pagination--${navigation.type}`">
-      <template v-if="navigation.type === 'bullets'">
-        <span
-          v-for="(item, index) in paginationList"
-          :key="'page' + index"
-          :class="{ [`${name}-pagination-dot`]: true, active: index === state.activeIndex }"
-        ></span>
-      </template>
-      <span v-if="navigation.type === 'fraction'">
-        {{ showPageNum + '/' + state.itemLength }}
-      </span>
-    </span>
-    {{ defaultCurrent }}
+    </template>
   </div>
 </template>
 <script lang="ts">
@@ -62,7 +63,6 @@ export default defineComponent({
   setup(props, context) {
     const self = getCurrentInstance();
     const swiperContainer = ref(null);
-
     // const { height = 180, current = null } = props;
     const height = props.height || ref(180);
     const state: {
@@ -70,11 +70,13 @@ export default defineComponent({
       itemLength: number;
       itemWidth: number;
       isControl: boolean;
+      btnDisabled: boolean;
     } = reactive({
       activeIndex: 0,
       itemLength: 0,
       itemWidth: 0,
       isControl: false,
+      btnDisabled: false,
     });
     // 分页数组--任意数组，用于循环分页点
     const paginationList = computed(() => new Array(state.itemLength).fill(1));
@@ -86,7 +88,7 @@ export default defineComponent({
       return activeIndex + 1;
     });
     // 获取容器节点（实时获取，才能获取到最新的节点）
-    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper-container');
+    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     // 初始化轮播图元素
     const initSwiper = () => {
@@ -106,7 +108,7 @@ export default defineComponent({
     onMounted(() => {
       const _swiperContainer = getContainer();
       state.itemLength = _swiperContainer.children?.length || 0;
-      const itemWidth = document.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
+      const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       initSwiper();
       startAutoplay();
@@ -117,6 +119,7 @@ export default defineComponent({
     });
     // eslint-disable-next-line no-undef
     let autoplayTimer: number | NodeJS.Timeout | null = null;
+    let actionIsTrust = true;
     /**
      * 移动节点
      */
@@ -127,6 +130,7 @@ export default defineComponent({
       const { height = 180 } = props;
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
       const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
+      actionIsTrust = isTrust;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
     };
@@ -138,10 +142,11 @@ export default defineComponent({
     // 移除动画（轮播时用到）
     const removeAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = 'transform 0s';
+      _swiperContainer.style.transition = 'none';
     };
     // 确认是否已经移动到最后一个元素，每次transitionend事件后即检查
     const handleAnimationEnd = () => {
+      state.btnDisabled = false;
       removeAnimation();
       if (state.activeIndex >= state.itemLength) {
         // console.log('到了最后一个元素', state.activeIndex, state.itemLength);
@@ -153,6 +158,9 @@ export default defineComponent({
         state.activeIndex = state.itemLength - 1;
         move(state.itemLength - 1);
       }
+      setTimeout(() => {
+        actionIsTrust && emitCurrentChange(state.activeIndex);
+      }, 0);
     };
     // 停止自动播放
     const stopAutoplay = () => {
@@ -181,21 +189,23 @@ export default defineComponent({
     };
     // 移动到上一个
     const prev = (step = 1) => {
+      if (state.btnDisabled) return false;
       stopAutoplay();
       state.activeIndex -= step;
       addAnimation();
       move(state.activeIndex);
       startAutoplay();
-      emitCurrentChange(state.activeIndex);
+      state.btnDisabled = true;
     };
     // 移动到下一个
     const next = (step = 1) => {
+      if (state.btnDisabled) return false;
       stopAutoplay();
       state.activeIndex += step;
       addAnimation();
       move(state.activeIndex);
       startAutoplay();
-      emitCurrentChange(state.activeIndex);
+      state.btnDisabled = true;
     };
     let touchStartX = 0;
     let touchStartY = 0;
@@ -207,6 +217,7 @@ export default defineComponent({
     };
     // 滑动过程中位移容器
     const onTouchMove = (event: TouchEvent) => {
+      event.preventDefault();
       const { activeIndex, itemWidth } = state;
       const endY = event.changedTouches[0].clientY;
       const endX = event.changedTouches[0].clientX;
@@ -241,7 +252,6 @@ export default defineComponent({
       } else {
         move(state.activeIndex);
       }
-      emitCurrentChange(state.activeIndex);
       startAutoplay();
     };
     watch(

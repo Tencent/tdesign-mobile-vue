@@ -1,57 +1,46 @@
 <template>
-  <div :class="`${name}`" >
-     <t-cell-group  class="tdesign-demo--dialog">
-        <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(5)">
-            双操作对话框
-          </t-button>
-          <t-button theme="primary" @click="changeDialogVisible(6)">
-            带警示操作对话框
-          </t-button>
-          <t-dialog
-            v-model="isShowDialog5"
-            type="confirm"
-            :title="title"
-            :content="content"
-            :cancel-button-text="cancelButtonText"
-            :confirm-button-text="confirmButtonText"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-          </t-dialog>
-          <t-dialog
-            v-model="isShowDialog6"
-            type="confirm"
-            :title="title"
-            :content="moreTextContent"
-            :cancel-button-text="cancelButtonText"
-            :confirm-button-text="confirmButtonText"
-            @confirm="onConfirm"
-            @cancel="onCancel">
-            <template #footer-cancel>
-              <div style="color:#000;font-size:18px;">辅助操作</div>
-            </template>
-            <template #footer-confirm>
-              <div style="color:#E34D59;font-size:18px;">我同意</div>
-            </template>
-          </t-dialog>
-        </t-cell>
-      </t-cell-group>
+  <div :class="`${name}`">
+    <t-cell-group class="tdesign-demo--dialog">
+      <t-cell value-align="left">
+        <t-button theme="primary" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
+        <t-button theme="primary" @click="eventDialog()"> 带警示操作对话框 </t-button>
+        <t-dialog
+          v-model="isShowDialog5"
+          type="confirm"
+          :title="title"
+          :content="content"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        >
+        </t-dialog>
+        <t-dialog
+          v-model="isShowDialog6"
+          type="confirm"
+          :title="title"
+          :content="moreTextContent"
+          :cancel-button-text="cancelButtonText"
+          :confirm-button-text="confirmButtonText"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        >
+          <template #footer-cancel>
+            <div style="color: #000; font-size: 18px">辅助操作</div>
+          </template>
+          <template #footer-confirm>
+            <div style="color: #e34d59; font-size: 18px">我同意</div>
+          </template>
+        </t-dialog>
+      </t-cell>
+    </t-cell-group>
   </div>
 </template>
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 
-import config from '@/config';
-
-const { prefix } = config;
-const name = `${prefix}-demo--dialog`;
-
 export default defineComponent({
-  setup() {
-    return {
-      name: ref(name),
-    };
-  },
+  setup() {},
   data() {
     return {
       title: '对话框标题',
@@ -86,7 +75,10 @@ export default defineComponent({
         }
       }
     },
-    onConfirm(e: string)  {
+    eventDialog() {
+      this.$dialog.alert('event dialog');
+    },
+    onConfirm(e: string) {
       console.log('dialog:confirm', e);
     },
 
@@ -99,9 +91,8 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .tdesign-demo--dialog {
-  .t-button:not(:last-child){
+  .t-button:not(:last-child) {
     margin-right: 20px;
   }
 }
 </style>
-

@@ -1,4 +1,4 @@
-import { withInstall, WithInstallType } from '../shared';
+import { mapProps, withInstall, WithInstallType } from '../shared';
 import Input from './input.vue';
 
 import './style';

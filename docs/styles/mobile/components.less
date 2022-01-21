@@ -1,90 +1,109 @@
 @import "../vars.less";
 @import "../mixins/index.less";
 
-.button-demo {
-  padding: 16px 0;
+.tdesign-mobile-demo-block {
+  .button-demo {
 
-  .t-button {
-    margin-bottom: 16px;
+    .t-button {
+      margin-bottom: 16px;
+    }
   }
-}
 
-.tdesign-demo-iconfont {
-  .tdesign-demo-icon {
+  .tdesign-demo-iconfont {
+    .tdesign-demo-icon {
+      display: inline-block;
+      width: 25%;
+      text-align: center;
+
+      .t-icon {
+        color: inherit;
+        font-size: 28px;
+      }
+
+      p {
+        margin: 10px 0;
+        .text-ellipsis();
+      }
+    }
+  }
+
+  .cell-base {
+    background-color: #fbfbfb;
+  }
+
+  .tag-demo {
+    background-color: #fff;
+    padding: 16px;
+    display: flex;
+
+    .t-tag+.t-tag {
+      margin-left: 8px;
+    }
+  }
+
+  .tag-demo+.tag-demo {
+    margin-top: 16px;
+  }
+
+  .segmented-control-demo {
+    background-color: #fff;
+    padding: 12px 16px;
+  }
+
+  .toast-demo,
+  .message-demo,
+  .dialog-demo,
+  .action-sheet-demo {
+    padding: 0 16px;
+
+    .t-button+.t-button {
+      margin-top: 16px;
+    }
+  }
+
+  .slider-demo {
+    background-color: #fff;
+    padding: 12px 16px;
+    max-height: 69px;
+  }
+
+  .stepper-demo {
+    background-color: #fff;
+    // max-height: 69px;
+  }
+
+  .stepper-demo+.stepper-demo {
+    margin-top: 16px;
+  }
+
+  .stepper-pure-demo {
     display: inline-block;
-    width: 25%;
-    text-align: center;
+  }
 
-    .t-icon {
-      color: inherit;
-      font-size: 28px;
+  .step-demo {
+    background-color: #fff;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 40px;
+
+    .t-steps {
+      padding-bottom: 40px;
     }
+  }
 
-    p {
-      margin: 10px 0;
-      .text-ellipsis();
+  .step-demo+.step-demo {
+    margin-top: 16px;
+  }
+
+
+  .badge-demo {
+    display: flex;
+    padding: 16px 0;
+    width: 100%;
+
+    .badge-item {
+      width: 24%;
+      text-align: center;
     }
   }
-}
-
-.cell-base {
-  background-color: #fbfbfb;
-}
-
-.tag-demo {
-  background-color: #fff;
-  padding: 16px;
-  margin: 16px 0;
-  display: flex;
-
-  .t-tag+.t-tag {
-    margin-left: 8px;
-  }
-}
-
-.segmented-control-demo {
-  margin: 16px 0;
-  background-color: #fff;
-  padding: 12px 16px;
-}
-
-.toast-demo, .message-demo, .dialog-demo {
-  padding: 16px;
-
-  .t-button {
-    margin-bottom: 16px;
-  }
-}
-.dialog-demo{
-  padding: 8px 16px 0;
-}
-.slider-demo {
-  background-color: #fff;
-  margin: 16px 0;
-  padding: 12px 16px;
-  max-height:69px;
-}
-.stepper-demo {
-  background-color: #fff;
-  margin: 16px 0;
-  max-height:69px;
-}
-.stepper-pure-demo {
-  background-color: #fff;
-  display: inline-block;
-  margin: 16px 12px;
-}
-.step-demo { 
-  background-color: #fff;
-  margin: 16px 0;
-  padding-left:12px;
-  padding-right:12px;
-  padding-top: 40px;
-  .t-steps{
-    padding-bottom:40px;
-  }
-}
-
-.t-notice-bar {
-  margin: 16px 0;
 }

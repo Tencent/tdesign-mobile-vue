@@ -2,11 +2,11 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-14 13:07:02
+ * updated at 2021-12-21 00:06:59
  * */
 
-import { TdButtonProps } from '@Button';
-import { ButtonProps } from '@Button';
+import { TdButtonProps } from '../button';
+import { ButtonProps } from '../button';
 import { TNode } from '../common';
 
 export interface TdDialogProps {
@@ -91,7 +91,7 @@ export interface TdDialogProps {
    * 如果蒙层存在，点击蒙层时触发
    */
   onOverlayClick: (context: { e: MouseEvent }) => void;
-};
+}
 
 export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
   /**
@@ -104,7 +104,7 @@ export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
    * @default ''
    */
   style: string;
-};
+}
 
 export interface DialogInstance {
   /**
@@ -123,11 +123,14 @@ export interface DialogInstance {
    * 更新弹框内容
    */
   update: (props: DialogOptions) => void;
-};
+}
 
 export type DialogEventSource = 'cancel' | 'overlay';
 
-export interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent };
+export interface DialogCloseContext {
+  trigger: DialogEventSource;
+  e: MouseEvent;
+}
 
 export type DialogMethod = (options?: DialogOptions) => DialogInstance;
 

@@ -39,10 +39,10 @@ const Tag = defineComponent({
 
     const classes = computed(() => [
       `${baseClass}`,
-      `${baseClass}--theme-${theme.value}`,
+      `${baseClass}-${theme.value}`,
       `${baseClass}--${shape.value}`,
       {
-        [`${baseClass}--variant-${variant.value}`]: theme.value,
+        [`${baseClass}-${variant.value}`]: variant.value,
         [`${prefix}-is-error`]: theme.value === 'danger',
         [`${prefix}-is-success`]: theme.value === 'success',
         [`${prefix}-is-warning`]: theme.value === 'warning',

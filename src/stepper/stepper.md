@@ -1,36 +1,4 @@
----
-title: Stepper 步进器
-description: 用于数量的增减。
-spline: base
-isComponent: true
-toc: false
----
-
-### 基础步进器
-
-使用场景：在表单中需要用户输入数量时可以使用
-
-::: demo demos/index
-:::
-
-## 组件样式
-
-### 禁止点击
-
-::: demo demos/disabled
-:::
-
-### 禁止输入
-
-::: demo demos/disableInput
-:::
-
-## 组件使用
-
-### 绑定事件
-
-::: demo demos/event
-:::
+:: BASE_DOC ::
 
 ## API
 
