@@ -19,7 +19,8 @@ const quartEaseOut = function (t: number, b: number, c: number, d: number) {
 const DEFAULT_ITEM_HEIGHT = 40;
 const DEFAULT_HOLDER_HEIGHT = 200;
 const OFFSET_OF_BOUND = 60;
-const ANIMATION_TIME = 460;
+const ANIMATION_TIME_LIMIT = 460;
+const ANIMATION_DURATION = 150;
 
 /**
  * @name picker
@@ -118,7 +119,7 @@ class Picker {
     this.setOffsetY(startOffsetY);
     this.offsetYOfStart = startOffsetY;
     this.offsetYOfEnd = -this.itemHeight * (itemLen - 3);
-    this.offsetYOfStartBound = startOffsetY + OFFSET_OF_BOUND;
+    this.offsetYOfStartBound = this.itemHeight * 2 + OFFSET_OF_BOUND;
     this.offsetYOfEndBound = -(this.itemHeight * (itemLen - 3) + OFFSET_OF_BOUND);
   }
 
@@ -130,8 +131,8 @@ class Picker {
   }
 
   touchStartHandler(event: TouchEvent): void {
-    this.isPicking = true;
     event.preventDefault();
+    this.isPicking = true;
     if (!this.holder) return;
     if (this.list) this.list.style.transition = '';
     this.startY = event.changedTouches[0].pageY;
@@ -140,8 +141,8 @@ class Picker {
   }
 
   touchMoveHandler(event: TouchEvent): void {
-    if (!this.isPicking || !this.holder) return;
     event.preventDefault();
+    if (!this.isPicking || !this.holder) return;
     const endY = event.changedTouches[0].pageY;
     const dragRange = endY - this.startY;
     this.updateInertiaParams(event, false);
@@ -150,15 +151,15 @@ class Picker {
   }
 
   touchEndHandler(event: TouchEvent): void {
-    this.isPicking = false;
     event.preventDefault();
+    this.isPicking = false;
     if (!this.holder) return;
     const point = event.changedTouches[0];
     const nowTime = event.timeStamp || Date.now();
     // move time gap
     const moveTime = nowTime - this.lastMoveTime;
     // 超出一定时间不再惯性滚动
-    if (moveTime > ANIMATION_TIME) {
+    if (moveTime > ANIMATION_TIME_LIMIT) {
       this.stopInertiaMove = false;
       this.endScroll();
       return;
@@ -182,6 +183,7 @@ class Picker {
       this.endScroll();
       return;
     }
+    console.log('scrollDist')
     this.scrollDist(nowTime, this.offsetY, dist, duration);
   }
 
@@ -216,7 +218,6 @@ class Picker {
       if (!start) start = timestamp;
       const progress = timestamp - start;
       const newOffsetY = quartEaseOut(progress, startOffsetY, dist, duration);
-      // const destOffsetY = newOffsetY
       this.setOffsetY(newOffsetY);
       if (progress > duration || newOffsetY > this.offsetYOfStartBound || newOffsetY < this.offsetYOfEndBound) {
         this.endScroll();
@@ -246,11 +247,8 @@ class Picker {
     this.setSelectedClassName();
     const moveOffsetY = (-index + 2) * this.itemHeight;
     if (this.list) {
-      // this.list.style.webkitTransform = `translate(0,${moveOffsetY}px) translateZ(0)`;
       this.list.style.transform = `translate(0,${moveOffsetY}px) translateZ(0)`;
-      // this.list.style.webkitTransitionDuration = `${duration}ms`;
       this.list.style.transitionDuration = `${duration}ms`;
-      // this.list.style.webkitTransitionTimingFunction = "ease-out";
       this.list.style.transitionTimingFunction = 'ease-out';
     }
     this.onChange(index);
@@ -307,7 +305,6 @@ class Picker {
   setOffsetY(offsetY: number): void {
     this.offsetY = offsetY;
     if (this.list) {
-      // this.list.style.webkitTransform = `translate3d(0, ${offsetY}px, 0)`;
       this.list.style.transform = `translate3d(0, ${offsetY}px, 0)`;
     }
   }
@@ -317,24 +314,20 @@ class Picker {
    */
   endScroll(): void {
     if (this.stopInertiaMove) return;
-
     let curIndex = 0;
     if (this.offsetY > this.offsetYOfStartBound) {
       curIndex = 0;
       if (this.list) {
-        // this.list.style.webkitTransition = "150ms ease-out";
-        this.list.style.transition = '150ms ease-out';
+        this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
       }
     } else if (this.offsetY < this.offsetYOfEndBound) {
       curIndex = this.elementItems.length - 1;
       if (this.list) {
-        // this.list.style.webkitTransition = "150ms ease-out";
-        this.list.style.transition = '150ms ease-out';
+        this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
       }
     } else {
       if (this.list) {
-        // this.list.style.webkitTransition = "100ms ease-out";
-        this.list.style.transition = '100ms ease-out';
+        this.list.style.transition = `${ANIMATION_DURATION}ms ease-out`;
       }
       curIndex = 2 - Math.round(this.offsetY / this.itemHeight);
       if (curIndex < 0) curIndex = 0;
