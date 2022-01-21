@@ -1,6 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
+      :defaultValue="data.pickerValue"
       :value="data.pickerValue"
       :title="title"
       @change="onChange"
@@ -9,42 +10,36 @@
       >
       <t-picker-item
         v-if="pickerColumns.includes('year')"
-        :value="data.year"
         :options="yearOptions"
         :formatter="(val) => `${val}年`"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('month')"
-        :value="data.month"
         :options="monthOptions"
         :formatter="(val) => `${val + 1}月`"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('date')"
-        :value="data.date"
         :options="dateOptions"
         :formatter="(val) => `${val}日(${showWeek ? getWeekdayText(val) : ''})`"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('hour')"
-        :value="data.hour"
         :options="hourOptions"
         :formatter="(val) => `${val}时`"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('minute')"
-        :value="data.minute"
         :options="minuteOptions"
         :formatter="(val) => `${val}分`"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('second')"
-        :value="data.second"
         :options="secondOptions"
         :formatter="(val) => `${val}秒`"
         @change="onColumnChange"
@@ -54,7 +49,7 @@
 </template>
 
 <script lang="ts">
-import { reactive, computed, defineComponent, ComputedRef } from 'vue';
+import { ref, reactive, watchEffect, computed, defineComponent, ComputedRef } from 'vue';
 import config from '../config';
 import DateTimePickerProps from './props';
 import { DateValue, TimeModeValues } from './type';
@@ -118,6 +113,7 @@ export default defineComponent({
       return value;
     });
 
+    // 数据
     const data = reactive({
       pickerValue: defaultPickerValue.value,
 
@@ -127,6 +123,11 @@ export default defineComponent({
       hour: defaultModeValue.value.hour,
       minute: defaultModeValue.value.minute,
       second: defaultModeValue.value.second,
+    });
+
+    const currentYear = ref(defaultModeValue.value.year);
+    watchEffect(() => {
+      currentYear.value = data.year;
     });
 
     // 标题
@@ -172,8 +173,7 @@ export default defineComponent({
     };
 
     const yearOptions = computed(() => {
-      // return Array.from(new Array(7), (_, index) => data.year - 4 + index);
-      return Array.from(new Array(7), (_, index) => 2022 - 4 + index).filter(year => yearIsAvailable(year));
+      return Array.from(new Array(7), (_, index) => currentYear.value - 3 + index).filter(year => yearIsAvailable(year));
     });
     const monthOptions = computed(() => {
       return Array.from(new Array(12), (_, index) => index).filter(month => monthIsAvailable(data.year, month));
