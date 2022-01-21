@@ -37,8 +37,6 @@ export default defineComponent({
       return defaultIndex < 0 ? 0 : defaultIndex;
     };
 
-    const defaultIndex: number = getDefaultIndex(props.value);
-    const curIndex = ref(defaultIndex);
     const className = computed(() => `${name}`);
     const wrapperClassName = computed(() => [`${name}__wrapper`]);
     const itemClassName = computed(() => [`${name}__item`]);
@@ -64,9 +62,8 @@ export default defineComponent({
     onMounted(() => {
       picker = new Picker({
         el: root.value,
-        defaultIndex: +(defaultIndex || 0),
+        defaultIndex: getDefaultIndex(props.value) || 0,
         onChange: (index: number) => {
-          curIndex.value = index;
           const curItem = props.options[index];
           const curValue = typeof curItem === 'object' ? curItem.value : curItem;
           context.emit('change', {
@@ -82,7 +79,6 @@ export default defineComponent({
       className,
       wrapperClassName,
       itemClassName,
-      curIndex,
       ...toRefs(props),
     };
   },
