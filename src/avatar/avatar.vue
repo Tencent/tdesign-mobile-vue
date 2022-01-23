@@ -1,6 +1,6 @@
 <template>
   <div :class="avatarClass" :style="customAvatarSize">
-    <div class="t-avatar__inner">
+    <div :class="`${name}__inner`">
       <img
         v-if="image && !hideOnLoadFailed"
         :src="image"
@@ -56,8 +56,7 @@ export default defineComponent({
       `${name}`,
       sizeValue.value ? CLASSNAMES.SIZE[sizeValue.value] : '',
       {
-        [`${name}--circle`]: props.shape === 'circle',
-        [`${name}--round`]: props.shape === 'round',
+        [`${name}--${props.shape}`]: props.shape,
       },
     ]);
 
