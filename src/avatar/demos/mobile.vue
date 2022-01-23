@@ -43,12 +43,18 @@
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3" size="40px" :collapse-avatar="userAddIcon">
+        <t-avatar-group cascading="left-up" :max="3" size="40px">
+          <template #collapseAvatar>
+            <user-add-icon style="font-size: 20px"></user-add-icon>
+          </template>
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3" :collapse-avatar="userAddIcon">
+        <t-avatar-group cascading="left-up" :max="3">
+          <template #collapseAvatar>
+            <user-add-icon style="font-size: 24px"></user-add-icon>
+          </template>
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
@@ -119,6 +125,9 @@ import { defineComponent, h, ref } from 'vue';
 import { UserAddIcon, UserIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
+  components: {
+    UserAddIcon,
+  },
   setup() {
     const userIcon = () => h(UserIcon);
     const userAddIcon = () => h(UserAddIcon);
