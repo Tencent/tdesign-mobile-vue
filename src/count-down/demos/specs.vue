@@ -5,7 +5,7 @@
       <t-countdown
         content="ok"
         :time="900000"
-        :auto-start="false"
+        :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
         @change="onChange"
@@ -16,7 +16,7 @@
       <t-countdown
         content="ok"
         :time="900000"
-        :auto-start="false"
+        :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
         @change="onChange"
@@ -31,7 +31,7 @@
       <t-countdown
         content="ok"
         :time="900000"
-        :auto-start="false"
+        :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
         @change="onChange"
@@ -42,7 +42,7 @@
       <t-countdown
         content="ok"
         :time="900000"
-        :auto-start="false"
+        :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
         @change="onChange"
@@ -57,7 +57,7 @@
       <t-countdown
         content="ok"
         :time="900000"
-        :auto-start="false"
+        :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
         @change="onChange"
@@ -68,7 +68,7 @@
       <t-countdown
         content="ok"
         :time="900000"
-        :auto-start="false"
+        :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
         @change="onChange"
@@ -109,6 +109,7 @@ export default defineComponent({
   justify-content: space-between;
   span {
     font-weight: 700;
+    font-family: "DIN Alternate";
   }
   .format {
     opacity: 1;

@@ -49,7 +49,6 @@ export default defineComponent({
         const newPickerItem = pickerItem;
         const pickerItemDefaultValue = Array.isArray(props.defaultValue) ? props.defaultValue[itemIndex] : newPickerItem.props.value || newPickerItem.props.options[0];
         const curValue = pickerItemDefaultValue;
-        console.log({ curValue })
         if (!curData[itemIndex]) {
           curData[itemIndex] = curValue;
         }

@@ -26,6 +26,7 @@ export { default as Drawer } from './drawer';
 export { default as Navbar } from './navbar';
 export { default as Message } from './message';
 export { default as DateTimePicker } from './date-time-picker';
+export { default as Toast } from './toast';
 export { default as Search } from './search';
 export { Steps, Step } from './steps';
 export { Indexes, IndexesCell, IndexesAnchor } from './indexes';

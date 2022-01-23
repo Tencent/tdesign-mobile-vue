@@ -1,6 +1,6 @@
 <template>
   <div :class="avatarClass" :style="customAvatarSize">
-    <div class="t-avatar__inner">
+    <div :class="`${name}__inner`">
       <img
         v-if="image && !hideOnLoadFailed"
         :src="image"
@@ -15,7 +15,7 @@
         <t-node :content="avatarContent"></t-node>
       </span>
     </div>
-    <div v-if="badgeProps && (badgeProps.dot || badgeProps.count)" :class="`${name}__badge`">
+    <div v-if="badgeProps" :class="`${name}__badge`">
       <t-badge
         :count="badgeProps.count"
         :max-count="badgeProps.maxCount"
@@ -30,11 +30,12 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance } from 'vue';
-import { renderContent, renderTNode, TNode } from '../shared';
+import { computed, toRefs, defineComponent, getCurrentInstance, inject, onMounted, ref } from 'vue';
+import { renderContent, renderTNode, TNode, emitEvent } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import AvatarProps from './props';
 import config from '../config';
+import { TdAvatarGroupProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-avatar`;
@@ -47,40 +48,37 @@ export default defineComponent({
   setup(props, context) {
     const { size } = toRefs(props);
     const internalInstance = getCurrentInstance();
+    const avatarGroupProps = inject('avatarGroup', {}) as TdAvatarGroupProps;
     const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
+    const sizeValue = ref(props.size || (avatarGroupProps && avatarGroupProps.size));
     const avatarClass = computed(() => [
       `${name}`,
-      props.size ? CLASSNAMES.SIZE[props.size] : '',
+      sizeValue.value ? CLASSNAMES.SIZE[sizeValue.value] : '',
       {
-        [`${name}--circle`]: props.shape === 'circle',
-        [`${name}--round`]: props.shape === 'round',
+        [`${name}--${props.shape}`]: props.shape,
       },
     ]);
 
-    const sizeValue = size.value;
-    const isCustomSize = sizeValue && !CLASSNAMES.SIZE[sizeValue];
+    const isCustomSize = computed(() => sizeValue.value && !CLASSNAMES.SIZE[sizeValue.value]);
     const customAvatarSize = computed(() => {
-      return isCustomSize
+      return isCustomSize.value
         ? {
-            height: sizeValue,
-            width: sizeValue,
-            'font-size': `${Number.parseInt(sizeValue, 10) / 2}px`,
+            height: sizeValue.value,
+            width: sizeValue.value,
           }
         : {};
     });
     const customImageSize = computed(() => {
-      return isCustomSize
+      return isCustomSize.value
         ? {
-            height: sizeValue,
-            width: sizeValue,
+            height: sizeValue.value,
+            width: sizeValue.value,
           }
         : {};
     });
     const handleImgLoadError = (e: Event) => {
-      const { onError } = props;
-      onError && onError();
-      context.emit('error', e);
+      emitEvent(props, context, 'error');
     };
 
     return {
