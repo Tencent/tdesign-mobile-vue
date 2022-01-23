@@ -1,7 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
-      :defaultValue="data.pickerValue"
+      :defaultValue="[2022, 6, 21, 5, 5, 5]"
       :value="data.pickerValue"
       :title="title"
       @change="onChange"
@@ -173,7 +173,7 @@ export default defineComponent({
     };
 
     const yearOptions = computed(() => {
-      return Array.from(new Array(7), (_, index) => currentYear.value - 3 + index).filter(year => yearIsAvailable(year));
+      return Array.from(new Array(200), (_, index) => 1900 + index).filter(year => yearIsAvailable(year));
     });
     const monthOptions = computed(() => {
       return Array.from(new Array(12), (_, index) => index).filter(month => monthIsAvailable(data.year, month));
@@ -247,9 +247,9 @@ export default defineComponent({
       if (JSON.stringify(data.pickerValue) !== JSON.stringify(v)) {
         data.pickerValue = v;
 
-        pickerColumns.value.forEach((mode, index) => {
-          data[mode] = v[index];
-        });
+        // pickerColumns.value.forEach((mode, index) => {
+        //   data[mode] = v[index];
+        // });
       }
     };
 
