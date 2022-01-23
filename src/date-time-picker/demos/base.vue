@@ -7,8 +7,85 @@
       <t-popup v-model="show.ymd" position="bottom">
         <t-date-time-picker
           v-model="text.ymd"
+          :mode="['year', 'month', 'date']"
           title="选择日期"
+          @change="onChange"
+          @columnChange="onColumnChange"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        />
+      </t-popup>
+      <t-input :value="text.hm" label="选择时间(时分)" placeholder="时分" @click="show.hm = true" />
+      <t-popup v-model="show.hm" position="bottom">
+        <t-date-time-picker
+          v-model="text.hm"
+          :mode="['hour', 'minute']"
+          title="选择时间"
+          @change="onChange"
+          @columnChange="onColumnChange"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        />
+      </t-popup>
+      <t-input :value="text.ymdhms" label="选择日期时间(年月日时分秒)" placeholder="年月日时分秒" @click="show.ymdhms = true" />
+      <t-popup v-model="show.ymdhms" position="bottom">
+        <t-date-time-picker
+          v-model="text.ymdhms"
+          :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
+          title="选择日期时间"
           :showWeek="true"
+          @change="onChange"
+          @columnChange="onColumnChange"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        />
+      </t-popup>
+    </tdesign-demo-block>
+
+    <tdesign-demo-block title="02 功能" summary="时间禁用">
+      <t-input :value="text.ymd2" label="选择日期(年月日)" placeholder="年月日" @click="show.ymd2 = true" />
+      <t-popup v-model="show.ymd2" position="bottom">
+        <t-date-time-picker
+          v-model="text.ymd2"
+          :mode="['year', 'month', 'date']"
+          title="选择日期"
+          :disableDate="{
+            before: '2021-05-15',
+            after: '2022-08-20',
+          }"
+          @change="onChange"
+          @columnChange="onColumnChange"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        />
+      </t-popup>
+      <t-input :value="text.hm2" label="选择时间(时分)" placeholder="时分" @click="show.hm2 = true" />
+      <t-popup v-model="show.hm2" position="bottom">
+        <t-date-time-picker
+          v-model="text.hm2"
+          :mode="['hour', 'minute']"
+          title="选择时间"
+          :disableDate="{
+            from: '2021-05-15 15:20:20',
+            to: '2022-05-15 15:35:31',
+          }"
+          @change="onChange"
+          @columnChange="onColumnChange"
+          @confirm="onConfirm"
+          @cancel="onCancel"
+        />
+      </t-popup>
+      <t-input :value="text.ymdhms2" label="选择日期时间(年月日时分秒)" placeholder="年月日时分秒" @click="show.ymdhms2 = true" />
+      <t-popup v-model="show.ymdhms2" position="bottom">
+        <t-date-time-picker
+          v-model="text.ymdhms2"
+          :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
+          title="选择日期时间"
+          :showWeek="true"
+          :disableDate="{
+            from: '2021-05-15 15:20:20',
+            to: '2022-05-15 15:35:31',
+          }"
           @change="onChange"
           @columnChange="onColumnChange"
           @confirm="onConfirm"
@@ -24,18 +101,30 @@ import { defineComponent, reactive } from 'vue';
 export default defineComponent({
   setup() {
     const show = reactive({
-      ymd: true,
+      ymd: false,
+      hm: false,
+      ymdhms: false,
+
+      ymd2: false,
+      hm2: false,
+      ymdhms2: false,
     });
     const text = reactive({
       ymd: '2022-01-09',
+      hm: '13:20',
+      ymdhms: '',
+
+      ymd2: '2022-01-09',
+      hm2: '13:20',
+      ymdhms2: '',
     });
 
-    const onChange = (e: any) => {
-      console.log('date-time-picker:change', e);
+    const onChange = (value) => {
+      console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = (e: any) => {
-      console.log('date-time-picker:columnChange', e);
+    const onColumnChange = ({ value, index }) => {
+      console.log('date-time-picker:columnChange', value, index);
     };
 
     const onCancel = () => {
@@ -43,9 +132,9 @@ export default defineComponent({
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
-    const onConfirm = (e: any) => {
-      console.log('date-time-picker:confirm', JSON.stringify(text.ymd));
-      show.ymd = false;
+    const onConfirm = ({ value }) => {
+      console.log('date-time-picker:confirm', JSON.stringify(value));
+      Object.keys(show).forEach((item) => (show[item] = false));
     };
 
     return {

@@ -1,7 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
-      :defaultValue="[2022, 6, 21, 5, 5, 5]"
+      :defaultValue="defaultPickerValue"
       :value="data.pickerValue"
       :title="title"
       @change="onChange"
@@ -23,7 +23,7 @@
       <t-picker-item
         v-if="pickerColumns.includes('date')"
         :options="dateOptions"
-        :formatter="(val) => `${val}日(${showWeek ? getWeekdayText(val) : ''})`"
+        :formatter="(val) => `${val}日${showWeek ? getWeekdayText(val) : ''}`"
         @change="onColumnChange"
       />
       <t-picker-item
@@ -59,6 +59,9 @@ dayjs.extend(weekday);
 
 const { prefix } = config;
 const name = `${prefix}-date-time-picker`;
+const DATE_MODES: Array<TimeModeValues> = ['year', 'month', 'date'];
+const TIME_MODES: Array<TimeModeValues> = ['hour', 'minute', 'second'];
+const ALL_MODES = [...DATE_MODES, ...TIME_MODES];
 
 export default defineComponent({
   name,
@@ -69,8 +72,8 @@ export default defineComponent({
 
     // 根据props.mode判断展示哪些列
     const pickerColumns: ComputedRef<TimeModeValues[]> = computed(() => {
-      const dateModes: Array<TimeModeValues> = ['year', 'month', 'date'];
-      const timeModes: Array<TimeModeValues> = ['hour', 'minute', 'second'];
+      const dateModes = [...DATE_MODES];
+      const timeModes = [...TIME_MODES];
       ;[dateModes, timeModes].forEach((modes) => {
         [...modes].reverse().every((mode) => {
           if (props.mode instanceof Array) {
@@ -104,7 +107,7 @@ export default defineComponent({
       const dayjsValueProps = dayjs(props.value as any);
       const value: Record<TimeModeValues, number> = Object.create({});
 
-      ;['year', 'month', 'date', 'hour', 'minute', 'second'].forEach((mode) => {
+      ALL_MODES.forEach((mode) => {
         value[mode] = dayjsValueDefault[mode]();
       });
       pickerColumns.value.forEach((mode) => {
@@ -117,6 +120,8 @@ export default defineComponent({
     const data = reactive({
       pickerValue: defaultPickerValue.value,
 
+      // 为了简化代码，增加了下列冗余的取值属性，其值与pickerValue同步更新。
+      // TODO:
       year: defaultModeValue.value.year,
       month: defaultModeValue.value.month,
       date: defaultModeValue.value.date,
@@ -157,45 +162,73 @@ export default defineComponent({
     const confirmButtonText = computed(() => props.confirmBtn || '确定');
     const cancelButtonText = computed(() => props.cancelBtn || '取消');
 
-    const yearIsAvailable = (year) => {
-      let value = dayjs().year(year).month(0).date(1).hour(0).minute(0).second(0);
-      return !value.isBefore(dayjs('2021-05-15'), 'year');
-    };
+    const isAvailable = (...args) => {
+      if (!props.disableDate) {
+        return true;
+      } else if (args.length === 0) {
+        return false;
+      }
 
-    const monthIsAvailable = (year, month) => {
-      let value = dayjs().year(year).month(month).date(1).hour(0).minute(0).second(0);
-      return !value.isBefore(dayjs('2021-05-15'), 'month');
-    };
+      const [
+        year = dayjs().year(),
+        month = 0,
+        date = 1,
+        hour = 0,
+        minute = 0,
+        second = 0,
+      ] = args;
+      const mode = ALL_MODES[args.length - 1];
+      const value = dayjs().year(year).month(month).date(date).hour(hour).minute(minute).second(second);
 
-    const dateIsAvailable = (year, month, date) => {
-      let value = dayjs().year(year).month(month).date(date).hour(0).minute(0).second(0);
-      return !value.isBefore(dayjs('2021-05-15'), 'date');
+      const conditionFunction = typeof props.disableDate === 'function' ? !props.disableDate(value) : true;
+      const conditionArray = props.disableDate instanceof Array
+        ? props.disableDate.every(item => !value.isSame(dayjs(item), mode)) : true;
+      
+      let conditionFromAndTo = true;
+      if (props.disableDate?.from && props.disableDate?.to) {
+        conditionFromAndTo = value.isBefore(dayjs(props.disableDate?.from), mode)
+          || !value.isAfter(dayjs(props.disableDate?.to), mode);
+      } else if (props.disableDate?.from) {
+        conditionFromAndTo = value.isBefore(dayjs(props.disableDate?.from), mode);
+      } else if (props.disableDate?.to) {
+        conditionFromAndTo = value.isAfter(dayjs(props.disableDate?.to), mode);
+      }
+
+      let conditionBefore = true;
+      if (props.disableDate?.before) {
+        conditionBefore = !value.isBefore(dayjs(props.disableDate?.before), mode);
+      }
+
+      let conditionAfter = true;
+      if (props.disableDate?.after) {
+        conditionAfter = !value.isAfter(dayjs(props.disableDate?.after), mode);
+      }
+
+      return conditionFunction && conditionArray && conditionFromAndTo && conditionBefore && conditionAfter;
     };
 
     const yearOptions = computed(() => {
-      return Array.from(new Array(200), (_, index) => 1900 + index).filter(year => yearIsAvailable(year));
+      return Array.from(new Array(200), (_, index) => 1900 + index).filter(year => isAvailable(year));
     });
     const monthOptions = computed(() => {
-      return Array.from(new Array(12), (_, index) => index).filter(month => monthIsAvailable(data.year, month));
+      return Array.from(new Array(12), (_, index) => index).filter(month => isAvailable(data.year, month));
     });
     const dateOptions = computed(() => {
       let maxDate = 31;
       if (pickerColumns.value.indexOf('year') > -1 && pickerColumns.value.indexOf('month') > -1) {
-        maxDate = dayjs()
-          .year(data.year)
-          .month(data.month)
-          .daysInMonth();
+        const theMonth = dayjs().year(data.year).month(data.month);
+        maxDate = theMonth.daysInMonth ? theMonth.daysInMonth() : 0;
       }
-      return Array.from(new Array(maxDate), (_, index) => index + 1).filter(date => dateIsAvailable(data.year, data.month, date));
+      return Array.from(maxDate ? new Array(maxDate) : [], (_, index) => index + 1).filter(date => isAvailable(data.year, data.month, date));
     });
     const hourOptions = computed(() => {
-      return Array.from(new Array(24), (_, index) => index);
+      return Array.from(new Array(24), (_, index) => index).filter(hour => isAvailable(data.year, data.month, data.date, hour));
     });
     const minuteOptions = computed(() => {
-      return Array.from(new Array(60), (_, index) => index);
+      return Array.from(new Array(60), (_, index) => index).filter(minute => isAvailable(data.year, data.month, data.date, data.hour, minute));
     });
     const secondOptions = computed(() => {
-      return Array.from(new Array(60), (_, index) => index);
+      return Array.from(new Array(60), (_, index) => index).filter(second => isAvailable(data.year, data.month, data.date, data.hour, data.minute, second));
     });
 
     const getOutputValue = () => {
@@ -220,9 +253,9 @@ export default defineComponent({
           format += 'YYYY-MM-DD';
         }
         if (
-          pickerColumns.value.includes('year') ||
-          pickerColumns.value.includes('month') ||
-          pickerColumns.value.includes('date')
+          pickerColumns.value.includes('hour') ||
+          pickerColumns.value.includes('minute') ||
+          pickerColumns.value.includes('second')
         ) {
           format += ' HH:mm:ss';
         }
@@ -247,9 +280,9 @@ export default defineComponent({
       if (JSON.stringify(data.pickerValue) !== JSON.stringify(v)) {
         data.pickerValue = v;
 
-        // pickerColumns.value.forEach((mode, index) => {
-        //   data[mode] = v[index];
-        // });
+        pickerColumns.value.forEach((mode, index) => {
+          data[mode] = v[index];
+        });
       }
     };
 
@@ -262,23 +295,31 @@ export default defineComponent({
 
     const getWeekdayText = (date) => {
       const week = dayjs().year(data.year).month(data.month).date(date).day();
+      let text = '';
       switch (week) {
         case 0:
-          return '日';
+          text = '日';
+          break;
         case 1:
-          return '一';
+          text = '一';
+          break;
         case 2:
-          return '二';
+          text = '二';
+          break;
         case 3:
-          return '三';
+          text = '三';
+          break;
         case 4:
-          return '四';
+          text = '四';
+          break;
         case 5:
-          return '五';
+          text = '五';
+          break;
         case 6:
-          return '六';
+          text = '六';
+          break;
       }
-      return '';
+      return `(${text})`;
     }
 
     return {
@@ -296,6 +337,7 @@ export default defineComponent({
       secondOptions,
       onColumnChange,
       onChange,
+      defaultPickerValue,
       data,
       getWeekdayText,
       title,
