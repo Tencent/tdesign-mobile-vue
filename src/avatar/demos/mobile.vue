@@ -16,7 +16,7 @@
           </template>
         </t-avatar>
         <t-avatar image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" shape="round"></t-avatar>
-        <t-avatar>A</t-avatar>
+        <t-avatar class="custom">A</t-avatar>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 特殊类型" summary="纯展示 从上往下">
@@ -38,28 +38,28 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="带操作 从下往上">
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3" size="small" :collapse-avatar="userIcon">
+        <t-avatar-group cascading="left-up" :max="3" size="small" :collapse-avatar="userAddIcon">
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3" size="40px" :collapse-avatar="userIcon">
+        <t-avatar-group cascading="left-up" :max="3" size="40px" :collapse-avatar="userAddIcon">
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3" :collapse-avatar="userIcon">
+        <t-avatar-group cascading="left-up" :max="3" :collapse-avatar="userAddIcon">
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 规格" summary="头像大小尺寸"
-      ><div class="avatar-demo" style="margin-bottom: 16px">
+    <tdesign-demo-block title="03 规格" summary="头像大小尺寸">
+      <div class="avatar-demo">
         <t-avatar shape="circle" size="large" :icon="userIcon"></t-avatar>
         <t-avatar shape="circle" size="medium" :icon="userIcon"></t-avatar>
         <t-avatar shape="circle" size="small" :icon="userIcon"></t-avatar>
       </div>
-      <div class="avatar-demo" style="margin-bottom: 16px">
+      <div class="avatar-demo">
         <t-avatar
           shape="circle"
           size="large"
@@ -82,7 +82,7 @@
           :badge-props="{ dot: true }"
         ></t-avatar>
       </div>
-      <div class="avatar-demo" style="margin-bottom: 16px">
+      <div class="avatar-demo">
         <t-avatar
           shape="round"
           size="large"
@@ -105,10 +105,10 @@
           :badge-props="{ dot: true }"
         ></t-avatar>
       </div>
-      <div class="avatar-demo" style="margin-bottom: 16px">
-        <t-avatar shape="circle" size="large">A</t-avatar>
-        <t-avatar shape="circle" size="medium">A</t-avatar>
-        <t-avatar shape="circle" size="small">A</t-avatar>
+      <div class="avatar-demo">
+        <t-avatar shape="circle" size="large" class="custom">A</t-avatar>
+        <t-avatar shape="circle" size="medium" class="custom">A</t-avatar>
+        <t-avatar shape="circle" size="small" class="custom">A</t-avatar>
       </div>
     </tdesign-demo-block>
   </div>
@@ -116,11 +116,12 @@
 
 <script lang="ts">
 import { defineComponent, h, ref } from 'vue';
-import { UserIcon } from 'tdesign-icons-vue-next';
+import { UserAddIcon, UserIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
     const userIcon = () => h(UserIcon);
+    const userAddIcon = () => h(UserAddIcon);
     const imageList = ref([
       'https://tdesign.gtimg.com/mobile/demos/avatar_1.png',
       'https://tdesign.gtimg.com/mobile/demos/avatar_2.png',
@@ -128,17 +129,23 @@ export default defineComponent({
       'https://tdesign.gtimg.com/mobile/demos/avatar_4.png',
       'https://tdesign.gtimg.com/mobile/demos/avatar_5.png',
     ]);
-    return { userIcon, imageList };
+    return { userIcon, userAddIcon, imageList };
   },
 });
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .avatar-demo {
   margin-left: 16px;
+  margin-bottom: 16px;
   .t-avatar {
     margin-right: 20px;
-    vertical-align: top;
+  }
+  .custom {
+    .t-avatar__inner {
+      background-color: #0052d9;
+      color: #fff;
+    }
   }
 }
 .avatar-group-demo {

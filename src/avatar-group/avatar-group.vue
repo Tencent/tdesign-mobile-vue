@@ -26,6 +26,8 @@ export default defineComponent({
   },
   props: AvatarGroupProps,
   setup(props, { slots }) {
+    provide('avatarGroup', { ...props });
+
     const internalInstance = getCurrentInstance();
     const classes = computed(() => [
       `${name}`,
@@ -63,9 +65,6 @@ export default defineComponent({
       size.value = childrenShow[0].size || props.size;
       return childrenShow;
     };
-    provide('avatarGroup', {
-      size,
-    });
     return {
       classes,
       size,
