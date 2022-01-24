@@ -1,5 +1,5 @@
 <template>
-  <t-cell v-if="type !== 'textarea'" :required="required" :class="styleWrapper">
+  <t-cell :required="required" :class="styleWrapper">
     <template v-if="labelContent" #title>
       <div :class="styleLabel">
         <t-node :content="labelContent"></t-node>
@@ -12,7 +12,7 @@
       <div :class="`${componentName}__wrap`">
         <input
           ref="inputRef"
-          v-model="innerValue"
+          :value="innerValue"
           :name="name"
           :class="styleControl"
           :type="type"
@@ -20,8 +20,10 @@
           :autocomplete="autocomplete ? 'On' : 'Off'"
           :placeholder="placeholder"
           :readonly="readonly"
+          :maxlength="maxlength"
           @focus="handleFocus"
           @blur="handleBlur"
+          @input="handleInput"
         />
         <div
           v-if="clearable && String(innerValue).length > 0"
@@ -40,37 +42,16 @@
       <t-node :content="suffixIconContent"></t-node>
     </template>
   </t-cell>
-  <div v-else :class="styleWrapper">
-    <div v-if="labelContent" :class="`${componentName}--textarea-label`">
-      <t-node :content="labelContent"></t-node>
-    </div>
-    <div :class="`${componentName}--textarea`">
-      <textarea
-        ref="inputRef"
-        v-model="innerValue"
-        :name="name"
-        :maxlength="maxlength || -1"
-        :disabled="disabled"
-        :autocomplete="autocomplete ? 'On' : 'Off'"
-        :placeholder="placeholder"
-        :readonly="readonly"
-        @focus="handleFocus"
-        @blur="handleBlur"
-      />
-      <div v-if="maxlength" :class="`${componentName}--count`">
-        {{ `${String(innerValue).length}/${maxlength}` }}
-      </div>
-    </div>
-  </div>
 </template>
 
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { ref, computed, watch, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext } from 'vue';
-import { emitEvent, renderTNode, TNode, useDefault } from '../shared';
+import { ref, computed, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick } from 'vue';
+import { emitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '../shared';
 import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import InputProps from './props';
+import { InputValue } from './type';
 
 const { prefix } = config;
 const componentName = `${prefix}-input`;
@@ -110,6 +91,32 @@ export default defineComponent({
       [`${componentName}__error`]: !!props.errorMessage,
     }));
 
+    const setInputValue = (v: InputValue = '') => {
+      const input = inputRef.value as HTMLInputElement;
+      const sV = String(v);
+      if (!input) {
+        return;
+      }
+      if (input.value !== sV) {
+        input.value = sV;
+      }
+    };
+
+    const handleInput = (e: Event) => {
+      const { value } = e.target as HTMLInputElement;
+      const { maxcharacter } = props;
+      if (maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
+        const { length = 0, characters = '' } = getCharacterLength(value, maxcharacter) as {
+          length: number;
+          characters: string;
+        };
+        innerValue.value = characters;
+      } else {
+        innerValue.value = value;
+      }
+      nextTick(() => setInputValue(innerValue.value));
+    };
+
     const handleClear = (e: MouseEvent) => {
       innerValue.value = '';
       emitEvent(props, context, 'clear', { e });
@@ -124,11 +131,6 @@ export default defineComponent({
     onMounted(() => {
       if (props.autofocus) {
         inputRef.value?.focus();
-      }
-    });
-    watch(innerValue, () => {
-      if (props.type === 'textarea' && inputRef.value) {
-        inputRef.value.style.height = 'auto';
       }
     });
 
@@ -147,6 +149,7 @@ export default defineComponent({
       handleClear,
       handleFocus,
       handleBlur,
+      handleInput,
     };
   },
 });
