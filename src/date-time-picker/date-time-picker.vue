@@ -180,7 +180,7 @@ export default defineComponent({
       const mode = ALL_MODES[args.length - 1];
       const value = dayjs().year(year).month(month).date(date).hour(hour).minute(minute).second(second);
 
-      const conditionFunction = typeof props.disableDate === 'function' ? !props.disableDate(value) : true;
+      const conditionFunction = typeof props.disableDate === 'function' ? !props.disableDate(getOutputValue(value)) : true;
       const conditionArray = props.disableDate instanceof Array
         ? props.disableDate.every(item => !value.isSame(dayjs(item), mode)) : true;
       
@@ -231,11 +231,14 @@ export default defineComponent({
       return Array.from(new Array(60), (_, index) => index).filter(second => isAvailable(data.year, data.month, data.date, data.hour, data.minute, second));
     });
 
-    const getOutputValue = () => {
-      let value = dayjs().month(0).date(1).hour(0).minute(0).second(0);
-      pickerColumns.value.forEach((mode, index) => {
-        value = value[mode](data.pickerValue[index]) as dayjs.Dayjs;
-      });
+    const getOutputValue = (v = undefined) => {
+      let value = v;
+      if (value === undefined) {
+        value = dayjs().month(0).date(1).hour(0).minute(0).second(0);
+        pickerColumns.value.forEach((mode, index) => {
+          value = value[mode](data.pickerValue[index]) as dayjs.Dayjs;
+        });
+      }
 
       // 当指定format为空时，输出类型尽量保持与输入类型格式相同
       let output: DateValue = '';

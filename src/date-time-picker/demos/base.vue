@@ -42,7 +42,7 @@
       </t-popup>
     </tdesign-demo-block>
 
-    <tdesign-demo-block title="02 功能" summary="时间禁用">
+    <tdesign-demo-block title="02 功能" summary="日期时间禁用">
       <t-input :value="text.ymd2" label="选择日期(年月日)" placeholder="年月日" @click="show.ymd2 = true" />
       <t-popup v-model="show.ymd2" position="bottom">
         <t-date-time-picker
@@ -82,10 +82,7 @@
           :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
           title="选择日期时间"
           :showWeek="true"
-          :disableDate="{
-            from: '2021-05-15 15:20:20',
-            to: '2022-05-15 15:35:31',
-          }"
+          :disableDate="disableDate"
           @change="onChange"
           @columnChange="onColumnChange"
           @confirm="onConfirm"
@@ -93,10 +90,14 @@
         />
       </t-popup>
     </tdesign-demo-block>
+
+    <tdesign-demo-block title="03 格式" summary="多种输入输出格式">
+    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
+import dayjs from 'dayjs';
 
 export default defineComponent({
   setup() {
@@ -137,6 +138,10 @@ export default defineComponent({
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
+    const disableDate = (date) => {
+      return dayjs(date).isBefore('2025-04-10');
+    };
+
     return {
       onChange,
       onColumnChange,
@@ -144,6 +149,7 @@ export default defineComponent({
       onConfirm,
       show,
       text,
+      disableDate,
     };
   },
 });
