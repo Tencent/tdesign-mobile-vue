@@ -16,7 +16,7 @@ export interface CollapsePropsType {
   /**
    * @description: 默认`false`。若为`true`，默认展开全部
    */
-  defaultExpandAll?: boolean;
+  expandAll?: boolean;
   /**
    * @description 面板内列表标签宽度
    */
@@ -30,7 +30,7 @@ export const CollapseProps = {
     default: false,
   },
   title: String,
-  defaultExpandAll: Boolean,
+  expandAll: Boolean,
   labelWidth: Number,
 };
 

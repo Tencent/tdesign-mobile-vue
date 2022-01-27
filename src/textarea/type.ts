@@ -39,14 +39,12 @@ export interface TdTextareaProps {
   placeholder: string;
   /**
    * 文本框值
-   * @default ''
    */
-  value: string;
+  value: TextareaValue;
   /**
    * 文本框值，非受控属性
-   * @default ''
    */
-  defaultValue: string;
+  defaultValue: TextareaValue;
   /**
    * 失去焦点时触发
    */
@@ -60,3 +58,5 @@ export interface TdTextareaProps {
    */
   onFocus: (value: TextareaValue, context: { e: FocusEvent }) => void;
 }
+
+export type TextareaValue = string | number;

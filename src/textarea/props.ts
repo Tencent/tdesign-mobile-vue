@@ -34,13 +34,11 @@ export default {
   },
   /** 文本框值 */
   value: {
-    type: String,
-    default: '',
+    type: [String, Number] as PropType<TdTextareaProps['value']>,
   },
   /** 文本框值，非受控属性 */
   defaultValue: {
-    type: String,
-    default: '',
+    type: [String, Number] as PropType<TdTextareaProps['defaultValue']>,
   },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdTextareaProps['onBlur']>,

@@ -132,7 +132,7 @@ export default defineComponent({
       });
     });
     onMounted(() => {
-      if (collapseProps.defaultExpandAll) {
+      if (collapseProps.expandAll) {
         // 展开未展开的
         !isActive.value && onChange();
       }
