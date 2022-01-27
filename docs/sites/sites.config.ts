@@ -135,6 +135,13 @@ export default {
           component: () => import('@/picker/picker.md'),
         },
         {
+          title: 'DateTimePicker 时间选择器',
+          name: 'date-time-picker',
+          meta: { docType: 'form' },
+          path: '/vue-mobile/components/date-time-picker',
+          component: () => import('@/date-time-picker/date-time-picker.md'),
+        },
+        {
           title: 'Radio 单选框',
           name: 'radio',
           meta: { docType: 'form' },
