@@ -75,20 +75,6 @@
           @cancel="onCancel"
         />
       </t-popup>
-      <t-input :value="text.ymdhms2" label="选择日期时间(年月日时分秒)" placeholder="年月日时分秒" @click="show.ymdhms2 = true" />
-      <t-popup v-model="show.ymdhms2" position="bottom">
-        <t-date-time-picker
-          v-model="text.ymdhms2"
-          :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
-          title="选择日期时间"
-          :showWeek="true"
-          :disableDate="disableDate"
-          @change="onChange"
-          @columnChange="onColumnChange"
-          @confirm="onConfirm"
-          @cancel="onCancel"
-        />
-      </t-popup>
     </tdesign-demo-block>
 
     <tdesign-demo-block title="03 格式" summary="多种输入输出格式">
@@ -138,10 +124,6 @@ export default defineComponent({
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
-    const disableDate = (date) => {
-      return dayjs(date).isBefore('2025-04-10');
-    };
-
     return {
       onChange,
       onColumnChange,
@@ -149,7 +131,6 @@ export default defineComponent({
       onConfirm,
       show,
       text,
-      disableDate,
     };
   },
 });
