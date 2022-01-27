@@ -1,16 +1,4 @@
----
-title: DateTimePicker 时间选择器
-description: 用于选择一个时间点或者一个时间段。
-spline: base
-isComponent: true
-toc: false
----
-
-### 基础时间选择器
-
-::: demo demos/base
-:::
-
+:: BASE_DOC ::
 
 ## API
 ### DateTimePicker Props

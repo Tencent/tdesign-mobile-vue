@@ -27,13 +27,18 @@
           @cancel="onCancel"
         />
       </t-popup>
-      <t-input :value="text.ymdhms" label="选择日期时间(年月日时分秒)" placeholder="年月日时分秒" @click="show.ymdhms = true" />
+      <t-input
+        :value="text.ymdhms"
+        label="选择日期时间(年月日时分秒)"
+        placeholder="年月日时分秒"
+        @click="show.ymdhms = true"
+      />
       <t-popup v-model="show.ymdhms" position="bottom">
         <t-date-time-picker
           v-model="text.ymdhms"
           :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
           title="选择日期时间"
-          :showWeek="true"
+          :show-week="true"
           @change="onChange"
           @columnChange="onColumnChange"
           @confirm="onConfirm"
@@ -49,7 +54,7 @@
           v-model="text.ymd2"
           :mode="['year', 'month', 'date']"
           title="选择日期"
-          :disableDate="{
+          :disable-date="{
             before: '2021-05-15',
             after: '2022-08-20',
           }"
@@ -65,7 +70,7 @@
           v-model="text.hm2"
           :mode="['hour', 'minute']"
           title="选择时间"
-          :disableDate="{
+          :disable-date="{
             from: '2021-05-15 15:20:20',
             to: '2022-05-15 15:35:31',
           }"
@@ -75,9 +80,6 @@
           @cancel="onCancel"
         />
       </t-popup>
-    </tdesign-demo-block>
-
-    <tdesign-demo-block title="03 格式" summary="多种输入输出格式">
     </tdesign-demo-block>
   </div>
 </template>
@@ -142,4 +144,3 @@ export default defineComponent({
   }
 }
 </style>
-

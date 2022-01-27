@@ -47,7 +47,7 @@ export default {
         {
           title: 'DateTimePicker 时间选择器',
           name: 'date-time-picker',
-          component: () => import('@/date-time-picker/demos/base.vue'),
+          component: () => import('@/date-time-picker/demos/mobile.vue'),
         },
         {
           title: 'Radio 单选',
