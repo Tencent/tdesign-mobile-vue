@@ -16,7 +16,7 @@
       </t-collapse>
     </tdesign-demo-block>
     <tdesign-demo-block summary="更多（默认全部展开）">
-      <t-collapse default-expand-all>
+      <t-collapse expand-all>
         <t-collapse-panel name="demoCustom">
           <template #title
             >自定义标题<span style="color: #ccc; font-size: 12px; margin-left: 6px">自定义内容</span></template

@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-23 10:17:14
  * */
 
 import { TdInputProps } from './type';
@@ -34,11 +33,11 @@ export default {
   label: {
     type: [String, Function] as PropType<TdInputProps['label']>,
   },
-  /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 */
+  /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxcharacter: {
     type: Number,
   },
-  /** 用户最多可以输入的文本长度。值小于等于 0 的时候，则不限制输入长度 */
+  /** 用户最多可以输入的文本长度。值小于等于 0 的时候，则不限制输入长度。`maxcharacter` 和 `maxlength` 二选一使用 */
   maxlength: {
     type: Number,
   },
@@ -50,7 +49,7 @@ export default {
   /** 占位符 */
   placeholder: {
     type: String,
-    default: '',
+    default: undefined,
   },
   /** 组件前置图标 */
   prefixIcon: {
@@ -60,6 +59,14 @@ export default {
   readonly: Boolean,
   /** 是否显示表单必填星号 */
   required: Boolean,
+  /** 输入框尺寸 */
+  size: {
+    type: String as PropType<TdInputProps['size']>,
+    default: 'small' as TdInputProps['size'],
+    validator(val: TdInputProps['size']): boolean {
+      return ['small', 'medium'].includes(val);
+    },
+  },
   /** 后置图标前的后置内容 */
   suffix: {
     type: [String, Function] as PropType<TdInputProps['suffix']>,
@@ -73,12 +80,8 @@ export default {
     type: String as PropType<TdInputProps['type']>,
     default: 'text' as TdInputProps['type'],
     validator(val: TdInputProps['type']): boolean {
-      return ['textarea', 'text', 'number', 'url', 'tel', 'password', 'search', 'submit', 'hidden'].includes(val);
+      return ['text', 'number', 'url', 'tel', 'password', 'search', 'submit', 'hidden'].includes(val);
     },
-  },
-  /** 输入框的值 */
-  modelValue: {
-    type: [String, Number] as PropType<TdInputProps['value']>,
   },
   /** 输入框的值 */
   value: {
@@ -87,7 +90,6 @@ export default {
   /** 输入框的值，非受控属性 */
   defaultValue: {
     type: [String, Number] as PropType<TdInputProps['defaultValue']>,
-    default: '',
   },
   /** 失去焦点时触发 */
   onBlur: Function as PropType<TdInputProps['onBlur']>,

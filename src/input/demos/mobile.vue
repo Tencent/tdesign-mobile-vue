@@ -24,22 +24,11 @@
     <tdesign-demo-block summary="长标题文本框">
       <t-input label="超长需换行的标签" placeholder="预设文本"> </t-input>
     </tdesign-demo-block>
-    <tdesign-demo-block summary="长文本输入文本框">
-      <t-input type="textarea" placeholder="预设文本" />
-      <t-input
-        :maxlength="140"
-        label="标签文字"
-        type="textarea"
-        placeholder="预设文本"
-        style="margin-top: 16px"
-        @change="changeText"
-      />
-    </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="文本框状态">
       <t-cell-group>
-        <t-input v-model="text1" label="标签文字" readonly>请输入文字</t-input>
-        <t-input v-model="text1" label="填写错误" error-message="提示信息" />
-        <t-input v-model="text2" label="不可编辑" disabled />
+        <t-input v-model="text1" label="标签文字" value="请输入文字"></t-input>
+        <t-input v-model="text1" label="填写错误" value="一段错误填写的内容" error-message="提示信息" />
+        <t-input v-model="text2" label="不可编辑" value="请输入文字" readonly />
       </t-cell-group>
     </tdesign-demo-block>
     <tdesign-demo-block title="03 特殊类型" summary="特殊文本框类型">
@@ -58,6 +47,10 @@
       <t-input label="个数" align="right" placeholder="填写个数" suffix="个" />
     </tdesign-demo-block>
   </div>
+  <tdesign-demo-block title="04 字数限制" summary="文本框字数限制">
+    <t-input placeholder="最大输入10个字符" :maxlength="10" />
+    <t-input placeholder="最大输入10个字符，汉字算两个" :maxcharacter="10" />
+  </tdesign-demo-block>
 </template>
 <script lang="ts">
 import { InfoCircleFilledIcon } from 'tdesign-icons-vue-next';
