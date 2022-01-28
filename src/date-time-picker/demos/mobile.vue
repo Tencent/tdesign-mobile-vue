@@ -10,7 +10,7 @@
           :mode="['year', 'month', 'date']"
           title="选择日期"
           @change="onChange"
-          @columnChange="onColumnChange"
+          @column-change="onColumnChange"
           @confirm="onConfirm"
           @cancel="onCancel"
         />
@@ -22,7 +22,7 @@
           :mode="['hour', 'minute']"
           title="选择时间"
           @change="onChange"
-          @columnChange="onColumnChange"
+          @column-change="onColumnChange"
           @confirm="onConfirm"
           @cancel="onCancel"
         />
@@ -40,7 +40,7 @@
           title="选择日期时间"
           :show-week="true"
           @change="onChange"
-          @columnChange="onColumnChange"
+          @column-change="onColumnChange"
           @confirm="onConfirm"
           @cancel="onCancel"
         />
@@ -59,7 +59,7 @@
             after: '2022-08-20',
           }"
           @change="onChange"
-          @columnChange="onColumnChange"
+          @column-change="onColumnChange"
           @confirm="onConfirm"
           @cancel="onCancel"
         />
@@ -75,7 +75,7 @@
             to: '2022-05-15 15:35:31',
           }"
           @change="onChange"
-          @columnChange="onColumnChange"
+          @column-change="onColumnChange"
           @confirm="onConfirm"
           @cancel="onCancel"
         />
