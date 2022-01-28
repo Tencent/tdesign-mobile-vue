@@ -85,7 +85,6 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import dayjs from 'dayjs';
 
 export default defineComponent({
   setup() {

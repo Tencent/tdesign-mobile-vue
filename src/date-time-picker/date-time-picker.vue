@@ -1,7 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
-      :defaultValue="defaultPickerValue"
+      :default-value="defaultPickerValue"
       :value="data.pickerValue"
       :title="title"
       @change="onChange"
