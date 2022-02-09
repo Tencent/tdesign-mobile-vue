@@ -4,7 +4,7 @@
     <div class="t-countdown__small-square">
       <t-countdown
         content="ok"
-        :time="9000"
+        :time="900000"
         :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
