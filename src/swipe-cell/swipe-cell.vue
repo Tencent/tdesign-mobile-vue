@@ -78,32 +78,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed, onMounted, ref, watch } from 'vue';
+import { defineComponent, reactive, computed, onMounted, ref, watch, SetupContext } from 'vue';
+import { onClickOutside } from '@vueuse/core';
 import config from '../config';
-import useClickAway from './utils/useClickAway';
+import { emitEvent } from '../shared/emit';
+import props from './props';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
 export default defineComponent({
   name,
-  props: {
-    // disabled 禁止滑动
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-    // 左边按钮数组
-    left: {
-      type: Array,
-      default: () => [],
-    },
-    // 右边按钮数组
-    right: {
-      type: Array,
-      default: () => [],
-    },
-  },
-  setup(props, { emit }) {
+  props,
+  emits: ['onClick', 'open', 'close'],
+  setup(props, context: SetupContext) {
     const leftRef = ref<HTMLElement>();
     const rightRef = ref<HTMLElement>();
     const swipeCell = ref<HTMLElement>();
@@ -112,7 +99,7 @@ export default defineComponent({
     // autoBack 点击菜单后是否收回菜
     const autoBack = true;
     // threshold 滑动宽度的百分之多少自动打开菜单，否则收回
-    const threshold = 0.6;
+    const threshold = 0.5;
     const initData = reactive({
       startPoint: {
         x: 0,
@@ -142,20 +129,13 @@ export default defineComponent({
       () => initData.status,
       (value, oldValue) => {
         if (oldValue === 'close' && value === 'open') {
-          emit('onOpen');
+          emitEvent(props, context, 'open');
         } else if (oldValue === 'open' && value === 'close') {
-          emit('onClose');
+          emitEvent(props, context, 'close');
         }
       },
     );
-    // 点击外部，收回菜单
-    useClickAway(
-      () => {
-        close();
-      },
-      swipeCell,
-      'click', // click, touchstart
-    );
+    onClickOutside(swipeCell, (event) => close());
     // 开始滚动
     const start = (e: any) => {
       if (props.disabled) {
@@ -191,20 +171,17 @@ export default defineComponent({
           initData.moving = false;
           return;
         }
-        // 向右滑动，左边按钮出
-        // console.log('当前移动到的位置%d，起点位置%d, 综合上一次移动的位置%d',clientX, x, pos)
-        pos = Math.min(pos, initData.leftWidth);
+        // 向右滑动，左边按钮出，10是在拉出菜单后，还能拉出的距离，产生一个回弹效果
+        pos = Math.min(pos, initData.leftWidth > 0 ? initData.leftWidth + 10 : 0);
       } else {
         if (initData.rightWidth === 0) {
           initData.moving = false;
-          return;
         }
         // 向左滑动，右边按钮出
-        pos = Math.min(-pos, initData.rightWidth);
+        pos = Math.max(pos, -(initData.rightWidth > 0 ? initData.rightWidth + 10 : 0));
       }
-      pos = Math.max(pos, 0);
       if (initData.status === 'close') {
-        initData.pos = clientX - x;
+        initData.pos = pos;
       }
     };
     // 滚动结束
@@ -225,6 +202,7 @@ export default defineComponent({
           close();
         }
       } else if (-initData.pos > initData.rightWidth * threshold) {
+        console.log(1111);
         open(direction);
       } else {
         close();
@@ -232,11 +210,13 @@ export default defineComponent({
     };
     // 开启，通过父组件调用
     const open = (direction: String) => {
+      console.log('开启', direction);
       initData.moving = true;
       initData.status = 'open';
       if (direction === 'toLeft') {
         initData.pos = -initData.rightWidth;
         if (initData.leftWidth) {
+          // @ts-ignore
           initData.opened = [false, true];
         } else {
           initData.opened = true;
@@ -244,6 +224,7 @@ export default defineComponent({
       } else {
         initData.pos = initData.leftWidth;
         if (initData.rightWidth) {
+          // @ts-ignore
           initData.opened = [true, false];
         } else {
           initData.opened = true;
@@ -252,10 +233,12 @@ export default defineComponent({
     };
     // 关闭，可以通过父组件调用
     const close = () => {
+      console.log('关闭');
       initData.moving = true;
       initData.status = 'close';
       initData.pos = 0;
       if (initData.leftWidth && initData.rightWidth) {
+        // @ts-ignore
         initData.opened = [false, false];
       } else {
         initData.opened = false;
@@ -263,7 +246,7 @@ export default defineComponent({
     };
     // btns按钮点击事件
     const handleClickBtn = ({ action, source }: { action: { [key: string]: any }; source: String }) => {
-      emit('onClick', {
+      emitEvent(props, context, 'onClick', {
         action,
         source,
       });
@@ -271,7 +254,19 @@ export default defineComponent({
         close();
       }
     };
-    return { start, move, end, initData, classes, swipeCell, leftRef, rightRef, open, close, handleClickBtn };
+    return {
+      start,
+      move,
+      end,
+      initData,
+      classes,
+      swipeCell,
+      leftRef,
+      rightRef,
+      open,
+      close,
+      handleClickBtn,
+    };
   },
 });
 </script>

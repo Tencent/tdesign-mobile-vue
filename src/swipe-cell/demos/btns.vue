@@ -38,6 +38,7 @@ export default defineComponent({
       Toast(JSON.stringify(value));
     };
     const handleShowOpened = () => {
+      // @ts-ignore
       Toast(swipeRef.value.initData.opened.toString());
     };
     const handleClickLeft = () => {

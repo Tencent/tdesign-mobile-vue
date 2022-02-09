@@ -4,36 +4,23 @@
 
 ### SwipeCell
 
-| 名称     | 类型                          | 默认值 | 说明                                                   | 必传 |
-| -------- | ----------------------------- | ------ | ------------------------------------------------------ | ---- |
-| disabled | Boolean                       | false  | 禁止滑动                                               | N    |
-| left     | BtnItem[]                     | []     | 如果设置了 :left="[]"，还需要设置 onClick              | N    |
-| right    | BtnItem[]                     | []     | 如果设置了 :right="[]"，还需要设置 onClick             | N    |
-| opened   | Boolean \| [Boolean, Boolean] | false  | 通过 ref.value.initData.opened 获取菜单的展开/收回状态 | N    |
+| 名称     | 类型                    | 默认值 | 说明                                                                                                                                                                                                                                                                                                                                  | 必传 |
+| -------- | ----------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| disabled | Boolean                 | false  | 是否禁止滑动                                                                                                                                                                                                                                                                                                                          | N    |
+| left     | Array / Slot / Function | -      | 左侧滑动操作项。所有行为同 `right`。                                                                                                                                                                                                                                                                                                  | N    |
+| right    | Array / Slot / Function | -      | 右侧滑动操作项。有两种定义方式，一种是使用数组，二种是使用插槽。`right.content` 表示操作文本，`right.className` 表示操作项类名，`right.style` 表示操作项样式，`right.size`表示按钮 size，`right.theme`表示按钮 theme。示例：`[{ content: '删除', className: 'btn', style: 'background-color: red',size: 'small', theme: 'primary' }]` | N    |
+| opened   | Boolean / Array         | false  | 操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态。父组件通过 ref.value.initData.opened 获取                                                                                                                                                                                                                     | N    |
 
-### BtnItem
+### SwipeCell Events
 
-t-button 按钮的部分属性，复杂按钮请使用 slot#left/right
+| 名称    | 参数                                                   | 描述                                                                                                                  |
+| ------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| onClick | `{action: SwipeActionItem, source: 'left' \| 'right'}` | 传递 left 和 right 属性时绑定的点击事件，action 表示通过数组传递的按钮的属性，source 表示是点击的左边按钮还是右边按钮 |
 
-| 名称      | 类型          | 默认值       | 说明                                                           | 必传 |
-| --------- | ------------- | ------------ | -------------------------------------------------------------- | ---- |
-| content   | String / Slot | -            | 按钮内容                                                       | Y    |
-| className | String        | -            | 按钮 class 类名                                                | N    |
-| style     | String        | height: 100% | 按钮 css 样式                                                  | N    |
-| size      | String        | small        | 组件尺寸。可选项：small/medium/large。                         | N    |
-| theme     | String        | primary      | 组件风格，依次为品牌色、危险色。可选项：default/primary/danger | N    |
+### SwipeCell Slots
 
-### Events
-
-| 名称    | 说明                                    | 回调参数                                               |
-| ------- | --------------------------------------- | ------------------------------------------------------ |
-| onClick | 传递 left 和 right 属性时绑定的点击事件 | ({action: BtnItem, source: 'left' \| 'right'}) => void |
-
-### Slots
-
-| 名称    | 说明   |
-| ------- | ------ |
-| -       | 内容   |
-| content | 内容   |
-| left    | 左菜单 |
-| right   | 右菜单 |
+| 名称    | 说明     |
+| ------- | -------- |
+| content | 内容     |
+| left    | 左边菜单 |
+| right   | 右边菜单 |

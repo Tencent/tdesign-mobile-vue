@@ -59,7 +59,7 @@
     </tdesign-demo-block>
     <!-- onClick -->
     <tdesign-demo-block summary="click点击事件">
-      <t-swipe-cell :right="initData.btns" @onClick="(value) => handleClick(value)">
+      <t-swipe-cell :right="initData.btns" @onClick="handleClick">
         <t-cell title="左右都有菜单" note="辅助信息"></t-cell>
         <template #left>
           <t-button @click="handleClickLeft">选择</t-button>
@@ -90,6 +90,7 @@ export default defineComponent({
       Toast(JSON.stringify(value));
     };
     const handleShowOpened = () => {
+      // @ts-ignore
       Toast(swipeRef.value.initData.opened.toString());
     };
     const handleClickLeft = () => {
