@@ -202,7 +202,6 @@ export default defineComponent({
           close();
         }
       } else if (-initData.pos > initData.rightWidth * threshold) {
-        console.log(1111);
         open(direction);
       } else {
         close();
@@ -210,7 +209,6 @@ export default defineComponent({
     };
     // 开启，通过父组件调用
     const open = (direction: String) => {
-      console.log('开启', direction);
       initData.moving = true;
       initData.status = 'open';
       if (direction === 'toLeft') {
@@ -233,7 +231,6 @@ export default defineComponent({
     };
     // 关闭，可以通过父组件调用
     const close = () => {
-      console.log('关闭');
       initData.moving = true;
       initData.status = 'close';
       initData.pos = 0;
