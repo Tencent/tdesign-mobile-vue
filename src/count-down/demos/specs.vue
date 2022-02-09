@@ -4,7 +4,7 @@
     <div class="t-countdown__small-square">
       <t-countdown
         content="ok"
-        :time="900000"
+        :time="9000"
         :auto-start="true"
         :millisecond="false"
         format="HH:mm:ss"
@@ -89,7 +89,7 @@ export default defineComponent({
       // console.log('onChange', val);
     };
     const onFinish = () => {
-      // console.log('onFinish');
+      console.log('onFinish');
     };
 
     return {
@@ -109,7 +109,7 @@ export default defineComponent({
   justify-content: space-between;
   span {
     font-weight: 700;
-    font-family: "DIN Alternate";
+    font-family: 'DIN Alternate';
   }
   .format {
     opacity: 1;
