@@ -29,6 +29,7 @@ import { toRefs, computed, reactive, defineComponent } from 'vue';
 import config from '../config';
 import StepperProps from './props';
 import CLASSNAMES from '../shared/constants';
+import { emitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-stepper`;
@@ -47,7 +48,7 @@ export default defineComponent({
         return Number(props.value) || state.cacheValue;
       },
       set(val: number) {
-        emit('change', val);
+        emitEvent(props, context, 'change', val);
         emit('update:value', val);
         console.log(val, props.value);
         state.cacheValue = val;
@@ -56,10 +57,8 @@ export default defineComponent({
 
     const { min, max, inputWidth, theme } = toRefs(props);
     const isPureMode = theme.value === 'mode';
-    console.log(theme.value);
-    console.log(isPureMode, 'isPureMode');
     const inputStyle = inputWidth ? { width: `${inputWidth.value}px` } : '';
-    console.log(inputStyle);
+
     const format = (val: number) =>
       Math.min(Math.max(min.value, val, Number.MIN_SAFE_INTEGER), max.value, Number.MAX_SAFE_INTEGER);
     currentValue.value = format(Number(props.value));

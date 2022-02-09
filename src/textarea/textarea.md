@@ -8,6 +8,7 @@
 autofocus | Boolean | false | 自动聚焦，拉起键盘 | N
 autosize | Boolean | false | 是否自动增高，值为 autosize 时，style.height 不生效 | N
 disabled | Boolean | false | 是否禁用文本框 | N
+label | String / Slot / Function | - | 左侧文本。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 | N
 maxlength | Number | - | 用户最多可以输入的字符个数 | N
 name | String | - | 名称，HTML 元素原生属性 | N

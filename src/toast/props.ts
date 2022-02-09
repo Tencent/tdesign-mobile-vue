@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-30 21:24:46
  * */
 
 import { TdToastProps } from './type';
@@ -12,6 +11,7 @@ export default {
   /** 图标排列方式 */
   direction: {
     type: String as PropType<TdToastProps['direction']>,
+    default: 'row' as TdToastProps['direction'],
     validator(val: TdToastProps['direction']): boolean {
       return ['row', 'column'].includes(val);
     },
@@ -23,27 +23,26 @@ export default {
   },
   /** 自定义图标 */
   icon: {
-    type: Function as PropType<TdToastProps['icon']>,
+    type: [String, Function] as PropType<TdToastProps['icon']>,
   },
   /** 弹窗显示文字 */
   message: {
-    type: String,
-    default: '',
+    type: [String, Function] as PropType<TdToastProps['message']>,
   },
   /** 弹窗展示位置 */
-  position: {
-    type: String as PropType<TdToastProps['position']>,
-    default: 'middle' as TdToastProps['position'],
-    validator(val: TdToastProps['position']): boolean {
+  placement: {
+    type: String as PropType<TdToastProps['placement']>,
+    default: 'middle' as TdToastProps['placement'],
+    validator(val: TdToastProps['placement']): boolean {
       return ['top', 'middle', 'bottom'].includes(val);
     },
   },
-  /** 是否显示背景遮罩，禁止背景点击和滚动 */
-  showOverlay: Boolean,
+  /** 防止滚动穿透，即不允许点击和滚动 */
+  preventScrollThrough: Boolean,
   /** 提示类型 */
-  type: {
-    type: String as PropType<TdToastProps['type']>,
-    validator(val: TdToastProps['type']): boolean {
+  theme: {
+    type: String as PropType<TdToastProps['theme']>,
+    validator(val: TdToastProps['theme']): boolean {
       return ['loading', 'success', 'fail'].includes(val);
     },
   },

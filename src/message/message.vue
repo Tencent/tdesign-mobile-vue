@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch, defineComponent, getCurrentInstance, PropType } from 'vue';
+import { ref, computed, watch, defineComponent, getCurrentInstance, PropType } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { MessageAlignType, MessageThemeList } from './type';
 import config from '../config';

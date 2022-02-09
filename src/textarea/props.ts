@@ -14,6 +14,10 @@ export default {
   autosize: Boolean,
   /** 是否禁用文本框 */
   disabled: Boolean,
+  /** 左侧文本 */
+  label: {
+    type: [String, Function] as PropType<TdTextareaProps['label']>,
+  },
   /** 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度 */
   maxcharacter: {
     type: Number,

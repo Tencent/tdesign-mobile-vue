@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-04 22:11:58
  * */
 
 import { TdNoticeBarProps } from './type';
@@ -24,7 +23,7 @@ export default {
     type: String,
     default: '',
   },
-  /** 延迟 */
+  /** 延迟显示，单位：毫秒 */
   delay: {
     type: Number,
     default: 0,

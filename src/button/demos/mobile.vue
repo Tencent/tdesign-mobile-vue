@@ -4,7 +4,7 @@
     <p class="summary">按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</p>
     <tdesign-demo-block title="01 类型" summary="基础按钮">
       <div class="button-demo" style="margin: 0 16px 0">
-        <t-button theme="primary" @click="onClick">强按钮</t-button>
+        <t-button theme="primary" shape="round" @click="onClick">强按钮</t-button>
         <t-button theme="primary" variant="outline">弱按钮</t-button>
         <t-button variant="outline">次按钮</t-button>
         <t-button theme="primary" variant="outline" :icon="iconFunc">带图标按钮</t-button>

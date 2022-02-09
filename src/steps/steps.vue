@@ -19,6 +19,7 @@ import StepsProps from './props';
 import TStepItem from './step-item.vue';
 import config from '../config';
 import { TdStepsProps } from './type';
+import { emitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-steps`;
@@ -44,8 +45,7 @@ export default defineComponent({
 
     const onClickItem = (cur: TdStepsProps['current'], prev: TdStepsProps['current'], e: MouseEvent) => {
       context.emit('update:current', cur);
-      context.emit('change', cur, prev, { e });
-      if (typeof props.onChange === 'function') props.onChange(cur, prev, { e });
+      emitEvent(props, context, 'change', cur, prev, { e });
     };
 
     provide('stepsProvide', {

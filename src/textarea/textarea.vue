@@ -24,7 +24,7 @@ import { ref, onMounted, defineComponent, toRefs, SetupContext, nextTick } from 
 import { emitEvent, getCharacterLength, useDefault } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
-import { TextareaValue } from './type';
+import { TdTextareaProps, TextareaValue } from './type';
 import calcTextareaHeight from './calcTextareaHeight';
 
 const { prefix } = config;
@@ -38,7 +38,7 @@ export default defineComponent({
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();
     const textareaLength = ref(0);
-    const { innerValue } = useDefault(props, context, 'value', 'change');
+    const [innerValue] = useDefault<string, TdTextareaProps>(props, context.emit, 'value', 'change');
     innerValue.value = innerValue.value || '';
 
     const setInputValue = (v: TextareaValue = '') => {
