@@ -109,7 +109,7 @@ export default defineComponent({
   justify-content: space-between;
   span {
     font-weight: 700;
-    font-family: "DIN Alternate";
+    font-family: 'DIN Alternate';
   }
   .format {
     opacity: 1;
