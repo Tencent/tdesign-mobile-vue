@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <h1 class="title">SwipeCell</h1>
+    <h1 class="title">SwipeCell 滑动单元格</h1>
     <p class="summary">用来承载列表中的更多操作，通过左右滑动来展示，按钮的宽度固定高度根据列表高度而变化。</p>
     <tdesign-demo-block summary="左滑单操作">
       <t-swipe-cell>
