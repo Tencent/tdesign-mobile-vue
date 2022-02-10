@@ -18,6 +18,7 @@
 import { ref, computed, SetupContext, watch, defineComponent, getCurrentInstance, PropType } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { MessageAlignType, MessageThemeList } from './type';
+import messageProps from './props';
 import config from '../config';
 import { emitEvent } from '../shared/emit';
 import { renderTNode, TNode } from '../shared';
@@ -28,62 +29,8 @@ const name = `${prefix}-message`;
 export default defineComponent({
   name,
   components: { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon, TNode },
-  props: {
-    modelValue: Boolean,
-    /**
-     * @description 显示与隐藏
-     * @attribute visible
-     */
-    visible: Boolean,
-    /**
-     * @description 消息内容
-     * @attribute content
-     */
-    content: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description 消息类型
-     * @attribute theme
-     */
-    theme: {
-      type: String as PropType<MessageThemeList>,
-      default: 'info',
-    },
-    /**
-     * @description 显示时间，毫秒
-     * @attribute duration
-     */
-    duration: {
-      type: Number,
-      default: 2000,
-    },
-    /**
-     * @description 文本对齐方式
-     * @attribute align
-     */
-    align: {
-      type: String as PropType<MessageAlignType>,
-      default: 'left',
-    },
-    /**
-     * @description 关闭按钮
-     * @attribute close-btn
-     */
-    closeBtn: {
-      type: [String, Boolean, Object] as PropType<string | boolean | typeof TNode>,
-    },
-    /**
-     * @description 自定义层级
-     * @attribute zIndex
-     */
-    zIndex: {
-      type: Number,
-      default: 5000,
-    },
-  },
-  emits: ['update:modelValue', 'visible-change', 'open', 'opened', 'close', 'closed'],
+  props: messageProps,
+  emits: ['visible-change', 'open', 'opened', 'close', 'closed'],
   setup(props, context) {
     const root = ref(null);
     const internalInstance = getCurrentInstance();
@@ -99,18 +46,18 @@ export default defineComponent({
     }));
 
     const onClose = () => {
-      context.emit('update:modelValue', false);
       emitEvent(props, context, 'close');
+      emitEvent(props, context, 'visible-change', false);
     };
 
     watch(
       () => currentVisible.value,
       (val) => {
-        emitEvent(props, context, 'visible-change', val);
-
         if (val === false) return;
 
         emitEvent(props, context, 'open');
+        emitEvent(props, context, 'visible-change', true);
+
         if (props.duration > 0) {
           setTimeout(onClose, props.duration);
         }

@@ -15,6 +15,7 @@
 
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
+import popupProps from './props';
 import { emitEvent } from '../shared/emit';
 import TMask from '../mask';
 import config from '../config';
@@ -26,74 +27,8 @@ const name = `${prefix}-popup`;
 export default defineComponent({
   name,
   components: { TMask },
-  props: {
-    modelValue: Boolean,
-    /**
-     * @description 显示与隐藏
-     * @attribute visible
-     */
-    visible: Boolean,
-    /**
-     * @description 将popup放在哪个el下，该el在createApp前必须存在
-     * @attribute to
-     */
-    to: {
-      type: String,
-      default: 'body',
-    },
-    /**
-     * @description 是否禁用teleport
-     * @attribute teleport-disabled
-     */
-    teleportDisabled: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * @description 是否显示遮罩层
-     * @attribute show-overlay
-     */
-    showOverlay: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * @description 是否锁定内容滚动
-     * @attribute lock-scroll
-     */
-    lockScroll: {
-      type: Boolean,
-      default: true,
-    },
-    /**
-     * @description 弹出层的位置
-     * @attribute placement
-     * @enum ["top", "right", "bottom", "left", "center"]
-     * @default bottom
-     */
-    placement: {
-      type: String,
-      default: 'bottom',
-      validator: (val: string) => ['top', 'right', 'bottom', 'left', 'center'].indexOf(val) !== -1,
-    },
-    /**
-     * @description 弹出层内容区的动画名，等价于transition组件的name属性
-     * @attribute transition-name
-     */
-    transitionName: {
-      type: String,
-      default: '',
-    },
-    /**
-     * @description 自定义层级
-     * @attribute zIndex
-     */
-    zIndex: {
-      type: Number,
-      default: 1500,
-    },
-  },
-  emits: ['open', 'visible-change', 'close', 'opened', 'update:modelValue', 'closed'],
+  props: popupProps,
+  emits: ['open', 'close', 'opened', 'closed', 'visible-change'],
   setup(props, context: SetupContext) {
     const currentVisible = computed(() => props.modelValue || props.visible);
 
@@ -117,11 +52,11 @@ export default defineComponent({
     watch(
       () => currentVisible.value,
       (val) => {
-        emitEvent(props, context, 'visible-change', val);
         const cls = `${prefix}-overflow-hidden`;
         if (val) {
           document.body.classList.add(cls);
           emitEvent(props, context, 'open');
+          emitEvent(props, context, 'visible-change', true);
         } else {
           document.body.classList.remove(cls);
         }
@@ -130,7 +65,7 @@ export default defineComponent({
 
     const handleMaskClick = () => {
       emitEvent(props, context, 'close');
-      context.emit('update:modelValue', false);
+      emitEvent(props, context, 'visible-change', false);
     };
 
     const handleMove = (e: TouchEvent) => {

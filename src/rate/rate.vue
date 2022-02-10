@@ -41,7 +41,7 @@ export default defineComponent({
   name,
   components: { StarFilledIcon, StarIcon },
   props: rateProps,
-  emits: ['change', 'update:modelValue'],
+  emits: ['change'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
     const actualVal = computed(() => props.value) as ComputedRef<number>;
@@ -75,7 +75,6 @@ export default defineComponent({
 
     function emit(val: number) {
       emitEvent(props, context, 'change', val);
-      context.emit('update:modelValue', val);
     }
 
     function onClick(current: number) {
