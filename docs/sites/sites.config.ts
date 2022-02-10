@@ -239,6 +239,13 @@ export default {
           component: () => import('@/cell/cell.md'),
         },
         {
+          title: 'SwipeCell 滑动单元格',
+          name: 'swipe-cell',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/swipe-cell',
+          component: () => import('@/swipe-cell/swipe-cell.md'),
+        },
+        {
           title: 'Swiper 轮播',
           name: 'swiper',
           meta: { docType: 'data' },
