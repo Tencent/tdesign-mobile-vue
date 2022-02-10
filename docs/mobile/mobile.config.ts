@@ -189,6 +189,11 @@ export default {
           name: 'textarea',
           component: () => import('@/textarea/demos/mobile.vue'),
         },
+        {
+          title: 'SwipeCell 滑动单元格',
+          name: 'swipe-cell',
+          component: () => import('@/swipe-cell/demos/mobile.vue'),
+        },
       ],
     },
   },

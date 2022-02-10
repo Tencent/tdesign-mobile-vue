@@ -89,7 +89,7 @@ export default defineComponent({
       // console.log('onChange', val);
     };
     const onFinish = () => {
-      // console.log('onFinish');
+      console.log('onFinish');
     };
 
     return {

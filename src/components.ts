@@ -41,3 +41,4 @@ export { Swiper, SwiperItem } from './swiper';
 export { Countdown } from './count-down';
 export { default as Avatar } from './avatar';
 export { default as AvatarGroup } from './avatar-group';
+export { default as SwipeCell } from './swipe-cell';
