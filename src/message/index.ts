@@ -1,6 +1,6 @@
 import { createApp, defineComponent, ref, h, VNode, App, nextTick } from 'vue';
 import Message from './message.vue';
-import { WithInstallType } from '../shared';
+import { WithInstallType, withInstall, mapProps } from '../shared';
 import { TdMessageProps, MessageThemeList } from './type';
 
 import './style';
@@ -83,7 +83,16 @@ type MessageApi = {
   error: (options?: TdMessageProps | string) => void;
 };
 
-export const MessagePlugin: WithInstallType<typeof Message> & MessageApi = Message as any;
+export const MessagePlugin: WithInstallType<typeof Message> = withInstall(
+  mapProps([
+    {
+      name: 'visible',
+      event: 'visible-change',
+      alias: ['modelValue'],
+    },
+  ])(Message),
+);
+
 export default MessagePlugin;
 
 declare module '@vue/runtime-core' {
