@@ -108,12 +108,10 @@ export interface TdCheckboxGroupProps {
   options?: Array<CheckboxOption>;
   /**
    * 选中值
-   * @default []
    */
   value?: CheckboxGroupValue;
   /**
    * 选中值，非受控属性
-   * @default []
    */
   defaultValue?: CheckboxGroupValue;
   /**

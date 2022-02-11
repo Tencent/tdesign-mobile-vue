@@ -17,9 +17,19 @@ export default {
     },
   },
   /** 是否选中 */
-  checked: Boolean,
+  checked: {
+   type: Boolean,
+   default: undefined 
+  },
+  modelValue: {
+   type: Boolean,
+   default: undefined 
+  },
   /** 是否选中，非受控属性 */
-  defaultChecked: Boolean,
+  defaultChecked: {
+   type: Boolean,
+   default: undefined 
+  },
   /** 单选内容 */
   content: {
     type: [String, Function] as PropType<TdRadioProps['content']>,
@@ -51,7 +61,7 @@ export default {
   },
   /** 单选按钮的值 */
   value: {
-    type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
+    type: [String, Number] as PropType<TdRadioProps['value']>,
     default: undefined,
   },
   /** 选中状态变化时触发 */
