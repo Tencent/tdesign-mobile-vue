@@ -89,17 +89,17 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="横向只读步骤条">
       <div class="step-demo">
-        <t-steps v-model="current8">
+        <t-steps v-model="current8" :readonly="true">
           <t-step title="已完成步骤"></t-step>
           <t-step title="当前步骤"></t-step>
           <t-step title="未完成步骤"></t-step>
         </t-steps>
-        <t-steps v-model="current8">
+        <t-steps v-model="current8" :readonly="true">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="当前步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
         </t-steps>
-        <t-steps v-model="current9">
+        <t-steps v-model="current9" :readonly="true">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="错误步骤" content="辅助信息文字最多两行" status="error"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
@@ -108,12 +108,12 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="竖向只读步骤条">
       <div class="step-demo">
-        <t-steps v-model="current10" layout="vertical">
+        <t-steps v-model="current10" layout="vertical" :readonly="true">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="当前步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
         </t-steps>
-        <t-steps v-model="current11" layout="vertical">
+        <t-steps v-model="current11" layout="vertical" :readonly="true">
           <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="错误步骤" content="辅助信息文字最多两行" status="error"></t-step>
           <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
@@ -135,100 +135,6 @@
           <t-step title="事件描述"></t-step>
           <t-step title="事件描述"></t-step>
           <t-step title="事件描述"></t-step>
-        </t-steps>
-      </div>
-    </tdesign-demo-block>
-    <tdesign-demo-block summary="竖向带图标只读步骤条">
-      <div class="step-demo">
-        <t-steps v-model="current15" layout="vertical">
-          <t-step title="已完成步骤" content="辅助信息文字最多两行">
-            <template #icon>
-              <div class="step-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="design-iconfont">
-                  <path
-                    d="M10.3102703,6.1459779 L10.379575,6.20446033 L10.379575,6.20446033 L10.6872347,6.5121201 C10.7206815,6.54568642 10.7483894,6.58281591 10.770358,6.62228582 L20.9954954,16.8375454 L19.9807289,17.8523119 L10.0114954,7.89568807 L5.01026196,12.9080828 L3.9954954,11.8933162 L9.67281636,6.20480815 C9.84590231,6.03076218 10.1152732,6.01117753 10.3102703,6.1459779 Z"
-                    fill="#0052D9"
-                    transform="matrix(1 0 0 -1 0 24)"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </template>
-          </t-step>
-          <t-step title="当前步骤" content="辅助信息文字最多两行">
-            <template #icon>
-              <div class="step-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="design-iconfont">
-                  <path
-                    d="M10.3102703,6.1459779 L10.379575,6.20446033 L10.379575,6.20446033 L10.6872347,6.5121201 C10.7206815,6.54568642 10.7483894,6.58281591 10.770358,6.62228582 L20.9954954,16.8375454 L19.9807289,17.8523119 L10.0114954,7.89568807 L5.01026196,12.9080828 L3.9954954,11.8933162 L9.67281636,6.20480815 C9.84590231,6.03076218 10.1152732,6.01117753 10.3102703,6.1459779 Z"
-                    fill="#ffffff"
-                    transform="matrix(1 0 0 -1 0 24)"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </template>
-          </t-step>
-          <t-step title="未完成步骤" content="辅助信息文字最多两行">
-            <template #icon>
-              <div class="step-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="design-iconfont">
-                  <path
-                    d="M10.3102703,6.1459779 L10.379575,6.20446033 L10.379575,6.20446033 L10.6872347,6.5121201 C10.7206815,6.54568642 10.7483894,6.58281591 10.770358,6.62228582 L20.9954954,16.8375454 L19.9807289,17.8523119 L10.0114954,7.89568807 L5.01026196,12.9080828 L3.9954954,11.8933162 L9.67281636,6.20480815 C9.84590231,6.03076218 10.1152732,6.01117753 10.3102703,6.1459779 Z"
-                    fill="#ddd"
-                    transform="matrix(1 0 0 -1 0 24)"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </template>
-          </t-step>
-        </t-steps>
-      </div>
-      <div class="step-demo">
-        <t-steps v-model="current16" layout="vertical">
-          <t-step title="已完成步骤" content="辅助信息文字最多两行">
-            <template #icon>
-              <div class="step-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="design-iconfont">
-                  <path
-                    d="M10.3102703,6.1459779 L10.379575,6.20446033 L10.379575,6.20446033 L10.6872347,6.5121201 C10.7206815,6.54568642 10.7483894,6.58281591 10.770358,6.62228582 L20.9954954,16.8375454 L19.9807289,17.8523119 L10.0114954,7.89568807 L5.01026196,12.9080828 L3.9954954,11.8933162 L9.67281636,6.20480815 C9.84590231,6.03076218 10.1152732,6.01117753 10.3102703,6.1459779 Z"
-                    fill="#0052D9"
-                    transform="matrix(1 0 0 -1 0 24)"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </template>
-          </t-step>
-          <t-step title="错误步骤" content="辅助信息文字最多两行" status="error">
-            <template #icon>
-              <div class="step-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="design-iconfont">
-                  <path
-                    d="M10.3102703,6.1459779 L10.379575,6.20446033 L10.379575,6.20446033 L10.6872347,6.5121201 C10.7206815,6.54568642 10.7483894,6.58281591 10.770358,6.62228582 L20.9954954,16.8375454 L19.9807289,17.8523119 L10.0114954,7.89568807 L5.01026196,12.9080828 L3.9954954,11.8933162 L9.67281636,6.20480815 C9.84590231,6.03076218 10.1152732,6.01117753 10.3102703,6.1459779 Z"
-                    fill="#ffffff"
-                    transform="matrix(1 0 0 -1 0 24)"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </template>
-          </t-step>
-          <t-step title="未完成步骤" content="辅助信息文字最多两行">
-            <template #icon>
-              <div class="step-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="design-iconfont">
-                  <path
-                    d="M10.3102703,6.1459779 L10.379575,6.20446033 L10.379575,6.20446033 L10.6872347,6.5121201 C10.7206815,6.54568642 10.7483894,6.58281591 10.770358,6.62228582 L20.9954954,16.8375454 L19.9807289,17.8523119 L10.0114954,7.89568807 L5.01026196,12.9080828 L3.9954954,11.8933162 L9.67281636,6.20480815 C9.84590231,6.03076218 10.1152732,6.01117753 10.3102703,6.1459779 Z"
-                    fill="#ddd"
-                    transform="matrix(1 0 0 -1 0 24)"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </div>
-            </template>
-          </t-step>
         </t-steps>
       </div>
     </tdesign-demo-block>

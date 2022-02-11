@@ -15,7 +15,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
-import { renderContent, renderTNode, TNode } from '../shared';
+import { emitEvent, renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-tag`;
@@ -54,21 +54,13 @@ const Tag = defineComponent({
 
     function onClickClose(e: Event) {
       if (!props.disabled) {
-        if (typeof props.onClose === 'function') {
-          props.onClose({ e });
-        } else {
-          context.emit('close', e);
-        }
+        emitEvent(props, context, 'close', e);
       }
     }
 
     const handleClick = (e: MouseEvent): void => {
       if (!props.disabled) {
-        if (typeof props.onClick === 'function') {
-          props.onClick({ e });
-        } else {
-          context.emit('click', { e });
-        }
+        emitEvent(props, context, 'click', e);
       }
     };
 

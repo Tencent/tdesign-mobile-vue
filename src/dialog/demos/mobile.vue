@@ -110,17 +110,9 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-import config from '@/config';
-
-const { prefix } = config;
-const name = `${prefix}-demo--dialog`;
 
 export default defineComponent({
-  setup() {
-    return {
-      name: ref(name),
-    };
-  },
+  setup() {},
   data() {
     return {
       title: '对话框标题',

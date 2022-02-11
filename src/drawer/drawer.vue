@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent, h } from 'vue';
+import { emitEvent } from '@/shared';
 import config from '../config';
 import { SidebarItem } from './drawer.interface';
 
@@ -44,7 +45,7 @@ export default defineComponent({
       }
     };
     watch(open, () => {
-      context.emit('update:modelValue', open.value);
+      emitEvent(props, context, 'update:modelValue', open.value);
     });
     watch(modelValue, () => {
       open.value = modelValue.value;

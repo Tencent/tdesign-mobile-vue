@@ -72,14 +72,14 @@ export default defineComponent({
     },
     showSuccessRow(message: string) {
       Toast({
-        type: 'success',
+        theme: 'success',
         direction: 'row',
         message,
       });
     },
     showFailRow(message: string) {
       Toast({
-        type: 'fail',
+        theme: 'fail',
         direction: 'row',
         message,
       });
@@ -88,6 +88,7 @@ export default defineComponent({
       Toast({
         icon: () => h(UserIcon),
         direction,
+        duration: 10000,
         message,
       });
     },
@@ -99,15 +100,15 @@ export default defineComponent({
     },
     showLoading(message: string) {
       Toast({
-        type: 'loading',
+        theme: 'loading',
         message,
       });
     },
-    showPosition(position: TdToastProps['position']) {
-      Toast({ position, message: '轻提示内容' });
+    showPosition(placement: TdToastProps['placement']) {
+      Toast({ placement, message: '轻提示内容' });
     },
     showOverlay() {
-      Toast({ type: 'loading', message: '加载中...', showOverlay: true });
+      Toast({ theme: 'loading', message: '加载中...', preventScrollThrough: true });
     },
   },
 });

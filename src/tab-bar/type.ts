@@ -2,10 +2,9 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-21 19:16:47
  * */
 
-import { BadgeProps } from '../Badge';
+import { TdBadgeProps } from '@/Badge';
 import { TNode } from '../common';
 
 export interface TdTabBarProps {
@@ -13,43 +12,45 @@ export interface TdTabBarProps {
    * 是否显示外边框
    * @default true
    */
-  bordered: boolean;
+  bordered?: boolean;
   /**
    * 是否固定在底部
    * @default true
    */
-  fixed: boolean;
+  fixed?: boolean;
   /**
    * 当前选中标签的索引
    * @default 0
    */
-  value: string | number | Array<string | number>;
+  value?: string | number | Array<string | number>;
+  /**
+   * 当前选中标签的索引，非受控属性
+   * @default 0
+   */
+  defaultValue?: string | number | Array<string | number>;
   /**
    * 选中标签切换时触发
    */
-  onChange: () => void;
+  onChange?: () => void;
 }
 
 export interface TdTabBarItemProps {
   /**
    * 图标右上角提示信息
    */
-  badgeProps: BadgeProps;
+  badgeProps?: TdBadgeProps;
   /**
    * 图标名称
    */
-  icon: TNode;
+  icon?: TNode;
   /**
    * 二级菜单
    */
-  subTabBar: SubTabBarItem[];
+  subTabBar?: SubTabBarItem[] ;
   /**
    * 标识符
    */
-  value: string | number;
+  value?: string | number;
 }
 
-export interface SubTabBarItem {
-  value: string;
-  label: string;
-}
+export interface SubTabBarItem { value: string; label: string };

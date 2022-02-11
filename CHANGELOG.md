@@ -5,7 +5,31 @@ toc: false
 spline: explain
 ---
 
-## 0.4.1 (2022-01-06)
+## 0.5.0 `(2022-01-23)`
+
+### Bug Fixes
+
+* **tag:** 更新tag样式light-outline 1e051bd
+* **picker:** 修复默认值非第一个时的滚动错误 1ff7183
+* **avatar:** 修复size和dot的支持 class 57fe446
+* **cell:** icon对齐的问题 7c71689
+* **checkbox:** 组件对齐的问题 78f5bb0
+* **dialog:** 修复dialog插件类型错误 f7983d7
+* **dropdown-menu:** 修复单选项目 update:value 失效的问题 68e62bd, 修复一些特殊场景出现的问题 ffc2f4e
+* **input:** 修复点击事件丢失问题 31f1a39
+* **radio:** 修复radio的文本点击事件丢失问题 3664b5f
+* **rate:** 修复视觉走查 b7bd53a
+* **swiper:** 添加圆角支持 69aa8e5
+
+### Features
+
+* 完善avatar组件
+* 完善picker默认值以及demo fa1983a
+* 添加useDefault（支持受控和非受控逻辑）支持setInnerValue  dc8262d
+* checkbox and check-group结构调整 fe53611
+* picker-item的value变化时，picker及时更新 5b12841
+
+## 0.4.1 `(2022-01-06)`
 
 ### Bug Fixes
 

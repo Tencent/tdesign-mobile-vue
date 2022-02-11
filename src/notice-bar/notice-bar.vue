@@ -49,7 +49,7 @@ import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import NoticeBarProps from './props';
 
 import config from '../config';
-import { renderTNode, TNode } from '../shared';
+import { emitEvent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;
@@ -91,17 +91,11 @@ export default defineComponent({
     const iconColorCustom = computed(() => (props.iconColor ? `color:${props.iconColor};` : ''));
 
     function handleClose() {
-      context.emit('close');
-      if (props.onClose) {
-        props.onClose();
-      }
+      emitEvent(props, context, 'close');
     }
 
     function handleClick() {
-      context.emit('click');
-      if (props.onClick) {
-        props.onClick();
-      }
+      emitEvent(props, context, 'click');
     }
 
     const handleClickIcon = computed(() => {
@@ -112,10 +106,7 @@ export default defineComponent({
     });
 
     function handleDetailLink() {
-      context.emit('detail');
-      if (props.onDetail) {
-        props.onDetail();
-      }
+      emitEvent(props, context, 'detail');
     }
 
     const animateStyle = computed(() => ({

@@ -56,4 +56,6 @@ export type TdUseCountDownShowTimes = Array<{ mark?: string; value?: string | nu
 export interface TdUseCountDown {
   time: { value: number };
   showTimes: TdUseCountDownShowTimes;
+  pause?: () => void;
+  resume?: () => void;
 }

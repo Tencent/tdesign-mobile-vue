@@ -25,11 +25,6 @@ export default {
           component: () => import('@/divider/demos/mobile.vue'),
         },
         {
-          title: 'ButtonGroup 按钮组',
-          name: 'button-group',
-          component: () => import('@/button-group/demos/mobile.vue'),
-        },
-        {
           title: 'Cell 单元格',
           name: 'cell',
           component: () => import('@/cell/demos/mobile.vue'),
@@ -53,6 +48,11 @@ export default {
           title: 'Picker 选择器',
           name: 'picker',
           component: () => import('@/picker/demos/mobile.vue'),
+        },
+        {
+          title: 'DateTimePicker 时间选择器',
+          name: 'date-time-picker',
+          component: () => import('@/date-time-picker/demos/mobile.vue'),
         },
         {
           title: 'Radio 单选',
@@ -188,6 +188,16 @@ export default {
           title: 'Avatar 头像',
           name: 'avatar',
           component: () => import('@/avatar/demos/mobile.vue'),
+        },
+        {
+          title: 'Textarea 多行文本输入框',
+          name: 'textarea',
+          component: () => import('@/textarea/demos/mobile.vue'),
+        },
+        {
+          title: 'SwipeCell 滑动单元格',
+          name: 'swipe-cell',
+          component: () => import('@/swipe-cell/demos/mobile.vue'),
         },
       ],
     },

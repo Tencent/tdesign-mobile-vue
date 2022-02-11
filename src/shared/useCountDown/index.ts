@@ -1,44 +1,33 @@
 import { watch, ref, reactive } from 'vue';
+import { useRafFn } from '@vueuse/core';
 import { TdUseCountDownProps, TdUseCountDown } from './type';
 import { getRemainTimes, getShowTimes } from './utils';
 
 export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
-  const { format = 'HH:mm:ss', millisecond, onFinish, onChange } = props || {};
-
+  const { time = 0, autoStart, millisecond, format = 'HH:mm:ss', onFinish, onChange } = props || {};
   // state
-  const time = ref(Number(props?.time || 0));
-  const showTimes = reactive(getShowTimes(getRemainTimes(time?.value), format));
+  const count = ref(Number(time));
+  const showTimes = reactive(getShowTimes(getRemainTimes(time), format));
 
-  // 开始倒计时 处理
-  const interval = millisecond ? 50 : 1000; // 间隔
-  const StartCountdown = () => {
-    const timer: any = setInterval(() => {
-      if (time.value <= 0) {
-        onFinish?.();
-        return clearInterval(timer);
+  // raf
+  const { pause, resume } = useRafFn(
+    () => {
+      count.value = parseInt(count.value - 1000 / 60, 10);
+      if (count.value <= 0) {
+        pause?.();
+        count.value = 0;
       }
-      //
-      const times = getRemainTimes(time.value);
+      // console.log('count:', count.value);
+      const times = getRemainTimes(count.value);
       onChange?.(times);
-      if (millisecond) {
-        time.value -= 50;
-      } else {
-        time.value -= 1000;
-      }
-      getShowTimes(times, format)?.forEach?.((i, idx) => {
-        showTimes[idx].value = i?.value;
-      });
-    }, interval);
-  };
-
-  // autoStart为true开始倒计时
-  props?.autoStart && StartCountdown();
+      count.value === 0 && onFinish(times);
+      getShowTimes(times, format)?.forEach?.((i, idx) => (showTimes[idx].value = i?.value));
+    },
+    { immediate: autoStart },
+  );
 
   /**
    * return
    */
-  return {
-    time,
-    showTimes,
-  };
+  return { time: count, showTimes, pause, resume };
 }

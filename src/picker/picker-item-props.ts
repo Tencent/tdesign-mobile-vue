@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-29 23:52:01
  * */
 
 import { TdPickerItemProps } from '../picker/type';
@@ -14,7 +13,7 @@ export default {
     type: Array as PropType<TdPickerItemProps['options']>,
     default: (): TdPickerItemProps['options'] => [],
   },
-  /** 默认选中的侯选项 */
+  /** 默认选中的选项 */
   value: {
     type: [String, Number] as PropType<TdPickerItemProps['value']>,
   },

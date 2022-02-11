@@ -1,21 +1,34 @@
-import { computed, ref, SetupContext, watchEffect } from 'vue';
-import { toCamel } from '../util';
+import { computed, ref, SetupContext, watchEffect, WritableComputedRef } from 'vue';
+import camelCase from 'lodash/camelCase';
 
-export function useDefault<T, K extends keyof T, C extends SetupContext>(
-  props: T,
-  context: C,
-  key: K,
-  eventName: Parameters<C['emit']>[0],
-) {
-  const modelValue = `modelValue`;
-  const defaultName = `default${toCamel(String(key))}`;
+function getDefaultName(key: string): string {
+  const str = camelCase(key);
+  return `default${str[0].toLocaleUpperCase() + str.slice(1)}`;
+}
 
-  // XXX: warning or error when value is undefined
+// eventName is keybase, change -> onChange; visible-change -> onVisibleChange
+function getEventPropsName(eventName: string): string {
+  const str = camelCase(eventName);
+  return `on${str[0].toLocaleUpperCase()}${str.slice(1)}`;
+}
+
+/**
+ * 受控和非受控逻辑处理，包含 value / modelValue / events
+ * @param props 属性
+ * @param emit 触发方法，context.emit
+ * @param key 受控属性名称
+ * @param eventName 事件名称
+ * @example const [value, setValue] = useDefault();
+ * @returns [value, setValue]
+ */
+export function useDefault<V, T>(props: T, emit: SetupContext['emit'], key: string, eventName: string) {
+  const modelValue = 'modelValue';
+  const defaultName = getDefaultName(String(key));
+
   const isUsedModelValue = props[modelValue] !== undefined;
   const isUsedKey = props[key] !== undefined;
 
-  const innerValue = ref();
-  // XXX: 绑定值为undefined如何解， 要么就明确避免
+  const innerValue = ref<V>();
 
   if (isUsedKey) {
     innerValue.value = props[key];
@@ -24,27 +37,7 @@ export function useDefault<T, K extends keyof T, C extends SetupContext>(
   } else {
     innerValue.value = props[defaultName];
   }
-
-  const toCamelCase = (str: string) =>
-    `on${str
-      .split('-')
-      .map((char) => toCamel(char))
-      .join('')}`;
-
-  const emitEvents = (value: T[K], ...arg: any[]) => {
-    console.log('trigger emitEvents', value, 'isUsedModelValue', isUsedModelValue);
-    const updateKeys = [`update:${key}`];
-    if (isUsedModelValue) {
-      updateKeys.push(`update:modelValue`);
-    }
-    updateKeys.forEach((updateKey) => {
-      context.emit(updateKey, value, ...arg);
-    });
-    if (typeof props[toCamelCase(eventName)] === 'function') {
-      props[toCamelCase(eventName)](value, ...arg);
-    }
-  };
-
+  console.log('innervalue', innerValue.value, isUsedKey, isUsedModelValue);
   watchEffect(() => {
     if (isUsedModelValue) {
       innerValue.value = props[modelValue];
@@ -54,25 +47,34 @@ export function useDefault<T, K extends keyof T, C extends SetupContext>(
     }
   });
 
-  const setInnerValue = (value: T[K], ...arg: any[]) => {
+  function emitEvents<T extends Array<any>>(value: V, ...arg: T) {
+    const updateKeys = [`update:${key}`];
+    if (isUsedModelValue) {
+      updateKeys.push(`update:modelValue`);
+    }
+    // Props Event exists in Vue3. `props.onChange()` is equal `contex.emit('change')`
+    updateKeys.forEach((updateKey) => {
+      emit(updateKey, value, ...arg);
+    });
+    const propsEventName = getEventPropsName(eventName);
+    props[propsEventName]?.(value, ...arg);
+  }
+
+  function setInnerValue<M extends Array<any>>(value: V, ...arg: M) {
     if (!isUsedKey && !isUsedModelValue) {
       innerValue.value = value;
     }
-    emitEvents(value, arg);
-  };
+    emitEvents<M>(value, ...arg);
+  }
 
-  return {
-    innerValue: computed<T[K]>({
-      get() {
-        return innerValue.value;
-      },
-      set(value) {
-        if (!isUsedKey && !isUsedModelValue) {
-          innerValue.value = value;
-        }
-        emitEvents(value);
-      },
-    }),
-    setInnerValue,
-  };
+  const innerValueRef = computed<V>({
+    get() {
+      return innerValue.value as V;
+    },
+    set(value: V) {
+      setInnerValue(value);
+    },
+  });
+
+  return [innerValueRef, setInnerValue] as [WritableComputedRef<V>, typeof setInnerValue];
 }

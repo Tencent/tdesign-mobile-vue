@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-04 22:11:58
  * */
 
 import { TNode } from '../common';
@@ -12,68 +11,68 @@ export interface TdNoticeBarProps {
    * 背景色
    * @default ''
    */
-  bgColor: string;
+  bgColor?: string;
   /**
    * 文本颜色
    * @default ''
    */
-  color: string;
+  color?: string;
   /**
    * 文本内容
    * @default ''
    */
-  content: string;
+  content?: string;
   /**
-   * 延迟
+   * 延迟显示，单位：毫秒
    * @default 0
    */
-  delay: number;
+  delay?: number;
   /**
    * 详情
    * @default ''
    */
-  detailText: string;
+  detailText?: string;
   /**
    * 详情颜色
    * @default ''
    */
-  detailTextColor: string;
+  detailTextColor?: string;
   /**
    * 图标颜色
    * @default ''
    */
-  iconColor: string;
+  iconColor?: string;
   /**
    * 左边图标
    */
-  leftIcon: TNode;
+  leftIcon?: TNode;
   /**
    * 模式
    */
-  mode: 'link' | 'closeable';
+  mode?: 'link' | 'closeable';
   /**
    * 左边图标
    */
-  rightIcon: TNode;
+  rightIcon?: TNode;
   /**
    * 是否需要滚动
    */
-  scrollable: boolean;
+  scrollable?: boolean;
   /**
    * 滚动速度
    * @default 50
    */
-  speed: number;
+  speed?: number;
   /**
    * 点击事件
    */
-  onClick: () => void;
+  onClick?: () => void;
   /**
    * 关闭
    */
-  onClose: () => void;
+  onClose?: () => void;
   /**
    * 详情点击
    */
-  onDetail: () => void;
+  onDetail?: () => void;
 }

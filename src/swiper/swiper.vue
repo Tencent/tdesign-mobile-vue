@@ -46,6 +46,7 @@ import { defineComponent, reactive, getCurrentInstance, onMounted, computed, wat
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
 import config from '../config';
+import { emitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -185,7 +186,7 @@ export default defineComponent({
       let resultIndex = index;
       if (index >= state.itemLength) resultIndex = 0;
       if (index < 0) resultIndex = state.itemLength - 1;
-      context.emit('change', resultIndex);
+      emitEvent(props, context, 'change', resultIndex);
     };
     // 移动到上一个
     const prev = (step = 1) => {
@@ -257,7 +258,6 @@ export default defineComponent({
     watch(
       () => props.current,
       (newPage, oldPage) => {
-        console.info(`受控页数变化,从${oldPage}->${newPage}`);
         if (state.isControl) {
           state.activeIndex = newPage || 0;
           addAnimation();

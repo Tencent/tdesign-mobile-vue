@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-21 00:06:52
  * */
 
 import { TdSwiperProps } from './type';
@@ -59,7 +58,7 @@ export default {
   },
   /** 导航器全部配置 */
   navigation: {
-    type: Object as PropType<TdSwiperProps['navigation']>,
+    type: [Object, Function] as PropType<TdSwiperProps['navigation']>,
   },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,

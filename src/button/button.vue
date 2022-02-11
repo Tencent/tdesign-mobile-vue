@@ -10,7 +10,7 @@
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
-import { renderContent, renderTNode, TNode } from '../shared';
+import { emitEvent, renderContent, renderTNode, TNode } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import ButtonProps from './props';
 import config from '../config';
@@ -31,7 +31,7 @@ export default defineComponent({
       `${name}--${props.variant}`,
       {
         [`${name}--${props.theme}`]: props.theme,
-        [`${name}--${props.shape}`]: props.shape !== 'round',
+        [`${name}--${props.shape}`]: props.shape,
         [`${name}--ghost`]: props.ghost,
         [`${prefix}-size-full-width`]: props.block,
         [CLASSNAMES.STATUS.disabled]: props.disabled,
@@ -42,7 +42,7 @@ export default defineComponent({
     const iconContent = computed(() => (props.loading ? h(LoadingIcon) : renderTNode(internalInstance, 'icon')));
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
-        context.emit('click', e);
+        emitEvent(props, context, 'click', e);
       } else {
         e.stopPropagation();
       }

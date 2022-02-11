@@ -49,7 +49,7 @@ import { computed, ref, toRefs, watch, defineComponent, getCurrentInstance } fro
 import TPopup from '../popup';
 import config from '../config';
 import DialogProps from './props';
-import { renderContent, TNode } from '@/shared';
+import { renderContent, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-dialog`;

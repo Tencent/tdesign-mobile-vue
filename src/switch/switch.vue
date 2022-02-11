@@ -8,12 +8,12 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, h, watch, SetupContext } from 'vue';
+import { computed, toRefs, defineComponent, SetupContext } from 'vue';
 import { useToggle, useDefault } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
 import ClASSNAMES from '../shared/constants';
-import { SwitchValue } from './type';
+import { SwitchValue, TdSwitchProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-switch`;
@@ -24,13 +24,12 @@ export default defineComponent({
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const switchValues = props.customValue || [true, false];
-    const { innerValue } = useDefault(props, context, 'value', 'change');
+    const [innerValue] = useDefault<SwitchValue, TdSwitchProps>(props, context.emit, 'value', 'change');
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
-
     const classes = computed(() => [
       `${name}`,
       {
-        [ClASSNAMES.STATUS.checked]: innerValue.value === true,
+        [ClASSNAMES.STATUS.checked]: innerValue.value === switchValues[0],
         [ClASSNAMES.STATUS.disabled]: props.disabled,
       },
     ]);
@@ -49,7 +48,6 @@ export default defineComponent({
       }
       toggle();
       innerValue.value = state.value;
-      console.log('state', state.value, 'innerValue', innerValue.value);
     }
     return {
       name,
