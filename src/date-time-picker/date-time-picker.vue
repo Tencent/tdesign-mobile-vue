@@ -1,13 +1,13 @@
 <template>
   <div :class="className">
     <t-picker
-      :defaultValue="defaultPickerValue"
+      :default-value="defaultPickerValue"
       :value="data.pickerValue"
       :title="title"
       @change="onChange"
       @confirm="onConfirm"
       @cancel="onCancel"
-      >
+    >
       <t-picker-item
         v-if="pickerColumns.includes('year')"
         :options="yearOptions"
@@ -50,11 +50,12 @@
 
 <script lang="ts">
 import { ref, reactive, watchEffect, computed, defineComponent, ComputedRef } from 'vue';
-import config from '../config';
-import DateTimePickerProps from './props';
-import { DateValue, TimeModeValues } from './type';
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
+import config from '../config';
+import DateTimePickerProps from './props';
+import { DateValue, TimeModeValues, DisableDateObj } from './type';
+
 dayjs.extend(weekday);
 
 const { prefix } = config;
@@ -74,21 +75,21 @@ export default defineComponent({
     const pickerColumns: ComputedRef<TimeModeValues[]> = computed(() => {
       const dateModes = [...DATE_MODES];
       const timeModes = [...TIME_MODES];
-      ;[dateModes, timeModes].forEach((modes) => {
+      [dateModes, timeModes].forEach((modes) => {
         [...modes].reverse().every((mode) => {
           if (props.mode instanceof Array) {
             if (!props.mode.includes(mode)) {
               modes.pop();
               return true;
-            } else {
-              return false;
             }
-          } else if (props.mode !== mode) {
-            modes.pop();
-            return true;
-          } else {
             return false;
           }
+
+          if (props.mode !== mode) {
+            modes.pop();
+            return true;
+          }
+          return false;
         });
       });
       return [...dateModes, ...timeModes];
@@ -165,53 +166,52 @@ export default defineComponent({
     const isAvailable = (...args) => {
       if (!props.disableDate) {
         return true;
-      } else if (args.length === 0) {
+      }
+
+      if (args.length === 0) {
         return false;
       }
 
-      const [
-        year = dayjs().year(),
-        month = 0,
-        date = 1,
-        hour = 0,
-        minute = 0,
-        second = 0,
-      ] = args;
+      const [year = dayjs().year(), month = 0, date = 1, hour = 0, minute = 0, second = 0] = args;
       const mode = ALL_MODES[args.length - 1];
       const value = dayjs().year(year).month(month).date(date).hour(hour).minute(minute).second(second);
 
-      const conditionFunction = typeof props.disableDate === 'function' ? !props.disableDate(getOutputValue(value)) : true;
-      const conditionArray = props.disableDate instanceof Array
-        ? props.disableDate.every(item => !value.isSame(dayjs(item), mode)) : true;
-      
+      const conditionFunction =
+        typeof props.disableDate === 'function' ? !props.disableDate(getOutputValue(value)) : true;
+      const conditionArray =
+        props.disableDate instanceof Array ? props.disableDate.every((item) => !value.isSame(dayjs(item), mode)) : true;
+
+      const disabledDateObj = props.disableDate as DisableDateObj;
+
       let conditionFromAndTo = true;
-      if (props.disableDate?.from && props.disableDate?.to) {
-        conditionFromAndTo = value.isBefore(dayjs(props.disableDate?.from), mode)
-          || !value.isAfter(dayjs(props.disableDate?.to), mode);
-      } else if (props.disableDate?.from) {
-        conditionFromAndTo = value.isBefore(dayjs(props.disableDate?.from), mode);
-      } else if (props.disableDate?.to) {
-        conditionFromAndTo = value.isAfter(dayjs(props.disableDate?.to), mode);
+
+      if (disabledDateObj?.from && disabledDateObj?.to) {
+        conditionFromAndTo =
+          value.isBefore(dayjs(disabledDateObj?.from), mode) || !value.isAfter(dayjs(disabledDateObj?.to), mode);
+      } else if (disabledDateObj?.from) {
+        conditionFromAndTo = value.isBefore(dayjs(disabledDateObj?.from), mode);
+      } else if (disabledDateObj?.to) {
+        conditionFromAndTo = value.isAfter(dayjs(disabledDateObj?.to), mode);
       }
 
       let conditionBefore = true;
-      if (props.disableDate?.before) {
-        conditionBefore = !value.isBefore(dayjs(props.disableDate?.before), mode);
+      if (disabledDateObj?.before) {
+        conditionBefore = !value.isBefore(dayjs(disabledDateObj?.before), mode);
       }
 
       let conditionAfter = true;
-      if (props.disableDate?.after) {
-        conditionAfter = !value.isAfter(dayjs(props.disableDate?.after), mode);
+      if (disabledDateObj?.after) {
+        conditionAfter = !value.isAfter(dayjs(disabledDateObj?.after), mode);
       }
 
       return conditionFunction && conditionArray && conditionFromAndTo && conditionBefore && conditionAfter;
     };
 
     const yearOptions = computed(() => {
-      return Array.from(new Array(200), (_, index) => 1900 + index).filter(year => isAvailable(year));
+      return Array.from(new Array(200), (_, index) => 1900 + index).filter((year) => isAvailable(year));
     });
     const monthOptions = computed(() => {
-      return Array.from(new Array(12), (_, index) => index).filter(month => isAvailable(data.year, month));
+      return Array.from(new Array(12), (_, index) => index).filter((month) => isAvailable(data.year, month));
     });
     const dateOptions = computed(() => {
       let maxDate = 31;
@@ -219,16 +219,24 @@ export default defineComponent({
         const theMonth = dayjs().year(data.year).month(data.month);
         maxDate = theMonth.daysInMonth ? theMonth.daysInMonth() : 0;
       }
-      return Array.from(maxDate ? new Array(maxDate) : [], (_, index) => index + 1).filter(date => isAvailable(data.year, data.month, date));
+      return Array.from(maxDate ? new Array(maxDate) : [], (_, index) => index + 1).filter((date) =>
+        isAvailable(data.year, data.month, date),
+      );
     });
     const hourOptions = computed(() => {
-      return Array.from(new Array(24), (_, index) => index).filter(hour => isAvailable(data.year, data.month, data.date, hour));
+      return Array.from(new Array(24), (_, index) => index).filter((hour) =>
+        isAvailable(data.year, data.month, data.date, hour),
+      );
     });
     const minuteOptions = computed(() => {
-      return Array.from(new Array(60), (_, index) => index).filter(minute => isAvailable(data.year, data.month, data.date, data.hour, minute));
+      return Array.from(new Array(60), (_, index) => index).filter((minute) =>
+        isAvailable(data.year, data.month, data.date, data.hour, minute),
+      );
     });
     const secondOptions = computed(() => {
-      return Array.from(new Array(60), (_, index) => index).filter(second => isAvailable(data.year, data.month, data.date, data.hour, data.minute, second));
+      return Array.from(new Array(60), (_, index) => index).filter((second) =>
+        isAvailable(data.year, data.month, data.date, data.hour, data.minute, second),
+      );
     });
 
     const getOutputValue = (v = undefined) => {
@@ -265,7 +273,7 @@ export default defineComponent({
         output = value.format(format.trim());
       }
       return output;
-    }
+    };
 
     const onConfirm = (e: MouseEvent) => {
       const outputValue = getOutputValue();
@@ -276,6 +284,7 @@ export default defineComponent({
     };
 
     const onCancel = (e: MouseEvent) => {
+      // TODO: columnChange事件
       context.emit('cancel', { e });
     };
 
@@ -294,7 +303,7 @@ export default defineComponent({
         value,
         index,
       });
-    }
+    };
 
     const getWeekdayText = (date) => {
       const week = dayjs().year(data.year).month(data.month).date(date).day();
@@ -323,7 +332,7 @@ export default defineComponent({
           break;
       }
       return `(${text})`;
-    }
+    };
 
     return {
       className,
