@@ -114,10 +114,11 @@ import {
 } from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
+import { useDefault } from '../shared';
 import { emitEvent } from '../shared/emit';
 import TransAniControl from './trans-ani-control';
 import DropdownItemProps from './dropdown-item-props';
-import { TdDropdownMenuProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
+import { TdDropdownMenuProps, TdDropdownItemProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 
 const { prefix } = config;
@@ -142,8 +143,14 @@ type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOpt
 export default defineComponent({
   name,
   props: DropdownItemProps,
-  emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value'],
+  emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {
+    // 受控 value 属性
+    const [passInValue, setValue] = useDefault<
+      TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> | null,
+      TdDropdownItemProps
+    >(props, context.emit, 'value', 'change');
+
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as DropdownMenuState;
@@ -214,7 +221,7 @@ export default defineComponent({
       const { duration } = menuProps;
       // 动画状态控制
       menuAniControl.setTo(
-        +duration,
+        +(duration ?? 200),
         () => {
           // Now do:
           emitEvent(props, context, val ? 'open' : 'close');
@@ -326,7 +333,7 @@ export default defineComponent({
     }
     // 根据传入值更新当前选中
     const updateSelectValue = (
-      val: TdDropdownItemOptionValueType | TdDropdownItemOptionValueType[] | TdDropdownTreeValueType[] | undefined,
+      val: TdDropdownItemOptionValueType | TdDropdownItemOptionValueType[] | TdDropdownTreeValueType[] | null,
     ) => {
       const layout = props.optionsLayout;
       if (layout === 'tree') {
@@ -346,10 +353,10 @@ export default defineComponent({
       }
     };
     // 初始值更新一次选中项
-    updateSelectValue(props.value);
+    updateSelectValue(passInValue.value);
     // 跟踪 modelValue 更新选项
     watch(
-      () => props.value,
+      () => passInValue.value,
       (val) => updateSelectValue(val),
     );
 
@@ -392,18 +399,18 @@ export default defineComponent({
           break;
       }
       values = JSON.parse(JSON.stringify(values));
-      emitEvent(props, context, 'update:value', values);
-      emitEvent(props, context, 'change', values);
+      setValue(values);
+      emitEvent('change', context, 'change', values);
       collapseMenu();
     };
     // 单选值监控
     watch(radioSelect, (val) => {
       if (props.multiple || props.optionsLayout === 'tree') return;
       if (!state.isShowItems) return;
-      const value = props.value || [];
+      const value = passInValue.value || [];
       if (value[0] === val) return;
-      emitEvent(props, context, 'update:value', val);
-      emitEvent(props, context, 'change', val);
+      setValue(val);
+      emitEvent('change', context, 'change', val);
       collapseMenu();
     });
     // 点击遮罩层
