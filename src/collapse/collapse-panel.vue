@@ -55,6 +55,7 @@ import {
 } from './collapse.interface';
 import config from '../config';
 import { findIndex, isFalsy, toArray } from './util';
+import { emitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
@@ -99,7 +100,7 @@ export default defineComponent({
       if (props.disabled) {
         return;
       }
-      context.emit('click', props.name);
+      emitEvent(props, context, 'click', props.name);
       if (/^header$/i.test(from) && !props.headerClickable) {
         return;
       }

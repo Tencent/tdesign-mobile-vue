@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-31 10:22:30
  * */
 
 import { TdSwitchProps } from './type';
@@ -25,19 +24,18 @@ export default {
     default: '',
   },
   /** 开关值 */
-  modelValue: {
+  value: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
     default: undefined,
   },
-  /** 开关值 */
-  value: {
+  modelValue: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['value']>,
     default: undefined,
   },
   /** 开关值，非受控属性 */
   defaultValue: {
     type: [String, Number, Boolean] as PropType<TdSwitchProps['defaultValue']>,
-    default: false,
+    default: undefined,
   },
   /** 数据发生变化时触发 */
   onChange: Function as PropType<TdSwitchProps['onChange']>,

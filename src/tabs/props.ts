@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-16 09:37:49
  * */
 
 import { TdTabsProps } from './type';
@@ -22,7 +21,7 @@ export default {
     type: String as PropType<TdTabsProps['placement']>,
     default: 'top' as TdTabsProps['placement'],
     validator(val: TdTabsProps['placement']): boolean {
-      return ['left', 'right', 'top', 'bottom'].includes(val);
+      return ['left', 'top'].includes(val);
     },
   },
   /** 是否展示底部激活线条 */

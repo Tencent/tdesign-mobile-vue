@@ -9,11 +9,11 @@
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
-        <t-rate v-model="current" clearable />
+        <t-rate :default-value="3" clearable />
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
-        <t-rate v-model="current" variant="outline" />
+        <t-rate :value="current" variant="outline" />
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">自定义数量</div>

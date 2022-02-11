@@ -27,7 +27,8 @@ import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropTyp
 import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
 import rateProps from './props';
 import config from '../config';
-import { emitEvent } from '../shared/emit';
+import { TdRateProps } from './type';
+import { useDefault } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;
@@ -41,10 +42,10 @@ export default defineComponent({
   name,
   components: { StarFilledIcon, StarIcon },
   props: rateProps,
-  emits: ['change', 'update:modelValue'],
+  emits: ['change'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
-    const actualVal = computed(() => props.value) as ComputedRef<number>;
+    const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
     const rateText = computed(() => {
       if (Array.isArray(props.texts) && props.texts.length > 0) {
         return props.texts[actualVal.value - 1];
@@ -73,14 +74,9 @@ export default defineComponent({
       [`${name}-half`]: actualVal.value + 0.5 === n,
     });
 
-    function emit(val: number) {
-      emitEvent(props, context, 'change', val);
-      context.emit('update:modelValue', val);
-    }
-
     function onClick(current: number) {
       if (props.disabled) return;
-      emit(props.clearable && actualVal.value === current ? 0 : current);
+      actualVal.value = props.clearable && actualVal.value === current ? 0 : current;
     }
 
     let ranges: Array<RangeTypes> = [];
@@ -115,8 +111,7 @@ export default defineComponent({
           score = 0;
         }
       }
-
-      emit(score);
+      actualVal.value = score;
     }
 
     return {

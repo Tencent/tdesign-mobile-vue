@@ -43,7 +43,10 @@ Toast.clear = () => {
   }
 };
 
-(['loading', 'success', 'fail'] as TdToastProps['type'][]).forEach((type): void => {
+(['loading', 'success', 'fail'] as TdToastProps['theme'][]).forEach((type): void => {
+  if (!type) {
+    return;
+  }
   Toast[type] = (options: TdToastProps | string) => {
     let props = { message: '', type } as unknown as TdToastProps;
 

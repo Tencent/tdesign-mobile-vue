@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-02 16:32:45
  * */
 
 import { TdPopupProps } from './type';
@@ -55,6 +54,6 @@ export default {
   onOpen: Function as PropType<TdPopupProps['onOpen']>,
   /** 组件展示且动画结束后执行 */
   onOpened: Function as PropType<TdPopupProps['onOpened']>,
-  /** 当浮层隐藏或显示时触发，`context.trigger` 表示触发来源，值为 ‘close-btn’ 表示关闭按钮触发，值为 `overlay` 表示浮层触发 */
+  /** 当浮层隐藏或显示时触发 */
   onVisibleChange: Function as PropType<TdPopupProps['onVisibleChange']>,
 };

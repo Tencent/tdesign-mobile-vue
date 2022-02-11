@@ -20,6 +20,7 @@ import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
 import { CheckboxOption } from '../checkbox/type';
+import { emitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
@@ -35,7 +36,7 @@ export default defineComponent({
   },
   props: CheckboxProps,
   emits: ['update:value', 'change'],
-  setup(props: any, content: SetupContext) {
+  setup(props: any, context: SetupContext) {
     const children = ref({});
     const isALlSelected = ref(false);
     const checkedValues = computed(() => props.value || []);
@@ -78,8 +79,8 @@ export default defineComponent({
         const tempValues = checkedValues?.value?.concat(value);
         const resultValues = [...Array.from(tempValues)];
         isALlSelected.value = Object.keys(children?.value).length === resultValues.length;
-        content.emit('update:value', resultValues);
-        content.emit('change', resultValues, { e });
+        emitEvent(props, context, 'update:value', resultValues, { e });
+        emitEvent(props, context, 'change', resultValues, { e });
         props?.onChange && props?.onChange(resultValues, { e });
       }
     };
@@ -94,8 +95,8 @@ export default defineComponent({
         isALlSelected.value = false;
         const tempValues = checkedValues?.value.slice(0, index);
         const resultValues = tempValues.concat(checkedValues?.value.slice(index + 1));
-        content.emit('update:value', resultValues);
-        content.emit('change', resultValues, { e });
+        emitEvent(props, context, 'update:value', resultValues, { e });
+        emitEvent(props, context, 'change', resultValues, { e });
         props?.onChange && props?.onChange(resultValues, { e });
       }
     };
@@ -128,8 +129,8 @@ export default defineComponent({
         return checked === false ? false : !checked ? !isChecked : true;
       });
       isALlSelected.value = !!names.length;
-      content.emit('update:value', names);
-      content.emit('change', names);
+      emitEvent(props, context, 'update:value', names);
+      emitEvent(props, context, 'change', names);
     };
 
     provide('rootGroup', {

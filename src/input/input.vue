@@ -51,7 +51,7 @@ import { emitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '.
 import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import InputProps from './props';
-import { InputValue } from './type';
+import { InputValue, TdInputProps } from './type';
 
 const { prefix } = config;
 const componentName = `${prefix}-input`;
@@ -63,11 +63,11 @@ export default defineComponent({
     TNode,
   },
   props: InputProps,
-  emits: ['update:value', 'click-icon', 'focus', 'blur', 'change', 'clear'],
+  emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context: SetupContext) {
     const inputRef = ref<null | HTMLElement>(null);
     const internalInstance = getCurrentInstance();
-    const { innerValue } = useDefault(props, context, 'value', 'change');
+    const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
     const styleLabel = computed(() => ({
       [`${componentName}--label`]: true,

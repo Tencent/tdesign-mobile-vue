@@ -1,16 +1,11 @@
 import Rate from './rate.vue';
-import { withInstall, WithInstallType, mapProps } from '../shared';
+import { withInstall, WithInstallType } from '../shared';
+import { TdRateProps } from './type';
 
 import './style';
 
-const _Rate: WithInstallType<typeof Rate> = withInstall(
-  mapProps([
-    {
-      name: 'value',
-      event: 'change',
-      alias: ['modelValue'],
-    },
-  ])(Rate),
-);
+export * from './type';
+export type RateProps = TdRateProps;
 
+const _Rate: WithInstallType<typeof Rate> = withInstall(Rate);
 export default _Rate;

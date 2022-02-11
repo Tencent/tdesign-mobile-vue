@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-26 22:44:45
  * */
 
 import { TdRadioGroupProps } from '../radio/type';
@@ -25,6 +24,10 @@ export default {
   },
   /** 选中的值 */
   value: {
+    type: [String, Number, Boolean] as PropType<TdRadioGroupProps['value']>,
+    default: undefined,
+  },
+  modelValue: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['value']>,
     default: undefined,
   },

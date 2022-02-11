@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2022-01-19 16:08:26
  * */
 
 import { TdRateProps } from './type';
@@ -43,14 +42,16 @@ export default {
   /** 选择评分的值 */
   value: {
     type: Number,
-    default: 0,
-    required: true,
+    default: undefined,
+  },
+  modelValue: {
+    type: Number,
+    default: undefined,
   },
   /** 选择评分的值，非受控属性 */
   defaultValue: {
     type: Number,
-    default: 0,
-    required: true,
+    default: undefined,
   },
   /** 形状类型，有描边类型和填充类型两种 */
   variant: {
