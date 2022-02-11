@@ -42,14 +42,16 @@ export default {
   /** 选择评分的值 */
   value: {
     type: Number,
-    default: 0,
-    required: true,
+    default: undefined,
+  },
+  modelValue: {
+    type: Number,
+    default: undefined,
   },
   /** 选择评分的值，非受控属性 */
   defaultValue: {
     type: Number,
-    default: 0,
-    required: true,
+    default: undefined,
   },
   /** 形状类型，有描边类型和填充类型两种 */
   variant: {

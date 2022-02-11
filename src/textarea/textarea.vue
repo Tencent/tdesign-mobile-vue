@@ -25,7 +25,7 @@ import { emitEvent, getCharacterLength, useDefault } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
-import calcTextareaHeight from './calcTextareaHeight';
+import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
 
 const { prefix } = config;
 const componentName = `${prefix}-textarea`;

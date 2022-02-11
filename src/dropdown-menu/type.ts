@@ -64,6 +64,10 @@ export interface TdDropdownItemProps {
    * 选中值
    */
   value?: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ;
+  /**
+   * 选中值，非受控属性
+   */
+  defaultValue?: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ;
 }
 
 export interface TdDropdownItemOption { title: string;disabled: boolean;value: TdDropdownItemOptionValueType; [key: string]: any };
