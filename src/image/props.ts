@@ -26,10 +26,7 @@ export default {
     },
   },
   /** 是否开启图片懒加载 */
-  lazy: {
-    type: String,
-    default: 'false',
-  },
+  lazy: Boolean,
   /** 自定义加载中状态下的图片内容 */
   loading: {
     type: Function as PropType<TdImageProps['loading']>,
@@ -42,7 +39,7 @@ export default {
   /** 图片圆角类型 */
   shape: {
     type: String as PropType<TdImageProps['shape']>,
-    default: 'circle' as TdImageProps['shape'],
+    default: 'round' as TdImageProps['shape'],
     validator(val: TdImageProps['shape']): boolean {
       return ['circle', 'round', 'square'].includes(val);
     },

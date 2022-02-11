@@ -10,6 +10,11 @@ export default {
           component: () => import('@/button/demos/mobile.vue'),
         },
         {
+          title: 'Image 图片',
+          name: 'image',
+          component: () => import('@/image/demos/mobile.vue'),
+        },
+        {
           title: 'Badge 徽标',
           name: 'badge',
           component: () => import('@/badge/demos/mobile.vue'),

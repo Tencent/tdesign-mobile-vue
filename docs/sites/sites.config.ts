@@ -66,6 +66,13 @@ export default {
           component: () => import('@/badge/badge.md'),
         },
         {
+          title: 'Image 图片',
+          name: 'image',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/image',
+          component: () => import('@/image/image.md'),
+        },
+        {
           title: 'CountDown 倒计时',
           name: 'CountDown',
           meta: { docType: 'data' },
