@@ -3,12 +3,7 @@
     <h1 class="title">DateTimePicker 时间选择器</h1>
     <p class="summary">用于选择一个时间点或者一个时间段</p>
     <tdesign-demo-block title="01 类型" summary="时间选择器">
-      <t-input
-        :value="text.ymdhms"
-        label="选择日期时间"
-        placeholder="日期时间"
-        @click="show.ymdhms = true"
-      />
+      <t-input :value="text.ymdhms" label="选择日期时间" placeholder="日期时间" @click="show.ymdhms = true" />
       <t-popup v-model="show.ymdhms" position="bottom">
         <t-date-time-picker
           v-model="text.ymdhms"
