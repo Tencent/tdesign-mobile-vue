@@ -21,7 +21,7 @@
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, renderContent, TNode } from '../shared';
+import { renderTNode, renderContent, TNode, emitEvent } from '../shared';
 import config from '../config';
 import CellProps from './props';
 
@@ -56,7 +56,7 @@ export default defineComponent({
       },
     ]);
 
-    const onClick = (e: Event) => context.emit('click', e);
+    const onClick = (e: Event) => emitEvent(props, context, 'click', e);
 
     return {
       ...toRefs(props),

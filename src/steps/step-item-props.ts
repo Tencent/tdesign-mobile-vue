@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-11-30 10:39:32
  * */
 
 import { TdStepItemProps } from '../steps/type';
@@ -14,7 +13,7 @@ export default {
     type: [String, Function] as PropType<TdStepItemProps['content']>,
     default: '',
   },
-  /** 图标，默认显示内置图标，也可以自定义图标 */
+  /** 图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标 */
   icon: {
     type: [Boolean, Function] as PropType<TdStepItemProps['icon']>,
     default: true,

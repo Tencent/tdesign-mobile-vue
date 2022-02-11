@@ -75,7 +75,7 @@ import {
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { renderContent, renderTNode, TNode, useToggle } from '../shared';
+import { emitEvent, renderContent, renderTNode, TNode, useToggle } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
@@ -219,7 +219,7 @@ export default defineComponent({
       }
       if (singleChecked.value || (rootGroup && isChecked.value)) {
         toggle();
-        context.emit('update:value', '');
+        emitEvent(props, context, 'update:value', '');
         if (rootGroup) {
           rootGroup?.uncheck(target?.value, { e });
         } else {
@@ -231,7 +231,7 @@ export default defineComponent({
         props?.onChange && props?.onChange(state.value, { e });
       } else {
         toggle();
-        context.emit('update:value', target?.value, { e });
+        emitEvent(props, context, 'update:value', target?.value, { e });
         props?.onChange && props?.onChange(state.value, { e });
         if (rootGroup) {
           rootGroup?.check(target?.value, { e });

@@ -46,7 +46,6 @@ export default defineComponent({
   props: AvatarProps,
   emits: ['error'],
   setup(props, context) {
-    const { size } = toRefs(props);
     const internalInstance = getCurrentInstance();
     const avatarGroupProps = inject('avatarGroup', {}) as TdAvatarGroupProps;
     const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));

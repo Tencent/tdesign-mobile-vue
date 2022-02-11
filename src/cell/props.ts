@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-29 23:45:19
  * */
 
 import { TdCellProps } from './type';
@@ -30,6 +29,10 @@ export default {
   },
   /** 是否开启点击反馈 */
   hover: Boolean,
+  /** 主图 */
+  image: {
+    type: [String, Function] as PropType<TdCellProps['image']>,
+  },
   /** 左侧图标，出现在单元格标题的左侧 */
   leftIcon: {
     type: Function as PropType<TdCellProps['leftIcon']>,

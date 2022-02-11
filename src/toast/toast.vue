@@ -1,9 +1,11 @@
 <template>
   <div>
-    <t-mask v-show="showOverlay" />
+    <t-mask v-show="preventScrollThrough" />
     <div :class="classes">
       <t-node :content="iconContent"></t-node>
-      <div v-if="message" :class="`${name}__text`">{{ message }}</div>
+      <div v-if="messageContent" :class="`${name}__text`">
+        <t-node :content="messageContent"></t-node>
+      </div>
     </div>
   </div>
 </template>
@@ -30,10 +32,11 @@ export default defineComponent({
       fail: ErrorCircleIcon,
     };
     const internalInstance = getCurrentInstance();
+    const messageContent = computed(() => renderTNode(internalInstance, 'message'));
     const iconContent = computed(() => {
       let iconNode = renderTNode(internalInstance, 'icon');
-      if (iconNode === undefined && props.type) {
-        iconNode = h(toastTypeIcon[props.type]);
+      if (iconNode === undefined && props.theme) {
+        iconNode = h(toastTypeIcon[props.theme]);
       }
       return iconNode;
     });
@@ -43,10 +46,10 @@ export default defineComponent({
       {
         [`${name}--${props.direction}`]: props.direction,
         [`${name}--text`]: !iconContent.value,
-        [`${name}--icononly`]: !props.message && iconContent.value,
-        [`${name}--top`]: props.position === 'top',
-        [`${name}--middle`]: props.position === 'middle',
-        [`${name}--bottom`]: props.position === 'bottom',
+        [`${name}--icononly`]: !messageContent.value && iconContent.value,
+        [`${name}--top`]: props.placement === 'top',
+        [`${name}--middle`]: props.placement === 'middle',
+        [`${name}--bottom`]: props.placement === 'bottom',
       },
     ]);
 
@@ -54,6 +57,7 @@ export default defineComponent({
       name: ref(name),
       classes,
       iconContent,
+      messageContent,
       ...toRefs(props),
     };
   },

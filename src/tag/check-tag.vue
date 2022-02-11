@@ -22,7 +22,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
-import { renderContent, renderTNode, TNode, useToggle } from '../shared';
+import { emitEvent, renderContent, renderTNode, TNode, useToggle } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -64,18 +64,17 @@ const CheckTag = defineComponent({
       if (props.disabled) {
         e.stopPropagation();
       } else {
-        context.emit('close', e);
+        emitEvent(props, context, 'close', e);
       }
     }
 
     const handleClick = (e: MouseEvent): void => {
       if (!disabled.value) {
         toggle();
-        context.emit('click', { e });
-        context.emit('change', state.value);
+
+        emitEvent(props, context, 'click', { e });
+        emitEvent(props, context, 'change', state.value);
         context.emit('update:checked', state.value);
-        if (typeof props.onClick === 'function') props.onClick({ e });
-        if (typeof props.onChange === 'function') props.onChange(state.value);
       }
     };
 

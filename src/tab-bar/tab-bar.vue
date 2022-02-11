@@ -8,6 +8,7 @@
 import { defineComponent, ref, provide, watch, Ref, computed } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
+import { emitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-tab-bar`;
@@ -16,7 +17,7 @@ export default defineComponent({
   name,
   props: TabBarProps,
   emits: ['update:value', 'change'],
-  setup(props, { emit }) {
+  setup(props, context) {
     const activeValue = ref(props.value || 0);
     const defaultIndex: Ref<number> = ref(-1);
 
@@ -33,8 +34,8 @@ export default defineComponent({
     ]);
 
     watch(activeValue, (newValue) => {
-      emit('update:value', newValue);
-      emit('change', newValue);
+      context.emit('update:value', newValue);
+      emitEvent(props, context, 'change', newValue);
     });
 
     provide('tab-bar', {

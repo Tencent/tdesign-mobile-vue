@@ -2,72 +2,71 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-13 00:11:13
  * */
 
-import { TdBadgeProps } from '../Badge';
+import { TdBadgeProps } from '../badge';
 import { TNode } from '../common';
 
 export interface TdAvatarProps {
   /**
-   * 头像替换文本
+   * 头像替换文本，仅当图片存在时有效
    * @default ''
    */
-  alt: string;
+  alt?: string;
   /**
    * 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字
    */
-  badgeProps: TdBadgeProps;
+  badgeProps?: TdBadgeProps;
   /**
    * 加载失败时隐藏图片
    * @default false
    */
-  hideOnLoadFailed: boolean;
+  hideOnLoadFailed?: boolean;
   /**
    * 图标
    */
-  icon: TNode;
+  icon?: TNode;
   /**
    * 图片地址
    * @default ''
    */
-  image: string;
+  image?: string;
   /**
    * 形状
    * @default circle
    */
-  shape: ShapeEnum ;
+  shape?: ShapeEnum ;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large
    * @default ''
    */
-  size: string;
+  size?: string;
   /**
    * 图片加载失败时触发
    */
-  onError: () => void;
-};
+  onError?: () => void;
+}
 
 export interface TdAvatarGroupProps {
   /**
    * 图片之间的层叠关系，可选值：左侧图片在上和右侧图片在上
    * @default 'right-up'
    */
-  cascading: CascadingValue;
+  cascading?: CascadingValue;
   /**
    * 头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多`
    */
-  collapseAvatar: string | TNode;
+  collapseAvatar?: string | TNode;
   /**
    * 能够同时显示的最多头像数量
    */
-  max: number;
+  max?: number;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
    * @default medium
    */
-  size: string;
-};
+  size?: string;
+}
 
 export type ShapeEnum = 'circle' | 'round';
 

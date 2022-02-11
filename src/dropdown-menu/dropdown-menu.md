@@ -18,8 +18,7 @@ zIndex | Number | - | 菜单栏 z-index 层级 | N
 disabled | Boolean | false | 是否禁用 | N
 label | String | - | 标题 | N
 multiple | Boolean | false | 是否多选 | N
-options | Array | - | 选项数据。TS 类型：`Array<TdDropdownItemOption>`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+options | Array | - | 选项数据。TS 类型：`Array<TdDropdownItemOption>` `interface TdDropdownItemOption { title: string;disabled: boolean;value: TdDropdownItemOptionValueType; [key: string]: any }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 optionsColumns | String / Number | - | 选项分栏（1-3） | N
 optionsLayout | String | columns | 选项排列。可选项：columns/tree | N
-value | String / Number / Array | - | 选中值。支持语法糖。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> `。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
-defaultValue | String / Number / Array | - | 选中值。非受控属性。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> `。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+value | String / Number / Array | - | 选中值。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ` `type TdDropdownItemOptionValueType = string | number;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N

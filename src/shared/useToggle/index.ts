@@ -4,9 +4,13 @@ export type ToggleValueType = string | number | boolean | undefined;
 
 export function useToggle<T extends ToggleValueType>(values: Array<T>, defaultValue?: T | Ref<T>) {
   const innerValues = values || [true, false];
-  let state = ref(defaultValue || innerValues[1]) as Ref<T>;
-  if (isRef(defaultValue)) {
+  let state = ref();
+  if (defaultValue === undefined) {
+    state = ref(innerValues[1]);
+  } else if (isRef(defaultValue)) {
     state = defaultValue;
+  } else {
+    state = ref(defaultValue);
   }
   const toggle = (value?: T) => {
     if (value !== undefined) {
