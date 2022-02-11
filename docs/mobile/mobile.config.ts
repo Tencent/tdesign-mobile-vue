@@ -95,11 +95,6 @@ export default {
           component: () => import('@/slider/demos/mobile.vue'),
         },
         {
-          title: 'NoticeBar 公告栏',
-          name: 'notice-bar',
-          component: () => import('@/notice-bar/demos/mobile.vue'),
-        },
-        {
           title: 'Dialog 对话框',
           name: 'dialog',
           component: () => import('@/dialog/demos/mobile.vue'),
