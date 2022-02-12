@@ -19,7 +19,7 @@ import StepsProps from './props';
 import TStepItem from './step-item.vue';
 import config from '../config';
 import { TdStepsProps } from './type';
-import { emitEvent } from '@/shared';
+import { emitEvent, useDefault } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-steps`;
@@ -29,11 +29,16 @@ export default defineComponent({
     TStepItem,
   },
   props: StepsProps,
-  emits: ['update:current', 'change'],
+  emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context: SetupContext) {
     const baseClass = computed(() => [name, `${name}--${props.layout}`, `${name}--${props.theme}-anchor`]);
 
-    const current = computed(() => props.current);
+    const [current, setCurrent] = useDefault<TdStepsProps['current'], TdStepsProps>(
+      props,
+      context.emit,
+      'current',
+      'change',
+    );
 
     const state = reactive({
       children: [] as ComponentInternalInstance[],
@@ -44,8 +49,7 @@ export default defineComponent({
     };
 
     const onClickItem = (cur: TdStepsProps['current'], prev: TdStepsProps['current'], e: MouseEvent) => {
-      context.emit('update:current', cur);
-      emitEvent(props, context, 'change', cur, prev, { e });
+      setCurrent(cur, prev, { e });
     };
 
     provide('stepsProvide', {
