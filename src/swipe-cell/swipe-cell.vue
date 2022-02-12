@@ -91,7 +91,7 @@ import { onClickOutside } from '@vueuse/core';
 import config from '../config';
 import { emitEvent } from '../shared/emit';
 import props from './props';
-import { renderContent, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '@/shared';
 import { SwipeInitData } from './type';
 
 const { prefix } = config;
@@ -108,8 +108,9 @@ export default defineComponent({
     const rightRef = ref<HTMLElement>();
     const swipeCell = ref<HTMLElement>();
     const swipeContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const swipeLeftMenu = computed(() => renderContent(internalInstance, '', 'left'));
-    const swipeRightMenu = computed(() => renderContent(internalInstance, '', 'right'));
+    const swipeLeftMenu = computed(() => renderTNode(internalInstance, 'left'));
+    const swipeRightMenu = computed(() => renderTNode(internalInstance, 'right'));
+
     // distance 滑动多少距离后开始显示菜
     const distance = 0;
     // autoBack 点击菜单后是否收回菜

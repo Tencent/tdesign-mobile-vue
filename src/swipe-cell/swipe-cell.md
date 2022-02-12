@@ -1,5 +1,9 @@
 :: BASE_DOC ::
 
+### 父子组件联动
+
+{{ bind }}
+
 ## API
 
 ### SwipeCell
