@@ -400,7 +400,6 @@ export default defineComponent({
       }
       values = JSON.parse(JSON.stringify(values));
       setValue(values);
-      emitEvent('change', context, 'change', values);
       collapseMenu();
     };
     // 单选值监控
@@ -410,7 +409,6 @@ export default defineComponent({
       const value = passInValue.value || [];
       if (value[0] === val) return;
       setValue(val);
-      emitEvent('change', context, 'change', val);
       collapseMenu();
     });
     // 点击遮罩层
