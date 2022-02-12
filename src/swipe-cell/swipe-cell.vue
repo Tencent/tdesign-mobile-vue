@@ -92,10 +92,25 @@ import config from '../config';
 import { emitEvent } from '../shared/emit';
 import props from './props';
 import { renderContent, renderTNode, TNode } from '@/shared';
-import { SwipeInitData } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
+
+export interface SwipeInitData {
+  startPoint: {
+    x: number;
+    y: number;
+  };
+  endPoint: {
+    x: number;
+    y: number;
+  };
+  moving: boolean;
+  leftWidth: number;
+  rightWidth: number;
+  pos: number;
+  status: 'open' | 'close';
+}
 
 export default defineComponent({
   name,
