@@ -3,7 +3,7 @@
     <h1 class="title">TabBar 标签栏</h1>
     <p class="summary">移动端的主导航，用做功能模块之间的切换</p>
     <tdesign-demo-block title="01 类型" summary="单层级纯文本标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_1" :key="index" v-model="value" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_1" :key="index" :value="value" @change="change">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name">
           {{ item.text }}
         </t-tab-bar-item>
@@ -20,7 +20,7 @@
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯图标标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_3" :key="index" v-model="value" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_3" :key="index" :default-value="value" @change="change">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name">
           <template #icon>
             <app-icon />
@@ -50,7 +50,7 @@ import { AppIcon } from 'tdesign-icons-vue-next';
 export default defineComponent({
   components: { AppIcon },
   setup() {
-    const value = ref(null);
+    const value = ref(1);
     const list_1 = [
       {
         name: 'label_1',
