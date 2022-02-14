@@ -75,6 +75,14 @@
         </div>
       </div>
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 懒加载" summary="通过设置lazy属性，实现图片懒加载">
+      <div class="image-group">
+        <div class="image-demo">
+          <t-image class="image-container" lazy :src="imageSrc"></t-image>
+          <p class="image-demo-tip">懒加载图片</p>
+        </div>
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 

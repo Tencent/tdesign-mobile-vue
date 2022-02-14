@@ -11,7 +11,7 @@
       </slot>
     </div>
     <img
-      ref="wrapDOM"
+      ref="imageDOM"
       :class="`${name}__img`"
       :style="imageStyles"
       :src="realSrc"
@@ -23,12 +23,11 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, onMounted, defineComponent, watch, SetupContext } from 'vue';
-
+import { ref, computed, defineComponent, SetupContext } from 'vue';
+import { useIntersectionObserver } from '@vueuse/core';
 import { EllipsisIcon as TIconEllipsis, CloseIcon as TIconClose } from 'tdesign-icons-vue-next';
 
 import { emitEvent } from '../shared';
-import useInViewport from './useInViewport';
 import ImageProps from './props';
 import config from '../config';
 
@@ -40,17 +39,14 @@ export default defineComponent({
   components: { TIconEllipsis, TIconClose },
   props: ImageProps,
   setup(props, context: SetupContext) {
-    const wrapDOM = ref();
-    onMounted(() => {
-      const showImage = useInViewport(wrapDOM.value);
-      watch(
-        () => showImage.value,
-        () => {
-          if (props.lazy) {
-            realSrc.value = props.src;
-          }
-        },
-      );
+    const imageDOM = ref();
+    // 图片懒加载
+    const { stop } = useIntersectionObserver(imageDOM, ([{ isIntersecting }], observerElement) => {
+      if (isIntersecting && props.lazy) {
+        // 停止监听
+        stop();
+        realSrc.value = props.src;
+      }
     });
     const loadingValue = ref(true);
     const errorValue = ref(false);
@@ -84,7 +80,7 @@ export default defineComponent({
       errorValue.value = true;
     };
     return {
-      wrapDOM,
+      imageDOM,
       name,
       classes,
       imageStyles,
