@@ -116,7 +116,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props,
-  emits: ['click', 'open', 'close', 'change'],
+  emits: ['click', 'change'],
   setup(props, context: SetupContext) {
     const internalInstance = getCurrentInstance();
     const leftRef = ref<HTMLElement>();
@@ -158,30 +158,19 @@ export default defineComponent({
       initData.rightWidth = rightWidth > 0 ? rightWidth + distance : 0;
       renderMenuStatus();
     });
-    // 监听父组件传递的opened变化
+    // 监听父组件传递的expanded变化
     watch(
-      () => props.opened,
+      () => props.expanded,
       () => renderMenuStatus(),
-    );
-    // 监听status状态变化，用于展开完成的回调和收回完成的回调
-    watch(
-      () => initData.status,
-      (value, oldValue) => {
-        // if (oldValue === 'close' && value === 'open') {
-        //   emitEvent(props, context, 'open');
-        // } else if (oldValue === 'open' && value === 'close') {
-        //   emitEvent(props, context, 'close');
-        // }
-      },
     );
     onClickOutside(swipeCell, (event) => {
       close();
     });
-    // 根据opened来渲染菜单
+    // 根据expanded来渲染菜单
     const renderMenuStatus = () => {
-      if (typeof props.opened === 'boolean') {
-        if (props.opened) {
-          if (initData.leftWidth && !initData.rightWidth) {
+      if (typeof props.expanded === 'boolean') {
+        if (props.expanded) {
+          if (initData.leftWidth) {
             open('toRight');
           } else if (initData.rightWidth && !initData.leftWidth) {
             open('toLeft');
@@ -189,14 +178,14 @@ export default defineComponent({
         } else if (initData.leftWidth || initData.rightWidth) {
           close();
         }
-      } else if (typeof props.opened === 'object' && props.opened instanceof Array && props.opened.length) {
-        if (props.opened.length === 2) {
-          if (!(props.opened[0] && props.opened[1])) {
-            if (props.opened[0]) {
+      } else if (typeof props.expanded === 'object' && props.expanded instanceof Array && props.expanded.length) {
+        if (props.expanded.length === 2) {
+          if (!(props.expanded[0] && props.expanded[1])) {
+            if (props.expanded[0]) {
               if (initData.leftWidth) {
                 open('toRight');
               }
-            } else if (props.opened[1]) {
+            } else if (props.expanded[1]) {
               if (initData.rightWidth) {
                 open('toLeft');
               }
