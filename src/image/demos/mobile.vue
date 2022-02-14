@@ -93,7 +93,7 @@ export default defineComponent({
   setup() {
     return {
       name: ref(name),
-      imageSrc: 'https://km-10029162.file.myqcloud.com/ImageHosting/20220210/60214b7463737bc20cb45c921af8b4d2.jpg',
+      imageSrc: 'https://tdesign.gtimg.com/site/upload1.png',
     };
   },
   data() {

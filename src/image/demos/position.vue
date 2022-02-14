@@ -2,7 +2,7 @@
   <div>
     <t-image
       class="image-container"
-      src="https://km-10029162.file.myqcloud.com/ImageHosting/20220210/60214b7463737bc20cb45c921af8b4d2.jpg"
+      src="https://tdesign.gtimg.com/site/upload1.png"
       fit="contain"
       postion="left top"
     ></t-image>

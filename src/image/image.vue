@@ -2,12 +2,12 @@
   <div :class="classes">
     <div v-if="loadingValue" :class="`${name}__status`">
       <slot name="loading">
-        <t-node :content="defaultLoadingIcon"></t-node>
+        <t-icon-ellipsis />
       </slot>
     </div>
     <div v-else-if="errorValue" :class="`${name}__status`">
       <slot name="error">
-        <t-node :content="defaultCloseIcon"></t-node>
+        <t-icon-close />
       </slot>
     </div>
     <img
@@ -23,10 +23,11 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, h, onMounted, defineComponent, watch, SetupContext } from 'vue';
+import { ref, computed, onMounted, defineComponent, watch, SetupContext } from 'vue';
 
-import { EllipsisIcon, CloseIcon } from 'tdesign-icons-vue-next';
-import { TNode } from '../shared';
+import { EllipsisIcon as TIconEllipsis, CloseIcon as TIconClose } from 'tdesign-icons-vue-next';
+
+import { emitEvent } from '../shared';
 import useInViewport from './useInViewport';
 import ImageProps from './props';
 import config from '../config';
@@ -36,7 +37,7 @@ const name = `${prefix}-image`;
 
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TIconEllipsis, TIconClose },
   props: ImageProps,
   setup(props, context: SetupContext) {
     const wrapDOM = ref();
@@ -53,13 +54,6 @@ export default defineComponent({
     });
     const loadingValue = ref(true);
     const errorValue = ref(false);
-    const defaultLoadingIcon = computed(() => {
-      return h(EllipsisIcon);
-    });
-
-    const defaultCloseIcon = computed(() => {
-      return h(CloseIcon);
-    });
 
     const realSrc = ref(props.lazy ? '' : props.src);
 
@@ -77,7 +71,7 @@ export default defineComponent({
     }));
 
     const handleImgLoadCompleted = (e: Event) => {
-      context.emit('load', e);
+      emitEvent(props, context, 'load', e);
       loadingValue.value = false;
     };
 
@@ -85,7 +79,7 @@ export default defineComponent({
       if (realSrc.value === '') {
         return;
       }
-      context.emit('error', e);
+      emitEvent(props, context, 'error', e);
       loadingValue.value = false;
       errorValue.value = true;
     };
@@ -97,8 +91,6 @@ export default defineComponent({
       loadingValue,
       realSrc,
       errorValue,
-      defaultLoadingIcon,
-      defaultCloseIcon,
       handleImgLoadCompleted,
       handleImgLoadError,
     };
