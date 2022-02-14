@@ -4,7 +4,7 @@
     :disabled="disabled"
     role="button"
     :aria-disabled="disabled"
-    :aria-checked="checked"
+    :aria-checked="innerChecked"
     @click="handleClick"
   >
     <div :class="`${baseClass}__icon`">
@@ -19,10 +19,11 @@
 
 <script lang="ts">
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance, SetupContext } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
-import { emitEvent, renderContent, renderTNode, TNode, useToggle } from '../shared';
+import { emitEvent, renderContent, renderTNode, TNode, useDefault, useToggle } from '../shared';
+import { TdCheckTagProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -34,15 +35,15 @@ const CheckTag = defineComponent({
     TNode,
   },
   props: CheckTagProps,
-  emits: ['change', 'click', 'close', 'update:checked'],
-  setup(props, context) {
+  emits: ['change', 'click', 'update:checked', 'update:modelValue'],
+  setup(props, context: SetupContext) {
     const baseClass = `${prefix}-tag`;
 
     const { size, shape, disabled, closable } = toRefs(props);
 
+    const [innerChecked] = useDefault<boolean, TdCheckTagProps>(props, context.emit, 'checked', 'change');
     const switchValues = [true, false];
-    const { state, toggle } = useToggle(switchValues, props.checked || props.defaultChecked);
-    const checked = computed(() => state.value === switchValues[1]);
+    const { state, toggle } = useToggle(switchValues, innerChecked.value);
 
     const internalInstance = getCurrentInstance();
     const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
@@ -56,7 +57,7 @@ const CheckTag = defineComponent({
         [`${baseClass}--size-${size.value}`]: size.value,
         [`${prefix}-is-closable ${baseClass}--closable`]: closable.value,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: disabled.value,
-        [`${prefix}-is-checked ${baseClass}--checked`]: state.value,
+        [`${prefix}-is-checked ${baseClass}--checked`]: innerChecked.value,
       },
     ]);
 
@@ -73,8 +74,7 @@ const CheckTag = defineComponent({
         toggle();
 
         emitEvent(props, context, 'click', { e });
-        emitEvent(props, context, 'change', state.value);
-        context.emit('update:checked', state.value);
+        innerChecked.value = state.value;
       }
     };
 
@@ -85,7 +85,7 @@ const CheckTag = defineComponent({
       handleClick,
       iconContent,
       tagContent,
-      checked,
+      innerChecked,
     };
   },
 });

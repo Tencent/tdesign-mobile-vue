@@ -4,7 +4,7 @@
     <p class="summary">用于用户对某个任务的时间节点</p>
     <tdesign-demo-block title="01 类型" summary="横向可操作步骤条">
       <div class="step-demo">
-        <t-steps v-model="current" :readonly="false">
+        <t-steps :current="current" :readonly="false">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
         </t-steps>
@@ -15,12 +15,12 @@
         </t-steps>
       </div>
       <div class="step-demo">
-        <t-steps v-model="current2" :readonly="false">
+        <t-steps :default-value="current2" :readonly="false">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
           <t-step title="步骤描述"></t-step>
         </t-steps>
-        <t-steps v-model="current3" :readonly="false">
+        <t-steps :default-value="current3" :readonly="false">
           <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
           <t-step title="选中步骤" content="辅助信息文字最多两行"></t-step>
           <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>

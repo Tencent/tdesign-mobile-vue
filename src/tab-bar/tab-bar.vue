@@ -5,10 +5,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, provide, watch, Ref, computed } from 'vue';
+import { defineComponent, ref, provide, watch, Ref, computed, SetupContext } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
-import { emitEvent } from '@/shared';
+import { emitEvent, useDefault } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-tab-bar`;
@@ -16,9 +16,9 @@ const name = `${prefix}-tab-bar`;
 export default defineComponent({
   name,
   props: TabBarProps,
-  emits: ['update:value', 'change'],
-  setup(props, context) {
-    const activeValue = ref(props.value || 0);
+  emits: ['update:value', 'update:modelValue', 'change'],
+  setup(props, context: SetupContext) {
+    const [activeValue] = useDefault(props, context.emit, 'value', 'change');
     const defaultIndex: Ref<number> = ref(-1);
 
     const updateChild = (currentValue: number | string) => {
@@ -32,11 +32,6 @@ export default defineComponent({
         [`${name}--fixed`]: props.fixed,
       },
     ]);
-
-    watch(activeValue, (newValue) => {
-      context.emit('update:value', newValue);
-      emitEvent(props, context, 'change', newValue);
-    });
 
     provide('tab-bar', {
       defaultIndex,

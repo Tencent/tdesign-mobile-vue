@@ -7,8 +7,8 @@
 -- | -- | -- | -- | --
 bordered | Boolean | true | 是否显示外边框 | N
 fixed | Boolean | true | 是否固定在底部 | N
-value | String / Number / Array | 0 | 当前选中标签的索引。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`string | number | Array<string | number>` | N
-defaultValue | String / Number / Array | 0 | 当前选中标签的索引。非受控属性。TS 类型：`string | number | Array<string | number>` | N
+value | String / Number / Array | undefined | 当前选中标签的索引。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`string | number | Array<string | number>` | N
+defaultValue | String / Number / Array | undefined | 当前选中标签的索引。非受控属性。TS 类型：`string | number | Array<string | number>` | N
 onChange | Function |  | TS 类型：`() => void`<br/>选中标签切换时触发 | N
 
 ### TabBar Events

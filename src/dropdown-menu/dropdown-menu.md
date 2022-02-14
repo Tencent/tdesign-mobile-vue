@@ -21,4 +21,12 @@ multiple | Boolean | false | 是否多选 | N
 options | Array | - | 选项数据。TS 类型：`Array<TdDropdownItemOption>` `interface TdDropdownItemOption { title: string;disabled: boolean;value: TdDropdownItemOptionValueType; [key: string]: any }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 optionsColumns | String / Number | - | 选项分栏（1-3） | N
 optionsLayout | String | columns | 选项排列。可选项：columns/tree | N
-value | String / Number / Array | - | 选中值。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ` `type TdDropdownItemOptionValueType = string | number;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+value | String / Number / Array | undefined | 选中值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ` `type TdDropdownItemOptionValueType = string | number;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+defaultValue | String / Number / Array | undefined | 选中值。非受控属性。TS 类型：`TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ` `type TdDropdownItemOptionValueType = string | number;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+onChange | Function |  | TS 类型：`(value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>) => void`<br/>值改变时触发 | N
+
+### DropdownItem Events
+
+名称 | 参数 | 描述
+-- | -- | --
+change | `(value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>)` | 值改变时触发

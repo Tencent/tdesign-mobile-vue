@@ -285,6 +285,20 @@ export default {
           path: '/vue-mobile/components/drawer',
           component: () => import('@/drawer/drawer.md'),
         },
+        {
+          title: 'Skeleton 骨架屏',
+          name: 'skeleton',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/skeleton',
+          component: () => import('@/skeleton/skeleton.md'),
+        },
+        {
+          title: 'Grid 宫格',
+          name: 'grid',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/grid',
+          component: () => import('@/grid/grid.md'),
+        }
       ],
     },
     {
@@ -318,13 +332,6 @@ export default {
           meta: { docType: 'message' },
           path: '/vue-mobile/components/message',
           component: () => import('@/message/message.md'),
-        },
-        {
-          title: 'NoticeBar 公告栏',
-          name: 'notice-bar',
-          meta: { docType: 'message' },
-          path: '/vue-mobile/components/notice-bar',
-          component: () => import('@/notice-bar/notice-bar.md'),
         },
         {
           title: 'Dialog 弹出框',

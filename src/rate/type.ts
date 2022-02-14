@@ -50,14 +50,12 @@ export interface TdRateProps {
   texts?: Array<string>;
   /**
    * 选择评分的值
-   * @default 0
    */
-  value: number;
+  value?: number;
   /**
    * 选择评分的值，非受控属性
-   * @default 0
    */
-  defaultValue: number;
+  defaultValue?: number;
   /**
    * 形状类型，有描边类型和填充类型两种
    * @default filled

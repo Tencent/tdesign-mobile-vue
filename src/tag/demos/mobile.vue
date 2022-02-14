@@ -36,7 +36,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="标签状态">
       <div class="tag-demo">
-        <t-check-tag :checked="true">已点击</t-check-tag>
+        <t-check-tag :checked="checkedTag">已点击</t-check-tag>
         <t-check-tag :default-checked="false">未点击</t-check-tag>
         <t-check-tag disabled>不可点击</t-check-tag>
       </div>
@@ -61,6 +61,7 @@ const name = `${prefix}-tag-base-demo`;
 export default defineComponent({
   name,
   setup() {
+    const checkedTag = ref(true);
     const closableTags = ref([
       {
         name: '标签',
@@ -79,6 +80,7 @@ export default defineComponent({
     return {
       closableTags,
       onClickClose,
+      checkedTag,
     };
   },
 });

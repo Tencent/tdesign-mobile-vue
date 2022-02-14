@@ -31,6 +31,8 @@ export default {
   right: {
     type: [Array, Function] as PropType<TdSwipeCellProps['right']>,
   },
+  /** 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态。 */
+  onChange: Function as PropType<TdSwipeCellProps['onChange']>,
   /** 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件） */
   onClick: Function as PropType<TdSwipeCellProps['onClick']>,
 };

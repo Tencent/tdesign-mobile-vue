@@ -1,6 +1,5 @@
 <template>
   <div
-    ref="swipeCell"
     :class="classes"
     @touchstart="start"
     @touchmove="move"
@@ -22,7 +21,7 @@
         @touchstart.stop.passive
       >
         <!-- 通过插槽插入内容 -->
-        <slot name="left"></slot>
+        <t-node :content="swipeLeftMenu"></t-node>
         <!-- 通过属性传递的内容 -->
         <template v-for="(btn, index) of left" :key="index">
           <t-button
@@ -42,9 +41,8 @@
         </template>
       </div>
       <!-- 显示内容 -->
-      <div class="content">
-        <slot name="content"></slot>
-        <slot></slot>
+      <div ref="swipeCell" class="content">
+        <t-node :content="swipeContent"></t-node>
       </div>
       <!-- 右边按钮 -->
       <div
@@ -54,7 +52,7 @@
         @touchstart.stop.passive
       >
         <!-- 通过插槽插入内容 -->
-        <slot name="right"></slot>
+        <t-node :content="swipeRightMenu"></t-node>
         <!-- 通过属性传递的内容 -->
         <template v-for="(btn, index) of right" :key="index">
           <t-button
@@ -78,29 +76,65 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed, onMounted, ref, watch, SetupContext } from 'vue';
+import {
+  toRefs,
+  defineComponent,
+  reactive,
+  computed,
+  onMounted,
+  ref,
+  watch,
+  SetupContext,
+  getCurrentInstance,
+} from 'vue';
 import { onClickOutside } from '@vueuse/core';
 import config from '../config';
 import { emitEvent } from '../shared/emit';
 import props from './props';
+import { renderContent, renderTNode, TNode } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
+
+export interface SwipeInitData {
+  startPoint: {
+    x: number;
+    y: number;
+  };
+  endPoint: {
+    x: number;
+    y: number;
+  };
+  moving: boolean;
+  leftWidth: number;
+  rightWidth: number;
+  pos: number;
+  status: 'open' | 'close';
+}
+
 export default defineComponent({
   name,
+  components: { TNode },
   props,
-  emits: ['onClick', 'open', 'close'],
+  emits: ['click', 'open', 'close', 'change'],
   setup(props, context: SetupContext) {
+    const internalInstance = getCurrentInstance();
     const leftRef = ref<HTMLElement>();
     const rightRef = ref<HTMLElement>();
     const swipeCell = ref<HTMLElement>();
+    const swipeContent = computed(() => renderContent(internalInstance, 'default', 'content'));
+    const swipeLeftMenu = computed(() => renderTNode(internalInstance, 'left'));
+    const swipeRightMenu = computed(() => renderTNode(internalInstance, 'right'));
+
     // distance 滑动多少距离后开始显示菜
     const distance = 0;
     // autoBack 点击菜单后是否收回菜
     const autoBack = true;
     // threshold 滑动宽度的百分之多少自动打开菜单，否则收回
     const threshold = 0.5;
-    const initData = reactive({
+    // 回弹距离
+    const spring = 0;
+    const initData: SwipeInitData = reactive({
       startPoint: {
         x: 0,
         y: 0,
@@ -113,8 +147,7 @@ export default defineComponent({
       leftWidth: 0, // 左边菜单的宽度
       rightWidth: 0, // 右边菜单的宽度
       pos: 0, // 移动的距离
-      status: 'close', // 菜单的状态
-      opened: false, // 对外显示的菜单的状态
+      status: 'close', // 菜单的状态，默认close
     });
     const classes = computed(() => [`${name}`]);
     onMounted(() => {
@@ -123,19 +156,55 @@ export default defineComponent({
       const rightWidth = rightRef.value?.clientWidth as number;
       initData.leftWidth = leftWidth > 0 ? leftWidth + distance : 0;
       initData.rightWidth = rightWidth > 0 ? rightWidth + distance : 0;
+      renderMenuStatus();
     });
-    // 监听status状态变化
+    // 监听父组件传递的opened变化
+    watch(
+      () => props.opened,
+      () => renderMenuStatus(),
+    );
+    // 监听status状态变化，用于展开完成的回调和收回完成的回调
     watch(
       () => initData.status,
       (value, oldValue) => {
-        if (oldValue === 'close' && value === 'open') {
-          emitEvent(props, context, 'open');
-        } else if (oldValue === 'open' && value === 'close') {
-          emitEvent(props, context, 'close');
-        }
+        // if (oldValue === 'close' && value === 'open') {
+        //   emitEvent(props, context, 'open');
+        // } else if (oldValue === 'open' && value === 'close') {
+        //   emitEvent(props, context, 'close');
+        // }
       },
     );
-    onClickOutside(swipeCell, (event) => close());
+    onClickOutside(swipeCell, (event) => {
+      close();
+    });
+    // 根据opened来渲染菜单
+    const renderMenuStatus = () => {
+      if (typeof props.opened === 'boolean') {
+        if (props.opened) {
+          if (initData.leftWidth && !initData.rightWidth) {
+            open('toRight');
+          } else if (initData.rightWidth && !initData.leftWidth) {
+            open('toLeft');
+          }
+        } else if (initData.leftWidth || initData.rightWidth) {
+          close();
+        }
+      } else if (typeof props.opened === 'object' && props.opened instanceof Array && props.opened.length) {
+        if (props.opened.length === 2) {
+          if (!(props.opened[0] && props.opened[1])) {
+            if (props.opened[0]) {
+              if (initData.leftWidth) {
+                open('toRight');
+              }
+            } else if (props.opened[1]) {
+              if (initData.rightWidth) {
+                open('toLeft');
+              }
+            }
+          }
+        }
+      }
+    };
     // 开始滚动
     const start = (e: any) => {
       if (props.disabled) {
@@ -172,13 +241,13 @@ export default defineComponent({
           return;
         }
         // 向右滑动，左边按钮出，10是在拉出菜单后，还能拉出的距离，产生一个回弹效果
-        pos = Math.min(pos, initData.leftWidth > 0 ? initData.leftWidth + 10 : 0);
+        pos = Math.min(pos, initData.leftWidth > 0 ? initData.leftWidth + spring : 0);
       } else {
         if (initData.rightWidth === 0) {
           initData.moving = false;
         }
         // 向左滑动，右边按钮出
-        pos = Math.max(pos, -(initData.rightWidth > 0 ? initData.rightWidth + 10 : 0));
+        pos = Math.max(pos, -(initData.rightWidth > 0 ? initData.rightWidth + spring : 0));
       }
       if (initData.status === 'close') {
         initData.pos = pos;
@@ -199,51 +268,58 @@ export default defineComponent({
         if (initData.pos > initData.leftWidth * threshold) {
           open(direction);
         } else {
-          close();
+          close('force');
         }
       } else if (-initData.pos > initData.rightWidth * threshold) {
         open(direction);
       } else {
-        close();
+        close('force');
       }
     };
     // 开启，通过父组件调用
-    const open = (direction: String) => {
+    const open = (direction: 'toRight' | 'toLeft') => {
+      if (initData.status === 'open') {
+        return;
+      }
       initData.moving = true;
       initData.status = 'open';
       if (direction === 'toLeft') {
         initData.pos = -initData.rightWidth;
         if (initData.leftWidth) {
-          // @ts-ignore
-          initData.opened = [false, true];
+          const data = [false, true];
+          emitEvent(props, context, 'change', data);
         } else {
-          initData.opened = true;
+          emitEvent(props, context, 'change', true);
         }
       } else {
         initData.pos = initData.leftWidth;
         if (initData.rightWidth) {
-          // @ts-ignore
-          initData.opened = [true, false];
+          const data = [true, false];
+          emitEvent(props, context, 'change', data);
         } else {
-          initData.opened = true;
+          emitEvent(props, context, 'change', true);
         }
       }
     };
     // 关闭，可以通过父组件调用
-    const close = () => {
+    const close = (type?: string) => {
+      if (initData.status === 'close' && type !== 'force') {
+        return;
+      }
       initData.moving = true;
       initData.status = 'close';
       initData.pos = 0;
       if (initData.leftWidth && initData.rightWidth) {
-        // @ts-ignore
-        initData.opened = [false, false];
+        const data = [false, false];
+        emitEvent(props, context, 'change', data);
       } else {
-        initData.opened = false;
+        const data = [false, false];
+        emitEvent(props, context, 'change', false);
       }
     };
     // btns按钮点击事件
     const handleClickBtn = ({ action, source }: { action: { [key: string]: any }; source: String }) => {
-      emitEvent(props, context, 'onClick', {
+      emitEvent(props, context, 'click', {
         action,
         source,
       });
@@ -252,9 +328,13 @@ export default defineComponent({
       }
     };
     return {
+      ...toRefs(props),
       start,
       move,
       end,
+      swipeContent,
+      swipeLeftMenu,
+      swipeRightMenu,
       initData,
       classes,
       swipeCell,

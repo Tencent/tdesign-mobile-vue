@@ -54,7 +54,7 @@ import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import config from '../config';
 import DateTimePickerProps from './props';
-import { DateValue, TimeModeValues } from './type';
+import { DateValue, TimeModeValues, DisableDateObj } from './type';
 
 dayjs.extend(weekday);
 
@@ -179,24 +179,27 @@ export default defineComponent({
       const conditionArray =
         props.disableDate instanceof Array ? props.disableDate.every((item) => !value.isSame(dayjs(item), mode)) : true;
 
+      const disabledDateObj = props.disableDate as DisableDateObj;
+
       let conditionFromAndTo = true;
-      if (props.disableDate?.from && props.disableDate?.to) {
+
+      if (disabledDateObj?.from && disabledDateObj?.to) {
         conditionFromAndTo =
-          value.isBefore(dayjs(props.disableDate?.from), mode) || !value.isAfter(dayjs(props.disableDate?.to), mode);
-      } else if (props.disableDate?.from) {
-        conditionFromAndTo = value.isBefore(dayjs(props.disableDate?.from), mode);
-      } else if (props.disableDate?.to) {
-        conditionFromAndTo = value.isAfter(dayjs(props.disableDate?.to), mode);
+          value.isBefore(dayjs(disabledDateObj?.from), mode) || !value.isAfter(dayjs(disabledDateObj?.to), mode);
+      } else if (disabledDateObj?.from) {
+        conditionFromAndTo = value.isBefore(dayjs(disabledDateObj?.from), mode);
+      } else if (disabledDateObj?.to) {
+        conditionFromAndTo = value.isAfter(dayjs(disabledDateObj?.to), mode);
       }
 
       let conditionBefore = true;
-      if (props.disableDate?.before) {
-        conditionBefore = !value.isBefore(dayjs(props.disableDate?.before), mode);
+      if (disabledDateObj?.before) {
+        conditionBefore = !value.isBefore(dayjs(disabledDateObj?.before), mode);
       }
 
       let conditionAfter = true;
-      if (props.disableDate?.after) {
-        conditionAfter = !value.isAfter(dayjs(props.disableDate?.after), mode);
+      if (disabledDateObj?.after) {
+        conditionAfter = !value.isAfter(dayjs(disabledDateObj?.after), mode);
       }
 
       return conditionFunction && conditionArray && conditionFromAndTo && conditionBefore && conditionAfter;
@@ -279,6 +282,7 @@ export default defineComponent({
     };
 
     const onCancel = (e: MouseEvent) => {
+      // TODO: columnChange事件
       context.emit('cancel', { e });
     };
 

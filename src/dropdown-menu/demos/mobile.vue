@@ -4,7 +4,7 @@
     <p class="summary">向下弹出的菜单列表</p>
     <tdesign-demo-block title="01 类型" summary="单选下拉菜单">
       <t-dropdown-menu>
-        <t-dropdown-item v-model="valueS1" label="菜单名称" :options="optionsN" />
+        <t-dropdown-item :value="valueS1" label="菜单名称" :options="optionsN" @change="onChange" />
         <t-dropdown-item v-model="valueS2" label="菜单名称" :options="optionsC" />
       </t-dropdown-menu>
     </tdesign-demo-block>
@@ -96,6 +96,9 @@ export default defineComponent({
     const valueM2 = ref(['options_A', 'options_C']);
     const valueM3 = ref(['options_A', 'options_C']);
 
+    const onChange = function (value: any) {
+      console.log(value);
+    };
     return {
       optionsN,
       optionsC,
@@ -112,6 +115,7 @@ export default defineComponent({
       treeValue2,
       treeValue3,
       treeValue4,
+      onChange,
     };
   },
 });

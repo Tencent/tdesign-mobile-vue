@@ -20,12 +20,10 @@ export interface TdTabBarProps {
   fixed?: boolean;
   /**
    * 当前选中标签的索引
-   * @default 0
    */
   value?: string | number | Array<string | number>;
   /**
    * 当前选中标签的索引，非受控属性
-   * @default 0
    */
   defaultValue?: string | number | Array<string | number>;
   /**

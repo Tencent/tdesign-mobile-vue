@@ -39,9 +39,19 @@ export default {
     default: '',
   },
   /** 是否显示浮层 */
-  visible: Boolean,
+  visible: {
+   type: Boolean,
+   default: undefined 
+  },
+  modelValue: {
+   type: Boolean,
+   default: undefined 
+  },
   /** 是否显示浮层，非受控属性 */
-  defaultVisible: Boolean,
+  defaultVisible: {
+   type: Boolean,
+   default: undefined 
+  },
   /** 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 */
   zIndex: {
     type: Number,

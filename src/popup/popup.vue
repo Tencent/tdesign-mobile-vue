@@ -14,11 +14,13 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch, defineComponent, PropType } from 'vue';
+import { ref, computed, SetupContext, watch, defineComponent } from 'vue';
 import popupProps from './props';
 import { emitEvent } from '../shared/emit';
 import TMask from '../mask';
 import config from '../config';
+import { TdPopupProps } from './type';
+import { useDefault } from '@/shared';
 
 const { prefix } = config;
 
@@ -28,9 +30,14 @@ export default defineComponent({
   name,
   components: { TMask },
   props: popupProps,
-  emits: ['open', 'close', 'opened', 'closed', 'visible-change'],
+  emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context: SetupContext) {
-    const currentVisible = computed(() => props.modelValue || props.visible);
+    const [currentVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
+      props,
+      context.emit,
+      'visible',
+      'visible-change',
+    );
 
     const rootClasses = computed(() => name);
     const rootStyles = computed(() => ({
@@ -56,7 +63,7 @@ export default defineComponent({
         if (val) {
           document.body.classList.add(cls);
           emitEvent(props, context, 'open');
-          emitEvent(props, context, 'visible-change', true);
+          currentVisible.value = true;
         } else {
           document.body.classList.remove(cls);
         }
@@ -65,7 +72,7 @@ export default defineComponent({
 
     const handleMaskClick = () => {
       emitEvent(props, context, 'close');
-      emitEvent(props, context, 'visible-change', false);
+      currentVisible.value = false;
     };
 
     const handleMove = (e: TouchEvent) => {

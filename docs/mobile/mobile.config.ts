@@ -100,11 +100,6 @@ export default {
           component: () => import('@/slider/demos/mobile.vue'),
         },
         {
-          title: 'NoticeBar 公告栏',
-          name: 'notice-bar',
-          component: () => import('@/notice-bar/demos/mobile.vue'),
-        },
-        {
           title: 'Dialog 对话框',
           name: 'dialog',
           component: () => import('@/dialog/demos/mobile.vue'),
@@ -198,6 +193,16 @@ export default {
           title: 'SwipeCell 滑动单元格',
           name: 'swipe-cell',
           component: () => import('@/swipe-cell/demos/mobile.vue'),
+        },
+        {
+          title: 'Skeleton 骨架屏',
+          name: 'skeleton',
+          component: () => import('@/skeleton/demos/mobile.vue'),
+        },
+        {
+          title: 'Grid 宫格',
+          name: 'grid',
+          component: () => import('@/grid/demos/mobile.vue'),
         },
       ],
     },
