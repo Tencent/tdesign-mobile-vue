@@ -13,7 +13,7 @@
         />
         <t-node :content="iconContent"></t-node>
       </span>
-      <span :class="[`${name}__label-wrap`]">
+      <span v-if="labelContent || radioContent" :class="[`${name}__label-wrap`]">
         <span v-if="labelContent" :class="titleClasses" @click="radioOrgChange">
           <t-node :content="labelContent"></t-node>
         </span>
@@ -38,9 +38,9 @@
 </template>
 
 <script lang="ts">
-import { inject, computed, defineComponent, getCurrentInstance, h, ref } from 'vue';
+import { inject, computed, defineComponent, getCurrentInstance, h, ref, SetupContext } from 'vue';
 import { CheckCircleFilledIcon, CircleIcon, CheckIcon } from 'tdesign-icons-vue-next';
-import { renderContent, renderTNode, TNode, emitEvent, NOOP } from '../shared';
+import { renderContent, renderTNode, TNode, emitEvent, NOOP, useDefault } from '../shared';
 import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import RadioProps from './props';
@@ -59,13 +59,14 @@ export default defineComponent({
   components: { TNode },
   props: RadioProps,
   emits: ['change', 'update:checked'],
-  setup(props, context) {
+  setup(props: any, context: SetupContext) {
     const radioName = ref(props.name);
+    const [innerValue] = useDefault<RadioValue, TdRadioGroupProps>(props, context.emit, 'value', 'change');
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
     const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue) => void;
     const disabled = computed(() => (rootGroupProps.disabled !== undefined ? rootGroupProps.disabled : props.disabled));
     const checked = computed(() =>
-      rootGroupProps.value !== undefined ? rootGroupProps.value === props.value : props.checked,
+      rootGroupProps.value !== undefined ? rootGroupProps.value === innerValue.value : props.checked,
     );
     const internalInstance = getCurrentInstance();
     const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
@@ -112,8 +113,8 @@ export default defineComponent({
       if (disabled.value) {
         return;
       }
-      if (rootGroupChange !== NOOP && props.value) {
-        rootGroupChange(props.value);
+      if (rootGroupChange !== NOOP && innerValue.value) {
+        rootGroupChange(innerValue.value);
       } else {
         context.emit('update:checked', !checked.value);
         emitEvent(props, context, 'change', !checked.value, { e });
