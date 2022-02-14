@@ -189,6 +189,16 @@ export default {
           name: 'swipe-cell',
           component: () => import('@/swipe-cell/demos/mobile.vue'),
         },
+        {
+          title: 'Skeleton 骨架屏',
+          name: 'skeleton',
+          component: () => import('@/skeleton/demos/mobile.vue'),
+        },
+        {
+          title: 'Grid 宫格',
+          name: 'grid',
+          component: () => import('@/grid/demos/mobile.vue'),
+        },
       ],
     },
   },
