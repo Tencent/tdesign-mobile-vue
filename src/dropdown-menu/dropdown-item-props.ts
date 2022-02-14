@@ -47,4 +47,6 @@ export default {
     type: [String, Number, Array] as PropType<TdDropdownItemProps['defaultValue']>,
     default: undefined,
   },
+  /** 值改变时触发 */
+  onChange: Function as PropType<TdDropdownItemProps['onChange']>,
 };

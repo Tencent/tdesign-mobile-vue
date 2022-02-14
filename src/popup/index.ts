@@ -1,16 +1,11 @@
 import Popup from './popup.vue';
-import { withInstall, WithInstallType, mapProps } from '../shared';
+import { withInstall, WithInstallType } from '../shared';
+import { TdPopupProps } from './type';
 
 import './style';
 
-const _Popup: WithInstallType<typeof Popup> = withInstall(
-  mapProps([
-    {
-      name: 'visible',
-      event: 'visible-change',
-      alias: ['modelValue'],
-    },
-  ])(Popup),
-);
+export * from './type';
+export type PopupProps = TdPopupProps;
 
+const _Popup: WithInstallType<typeof Popup> = withInstall(Popup);
 export default _Popup;

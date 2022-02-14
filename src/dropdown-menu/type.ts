@@ -68,6 +68,10 @@ export interface TdDropdownItemProps {
    * 选中值，非受控属性
    */
   defaultValue?: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> ;
+  /**
+   * 值改变时触发
+   */
+  onChange?: (value: TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>) => void;
 }
 
 export interface TdDropdownItemOption { title: string;disabled: boolean;value: TdDropdownItemOptionValueType; [key: string]: any };
