@@ -75,7 +75,8 @@ import {
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { emitEvent, renderContent, renderTNode, TNode, useToggle } from '../shared';
+import { emitEvent, renderContent, renderTNode, TNode, useToggle, useDefault } from '../shared';
+import { CheckboxOption, TdCheckboxProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
@@ -122,8 +123,8 @@ const getTitleClasses = (flagName: string, props: any, rootGroup: any) =>
  * @param {rootGroup} Group注入的对象
  * @return: 返回是否选中的对象
  */
-const getIsCheck = (props: any, rootGroup: any) =>
-  computed(() => rootGroup && rootGroup?.checkedValues?.value?.indexOf(props.value) !== -1);
+const getIsCheck = (innerValue: any, rootGroup: any) =>
+  computed(() => rootGroup && rootGroup?.checkedValues?.value?.indexOf(innerValue.value) !== -1);
 
 const getCheckedIconClass = (flagName: string, isChecked: any, singleChecked: boolean, disabled: boolean) =>
   computed(() => {
@@ -181,6 +182,7 @@ export default defineComponent({
   props: CheckboxProps,
   emits: ['update:value', 'change'],
   setup(props: any, context: SetupContext) {
+    const [innerValue] = useDefault<CheckboxOption, TdCheckboxProps>(props, context.emit, 'value', 'change');
     const defaultCheck = h(CheckCircleFilledIcon);
     const defaultUncheck = h(CircleIcon);
     const internalInstance = getCurrentInstance();
@@ -198,7 +200,7 @@ export default defineComponent({
     onUnmounted(() => {
       rootGroup?.unregister(props);
     });
-    const isChecked = getIsCheck(props, rootGroup);
+    const isChecked = getIsCheck(innerValue, rootGroup);
     const iconClasses = getIconClasses(flagName, isChecked, context, props, rootGroup);
     const titleClasses = getTitleClasses(flagName, props, rootGroup);
     const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
