@@ -273,6 +273,20 @@ export default {
           path: '/vue-mobile/components/drawer',
           component: () => import('@/drawer/drawer.md'),
         },
+        {
+          title: 'Skeleton 骨架屏',
+          name: 'skeleton',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/skeleton',
+          component: () => import('@/skeleton/skeleton.md'),
+        },
+        {
+          title: 'Grid 宫格',
+          name: 'grid',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/grid',
+          component: () => import('@/grid/grid.md'),
+        }
       ],
     },
     {

@@ -42,3 +42,5 @@ export { Countdown } from './count-down';
 export { default as Avatar } from './avatar';
 export { default as AvatarGroup } from './avatar-group';
 export { default as SwipeCell } from './swipe-cell';
+export { default as Skeleton } from './skeleton';
+export { Grid, GridItem } from './grid';
