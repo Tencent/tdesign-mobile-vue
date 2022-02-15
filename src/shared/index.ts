@@ -11,3 +11,4 @@ export * from './emit';
 export * from './useToggle';
 export * from './useCountDown';
 export * from './useDefault';
+export * from './useEmitEvent';

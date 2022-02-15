@@ -8,9 +8,9 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
+import { computed, toRefs, defineComponent, getCurrentInstance, h, SetupContext } from 'vue';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
-import { emitEvent, renderContent, renderTNode, TNode } from '../shared';
+import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import ButtonProps from './props';
 import config from '../config';
@@ -23,7 +23,8 @@ export default defineComponent({
   components: { TNode },
   props: ButtonProps,
   emits: ['click'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const buttonClass = computed(() => [
       `${name}`,
@@ -42,7 +43,7 @@ export default defineComponent({
     const iconContent = computed(() => (props.loading ? h(LoadingIcon) : renderTNode(internalInstance, 'icon')));
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
-        emitEvent(props, context, 'click', e);
+        emitEvent('click', e);
       } else {
         e.stopPropagation();
       }

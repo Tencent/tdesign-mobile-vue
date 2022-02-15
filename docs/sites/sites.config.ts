@@ -73,18 +73,13 @@ export default {
           component: () => import('@/navbar/navbar.md'),
         },
         {
-          title: 'Image 图片',
-          name: 'image',
-          meta: { docType: 'base' },
-          path: '/vue-mobile/components/image',
-          component: () => import('@/image/image.md'),
-        },
-        {
           title: 'CountDown 倒计时',
           name: 'CountDown',
           meta: { docType: 'data' },
           path: '/vue-mobile/components/count-down',
           component: () => import('@/count-down/count-down.md'),
+        },
+        {
           title: 'Steps 步骤条',
           name: 'steps',
           meta: { docType: 'navigation' },
@@ -208,6 +203,13 @@ export default {
       title: '数据展示',
       type: 'component',
       children: [
+        {
+          title: 'Image 图片',
+          name: 'image',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/image',
+          component: () => import('@/image/image.md'),
+        },
         {
           title: 'Avatar 头像',
           name: 'avatar',

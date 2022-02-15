@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { ref, computed, watch, defineComponent, PropType, ComputedRef, SetupContext } from 'vue';
-import { emitEvent } from '../shared/emit';
+import { useEmitEvent } from '../shared';
 import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
 import TPopup from '../popup';
@@ -94,6 +94,7 @@ export default defineComponent({
   },
   emits: ['selected', 'update:modelValue', 'cancel', 'close'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const actionItems = ref([]);
 
     const currentVisible = computed(() => props.modelValue || props.visible) as ComputedRef<boolean>;
@@ -124,16 +125,16 @@ export default defineComponent({
     );
 
     const handleCancel = () => {
-      emitEvent(props, context, 'cancel');
+      emitEvent('cancel');
       context.emit('update:modelValue', false);
     };
 
     const handleSelected = (index: number) => {
-      emitEvent(props, context, 'selected', props.items[index], index);
+      emitEvent('selected', props.items[index], index);
     };
 
     const handleClose = () => {
-      emitEvent(props, context, 'close');
+      emitEvent('close');
       context.emit('update:modelValue', false);
     };
 
