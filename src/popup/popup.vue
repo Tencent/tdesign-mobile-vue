@@ -16,11 +16,10 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent } from 'vue';
 import popupProps from './props';
-import { emitEvent } from '../shared/emit';
 import TMask from '../mask';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault } from '@/shared';
+import { useDefault, useEmitEvent } from '@/shared';
 
 const { prefix } = config;
 
@@ -32,6 +31,7 @@ export default defineComponent({
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const [currentVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,
       context.emit,
@@ -62,7 +62,7 @@ export default defineComponent({
         const cls = `${prefix}-overflow-hidden`;
         if (val) {
           document.body.classList.add(cls);
-          emitEvent(props, context, 'open');
+          emitEvent('open');
           currentVisible.value = true;
         } else {
           document.body.classList.remove(cls);
@@ -71,7 +71,7 @@ export default defineComponent({
     );
 
     const handleMaskClick = () => {
-      emitEvent(props, context, 'close');
+      emitEvent('close');
       currentVisible.value = false;
     };
 
@@ -81,8 +81,8 @@ export default defineComponent({
       }
     };
 
-    const afterLeave = () => emitEvent(props, context, 'closed');
-    const afterEnter = () => emitEvent(props, context, 'opened');
+    const afterLeave = () => emitEvent('closed');
+    const afterEnter = () => emitEvent('opened');
 
     return {
       name: ref(name),

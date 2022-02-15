@@ -40,7 +40,7 @@
 <script lang="ts">
 import { inject, computed, defineComponent, getCurrentInstance, h, ref, SetupContext } from 'vue';
 import { CheckCircleFilledIcon, CircleIcon, CheckIcon } from 'tdesign-icons-vue-next';
-import { renderContent, renderTNode, TNode, emitEvent, NOOP, useDefault } from '../shared';
+import { renderContent, renderTNode, TNode, useEmitEvent, NOOP, useDefault } from '../shared';
 import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import RadioProps from './props';
@@ -60,6 +60,7 @@ export default defineComponent({
   props: RadioProps,
   emits: ['change', 'update:checked'],
   setup(props: any, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const radioName = ref(props.name);
     const [innerValue] = useDefault<RadioValue, TdRadioGroupProps>(props, context.emit, 'value', 'change');
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
@@ -116,8 +117,8 @@ export default defineComponent({
       if (rootGroupChange !== NOOP && innerValue.value) {
         rootGroupChange(innerValue.value);
       } else {
-        context.emit('update:checked', !checked.value);
-        emitEvent(props, context, 'change', !checked.value, { e });
+        emitEvent('update:checked', !checked.value);
+        emitEvent('change', !checked.value, { e });
       }
     };
 

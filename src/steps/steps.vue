@@ -19,7 +19,7 @@ import StepsProps from './props';
 import TStepItem from './step-item.vue';
 import config from '../config';
 import { TdStepsProps } from './type';
-import { emitEvent, useDefault } from '@/shared';
+import { useDefault } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-steps`;

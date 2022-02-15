@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { ref, onMounted, defineComponent, toRefs, SetupContext, nextTick } from 'vue';
-import { emitEvent, getCharacterLength, useDefault } from '../shared';
+import { useEmitEvent, getCharacterLength, useDefault } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
@@ -35,6 +35,7 @@ export default defineComponent({
   props: TextareaProps,
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();
     const textareaLength = ref(0);
@@ -93,13 +94,13 @@ export default defineComponent({
 
     const handleClear = (e: MouseEvent) => {
       innerValue.value = '';
-      emitEvent(props, context, 'clear', { e });
+      emitEvent('clear', { e });
     };
     const handleFocus = (e: FocusEvent) => {
-      emitEvent(props, context, 'focus', innerValue.value, { e });
+      emitEvent('focus', innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
-      emitEvent(props, context, 'blur', innerValue.value, { e });
+      emitEvent('blur', innerValue.value, { e });
     };
 
     onMounted(() => {

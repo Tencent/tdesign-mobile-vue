@@ -47,7 +47,7 @@
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { ref, computed, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick } from 'vue';
-import { emitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '../shared';
+import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '../shared';
 import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import InputProps from './props';
@@ -65,6 +65,7 @@ export default defineComponent({
   props: InputProps,
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const inputRef = ref<null | HTMLElement>(null);
     const internalInstance = getCurrentInstance();
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
@@ -119,13 +120,13 @@ export default defineComponent({
 
     const handleClear = (e: MouseEvent) => {
       innerValue.value = '';
-      emitEvent(props, context, 'clear', { e });
+      emitEvent('clear', { e });
     };
     const handleFocus = (e: FocusEvent) => {
-      emitEvent(props, context, 'focus', innerValue.value, { e });
+      emitEvent('focus', innerValue.value, { e });
     };
     const handleBlur = (e: FocusEvent) => {
-      emitEvent(props, context, 'blur', innerValue.value, { e });
+      emitEvent('blur', innerValue.value, { e });
     };
 
     onMounted(() => {
