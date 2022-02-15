@@ -204,6 +204,11 @@ export default {
           name: 'grid',
           component: () => import('@/grid/demos/mobile.vue'),
         },
+        {
+          title: 'Sticky 吸顶容器',
+          name: 'sticky',
+          component: () => import('@/sticky/demos/mobile.vue'),
+        },
       ],
     },
   },

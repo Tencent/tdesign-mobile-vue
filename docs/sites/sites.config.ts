@@ -300,6 +300,13 @@ export default {
           meta: { docType: 'data' },
           path: '/vue-mobile/components/grid',
           component: () => import('@/grid/grid.md'),
+        },
+        {
+          title: 'Sticky 吸顶容器',
+          name: 'sticky',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/sticky',
+          component: () => import('@/sticky/sticky.md'),
         }
       ],
     },
