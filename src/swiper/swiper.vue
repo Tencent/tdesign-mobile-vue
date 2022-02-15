@@ -42,11 +42,11 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref } from 'vue';
+import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref, SetupContext } from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
 import config from '../config';
-import { emitEvent } from '@/shared';
+import { useEmitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -61,7 +61,8 @@ export default defineComponent({
     ...SwiperProps,
   },
   emits: ['change', 'update:current'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const self = getCurrentInstance();
     const swiperContainer = ref(null);
     // const { height = 180, current = null } = props;
@@ -125,8 +126,6 @@ export default defineComponent({
      * 移动节点
      */
     const move = (targetIndex: number, isTrust = true) => {
-      // const allItems: NodeListOf<HTMLDivElement> = document.querySelectorAll('.t-swiper-item') || [];
-      // const firstItem: HTMLDivElement = allItems[0];
       const _swiperContainer = getContainer();
       const { height = 180 } = props;
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
@@ -186,7 +185,7 @@ export default defineComponent({
       let resultIndex = index;
       if (index >= state.itemLength) resultIndex = 0;
       if (index < 0) resultIndex = state.itemLength - 1;
-      emitEvent(props, context, 'change', resultIndex);
+      emitEvent('change', resultIndex);
     };
     // 移动到上一个
     const prev = (step = 1) => {

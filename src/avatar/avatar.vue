@@ -30,8 +30,8 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, inject, onMounted, ref } from 'vue';
-import { renderContent, renderTNode, TNode, emitEvent } from '../shared';
+import { computed, toRefs, defineComponent, getCurrentInstance, inject, onMounted, ref, SetupContext } from 'vue';
+import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import AvatarProps from './props';
 import config from '../config';
@@ -45,7 +45,8 @@ export default defineComponent({
   components: { TNode },
   props: AvatarProps,
   emits: ['error'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const avatarGroupProps = inject('avatarGroup', {}) as TdAvatarGroupProps;
     const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
@@ -77,7 +78,7 @@ export default defineComponent({
         : {};
     });
     const handleImgLoadError = (e: Event) => {
-      emitEvent(props, context, 'error');
+      emitEvent('error', e);
     };
 
     return {

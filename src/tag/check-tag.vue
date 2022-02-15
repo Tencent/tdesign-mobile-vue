@@ -22,7 +22,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance, SetupContext } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
-import { emitEvent, renderContent, renderTNode, TNode, useDefault, useToggle } from '../shared';
+import { useEmitEvent, renderContent, renderTNode, TNode, useDefault, useToggle } from '../shared';
 import { TdCheckTagProps } from './type';
 
 const { prefix } = config;
@@ -37,6 +37,7 @@ const CheckTag = defineComponent({
   props: CheckTagProps,
   emits: ['change', 'click', 'update:checked', 'update:modelValue'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const baseClass = `${prefix}-tag`;
 
     const { size, shape, disabled, closable } = toRefs(props);
@@ -65,7 +66,7 @@ const CheckTag = defineComponent({
       if (props.disabled) {
         e.stopPropagation();
       } else {
-        emitEvent(props, context, 'close', e);
+        emitEvent('close', e);
       }
     }
 
@@ -73,7 +74,7 @@ const CheckTag = defineComponent({
       if (!disabled.value) {
         toggle();
 
-        emitEvent(props, context, 'click', { e });
+        emitEvent('click', { e });
         innerChecked.value = state.value;
       }
     };

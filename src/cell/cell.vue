@@ -19,9 +19,9 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
+import { computed, defineComponent, getCurrentInstance, toRefs, h, SetupContext } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, renderContent, TNode, emitEvent } from '../shared';
+import { renderTNode, renderContent, TNode, useEmitEvent } from '../shared';
 import config from '../config';
 import CellProps from './props';
 
@@ -33,7 +33,8 @@ export default defineComponent({
   components: { TNode },
   props: CellProps,
   emits: ['click'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const noteContent = computed(() => renderContent(internalInstance, 'default', 'note'));
     const titleContent = computed(() => renderTNode(internalInstance, 'title'));
@@ -56,7 +57,7 @@ export default defineComponent({
       },
     ]);
 
-    const onClick = (e: Event) => emitEvent(props, context, 'click', e);
+    const onClick = (e: Event) => emitEvent('click', e);
 
     return {
       ...toRefs(props),

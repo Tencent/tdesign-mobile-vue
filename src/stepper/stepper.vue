@@ -1,8 +1,5 @@
 <template>
   <div :class="[`${name}`, `${disabled ? disabledClass : ''}`, `${isPureMode ? `${name}__pure` : ''}`]">
-    <slot name="label">
-      <div v-if="label" :class="`${name}__label`">{{ label }}</div>
-    </slot>
     <span
       :class="[`${name}__minus`, `${disabled || currentValue <= min ? 't-is-disabled' : ''}`]"
       @click="minusValue"
@@ -81,12 +78,7 @@ export default defineComponent({
     const onBlur = (e: Event) => {
       changeValue(e);
     };
-    const hasLabel = computed(() => {
-      if (props.label) {
-        return true;
-      }
-      return false;
-    });
+
     return {
       name,
       disabledClass,
@@ -95,7 +87,6 @@ export default defineComponent({
       plusValue,
       changeValue,
       inputStyle,
-      hasLabel,
       onBlur,
       isPureMode,
       ...toRefs(props),

@@ -17,11 +17,6 @@ export default {
   inputWidth: {
     type: Number,
   },
-  /** 标签 */
-  label: {
-    type: String,
-    default: '',
-  },
   /** 最大值 */
   max: {
     type: Number,

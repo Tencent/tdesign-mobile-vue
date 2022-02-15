@@ -4,12 +4,16 @@
     <p class="summary">用户通过调整“+”按钮、“-”按钮、数字输入框来调整具体需要的数值，可设置最大值和最小值</p>
     <tdesign-demo-block title="01 类型" summary="基础步进器">
       <div class="stepper-demo">
-        <t-stepper v-model.number="number1" label="标题文字" :step="1" :min="0" :max="100" @change="onChange" />
+        <t-cell title="标题文字">
+          <t-stepper v-model.number="number1" :step="1" :min="0" :max="100" @change="onChange" />
+        </t-cell>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="带单位步进器">
       <div class="stepper-demo">
-        <t-stepper v-model.number="number2" label="标题文字（单位）" :step="1" :min="0" :max="100" />
+        <t-cell title="标题文字（单位）">
+          <t-stepper v-model.number="number2" :step="1" :min="0" :max="100" />
+        </t-cell>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯步进器">
@@ -20,18 +24,26 @@
     <tdesign-demo-block title="02 类型" summary="步进器状态"> </tdesign-demo-block>
     <tdesign-demo-block>
       <div class="stepper-demo">
-        <t-stepper v-model.number="number4" label="禁用" :step="1" :min="0" :max="100" disabled />
+        <t-cell title="禁用">
+          <t-stepper v-model.number="number4" :step="1" :min="0" :max="100" disabled />
+        </t-cell>
       </div>
       <div class="stepper-demo">
-        <t-stepper v-model.number="number5" label="禁用单位" :step="1" :min="0" :max="100" disabled />
+        <t-cell title="禁用单位">
+          <t-stepper v-model.number="number5" :step="1" :min="0" :max="100" disabled />
+        </t-cell>
       </div>
       <div class="stepper-demo">
-        <t-stepper v-model.number="number6" label="最大值" :step="1" :min="0" :max="999" />
+        <t-cell title="最大值">
+          <t-stepper v-model.number="number6" :step="1" :min="0" :max="999" />
+        </t-cell>
       </div>
       <div class="stepper-demo">
-        <t-stepper v-model.number="number7" label="最小值" :step="1" :min="0" :max="999" />
+        <t-cell title="最小值">
+          <t-stepper v-model.number="number7" :step="1" :min="0" :max="999" />
+        </t-cell>
       </div>
-      <div class="stepper-demo">
+      <div class="stepper-inline-demo">
         <t-stepper v-model.number="number3" theme="mode" :step="1" :min="0" :max="100" disabled />
         <t-stepper v-model.number="number6" theme="mode" :step="1" :min="0" :max="100" />
         <t-stepper v-model.number="number7" theme="mode" :step="1" :min="0" :max="100" />

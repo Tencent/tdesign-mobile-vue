@@ -114,8 +114,7 @@ import {
 } from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import { useDefault } from '../shared';
-import { emitEvent } from '../shared/emit';
+import { useDefault, useEmitEvent } from '../shared';
 import TransAniControl from './trans-ani-control';
 import DropdownItemProps from './dropdown-item-props';
 import { TdDropdownMenuProps, TdDropdownItemProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
@@ -145,6 +144,7 @@ export default defineComponent({
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     // 受控 value 属性
     const [passInValue, setValue] = useDefault<
       TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> | null,
@@ -224,7 +224,7 @@ export default defineComponent({
         +(duration ?? 200),
         () => {
           // Now do:
-          emitEvent(props, context, val ? 'open' : 'close');
+          emitEvent(val ? 'open' : 'close');
           if (val) {
             state.isShowItems = val;
           }
@@ -239,7 +239,7 @@ export default defineComponent({
           if (!val) {
             state.isShowItems = val;
           }
-          emitEvent(props, context, val ? 'opened' : 'closed');
+          emitEvent(val ? 'opened' : 'closed');
         },
       );
     };

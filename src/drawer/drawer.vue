@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent, h } from 'vue';
-import { emitEvent } from '@/shared';
+import { useEmitEvent } from '@/shared';
 import config from '../config';
 import { SidebarItem } from './drawer.interface';
 
@@ -31,6 +31,7 @@ export default defineComponent({
   },
   emits: ['update:modelValue'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const { modelValue } = toRefs(props);
     const open = ref(false) || modelValue;
 
@@ -45,7 +46,7 @@ export default defineComponent({
       }
     };
     watch(open, () => {
-      emitEvent(props, context, 'update:modelValue', open.value);
+      emitEvent('update:modelValue', open.value);
     });
     watch(modelValue, () => {
       open.value = modelValue.value;
