@@ -4,21 +4,35 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { computed, getCurrentInstance } from 'vue';
+<script lang="ts">
+import { computed, getCurrentInstance, defineComponent } from 'vue';
 import props from './props';
 import config from '../config';
-import { renderContent } from '@/shared';
+import { renderContent, useEmitEvent } from '@/shared';
 
 const name = `${config.prefix}-sticky`;
 
-const showSticky = computed(() => props.disabled);
-const stickyClasses = computed(() => [`${name}`, {}]);
-const stickyStyles = computed(() => {
-  return {
-    top: `${props.offsetTop}px`,
-    'z-index': Number(props.zIndex),
-  };
+export default defineComponent({
+  name,
+  props,
+  setup(props, context) {
+    const emitEvent = useEmitEvent(props, context.emit);
+
+    const showSticky = computed(() => props.disabled);
+    const stickyClasses = computed(() => [`${name}`, {}]);
+    const stickyStyles = computed(() => {
+      return {
+        top: `${props.offsetTop}px`,
+        'z-index': Number(props.zIndex),
+      };
+    });
+    const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', 'content'));
+    return {
+      showSticky,
+      stickyClasses,
+      stickyStyles,
+      stickyContent,
+    };
+  },
 });
-const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', 'content'));
 </script>

@@ -22,7 +22,7 @@
 
 <style lang="less" scoped>
 .sticky-demo {
-  height: 200%;
+  height: 1500px;
   overflow: scroll;
 }
 </style>
