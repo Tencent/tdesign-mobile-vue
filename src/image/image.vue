@@ -27,7 +27,7 @@ import { ref, computed, defineComponent, SetupContext } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { EllipsisIcon as TIconEllipsis, CloseIcon as TIconClose } from 'tdesign-icons-vue-next';
 
-import { emitEvent } from '../shared';
+import { useEmitEvent } from '../shared';
 import ImageProps from './props';
 import config from '../config';
 
@@ -39,6 +39,7 @@ export default defineComponent({
   components: { TIconEllipsis, TIconClose },
   props: ImageProps,
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const imageDOM = ref();
     // 图片懒加载
     const { stop } = useIntersectionObserver(imageDOM, ([{ isIntersecting }], observerElement) => {
@@ -67,7 +68,7 @@ export default defineComponent({
     }));
 
     const handleImgLoadCompleted = (e: Event) => {
-      emitEvent(props, context, 'load', e);
+      emitEvent('load', e);
       loadingValue.value = false;
     };
 
@@ -75,7 +76,7 @@ export default defineComponent({
       if (realSrc.value === '') {
         return;
       }
-      emitEvent(props, context, 'error', e);
+      emitEvent('error', e);
       loadingValue.value = false;
       errorValue.value = true;
     };
