@@ -116,7 +116,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props,
-  emits: ['click', 'open', 'close', 'change'],
+  emits: ['click', 'change'],
   setup(props, context: SetupContext) {
     const internalInstance = getCurrentInstance();
     const leftRef = ref<HTMLElement>();
@@ -158,50 +158,24 @@ export default defineComponent({
       initData.rightWidth = rightWidth > 0 ? rightWidth + distance : 0;
       renderMenuStatus();
     });
-    // 监听父组件传递的opened变化
+    // 监听父组件传递的expanded变化
     watch(
-      () => props.opened,
+      () => props.expanded,
       () => renderMenuStatus(),
-    );
-    // 监听status状态变化，用于展开完成的回调和收回完成的回调
-    watch(
-      () => initData.status,
-      (value, oldValue) => {
-        // if (oldValue === 'close' && value === 'open') {
-        //   emitEvent(props, context, 'open');
-        // } else if (oldValue === 'open' && value === 'close') {
-        //   emitEvent(props, context, 'close');
-        // }
-      },
     );
     onClickOutside(swipeCell, (event) => {
       close();
     });
-    // 根据opened来渲染菜单
+    // 根据expanded来渲染菜单
     const renderMenuStatus = () => {
-      if (typeof props.opened === 'boolean') {
-        if (props.opened) {
-          if (initData.leftWidth && !initData.rightWidth) {
-            open('toRight');
-          } else if (initData.rightWidth && !initData.leftWidth) {
-            open('toLeft');
-          }
-        } else if (initData.leftWidth || initData.rightWidth) {
-          close();
+      if (props.expanded && props.expanded === 'left') {
+        if (initData.leftWidth) {
+          open('toRight');
         }
-      } else if (typeof props.opened === 'object' && props.opened instanceof Array && props.opened.length) {
-        if (props.opened.length === 2) {
-          if (!(props.opened[0] && props.opened[1])) {
-            if (props.opened[0]) {
-              if (initData.leftWidth) {
-                open('toRight');
-              }
-            } else if (props.opened[1]) {
-              if (initData.rightWidth) {
-                open('toLeft');
-              }
-            }
-          }
+      }
+      if (props.expanded && props.expanded === 'right') {
+        if (initData.rightWidth) {
+          open('toLeft');
         }
       }
     };
@@ -285,19 +259,13 @@ export default defineComponent({
       initData.status = 'open';
       if (direction === 'toLeft') {
         initData.pos = -initData.rightWidth;
-        if (initData.leftWidth) {
-          const data = [false, true];
-          emitEvent(props, context, 'change', data);
-        } else {
-          emitEvent(props, context, 'change', true);
+        if (initData.rightWidth) {
+          emitEvent(props, context, 'change', 'right');
         }
       } else {
         initData.pos = initData.leftWidth;
-        if (initData.rightWidth) {
-          const data = [true, false];
-          emitEvent(props, context, 'change', data);
-        } else {
-          emitEvent(props, context, 'change', true);
+        if (initData.leftWidth) {
+          emitEvent(props, context, 'change', 'left');
         }
       }
     };
@@ -309,13 +277,7 @@ export default defineComponent({
       initData.moving = true;
       initData.status = 'close';
       initData.pos = 0;
-      if (initData.leftWidth && initData.rightWidth) {
-        const data = [false, false];
-        emitEvent(props, context, 'change', data);
-      } else {
-        const data = [false, false];
-        emitEvent(props, context, 'change', false);
-      }
+      emitEvent(props, context, 'change', '');
     };
     // btns按钮点击事件
     const handleClickBtn = ({ action, source }: { action: { [key: string]: any }; source: String }) => {

@@ -18,10 +18,12 @@ export default {
   },
   /** 是否禁用滑动 */
   disabled: Boolean,
-  /** 操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态 */
+  /** 操作项是否呈现为打开态 */
   expanded: {
-    type: [Boolean, Array] as PropType<TdSwipeCellProps['expanded']>,
-    default: false,
+    type: String as PropType<TdSwipeCellProps['expanded']>,
+    validator(val: TdSwipeCellProps['expanded']): boolean {
+      return ['left', 'right'].includes(val);
+    },
   },
   /** 左侧滑动操作项。所有行为同 `right` */
   left: {
