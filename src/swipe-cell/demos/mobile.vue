@@ -11,7 +11,7 @@
       </t-swipe-cell>
     </tdesign-demo-block>
     <tdesign-demo-block style="margin-top: 10px">
-      <t-swipe-cell :expanded="true">
+      <t-swipe-cell expanded="right">
         <t-cell title="列表-左滑单操作" note="辅助信息"></t-cell>
         <template #right>
           <t-button theme="danger" shape="square" @click="handleClick">删除</t-button>
@@ -24,7 +24,7 @@
       </t-swipe-cell>
     </tdesign-demo-block>
     <tdesign-demo-block style="margin-top: 10px">
-      <t-swipe-cell :right="initData.btns" :expanded="true" @click="(value) => handleClickBtns(value)">
+      <t-swipe-cell :right="initData.btns" expanded="right" @click="(value) => handleClickBtns(value)">
         <t-cell title="列表-左滑双操作" note="双操作"></t-cell>
       </t-swipe-cell>
     </tdesign-demo-block>
@@ -39,7 +39,7 @@
       </t-swipe-cell>
     </tdesign-demo-block>
     <tdesign-demo-block style="margin-top: 10px">
-      <t-swipe-cell :expanded="true">
+      <t-swipe-cell expanded="right">
         <t-cell title="列表-左滑多操作" note="多操作"></t-cell>
         <template #right>
           <t-button theme="primary" shape="square" @click="handleClick">收藏</t-button>
@@ -64,7 +64,7 @@
       </t-swipe-cell>
     </tdesign-demo-block>
     <tdesign-demo-block style="margin-top: 10px">
-      <t-swipe-cell :expanded="true">
+      <t-swipe-cell expanded="right">
         <t-cell title="左滑大列表" description="一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字">
           <template #leftIcon>
             <img
@@ -87,7 +87,7 @@
       </t-swipe-cell>
     </tdesign-demo-block>
     <tdesign-demo-block style="margin-top: 10px">
-      <t-swipe-cell :expanded="true">
+      <t-swipe-cell expanded="left">
         <t-cell title="列表-右滑单操作" note="辅助信息"></t-cell>
         <template #left>
           <t-button theme="primary" shape="square" @click="handleClick">选择</t-button>
@@ -96,7 +96,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="通过expanded实现父子组件联动">
       <t-cell title="开关">
-        <t-switch :value="initData.expanded" @change="(value) => handleChangeSwitch(value)" />
+        <t-switch :value="initData.expanded === 'right'" @change="(value) => handleChangeSwitch(value)" />
       </t-cell>
       <t-swipe-cell :expanded="initData.expanded" @change="(value) => handleChange(value)">
         <t-cell title="父子组件联动" />
@@ -115,7 +115,7 @@ import Toast from '../../toast/index';
 interface InitData {
   disabled: boolean;
   btns: {}[];
-  expanded: boolean | [boolean, boolean];
+  expanded: 'left' | 'right' | '';
 }
 export default defineComponent({
   setup() {
@@ -125,7 +125,7 @@ export default defineComponent({
         { content: '编辑', theme: 'warning' },
         { content: '删除', theme: 'danger' },
       ],
-      expanded: false,
+      expanded: 'right',
     });
     const handleClickBtns = (value: { action: { [key: string]: any }; source: String }) => {
       Toast(JSON.stringify(value));
@@ -133,11 +133,11 @@ export default defineComponent({
     const handleClick = () => {
       Toast('click');
     };
-    const handleChange = (value: boolean | [boolean, boolean]) => {
+    const handleChange = (value: InitData['expanded']) => {
       initData.expanded = value;
     };
-    const handleChangeSwitch = (value: boolean | [boolean, boolean]) => {
-      initData.expanded = value;
+    const handleChangeSwitch = (value: boolean) => {
+      initData.expanded = value ? 'right' : '';
     };
     return {
       initData,

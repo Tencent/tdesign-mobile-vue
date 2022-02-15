@@ -168,29 +168,14 @@ export default defineComponent({
     });
     // 根据expanded来渲染菜单
     const renderMenuStatus = () => {
-      if (typeof props.expanded === 'boolean') {
-        if (props.expanded) {
-          if (initData.leftWidth) {
-            open('toRight');
-          } else if (initData.rightWidth && !initData.leftWidth) {
-            open('toLeft');
-          }
-        } else if (initData.leftWidth || initData.rightWidth) {
-          close();
+      if (props.expanded && props.expanded === 'left') {
+        if (initData.leftWidth) {
+          open('toRight');
         }
-      } else if (typeof props.expanded === 'object' && props.expanded instanceof Array && props.expanded.length) {
-        if (props.expanded.length === 2) {
-          if (!(props.expanded[0] && props.expanded[1])) {
-            if (props.expanded[0]) {
-              if (initData.leftWidth) {
-                open('toRight');
-              }
-            } else if (props.expanded[1]) {
-              if (initData.rightWidth) {
-                open('toLeft');
-              }
-            }
-          }
+      }
+      if (props.expanded && props.expanded === 'right') {
+        if (initData.rightWidth) {
+          open('toLeft');
         }
       }
     };
@@ -274,19 +259,13 @@ export default defineComponent({
       initData.status = 'open';
       if (direction === 'toLeft') {
         initData.pos = -initData.rightWidth;
-        if (initData.leftWidth) {
-          const data = [false, true];
-          emitEvent(props, context, 'change', data);
-        } else {
-          emitEvent(props, context, 'change', true);
+        if (initData.rightWidth) {
+          emitEvent(props, context, 'change', 'right');
         }
       } else {
         initData.pos = initData.leftWidth;
-        if (initData.rightWidth) {
-          const data = [true, false];
-          emitEvent(props, context, 'change', data);
-        } else {
-          emitEvent(props, context, 'change', true);
+        if (initData.leftWidth) {
+          emitEvent(props, context, 'change', 'left');
         }
       }
     };
@@ -298,13 +277,7 @@ export default defineComponent({
       initData.moving = true;
       initData.status = 'close';
       initData.pos = 0;
-      if (initData.leftWidth && initData.rightWidth) {
-        const data = [false, false];
-        emitEvent(props, context, 'change', data);
-      } else {
-        const data = [false, false];
-        emitEvent(props, context, 'change', false);
-      }
+      emitEvent(props, context, 'change', '');
     };
     // btns按钮点击事件
     const handleClickBtn = ({ action, source }: { action: { [key: string]: any }; source: String }) => {

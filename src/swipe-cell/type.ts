@@ -20,10 +20,9 @@ export interface TdSwipeCellProps {
    */
   disabled?: boolean;
   /**
-   * 操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态
-   * @default false
+   * 操作项是否呈现为打开态
    */
-  expanded?: boolean | Array<boolean>;
+  expanded?: 'left' | 'right';
   /**
    * 左侧滑动操作项。所有行为同 `right`
    */
@@ -35,7 +34,7 @@ export interface TdSwipeCellProps {
   /**
    * 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态。
    */
-  onChange?: (value: boolean | Array<boolean>) => void;
+  onChange?: (value: string) => void;
   /**
    * 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）
    */
