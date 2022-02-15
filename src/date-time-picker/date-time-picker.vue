@@ -84,7 +84,6 @@ export default defineComponent({
             }
             return false;
           }
-
           if (props.mode !== mode) {
             modes.pop();
             return true;
@@ -167,7 +166,6 @@ export default defineComponent({
       if (!props.disableDate) {
         return true;
       }
-
       if (args.length === 0) {
         return false;
       }
