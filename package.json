@@ -22,6 +22,8 @@
     "build:tsc-es": "vue-tsc --declaration --emitDeclarationOnly --outDir es/ -p tsconfig.build.json",
     "build:tsc-esm": "vue-tsc --declaration --emitDeclarationOnly --outDir esm/ -p tsconfig.build.json",
     "build:tsc-lib": "vue-tsc --declaration --emitDeclarationOnly --outDir lib/ -p tsconfig.build.json",
+    "site": "vite build",
+    "site:preview": "vite build --mode preview",
     "test": "npm run test:unit",
     "test:update": "npm run test:unit-update && npm run test:node-update",
     "test:unit": "jest --config scripts/test/jest.unit.conf.js",
