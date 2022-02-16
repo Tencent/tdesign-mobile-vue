@@ -19,7 +19,7 @@
         <t-popup v-model="show.city" position="bottom">
           <t-picker
             v-model="text.city"
-            :defaultValue="['广州市']"
+            :default-value="['广州市']"
             title="标题"
             @change="onChange"
             @confirm="onCityConfirm"
