@@ -11,7 +11,7 @@
       </div>
     </template>
     <template v-else-if="theme === 'avatar-text'">
-      <div :class="`${name}--type-circle ${name}__col`"></div>
+      <div :class="`${name}__col ${name}--type-circle`"></div>
       <div :class="`${name}__paragraph`">
         <div v-for="(item, index) of parsedRowcols" :key="`${rowClass}-${index}`" :class="rowClass">
           <div v-for="(col, idx) of item" :key="`${colClass}-${idx}`" :class="colClass" :style="col.style"></div>
@@ -41,7 +41,7 @@ export default defineComponent({
   setup(props) {
     const showContent = !props.loading;
 
-    const rootClasses = computed(() => [`${name}`, `${name}__${props.theme}`]);
+    const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
 
     const rowCols = [];
 
