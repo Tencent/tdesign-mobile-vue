@@ -9,7 +9,7 @@
 <script lang="ts">
 import { defineComponent, h } from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
-import Toast from '../index';
+import { Toast } from 'tdesign-mobile-vue';
 
 export default defineComponent({
   setup() {

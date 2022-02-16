@@ -1,14 +1,15 @@
 import * as path from 'path';
-import createTDesignPlugin from './docs/sites/plugin-tdoc/';
+import createTDesignPlugin from './sites/plugin-tdoc';
 import vue from '@vitejs/plugin-vue';
 
 module.exports = {
   base: process.env.NODE_ENV === 'production' ? '/vue-mobile/' : './',
-  root: './docs',
+  root: '.',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@common': path.resolve(__dirname, 'src/_common'),
+      '@': path.resolve(__dirname, '../src'),
+      'tdesign-moile-vue': path.resolve(__dirname, '../src'),
+      '@common': path.resolve(__dirname, '../src/_common'),
     },
   },
   server: {

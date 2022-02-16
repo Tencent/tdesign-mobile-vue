@@ -38,7 +38,7 @@ fs.readFile(resolveCwd('test/unit/coverage/index.html'), 'utf8', (err, html) => 
     });
 
     const finalRes = `module.exports = ${JSON.stringify(result, null, 2)}`;
-    fs.writeFileSync(resolveCwd('docs/sites/test-coverage.js'), finalRes);
+    fs.writeFileSync(resolveCwd('site/sites/test-coverage.js'), finalRes);
     console.log('successful re-generate coverage');
   }
 });
