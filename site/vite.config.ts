@@ -1,5 +1,5 @@
 import * as path from 'path';
-import createTDesignPlugin from './sites/plugin-tdoc';
+import createTDesignPlugin from './web/plugin-tdoc';
 import vue from '@vitejs/plugin-vue';
 
 module.exports = {
