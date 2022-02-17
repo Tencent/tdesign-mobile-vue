@@ -1,36 +1,79 @@
 <template>
-  <div v-show="showSticky" :class="stickyClasses" :style="stickyStyles">
-    <t-node :content="stickyContent"></t-node>
+  <div ref="boxRef" :class="stickyClasses" :style="boxStyles">
+    <div ref="contentRef" :style="contentStyles">
+      <t-node :content="stickyContent"></t-node>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, getCurrentInstance, defineComponent } from 'vue';
+import { computed, getCurrentInstance, defineComponent, ref, watch } from 'vue';
+import { useElementBounding, templateRef } from '@vueuse/core';
 import props from './props';
 import config from '../config';
-import { renderContent, useEmitEvent } from '@/shared';
+import { renderContent, useEmitEvent, TNode } from '@/shared';
 
 const name = `${config.prefix}-sticky`;
 
 export default defineComponent({
   name,
+  components: { TNode },
   props,
   setup(props, context) {
+    const stickyClasses = name;
+    const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', ''));
     const emitEvent = useEmitEvent(props, context.emit);
 
-    const showSticky = computed(() => props.disabled);
-    const stickyClasses = computed(() => [`${name}`, {}]);
-    const stickyStyles = computed(() => {
-      return {
-        top: `${props.offsetTop}px`,
-        'z-index': Number(props.zIndex),
-      };
+    // box 用于占位和记录边界
+    // content 用于实际定位
+    const boxRef = templateRef('boxRef');
+    const { top: boxTop } = useElementBounding(boxRef);
+    const contentRef = templateRef('contentRef');
+    const { top: contentTop, height } = useElementBounding(contentRef);
+
+    const boxStyles = computed(() => `height:${height.value}px;`);
+
+    // container 容器，sticky不会超出该边界
+    let container: HTMLElement;
+    const containerHeight = ref(0);
+    const containerTop = ref(0);
+
+    // 监听页面滚动事件
+    watch(boxTop, () => {
+      if (props.container) {
+        // @ts-ignore
+        container = props.container();
+        const { top, height } = container.getBoundingClientRect();
+        containerHeight.value = height;
+        containerTop.value = top;
+      }
     });
-    const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', 'content'));
+
+    // 通过改变 content 的定位来实现 sticky 效果
+    const contentStyles = computed(() => {
+      let styleStr = `z-index:${props.zIndex};`;
+      let isFixed = false;
+      if (props.disabled) return styleStr;
+      const offsetTop = Number(props.offsetTop);
+      if (container) {
+        if (containerHeight.value + containerTop.value < offsetTop + height.value) {
+          styleStr += `transform:translate3d(0, ${containerHeight.value - height.value}px, 0);`;
+        } else if (boxTop.value <= offsetTop) {
+          styleStr += `position:fixed;top:${offsetTop}px;`;
+          isFixed = true;
+        }
+      } else if (boxTop.value <= offsetTop) {
+        styleStr += `position:fixed;top:${offsetTop}px;`;
+        isFixed = true;
+      }
+      emitEvent('scroll', { scrollTop: contentTop.value, isFixed });
+      return styleStr;
+    });
+
     return {
-      showSticky,
       stickyClasses,
-      stickyStyles,
+      boxStyles,
+      contentStyles,
       stickyContent,
     };
   },

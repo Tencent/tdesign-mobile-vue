@@ -16,7 +16,7 @@ export default {
   disabled: Boolean,
   /** 吸顶时与顶部的距离，单位`px` */
   offsetTop: {
-    type: Number,
+    type: [String, Number] as PropType<TdStickyProps['offsetTop']>,
     default: 0,
   },
   /** 吸顶时的 z-index */

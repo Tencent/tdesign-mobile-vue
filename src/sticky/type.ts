@@ -18,7 +18,7 @@ export interface TdStickyProps {
    * 吸顶时与顶部的距离，单位`px`
    * @default 0
    */
-  offsetTop?: number;
+  offsetTop?: string | number;
   /**
    * 吸顶时的 z-index
    * @default 99
