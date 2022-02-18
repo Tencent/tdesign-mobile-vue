@@ -21,11 +21,6 @@ export interface TdStepperProps {
    */
   inputWidth: number;
   /**
-   * 标签
-   * @default ''
-   */
-  label: string;
-  /**
    * 最大值
    * @default 100
    */

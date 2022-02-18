@@ -16,10 +16,10 @@
 </template>
 
 <script lang="ts">
-import { provide, defineComponent, toRefs, computed } from 'vue';
-import { emitEvent, isNumber, isString } from '../shared';
+import { provide, defineComponent, toRefs, computed, SetupContext } from 'vue';
+import { useDefault } from '../shared';
 import RadioGroupProps from '../radio/radio-group-props';
-import { RadioOption, RadioOptionObj, RadioValue } from '../radio/type';
+import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
 import Radio from '../radio/radio.vue';
 import config from '../config';
 
@@ -30,12 +30,14 @@ export default defineComponent({
   name: componentName,
   components: { Radio },
   props: RadioGroupProps,
-  emits: ['update:value', 'change'],
-  setup(props, context) {
-    const change = (val: RadioValue) => {
-      context.emit('update:value', val);
-      emitEvent(props, context, 'change', val);
-    };
+  emits: ['update:value', 'update:modelValue', 'change'],
+  setup(props, context: SetupContext) {
+    const [groupValue, setGroupValue] = useDefault<RadioValue, TdRadioGroupProps>(
+      props,
+      context.emit,
+      'value',
+      'change',
+    );
     const groupOptions = computed(() => {
       return props.options?.map((option: RadioOption) => {
         let opt = option as RadioOptionObj;
@@ -45,8 +47,12 @@ export default defineComponent({
         return opt;
       });
     });
+    const handleRadioChange = (val: RadioValue, e: Event) => {
+      setGroupValue(val, { e });
+    };
     provide('rootGroupProps', props);
-    provide('rootGroupChange', change);
+    provide('rootGroupValue', groupValue);
+    provide('rootGroupChange', handleRadioChange);
     return {
       ...toRefs(props),
       componentName,

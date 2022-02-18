@@ -19,7 +19,7 @@
 import { ref, computed, defineComponent, SetupContext, getCurrentInstance, h } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { EllipsisIcon, CloseIcon } from 'tdesign-icons-vue-next';
-import { emitEvent, renderTNode, TNode } from '../shared';
+import { useEmitEvent, renderTNode, TNode } from '../shared';
 import ImageProps from './props';
 import config from '../config';
 
@@ -31,6 +31,8 @@ export default defineComponent({
   components: { TNode },
   props: ImageProps,
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
+
     // 默认loading和error状态展示，slot支持node和funtion
     const internalInstance = getCurrentInstance();
     const loadingContent = computed(() => {
@@ -75,7 +77,7 @@ export default defineComponent({
 
     // 图片加载完成回调
     const handleImgLoadCompleted = (e: Event) => {
-      emitEvent(props, context, 'load', e);
+      emitEvent('load', e);
       loadingValue.value = false;
     };
 
@@ -84,7 +86,7 @@ export default defineComponent({
       if (realSrc.value === '') {
         return;
       }
-      emitEvent(props, context, 'error', e);
+      emitEvent('error', e);
       loadingValue.value = false;
       errorValue.value = true;
     };

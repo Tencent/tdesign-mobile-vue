@@ -1,13 +1,7 @@
 <template>
-  <div :class="avatarClass" :style="customAvatarSize">
+  <div :class="avatarClass" :style="customSize">
     <div :class="`${name}__inner`">
-      <img
-        v-if="image && !hideOnLoadFailed"
-        :src="image"
-        :alt="alt"
-        :style="customImageSize"
-        @error="handleImgLoadError"
-      />
+      <img v-if="image && !hideOnLoadFailed" :src="image" :alt="alt" :style="customSize" @error="handleImgLoadError" />
       <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
         <t-node :content="iconContent"></t-node>
       </div>
@@ -30,8 +24,8 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, inject, onMounted, ref } from 'vue';
-import { renderContent, renderTNode, TNode, emitEvent } from '../shared';
+import { computed, toRefs, defineComponent, getCurrentInstance, inject, onMounted, ref, SetupContext } from 'vue';
+import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import AvatarProps from './props';
 import config from '../config';
@@ -45,7 +39,8 @@ export default defineComponent({
   components: { TNode },
   props: AvatarProps,
   emits: ['error'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const avatarGroupProps = inject('avatarGroup', {}) as TdAvatarGroupProps;
     const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
@@ -60,15 +55,7 @@ export default defineComponent({
     ]);
 
     const isCustomSize = computed(() => sizeValue.value && !CLASSNAMES.SIZE[sizeValue.value]);
-    const customAvatarSize = computed(() => {
-      return isCustomSize.value
-        ? {
-            height: sizeValue.value,
-            width: sizeValue.value,
-          }
-        : {};
-    });
-    const customImageSize = computed(() => {
+    const customSize = computed(() => {
       return isCustomSize.value
         ? {
             height: sizeValue.value,
@@ -77,7 +64,7 @@ export default defineComponent({
         : {};
     });
     const handleImgLoadError = (e: Event) => {
-      emitEvent(props, context, 'error');
+      emitEvent('error', e);
     };
 
     return {
@@ -86,8 +73,7 @@ export default defineComponent({
       avatarContent,
       iconContent,
       avatarClass,
-      customAvatarSize,
-      customImageSize,
+      customSize,
       handleImgLoadError,
     };
   },

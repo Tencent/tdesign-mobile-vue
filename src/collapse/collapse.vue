@@ -10,7 +10,7 @@ import { toRefs, provide, reactive, SetupContext, defineComponent, watch } from 
 import { CollapsePropsType, CollapseProps, onChangeEvent } from './collapse.interface';
 import config from '../config';
 import { toggleElem } from './util';
-import { emitEvent } from '@/shared';
+import { useEmitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-collapse`;
@@ -19,6 +19,7 @@ export default defineComponent({
   props: CollapseProps,
   emits: ['update:value', 'change'],
   setup(props: CollapsePropsType, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     // 根结点类名
     const state = reactive({
       className: name,
@@ -34,8 +35,8 @@ export default defineComponent({
     const onPanelChange: onChangeEvent = (name: any) => {
       const newV = toggleElem(name, state.curValue, !props.accordion);
       state.curValue = newV;
-      emitEvent(props, context, 'update:value', newV);
-      emitEvent(props, context, 'change', newV);
+      emitEvent('update:value', newV);
+      emitEvent('change', newV);
     };
 
     // 提供子组件访问

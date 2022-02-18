@@ -183,7 +183,6 @@ class Picker {
       this.endScroll();
       return;
     }
-    console.log('scrollDist')
     this.scrollDist(nowTime, this.offsetY, dist, duration);
   }
 

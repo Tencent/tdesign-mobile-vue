@@ -92,9 +92,10 @@
         <t-avatar
           shape="round"
           size="large"
-          image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          image="#"
           alt="示例图片"
           :badge-props="{ count: 10 }"
+          @error="errorConsole"
         ></t-avatar>
         <t-avatar
           shape="round"
@@ -131,6 +132,9 @@ export default defineComponent({
   setup() {
     const userIcon = () => h(UserIcon);
     const userAddIcon = () => h(UserAddIcon);
+    const errorConsole = () => {
+      console.log('error console');
+    };
     const imageList = ref([
       'https://tdesign.gtimg.com/mobile/demos/avatar_1.png',
       'https://tdesign.gtimg.com/mobile/demos/avatar_2.png',
@@ -138,7 +142,7 @@ export default defineComponent({
       'https://tdesign.gtimg.com/mobile/demos/avatar_4.png',
       'https://tdesign.gtimg.com/mobile/demos/avatar_5.png',
     ]);
-    return { userIcon, userAddIcon, imageList };
+    return { userIcon, userAddIcon, imageList, errorConsole };
   },
 });
 </script>

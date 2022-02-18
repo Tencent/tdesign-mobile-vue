@@ -38,13 +38,13 @@
 </template>
 
 <script lang="ts">
-import { inject, computed, defineComponent, getCurrentInstance, h, ref, SetupContext } from 'vue';
+import { inject, computed, defineComponent, getCurrentInstance, h, ref, SetupContext, Ref } from 'vue';
 import { CheckCircleFilledIcon, CircleIcon, CheckIcon } from 'tdesign-icons-vue-next';
-import { renderContent, renderTNode, TNode, emitEvent, NOOP, useDefault } from '../shared';
+import { renderContent, renderTNode, TNode, NOOP, useDefault } from '../shared';
 import ClASSNAMES from '../shared/constants';
 import config from '../config';
 import RadioProps from './props';
-import { RadioValue, TdRadioGroupProps } from './type';
+import { RadioValue, TdRadioGroupProps, TdRadioProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-radio`;
@@ -58,16 +58,20 @@ export default defineComponent({
   name,
   components: { TNode },
   props: RadioProps,
-  emits: ['change', 'update:checked'],
-  setup(props: any, context: SetupContext) {
+  emits: ['update:checked', 'update:modelValue', 'change'],
+  setup(props, context: SetupContext) {
     const radioName = ref(props.name);
-    const [innerValue] = useDefault<RadioValue, TdRadioGroupProps>(props, context.emit, 'value', 'change');
+    const [innerChecked, setInnerChecked] = useDefault<Boolean, TdRadioProps>(props, context.emit, 'checked', 'change');
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
-    const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue) => void;
+    const rootGroupValue = inject<Ref<RadioValue>>('rootGroupValue');
+    const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue, e: Event) => void;
     const disabled = computed(() => (rootGroupProps.disabled !== undefined ? rootGroupProps.disabled : props.disabled));
-    const checked = computed(() =>
-      rootGroupProps.value !== undefined ? rootGroupProps.value === innerValue.value : props.checked,
-    );
+    const checked = computed(() => {
+      if (rootGroupValue !== undefined) {
+        setInnerChecked(rootGroupValue.value === props.value);
+      }
+      return innerChecked.value;
+    });
     const internalInstance = getCurrentInstance();
     const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
     const radioContent = computed(() => renderTNode(internalInstance, 'content'));
@@ -76,14 +80,14 @@ export default defineComponent({
         return;
       }
       let curContent: any = '';
-      const iconIndex = checked.value === false ? 1 : 0;
+      const iconIndex = checked.value ? 0 : 1;
       const isIconArray = Array.isArray(props.icon);
       if (isIconArray) {
         curContent = props.icon[iconIndex];
       } else {
         curContent = iconDefault[props.icon][iconIndex];
       }
-      return curContent === '' ? curContent : curContent;
+      return curContent;
     });
 
     const radioClasses = computed(() => [
@@ -113,11 +117,10 @@ export default defineComponent({
       if (disabled.value) {
         return;
       }
-      if (rootGroupChange !== NOOP && innerValue.value) {
-        rootGroupChange(innerValue.value);
+      if (rootGroupChange !== NOOP && props.value !== undefined) {
+        rootGroupChange(props.value, e);
       } else {
-        context.emit('update:checked', !checked.value);
-        emitEvent(props, context, 'change', !checked.value, { e });
+        setInnerChecked(!checked.value, e);
       }
     };
 

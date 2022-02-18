@@ -5,6 +5,9 @@ import { WithInstallType } from '../shared';
 
 import './style';
 
+export * from './type';
+export type ToastProps = TdToastProps;
+
 let instance: any = null;
 
 /** 展示提示 */

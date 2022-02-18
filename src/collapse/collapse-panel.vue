@@ -27,8 +27,6 @@
         </div>
       </template>
     </div>
-    <!-- <transition name="collapse">
-    </transition> -->
   </div>
 </template>
 
@@ -55,7 +53,7 @@ import {
 } from './collapse.interface';
 import config from '../config';
 import { findIndex, isFalsy, toArray } from './util';
-import { emitEvent } from '@/shared';
+import { useEmitEvent } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
@@ -68,6 +66,7 @@ export default defineComponent({
   props: CollapsePanelProps,
   emits: ['click'],
   setup(props: CollapsePanelPropsType, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     // 从父组件取属性、状态和控制函数
     const collapseProps = inject('collapseProps') as CollapsePropsType;
     const collapseState = inject('collapseState') as CollapseStateType;
@@ -100,7 +99,7 @@ export default defineComponent({
       if (props.disabled) {
         return;
       }
-      emitEvent(props, context, 'click', props.name);
+      emitEvent('click', props.name);
       if (/^header$/i.test(from) && !props.headerClickable) {
         return;
       }

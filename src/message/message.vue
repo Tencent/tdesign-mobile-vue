@@ -19,8 +19,7 @@ import { ref, computed, watch, defineComponent, getCurrentInstance, PropType, Se
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import messageProps from './props';
 import config from '../config';
-import { emitEvent } from '../shared/emit';
-import { renderTNode, TNode, useDefault } from '../shared';
+import { renderTNode, TNode, useDefault, useEmitEvent } from '../shared';
 import { TdMessageProps } from './type';
 
 const { prefix } = config;
@@ -32,6 +31,7 @@ export default defineComponent({
   props: messageProps,
   emits: ['visible-change', 'open', 'opened', 'close', 'closed'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const root = ref(null);
     const internalInstance = getCurrentInstance();
     const closeBtnContent = computed(() => renderTNode(internalInstance, 'closeBtn'));
@@ -51,7 +51,7 @@ export default defineComponent({
     }));
 
     const onClose = () => {
-      emitEvent(props, context, 'close');
+      emitEvent('close');
       currentVisible.value = false;
     };
 
@@ -60,7 +60,7 @@ export default defineComponent({
       (val) => {
         if (val === false) return;
 
-        emitEvent(props, context, 'open');
+        emitEvent('open');
         currentVisible.value = true;
 
         if (props.duration > 0) {
@@ -77,8 +77,8 @@ export default defineComponent({
       rootStyles,
       closeBtnContent,
       onClose,
-      afterEnter: () => emitEvent(props, context, 'opened'),
-      afterLeave: () => emitEvent(props, context, 'closed'),
+      afterEnter: () => emitEvent('opened'),
+      afterLeave: () => emitEvent('closed'),
     };
   },
 });

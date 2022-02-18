@@ -14,8 +14,8 @@
   },
   "scripts": {
     "prepare": "husky install .husky",
-    "dev": "cross-env NODE_ENV=development vite",
-    "dev:debug": "cross-env NODE_ENV=development vite --debug",
+    "dev": "cd site && cross-env NODE_ENV=development vite",
+    "dev:debug": "cd site && cross-env NODE_ENV=development vite --debug",
     "prebuild": "rimraf dist/* lib/* es/* esm/* typings/*",
     "build": "cross-env NODE_ENV=production rollup -c scripts/rollup.config.js && npm run build:tsc",
     "build:tsc": "concurrently \"npm:build:tsc-*\"",
@@ -70,7 +70,7 @@
   ],
   "sideEffects": [
     "dist/*",
-    "docs/**",
+    "site/**",
     "es/**/style/**",
     "esm/**/style/**"
   ],

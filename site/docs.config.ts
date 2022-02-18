@@ -73,18 +73,6 @@ export default {
           component: () => import('@/navbar/navbar.md'),
         },
         {
-          title: 'Image 图片',
-          name: 'image',
-          meta: { docType: 'base' },
-          path: '/vue-mobile/components/image',
-          component: () => import('@/image/image.md'),
-        },
-        {
-          title: 'CountDown 倒计时',
-          name: 'CountDown',
-          meta: { docType: 'data' },
-          path: '/vue-mobile/components/count-down',
-          component: () => import('@/count-down/count-down.md'),
           title: 'Steps 步骤条',
           name: 'steps',
           meta: { docType: 'navigation' },
@@ -93,7 +81,7 @@ export default {
         },
         {
           title: 'TabBar 标签栏',
-          name: 'tabbar',
+          name: 'tab-bar',
           meta: { docType: 'navigation' },
           path: '/vue-mobile/components/tabbar',
           component: () => import('@/tab-bar/tab-bar.md'),
@@ -209,6 +197,13 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Image 图片',
+          name: 'image',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/image',
+          component: () => import('@/image/image.md'),
+        },
+        {
           title: 'Avatar 头像',
           name: 'avatar',
           meta: { docType: 'data' },
@@ -224,7 +219,7 @@ export default {
         },
         {
           title: 'CountDown 倒计时',
-          name: 'CountDown',
+          name: 'count-down',
           meta: { docType: 'data' },
           path: '/vue-mobile/components/count-down',
           component: () => import('@/count-down/count-down.md'),
@@ -314,7 +309,7 @@ export default {
         },
         {
           title: 'ActionSheet 动作面板',
-          name: 'actionsheet',
+          name: 'action-sheet',
           meta: { docType: 'message' },
           path: '/vue-mobile/components/actionsheet',
           component: () => import('@/action-sheet/action-sheet.md'),
