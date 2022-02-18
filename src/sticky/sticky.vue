@@ -1,5 +1,5 @@
 <template>
-  <div ref="boxRef" :class="stickyClasses" :style="boxStyles">
+  <div ref="boxRef" :class="boxClasses" :style="boxStyles">
     <div ref="contentRef" :style="contentStyles">
       <t-node :content="stickyContent"></t-node>
     </div>
@@ -20,7 +20,7 @@ export default defineComponent({
   components: { TNode },
   props,
   setup(props, context) {
-    const stickyClasses = name;
+    const boxClasses = name;
     const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', ''));
     const emitEvent = useEmitEvent(props, context.emit);
 
@@ -42,7 +42,7 @@ export default defineComponent({
     watch(boxTop, () => {
       if (props.container) {
         // @ts-ignore
-        container = props.container();
+        container = document.querySelector(props.container);
         const { top, height } = container.getBoundingClientRect();
         containerHeight.value = height;
         containerTop.value = top;
@@ -71,7 +71,7 @@ export default defineComponent({
     });
 
     return {
-      stickyClasses,
+      boxClasses,
       boxStyles,
       contentStyles,
       stickyContent,

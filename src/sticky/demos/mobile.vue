@@ -16,7 +16,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="03 指定容器">
       <div ref="container" class="block-3">
-        <t-sticky :container="container" @scroll="onScroll">
+        <t-sticky container=".block-3" @scroll="onScroll">
           <t-button>吸顶按钮</t-button>
         </t-sticky>
       </div>
@@ -25,7 +25,6 @@
 </template>
 
 <script setup lang="ts">
-const container = () => document.querySelector('.block-3');
 const onScroll = (context: { scrollTop: number; isFixed: boolean }) => {
   console.log(context);
 };
