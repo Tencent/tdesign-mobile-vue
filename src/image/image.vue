@@ -33,7 +33,7 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
 
-    // 默认loading和error状态展示，slot支持Node和Fuction
+    // 默认loading和error状态展示，slot支持Node和Function
     const internalInstance = getCurrentInstance();
     const loadingContent = computed(() => {
       if (context.slots?.loading) {
