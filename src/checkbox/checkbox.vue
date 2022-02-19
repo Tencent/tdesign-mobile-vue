@@ -180,7 +180,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: CheckboxProps,
-  emits: ['update:value', 'change'],
+  emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: any, context: SetupContext) {
     const [innerValue] = useDefault<CheckboxOption, TdCheckboxProps>(props, context.emit, 'value', 'change');
     const defaultCheck = h(CheckCircleFilledIcon);
