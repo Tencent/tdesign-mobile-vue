@@ -34,7 +34,7 @@ export default {
   /** 选中的值，非受控属性 */
   defaultValue: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['defaultValue']>,
-    default: undefined,
+    default: false,
   },
   /** 选中值发生变化时触发 */
   onChange: Function as PropType<TdRadioGroupProps['onChange']>,

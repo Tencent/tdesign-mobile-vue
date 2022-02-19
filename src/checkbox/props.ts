@@ -28,10 +28,7 @@ export default {
    default: undefined 
   },
   /** 是否选中，非受控属性 */
-  defaultChecked: {
-   type: Boolean,
-   default: undefined 
-  },
+  defaultChecked: Boolean,
   /** 复选框内容 */
   content: {
     type: [String, Function] as PropType<TdCheckboxProps['content']>,

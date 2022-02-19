@@ -39,6 +39,6 @@ export default {
     type: Array as PropType<TdCheckboxGroupProps['defaultValue']>,
     default: undefined,
   },
-  /** 值变化时触发 */
+  /** 值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中 */
   onChange: Function as PropType<TdCheckboxGroupProps['onChange']>,
 };

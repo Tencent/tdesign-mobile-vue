@@ -47,7 +47,9 @@ export default defineComponent({
       let pickerItems = context.slots.default ? context.slots.default() : [];
       pickerItems = pickerItems.map((pickerItem: any, itemIndex: number) => {
         const newPickerItem = pickerItem;
-        const pickerItemDefaultValue = Array.isArray(props.defaultValue) ? props.defaultValue[itemIndex] : newPickerItem.props.value || newPickerItem.props.options[0];
+        const pickerItemDefaultValue = Array.isArray(props.defaultValue)
+          ? props.defaultValue[itemIndex]
+          : newPickerItem.props.value || newPickerItem.props.options[0];
         const curValue = pickerItemDefaultValue;
         if (!curData[itemIndex]) {
           curData[itemIndex] = curValue;

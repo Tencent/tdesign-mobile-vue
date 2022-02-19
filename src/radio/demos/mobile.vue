@@ -1,9 +1,9 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Radio 单选框</h1>
-    <p class="summary">描述文字</p>
+    <p class="summary">用于在预设的一组选项中执行单项选择，并呈现选择结果。</p>
     <tdesign-demo-block title="01 类型" summary="左侧圆形单选框">
-      <t-radio-group v-model="radio" @change="testChange">
+      <t-radio-group v-model="radio">
         <t-cell-group>
           <t-cell title="单选">
             <template #leftIcon>
@@ -28,11 +28,10 @@
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="右侧圆形单选框">
-      <!-- <t-radio-group v-model="radio" :options="options" @change="testChange"></t-radio-group> -->
       <t-cell-group>
         <t-cell>
           <template #rightIcon>
-            <t-radio :checked="radio2" value="1" @change="onChangeFn"></t-radio>
+            <t-radio :checked="radio2" value="1"></t-radio>
           </template>
           <template #title>
             <span>单选</span>
@@ -213,7 +212,7 @@
     <tdesign-demo-block title="03 特殊类型" summary="自定义图标多选框">
       <t-radio-group v-model:value="radio6">
         <t-cell-group>
-          <t-cell :class="`cell-inden--bordered`" @click="radio = '1'">
+          <t-cell @click="radio6 = '1'">
             <template #leftIcon>
               <t-radio name="radio9" value="1" :icon="checkRectangle"></t-radio>
             </template>
@@ -221,7 +220,7 @@
               <span>单选</span>
             </template>
           </t-cell>
-          <t-cell :class="`cell-inden--bordered`" @click="radio = '2'">
+          <t-cell @click="radio6 = '2'">
             <template #leftIcon>
               <t-radio name="radio9" value="2" :icon="checkRectangle"></t-radio>
             </template>
@@ -234,18 +233,14 @@
     </tdesign-demo-block>
 
     <tdesign-demo-block title="04 规格" summary="单选框尺寸规格">
-      <t-radio-group v-model="radio">
-        <t-cell-group>
-          <t-cell :class="`cell-inden--bordered`" @click="radio = '1'">
-            <template #leftIcon>
-              <t-radio name="radio10" value="1"></t-radio>
-            </template>
-            <template #title>
-              <span>单选 H48</span>
-            </template>
-          </t-cell>
-        </t-cell-group>
-      </t-radio-group>
+      <t-cell>
+        <template #leftIcon>
+          <t-radio name="radio10" value="1"></t-radio>
+        </template>
+        <template #title>
+          <span>单选 H48</span>
+        </template>
+      </t-cell>
     </tdesign-demo-block>
   </div>
 </template>
@@ -287,7 +282,6 @@ export default defineComponent({
 
     const onChangeFn = (checked: boolean, context: { e: Event }) => {
       console.log('checked', checked);
-      radio2.value = checked;
     };
 
     const TiconCheckRectangleFilled = h(CheckRectangleFilledIcon);

@@ -26,10 +26,7 @@ export default {
    default: undefined 
   },
   /** 是否选中，非受控属性 */
-  defaultChecked: {
-   type: Boolean,
-   default: undefined 
-  },
+  defaultChecked: Boolean,
   /** 单选内容 */
   content: {
     type: [String, Function] as PropType<TdRadioProps['content']>,
@@ -61,8 +58,8 @@ export default {
   },
   /** 单选按钮的值 */
   value: {
-    type: [String, Number] as PropType<TdRadioProps['value']>,
-    default: undefined,
+    type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
+    default: false,
   },
   /** 选中状态变化时触发 */
   onChange: Function as PropType<TdRadioProps['onChange']>,

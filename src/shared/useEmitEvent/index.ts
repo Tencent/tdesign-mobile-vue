@@ -1,4 +1,3 @@
-import { onBeforeUnmount, onMounted } from 'vue';
 import camelCase from 'lodash/camelCase';
 
 export type EmitEventName = { event: string; method: string } | string;

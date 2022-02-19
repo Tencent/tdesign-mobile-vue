@@ -1,13 +1,7 @@
 <template>
-  <div :class="avatarClass" :style="customAvatarSize">
+  <div :class="avatarClass" :style="customSize">
     <div :class="`${name}__inner`">
-      <img
-        v-if="image && !hideOnLoadFailed"
-        :src="image"
-        :alt="alt"
-        :style="customImageSize"
-        @error="handleImgLoadError"
-      />
+      <img v-if="image && !hideOnLoadFailed" :src="image" :alt="alt" :style="customSize" @error="handleImgLoadError" />
       <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
         <t-node :content="iconContent"></t-node>
       </div>
@@ -61,15 +55,7 @@ export default defineComponent({
     ]);
 
     const isCustomSize = computed(() => sizeValue.value && !CLASSNAMES.SIZE[sizeValue.value]);
-    const customAvatarSize = computed(() => {
-      return isCustomSize.value
-        ? {
-            height: sizeValue.value,
-            width: sizeValue.value,
-          }
-        : {};
-    });
-    const customImageSize = computed(() => {
+    const customSize = computed(() => {
       return isCustomSize.value
         ? {
             height: sizeValue.value,
@@ -87,8 +73,7 @@ export default defineComponent({
       avatarContent,
       iconContent,
       avatarClass,
-      customAvatarSize,
-      customImageSize,
+      customSize,
       handleImgLoadError,
     };
   },
