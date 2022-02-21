@@ -69,7 +69,7 @@ export const packageJSONContent = JSON.stringify(
     dependencies: {
       vue: orgPkg.devDependencies.vue,
       'tdesign-mobile-vue': orgPkg.version,
-      'tdesign-icons-mobile-vue': orgPkg.dependencies['tdesign-icons-mobile-vue'],
+      'tdesign-icons-vue-next': orgPkg.dependencies['tdesign-icons-vue-next'],
     },
     devDependencies: {
       vite: orgPkg.devDependencies.vite,
