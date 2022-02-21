@@ -92,10 +92,9 @@
         <t-avatar
           shape="round"
           size="large"
-          image="#"
+          image="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
           alt="示例图片"
           :badge-props="{ count: 10 }"
-          @error="errorConsole"
         ></t-avatar>
         <t-avatar
           shape="round"

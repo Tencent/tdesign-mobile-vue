@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
-import { isNumber } from '@/shared';
+import { isNumber } from '../shared';
 
 import config from '../config';
 import SkeletonProps from './props';

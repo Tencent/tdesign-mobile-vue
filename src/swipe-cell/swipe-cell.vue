@@ -91,7 +91,7 @@ import { onClickOutside } from '@vueuse/core';
 import config from '../config';
 import { emitEvent } from '../shared/emit';
 import props from './props';
-import { renderContent, renderTNode, TNode } from '@/shared';
+import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;

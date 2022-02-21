@@ -46,7 +46,8 @@ import { defineComponent, reactive, getCurrentInstance, onMounted, computed, wat
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import SwiperProps from './props';
 import config from '../config';
-import { useEmitEvent } from '@/shared';
+import { useDefault, useEmitEvent } from '../shared';
+import { TdSwiperProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-swiper`;
@@ -57,16 +58,15 @@ const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): vo
 export default defineComponent({
   name,
   components: { ChevronLeftIcon, ChevronRightIcon },
-  props: {
-    ...SwiperProps,
-  },
-  emits: ['change', 'update:current'],
+  props: SwiperProps,
+  emits: ['change', 'update:current', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
+    const [swiperValue, setSwiperValue] = useDefault<Number, TdSwiperProps>(props, context.emit, 'current', 'change');
     const self = getCurrentInstance();
     const swiperContainer = ref(null);
     // const { height = 180, current = null } = props;
-    const height = props.height || ref(180);
+    const height = props.height || 180;
     const state: {
       activeIndex: number;
       itemLength: number;
@@ -127,7 +127,6 @@ export default defineComponent({
      */
     const move = (targetIndex: number, isTrust = true) => {
       const _swiperContainer = getContainer();
-      const { height = 180 } = props;
       const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
       const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
       actionIsTrust = isTrust;
