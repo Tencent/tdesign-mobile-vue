@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import App from './app.vue';
 import router from './router';
 import TDesign from '@/index';
-import CodeSandbox from './code-sandbox/index.vue';
+import Stackblitz from './stackblitz/index.vue';
 
 // import tdesign style
 import '@common/style/mobile/_reset.less';
@@ -16,6 +16,6 @@ import 'tdesign-site-components/lib/styles/prism-theme-dark.less';
 
 const app = createApp(App);
 
-app.component('CodeSandbox', CodeSandbox);
+app.component('Stackblitz', Stackblitz);
 
 app.use(TDesign).use(router).mount('#app');
