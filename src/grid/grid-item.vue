@@ -1,8 +1,18 @@
 <template>
   <div :class="rootClass" :style="rootStyle">
     <div :class="`${name}__image-box`">
-      <img v-if="image" :src="image" :class="`${name}__image`" :style="imgStyle" />
-      <!-- <t-node :content="imageContent"></t-node> -->
+      <t-badge
+        v-if="badgeProps"
+        :count="badgeProps.count"
+        :max-count="badgeProps.maxCount"
+        :dot="badgeProps.dot"
+        :content="badgeProps.content"
+        :size="badgeProps.size"
+        :offset="badgeProps.offset"
+      >
+        <img v-if="image" :src="image" :class="`${name}__image`" :style="imgStyle" />
+      </t-badge>
+      <img v-else-if="image" :src="image" :class="`${name}__image`" :style="imgStyle" />
     </div>
     <div :class="`${name}__text`" :style="textStyle">
       <div :class="`${name}__title`" :style="titleStyle">
@@ -15,8 +25,8 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, getCurrentInstance, computed, render, inject } from 'vue';
-import { renderTNode, renderContent, TNode, emitEvent } from '../shared';
+import { defineComponent, getCurrentInstance, computed, inject } from 'vue';
+import { renderTNode, TNode } from '../shared';
 
 import config from '../config';
 import gridItemprops from './grid-item-props';
@@ -37,24 +47,18 @@ export default defineComponent({
     const textContent = computed(() => renderTNode(internalInstance, 'text'));
     const descContent = computed(() => renderTNode(internalInstance, 'description'));
 
-    const rootClass = computed(() => [`${name}`]);
+    const rootClass = computed(() => [`${name}`, { [`${name}--bordered`]: border.value }]);
 
     const rootStyle = computed(() => {
       const percent = `${100 / +column.value}%`;
-      let borderStyle = {};
+      const borderStyle = {};
       if (border.value) {
-        if (typeof border.value === 'boolean') {
-          borderStyle = {
-            borderColor: '#f6f6f6',
-            borderWidth: '1px',
-            borderStyle: 'solid',
-          };
-        } else {
+        if (typeof border.value !== 'boolean') {
           const { color, width, style } = border;
           return {
-            borderColor: color || '#f6f6f6',
-            borderWidth: width || '1px',
-            borderStyle: style || 'solid',
+            borderColor: color,
+            borderWidth: width,
+            borderStyle: style,
           };
         }
       }

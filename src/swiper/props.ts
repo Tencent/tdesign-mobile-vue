@@ -24,10 +24,16 @@ export default {
   /** 当前轮播在哪一项（下标） */
   current: {
     type: Number,
+    default: undefined,
+  },
+  modelValue: {
+    type: Number,
+    default: undefined,
   },
   /** 当前轮播在哪一项（下标），非受控属性 */
   defaultCurrent: {
     type: Number,
+    default: 0,
   },
   /** 轮播滑动方向，包括横向滑动和纵向滑动两个方向 */
   direction: {

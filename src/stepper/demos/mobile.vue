@@ -5,7 +5,7 @@
     <tdesign-demo-block title="01 类型" summary="基础步进器">
       <div class="stepper-demo">
         <t-cell title="标题文字">
-          <t-stepper v-model.number="number1" :step="1" :min="0" :max="100" @change="onChange" />
+          <t-stepper v-model="number1" :step="1" :min="0" :max="100" @change="onChange" />
         </t-cell>
       </div>
     </tdesign-demo-block>
@@ -18,7 +18,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯步进器">
       <div class="stepper-pure-demo">
-        <t-stepper v-model.number="number3" theme="mode" :step="1" :min="0" :max="100" />
+        <t-stepper v-model.number="number3" theme="grey" :step="1" :min="0" :max="100" />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 类型" summary="步进器状态"> </tdesign-demo-block>
@@ -44,9 +44,9 @@
         </t-cell>
       </div>
       <div class="stepper-inline-demo">
-        <t-stepper v-model.number="number3" theme="mode" :step="1" :min="0" :max="100" disabled />
-        <t-stepper v-model.number="number6" theme="mode" :step="1" :min="0" :max="100" />
-        <t-stepper v-model.number="number7" theme="mode" :step="1" :min="0" :max="100" />
+        <t-stepper v-model.number="number3" theme="grey" :step="1" :min="0" :max="100" disabled />
+        <t-stepper v-model.number="number6" theme="grey" :step="1" :min="0" :max="100" />
+        <t-stepper v-model.number="number7" theme="grey" :step="1" :min="0" :max="100" />
       </div>
     </tdesign-demo-block>
   </div>

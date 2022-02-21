@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent, h } from 'vue';
-import { useEmitEvent } from '@/shared';
+import { useEmitEvent } from '../shared';
 import config from '../config';
 import { SidebarItem } from './drawer.interface';
 

@@ -73,13 +73,6 @@ export default {
           component: () => import('@/navbar/navbar.md'),
         },
         {
-          title: 'CountDown 倒计时',
-          name: 'CountDown',
-          meta: { docType: 'data' },
-          path: '/vue-mobile/components/count-down',
-          component: () => import('@/count-down/count-down.md'),
-        },
-        {
           title: 'Steps 步骤条',
           name: 'steps',
           meta: { docType: 'navigation' },
@@ -88,7 +81,7 @@ export default {
         },
         {
           title: 'TabBar 标签栏',
-          name: 'tabbar',
+          name: 'tab-bar',
           meta: { docType: 'navigation' },
           path: '/vue-mobile/components/tabbar',
           component: () => import('@/tab-bar/tab-bar.md'),
@@ -226,7 +219,7 @@ export default {
         },
         {
           title: 'CountDown 倒计时',
-          name: 'CountDown',
+          name: 'count-down',
           meta: { docType: 'data' },
           path: '/vue-mobile/components/count-down',
           component: () => import('@/count-down/count-down.md'),
@@ -300,6 +293,13 @@ export default {
           meta: { docType: 'data' },
           path: '/vue-mobile/components/grid',
           component: () => import('@/grid/grid.md'),
+        },
+        {
+          title: 'Sticky 吸顶容器',
+          name: 'sticky',
+          meta: { docType: 'data' },
+          path: '/vue-mobile/components/sticky',
+          component: () => import('@/sticky/sticky.md'),
         }
       ],
     },
@@ -316,7 +316,7 @@ export default {
         },
         {
           title: 'ActionSheet 动作面板',
-          name: 'actionsheet',
+          name: 'action-sheet',
           meta: { docType: 'message' },
           path: '/vue-mobile/components/actionsheet',
           component: () => import('@/action-sheet/action-sheet.md'),

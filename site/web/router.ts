@@ -1,7 +1,7 @@
 import { RouteRecordRaw, createRouter, createWebHistory, createWebHashHistory, RouterOptions } from 'vue-router';
-import siteConfig from './sites.config';
+import docsConfig from '../docs.config';
 
-const { docs } = siteConfig;
+const { docs } = docsConfig;
 
 function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   let docsRoutes: Array<RouteRecordRaw> = [];

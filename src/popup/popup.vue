@@ -19,7 +19,7 @@ import popupProps from './props';
 import TMask from '../mask';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, useEmitEvent } from '@/shared';
+import { useDefault, useEmitEvent } from '../shared';
 
 const { prefix } = config;
 

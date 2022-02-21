@@ -1,6 +1,5 @@
 import { App } from 'vue';
 
-import * as plugins from './plugins';
 import * as components from './components';
 
 const install = function (app: App, option?: Record<string, unknown>): void {

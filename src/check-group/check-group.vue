@@ -19,8 +19,8 @@ import { SetupContext, provide, ref, computed, defineComponent } from 'vue';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
-import { CheckboxOption } from '../checkbox/type';
-import { emitEvent } from '@/shared';
+import { CheckboxGroupValue, CheckboxOption, TdCheckboxGroupProps } from '../checkbox/type';
+import { useDefault } from '@/shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
@@ -35,10 +35,17 @@ export default defineComponent({
     checkbox,
   },
   props: CheckboxProps,
-  emits: ['update:value', 'change'],
+  emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: any, context: SetupContext) {
     const children = ref({});
-    const isALlSelected = ref(false);
+    const isAllSelected = ref(false);
+    const [groupCheckValue, setGroupCheckValue] = useDefault<CheckboxGroupValue, TdCheckboxGroupProps>(
+      props,
+      context.emit,
+      'value',
+      'change',
+    );
+
     const checkedValues = computed(() => props.value || []);
     // eslint-disable-next-line vue/no-setup-props-destructure
     const groupOptions = computed(() => {
@@ -78,10 +85,8 @@ export default defineComponent({
       if (index !== undefined && index === -1 && inMax) {
         const tempValues = checkedValues?.value?.concat(value);
         const resultValues = [...Array.from(tempValues)];
-        isALlSelected.value = Object.keys(children?.value).length === resultValues.length;
-        emitEvent(props, context, 'update:value', resultValues, { e });
-        emitEvent(props, context, 'change', resultValues, { e });
-        props?.onChange && props?.onChange(resultValues, { e });
+        isAllSelected.value = Object.keys(children?.value).length === resultValues.length;
+        setGroupCheckValue(resultValues as CheckboxGroupValue, { e });
       }
     };
     /**
@@ -92,12 +97,10 @@ export default defineComponent({
     const uncheck = (name: string, e: Event) => {
       const index = checkedValues?.value.indexOf(name);
       if (index !== undefined && index !== -1) {
-        isALlSelected.value = false;
+        isAllSelected.value = false;
         const tempValues = checkedValues?.value.slice(0, index);
         const resultValues = tempValues.concat(checkedValues?.value.slice(index + 1));
-        emitEvent(props, context, 'update:value', resultValues, { e });
-        emitEvent(props, context, 'change', resultValues, { e });
-        props?.onChange && props?.onChange(resultValues, { e });
+        setGroupCheckValue(resultValues as CheckboxGroupValue, { e });
       }
     };
     /**
@@ -119,7 +122,7 @@ export default defineComponent({
      * @return: void
      */
     const toggleAll = (checked: boolean) => {
-      const names = Object.keys(children.value).filter((name: string) => {
+      const resultValues = Object.keys(children.value).filter((name: string) => {
         const child = children.value[name];
         const isChecked = !!checkedValues?.value?.indexOf(name);
         if (child.disabled) {
@@ -128,9 +131,8 @@ export default defineComponent({
         // eslint-disable-next-line no-nested-ternary
         return checked === false ? false : !checked ? !isChecked : true;
       });
-      isALlSelected.value = !!names.length;
-      emitEvent(props, context, 'update:value', names);
-      emitEvent(props, context, 'change', names);
+      isAllSelected.value = !!resultValues.length;
+      setGroupCheckValue(resultValues as CheckboxGroupValue);
     };
 
     provide('rootGroup', {
@@ -142,7 +144,7 @@ export default defineComponent({
       uncheck,
       toggle,
       toggleAll,
-      isALlSelected,
+      isAllSelected,
     });
     return {
       prefix,

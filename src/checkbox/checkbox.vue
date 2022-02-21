@@ -82,42 +82,6 @@ const { prefix } = config;
 const name = `${prefix}-checkbox`;
 
 /**
- * @description: 返回 Icon 的对应的类名
- * @param {flagName} 类名前缀
- * @param {isChecked} 是否选中
- * @param {props} props属性对象
- * @param {rootGroup} Group注入的对象
- * @return: 返回IconClass对象
- */
-const getIconClasses = (flagName: string, isChecked: any, content: SetupContext, props: any, rootGroup: any) =>
-  computed(() => {
-    const classes: Array<string> = [];
-    classes.push(`${flagName}__icon-left`);
-    if (isChecked.value) {
-      classes.push(`${prefix}-is-checked`);
-    }
-    if (rootGroup?.disabled || props?.disabled) {
-      classes.push(`${prefix}-is-disabled`);
-    }
-    return classes;
-  });
-/**
- * @description: 返回标题对应的类名
- * @param {flagName} 类名前缀
- * @param {props} props属性对象
- * @param {rootGroup} Group注入的对象
- * @return: 返回TitleClass对象
- */
-const getTitleClasses = (flagName: string, props: any, rootGroup: any) =>
-  computed(() => {
-    const classes: Array<string> = [];
-    classes.push(`${flagName}__content-title`);
-    if (rootGroup?.disabled || props.disabled) {
-      classes.push(`${prefix}-is-disabled`);
-    }
-    return classes;
-  });
-/**
  * @description: 判断当前checkbox是否选中
  * @param {props} props属性对象
  * @param {rootGroup} Group注入的对象
@@ -125,22 +89,6 @@ const getTitleClasses = (flagName: string, props: any, rootGroup: any) =>
  */
 const getIsCheck = (innerValue: any, rootGroup: any) =>
   computed(() => rootGroup && rootGroup?.checkedValues?.value?.indexOf(innerValue.value) !== -1);
-
-const getCheckedIconClass = (flagName: string, isChecked: any, singleChecked: boolean, disabled: boolean) =>
-  computed(() => {
-    let checkClass = '';
-    if ((singleChecked || isChecked) && !disabled) {
-      checkClass = `${flagName}__checked-icon`;
-    } else {
-      checkClass = `${flagName}__checked__disable-icon`;
-    }
-    return checkClass;
-  });
-
-const getUnCheckedIconClass = (flagName: string) => {
-  const unCheckClass = `${flagName}__uncheck-icon`;
-  return unCheckClass;
-};
 
 /**
  * @description: 设置checkbox点击回调
@@ -180,7 +128,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: CheckboxProps,
-  emits: ['update:value', 'change'],
+  emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: any, context: SetupContext) {
     const [innerValue] = useDefault<CheckboxOption, TdCheckboxProps>(props, context.emit, 'value', 'change');
     const defaultCheck = h(CheckCircleFilledIcon);
@@ -200,18 +148,38 @@ export default defineComponent({
     onUnmounted(() => {
       rootGroup?.unregister(props);
     });
+
     const isChecked = getIsCheck(innerValue, rootGroup);
-    const iconClasses = getIconClasses(flagName, isChecked, context, props, rootGroup);
-    const titleClasses = getTitleClasses(flagName, props, rootGroup);
+
+    const iconClasses = computed(() => [
+      `${flagName}__icon-left`,
+      {
+        [`${prefix}-is-checked`]: isChecked.value,
+        [`${prefix}-is-disabled`]: rootGroup?.disabled || props?.disabled,
+      },
+    ]);
+
+    const titleClasses = computed(() => [
+      `${flagName}__content-title`,
+      {
+        [`${prefix}-is-disabled`]: rootGroup?.disabled || props.disabled,
+      },
+    ]);
+
+    const checkedIconClass = computed(() => [
+      {
+        [`${flagName}__checked-icon`]: (singleChecked || isChecked) && !(rootGroup?.disabled || props?.disabled),
+        [`${flagName}__checked__disable-icon`]:
+          !(singleChecked || isChecked) && !(rootGroup?.disabled || props?.disabled),
+      },
+    ]);
+
+    const unCheckedIconClass = `${flagName}__uncheck-icon`;
+
     const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
-    const checkedIconClass = getCheckedIconClass(
-      flagName,
-      isChecked,
-      singleChecked,
-      rootGroup?.disabled || props?.disabled,
-    );
-    const unCheckedIconClass = getUnCheckedIconClass(flagName);
+
     const { state, toggle } = useToggle(checkboxCheckVal, isChecked.value);
+
     const isALlSelected = computed(() => rootGroup?.isALlSelected);
 
     const checkBoxOrgChange = (e: Event) => {

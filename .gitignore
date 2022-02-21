@@ -13,7 +13,7 @@ esm/
 lib/
 dist/
 typings/
-docs/public/
+site/public/
 results/
 
 # lock

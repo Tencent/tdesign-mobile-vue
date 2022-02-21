@@ -2,14 +2,13 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-08-31 22:56:24
  * */
 
 import { TdStepperProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 禁用 */
+  /** 禁用全部操作 */
   disabled: Boolean,
   /** 禁用输入框 */
   disableInput: Boolean,
@@ -27,7 +26,7 @@ export default {
     type: Number,
     default: 0,
   },
-  /** 步进 */
+  /** 步长 */
   step: {
     type: Number,
     default: 1,
@@ -37,17 +36,27 @@ export default {
     type: String as PropType<TdStepperProps['theme']>,
     default: 'normal' as TdStepperProps['theme'],
     validator(val: TdStepperProps['theme']): boolean {
-      return ['normal', 'mode'].includes(val);
+      return ['normal', 'grey'].includes(val);
     },
   },
   /** 值 */
   value: {
     type: [String, Number] as PropType<TdStepperProps['value']>,
-    default: 0,
+    default: undefined,
+  },
+  modelValue: {
+    type: [String, Number] as PropType<TdStepperProps['value']>,
+    default: undefined,
   },
   /** 值，非受控属性 */
   defaultValue: {
     type: [String, Number] as PropType<TdStepperProps['defaultValue']>,
     default: 0,
   },
+  /** 输入框失去焦点时触发 */
+  onBlur: Function as PropType<TdStepperProps['onBlur']>,
+  /** 数值发生变更时触发 */
+  onChange: Function as PropType<TdStepperProps['onChange']>,
+  /** 数值超出限制时触发 */
+  onOverlimit: Function as PropType<TdStepperProps['onOverlimit']>,
 };

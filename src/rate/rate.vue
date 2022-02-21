@@ -28,7 +28,7 @@ import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
 import rateProps from './props';
 import config from '../config';
 import { TdRateProps } from './type';
-import { useDefault } from '@/shared';
+import { useDefault } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;

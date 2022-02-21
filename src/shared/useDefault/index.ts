@@ -37,7 +37,6 @@ export function useDefault<V, T>(props: T, emit: SetupContext['emit'], key: stri
   } else {
     innerValue.value = props[defaultName];
   }
-  console.log('innervalue', innerValue.value, isUsedKey, isUsedModelValue);
   watchEffect(() => {
     if (isUsedModelValue) {
       innerValue.value = props[modelValue];

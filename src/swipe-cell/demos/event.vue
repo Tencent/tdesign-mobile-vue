@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <t-swipe-cell :right="initData.btns" @onClick="(value) => handleClick(value)">
+    <t-swipe-cell :right="initData.btns" @click="handleClick">
       <t-cell title="左右都有内容" note="辅助信息"></t-cell>
       <template #left>
         <t-button @click="handleClickLeft">选择</t-button>
