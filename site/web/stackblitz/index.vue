@@ -19,7 +19,7 @@
         </svg>
       </div>
     </form>
-    <span>在 CodeSanbox 中打开</span>
+    <span>在 Stackblitz 中打开</span>
   </td-tooltip>
 </template>
 
