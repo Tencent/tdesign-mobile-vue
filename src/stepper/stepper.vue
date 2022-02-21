@@ -12,7 +12,7 @@
       pattern="[0-9]*"
       :disabled="disableInput || disabled"
       :readonly="disableInput"
-      @blur="onBlur"
+      @blur="handleBlur"
     />
     <span
       :class="[`${name}__plus`, `${disabled || stepperValue >= max ? 't-is-disabled' : ''}`]"
@@ -26,7 +26,7 @@ import { toRefs, computed, reactive, defineComponent, SetupContext } from 'vue';
 import config from '../config';
 import StepperProps from './props';
 import CLASSNAMES from '../shared/constants';
-import { emitEvent, useDefault } from '../shared';
+import { useDefault, useEmitEvent } from '../shared';
 import { TdStepperProps } from './type';
 
 const { prefix } = config;
@@ -38,6 +38,7 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props, context: SetupContext) {
     const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
+    const emitEvent = useEmitEvent(props, context.emit);
 
     const { min, max, inputWidth, theme } = toRefs(props);
     const isPureMode = theme.value === 'grey';
@@ -46,10 +47,8 @@ export default defineComponent({
     const format = (val: number) =>
       Math.min(Math.max(min.value, val, Number.MIN_SAFE_INTEGER), max.value, Number.MAX_SAFE_INTEGER);
     const plusValue = () => {
-      console.log(stepperValue.value, props.step);
       if (stepperValue.value + props.step > props.max || props.disabled) return;
       stepperValue.value += props.step;
-      console.log(stepperValue.value, props.step);
     };
     const minusValue = () => {
       if (stepperValue.value - props.step < props.min || props.disabled) return;
@@ -63,8 +62,9 @@ export default defineComponent({
         stepperValue.value = format(Number(value));
       }
     };
-    const onBlur = (e: Event) => {
+    const handleBlur = (e: FocusEvent) => {
       changeValue(e);
+      emitEvent('blur');
     };
 
     return {
@@ -75,7 +75,7 @@ export default defineComponent({
       plusValue,
       changeValue,
       inputStyle,
-      onBlur,
+      handleBlur,
       isPureMode,
       ...toRefs(props),
     };
