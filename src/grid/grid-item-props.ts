@@ -25,7 +25,7 @@
      type: String as PropType<TdGridItemProps['layout']>,
      default: 'vertical' as TdGridItemProps['layout'],
      validator(val: TdGridItemProps['layout']): boolean {
-       return ['vertical', 'horizontal'].includes(val);
+       return ['vertical', 'horizontal'].includes(val!);
      },
    },
    /** 文本，可以通过 Props 传入文本，也可以自定义标题节点 */

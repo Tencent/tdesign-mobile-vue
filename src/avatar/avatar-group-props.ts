@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdAvatarGroupProps['cascading']>,
     default: 'right-up' as TdAvatarGroupProps['cascading'],
     validator(val: TdAvatarGroupProps['cascading']): boolean {
-      return ['left-up', 'right-up'].includes(val);
+      return ['left-up', 'right-up'].includes(val!);
     },
   },
   /** 头像数量超出时，会出现一个头像折叠元素。该元素内容可自定义。默认为 `+N`。示例：`+5`，`...`, `更多` */

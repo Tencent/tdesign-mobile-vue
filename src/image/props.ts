@@ -22,7 +22,7 @@ export default {
     type: String as PropType<TdImageProps['fit']>,
     default: 'fill' as TdImageProps['fit'],
     validator(val: TdImageProps['fit']): boolean {
-      return ['contain', 'cover', 'fill', 'none', 'scale-down'].includes(val);
+      return ['contain', 'cover', 'fill', 'none', 'scale-down'].includes(val!);
     },
   },
   /** 是否开启图片懒加载 */
@@ -41,7 +41,7 @@ export default {
     type: String as PropType<TdImageProps['shape']>,
     default: 'round' as TdImageProps['shape'],
     validator(val: TdImageProps['shape']): boolean {
-      return ['circle', 'round', 'square'].includes(val);
+      return ['circle', 'round', 'square'].includes(val!);
     },
   },
   /** 图片链接 */

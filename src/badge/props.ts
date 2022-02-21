@@ -38,7 +38,7 @@ export default {
     type: String as PropType<TdBadgeProps['shape']>,
     default: 'circle' as TdBadgeProps['shape'],
     validator(val: TdBadgeProps['shape']): boolean {
-      return ['circle', 'round', 'ribbon'].includes(val);
+      return ['circle', 'round', 'ribbon'].includes(val!);
     },
   },
   /** 当数值为 0 时，是否展示徽标 */
@@ -48,7 +48,7 @@ export default {
     type: String as PropType<TdBadgeProps['size']>,
     default: 'medium' as TdBadgeProps['size'],
     validator(val: TdBadgeProps['size']): boolean {
-      return ['small', 'medium'].includes(val);
+      return ['small', 'medium'].includes(val!);
     },
   },
 };

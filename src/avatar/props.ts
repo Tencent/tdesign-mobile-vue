@@ -33,7 +33,7 @@ export default {
     type: String as PropType<TdAvatarProps['shape']>,
     default: 'circle' as TdAvatarProps['shape'],
     validator(val: TdAvatarProps['shape']): boolean {
-      return ['circle', 'round'].includes(val);
+      return ['circle', 'round'].includes(val!);
     },
   },
   /** 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large */

@@ -18,7 +18,7 @@ export default {
     type: String as PropType<TdPopupProps['placement']>,
     default: 'top' as TdPopupProps['placement'],
     validator(val: TdPopupProps['placement']): boolean {
-      return ['top', 'left', 'right', 'bottom', 'center'].includes(val);
+      return ['top', 'left', 'right', 'bottom', 'center'].includes(val!);
     },
   },
   /** 是否显示遮罩层 */
