@@ -1,14 +1,7 @@
 <template>
   <div :class="classes">
-    <div v-if="loadingValue" :class="`${name}__status`">
-      <slot name="loading">
-        <t-icon-ellipsis />
-      </slot>
-    </div>
-    <div v-else-if="errorValue" :class="`${name}__status`">
-      <slot name="error">
-        <t-icon-close />
-      </slot>
+    <div v-if="loadingValue || errorValue" :class="`${name}__status`">
+      <t-node :content="loadingValue ? loadingContent : errorContent" />
     </div>
     <img
       ref="imageDOM"
@@ -23,11 +16,10 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent, SetupContext } from 'vue';
+import { ref, computed, defineComponent, SetupContext, getCurrentInstance, h } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
-import { EllipsisIcon as TIconEllipsis, CloseIcon as TIconClose } from 'tdesign-icons-vue-next';
-
-import { useEmitEvent } from '../shared';
+import { EllipsisIcon, CloseIcon } from 'tdesign-icons-vue-next';
+import { useEmitEvent, renderTNode, TNode } from '../shared';
 import ImageProps from './props';
 import config from '../config';
 
@@ -36,23 +28,29 @@ const name = `${prefix}-image`;
 
 export default defineComponent({
   name,
-  components: { TIconEllipsis, TIconClose },
+  components: { TNode },
   props: ImageProps,
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
-    const imageDOM = ref();
-    // 图片懒加载
-    const { stop } = useIntersectionObserver(imageDOM, ([{ isIntersecting }], observerElement) => {
-      if (isIntersecting && props.lazy) {
-        // 停止监听
-        stop();
-        realSrc.value = props.src;
+
+    // 默认loading和error状态展示，slot支持Node和Function
+    const internalInstance = getCurrentInstance();
+    const loadingContent = computed(() => {
+      if (context.slots?.loading) {
+        return renderTNode(internalInstance, 'loading');
       }
+      return h(EllipsisIcon);
     });
+    const errorContent = computed(() => {
+      if (context.slots?.error) {
+        return renderTNode(internalInstance, 'error');
+      }
+      return h(CloseIcon);
+    });
+
+    // 记录图片的loading、error状态
     const loadingValue = ref(true);
     const errorValue = ref(false);
-
-    const realSrc = ref(props.lazy ? '' : props.src);
 
     // 图片自定义样式
     const imageStyles = computed(() => {
@@ -61,17 +59,29 @@ export default defineComponent({
         objectPosition: props.position,
       };
     });
-
     const classes = computed(() => ({
       [`${name}`]: true,
       [`${name}--${props.shape}`]: true,
     }));
 
+    // 图片懒加载
+    const imageDOM = ref();
+    const realSrc = ref(props.lazy ? '' : props.src);
+    const { stop } = useIntersectionObserver(imageDOM, ([{ isIntersecting }], observerElement) => {
+      if (isIntersecting && props.lazy) {
+        // 停止监听
+        stop();
+        realSrc.value = props.src;
+      }
+    });
+
+    // 图片加载完成回调
     const handleImgLoadCompleted = (e: Event) => {
       emitEvent('load', e);
       loadingValue.value = false;
     };
 
+    // 图片加载失败回调
     const handleImgLoadError = (e: Event) => {
       if (realSrc.value === '') {
         return;
@@ -82,6 +92,8 @@ export default defineComponent({
     };
     return {
       imageDOM,
+      loadingContent,
+      errorContent,
       name,
       classes,
       imageStyles,
