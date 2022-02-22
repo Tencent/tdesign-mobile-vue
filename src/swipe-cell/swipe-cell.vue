@@ -73,9 +73,8 @@ import {
 } from 'vue';
 import { onClickOutside, useSwipe } from '@vueuse/core'; // https://vueuse.org/core/useswipe/
 import config from '../config';
-import { emitEvent } from '../shared/emit';
 import props from './props';
-import { renderContent, renderTNode, TNode } from '../shared';
+import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
@@ -94,6 +93,7 @@ export default defineComponent({
   props,
   emits: ['click', 'change'],
   setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const swipeContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const swipeLeftMenu = computed(() => renderTNode(internalInstance, 'left'));
@@ -195,12 +195,12 @@ export default defineComponent({
       if (direction === 'toLeft') {
         initData.pos = -initData.rightWidth;
         if (initData.rightWidth) {
-          emitEvent(props, context, 'change', 'right');
+          emitEvent('change', 'right');
         }
       } else {
         initData.pos = initData.leftWidth;
         if (initData.leftWidth) {
-          emitEvent(props, context, 'change', 'left');
+          emitEvent('change', 'left');
         }
       }
     };
@@ -211,13 +211,10 @@ export default defineComponent({
       initData.moving = true;
       initData.status = 'close';
       initData.pos = 0;
-      emitEvent(props, context, 'change', '');
+      emitEvent('change', '');
     };
     const handleClickBtn = ({ action, source }: { action: { [key: string]: any }; source: String }) => {
-      emitEvent(props, context, 'click', {
-        action,
-        source,
-      });
+      emitEvent('click', { action, source });
       if (autoBack) {
         close();
       }
