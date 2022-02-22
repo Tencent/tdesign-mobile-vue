@@ -123,7 +123,7 @@ export default defineComponent({
       if (pickerColumns.value.includes('second')) {
         formatTime = 'HH:mm:ss';
       }
-      return (formatDate + ' ' + formatTime).trim();
+      return `${formatDate} ${formatTime}`.trim();
     });
 
     const defaultPickerValue = computed(() => {
@@ -138,8 +138,6 @@ export default defineComponent({
         }
         return v;
       });
-      console.info('11111111')
-      console.info(value)
       return value;
     });
 
@@ -279,19 +277,14 @@ export default defineComponent({
     });
 
     const getOutputValue = (v = undefined) => {
-            console.info('8888888888')
-            console.info(data.pickerValue);
       let value = v;
       if (value === undefined) {
         value = dayjs().month(0).date(1).hour(0).minute(0).second(0);
         pickerColumns.value.forEach((mode, index) => {
-          console.info(mode)
           value = value[mode](data.pickerValue[index]) as dayjs.Dayjs;
         });
       }
 
-      console.info(value)
-      console.info(modeFormat.value)
       // 当指定format为空时，输出类型尽量保持与输入类型格式相同
       let output: DateValue = '';
       if (props.format) {
