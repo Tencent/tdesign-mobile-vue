@@ -14,7 +14,6 @@
         <template v-for="(btn, index) of left" :key="index">
           <t-button
             :class="btn.className || ''"
-            :size="btn.size || 'small'"
             :style="btn.style || 'height: 100%'"
             :theme="btn.theme || 'primary'"
             @click="
@@ -24,7 +23,7 @@
               })
             "
           >
-            {{ btn.content }}
+            {{ btn.text }}
           </t-button>
         </template>
       </div>
@@ -41,7 +40,6 @@
         <template v-for="(btn, index) of right" :key="index">
           <t-button
             :class="btn.className || ''"
-            :size="btn.size || 'small'"
             :style="btn.style || 'height: 100%'"
             :theme="btn.theme || 'primary'"
             @click="
@@ -51,7 +49,7 @@
               })
             "
           >
-            {{ btn.content }}
+            {{ btn.text }}
           </t-button>
         </template>
       </div>
@@ -75,6 +73,7 @@ import { onClickOutside, useSwipe } from '@vueuse/core'; // https://vueuse.org/c
 import config from '../config';
 import props from './props';
 import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
+import { SwipeActionItem } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
@@ -211,13 +210,17 @@ export default defineComponent({
       initData.moving = true;
       initData.status = 'close';
       initData.pos = 0;
-      emitEvent('change', '');
+      emitEvent('change', undefined);
     };
-    const handleClickBtn = ({ action, source }: { action: { [key: string]: any }; source: String }) => {
-      emitEvent('click', { action, source });
+    const handleClickBtn = ({ action, source }: { action: SwipeActionItem; source: String }) => {
       if (autoBack) {
         close();
       }
+      if (action.onClick) {
+        action.onClick();
+        return;
+      }
+      emitEvent('click', { action, source });
     };
     return {
       ...toRefs(props),

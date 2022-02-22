@@ -19,7 +19,7 @@ import { defineComponent, reactive } from 'vue';
 import Toast from '../../toast/index';
 
 interface InitData {
-  expanded: 'left' | 'right' | '';
+  expanded: 'left' | 'right' | undefined;
 }
 export default defineComponent({
   setup() {
@@ -33,7 +33,7 @@ export default defineComponent({
       initData.expanded = value;
     };
     const handleChangeSwitch = (value: boolean) => {
-      initData.expanded = value ? 'right' : '';
+      initData.expanded = value ? 'right' : undefined;
     };
     return {
       initData,
