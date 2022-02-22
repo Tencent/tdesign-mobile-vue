@@ -1,15 +1,11 @@
 import _Stepper from './stepper.vue';
-import { withInstall, WithInstallType, mapProps } from '../shared';
+import { withInstall, WithInstallType } from '../shared';
+import { TdStepperProps } from './type';
 
 import './style';
 
-const LocalStepper = mapProps([
-  {
-    name: 'value',
-    event: 'change',
-    alias: ['modelValue'],
-  },
-])(_Stepper);
+export * from './type';
+export type StepperProps = TdStepperProps;
 
-const Stepper: WithInstallType<typeof LocalStepper> = withInstall(LocalStepper);
+const Stepper: WithInstallType<typeof _Stepper> = withInstall(_Stepper);
 export default Stepper;

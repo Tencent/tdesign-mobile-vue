@@ -1,7 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
-      :default-value="defaultPickerValue"
+      :default-value="data.pickerValue"
       :value="data.pickerValue"
       :title="title"
       @change="onChange"
@@ -52,11 +52,14 @@
 import { ref, reactive, watchEffect, computed, defineComponent, ComputedRef } from 'vue';
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
+import { useEmitEvent, useDefault } from '../shared';
 import config from '../config';
 import DateTimePickerProps from './props';
-import { DateValue, TimeModeValues, DisableDateObj } from './type';
+import { DateValue, TimeModeValues, DisableDateObj, TdDateTimePickerProps } from './type';
 
 dayjs.extend(weekday);
+dayjs.extend(customParseFormat);
 
 const { prefix } = config;
 const name = `${prefix}-date-time-picker`;
@@ -67,8 +70,10 @@ const ALL_MODES = [...DATE_MODES, ...TIME_MODES];
 export default defineComponent({
   name,
   props: DateTimePickerProps,
-  emits: ['change', 'cancel', 'confirm', 'update:modelValue', 'columnChange'],
+  emits: ['change', 'update:value', 'update:modelValue', 'cancel', 'confirm', 'columnChange'],
   setup(props, context) {
+    const emitEvent = useEmitEvent(props, context.emit);
+    const [innerValue] = useDefault<DateValue, TdDateTimePickerProps>(props, context.emit, 'value', 'change');
     const className = computed(() => [`${name}`]);
 
     // 根据props.mode判断展示哪些列
@@ -94,17 +99,51 @@ export default defineComponent({
       return [...dateModes, ...timeModes];
     });
 
+    // 根据mode参数推断出的format，优先级低于format参数
+    const modeFormat = computed(() => {
+      let formatDate = '';
+      let formatTime = '';
+
+      if (pickerColumns.value.includes('year')) {
+        formatDate = 'YYYY';
+      }
+      if (pickerColumns.value.includes('month')) {
+        formatDate = 'YYYY-MM';
+      }
+      if (pickerColumns.value.includes('date')) {
+        formatDate = 'YYYY-MM-DD';
+      }
+
+      if (pickerColumns.value.includes('hour')) {
+        formatTime = 'HH';
+      }
+      if (pickerColumns.value.includes('minute')) {
+        formatTime = 'HH:mm';
+      }
+      if (pickerColumns.value.includes('second')) {
+        formatTime = 'HH:mm:ss';
+      }
+      return `${formatDate} ${formatTime}`.trim();
+    });
+
     const defaultPickerValue = computed(() => {
-      const dayjsValueProps = dayjs(props.value as any);
+      const dayjsValueDefault = dayjs();
+
+      const formats = [props.format, modeFormat.value];
+      const dayjsValueProps = dayjs(innerValue.value as any, formats, 'es', true);
       const value = pickerColumns.value.map((mode) => {
-        return dayjsValueProps[mode]();
+        let v = dayjsValueProps[mode]();
+        if (v === undefined || v == null || isNaN(v)) {
+          v = dayjsValueDefault[mode]();
+        }
+        return v;
       });
       return value;
     });
 
     const defaultModeValue = computed(() => {
-      const dayjsValueDefault = dayjs().month(0).date(1).hour(0).minute(0).second(0);
-      const dayjsValueProps = dayjs(props.value as any);
+      const dayjsValueDefault = dayjs();
+      const dayjsValueProps = dayjs(innerValue.value as any);
       const value: Record<TimeModeValues, number> = Object.create({});
 
       ALL_MODES.forEach((mode) => {
@@ -253,22 +292,7 @@ export default defineComponent({
       } else if (typeof props.value === 'number') {
         output = value.unix();
       } else {
-        let format = '';
-        if (
-          pickerColumns.value.includes('year') ||
-          pickerColumns.value.includes('month') ||
-          pickerColumns.value.includes('date')
-        ) {
-          format += 'YYYY-MM-DD';
-        }
-        if (
-          pickerColumns.value.includes('hour') ||
-          pickerColumns.value.includes('minute') ||
-          pickerColumns.value.includes('second')
-        ) {
-          format += ' HH:mm:ss';
-        }
-        output = value.format(format.trim());
+        output = value.format(modeFormat.value);
       }
       return output;
     };
@@ -276,17 +300,17 @@ export default defineComponent({
     const onConfirm = (e: MouseEvent) => {
       const outputValue = getOutputValue();
 
-      context.emit('change', outputValue);
-      context.emit('update:modelValue', outputValue);
-      context.emit('confirm', { value: outputValue, e });
+      emitEvent('change', outputValue);
+      emitEvent('update:modelValue', outputValue);
+      emitEvent('confirm', { value: outputValue, e });
     };
 
     const onCancel = (e: MouseEvent) => {
       // TODO: columnChange事件
-      context.emit('cancel', { e });
+      emitEvent('cancel', { e });
     };
 
-    const onChange = (v) => {
+    const onChange = (v: number[]) => {
       if (JSON.stringify(data.pickerValue) !== JSON.stringify(v)) {
         data.pickerValue = v;
 
@@ -296,7 +320,7 @@ export default defineComponent({
       }
     };
 
-    const onColumnChange = (value, index) => {
+    const onColumnChange = (value: number, index: number) => {
       context.emit('columnChange', {
         value,
         index,

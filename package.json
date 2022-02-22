@@ -38,7 +38,7 @@
     "lint:fix": "npm run lint:fix-prettier && npm run lint:fix-eslint",
     "lint:fix-eslint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore --fix",
     "lint:fix-prettier": "prettier ./ --ignore-path .gitignore --ignore-path .eslintignore --write './*.{vue,ts,tsx}' --ignore-unknown",
-    "lint:vue": "vue-tsc --noEmit",
+    "lint:vue": "vue-tsc --noEmit -p tsconfig.build.json",
     "update:coverage-badge": "node scripts/test/generate-coverage.js",
     "changelog": "publish-cli changelog",
     "robot": "publish-cli robot-msg",

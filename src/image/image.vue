@@ -1,7 +1,7 @@
 <template>
   <div :class="classes">
     <div v-if="loadingValue || errorValue" :class="`${name}__status`">
-      <t-node :content="loadingValue ? loadingContent : errorContent" />
+      <t-node :content="statusContent" />
     </div>
     <img
       ref="imageDOM"
@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent, SetupContext, getCurrentInstance, h } from 'vue';
+import { ref, computed, defineComponent, SetupContext, getCurrentInstance, h, watch } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { EllipsisIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { useEmitEvent, renderTNode, TNode } from '../shared';
@@ -35,17 +35,20 @@ export default defineComponent({
 
     // 默认loading和error状态展示，slot支持Node和Function
     const internalInstance = getCurrentInstance();
-    const loadingContent = computed(() => {
-      if (context.slots?.loading) {
+    const statusContent = computed(() => {
+      if (context.slots?.loading && loadingValue.value) {
         return renderTNode(internalInstance, 'loading');
       }
-      return h(EllipsisIcon);
-    });
-    const errorContent = computed(() => {
-      if (context.slots?.error) {
+      if (!context.slots?.loading && loadingValue.value) {
+        return h(EllipsisIcon);
+      }
+      if (context.slots?.error && errorValue.value) {
         return renderTNode(internalInstance, 'error');
       }
-      return h(CloseIcon);
+      if (!context.slots?.error && errorValue.value) {
+        return h(CloseIcon);
+      }
+      return '';
     });
 
     // 记录图片的loading、error状态
@@ -92,8 +95,7 @@ export default defineComponent({
     };
     return {
       imageDOM,
-      loadingContent,
-      errorContent,
+      statusContent,
       name,
       classes,
       imageStyles,

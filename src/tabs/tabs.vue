@@ -111,7 +111,7 @@ export default defineComponent({
         console.log(tab);
         if (!tab) return;
         const line = navLine.value;
-        if (placement.value === 'left' || placement.value === 'top') {
+        if (placement.value === 'left') {
           lineStyle.value = `transform: translateY(${tab.offsetTop}px);${
             props.animation ? `transition-duration:${props.animation.duration}ms` : ''
           }`;
