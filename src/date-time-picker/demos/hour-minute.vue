@@ -24,7 +24,7 @@ export default defineComponent({
       hm: false,
     });
     const text = reactive({
-      hm: '13:20',
+      hm: '12:01',
     });
 
     const onChange = (value: DateValue) => {

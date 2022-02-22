@@ -24,7 +24,7 @@ export default defineComponent({
       ym: false,
     });
     const text = reactive({
-      ym: '',
+      ym: '2020-08',
     });
 
     const onChange = (value: DateValue) => {

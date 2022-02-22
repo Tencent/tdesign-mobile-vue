@@ -24,7 +24,7 @@ export default defineComponent({
       ymd: false,
     });
     const text = reactive({
-      ymd: '2022-01-09',
+      ymd: '2020-08-10',
     });
 
     const onChange = (value: DateValue) => {

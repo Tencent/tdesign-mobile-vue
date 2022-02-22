@@ -7,7 +7,7 @@
         :mode="['year', 'month', 'date']"
         title="选择日期"
         :disable-date="{
-          before: '2021-05-15',
+          before: '2019-05-15',
           after: '2022-08-20',
         }"
         @change="onChange"
@@ -28,7 +28,7 @@ export default defineComponent({
       ymd2: false,
     });
     const text = reactive({
-      ymd2: '2022-01-09',
+      ymd2: '2020-08-10',
     });
 
     const onChange = (value: DateValue) => {
