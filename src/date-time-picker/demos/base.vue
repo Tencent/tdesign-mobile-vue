@@ -25,14 +25,14 @@ export default defineComponent({
       ymdhms: false,
     });
     const text = reactive({
-      ymdhms: '',
+      ymdhms: '2020-08-10 12:50:00',
     });
 
     const onChange = (value: DateValue) => {
       console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = ({ value, index }: { value: DateValue, index: number}) => {
+    const onColumnChange = ({ value, index }: { value: DateValue; index: number }) => {
       console.log('date-time-picker:columnChange', value, index);
     };
 

@@ -1,6 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
+      v-if="pickerColumns.includes('year') || pickerColumns.includes('month') || pickerColumns.includes('date')"
       :default-value="data.pickerValue"
       :value="data.pickerValue"
       :title="title"
@@ -11,37 +12,65 @@
       <t-picker-item
         v-if="pickerColumns.includes('year')"
         :options="yearOptions"
-        :formatter="(val) => `${val}年`"
+        :formatter="formatLabel('year')"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('month')"
         :options="monthOptions"
-        :formatter="(val) => `${val + 1}月`"
+        :formatter="formatLabel('month')"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('date')"
         :options="dateOptions"
-        :formatter="(val) => `${val}日${showWeek ? getWeekdayText(val) : ''}`"
+        :formatter="formatLabel('date')"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('hour')"
         :options="hourOptions"
-        :formatter="(val) => `${val}时`"
+        :formatter="formatLabel('hour')"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('minute')"
         :options="minuteOptions"
-        :formatter="(val) => `${val}分`"
+        :formatter="formatLabel('minute')"
         @change="onColumnChange"
       />
       <t-picker-item
         v-if="pickerColumns.includes('second')"
         :options="secondOptions"
-        :formatter="(val) => `${val}秒`"
+        :formatter="formatLabel('second')"
+        @change="onColumnChange"
+      />
+    </t-picker>
+    <t-picker
+      v-else
+      :default-value="data.pickerValue"
+      :value="data.pickerValue"
+      :title="title"
+      @change="onChange"
+      @confirm="onConfirm"
+      @cancel="onCancel"
+    >
+      <t-picker-item
+        v-if="pickerColumns.includes('hour')"
+        :options="hourOptions"
+        :formatter="formatLabel('hour')"
+        @change="onColumnChange"
+      />
+      <t-picker-item
+        v-if="pickerColumns.includes('minute')"
+        :options="minuteOptions"
+        :formatter="formatLabel('minute')"
+        @change="onColumnChange"
+      />
+      <t-picker-item
+        v-if="pickerColumns.includes('second')"
+        :options="secondOptions"
+        :formatter="formatLabel('second')"
         @change="onColumnChange"
       />
     </t-picker>
@@ -49,7 +78,7 @@
 </template>
 
 <script lang="ts">
-import { ref, reactive, watchEffect, computed, defineComponent, ComputedRef } from 'vue';
+import { ref, reactive, watchEffect, computed, defineComponent, ComputedRef, SetupContext } from 'vue';
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
@@ -71,7 +100,7 @@ export default defineComponent({
   name,
   props: DateTimePickerProps,
   emits: ['change', 'update:value', 'update:modelValue', 'cancel', 'confirm', 'columnChange'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerValue] = useDefault<DateValue, TdDateTimePickerProps>(props, context.emit, 'value', 'change');
     const className = computed(() => [`${name}`]);
@@ -130,7 +159,7 @@ export default defineComponent({
       const dayjsValueDefault = dayjs();
 
       const formats = [props.format, modeFormat.value];
-      const dayjsValueProps = dayjs(innerValue.value as any, formats, 'es', true);
+      const dayjsValueProps = dayjs(innerValue.value, formats as dayjs.OptionType, 'es', true);
       const value = pickerColumns.value.map((mode) => {
         let v = dayjsValueProps[mode]();
         if (v === undefined || v == null || isNaN(v)) {
@@ -143,14 +172,18 @@ export default defineComponent({
 
     const defaultModeValue = computed(() => {
       const dayjsValueDefault = dayjs();
-      const dayjsValueProps = dayjs(innerValue.value as any);
+      const formats = [props.format, modeFormat.value];
+      const dayjsValueProps = dayjs(innerValue.value, formats as dayjs.OptionType, 'es', true);
       const value: Record<TimeModeValues, number> = Object.create({});
 
       ALL_MODES.forEach((mode) => {
         value[mode] = dayjsValueDefault[mode]();
       });
       pickerColumns.value.forEach((mode) => {
-        value[mode] = dayjsValueProps[mode]();
+        const v = dayjsValueProps[mode]();
+        if (v === undefined || v == null || isNaN(v)) {
+          value[mode] = dayjsValueDefault[mode]();
+        }
       });
       return value;
     });
@@ -201,7 +234,7 @@ export default defineComponent({
     const confirmButtonText = computed(() => props.confirmBtn || '确定');
     const cancelButtonText = computed(() => props.cancelBtn || '取消');
 
-    const isAvailable = (...args) => {
+    const isAvailable = (...args: Array<number>) => {
       if (!props.disableDate) {
         return true;
       }
@@ -276,12 +309,14 @@ export default defineComponent({
       );
     });
 
-    const getOutputValue = (v = undefined) => {
+    const getOutputValue = (v: dayjs.Dayjs | undefined = undefined) => {
       let value = v;
       if (value === undefined) {
         value = dayjs().month(0).date(1).hour(0).minute(0).second(0);
         pickerColumns.value.forEach((mode, index) => {
-          value = value[mode](data.pickerValue[index]) as dayjs.Dayjs;
+          if (value) {
+            value = value[mode](data.pickerValue[index]) as dayjs.Dayjs;
+          }
         });
       }
 
@@ -327,7 +362,7 @@ export default defineComponent({
       });
     };
 
-    const getWeekdayText = (date) => {
+    const getWeekdayText = (date: number) => {
       const week = dayjs().year(data.year).month(data.month).date(date).day();
       let text = '';
       switch (week) {
@@ -356,6 +391,23 @@ export default defineComponent({
       return `(${text})`;
     };
 
+    const formatLabel = (type: string) => {
+      switch (type) {
+        case 'year':
+          return (val: number) => `${val}年`;
+        case 'month':
+          return (val: number) => `${val + 1}月`;
+        case 'date':
+          return (val: number) => `${val}日${props.showWeek ? getWeekdayText(val) : ''}`;
+        case 'hour':
+          return (val: number) => `${val}时`;
+        case 'minute':
+          return (val: number) => `${val}分`;
+        case 'second':
+          return (val: number) => `${val}秒`;
+      }
+    };
+
     return {
       className,
       confirmButtonText,
@@ -375,6 +427,7 @@ export default defineComponent({
       data,
       getWeekdayText,
       title,
+      formatLabel,
     };
   },
 });

@@ -24,14 +24,14 @@ export default defineComponent({
       hm: false,
     });
     const text = reactive({
-      hm: '13:20',
+      hm: '12:01',
     });
 
     const onChange = (value: DateValue) => {
       console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = ({ value, index }: { value: DateValue, index: number}) => {
+    const onColumnChange = ({ value, index }: { value: DateValue; index: number }) => {
       console.log('date-time-picker:columnChange', value, index);
     };
 
