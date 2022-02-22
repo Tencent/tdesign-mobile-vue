@@ -310,7 +310,7 @@ export default defineComponent({
       emitEvent('cancel', { e });
     };
 
-    const onChange = (v) => {
+    const onChange = (v: number[]) => {
       if (JSON.stringify(data.pickerValue) !== JSON.stringify(v)) {
         data.pickerValue = v;
 
@@ -320,7 +320,7 @@ export default defineComponent({
       }
     };
 
-    const onColumnChange = (value, index) => {
+    const onColumnChange = (value: number, index: number) => {
       context.emit('columnChange', {
         value,
         index,
