@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdDividerProps['align']>,
     default: 'center' as TdDividerProps['align'],
     validator(val: TdDividerProps['align']): boolean {
-      return ['left', 'right', 'center'].includes(val);
+      return ['left', 'right', 'center'].includes(val!);
     },
   },
   /** 子元素 */
@@ -31,7 +31,7 @@ export default {
     type: String as PropType<TdDividerProps['layout']>,
     default: 'horizontal' as TdDividerProps['layout'],
     validator(val: TdDividerProps['layout']): boolean {
-      return ['horizontal', 'vertical'].includes(val);
+      return ['horizontal', 'vertical'].includes(val!);
     },
   },
   /** 分隔线颜色 */

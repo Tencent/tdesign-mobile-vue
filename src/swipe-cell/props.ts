@@ -22,7 +22,7 @@ export default {
   expanded: {
     type: String as PropType<TdSwipeCellProps['expanded']>,
     validator(val: TdSwipeCellProps['expanded']): boolean {
-      return ['left', 'right'].includes(val);
+      return ['left', 'right'].includes(val!);
     },
   },
   /** 左侧滑动操作项。所有行为同 `right` */

@@ -29,7 +29,7 @@ export default {
     type: String as PropType<TdButtonProps['shape']>,
     default: 'square' as TdButtonProps['shape'],
     validator(val: TdButtonProps['shape']): boolean {
-      return ['square', 'round'].includes(val);
+      return ['square', 'round'].includes(val!);
     },
   },
   /** 组件尺寸 */
@@ -37,7 +37,7 @@ export default {
     type: String as PropType<TdButtonProps['size']>,
     default: 'medium' as TdButtonProps['size'],
     validator(val: TdButtonProps['size']): boolean {
-      return ['small', 'medium', 'large'].includes(val);
+      return ['small', 'medium', 'large'].includes(val!);
     },
   },
   /** 组件风格，依次为品牌色、危险色 */
@@ -45,7 +45,7 @@ export default {
     type: String as PropType<TdButtonProps['theme']>,
     default: 'default' as TdButtonProps['theme'],
     validator(val: TdButtonProps['theme']): boolean {
-      return ['default', 'primary', 'danger'].includes(val);
+      return ['default', 'primary', 'danger'].includes(val!);
     },
   },
   /** 按钮形式，基础、线框、文字 */
@@ -53,7 +53,7 @@ export default {
     type: String as PropType<TdButtonProps['variant']>,
     default: 'base' as TdButtonProps['variant'],
     validator(val: TdButtonProps['variant']): boolean {
-      return ['base', 'outline', 'text'].includes(val);
+      return ['base', 'outline', 'text'].includes(val!);
     },
   },
   /** 点击时触发 */

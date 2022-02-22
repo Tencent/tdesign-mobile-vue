@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdToastProps['direction']>,
     default: 'row' as TdToastProps['direction'],
     validator(val: TdToastProps['direction']): boolean {
-      return ['row', 'column'].includes(val);
+      return ['row', 'column'].includes(val!);
     },
   },
   /** 弹窗显示毫秒数 */
@@ -34,7 +34,7 @@ export default {
     type: String as PropType<TdToastProps['placement']>,
     default: 'middle' as TdToastProps['placement'],
     validator(val: TdToastProps['placement']): boolean {
-      return ['top', 'middle', 'bottom'].includes(val);
+      return ['top', 'middle', 'bottom'].includes(val!);
     },
   },
   /** 防止滚动穿透，即不允许点击和滚动 */
@@ -43,7 +43,7 @@ export default {
   theme: {
     type: String as PropType<TdToastProps['theme']>,
     validator(val: TdToastProps['theme']): boolean {
-      return ['loading', 'success', 'fail'].includes(val);
+      return ['loading', 'success', 'fail'].includes(val!);
     },
   },
 };

@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdMessageProps['align']>,
     default: 'left' as TdMessageProps['align'],
     validator(val: TdMessageProps['align']): boolean {
-      return ['left', 'center'].includes(val);
+      return ['left', 'center'].includes(val!);
     },
   },
   /** 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮 */
@@ -35,7 +35,7 @@ export default {
     type: String as PropType<TdMessageProps['theme']>,
     default: 'info' as TdMessageProps['theme'],
     validator(val: TdMessageProps['theme']): boolean {
-      return ['info', 'success', 'warning', 'error'].includes(val);
+      return ['info', 'success', 'warning', 'error'].includes(val!);
     },
   },
   /** 是否显示，隐藏时默认销毁组件 */

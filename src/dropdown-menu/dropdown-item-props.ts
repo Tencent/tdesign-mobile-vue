@@ -30,7 +30,7 @@ export default {
     type: String as PropType<TdDropdownItemProps['optionsLayout']>,
     default: 'columns' as TdDropdownItemProps['optionsLayout'],
     validator(val: TdDropdownItemProps['optionsLayout']): boolean {
-      return ['columns', 'tree'].includes(val);
+      return ['columns', 'tree'].includes(val!);
     },
   },
   /** 选中值 */

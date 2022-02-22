@@ -30,7 +30,7 @@ export default {
     type: String as PropType<TdTagProps['shape']>,
     default: 'square' as TdTagProps['shape'],
     validator(val: TdTagProps['shape']): boolean {
-      return ['square', 'round', 'mark'].includes(val);
+      return ['square', 'round', 'mark'].includes(val!);
     },
   },
   /** 标签尺寸 */
@@ -38,7 +38,7 @@ export default {
     type: String as PropType<TdTagProps['size']>,
     default: 'medium' as TdTagProps['size'],
     validator(val: TdTagProps['size']): boolean {
-      return ['small', 'medium', 'large'].includes(val);
+      return ['small', 'medium', 'large'].includes(val!);
     },
   },
   /** 组件风格，用于描述组件不同的应用场景 */
@@ -46,7 +46,7 @@ export default {
     type: String as PropType<TdTagProps['theme']>,
     default: 'default' as TdTagProps['theme'],
     validator(val: TdTagProps['theme']): boolean {
-      return ['default', 'primary', 'warning', 'danger', 'success'].includes(val);
+      return ['default', 'primary', 'warning', 'danger', 'success'].includes(val!);
     },
   },
   /** 标签风格变体 */
@@ -54,7 +54,7 @@ export default {
     type: String as PropType<TdTagProps['variant']>,
     default: 'dark' as TdTagProps['variant'],
     validator(val: TdTagProps['variant']): boolean {
-      return ['dark', 'light', 'outline', 'light-outline'].includes(val);
+      return ['dark', 'light', 'outline', 'light-outline'].includes(val!);
     },
   },
   /** 点击时触发 */

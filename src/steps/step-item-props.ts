@@ -23,7 +23,7 @@ export default {
     type: String as PropType<TdStepItemProps['status']>,
     default: 'default' as TdStepItemProps['status'],
     validator(val: TdStepItemProps['status']): boolean {
-      return ['default', 'process', 'finish', 'error'].includes(val);
+      return ['default', 'process', 'finish', 'error'].includes(val!);
     },
   },
   /** 标题 */

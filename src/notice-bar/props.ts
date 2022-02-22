@@ -51,7 +51,7 @@ export default {
   mode: {
     type: String as PropType<TdNoticeBarProps['mode']>,
     validator(val: TdNoticeBarProps['mode']): boolean {
-      return ['link', 'closeable'].includes(val);
+      return ['link', 'closeable'].includes(val!);
     },
   },
   /** 左边图标 */

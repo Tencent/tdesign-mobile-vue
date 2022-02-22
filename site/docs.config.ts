@@ -260,13 +260,6 @@ export default {
           component: () => import('@/swiper/swiper.md'),
         },
         {
-          title: 'SegmentedControl 分段器',
-          name: 'segmented-control',
-          meta: { docType: 'data' },
-          path: '/vue-mobile/components/segmented-control',
-          component: () => import('@/segmented-control/segmented-control.md'),
-        },
-        {
           title: 'Preview 图片预览',
           name: 'preview',
           meta: { docType: 'data' },

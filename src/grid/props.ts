@@ -13,7 +13,7 @@
      type: String as PropType<TdGridProps['align']>,
      default: 'center' as TdGridProps['align'],
      validator(val: TdGridProps['align']): boolean {
-       return ['left', 'center'].includes(val);
+       return ['left', 'center'].includes(val!);
      },
    },
    /** 边框，默认不显示。值为 true 则显示默认边框，值类型为 object 则表示自定义边框样式 */

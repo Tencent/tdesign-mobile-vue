@@ -58,7 +58,7 @@ export default {
     type: String as PropType<TdRateProps['variant']>,
     default: 'filled' as TdRateProps['variant'],
     validator(val: TdRateProps['variant']): boolean {
-      return ['outline', 'filled'].includes(val);
+      return ['outline', 'filled'].includes(val!);
     },
   },
   /** 评分数改变时触发 */

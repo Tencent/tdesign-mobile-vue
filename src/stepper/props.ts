@@ -36,7 +36,7 @@ export default {
     type: String as PropType<TdStepperProps['theme']>,
     default: 'normal' as TdStepperProps['theme'],
     validator(val: TdStepperProps['theme']): boolean {
-      return ['normal', 'grey'].includes(val);
+      return ['normal', 'grey'].includes(val!);
     },
   },
   /** 值 */

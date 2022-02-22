@@ -12,7 +12,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
   // raf
   const { pause, resume } = useRafFn(
     () => {
-      count.value = parseInt(count.value - 1000 / 60, 10);
+      count.value = parseInt(`${Number(count.value) - 1000 / 60}`, 10);
       if (count.value <= 0) {
         pause?.();
         count.value = 0;
@@ -20,7 +20,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
       // console.log('count:', count.value);
       const times = getRemainTimes(count.value);
       onChange?.(times);
-      count.value === 0 && onFinish(times);
+      count.value === 0 && onFinish?.();
       getShowTimes(times, format)?.forEach?.((i, idx) => (showTimes[idx].value = i?.value));
     },
     { immediate: autoStart },

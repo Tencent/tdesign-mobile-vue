@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdRadioProps['align']>,
     default: 'left' as TdRadioProps['align'],
     validator(val: TdRadioProps['align']): boolean {
-      return ['left', 'right'].includes(val);
+      return ['left', 'right'].includes(val!);
     },
   },
   /** 是否选中 */

@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdSwiperProps['animation']>,
     default: 'slide' as TdSwiperProps['animation'],
     validator(val: TdSwiperProps['animation']): boolean {
-      return ['slide'].includes(val);
+      return ['slide'].includes(val!);
     },
   },
   /** 是否自动播放 */
@@ -40,7 +40,7 @@ export default {
     type: String as PropType<TdSwiperProps['direction']>,
     default: 'horizontal' as TdSwiperProps['direction'],
     validator(val: TdSwiperProps['direction']): boolean {
-      return ['horizontal', 'vertical'].includes(val);
+      return ['horizontal', 'vertical'].includes(val!);
     },
   },
   /** 滑动动画时长 */

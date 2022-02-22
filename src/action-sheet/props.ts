@@ -34,7 +34,7 @@ export default {
     type: String as PropType<TdActionSheetProps['theme']>,
     default: 'list' as TdActionSheetProps['theme'],
     validator(val: TdActionSheetProps['theme']): boolean {
-      return ['list', 'grid'].includes(val);
+      return ['list', 'grid'].includes(val!);
     },
   },
   /** 显示与隐藏 */

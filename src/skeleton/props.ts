@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdSkeletonProps['animation']>,
     validator(val: TdSkeletonProps['animation']): boolean {
       if (!val) return true;
-      return ['gradient', 'flashed'].includes(val);
+      return ['gradient', 'flashed'].includes(val!);
     },
   },
   /** 加载完成的内容 */
@@ -45,7 +45,7 @@ export default {
     default: 'text' as TdSkeletonProps['theme'],
     validator(val: TdSkeletonProps['theme']): boolean {
       if (!val) return true;
-      return ['text', 'avatar-text'].includes(val);
+      return ['text', 'avatar-text'].includes(val!);
     },
   },
 };

@@ -39,7 +39,7 @@ export default {
     type: String as PropType<TdCheckTagProps['shape']>,
     default: 'square' as TdCheckTagProps['shape'],
     validator(val: TdCheckTagProps['shape']): boolean {
-      return ['square', 'round', 'mark'].includes(val);
+      return ['square', 'round', 'mark'].includes(val!);
     },
   },
   /** 标签尺寸 */
@@ -47,7 +47,7 @@ export default {
     type: String as PropType<TdCheckTagProps['size']>,
     default: 'medium' as TdCheckTagProps['size'],
     validator(val: TdCheckTagProps['size']): boolean {
-      return ['small', 'medium', 'large'].includes(val);
+      return ['small', 'medium', 'large'].includes(val!);
     },
   },
   /** 组件子元素 */

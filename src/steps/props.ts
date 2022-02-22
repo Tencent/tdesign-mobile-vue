@@ -27,7 +27,7 @@ export default {
     type: String as PropType<TdStepsProps['layout']>,
     default: 'horizontal' as TdStepsProps['layout'],
     validator(val: TdStepsProps['layout']): boolean {
-      return ['horizontal', 'vertical'].includes(val);
+      return ['horizontal', 'vertical'].includes(val!);
     },
   },
   /** 步骤条数据列表（作用和 StepItem 效果一样） */
@@ -41,7 +41,7 @@ export default {
     type: String as PropType<TdStepsProps['theme']>,
     default: 'default' as TdStepsProps['theme'],
     validator(val: TdStepsProps['theme']): boolean {
-      return ['default', 'dot'].includes(val);
+      return ['default', 'dot'].includes(val!);
     },
   },
   /** 当前步骤发生变化时触发 */

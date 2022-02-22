@@ -13,7 +13,7 @@ export default {
     type: String as PropType<TdInputProps['align']>,
     default: 'left' as TdInputProps['align'],
     validator(val: TdInputProps['align']): boolean {
-      return ['left', 'center', 'right'].includes(val);
+      return ['left', 'center', 'right'].includes(val!);
     },
   },
   /** 是否开启自动填充功能 */
@@ -64,7 +64,7 @@ export default {
     type: String as PropType<TdInputProps['size']>,
     default: 'small' as TdInputProps['size'],
     validator(val: TdInputProps['size']): boolean {
-      return ['small', 'medium'].includes(val);
+      return ['small', 'medium'].includes(val!);
     },
   },
   /** 后置图标前的后置内容 */
@@ -80,7 +80,7 @@ export default {
     type: String as PropType<TdInputProps['type']>,
     default: 'text' as TdInputProps['type'],
     validator(val: TdInputProps['type']): boolean {
-      return ['text', 'number', 'url', 'tel', 'password', 'search', 'submit', 'hidden'].includes(val);
+      return ['text', 'number', 'url', 'tel', 'password', 'search', 'submit', 'hidden'].includes(val!);
     },
   },
   /** 输入框的值 */
