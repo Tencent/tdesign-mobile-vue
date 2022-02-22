@@ -20,7 +20,7 @@ import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import checkbox from '../checkbox/checkbox.vue';
 import { CheckboxGroupValue, CheckboxOption, TdCheckboxGroupProps } from '../checkbox/type';
-import { useDefault } from '@/shared';
+import { useDefault } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-check-group`;
