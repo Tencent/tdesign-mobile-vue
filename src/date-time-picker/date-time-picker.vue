@@ -1,6 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
+      v-if="pickerColumns.includes('year') || pickerColumns.includes('month') || pickerColumns.includes('date')"
       :default-value="data.pickerValue"
       :value="data.pickerValue"
       :title="title"
@@ -26,6 +27,34 @@
         :formatter="(val) => `${val}日${showWeek ? getWeekdayText(val) : ''}`"
         @change="onColumnChange"
       />
+      <t-picker-item
+        v-if="pickerColumns.includes('hour')"
+        :options="hourOptions"
+        :formatter="(val) => `${val}时`"
+        @change="onColumnChange"
+      />
+      <t-picker-item
+        v-if="pickerColumns.includes('minute')"
+        :options="minuteOptions"
+        :formatter="(val) => `${val}分`"
+        @change="onColumnChange"
+      />
+      <t-picker-item
+        v-if="pickerColumns.includes('second')"
+        :options="secondOptions"
+        :formatter="(val) => `${val}秒`"
+        @change="onColumnChange"
+      />
+    </t-picker>
+    <t-picker
+      v-else
+      :default-value="data.pickerValue"
+      :value="data.pickerValue"
+      :title="title"
+      @change="onChange"
+      @confirm="onConfirm"
+      @cancel="onCancel"
+    >
       <t-picker-item
         v-if="pickerColumns.includes('hour')"
         :options="hourOptions"
@@ -143,14 +172,18 @@ export default defineComponent({
 
     const defaultModeValue = computed(() => {
       const dayjsValueDefault = dayjs();
-      const dayjsValueProps = dayjs(innerValue.value as any);
+      const formats = [props.format, modeFormat.value];
+      const dayjsValueProps = dayjs(innerValue.value as any, formats, 'es', true);
       const value: Record<TimeModeValues, number> = Object.create({});
 
       ALL_MODES.forEach((mode) => {
         value[mode] = dayjsValueDefault[mode]();
       });
       pickerColumns.value.forEach((mode) => {
-        value[mode] = dayjsValueProps[mode]();
+        let v = dayjsValueProps[mode]();
+        if (v === undefined || v == null || isNaN(v)) {
+          value[mode] = dayjsValueDefault[mode]();
+        }
       });
       return value;
     });
