@@ -180,7 +180,7 @@ export default defineComponent({
         value[mode] = dayjsValueDefault[mode]();
       });
       pickerColumns.value.forEach((mode) => {
-        let v = dayjsValueProps[mode]();
+        const v = dayjsValueProps[mode]();
         if (v === undefined || v == null || isNaN(v)) {
           value[mode] = dayjsValueDefault[mode]();
         }
@@ -314,7 +314,7 @@ export default defineComponent({
       if (value === undefined) {
         value = dayjs().month(0).date(1).hour(0).minute(0).second(0);
         pickerColumns.value.forEach((mode, index) => {
-          value = value[mode](data.pickerValue[index]) as dayjs.Dayjs;
+          value = value[mode](data.pickerValue[index]);
         });
       }
 
@@ -360,7 +360,7 @@ export default defineComponent({
       });
     };
 
-    const getWeekdayText = (date) => {
+    const getWeekdayText = (date: number) => {
       const week = dayjs().year(data.year).month(data.month).date(date).day();
       let text = '';
       switch (week) {

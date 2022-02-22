@@ -31,7 +31,7 @@ export default defineComponent({
       console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = ({ value, index }: { value: DateValue, index: number}) => {
+    const onColumnChange = ({ value, index }: { value: DateValue; index: number }) => {
       console.log('date-time-picker:columnChange', value, index);
     };
 
@@ -44,7 +44,6 @@ export default defineComponent({
       console.log('date-time-picker:confirm', JSON.stringify(value));
       Object.keys(show).forEach((item) => (show[item] = false));
     };
-
 
     return {
       onChange,
