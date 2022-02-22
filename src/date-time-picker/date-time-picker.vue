@@ -1,7 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
-      :default-value="defaultPickerValue"
+      :default-value="data.pickerValue"
       :value="data.pickerValue"
       :title="title"
       @change="onChange"
@@ -74,9 +74,6 @@ export default defineComponent({
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerValue] = useDefault<DateValue, TdDateTimePickerProps>(props, context.emit, 'value', 'change');
-    console.info('111111');
-    console.info(innerValue.value);
-
     const className = computed(() => [`${name}`]);
 
     // 根据props.mode判断展示哪些列
@@ -102,8 +99,8 @@ export default defineComponent({
       return [...dateModes, ...timeModes];
     });
 
-    const defaultPickerValue = computed(() => {
-      const dayjsValueDefault = dayjs();
+    // 根据mode参数推断出的format，优先级低于format参数
+    const modeFormat = computed(() => {
       let formatDate = '';
       let formatTime = '';
 
@@ -126,7 +123,13 @@ export default defineComponent({
       if (pickerColumns.value.includes('second')) {
         formatTime = 'HH:mm:ss';
       }
-      const formats = [props.format, (formatDate + ' ' + formatTime).trim()];
+      return (formatDate + ' ' + formatTime).trim();
+    });
+
+    const defaultPickerValue = computed(() => {
+      const dayjsValueDefault = dayjs();
+
+      const formats = [props.format, modeFormat.value];
       const dayjsValueProps = dayjs(innerValue.value as any, formats, 'es', true);
       const value = pickerColumns.value.map((mode) => {
         let v = dayjsValueProps[mode]();
@@ -135,13 +138,13 @@ export default defineComponent({
         }
         return v;
       });
-      console.info(4)
+      console.info('11111111')
       console.info(value)
       return value;
     });
 
     const defaultModeValue = computed(() => {
-      const dayjsValueDefault = dayjs().month(0).date(1).hour(0).minute(0).second(0);
+      const dayjsValueDefault = dayjs();
       const dayjsValueProps = dayjs(innerValue.value as any);
       const value: Record<TimeModeValues, number> = Object.create({});
 
@@ -276,14 +279,19 @@ export default defineComponent({
     });
 
     const getOutputValue = (v = undefined) => {
+            console.info('8888888888')
+            console.info(data.pickerValue);
       let value = v;
       if (value === undefined) {
         value = dayjs().month(0).date(1).hour(0).minute(0).second(0);
         pickerColumns.value.forEach((mode, index) => {
+          console.info(mode)
           value = value[mode](data.pickerValue[index]) as dayjs.Dayjs;
         });
       }
 
+      console.info(value)
+      console.info(modeFormat.value)
       // 当指定format为空时，输出类型尽量保持与输入类型格式相同
       let output: DateValue = '';
       if (props.format) {
@@ -291,22 +299,7 @@ export default defineComponent({
       } else if (typeof props.value === 'number') {
         output = value.unix();
       } else {
-        let format = '';
-        if (
-          pickerColumns.value.includes('year') ||
-          pickerColumns.value.includes('month') ||
-          pickerColumns.value.includes('date')
-        ) {
-          format += 'YYYY-MM-DD';
-        }
-        if (
-          pickerColumns.value.includes('hour') ||
-          pickerColumns.value.includes('minute') ||
-          pickerColumns.value.includes('second')
-        ) {
-          format += ' HH:mm:ss';
-        }
-        output = value.format(format.trim());
+        output = value.format(modeFormat.value);
       }
       return output;
     };
