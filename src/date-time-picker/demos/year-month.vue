@@ -4,7 +4,7 @@
     <t-popup v-model="show.ym" position="bottom">
       <t-date-time-picker
         v-model="text.ym"
-        :mode="['year', 'month', 'date']"
+        :mode="['year', 'month']"
         title="选择年月"
         @change="onChange"
         @column-change="onColumnChange"
@@ -20,10 +20,10 @@ import { defineComponent, reactive } from 'vue';
 export default defineComponent({
   setup() {
     const show = reactive({
-      ymd: false,
+      ym: false,
     });
     const text = reactive({
-      ymd: '2022-01-09',
+      ym: '',
     });
 
     const onChange = (value) => {

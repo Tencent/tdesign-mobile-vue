@@ -3,7 +3,7 @@
     <t-input :value="text.ymd" label="选择年月日" placeholder="年月日" @click="show.ymd = true" />
     <t-popup v-model="show.ymd" position="bottom">
       <t-date-time-picker
-        :value="text.ymd"
+        v-model="text.ymd"
         :mode="['year', 'month', 'date']"
         title="选择年月日"
         @change="onChange"
