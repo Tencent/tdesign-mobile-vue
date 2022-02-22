@@ -18,6 +18,7 @@
 <script lang="ts">
 import { defineComponent, reactive, ref } from 'vue';
 import Toast from '../../toast/index';
+import { SwipeActionItem } from '../type';
 
 export default defineComponent({
   setup() {
@@ -25,7 +26,7 @@ export default defineComponent({
       showDialog: false,
       disabled: false,
     });
-    const handleClick = (value: { action: { [key: string]: any }; source: String }) => {
+    const handleClick = (value: { action: SwipeActionItem; source: String }) => {
       Toast(JSON.stringify(value));
     };
     const handleClickLeft = () => {

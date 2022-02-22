@@ -12,16 +12,23 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
 import Toast from '../../toast/index';
+import { SwipeActionItem } from '../type';
 
 export default defineComponent({
   setup() {
+    const handleDelete = () => {
+      Toast.success('删除成功');
+    };
     const initData = reactive({
       btns: [
-        { content: '删除', theme: 'danger' },
-        { content: '收藏', theme: 'default' },
+        // 通过按钮对象传入onClick事件，按钮的onClick事件优先级大于swipe-cell组件上绑定的onClick事件
+        { text: '删除', theme: 'danger', onClick: handleDelete },
+        { text: '收藏', theme: 'default' },
       ],
     });
-    const handleClick = (value: { action: { [key: string]: any }; source: String }) => {
+    // 绑定在swipe-cell组件上面的onClick事件
+    const handleClick = (value: { action: SwipeActionItem; source: String }) => {
+      // 根据返回的action对象判断点击的按钮
       Toast(JSON.stringify(value));
     };
     const handleClickLeft = () => {
