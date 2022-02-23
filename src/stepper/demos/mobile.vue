@@ -17,12 +17,11 @@
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯步进器">
-      <div class="stepper-pure-demo">
+      <div style="margin-left: 16px">
         <t-stepper v-model.number="number3" theme="grey" :step="1" :min="0" :max="100" />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 类型" summary="步进器状态"> </tdesign-demo-block>
-    <tdesign-demo-block>
+    <tdesign-demo-block title="02 类型" summary="步进器状态">
       <div class="stepper-demo">
         <t-cell title="禁用">
           <t-stepper v-model.number="number4" :step="1" :min="0" :max="100" disabled />

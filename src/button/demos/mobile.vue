@@ -51,7 +51,7 @@
 </template>
 <script lang="ts">
 import { ref, defineComponent, h } from 'vue';
-import { StarIcon } from 'tdesign-icons-vue-next';
+import { AppIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
   setup() {
@@ -59,7 +59,7 @@ export default defineComponent({
       console.log('强按钮');
     };
     const loading = ref(true);
-    const iconFunc = () => h(StarIcon);
+    const iconFunc = () => h(AppIcon);
     return { onClick, loading, iconFunc };
   },
 });

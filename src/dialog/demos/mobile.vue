@@ -9,15 +9,15 @@
         <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
         <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
         <t-dialog
-          v-model="isShowDialog1"
+          v-model:visible="isShowDialog1"
           :title="singleHeader"
           :confirm-btn="confirmButtonText"
           :show-overlay="showOverlay"
         >
         </t-dialog>
-        <t-dialog v-model="isShowDialog2" :title="moreTextHeader" :confirm-btn="confirmButtonText"> </t-dialog>
+        <t-dialog v-model:visible="isShowDialog2" :title="moreTextHeader" :confirm-btn="confirmButtonText"> </t-dialog>
         <t-dialog
-          v-model="isShowDialog3"
+          v-model:visible="isShowDialog3"
           :content="content"
           :confirm-btn="confirmButtonText"
           @confirm="onConfirm"
@@ -25,7 +25,7 @@
         >
         </t-dialog>
         <t-dialog
-          v-model="isShowDialog4"
+          v-model:visible="isShowDialog4"
           :title="title"
           :content="moreTextContent"
           :confirm-btn="confirmButtonText"
@@ -37,7 +37,7 @@
         <t-button variant="outline" size="large" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
         <t-button variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示操作对话框 </t-button>
         <t-dialog
-          v-model="isShowDialog5"
+          v-model:visible="isShowDialog5"
           type="confirm"
           :title="title"
           :content="content"
@@ -49,7 +49,7 @@
         >
         </t-dialog>
         <t-dialog
-          v-model="isShowDialog6"
+          v-model:visible="isShowDialog6"
           type="confirm"
           :title="title"
           :content="moreTextContent"
@@ -67,7 +67,7 @@
         <t-button variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
         <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog
-          v-model="isShowDialog7"
+          v-model:visible="isShowDialog7"
           :title="singleHeader"
           :cancel-btn="cancelButtonText"
           :confirm-btn="confirmButtonText"
@@ -83,7 +83,7 @@
           </template>
         </t-dialog>
         <t-dialog
-          v-model="isShowDialog8"
+          v-model:visible="isShowDialog8"
           :title="title"
           :content="content"
           :cancel-btn="cancelButtonText"

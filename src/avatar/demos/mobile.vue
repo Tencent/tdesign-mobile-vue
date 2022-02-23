@@ -21,29 +21,29 @@
     </tdesign-demo-block>
     <tdesign-demo-block title="02 特殊类型" summary="纯展示 从上往下">
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="right-up" :max="3" size="small">
+        <t-avatar-group cascading="right-up" :max="5" size="small">
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="right-up" :max="3" size="40px">
+        <t-avatar-group cascading="right-up" :max="5" size="40px">
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="right-up" :max="3">
+        <t-avatar-group cascading="right-up" :max="5">
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="带操作 从下往上">
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3" size="small" :collapse-avatar="userAddIcon">
+        <t-avatar-group cascading="left-up" :max="5" size="small" :collapse-avatar="userAddIcon">
           <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3" size="40px">
+        <t-avatar-group cascading="left-up" :max="5" size="40px">
           <template #collapseAvatar>
             <user-add-icon style="font-size: 20px"></user-add-icon>
           </template>
@@ -51,7 +51,7 @@
         </t-avatar-group>
       </div>
       <div class="avatar-group-demo">
-        <t-avatar-group cascading="left-up" :max="3">
+        <t-avatar-group cascading="left-up" :max="5">
           <template #collapseAvatar>
             <user-add-icon style="font-size: 24px"></user-add-icon>
           </template>
@@ -135,6 +135,11 @@ export default defineComponent({
       console.log('error console');
     };
     const imageList = ref([
+      'https://tdesign.gtimg.com/mobile/demos/avatar_1.png',
+      'https://tdesign.gtimg.com/mobile/demos/avatar_2.png',
+      'https://tdesign.gtimg.com/mobile/demos/avatar_3.png',
+      'https://tdesign.gtimg.com/mobile/demos/avatar_4.png',
+      'https://tdesign.gtimg.com/mobile/demos/avatar_5.png',
       'https://tdesign.gtimg.com/mobile/demos/avatar_1.png',
       'https://tdesign.gtimg.com/mobile/demos/avatar_2.png',
       'https://tdesign.gtimg.com/mobile/demos/avatar_3.png',
