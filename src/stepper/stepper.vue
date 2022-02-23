@@ -35,7 +35,7 @@ const disabledClass = CLASSNAMES.STATUS.disabled;
 export default defineComponent({
   name,
   props: StepperProps,
-  emits: ['update:value', 'update:modelValue', 'change'],
+  emits: ['update:value', 'update:modelValue', 'blur', 'change', 'overlimit'],
   setup(props, context: SetupContext) {
     const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
     const emitEvent = useEmitEvent(props, context.emit);
@@ -59,12 +59,21 @@ export default defineComponent({
       if (value.trim() === '') {
         stepperValue.value = 0;
       } else {
+        handleOverlimit(value);
         stepperValue.value = format(Number(value));
       }
     };
     const handleBlur = (e: FocusEvent) => {
       changeValue(e);
-      emitEvent('blur');
+      emitEvent('blur', stepperValue.value);
+    };
+    const handleOverlimit = (value) => {
+      if (value < Math.max(min.value, Number.MIN_SAFE_INTEGER)) {
+        emitEvent('overlimit', 'minus');
+      }
+      if (value > Math.min(max.value, Number.MAX_SAFE_INTEGER)) {
+        emitEvent('overlimit', 'plus');
+      }
     };
 
     return {
