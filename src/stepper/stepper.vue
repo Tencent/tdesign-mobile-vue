@@ -59,7 +59,7 @@ export default defineComponent({
       if (value.trim() === '') {
         stepperValue.value = 0;
       } else {
-        handleOverlimit(value);
+        handleOverlimit(Number(value));
         stepperValue.value = format(Number(value));
       }
     };
@@ -67,7 +67,7 @@ export default defineComponent({
       changeValue(e);
       emitEvent('blur', stepperValue.value);
     };
-    const handleOverlimit = (value) => {
+    const handleOverlimit = (value: number) => {
       if (value < Math.max(min.value, Number.MIN_SAFE_INTEGER)) {
         emitEvent('overlimit', 'minus');
       }
