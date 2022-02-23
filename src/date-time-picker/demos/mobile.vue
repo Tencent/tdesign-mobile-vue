@@ -3,8 +3,8 @@
     <h1 class="title">DateTimePicker 时间选择器</h1>
     <p class="summary">用于选择一个时间点或者一个时间段</p>
     <tdesign-demo-block title="01 类型" summary="时间选择器">
-      <t-input :value="text.ymdhms" label="选择日期时间" placeholder="日期时间" @click="show.ymdhms = true" />
-      <t-popup v-model="show.ymdhms" position="bottom">
+      <t-input :value="text.ymdhms" label="日期时间" placeholder="日期时间" @click="show.ymdhms = true" />
+      <t-popup v-model="show.ymdhms" placement="bottom">
         <t-date-time-picker
           v-model="text.ymdhms"
           :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
@@ -16,8 +16,8 @@
           @cancel="onCancel"
         />
       </t-popup>
-      <t-input :value="text.ymd" label="选择年月日" placeholder="年月日" @click="show.ymd = true" />
-      <t-popup v-model="show.ymd" position="bottom">
+      <t-input :value="text.ymd" label="年月日" placeholder="年月日" @click="show.ymd = true" />
+      <t-popup v-model="show.ymd" placement="bottom">
         <t-date-time-picker
           v-model="text.ymd"
           :mode="['year', 'month', 'date']"
@@ -28,8 +28,8 @@
           @cancel="onCancel"
         />
       </t-popup>
-      <t-input :value="text.ym" label="选择年月" placeholder="年月" @click="show.ym = true" />
-      <t-popup v-model="show.ym" position="bottom">
+      <t-input :value="text.ym" label="年月" placeholder="年月" @click="show.ym = true" />
+      <t-popup v-model="show.ym" placement="bottom">
         <t-date-time-picker
           v-model="text.ym"
           :mode="['year', 'month']"
@@ -40,8 +40,8 @@
           @cancel="onCancel"
         />
       </t-popup>
-      <t-input :value="text.hm" label="选择时分" placeholder="时分" @click="show.hm = true" />
-      <t-popup v-model="show.hm" position="bottom">
+      <t-input :value="text.hm" label="时分" placeholder="时分" @click="show.hm = true" />
+      <t-popup v-model="show.hm" placement="bottom">
         <t-date-time-picker
           v-model="text.hm"
           :mode="['hour', 'minute']"
@@ -56,7 +56,7 @@
 
     <tdesign-demo-block title="02 功能" summary="日期时间禁用">
       <t-input :value="text.ymd2" label="选择日期" placeholder="日期" @click="show.ymd2 = true" />
-      <t-popup v-model="show.ymd2" position="bottom">
+      <t-popup v-model="show.ymd2" placement="bottom">
         <t-date-time-picker
           v-model="text.ymd2"
           :mode="['year', 'month', 'date']"
