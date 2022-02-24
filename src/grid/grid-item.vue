@@ -24,6 +24,7 @@
     </div>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent, getCurrentInstance, computed, inject } from 'vue';
 import { renderTNode, TNode } from '../shared';
