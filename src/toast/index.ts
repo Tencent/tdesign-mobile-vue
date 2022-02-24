@@ -9,6 +9,7 @@ export * from './type';
 export type ToastProps = TdToastProps;
 
 let instance: any = null;
+let app: App<Element>;
 
 /** 展示提示 */
 function Toast(props: string | Partial<TdToastProps>): DefineComponent<TdToastProps> {
@@ -28,6 +29,7 @@ function Toast(props: string | Partial<TdToastProps>): DefineComponent<TdToastPr
 
   instance.clear = () => {
     clearTimeout(instance.timer);
+    app.unmount();
     root.remove();
   };
 
@@ -35,7 +37,8 @@ function Toast(props: string | Partial<TdToastProps>): DefineComponent<TdToastPr
     instance.timer = setTimeout(instance.clear, propsObject.duration);
   }
 
-  createApp(instance, { ...propsObject }).mount(root);
+  app = createApp(instance, { ...propsObject });
+  app.mount(root);
 
   return instance;
 }
