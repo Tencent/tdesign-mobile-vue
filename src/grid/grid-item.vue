@@ -10,9 +10,16 @@
         :size="badgeProps.size"
         :offset="badgeProps.offset"
       >
-        <img v-if="image" :src="image" :class="`${name}__image`" :style="imgStyle" />
+        <template v-if="image">
+          <img v-if="typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
+          <t-node v-else :content="imageContent"></t-node>
+        </template>
       </t-badge>
-      <img v-else-if="image" :src="image" :class="`${name}__image`" :style="imgStyle" />
+
+      <template v-else-if="image">
+        <img v-if="typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
+        <t-node v-else :content="imageContent"></t-node>
+      </template>
     </div>
     <div :class="`${name}__text`" :style="textStyle">
       <div :class="`${name}__title`" :style="titleStyle">
@@ -66,12 +73,12 @@ export default defineComponent({
 
       const style = {
         flexBasis: percent,
-        flexDirection: isHorz ? 'row' : 'column',
+        flexDirection: isHorz ? ('row' as const) : ('column' as const),
         paddingLeft: gutter.value ? `${gutter}px` : 0,
         paddingRight: gutter.value ? `${gutter}px` : 0,
         alignItems: 'center',
         justifyContent: 'center',
-        textAlign: align.value || 'center',
+        textAlign: ['center', 'left'].includes(align.value) ? align.value : 'center',
         ...borderStyle,
       };
       return style;

@@ -59,13 +59,6 @@ export default {
       type: 'component',
       children: [
         {
-          title: 'Indexes 索引',
-          name: 'indexes',
-          meta: { docType: 'navigation' },
-          path: '/vue-mobile/components/indexes',
-          component: () => import('@/indexes/indexes.md'),
-        },
-        {
           title: 'Navbar 导航条',
           name: 'navbar',
           meta: { docType: 'navigation' },
@@ -175,13 +168,6 @@ export default {
           meta: { docType: 'form' },
           path: '/vue-mobile/components/search',
           component: () => import('@/search/search.md'),
-        },
-        {
-          title: 'Slider 滑动选择器',
-          name: 'slider',
-          meta: { docType: 'form' },
-          path: '/vue-mobile/components/slider',
-          component: () => import('@/slider/slider.md'),
         },
         {
           title: 'Fab 悬浮按钮',

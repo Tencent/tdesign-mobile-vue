@@ -58,7 +58,7 @@ export default defineComponent({
   name,
   components: { TPopup, TNode },
   props: DialogProps,
-  emits: ['update:modelValue', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
+  emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
   setup(props, context) {
     const internalInstance = getCurrentInstance();
     const dialogContent = renderContent(internalInstance, 'default', 'content');
@@ -96,18 +96,18 @@ export default defineComponent({
     }));
 
     const handleConfirm = () => {
-      context.emit('update:modelValue', false);
+      context.emit('update:visible', false);
       context.emit('confirm');
     };
 
     const handleCancel = () => {
-      context.emit('update:modelValue', false);
+      context.emit('update:visible', false);
       context.emit('close', 'cancel');
       context.emit('cancel');
     };
 
     const handleOverlayClick = () => {
-      context.emit('update:modelValue', false);
+      context.emit('update:visible', false);
       context.emit('close', 'overlay');
       context.emit('overlay-click');
     };

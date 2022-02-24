@@ -16,7 +16,7 @@
       </t-cells>
 
       <div class="props-block">
-        <t-popup v-model="show.city" position="bottom">
+        <t-popup v-model="show.city" placement="bottom">
           <t-picker
             v-model="text.city"
             :default-value="['广州市']"
@@ -28,7 +28,7 @@
             <t-picker-item :options="roleOptions" @change="onColumnChange" />
           </t-picker>
         </t-popup>
-        <t-popup v-model="show.yearAndSeason" position="bottom">
+        <t-popup v-model="show.yearAndSeason" placement="bottom">
           <t-picker
             v-model="text.yearAndSeason"
             @change="onChange"
@@ -39,7 +39,7 @@
             <t-picker-item :options="seasonOptions" @change="onColumnChange" />
           </t-picker>
         </t-popup>
-        <t-popup v-model="show.date" position="bottom">
+        <t-popup v-model="show.date" placement="bottom">
           <t-picker v-model="text.date" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
             <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
             <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
@@ -76,7 +76,7 @@
       </t-cells>
 
       <div class="props-block">
-        <t-popup v-model="show.cityTitle" position="bottom">
+        <t-popup v-model="show.cityTitle" placement="bottom">
           <t-picker
             v-model="text.cityTitle"
             title="选择城市"
@@ -87,7 +87,7 @@
             <t-picker-item :options="cityObjectOptions" @change="onColumnChange" />
           </t-picker>
         </t-popup>
-        <t-popup v-model="show.yearAndSeasonTitle" position="bottom">
+        <t-popup v-model="show.yearAndSeasonTitle" placement="bottom">
           <t-picker
             v-model="text.yearAndSeasonTitle"
             title="选择年份和季节"
@@ -99,7 +99,7 @@
             <t-picker-item :options="seasonOptions" @change="onColumnChange" />
           </t-picker>
         </t-popup>
-        <t-popup v-model="show.dateTitle" position="bottom">
+        <t-popup v-model="show.dateTitle" placement="bottom">
           <t-picker
             v-model="text.dateTitle"
             title="选择日期"

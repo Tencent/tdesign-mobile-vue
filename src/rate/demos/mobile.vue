@@ -123,7 +123,7 @@ export default defineComponent({
   align-items: center;
   &__label {
     font-size: 16px;
-    margin-right: 8px;
+    margin-right: 16px;
     min-width: 80px;
   }
 }

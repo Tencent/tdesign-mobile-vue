@@ -13,8 +13,8 @@ export default defineComponent({
   setup() {
     const initData = reactive({
       btns: [
-        { content: '删除', theme: 'danger' },
-        { content: '收藏', theme: 'default' },
+        { text: '删除', theme: 'danger' },
+        { text: '收藏', theme: 'default' },
       ],
     });
     return {

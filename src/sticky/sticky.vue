@@ -11,7 +11,7 @@ import { computed, getCurrentInstance, defineComponent, ref, watch } from 'vue';
 import { useElementBounding, templateRef } from '@vueuse/core';
 import props from './props';
 import config from '../config';
-import { renderContent, useEmitEvent, TNode } from '@/shared';
+import { renderContent, useEmitEvent, TNode } from '../shared';
 
 const name = `${config.prefix}-sticky`;
 

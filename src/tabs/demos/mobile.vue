@@ -188,8 +188,10 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-.t-tabs {
-  margin-bottom: 20px;
+.tdesign-mobile-demo-block {
+  .t-tabs + .t-tabs {
+    margin-top: 20px;
+  }
 }
 .t-tabs__panel p {
   height: 86px;

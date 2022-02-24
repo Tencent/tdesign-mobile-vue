@@ -15,7 +15,7 @@
     >
       <slot></slot>
     </div>
-    <template v-if="navigation">
+    <template v-if="navigation && 'type' in navigation">
       <!-- 左右侧的按钮 -->
       <span v-if="direction === 'horizontal' && navigation.showSlideBtn">
         <span :class="`${name}__btn btn-prev`" @click="prev(1)">

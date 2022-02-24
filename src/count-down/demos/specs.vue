@@ -102,7 +102,7 @@ export default defineComponent({
 
 <style lang="less">
 .demo-size__box {
-  margin-top: 18px;
+  margin-bottom: 18px;
   display: flex;
   font-size: 14px;
   align-items: center;

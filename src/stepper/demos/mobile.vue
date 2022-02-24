@@ -5,7 +5,15 @@
     <tdesign-demo-block title="01 类型" summary="基础步进器">
       <div class="stepper-demo">
         <t-cell title="标题文字">
-          <t-stepper v-model="number1" :step="1" :min="0" :max="100" @change="onChange" />
+          <t-stepper
+            v-model="number1"
+            :step="1"
+            :min="0"
+            :max="100"
+            @overlimit="onOverlimit"
+            @change="onChange"
+            @blur="onBlur"
+          />
         </t-cell>
       </div>
     </tdesign-demo-block>
@@ -17,12 +25,11 @@
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯步进器">
-      <div class="stepper-pure-demo">
+      <div style="margin-left: 16px">
         <t-stepper v-model.number="number3" theme="grey" :step="1" :min="0" :max="100" />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 类型" summary="步进器状态"> </tdesign-demo-block>
-    <tdesign-demo-block>
+    <tdesign-demo-block title="02 类型" summary="步进器状态">
       <div class="stepper-demo">
         <t-cell title="禁用">
           <t-stepper v-model.number="number4" :step="1" :min="0" :max="100" disabled />
@@ -74,8 +81,16 @@ export default defineComponent({
     const onChange = ($event: number) => {
       console.log(`change to ${$event}`);
     };
+    const onBlur = ($event: number) => {
+      console.log(`blur to ${$event}`);
+    };
+    const onOverlimit = ($type: string) => {
+      console.log(`onOverlimit ${$type}`);
+    };
     return {
       onChange,
+      onBlur,
+      onOverlimit,
       ...toRefs(state),
     };
   },

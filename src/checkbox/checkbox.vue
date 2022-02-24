@@ -180,7 +180,7 @@ export default defineComponent({
 
     const { state, toggle } = useToggle(checkboxCheckVal, isChecked.value);
 
-    const isALlSelected = computed(() => rootGroup?.isALlSelected);
+    const isAllSelected = computed(() => rootGroup?.isAllSelected);
 
     const checkBoxOrgChange = (e: Event) => {
       const { target }: { target: any } = e;
@@ -227,7 +227,7 @@ export default defineComponent({
       defaultCheck,
       defaultUncheck,
       singleChecked,
-      isALlSelected,
+      isAllSelected,
       unCheckedIconClass,
       checkedIconClass,
     };

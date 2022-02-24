@@ -122,7 +122,7 @@ export default defineComponent({
   padding: 0 16px;
   font-family: 'PingFang SC';
   .demo__box {
-    margin-top: 16px;
+    margin-bottom: 16px;
     display: flex;
     font-size: 14px;
     align-items: center;
@@ -140,6 +140,9 @@ export default defineComponent({
       margin-right: 30%;
       color: rgba(0, 0, 0, 0.4);
     }
+  }
+  .demo__box:last-child {
+    margin-bottom: 0;
   }
   // 方底
   .t-countdown__square-bottom {

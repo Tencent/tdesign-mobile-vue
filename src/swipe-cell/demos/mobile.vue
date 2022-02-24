@@ -111,23 +111,27 @@
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
 import Toast from '../../toast/index';
+import { SwipeActionItem } from '../type';
 
 interface InitData {
   disabled: boolean;
   btns: {}[];
-  expanded: 'left' | 'right' | '';
+  expanded: 'left' | 'right' | undefined;
 }
 export default defineComponent({
   setup() {
+    const handleEdit = () => {
+      Toast.success(`编辑成功`);
+    };
     const initData: InitData = reactive({
       disabled: false,
       btns: [
-        { content: '编辑', theme: 'warning' },
-        { content: '删除', theme: 'danger' },
+        { text: '编辑', theme: 'warning', onClick: handleEdit },
+        { text: '删除', theme: 'danger' },
       ],
       expanded: 'right',
     });
-    const handleClickBtns = (value: { action: { [key: string]: any }; source: String }) => {
+    const handleClickBtns = (value: { action: SwipeActionItem; source: String }) => {
       Toast(JSON.stringify(value));
     };
     const handleClick = () => {
@@ -137,7 +141,7 @@ export default defineComponent({
       initData.expanded = value;
     };
     const handleChangeSwitch = (value: boolean) => {
-      initData.expanded = value ? 'right' : '';
+      initData.expanded = value ? 'right' : undefined;
     };
     return {
       initData,

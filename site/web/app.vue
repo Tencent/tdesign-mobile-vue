@@ -9,10 +9,12 @@
 
 <script>
 import siteConfig from '../docs.config';
-
+import  { sortDocs } from './utils';
 import { defineComponent } from 'vue';
 
-const { docs: routerList } = JSON.parse(JSON.stringify(siteConfig).replace(/component:.+/g, ''));
+const docs = sortDocs(siteConfig.docs)
+
+const { docs: routerList } = JSON.parse(JSON.stringify({ docs: docs }).replace(/component:.+/g, ''));
 
 export default defineComponent({
   data() {
