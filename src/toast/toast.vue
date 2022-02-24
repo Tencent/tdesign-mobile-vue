@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { LoadingIcon, CheckCircleIcon, ErrorCircleIcon } from 'tdesign-icons-vue-next';
-import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
+import { computed, toRefs, ref, defineComponent, getCurrentInstance, h, onMounted, onUnmounted } from 'vue';
 import { renderTNode, TNode } from '../shared';
 import TMask from '../mask';
 import ToastProps from './props';
@@ -52,6 +52,15 @@ export default defineComponent({
         [`${name}--bottom`]: props.placement === 'bottom',
       },
     ]);
+
+    const cls = `${prefix}-overflow-hidden`;
+    onMounted(() => {
+      props.preventScrollThrough && document.body.classList.add(cls);
+    });
+
+    onUnmounted(() => {
+      props.preventScrollThrough && document.body.classList.remove(cls);
+    });
 
     return {
       name: ref(name),
