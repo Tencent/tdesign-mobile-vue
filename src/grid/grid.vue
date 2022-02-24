@@ -1,6 +1,7 @@
 <template>
   <div :class="`${name}`"><slot></slot></div>
 </template>
+
 <script lang="ts">
 import { defineComponent, provide, toRefs } from 'vue';
 

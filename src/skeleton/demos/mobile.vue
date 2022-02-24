@@ -18,7 +18,7 @@
         <t-skeleton :row-col="rowCols" class="item"></t-skeleton>
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 类型" summary="渐变加载动画">
+    <tdesign-demo-block title="02 动画" summary="渐变加载动画">
       <div class="skeleton-demo">
         <t-skeleton animation="gradient" />
       </div>
