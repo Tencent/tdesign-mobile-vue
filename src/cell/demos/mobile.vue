@@ -56,17 +56,8 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { ChevronRightIcon as TIconChevronRight, AppIcon } from 'tdesign-icons-vue-next';
-import { defineComponent } from 'vue';
 import TSwitch from '../../switch';
 import TBadge from '../../badge';
-
-export default defineComponent({
-  data() {
-    return {
-      // description: <div>1</div>
-    };
-  },
-});
 </script>
