@@ -38,6 +38,7 @@ export default {
     type: String as PropType<TdLoadingProps['layout']>,
     default: 'horizontal' as TdLoadingProps['layout'],
     validator(val: TdLoadingProps['layout']): boolean {
+      if (!val) return true;
       return ['horizontal', 'vertical'].includes(val);
     },
   },
@@ -68,6 +69,7 @@ export default {
     type: String as PropType<TdLoadingProps['theme']>,
     default: 'circular' as TdLoadingProps['theme'],
     validator(val: TdLoadingProps['theme']): boolean {
+      if (!val) return true;
       return ['circular', 'spinner', 'bar', 'error', 'dots'].includes(val);
     },
   },

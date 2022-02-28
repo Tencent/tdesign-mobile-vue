@@ -46,6 +46,6 @@
    /**
     * 列表滚动时触发，scrollTop 表示顶部滚动距离
     */
-   onScroll?: ({ scrollTop: number }) => void;
+   onScroll?: ({ scrollTop: number }: any) => void;
  }
  
