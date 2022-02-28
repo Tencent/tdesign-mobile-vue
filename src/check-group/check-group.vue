@@ -16,7 +16,7 @@
 
 <script lang="ts">
 import { SetupContext, provide, ref, computed, defineComponent, watch, toRefs, VNode, reactive, onMounted } from 'vue';
-import { intersection, toFinite } from 'lodash';
+import intersection from 'lodash/intersection';
 import config from '../config';
 import CheckboxProps from '../checkbox/checkbox-group-props';
 import Checkbox from '../checkbox/checkbox.vue';
