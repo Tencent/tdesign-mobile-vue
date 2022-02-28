@@ -25,6 +25,7 @@
      type: String as PropType<TdListProps['layout']>,
      default: 'horizontal' as TdListProps['layout'],
      validator(val: TdListProps['layout']): boolean {
+       if (!val) return true;
        return ['horizontal', 'vertical'].includes(val);
      },
    },
@@ -33,6 +34,7 @@
      type: String as PropType<TdListProps['size']>,
      default: 'medium' as TdListProps['size'],
      validator(val: TdListProps['size']): boolean {
+       if (!val) return true;
        return ['small', 'medium', 'large'].includes(val);
      },
    },

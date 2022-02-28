@@ -4,9 +4,9 @@
     <slot />
     <div @click.stop="onLoadMore">
       <t-loading
-        v-if="['loading', 'loadingMore'].includes(asyncLoading)"
+        v-if="typeof asyncLoading === 'string' && ['loading', 'loadingMore'].includes(asyncLoading)"
         :loading="asyncLoading === 'loading'"
-        :content="LOADING_TEXT_MAP[asyncLoading]"
+        :content="typeof asyncLoading === 'string' ? LOADING_TEXT_MAP[asyncLoading] : ''"
         :class="`${name}__loading`"
       />
     </div>
