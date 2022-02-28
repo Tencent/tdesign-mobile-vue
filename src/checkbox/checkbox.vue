@@ -1,235 +1,124 @@
 <template>
-  <div :class="`${flagName}`">
+  <div :class="componentClass">
     <div :class="`${flagName}__content-wrap`">
-      <!-- 按钮区域 -->
-      <span v-if="align === 'left'" :class="iconClasses">
+      <span v-if="align === 'left'" :class="`${flagName}__icon-left`">
         <input
           type="checkbox"
           :name="name"
           :class="`${flagName}__original-left`"
           :value="value"
-          :checked="singleChecked || isChecked"
-          @click="checkBoxOrgChange"
+          :disabled="isDisabled"
+          :readonly="readonly"
+          :checked="isChecked"
+          :indeterminate="indeterminate"
+          @click="handleChange"
         />
-        <t-node
-          v-if="(singleChecked || isChecked) && !indeterminate"
-          :content="(icon && icon[0]) || defaultCheck"
-          :class="checkedIconClass"
-          size="24px"
-        ></t-node>
-        <t-node
-          v-else-if="!(singleChecked || isChecked) && !indeterminate"
-          :content="(icon && icon[1]) || defaultUncheck"
-          :class="unCheckedIconClass"
-          size="24px"
-        ></t-node>
-        <t-node v-else-if="indeterminate" :content="TMinusCircleFilledIcon" size="24px"></t-node>
+        <t-node v-if="!indeterminate" :content="checkIcons[isChecked ? 0 : 1]"></t-node>
+        <minus-circle-filled-icon v-else></minus-circle-filled-icon>
       </span>
-      <!-- 文本区域 -->
       <span
-        :class="{ [`${flagName}__label-wrap`]: true, [`${flagName}__label-wrap-left`]: align === 'right' }"
-        @click="checkBoxChange('content')"
+        v-if="labelContent"
+        :class="{ [`${flagName}__label`]: true, [`${flagName}__label-left`]: align === 'right' }"
+        @click="(e) => handleChange(e, 'content')"
       >
-        <span v-if="labelContent" :class="titleClasses">
-          <t-node :content="labelContent"></t-node>
-        </span>
-        <div v-if="checkboxContent" :class="`${flagName}__content-inner`">
-          <t-node :content="checkboxContent"></t-node>
-        </div>
+        <t-node :content="labelContent"></t-node>
       </span>
-      <!-- 按钮区域 -->
-      <span v-if="align === 'right'" :class="`${flagName}__icon-wrap ${flagName}__icon-right-wrap`">
+      <span v-if="align === 'right'" :class="`${flagName}__icon-right`">
         <input
           type="checkbox"
           :name="name"
           :class="`${flagName}__original-right`"
           :value="value"
-          :checked="singleChecked || isChecked"
-          @click="checkBoxOrgChange"
+          :disabled="isDisabled"
+          :readonly="readonly"
+          :checked="isChecked"
+          :indeterminate="indeterminate"
+          @click="handleChange"
         />
-        <!-- <span v-if="disabled && !(singleChecked || isChecked)" :class="`${flagName}__icon-disable-center`"></span> -->
-        <t-node
-          v-if="singleChecked || isChecked"
-          :content="(icon && icon[0]) || defaultCheck"
-          :class="checkedIconClass"
-          size="24px"
-        ></t-node>
-        <t-node v-else :content="(icon && icon[1]) || defaultUncheck" :class="unCheckedIconClass" size="24px"></t-node>
+        <t-node v-if="!indeterminate" :content="checkIcons[isChecked ? 0 : 1]"></t-node>
+        <minus-circle-filled-icon v-else></minus-circle-filled-icon>
       </span>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  inject,
-  onMounted,
-  onUnmounted,
-  computed,
-  SetupContext,
-  defineComponent,
-  getCurrentInstance,
-  h,
-  ref,
-} from 'vue';
+import { inject, computed, SetupContext, defineComponent, getCurrentInstance, h, toRefs } from 'vue';
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { emitEvent, renderContent, renderTNode, TNode, useToggle, useDefault } from '../shared';
-import { CheckboxOption, TdCheckboxProps } from './type';
+import { renderContent, TNode, useDefault } from '../shared';
+import { TdCheckboxProps } from './type';
+import ClASSNAMES from '../shared/constants';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
 
-/**
- * @description: 判断当前checkbox是否选中
- * @param {props} props属性对象
- * @param {rootGroup} Group注入的对象
- * @return: 返回是否选中的对象
- */
-const getIsCheck = (innerValue: any, rootGroup: any) =>
-  computed(() => rootGroup && rootGroup?.checkedValues?.value?.indexOf(innerValue.value) !== -1);
-
-/**
- * @description: 设置checkbox点击回调
- * @param {isChecked} 是否选中
- * @param {props} props属性对象
- * @param {rootGroup} Group注入的对象
- * @return: 返回点击函数
- */
-const setCheckBoxChange = (props: any, rootGroup: any, content: SetupContext, isChecked: any) => (area: string) => {
-  if (props.disabled) {
-    return;
-  }
-  if (area === 'content' && props?.contentDisabled) {
-    return;
-  }
-  if (isChecked.value) {
-    content.emit('update:value', '');
-    content.emit('change', '');
-    if (rootGroup) {
-      rootGroup?.uncheck(props.value);
-    }
-    if (props.checkAll) {
-      rootGroup.toggleAll(false);
-    }
-  } else {
-    content.emit('update:value', props.value);
-    content.emit('change', props.value);
-    if (rootGroup) {
-      rootGroup?.check(props.value);
-    }
-    if (props.checkAll) {
-      rootGroup.toggleAll(true);
-    }
-  }
-};
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, MinusCircleFilledIcon },
   props: CheckboxProps,
-  emits: ['update:value', 'update:modelValue', 'change'],
-  setup(props: any, context: SetupContext) {
-    const [innerValue] = useDefault<CheckboxOption, TdCheckboxProps>(props, context.emit, 'value', 'change');
-    const defaultCheck = h(CheckCircleFilledIcon);
-    const defaultUncheck = h(CircleIcon);
-    const internalInstance = getCurrentInstance();
+  emits: ['update:checked', 'update:modelValue', 'change'],
+  setup(props, context: SetupContext) {
     const flagName = name;
-    const rootGroup: any = inject('rootGroup', undefined);
-    const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
-    const checkboxContent = computed(() => renderTNode(internalInstance, 'content'));
-    const TMinusCircleFilledIcon = h(MinusCircleFilledIcon);
-    const singleChecked = props.checked || ref(false);
-    const checkboxCheckVal = [false, true];
-    onMounted(() => {
-      rootGroup?.register(props);
+    const checkIcons = props.icon || [h(CheckCircleFilledIcon), h(CircleIcon)];
+    const [innerChecked, setInnerChecked] = useDefault<boolean, TdCheckboxProps>(
+      props,
+      context.emit,
+      'checked',
+      'change',
+    );
+    const internalInstance = getCurrentInstance();
+    const checkboxGroup: any = inject('checkboxGroup', undefined);
+    const labelContent = computed(() => renderContent(internalInstance, 'label', 'default'));
+    const indeterminate = computed<boolean>(() => {
+      if (props.checkAll && checkboxGroup !== undefined) return checkboxGroup.indeterminate.value;
+      return props.indeterminate;
     });
-
-    onUnmounted(() => {
-      rootGroup?.unregister(props);
-    });
-
-    const isChecked = getIsCheck(innerValue, rootGroup);
-
-    const iconClasses = computed(() => [
-      `${flagName}__icon-left`,
-      {
-        [`${prefix}-is-checked`]: isChecked.value,
-        [`${prefix}-is-disabled`]: rootGroup?.disabled || props?.disabled,
-      },
-    ]);
-
-    const titleClasses = computed(() => [
-      `${flagName}__content-title`,
-      {
-        [`${prefix}-is-disabled`]: rootGroup?.disabled || props.disabled,
-      },
-    ]);
-
-    const checkedIconClass = computed(() => [
-      {
-        [`${flagName}__checked-icon`]: (singleChecked || isChecked) && !(rootGroup?.disabled || props?.disabled),
-        [`${flagName}__checked__disable-icon`]:
-          !(singleChecked || isChecked) && !(rootGroup?.disabled || props?.disabled),
-      },
-    ]);
-
-    const unCheckedIconClass = `${flagName}__uncheck-icon`;
-
-    const checkBoxChange = setCheckBoxChange(props, rootGroup, context, isChecked);
-
-    const { state, toggle } = useToggle(checkboxCheckVal, isChecked.value);
-
-    const isAllSelected = computed(() => rootGroup?.isAllSelected);
-
-    const checkBoxOrgChange = (e: Event) => {
-      const { target }: { target: any } = e;
-      if (rootGroup?.disabled || props?.disabled) {
-        return;
+    const isChecked = computed(() => {
+      if (props.checkAll) return checkboxGroup?.isCheckAll.value;
+      if (checkboxGroup !== undefined && props.value !== undefined) {
+        return !!checkboxGroup.checkedMap.value[props.value];
       }
-      if (singleChecked.value || (rootGroup && isChecked.value)) {
-        toggle();
-        emitEvent(props, context, 'update:value', '');
-        if (rootGroup) {
-          rootGroup?.uncheck(target?.value, { e });
-        } else {
-          singleChecked.value = false;
-        }
-        if (props.checkAll) {
-          rootGroup.toggleAll(false);
-        }
-        props?.onChange && props?.onChange(state.value, { e });
-      } else {
-        toggle();
-        emitEvent(props, context, 'update:value', target?.value, { e });
-        props?.onChange && props?.onChange(state.value, { e });
-        if (rootGroup) {
-          rootGroup?.check(target?.value, { e });
-        } else {
-          singleChecked.value = true;
-        }
-        if (props.checkAll) {
-          rootGroup.toggleAll(true);
-        }
+      return innerChecked.value;
+    });
+
+    const isDisabled = computed(() => {
+      if (props.disabled !== undefined) return props.disabled;
+      return !!checkboxGroup?.disabled.value;
+    });
+
+    const componentClass = computed(() => [
+      `${flagName}`,
+      {
+        [ClASSNAMES.STATUS.checked]: isChecked.value,
+        [ClASSNAMES.STATUS.disabled]: isDisabled.value,
+        [ClASSNAMES.STATUS.indeterminate]: indeterminate.value,
+      },
+    ]);
+
+    const handleChange = (e: Event, source?: string) => {
+      if (isDisabled.value) return;
+      if (source === 'content' && props.contentDisabled) return;
+
+      const value = !isChecked.value;
+      setInnerChecked(value, { e });
+      e.stopPropagation();
+      if (checkboxGroup && checkboxGroup?.onCheckedChange) {
+        checkboxGroup.onCheckedChange({ checked: value, checkAll: props.checkAll, e, option: props });
       }
     };
 
     return {
-      checkboxContent,
-      labelContent,
-      checkBoxOrgChange,
+      ...toRefs(props),
       isChecked,
+      checkIcons,
+      labelContent,
+      isDisabled,
       flagName,
-      checkBoxChange,
-      iconClasses,
-      titleClasses,
-      TMinusCircleFilledIcon,
-      defaultCheck,
-      defaultUncheck,
-      singleChecked,
-      isAllSelected,
-      unCheckedIconClass,
-      checkedIconClass,
+      componentClass,
+      indeterminate,
+      handleChange,
     };
   },
 });
