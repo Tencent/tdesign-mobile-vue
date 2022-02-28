@@ -4,11 +4,10 @@
     <p class="summary">用于用户对某个任务的时间节点</p>
     <tdesign-demo-block title="01 类型" summary="横向可操作步骤条">
       <div class="step-demo">
-        <t-steps :current="current" :readonly="false">
+        <t-steps v-model="current" :readonly="false">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
         </t-steps>
-
         <t-steps v-model="current1" :readonly="false">
           <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
           <t-step title="选中步骤" content="辅助信息文字最多两行"></t-step>
@@ -234,7 +233,7 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .step-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 </style>
