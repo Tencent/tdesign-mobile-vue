@@ -246,11 +246,11 @@ export default {
           component: () => import('@/swiper/swiper.md'),
         },
         {
-          title: 'Preview 图片预览',
-          name: 'preview',
+          title: 'ImageViewer 图片预览',
+          name: 'image-viewer',
           meta: { docType: 'data' },
-          path: '/vue-mobile/components/preview',
-          component: () => import('@/preview/preview.md'),
+          path: '/vue-mobile/components/image-viewer',
+          component: () => import('@/image-viewer/image-viewer.md'),
         },
         {
           title: 'Drawer 抽屉',
