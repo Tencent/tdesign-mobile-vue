@@ -31,7 +31,12 @@ export default defineComponent({
   props: StepsProps,
   emits: ['update:current', 'update:modelValue', 'change'],
   setup(props, context: SetupContext) {
-    const baseClass = computed(() => [name, `${name}--${props.layout}`, `${name}--${props.theme}-anchor`]);
+    const baseClass = computed(() => [
+      name,
+      `${name}--${props.layout}`,
+      { [`${name}--readonly`]: props.readonly },
+      `${name}--${props.theme}-anchor`,
+    ]);
 
     const [current, setCurrent] = useDefault<TdStepsProps['current'], TdStepsProps>(
       props,
