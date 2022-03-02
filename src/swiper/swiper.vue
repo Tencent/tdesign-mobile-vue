@@ -127,8 +127,8 @@ export default defineComponent({
      */
     const move = (targetIndex: number, isTrust = true) => {
       const _swiperContainer = getContainer();
-      const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
-      const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
+      const moveDirection = props.direction === 'horizontal' ? 'X' : 'Y';
+      const moveLength: number = props.direction === 'vertical' ? height : state.itemWidth;
       actionIsTrust = isTrust;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
@@ -136,7 +136,7 @@ export default defineComponent({
     // 添加动画
     const addAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = `transform ${props?.duration}ms`;
+      _swiperContainer.style.transition = `transform ${props.duration}ms`;
     };
     // 移除动画（轮播时用到）
     const removeAnimation = () => {
@@ -171,12 +171,12 @@ export default defineComponent({
     const startAutoplay = () => {
       // 如果是受控组件，永远不自动播放
       if (typeof props.current === 'number') return false;
-      if (!props?.autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
+      if (!props.autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
       autoplayTimer = setInterval(() => {
         state.activeIndex += 1;
         addAnimation();
         move(state.activeIndex);
-      }, props?.interval);
+      }, props.interval);
     };
     // 通知父组件更新页数（受控模式）
     const emitCurrentChange = (index: number) => {
@@ -224,7 +224,7 @@ export default defineComponent({
       const distanceY = endY - touchStartY;
       const _container = getContainer();
       removeAnimation();
-      if (props?.direction === 'horizontal') {
+      if (props.direction === 'horizontal') {
         setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
       } else {
         const { height = 180 } = props;
@@ -239,13 +239,13 @@ export default defineComponent({
       const distanceY = endY - touchStartY;
       addAnimation();
       if (
-        (props?.direction === 'horizontal' && distanceX > 100) ||
-        (props?.direction === 'vertical' && distanceY > 100)
+        (props.direction === 'horizontal' && distanceX > 100) ||
+        (props.direction === 'vertical' && distanceY > 100)
       ) {
         prev(1);
       } else if (
-        (props?.direction === 'horizontal' && distanceX < -100) ||
-        (props?.direction === 'vertical' && distanceY < -100)
+        (props.direction === 'horizontal' && distanceX < -100) ||
+        (props.direction === 'vertical' && distanceY < -100)
       ) {
         next(1);
       } else {

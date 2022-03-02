@@ -164,12 +164,9 @@ export default defineComponent({
       const offsetLeft = dragState.currentLeft - dragState.startLeft;
       const offsetTop = dragState.currentTop - dragState.startTop;
       event.preventDefault();
-      const isVertical = false;
+
       const newOffsetLeft = Math.min(Math.max(-dragState.itemWidth + 1, offsetLeft), dragState.itemWidth - 1);
-      const newOffsetTop = Math.min(Math.max(-dragState.itemHeight + 1, offsetTop), dragState.itemHeight - 1);
-      const offset = isVertical
-        ? newOffsetTop - dragState.itemHeight * index.value
-        : newOffsetLeft - dragState.itemWidth * index.value;
+      const offset = newOffsetLeft - dragState.itemWidth * index.value;
       setTransform(offset);
     };
     const onTouchEnd = (event: TouchEvent) => {
