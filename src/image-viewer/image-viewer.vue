@@ -1,7 +1,7 @@
 <template>
-  <div v-show="showViewer" :class="`${prefix}-preview`">
+  <div v-show="showViewer" :class="`${prefix}-image-viewer`">
     <div :class="`${prefix}-image-mask`" :style="{ background: backgroundColor }"></div>
-    <div class="preview-container">
+    <div class="image-viewer-container">
       <div
         :ref="myRef"
         :class="classes"
@@ -15,7 +15,7 @@
             <div
               v-for="(item, itemIndex) in images"
               :key="itemIndex"
-              :class="`${prefix}-swiper-item preview-item-wrap`"
+              :class="`${prefix}-swiper-item image-viewer-item-wrap`"
             >
               <div class="item">
                 <img :src="item" />
@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-      <div v-if="showIndex" class="preview-index">{{ index }}/{{ count > 2 ? count - 2 : count }}</div>
+      <div v-if="showIndex" class="image-viewer-index">{{ index }}/{{ count > 2 ? count - 2 : count }}</div>
     </div>
   </div>
 </template>
@@ -32,10 +32,10 @@
 <script lang="ts">
 import { computed, toRefs, ref, defineComponent, reactive, watch, nextTick, PropType } from 'vue';
 import config from '../config';
-import { DragState } from './preview.interface';
+import { DragState } from './image-viewer.interface';
 
 const { prefix } = config;
-const name = `${prefix}-preview`;
+const name = `${prefix}-image-viewer`;
 
 export default defineComponent({
   name,

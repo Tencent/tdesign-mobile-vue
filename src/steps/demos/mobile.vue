@@ -4,11 +4,10 @@
     <p class="summary">用于用户对某个任务的时间节点</p>
     <tdesign-demo-block title="01 类型" summary="横向可操作步骤条">
       <div class="step-demo">
-        <t-steps :current="current" :readonly="false">
+        <t-steps v-model="current" :readonly="false">
           <t-step title="步骤描述"></t-step>
           <t-step title="选中步骤"></t-step>
         </t-steps>
-
         <t-steps v-model="current1" :readonly="false">
           <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
           <t-step title="选中步骤" content="辅助信息文字最多两行"></t-step>
@@ -34,12 +33,6 @@
           <t-step title="步骤描述"></t-step>
         </t-steps>
         <t-steps v-model="current5" :readonly="false" :options="stepData"> </t-steps>
-        <t-steps v-model="current5" :readonly="false">
-          <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
-          <t-step title="选中步骤" content="辅助信息文字最多两行"></t-step>
-          <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
-          <t-step title="步骤描述" content="辅助信息文字最多两行"></t-step>
-        </t-steps>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="横向带图标可操作步骤条">
@@ -120,15 +113,6 @@
         </t-steps>
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block summary="竖向可操作步骤条">
-      <div class="step-demo">
-        <t-steps v-model="current14" layout="vertical" :readonly="false">
-          <t-step title="已完成步骤" content="辅助信息文字最多两行"></t-step>
-          <t-step title="当前步骤" content="辅助信息文字最多两行"></t-step>
-          <t-step title="未完成步骤" content="辅助信息文字最多两行"></t-step>
-        </t-steps>
-      </div>
-    </tdesign-demo-block>
     <tdesign-demo-block summary="竖向简化只读步骤条">
       <div class="step-demo">
         <t-steps v-model="current12" theme="dot" layout="vertical">
@@ -140,7 +124,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="自定义内容步骤条">
       <div class="step-demo">
-        <t-steps v-model="current13" layout="vertical">
+        <t-steps v-model="current13" layout="vertical" :readonly="true">
           <t-step
             title="已完成步骤"
             content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。"
@@ -164,12 +148,8 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
-import config from '@/config';
 
-const { prefix } = config;
-const name = `${prefix}-steps-demo`;
 export default defineComponent({
-  name,
   setup() {
     const current = ref(1);
     const current1 = ref(1);
@@ -240,7 +220,7 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .step-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
 }
 </style>

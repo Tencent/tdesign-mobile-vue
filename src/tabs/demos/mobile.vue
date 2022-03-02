@@ -166,12 +166,8 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import config from '@/config';
 
-const { prefix } = config;
-const name = `${prefix}-tabs-demo`;
 export default defineComponent({
-  name,
   setup() {
     const onChange = (value: string) => {
       console.log(`onChange to ${value}`);

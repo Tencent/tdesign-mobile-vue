@@ -16,7 +16,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import { DateValue } from '../type';
+import { DateValue } from 'tdesign-mobile-vue';
 
 export default defineComponent({
   setup() {

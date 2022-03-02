@@ -1,18 +1,18 @@
 <template>
   <div :class="styleCell" @click="onClick">
-    <div v-if="leftIconContent !== undefined" :class="`${name}__left-icon`">
+    <div v-if="leftIconContent" :class="`${name}__left-icon`">
       <t-node :content="leftIconContent"></t-node>
     </div>
-    <div v-if="titleContent !== undefined" :class="`${name}__title`">
+    <div v-if="titleContent" :class="`${name}__title`">
       <t-node :content="titleContent"></t-node><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
-      <div v-if="descriptionContent !== undefined" :class="`${name}__description`">
+      <div v-if="descriptionContent" :class="`${name}__description`">
         <t-node :content="descriptionContent"></t-node>
       </div>
     </div>
-    <div v-if="noteContent !== undefined" :class="`${name}__note`">
+    <div v-if="noteContent" :class="`${name}__note`">
       <t-node :content="noteContent"></t-node>
     </div>
-    <div v-if="rightIconContent !== undefined" :class="`${name}__right-icon`">
+    <div v-if="rightIconContent" :class="`${name}__right-icon`">
       <t-node :content="rightIconContent"></t-node>
     </div>
   </div>

@@ -5,6 +5,35 @@ toc: false
 spline: explain
 ---
 
+## 0.6.1 (2022-02-28)
+
+
+### Bug Fixes
+
+* **avatar:** 移除完全一样的逻辑实现
+* **demo:** 修复demo展示问题&移除indexes
+* **picker:** 修复picker的错误
+* **steps** steps只读demo不可点击问题修复
+* **swiper:** 修复类型错误
+* **tabs:** 移除顶部transform
+* **toast:** 修复遮罩禁止滑动不生效的问题
+
+### Features
+
+* 新增 stackblitz 支持
+* 引入vueuse, 优化代码逻辑
+* 优化图片懒加载方案
+* 新增Image、Sticky、Skeleton、Grid、List、Loading组件
+* 引入useDefault处理受控和非受控逻辑
+* 引入useEmitEvent处理事件逻辑:stepper, image
+* 移除mapprops高阶组件
+* 处理props对于可空类型的判断ts提示问题
+* Stepper增加overlimit支持
+
+### BREAKING CHANGES
+
+* **datetimepicker:** 改变API由position为placement
+
 ## 0.5.0 `(2022-01-23)`
 
 ### Bug Fixes

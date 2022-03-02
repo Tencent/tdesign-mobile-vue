@@ -5,7 +5,7 @@
         <t-node :content="labelContent"></t-node>
       </div>
     </template>
-    <template #leftIcon>
+    <template v-if="prefixIconContent" #leftIcon>
       <t-node :content="prefixIconContent"></t-node>
     </template>
     <template #note>
@@ -38,7 +38,7 @@
       </div>
       <div v-if="errorMessage" :class="`${componentName}__error-msg`">{{ errorMessage }}</div>
     </template>
-    <template #rightIcon>
+    <template v-if="suffixIconContent" #rightIcon>
       <t-node :content="suffixIconContent"></t-node>
     </template>
   </t-cell>

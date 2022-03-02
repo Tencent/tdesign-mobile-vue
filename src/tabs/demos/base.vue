@@ -20,12 +20,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import config from '@/config';
 
-const { prefix } = config;
-const name = `${prefix}-tabs-demo`;
 export default defineComponent({
-  name,
   setup() {
     const onChange = ($event: number) => {
       console.log(`change to ${$event}`);

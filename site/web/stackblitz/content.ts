@@ -74,7 +74,8 @@ export const packageJSONContent = JSON.stringify(
     devDependencies: {
       vite: orgPkg.devDependencies.vite,
       '@vue/compiler-sfc': orgPkg.devDependencies['@vue/compiler-sfc'],
-      '@vitejs/plugin-vue': orgPkg.devDependencies['@vitejs/plugin-vue']
+      '@vitejs/plugin-vue': orgPkg.devDependencies['@vitejs/plugin-vue'],
+      'less': orgPkg.devDependencies['less']
     },
   },
   null,

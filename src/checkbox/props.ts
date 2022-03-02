@@ -13,7 +13,8 @@ export default {
     type: String as PropType<TdCheckboxProps['align']>,
     default: 'left' as TdCheckboxProps['align'],
     validator(val: TdCheckboxProps['align']): boolean {
-      return ['left', 'right'].includes(val!);
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
     },
   },
   /** 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 */

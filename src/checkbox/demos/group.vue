@@ -12,7 +12,7 @@ import { ref, defineComponent, h } from 'vue';
 
 export default defineComponent({
   setup() {
-    const checkBoxs1 = ref(['1', '2', '4', '5']);
+    const checkBoxs1 = ref(['1', '2']);
     const changeFn = (value: any, context: { e: Event }) => {
       console.log('value:', value);
       console.log('Event:', context);

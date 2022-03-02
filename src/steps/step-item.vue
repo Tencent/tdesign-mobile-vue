@@ -1,21 +1,20 @@
 <template>
   <div :class="rootClassName">
-    <div :class="`${name}__inner`">
-      <div :class="`${name}-icon`" @click="onClickIcon">
-        <span v-if="isDot" :class="`${name}-icon__dot`"></span>
-        <div v-else :class="`${name}-icon__number`">
-          <slot name="icon">{{ index + 1 }}</slot>
+    <div :class="innerClassName" @click="onClickIcon">
+      <div :class="`${name}-icon`">
+        <div :class="iconClassName">
+          <t-node :content="iconContent"></t-node>
         </div>
       </div>
       <div :class="`${name}-content`">
         <div :class="`${name}-title`">
-          <slot name="title">{{ title }}</slot>
+          <t-node :content="titleContent"></t-node>
         </div>
         <div :class="`${name}-description`">
-          <slot name="content">{{ content }}</slot>
+          <t-node :content="descContent"></t-node>
         </div>
         <div :class="`${name}-extra`">
-          <slot name="extra"></slot>
+          <t-node :content="extraContent"></t-node>
         </div>
       </div>
     </div>
@@ -23,8 +22,12 @@
 </template>
 
 <script lang="ts">
-import { computed, inject, defineComponent, getCurrentInstance, ComponentInternalInstance } from 'vue';
+import { computed, inject, defineComponent, getCurrentInstance, ComponentInternalInstance, h } from 'vue';
+import { CloseIcon as TCloseIcon, CheckIcon as TCheckIcon } from 'tdesign-icons-vue-next';
+
 import StepItemProps from './step-item-props';
+import { renderTNode, TNode } from '../shared';
+
 import config from '../config';
 
 const { prefix } = config;
@@ -32,14 +35,37 @@ const name = `${prefix}-step`;
 
 export default defineComponent({
   name,
+  components: { TNode },
   props: StepItemProps,
   setup(props) {
-    const { proxy } = getCurrentInstance() as ComponentInternalInstance;
-    const stepsProvide: any = inject('stepsProvide');
+    const internalInstance = getCurrentInstance();
+    const { proxy } = internalInstance as ComponentInternalInstance;
+    const stepsProvide: any = inject('stepsProvide', undefined);
     stepsProvide.relation(proxy);
-    const index = computed(() => stepsProvide.state.children.indexOf(proxy));
 
+    const index = computed(() => stepsProvide.state.children.indexOf(proxy));
     const theme = computed(() => stepsProvide.theme);
+    const dot = computed(() => theme.value === 'dot' && stepsProvide.layout === 'vertical');
+    const iconNode = computed(() => renderTNode(internalInstance, 'icon'));
+
+    const iconContent = computed(() => {
+      if (dot.value) {
+        return '';
+      }
+      if (props.status === 'error') {
+        return h(TCloseIcon);
+      }
+      if (index.value < current.value && readonly.value) {
+        return h(TCheckIcon);
+      }
+      if (typeof iconNode.value === 'boolean') {
+        return iconNode.value ? index.value + 1 : '';
+      }
+      return iconNode.value;
+    });
+    const titleContent = computed(() => renderTNode(internalInstance, 'title'));
+    const descContent = computed(() => renderTNode(internalInstance, 'content'));
+    const extraContent = computed(() => renderTNode(internalInstance, 'extra'));
 
     const current = computed(() => stepsProvide.current.value || stepsProvide.defaultCurrent || 0);
 
@@ -49,12 +75,17 @@ export default defineComponent({
     const rootClassName = computed(() => [
       name,
       { [`${name}--default`]: !readonly.value },
-      { [`${name}--${curStatus.value}`]: curStatus.value },
+      { [`${name}--${currentStatus.value}`]: currentStatus.value },
     ]);
+    const innerClassName = computed(() => {
+      if (typeof iconNode.value === 'boolean') {
+        return [`${name}__inner`];
+      }
+      return [`${name}__inner`, `${name}__inner__icon`];
+    });
+    const iconClassName = computed(() => [`${name}-icon__number`, { [`${name}-icon__dot`]: dot.value }]);
 
-    const isDot = computed(() => theme.value === 'dot' && stepsProvide.layout === 'vertical');
-
-    const curStatus = computed(() => {
+    const currentStatus = computed(() => {
       const { status } = props;
       if (status !== 'default') return status;
       if (index.value < current.value) return 'finish';
@@ -63,22 +94,29 @@ export default defineComponent({
     });
 
     const onClickIcon = (e: MouseEvent) => {
-      if (!readonly.value && theme.value !== 'dot') {
+      if (!readonly.value && !dot.value) {
         stepsProvide.onClickItem(index.value, current.value, e);
       }
     };
 
     return {
+      dot,
       name,
-      current,
-      curStatus,
-      index,
-      onClickIcon,
       theme,
-      rootClassName,
-      stepsStatus,
+      index,
+      current,
       readonly,
-      isDot,
+      iconNode,
+      stepsStatus,
+      descContent,
+      iconContent,
+      onClickIcon,
+      titleContent,
+      extraContent,
+      rootClassName,
+      currentStatus,
+      iconClassName,
+      innerClassName,
     };
   },
 });
