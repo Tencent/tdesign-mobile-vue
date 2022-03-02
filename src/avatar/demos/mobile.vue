@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo">
+  <div class="tdesign-mobile-demo" style="background-color: #fff">
     <h1 class="title">Avatar 头像</h1>
     <p class="summary">用于展示用户头像信息，除了纯展示也可点击进入个人详情等操作。</p>
     <tdesign-demo-block title="01 头像类型" summary="头像样式可为默认头像、微信头像圆形、方形、自定义文字">
