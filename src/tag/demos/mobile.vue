@@ -53,13 +53,8 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-import config from '@/config';
-
-const { prefix } = config;
-const name = `${prefix}-tag-base-demo`;
 
 export default defineComponent({
-  name,
   setup() {
     const checkedTag = ref(true);
     const closableTags = ref([

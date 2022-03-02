@@ -13,7 +13,7 @@
       />
     </t-cell-group>
     <t-cell-group>
-      <t-input v-model="text.date" label="日期" placeholder="选择日期" @click="show.date = true" />
+      <t-input v-model="text.date" label="日期" placeholder="选择日期" @click="showDate = true" />
       <span style="color: #888; padding: 5px 10px; font-size: 12px">仅做展示，年月日关联关系由自己实现</span>
     </t-cell-group>
 
@@ -52,6 +52,14 @@ export default defineComponent({
     const cityText = reactive([]);
     const yearAndSeasonText = reactive([]);
     const dateText = reactive([]);
+    const text = reactive({
+      city: [],
+      cityTitle: [],
+      yearAndSeason: [],
+      yearAndSeasonTitle: [],
+      date: [],
+      dateTitle: [],
+    });
 
     const cities = ['广州市', '韶关市', '深圳市', '珠海市', '汕头市'];
     const years = [2021, 2020, 2019, 2018, 2017, 2016, 2015];
@@ -89,6 +97,7 @@ export default defineComponent({
     };
 
     return {
+      text,
       cityOptions,
       yearOptions,
       seasonOptions,

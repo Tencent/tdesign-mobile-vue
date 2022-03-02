@@ -24,12 +24,12 @@
     "build:tsc-lib": "vue-tsc --declaration --emitDeclarationOnly --outDir lib/ -p tsconfig.build.json",
     "site": "cd site && vite build",
     "site:preview": "cd site && vite build --mode preview",
-    "test": "npm run test:unit",
+    "test": "npm run test:unit && npm run test:node",
     "test:update": "npm run test:unit-update && npm run test:node-update",
-    "test:unit": "jest --config scripts/test/jest.unit.conf.js",
-    "test:unit-update": "jest --config scripts/test/jest.unit.conf.js --updateSnapshot",
+    "test:unit": "jest --config scripts/test/jest.unit.conf.js --passWithNoTests",
+    "test:unit-update": "jest --config scripts/test/jest.unit.conf.js --updateSnapshot --passWithNoTests",
     "test:node": "jest --config scripts/test/jest.ssr.conf.js",
-    "test:node-update": "jest --config scripts/test/jest.ssr.conf.js --updateSnapshot",
+    "test:node-update": "jest --config scripts/test/jest.ssr.conf.js --updateSnapshot --passWithNoTests",
     "test:watch": "jest --config scripts/test/jest.unit.conf.js --watch",
     "test:coverage": "jest --config scripts/test/jest.unit.conf.js --coverage",
     "test:e2e": "cypress run --config-file scripts/test/cypress.json",
@@ -178,7 +178,7 @@
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
     "vue-tsc": "^0.29.8",
-    "vue3-jest": "^27.0.0-alpha.1"
+    "vue3-jest": "^27.0.0-alpha.2"
   },
   "config": {
     "commitizen": {

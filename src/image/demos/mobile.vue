@@ -89,10 +89,6 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 import { LoadingIcon as TIconLoading } from 'tdesign-icons-vue-next';
-import config from '@/config';
-
-const { prefix } = config;
-const name = `${prefix}-image`;
 
 export default defineComponent({
   components: {
@@ -100,7 +96,6 @@ export default defineComponent({
   },
   setup() {
     return {
-      name: ref(name),
       imageSrc: 'https://tdesign.gtimg.com/site/upload1.png',
     };
   },

@@ -2,9 +2,8 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Picker 选择器</h1>
     <p class="summary">用于选择一个地区的省、市、区、街道等，包含树形用于多层级地区选择以及行政区单层选择</p>
-    <!-- 基础选择器 -->
     <tdesign-demo-block title="01 类型" summary="基础选择器">
-      <t-cells>
+      <t-cell-group>
         <t-cell arrow title="城市" :note="text.city.join(',') || '选择城市'" @click="show.city = true"></t-cell>
         <t-cell
           arrow
@@ -13,7 +12,7 @@
           @click="show.yearAndSeason = true"
         ></t-cell>
         <t-cell arrow title="日期" :note="text.date.join(',') || '选择日期'" @click="show.date = true"></t-cell>
-      </t-cells>
+      </t-cell-group>
 
       <div class="props-block">
         <t-popup v-model="show.city" placement="bottom">
@@ -48,10 +47,8 @@
         </t-popup>
       </div>
     </tdesign-demo-block>
-
-    <!-- 带标题选择器 -->
     <tdesign-demo-block summary="带标题选择器">
-      <t-cells>
+      <t-cell-group>
         <t-cell
           arrow
           title="城市"
@@ -73,7 +70,7 @@
           :note="text.dateTitle.join(',') || '选择日期'"
           @click="show.dateTitle = true"
         ></t-cell>
-      </t-cells>
+      </t-cell-group>
 
       <div class="props-block">
         <t-popup v-model="show.cityTitle" placement="bottom">
@@ -107,9 +104,9 @@
             @confirm="onDateTitleConfirm"
             @cancel="onCancel"
           >
-            <t-picker-item :options="yearOptions" :formatter="(val: any) => `${val}年`" @change="onColumnChange" />
-            <t-picker-item :options="monthOptions" :formatter="(val: any) => `${val}月`" @change="onColumnChange" />
-            <t-picker-item :options="dayOptions" :formatter="(val: any) => `${val}日`" @change="onColumnChange" />
+            <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
+            <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
+            <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
           </t-picker>
         </t-popup>
       </div>

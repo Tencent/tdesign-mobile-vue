@@ -61,13 +61,8 @@
 
 <script lang="ts">
 import { reactive, toRefs, defineComponent } from 'vue';
-import config from '@/config';
-
-const { prefix } = config;
-const name = `${prefix}-stepper-demo`;
 
 export default defineComponent({
-  name,
   setup() {
     const state = reactive({
       number1: 1,

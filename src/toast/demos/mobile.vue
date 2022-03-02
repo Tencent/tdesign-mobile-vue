@@ -38,18 +38,11 @@
 import { ref, h, defineComponent } from 'vue';
 import { UserIcon } from 'tdesign-icons-vue-next';
 import Toast from '../index';
-import config from '@/config';
+
 import { TdToastProps } from '../type';
 
-const { prefix } = config;
-const name = `${prefix}-toast-base-demo`;
-
 export default defineComponent({
-  setup() {
-    return {
-      name: ref(name),
-    };
-  },
+  setup() {},
   data() {
     return {
       text1: '轻提示文字内容',
