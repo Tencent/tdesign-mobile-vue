@@ -3,14 +3,14 @@
     <h1 class="title">TabBar 标签栏</h1>
     <p class="summary">移动端的主导航，用做功能模块之间的切换</p>
     <tdesign-demo-block title="01 类型" summary="单层级纯文本标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_1" :key="index" :value="value" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_1" :key="index" :default-value="0">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name">
           {{ item.text }}
         </t-tab-bar-item>
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="文本加图标标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_2" :key="index" v-model="value" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_2" :key="index" :default-value="0">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name" :badge-props="item.badge">
           <template #icon>
             <app-icon />
@@ -20,7 +20,7 @@
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯图标标签栏">
-      <t-tab-bar v-for="(list, index) in demoList_3" :key="index" :default-value="value" @change="change">
+      <t-tab-bar v-for="(list, index) in demoList_3" :key="index" :default-value="0">
         <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :name="item.name">
           <template #icon>
             <app-icon />
@@ -29,7 +29,7 @@
       </t-tab-bar>
     </tdesign-demo-block>
     <tdesign-demo-block summary="双层级纯文本标签栏">
-      <t-tab-bar v-model="value" fixed :bordered="false" @change="change">
+      <t-tab-bar v-model="value" fixed :bordered="false" :default-value="0">
         <t-tab-bar-item
           v-for="(item, index) in list_5"
           :key="item.name || index"
@@ -51,6 +51,8 @@ export default defineComponent({
   components: { AppIcon },
   setup() {
     const value = ref(1);
+    const value1 = ref(1);
+    const value2 = ref(1);
     const list_1 = [
       {
         name: 'label_1',
@@ -160,6 +162,8 @@ export default defineComponent({
       demoList_3: [list_1, list_2, list_3, list_4],
       list_5,
       value,
+      value1,
+      value2,
       change,
     };
   },
