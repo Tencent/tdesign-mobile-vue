@@ -157,12 +157,8 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, watch } from 'vue';
-import config from '@/config';
 
-const { prefix } = config;
-const name = `${prefix}-steps-demo`;
 export default defineComponent({
-  name,
   setup() {
     const current = ref(1);
     const current1 = ref(1);

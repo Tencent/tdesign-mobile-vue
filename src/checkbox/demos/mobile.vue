@@ -222,11 +222,8 @@
       <tdesign-demo-block title="04 规格" summary="多选框尺寸规格">
         <t-cell-group>
           <t-cell>
-            <template #leftIcon>
-              <t-checkbox name="checkbox7" :checked="true"></t-checkbox>
-            </template>
             <template #title>
-              <span>多选 H48</span>
+              <t-checkbox name="checkbox7" :checked="true">多选 H48</t-checkbox>
             </template>
           </t-cell>
         </t-cell-group>
@@ -234,11 +231,8 @@
       <tdesign-demo-block style="margin-top: 16px">
         <t-cell-group>
           <t-cell style="height: 56px">
-            <template #leftIcon>
-              <t-checkbox name="checkbox7" :checked="true"></t-checkbox>
-            </template>
             <template #title>
-              <span>多选 H56</span>
+              <t-checkbox name="checkbox7" :checked="true">多选 H56</t-checkbox>
             </template>
           </t-cell>
         </t-cell-group>
