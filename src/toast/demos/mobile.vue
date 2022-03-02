@@ -65,10 +65,18 @@ export default defineComponent({
       Toast(message);
     },
     showSuccess(message?: string) {
-      Toast.success(message);
+      Toast({
+        theme: 'success',
+        direction: 'column',
+        message,
+      });
     },
     showFail(message: string) {
-      Toast.fail(message);
+      Toast({
+        theme: 'fail',
+        direction: 'column',
+        message,
+      });
     },
     showSuccessRow(message: string) {
       Toast({

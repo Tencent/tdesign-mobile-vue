@@ -39,7 +39,14 @@ export default {
     },
   },
   /** 是否显示，隐藏时默认销毁组件 */
-  visible: Boolean,
+  visible: {
+    type: Boolean,
+    default: undefined
+  },
+  modelValue: {
+    type: Boolean,
+    default: undefined
+   },
   /** 元素层级，样式默认为 5000 */
   zIndex: {
     type: Number,
