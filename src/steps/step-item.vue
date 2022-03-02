@@ -22,7 +22,9 @@
 </template>
 
 <script lang="ts">
-import { computed, inject, defineComponent, getCurrentInstance, ComponentInternalInstance } from 'vue';
+import { computed, inject, defineComponent, getCurrentInstance, ComponentInternalInstance, h } from 'vue';
+import { CloseIcon as TCloseIcon, CheckIcon as TCheckIcon } from 'tdesign-icons-vue-next';
+
 import StepItemProps from './step-item-props';
 import { renderTNode, TNode } from '../shared';
 
@@ -49,6 +51,12 @@ export default defineComponent({
     const iconContent = computed(() => {
       if (dot.value) {
         return '';
+      }
+      if (props.status === 'error') {
+        return h(TCloseIcon);
+      }
+      if (index.value < current.value && readonly.value) {
+        return h(TCheckIcon);
       }
       if (typeof iconNode.value === 'boolean') {
         return iconNode.value ? index.value + 1 : '';
