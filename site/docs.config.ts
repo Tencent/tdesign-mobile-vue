@@ -86,13 +86,13 @@ export default {
           path: '/vue-mobile/components/tabs',
           component: () => import('@/tabs/tabs.md'),
         },
-        {
-          title: 'DropdownMenu 下拉菜单',
-          name: 'dropdown-menu',
-          meta: { docType: 'navigation' },
-          path: '/vue-mobile/components/dropdown-menu',
-          component: () => import('@/dropdown-menu/dropdown-menu.md'),
-        },
+        // {
+        //   title: 'DropdownMenu 下拉菜单',
+        //   name: 'dropdown-menu',
+        //   meta: { docType: 'navigation' },
+        //   path: '/vue-mobile/components/dropdown-menu',
+        //   component: () => import('@/dropdown-menu/dropdown-menu.md'),
+        // },
       ],
     },
     {
@@ -307,13 +307,13 @@ export default {
           path: '/vue-mobile/components/progress',
           component: () => import('@/progress/progress.md'),
         },
-        {
-          title: 'ActionSheet 动作面板',
-          name: 'action-sheet',
-          meta: { docType: 'message' },
-          path: '/vue-mobile/components/actionsheet',
-          component: () => import('@/action-sheet/action-sheet.md'),
-        },
+        // {
+        //   title: 'ActionSheet 动作面板',
+        //   name: 'action-sheet',
+        //   meta: { docType: 'message' },
+        //   path: '/vue-mobile/components/actionsheet',
+        //   component: () => import('@/action-sheet/action-sheet.md'),
+        // },
         {
           title: 'Toast 轻提示',
           name: 'toast',
