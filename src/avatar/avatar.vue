@@ -24,19 +24,20 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, inject, onMounted, ref, SetupContext } from 'vue';
-import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
-import CLASSNAMES from '../shared/constants';
-import AvatarProps from './props';
+import { computed, toRefs, defineComponent, getCurrentInstance, inject, ref, SetupContext } from 'vue';
+import TBadge from '../badge';
 import config from '../config';
+import AvatarProps from './props';
 import { TdAvatarGroupProps } from './type';
+import CLASSNAMES from '../shared/constants';
+import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-avatar`;
 
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TBadge },
   props: AvatarProps,
   emits: ['error'],
   setup(props, context: SetupContext) {

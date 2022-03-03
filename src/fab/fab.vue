@@ -9,12 +9,14 @@
 import { computed, defineComponent } from 'vue';
 import { AddIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
+import TButton from '../button';
 
 const { prefix } = config;
 const name = `${prefix}-fab`;
 
 export default defineComponent({
   name,
+  components: { TButton },
   props: {
     icon: {
       type: Function,

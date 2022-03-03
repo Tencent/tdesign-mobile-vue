@@ -99,26 +99,32 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  toRefs,
-  ref,
-  reactive,
-  inject,
-  watch,
-  defineComponent,
-  nextTick,
-  onBeforeMount,
-  SetupContext,
-  h,
-} from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
+import {
+  h,
+  ref,
+  watch,
+  toRefs,
+  inject,
+  computed,
+  reactive,
+  nextTick,
+  SetupContext,
+  onBeforeMount,
+  defineComponent,
+} from 'vue';
+import TMask from '../mask';
+import TRadio from '../radio';
 import config from '../config';
-import { useDefault, useEmitEvent } from '../shared';
+import TButton from '../button';
+import TCheckbox from '../checkbox';
+import TRadioGroup from '../radio-group';
+import TCheckGroup from '../check-group';
 import TransAniControl from './trans-ani-control';
+import { useDefault, useEmitEvent } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
-import { TdDropdownMenuProps, TdDropdownItemProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
 import { DropdownMenuState, DropdownMenuControl } from './context';
+import { TdDropdownMenuProps, TdDropdownItemProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-dropdown-item`;
@@ -141,6 +147,7 @@ type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOpt
 
 export default defineComponent({
   name,
+  components: { TMask, TRadio, TButton, TCheckbox, TRadioGroup, TCheckGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {

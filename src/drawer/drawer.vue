@@ -10,8 +10,9 @@
 
 <script lang="ts">
 import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent, h } from 'vue';
-import { useEmitEvent } from '../shared';
+import TPopup from '../popup';
 import config from '../config';
+import { useEmitEvent } from '../shared';
 import { SidebarItem } from './drawer.interface';
 
 const { prefix } = config;
@@ -19,6 +20,7 @@ const name = `${prefix}-drawer`;
 
 export default defineComponent({
   name,
+  components: { TPopup },
   props: {
     modelValue: {
       type: Boolean,

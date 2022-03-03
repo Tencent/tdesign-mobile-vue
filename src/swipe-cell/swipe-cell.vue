@@ -58,22 +58,23 @@
 </template>
 
 <script lang="ts">
+import { onClickOutside, useSwipe } from '@vueuse/core'; // https://vueuse.org/core/useswipe/
 import {
+  ref,
+  watch,
   toRefs,
-  defineComponent,
   reactive,
   computed,
   onMounted,
-  ref,
-  watch,
   SetupContext,
+  defineComponent,
   getCurrentInstance,
 } from 'vue';
-import { onClickOutside, useSwipe } from '@vueuse/core'; // https://vueuse.org/core/useswipe/
-import config from '../config';
 import props from './props';
-import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
+import config from '../config';
+import TButton from '../button';
 import { SwipeActionItem } from './type';
+import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
@@ -88,7 +89,7 @@ export interface SwipeInitData {
 
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TButton },
   props,
   emits: ['click', 'change'],
   setup(props, context: SetupContext) {

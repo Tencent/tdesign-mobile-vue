@@ -51,10 +51,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, inject, computed, ref, watch, Ref, ComputedRef, getCurrentInstance, toRefs } from 'vue';
-import TabBarItemProps from './tab-bar-item-props';
+import { defineComponent, inject, computed, ref, watch, Ref, getCurrentInstance, toRefs } from 'vue';
+import TBadge from '../badge';
 import config from '../config';
 import { initName } from './useTabBar';
+import TabBarItemProps from './tab-bar-item-props';
 import { renderContent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
@@ -62,7 +63,7 @@ const componentName = `${prefix}-tab-bar-item`;
 
 export default defineComponent({
   name: componentName,
-  components: { TNode },
+  components: { TNode, TBadge },
   props: TabBarItemProps,
   setup(props) {
     const { defaultIndex, activeValue, updateChild } = inject<any>('tab-bar');

@@ -34,18 +34,18 @@
 
 <script lang="ts">
 import { defineComponent, getCurrentInstance, computed, inject } from 'vue';
-import { renderTNode, TNode } from '../shared';
-
+import TBadge from '../badge';
 import config from '../config';
-import gridItemprops from './grid-item-props';
+import gridItemProps from './grid-item-props';
+import { renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-grid-item`;
 
 export default defineComponent({
   name,
-  components: { TNode },
-  props: gridItemprops,
+  components: { TNode, TBadge },
+  props: gridItemProps,
   setup(props) {
     const internalInstance = getCurrentInstance();
     const isHorz = props.layout === 'horizontal';
