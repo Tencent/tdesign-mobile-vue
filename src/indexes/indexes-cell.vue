@@ -4,6 +4,7 @@
 
 <script lang="ts">
 import { reactive, defineComponent } from 'vue';
+import TCell from '../cell';
 import config from '../config';
 
 const { prefix } = config;
@@ -12,6 +13,7 @@ const name = `${prefix}-indexes-cell`;
 
 export default defineComponent({
   name,
+  components: { TCell },
   props: {
     title: {
       type: String,

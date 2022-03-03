@@ -5,12 +5,14 @@
 <script lang="ts">
 import { reactive, defineComponent } from 'vue';
 import config from '../config';
+import TCellGroup from '../cell-group';
 
 const { prefix } = config;
 const componentName = `${prefix}-indexes-anchor`;
 
 export default defineComponent({
   name: componentName,
+  components: { TCellGroup },
   props: {
     index: {
       type: String,

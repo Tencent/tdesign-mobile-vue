@@ -82,9 +82,10 @@ import { ref, reactive, watchEffect, computed, defineComponent, ComputedRef, Set
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import { useEmitEvent, useDefault } from '../shared';
 import config from '../config';
 import DateTimePickerProps from './props';
+import { useEmitEvent, useDefault } from '../shared';
+import { Picker as TPicker, PickerItem as TPickerItem } from '../picker';
 import { DateValue, TimeModeValues, DisableDateObj, TdDateTimePickerProps } from './type';
 
 dayjs.extend(weekday);
@@ -98,6 +99,7 @@ const ALL_MODES = [...DATE_MODES, ...TIME_MODES];
 
 export default defineComponent({
   name,
+  components: { TPicker, TPickerItem },
   props: DateTimePickerProps,
   emits: ['change', 'update:value', 'update:modelValue', 'cancel', 'confirm', 'columnChange'],
   setup(props, context: SetupContext) {

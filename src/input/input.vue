@@ -47,11 +47,12 @@
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { ref, computed, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick } from 'vue';
-import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '../shared';
-import ClASSNAMES from '../shared/constants';
+import TCell from '../cell';
 import config from '../config';
 import InputProps from './props';
+import ClASSNAMES from '../shared/constants';
 import { InputValue, TdInputProps } from './type';
+import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '../shared';
 
 const { prefix } = config;
 const componentName = `${prefix}-input`;
@@ -59,8 +60,9 @@ const componentName = `${prefix}-input`;
 export default defineComponent({
   name: componentName,
   components: {
-    CloseCircleFilledIcon,
     TNode,
+    TCell,
+    CloseCircleFilledIcon,
   },
   props: InputProps,
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
