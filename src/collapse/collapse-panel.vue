@@ -57,9 +57,6 @@ import { useEmitEvent } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
-function getExpandIconName(isActive: boolean) {
-  return isActive ? ChevronDownIcon : ChevronUpIcon;
-}
 export default defineComponent({
   name,
   components: { ChevronDownIcon, ChevronUpIcon },
@@ -71,7 +68,7 @@ export default defineComponent({
     const collapseProps = inject('collapseProps') as CollapsePropsType;
     const collapseState = inject('collapseState') as CollapseStateType;
     const onPanelChange = inject('onPanelChange') as onChangeEvent;
-
+    const rightIcon = computed(() => (isActive.value ? ChevronDownIcon : ChevronUpIcon));
     // 内容转为数组统一处理
     const contList = computed(() => toArray(props.content));
     const className = computed(() => ({
@@ -89,8 +86,6 @@ export default defineComponent({
     const isActive = computed(() => findIndex(props.name, collapseState.curValue) > -1);
     const state = reactive({
       baseClass: name,
-      // 右侧按钮是否展开
-      rightIcon: getExpandIconName(isActive.value),
     });
 
     // 切换自身展开态
@@ -116,7 +111,6 @@ export default defineComponent({
         return;
       }
       const { height: headHeight } = headDOM.value.getBoundingClientRect();
-      state.rightIcon = getExpandIconName(isActive.value);
       if (!isActive.value) {
         wrapDOM.value.style.height = `${headHeight}px`;
         return;
@@ -142,6 +136,7 @@ export default defineComponent({
       ...toRefs(state),
       contList,
       headDOM,
+      rightIcon,
       bodyDOM,
       wrapDOM,
       className,

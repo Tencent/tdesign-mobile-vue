@@ -120,7 +120,6 @@ export default defineComponent({
 
 <style lang="less">
 .action-sheet-grid-demo {
-  color: rgba(0, 0, 0, 0.3);
   > div {
     margin-top: 8px;
   }
