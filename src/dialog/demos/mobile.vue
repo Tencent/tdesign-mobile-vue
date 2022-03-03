@@ -63,7 +63,7 @@
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="输入对话框">
-      <div class="dialog-demo">
+      <div class="dialog-demo" style="margin-bottom: 20px">
         <t-button variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
         <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog

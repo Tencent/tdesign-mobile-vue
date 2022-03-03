@@ -30,14 +30,14 @@
         </div>
       </div>
       <div v-if="buttonLayout == 'vertical'" :class="dFooterVerticalClassName">
-        <div v-if="cancelBtn" :class="dVerticalDefaultBtnClassName" @click="handleCancel">
-          <slot name="footer-cancel">
-            {{ cancelBtn }}
-          </slot>
-        </div>
         <div v-if="confirmBtn" :class="dVerticalConformBtnClassName" @click="handleConfirm">
           <slot name="footer-confirm">
             {{ confirmBtn }}
+          </slot>
+        </div>
+        <div v-if="cancelBtn" :class="dVerticalDefaultBtnClassName" @click="handleCancel">
+          <slot name="footer-cancel">
+            {{ cancelBtn }}
           </slot>
         </div>
       </div>

@@ -164,7 +164,6 @@ export default defineComponent({
       const offsetLeft = dragState.currentLeft - dragState.startLeft;
       const offsetTop = dragState.currentTop - dragState.startTop;
       event.preventDefault();
-
       const newOffsetLeft = Math.min(Math.max(-dragState.itemWidth + 1, offsetLeft), dragState.itemWidth - 1);
       const offset = newOffsetLeft - dragState.itemWidth * index.value;
       setTransform(offset);
