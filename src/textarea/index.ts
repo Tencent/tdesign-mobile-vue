@@ -3,5 +3,10 @@ import Textarea from './textarea.vue';
 
 import './style';
 
+import { TdTextareaProps } from './type';
+
+export * from './type';
+export type TextareaProps = TdTextareaProps;
+
 const _Textarea: WithInstallType<typeof Textarea> = withInstall(Textarea);
 export default _Textarea;
