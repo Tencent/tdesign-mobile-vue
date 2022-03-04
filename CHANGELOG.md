@@ -4,6 +4,16 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+## 0.6.2 (2022-03-03)
+
+### Bug Fixes
+
+* 修复缺失的组件引用 `bug #149`
+* **dialog:** buttons layout 92944ee
+* **steps** 设计修改样式对齐 38ca336
+* **swiper:** 非空Props的处理
+* **tabbar:** 调整demo默认值使用
+* **input** modelValue绑定丢失的问题 `bug #151`
 
 ## 0.6.1 (2022-02-28)
 
