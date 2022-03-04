@@ -26,9 +26,9 @@
     </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="文本框状态">
       <t-cell-group>
-        <t-input v-model="text1" label="标签文字" value="请输入文字"></t-input>
-        <t-input v-model="text1" label="填写错误" value="一段错误填写的内容" error-message="提示信息" />
-        <t-input v-model="text2" label="不可编辑" value="请输入文字" readonly />
+        <t-input v-model="text1" label="标签文字"></t-input>
+        <t-input v-model="text1" label="填写错误" error-message="提示信息" />
+        <t-input v-model="text2" label="不可编辑" readonly />
       </t-cell-group>
     </tdesign-demo-block>
     <tdesign-demo-block title="03 特殊类型" summary="特殊文本框类型">

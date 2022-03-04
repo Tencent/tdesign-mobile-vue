@@ -14,7 +14,7 @@
                     :label="option.title"
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
-                    :icon="isCheckedRadio(option.value) ? [renderCheckIcon] : []"
+                    :checked="isCheckedRadio(option.value)"
                   />
                 </div>
               </t-radio-group>
@@ -114,7 +114,7 @@ import {
   defineComponent,
 } from 'vue';
 import TMask from '../mask';
-import TRadio from '../radio';
+import TRadio, { RadioValue } from '../radio';
 import config from '../config';
 import TButton from '../button';
 import TCheckbox from '../checkbox';
@@ -154,7 +154,7 @@ export default defineComponent({
     const emitEvent = useEmitEvent(props, context.emit);
     // 受控 value 属性
     const [passInValue, setValue] = useDefault<
-      TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType> | null,
+      TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>,
       TdDropdownItemProps
     >(props, context.emit, 'value', 'change');
 
@@ -257,7 +257,7 @@ export default defineComponent({
       (val: boolean) => setExpand(val),
     );
 
-    const radioSelect = ref<TdDropdownItemOptionValueType | null>(null);
+    const radioSelect = ref<RadioValue>();
     const checkSelect = ref<TdDropdownItemOptionValueType[]>([]);
     const treeState = reactive<TdDropdownTreeState>({
       leafLevel: 0,
@@ -428,19 +428,19 @@ export default defineComponent({
     const renderCheckIcon = h(CheckIcon);
     return {
       name: ref(name),
+      ...toRefs(props),
+      ...toRefs(state),
       classes,
       styleContent,
-      styleDropRadio,
       isBtnDisabled,
-      isCheckedRadio,
       radioSelect,
       checkSelect,
       treeOptions,
       treeState,
-      selectTreeNode,
       styleTreeRadio,
-      ...toRefs(props),
-      ...toRefs(state),
+      isCheckedRadio,
+      selectTreeNode,
+      styleDropRadio,
       expandMenu,
       collapseMenu,
       resetSelect,

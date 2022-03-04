@@ -126,8 +126,8 @@ export default defineComponent({
     const initData: InitData = reactive({
       disabled: false,
       btns: [
-        { text: '编辑', theme: 'warning', onClick: handleEdit },
-        { text: '删除', theme: 'danger' },
+        { text: '编辑', className: 't-button--primary', onClick: handleEdit },
+        { text: '删除', className: 't-button--danger' },
       ],
       expanded: 'right',
     });

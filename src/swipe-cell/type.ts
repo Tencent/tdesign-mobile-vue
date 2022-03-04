@@ -41,6 +41,6 @@ export interface TdSwipeCellProps {
   onClick?: (context: SwipeActionClickContext) => void;
 }
 
-export interface SwipeActionItem { theme: string, text: string; className?: string; style?: string; onClick?: () => void; [key: string]: any };
+export interface SwipeActionItem { text: string; className?: string; style?: string; onClick?: () => void; [key: string]: any };
 
 export interface SwipeActionClickContext { action: SwipeActionItem; source: 'left' | 'right' };

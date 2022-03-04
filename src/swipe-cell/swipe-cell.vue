@@ -15,7 +15,6 @@
           <t-button
             :class="btn.className || ''"
             :style="btn.style || 'height: 100%'"
-            :theme="btn.theme || 'primary'"
             @click="
               handleClickBtn({
                 action: { ...btn },
@@ -41,7 +40,6 @@
           <t-button
             :class="btn.className || ''"
             :style="btn.style || 'height: 100%'"
-            :theme="btn.theme || 'primary'"
             @click="
               handleClickBtn({
                 action: { ...btn },
@@ -58,7 +56,7 @@
 </template>
 
 <script lang="ts">
-import { onClickOutside, useSwipe } from '@vueuse/core'; // https://vueuse.org/core/useswipe/
+import { onClickOutside, useSwipe } from '@vueuse/core';
 import {
   ref,
   watch,

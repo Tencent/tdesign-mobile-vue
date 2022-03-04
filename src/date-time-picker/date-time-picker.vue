@@ -82,10 +82,11 @@ import { ref, reactive, watchEffect, computed, defineComponent, ComputedRef, Set
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import toNumber from 'lodash/toNumber';
 import config from '../config';
 import DateTimePickerProps from './props';
 import { useEmitEvent, useDefault } from '../shared';
-import { Picker as TPicker, PickerItem as TPickerItem } from '../picker';
+import { Picker as TPicker, PickerItem as TPickerItem, PickerValue } from '../picker';
 import { DateValue, TimeModeValues, DisableDateObj, TdDateTimePickerProps } from './type';
 
 dayjs.extend(weekday);
@@ -334,11 +335,9 @@ export default defineComponent({
       return output;
     };
 
-    const onConfirm = (e: MouseEvent) => {
+    const onConfirm = ({ e }: { e: MouseEvent }) => {
       const outputValue = getOutputValue();
-
-      emitEvent('change', outputValue);
-      emitEvent('update:modelValue', outputValue);
+      innerValue.value = outputValue;
       emitEvent('confirm', { value: outputValue, e });
     };
 
@@ -347,12 +346,12 @@ export default defineComponent({
       emitEvent('cancel', { e });
     };
 
-    const onChange = (v: number[]) => {
+    const onChange = (v: PickerValue[]) => {
       if (JSON.stringify(data.pickerValue) !== JSON.stringify(v)) {
-        data.pickerValue = v;
+        data.pickerValue = v.map((item) => toNumber(item));
 
         pickerColumns.value.forEach((mode, index) => {
-          data[mode] = v[index];
+          data[mode] = toNumber(v[index]);
         });
       }
     };

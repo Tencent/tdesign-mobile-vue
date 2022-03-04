@@ -4000,7 +4000,7 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
     </div>
   </tdesign-demo-block>
   <tdesign-demo-block summary="输入对话框">
-    <div class="dialog-demo"><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+    <div class="dialog-demo" style="margin-bottom:20px;"><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 单行标题对话框 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 带说明文本对话框 <!--]--></span>
@@ -4051,14 +4051,14 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
             <div class="t-dialog__vertical-footer t-dialog__footer">
-              <div class="t-dialog__btn t-dialog__btn--default t-dialog__vertical-btn">
-                <!--[-->
-                <div>我不同意</div>
-                <!--]-->
-              </div>
               <div class="t-dialog__btn t-dialog__btn--primary t-dialog__vertical-btn">
                 <!--[-->
                 <div>我同意</div>
+                <!--]-->
+              </div>
+              <div class="t-dialog__btn t-dialog__btn--default t-dialog__vertical-btn">
+                <!--[-->
+                <div>我不同意</div>
                 <!--]-->
               </div>
             </div>
@@ -4227,16 +4227,45 @@ exports[`ssr snapshot test renders ./src/drawer/demos/mobile.vue correctly 1`] =
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/customized-menu.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="单选菜单" disabled></t-dropdown-item>
+    <t-dropdown-item title="自定义内容">
+      <div class="t-cell-group">
+        <!--v-if-->
+        <div class="t-cell-group__container">
+          <!--[-->
+          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 1">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[--><span class="t-switch" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 2">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[--><span class="t-switch t-is-checked" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 3">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[--><span class="t-switch t-is-disabled" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
+          <!--]-->
+        </div>
+      </div>
+    </t-dropdown-item>
+  </t-dropdown-menu>
   <p> 开关 1: <strong>false</strong></p>
   <p> 开关 2: <strong>true</strong></p>
   <p> 开关 3: <strong>false</strong></p>
@@ -4254,16 +4283,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/demo-container.vue 
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/disabled.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="禁用菜单" disabled></t-dropdown-item>
+    <t-dropdown-item title="禁用选项"></t-dropdown-item>
+  </t-dropdown-menu>
   <p>禁用了序号是3的倍数的选项。</p>
   <!--]-->
 </div>
@@ -4272,16 +4295,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/disabled.vue correc
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/events.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item modelValue="option_2" title="单选菜单" select-mode="multi" options-layout="columns" options-columns="2"></t-dropdown-item>
+    <t-dropdown-item title="多选菜单" select-mode="multi" options-layout="columns" options-columns="3"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单选菜单 选中项: <strong>option_2</strong></p>
   <p> 多选菜单 选中项: <strong>options_A, options_C</strong></p>
   <!--]-->
@@ -4293,55 +4310,31 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/mobile.vue correctl
   <h1 class="title">DropdownMenu 下拉菜单</h1>
   <p class="summary">向下弹出的菜单列表</p>
   <tdesign-demo-block title="01 类型" summary="单选下拉菜单">
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item value="options_2" label="菜单名称"></t-dropdown-item>
+      <t-dropdown-item modelValue="options_A" label="菜单名称"></t-dropdown-item>
+    </t-dropdown-menu>
   </tdesign-demo-block>
   <tdesign-demo-block summary="多选下拉菜单">
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item label="单列" multiple options-columns="1"></t-dropdown-item>
+      <t-dropdown-item label="双列" multiple options-layout="columns" options-columns="2"></t-dropdown-item>
+      <t-dropdown-item label="三列" multiple options-layout="columns" options-columns="3"></t-dropdown-item>
+    </t-dropdown-menu>
   </tdesign-demo-block>
   <tdesign-demo-block summary="单选下拉菜单">
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item modelValue="options_2" label="菜单名称"></t-dropdown-item>
+      <t-dropdown-item modelValue="options_A" label="菜单名称"></t-dropdown-item>
+    </t-dropdown-menu>
   </tdesign-demo-block>
   <tdesign-demo-block summary="树形下拉菜单">
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item label="菜单" options-layout="tree" multiple></t-dropdown-item>
+      <t-dropdown-item label="菜单" options-layout="tree" multiple></t-dropdown-item>
+      <t-dropdown-item label="菜单" options-layout="tree"></t-dropdown-item>
+      <t-dropdown-item label="菜单" options-layout="tree"></t-dropdown-item>
+    </t-dropdown-menu>
   </tdesign-demo-block>
   <div style="height:300px;"></div>
 </div>
@@ -4350,16 +4343,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/mobile.vue correctl
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/multi-choice.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item modelValue="option_2" title="多选菜单1" select-mode="multi"></t-dropdown-item>
+    <t-dropdown-item title="多选菜单2" select-mode="multi"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单选菜单 选中项: <strong>option_2</strong></p>
   <!--]-->
 </div>
@@ -4368,17 +4355,11 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/multi-choice.vue co
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/options-layout.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="单列" select-mode="multi" options-columns="1"></t-dropdown-item>
+    <t-dropdown-item title="双列" select-mode="multi" options-layout="columns" options-columns="2"></t-dropdown-item>
+    <t-dropdown-item title="三列" select-mode="multi" options-layout="columns" options-columns="3"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单列菜单 选中项: <strong></strong></p>
   <p> 两栏菜单 选中项: <strong></strong></p>
   <p> 三栏菜单 选中项: <strong>options_A, options_C</strong></p>
@@ -4389,16 +4370,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/options-layout.vue 
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/single-choice.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item modelValue="option_2" title="单选菜单1"></t-dropdown-item>
+    <t-dropdown-item modelValue="options_A" title="单选菜单2"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单选菜单1 选中项: <strong>option_2</strong></p>
   <p> 单选菜单2 选中项: <strong>options_A</strong></p><!-- <t-button @click="updateOptions">更新选项</t-button> -->
   <!--]-->
@@ -4408,16 +4383,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/single-choice.vue c
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/tree-menu.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="两列多选" options-layout="tree" select-mode="multi"></t-dropdown-item>
+    <t-dropdown-item title="三列多选" options-layout="tree" select-mode="multi"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 多选树形菜单（两列） 选中路径: <strong>null</strong></p>
   <p> 多选树形菜单（三列） 选中路径: <strong>[&quot;options_1&quot;,&quot;options_3&quot;,[&quot;options_2&quot;,&quot;options_3&quot;]]</strong></p>
   <!--]-->
@@ -8354,7 +8323,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
     </div>
     <div class="t-cell-group__container">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue>
+      <div class="t-cell t-cell--middle t-cell--bordered t-input">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -8365,7 +8334,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本(非必填)">
+          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本(非必填)">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8408,7 +8377,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue error="true">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input" error="true">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -8419,7 +8388,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="警告文本">
+          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="警告文本">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8428,7 +8397,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error" modelvalue="一段错误填写的内容">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -8439,7 +8408,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off">
+          <div class="t-input__wrap"><input value="一段错误填写的内容" name class="t-input__control" type="text" autocomplete="Off">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8448,7 +8417,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue="不可编辑的内容">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -8459,7 +8428,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" disabled autocomplete="Off">
+          <div class="t-input__wrap"><input value="不可编辑的内容" name class="t-input__control" type="text" disabled autocomplete="Off">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8566,7 +8535,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     </div>
   </tdesign-demo-block>
   <tdesign-demo-block summary="带提示信息文本框">
-    <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue>
+    <div class="t-cell t-cell--middle t-cell--bordered t-input">
       <!--v-if-->
       <div class="t-cell__title">
         <!--[-->
@@ -8577,7 +8546,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字">
+        <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -8621,7 +8590,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
       <div class="t-cell-group__container">
         <!--[-->
-        <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue="请输入文字">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input">
           <!--v-if-->
           <div class="t-cell__title">
             <!--[-->
@@ -8641,7 +8610,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <!--v-if-->
         </div>
-        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error" modelvalue="请输入文字">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error">
           <!--v-if-->
           <div class="t-cell__title">
             <!--[-->
@@ -8652,7 +8621,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value="一段错误填写的内容" name class="t-input__control" type="text" autocomplete="Off">
+            <div class="t-input__wrap"><input value="请输入文字" name class="t-input__control" type="text" autocomplete="Off">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -8661,7 +8630,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <!--v-if-->
         </div>
-        <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue="不可编辑的内容">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input">
           <!--v-if-->
           <div class="t-cell__title">
             <!--[-->
@@ -8672,7 +8641,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value="请输入文字" name class="t-input__control" type="text" autocomplete="Off" readonly>
+            <div class="t-input__wrap"><input value="不可编辑的内容" name class="t-input__control" type="text" autocomplete="Off" readonly>
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -8686,7 +8655,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     </div>
   </tdesign-demo-block>
   <tdesign-demo-block title="03 特殊类型" summary="特殊文本框类型">
-    <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue="12345678">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input">
       <!--v-if-->
       <div class="t-cell__title">
         <!--[-->
@@ -8697,7 +8666,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="password" autocomplete="Off">
+        <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off">
           <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
               <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
             </svg></div>
@@ -8835,7 +8804,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
     </div>
     <div class="t-cell-group__container">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue="12345678">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -8846,7 +8815,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="password" autocomplete="Off">
+          <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off">
             <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
                 <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
               </svg></div>
@@ -10314,7 +10283,7 @@ exports[`ssr snapshot test renders ./src/picker/demos/title.vue correctly 1`] = 
     <!--v-if-->
     <div class="t-cell-group__container">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue>
+      <div class="t-cell t-cell--middle t-cell--bordered t-input">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -10325,7 +10294,7 @@ exports[`ssr snapshot test renders ./src/picker/demos/title.vue correctly 1`] = 
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城市">
+          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城市">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -10341,7 +10310,7 @@ exports[`ssr snapshot test renders ./src/picker/demos/title.vue correctly 1`] = 
     <!--v-if-->
     <div class="t-cell-group__container">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue>
+      <div class="t-cell t-cell--middle t-cell--bordered t-input">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -10352,7 +10321,7 @@ exports[`ssr snapshot test renders ./src/picker/demos/title.vue correctly 1`] = 
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城年份和季节">
+          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城年份和季节">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -10368,7 +10337,7 @@ exports[`ssr snapshot test renders ./src/picker/demos/title.vue correctly 1`] = 
     <!--v-if-->
     <div class="t-cell-group__container">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" modelvalue>
+      <div class="t-cell t-cell--middle t-cell--bordered t-input">
         <!--v-if-->
         <div class="t-cell__title">
           <!--[-->
@@ -10379,7 +10348,7 @@ exports[`ssr snapshot test renders ./src/picker/demos/title.vue correctly 1`] = 
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="选择日期">
+          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="选择日期">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -14274,7 +14243,7 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/event.vue correctly 1`
       <div class="t-swipe-cell__right" style="width:auto;">
         <!--[-->
         <!--]-->
-        <!--[--><button class="t-button t-size-m t-button--base t-button--danger t-button--square" role="button" aria-disabled="false" style="height:100%;">
+        <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" style="height:100%;">
           <!----><span class="t-button__text"><!--[-->删除<!--]--></span>
         </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" style="height:100%;">
           <!----><span class="t-button__text"><!--[-->收藏<!--]--></span>
@@ -14293,7 +14262,7 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-menu.vue correctl
       <div class="t-swipe-cell__left" style="width:auto;">
         <!--[-->
         <!--]-->
-        <!--[--><button class="t-button t-size-m t-button--base t-button--danger t-button--square" role="button" aria-disabled="false" style="height:100%;">
+        <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" style="height:100%;">
           <!----><span class="t-button__text"><!--[-->删除<!--]--></span>
         </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" style="height:100%;">
           <!----><span class="t-button__text"><!--[-->收藏<!--]--></span>
@@ -14415,9 +14384,9 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="t-swipe-cell__right" style="width:auto;">
           <!--[-->
           <!--]-->
-          <!--[--><button class="t-button t-size-m t-button--base t-button--warning t-button--square" role="button" aria-disabled="false" style="height:100%;">
+          <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square t-button--primary" role="button" aria-disabled="false" style="height:100%;">
             <!----><span class="t-button__text"><!--[-->编辑<!--]--></span>
-          </button><button class="t-button t-size-m t-button--base t-button--danger t-button--square" role="button" aria-disabled="false" style="height:100%;">
+          </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-button--danger" role="button" aria-disabled="false" style="height:100%;">
             <!----><span class="t-button__text"><!--[-->删除<!--]--></span>
           </button>
           <!--]-->
@@ -14449,9 +14418,9 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="t-swipe-cell__right" style="width:auto;">
           <!--[-->
           <!--]-->
-          <!--[--><button class="t-button t-size-m t-button--base t-button--warning t-button--square" role="button" aria-disabled="false" style="height:100%;">
+          <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square t-button--primary" role="button" aria-disabled="false" style="height:100%;">
             <!----><span class="t-button__text"><!--[-->编辑<!--]--></span>
-          </button><button class="t-button t-size-m t-button--base t-button--danger t-button--square" role="button" aria-disabled="false" style="height:100%;">
+          </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-button--danger" role="button" aria-disabled="false" style="height:100%;">
             <!----><span class="t-button__text"><!--[-->删除<!--]--></span>
           </button>
           <!--]-->
@@ -14737,7 +14706,7 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/right-menu.vue correct
       <div class="t-swipe-cell__right" style="width:auto;">
         <!--[-->
         <!--]-->
-        <!--[--><button class="t-button t-size-m t-button--base t-button--danger t-button--square" role="button" aria-disabled="false" style="height:100%;">
+        <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" style="height:100%;">
           <!----><span class="t-button__text"><!--[-->删除<!--]--></span>
         </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" style="height:100%;">
           <!----><span class="t-button__text"><!--[-->收藏<!--]--></span>
