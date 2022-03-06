@@ -1,0 +1,93 @@
+@import '../vars.less';
+@import '../mixins/index.less';
+@import './components.less';
+@import './demo.less';
+
+body {
+  background-color: #F6F6F6;
+}
+
+#app {
+  height: 100%;
+  z-index: 0;
+}
+
+.tdesign-mobile-home {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+  & p{
+    padding-top:16px;
+    opacity: 1;
+    color: rgba(0,0,0,0.4);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "PingFang SC";
+    line-height: 22px;
+  }
+  &-navlink{
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-left: 20px;
+  }
+  &-navs {
+    position: relative;
+    display: flex;
+    margin: 0 0 12px;
+    color: #323233;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px;
+    background: #f7f8fa;
+    & a {
+      text-decoration: none;
+      color: #323233
+    }
+  }
+  .tdesign-mobile-logo {
+    padding-bottom: 24px;
+    img {
+      width: 126px;
+    }
+  }
+  .t-collapse {
+    margin-bottom: 12px;
+    background-color: #fff;
+    &-panel {
+      height: 60px;
+      &--active{
+        .t-collapse-panel__title {
+          color: rgba(0,0,0,0.4)
+        }
+      }
+      &__body {
+        padding: 0;
+        &-slot {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.tdesign-demo-topnav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: @shadow-level-1;
+  &-title{
+    font-size: 18px;
+  }
+  &__back{
+    position: absolute;
+    left: 16px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
