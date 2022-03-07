@@ -97,9 +97,7 @@ export default defineComponent({
       window.scrollTo(0, 1200);
     };
 
-    const myDOMTarget = () => {
-      return myDOM.value;
-    };
+    const myDOMTarget = () => myDOM.value;
     return {
       name,
       myDOM,

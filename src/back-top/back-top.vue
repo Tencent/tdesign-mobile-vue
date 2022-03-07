@@ -23,7 +23,7 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const el = computed(() => {
-      return props.target && props.target();
+      return props.target ? props.target() : window.document.documentElement;
     });
     const { top } = useElementBounding(el);
     const classes = computed(() => {
