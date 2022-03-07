@@ -186,7 +186,7 @@
     }
   },
   "lint-staged": {
-    "src/*.{vue,ts,tsx}": [
+    "*.{vue,ts,tsx}": [
       "npm run lint"
     ]
   }
