@@ -3,7 +3,7 @@ import createTDesignPlugin from './web/plugin-tdoc';
 import vue from '@vitejs/plugin-vue';
 
 module.exports = {
-  base: process.env.NODE_ENV === 'production' ? '/vue-mobile/' : './',
+  base: process.env.NODE_ENV === 'production' ? '/mobile-vue/' : '/',
   root: '.',
   resolve: {
     alias: {
