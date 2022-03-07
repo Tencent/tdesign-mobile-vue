@@ -19,7 +19,6 @@ export interface TdBackTopProps {
   icon?: string | TNode;
   /**
    * 定位滚动到指定对象
-   * @default () => window
    */
   target?: () => HTMLElement;
   /**
@@ -32,4 +31,8 @@ export interface TdBackTopProps {
    * @default round
    */
   theme?: 'round' | 'half-round' | 'round-dark' | 'half-round-dark';
+  /**
+   * 点击触发
+   */
+  onToTop?: () => void;
 }

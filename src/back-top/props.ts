@@ -20,8 +20,7 @@ export default {
   },
   /** 定位滚动到指定对象 */
   target: {
-    type: Object as PropType<TdBackTopProps['target']>,
-    default: () => window,
+    type: Function as PropType<TdBackTopProps['target']>,
   },
   /** 文案 */
   text: {
@@ -37,4 +36,6 @@ export default {
       return ['round', 'half-round', 'round-dark', 'half-round-dark'].includes(val);
     },
   },
+  /** 点击触发 */
+  onToTop: Function as PropType<TdBackTopProps['onToTop']>,
 };
