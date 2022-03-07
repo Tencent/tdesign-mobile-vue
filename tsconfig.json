@@ -36,5 +36,5 @@
     "src/style/index.js",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "docs/vite.config.ts", "site"]
+  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "site"]
 }

@@ -177,7 +177,7 @@ function customRender({ source, file, md }) {
   }
 
   // 移动端路由地址
-  const prefix = process.env.NODE_ENV === 'development' ? `/mobile.html` : `/vue-mobile/mobile.html`;
+  const prefix = process.env.NODE_ENV === 'development' ? `/mobile.html` : `/mobile-vue/mobile.html`;
   mdSegment.mobileUrl = `${prefix}#/${componentName}`;
 
   // 设计指南内容 不展示 design Tab 则不解析
