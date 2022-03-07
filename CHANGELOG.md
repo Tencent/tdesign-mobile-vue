@@ -4,7 +4,7 @@ docClass: timeline
 toc: false
 spline: explain
 ---
-## 0.6.2 (2022-03-03)
+## 0.6.2 `(2022-03-03)`
 
 ### Bug Fixes
 
@@ -15,7 +15,7 @@ spline: explain
 * **tabbar:** 调整demo默认值使用
 * **input** modelValue绑定丢失的问题 `bug #151`
 
-## 0.6.1 (2022-02-28)
+## 0.6.1 `(2022-02-28)`
 
 
 ### Bug Fixes
