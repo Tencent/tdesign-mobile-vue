@@ -2,13 +2,13 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">BackTop 回到顶部</h1>
     <p class="summary">用于当页面过长往下滑动时，帮助用户快速回到页面顶部</p>
-    <t-back-top v-show="showBackTop" :theme="theme" :text="text" :icon="icon" />
+    <t-back-top v-show="showBackTop" :theme="theme" :text="text" />
     <t-back-top v-show="showBackTop2" text="顶部">
       <template #icon>
-        <div>测试</div>
+        <div></div>
       </template>
     </t-back-top>
-    <t-back-top v-show="showBackTop3" text="顶部" icon="error" />
+    <t-back-top v-show="showBackTop3" text="顶部" />
     <t-back-top v-show="showBackTop4" :target="myDOMTarget" text="target" />
     <tdesign-demo-block
       title="01 类型"
@@ -42,7 +42,6 @@
 
 <script lang="ts">
 import { ref, defineComponent, reactive, toRefs } from 'vue';
-import { LoadingIcon as TIconLoading } from 'tdesign-icons-vue-next';
 import config from '@/config';
 
 const { prefix } = config;

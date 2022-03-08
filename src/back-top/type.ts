@@ -16,7 +16,7 @@ export interface TdBackTopProps {
    * 图标
    * @default 'backtop'
    */
-  icon?: string | TNode;
+  icon?: TNode;
   /**
    * 定位滚动到指定对象
    */

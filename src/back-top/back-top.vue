@@ -1,15 +1,16 @@
 <template>
   <div :class="classes" @click="clickBackBtn">
-    <icon v-if="!showIconTNode" :name="icon" />
-    <t-node v-else :content="showIconTNode" />
+    <t-node v-if="iconTNode" :content="iconTNode" />
+    <t-icon-back-top v-else />
     <span v-if="text" :class="`${name}__text`">{{ text }}</span>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent, SetupContext, getCurrentInstance } from 'vue';
-import { Icon } from 'tdesign-icons-vue-next';
+import { computed, defineComponent, SetupContext, getCurrentInstance, h } from 'vue';
 import { useElementBounding } from '@vueuse/core';
+import { BacktopIcon as TIconBackTop } from 'tdesign-icons-vue-next';
+
 import { useEmitEvent, renderTNode, TNode } from '../shared';
 import BackTopProps from './props';
 import config from '../config';
@@ -18,7 +19,7 @@ const { prefix } = config;
 const name = `${prefix}-back-top`;
 export default defineComponent({
   name,
-  components: { TNode, Icon },
+  components: { TNode, TIconBackTop },
   props: BackTopProps,
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
@@ -34,9 +35,8 @@ export default defineComponent({
       };
     });
 
-    // 根据icon的类型，展示不同的t-node
     const internalInstance = getCurrentInstance();
-    const showIconTNode = computed(() => {
+    const iconTNode = computed(() => {
       if (context.slots?.icon || typeof props.icon === 'function') {
         return renderTNode(internalInstance, 'icon');
       }
@@ -50,8 +50,8 @@ export default defineComponent({
 
     return {
       name,
-      showIconTNode,
       classes,
+      iconTNode,
       el,
       top,
       clickBackBtn,
