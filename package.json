@@ -4,7 +4,7 @@
   "version": "0.6.2",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
-  "homepage": "http://tdesign.tencent.com/vue-mobile/",
+  "homepage": "https://tdesign.tencent.com/mobile-vue/",
   "bugs": {
     "url": "/tdesign-mobile-vue/issues"
   },
@@ -23,7 +23,9 @@
     "build:tsc-esm": "vue-tsc --declaration --emitDeclarationOnly --outDir esm/ -p tsconfig.build.json",
     "build:tsc-lib": "vue-tsc --declaration --emitDeclarationOnly --outDir lib/ -p tsconfig.build.json",
     "site": "cd site && vite build",
+    "site:intranet": "cd site && vite build --mode intranet",
     "site:preview": "cd site && vite build --mode preview",
+    "postsite:preview": "cp _site/index.html _site/404.html",
     "test": "npm run test:unit && npm run test:node",
     "test:update": "npm run test:unit-update && npm run test:node-update",
     "test:unit": "jest --config scripts/test/jest.unit.conf.js --passWithNoTests",
@@ -105,10 +107,6 @@
     "@rollup/plugin-url": "^6.0.0",
     "@soerenmartius/vue3-clipboard": "^0.1.1",
     "@types/jest": "^27.0.3",
-    "@types/lru-cache": "^5.1.0",
-    "@types/markdown-it": "^12.0.1",
-    "@types/markdown-it-anchor": "^7.0.0",
-    "@types/markdown-it-container": "^2.0.3",
     "@types/prismjs": "^1.16.2",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
@@ -143,11 +141,6 @@
     "jest-watch-typeahead": "^1.0.0",
     "less": "^4.1.2",
     "lint-staged": "^10.5.4",
-    "lru-cache": "^6.0.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^6.0.1",
-    "markdown-it-container": "^2.0.0",
-    "markdown-it-toc-done-right": "^4.2.0",
     "mockdate": "^3.0.5",
     "postcss": "^8.2.1",
     "prettier": "^2.5.1",
@@ -166,9 +159,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-vue": "^6.0.0",
     "rollup-pluginutils": "^2.8.2",
-    "tdesign-icons-vue-next": "^0.0.4",
     "tdesign-publish-cli": "^0.0.9",
-    "tdesign-site-components": "^0.5.35",
+    "tdesign-site-components": "^0.6.2",
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.2",
@@ -186,7 +178,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
+    "*.{vue,ts,tsx}": [
       "npm run lint"
     ]
   }

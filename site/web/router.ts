@@ -1,8 +1,8 @@
-import { RouteRecordRaw, createRouter, createWebHistory, createWebHashHistory, RouterOptions } from 'vue-router';
+import { RouteRecordRaw, createRouter, createWebHistory, RouterOptions } from 'vue-router';
 import docsConfig from '../docs.config';
 import { sortDocs } from './utils';
 
-const docs =  sortDocs(docsConfig.docs);
+const docs = sortDocs(docsConfig.docs);
 
 function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
   let docsRoutes: Array<RouteRecordRaw> = [];
@@ -27,11 +27,11 @@ function getDocsRoutes(docs: any[], type: string): RouteRecordRaw[] {
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/vue-mobile/components/button',
+    redirect: '/mobile-vue/overview',
   },
   {
-    path: "/:catchAll(.*)",
-    redirect: '/vue-mobile/components/button',
+    path: '/:catchAll(.*)',
+    redirect: '/mobile-vue/overview',
   },
   ...getDocsRoutes(docs, 'document'),
   ...getDocsRoutes(docs, 'component'),
@@ -42,28 +42,19 @@ const routerConfig: RouterOptions = {
   history: createWebHistory('/'),
 };
 
-if (process.env.NODE_ENV === 'preview') {
-  routerConfig.history = createWebHashHistory();
-}
-
 const router = createRouter(routerConfig);
 
 router.beforeEach((to, from, next) => {
-
-  // @ts-ignore
-  if (typeof NProgress !== 'undefined') {
+  if (to.name !== from.name) {
     // @ts-ignore
-    NProgress.start();
+    window.NProgress && window.NProgress.start();
   }
   next();
 });
 
 router.afterEach(() => {
   // @ts-ignore
-  if (typeof NProgress !== 'undefined') {
-    // @ts-ignore
-    NProgress.done();
-  }
+  window.NProgress && window.NProgress.done();
 });
 
 export default router;
