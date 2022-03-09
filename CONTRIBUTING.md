@@ -26,7 +26,7 @@ spline: explain
 
 ```bash
 git clone https://github.com/Tencent/tdesign-mobile-vue.git
-cd tdesign-vue
+cd tdesign-mobile-vue
 git submodule init
 git submodule update
 
