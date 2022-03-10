@@ -46,3 +46,4 @@ export { Grid, GridItem } from './grid';
 export { default as Sticky } from './sticky';
 export { default as List, PullRefresh } from './list';
 export { default as Loading } from './loading';
+export { default as BackTop } from './back-top';

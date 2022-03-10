@@ -268,6 +268,13 @@ export default {
           path: '/mobile-vue/components/progress',
           component: () => import('@/progress/progress.md'),
         },
+        {
+          title: 'BackTop 返回顶部',
+          name: 'back-top',
+          meta: { docType: 'base' },
+          path: '/vue-mobile/components/back-top',
+          component: () => import('@/back-top/back-top.md'),
+        },
         // {
         //   title: 'ActionSheet 动作面板',
         //   name: 'action-sheet',
