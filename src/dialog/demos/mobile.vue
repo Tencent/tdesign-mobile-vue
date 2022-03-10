@@ -8,10 +8,12 @@
         <t-button variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
         <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
         <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
+        <t-button variant="outline" size="large" @click="eventDialog()"> 函数调用长文本对话框 </t-button>
         <t-dialog
           v-model:visible="isShowDialog1"
           :title="singleHeader"
           :confirm-btn="confirmButtonText"
+          :close-on-overlay-click="false"
           :show-overlay="showOverlay"
         >
         </t-dialog>
@@ -110,6 +112,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
+import { Dialog } from '../../components';
 
 export default defineComponent({
   setup() {},
@@ -236,6 +239,10 @@ export default defineComponent({
           break;
         }
       }
+    },
+
+    eventDialog() {
+      Dialog.alert(this.moreTextContent);
     },
 
     onConfirm() {
