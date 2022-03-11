@@ -513,6 +513,94 @@ exports[`ssr snapshot test renders ./src/avatar/demos/type.vue correctly 1`] = `
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/back-top/demos/base.vue correctly 1`] = `
+<div>
+  <div class="tdesign-demo-block">
+    <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+        <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+      </svg>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/back-top/demos/mobile.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <h1 class="title">BackTop 回到顶部</h1>
+  <p class="summary">用于当页面过长往下滑动时，帮助用户快速回到页面顶部</p>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+      <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+    </svg><span class="t-back-top__text">顶部</span></div>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;">
+    <!--[-->
+    <div></div>
+    <!--]--><span class="t-back-top__text">顶部</span>
+  </div>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+      <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+    </svg><span class="t-back-top__text">顶部</span></div>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+      <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+    </svg><span class="t-back-top__text">target</span></div>
+  <tdesign-demo-block title="01 类型" summary="通过设置theme属性，可以分别展示圆+白、半圆+白、圆+黑、半圆+黑四种样式类型">
+    <div class="button-group"><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="0">
+        <!----><span class="t-button__text"><!--[-->圆角白底<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="1">
+        <!----><span class="t-button__text"><!--[-->圆角黑底<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="2">
+        <!----><span class="t-button__text"><!--[-->半圆白底<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="3">
+        <!----><span class="t-button__text"><!--[-->半圆黑底<!--]--></span>
+      </button></div>
+  </tdesign-demo-block>
+  <tdesign-demo-block title="02 内容" summary="通过设置text、icon属性，可以控制悬浮按钮的展示内容">
+    <div class="button-group"><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="4">
+        <!----><span class="t-button__text"><!--[-->纯图标<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->纯文字<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->自定义图标<!--]--></span>
+      </button></div>
+  </tdesign-demo-block>
+  <tdesign-demo-block title="03 返回" summary="通过设置target属性，可以控制页面滚动到对应的DOM元素">
+    <div class="button-group"><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->回到此按钮<!--]--></span>
+      </button></div>
+  </tdesign-demo-block>
+  <div class="blank"></div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/back-top/demos/target.vue correctly 1`] = `
+<div><span></span>
+  <div class="tdesign-demo-block">
+    <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+        <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+      </svg>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/back-top/demos/theme.vue correctly 1`] = `
+<div>
+  <div class="tdesign-demo-block">
+    <div class="t-back-top t-is-fixed t-back-top--half-round-dark" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+        <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+      </svg>
+      <!--v-if-->
+    </div>
+    <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;">
+      <!--[-->
+      <div>图标</div>
+      <!--]--><span class="t-back-top__text">顶部</span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/badge/demos/basic.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="t-cell-group">
@@ -3828,6 +3916,8 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
         <!----><span class="t-button__text"><!--[--> 短文本对话框 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 长文本对话框 <!--]--></span>
+      </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[--> 函数调用长文本对话框 <!--]--></span>
       </button>
       <!--teleport start-->
       <div class="t-popup" style="">
