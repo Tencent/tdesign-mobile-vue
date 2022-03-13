@@ -14704,6 +14704,33 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/right-menu.vue correct
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/swiper/demos/base.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div style="padding:0 16px;">
+    <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
+      <div class="t-swiper__container" style="height:undefinedpx;flex-direction:row;">
+        <!--[-->
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img">
+          <!--]-->
+        </div>
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img">
+          <!--]-->
+        </div>
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img">
+          <!--]-->
+        </div>
+        <!--]-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/swiper/demos/control.vue correctly 1`] = `
 <div>
   <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
@@ -14796,7 +14823,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
         <!--]-->
       </div>
       <div style="height:180px;overflow:hidden;" class="t-swiper">
-        <div class="t-swiper__container" style="height:180px;flex-direction:row;">
+        <div class="t-swiper__container" style="height:180px;flex-direction:column;">
           <!--[-->
           <div class="t-swiper-item swiper-item--demo1">
             <!--[--><img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img">
@@ -14860,6 +14887,23 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
         </div>
         <!--v-if-->
       </div>
+      <!-- <t-swiper :interval="3000" :autoplay="true">
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
+          </t-swiper-item>
+          <template #navigation>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </template>
+        </t-swiper> -->
     </div>
   </tdesign-demo-block>
 </div>
