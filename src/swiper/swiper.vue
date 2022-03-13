@@ -11,7 +11,7 @@
     >
       <slot></slot>
     </div>
-    <template v-if="navigation && 'type' in navigation">
+    <template v-if="navigation">
       <span v-if="direction === 'horizontal' && navigation.showSlideBtn">
         <span :class="`${name}__btn btn-prev`" @click="prev(1)">
           <chevron-left-icon size="20px" />
@@ -20,7 +20,7 @@
           <chevron-right-icon size="20px" />
         </span>
       </span>
-      <span v-if="navigation.type" :class="`${name}__pagination ${name}__pagination-${navigation.type || ''}`">
+      <span v-if="'type' in navigation" :class="`${name}__pagination ${name}__pagination-${navigation.type || ''}`">
         <template v-if="['dots', 'dots-bar'].includes(navigation.type)">
           <span
             v-for="(item, index) in paginationList"
