@@ -8,10 +8,6 @@
         flexDirection: direction === 'horizontal' ? 'row' : 'column',
       }"
       @transitionend="handleAnimationEnd"
-      @touchstart="onTouchStart"
-      @touchmove.prevent="onTouchMove"
-      @touchend="onTouchEnd"
-      @touchcancel="onTouchEnd"
     >
       <slot></slot>
     </div>
@@ -26,7 +22,7 @@
         </span>
       </span>
       <!-- 分页器 -->
-      <span v-if="navigation.type" :class="`${name}__pagination ${name}__pagination-${navigation.type}`">
+      <span v-if="navigation.type" :class="`${name}__pagination ${name}__pagination-${navigation.type || ''}`">
         <template v-if="['dots', 'dots-bar'].includes(navigation.type)">
           <span
             v-for="(item, index) in paginationList"
@@ -34,19 +30,23 @@
             :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
           ></span>
         </template>
-        <span v-if="navigation.type === 'fraction'">
+        <span v-if="navigation.type && navigation.type === 'fraction'">
           {{ showPageNum + '/' + state.itemLength }}
         </span>
       </span>
+    </template>
+    <template v-if="computedNavigation !== undefined">
+      <t-node :content="computedNavigation" :style="{}"></t-node>
     </template>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref, SetupContext } from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
+import { SwipeDirection, useSwipe } from '@vueuse/core';
 import SwiperProps from './props';
 import config from '../config';
-import { useDefault, useEmitEvent } from '../shared';
+import { renderTNode, useDefault, TNode } from '../shared';
 import { TdSwiperProps } from './type';
 
 const { prefix } = config;
@@ -57,14 +57,15 @@ const setOffset = (element: HTMLDivElement, offset: number, direction = 'X'): vo
 };
 export default defineComponent({
   name,
-  components: { ChevronLeftIcon, ChevronRightIcon },
+  components: { ChevronLeftIcon, ChevronRightIcon, TNode },
   props: SwiperProps,
   emits: ['change', 'update:current', 'update:modelValue'],
   setup(props, context: SetupContext) {
-    const emitEvent = useEmitEvent(props, context.emit);
+    // const emitEvent = useEmitEvent(props, context.emit);
     const [swiperValue, setSwiperValue] = useDefault<Number, TdSwiperProps>(props, context.emit, 'current', 'change');
     const self = getCurrentInstance();
-    const swiperContainer = ref(null);
+    const swiperContainer = ref<HTMLElement | null>(null);
+    const computedNavigation = computed(() => renderTNode(self, 'navigation'));
     // const { height = 180, current = null } = props;
     const height = props.height || 180;
     const state: {
@@ -127,8 +128,8 @@ export default defineComponent({
      */
     const move = (targetIndex: number, isTrust = true) => {
       const _swiperContainer = getContainer();
-      const moveDirection = props.direction === 'horizontal' ? 'X' : 'Y';
-      const moveLength: number = props.direction === 'vertical' ? height : state.itemWidth;
+      const moveDirection = props?.direction === 'horizontal' ? 'X' : 'Y';
+      const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
       actionIsTrust = isTrust;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
       _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
@@ -136,7 +137,7 @@ export default defineComponent({
     // 添加动画
     const addAnimation = () => {
       const _swiperContainer = getContainer();
-      _swiperContainer.style.transition = `transform ${props.duration}ms`;
+      _swiperContainer.style.transition = `transform ${props?.duration}ms`;
     };
     // 移除动画（轮播时用到）
     const removeAnimation = () => {
@@ -171,12 +172,12 @@ export default defineComponent({
     const startAutoplay = () => {
       // 如果是受控组件，永远不自动播放
       if (typeof props.current === 'number') return false;
-      if (!props.autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
+      if (!props?.autoplay || autoplayTimer !== null) return false; // 防止多次创建定时器
       autoplayTimer = setInterval(() => {
         state.activeIndex += 1;
         addAnimation();
         move(state.activeIndex);
-      }, props.interval);
+      }, props?.interval);
     };
     // 通知父组件更新页数（受控模式）
     const emitCurrentChange = (index: number) => {
@@ -184,7 +185,8 @@ export default defineComponent({
       let resultIndex = index;
       if (index >= state.itemLength) resultIndex = 0;
       if (index < 0) resultIndex = state.itemLength - 1;
-      emitEvent('change', resultIndex);
+      // emitEvent('change', resultIndex);
+      setSwiperValue(resultIndex);
     };
     // 移动到上一个
     const prev = (step = 1) => {
@@ -206,46 +208,47 @@ export default defineComponent({
       startAutoplay();
       state.btnDisabled = true;
     };
-    let touchStartX = 0;
-    let touchStartY = 0;
     // 按下鼠标或屏幕开始滑动
-    const onTouchStart = (event: TouchEvent) => {
-      stopAutoplay();
-      touchStartY = event.touches[0].clientY;
-      touchStartX = event.touches[0].clientX;
-    };
+    const { lengthX, lengthY } = useSwipe(swiperContainer, {
+      passive: false,
+      onSwipeStart(e: TouchEvent) {
+        stopAutoplay();
+      },
+      onSwipe(e: TouchEvent) {
+        onTouchMove(e);
+      },
+      onSwipeEnd() {
+        onTouchEnd();
+      },
+    });
     // 滑动过程中位移容器
     const onTouchMove = (event: TouchEvent) => {
       event.preventDefault();
       const { activeIndex, itemWidth } = state;
-      const endY = event.changedTouches[0].clientY;
-      const endX = event.changedTouches[0].clientX;
-      const distanceX = endX - touchStartX;
-      const distanceY = endY - touchStartY;
+      const distanceX = lengthX.value;
+      const distanceY = lengthY.value;
       const _container = getContainer();
       removeAnimation();
-      if (props.direction === 'horizontal') {
-        setOffset(_container, -((activeIndex + 1) * itemWidth - distanceX));
+      if (props?.direction === 'horizontal') {
+        setOffset(_container, -((activeIndex + 1) * itemWidth + distanceX));
       } else {
         const { height = 180 } = props;
-        setOffset(_container, -((activeIndex + 1) * height - distanceY), 'Y');
+        setOffset(_container, -((activeIndex + 1) * height + distanceY), 'Y');
       }
     };
     // 放开手指或者鼠标，停止滑动，判断滑动量，如果不够回到原来的位置，否则按方向移动一个节点。
-    const onTouchEnd = (event: TouchEvent) => {
-      const endY = event.changedTouches[0].clientY;
-      const endX = event.changedTouches[0].clientX;
-      const distanceX = endX - touchStartX;
-      const distanceY = endY - touchStartY;
+    const onTouchEnd = () => {
+      const distanceX = lengthX.value;
+      const distanceY = lengthY.value;
       addAnimation();
       if (
-        (props.direction === 'horizontal' && distanceX > 100) ||
-        (props.direction === 'vertical' && distanceY > 100)
+        (props?.direction === 'horizontal' && distanceX < -100) ||
+        (props?.direction === 'vertical' && distanceY < -100)
       ) {
         prev(1);
       } else if (
-        (props.direction === 'horizontal' && distanceX < -100) ||
-        (props.direction === 'vertical' && distanceY < -100)
+        (props?.direction === 'horizontal' && distanceX > 100) ||
+        (props?.direction === 'vertical' && distanceY > 100)
       ) {
         next(1);
       } else {
@@ -266,7 +269,7 @@ export default defineComponent({
     return {
       swiperContainer,
       name,
-      onTouchStart,
+      computedNavigation,
       onTouchMove,
       onTouchEnd,
       handleAnimationEnd,
