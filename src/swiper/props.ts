@@ -13,6 +13,7 @@ export default {
     type: String as PropType<TdSwiperProps['animation']>,
     default: 'slide' as TdSwiperProps['animation'],
     validator(val: TdSwiperProps['animation']): boolean {
+      if (!val) return true;
       return ['slide'].includes(`${val}`);
     },
   },

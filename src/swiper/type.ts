@@ -80,3 +80,4 @@
  export type SwiperChangeSource = 'autoplay' | 'touch' | '';
  
  export type SwiperNavigationType = 'dots' | 'dots-bar' | 'fraction';
+ 
