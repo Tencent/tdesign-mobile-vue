@@ -4,6 +4,22 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+
+## 0.7.0 `(2022-03-14)`
+
+### BREAKING CHANGES
+
+* 支持主题和大小 3f0a5e5
+
+### Bug Fixes
+
+* 弹出框蒙层点击是否关闭修复 & provide暴露$dialog, close #12 11092af, closes #12
+* 修复Badge导入类型 d4f8da6
+
+### Features
+
+* 新增BackTop组件 fb61e74
+
 ## 0.6.2 `(2022-03-03)`
 
 ### Bug Fixes
