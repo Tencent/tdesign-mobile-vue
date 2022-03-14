@@ -12,16 +12,13 @@ export const DialogPropsDefault = {
   title: '温馨提醒',
   content: '',
   type: '',
-  showFooter: true,
-  placeholderText: '',
   confirmBtn: '确认',
-  cancelContent: '取消',
-  isInput: false,
+  cancelBtn: '取消',
   visible: false,
-  knowContent: '我知道了',
   zIndex: 2500,
   showOverlay: true,
   width: '320px',
+  closeOnOverlayClick: false,
 };
 
 let instance: DefineComponent;
@@ -108,6 +105,7 @@ Dialog.install = (app: App, name = '') => {
 
   // 添加插件入口
   app.config.globalProperties.$dialog = Dialog;
+  app.provide('$dialog', Dialog);
 };
 
 type DialogApi = {

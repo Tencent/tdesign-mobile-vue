@@ -30,6 +30,16 @@ export default {
     type: Number,
     required: true,
   },
+  /** 倒计时尺寸 */
+  size: {
+    type: String,
+    default: 'small',
+  },
+  /** 倒计时风格 */
+  theme: {
+    type: String,
+    default: 'default',
+  },
   /** 时间变化时触发 */
   onChange: Function as PropType<TdCountDownProps['onChange']>,
   /** 倒计时结束时触发 */

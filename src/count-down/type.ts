@@ -31,6 +31,17 @@ export interface TdCountDownProps {
    * 倒计时时长，单位毫秒
    */
   time: number;
+
+  /**
+   * 倒计时尺寸
+   * @default 'small'
+   */
+  size?: 'small' | 'medium' | 'large';
+  /**
+   * 倒计时风格
+   * @default 'default'
+   */
+  theme?: 'default' | 'round' | 'square';
   /**
    * 时间变化时触发
    */
@@ -41,4 +52,10 @@ export interface TdCountDownProps {
   onFinish?: () => void;
 }
 
-export interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number };
+export interface TimeData {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  milliseconds: number;
+}
