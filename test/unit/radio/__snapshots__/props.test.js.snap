@@ -1,0 +1,542 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio :props align 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props align 2`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <!--v-if-->
+    <!--v-if-->
+    <span
+      class="t-radio__icon-wrap t-radio__icon-right-wrap"
+    >
+      <input
+        class="t-radio__original-right"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Radio :props checked 1`] = `
+<div
+  class="t-radio t-is-checked"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-check-circle-filled"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props content 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <!--v-if-->
+      <div
+        class="t-radio__content-inner"
+      >
+        <div>
+          text
+        </div>
+      </div>
+    </span>
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props content 2`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <!--v-if-->
+      <div
+        class="t-radio__content-inner"
+      >
+        text
+      </div>
+    </span>
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props contentDisabled 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props default 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <span
+        class="t-radio__content-title"
+      >
+        <div>
+          text
+        </div>
+      </span>
+      <!--v-if-->
+    </span>
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props default 2`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <span
+        class="t-radio__content-title"
+      >
+        text
+      </span>
+      <!--v-if-->
+    </span>
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props disabled 1`] = `
+<div
+  class="t-radio t-is-disabled"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        disabled=""
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props label 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <span
+        class="t-radio__content-title"
+      >
+        <div>
+          text
+        </div>
+      </span>
+      <!--v-if-->
+    </span>
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props label 2`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <span
+        class="t-radio__content-title"
+      >
+        text
+      </span>
+      <!--v-if-->
+    </span>
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props name 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </span>
+</div>
+`;
+
+exports[`Radio :props value 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="true"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </span>
+</div>
+`;

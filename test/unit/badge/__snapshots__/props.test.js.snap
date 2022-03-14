@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge :props color 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props count 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--medium t-badge--circle"
+  >
+    <div>
+      text
+    </div>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`Badge :props count 2`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--medium t-badge--circle"
+  >
+    text
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`Badge :props dot 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
+  >
+    
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props maxCount 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props offset 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props shape 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props shape 2`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props shape 3`] = `
+<div
+  class="t-badge t-badge__ribbon--outer"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--ribbon"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props showZero 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props size 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--small t-badge--circle"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
+
+exports[`Badge :props size 2`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+  >
+    0
+  </div>
+  测试
+</div>
+`;
