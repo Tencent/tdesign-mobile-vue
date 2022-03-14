@@ -1,15 +1,15 @@
 <template>
-  <div :class="`${name}`">
-    <p v-if="!time">
-      <t-node :content="contentLayout"></t-node>
-    </p>
+  <template v-if="!time">
+    <t-node :content="contentLayout"></t-node>
+  </template>
+  <span :class="`${name} ${name}--${theme} ${name}--${size}`">
     <template v-if="time">
       <template v-for="item in showTimes" :key="item.mark">
-        <span>{{ item.value }}</span>
-        <label v-if="item.mark">{{ item.mark }}</label>
+        <span :class="`${name}__digit`">{{ item.value }}</span>
+        <span v-if="item.mark" :class="`${name}__unit`">{{ item.mark }}</span>
       </template>
     </template>
-  </div>
+  </span>
 </template>
 
 <script lang="ts">
@@ -29,7 +29,7 @@ export default defineComponent({
     ...CountDownProps,
   },
   setup(props) {
-    const { content, ...other } = props || {};
+    const { content, size = 'small', theme = 'default', ...other } = props || {};
     //
     const { time, showTimes } = useCountDown(other);
     const internalInstance = getCurrentInstance();

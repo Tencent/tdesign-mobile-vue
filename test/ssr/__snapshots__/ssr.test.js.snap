@@ -513,6 +513,94 @@ exports[`ssr snapshot test renders ./src/avatar/demos/type.vue correctly 1`] = `
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/back-top/demos/base.vue correctly 1`] = `
+<div>
+  <div class="tdesign-demo-block">
+    <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+        <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+      </svg>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/back-top/demos/mobile.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <h1 class="title">BackTop 回到顶部</h1>
+  <p class="summary">用于当页面过长往下滑动时，帮助用户快速回到页面顶部</p>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+      <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+    </svg><span class="t-back-top__text">顶部</span></div>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;">
+    <!--[-->
+    <div></div>
+    <!--]--><span class="t-back-top__text">顶部</span>
+  </div>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+      <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+    </svg><span class="t-back-top__text">顶部</span></div>
+  <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+      <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+    </svg><span class="t-back-top__text">target</span></div>
+  <tdesign-demo-block title="01 类型" summary="通过设置theme属性，可以分别展示圆+白、半圆+白、圆+黑、半圆+黑四种样式类型">
+    <div class="button-group"><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="0">
+        <!----><span class="t-button__text"><!--[-->圆角白底<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="1">
+        <!----><span class="t-button__text"><!--[-->圆角黑底<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="2">
+        <!----><span class="t-button__text"><!--[-->半圆白底<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="3">
+        <!----><span class="t-button__text"><!--[-->半圆黑底<!--]--></span>
+      </button></div>
+  </tdesign-demo-block>
+  <tdesign-demo-block title="02 内容" summary="通过设置text、icon属性，可以控制悬浮按钮的展示内容">
+    <div class="button-group"><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false" data-index="4">
+        <!----><span class="t-button__text"><!--[-->纯图标<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->纯文字<!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->自定义图标<!--]--></span>
+      </button></div>
+  </tdesign-demo-block>
+  <tdesign-demo-block title="03 返回" summary="通过设置target属性，可以控制页面滚动到对应的DOM元素">
+    <div class="button-group"><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->回到此按钮<!--]--></span>
+      </button></div>
+  </tdesign-demo-block>
+  <div class="blank"></div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/back-top/demos/target.vue correctly 1`] = `
+<div><span></span>
+  <div class="tdesign-demo-block">
+    <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+        <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+      </svg>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/back-top/demos/theme.vue correctly 1`] = `
+<div>
+  <div class="tdesign-demo-block">
+    <div class="t-back-top t-is-fixed t-back-top--half-round-dark" style="display:none;"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-backtop" style="">
+        <path fill="currentColor" d="M2 3h12V2H2v1zM3.38 10.23l4.1-4.03v8.64H8.5V6.2l4.18 4.08.71-.7-5.05-4.93a.5.5 0 00-.7 0l-4.98 4.9.72.69z" fill-opacity="0.9"></path>
+      </svg>
+      <!--v-if-->
+    </div>
+    <div class="t-back-top t-is-fixed t-back-top--round" style="display:none;">
+      <!--[-->
+      <div>图标</div>
+      <!--]--><span class="t-back-top__text">顶部</span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/badge/demos/basic.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="t-cell-group">
@@ -2769,199 +2857,159 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
   <h1 class="title">CountDown 倒计时</h1>
   <p class="summary">用于实时展示倒计时数值。</p>
   <tdesign-demo-block title="01类型" summary="动态倒计时间主要有时间数字和时分秒分割组成">
-    <div class="demo-count-down">
-      <!-- 时分秒 -->
-      <div class="demo__box">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>14</span><label>:</label>
-          <!--]-->
-          <!--[--><span>59</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">时分秒</p>
-      </div><!-- 带毫秒 -->
-      <div class="demo__box">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>15</span><label>:</label>
-          <!--]-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>106</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带毫秒</p>
-      </div><!-- 带方形底 -->
-      <div class="demo__box t-countdown__square-bottom">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>14</span><label>:</label>
-          <!--]-->
-          <!--[--><span>59</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带方形底</p>
-      </div><!-- 带圆底 -->
-      <div class="demo__box t-countdown__circular-bottom">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>15</span><label>:</label>
-          <!--]-->
-          <!--[--><span>31</span><label>:</label>
-          <!--]-->
-          <!--[--><span>59</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带圆底</p>
-      </div><!-- 带单位 -->
-      <div class="demo__box t-countdown__has-unit">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>01</span><label>天</label>
-          <!--]-->
-          <!--[--><span>06</span><label>时</label>
-          <!--]-->
-          <!--[--><span>51</span><label>分</label>
-          <!--]-->
-          <!--[--><span>59</span><label>秒</label>
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带单位</p>
-      </div><!-- 无底色带单位 -->
-      <div class="demo__box t-countdown__has-unit2">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>01</span><label>天</label>
-          <!--]-->
-          <!--[--><span>06</span><label>时</label>
-          <!--]-->
-          <!--[--><span>51</span><label>分</label>
-          <!--]-->
-          <!--[--><span>59</span><label>秒</label>
-          <!--]-->
-          <!--]-->
-        </div>
+    <!-- 时分秒 -->
+    <div class="demo__box">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--default t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">时分秒</p>
+    </div><!-- 带毫秒 -->
+    <div class="demo__box">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--default t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">106</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带毫秒</p>
+    </div><!-- 带圆底 -->
+    <div class="demo__box t-countdown__circular-bottom">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">31</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带圆底</p>
+    </div><!-- 带方形底 -->
+    <div class="demo__box t-countdown__square-bottom">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带方形底</p>
+    </div><!-- 带单位 -->
+    <div class="demo__box t-countdown__has-unit">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">01</span><span class="t-countdown__unit">天</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">06</span><span class="t-countdown__unit">时</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">51</span><span class="t-countdown__unit">分</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span><span class="t-countdown__unit">秒</span>
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带单位</p>
+    </div><!-- 无底色带单位 -->
+    <!-- <div class="demo__box t-countdown__has-unit2">
+        <t-countdown
+          content="ok"
+          :time="111120000"
+          :auto-start="true"
+          :millisecond="false"
+          format="DD天HH时mm分ss秒"
+          @change="onChange"
+          @finish="onFinish"
+        />
         <p class="format">无底色带单位</p>
-      </div>
-    </div>
+      </div> -->
   </tdesign-demo-block>
-  <tdesign-demo-block title="02规格" summary="动倒计时带底色和无底色各尺寸规格">
+  <tdesign-demo-block title="02规格" summary="动倒计时带方底和圆底各尺寸规格">
     <div class="demo-count-down">
       <!--[-->
       <!-- S -->
       <div class="demo-size__box">
-        <div class="t-countdown__small-square">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
-        <div class="t-countdown__small">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
         <p class="format">S</p>
       </div><!-- M -->
       <div class="demo-size__box">
-        <div class="t-countdown__middle-square">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
-        <div class="t-countdown__middle">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--round t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--square t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
         <p class="format">M</p>
       </div><!-- L -->
       <div class="demo-size__box">
-        <div class="t-countdown__large-square">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
-        <div class="t-countdown__large">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--round t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--square t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
         <p class="format">L</p>
       </div>
       <!--]-->
@@ -2975,199 +3023,159 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
   <h1 class="title">CountDown 倒计时</h1>
   <p class="summary">用于实时展示倒计时数值。</p>
   <tdesign-demo-block title="01类型" summary="动态倒计时间主要有时间数字和时分秒分割组成">
-    <div class="demo-count-down">
-      <!-- 时分秒 -->
-      <div class="demo__box">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>14</span><label>:</label>
-          <!--]-->
-          <!--[--><span>59</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">时分秒</p>
-      </div><!-- 带毫秒 -->
-      <div class="demo__box">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>15</span><label>:</label>
-          <!--]-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>106</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带毫秒</p>
-      </div><!-- 带方形底 -->
-      <div class="demo__box t-countdown__square-bottom">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>00</span><label>:</label>
-          <!--]-->
-          <!--[--><span>14</span><label>:</label>
-          <!--]-->
-          <!--[--><span>59</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带方形底</p>
-      </div><!-- 带圆底 -->
-      <div class="demo__box t-countdown__circular-bottom">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>15</span><label>:</label>
-          <!--]-->
-          <!--[--><span>31</span><label>:</label>
-          <!--]-->
-          <!--[--><span>59</span>
-          <!--v-if-->
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带圆底</p>
-      </div><!-- 带单位 -->
-      <div class="demo__box t-countdown__has-unit">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>01</span><label>天</label>
-          <!--]-->
-          <!--[--><span>06</span><label>时</label>
-          <!--]-->
-          <!--[--><span>51</span><label>分</label>
-          <!--]-->
-          <!--[--><span>59</span><label>秒</label>
-          <!--]-->
-          <!--]-->
-        </div>
-        <p class="format">带单位</p>
-      </div><!-- 无底色带单位 -->
-      <div class="demo__box t-countdown__has-unit2">
-        <div class="t-countdown">
-          <!--v-if-->
-          <!--[-->
-          <!--[--><span>01</span><label>天</label>
-          <!--]-->
-          <!--[--><span>06</span><label>时</label>
-          <!--]-->
-          <!--[--><span>51</span><label>分</label>
-          <!--]-->
-          <!--[--><span>59</span><label>秒</label>
-          <!--]-->
-          <!--]-->
-        </div>
+    <!-- 时分秒 -->
+    <div class="demo__box">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--default t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">时分秒</p>
+    </div><!-- 带毫秒 -->
+    <div class="demo__box">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--default t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">106</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带毫秒</p>
+    </div><!-- 带圆底 -->
+    <div class="demo__box t-countdown__circular-bottom">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">31</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带圆底</p>
+    </div><!-- 带方形底 -->
+    <div class="demo__box t-countdown__square-bottom">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span>
+      <!--v-if-->
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带方形底</p>
+    </div><!-- 带单位 -->
+    <div class="demo__box t-countdown__has-unit">
+      <!--[-->
+      <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">01</span><span class="t-countdown__unit">天</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">06</span><span class="t-countdown__unit">时</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">51</span><span class="t-countdown__unit">分</span>
+      <!--]-->
+      <!--[--><span class="t-countdown__digit">59</span><span class="t-countdown__unit">秒</span>
+      <!--]-->
+      <!--]--></span>
+      <!--]-->
+      <p class="format">带单位</p>
+    </div><!-- 无底色带单位 -->
+    <!-- <div class="demo__box t-countdown__has-unit2">
+        <t-countdown
+          content="ok"
+          :time="111120000"
+          :auto-start="true"
+          :millisecond="false"
+          format="DD天HH时mm分ss秒"
+          @change="onChange"
+          @finish="onFinish"
+        />
         <p class="format">无底色带单位</p>
-      </div>
-    </div>
+      </div> -->
   </tdesign-demo-block>
-  <tdesign-demo-block title="02规格" summary="动倒计时带底色和无底色各尺寸规格">
+  <tdesign-demo-block title="02规格" summary="动倒计时带方底和圆底各尺寸规格">
     <div class="demo-count-down">
       <!--[-->
       <!-- S -->
       <div class="demo-size__box">
-        <div class="t-countdown__small-square">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
-        <div class="t-countdown__small">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
         <p class="format">S</p>
       </div><!-- M -->
       <div class="demo-size__box">
-        <div class="t-countdown__middle-square">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
-        <div class="t-countdown__middle">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--round t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--square t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
         <p class="format">M</p>
       </div><!-- L -->
       <div class="demo-size__box">
-        <div class="t-countdown__large-square">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
-        <div class="t-countdown__large">
-          <div class="t-countdown">
-            <!--v-if-->
-            <!--[-->
-            <!--[--><span>00</span><label>:</label>
-            <!--]-->
-            <!--[--><span>14</span><label>:</label>
-            <!--]-->
-            <!--[--><span>59</span>
-            <!--v-if-->
-            <!--]-->
-            <!--]-->
-          </div>
-        </div>
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--round t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
+        <!--[-->
+        <!--v-if--><span class="t-countdown t-countdown--square t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--]-->
+        <!--[--><span class="t-countdown__digit">59</span>
+        <!--v-if-->
+        <!--]-->
+        <!--]--></span>
+        <!--]-->
         <p class="format">L</p>
       </div>
       <!--]-->
@@ -3180,96 +3188,72 @@ exports[`ssr snapshot test renders ./src/count-down/demos/specs.vue correctly 1`
 <!--[-->
 <!-- S -->
 <div class="demo-size__box">
-  <div class="t-countdown__small-square">
-    <div class="t-countdown">
-      <!--v-if-->
-      <!--[-->
-      <!--[--><span>00</span><label>:</label>
-      <!--]-->
-      <!--[--><span>14</span><label>:</label>
-      <!--]-->
-      <!--[--><span>59</span>
-      <!--v-if-->
-      <!--]-->
-      <!--]-->
-    </div>
-  </div>
-  <div class="t-countdown__small">
-    <div class="t-countdown">
-      <!--v-if-->
-      <!--[-->
-      <!--[--><span>00</span><label>:</label>
-      <!--]-->
-      <!--[--><span>14</span><label>:</label>
-      <!--]-->
-      <!--[--><span>59</span>
-      <!--v-if-->
-      <!--]-->
-      <!--]-->
-    </div>
-  </div>
+  <!--[-->
+  <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">59</span>
+  <!--v-if-->
+  <!--]-->
+  <!--]--></span>
+  <!--]-->
+  <!--[-->
+  <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">59</span>
+  <!--v-if-->
+  <!--]-->
+  <!--]--></span>
+  <!--]-->
   <p class="format">S</p>
 </div><!-- M -->
 <div class="demo-size__box">
-  <div class="t-countdown__middle-square">
-    <div class="t-countdown">
-      <!--v-if-->
-      <!--[-->
-      <!--[--><span>00</span><label>:</label>
-      <!--]-->
-      <!--[--><span>14</span><label>:</label>
-      <!--]-->
-      <!--[--><span>59</span>
-      <!--v-if-->
-      <!--]-->
-      <!--]-->
-    </div>
-  </div>
-  <div class="t-countdown__middle">
-    <div class="t-countdown">
-      <!--v-if-->
-      <!--[-->
-      <!--[--><span>00</span><label>:</label>
-      <!--]-->
-      <!--[--><span>14</span><label>:</label>
-      <!--]-->
-      <!--[--><span>59</span>
-      <!--v-if-->
-      <!--]-->
-      <!--]-->
-    </div>
-  </div>
+  <!--[-->
+  <!--v-if--><span class="t-countdown t-countdown--round t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">59</span>
+  <!--v-if-->
+  <!--]-->
+  <!--]--></span>
+  <!--]-->
+  <!--[-->
+  <!--v-if--><span class="t-countdown t-countdown--square t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">59</span>
+  <!--v-if-->
+  <!--]-->
+  <!--]--></span>
+  <!--]-->
   <p class="format">M</p>
 </div><!-- L -->
 <div class="demo-size__box">
-  <div class="t-countdown__large-square">
-    <div class="t-countdown">
-      <!--v-if-->
-      <!--[-->
-      <!--[--><span>00</span><label>:</label>
-      <!--]-->
-      <!--[--><span>14</span><label>:</label>
-      <!--]-->
-      <!--[--><span>59</span>
-      <!--v-if-->
-      <!--]-->
-      <!--]-->
-    </div>
-  </div>
-  <div class="t-countdown__large">
-    <div class="t-countdown">
-      <!--v-if-->
-      <!--[-->
-      <!--[--><span>00</span><label>:</label>
-      <!--]-->
-      <!--[--><span>14</span><label>:</label>
-      <!--]-->
-      <!--[--><span>59</span>
-      <!--v-if-->
-      <!--]-->
-      <!--]-->
-    </div>
-  </div>
+  <!--[-->
+  <!--v-if--><span class="t-countdown t-countdown--round t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">59</span>
+  <!--v-if-->
+  <!--]-->
+  <!--]--></span>
+  <!--]-->
+  <!--[-->
+  <!--v-if--><span class="t-countdown t-countdown--square t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--]-->
+  <!--[--><span class="t-countdown__digit">59</span>
+  <!--v-if-->
+  <!--]-->
+  <!--]--></span>
+  <!--]-->
   <p class="format">L</p>
 </div>
 <!--]-->
@@ -3828,6 +3812,8 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
         <!----><span class="t-button__text"><!--[--> 短文本对话框 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 长文本对话框 <!--]--></span>
+      </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[--> 函数调用长文本对话框 <!--]--></span>
       </button>
       <!--teleport start-->
       <div class="t-popup" style="">
