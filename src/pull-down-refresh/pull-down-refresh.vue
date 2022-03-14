@@ -8,11 +8,11 @@
       @touchend.stop="onTouchEnd"
       @touchcancel.stop="onTouchEnd"
     >
-      <div :class="`${name}__head`">
-        <div v-if="SHOW_TEXT_LIST.includes(state.status)">{{ TEXT_MAP[state.status] }}</div>
+      <div :class="`${name}__tips`" :style="tipsStyles">
         <div v-if="state.status === 'loading'">
-          <t-loading text="加载中..." />
+          <t-loading :text="loadingText" :class="`${name}__loading-icon`" v-bind="loadingIconProps" />
         </div>
+        <div v-else>{{ loadingText }}</div>
       </div>
       <slot />
     </div>
@@ -20,12 +20,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, nextTick, reactive, ref, computed, watch } from 'vue';
+import { defineComponent, onUnmounted, reactive, ref, computed, SetupContext, watch, onMounted } from 'vue';
+import PullDownRefreshProps from './props';
+import { useEmitEvent, renderTNode, TNode } from '../shared';
 import config from '../config';
 import TLoading from '../loading';
 
 const { prefix } = config;
-const name = `${prefix}-pull-refresh`;
+const name = `${prefix}-pull-down-refresh`;
 type PullRefreshStatus = 'normal' | 'loading' | 'loosing' | 'pulling' | 'success';
 
 function useTouch() {
@@ -50,17 +52,8 @@ function useTouch() {
 
 const PULL_DISTANCE = 50;
 const ANIMATION_DURATION = 300;
-const TEXT_MAP = {
-  loading: '加载中',
-  pulling: '下拉即可刷新...',
-  loosing: '释放即可刷新...',
-  success: '刷新成功',
-};
-const SHOW_TEXT_LIST = ['pulling', 'loosing', 'success'];
-const PullRefreshProps = {
-  modelValue: Boolean,
-};
 
+// 缓动函数
 const easeDistance = (distance: number, pullDistance: number) => {
   if (distance > pullDistance) {
     if (distance < pullDistance * 2) {
@@ -76,6 +69,7 @@ function isElement(node: Element) {
   const ELEMENT_NODE_TYPE = 1;
   return node.tagName !== 'HTML' && node.tagName !== 'BODY' && node.nodeType === ELEMENT_NODE_TYPE;
 }
+
 const getScrollParent = (node: Element) => {
   let res = node;
   while (res && isElement(res)) {
@@ -89,9 +83,25 @@ const getScrollParent = (node: Element) => {
 export default defineComponent({
   name,
   components: { TLoading },
-  props: PullRefreshProps,
-  emits: ['refresh', 'update:modelValue'],
-  setup(props, { emit }) {
+  props: PullDownRefreshProps,
+  emits: ['refresh', 'timeout', 'update:modelValue'],
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
+
+    // 动态生成style
+    const trackStyle = computed(() => ({
+      transitionDuration: `${state.duration}ms`,
+      transform: state.distance ? `translate3d(0, ${state.distance}px, 0)` : '',
+    }));
+
+    const tipsStyles = computed(() => ({
+      height: `${props.loadingBarHeight}px`,
+    }));
+
+    // 动态生成loadingIcon的props
+    const loadingIconProps = computed(() => ({ ...props.loadingProps }));
+
+    // 初始化状态和滑动距离，动态调整state
     const state = reactive({
       status: 'normal' as PullRefreshStatus,
       distance: 0,
@@ -112,10 +122,33 @@ export default defineComponent({
       }
     };
 
+    // 根据状态修改loadingText值
+    const loadingTexts = ref(
+      props.loadingTexts?.length ? props.loadingTexts : ['下拉刷新', '松手刷新', '正在刷新', '刷新完成'],
+    );
+
+    const loadingText = computed(() => {
+      if (state.status === 'pulling') {
+        return loadingTexts.value[0];
+      }
+      if (state.status === 'loosing') {
+        return loadingTexts.value[1];
+      }
+      if (state.status === 'loading') {
+        return loadingTexts.value[2];
+      }
+      if (state.status === 'success') {
+        return loadingTexts.value[3];
+      }
+      return '';
+    });
+
+    // touch事件逻辑
     const touch = useTouch();
 
     const isTouchable = () => state.status !== 'loading' && state.status !== 'success';
 
+    // 确保可滚动的父元素此时处于未滚动状态
     const isReachTop = (e: TouchEvent) => {
       const scrollParent = getScrollParent(e.target as Element);
       return !scrollParent || !scrollParent.scrollTop;
@@ -135,35 +168,40 @@ export default defineComponent({
       if (!isReachTop(e)) return;
 
       const { deltaY } = touch;
-      if (deltaY.value >= 0) {
+      const nextDistance = easeDistance(deltaY.value, PULL_DISTANCE);
+      if (deltaY.value >= 0 && nextDistance <= props.maxBarHeight) {
         e.preventDefault();
-        setStatus(easeDistance(deltaY.value, PULL_DISTANCE));
+        setStatus(nextDistance);
       }
       touch.move(e);
     };
 
+    let timer: any = null;
     const onTouchEnd = () => {
       state.duration = ANIMATION_DURATION;
       if (state.status === 'loosing') {
-        emit('update:modelValue', true);
-        nextTick(() => emit('refresh'));
+        setStatus(props.loadingBarHeight, true);
+        emitEvent('refresh');
+
+        timer = setTimeout(() => {
+          emitEvent('timeout');
+          state.status = 'normal';
+          setTimeout(() => {
+            setStatus(0, false);
+          }, ANIMATION_DURATION);
+        }, props.refreshTimeout);
       } else {
         setStatus(0);
       }
     };
 
-    const trackStyle = computed(() => ({
-      transitionDuration: `${state.duration}ms`,
-      transform: state.distance ? `translate3d(0, ${state.distance}px, 0)` : '',
-    }));
-
+    // 监听value变化，当value变为false，代表下拉加载已结束，可以扭转loading状态了
     watch(
       () => props.modelValue,
       (value) => {
-        if (value) {
-          setStatus(PULL_DISTANCE, true);
-        } else {
+        if (!value) {
           state.status = 'success';
+          clearTimeout(timer);
 
           setTimeout(() => {
             setStatus(0, false);
@@ -172,12 +210,17 @@ export default defineComponent({
       },
     );
 
+    onUnmounted(() => {
+      clearTimeout(timer);
+    });
+
     return {
       name,
       state,
       trackStyle,
-      TEXT_MAP,
-      SHOW_TEXT_LIST,
+      loadingText,
+      tipsStyles,
+      loadingIconProps,
       onTouchStart,
       onTouchMove,
       onTouchEnd,

@@ -1,11 +1,11 @@
 <template>
-  <t-pull-refresh v-model="refreshing" @refresh="onRefresh">
+  <t-pull-down-refresh v-model="refreshing" @refresh="onRefresh">
     <t-list :async-loading="pullloading" @scroll="(e) => onScroll(e, 2)">
       <t-cell v-for="item in listPull" :key="item" align="middle">
         <span class="cell">{{ item }}</span>
       </t-cell>
     </t-list>
-  </t-pull-refresh>
+  </t-pull-down-refresh>
 </template>
 
 <script lang="ts">

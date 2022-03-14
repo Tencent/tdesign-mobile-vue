@@ -275,6 +275,12 @@ export default {
           path: '/vue-mobile/components/back-top',
           component: () => import('@/back-top/back-top.md'),
         },
+        {
+          title: 'PullDownRefresh 下拉刷新',
+          name: 'pull-down-refresh',
+          path: '/vue-mobile/components/pull-down-refresh',
+          component: () => import('@/pull-down-refresh/pull-down-refresh.md'),
+        },
         // {
         //   title: 'ActionSheet 动作面板',
         //   name: 'action-sheet',
