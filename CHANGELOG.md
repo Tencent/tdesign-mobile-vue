@@ -9,11 +9,11 @@ spline: explain
 
 ### BREAKING CHANGES
 
-* 支持主题和大小 3f0a5e5
+* **count-down**支持主题和大小 3f0a5e5
 
 ### Bug Fixes
 
-* 弹出框蒙层点击是否关闭修复 & provide暴露$dialog, close #12 11092af, closes #12
+* **dialog**弹出框蒙层点击是否关闭修复 & provide暴露$dialog, close #12 11092af, closes #12
 * 修复Badge导入类型 d4f8da6
 
 ### Features
