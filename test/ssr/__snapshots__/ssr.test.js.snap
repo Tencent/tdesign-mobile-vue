@@ -14735,6 +14735,33 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/right-menu.vue correct
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/swiper/demos/base.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div style="padding:0 16px;">
+    <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
+      <div class="t-swiper__container" style="height:undefinedpx;flex-direction:row;">
+        <!--[-->
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img">
+          <!--]-->
+        </div>
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img">
+          <!--]-->
+        </div>
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img">
+          <!--]-->
+        </div>
+        <!--]-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/swiper/demos/control.vue correctly 1`] = `
 <div>
   <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
@@ -14754,8 +14781,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/control.vue correctly 1`] 
       </div>
       <!--]-->
     </div>
-    <!--[-->
-    <!-- 左右侧的按钮 --><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
+    <!--[--><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
     <!--]-->
   </div>
   <p class="summary"> 手动指定页数： <button class="t-button t-size-s t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -14789,9 +14815,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/direction.vue correctly 1`
       <!--]-->
     </div>
     <!--[-->
-    <!-- 左右侧的按钮 -->
-    <!--v-if-->
-    <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
+    <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
     <!--]-->
   </div>
 </div>
@@ -14821,13 +14845,11 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           <!--]-->
         </div>
         <!--[-->
-        <!-- 左右侧的按钮 -->
-        <!--v-if-->
-        <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-dots"><!--[--><!--]--><!--v-if--></span>
+        <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-dots"><!--[--><!--]--><!--v-if--></span>
         <!--]-->
       </div>
       <div style="height:180px;overflow:hidden;" class="t-swiper">
-        <div class="t-swiper__container" style="height:180px;flex-direction:row;">
+        <div class="t-swiper__container" style="height:180px;flex-direction:column;">
           <!--[-->
           <div class="t-swiper-item swiper-item--demo1">
             <!--[--><img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img">
@@ -14844,9 +14866,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           <!--]-->
         </div>
         <!--[-->
-        <!-- 左右侧的按钮 -->
-        <!--v-if-->
-        <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
+        <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
         <!--]-->
       </div>
       <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
@@ -14867,9 +14887,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           <!--]-->
         </div>
         <!--[-->
-        <!-- 左右侧的按钮 -->
-        <!--v-if-->
-        <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
+        <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
         <!--]-->
       </div>
       <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
@@ -14889,8 +14907,27 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           </div>
           <!--]-->
         </div>
+        <!--[--><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span>
         <!--v-if-->
+        <!--]-->
       </div>
+      <!-- <t-swiper :interval="3000" :autoplay="true">
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
+          </t-swiper-item>
+          <template #navigation>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </template>
+        </t-swiper> -->
     </div>
   </tdesign-demo-block>
 </div>
@@ -14915,8 +14952,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/pagination-type.vue correc
       </div>
       <!--]-->
     </div>
-    <!--[-->
-    <!-- 左右侧的按钮 --><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
+    <!--[--><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
     <!--]-->
   </div>
 </div>
