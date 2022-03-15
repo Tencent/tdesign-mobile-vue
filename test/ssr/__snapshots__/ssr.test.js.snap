@@ -9007,11 +9007,10 @@ exports[`ssr snapshot test renders ./src/list/demos/mobile.vue correctly 1`] = `
         <div class="t-tabs__panel" value="pull-refresh" style="display:none;">
           <!--[-->
           <div class="pull-refresh-wrap">
-            <div class="t-pull-refresh">
-              <div class="t-pull-refresh__track" style="transition-duration:0ms;transform:;">
-                <div class="t-pull-refresh__head">
-                  <!--v-if-->
-                  <!--v-if-->
+            <div class="t-pull-down-refresh">
+              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+                <div class="t-pull-down-refresh__tips" style="height:50px;">
+                  <div></div>
                 </div>
                 <!--[-->
                 <div class="t-list">
@@ -9037,11 +9036,10 @@ exports[`ssr snapshot test renders ./src/list/demos/mobile.vue correctly 1`] = `
 `;
 
 exports[`ssr snapshot test renders ./src/list/demos/pull-refresh.vue correctly 1`] = `
-<div class="t-pull-refresh">
-  <div class="t-pull-refresh__track" style="transition-duration:0ms;transform:;">
-    <div class="t-pull-refresh__head">
-      <!--v-if-->
-      <!--v-if-->
+<div class="t-pull-down-refresh">
+  <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+    <div class="t-pull-down-refresh__tips" style="height:50px;">
+      <div></div>
     </div>
     <!--[-->
     <div class="t-list">
@@ -10687,6 +10685,130 @@ exports[`ssr snapshot test renders ./src/progress/demos/type.vue correctly 1`] =
       <div class="t-progress__ft"><span class="t-progress__text-percentage" style="color:;">88%</span></div>
     </div>
   </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/base.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <tdesign-demo-block title summary>
+    <div class="t-pull-down-refresh">
+      <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+        <div class="t-pull-down-refresh__tips" style="height:50px;">
+          <div></div>
+        </div>
+        <!--[-->下拉刷新
+        <!--]-->
+      </div>
+    </div>
+  </tdesign-demo-block>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/loading-texts.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <tdesign-demo-block title summary>
+    <div class="t-pull-down-refresh">
+      <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+        <div class="t-pull-down-refresh__tips" style="height:70px;">
+          <div></div>
+        </div>
+        <!--[-->下拉刷新
+        <!--]-->
+      </div>
+    </div>
+  </tdesign-demo-block>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/mobile.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <!-- <h1 class="title">PullDownRefresh 下拉刷新</h1>
+    <p class="summary">用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。</p>
+    <p class="blank"></p> -->
+  <tdesign-demo-block title summary>
+    <div class="t-tabs t-is-top t-size-m">
+      <div class="t-tabs__nav">
+        <div class="t-tabs__nav-container">
+          <div class="t-tabs__nav-wrap">
+            <!--[-->
+            <div class="t-tabs__nav-item t-is-active">基础用法</div>
+            <div class="t-tabs__nav-item">自定义文案</div>
+            <div class="t-tabs__nav-item">超时事件</div>
+            <!--]-->
+            <div class="t-tabs__nav-line" style=""></div>
+          </div>
+        </div>
+      </div>
+      <div class="t-tabs__content">
+        <!--[-->
+        <div class="t-tabs__panel" value="first">
+          <!--[-->
+          <div class="refresh-content">
+            <div class="t-pull-down-refresh demo-pull-down-refresh">
+              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+                <div class="t-pull-down-refresh__tips" style="height:50px;">
+                  <div></div>
+                </div>
+                <!--[-->
+                <div class="content-text">已下拉0次</div>
+                <!--]-->
+              </div>
+            </div>
+          </div>
+          <!--]-->
+        </div>
+        <div class="t-tabs__panel" value="second" style="display:none;">
+          <!--[-->
+          <div class="refresh-content">
+            <div class="t-pull-down-refresh demo-pull-down-refresh">
+              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+                <div class="t-pull-down-refresh__tips" style="height:50px;">
+                  <div></div>
+                </div>
+                <!--[-->
+                <div class="content-text">已下拉0次</div>
+                <!--]-->
+              </div>
+            </div>
+          </div>
+          <!--]-->
+        </div>
+        <div class="t-tabs__panel" value="third" style="display:none;">
+          <!--[-->
+          <div class="refresh-content">
+            <div class="t-pull-down-refresh demo-pull-down-refresh">
+              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+                <div class="t-pull-down-refresh__tips" style="height:50px;">
+                  <div></div>
+                </div>
+                <!--[-->
+                <div class="content-text">已下拉0次</div>
+                <!--]-->
+              </div>
+            </div>
+          </div>
+          <!--]-->
+        </div>
+        <!--]-->
+      </div>
+    </div>
+  </tdesign-demo-block>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/timeout.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <tdesign-demo-block title summary>
+    <div class="t-pull-down-refresh">
+      <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
+        <div class="t-pull-down-refresh__tips" style="height:50px;">
+          <div></div>
+        </div>
+        <!--[-->下拉刷新
+        <!--]-->
+      </div>
+    </div>
+  </tdesign-demo-block>
 </div>
 `;
 
