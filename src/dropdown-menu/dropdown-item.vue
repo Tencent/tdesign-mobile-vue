@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 <template>
   <div v-if="isShowItems" :class="classes" :style="{ ...expandStyle }">
     <t-mask v-if="isShowItems && showOverlay" @click="onClickOverlay" />
@@ -56,13 +57,8 @@
                 <!-- 树形列表 - 叶子节点 ST -->
                 <template v-if="!multiple">
                   <!-- 树形列表 - 叶子节点（单选） ST -->
-                  <t-radio-group
-                    v-for="option in treeOptions[level]"
-                    :key="option.value"
-                    :value="treeState.selectList[level]"
-                    @update:value="selectTreeNode(level, $event)"
-                  >
-                    <div :class="`${name}__cell`">
+                  <t-radio-group :value="treeState.selectList[level]" @update:value="selectTreeNode(level, $event)">
+                    <div v-for="option in treeOptions[level]" :key="option.value" :class="`${name}__cell`">
                       <t-radio
                         :value="option.value"
                         :label="option.title"

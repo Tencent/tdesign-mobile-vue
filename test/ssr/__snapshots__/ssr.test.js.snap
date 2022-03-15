@@ -4213,45 +4213,16 @@ exports[`ssr snapshot test renders ./src/drawer/demos/mobile.vue correctly 1`] =
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/customized-menu.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <t-dropdown-menu>
-    <t-dropdown-item title="单选菜单" disabled></t-dropdown-item>
-    <t-dropdown-item title="自定义内容">
-      <div class="t-cell-group">
-        <!--v-if-->
-        <div class="t-cell-group__container">
-          <!--[-->
-          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 1">
-            <!--v-if-->
-            <!--v-if-->
-            <div class="t-cell__note">
-              <!--[--><span class="t-switch" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
-              <!--]-->
-            </div>
-            <!--v-if-->
-          </div>
-          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 2">
-            <!--v-if-->
-            <!--v-if-->
-            <div class="t-cell__note">
-              <!--[--><span class="t-switch t-is-checked" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
-              <!--]-->
-            </div>
-            <!--v-if-->
-          </div>
-          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 3">
-            <!--v-if-->
-            <!--v-if-->
-            <div class="t-cell__note">
-              <!--[--><span class="t-switch t-is-disabled" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
-              <!--]-->
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-    </t-dropdown-item>
-  </t-dropdown-menu>
+  <div class="t-dropdown-menu">
+    <div class="t-dropdown-menu__bar">
+      <!--[-->
+      <!--]-->
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--]-->
+  </div>
   <p> 开关 1: <strong>false</strong></p>
   <p> 开关 2: <strong>true</strong></p>
   <p> 开关 3: <strong>false</strong></p>
@@ -4269,10 +4240,16 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/demo-container.vue 
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/disabled.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <t-dropdown-menu>
-    <t-dropdown-item title="禁用菜单" disabled></t-dropdown-item>
-    <t-dropdown-item title="禁用选项"></t-dropdown-item>
-  </t-dropdown-menu>
+  <div class="t-dropdown-menu">
+    <div class="t-dropdown-menu__bar">
+      <!--[-->
+      <!--]-->
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--]-->
+  </div>
   <p>禁用了序号是3的倍数的选项。</p>
   <!--]-->
 </div>
@@ -4281,10 +4258,16 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/disabled.vue correc
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/events.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <t-dropdown-menu>
-    <t-dropdown-item modelValue="option_2" title="单选菜单" select-mode="multi" options-layout="columns" options-columns="2"></t-dropdown-item>
-    <t-dropdown-item title="多选菜单" select-mode="multi" options-layout="columns" options-columns="3"></t-dropdown-item>
-  </t-dropdown-menu>
+  <div class="t-dropdown-menu">
+    <div class="t-dropdown-menu__bar">
+      <!--[-->
+      <!--]-->
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--]-->
+  </div>
   <p> 单选菜单 选中项: <strong>option_2</strong></p>
   <p> 多选菜单 选中项: <strong>options_A, options_C</strong></p>
   <!--]-->
@@ -4296,31 +4279,55 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/mobile.vue correctl
   <h1 class="title">DropdownMenu 下拉菜单</h1>
   <p class="summary">向下弹出的菜单列表</p>
   <tdesign-demo-block title="01 类型" summary="单选下拉菜单">
-    <t-dropdown-menu>
-      <t-dropdown-item value="options_2" label="菜单名称"></t-dropdown-item>
-      <t-dropdown-item modelValue="options_A" label="菜单名称"></t-dropdown-item>
-    </t-dropdown-menu>
+    <div class="t-dropdown-menu">
+      <div class="t-dropdown-menu__bar">
+        <!--[-->
+        <!--]-->
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--]-->
+    </div>
   </tdesign-demo-block>
   <tdesign-demo-block summary="多选下拉菜单">
-    <t-dropdown-menu>
-      <t-dropdown-item label="单列" multiple options-columns="1"></t-dropdown-item>
-      <t-dropdown-item label="双列" multiple options-layout="columns" options-columns="2"></t-dropdown-item>
-      <t-dropdown-item label="三列" multiple options-layout="columns" options-columns="3"></t-dropdown-item>
-    </t-dropdown-menu>
+    <div class="t-dropdown-menu">
+      <div class="t-dropdown-menu__bar">
+        <!--[-->
+        <!--]-->
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--]-->
+    </div>
   </tdesign-demo-block>
   <tdesign-demo-block summary="单选下拉菜单">
-    <t-dropdown-menu>
-      <t-dropdown-item modelValue="options_2" label="菜单名称"></t-dropdown-item>
-      <t-dropdown-item modelValue="options_A" label="菜单名称"></t-dropdown-item>
-    </t-dropdown-menu>
+    <div class="t-dropdown-menu">
+      <div class="t-dropdown-menu__bar">
+        <!--[-->
+        <!--]-->
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--]-->
+    </div>
   </tdesign-demo-block>
   <tdesign-demo-block summary="树形下拉菜单">
-    <t-dropdown-menu>
-      <t-dropdown-item label="菜单" options-layout="tree" multiple></t-dropdown-item>
-      <t-dropdown-item label="菜单" options-layout="tree" multiple></t-dropdown-item>
-      <t-dropdown-item label="菜单" options-layout="tree"></t-dropdown-item>
-      <t-dropdown-item label="菜单" options-layout="tree"></t-dropdown-item>
-    </t-dropdown-menu>
+    <div class="t-dropdown-menu">
+      <div class="t-dropdown-menu__bar">
+        <!--[-->
+        <!--]-->
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--]-->
+    </div>
   </tdesign-demo-block>
   <div style="height:300px;"></div>
 </div>
@@ -4329,10 +4336,16 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/mobile.vue correctl
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/multi-choice.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <t-dropdown-menu>
-    <t-dropdown-item modelValue="option_2" title="多选菜单1" select-mode="multi"></t-dropdown-item>
-    <t-dropdown-item title="多选菜单2" select-mode="multi"></t-dropdown-item>
-  </t-dropdown-menu>
+  <div class="t-dropdown-menu">
+    <div class="t-dropdown-menu__bar">
+      <!--[-->
+      <!--]-->
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--]-->
+  </div>
   <p> 单选菜单 选中项: <strong>option_2</strong></p>
   <!--]-->
 </div>
@@ -4341,11 +4354,17 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/multi-choice.vue co
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/options-layout.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <t-dropdown-menu>
-    <t-dropdown-item title="单列" select-mode="multi" options-columns="1"></t-dropdown-item>
-    <t-dropdown-item title="双列" select-mode="multi" options-layout="columns" options-columns="2"></t-dropdown-item>
-    <t-dropdown-item title="三列" select-mode="multi" options-layout="columns" options-columns="3"></t-dropdown-item>
-  </t-dropdown-menu>
+  <div class="t-dropdown-menu">
+    <div class="t-dropdown-menu__bar">
+      <!--[-->
+      <!--]-->
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--]-->
+  </div>
   <p> 单列菜单 选中项: <strong></strong></p>
   <p> 两栏菜单 选中项: <strong></strong></p>
   <p> 三栏菜单 选中项: <strong>options_A, options_C</strong></p>
@@ -4356,10 +4375,16 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/options-layout.vue 
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/single-choice.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <t-dropdown-menu>
-    <t-dropdown-item modelValue="option_2" title="单选菜单1"></t-dropdown-item>
-    <t-dropdown-item modelValue="options_A" title="单选菜单2"></t-dropdown-item>
-  </t-dropdown-menu>
+  <div class="t-dropdown-menu">
+    <div class="t-dropdown-menu__bar">
+      <!--[-->
+      <!--]-->
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--]-->
+  </div>
   <p> 单选菜单1 选中项: <strong>option_2</strong></p>
   <p> 单选菜单2 选中项: <strong>options_A</strong></p><!-- <t-button @click="updateOptions">更新选项</t-button> -->
   <!--]-->
@@ -4369,10 +4394,16 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/single-choice.vue c
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/tree-menu.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <t-dropdown-menu>
-    <t-dropdown-item title="两列多选" options-layout="tree" select-mode="multi"></t-dropdown-item>
-    <t-dropdown-item title="三列多选" options-layout="tree" select-mode="multi"></t-dropdown-item>
-  </t-dropdown-menu>
+  <div class="t-dropdown-menu">
+    <div class="t-dropdown-menu__bar">
+      <!--[-->
+      <!--]-->
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--v-if-->
+    <!--]-->
+  </div>
   <p> 多选树形菜单（两列） 选中路径: <strong>null</strong></p>
   <p> 多选树形菜单（三列） 选中路径: <strong>[&quot;options_1&quot;,&quot;options_3&quot;,[&quot;options_2&quot;,&quot;options_3&quot;]]</strong></p>
   <!--]-->
@@ -14704,6 +14735,33 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/right-menu.vue correct
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/swiper/demos/base.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div style="padding:0 16px;">
+    <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
+      <div class="t-swiper__container" style="height:undefinedpx;flex-direction:row;">
+        <!--[-->
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img">
+          <!--]-->
+        </div>
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img">
+          <!--]-->
+        </div>
+        <div class="t-swiper-item swiper-item--demo">
+          <!--[--><img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img">
+          <!--]-->
+        </div>
+        <!--]-->
+      </div>
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/swiper/demos/control.vue correctly 1`] = `
 <div>
   <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
@@ -14723,8 +14781,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/control.vue correctly 1`] 
       </div>
       <!--]-->
     </div>
-    <!--[-->
-    <!-- 左右侧的按钮 --><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
+    <!--[--><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
     <!--]-->
   </div>
   <p class="summary"> 手动指定页数： <button class="t-button t-size-s t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -14758,9 +14815,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/direction.vue correctly 1`
       <!--]-->
     </div>
     <!--[-->
-    <!-- 左右侧的按钮 -->
-    <!--v-if-->
-    <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
+    <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
     <!--]-->
   </div>
 </div>
@@ -14790,13 +14845,11 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           <!--]-->
         </div>
         <!--[-->
-        <!-- 左右侧的按钮 -->
-        <!--v-if-->
-        <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-dots"><!--[--><!--]--><!--v-if--></span>
+        <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-dots"><!--[--><!--]--><!--v-if--></span>
         <!--]-->
       </div>
       <div style="height:180px;overflow:hidden;" class="t-swiper">
-        <div class="t-swiper__container" style="height:180px;flex-direction:row;">
+        <div class="t-swiper__container" style="height:180px;flex-direction:column;">
           <!--[-->
           <div class="t-swiper-item swiper-item--demo1">
             <!--[--><img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img">
@@ -14813,9 +14866,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           <!--]-->
         </div>
         <!--[-->
-        <!-- 左右侧的按钮 -->
-        <!--v-if-->
-        <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
+        <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
         <!--]-->
       </div>
       <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
@@ -14836,9 +14887,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           <!--]-->
         </div>
         <!--[-->
-        <!-- 左右侧的按钮 -->
-        <!--v-if-->
-        <!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
+        <!--v-if--><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
         <!--]-->
       </div>
       <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
@@ -14858,8 +14907,27 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
           </div>
           <!--]-->
         </div>
+        <!--[--><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span>
         <!--v-if-->
+        <!--]-->
       </div>
+      <!-- <t-swiper :interval="3000" :autoplay="true">
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
+          </t-swiper-item>
+          <template #navigation>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </template>
+        </t-swiper> -->
     </div>
   </tdesign-demo-block>
 </div>
@@ -14884,8 +14952,7 @@ exports[`ssr snapshot test renders ./src/swiper/demos/pagination-type.vue correc
       </div>
       <!--]-->
     </div>
-    <!--[-->
-    <!-- 左右侧的按钮 --><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><!-- 分页器 --><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
+    <!--[--><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><span class="t-swiper__pagination t-swiper__pagination-fraction"><!--v-if--><span>0/0</span></span>
     <!--]-->
   </div>
 </div>

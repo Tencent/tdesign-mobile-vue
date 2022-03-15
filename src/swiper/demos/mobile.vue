@@ -21,7 +21,7 @@
           </t-swiper-item>
         </t-swiper>
 
-        <t-swiper :autoplay="false" :height="180" :navigation="{ type: 'fraction' }">
+        <t-swiper :autoplay="false" :height="180" direction="vertical" :navigation="{ type: 'fraction' }">
           <t-swiper-item class="swiper-item--demo1">
             <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
           </t-swiper-item>
@@ -61,6 +61,23 @@
             <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
           </t-swiper-item>
         </t-swiper>
+        <!-- <t-swiper :interval="3000" :autoplay="true">
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img" />
+          </t-swiper-item>
+          <t-swiper-item class="swiper-item--demo">
+            <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
+          </t-swiper-item>
+          <template #navigation>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </template>
+        </t-swiper> -->
       </div>
     </tdesign-demo-block>
   </div>
