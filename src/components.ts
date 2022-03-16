@@ -48,3 +48,4 @@ export { default as List } from './list';
 export { default as Loading } from './loading';
 export { default as BackTop } from './back-top';
 export { default as PullDownRefresh } from './pull-down-refresh';
+export { default as Upload } from './upload';
