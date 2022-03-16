@@ -272,13 +272,13 @@ export default {
           title: 'BackTop 返回顶部',
           name: 'back-top',
           meta: { docType: 'base' },
-          path: '/vue-mobile/components/back-top',
+          path: '/mobile-vue/components/back-top',
           component: () => import('@/back-top/back-top.md'),
         },
         {
           title: 'PullDownRefresh 下拉刷新',
           name: 'pull-down-refresh',
-          path: '/vue-mobile/components/pull-down-refresh',
+          path: '/mobile-vue/components/pull-down-refresh',
           component: () => import('@/pull-down-refresh/pull-down-refresh.md'),
         },
         // {
