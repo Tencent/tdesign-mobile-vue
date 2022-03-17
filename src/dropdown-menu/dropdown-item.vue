@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 <template>
   <div v-if="isShowItems" :class="classes" :style="{ ...expandStyle }">
     <t-mask v-if="isShowItems && showOverlay" @click="onClickOverlay" />
@@ -21,11 +22,11 @@
             </template>
             <template v-else>
               <!-- 多选列表 -->
-              <t-check-group v-model="checkSelect">
+              <t-checkbox-group v-model="checkSelect">
                 <div v-for="option in options" :key="option.value" :class="`${name}__cell`">
                   <t-checkbox :value="option.value" :label="option.title" :disabled="option.disabled" />
                 </div>
-              </t-check-group>
+              </t-checkbox-group>
             </template>
           </template>
           <template v-else-if="optionsLayout === 'tree'">
@@ -56,13 +57,8 @@
                 <!-- 树形列表 - 叶子节点 ST -->
                 <template v-if="!multiple">
                   <!-- 树形列表 - 叶子节点（单选） ST -->
-                  <t-radio-group
-                    v-for="option in treeOptions[level]"
-                    :key="option.value"
-                    :value="treeState.selectList[level]"
-                    @update:value="selectTreeNode(level, $event)"
-                  >
-                    <div :class="`${name}__cell`">
+                  <t-radio-group :value="treeState.selectList[level]" @update:value="selectTreeNode(level, $event)">
+                    <div v-for="option in treeOptions[level]" :key="option.value" :class="`${name}__cell`">
                       <t-radio
                         :value="option.value"
                         :label="option.title"
@@ -76,11 +72,11 @@
                 </template>
                 <template v-else>
                   <!-- 树形列表 - 叶子节点（多选） ST -->
-                  <t-check-group :value="treeState.selectList[level]" @update:value="selectTreeNode(level, $event)">
+                  <t-checkbox-group :value="treeState.selectList[level]" @update:value="selectTreeNode(level, $event)">
                     <div v-for="option in treeOptions[level]" :key="option.value" :class="`${name}__cell`">
                       <t-checkbox :value="option.value" :label="option.title" :disabled="option.disabled"></t-checkbox>
                     </div>
-                  </t-check-group>
+                  </t-checkbox-group>
                   <!-- 树形列表 - 叶子节点（多选） ED -->
                 </template>
                 <!-- 树形列表 - 叶子节点 ED -->
@@ -119,7 +115,7 @@ import config from '../config';
 import TButton from '../button';
 import TCheckbox from '../checkbox';
 import TRadioGroup from '../radio-group';
-import TCheckGroup from '../check-group';
+import TCheckboxGroup from '../checkbox-group';
 import TransAniControl from './trans-ani-control';
 import { useDefault, useEmitEvent } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
@@ -147,7 +143,7 @@ type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOpt
 
 export default defineComponent({
   name,
-  components: { TMask, TRadio, TButton, TCheckbox, TRadioGroup, TCheckGroup },
+  components: { TMask, TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {

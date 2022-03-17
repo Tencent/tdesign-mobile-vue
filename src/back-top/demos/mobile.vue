@@ -49,8 +49,8 @@ const name = `${prefix}-back-top`;
 const backTopDemos = [
   { text: '顶部', theme: 'round' },
   { text: '顶部', theme: 'round-dark' },
-  { text: '返回顶部', theme: 'half-round' },
-  { text: '返回顶部', theme: 'half-round-dark' },
+  { text: '返回', theme: 'half-round' },
+  { text: '返回', theme: 'half-round-dark' },
   { text: '', theme: 'round' },
 ];
 export default defineComponent({

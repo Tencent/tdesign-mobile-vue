@@ -76,12 +76,12 @@ export default {
           path: '/mobile-vue/components/tabs',
           component: () => import('@/tabs/tabs.md'),
         },
-        // {
-        //   title: 'DropdownMenu 下拉菜单',
-        //   name: 'dropdown-menu',
-        //   path: '/mobile-vue/components/dropdown-menu',
-        //   component: () => import('@/dropdown-menu/dropdown-menu.md'),
-        // },
+        {
+          title: 'DropdownMenu 下拉菜单',
+          name: 'dropdown-menu',
+          path: '/mobile-vue/components/dropdown-menu',
+          component: () => import('@/dropdown-menu/dropdown-menu.md'),
+        },
       ],
     },
     {
@@ -272,8 +272,14 @@ export default {
           title: 'BackTop 返回顶部',
           name: 'back-top',
           meta: { docType: 'base' },
-          path: '/vue-mobile/components/back-top',
+          path: '/mobile-vue/components/back-top',
           component: () => import('@/back-top/back-top.md'),
+        },
+        {
+          title: 'PullDownRefresh 下拉刷新',
+          name: 'pull-down-refresh',
+          path: '/mobile-vue/components/pull-down-refresh',
+          component: () => import('@/pull-down-refresh/pull-down-refresh.md'),
         },
         // {
         //   title: 'ActionSheet 动作面板',
