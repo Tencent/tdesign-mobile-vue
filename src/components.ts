@@ -32,7 +32,7 @@ export { Indexes, IndexesCell, IndexesAnchor } from './indexes';
 export { Picker, PickerItem } from './picker';
 export { Tag, CheckTag } from './tag';
 export { TabBar, TabBarItem } from './tab-bar';
-export { DropdownMenu, DropdownItem } from './dropdown-menu';
+// export { DropdownMenu, DropdownItem } from './dropdown-menu';
 export { Collapse, CollapsePanel } from './collapse';
 export { Tabs, TabPanel } from './tabs';
 export { Swiper, SwiperItem } from './swiper';

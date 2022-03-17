@@ -1,15 +1,15 @@
 <template>
   <div :class="classes">
-    <form :class="`${name}__form`">
+    <div :class="`${name}__form`">
       <div :class="`${name}__box`">
         <div :class="`${name}__icon-search`">
           <t-icon-search></t-icon-search>
         </div>
-        <input
+        <t-input
           ref="searchInput"
           v-model="currentValue"
           :class="`${name}__input`"
-          type="text"
+          type="search"
           :autofocus="autofocus"
           :placeholder="placeholder"
         />
@@ -23,8 +23,8 @@
         </div>
         <span :class="`${name}__label-text`">{{ placeholder }}</span>
       </label>
-    </form>
-    <t-button v-show="!state.labelActive" :class="`${name}__cancel-button`" @click="onCancel">
+    </div>
+    <t-button v-show="!state.labelActive" variant="text" :class="`${name}__cancel-button`" @click="onCancel">
       {{ cancelButtonText }}
     </t-button>
   </div>
@@ -35,17 +35,18 @@ import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TCloseIcon } from '
 import { ref, reactive, computed, defineComponent, nextTick } from 'vue';
 import config from '../config';
 import TButton from '../button';
+import TInput from '../input';
 
 const { prefix } = config;
 const name = `${prefix}-search`;
 
 export default defineComponent({
   name,
-  components: { TIconSearch, TCloseIcon, TButton },
+  components: { TIconSearch, TCloseIcon, TButton, TInput },
   props: {
     autofocus: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     clearable: {
       type: Boolean,
