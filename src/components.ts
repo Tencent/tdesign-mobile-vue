@@ -4,7 +4,7 @@ export { default as Divider } from './divider';
 export { default as Cell } from './cell';
 export { default as CellGroup } from './cell-group';
 export { default as Checkbox } from './checkbox';
-export { default as CheckGroup } from './check-group';
+export { default as CheckboxGroup } from './checkbox-group';
 export { default as Input } from './input';
 export { default as Textarea } from './textarea';
 export { default as Mask } from './mask';

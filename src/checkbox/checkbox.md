@@ -19,7 +19,7 @@ label | String / Slot / Function | - | 主文案。TS 类型：`string | TNode`�
 maxContentRow | Number | 5 | 内容最大行数限制 | N
 maxLabelRow | Number | 3 | 主文案最大行数限制 | N
 name | String | - | HTML 元素原生属性 | N
-readonly | Boolean | false | 组件是否只读 | N
+readonly | Boolean | false | 只读状态 | N
 value | String / Number | - | 复选框的值。TS 类型：`string | number` | N
 onChange | Function |  | TS 类型：`(checked: boolean, context: { e: Event }) => void`<br/>值变化时触发 | N
 
