@@ -1,7 +1,7 @@
 {
   "name": "tdesign-mobile-vue",
   "purename": "tdesign",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
@@ -17,7 +17,7 @@
     "dev": "cd site && cross-env NODE_ENV=development vite",
     "dev:debug": "cd site && cross-env NODE_ENV=development vite --debug",
     "prebuild": "rimraf dist/* lib/* es/* esm/* typings/*",
-    "build": "cross-env NODE_ENV=production rollup -c scripts/rollup.config.js && npm run build:tsc",
+    "build": "npm run prebuild && cross-env NODE_ENV=production rollup -c scripts/rollup.config.js && npm run build:tsc",
     "build:tsc": "concurrently \"npm:build:tsc-*\"",
     "build:tsc-es": "vue-tsc --declaration --emitDeclarationOnly --outDir es/ -p tsconfig.build.json",
     "build:tsc-esm": "vue-tsc --declaration --emitDeclarationOnly --outDir esm/ -p tsconfig.build.json",
