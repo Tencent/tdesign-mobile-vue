@@ -21,13 +21,13 @@
         </t-tab-panel>
         <t-tab-panel value="pull-refresh" label="下拉刷新">
           <div class="pull-refresh-wrap">
-            <t-pull-refresh v-model="refreshing" @refresh="onRefresh">
+            <t-pull-down-refresh v-model="refreshing" @refresh="onRefresh">
               <t-list :async-loading="pullloading" @scroll="(e) => onScroll(e, 2)">
                 <t-cell v-for="item in listPull" :key="item" align="middle">
                   <span class="cell">{{ item }}</span>
                 </t-cell>
               </t-list>
-            </t-pull-refresh>
+            </t-pull-down-refresh>
           </div>
         </t-tab-panel>
       </t-tabs>

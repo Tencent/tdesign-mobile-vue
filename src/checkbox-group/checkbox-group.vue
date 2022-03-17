@@ -30,7 +30,7 @@ import {
 import { useChildSlots, useDefault } from '../shared';
 
 const { prefix } = config;
-const name = `${prefix}-check-group`;
+const name = `${prefix}-checkbox-group`;
 
 export interface Child {
   value: string | number;
@@ -54,7 +54,7 @@ export default defineComponent({
     const checkedMap = ref({});
     const optionList = ref<Array<CheckboxOptionObj>>([]);
     const intersectionLen = computed(() => {
-      const values = optionList.value.map((item) => item.value);
+      const values = optionList.value?.map((item) => item.value);
       if (groupCheckValue.value instanceof Array) {
         const n = intersection(groupCheckValue.value, values);
         return n.length;

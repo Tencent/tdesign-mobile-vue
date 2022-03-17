@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image :props alt 1`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt=""
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props error 1`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt=""
+    class="t-image__img"
+    src=""
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props error 2`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt=""
+    class="t-image__img"
+    src=""
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props fit 1`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: contain; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props fit 2`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: cover; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props fit 3`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props fit 4`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: none; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props fit 5`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: scale-down; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props lazy 1`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src=""
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props loading 1`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt=""
+    class="t-image__img"
+    src=""
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props loading 2`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt=""
+    class="t-image__img"
+    src=""
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props position 1`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props shape 1`] = `
+<div
+  class="t-image t-image--circle"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props shape 2`] = `
+<div
+  class="t-image t-image--round"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
+
+exports[`Image :props shape 3`] = `
+<div
+  class="t-image t-image--square"
+>
+  <div
+    class="t-image__status"
+  >
+    <svg
+      class="t-icon t-icon-ellipsis"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <img
+    alt="图片占位"
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
