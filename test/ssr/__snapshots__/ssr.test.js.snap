@@ -4385,16 +4385,45 @@ exports[`ssr snapshot test renders ./src/drawer/demos/mobile.vue correctly 1`] =
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/customized-menu.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="单选菜单" disabled></t-dropdown-item>
+    <t-dropdown-item title="自定义内容">
+      <div class="t-cell-group">
+        <!--v-if-->
+        <div class="t-cell-group__container">
+          <!--[-->
+          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 1">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[--><span class="t-switch" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 2">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[--><span class="t-switch t-is-checked" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered" label="开关 3">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[--><span class="t-switch t-is-disabled" text="描述信息"><!--v-if--><span class="t-switch__node" style=""></span></span>
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
+          <!--]-->
+        </div>
+      </div>
+    </t-dropdown-item>
+  </t-dropdown-menu>
   <p> 开关 1: <strong>false</strong></p>
   <p> 开关 2: <strong>true</strong></p>
   <p> 开关 3: <strong>false</strong></p>
@@ -4412,16 +4441,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/demo-container.vue 
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/disabled.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="禁用菜单" disabled></t-dropdown-item>
+    <t-dropdown-item title="禁用选项"></t-dropdown-item>
+  </t-dropdown-menu>
   <p>禁用了序号是3的倍数的选项。</p>
   <!--]-->
 </div>
@@ -4430,16 +4453,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/disabled.vue correc
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/events.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item modelValue="option_2" title="单选菜单" select-mode="multi" options-layout="columns" options-columns="2"></t-dropdown-item>
+    <t-dropdown-item title="多选菜单" select-mode="multi" options-layout="columns" options-columns="3"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单选菜单 选中项: <strong>option_2</strong></p>
   <p> 多选菜单 选中项: <strong>options_A, options_C</strong></p>
   <!--]-->
@@ -4454,67 +4471,43 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/mobile.vue correctl
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
     <p class="tdesign-mobile-demo-block__summary">单选下拉菜单</p>
     <!--[-->
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item value="options_2" label="菜单名称"></t-dropdown-item>
+      <t-dropdown-item modelValue="options_A" label="菜单名称"></t-dropdown-item>
+    </t-dropdown-menu>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">多选下拉菜单</p>
     <!--[-->
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item label="单列" multiple options-columns="1"></t-dropdown-item>
+      <t-dropdown-item label="双列" multiple options-layout="columns" options-columns="2"></t-dropdown-item>
+      <t-dropdown-item label="三列" multiple options-layout="columns" options-columns="3"></t-dropdown-item>
+    </t-dropdown-menu>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">单选下拉菜单</p>
     <!--[-->
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item modelValue="options_2" label="菜单名称"></t-dropdown-item>
+      <t-dropdown-item modelValue="options_A" label="菜单名称"></t-dropdown-item>
+    </t-dropdown-menu>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">树形下拉菜单</p>
     <!--[-->
-    <div class="t-dropdown-menu">
-      <div class="t-dropdown-menu__bar">
-        <!--[-->
-        <!--]-->
-      </div>
-      <!--[-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--v-if-->
-      <!--]-->
-    </div>
+    <t-dropdown-menu>
+      <t-dropdown-item label="菜单" options-layout="tree" multiple></t-dropdown-item>
+      <t-dropdown-item label="菜单" options-layout="tree" multiple></t-dropdown-item>
+      <t-dropdown-item label="菜单" options-layout="tree"></t-dropdown-item>
+      <t-dropdown-item label="菜单" options-layout="tree"></t-dropdown-item>
+    </t-dropdown-menu>
     <!--]-->
   </div>
   <div style="height:300px;"></div>
@@ -4524,16 +4517,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/mobile.vue correctl
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/multi-choice.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item modelValue="option_2" title="多选菜单1" select-mode="multi"></t-dropdown-item>
+    <t-dropdown-item title="多选菜单2" select-mode="multi"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单选菜单 选中项: <strong>option_2</strong></p>
   <!--]-->
 </div>
@@ -4542,17 +4529,11 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/multi-choice.vue co
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/options-layout.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="单列" select-mode="multi" options-columns="1"></t-dropdown-item>
+    <t-dropdown-item title="双列" select-mode="multi" options-layout="columns" options-columns="2"></t-dropdown-item>
+    <t-dropdown-item title="三列" select-mode="multi" options-layout="columns" options-columns="3"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单列菜单 选中项: <strong></strong></p>
   <p> 两栏菜单 选中项: <strong></strong></p>
   <p> 三栏菜单 选中项: <strong>options_A, options_C</strong></p>
@@ -4563,16 +4544,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/options-layout.vue 
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/single-choice.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item modelValue="option_2" title="单选菜单1"></t-dropdown-item>
+    <t-dropdown-item modelValue="options_A" title="单选菜单2"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 单选菜单1 选中项: <strong>option_2</strong></p>
   <p> 单选菜单2 选中项: <strong>options_A</strong></p><!-- <t-button @click="updateOptions">更新选项</t-button> -->
   <!--]-->
@@ -4582,16 +4557,10 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/single-choice.vue c
 exports[`ssr snapshot test renders ./src/dropdown-menu/demos/tree-menu.vue correctly 1`] = `
 <div class="tdesign-demo-dropdown-menu">
   <!--[-->
-  <div class="t-dropdown-menu">
-    <div class="t-dropdown-menu__bar">
-      <!--[-->
-      <!--]-->
-    </div>
-    <!--[-->
-    <!--v-if-->
-    <!--v-if-->
-    <!--]-->
-  </div>
+  <t-dropdown-menu>
+    <t-dropdown-item title="两列多选" options-layout="tree" select-mode="multi"></t-dropdown-item>
+    <t-dropdown-item title="三列多选" options-layout="tree" select-mode="multi"></t-dropdown-item>
+  </t-dropdown-menu>
   <p> 多选树形菜单（两列） 选中路径: <strong>null</strong></p>
   <p> 多选树形菜单（三列） 选中路径: <strong>[&quot;options_1&quot;,&quot;options_3&quot;,[&quot;options_2&quot;,&quot;options_3&quot;]]</strong></p>
   <!--]-->
@@ -12499,11 +12468,25 @@ exports[`ssr snapshot test renders ./src/rate/demos/text.vue correctly 1`] = `
 exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
 <div>
   <div class="t-search">
-    <form class="t-search__form">
+    <div class="t-search__form">
       <div class="t-search__box">
         <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div><input class="t-search__input" type="text" autofocus placeholder="请输入关键字" value>
+          </svg></div>
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+          <!--v-if-->
+          <!--v-if-->
+          <div class="t-cell__note">
+            <!--[-->
+            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <!--]-->
+          </div>
+          <!--v-if-->
+        </div>
         <div class="t-search__icon-close">
           <!--v-if-->
         </div>
@@ -12512,7 +12495,7 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
           </svg></div><span class="t-search__label-text">请输入关键字</span>
       </label>
-    </form><button class="t-button t-size-m t-button--base t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
+    </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
       <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
     </button>
   </div>
@@ -12522,11 +12505,25 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
 exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = `
 <div>
   <div class="t-search" icon-color="#0052d9">
-    <form class="t-search__form">
+    <div class="t-search__form">
       <div class="t-search__box">
         <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div><input class="t-search__input" type="text" autofocus placeholder="请输入关键字" value>
+          </svg></div>
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+          <!--v-if-->
+          <!--v-if-->
+          <div class="t-cell__note">
+            <!--[-->
+            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <!--]-->
+          </div>
+          <!--v-if-->
+        </div>
         <div class="t-search__icon-close">
           <!--v-if-->
         </div>
@@ -12535,7 +12532,7 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
           </svg></div><span class="t-search__label-text">请输入关键字</span>
       </label>
-    </form><button class="t-button t-size-m t-button--base t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
+    </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
       <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
     </button>
   </div>
@@ -12551,11 +12548,25 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">基础搜索框</p>
     <!--[-->
     <div class="t-search">
-      <form class="t-search__form">
+      <div class="t-search__form">
         <div class="t-search__box">
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><input class="t-search__input" type="text" placeholder="搜索预设文案" value>
+            </svg></div>
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[-->
+              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
           <div class="t-search__icon-close">
             <!--v-if-->
           </div>
@@ -12564,7 +12575,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </form><button class="t-button t-size-m t-button--base t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
+      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
         <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
       </button>
     </div>
@@ -12575,11 +12586,25 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">默认状态</p>
     <!--[-->
     <div class="t-search">
-      <form class="t-search__form">
+      <div class="t-search__form">
         <div class="t-search__box">
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><input class="t-search__input" type="text" placeholder="搜索预设文案" value>
+            </svg></div>
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[-->
+              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
           <div class="t-search__icon-close">
             <!--v-if-->
           </div>
@@ -12588,7 +12613,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </form><button class="t-button t-size-m t-button--base t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
+      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
         <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
       </button>
     </div>
@@ -12599,11 +12624,25 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">点击状态</p>
     <!--[-->
     <div class="t-search">
-      <form class="t-search__form">
+      <div class="t-search__form">
         <div class="t-search__box">
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><input class="t-search__input" type="text" autofocus placeholder="搜索预设文案" value>
+            </svg></div>
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[-->
+              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
           <div class="t-search__icon-close">
             <!--v-if-->
           </div>
@@ -12612,7 +12651,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </form><button class="t-button t-size-m t-button--base t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
+      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
         <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
       </button>
     </div>
@@ -12623,11 +12662,25 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">输入状态</p>
     <!--[-->
     <div class="t-search">
-      <form class="t-search__form">
+      <div class="t-search__form">
         <div class="t-search__box">
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><input class="t-search__input" type="text" autofocus placeholder="搜索预设文案" value="搜索预设文案">
+            </svg></div>
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+            <!--v-if-->
+            <!--v-if-->
+            <div class="t-cell__note">
+              <!--[-->
+              <div class="t-input__wrap"><input value="搜索预设文案" name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
           <div class="t-search__icon-close"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
               <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
             </svg></div>
@@ -12636,7 +12689,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </form><button class="t-button t-size-m t-button--base t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
+      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
         <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
       </button>
     </div>
