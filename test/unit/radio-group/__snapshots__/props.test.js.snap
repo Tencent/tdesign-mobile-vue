@@ -1,16 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioGroup :props disabled 1`] = `
-<div
-  class="t-radio-group"
-  role="radiogroup"
->
-  <!--v-if-->
-  
-  
-</div>
-`;
-
 exports[`RadioGroup :props name 1`] = `
 <div
   class="t-radio-group"

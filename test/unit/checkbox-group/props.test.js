@@ -11,24 +11,6 @@ import { h } from 'vue';
 describe('CheckboxGroup', () => {
   describe(':props', () => {
     
-    it('disabled', () => {
-      const fn = jest.fn();
-      const wrapper = mount(CheckboxGroup, {
-        propsData: {
-          disabled: true,
-          onClick: fn,
-        },
-      });
-      wrapper.trigger('click');
-      expect(fn).not.toHaveBeenCalled();
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 是否禁用组件: false
-    it('disabled', () => {
-      const wrapper = mount(CheckboxGroup, {
-        propsData: {"disabled":true},
-      });
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 支持最多选中的数量: undefined
     it('max', () => {
       const wrapper = mount(CheckboxGroup, {
         propsData: {"max":"undefined"},
@@ -41,12 +23,6 @@ describe('CheckboxGroup', () => {
       });
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });// 以配置形式设置子元素。示例1：`['北京', '上海']` ，示例2: `[{ label: '全选', checkAll: true }, { label: '上海', value: 'shanghai' }]`。checkAll 值为 true 表示当前选项为「全选选项」: []
-    it('options', () => {
-      const wrapper = mount(CheckboxGroup, {
-        propsData: {"options":"[]"},
-      });
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 选中值: []
     it('value', () => {
       const wrapper = mount(CheckboxGroup, {
         propsData: {"value":"[]"},

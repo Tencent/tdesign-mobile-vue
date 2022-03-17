@@ -335,44 +335,6 @@ exports[`Radio :props default 2`] = `
 </div>
 `;
 
-exports[`Radio :props disabled 1`] = `
-<div
-  class="t-radio t-is-disabled"
->
-  <span
-    class="t-radio__content-wrap"
-  >
-    <span
-      class="t-radio__icon-wrap"
-    >
-      <input
-        class="t-radio__original-left"
-        disabled=""
-        name=""
-        type="radio"
-        value="false"
-      />
-      <svg
-        class="t-icon t-icon-circle"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
-          fill="currentColor"
-          fill-opacity="0.9"
-          opacity="0.9"
-        />
-      </svg>
-    </span>
-    <!--v-if-->
-    <!--v-if-->
-  </span>
-</div>
-`;
-
 exports[`Radio :props label 1`] = `
 <div
   class="t-radio"

@@ -24,9 +24,9 @@
         <span :class="`${name}__label-text`">{{ placeholder }}</span>
       </label>
     </form>
-    <button v-show="!state.labelActive" :class="`${name}__cancel-button`" @click="onCancel">
+    <t-button v-show="!state.labelActive" :class="`${name}__cancel-button`" @click="onCancel">
       {{ cancelButtonText }}
-    </button>
+    </t-button>
   </div>
 </template>
 
@@ -34,13 +34,14 @@
 import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TCloseIcon } from 'tdesign-icons-vue-next';
 import { ref, reactive, computed, defineComponent, nextTick } from 'vue';
 import config from '../config';
+import TButton from '../button';
 
 const { prefix } = config;
 const name = `${prefix}-search`;
 
 export default defineComponent({
   name,
-  components: { TIconSearch, TCloseIcon },
+  components: { TIconSearch, TCloseIcon, TButton },
   props: {
     autofocus: {
       type: Boolean,

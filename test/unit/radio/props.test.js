@@ -73,30 +73,6 @@ describe('Radio', () => {
       });
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
-    it('disabled', () => {
-      const fn = jest.fn();
-      const wrapper = mount(Radio, {
-        propsData: {
-          disabled: true,
-          onClick: fn,
-        },
-      });
-      wrapper.trigger('click');
-      expect(fn).not.toHaveBeenCalled();
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 是否为禁用态: undefined
-    it('disabled', () => {
-      const wrapper = mount(Radio, {
-        propsData: {"disabled":"undefined"},
-      });
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。值为 fill-circle 表示图标为填充型图标，值为 stroke-line 表示图标为描边型图标: 'fill-circle'
-    it('icon', () => {
-      const wrapper = mount(Radio, {
-        propsData: {"icon":"'fill-circle'"},
-      });
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });
     it('label', () => {
       const fn = jest.fn();
       const wrapper = mount(Radio, {

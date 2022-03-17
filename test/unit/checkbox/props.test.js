@@ -79,24 +79,6 @@ describe('Checkbox', () => {
       });
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
-    it('disabled', () => {
-      const fn = jest.fn();
-      const wrapper = mount(Checkbox, {
-        propsData: {
-          disabled: true,
-          onClick: fn,
-        },
-      });
-      wrapper.trigger('click');
-      expect(fn).not.toHaveBeenCalled();
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 是否禁用组件: undefined
-    it('disabled', () => {
-      const wrapper = mount(Checkbox, {
-        propsData: {"disabled":"undefined"},
-      });
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标]: 
     it('icon', () => {
       const wrapper = mount(Checkbox, {
         propsData: {"icon":""},

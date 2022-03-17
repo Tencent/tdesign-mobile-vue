@@ -11,24 +11,6 @@ import { h } from 'vue';
 describe('RadioGroup', () => {
   describe(':props', () => {
     
-    it('disabled', () => {
-      const fn = jest.fn();
-      const wrapper = mount(RadioGroup, {
-        propsData: {
-          disabled: true,
-          onClick: fn,
-        },
-      });
-      wrapper.trigger('click');
-      expect(fn).not.toHaveBeenCalled();
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// 是否禁用全部子单选框: undefined
-    it('disabled', () => {
-      const wrapper = mount(RadioGroup, {
-        propsData: {"disabled":"undefined"},
-      });
-      expect(wrapper.wrapperElement).toMatchSnapshot();
-    });// HTML 元素原生属性: 
     it('name', () => {
       const wrapper = mount(RadioGroup, {
         propsData: {"name":""},

@@ -333,43 +333,6 @@ exports[`Checkbox :props default 2`] = `
 </div>
 `;
 
-exports[`Checkbox :props disabled 1`] = `
-<div
-  class="t-checkbox t-is-disabled"
->
-  <div
-    class="t-checkbox__content-wrap"
-  >
-    <span
-      class="t-checkbox__icon-left"
-    >
-      <input
-        class="t-checkbox__original-left"
-        disabled=""
-        name=""
-        type="checkbox"
-      />
-      <svg
-        class="t-icon t-icon-circle"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
-          fill="currentColor"
-          fill-opacity="0.9"
-          opacity="0.9"
-        />
-      </svg>
-    </span>
-    <!--v-if-->
-    <!--v-if-->
-  </div>
-</div>
-`;
-
 exports[`Checkbox :props icon 1`] = `
 <div
   class="t-checkbox"
