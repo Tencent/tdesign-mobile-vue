@@ -1,9 +1,9 @@
 <template>
   <div :class="className">
     <div :class="toolbarClassName">
-      <button :class="cancelClassName" @click="handleCancel">{{ cancelButtonText }}</button>
+      <t-button :class="cancelClassName" variant="text" @click="handleCancel">{{ cancelButtonText }}</t-button>
       <div :class="titleClassName">{{ title }}</div>
-      <button :class="confirmClassName" @click="handleConfirm">{{ confirmButtonText }}</button>
+      <t-button :class="confirmClassName" variant="text" @click="handleConfirm">{{ confirmButtonText }}</t-button>
     </div>
     <div :class="mainClassName">
       <div :class="groupClassName">
@@ -21,12 +21,14 @@ import { useDefault } from '../shared';
 import config from '../config';
 import { PickerProps } from './props';
 import { PickerValue } from './type';
+import TButton from '../button';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
 
 export default defineComponent({
   name,
+  components: { TButton },
   props: PickerProps,
   emits: ['change', 'cancel', 'confirm', 'update:modelValue'],
   setup(props, context: SetupContext) {

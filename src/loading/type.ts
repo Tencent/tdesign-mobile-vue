@@ -66,7 +66,7 @@ export interface TdLoadingProps {
   /**
    * 加载提示文案
    */
-   text?: String;
+  text?: string;
   /**
    * 加载组件类型
    * @default circular

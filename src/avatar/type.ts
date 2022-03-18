@@ -9,7 +9,7 @@ import { TNode } from '../common';
 
 export interface TdAvatarProps {
   /**
-   * 头像替换文本，仅当图片存在时有效
+   * 头像替换文本，仅当图片加载失败时有效
    * @default ''
    */
   alt?: string;

@@ -107,6 +107,9 @@ export default defineComponent({
     };
 
     const handleOverlayClick = () => {
+      if (!props.closeOnOverlayClick) {
+        return;
+      }
       context.emit('update:visible', false);
       context.emit('close', 'overlay');
       context.emit('overlay-click');
