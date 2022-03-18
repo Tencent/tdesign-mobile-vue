@@ -1,12 +1,7 @@
 <template>
   <div>
     <ul :class="`${UPLOAD_NAME}__card`">
-      <li
-        v-for="(file, index) in uploadedFiles"
-        :key="index"
-        :class="`${UPLOAD_NAME}__card-item ${prefix}-is--background`"
-        :style="itemStyle"
-      >
+      <li v-for="(file, index) in uploadedFiles" :key="index" :class="`${UPLOAD_NAME}__card-item`" :style="itemStyle">
         <div :class="`${UPLOAD_NAME}__card-content ${UPLOAD_NAME}__card-box`" :style="itemContentStyle">
           <div
             key="delete-icon"
@@ -22,7 +17,7 @@
           </div>
           <img :class="`${UPLOAD_NAME}__card-image`" :src="file.url" @click="(e) => handlePreview(e, file)" />
           <!--上传失败时，reload重试-->
-          <div v-if="file.status == 'fail'" :class="`${UPLOAD_NAME}__card-mask`">
+          <div v-if="file.status === 'fail'" :class="`${UPLOAD_NAME}__card-mask`">
             <span key="refresh-icon" :class="`${UPLOAD_NAME}__card-mask-item`" @click="stopPropagation">
               <refresh-icon @click="(e) => handleReload(e, file)" />
             </span>
@@ -35,7 +30,7 @@
         </div>
       </template>
       <template v-else>
-        <li :class="`${UPLOAD_NAME}__card-item ${prefix}-is--background`" @click="triggerUpload">
+        <li :class="`${UPLOAD_NAME}__card-item`" @click="triggerUpload">
           <div :class="`${UPLOAD_NAME}__card-container ${UPLOAD_NAME}__card-box`">
             <add-icon></add-icon>
           </div>
@@ -376,9 +371,16 @@ export default defineComponent({
         res = props.formatResponse(response, { file });
       }
       errorMsg.value = res?.error;
-      const files = props.multiple ? uploadedFiles.value.concat(file) : [file];
-      const cContext = { e: event, response: res, trigger: 'upload-fail' };
-      setInnerFiles(files, cContext);
+      // 对上传失败的，reload失败时不需再重新设置uploadedFiles的值
+      if (
+        !uploadedFiles.value.find((item) => {
+          return item.name === file.name || file.status === 'fail';
+        })
+      ) {
+        const files = props.multiple ? uploadedFiles.value.concat(file) : [file];
+        const cContext = { e: event, response: res, trigger: 'upload-fail' };
+        setInnerFiles(files, cContext);
+      }
       const context = { e: event, file };
       emitEvent('fail', context);
     };
