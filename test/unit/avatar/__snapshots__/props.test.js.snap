@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar :props alt 1`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <img
+      alt=""
+      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+    />
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props badgeProps 1`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <img
+      alt=""
+      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+    />
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props hideOnLoadFailed 1`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <span>
+      <!---->
+    </span>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props icon 1`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <div
+      class="t-avatar__icon"
+    >
+      <div>
+        text
+      </div>
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props icon 2`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <div
+      class="t-avatar__icon"
+    >
+      text
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props image 1`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <span>
+      <!---->
+    </span>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props shape 1`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <img
+      alt=""
+      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+    />
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props shape 2`] = `
+<div
+  class="t-avatar t-avatar--round"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <img
+      alt=""
+      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+    />
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Avatar :props size 1`] = `
+<div
+  class="t-avatar t-avatar--circle"
+>
+  <div
+    class="t-avatar__inner"
+  >
+    <img
+      alt=""
+      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+    />
+  </div>
+  <!--v-if-->
+</div>
+`;

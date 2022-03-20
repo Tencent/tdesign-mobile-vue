@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroup :props max 1`] = `
+<div
+  class="t-checkbox-group"
+>
+  
+  
+</div>
+`;
+
+exports[`CheckboxGroup :props name 1`] = `
+<div
+  class="t-checkbox-group"
+>
+  
+  
+</div>
+`;
+
+exports[`CheckboxGroup :props value 1`] = `
+<div
+  class="t-checkbox-group"
+>
+  
+  
+</div>
+`;

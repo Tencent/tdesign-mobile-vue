@@ -4,6 +4,36 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+
+## 0.8.0 `(2022-03-17)`
+
+
+### Bug Fixes
+* **dropdown-menu:** 移除冗余的dom结构 ecba97f
+* **search:** 修复样式丢失问题, close #29 ac1dd2a, closes #29
+* **input** 修复输入框样式丢失问题
+* **grid** 修复grid-item样式丢失问题
+
+
+### Features
+* 新增pull-down-refresh组件 6f1c8a7
+
+
+## 0.7.0 `(2022-03-14)`
+
+### BREAKING CHANGES
+
+* **count-down**支持主题和大小 3f0a5e5
+
+### Bug Fixes
+
+* **dialog**弹出框蒙层点击是否关闭修复 & provide暴露$dialog, close #12 11092af, closes #12
+* 修复Badge导入类型 d4f8da6
+
+### Features
+
+* 新增BackTop组件 fb61e74
+
 ## 0.6.2 `(2022-03-03)`
 
 ### Bug Fixes

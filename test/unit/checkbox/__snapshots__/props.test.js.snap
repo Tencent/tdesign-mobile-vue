@@ -1,0 +1,671 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox :props align 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props align 2`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <!--v-if-->
+    <!--v-if-->
+    <span
+      class="t-checkbox__icon-right"
+    >
+      <input
+        class="t-checkbox__original-right"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props checkAll 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props checked 1`] = `
+<div
+  class="t-checkbox t-is-checked"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-check-circle-filled"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props content 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props content 2`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props contentDisabled 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props default 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-checkbox__label"
+    >
+      <div>
+        text
+      </div>
+    </span>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props default 2`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-checkbox__label"
+    >
+      text
+    </span>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props icon 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props indeterminate 1`] = `
+<div
+  class="t-checkbox t-is-indeterminate"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-minus-circle-filled"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          clip-rule="evenodd"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zm3.5-6.5h-7v-1h7v1z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props label 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-checkbox__label"
+    >
+      <div>
+        text
+      </div>
+    </span>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props label 2`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-checkbox__label"
+    >
+      text
+    </span>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props maxContentRow 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props maxLabelRow 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props name 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props readonly 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        readonly=""
+        type="checkbox"
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Checkbox :props value 1`] = `
+<div
+  class="t-checkbox"
+>
+  <div
+    class="t-checkbox__content-wrap"
+  >
+    <span
+      class="t-checkbox__icon-left"
+    >
+      <input
+        class="t-checkbox__original-left"
+        name=""
+        type="checkbox"
+        value=""
+      />
+      <svg
+        class="t-icon t-icon-circle"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+          fill="currentColor"
+          fill-opacity="0.9"
+          opacity="0.9"
+        />
+      </svg>
+    </span>
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
