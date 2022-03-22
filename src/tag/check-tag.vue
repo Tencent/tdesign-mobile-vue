@@ -1,5 +1,5 @@
 <template>
-  <button
+  <t-button
     :class="classes"
     :disabled="disabled"
     role="button"
@@ -14,7 +14,7 @@
       <t-node :content="tagContent"></t-node>
     </div>
     <close-icon v-if="closable && !disabled" :class="`${baseClass}__close`" @click="handleClickClose" />
-  </button>
+  </t-button>
 </template>
 
 <script lang="ts">
@@ -24,6 +24,7 @@ import config from '../config';
 import CheckTagProps from './check-tag-props';
 import { useEmitEvent, renderContent, renderTNode, TNode, useDefault, useToggle } from '../shared';
 import { TdCheckTagProps } from './type';
+import TButton from '../button';
 
 const { prefix } = config;
 const name = `${prefix}-check-tag`;
@@ -33,6 +34,7 @@ const CheckTag = defineComponent({
   components: {
     CloseIcon,
     TNode,
+    TButton,
   },
   props: CheckTagProps,
   emits: ['change', 'click', 'update:checked', 'update:modelValue'],

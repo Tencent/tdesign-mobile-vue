@@ -10274,8 +10274,12 @@ exports[`ssr snapshot test renders ./src/picker/demos/cascade.vue correctly 1`] 
 <div class="tdesign-demo-block">
   <!-- 联动选择 -->
   <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-picker__cancel">取消</button>
-      <div class="t-picker__title">王者荣耀</div><button class="t-picker__confirm">确认</button>
+    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
+      </button>
+      <div class="t-picker__title">王者荣耀</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
+      </button>
     </div>
     <div class="t-picker__main">
       <div class="t-picker-item__group">
@@ -10323,8 +10327,12 @@ exports[`ssr snapshot test renders ./src/picker/demos/cascade.vue correctly 1`] 
 exports[`ssr snapshot test renders ./src/picker/demos/custom.vue correctly 1`] = `
 <div class="tdesign-demo-block">
   <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-picker__cancel">取消</button>
-      <div class="t-picker__title">标题</div><button class="t-picker__confirm">确认</button>
+    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
+      </button>
+      <div class="t-picker__title">标题</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
+      </button>
     </div>
     <div class="t-picker__main">
       <div class="t-picker-item__group">
@@ -10353,8 +10361,12 @@ exports[`ssr snapshot test renders ./src/picker/demos/custom.vue correctly 1`] =
 exports[`ssr snapshot test renders ./src/picker/demos/default-selected.vue correctly 1`] = `
 <div class="tdesign-demo-block">
   <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-picker__cancel">取消</button>
-      <div class="t-picker__title">标题</div><button class="t-picker__confirm">确认</button>
+    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
+      </button>
+      <div class="t-picker__title">标题</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
+      </button>
     </div>
     <div class="t-picker__main">
       <div class="t-picker-item__group">
@@ -10498,8 +10510,12 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
 exports[`ssr snapshot test renders ./src/picker/demos/multiple.vue correctly 1`] = `
 <div class="tdesign-demo-block">
   <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-picker__cancel">取消</button>
-      <div class="t-picker__title">游戏</div><button class="t-picker__confirm">确认</button>
+    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
+      </button>
+      <div class="t-picker__title">游戏</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
+      </button>
     </div>
     <div class="t-picker__main">
       <div class="t-picker-item__group">
@@ -10548,8 +10564,12 @@ exports[`ssr snapshot test renders ./src/picker/demos/multiple.vue correctly 1`]
 exports[`ssr snapshot test renders ./src/picker/demos/object-array.vue correctly 1`] = `
 <div class="tdesign-demo-block">
   <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-picker__cancel">取消</button>
-      <div class="t-picker__title">标题</div><button class="t-picker__confirm">确认</button>
+    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
+      </button>
+      <div class="t-picker__title">标题</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
+      </button>
     </div>
     <div class="t-picker__main">
       <div class="t-picker-item__group">
@@ -18103,80 +18123,24 @@ exports[`ssr snapshot test renders ./src/tabs/demos/scroll.vue correctly 1`] = `
 exports[`ssr snapshot test renders ./src/tag/demos/checkable.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="tag-demo">
-    <!--[--><button class="t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-checked t-tag--checked" role="button" aria-checked="true">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->苹果
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-large" role="button" aria-checked="false">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->香蕉
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-large" role="button" aria-checked="false">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->桃子
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-disabled t-tag--disabled" disabled role="button" aria-disabled="true" aria-checked="false">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->火龙果
-        <!--]-->
-      </div>
-      <!--v-if-->
+    <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-checked t-tag--checked" role="button" aria-checked="true">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->苹果<!--]--></div><!--v-if--><!--]--></span>
+    </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-large" role="button" aria-checked="false">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->香蕉<!--]--></div><!--v-if--><!--]--></span>
+    </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-large" role="button" aria-checked="false">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->桃子<!--]--></div><!--v-if--><!--]--></span>
+    </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-disabled t-tag--disabled" disabled role="button" aria-disabled="true" aria-checked="false">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->火龙果<!--]--></div><!--v-if--><!--]--></span>
     </button>
     <!--]-->
-    <!--[--><button class="t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked" role="button" aria-checked="true">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->小苹果
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-medium" role="button" aria-checked="false">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->小香蕉
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-medium" role="button" aria-checked="false">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->小桃子
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled" disabled role="button" aria-disabled="true" aria-checked="false">
-      <div class="t-tag__icon">
-        <!---->
-      </div>
-      <div class="t-tag__text">
-        <!--[-->小火龙果
-        <!--]-->
-      </div>
-      <!--v-if-->
+    <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked" role="button" aria-checked="true">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->小苹果<!--]--></div><!--v-if--><!--]--></span>
+    </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium" role="button" aria-checked="false">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->小香蕉<!--]--></div><!--v-if--><!--]--></span>
+    </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium" role="button" aria-checked="false">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->小桃子<!--]--></div><!--v-if--><!--]--></span>
+    </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled" disabled role="button" aria-disabled="true" aria-checked="false">
+      <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->小火龙果<!--]--></div><!--v-if--><!--]--></span>
     </button>
     <!--]-->
   </div>
@@ -18250,33 +18214,12 @@ exports[`ssr snapshot test renders ./src/tag/demos/mobile.vue correctly 1`] = `
     <h2 class="tdesign-mobile-demo-block__title">02 状态</h2>
     <p class="tdesign-mobile-demo-block__summary">标签状态</p>
     <!--[-->
-    <div class="tag-demo"><button class="t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked" role="button" aria-disabled="false" aria-checked="true">
-        <div class="t-tag__icon">
-          <!---->
-        </div>
-        <div class="t-tag__text">
-          <!--[-->已点击
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-medium" role="button" aria-disabled="false" aria-checked="false">
-        <div class="t-tag__icon">
-          <!---->
-        </div>
-        <div class="t-tag__text">
-          <!--[-->未点击
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </button><button class="t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled" disabled role="button" aria-disabled="true">
-        <div class="t-tag__icon">
-          <!---->
-        </div>
-        <div class="t-tag__text">
-          <!--[-->不可点击
-          <!--]-->
-        </div>
-        <!--v-if-->
+    <div class="tag-demo"><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked" role="button" aria-disabled="false" aria-checked="true">
+        <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->已点击<!--]--></div><!--v-if--><!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium" role="button" aria-disabled="false" aria-checked="false">
+        <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->未点击<!--]--></div><!--v-if--><!--]--></span>
+      </button><button class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled" disabled role="button" aria-disabled="true">
+        <!----><span class="t-button__text"><!--[--><div class="t-tag__icon"><!----></div><div class="t-tag__text"><!--[-->不可点击<!--]--></div><!--v-if--><!--]--></span>
       </button></div>
     <!--]-->
   </div>

@@ -1,7 +1,9 @@
 <template>
   <td-doc-layout>
     <td-header slot="header" platform="mobile" framework="vue"></td-header>
-    <td-doc-aside ref="tdDocAside" title="Vue Next for Mobile"></td-doc-aside>
+    <td-doc-aside ref="tdDocAside" title="Vue Next for Mobile">
+      <td-select ref="tdSelect" :value="version" slot="extra"></td-select>
+    </td-doc-aside>
 
     <router-view :style="contentStyle" @loaded="contentLoaded" :docType="docType" />
   </td-doc-layout>
@@ -9,10 +11,14 @@
 
 <script>
 import siteConfig from '../docs.config';
-import  { sortDocs } from './utils';
+import { sortDocs, filterVersions } from './utils';
 import { defineComponent } from 'vue';
+import packageJson from '../../package.json';
 
-const docs = sortDocs(siteConfig.docs)
+const registryUrl = 'https://mirrors.tencent.com/npm/tdesign-mobile-vue';
+const currentVersion = packageJson.version.replace(/\./g, '_');
+
+const docs = sortDocs(siteConfig.docs);
 
 const { docs: routerList } = JSON.parse(JSON.stringify({ docs: docs }).replace(/component:.+/g, ''));
 
@@ -21,6 +27,7 @@ export default defineComponent({
     return {
       docType: '',
       loaded: false,
+      version: currentVersion,
     };
   },
 
@@ -40,6 +47,15 @@ export default defineComponent({
       this.$router.push({ path: detail });
       window.scrollTo(0, 0);
     };
+    this.$refs.tdSelect.onchange = ({ detail }) => {
+      const { value: version } = detail;
+      if (version === currentVersion) return;
+
+      const historyUrl = `https://${version}-tdesign-mobile-vue.surge.sh`;
+      window.open(historyUrl, '_blank');
+    };
+
+    this.initHistoryVersions();
   },
 
   watch: {
@@ -50,6 +66,22 @@ export default defineComponent({
   },
 
   methods: {
+    initHistoryVersions() {
+      fetch(registryUrl)
+        .then((res) => res.json())
+        .then((res) => {
+          const options = [];
+          const versions = filterVersions(Object.keys(res.versions).filter((v) => !v.includes('alpha')));
+
+          versions.forEach((v) => {
+            const nums = v.split('.');
+            if (nums[0] === '0' && nums[1] < 7) return false;
+
+            options.unshift({ label: v, value: v.replace(/\./g, '_') });
+          });
+          this.$refs.tdSelect.options = options;
+        });
+    },
     contentLoaded(callback) {
       requestAnimationFrame(() => {
         this.loaded = true;
