@@ -2,7 +2,7 @@
   <template v-if="!time">
     <t-node :content="contentLayout"></t-node>
   </template>
-  <span :class="`${name} ${name}--${theme} ${name}--${size}`">
+  <span :class="`${name} ${name}--${theme} ${name}--${size} ${!hasChinese ? '' : `${name}--split-with-unit`}`">
     <template v-if="time">
       <template v-for="item in showTimes" :key="item.mark">
         <span :class="`${name}__digit`">{{ item.value }}</span>
@@ -33,12 +33,14 @@ export default defineComponent({
     //
     const { time, showTimes } = useCountDown(other);
     const internalInstance = getCurrentInstance();
+    const hasChinese = /.*[\u4e00-\u9fa5]+.*$/?.test?.(other?.format);
     const contentLayout = computed(() => renderTNode(internalInstance, 'content'));
     // return
     return {
       name,
       time,
       showTimes,
+      hasChinese,
       contentLayout,
     };
   },
