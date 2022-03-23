@@ -72,7 +72,7 @@ export default defineComponent({
     RefreshIcon,
   },
   props,
-  emits: ['update:files', 'update:modelValue', 'change'],
+  emits: ['update:files', 'update:modelValue', 'change', 'fail', 'preview', 'progress', 'remove', 'success'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
@@ -107,11 +107,9 @@ export default defineComponent({
       if (isObject(gridConfig.value)) {
         ({ column } = gridConfig.value as any);
       }
-      const percent = `${100 / +column}%`;
-      const style = {
-        flexBasis: percent,
+      return {
+        flexBasis: `${100 / +column}%`,
       };
-      return style;
     });
     const itemContentStyle = computed(() => {
       let width = 80;
@@ -120,11 +118,10 @@ export default defineComponent({
       if (isObject(gridConfig.value)) {
         ({ width, height } = gridConfig.value as any);
       }
-      const style = {
+      return {
         height: `${height}px`,
         width: `${width}px`,
       };
-      return style;
     });
 
     const stopPropagation = (e: MouseEvent) => {
@@ -138,15 +135,13 @@ export default defineComponent({
     };
     const handlePreview = (e: MouseEvent, file: UploadFile) => {
       showViewer.value = true;
-      const pContext = {
+      emitEvent('preview', {
         e,
         file,
-      };
-      emitEvent('preview', pContext);
+      });
     };
     const handleReload = (e: MouseEvent, file: UploadFile) => {
-      const files = [file.raw];
-      uploadFiles(files);
+      uploadFiles([file.raw]);
     };
     const handleChange = (event: HTMLInputEvent) => {
       const { files } = event.target;
@@ -159,8 +154,7 @@ export default defineComponent({
       if (isFunction(props.beforeUpload)) {
         const beforeUpload = props.beforeUpload(file);
         if (beforeUpload instanceof Promise) return beforeUpload;
-        // eslint-disable-next-line no-promise-executor-return
-        return new Promise((resolve) => resolve(beforeUpload));
+        return Promise.resolve(beforeUpload);
       }
       return new Promise((resolve) => {
         if (props.sizeLimit) {
@@ -173,13 +167,13 @@ export default defineComponent({
       const sizeLimit: SizeLimitObj =
         typeof props.sizeLimit === 'number' ? { size: props.sizeLimit, unit: 'KB' } : props.sizeLimit;
 
-      const rSize = isOverSizeLimit(fileSize, sizeLimit.size, sizeLimit.unit);
-      if (!rSize) {
+      const isOverSize = isOverSizeLimit(fileSize, sizeLimit.size, sizeLimit.unit);
+      if (isOverSize) {
         errorMsg.value = sizeLimit.message
           ? sizeLimit.message
-          : `您上传的图片超过${props.sizeLimit}${sizeLimit.unit}的限制`;
+          : `TDesign Upoad Error: uploaded picture exceeds ${props.sizeLimit}${sizeLimit.unit} restrictions`;
       }
-      return rSize;
+      return isOverSize;
     };
     const uploadFiles = (files: FileList) => {
       const { max } = toRefs(props);
@@ -251,10 +245,8 @@ export default defineComponent({
       errorMsg.value = '';
       const files = uploadedFiles.value.concat();
       files.splice(index, 1);
-      const cContext = { e, trigger: 'remove', index, file };
-      const rContext = { e, index, file };
-      setInnerFiles(files, cContext);
-      emitEvent('remove', rContext);
+      setInnerFiles(files, { e, trigger: 'remove', index, file });
+      emitEvent('remove', { e, index, file });
       images.value.splice(index, 1);
     };
     const upload = async (file: UploadFile): Promise<void> => {
@@ -347,15 +339,13 @@ export default defineComponent({
       // 上传成功的文件发送到 files
       const newFile: UploadFile = { ...file, response: res };
       const files = props.multiple ? uploadedFiles.value.concat(newFile) : [newFile];
-      const cContext = { e: event, response: res, trigger: 'upload-success' };
-      setInnerFiles(files, cContext);
-      const sContext = {
+      setInnerFiles(files, { e: event, response: res, trigger: 'upload-success' });
+      emitEvent('success', {
         file,
         fileList: files,
         e: event,
         response: res,
-      };
-      emitEvent('success', sContext);
+      });
       images.value.push(newFile.url);
     };
     const handleError = (options: {
@@ -378,11 +368,9 @@ export default defineComponent({
         })
       ) {
         const files = props.multiple ? uploadedFiles.value.concat(file) : [file];
-        const cContext = { e: event, response: res, trigger: 'upload-fail' };
-        setInnerFiles(files, cContext);
+        setInnerFiles(files, { e: event, response: res, trigger: 'upload-fail' });
       }
-      const context = { e: event, file };
-      emitEvent('fail', context);
+      emitEvent('fail', { e: event, file });
     };
     return {
       ...toRefs(props),

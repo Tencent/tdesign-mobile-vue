@@ -65,8 +65,8 @@ export default defineComponent({
     const onRemove = ({ index, file, e }: UploadRemoveContext) => {
       console.log('====onRemove', index, file, e);
     };
-    // const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
-    const action = 'www';
+    const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
+    // const action = 'www';
     const max = 10;
     return {
       action,
