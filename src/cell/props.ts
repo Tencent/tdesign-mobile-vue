@@ -13,7 +13,8 @@ export default {
     type: String as PropType<TdCellProps['align']>,
     default: 'middle' as TdCellProps['align'],
     validator(val: TdCellProps['align']): boolean {
-      return ['top', 'middle', 'bottom'].includes(val!);
+      if (!val) return true;
+      return ['top', 'middle', 'bottom'].includes(val);
     },
   },
   /** 是否显示右侧箭头 */

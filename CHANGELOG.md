@@ -5,6 +5,20 @@ toc: false
 spline: explain
 ---
 
+## 0.8.0 `(2022-03-17)`
+
+
+### Bug Fixes
+* **dropdown-menu:** 移除冗余的dom结构 ecba97f
+* **search:** 修复样式丢失问题, close #29 ac1dd2a, closes #29
+* **input** 修复输入框样式丢失问题
+* **grid** 修复grid-item样式丢失问题
+
+
+### Features
+* 新增pull-down-refresh组件 6f1c8a7
+
+
 ## 0.7.0 `(2022-03-14)`
 
 ### BREAKING CHANGES
