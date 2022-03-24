@@ -50,7 +50,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, SetupContext, getCurrentInstance, ref, Ref, toRefs, computed } from 'vue';
+import { defineComponent, SetupContext, getCurrentInstance, ref, watch, Ref, toRefs, computed } from 'vue';
 import { AddIcon, CloseIcon, RefreshIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
 import xhr from '../_common/js/upload/xhr';
@@ -353,7 +353,7 @@ export default defineComponent({
       toUploadFiles.value.splice(index, 1);
       // 上传成功的文件发送到 files
       const newFile: UploadFile = { ...file, response: res };
-      const files = props.multiple ? uploadedFiles.value.concat(newFile) : [newFile];
+      const files = uploadedFiles.value.concat(newFile);
       setInnerFiles(files, { e: event, response: res, trigger: 'upload-success' });
       emitEvent('success', {
         file,
@@ -377,13 +377,12 @@ export default defineComponent({
         res = props.formatResponse(response, { file });
       }
       errorMsg.value = res?.error;
-      // 对上传失败的，reload失败时不需再重新设置uploadedFiles的值
       if (
         !uploadedFiles.value.find((item) => {
-          return item.name === file.name || file.status === 'fail';
+          return item.name === file.name;
         })
       ) {
-        const files = props.multiple ? uploadedFiles.value.concat(file) : [file];
+        const files = uploadedFiles.value.concat(file);
         setInnerFiles(files, { e: event, response: res, trigger: 'upload-fail' });
       }
       emitEvent('fail', { e: event, file });
