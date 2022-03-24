@@ -154,6 +154,12 @@ export default {
           path: '/mobile-vue/components/fab',
           component: () => import('@/fab/fab.md'),
         },
+        {
+          title: 'Upload 上传',
+          name: 'upload',
+          path: '/mobile-vue/components/upload',
+          component: () => import('@/upload/upload.md'),
+        },
       ],
     },
     {
