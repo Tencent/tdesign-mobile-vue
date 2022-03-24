@@ -50,7 +50,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, SetupContext, getCurrentInstance, ref, Ref, watch, toRefs, computed } from 'vue';
+import { defineComponent, SetupContext, getCurrentInstance, ref, Ref, toRefs, computed } from 'vue';
 import { AddIcon, CloseIcon, RefreshIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
 import xhr from '../_common/js/upload/xhr';
@@ -101,6 +101,7 @@ export default defineComponent({
     });
     const errorMsg = ref('');
     const inputRef = ref<null | HTMLInputElement>(null);
+
     const itemStyle = computed(() => {
       const { gridConfig } = toRefs(props);
       let column = 4;
@@ -111,6 +112,7 @@ export default defineComponent({
         flexBasis: `${100 / +column}%`,
       };
     });
+
     const itemContentStyle = computed(() => {
       let width = 80;
       let height = 80;
@@ -133,6 +135,7 @@ export default defineComponent({
       if (props.disabled) return;
       input.click();
     };
+
     const handlePreview = (e: MouseEvent, file: UploadFile) => {
       showViewer.value = true;
       emitEvent('preview', {
@@ -140,9 +143,11 @@ export default defineComponent({
         file,
       });
     };
+
     const handleReload = (e: MouseEvent, file: UploadFile) => {
       uploadFiles([file.raw]);
     };
+
     const handleChange = (event: HTMLInputEvent) => {
       const { files } = event.target;
       const input = inputRef.value as HTMLInputElement;
@@ -150,6 +155,7 @@ export default defineComponent({
       uploadFiles(files);
       input.value = '';
     };
+
     const handleBeforeUpload = (file: File | UploadFile): Promise<boolean> => {
       if (isFunction(props.beforeUpload)) {
         const beforeUpload = props.beforeUpload(file);
@@ -163,6 +169,7 @@ export default defineComponent({
         resolve(true);
       });
     };
+
     const handleSizeLimit = (fileSize: number) => {
       const sizeLimit: SizeLimitObj =
         typeof props.sizeLimit === 'number' ? { size: props.sizeLimit, unit: 'KB' } : props.sizeLimit;
@@ -175,6 +182,7 @@ export default defineComponent({
       }
       return isOverSize;
     };
+
     const uploadFiles = (files: FileList) => {
       const { max } = toRefs(props);
       let tmpFiles = [...files];
@@ -215,6 +223,7 @@ export default defineComponent({
         });
       });
     };
+
     /** 模拟进度条 Mock Progress */
     const handleMockProgress = (file: UploadFile) => {
       const timer = setInterval(() => {
@@ -230,6 +239,7 @@ export default defineComponent({
         });
       }, 10);
     };
+
     const handleProgress = ({ event, file, percent, type = 'real' }: InnerProgressContext) => {
       if (!file) throw new Error('Error file');
       file.percent = Math.min(percent, 100);
@@ -241,6 +251,7 @@ export default defineComponent({
       };
       emitEvent('progress', progressCtx);
     };
+
     const handleRemove = (e: MouseEvent, file: UploadFile, index: number) => {
       errorMsg.value = '';
       const files = uploadedFiles.value.concat();
@@ -249,6 +260,7 @@ export default defineComponent({
       emitEvent('remove', { e, index, file });
       images.value.splice(index, 1);
     };
+
     const upload = async (file: UploadFile): Promise<void> => {
       if (!props.action && !props.requestMethod) {
         console.error('TDesign Upload Error: one of action and requestMethod must be exist.');
@@ -278,6 +290,7 @@ export default defineComponent({
         });
       }
     };
+
     const handleRequestMethod = (file: UploadFile) => {
       if (!isFunction(props.requestMethod)) {
         console.warn('TDesign Upload Warn: `requestMethod` must be a function.');
@@ -293,6 +306,7 @@ export default defineComponent({
         }
       });
     };
+
     const handleRequestMethodResponse = (res: RequestMethodResponse) => {
       if (!res) {
         console.error('TDesign Upoad Error: `requestMethodResponse` is required.');
@@ -315,6 +329,7 @@ export default defineComponent({
       }
       return true;
     };
+
     const handleSuccess = ({ event, file, response }: SuccessContext) => {
       if (!file) throw new Error('Error file');
       file.status = 'success';
@@ -348,6 +363,7 @@ export default defineComponent({
       });
       images.value.push(newFile.url);
     };
+
     const handleError = (options: {
       event?: ProgressEvent;
       file: UploadFile;
@@ -372,6 +388,7 @@ export default defineComponent({
       }
       emitEvent('fail', { e: event, file });
     };
+
     return {
       ...toRefs(props),
       UPLOAD_NAME,
