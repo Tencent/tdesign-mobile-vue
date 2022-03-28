@@ -231,8 +231,8 @@ export default defineComponent({
       swipeCell,
       leftRef,
       rightRef,
-      end,
       handleClickBtn,
+      end,
     };
   },
 });
