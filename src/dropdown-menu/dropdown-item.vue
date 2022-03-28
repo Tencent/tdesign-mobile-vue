@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 <template>
   <div v-if="isShowItems" :class="classes" :style="{ ...expandStyle }">
     <t-mask v-if="isShowItems && showOverlay" @click="onClickOverlay" />
@@ -34,7 +33,7 @@
             <div v-for="(_, level) in treeOptions" :key="level" :class="`${name}__tree-group`">
               <t-radio-group
                 v-if="level < treeState.leafLevel"
-                :model-value="treeState.selectList[level]"
+                :model-value="convertTreeRadioType(treeState.selectList[level])"
                 @update:model-value="selectTreeNode(level, $event)"
               >
                 <!-- 树形列表 - 父级节点 ST -->
@@ -57,14 +56,17 @@
                 <!-- 树形列表 - 叶子节点 ST -->
                 <template v-if="!multiple">
                   <!-- 树形列表 - 叶子节点（单选） ST -->
-                  <t-radio-group :value="treeState.selectList[level]" @update:value="selectTreeNode(level, $event)">
+                  <t-radio-group
+                    :value="convertTreeRadioType(treeState.selectList[level])"
+                    @update:value="selectTreeNode(level, $event)"
+                  >
                     <div v-for="option in treeOptions[level]" :key="option.value" :class="`${name}__cell`">
                       <t-radio
                         :value="option.value"
                         :label="option.title"
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
-                        :icon="option.value === treeState.selectList[level] ? [renderCheckIcon] : []"
+                        :icon="option.value === treeState.selectList[level] ? renderCheckIcon : undefined"
                       />
                     </div>
                   </t-radio-group>
@@ -72,7 +74,10 @@
                 </template>
                 <template v-else>
                   <!-- 树形列表 - 叶子节点（多选） ST -->
-                  <t-checkbox-group :value="treeState.selectList[level]" @update:value="selectTreeNode(level, $event)">
+                  <t-checkbox-group
+                    :value="convertTreeCheckType(treeState.selectList[level])"
+                    @update:value="selectTreeNode(level, $event)"
+                  >
                     <div v-for="option in treeOptions[level]" :key="option.value" :class="`${name}__cell`">
                       <t-checkbox :value="option.value" :label="option.title" :disabled="option.disabled"></t-checkbox>
                     </div>
@@ -109,8 +114,9 @@ import {
   onBeforeMount,
   defineComponent,
 } from 'vue';
+import { TNode } from '../common';
 import TMask from '../mask';
-import TRadio, { RadioValue } from '../radio';
+import TRadio from '../radio';
 import config from '../config';
 import TButton from '../button';
 import TCheckbox from '../checkbox';
@@ -253,7 +259,7 @@ export default defineComponent({
       (val: boolean) => setExpand(val),
     );
 
-    const radioSelect = ref<RadioValue>();
+    const radioSelect = ref<TdDropdownItemOptionValueType | undefined>();
     const checkSelect = ref<TdDropdownItemOptionValueType[]>([]);
     const treeState = reactive<TdDropdownTreeState>({
       leafLevel: 0,
@@ -411,7 +417,9 @@ export default defineComponent({
       if (!state.isShowItems) return;
       const value = passInValue.value || [];
       if (value[0] === val) return;
-      setValue(val);
+      if (val && Array.isArray(val)) {
+        setValue(val);
+      }
       collapseMenu();
     });
     // 点击遮罩层
@@ -421,7 +429,10 @@ export default defineComponent({
       }
     };
     // 创建小图标
-    const renderCheckIcon = h(CheckIcon);
+    const TiconCheckIcon = h(CheckIcon);
+    // 树形节点的类型转换
+    const convertTreeRadioType = (value: TdDropdownTreeValueType) => value as TdDropdownItemOptionValueType;
+    const convertTreeCheckType = (value: TdDropdownTreeValueType) => value as TdDropdownItemOptionValueType[];
     return {
       name: ref(name),
       ...toRefs(props),
@@ -442,7 +453,9 @@ export default defineComponent({
       resetSelect,
       confirmSelect,
       onClickOverlay,
-      renderCheckIcon,
+      renderCheckIcon: [TiconCheckIcon as unknown as TNode],
+      convertTreeRadioType,
+      convertTreeCheckType,
     };
   },
 });

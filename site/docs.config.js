@@ -76,12 +76,12 @@ export default {
           path: '/mobile-vue/components/tabs',
           component: () => import('@/tabs/tabs.md'),
         },
-        // {
-        //   title: 'DropdownMenu 下拉菜单',
-        //   name: 'dropdown-menu',
-        //   path: '/mobile-vue/components/dropdown-menu',
-        //   component: () => import('@/dropdown-menu/dropdown-menu.md'),
-        // },
+        {
+          title: 'DropdownMenu 下拉菜单',
+          name: 'dropdown-menu',
+          path: '/mobile-vue/components/dropdown-menu',
+          component: () => import('@/dropdown-menu/dropdown-menu.md'),
+        },
       ],
     },
     {
@@ -153,6 +153,12 @@ export default {
           name: 'fab',
           path: '/mobile-vue/components/fab',
           component: () => import('@/fab/fab.md'),
+        },
+        {
+          title: 'Upload 上传',
+          name: 'upload',
+          path: '/mobile-vue/components/upload',
+          component: () => import('@/upload/upload.md'),
         },
       ],
     },
