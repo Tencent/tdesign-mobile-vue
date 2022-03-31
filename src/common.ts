@@ -7,14 +7,10 @@ export interface TVNode extends VNode {
   name: string;
 }
 export type TNodeReturnValue = SlotReturnValue;
-
-// 严格执行是否有参数，不允许出现 props?:T
-export type TNode<T = undefined> = T extends undefined
-  ? (h: typeof import('vue').h) => TNodeReturnValue
-  : (h: typeof import('vue').h, props: T) => TNodeReturnValue;
+export type TNode<T = any> = (h: typeof import('vue').h, props?: T) => import('vue').VNodeChild;
 
 export type AttachNodeReturnValue = HTMLElement | Element | Document;
-export type AttachNode = CSSSelector | ((triggerNode?: HTMLElement) => AttachNodeReturnValue);
+export type AttachNode = CSSSelector | (() => AttachNodeReturnValue);
 
 // 与滚动相关的容器类型，因为 document 上没有 scroll 相关属性, 因此排除document
 export type ScrollContainerElement = Window | HTMLElement;
