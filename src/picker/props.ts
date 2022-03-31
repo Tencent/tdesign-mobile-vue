@@ -55,6 +55,6 @@ export const PickerItemProps = {
   /** 格式化选项 */
   formatter: {
     type: Function as PropType<TdPickerItemProps['formatter']>,
-    default: (value: string): string => value,
+    default: (value: string | number): string => String(value),
   },
 };

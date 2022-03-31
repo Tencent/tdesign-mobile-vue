@@ -17,7 +17,6 @@
 
 <script lang="ts">
 import { computed, mergeProps, defineComponent, SetupContext } from 'vue';
-import { useDefault } from '../shared';
 import config from '../config';
 import { PickerProps } from './props';
 import { PickerValue } from './type';
@@ -49,14 +48,27 @@ export default defineComponent({
       let pickerItems = context.slots.default ? context.slots.default() : [];
       pickerItems = pickerItems.map((pickerItem: any, itemIndex: number) => {
         const newPickerItem = pickerItem;
-        const pickerItemDefaultValue = Array.isArray(props.defaultValue)
-          ? props.defaultValue[itemIndex]
-          : newPickerItem.props.value || newPickerItem.props.options[0];
-        const curValue = pickerItemDefaultValue;
+        let pickerItemDefaultValue;
+        // v-model绑定的默认值
+        if (Array.isArray(props.modelValue)) {
+          pickerItemDefaultValue = props.modelValue[itemIndex];
+        }
+        // 通过:default-value绑定的默认值
+        if (Array.isArray(props.defaultValue)) {
+          pickerItemDefaultValue = props.defaultValue[itemIndex];
+        }
+        // picker-item绑定的默认值
+        if (!pickerItemDefaultValue) {
+          pickerItemDefaultValue = newPickerItem.props.modelValue || newPickerItem.props.options[0];
+        }
+
+        let curValue = pickerItemDefaultValue;
+        if (typeof pickerItemDefaultValue === 'object') {
+          curValue = pickerItemDefaultValue.value;
+        }
         if (!curData[itemIndex]) {
           curData[itemIndex] = curValue;
         }
-
         newPickerItem.props = mergeProps(newPickerItem.props, {
           value: curValue,
           onChange(e: any) {
@@ -76,7 +88,7 @@ export default defineComponent({
         return acc;
       }, [] as Array<PickerValue>);
       context.emit('update:modelValue', emitData);
-      context.emit('confirm', { e });
+      context.emit('confirm', emitData);
     };
 
     const handleCancel = (e: MouseEvent) => context.emit('cancel', { e });
