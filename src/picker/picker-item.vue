@@ -13,6 +13,7 @@ import { ref, computed, onMounted, watch, nextTick, toRefs, defineComponent } fr
 import config from '../config';
 import Picker from './picker.class';
 import { PickerItemProps } from './props';
+import { PickerItemChangeEvent } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-picker-item`;
@@ -57,6 +58,9 @@ export default defineComponent({
           if (picker) picker.updateIndex(getDefaultIndex(val));
         });
       },
+      {
+        immediate: true,
+      },
     );
 
     onMounted(() => {
@@ -66,10 +70,8 @@ export default defineComponent({
         onChange: (index: number) => {
           const curItem = props.options[index];
           const curValue = typeof curItem === 'object' ? curItem.value : curItem;
-          context.emit('change', {
-            value: curValue,
-            index,
-          });
+          const changeValue: PickerItemChangeEvent = { value: curValue, index };
+          context.emit('change', changeValue);
         },
       });
     });
