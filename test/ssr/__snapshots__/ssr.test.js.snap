@@ -18479,3 +18479,147 @@ exports[`ssr snapshot test renders ./src/toast/demos/text.vue correctly 1`] = `
     <!----><span class="t-button__text"><!--[-->文字长提示<!--]--></span>
   </button></div>
 `;
+
+exports[`ssr snapshot test renders ./src/upload/demos/baseMultiple.vue correctly 1`] = `
+<div>
+  <div class="t-cell-group dialog-type-title">
+    <!--v-if-->
+    <div class="t-cell-group__container">
+      <!--[-->
+      <div class="title">多选上传图片</div>
+      <div>
+        <ul class="t-upload__card">
+          <!--[-->
+          <!--]-->
+          <li class="t-upload__card-item">
+            <div class="t-upload__card-container t-upload__card-box"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="">
+                <path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path>
+              </svg></div>
+          </li>
+        </ul><input type="file" multiple hidden accept>
+        <div class="t-image-viewer" style="display:none;">
+          <div class="t-image-mask" style="background:rgba(0, 0, 0, 0.6);"></div>
+          <div class="image-viewer-container">
+            <div class="t-image-viewer">
+              <div class="t-swiper-box">
+                <div class="t-swiper-container">
+                  <!--[-->
+                  <!--]-->
+                </div>
+              </div>
+            </div>
+            <div class="image-viewer-index">0/0</div>
+          </div>
+        </div>
+      </div>
+      <!--]-->
+    </div>
+  </div>
+  <message theme="warning"></message>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/upload/demos/baseSingle.vue correctly 1`] = `
+<div>
+  <div class="t-cell-group dialog-type-title">
+    <!--v-if-->
+    <div class="t-cell-group__container">
+      <!--[-->
+      <div class="title">单选上传图片</div>
+      <div>
+        <ul class="t-upload__card">
+          <!--[-->
+          <!--]-->
+          <li class="t-upload__card-item">
+            <div class="t-upload__card-container t-upload__card-box"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="">
+                <path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path>
+              </svg></div>
+          </li>
+        </ul><input type="file" hidden accept>
+        <div class="t-image-viewer" style="display:none;">
+          <div class="t-image-mask" style="background:rgba(0, 0, 0, 0.6);"></div>
+          <div class="image-viewer-container">
+            <div class="t-image-viewer">
+              <div class="t-swiper-box">
+                <div class="t-swiper-container">
+                  <!--[-->
+                  <!--]-->
+                </div>
+              </div>
+            </div>
+            <div class="image-viewer-index">0/0</div>
+          </div>
+        </div>
+      </div>
+      <!--]-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/upload/demos/mobile.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <h1 class="title">Upload上传</h1>
+  <p class="summary">上传图片（单张上传、多张上传</p>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
+    <p class="tdesign-mobile-demo-block__summary">上传图片</p>
+    <!--[-->
+    <div class="upload-demo">
+      <div class="upload-title">单选上传图片</div>
+      <div>
+        <ul class="t-upload__card">
+          <!--[-->
+          <!--]-->
+          <li class="t-upload__card-item">
+            <div class="t-upload__card-container t-upload__card-box"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="">
+                <path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path>
+              </svg></div>
+          </li>
+        </ul><input type="file" hidden accept>
+        <div class="t-image-viewer" style="display:none;">
+          <div class="t-image-mask" style="background:rgba(0, 0, 0, 0.6);"></div>
+          <div class="image-viewer-container">
+            <div class="t-image-viewer">
+              <div class="t-swiper-box">
+                <div class="t-swiper-container">
+                  <!--[-->
+                  <!--]-->
+                </div>
+              </div>
+            </div>
+            <div class="image-viewer-index">0/0</div>
+          </div>
+        </div>
+      </div>
+      <div class="upload-title">多选上传图片</div>
+      <div>
+        <ul class="t-upload__card">
+          <!--[-->
+          <!--]-->
+          <li class="t-upload__card-item">
+            <div class="t-upload__card-container t-upload__card-box"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="">
+                <path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path>
+              </svg></div>
+          </li>
+        </ul><input type="file" multiple hidden accept>
+        <div class="t-image-viewer" style="display:none;">
+          <div class="t-image-mask" style="background:rgba(0, 0, 0, 0.6);"></div>
+          <div class="image-viewer-container">
+            <div class="t-image-viewer">
+              <div class="t-swiper-box">
+                <div class="t-swiper-container">
+                  <!--[-->
+                  <!--]-->
+                </div>
+              </div>
+            </div>
+            <div class="image-viewer-index">0/0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--]-->
+  </div>
+</div>
+`;
