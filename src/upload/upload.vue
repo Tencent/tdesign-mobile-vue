@@ -73,7 +73,7 @@ export default defineComponent({
   },
   props,
   emits: ['update:files', 'update:modelValue', 'change', 'fail', 'preview', 'progress', 'remove', 'success'],
-  setup(props, context: SetupContext) {
+  setup(props: any, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
