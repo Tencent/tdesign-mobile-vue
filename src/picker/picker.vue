@@ -58,7 +58,7 @@ export default defineComponent({
           pickerItemDefaultValue = props.defaultValue[itemIndex];
         }
         // picker-item绑定的默认值
-        if (!pickerItemDefaultValue) {
+        if (!pickerItemDefaultValue && newPickerItem.props) {
           pickerItemDefaultValue = newPickerItem.props.modelValue || newPickerItem.props.options[0];
         }
 

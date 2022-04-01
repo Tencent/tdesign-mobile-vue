@@ -51,7 +51,7 @@ export function useDefault<V, T>(props: T, emit: SetupContext['emit'], key: stri
     if (isUsedModelValue) {
       updateKeys.push(`update:modelValue`);
     }
-    // Props Event exists in Vue3. `props.onChange()` is equal `contex.emit('change')`
+    // Props Event exists in Vue3. `props.onChange()` is equal `context.emit('change')`
     updateKeys.forEach((updateKey) => {
       emit(updateKey, value, ...arg);
     });

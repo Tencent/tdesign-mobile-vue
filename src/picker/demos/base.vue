@@ -27,16 +27,16 @@
 
   <t-popup v-model="seasonState.show" placement="bottom">
     <t-picker v-model="seasonState.season" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
-      <t-picker-item :options="yearOptions" :formatter="(val: number) => `${val}年`" />
+      <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" />
       <t-picker-item :options="seasonOptions" />
     </t-picker>
   </t-popup>
 
   <t-popup v-model="dateState.show" placement="bottom">
     <t-picker v-model="dateState.date" @confirm="onDateConfirm" @cancel="onCancel">
-      <t-picker-item :options="yearOptions" :formatter="(val: number) => `${val}年`" />
-      <t-picker-item :options="monthOptions" :formatter="(val: number) => `${val}月`" />
-      <t-picker-item :options="dayOptions" :formatter="(val: number) => `${val}日`" />
+      <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" />
+      <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" />
+      <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" />
     </t-picker>
   </t-popup>
 </template>
