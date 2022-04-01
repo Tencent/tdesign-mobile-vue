@@ -169,7 +169,7 @@
     "vue": "^3.2.4",
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
-    "vue-tsc": "^0.29.8",
+    "vue-tsc": "^0.33.9",
     "vue3-jest": "^27.0.0-alpha.2"
   },
   "config": {
