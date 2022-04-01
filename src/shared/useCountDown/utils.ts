@@ -87,12 +87,9 @@ export const getShowTimes = (times: TimeData, format: string): TdUseCountDownSho
  * @return {Promise<number>}
  */
 export const getScreenFps = (() => {
+  const { requestAnimationFrame, mozRequestAnimationFrame, webkitRequestAnimationFrame } = window as any;
   // 先做一下兼容性处理
-  const nextFrame = [
-    window.requestAnimationFrame,
-    window.mozRequestAnimationFrame,
-    window.webkitRequestAnimationFrame,
-  ]?.find?.((fn) => fn);
+  const nextFrame = [requestAnimationFrame, mozRequestAnimationFrame, webkitRequestAnimationFrame]?.find?.((fn) => fn);
   //
   if (!nextFrame) {
     console.error('requestAnimationFrame is not supported!');
@@ -106,7 +103,7 @@ export const getScreenFps = (() => {
     const beginDate = Date.now();
     return new Promise((resolve) => {
       (function log() {
-        nextFrame(() => {
+        nextFrame?.(() => {
           if (++count >= targetCount) {
             const diffDate = Date.now() - beginDate;
             const fps = (count / diffDate) * 1000;

@@ -14,8 +14,8 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
   const { pause, resume } = useRafFn(
     async () => {
       if (!fps.value) {
-        const res = await getScreenFps();
-        fps.value = res;
+        const res = await getScreenFps?.();
+        fps.value = res || 60;
       }
       count.value = parseInt(`${Number(count.value) - 1000 / fps.value}`, 10);
       if (count.value <= 0) {

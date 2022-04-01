@@ -2862,9 +2862,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
       <!--[-->
       <!--v-if--><span class="t-countdown t-countdown--default t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span>
+      <!--[--><span class="t-countdown__digit">00</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -2879,7 +2879,7 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
       <!--]-->
       <!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">106</span>
+      <!--[--><span class="t-countdown__digit">123</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -2890,9 +2890,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
       <!--[-->
       <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">31</span><span class="t-countdown__unit">:</span>
+      <!--[--><span class="t-countdown__digit">32</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span>
+      <!--[--><span class="t-countdown__digit">00</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -2903,9 +2903,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
       <!--[-->
       <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span>
+      <!--[--><span class="t-countdown__digit">00</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -2918,9 +2918,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
       <!--]-->
       <!--[--><span class="t-countdown__digit">06</span><span class="t-countdown__unit">时</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">51</span><span class="t-countdown__unit">分</span>
+      <!--[--><span class="t-countdown__digit">52</span><span class="t-countdown__unit">分</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span><span class="t-countdown__unit">秒</span>
+      <!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">秒</span>
       <!--]-->
       <!--]--></span>
       <!--]-->
@@ -2947,9 +2947,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -2957,9 +2957,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -2970,9 +2970,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--round t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -2980,9 +2980,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--square t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -2993,9 +2993,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--round t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3003,9 +3003,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/base.vue correctly 1`]
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--square t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3028,9 +3028,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
       <!--[-->
       <!--v-if--><span class="t-countdown t-countdown--default t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span>
+      <!--[--><span class="t-countdown__digit">00</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -3045,7 +3045,7 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
       <!--]-->
       <!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">106</span>
+      <!--[--><span class="t-countdown__digit">123</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -3056,9 +3056,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
       <!--[-->
       <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">31</span><span class="t-countdown__unit">:</span>
+      <!--[--><span class="t-countdown__digit">32</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span>
+      <!--[--><span class="t-countdown__digit">00</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -3069,9 +3069,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
       <!--[-->
       <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+      <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span>
+      <!--[--><span class="t-countdown__digit">00</span>
       <!--v-if-->
       <!--]-->
       <!--]--></span>
@@ -3084,9 +3084,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
       <!--]-->
       <!--[--><span class="t-countdown__digit">06</span><span class="t-countdown__unit">时</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">51</span><span class="t-countdown__unit">分</span>
+      <!--[--><span class="t-countdown__digit">52</span><span class="t-countdown__unit">分</span>
       <!--]-->
-      <!--[--><span class="t-countdown__digit">59</span><span class="t-countdown__unit">秒</span>
+      <!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">秒</span>
       <!--]-->
       <!--]--></span>
       <!--]-->
@@ -3113,9 +3113,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3123,9 +3123,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3136,9 +3136,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--round t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3146,9 +3146,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--square t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3159,9 +3159,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--round t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3169,9 +3169,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/mobile.vue correctly 1
         <!--[-->
         <!--v-if--><span class="t-countdown t-countdown--square t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+        <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
         <!--]-->
-        <!--[--><span class="t-countdown__digit">59</span>
+        <!--[--><span class="t-countdown__digit">00</span>
         <!--v-if-->
         <!--]-->
         <!--]--></span>
@@ -3191,9 +3191,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/specs.vue correctly 1`
   <!--[-->
   <!--v-if--><span class="t-countdown t-countdown--round t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">59</span>
+  <!--[--><span class="t-countdown__digit">00</span>
   <!--v-if-->
   <!--]-->
   <!--]--></span>
@@ -3201,9 +3201,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/specs.vue correctly 1`
   <!--[-->
   <!--v-if--><span class="t-countdown t-countdown--square t-countdown--small"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">59</span>
+  <!--[--><span class="t-countdown__digit">00</span>
   <!--v-if-->
   <!--]-->
   <!--]--></span>
@@ -3214,9 +3214,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/specs.vue correctly 1`
   <!--[-->
   <!--v-if--><span class="t-countdown t-countdown--round t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">59</span>
+  <!--[--><span class="t-countdown__digit">00</span>
   <!--v-if-->
   <!--]-->
   <!--]--></span>
@@ -3224,9 +3224,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/specs.vue correctly 1`
   <!--[-->
   <!--v-if--><span class="t-countdown t-countdown--square t-countdown--medium"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">59</span>
+  <!--[--><span class="t-countdown__digit">00</span>
   <!--v-if-->
   <!--]-->
   <!--]--></span>
@@ -3237,9 +3237,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/specs.vue correctly 1`
   <!--[-->
   <!--v-if--><span class="t-countdown t-countdown--round t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">59</span>
+  <!--[--><span class="t-countdown__digit">00</span>
   <!--v-if-->
   <!--]-->
   <!--]--></span>
@@ -3247,9 +3247,9 @@ exports[`ssr snapshot test renders ./src/count-down/demos/specs.vue correctly 1`
   <!--[-->
   <!--v-if--><span class="t-countdown t-countdown--square t-countdown--large"><!--[--><!--[--><span class="t-countdown__digit">00</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">14</span><span class="t-countdown__unit">:</span>
+  <!--[--><span class="t-countdown__digit">15</span><span class="t-countdown__unit">:</span>
   <!--]-->
-  <!--[--><span class="t-countdown__digit">59</span>
+  <!--[--><span class="t-countdown__digit">00</span>
   <!--v-if-->
   <!--]-->
   <!--]--></span>
