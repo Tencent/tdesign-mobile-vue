@@ -50,15 +50,15 @@
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
 
-const buildTree = (length: number, ...childLengthes: number[]) => {
+const buildTree = (length: number, ...childLengths: number[]) => {
   const tree: any[] = [];
   for (let i = 0; i < length; i++) {
     const item: any = {
       title: `选项 ${i + 1}`,
       value: `options_${i}`,
     };
-    if (childLengthes.length > 0) {
-      const [childLength, ...moreChildLenthes] = childLengthes;
+    if (childLengths.length > 0) {
+      const [childLength, ...moreChildLenthes] = childLengths;
       item.options = buildTree(childLength, ...moreChildLenthes);
     }
     tree.push(item);

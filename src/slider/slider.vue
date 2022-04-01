@@ -185,7 +185,7 @@ export default defineComponent({
       const touch = event.touches[0];
       touchData.deltaX = touch.clientX - touchData.startX;
       touchData.offsetX = Math.abs(touchData.deltaX);
-      dragStatus.value = 'draging';
+      dragStatus.value = 'dragging';
 
       const rect = rootRef.value.getBoundingClientRect();
       const delta = touchData.deltaX;
@@ -202,7 +202,7 @@ export default defineComponent({
       }
       event.stopPropagation();
       event.preventDefault();
-      if (dragStatus.value === 'draging') {
+      if (dragStatus.value === 'dragging') {
         updateValue(touchData.newValue, index, true);
         context.emit('drag-end');
       }

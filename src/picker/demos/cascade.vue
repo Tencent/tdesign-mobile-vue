@@ -19,7 +19,7 @@ import { PickerItemChangeEvent } from '../type';
 
 const roles = ['战士', '法师', '射手', '刺客', '坦克', '辅助'];
 const curRoleIndex = ref(0);
-const heros = [
+const heroes = [
   ['夏侯惇', '吕布', '铠', '狂铁', '李信', '哪吒', '杨戬', '关羽', '宫本武藏', '钟无艳', '亚瑟', '达摩', '老夫子'],
   [
     '安琪拉',
@@ -88,7 +88,7 @@ const heros = [
 const state = reactive({
   show: false,
   roleOptions: roles,
-  heroOptions: computed(() => heros[curRoleIndex.value]),
+  heroOptions: computed(() => heroes[curRoleIndex.value]),
   hero: [],
 });
 
