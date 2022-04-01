@@ -81,3 +81,40 @@ export const getShowTimes = (times: TimeData, format: string): TdUseCountDownSho
 
   return showTimes;
 };
+
+/**
+ * @param {number} targetCount 不小于1的整数，表示经过targetCount帧之后返回结果
+ * @return {Promise<number>}
+ */
+export const getScreenFps = (() => {
+  // 先做一下兼容性处理
+  const nextFrame = [
+    window.requestAnimationFrame,
+    window.mozRequestAnimationFrame,
+    window.webkitRequestAnimationFrame,
+  ]?.find?.((fn) => fn);
+  //
+  if (!nextFrame) {
+    console.error('requestAnimationFrame is not supported!');
+    return;
+  }
+  return (targetCount = 50) => {
+    if (targetCount < 1) {
+      return;
+    }
+    let count = 0;
+    const beginDate = Date.now();
+    return new Promise((resolve) => {
+      (function log() {
+        nextFrame(() => {
+          if (++count >= targetCount) {
+            const diffDate = Date.now() - beginDate;
+            const fps = (count / diffDate) * 1000;
+            return resolve(fps);
+          }
+          log();
+        });
+      })();
+    });
+  };
+})();
