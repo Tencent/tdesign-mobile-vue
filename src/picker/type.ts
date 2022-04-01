@@ -71,3 +71,4 @@ export interface TdPickerItemProps {
 export type PickerValue = string | number;
 export type PickerItemOptionObject = { label: string; value: string | number };
 export type PickerItemOption = PickerItemOptionObject | string | number;
+export type PickerItemChangeEvent = { index: number, value: string | number };

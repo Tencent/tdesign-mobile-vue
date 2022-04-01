@@ -18,8 +18,8 @@
           <img :class="`${UPLOAD_NAME}__card-image`" :src="file.url" @click="(e) => handlePreview(e, file)" />
           <!--上传失败时，reload重试-->
           <div v-if="file.status === 'fail'" :class="`${UPLOAD_NAME}__card-mask`">
-            <span key="refresh-icon" :class="`${UPLOAD_NAME}__card-mask-item`" @click="stopPropagation">
-              <refresh-icon @click="(e) => handleReload(e, file)" />
+            <span key="refresh-icon" :class="`${UPLOAD_NAME}__card-mask-item`">
+              <refresh-icon @click="handleReload(file)" />
             </span>
           </div>
         </div>
@@ -50,13 +50,13 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, SetupContext, getCurrentInstance, ref, watch, Ref, toRefs, computed } from 'vue';
+import { defineComponent, SetupContext, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
 import { AddIcon, CloseIcon, RefreshIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
 import xhr from '../_common/js/upload/xhr';
 import { useDefault, useEmitEvent, isFunction, isArray, isObject, renderTNode, TNode } from '../shared';
 import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
-import { HTMLInputEvent, SuccessContext, InnerProgressContext } from './interface';
+import { SuccessContext, InnerProgressContext } from './interface';
 import props from './props';
 import config from '../config';
 import { isOverSizeLimit } from './util';
@@ -73,7 +73,7 @@ export default defineComponent({
   },
   props,
   emits: ['update:files', 'update:modelValue', 'change', 'fail', 'preview', 'progress', 'remove', 'success'],
-  setup(props, context: SetupContext) {
+  setup(props: any, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
@@ -88,12 +88,12 @@ export default defineComponent({
     const showViewer = ref(false);
     const initialIndex = ref(0);
     const UPLOAD_NAME = name;
-    const xhrReq = ref(null);
+    const xhrReq = ref<XMLHttpRequest | null>(null);
     // 等待上传的文件
-    const toUploadFiles = ref([]);
+    const toUploadFiles: Ref<Array<UploadFile>> = ref([]);
     // 上传成功的文件
-    const uploadedFiles = computed(() => {
-      if (isArray(innerFiles.value)) {
+    const uploadedFiles: ComputedRef<UploadFile[]> = computed(() => {
+      if (innerFiles.value && isArray(innerFiles.value)) {
         // 上传失败的文件用localUrl展示，并且可上传重试
         return innerFiles.value.filter((file) => file.status === 'success' || file.status === 'fail');
       }
@@ -126,10 +126,6 @@ export default defineComponent({
       };
     });
 
-    const stopPropagation = (e: MouseEvent) => {
-      e.stopPropagation();
-    };
-
     const triggerUpload = () => {
       const input = inputRef.value as HTMLInputElement;
       if (props.disabled) return;
@@ -144,20 +140,30 @@ export default defineComponent({
       });
     };
 
-    const handleReload = (e: MouseEvent, file: UploadFile) => {
-      uploadFiles([file.raw]);
+    const handleReload = (file: UploadFile) => {
+      uploadFiles([file]);
     };
 
-    const handleChange = (event: HTMLInputEvent) => {
-      const { files } = event.target;
-      const input = inputRef.value as HTMLInputElement;
-      if (props.disabled) return;
-      uploadFiles(files);
+    const handleChange = (event: Event) => {
+      const { files } = <HTMLInputElement>event.target;
+      if (props.disabled || !files) return;
+      const input = <HTMLInputElement>inputRef.value;
+      uploadFiles(formatFileToUploadFile(files));
       input.value = '';
     };
 
+    const formatFileToUploadFile = (files: any): UploadFile[] => {
+      if (!props.format || !isFunction(props.format)) return files;
+
+      const NewFiles = [...files];
+      NewFiles.forEach((item) => {
+        item = props.format?.(item);
+      });
+      return NewFiles;
+    };
+
     const handleBeforeUpload = (file: File | UploadFile): Promise<boolean> => {
-      if (isFunction(props.beforeUpload)) {
+      if (props.beforeUpload && isFunction(props.beforeUpload)) {
         const beforeUpload = props.beforeUpload(file);
         if (beforeUpload instanceof Promise) return beforeUpload;
         return Promise.resolve(beforeUpload);
@@ -171,9 +177,14 @@ export default defineComponent({
     };
 
     const handleSizeLimit = (fileSize: number) => {
-      const sizeLimit: SizeLimitObj =
-        typeof props.sizeLimit === 'number' ? { size: props.sizeLimit, unit: 'KB' } : props.sizeLimit;
-
+      let sizeLimit: SizeLimitObj;
+      if (typeof props.sizeLimit === 'number') {
+        sizeLimit = { size: props.sizeLimit, unit: 'KB' };
+      } else if (typeof props.sizeLimit === 'object') {
+        sizeLimit = props.sizeLimit;
+      } else {
+        sizeLimit = { size: 0, unit: 'KB' };
+      }
       const isOverSize = isOverSizeLimit(fileSize, sizeLimit.size, sizeLimit.unit);
       if (isOverSize) {
         errorMsg.value = sizeLimit.message
@@ -183,7 +194,7 @@ export default defineComponent({
       return isOverSize;
     };
 
-    const uploadFiles = (files: FileList) => {
+    const uploadFiles = (files: UploadFile[]) => {
       const { max } = toRefs(props);
       let tmpFiles = [...files];
       if (max.value) {
@@ -192,29 +203,24 @@ export default defineComponent({
           console.warn(`TDesign Upload Warn: you can only upload ${max.value} files`);
         }
       }
-      tmpFiles.forEach((fileRaw: File) => {
-        let file: UploadFile | File = fileRaw;
-        if (isFunction(props.format)) {
-          file = props.format(fileRaw);
-        }
+      tmpFiles.forEach((fileRaw: UploadFile) => {
         const uploadFile: UploadFile = {
-          raw: fileRaw,
+          ...fileRaw,
           lastModified: fileRaw.lastModified,
           name: fileRaw.name,
           size: fileRaw.size,
           type: fileRaw.type,
           percent: 0,
           status: 'waiting',
-          ...file,
         };
         const reader = new FileReader();
-        reader.readAsDataURL(fileRaw);
+        reader.readAsDataURL(fileRaw as any);
         reader.onload = (event: ProgressEvent<FileReader>) => {
-          uploadFile.url = event.target.result as string;
+          uploadFile.url = event.target?.result as string;
         };
-        handleBeforeUpload(file).then((canUpload) => {
+        handleBeforeUpload(fileRaw).then((canUpload) => {
           if (!canUpload) return;
-          const newFiles = toUploadFiles.value.concat();
+          const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
           newFiles.push(uploadFile);
           toUploadFiles.value = [...new Set(newFiles)];
           if (props.autoUpload) {
@@ -279,15 +285,15 @@ export default defineComponent({
         const request = xhr;
         xhrReq.value = request({
           action: props.action,
-          data: props.data,
+          data: props.data || {},
           method: props.method,
           file,
-          headers: props.headers,
+          headers: props.headers || {},
           withCredentials: props.withCredentials,
           onError: handleError,
           onProgress: handleProgress,
           onSuccess: handleSuccess,
-        });
+        } as any);
       }
     };
 
@@ -296,13 +302,13 @@ export default defineComponent({
         console.warn('TDesign Upload Warn: `requestMethod` must be a function.');
         return;
       }
-      props.requestMethod(file).then((res: RequestMethodResponse) => {
+      props.requestMethod?.(file).then((res: RequestMethodResponse) => {
         if (!handleRequestMethodResponse(res)) return;
         if (res.status === 'success') {
           handleSuccess({ file, response: res.response });
         } else if (res.status === 'fail') {
           const r = res.response || {};
-          handleError({ event: null, file, response: { ...r, error: res.error } });
+          handleError({ event: undefined, file, response: { ...r, error: res.error } });
         }
       });
     };
@@ -334,14 +340,14 @@ export default defineComponent({
       if (!file) throw new Error('Error file');
       file.status = 'success';
       let res = response;
-      if (isFunction(props.formatResponse)) {
-        res = props.formatResponse(response, { file });
+      if (props.formatResponse && isFunction(props.formatResponse)) {
+        res = props.formatResponse(response, { file: file as UploadFile });
       }
       // 如果返回值存在 error，则认为当前接口上传失败
       if (res?.error) {
         handleError({
           event,
-          file,
+          file: file as UploadFile,
           response: res,
           resFormatted: true,
         });
@@ -352,8 +358,8 @@ export default defineComponent({
       const index = findIndex(toUploadFiles.value, (o: any) => o.name === file.name);
       toUploadFiles.value.splice(index, 1);
       // 上传成功的文件发送到 files
-      const newFile: UploadFile = { ...file, response: res };
-      const files = uploadedFiles.value.concat(newFile);
+      const newFile = { ...file, response: res };
+      const files = uploadedFiles.value.concat(newFile as UploadFile);
       setInnerFiles(files, { e: event, response: res, trigger: 'upload-success' });
       emitEvent('success', {
         file,
@@ -361,7 +367,7 @@ export default defineComponent({
         e: event,
         response: res,
       });
-      images.value.push(newFile.url);
+      images.value.push(newFile.url as string);
     };
 
     const handleError = (options: {
@@ -369,11 +375,11 @@ export default defineComponent({
       file: UploadFile;
       response?: any;
       resFormatted?: boolean;
-    }) => {
+    }): any => {
       const { event, file, response, resFormatted } = options;
       file.status = 'fail';
       let res = response;
-      if (!resFormatted && isFunction(props.formatResponse)) {
+      if (!resFormatted && props.formatResponse && isFunction(props.formatResponse)) {
         res = props.formatResponse(response, { file });
       }
       errorMsg.value = res?.error;
@@ -407,7 +413,6 @@ export default defineComponent({
       itemContentStyle,
       emitEvent,
       setInnerFiles,
-      stopPropagation,
       triggerUpload,
       handleChange,
       handlePreview,
