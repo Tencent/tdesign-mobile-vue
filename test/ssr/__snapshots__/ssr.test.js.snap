@@ -3889,7 +3889,7 @@ exports[`ssr snapshot test renders ./src/dialog/demos/input.vue correctly 1`] = 
     <!--v-if-->
     <!--v-if-->
     <div class="t-cell__note">
-      <!--[--><button class="t-button t-button--base t-button--primary t-button--square buttom-item" role="button" aria-disabled="false">
+      <!--[--><button class="t-button t-button--base t-button--primary t-button--square button-item" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 单行标题 <!--]--></span>
       </button><button class="t-button t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 带说明文本 <!--]--></span>
@@ -5595,10 +5595,10 @@ exports[`ssr snapshot test renders ./src/image/demos/mobile.vue correctly 1`] = 
 
 exports[`ssr snapshot test renders ./src/image/demos/position.vue correctly 1`] = `
 <div>
-  <div class="t-image t-image--round image-container" postion="left top">
+  <div class="t-image t-image--round image-container">
     <div class="t-image__status"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-ellipsis" style="">
         <path fill="currentColor" d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z" fill-opacity="0.9"></path>
-      </svg></div><img class="t-image__img" style="object-fit:contain;object-position:center;" src="https://tdesign.gtimg.com/site/upload1.png" alt>
+      </svg></div><img class="t-image__img" style="object-fit:contain;object-position:left top;" src="https://tdesign.gtimg.com/site/upload1.png" alt>
   </div>
 </div>
 `;
@@ -10209,218 +10209,95 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/type-info.vue correctl
 `;
 
 exports[`ssr snapshot test renders ./src/picker/demos/base.vue correctly 1`] = `
-<div class="tdesign-demo-block">
-  <!-- demos -->
-  <div class="t-cell-group">
-    <!--v-if-->
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+<!--[-->
+<!-- demos -->
+<div class="t-cell-group">
+  <!--v-if-->
+  <div class="t-cell-group__container">
+    <!--[-->
+    <div class="t-cell t-cell--middle t-cell--bordered">
+      <!--v-if-->
+      <div class="t-cell__title">城市
         <!--v-if-->
-        <div class="t-cell__title">
-          <!--[-->
-          <div class="t-input--label">城市</div>
-          <!--]-->
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城市">
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--]-->
-        </div>
         <!--v-if-->
       </div>
-      <!--]-->
+      <div class="t-cell__note">深圳</div>
+      <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+          <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+        </svg></div>
     </div>
+    <!--]-->
   </div>
-  <div class="t-cell-group">
-    <!--v-if-->
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
-        <div class="t-cell__title">
-          <!--[-->
-          <div class="t-input--label">年份和季节</div>
-          <!--]-->
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城年份和季节">
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <!--]-->
-    </div>
-  </div>
-  <div class="t-cell-group">
-    <!--v-if-->
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
-        <div class="t-cell__title">
-          <!--[-->
-          <div class="t-input--label">日期</div>
-          <!--]-->
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="选择日期">
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div><span style="color:#888;padding:5px 10px;font-size:12px;">仅做展示，年月日关联关系由自己实现</span>
-      <!--]-->
-    </div>
-  </div><!-- pickers -->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
 </div>
+<div class="t-cell-group">
+  <!--v-if-->
+  <div class="t-cell-group__container">
+    <!--[-->
+    <div class="t-cell t-cell--middle t-cell--bordered">
+      <!--v-if-->
+      <div class="t-cell__title">年份和季节
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__note">选择城年份和季节</div>
+      <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+          <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+        </svg></div>
+    </div>
+    <!--]-->
+  </div>
+</div>
+<div class="t-cell-group">
+  <!--v-if-->
+  <div class="t-cell-group__container">
+    <!--[-->
+    <div class="t-cell t-cell--middle t-cell--bordered">
+      <!--v-if-->
+      <div class="t-cell__title">日期
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__note">选择日期</div>
+      <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+          <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+        </svg></div>
+    </div><span style="color:#888;padding:5px 10px;font-size:12px;">仅做展示，年月日关联关系由自己实现</span>
+    <!--]-->
+  </div>
+</div><!-- pickers -->
+<!--teleport start-->
+<!--teleport end-->
+<!--teleport start-->
+<!--teleport end-->
+<!--teleport start-->
+<!--teleport end-->
+<!--]-->
 `;
 
 exports[`ssr snapshot test renders ./src/picker/demos/cascade.vue correctly 1`] = `
-<div class="tdesign-demo-block">
-  <!-- 联动选择 -->
-  <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
-      <div class="t-picker__title">王者荣耀</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
-      </button>
-    </div>
-    <div class="t-picker__main">
-      <div class="t-picker-item__group">
-        <!--[-->
-        <div class="t-picker-item">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item">战士</li>
-            <li class="t-picker-item__item">法师</li>
-            <li class="t-picker-item__item">射手</li>
-            <li class="t-picker-item__item">刺客</li>
-            <li class="t-picker-item__item">坦克</li>
-            <li class="t-picker-item__item">辅助</li>
-            <!--]-->
-          </ul>
-        </div>
-        <div class="t-picker-item">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item">夏侯惇</li>
-            <li class="t-picker-item__item">吕布</li>
-            <li class="t-picker-item__item">铠</li>
-            <li class="t-picker-item__item">狂铁</li>
-            <li class="t-picker-item__item">李信</li>
-            <li class="t-picker-item__item">哪吒</li>
-            <li class="t-picker-item__item">杨戬</li>
-            <li class="t-picker-item__item">关羽</li>
-            <li class="t-picker-item__item">宫本武藏</li>
-            <li class="t-picker-item__item">钟无艳</li>
-            <li class="t-picker-item__item">亚瑟</li>
-            <li class="t-picker-item__item">达摩</li>
-            <li class="t-picker-item__item">老夫子</li>
-            <!--]-->
-          </ul>
-        </div>
-        <!--]-->
+<!--[-->
+<!-- 联动选择 -->
+<div class="t-cell-group">
+  <!--v-if-->
+  <div class="t-cell-group__container">
+    <!--[-->
+    <div class="t-cell t-cell--middle t-cell--bordered">
+      <!--v-if-->
+      <div class="t-cell__title">英雄
+        <!--v-if-->
+        <!--v-if-->
       </div>
-      <div class="t-picker__mask"></div>
-      <div class="t-picker__indicator"></div>
+      <div class="t-cell__note">选择英雄</div>
+      <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+          <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+        </svg></div>
     </div>
+    <!--]-->
   </div>
 </div>
-`;
-
-exports[`ssr snapshot test renders ./src/picker/demos/custom.vue correctly 1`] = `
-<div class="tdesign-demo-block">
-  <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
-      <div class="t-picker__title">标题</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
-      </button>
-    </div>
-    <div class="t-picker__main">
-      <div class="t-picker-item__group">
-        <!--[-->
-        <div class="t-picker-item">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item">战士</li>
-            <li class="t-picker-item__item">法师</li>
-            <li class="t-picker-item__item">射手</li>
-            <li class="t-picker-item__item">刺客</li>
-            <li class="t-picker-item__item">坦克</li>
-            <li class="t-picker-item__item">辅助</li>
-            <!--]-->
-          </ul>
-        </div>
-        <!--]-->
-      </div>
-      <div class="t-picker__mask"></div>
-      <div class="t-picker__indicator"></div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/picker/demos/default-selected.vue correctly 1`] = `
-<div class="tdesign-demo-block">
-  <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
-      <div class="t-picker__title">标题</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
-      </button>
-    </div>
-    <div class="t-picker__main">
-      <div class="t-picker-item__group">
-        <!--[-->
-        <div class="t-picker-item" default-index="2">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item">战士</li>
-            <li class="t-picker-item__item">法师</li>
-            <li class="t-picker-item__item">射手</li>
-            <li class="t-picker-item__item">刺客</li>
-            <li class="t-picker-item__item">坦克</li>
-            <li class="t-picker-item__item">辅助</li>
-            <!--]-->
-          </ul>
-        </div>
-        <!--]-->
-      </div>
-      <div class="t-picker__mask"></div>
-      <div class="t-picker__indicator"></div>
-    </div>
-  </div>
-</div>
+<!--teleport start-->
+<!--teleport end-->
+<!--]-->
 `;
 
 exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] = `
@@ -10431,6 +10308,8 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
     <p class="tdesign-mobile-demo-block__summary">基础选择器</p>
     <!--[-->
+    <!--[-->
+    <!-- demos -->
     <div class="t-cell-group">
       <!--v-if-->
       <div class="t-cell-group__container">
@@ -10441,11 +10320,18 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div class="t-cell__note">选择城市</div>
+          <div class="t-cell__note">深圳</div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
               <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
             </svg></div>
         </div>
+        <!--]-->
+      </div>
+    </div>
+    <div class="t-cell-group">
+      <!--v-if-->
+      <div class="t-cell-group__container">
+        <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
           <!--v-if-->
           <div class="t-cell__title">年份和季节
@@ -10457,6 +10343,13 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
             </svg></div>
         </div>
+        <!--]-->
+      </div>
+    </div>
+    <div class="t-cell-group">
+      <!--v-if-->
+      <div class="t-cell-group__container">
+        <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
           <!--v-if-->
           <div class="t-cell__title">日期
@@ -10467,23 +10360,23 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
               <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
             </svg></div>
-        </div>
+        </div><span style="color:#888;padding:5px 10px;font-size:12px;">仅做展示，年月日关联关系由自己实现</span>
         <!--]-->
       </div>
-    </div>
-    <div class="props-block">
-      <!--teleport start-->
-      <!--teleport end-->
-      <!--teleport start-->
-      <!--teleport end-->
-      <!--teleport start-->
-      <!--teleport end-->
-    </div>
+    </div><!-- pickers -->
+    <!--teleport start-->
+    <!--teleport end-->
+    <!--teleport start-->
+    <!--teleport end-->
+    <!--teleport start-->
+    <!--teleport end-->
+    <!--]-->
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
-    <p class="tdesign-mobile-demo-block__summary">带标题选择器</p>
+    <p class="tdesign-mobile-demo-block__summary">object选择器</p>
+    <!--[-->
     <!--[-->
     <div class="t-cell-group">
       <!--v-if-->
@@ -10491,33 +10384,11 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
           <!--v-if-->
-          <div class="t-cell__title">城市
+          <div class="t-cell__title">角色
             <!--v-if-->
             <!--v-if-->
           </div>
-          <div class="t-cell__note">选择城市</div>
-          <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-              <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-            </svg></div>
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">年份和季节
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div class="t-cell__note">选择城年份和季节</div>
-          <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-              <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-            </svg></div>
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">日期
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div class="t-cell__note">选择日期</div>
+          <div class="t-cell__note">选择角色</div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
               <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
             </svg></div>
@@ -10525,207 +10396,66 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
         <!--]-->
       </div>
     </div>
-    <div class="props-block">
-      <!--teleport start-->
-      <!--teleport end-->
-      <!--teleport start-->
-      <!--teleport end-->
-      <!--teleport start-->
-      <!--teleport end-->
+    <!--teleport start-->
+    <!--teleport end-->
+    <!--]-->
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">02 联动</h2>
+    <p class="tdesign-mobile-demo-block__summary">数据联动选择器</p>
+    <!--[-->
+    <!--[-->
+    <!-- 联动选择 -->
+    <div class="t-cell-group">
+      <!--v-if-->
+      <div class="t-cell-group__container">
+        <!--[-->
+        <div class="t-cell t-cell--middle t-cell--bordered">
+          <!--v-if-->
+          <div class="t-cell__title">英雄
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div class="t-cell__note">选择英雄</div>
+          <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+              <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+            </svg></div>
+        </div>
+        <!--]-->
+      </div>
     </div>
+    <!--teleport start-->
+    <!--teleport end-->
+    <!--]-->
     <!--]-->
   </div>
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/picker/demos/multiple.vue correctly 1`] = `
-<div class="tdesign-demo-block">
-  <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
-      <div class="t-picker__title">游戏</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
-      </button>
-    </div>
-    <div class="t-picker__main">
-      <div class="t-picker-item__group">
-        <!--[-->
-        <div class="t-picker-item">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item">端游</li>
-            <li class="t-picker-item__item">手游</li>
-            <li class="t-picker-item__item">PS4</li>
-            <li class="t-picker-item__item">NS</li>
-            <!--]-->
-          </ul>
-        </div>
-        <div class="t-picker-item">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item">3A大作</li>
-            <li class="t-picker-item__item">精品游戏</li>
-            <li class="t-picker-item__item">动作游戏</li>
-            <li class="t-picker-item__item">冒险游戏</li>
-            <li class="t-picker-item__item">射击游戏</li>
-            <!--]-->
-          </ul>
-        </div>
-        <div class="t-picker-item">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item">塞尔达传说</li>
-            <li class="t-picker-item__item">只狼</li>
-            <li class="t-picker-item__item">荒野大嫖客</li>
-            <li class="t-picker-item__item">王者荣耀</li>
-            <li class="t-picker-item__item">和平精英</li>
-            <!--]-->
-          </ul>
-        </div>
-        <!--]-->
-      </div>
-      <div class="t-picker__mask"></div>
-      <div class="t-picker__indicator"></div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/picker/demos/object-array.vue correctly 1`] = `
-<div class="tdesign-demo-block">
-  <div class="t-picker">
-    <div class="t-picker__toolbar"><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
-      <div class="t-picker__title">标题</div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->确认<!--]--></span>
-      </button>
-    </div>
-    <div class="t-picker__main">
-      <div class="t-picker-item__group">
-        <!--[-->
-        <div class="t-picker-item" option-key="name">
-          <ul class="t-picker-item__wrapper">
-            <!--[-->
-            <li class="t-picker-item__item"></li>
-            <li class="t-picker-item__item"></li>
-            <li class="t-picker-item__item"></li>
-            <li class="t-picker-item__item"></li>
-            <li class="t-picker-item__item"></li>
-            <li class="t-picker-item__item"></li>
-            <!--]-->
-          </ul>
-        </div>
-        <!--]-->
-      </div>
-      <div class="t-picker__mask"></div>
-      <div class="t-picker__indicator"></div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/picker/demos/popup-picker.vue correctly 1`] = `
-<div class="tdesign-demo-block"><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false" style="margin-left:20px;">
-    <!----><span class="t-button__text"><!--[--> 结合Popup组件<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/picker/demos/title.vue correctly 1`] = `
-<div class="tdesign-demo-block">
-  <!-- demos -->
-  <div class="t-cell-group">
-    <!--v-if-->
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+exports[`ssr snapshot test renders ./src/picker/demos/object.vue correctly 1`] = `
+<!--[-->
+<div class="t-cell-group">
+  <!--v-if-->
+  <div class="t-cell-group__container">
+    <!--[-->
+    <div class="t-cell t-cell--middle t-cell--bordered">
+      <!--v-if-->
+      <div class="t-cell__title">角色
         <!--v-if-->
-        <div class="t-cell__title">
-          <!--[-->
-          <div class="t-input--label">城市</div>
-          <!--]-->
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城市">
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--]-->
-        </div>
         <!--v-if-->
       </div>
-      <!--]-->
+      <div class="t-cell__note">选择角色</div>
+      <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+          <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+        </svg></div>
     </div>
+    <!--]-->
   </div>
-  <div class="t-cell-group" style="margin-top:20px;">
-    <!--v-if-->
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
-        <div class="t-cell__title">
-          <!--[-->
-          <div class="t-input--label">年份和季节</div>
-          <!--]-->
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="选择城年份和季节">
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <!--]-->
-    </div>
-  </div>
-  <div class="t-cell-group" style="margin-top:20px;">
-    <!--v-if-->
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
-        <div class="t-cell__title">
-          <!--[-->
-          <div class="t-input--label">日期</div>
-          <!--]-->
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="选择日期">
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div><span style="color:#888;padding:5px 10px;font-size:12px;">仅做展示，年月日关联关系由自己实现</span>
-      <!--]-->
-    </div>
-  </div><!-- pickers -->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
 </div>
+<!--teleport start-->
+<!--teleport end-->
+<!--]-->
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/custom-animation.vue correctly 1`] = `

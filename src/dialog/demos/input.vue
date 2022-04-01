@@ -1,7 +1,7 @@
 <template>
   <div :class="`${name}`">
     <t-cell value-align="left" class="tdesign-demo--dialog">
-      <t-button theme="primary" size="middle" class="buttom-item" @click="changeDialogVisible(1)"> 单行标题 </t-button>
+      <t-button theme="primary" size="middle" class="button-item" @click="changeDialogVisible(1)"> 单行标题 </t-button>
       <t-button theme="primary" size="middle" @click="changeDialogVisible(2)"> 带说明文本 </t-button>
     </t-cell>
     <t-dialog
