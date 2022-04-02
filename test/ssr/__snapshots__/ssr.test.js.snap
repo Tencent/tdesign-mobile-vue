@@ -5653,11 +5653,11 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/background.vue corre
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/image-viewer/demos/imageList.vue correctly 1`] = `
+exports[`ssr snapshot test renders ./src/image-viewer/demos/base.vue correctly 1`] = `
 <div>
   <div class="t-cell-group dialog-type-title">
     <div class="t-cell-group__title">
-      <!--[-->图片数组：images
+      <!--[-->显示和隐藏
       <!--]-->
     </div>
     <div class="t-cell-group__container">
@@ -5667,7 +5667,7 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/imageList.vue correc
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
-            <!----><span class="t-button__text"><!--[--> 图片列表 <!--]--></span>
+            <!----><span class="t-button__text"><!--[-->显示<!--]--></span>
           </button>
           <div class="t-image-viewer" style="display:none;">
             <div class="t-image-mask" style="background:rgba(0, 0, 0, 0.6);"></div>
@@ -5693,11 +5693,11 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/imageList.vue correc
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/image-viewer/demos/index.vue correctly 1`] = `
+exports[`ssr snapshot test renders ./src/image-viewer/demos/imageList.vue correctly 1`] = `
 <div>
   <div class="t-cell-group dialog-type-title">
     <div class="t-cell-group__title">
-      <!--[-->显示和隐藏
+      <!--[-->图片数组：images
       <!--]-->
     </div>
     <div class="t-cell-group__container">
@@ -5707,7 +5707,7 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/index.vue correctly 
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
-            <!----><span class="t-button__text"><!--[-->显示<!--]--></span>
+            <!----><span class="t-button__text"><!--[--> 图片列表 <!--]--></span>
           </button>
           <div class="t-image-viewer" style="display:none;">
             <div class="t-image-mask" style="background:rgba(0, 0, 0, 0.6);"></div>
@@ -15823,6 +15823,45 @@ exports[`ssr snapshot test renders ./src/swiper/demos/pagination-type.vue correc
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/switch/demos/base.vue correctly 1`] = `
+<div class="cell-base">
+  <div class="t-cell-group">
+    <div class="t-cell-group__title">
+      <!--[-->基础开关
+      <!--]-->
+    </div>
+    <div class="t-cell-group__container">
+      <!--[-->
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <!--v-if-->
+        <div class="t-cell__title">标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[--><span class="t-switch t-is-checked"><!--v-if--><span class="t-switch__node" style=""></span></span>
+          <!--]-->
+        </div>
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <!--v-if-->
+        <div class="t-cell__title">标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[--><span class="t-switch"><!--v-if--><span class="t-switch__node" style=""></span></span>
+          <!--]-->
+        </div>
+        <!--v-if-->
+      </div>
+      <!--]-->
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/switch/demos/desc.vue correctly 1`] = `
 <div class="cell-base">
   <div class="t-cell-group">
@@ -15891,45 +15930,6 @@ exports[`ssr snapshot test renders ./src/switch/demos/disabled.vue correctly 1`]
         </div>
         <div class="t-cell__note">
           <!--[--><span class="t-switch t-is-disabled"><span class="t-switch__text">描述信息</span><span class="t-switch__node" style=""></span></span>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <!--]-->
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/switch/demos/index.vue correctly 1`] = `
-<div class="cell-base">
-  <div class="t-cell-group">
-    <div class="t-cell-group__title">
-      <!--[-->基础开关
-      <!--]-->
-    </div>
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
-        <div class="t-cell__title">标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[--><span class="t-switch t-is-checked"><!--v-if--><span class="t-switch__node" style=""></span></span>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
-        <div class="t-cell__title">标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell__note">
-          <!--[--><span class="t-switch"><!--v-if--><span class="t-switch__node" style=""></span></span>
           <!--]-->
         </div>
         <!--v-if-->
