@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-tab-bar is-actived">
+  <div class="demo-tab-bar is-activated">
     <t-tab-bar v-model="value" @change="change">
       <t-tab-bar-item
         v-for="(item, index) in list"
@@ -77,7 +77,7 @@ export default defineComponent({
 <style lang="less" scoped>
 .demo-tab-bar {
   width: 375px;
-  &.is-actived {
+  &.is-activated {
     padding-top: 150px;
   }
 }

@@ -16504,7 +16504,7 @@ exports[`ssr snapshot test renders ./src/tab-bar/demos/pure-icon.vue correctly 1
 `;
 
 exports[`ssr snapshot test renders ./src/tab-bar/demos/text-spread.vue correctly 1`] = `
-<div class="demo-tab-bar is-actived">
+<div class="demo-tab-bar is-activated">
   <div class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed" role="tablist">
     <!--[-->
     <!--[-->
