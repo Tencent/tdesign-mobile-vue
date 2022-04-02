@@ -34,6 +34,8 @@ const { prefix } = config;
 const name = `${prefix}-pull-down-refresh`;
 const ANIMATION_DURATION = 300;
 
+const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
+
 export default defineComponent({
   name,
   components: { TLoading },
@@ -64,7 +66,7 @@ export default defineComponent({
     const distance = ref(0);
 
     const { value, modelValue } = toRefs(props);
-    const [statusValue, setStatusValue] = useVModel(value, modelValue, null, props.onChange);
+    const [statusValue, setStatusValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     // 组件当前状态
     const status = computed(() => {
       if (!statusValue.value && isLoading.value) {
@@ -85,8 +87,11 @@ export default defineComponent({
     watch(status, (newVal) => {
       // 下拉刷新结束后，收起下拉页面
       if (newVal === 'success' || newVal === 'initial') {
-        distance.value = 0;
-        isLoading.value = false;
+        // 延时300ms收起下拉框，加强刷新成功提示
+        setTimeout(() => {
+          distance.value = 0;
+          isLoading.value = false;
+        }, 300);
       }
     });
 
@@ -95,19 +100,8 @@ export default defineComponent({
       props.loadingTexts?.length ? props.loadingTexts : ['下拉刷新', '松手刷新', '正在刷新', '刷新完成'],
     );
     const loadingText = computed(() => {
-      if (status.value === 'pulling') {
-        return loadingTexts.value[0];
-      }
-      if (status.value === 'loosing') {
-        return loadingTexts.value[1];
-      }
-      if (status.value === 'loading') {
-        return loadingTexts.value[2];
-      }
-      if (status.value === 'success') {
-        return loadingTexts.value[3];
-      }
-      return '';
+      const index = statusName.indexOf(status.value);
+      return index >= 0 ? loadingTexts.value[index] : '';
     });
 
     const touch = useTouch();

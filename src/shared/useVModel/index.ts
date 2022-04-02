@@ -8,7 +8,7 @@ export function useVModel<T, P extends any[]>(
   modelValue: Ref<T>,
   defaultValue: T,
   onChange: ChangeHandler<T, P>,
-  // emit 和 eventName 用于支持 v-model 和 xxx.sync 语法糖
+  // emit 和 eventName 用于支持 v-model
 ): [Ref<T>, ChangeHandler<T, P>] {
   const { emit } = getCurrentInstance() as ComponentInternalInstance;
   const internalValue = ref();
