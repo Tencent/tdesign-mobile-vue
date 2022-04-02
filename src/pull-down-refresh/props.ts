@@ -8,9 +8,12 @@ import { TdPullDownRefreshProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 加载中下拉高度，如果值为数字则单位是：'px' */
+  modelValue: {
+    type: Boolean,
+  },
+  /** 加载中下拉高度 */
   loadingBarHeight: {
-    type: [String, Number] as PropType<TdPullDownRefreshProps['loadingBarHeight']>,
+    type: Number,
     default: 50,
   },
   /** 加载loading样式 */
@@ -22,9 +25,9 @@ export default {
     type: Array as PropType<TdPullDownRefreshProps['loadingTexts']>,
     default: (): TdPullDownRefreshProps['loadingTexts'] => [],
   },
-  /** 最大下拉高度，如果值为数字则单位是：'px' */
+  /** 最大下拉高度 */
   maxBarHeight: {
-    type: [String, Number] as PropType<TdPullDownRefreshProps['maxBarHeight']>,
+    type: Number,
     default: 80,
   },
   /** 刷新超时时间 */
@@ -32,12 +35,6 @@ export default {
     type: Number,
     default: 3000,
   },
-  /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
-  value: Boolean,
-  /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态，非受控属性 */
-  defaultValue: Boolean,
-  /** 下拉或收起时触发，用户手势往下滑动触发下拉状态，手势松开触发收起状态 */
-  onChange: Function as PropType<TdPullDownRefreshProps['onChange']>,
   /** 结束下拉时触发 */
   onRefresh: Function as PropType<TdPullDownRefreshProps['onRefresh']>,
   /** 刷新超时触发 */
