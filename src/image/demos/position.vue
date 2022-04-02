@@ -4,7 +4,7 @@
       class="image-container"
       src="https://tdesign.gtimg.com/site/upload1.png"
       fit="contain"
-      postion="left top"
+      position="left top"
     ></t-image>
   </div>
 </template>

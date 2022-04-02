@@ -4,7 +4,7 @@
       <h1 class="title">Checkbox 多选框</h1>
       <p class="summary">描述文字</p>
       <tdesign-demo-block title="01 类型" summary="基础多选框">
-        <t-checkbox-group v-model:value="checkBoxs1" @change="changeFn">
+        <t-checkbox-group v-model:value="checkBox1" @change="changeFn">
           <t-cell-group>
             <t-cell>
               <template #leftIcon>
@@ -98,7 +98,7 @@
         </t-cell-group>
       </tdesign-demo-block>
       <tdesign-demo-block summary="带全选多选框">
-        <t-checkbox-group v-model="checkBoxs2">
+        <t-checkbox-group v-model="checkBox2">
           <t-cell-group>
             <t-cell>
               <template #leftIcon>
@@ -136,7 +136,7 @@
         </t-checkbox-group>
       </tdesign-demo-block>
       <tdesign-demo-block title="02 状态" summary="多选框禁用态">
-        <t-checkbox-group v-model:value="checkBoxs3">
+        <t-checkbox-group v-model:value="checkBox3">
           <t-cell-group>
             <t-cell>
               <template #leftIcon>
@@ -190,7 +190,7 @@
         </t-checkbox-group>
       </tdesign-demo-block>
       <tdesign-demo-block title="03 特殊类型" summary="自定义图标多选框">
-        <t-checkbox-group v-model="checkBoxs2">
+        <t-checkbox-group v-model="checkBox2">
           <t-cell-group>
             <t-cell>
               <template #leftIcon>
@@ -246,23 +246,23 @@ import { CheckCircleFilledIcon, CircleIcon, CheckRectangleFilledIcon, RectangleI
 
 export default defineComponent({
   setup() {
-    const checkBoxs1 = ref(['1', '3']);
-    const checkBoxs2 = ref(['2', '3']);
-    const checkBoxs3 = ref(['1', '4']);
-    const checkBoxs4 = ref(['1', '4']);
+    const checkBox1 = ref(['1', '3']);
+    const checkBox2 = ref(['2', '3']);
+    const checkBox3 = ref(['1', '4']);
+    const checkBox4 = ref(['1', '4']);
     const indeterminate = ref(false);
     watch(
-      () => checkBoxs1.value,
+      () => checkBox1.value,
       (val) => {
-        console.log('checkBoxs1:', val);
+        console.log('checkBox1:', val);
       },
     );
 
     // watch(
-    //   () => checkBoxs2.value,
+    //   () => checkBox2.value,
     //   (val) => {
     //     indeterminate.value = val.length < 4;
-    //     console.log('checkBoxs2:', val.length);
+    //     console.log('checkBox2:', val.length);
     //   },
     // );
 
@@ -280,10 +280,10 @@ export default defineComponent({
     };
 
     return {
-      checkBoxs1,
-      checkBoxs2,
-      checkBoxs3,
-      checkBoxs4,
+      checkBox1,
+      checkBox2,
+      checkBox3,
+      checkBox4,
       circleFilledIcons: [TIconCircleFilled, TIconCircle],
       CheckRectangleFilledIcons: [TCheckRectangleFilledIcon, TRectangleIcon],
       changeFn,
