@@ -62,7 +62,6 @@ export default defineComponent({
     const handleRefresh = (value: any) => {
       if (value === 1) {
         setTimeout(() => {
-          console.log(999);
           handleChangeRefreshing1(false);
           refreshCount1.value = 1 + refreshCount1.value;
         }, 1000);
