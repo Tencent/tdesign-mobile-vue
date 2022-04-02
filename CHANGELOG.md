@@ -4,6 +4,21 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+## 0.8.1 (2022-04-02)
+
+### Bug Fixes
+
+* **count-down:** 单位样式bug修复、倒计时加入fps获取
+* **swiper:** 快速滑动导致卡住问题
+* **picker:** 组件demo修复
+* **swipe-cell:** 修改组件示例，和demo保持一致
+
+
+### Features
+
+* 加入ci拼写检查报错
+* 支持历史版本跳转
+* **dropdown-menu:** 更新组件的模板类型处理
 
 ## 0.8.0 `(2022-03-17)`
 
