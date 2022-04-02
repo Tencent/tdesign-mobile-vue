@@ -4,33 +4,52 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdLoadingProps } from '../loading';
+import { LoadingProps } from '../loading';
 
 export interface TdPullDownRefreshProps {
   /**
-   * 加载中下拉高度
+   * 加载中下拉高度，如果值为数字则单位是：'px'
    * @default 50
    */
-  loadingBarHeight?: number;
+  loadingBarHeight?: string | number;
   /**
    * 加载loading样式
    */
-  loadingProps?: TdLoadingProps;
+  loadingProps?: LoadingProps;
   /**
    * 提示语，组件内部默认值为 ['下拉刷新', '松手刷新', '正在刷新', '刷新完成']
    * @default []
    */
   loadingTexts?: string[];
   /**
-   * 最大下拉高度
+   * 最大下拉高度，如果值为数字则单位是：'px'
    * @default 80
    */
-  maxBarHeight?: number;
+  maxBarHeight?: string | number;
   /**
    * 刷新超时时间
    * @default 3000
    */
   refreshTimeout?: number;
+  /**
+   * 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态
+   * @default false
+   */
+  value?: boolean;
+  /**
+   * 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态，非受控属性
+   * @default false
+   */
+  defaultValue?: boolean;
+  /**
+   * 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态
+   * @default false
+   */
+  modelValue?: boolean;
+  /**
+   * 下拉或收起时触发，用户手势往下滑动触发下拉状态，手势松开触发收起状态
+   */
+  onChange?: (value: boolean) => void;
   /**
    * 结束下拉时触发
    */
