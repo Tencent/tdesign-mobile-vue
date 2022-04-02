@@ -2,7 +2,6 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-28 10:16:33
  * */
 
 import { TdUploadProps } from './type';
@@ -19,6 +18,8 @@ export default {
     type: String,
     default: '',
   },
+  /** 是否允许重复上传相同文件名的文件 */
+  allowUploadDuplicateFile: Boolean,
   /** 是否选取文件后自动上传 */
   autoUpload: {
     type: Boolean,
@@ -32,16 +33,16 @@ export default {
   data: {
     type: Object as PropType<TdUploadProps['data']>,
   },
-  /** 触发上传的内容，同 trigger */
-  default: {
-    type: [String, Function] as PropType<TdUploadProps['default']>,
-  },
   /** 删除图标。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。 */
   deleteBtn: {
     type: [String, Function] as PropType<TdUploadProps['deleteBtn']>,
   },
   /** 是否禁用 */
   disabled: Boolean,
+  /** 【开发中】用于完全自定义文件列表内容 */
+  fileListDisplay: {
+    type: Function as PropType<TdUploadProps['fileListDisplay']>,
+  },
   /** 已上传文件列表 */
   files: {
     type: Array as PropType<TdUploadProps['files']>,
@@ -66,6 +67,10 @@ export default {
   headers: {
     type: Object as PropType<TdUploadProps['headers']>,
   },
+  /** 透传 Image 组件全部属性 */
+  imageProps: {
+    type: Object as PropType<TdUploadProps['imageProps']>,
+  },
   /** 用于控制文件上传数量，值为 0 则不限制 */
   max: {
     type: Number,
@@ -76,16 +81,12 @@ export default {
     type: String as PropType<TdUploadProps['method']>,
     default: 'POST' as TdUploadProps['method'],
     validator(val: TdUploadProps['method']): boolean {
-      return ['POST', 'GET', 'PUT', 'OPTION'].includes(val);
+      if (!val) return true;
+      return ['POST', 'GET', 'PUT', 'OPTION', 'PATCH', 'post', 'get', 'put', 'option', 'patch'].includes(val);
     },
   },
   /** 是否支持多选文件 */
   multiple: Boolean,
-  /** 占位符 */
-  placeholder: {
-    type: String,
-    default: '',
-  },
   /** 自定义上传方法。返回值 status 表示上传成功或失败，error 表示上传失败的原因，response 表示请求上传成功后的返回数据，response.url 表示上传成功后的图片地址。示例一：`{ status: 'fail', error: '上传失败', response }`。示例二：`{ status: 'success', response: { url: 'https://tdesign.gtimg.com/site/avatar.jpg' } }` */
   requestMethod: {
     type: Function as PropType<TdUploadProps['requestMethod']>,
@@ -117,6 +118,8 @@ export default {
   onProgress: Function as PropType<TdUploadProps['onProgress']>,
   /** 移除文件时触发 */
   onRemove: Function as PropType<TdUploadProps['onRemove']>,
-  /** 上传成功后触发 */
+  /** 文件选择后，上传开始前，触发 */
+  onSelectChange: Function as PropType<TdUploadProps['onSelectChange']>,
+  /** 上传成功后触发，`context.currentFiles` 表示当次请求上传的文件，`context.fileList` 表示上传成功后的文件，`context.response` 表示上传请求的返回数据。<br />⚠️ `context.file` 请勿使用 */
   onSuccess: Function as PropType<TdUploadProps['onSuccess']>,
 };

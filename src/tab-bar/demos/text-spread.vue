@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-tab-bar is-actived">
+  <div class="demo-tab-bar is-activated">
     <t-tab-bar v-model="value" @change="change">
       <t-tab-bar-item
         v-for="(item, index) in list"
@@ -20,7 +20,7 @@ import { defineComponent, ref, watch } from 'vue';
 export default defineComponent({
   setup() {
     const value = ref(null);
-    const isActived = true;
+    const isActivated = true;
     const list = [
       {
         name: 'label_1',
@@ -68,7 +68,7 @@ export default defineComponent({
       list,
       value,
       change,
-      isActived,
+      isActivated,
     };
   },
 });
@@ -77,7 +77,7 @@ export default defineComponent({
 <style lang="less" scoped>
 .demo-tab-bar {
   width: 375px;
-  &.is-actived {
+  &.is-activated {
     padding-top: 150px;
   }
 }

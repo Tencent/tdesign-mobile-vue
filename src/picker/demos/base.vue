@@ -1,120 +1,92 @@
 <template>
-  <div class="tdesign-demo-block">
-    <!-- demos -->
-    <t-cell-group>
-      <t-input :value="cityText.join(',')" label="城市" placeholder="选择城市" @click="showCity.value = true" />
-    </t-cell-group>
-    <t-cell-group>
-      <t-input
-        :value="yearAndSeasonText"
-        label="年份和季节"
-        placeholder="选择城年份和季节"
-        @click="showYearAndSeason = true"
-      />
-    </t-cell-group>
-    <t-cell-group>
-      <t-input v-model="text.date" label="日期" placeholder="选择日期" @click="showDate = true" />
-      <span style="color: #888; padding: 5px 10px; font-size: 12px">仅做展示，年月日关联关系由自己实现</span>
-    </t-cell-group>
+  <!-- demos -->
+  <t-cell-group>
+    <t-cell arrow title="城市" :note="cityState.city.join(',') || '选择城市'" @click="cityState.show = true" />
+  </t-cell-group>
 
-    <!-- pickers -->
-    <t-popup v-model="showCity" placement="bottom">
-      <t-picker v-model="cityText" @change="onCityChange" @confirm="onCityConfirm" @cancel="showCity.value = false">
-        <t-picker-item :options="cityOptions" @change="onColumnChange" />
-      </t-picker>
-    </t-popup>
+  <t-cell-group>
+    <t-cell
+      arrow
+      title="年份和季节"
+      :note="seasonState.season.join(',') || '选择城年份和季节'"
+      @click="seasonState.show = true"
+    />
+  </t-cell-group>
 
-    <t-popup v-model="showYearAndSeason" placement="bottom">
-      <t-picker v-model="yearAndSeasonText" @change="onChange" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
-        <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-        <t-picker-item :options="seasonOptions" @change="onColumnChange" />
-      </t-picker>
-    </t-popup>
+  <t-cell-group>
+    <t-cell arrow title="日期" :note="dateState.date.join(',') || '选择日期'" @click="dateState.show = true" />
+    <span style="color: #888; padding: 5px 10px; font-size: 12px">仅做展示，年月日关联关系由自己实现</span>
+  </t-cell-group>
 
-    <t-popup v-model="showDate" placement="bottom">
-      <t-picker v-model="dateText" @change="onChange" @confirm="onDateConfirm" @cancel="onCancel">
-        <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" @change="onColumnChange" />
-        <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" @change="onColumnChange" />
-        <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" @change="onColumnChange" />
-      </t-picker>
-    </t-popup>
-  </div>
+  <!-- pickers -->
+  <t-popup v-model="cityState.show" placement="bottom">
+    <t-picker v-model="cityState.city" @confirm="onCityConfirm" @cancel="cityState.show = false">
+      <t-picker-item :options="cityOptions" />
+    </t-picker>
+  </t-popup>
+
+  <t-popup v-model="seasonState.show" placement="bottom">
+    <t-picker v-model="seasonState.season" @confirm="onYearAndSeasonConfirm" @cancel="onCancel">
+      <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" />
+      <t-picker-item :options="seasonOptions" />
+    </t-picker>
+  </t-popup>
+
+  <t-popup v-model="dateState.show" placement="bottom">
+    <t-picker v-model="dateState.date" @confirm="onDateConfirm" @cancel="onCancel">
+      <t-picker-item :options="yearOptions" :formatter="(val) => `${val}年`" />
+      <t-picker-item :options="monthOptions" :formatter="(val) => `${val}月`" />
+      <t-picker-item :options="dayOptions" :formatter="(val) => `${val}日`" />
+    </t-picker>
+  </t-popup>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent, reactive } from 'vue';
+<script lang="ts" setup>
+import { reactive } from 'vue';
+import ToastPlugin from '@/toast';
+import { PickerItemOptionObject } from '../type';
 
-export default defineComponent({
-  setup() {
-    const showCity = ref(false);
-    const showYearAndSeason = ref(false);
-    const showDate = ref(false);
-    const cityText = reactive([]);
-    const yearAndSeasonText = reactive([]);
-    const dateText = reactive([]);
-    const text = reactive({
-      city: [],
-      cityTitle: [],
-      yearAndSeason: [],
-      yearAndSeasonTitle: [],
-      date: [],
-      dateTitle: [],
-    });
+const cityOptions = ['北京', '上海', '广州', '深圳', '杭州', '成都', '长沙'];
+const currentYear = Number(new Date().getFullYear());
+const yearOptions = Array.from(new Array(10), (_, index) => currentYear - index);
+const seasonOptions = ['春', '夏', '秋', '冬'];
+const monthOptions = Array.from(new Array(12), (_, index) => index + 1);
+const dayOptions = Array.from(new Array(31), (_, index) => index + 1);
 
-    const cities = ['广州市', '韶关市', '深圳市', '珠海市', '汕头市'];
-    const years = [2021, 2020, 2019, 2018, 2017, 2016, 2015];
-    const seasons = ['春', '夏', '秋', '冬'];
-    const months = Array.from(new Array(12), (_, index) => index + 1);
-    const days = Array.from(new Array(31), (_, index) => index + 1);
-
-    const cityOptions = ref(cities);
-    const yearOptions = ref(years);
-    const seasonOptions = ref(seasons);
-    const monthOptions = ref(months);
-    const dayOptions = ref(days);
-
-    const onColumnChange = (e: any) => {
-      console.log('column:change', e);
-    };
-
-    const onChange = (e: any) => {
-      console.log('picker:change', e);
-    };
-
-    const onCityConfirm = (e: any) => {
-      console.log('picker:confirm', e, cityText);
-      showCity.value = false;
-    };
-
-    const onYearAndSeasonConfirm = (e: any) => {
-      console.log('picker:confirm', e);
-      showYearAndSeason.value = false;
-    };
-
-    const onDateConfirm = (e: any) => {
-      console.log('picker:confirm', e);
-      showDate.value = false;
-    };
-
-    return {
-      text,
-      cityOptions,
-      yearOptions,
-      seasonOptions,
-      monthOptions,
-      dayOptions,
-      onColumnChange,
-      onChange,
-      onCityConfirm,
-      onYearAndSeasonConfirm,
-      onDateConfirm,
-      cityText,
-      yearAndSeasonText,
-      dateText,
-      showCity,
-      showYearAndSeason,
-      showDate,
-    };
-  },
+const cityState = reactive({
+  show: false,
+  city: ['深圳'],
 });
+
+const seasonState = reactive({
+  show: false,
+  season: [],
+});
+
+const dateState = reactive({
+  show: false,
+  date: [],
+});
+
+const onCancel = () => {
+  ToastPlugin({ message: '已取消' });
+  cityState.show = false;
+  seasonState.show = false;
+  dateState.show = false;
+};
+
+const onCityConfirm = (val: string[]) => {
+  ToastPlugin({ message: JSON.stringify(val) });
+  cityState.show = false;
+};
+
+const onYearAndSeasonConfirm = (val: string[]) => {
+  ToastPlugin({ message: JSON.stringify(val) });
+  seasonState.show = false;
+};
+
+const onDateConfirm = (val: string[]) => {
+  ToastPlugin({ message: JSON.stringify(val) });
+  dateState.show = false;
+};
 </script>
