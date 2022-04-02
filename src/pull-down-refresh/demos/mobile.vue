@@ -7,11 +7,7 @@
       <t-tabs default-value="first" @on-change="onChange">
         <t-tab-panel value="first" label="基础用法">
           <div class="refresh-content">
-            <t-pull-down-refresh
-              :value="refreshing1"
-              class="demo-pull-down-refresh"
-              @refresh="handleRefresh(1)"
-              @change="handleChangeRefreshing1"
+            <t-pull-down-refresh v-model="refreshing1" class="demo-pull-down-refresh" @refresh="handleRefresh(1)"
               ><div class="content-text">已下拉{{ refreshCount1 }}次</div></t-pull-down-refresh
             >
           </div>
@@ -19,8 +15,7 @@
         <t-tab-panel value="second" label="自定义文案">
           <div class="refresh-content">
             <t-pull-down-refresh
-              :value="refreshing2"
-              :on-change="handleChangeRefreshing2"
+              v-model="refreshing2"
               class="demo-pull-down-refresh"
               :loading-texts="['下拉即可刷新...', '释放即可刷新...', '加载中...', '刷新成功']"
               @refresh="handleRefresh(2)"
@@ -35,7 +30,7 @@
               v-model="refreshing3"
               class="demo-pull-down-refresh"
               :loading-texts="['下拉即可刷新...', '释放即可刷新...', '加载中...', '刷新成功']"
-              :refresh-timeout="2000"
+              :refresh-timeout="1000"
               @refresh="handleRefresh(3)"
               @timeout="handleTimeout"
               ><div class="content-text">已下拉{{ refreshCount3 }}次</div></t-pull-down-refresh
@@ -61,34 +56,27 @@ export default defineComponent({
     const refreshCount3 = ref(0);
     const handleRefresh = (value: any) => {
       if (value === 1) {
+        refreshing1.value = true;
         setTimeout(() => {
-          handleChangeRefreshing1(false);
+          refreshing1.value = false;
           refreshCount1.value = 1 + refreshCount1.value;
         }, 1000);
       } else if (value === 2) {
+        refreshing2.value = true;
         setTimeout(() => {
-          handleChangeRefreshing2(false);
+          refreshing2.value = false;
           refreshCount2.value = 1 + refreshCount2.value;
         }, 1000);
       } else {
+        refreshing3.value = true;
         setTimeout(() => {
           refreshing3.value = false;
           refreshCount3.value = 1 + refreshCount3.value;
-        }, 3000);
+        }, 2000);
       }
     };
     const handleTimeout = () => {
       Toast('已超时');
-      refreshCount3.value = 1 + refreshCount3.value;
-    };
-    const handleChangeRefreshing1 = (value: boolean) => {
-      refreshing1.value = value;
-    };
-    const handleChangeRefreshing2 = (value: boolean) => {
-      refreshing2.value = value;
-    };
-    const handleChangeRefreshing3 = (value: boolean) => {
-      refreshing3.value = value;
     };
     return {
       refreshing1,
@@ -99,9 +87,6 @@ export default defineComponent({
       refreshCount3,
       handleRefresh,
       handleTimeout,
-      handleChangeRefreshing1,
-      handleChangeRefreshing2,
-      handleChangeRefreshing3,
     };
   },
   data() {
