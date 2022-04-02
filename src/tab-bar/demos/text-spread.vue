@@ -20,7 +20,7 @@ import { defineComponent, ref, watch } from 'vue';
 export default defineComponent({
   setup() {
     const value = ref(null);
-    const isActived = true;
+    const isActivated = true;
     const list = [
       {
         name: 'label_1',
@@ -68,7 +68,7 @@ export default defineComponent({
       list,
       value,
       change,
-      isActived,
+      isActivated,
     };
   },
 });
