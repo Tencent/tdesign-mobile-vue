@@ -33,8 +33,14 @@ export default {
     default: 3000,
   },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
-  value: Boolean,
-  modelValue: Boolean,
+  value: {
+    type: Boolean,
+    default: undefined,
+  },
+  modelValue: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态，非受控属性 */
   defaultValue: Boolean,
   /** 下拉或收起时触发，用户手势往下滑动触发下拉状态，手势松开触发收起状态 */
