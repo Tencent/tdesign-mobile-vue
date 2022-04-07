@@ -101,7 +101,6 @@ export default defineComponent({
         label: () => label[index] || item.props.label,
       }));
     });
-    console.log('itemProps', itemProps);
     const navScroll = ref<HTMLElement | null>(null);
     const navWrap = ref<HTMLElement | null>(null);
     const navLine = ref<HTMLElement | null>(null);
