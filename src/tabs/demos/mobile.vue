@@ -9,12 +9,12 @@
           <p>标签一内容区</p>
         </t-tab-panel>
         <t-tab-panel value="second">
-          <template #label> 标签页一 </template>
+          <template #label> 标签页一内容区 </template>
           <p>标签二内容区</p>
         </t-tab-panel>
       </t-tabs>
       <t-tabs value="first" @on-change="onChange">
-        <t-tab-panel value="first" :label="labelContent"><p>标签一内容区</p> </t-tab-panel>
+        <t-tab-panel value="first" label="标签页一"><p>标签一内容区</p> </t-tab-panel>
         <t-tab-panel value="second" label="标签页二"><p>标签二内容区</p> </t-tab-panel>
         <t-tab-panel value="third" label="标签页三"> <p>标签三内容区</p></t-tab-panel>
       </t-tabs>
@@ -180,15 +180,10 @@ export default defineComponent({
     };
     const animation = { duration: 500 };
     const currentValue = ref('first');
-    const labelContent = ref('标签一内容区');
-    // setTimeout(() => {
-    //   labelContent.value = '测试';
-    // }, 2000);
     return {
       onChange,
       currentValue,
       animation,
-      labelContent,
     };
   },
 });
