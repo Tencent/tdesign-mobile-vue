@@ -13,7 +13,8 @@
               [disabledClass]: item.disabled,
             }"
             @click="(e) => tabClick(e, item)"
-          />
+          >
+          </tab-nav-item>
           <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
         </div>
       </div>
@@ -75,40 +76,40 @@ export default defineComponent({
         });
       },
     );
-
-    const { itemProps } = (() => {
+    const itemProps = computed(() => {
       if (props.list) {
-        return {
-          itemProps: props.list,
-        };
+        return props.list;
       }
       let children: any[] = slots.default ? slots.default() : [];
+
       const res: any[] = [];
+      const label: any[] = [];
       children.forEach((child) => {
         if (child.type === Fragment) {
           res.push(...child.children);
         } else {
           res.push(child);
         }
+        if (child.children.label) {
+          label.push(child.children.label()[0] || null);
+        }
       });
-      children = res.filter((child: any) => child.type.name === `${prefix}-tab-panel`);
-      const itemProps = children.map((item: any) => ({
-        ...item.props,
-      }));
-      return {
-        itemProps,
-      };
-    })();
 
+      children = res.filter((child: any) => child.type.name === `${prefix}-tab-panel`);
+      return children.map((item: any, index: number) => ({
+        ...item.props,
+        label: () => label[index] || item.props.label,
+      }));
+    });
+    console.log('itemProps', itemProps);
     const navScroll = ref<HTMLElement | null>(null);
     const navWrap = ref<HTMLElement | null>(null);
     const navLine = ref<HTMLElement | null>(null);
     const lineStyle = ref('');
     const moveToActiveTab = () => {
-      console.log(props.animation);
       if (navWrap.value && navLine.value && showBottomLine.value) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
-        console.log(tab);
+
         if (!tab) return;
         const line = navLine.value;
         if (placement.value === 'left') {
