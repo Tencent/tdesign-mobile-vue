@@ -1,5 +1,5 @@
 <template>
-  <teleport :to="to" :disabled="teleportDisabled">
+  <teleport :to="to" :disabled="!to">
     <div :class="[rootClasses, $attrs.class]" :style="rootStyles" @touchmove="handleMove">
       <transition name="fade">
         <t-mask v-show="currentVisible" :transparent="!showOverlay" @click="handleMaskClick" />

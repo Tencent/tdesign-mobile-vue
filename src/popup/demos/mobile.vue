@@ -29,7 +29,7 @@
     <div style="height: 200px; background: #fff"></div>
   </t-popup>
 
-  <t-popup v-model="center" placement="center">
+  <t-popup v-model="center" placement="center" to="body">
     <div style="width: 200px; height: 200px; background: #fff"></div>
   </t-popup>
 

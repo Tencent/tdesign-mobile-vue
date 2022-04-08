@@ -24,8 +24,6 @@ exports[`ssr snapshot test renders ./src/action-sheet/demos/grid.vue correctly 1
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <!--teleport end-->
 </div>
 `;
 
@@ -64,12 +62,6 @@ exports[`ssr snapshot test renders ./src/action-sheet/demos/list.vue correctly 1
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
 </div>
 `;
 
@@ -99,14 +91,6 @@ exports[`ssr snapshot test renders ./src/action-sheet/demos/mobile.vue correctly
     <!--]-->
   </div>
 </div>
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
 <!--]-->
 `;
 
@@ -3404,8 +3388,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/base.vue correct
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <!--teleport end-->
   <!--]-->
 </div>
 `;
@@ -3435,8 +3417,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/disable-date.vue
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <!--teleport end-->
   <!--]-->
 </div>
 `;
@@ -3466,8 +3446,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/hour-minute.vue 
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <!--teleport end-->
   <!--]-->
 </div>
 `;
@@ -3500,8 +3478,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <!--teleport start-->
-    <!--teleport end-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
       <!--v-if-->
       <div class="t-cell__title">
@@ -3522,8 +3498,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <!--teleport start-->
-    <!--teleport end-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
       <!--v-if-->
       <div class="t-cell__title">
@@ -3544,8 +3518,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <!--teleport start-->
-    <!--teleport end-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
       <!--v-if-->
       <div class="t-cell__title">
@@ -3566,8 +3538,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <!--teleport start-->
-    <!--teleport end-->
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
@@ -3594,8 +3564,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <!--teleport start-->
-    <!--teleport end-->
     <!--]-->
   </div>
 </div>
@@ -3626,8 +3594,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month.vue c
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <!--teleport end-->
   <!--]-->
 </div>
 `;
@@ -3657,8 +3623,6 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month-date.
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <!--teleport end-->
   <!--]-->
 </div>
 `;
@@ -3678,54 +3642,6 @@ exports[`ssr snapshot test renders ./src/dialog/demos/confirm.vue correctly 1`] 
           </button><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[--> 带警示操作对话框 <!--]--></span>
           </button>
-          <!--teleport start-->
-          <div class="t-popup" style="">
-            <div class="t-mask" style="display:none;"></div>
-            <div class="t-popup--content t-popup--content-center" style="display:none;">
-              <!--[-->
-              <div id="root" class="t-dialog" style="width:undefinedpx;">
-                <div class="t-dialog__header t-dialog__header--has-content">
-                  <!--[-->
-                  <div class="t-dialog__title">对话框标题</div>
-                  <!--]-->
-                </div>
-                <div class="t-dialog__body">
-                  <div class="t-dialog__text">告知当前状态、信息和解决方法</div>
-                </div>
-                <div class="t-dialog__footer">
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-                <!--v-if-->
-              </div>
-              <!--]-->
-            </div>
-          </div>
-          <!--teleport end-->
-          <!--teleport start-->
-          <div class="t-popup" style="">
-            <div class="t-mask" style="display:none;"></div>
-            <div class="t-popup--content t-popup--content-center" style="display:none;">
-              <!--[-->
-              <div id="root" class="t-dialog" style="width:undefinedpx;">
-                <div class="t-dialog__header t-dialog__header--has-content">
-                  <!--[-->
-                  <div class="t-dialog__title">对话框标题</div>
-                  <!--]-->
-                </div>
-                <div class="t-dialog__body">
-                  <div class="t-dialog__text">告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内</div>
-                </div>
-                <div class="t-dialog__footer">
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-                <!--v-if-->
-              </div>
-              <!--]-->
-            </div>
-          </div>
-          <!--teleport end-->
           <!--]-->
         </div>
         <!--v-if-->
@@ -3753,28 +3669,6 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[--> 单行标题对话框 <!--]--></span>
             </button>
-            <!--teleport start-->
-            <div class="t-popup" style="">
-              <div class="t-mask" style="display:none;"></div>
-              <div class="t-popup--content t-popup--content-center" style="display:none;">
-                <!--[-->
-                <div id="root" class="t-dialog" style="width:undefinedpx;">
-                  <div class="t-dialog__header">
-                    <!--[-->
-                    <div class="t-dialog__title">最小高度样式，文案上下居中</div>
-                    <!--]-->
-                  </div>
-                  <!--v-if-->
-                  <div class="t-dialog__footer">
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                  <!--v-if-->
-                </div>
-                <!--]-->
-              </div>
-            </div>
-            <!--teleport end-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -3786,28 +3680,6 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[--> 多行标题对话框 <!--]--></span>
             </button>
-            <!--teleport start-->
-            <div class="t-popup" style="">
-              <div class="t-mask" style="display:none;"></div>
-              <div class="t-popup--content t-popup--content-center" style="display:none;">
-                <!--[-->
-                <div id="root" class="t-dialog" style="width:undefinedpx;">
-                  <div class="t-dialog__header">
-                    <!--[-->
-                    <div class="t-dialog__title">告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内</div>
-                    <!--]-->
-                  </div>
-                  <!--v-if-->
-                  <div class="t-dialog__footer">
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                  <!--v-if-->
-                </div>
-                <!--]-->
-              </div>
-            </div>
-            <!--teleport end-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -3819,26 +3691,6 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[--> 短文本对话框 <!--]--></span>
             </button>
-            <!--teleport start-->
-            <div class="t-popup" style="">
-              <div class="t-mask" style="display:none;"></div>
-              <div class="t-popup--content t-popup--content-center" style="display:none;">
-                <!--[-->
-                <div id="root" class="t-dialog" style="width:undefinedpx;">
-                  <!--v-if-->
-                  <div class="t-dialog__body">
-                    <div class="t-dialog__text">告知当前状态、信息和解决方法</div>
-                  </div>
-                  <div class="t-dialog__footer">
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                  <!--v-if-->
-                </div>
-                <!--]-->
-              </div>
-            </div>
-            <!--teleport end-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -3850,28 +3702,6 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[--> 长文本对话框 <!--]--></span>
             </button>
-            <!--teleport start-->
-            <div class="t-popup" style="">
-              <div class="t-mask" style="display:none;"></div>
-              <div class="t-popup--content t-popup--content-center" style="display:none;">
-                <!--[-->
-                <div id="root" class="t-dialog" style="width:undefinedpx;">
-                  <div class="t-dialog__header">
-                    <!--[-->
-                    <div class="t-dialog__title">对话框标题</div>
-                    <!--]-->
-                  </div>
-                  <!--v-if-->
-                  <div class="t-dialog__footer">
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                  <!--v-if-->
-                </div>
-                <!--]-->
-              </div>
-            </div>
-            <!--teleport end-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -3898,52 +3728,6 @@ exports[`ssr snapshot test renders ./src/dialog/demos/input.vue correctly 1`] = 
     </div>
     <!--v-if-->
   </div>
-  <!--teleport start-->
-  <div class="t-popup" style="">
-    <div class="t-mask" style="display:none;"></div>
-    <div class="t-popup--content t-popup--content-center" style="display:none;">
-      <!--[-->
-      <div id="root" class="t-dialog" style="width:undefinedpx;">
-        <div class="t-dialog__header">
-          <!--[-->
-          <div class="t-dialog__title">标题</div>
-          <!--]-->
-        </div>
-        <!--v-if-->
-        <div class="t-dialog__footer">
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-      </div>
-      <!--]-->
-    </div>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div class="t-popup" style="">
-    <div class="t-mask" style="display:none;"></div>
-    <div class="t-popup--content t-popup--content-center" style="display:none;">
-      <!--[-->
-      <div id="root" class="t-dialog" style="width:undefinedpx;">
-        <div class="t-dialog__header t-dialog__header--has-content">
-          <!--[-->
-          <div class="t-dialog__title">标题</div>
-          <!--]-->
-        </div>
-        <div class="t-dialog__body">
-          <div class="t-dialog__text">告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内</div>
-        </div>
-        <div class="t-dialog__footer">
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-      </div>
-      <!--]-->
-    </div>
-  </div>
-  <!--teleport end-->
 </div>
 `;
 
@@ -3965,108 +3749,7 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
         <!----><span class="t-button__text"><!--[--> 长文本对话框 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 函数调用长文本对话框 <!--]--></span>
-      </button>
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <div class="t-dialog__header">
-              <!--[-->
-              <div class="t-dialog__title">最小高度样式，文案上下居中</div>
-              <!--]-->
-            </div>
-            <!--v-if-->
-            <div class="t-dialog__footer">
-              <!--v-if-->
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn">
-                <!--[-->我知道了
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <div class="t-dialog__header">
-              <!--[-->
-              <div class="t-dialog__title">对话框标题告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内</div>
-              <!--]-->
-            </div>
-            <!--v-if-->
-            <div class="t-dialog__footer">
-              <!--v-if-->
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn">
-                <!--[-->我知道了
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <!--v-if-->
-            <div class="t-dialog__body">
-              <div class="t-dialog__text">告知当前状态、信息和解决方法</div>
-            </div>
-            <div class="t-dialog__footer">
-              <!--v-if-->
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn">
-                <!--[-->我知道了
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <div class="t-dialog__header t-dialog__header--has-content">
-              <!--[-->
-              <div class="t-dialog__title">对话框标题</div>
-              <!--]-->
-            </div>
-            <div class="t-dialog__body">
-              <div class="t-dialog__text">告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很</div>
-            </div>
-            <div class="t-dialog__footer">
-              <!--v-if-->
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn">
-                <!--[-->我知道了
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-    </div>
+      </button></div>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
@@ -4077,68 +3760,7 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
         <!----><span class="t-button__text"><!--[--> 双操作对话框 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 带警示操作对话框 <!--]--></span>
-      </button>
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <div class="t-dialog__header t-dialog__header--has-content">
-              <!--[-->
-              <div class="t-dialog__title">对话框标题</div>
-              <!--]-->
-            </div>
-            <div class="t-dialog__body">
-              <div class="t-dialog__text">告知当前状态、信息和解决方法</div>
-            </div>
-            <div class="t-dialog__footer">
-              <div class="t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn">
-                <!--[-->我再想想
-                <!--]-->
-              </div>
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn">
-                <!--[-->我知道了
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <div class="t-dialog__header t-dialog__header--has-content">
-              <!--[-->
-              <div class="t-dialog__title">对话框标题</div>
-              <!--]-->
-            </div>
-            <div class="t-dialog__body">
-              <div class="t-dialog__text">告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很</div>
-            </div>
-            <div class="t-dialog__footer">
-              <div class="t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn">
-                <!--[-->我再想想
-                <!--]-->
-              </div>
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn">
-                <!--[-->我知道了
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-    </div>
+      </button></div>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
@@ -4149,70 +3771,7 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
         <!----><span class="t-button__text"><!--[--> 单行标题对话框 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 带说明文本对话框 <!--]--></span>
-      </button>
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <div class="t-dialog__header">
-              <!--[-->
-              <div class="t-dialog__title">最小高度样式，文案上下居中</div>
-              <!--]-->
-            </div>
-            <!--v-if-->
-            <div class="t-dialog__footer">
-              <div class="t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn">
-                <!--[-->
-                <div>我不同意</div>
-                <!--]-->
-              </div>
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn">
-                <!--[-->
-                <div>我同意</div>
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-      <!--teleport start-->
-      <div class="t-popup" style="">
-        <div class="t-mask" style="display:none;"></div>
-        <div class="t-popup--content t-popup--content-center" style="display:none;">
-          <!--[-->
-          <div id="root" class="t-dialog" style="width:undefinedpx;">
-            <div class="t-dialog__header t-dialog__header--has-content">
-              <!--[-->
-              <div class="t-dialog__title">对话框标题</div>
-              <!--]-->
-            </div>
-            <div class="t-dialog__body">
-              <div class="t-dialog__text">告知当前状态、信息和解决方法</div>
-            </div>
-            <!--v-if-->
-            <div class="t-dialog__vertical-footer t-dialog__footer">
-              <div class="t-dialog__btn t-dialog__btn--primary t-dialog__vertical-btn">
-                <!--[-->
-                <div>我同意</div>
-                <!--]-->
-              </div>
-              <div class="t-dialog__btn t-dialog__btn--default t-dialog__vertical-btn">
-                <!--[-->
-                <div>我不同意</div>
-                <!--]-->
-              </div>
-            </div>
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--teleport end-->
-    </div>
+      </button></div>
     <!--]-->
   </div>
 </div>
@@ -4330,8 +3889,6 @@ exports[`ssr snapshot test renders ./src/divider/demos/vertical.vue correctly 1`
 exports[`ssr snapshot test renders ./src/drawer/demos/base.vue correctly 1`] = `
 <div>
   <div class="demo-drawer">
-    <!--teleport start-->
-    <!--teleport end-->
     <div class="demo-drawer-content">
       <div class="demo-drawer-text">单层级纯文本标签栏</div><button class="t-button t-size-l t-button--outline t-button--default t-button--round" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->基础抽屉<!--]--></span>
@@ -4344,8 +3901,6 @@ exports[`ssr snapshot test renders ./src/drawer/demos/base.vue correctly 1`] = `
 exports[`ssr snapshot test renders ./src/drawer/demos/icon.vue correctly 1`] = `
 <div>
   <div class="demo-drawer">
-    <!--teleport start-->
-    <!--teleport end-->
     <div class="demo-drawer-content">
       <div class="demo-drawer-text">单层级纯文本标签栏</div><button class="t-button t-size-l t-button--outline t-button--default t-button--round" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->带图标抽屉<!--]--></span>
@@ -4362,9 +3917,7 @@ exports[`ssr snapshot test renders ./src/drawer/demos/mobile.vue correctly 1`] =
   <div class="tdesign-mobile-demo-block">
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
     <p class="tdesign-mobile-demo-block__summary">基础抽屉</p>
-    <!--[-->
-    <!--teleport start-->
-    <!--teleport end--><button class="t-button t-size-l t-button--outline t-button--default t-button--round" role="button" aria-disabled="false">
+    <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--round" role="button" aria-disabled="false">
       <!----><span class="t-button__text"><!--[-->基础抽屉<!--]--></span>
     </button>
     <!--]-->
@@ -4372,9 +3925,7 @@ exports[`ssr snapshot test renders ./src/drawer/demos/mobile.vue correctly 1`] =
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">带图标抽屉</p>
-    <!--[-->
-    <!--teleport start-->
-    <!--teleport end--><button class="t-button t-size-l t-button--outline t-button--default t-button--round" role="button" aria-disabled="false">
+    <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--round" role="button" aria-disabled="false">
       <!----><span class="t-button__text"><!--[-->带图标抽屉<!--]--></span>
     </button>
     <!--]-->
@@ -10265,12 +9816,6 @@ exports[`ssr snapshot test renders ./src/picker/demos/base.vue correctly 1`] = `
     <!--]-->
   </div>
 </div><!-- pickers -->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
 <!--]-->
 `;
 
@@ -10295,8 +9840,6 @@ exports[`ssr snapshot test renders ./src/picker/demos/cascade.vue correctly 1`] 
     <!--]-->
   </div>
 </div>
-<!--teleport start-->
-<!--teleport end-->
 <!--]-->
 `;
 
@@ -10364,12 +9907,6 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
         <!--]-->
       </div>
     </div><!-- pickers -->
-    <!--teleport start-->
-    <!--teleport end-->
-    <!--teleport start-->
-    <!--teleport end-->
-    <!--teleport start-->
-    <!--teleport end-->
     <!--]-->
     <!--]-->
   </div>
@@ -10396,8 +9933,6 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
         <!--]-->
       </div>
     </div>
-    <!--teleport start-->
-    <!--teleport end-->
     <!--]-->
     <!--]-->
   </div>
@@ -10425,8 +9960,6 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
         <!--]-->
       </div>
     </div>
-    <!--teleport start-->
-    <!--teleport end-->
     <!--]-->
     <!--]-->
   </div>
@@ -10453,18 +9986,13 @@ exports[`ssr snapshot test renders ./src/picker/demos/object.vue correctly 1`] =
     <!--]-->
   </div>
 </div>
-<!--teleport start-->
-<!--teleport end-->
 <!--]-->
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/custom-animation.vue correctly 1`] = `
 <div><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->1.5s的slide-fade动画<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
+  </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/mobile.vue correctly 1`] = `
@@ -10492,16 +10020,6 @@ exports[`ssr snapshot test renders ./src/popup/demos/mobile.vue correctly 1`] = 
 </div>
 <!--teleport start-->
 <!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
-<!--teleport start-->
-<!--teleport end-->
 <!--]-->
 `;
 
@@ -10516,63 +10034,37 @@ exports[`ssr snapshot test renders ./src/popup/demos/placement.vue correctly 1`]
     <!----><span class="t-button__text"><!--[-->右侧<!--]--></span>
   </button><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->中间<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
+  </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/placement-bottom.vue correctly 1`] = `
 <div class="popup-base"><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->底部弹出<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
+  </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/placement-center.vue correctly 1`] = `
 <div class="popup-base"><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->中部弹出<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
+  </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/placement-left.vue correctly 1`] = `
 <div class="popup-base"><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->左侧弹出<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
+  </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/placement-right.vue correctly 1`] = `
 <div class="popup-base"><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->右侧弹出<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
+  </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/popup/demos/placement-top.vue correctly 1`] = `
 <div class="popup-base"><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->顶部弹出<!--]--></span>
-  </button>
-  <!--teleport start-->
-  <!--teleport end-->
-</div>
+  </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/progress/demos/base.vue correctly 1`] = `
@@ -17680,8 +17172,10 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
         <div class="t-tabs__nav-container">
           <div class="t-tabs__nav-wrap">
             <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
+            <div class="t-tabs__nav-item t-is-active">
+              <div>标签一内容区</div>
+            </div>
+            <div class="t-tabs__nav-item"> 标签页一内容区 </div>
             <!--]-->
             <div class="t-tabs__nav-line" style=""></div>
           </div>
