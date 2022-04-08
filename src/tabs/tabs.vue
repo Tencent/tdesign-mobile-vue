@@ -90,7 +90,7 @@ export default defineComponent({
         } else {
           res.push(child);
         }
-        if (child.children.label) {
+        if (child.children?.label) {
           label.push(child.children.label()[0] || null);
         }
       });

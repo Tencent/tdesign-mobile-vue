@@ -17680,8 +17680,10 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
         <div class="t-tabs__nav-container">
           <div class="t-tabs__nav-wrap">
             <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
+            <div class="t-tabs__nav-item t-is-active">
+              <div>标签一内容区</div>
+            </div>
+            <div class="t-tabs__nav-item"> 标签页一内容区 </div>
             <!--]-->
             <div class="t-tabs__nav-line" style=""></div>
           </div>
