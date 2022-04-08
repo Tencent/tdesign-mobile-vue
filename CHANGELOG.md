@@ -4,6 +4,14 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+## 0.8.2 (2022-04-08)
+
+
+### Bug Fixes
+* **tabs:** label支持动态修改，以及新增支持slot的方式 
+* **popup:** 修复teleport失效问题
+
+
 ## 0.8.1 (2022-04-02)
 
 ### Bug Fixes
