@@ -47,24 +47,14 @@
 
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import {
-  ref,
-  computed,
-  onMounted,
-  defineComponent,
-  getCurrentInstance,
-  toRefs,
-  SetupContext,
-  nextTick,
-  watch,
-} from 'vue';
+import { ref, computed, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick, watch } from 'vue';
 import { useFocus } from '@vueuse/core';
 import TCell from '../cell';
 import config from '../config';
 import InputProps from './props';
 import ClASSNAMES from '../shared/constants';
 import { InputValue, TdInputProps } from './type';
-import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '../shared';
+import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault, extendAPI } from '../shared';
 
 const { prefix } = config;
 const componentName = `${prefix}-input`;
@@ -121,8 +111,8 @@ export default defineComponent({
 
     const handleInput = (e: any) => {
       // 中文输入的时候inputType是insertCompositionText所以中文输入的时候禁止触发。
-      // const checkInputType = e.inputType && e.inputType === 'insertCompositionText';
-      if (e.isComposing) return;
+      const checkInputType = e.inputType && e.inputType === 'insertCompositionText';
+      if (e.isComposing || checkInputType) return;
       inputValueChangeHandle(e);
     };
 
@@ -141,13 +131,15 @@ export default defineComponent({
       nextTick(() => setInputValue(innerValue.value));
     };
 
-    // const focus = () => {
-    //   focused.value = true;
-    // };
+    const focus = () => {
+      focused.value = true;
+    };
 
-    // const blur = () => {
-    //   inputRef.value?.blur();
-    // };
+    const blur = () => {
+      inputRef.value?.blur();
+    };
+
+    extendAPI({ focus, blur });
 
     const handleClear = (e: MouseEvent) => {
       innerValue.value = '';

@@ -3379,7 +3379,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/base.vue correct
     </div>
     <div class="t-cell__note">
       <!--[-->
-      <div class="t-input__wrap"><input value="2020-08-10 12:50:00" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期时间">
+      <div class="t-input__wrap"><input value="2020-08-10 12:50:00" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期时间" maxlength="-1">
         <!--v-if-->
         <!--v-if-->
       </div>
@@ -3408,7 +3408,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/disable-date.vue
     </div>
     <div class="t-cell__note">
       <!--[-->
-      <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期">
+      <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期" maxlength="-1">
         <!--v-if-->
         <!--v-if-->
       </div>
@@ -3437,7 +3437,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/hour-minute.vue 
     </div>
     <div class="t-cell__note">
       <!--[-->
-      <div class="t-input__wrap"><input value="12:01" name class="t-input__control" type="text" autocomplete="Off" placeholder="时分">
+      <div class="t-input__wrap"><input value="12:01" name class="t-input__control" type="text" autocomplete="Off" placeholder="时分" maxlength="-1">
         <!--v-if-->
         <!--v-if-->
       </div>
@@ -3469,7 +3469,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input value="2020-08-10 12:50:00" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期时间">
+        <div class="t-input__wrap"><input value="2020-08-10 12:50:00" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期时间" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -3489,7 +3489,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月日">
+        <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月日" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -3509,7 +3509,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input value="2020-08" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月">
+        <div class="t-input__wrap"><input value="2020-08" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -3529,7 +3529,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input value="12:01" name class="t-input__control" type="text" autocomplete="Off" placeholder="时分">
+        <div class="t-input__wrap"><input value="12:01" name class="t-input__control" type="text" autocomplete="Off" placeholder="时分" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -3555,7 +3555,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期">
+        <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="日期" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -3585,7 +3585,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month.vue c
     </div>
     <div class="t-cell__note">
       <!--[-->
-      <div class="t-input__wrap"><input value="2020-08" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月">
+      <div class="t-input__wrap"><input value="2020-08" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月" maxlength="-1">
         <!--v-if-->
         <!--v-if-->
       </div>
@@ -3614,7 +3614,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month-date.
     </div>
     <div class="t-cell__note">
       <!--[-->
-      <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月日">
+      <div class="t-input__wrap"><input value="2020-08-10" name class="t-input__control" type="text" autocomplete="Off" placeholder="年月日" maxlength="-1">
         <!--v-if-->
         <!--v-if-->
       </div>
@@ -8126,7 +8126,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本(非必填)">
+          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本(非必填)" maxlength="-1">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8146,7 +8146,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本保持上下居中">
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本保持上下居中" maxlength="-1">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8160,7 +8160,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         <!--v-if-->
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="无标题预设文本">
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="无标题预设文本" maxlength="-1">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8180,7 +8180,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="警告文本">
+          <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="警告文本" maxlength="-1">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8200,7 +8200,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input value="一段错误填写的内容" name class="t-input__control" type="text" autocomplete="Off">
+          <div class="t-input__wrap"><input value="一段错误填写的内容" name class="t-input__control" type="text" autocomplete="Off" maxlength="-1">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8220,7 +8220,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input value="不可编辑的内容" name class="t-input__control" type="text" disabled autocomplete="Off">
+          <div class="t-input__wrap"><input value="不可编辑的内容" name class="t-input__control" type="text" disabled autocomplete="Off" maxlength="-1">
             <!--v-if-->
             <!--v-if-->
           </div>
@@ -8255,7 +8255,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字">
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -8284,7 +8284,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字">
+            <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -8304,7 +8304,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字 (选填)">
+            <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字 (选填)" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -8327,7 +8327,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字">
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -8353,7 +8353,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字">
+        <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -8386,7 +8386,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本">
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="预设文本" maxlength="-1">
           <!--v-if-->
           <!--v-if-->
         </div>
@@ -8416,7 +8416,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value="请输入文字" name class="t-input__control" type="text" autocomplete="Off">
+            <div class="t-input__wrap"><input value="请输入文字" name class="t-input__control" type="text" autocomplete="Off" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -8436,7 +8436,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value="请输入文字" name class="t-input__control" type="text" autocomplete="Off">
+            <div class="t-input__wrap"><input value="请输入文字" name class="t-input__control" type="text" autocomplete="Off" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -8456,7 +8456,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value="不可编辑的内容" name class="t-input__control" type="text" autocomplete="Off" readonly>
+            <div class="t-input__wrap"><input value="不可编辑的内容" name class="t-input__control" type="text" autocomplete="Off" readonly maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -8485,7 +8485,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off">
+        <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off" maxlength="-1">
           <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
               <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
             </svg></div>
@@ -8507,7 +8507,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="输入验证码">
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="输入验证码" maxlength="-1">
           <!--v-if-->
           <div class="t-input__wrap--suffix">
             <!--[-->
@@ -8525,7 +8525,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入手机号码">
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入手机号码" maxlength="-1">
           <!--v-if-->
           <div class="t-input__wrap--suffix">
             <!--[--><button class="t-button t-size-s t-button--text t-button--primary t-button--square" role="button" aria-disabled="false" style="height:24px;padding:0;">
@@ -8550,7 +8550,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="0.00">
+        <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="0.00" maxlength="-1">
           <!--v-if-->
           <div class="t-input__wrap--suffix">元</div>
         </div>
@@ -8570,7 +8570,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="t-cell__note">
         <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="填写个数">
+        <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="填写个数" maxlength="-1">
           <!--v-if-->
           <div class="t-input__wrap--suffix">个</div>
         </div>
@@ -8605,7 +8605,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <!--v-if-->
     <div class="t-cell__note">
       <!--[-->
-      <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="最大输入10个字符，汉字算两个">
+      <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="最大输入10个字符，汉字算两个" maxlength="-1">
         <!--v-if-->
         <!--v-if-->
       </div>
@@ -8639,7 +8639,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off">
+          <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off" maxlength="-1">
             <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
                 <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
               </svg></div>
@@ -8661,7 +8661,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="输入验证码">
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="输入验证码" maxlength="-1">
             <!--v-if-->
             <div class="t-input__wrap--suffix">
               <!--[-->
@@ -8679,7 +8679,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         <!--v-if-->
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入手机号码">
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入手机号码" maxlength="-1">
             <!--v-if-->
             <div class="t-input__wrap--suffix">
               <!--[--><button class="t-button t-size-m t-button--text t-button--default t-button--square" role="button" aria-disabled="false">
@@ -8704,7 +8704,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="0.00">
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="0.00" maxlength="-1">
             <!--v-if-->
             <div class="t-input__wrap--suffix">元</div>
           </div>
@@ -8724,7 +8724,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <div class="t-cell__note">
           <!--[-->
-          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="填写个数">
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="填写个数" maxlength="-1">
             <!--v-if-->
             <div class="t-input__wrap--suffix">个</div>
           </div>
@@ -11751,7 +11751,7 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字">
+            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -11788,7 +11788,7 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字">
+            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -11831,7 +11831,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -11869,7 +11869,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -11907,7 +11907,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -11945,7 +11945,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value="搜索预设文案" name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案">
+              <div class="t-input__wrap"><input value="搜索预设文案" name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
