@@ -23,13 +23,13 @@
       <span v-if="'type' in navigation" :class="`${name}__pagination ${name}__pagination-${navigation.type || ''}`">
         <template v-if="['dots', 'dots-bar'].includes(navigation.type || '')">
           <span
-            v-for="(item, index) in paginationList"
+            v-for="(item, index) in state.children.length"
             :key="'page' + index"
             :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
           ></span>
         </template>
         <span v-if="navigation.type && navigation.type === 'fraction'">
-          {{ showPageNum + '/' + state.itemLength }}
+          {{ showPageNum + '/' + state.children.length }}
         </span>
       </span>
     </template>
@@ -106,26 +106,31 @@ export default defineComponent({
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
       const _swiperContainer = getContainer();
+      _swiperContainer.querySelectorAll('.copy-item').forEach((ele) => {
+        _swiperContainer.removeChild(ele);
+      });
       const items = _swiperContainer.querySelectorAll('.t-swiper-item');
       state.itemLength = _swiperContainer.children?.length || 0;
       const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       if (items.length <= 0) return false;
-      const first = items[0].cloneNode(true);
-      const last = items[items.length - 1].cloneNode(true);
+      const first = items[0].cloneNode(true) as HTMLDivElement;
+      first.classList.add('copy-item');
+      const last = items[items.length - 1].cloneNode(true) as HTMLDivElement;
+      last.classList.add('copy-item');
       _swiperContainer.appendChild(first);
       _swiperContainer.insertBefore(last, items[0]);
       move(0);
+      startAutoplay();
+      if (typeof props.current === 'number') {
+        state.isControl = true;
+        next(props.current);
+      }
     };
     onMounted(() => {
       nextTick(() => {
         console.info('swiper mounted');
         initSwiper();
-        startAutoplay();
-        if (typeof props.current === 'number') {
-          state.isControl = true;
-          next(props.current);
-        }
       });
     });
     watch(
@@ -134,11 +139,6 @@ export default defineComponent({
         nextTick(() => {
           console.info('swiper mounted');
           initSwiper();
-          startAutoplay();
-          if (typeof props.current === 'number') {
-            state.isControl = true;
-            next(props.current);
-          }
         });
       },
     );

@@ -15506,6 +15506,21 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/right-menu.vue correct
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/swiper/demos/async.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div style="padding:0 16px;">
+    <div style="height:undefinedpx;overflow:hidden;" class="t-swiper">
+      <div class="t-swiper__container" style="height:undefinedpx;flex-direction:row;">
+        <!--[-->
+        <!--]-->
+      </div>
+      <!--[--><span><span class="t-swiper__btn btn-prev"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-left" style="font-size:20px;"><path fill="currentColor" d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z" fill-opacity="0.9"></path></svg></span><span class="t-swiper__btn btn-next"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="font-size:20px;"><path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path></svg></span></span><span class="t-swiper__pagination t-swiper__pagination-dots-bar"><!--[--><!--]--><!--v-if--></span>
+      <!--]-->
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/swiper/demos/base.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div style="padding:0 16px;">
@@ -15685,6 +15700,8 @@ exports[`ssr snapshot test renders ./src/swiper/demos/mobile.vue correctly 1`] =
         <!--v-if-->
         <!--]-->
       </div>
+      <!-- <h2>异步内容</h2>
+        <demo-async /> -->
       <!-- <t-swiper :interval="3000" :autoplay="true">
           <t-swiper-item class="swiper-item--demo">
             <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
