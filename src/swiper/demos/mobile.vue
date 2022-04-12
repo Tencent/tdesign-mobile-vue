@@ -86,7 +86,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import async from './async.vue';
+// import async from './async.vue';
 
 export default defineComponent({
   components: {
