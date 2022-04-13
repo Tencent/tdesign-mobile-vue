@@ -8,8 +8,7 @@
 lockScroll | Boolean | true | 是否锁定内容滚动 | N
 placement | String | top | 浮层出现位置。可选项：top/left/right/bottom/center | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
-teleportDisabled | Boolean | false | 是否禁用teleport | N
-to | String | body | 透传给teleport组件的to属性 | N
+to | String | - | 透传给teleport组件的to属性 | N
 transitionName | String | - | 弹出层内容区的动画名，等价于transition组件的name属性 | N
 visible | Boolean | false | 是否显示浮层。支持语法糖 `v-model` 或 `v-model:visible`。TS 类型：`boolean` | N
 defaultVisible | Boolean | false | 是否显示浮层。非受控属性。TS 类型：`boolean` | N

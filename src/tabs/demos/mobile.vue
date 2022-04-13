@@ -4,8 +4,14 @@
     <p class="summary">用作一组平行关系页面/内容的切换器</p>
     <tdesign-demo-block title="01 类型" summary="横向选项卡">
       <t-tabs :value="currentValue" @on-change="onChange">
-        <t-tab-panel value="first" label="标签页一"> <p>标签一内容区</p></t-tab-panel>
-        <t-tab-panel value="second" label="标签页二"><p>标签二内容区</p> </t-tab-panel>
+        <t-tab-panel value="first">
+          <template #label> <div>标签一内容区</div> </template>
+          <p>标签一内容区</p>
+        </t-tab-panel>
+        <t-tab-panel value="second">
+          <template #label> 标签页一内容区 </template>
+          <p>标签二内容区</p>
+        </t-tab-panel>
       </t-tabs>
       <t-tabs value="first" @on-change="onChange">
         <t-tab-panel value="first" label="标签页一"><p>标签一内容区</p> </t-tab-panel>
@@ -165,7 +171,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, reactive } from 'vue';
 
 export default defineComponent({
   setup() {

@@ -33,7 +33,6 @@ import { useTouch, isReachTop, easeDistance } from './useTouch';
 const { prefix } = config;
 const name = `${prefix}-pull-down-refresh`;
 const ANIMATION_DURATION = 300;
-
 const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
 
 export default defineComponent({
@@ -64,9 +63,9 @@ export default defineComponent({
 
     // 滑动距离
     const distance = ref(0);
-
     const { value, modelValue } = toRefs(props);
     const [statusValue, setStatusValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     // 组件当前状态
     const status = computed(() => {
       if (!statusValue.value && isLoading.value) {
@@ -111,15 +110,15 @@ export default defineComponent({
     const { height: maxBarHeight } = useElementSize(maxBar);
 
     const onTouchStart = (e: TouchEvent) => {
-      if (!isReachTop(e)) return;
-      if (isLoading.value) return;
+      if (!isReachTop(e) || isLoading.value) return;
+
       setStatusValue(true);
       distance.value = 0;
       touch.start(e);
     };
+
     const onTouchMove = (e: TouchEvent) => {
-      if (!isReachTop(e)) return;
-      if (isLoading.value) return;
+      if (!isReachTop(e) || isLoading.value) return;
 
       const { deltaY } = touch;
       const nextDistance = easeDistance(deltaY.value, loadingBarHeight.value);
@@ -132,14 +131,12 @@ export default defineComponent({
 
     let timer: any = null;
     const onTouchEnd = (e: TouchEvent) => {
-      if (!isReachTop(e)) return;
-      if (isLoading.value) return;
+      if (!isReachTop(e) || isLoading.value) return;
 
       if (status.value === 'loosing') {
         distance.value = loadingBarHeight.value;
         isLoading.value = true;
         emitEvent('refresh');
-
         timer = setTimeout(() => {
           if (isLoading.value) {
             emitEvent('timeout');
@@ -154,6 +151,7 @@ export default defineComponent({
     onUnmounted(() => {
       clearTimeout(timer);
     });
+
     return {
       name,
       status,

@@ -60,21 +60,24 @@ export default defineComponent({
     const refreshing3 = ref(false);
     const refreshCount3 = ref(0);
     const handleRefresh = (value: any) => {
-      if (value === 1) {
-        setTimeout(() => {
-          handleChangeRefreshing1(false);
-          refreshCount1.value = 1 + refreshCount1.value;
-        }, 1000);
-      } else if (value === 2) {
-        setTimeout(() => {
-          handleChangeRefreshing2(false);
-          refreshCount2.value = 1 + refreshCount2.value;
-        }, 1000);
-      } else {
-        setTimeout(() => {
-          refreshing3.value = false;
-          refreshCount3.value = 1 + refreshCount3.value;
-        }, 3000);
+      switch (value) {
+        case 1:
+          setTimeout(() => {
+            handleChangeRefreshing1(false);
+            refreshCount1.value = 1 + refreshCount1.value;
+          }, 1000);
+          break;
+        case 2:
+          setTimeout(() => {
+            handleChangeRefreshing2(false);
+            refreshCount2.value = 1 + refreshCount2.value;
+          }, 1000);
+          break;
+        default:
+          setTimeout(() => {
+            refreshing3.value = false;
+            refreshCount3.value = 1 + refreshCount3.value;
+          }, 3000);
       }
     };
     const handleTimeout = () => {

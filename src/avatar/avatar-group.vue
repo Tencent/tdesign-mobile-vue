@@ -10,10 +10,10 @@
 <script lang="ts">
 import { computed, defineComponent, Fragment, getCurrentInstance, provide, ref } from 'vue';
 import { renderTNode, TNode } from '../shared';
-import AvatarGroupProps from '../avatar/avatar-group-props';
-import { TdAvatarProps } from '../avatar/type';
+import AvatarGroupProps from './avatar-group-props';
+import { TdAvatarProps } from './type';
 import config from '../config';
-import Avatar from '../avatar/avatar.vue';
+import Avatar from './avatar.vue';
 
 const { prefix } = config;
 const name = `${prefix}-avatar-group`;

@@ -26,13 +26,8 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 是否禁用teleport */
-  teleportDisabled: Boolean,
   /** 透传给teleport组件的to属性 */
-  to: {
-    type: String,
-    default: 'body',
-  },
+  to: String,
   /** 弹出层内容区的动画名，等价于transition组件的name属性 */
   transitionName: {
     type: String,
@@ -41,16 +36,16 @@ export default {
   /** 是否显示浮层 */
   visible: {
    type: Boolean,
-   default: undefined 
+   default: undefined
   },
   modelValue: {
    type: Boolean,
-   default: undefined 
+   default: undefined
   },
   /** 是否显示浮层，非受控属性 */
   defaultVisible: {
    type: Boolean,
-   default: undefined 
+   default: undefined
   },
   /** 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 */
   zIndex: {
