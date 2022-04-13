@@ -4,15 +4,14 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdButtonProps } from '../button';
 import { ButtonProps } from '../button';
-import { TNode } from '../common';
+import { TNode, Styles } from '../common';
 
 export interface TdDialogProps {
   /**
    * 操作栏
    */
-  actions?: Array<TdButtonProps>;
+  actions?: Array<ButtonProps>;
   /**
    * 多按钮排列方式
    * @default horizontal
@@ -47,6 +46,11 @@ export interface TdDialogProps {
    * @default true
    */
   preventScrollThrough?: boolean;
+  /**
+   * 【开发中】仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative
+   * @default false
+   */
+  showInAttachedElement?: boolean;
   /**
    * 是否显示遮罩层
    * @default true
@@ -95,9 +99,8 @@ export interface DialogOptions extends Omit<TdDialogProps, 'attach'> {
   className?: string;
   /**
    * 弹框 style 属性，输入 [CSSStyleDeclaration.cssText](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText)
-   * @default ''
    */
-  style?: string;
+  style?: string | Styles;
 }
 
 export interface DialogInstance {

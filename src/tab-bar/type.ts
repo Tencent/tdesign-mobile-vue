@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdBadgeProps } from '../badge';
+import { BadgeProps } from '../badge';
 import { TNode } from '../common';
 
 export interface TdTabBarProps {
@@ -27,6 +27,10 @@ export interface TdTabBarProps {
    */
   defaultValue?: string | number | Array<string | number>;
   /**
+   * 当前选中标签的索引
+   */
+  modelValue?: string | number | Array<string | number>;
+  /**
    * 选中标签切换时触发
    */
   onChange?: () => void;
@@ -36,7 +40,7 @@ export interface TdTabBarItemProps {
   /**
    * 图标右上角提示信息
    */
-  badgeProps?: TdBadgeProps;
+  badgeProps?: BadgeProps;
   /**
    * 图标名称
    */
