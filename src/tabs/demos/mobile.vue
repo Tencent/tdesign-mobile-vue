@@ -3,7 +3,7 @@
     <h1 class="title">Tabs 选项卡</h1>
     <p class="summary">用作一组平行关系页面/内容的切换器</p>
     <tdesign-demo-block title="01 类型" summary="横向选项卡">
-      <t-tabs :value="currentValue" @on-change="onChange">
+      <t-tabs :value="currentValue" :sticky-props="stickyProps" @on-change="onChange">
         <t-tab-panel value="first">
           <template #label> <div>标签一内容区</div> </template>
           <p>标签一内容区</p>
@@ -180,10 +180,14 @@ export default defineComponent({
     };
     const animation = { duration: 500 };
     const currentValue = ref('first');
+    const stickyProps = {
+      disabled: false,
+    };
     return {
       onChange,
       currentValue,
       animation,
+      stickyProps,
     };
   },
 });

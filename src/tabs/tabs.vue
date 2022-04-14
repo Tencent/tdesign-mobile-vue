@@ -1,25 +1,26 @@
 <template>
   <div :class="classes">
-    <div :class="navClasses">
-      <div ref="navScroll" :class="`${name}__nav-container`">
-        <div ref="navWrap" :class="`${name}__nav-wrap`">
-          <tab-nav-item
-            v-for="item in itemProps"
-            :key="item.value"
-            :label="item.label"
-            :class="{
-              [`${name}__nav-item`]: true,
-              [activeClass]: item.value === currentValue,
-              [disabledClass]: item.disabled,
-            }"
-            @click="(e) => tabClick(e, item)"
-          >
-          </tab-nav-item>
-          <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
+    <t-sticky v-bind="stickyProps">
+      <div :class="navClasses">
+        <div ref="navScroll" :class="`${name}__nav-container`">
+          <div ref="navWrap" :class="`${name}__nav-wrap`">
+            <tab-nav-item
+              v-for="item in itemProps"
+              :key="item.value"
+              :label="item.label"
+              :class="{
+                [`${name}__nav-item`]: true,
+                [activeClass]: item.value === currentValue,
+                [disabledClass]: item.disabled,
+              }"
+              @click="(e) => tabClick(e, item)"
+            >
+            </tab-nav-item>
+            <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
+          </div>
         </div>
       </div>
-    </div>
-
+    </t-sticky>
     <div :class="`${name}__content`">
       <slot> </slot>
     </div>
@@ -45,18 +46,21 @@ import TabsProps from './props';
 import TabNavItem from './tab-nav-item.vue';
 import { renderContent, renderTNode, TNode } from '../shared';
 import CLASSNAMES from '../shared/constants';
+import TSticky from '../sticky';
 
 const { prefix } = config;
 const name = `${prefix}-tabs`;
 
 export default defineComponent({
   name,
-  components: { TabNavItem },
+  components: { TabNavItem, TSticky },
   props: TabsProps,
   emits: ['onChange'],
   setup(props, { emit, slots }) {
     const placement = computed(() => props.placement);
+    console.log('placement', placement.value);
     const showBottomLine = computed(() => props.showBottomLine);
+    const stickyProps = computed(() => ({ disabled: true, ...props.stickyProps }));
     const activeClass = CLASSNAMES.STATUS.active;
     const disabledClass = CLASSNAMES.STATUS.disabled;
     const classes = computed(() => [
@@ -108,9 +112,9 @@ export default defineComponent({
     const moveToActiveTab = () => {
       if (navWrap.value && navLine.value && showBottomLine.value) {
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
-
         if (!tab) return;
         const line = navLine.value;
+        console.log('tab', Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2);
         if (placement.value === 'left') {
           lineStyle.value = `transform: translateY(${tab.offsetTop}px);${
             props.animation ? `transition-duration:${props.animation.duration}ms` : ''
@@ -126,8 +130,10 @@ export default defineComponent({
     onMounted(() => {
       isScroll.value = (navWrap.value?.offsetWidth || 0) > (navScroll.value?.offsetWidth || 0);
       isScroll.value && navClasses.value.push(`${prefix}-is-scrollable`);
-      moveToActiveTab();
       window.addEventListener('resize', moveToActiveTab, false);
+      setTimeout(() => {
+        moveToActiveTab();
+      }, 300);
     });
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
@@ -159,13 +165,15 @@ export default defineComponent({
       activeClass,
       disabledClass,
       currentValue,
-      showBottomLine,
       tabClick,
+      showBottomLine,
       itemProps,
       navScroll,
       navWrap,
       navLine,
       lineStyle,
+      moveToActiveTab,
+      stickyProps,
     };
   },
 });
