@@ -10,6 +10,7 @@ list | Array | - | 选项卡列表。TS 类型：`Array<TdTabPanelProps>` | N
 placement | String | top | 选项卡位置。可选项：left/top | N
 showBottomLine | Boolean | true | 是否展示底部激活线条 | N
 size | String | medium | 组件尺寸。可选项：medium/large | N
+stickyProps | Object | - | 是否支持吸顶。TS 类型：`StickyProps`，[Sticky API Documents](./sticky?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 value | String / Number | - | 激活的选项卡值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`TabValue` `type TabValue = string | number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 defaultValue | String / Number | - | 激活的选项卡值。非受控属性。TS 类型：`TabValue` `type TabValue = string | number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tabs/type.ts) | N
 onChange | Function |  | TS 类型：`(value: TabValue) => void`<br/>激活的选项卡发生变化时触发 | N
