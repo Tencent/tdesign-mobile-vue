@@ -4,6 +4,21 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+## 0.8.4 (2022-04-15)
+
+
+### Bug Fixes
+
+* **Swiper:** 修复动态绑定时出错问题
+* **List:** 修复组件demo代码运行出错的问题
+* **Input:** compositionend优化
+
+
+### Features
+
+* **Tabs:** 新增stickyProps，支持滚动到顶部时自动吸顶
+* **PullDownRefresh:** loadingBarHeight属性支持string类型，代码优化
+
 ## 0.8.2 (2022-04-08)
 
 
