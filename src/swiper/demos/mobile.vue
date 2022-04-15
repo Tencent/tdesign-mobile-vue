@@ -61,6 +61,8 @@
             <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
           </t-swiper-item>
         </t-swiper>
+        <!-- <h2>异步内容</h2>
+        <demo-async /> -->
         <!-- <t-swiper :interval="3000" :autoplay="true">
           <t-swiper-item class="swiper-item--demo">
             <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
@@ -84,8 +86,12 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
+// import async from './async.vue';
 
 export default defineComponent({
+  components: {
+    // 'demo-async': async,
+  },
   setup() {
     const handleChange = (index: number) => {
       console.log('基础示例,页数变化到》》》', index);

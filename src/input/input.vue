@@ -20,10 +20,11 @@
           :autocomplete="autocomplete ? 'On' : 'Off'"
           :placeholder="placeholder"
           :readonly="readonly"
-          :maxlength="maxlength"
+          :maxlength="maxlength || -1"
           @focus="handleFocus"
           @blur="handleBlur"
           @input="handleInput"
+          @compositionend="handleCompositionend"
         />
         <div
           v-if="clearable && String(innerValue).length > 0"
@@ -46,13 +47,14 @@
 
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { ref, computed, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick } from 'vue';
+import { ref, computed, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick, watch } from 'vue';
+import { useFocus } from '@vueuse/core';
 import TCell from '../cell';
 import config from '../config';
 import InputProps from './props';
 import ClASSNAMES from '../shared/constants';
 import { InputValue, TdInputProps } from './type';
-import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault } from '../shared';
+import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault, extendAPI } from '../shared';
 
 const { prefix } = config;
 const componentName = `${prefix}-input`;
@@ -68,7 +70,8 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
-    const inputRef = ref<null | HTMLElement>(null);
+    const inputRef = ref();
+    const { autofocus } = toRefs(props);
     const internalInstance = getCurrentInstance();
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
@@ -76,6 +79,7 @@ export default defineComponent({
       [`${componentName}--label`]: true,
       [ClASSNAMES.STATUS.disabled]: props.disabled,
     }));
+    const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
 
     const labelContent = computed(() => renderTNode(internalInstance, 'label'));
     const suffixIconContent = computed(() => renderTNode(internalInstance, 'suffixIcon'));
@@ -105,7 +109,14 @@ export default defineComponent({
       }
     };
 
-    const handleInput = (e: Event) => {
+    const handleInput = (e: any) => {
+      // 中文输入的时候inputType是insertCompositionText所以中文输入的时候禁止触发。
+      const checkInputType = e.inputType && e.inputType === 'insertCompositionText';
+      if (e.isComposing || checkInputType) return;
+      inputValueChangeHandle(e);
+    };
+
+    const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
       const { maxcharacter } = props;
       if (maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
@@ -120,8 +131,19 @@ export default defineComponent({
       nextTick(() => setInputValue(innerValue.value));
     };
 
+    const focus = () => {
+      focused.value = true;
+    };
+
+    const blur = () => {
+      inputRef.value?.blur();
+    };
+
+    extendAPI({ focus, blur });
+
     const handleClear = (e: MouseEvent) => {
       innerValue.value = '';
+      focused.value = true;
       emitEvent('clear', { e });
     };
     const handleFocus = (e: FocusEvent) => {
@@ -131,9 +153,15 @@ export default defineComponent({
       emitEvent('blur', innerValue.value, { e });
     };
 
-    onMounted(() => {
-      if (props.autofocus) {
-        inputRef.value?.focus();
+    const handleCompositionend = (e: InputEvent | CompositionEvent) => {
+      inputValueChangeHandle(e as InputEvent);
+    };
+
+    watch(autofocus, (autofocus, prevAutofocus) => {
+      if (autofocus === true) {
+        nextTick(() => {
+          focused.value = true;
+        });
       }
     });
 
@@ -153,6 +181,7 @@ export default defineComponent({
       handleFocus,
       handleBlur,
       handleInput,
+      handleCompositionend,
     };
   },
 });

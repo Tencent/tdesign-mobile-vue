@@ -32,10 +32,11 @@
 
 <script lang="ts">
 import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TCloseIcon } from 'tdesign-icons-vue-next';
-import { ref, reactive, computed, defineComponent, nextTick } from 'vue';
+import { ref, reactive, computed, defineComponent, nextTick, watch, toRefs } from 'vue';
 import config from '../config';
 import TButton from '../button';
 import TInput from '../input';
+import { extendAPI } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-search`;
@@ -72,6 +73,8 @@ export default defineComponent({
       [`${prefix}-is-focused`]: !state.labelActive,
     }));
 
+    const searchInput = ref();
+
     const state = reactive({
       labelActive: true,
       inputVal: '',
@@ -97,32 +100,36 @@ export default defineComponent({
       },
     });
 
-    const searchInput = ref<null | HTMLInputElement>(null);
+    const focus = () => {
+      searchInput.value?.focus();
+    };
+
+    const blur = () => {
+      searchInput.value?.blur();
+    };
 
     const onClick = () => {
       curLabelActive.value = state.labelActive;
-      searchInput.value?.focus();
+      focus();
     };
 
     const onCancel = (e: Event) => {
       curLabelActive.value = state.labelActive;
       currentValue.value = '';
-      searchInput.value?.blur();
+      blur();
       emit('cancel', e);
     };
 
     const onClear = (e: Event) => {
       currentValue.value = '';
+      focus();
       emit('clear', e);
     };
 
-    if (props.autofocus) {
-      nextTick(() => {
-        onClick();
-      });
-    }
+    extendAPI({ focus, blur });
 
     return {
+      ...toRefs(props),
       name: ref(name),
       classes,
       onClick,

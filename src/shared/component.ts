@@ -1,4 +1,4 @@
-import { App, Plugin } from 'vue';
+import { App, Plugin, getCurrentInstance } from 'vue';
 
 export type WithInstallType<T> = T & Plugin;
 export const withInstall = <T>(comp: T): T & Plugin => {
@@ -13,3 +13,10 @@ export const withInstall = <T>(comp: T): T & Plugin => {
 };
 
 export default withInstall;
+
+export function extendAPI<T = Record<string, any>>(apis: T) {
+  const instance = getCurrentInstance();
+  if (instance) {
+    Object.assign(instance.proxy, apis);
+  }
+}

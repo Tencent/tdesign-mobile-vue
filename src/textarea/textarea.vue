@@ -11,7 +11,7 @@
       @focus="handleFocus"
       @blur="handleBlur"
       @input="handleInput"
-      @composition="handleCompositionend"
+      @compositionend="handleCompositionend"
     />
     <div v-if="maxcharacter || maxlength" :class="`${componentName}--count`">
       {{ `${textareaLength}/${maxcharacter || maxlength}` }}

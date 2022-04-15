@@ -17,7 +17,8 @@ export default {
     type: String as PropType<TdDialogProps['buttonLayout']>,
     default: 'horizontal' as TdDialogProps['buttonLayout'],
     validator(val: TdDialogProps['buttonLayout']): boolean {
-      return ['horizontal', 'vertical'].includes(val!);
+      if (!val) return true;
+      return ['horizontal', 'vertical'].includes(val);
     },
   },
   /** 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件 */
@@ -46,6 +47,8 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 【开发中】仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative */
+  showInAttachedElement: Boolean,
   /** 是否显示遮罩层 */
   showOverlay: {
     type: Boolean,

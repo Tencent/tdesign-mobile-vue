@@ -23,13 +23,13 @@
       <span v-if="'type' in navigation" :class="`${name}__pagination ${name}__pagination-${navigation.type || ''}`">
         <template v-if="['dots', 'dots-bar'].includes(navigation.type || '')">
           <span
-            v-for="(item, index) in paginationList"
+            v-for="(item, index) in state.children.length"
             :key="'page' + index"
             :class="{ [`${name}-dot`]: true, [`${name}-dot--active`]: index === state.activeIndex }"
           ></span>
         </template>
         <span v-if="navigation.type && navigation.type === 'fraction'">
-          {{ showPageNum + '/' + state.itemLength }}
+          {{ showPageNum + '/' + state.children.length }}
         </span>
       </span>
     </template>
@@ -39,7 +39,20 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive, getCurrentInstance, onMounted, computed, watch, ref, SetupContext } from 'vue';
+import {
+  defineComponent,
+  reactive,
+  getCurrentInstance,
+  onMounted,
+  computed,
+  watch,
+  ref,
+  SetupContext,
+  nextTick,
+  provide,
+  ComponentInternalInstance,
+  ComponentPublicInstance,
+} from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { SwipeDirection, useSwipe } from '@vueuse/core';
 import SwiperProps from './props';
@@ -72,12 +85,14 @@ export default defineComponent({
       itemWidth: number;
       isControl: boolean;
       btnDisabled: boolean;
+      children: ComponentPublicInstance[];
     } = reactive({
       activeIndex: 0,
       itemLength: 0,
       itemWidth: 0,
       isControl: false,
       btnDisabled: false,
+      children: [] as ComponentPublicInstance[],
     });
     const paginationList = computed(() => new Array(state.itemLength).fill(1));
     const showPageNum = computed(() => {
@@ -86,29 +101,47 @@ export default defineComponent({
       if (activeIndex < 0) return 1;
       return activeIndex + 1;
     });
+    const childCount = computed(() => state.children.length);
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
       const _swiperContainer = getContainer();
+      _swiperContainer.querySelectorAll('.copy-item').forEach((ele) => {
+        _swiperContainer.removeChild(ele);
+      });
       const items = _swiperContainer.querySelectorAll('.t-swiper-item');
-      const first = items[0].cloneNode(true);
-      const last = items[items.length - 1].cloneNode(true);
-      _swiperContainer.appendChild(first);
-      _swiperContainer.insertBefore(last, items[0]);
-      move(0);
-    };
-    onMounted(() => {
-      const _swiperContainer = getContainer();
       state.itemLength = _swiperContainer.children?.length || 0;
       const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
-      initSwiper();
+      if (items.length <= 0) return false;
+      const first = items[0].cloneNode(true) as HTMLDivElement;
+      first.classList.add('copy-item');
+      const last = items[items.length - 1].cloneNode(true) as HTMLDivElement;
+      last.classList.add('copy-item');
+      _swiperContainer.appendChild(first);
+      _swiperContainer.insertBefore(last, items[0]);
+      move(0);
       startAutoplay();
       if (typeof props.current === 'number') {
         state.isControl = true;
         next(props.current);
       }
+    };
+    onMounted(() => {
+      nextTick(() => {
+        console.info('swiper mounted');
+        initSwiper();
+      });
     });
+    watch(
+      () => state.children.length,
+      () => {
+        nextTick(() => {
+          console.info('swiper mounted');
+          initSwiper();
+        });
+      },
+    );
     // eslint-disable-next-line no-undef
     let autoplayTimer: number | NodeJS.Timeout | null = null;
     let actionIsTrust = true;
@@ -233,6 +266,15 @@ export default defineComponent({
       }
       startAutoplay();
     };
+    const relation = (child: ComponentInternalInstance) => {
+      if (child.proxy) {
+        state.children.push(child.proxy);
+      }
+    };
+    provide('parent', {
+      props,
+      relation,
+    });
     watch(
       () => props.current,
       (newPage, oldPage) => {
