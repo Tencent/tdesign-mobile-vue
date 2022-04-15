@@ -12,9 +12,9 @@ showCancel | Boolean | true | 是否显示取消按钮 | N
 theme | String | list | 展示类型，列表和表格形式展示。可选项：list/grid | N
 visible | Boolean | false | 必需。显示与隐藏。支持语法糖 `v-model` 或 `v-model:visible` | Y
 defaultVisible | Boolean | false | 必需。显示与隐藏。非受控属性 | Y
-onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击取消按钮时触发 | N
-onClose | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>关闭时触发 | N
-onSelected | Function |  | TS 类型：`(selected: ActionSheetItem | String, index: number) => void`<br/>选择菜单项时触发 | N
+onCancel | Function |  | 点击取消按钮时触发<br/>TS 类型：`(context: { e: MouseEvent }) => void` | N
+onClose | Function |  | 关闭时触发<br/>TS 类型：`(context: { e: MouseEvent }) => void` | N
+onSelected | Function |  | 选择菜单项时触发<br/>TS 类型：`(selected: ActionSheetItem | String, index: number) => void` | N
 
 ### ActionSheet Events
 
