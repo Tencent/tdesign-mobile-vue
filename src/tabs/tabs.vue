@@ -58,7 +58,6 @@ export default defineComponent({
   emits: ['onChange'],
   setup(props, { emit, slots }) {
     const placement = computed(() => props.placement);
-    console.log('placement', placement.value);
     const showBottomLine = computed(() => props.showBottomLine);
     const stickyProps = computed(() => ({ disabled: true, ...props.stickyProps }));
     const activeClass = CLASSNAMES.STATUS.active;
@@ -114,7 +113,6 @@ export default defineComponent({
         const tab = navWrap.value.querySelector<HTMLElement>(`.${activeClass}`);
         if (!tab) return;
         const line = navLine.value;
-        console.log('tab', Number(tab.offsetLeft) + Number(tab.offsetWidth) / 2 - line.offsetWidth / 2);
         if (placement.value === 'left') {
           lineStyle.value = `transform: translateY(${tab.offsetTop}px);${
             props.animation ? `transition-duration:${props.animation.duration}ms` : ''

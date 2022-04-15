@@ -8769,16 +8769,22 @@ exports[`ssr snapshot test renders ./src/list/demos/mobile.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="list-demo">
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">基础列表</div>
-            <div class="t-tabs__nav-item">错误提示</div>
-            <div class="t-tabs__nav-item">下拉刷新</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">基础列表</div>
+                <div class="t-tabs__nav-item">错误提示</div>
+                <div class="t-tabs__nav-item">下拉刷新</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -10320,16 +10326,22 @@ exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/mobile.vue corr
     <!--v-if-->
     <!--[-->
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">基础用法</div>
-            <div class="t-tabs__nav-item">自定义文案</div>
-            <div class="t-tabs__nav-item">超时事件</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">基础用法</div>
+                <div class="t-tabs__nav-item">自定义文案</div>
+                <div class="t-tabs__nav-item">超时事件</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17026,15 +17038,21 @@ exports[`ssr snapshot test renders ./src/tabs/demos/base.vue correctly 1`] = `
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-tabs t-is-top t-size-m">
-        <div class="t-tabs__nav">
-          <div class="t-tabs__nav-container">
-            <div class="t-tabs__nav-wrap">
-              <!--[-->
-              <div class="t-tabs__nav-item t-is-active">标签页一</div>
-              <div class="t-tabs__nav-item">标签页二</div>
-              <!--]-->
-              <div class="t-tabs__nav-line" style=""></div>
+        <div class="t-sticky" style="height:0px;">
+          <div style="z-index:99;">
+            <!--[-->
+            <div class="t-tabs__nav">
+              <div class="t-tabs__nav-container">
+                <div class="t-tabs__nav-wrap">
+                  <!--[-->
+                  <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                  <div class="t-tabs__nav-item">标签页二</div>
+                  <!--]-->
+                  <div class="t-tabs__nav-line" style=""></div>
+                </div>
+              </div>
             </div>
+            <!--]-->
           </div>
         </div>
         <div class="t-tabs__content">
@@ -17053,16 +17071,22 @@ exports[`ssr snapshot test renders ./src/tabs/demos/base.vue correctly 1`] = `
         </div>
       </div>
       <div class="t-tabs t-is-top t-size-m">
-        <div class="t-tabs__nav">
-          <div class="t-tabs__nav-container">
-            <div class="t-tabs__nav-wrap">
-              <!--[-->
-              <div class="t-tabs__nav-item t-is-active">标签页一</div>
-              <div class="t-tabs__nav-item">标签页二</div>
-              <div class="t-tabs__nav-item">标签页三</div>
-              <!--]-->
-              <div class="t-tabs__nav-line" style=""></div>
+        <div class="t-sticky" style="height:0px;">
+          <div style="z-index:99;">
+            <!--[-->
+            <div class="t-tabs__nav">
+              <div class="t-tabs__nav-container">
+                <div class="t-tabs__nav-wrap">
+                  <!--[-->
+                  <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                  <div class="t-tabs__nav-item">标签页二</div>
+                  <div class="t-tabs__nav-item">标签页三</div>
+                  <!--]-->
+                  <div class="t-tabs__nav-line" style=""></div>
+                </div>
+              </div>
             </div>
+            <!--]-->
           </div>
         </div>
         <div class="t-tabs__content">
@@ -17086,17 +17110,23 @@ exports[`ssr snapshot test renders ./src/tabs/demos/base.vue correctly 1`] = `
         </div>
       </div>
       <div class="t-tabs t-is-top t-size-m">
-        <div class="t-tabs__nav">
-          <div class="t-tabs__nav-container">
-            <div class="t-tabs__nav-wrap">
-              <!--[-->
-              <div class="t-tabs__nav-item t-is-active">标签页一</div>
-              <div class="t-tabs__nav-item">标签页二</div>
-              <div class="t-tabs__nav-item">标签页三</div>
-              <div class="t-tabs__nav-item">标签页四</div>
-              <!--]-->
-              <div class="t-tabs__nav-line" style=""></div>
+        <div class="t-sticky" style="height:0px;">
+          <div style="z-index:99;">
+            <!--[-->
+            <div class="t-tabs__nav">
+              <div class="t-tabs__nav-container">
+                <div class="t-tabs__nav-wrap">
+                  <!--[-->
+                  <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                  <div class="t-tabs__nav-item">标签页二</div>
+                  <div class="t-tabs__nav-item">标签页三</div>
+                  <div class="t-tabs__nav-item">标签页四</div>
+                  <!--]-->
+                  <div class="t-tabs__nav-line" style=""></div>
+                </div>
+              </div>
             </div>
+            <!--]-->
           </div>
         </div>
         <div class="t-tabs__content">
@@ -17135,17 +17165,23 @@ exports[`ssr snapshot test renders ./src/tabs/demos/base.vue correctly 1`] = `
 exports[`ssr snapshot test renders ./src/tabs/demos/horizontal.vue correctly 1`] = `
 <div class="demo-tab-bar">
   <div class="t-tabs t-is-left t-size-m">
-    <div class="t-tabs__nav">
-      <div class="t-tabs__nav-container">
-        <div class="t-tabs__nav-wrap">
-          <!--[-->
-          <div class="t-tabs__nav-item t-is-active">标签页一</div>
-          <div class="t-tabs__nav-item">标签页二</div>
-          <div class="t-tabs__nav-item">标签页三</div>
-          <div class="t-tabs__nav-item">标签页四</div>
-          <!--]-->
-          <div class="t-tabs__nav-line" style=""></div>
+    <div class="t-sticky" style="height:0px;">
+      <div style="z-index:99;">
+        <!--[-->
+        <div class="t-tabs__nav">
+          <div class="t-tabs__nav-container">
+            <div class="t-tabs__nav-wrap">
+              <!--[-->
+              <div class="t-tabs__nav-item t-is-active">标签页一</div>
+              <div class="t-tabs__nav-item">标签页二</div>
+              <div class="t-tabs__nav-item">标签页三</div>
+              <div class="t-tabs__nav-item">标签页四</div>
+              <!--]-->
+              <div class="t-tabs__nav-line" style=""></div>
+            </div>
+          </div>
         </div>
+        <!--]-->
       </div>
     </div>
     <div class="t-tabs__content">
@@ -17185,17 +17221,23 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
     <p class="tdesign-mobile-demo-block__summary">横向选项卡</p>
     <!--[-->
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">
-              <div>标签一内容区</div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;position:fixed;top:0px;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">
+                  <div>标签一内容区</div>
+                </div>
+                <div class="t-tabs__nav-item"> 标签页一内容区 </div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
             </div>
-            <div class="t-tabs__nav-item"> 标签页一内容区 </div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17214,16 +17256,22 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
       </div>
     </div>
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17247,17 +17295,23 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
       </div>
     </div>
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <div class="t-tabs__nav-item">标签页四</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <div class="t-tabs__nav-item">标签页四</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17292,22 +17346,28 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
     <p class="tdesign-mobile-demo-block__summary">超过屏幕滑动</p>
     <!--[-->
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <div class="t-tabs__nav-item">标签页四</div>
-            <div class="t-tabs__nav-item">标签页五</div>
-            <div class="t-tabs__nav-item">标签页六</div>
-            <div class="t-tabs__nav-item">标签页七</div>
-            <div class="t-tabs__nav-item">标签页八</div>
-            <div class="t-tabs__nav-item">标签页九</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <div class="t-tabs__nav-item">标签页四</div>
+                <div class="t-tabs__nav-item">标签页五</div>
+                <div class="t-tabs__nav-item">标签页六</div>
+                <div class="t-tabs__nav-item">标签页七</div>
+                <div class="t-tabs__nav-item">标签页八</div>
+                <div class="t-tabs__nav-item">标签页九</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17367,22 +17427,28 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
     <p class="tdesign-mobile-demo-block__summary">无下划线</p>
     <!--[-->
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <div class="t-tabs__nav-item">标签页四</div>
-            <div class="t-tabs__nav-item">标签页五</div>
-            <div class="t-tabs__nav-item">标签页六</div>
-            <div class="t-tabs__nav-item">标签页七</div>
-            <div class="t-tabs__nav-item">标签页八</div>
-            <div class="t-tabs__nav-item">标签页九</div>
-            <!--]-->
-            <!--v-if-->
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <div class="t-tabs__nav-item">标签页四</div>
+                <div class="t-tabs__nav-item">标签页五</div>
+                <div class="t-tabs__nav-item">标签页六</div>
+                <div class="t-tabs__nav-item">标签页七</div>
+                <div class="t-tabs__nav-item">标签页八</div>
+                <div class="t-tabs__nav-item">标签页九</div>
+                <!--]-->
+                <!--v-if-->
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17442,17 +17508,23 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
     <p class="tdesign-mobile-demo-block__summary">运动时间可调整</p>
     <!--[-->
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <div class="t-tabs__nav-item">标签页四</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <div class="t-tabs__nav-item">标签页四</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17487,16 +17559,22 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
     <p class="tdesign-mobile-demo-block__summary">选项卡状态</p>
     <!--[-->
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">标签页一</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item t-is-disabled">标签页三</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">标签页一</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item t-is-disabled">标签页三</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17526,18 +17604,24 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
     <p class="tdesign-mobile-demo-block__summary">竖向选项卡</p>
     <!--[-->
     <div class="t-tabs t-is-left t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item">标签页一</div>
-            <div class="t-tabs__nav-item t-is-active">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <div class="t-tabs__nav-item">标签页四</div>
-            <div class="t-tabs__nav-item">标签页五</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item">标签页一</div>
+                <div class="t-tabs__nav-item t-is-active">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <div class="t-tabs__nav-item">标签页四</div>
+                <div class="t-tabs__nav-item">标签页五</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17577,16 +17661,22 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
     <p class="tdesign-mobile-demo-block__summary">选中态文字尺寸规格</p>
     <!--[-->
     <div class="t-tabs t-is-top t-size-l">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">大尺寸</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">大尺寸</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17610,16 +17700,22 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
       </div>
     </div>
     <div class="t-tabs t-is-top t-size-m">
-      <div class="t-tabs__nav">
-        <div class="t-tabs__nav-container">
-          <div class="t-tabs__nav-wrap">
-            <!--[-->
-            <div class="t-tabs__nav-item t-is-active">小尺寸</div>
-            <div class="t-tabs__nav-item">标签页二</div>
-            <div class="t-tabs__nav-item">标签页三</div>
-            <!--]-->
-            <div class="t-tabs__nav-line" style=""></div>
+      <div class="t-sticky" style="height:0px;">
+        <div style="z-index:99;">
+          <!--[-->
+          <div class="t-tabs__nav">
+            <div class="t-tabs__nav-container">
+              <div class="t-tabs__nav-wrap">
+                <!--[-->
+                <div class="t-tabs__nav-item t-is-active">小尺寸</div>
+                <div class="t-tabs__nav-item">标签页二</div>
+                <div class="t-tabs__nav-item">标签页三</div>
+                <!--]-->
+                <div class="t-tabs__nav-line" style=""></div>
+              </div>
+            </div>
           </div>
+          <!--]-->
         </div>
       </div>
       <div class="t-tabs__content">
@@ -17650,22 +17746,28 @@ exports[`ssr snapshot test renders ./src/tabs/demos/mobile.vue correctly 1`] = `
 exports[`ssr snapshot test renders ./src/tabs/demos/scroll.vue correctly 1`] = `
 <div class="demo-tab-bar">
   <div class="t-tabs t-is-top t-size-m" active-name="1">
-    <div class="t-tabs__nav">
-      <div class="t-tabs__nav-container">
-        <div class="t-tabs__nav-wrap">
-          <!--[-->
-          <div class="t-tabs__nav-item t-is-active">标签页一</div>
-          <div class="t-tabs__nav-item t-is-active t-is-disabled">标签页二</div>
-          <div class="t-tabs__nav-item t-is-active">标签页三</div>
-          <div class="t-tabs__nav-item t-is-active">标签页四</div>
-          <div class="t-tabs__nav-item t-is-active">标签页五</div>
-          <div class="t-tabs__nav-item t-is-active">标签页六</div>
-          <div class="t-tabs__nav-item t-is-active">标签页七</div>
-          <div class="t-tabs__nav-item t-is-active">标签页八</div>
-          <div class="t-tabs__nav-item t-is-active">标签页九</div>
-          <!--]-->
-          <div class="t-tabs__nav-line" style=""></div>
+    <div class="t-sticky" style="height:0px;">
+      <div style="z-index:99;">
+        <!--[-->
+        <div class="t-tabs__nav">
+          <div class="t-tabs__nav-container">
+            <div class="t-tabs__nav-wrap">
+              <!--[-->
+              <div class="t-tabs__nav-item t-is-active">标签页一</div>
+              <div class="t-tabs__nav-item t-is-active t-is-disabled">标签页二</div>
+              <div class="t-tabs__nav-item t-is-active">标签页三</div>
+              <div class="t-tabs__nav-item t-is-active">标签页四</div>
+              <div class="t-tabs__nav-item t-is-active">标签页五</div>
+              <div class="t-tabs__nav-item t-is-active">标签页六</div>
+              <div class="t-tabs__nav-item t-is-active">标签页七</div>
+              <div class="t-tabs__nav-item t-is-active">标签页八</div>
+              <div class="t-tabs__nav-item t-is-active">标签页九</div>
+              <!--]-->
+              <div class="t-tabs__nav-line" style=""></div>
+            </div>
+          </div>
         </div>
+        <!--]-->
       </div>
     </div>
     <div class="t-tabs__content">
