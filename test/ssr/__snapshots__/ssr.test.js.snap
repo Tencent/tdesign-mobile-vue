@@ -8821,9 +8821,11 @@ exports[`ssr snapshot test renders ./src/list/demos/mobile.vue correctly 1`] = `
           <!--[-->
           <div class="pull-refresh-wrap">
             <div class="t-pull-down-refresh">
-              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-                <div class="t-pull-down-refresh__tips" style="height:50px;">
-                  <div></div>
+              <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+                <div class="t-pull-down-refresh__max" style="height:80px;">
+                  <div class="t-pull-down-refresh__loading" style="height:50px;">
+                    <div></div>
+                  </div>
                 </div>
                 <!--[-->
                 <div class="t-list">
@@ -8850,9 +8852,11 @@ exports[`ssr snapshot test renders ./src/list/demos/mobile.vue correctly 1`] = `
 
 exports[`ssr snapshot test renders ./src/list/demos/pull-refresh.vue correctly 1`] = `
 <div class="t-pull-down-refresh">
-  <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-    <div class="t-pull-down-refresh__tips" style="height:50px;">
-      <div></div>
+  <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+    <div class="t-pull-down-refresh__max" style="height:80px;">
+      <div class="t-pull-down-refresh__loading" style="height:50px;">
+        <div></div>
+      </div>
     </div>
     <!--[-->
     <div class="t-list">
@@ -10283,9 +10287,11 @@ exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/base.vue correc
     <!--v-if-->
     <!--[-->
     <div class="t-pull-down-refresh">
-      <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-        <div class="t-pull-down-refresh__tips" style="height:50px;">
-          <div></div>
+      <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+        <div class="t-pull-down-refresh__max" style="height:80px;">
+          <div class="t-pull-down-refresh__loading" style="height:50px;">
+            <div></div>
+          </div>
         </div>
         <!--[-->下拉刷新
         <!--]-->
@@ -10303,9 +10309,11 @@ exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/loading-texts.v
     <!--v-if-->
     <!--[-->
     <div class="t-pull-down-refresh">
-      <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-        <div class="t-pull-down-refresh__tips" style="height:70px;">
-          <div></div>
+      <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+        <div class="t-pull-down-refresh__max" style="height:100px;">
+          <div class="t-pull-down-refresh__loading" style="height:70px;">
+            <div></div>
+          </div>
         </div>
         <!--[-->下拉刷新
         <!--]-->
@@ -10350,9 +10358,11 @@ exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/mobile.vue corr
           <!--[-->
           <div class="refresh-content">
             <div class="t-pull-down-refresh demo-pull-down-refresh">
-              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-                <div class="t-pull-down-refresh__tips" style="height:50px;">
-                  <div></div>
+              <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+                <div class="t-pull-down-refresh__max" style="height:80px;">
+                  <div class="t-pull-down-refresh__loading" style="height:50px;">
+                    <div></div>
+                  </div>
                 </div>
                 <!--[-->
                 <div class="content-text">已下拉0次</div>
@@ -10366,9 +10376,11 @@ exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/mobile.vue corr
           <!--[-->
           <div class="refresh-content">
             <div class="t-pull-down-refresh demo-pull-down-refresh">
-              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-                <div class="t-pull-down-refresh__tips" style="height:50px;">
-                  <div></div>
+              <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+                <div class="t-pull-down-refresh__max" style="height:80px;">
+                  <div class="t-pull-down-refresh__loading" style="height:50px;">
+                    <div></div>
+                  </div>
                 </div>
                 <!--[-->
                 <div class="content-text">已下拉0次</div>
@@ -10382,9 +10394,11 @@ exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/mobile.vue corr
           <!--[-->
           <div class="refresh-content">
             <div class="t-pull-down-refresh demo-pull-down-refresh">
-              <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-                <div class="t-pull-down-refresh__tips" style="height:50px;">
-                  <div></div>
+              <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+                <div class="t-pull-down-refresh__max" style="height:80px;">
+                  <div class="t-pull-down-refresh__loading" style="height:50px;">
+                    <div></div>
+                  </div>
                 </div>
                 <!--[-->
                 <div class="content-text">已下拉0次</div>
@@ -10409,9 +10423,11 @@ exports[`ssr snapshot test renders ./src/pull-down-refresh/demos/timeout.vue cor
     <!--v-if-->
     <!--[-->
     <div class="t-pull-down-refresh">
-      <div class="t-pull-down-refresh__track" style="transition-duration:0ms;transform:;">
-        <div class="t-pull-down-refresh__tips" style="height:50px;">
-          <div></div>
+      <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
+        <div class="t-pull-down-refresh__max" style="height:80px;">
+          <div class="t-pull-down-refresh__loading" style="height:50px;">
+            <div></div>
+          </div>
         </div>
         <!--[-->下拉刷新
         <!--]-->
