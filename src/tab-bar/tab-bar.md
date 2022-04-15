@@ -21,7 +21,7 @@ change | - | 选中标签切换时触发
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
-badgeProps | Object | - | 图标右上角提示信息。TS 类型：`TdBadgeProps` `import { TdBadgeProps } from '../Badge'`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tab-bar/type.ts) | N
+badgeProps | Object | - | 图标右上角提示信息。TS 类型：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tab-bar/type.ts) | N
 icon | Slot / Function | - | 图标名称。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 subTabBar | Array | - | 二级菜单。TS 类型：`SubTabBarItem[] ` `interface SubTabBarItem { value: string; label: string }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/tab-bar/type.ts) | N
 value | String / Number | - | 标识符 | N
