@@ -91,7 +91,8 @@ export default defineComponent({
     const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
     // prefix-icon
     let computedPrefixIcon: any;
-    if (props.prefixIcon !== '') {
+    // eslint-disable-next-line
+    if (props.prefixIcon as unknown as string !== '') {
       if (props.theme) {
         if (Object.keys(iconDefault).includes(props.theme)) {
           // eslint-disable-next-line
