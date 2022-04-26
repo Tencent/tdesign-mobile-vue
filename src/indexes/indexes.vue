@@ -1,43 +1,35 @@
 <template>
-  <div ref="indexesRoot" :style="{ height: height + 'px' }" :class="state.componentName" @scroll="handleRootScroll">
+  <div ref="indexesRoot" :style="indexesRootStyle" :class="componentName" @scroll="handleRootScroll">
     <div
-      v-if="state.list.length > 0"
-      :class="`${state.componentName}__sidebar`"
+      v-if="list.length > 0"
+      :class="`${componentName}__sidebar`"
       @touchstart="handleSidebarTouchstart"
       @touchmove="handleSidebarTouchmove"
     >
       <div
-        v-for="item in state.list"
+        v-for="item in list"
         :key="item.index"
         :class="[
-          `${state.componentName}__sidebar-item`,
-          state.activeSidebar === item.index ? `${state.componentName}__sidebar-item--active` : '',
+          `${componentName}__sidebar-item`,
+          activeSidebar === item.index ? `${componentName}__sidebar-item--active` : '',
         ]"
         :data-index="item.index"
         @click.prevent="handleSidebarItemClick(item.index)"
       >
         {{ item.index }}
-        <div
-          v-if="state.showSidebarTip && state.activeSidebar === item.index"
-          :class="`${state.componentName}__sidebar-tip`"
-        >
-          <span :class="`${state.componentName}__sidebar-tip-text`">
-            {{ state.activeSidebar }}
+        <div v-if="showSidebarTip && activeSidebar === item.index" :class="`${componentName}__sidebar-tip`">
+          <span :class="`${componentName}__sidebar-tip-text`">
+            {{ activeSidebar }}
           </span>
         </div>
       </div>
     </div>
 
-    <div
-      v-for="(item, index) in state.list"
-      :ref="(el) => (anchor[index] = el)"
-      :key="item.index"
-      :data-index="item.index"
-    >
-      <div :class="[`${state.componentName}__anchor`]">
+    <div v-for="(item, index) in list" :ref="setAnchorRefs(index)" :key="item.index" :data-index="item.index">
+      <div :class="[`${componentName}__anchor`]">
         {{ item.title ?? item.index }}
       </div>
-      <div :class="[`${state.componentName}__group`]">
+      <div :class="[`${componentName}__group`]">
         <t-indexes-cell
           v-for="(child, childrenIndex) in item.children"
           :key="child.title"
@@ -53,10 +45,22 @@
 </template>
 
 <script lang="ts">
-import { ref, reactive, defineComponent, PropType, onMounted, watchEffect } from 'vue';
+import {
+  ref,
+  reactive,
+  defineComponent,
+  PropType,
+  onMounted,
+  watchEffect,
+  computed,
+  onBeforeUnmount,
+  toRefs,
+  SetupContext,
+} from 'vue';
 import config from '../config';
 import { ListItem } from './type';
 import IndexesProps from './props';
+import { useEmitEvent } from '../shared';
 
 const { prefix } = config;
 
@@ -90,7 +94,8 @@ export default defineComponent({
   name: componentName,
   props: IndexesProps,
   emits: ['select'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     let timeOut: number;
     const indexesRoot = ref<null | HTMLElement>(null);
     const state: State = reactive({
@@ -101,9 +106,23 @@ export default defineComponent({
     });
     const anchor = ref<HTMLElement[]>([]);
 
+    const setAnchorRefs = (index: number) => {
+      return (el: any) => {
+        anchor.value[index] = el as HTMLElement;
+      };
+    };
+
+    const indexesRootStyle = computed(() => {
+      if (typeof props.height !== 'number') {
+        return {};
+      }
+      const height = Number(props.height);
+      return { height: height === 0 ? 0 : `${height}px` };
+    });
+
     const scrollToView = (): void => {
       const children = anchor.value;
-      const targets = children.filter((ele: HTMLElement) => {
+      const targets = children.filter((ele) => {
         const { dataset } = ele;
         return dataset && dataset.index === state.activeSidebar;
       });
@@ -133,16 +152,6 @@ export default defineComponent({
     watchEffect(() => {
       if (state.showSidebarTip) {
         clearSidebarTip();
-      }
-    });
-
-    onMounted(() => {
-      const children = anchor.value;
-      if (children.length > 0) {
-        const { index } = children[0].dataset;
-        if (index !== undefined) {
-          state.activeSidebar = index;
-        }
       }
     });
 
@@ -189,13 +198,28 @@ export default defineComponent({
     };
 
     const handleCellClick = (indexes: { groupIndex: string; childrenIndex: number }) => {
-      context.emit('select', indexes);
+      emitEvent('select', indexes);
     };
 
+    onMounted(() => {
+      const children = anchor.value;
+      if (children.length > 0) {
+        const { index } = children[0].dataset;
+        if (index !== undefined) {
+          state.activeSidebar = index;
+        }
+      }
+    });
+    onBeforeUnmount(() => {
+      timeOut && clearTimeout(timeOut);
+    });
+
     return {
-      state,
+      ...toRefs(state),
       indexesRoot,
+      indexesRootStyle,
       anchor,
+      setAnchorRefs,
       handleSidebarItemClick,
       handleSidebarTouchmove,
       handleSidebarTouchstart,
