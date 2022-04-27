@@ -28,7 +28,7 @@ export { default as DateTimePicker } from './date-time-picker';
 export { default as Toast } from './toast';
 export { default as Search } from './search';
 export { Steps, Step } from './steps';
-export { Indexes, IndexesCell, IndexesAnchor } from './indexes';
+export { Indexes, IndexesCell } from './indexes';
 export { Picker, PickerItem } from './picker';
 export { Tag, CheckTag } from './tag';
 export { TabBar, TabBarItem } from './tab-bar';

@@ -53,6 +53,12 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Indexes 索引',
+          name: 'indexes',
+          path: '/mobile-vue/components/indexes',
+          component: () => import('@/indexes/indexes.md'),
+        },
+        {
           title: 'Navbar 导航条',
           name: 'navbar',
           path: '/mobile-vue/components/navbar',
