@@ -1,40 +1,66 @@
 <template>
-  <div
-    ref="indexesRoot"
-    :class="state.componentName"
-    @touchstart="handleRootTouchstart"
-    @touchend="handleRootTouchend"
-    @scroll="handleRootScroll"
-  >
+  <div ref="indexesRoot" :style="indexesRootStyle" :class="componentName" @scroll="handleRootScroll">
     <div
-      v-if="state.indexList.length > 0"
-      :class="`${state.componentName}__sidebar`"
+      v-if="list.length > 0"
+      :class="`${componentName}__sidebar`"
       @touchstart="handleSidebarTouchstart"
       @touchmove="handleSidebarTouchmove"
     >
       <div
-        v-for="item in state.indexList"
-        :key="item"
+        v-for="item in list"
+        :key="item.index"
         :class="[
-          `${state.componentName}__sidebar-item`,
-          state.currentSidebar === item ? `${state.componentName}__sidebar-item--active` : '',
+          `${componentName}__sidebar-item`,
+          activeSidebar === item.index ? `${componentName}__sidebar-item--active` : '',
         ]"
-        :data-index="item"
-        @click.prevent="handleSidebarItemClick(item)"
+        :data-index="item.index"
+        @click.prevent="handleSidebarItemClick(item.index)"
       >
-        {{ item }}
+        {{ item.index }}
+        <div v-if="showSidebarTip && activeSidebar === item.index" :class="`${componentName}__sidebar-tip`">
+          <span :class="`${componentName}__sidebar-tip-text`">
+            {{ activeSidebar }}
+          </span>
+        </div>
       </div>
     </div>
-    <div v-if="state.showCurrentSidebar" :class="`${state.componentName}__current`">
-      {{ state.currentSidebar }}
+
+    <div v-for="(item, index) in list" :ref="setAnchorRefs(index)" :key="item.index" :data-index="item.index">
+      <div :class="[`${componentName}__anchor`]">
+        {{ item.title ?? item.index }}
+      </div>
+      <div :class="[`${componentName}__group`]">
+        <t-indexes-cell
+          v-for="(child, childrenIndex) in item.children"
+          :key="child.title"
+          :value="String(child.title)"
+          :title="child.title"
+          :link="true"
+          :bordered="false"
+          @click="handleCellClick({ groupIndex: item.index, childrenIndex: childrenIndex })"
+        />
+      </div>
     </div>
-    <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, reactive, defineComponent, PropType, onMounted, watchEffect } from 'vue';
+import {
+  ref,
+  reactive,
+  defineComponent,
+  PropType,
+  onMounted,
+  watchEffect,
+  computed,
+  onBeforeUnmount,
+  toRefs,
+  SetupContext,
+} from 'vue';
 import config from '../config';
+import { ListItem } from './type';
+import IndexesProps from './props';
+import { useEmitEvent } from '../shared';
 
 const { prefix } = config;
 
@@ -48,10 +74,9 @@ interface Touch {
 }
 interface State {
   componentName: string;
-  indexList: Array<string>;
-  children: Array<Record<string, unknown>>;
-  showCurrentSidebar: boolean;
-  currentSidebar: string;
+  list: ListItem[];
+  showSidebarTip: boolean;
+  activeSidebar: string;
 }
 
 const touch: Touch = {
@@ -63,161 +88,143 @@ const touch: Touch = {
   offsetY: 0,
 };
 
-let children: Array<HTMLElement> = [];
 const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
   name: componentName,
-  props: {
-    indexList: {
-      type: Array as PropType<Array<string>>,
-      default: () => [],
-    },
-  },
-  setup(props, context) {
+  props: IndexesProps,
+  emits: ['select'],
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     let timeOut: number;
-    let cacheTimer: number;
-    let rootScrollMask = false;
     const indexesRoot = ref<null | HTMLElement>(null);
     const state: State = reactive({
       componentName,
-      indexList: props.indexList,
-      showCurrentSidebar: false,
-      currentSidebar: '',
-      children: [],
+      list: props.list,
+      showSidebarTip: false,
+      activeSidebar: '',
     });
+    const anchor = ref<HTMLElement[]>([]);
 
-    const inertiaScroll = () => {
-      const target: null | HTMLElement = indexesRoot?.value;
-      const { scrollTop } = target || { scrollTop: 0 };
-      cacheTimer && clearTimeout(cacheTimer);
-      cacheTimer = window.setTimeout(() => {
-        const currentTarget = indexesRoot?.value;
-        const { scrollTop: currentScrollTop } = currentTarget || { scrollTop: 0 };
-        if (scrollTop === currentScrollTop) {
-          // 停止滚动
-        } else {
-          // 继续滚动
-          inertiaScroll();
-          calcChildPosition(scrollTop);
-        }
-      }, 100);
+    const setAnchorRefs = (index: number) => {
+      return (el: any) => {
+        anchor.value[index] = el as HTMLElement;
+      };
     };
 
+    const indexesRootStyle = computed(() => {
+      if (typeof props.height !== 'number') {
+        return {};
+      }
+      const height = Number(props.height);
+      return { height: height === 0 ? 0 : `${height}px` };
+    });
+
     const scrollToView = (): void => {
-      const children = getTitleNode();
-      // console.log('children', children)
-      const targets = children.filter((ele: HTMLElement) => {
+      const children = anchor.value;
+      const targets = children.filter((ele) => {
         const { dataset } = ele;
-        // console.log("dataset", dataset)
-        return dataset && dataset.index === state.currentSidebar;
+        return dataset && dataset.index === state.activeSidebar;
       });
-      // console.log('targets', targets)
       targets[0]?.scrollIntoView();
     };
 
     const calcChildPosition = (scrollTop: number) => {
-      const children = getTitleNode();
-      let currentTarget = '';
-      children.forEach((ele) => {
-        const { offsetTop, clientHeight } = ele;
-        const targetClientVertical = offsetTop - clientHeight;
-        if (currentTarget === '' && targetClientVertical > 0) {
-          currentTarget = children[0].dataset.index ?? '';
-        } else if (targetClientVertical < scrollTop) {
-          currentTarget = ele.dataset.index ?? '';
+      const children = anchor.value;
+      let currentIndex = '';
+      for (let i = 0; i < children.length - 1; i++) {
+        if (scrollTop < children[i + 1].offsetTop) {
+          currentIndex = children[i].dataset.index ?? '';
+          break;
         }
-      });
-
-      setCurrentSidebar(currentTarget);
+      }
+      if (scrollTop >= children[children.length - 1].offsetTop) {
+        currentIndex = children[children.length - 1].dataset.index ?? '';
+      }
+      state.activeSidebar = currentIndex;
     };
 
-    const getTitleNode = () =>
-      Array.from(document.getElementsByClassName(`${componentName}__anchor`)).filter(
-        (x): x is HTMLElement => x instanceof HTMLElement,
-      );
-
-    const setCurrentSidebar = (index: string) => {
-      state.currentSidebar = index;
-      state.showCurrentSidebar = true;
+    const setActiveSidebarAndTip = (index: string) => {
+      state.activeSidebar = index;
+      state.showSidebarTip = true;
     };
 
     watchEffect(() => {
-      if (state.showCurrentSidebar) {
-        clearCurrentSidebarToast();
-      }
-    });
-
-    onMounted(() => {
-      children = getTitleNode();
-      if (children.length > 0) {
-        const { index } = children[0].dataset;
-        if (index !== undefined) {
-          state.currentSidebar = index;
-        }
+      if (state.showSidebarTip) {
+        clearSidebarTip();
       }
     });
 
     const handleSidebarItemClick = (index: string) => {
-      setCurrentSidebar(index);
+      setActiveSidebarAndTip(index);
       scrollToView();
     };
 
     const handleSidebarTouchstart = (event: TouchEvent): void => {
+      event.stopPropagation();
       const { touches } = event;
       touch.startX = touches[0].clientX;
       touch.startY = touches[0].clientX;
     };
 
     const handleSidebarTouchmove = (event: TouchEvent): void => {
+      event.preventDefault();
       const { touches } = event;
       const { clientX, clientY } = touches[0];
 
       const target = document.elementFromPoint(clientX, clientY);
       if (target && target.className === `${componentName}__sidebar-item` && target instanceof HTMLElement) {
         const { index } = target.dataset;
-        if (index !== undefined && state.currentSidebar !== index) {
-          setCurrentSidebar(index);
+        if (index !== undefined && state.activeSidebar !== index) {
+          setActiveSidebarAndTip(index);
           scrollToView();
         }
       }
     };
 
     const handleRootScroll = (event: UIEvent) => {
-      if (!rootScrollMask) {
-        return;
-      }
       if (indexesRoot.value) {
         calcChildPosition(indexesRoot.value.scrollTop);
       }
     };
 
-    const handleRootTouchstart = () => {
-      rootScrollMask = true;
-    };
-    const handleRootTouchend = () => {
-      rootScrollMask = false;
-      inertiaScroll();
-    };
-
-    const clearCurrentSidebarToast = (): void => {
-      if (state.showCurrentSidebar && state.currentSidebar) {
+    const clearSidebarTip = (): void => {
+      if (state.showSidebarTip && state.activeSidebar) {
         timeOut && clearTimeout(timeOut);
         timeOut = window.setTimeout(() => {
-          state.showCurrentSidebar = false;
-        }, 2000);
+          state.showSidebarTip = false;
+        }, 1000);
       }
     };
 
+    const handleCellClick = (indexes: { groupIndex: string; childrenIndex: number }) => {
+      emitEvent('select', indexes);
+    };
+
+    onMounted(() => {
+      const children = anchor.value;
+      if (children.length > 0) {
+        const { index } = children[0].dataset;
+        if (index !== undefined) {
+          state.activeSidebar = index;
+        }
+      }
+    });
+    onBeforeUnmount(() => {
+      timeOut && clearTimeout(timeOut);
+    });
+
     return {
-      state,
+      ...toRefs(state),
       indexesRoot,
-      handleRootTouchend,
-      handleRootTouchstart,
+      indexesRootStyle,
+      anchor,
+      setAnchorRefs,
       handleSidebarItemClick,
       handleSidebarTouchmove,
       handleSidebarTouchstart,
       handleRootScroll,
+      handleCellClick,
     };
   },
 });
