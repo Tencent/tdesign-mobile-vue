@@ -5360,7 +5360,7 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/mobile.vue correctly
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/indexes/demos/base-indexes.vue correctly 1`] = `
+exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = `
 <div class="component-wrap">
   <div style="" class="t-indexes">
     <div class="t-indexes__sidebar">
@@ -5602,7 +5602,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base-indexes.vue correctl
 
 exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] = `
 <div class="component-wrap">
-  <div style="height:200px;" class="t-indexes">
+  <div style="" class="t-indexes">
     <div class="t-indexes__sidebar">
       <!--[-->
       <div class="t-indexes__sidebar-item" data-index="A">A
