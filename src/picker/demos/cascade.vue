@@ -101,5 +101,8 @@ const onConfirm = (e: CustomEvent) => {
   state.show = false;
 };
 
-const onCancel = () => ToastPlugin({ message: '已取消' });
+const onCancel = () => {
+  ToastPlugin({ message: '已取消' });
+  state.show = false;
+};
 </script>
