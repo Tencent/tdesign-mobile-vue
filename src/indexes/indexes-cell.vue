@@ -1,5 +1,11 @@
 <template>
-  <t-cell :data-key="state.key" :title="state.title" :value="state.value" :link="state.link" @click="handleClick" />
+  <t-cell
+    :class="state.componentName"
+    :data-key="state.key"
+    :title="state.title"
+    :value="state.value"
+    :link="state.link"
+  />
 </template>
 
 <script lang="ts">
@@ -9,10 +15,10 @@ import config from '../config';
 
 const { prefix } = config;
 
-const name = `${prefix}-indexes-cell`;
+const componentName = `${prefix}-indexes-cell`;
 
 export default defineComponent({
-  name,
+  name: componentName,
   components: { TCell },
   props: {
     title: {
@@ -34,25 +40,16 @@ export default defineComponent({
   },
   setup(props, context) {
     const currentSidebar = '';
-    const { emit } = context;
     const state = reactive({
       title: props.title,
       value: props.value,
       link: props.link,
       key: props.key,
+      componentName,
     });
-
-    const handleClick = () => {
-      emit('click', {
-        key: props.key,
-        value: props.value,
-        title: props.title,
-      });
-    };
 
     return {
       state,
-      handleClick,
       currentSidebar,
     };
   },
