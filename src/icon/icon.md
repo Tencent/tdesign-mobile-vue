@@ -7,3 +7,5 @@
 ```bash
 npm i tdesign-icons-vue-next
 ```
+
+所有图标详情见：[https://tdesign.tencent.com/design/icon](https://tdesign.tencent.com/design/icon)
