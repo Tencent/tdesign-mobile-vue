@@ -5374,7 +5374,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
       <!--]-->
     </div>
     <!--[-->
-    <div ref_for="true" data-index="A">
+    <div data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5462,7 +5462,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="B">
+    <div data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5629,7 +5629,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
       <!--]-->
     </div>
     <!--[-->
-    <div ref_for="true" data-index="A">
+    <div data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5717,7 +5717,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="B">
+    <div data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5850,7 +5850,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="C">
+    <div data-index="C">
       <div class="t-indexes__anchor">C开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6028,7 +6028,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="D">
+    <div data-index="D">
       <div class="t-indexes__anchor">D开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6152,7 +6152,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="E">
+    <div data-index="E">
       <div class="t-indexes__anchor">E开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6186,7 +6186,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="F">
+    <div data-index="F">
       <div class="t-indexes__anchor">F开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6256,7 +6256,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="G">
+    <div data-index="G">
       <div class="t-indexes__anchor">G开头</div>
       <div class="t-indexes__group">
         <!--[-->
