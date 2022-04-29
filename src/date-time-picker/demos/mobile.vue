@@ -7,7 +7,7 @@
       <t-popup v-model="show.ymdhms" placement="bottom">
         <t-date-time-picker
           v-model="text.ymdhms"
-          :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
+          :mode="mode"
           title="选择日期时间"
           :show-week="true"
           @change="onChange"
@@ -20,7 +20,7 @@
       <t-popup v-model="show.ymd" placement="bottom">
         <t-date-time-picker
           v-model="text.ymd"
-          :mode="['year', 'month', 'date']"
+          :mode="mode.slice(0, 3)"
           title="选择年月日"
           @change="onChange"
           @column-change="onColumnChange"
@@ -32,7 +32,7 @@
       <t-popup v-model="show.ym" placement="bottom">
         <t-date-time-picker
           v-model="text.ym"
-          :mode="['year', 'month']"
+          :mode="mode.slice(0, 2)"
           title="选择年月"
           @change="onChange"
           @column-change="onColumnChange"
@@ -44,7 +44,7 @@
       <t-popup v-model="show.hm" placement="bottom">
         <t-date-time-picker
           v-model="text.hm"
-          :mode="['hour', 'minute']"
+          :mode="mode.slice(3, 5)"
           title="选择时分"
           @change="onChange"
           @column-change="onColumnChange"
@@ -59,7 +59,7 @@
       <t-popup v-model="show.ymd2" placement="bottom">
         <t-date-time-picker
           v-model="text.ymd2"
-          :mode="['year', 'month', 'date']"
+          :mode="mode.slice(0, 3)"
           title="选择日期"
           :disable-date="{
             before: '2019-05-15',
@@ -75,11 +75,13 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
-import { DateValue } from '../type';
+import { defineComponent, reactive, ref } from 'vue';
+import { DateValue, DatePickerColumnChangeContext } from '../type';
 
+const modeArray = ['year', 'month', 'date', 'hour', 'minute', 'second'];
 export default defineComponent({
   setup() {
+    const mode = ref(modeArray);
     const show = reactive({
       ymdhms: false,
       ymd: false,
@@ -101,8 +103,8 @@ export default defineComponent({
       console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = ({ value, index }: { value: DateValue; index: number }) => {
-      console.log('date-time-picker:columnChange', value, index);
+    const onColumnChange = (data: DatePickerColumnChangeContext) => {
+      console.log('date-time-picker:columnChange', data);
     };
 
     const onCancel = () => {
@@ -122,6 +124,7 @@ export default defineComponent({
       onConfirm,
       show,
       text,
+      mode,
     };
   },
 });

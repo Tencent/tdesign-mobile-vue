@@ -2,8 +2,8 @@
   <div :class="className">
     <t-picker
       v-if="pickerColumns.includes('year') || pickerColumns.includes('month') || pickerColumns.includes('date')"
-      :default-value="data.pickerValue"
-      :value="data.pickerValue"
+      v-model="data.pickerValue"
+      :default-value="defaultPickerValue"
       :title="title"
       @change="onChange"
       @confirm="onConfirm"
@@ -86,8 +86,14 @@ import toNumber from 'lodash/toNumber';
 import config from '../config';
 import DateTimePickerProps from './props';
 import { useEmitEvent, useDefault } from '../shared';
-import { Picker as TPicker, PickerItem as TPickerItem, PickerValue } from '../picker';
-import { DateValue, TimeModeValues, DisableDateObj, TdDateTimePickerProps } from './type';
+import { Picker as TPicker, PickerItem as TPickerItem } from '../picker';
+import {
+  DateValue,
+  TimeModeValues,
+  DisableDateObj,
+  TdDateTimePickerProps,
+  DatePickerColumnChangeContext,
+} from './type';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
@@ -346,20 +352,22 @@ export default defineComponent({
       emitEvent('cancel', { e });
     };
 
-    const onChange = (v: PickerValue[]) => {
-      if (JSON.stringify(data.pickerValue) !== JSON.stringify(v)) {
-        data.pickerValue = v.map((item) => toNumber(item));
+    const onChange = (v: any[]) => {
+      let value = dayjs().month(0).date(1).hour(0).minute(0).second(0);
+      pickerColumns.value.forEach((mode, index) => {
+        if (value) {
+          value = value[mode](v[index]) as dayjs.Dayjs;
+        }
+      });
+      const outputValue = getOutputValue(value);
 
-        pickerColumns.value.forEach((mode, index) => {
-          data[mode] = toNumber(v[index]);
-        });
-      }
+      emitEvent('change', outputValue);
     };
 
-    const onColumnChange = (value: number, index: number) => {
+    const onColumnChange = (data: DatePickerColumnChangeContext) => {
       context.emit('columnChange', {
-        value,
-        index,
+        value: data.value,
+        index: data.index,
       });
     };
 
