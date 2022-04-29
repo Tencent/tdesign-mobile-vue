@@ -40,7 +40,6 @@ export { Countdown } from './count-down';
 export { default as Avatar, AvatarGroup } from './avatar';
 export { default as Image } from './image';
 export { default as SwipeCell } from './swipe-cell';
-export { default as NoticeBar } from './notice-bar';
 export { default as Skeleton } from './skeleton';
 export { Grid, GridItem } from './grid';
 export { default as Sticky } from './sticky';

@@ -1,35 +1,32 @@
 <template>
-  <div v-if="isShow" :class="rootClasses" :style="bgColorCustom">
+  <div :class="rootClasses" :style="bgColorCustom">
     <div :class="`${name}__inner`">
-      <div v-if="computedPrefixIcon !== undefined" :class="`${name}__hd`" @click="() => handleClick('prefix-icon')">
-        <t-node :content="computedPrefixIcon" :style="colorCustom"></t-node>
+      <div v-if="computedLeftIcon !== undefined" :class="`${name}__hd`">
+        <t-node :content="computedLeftIcon" :style="iconColorCustom"></t-node>
       </div>
-
       <div :class="`${name}__bd`">
-        <div ref="listDOM" :class="`${name}__list ${scroll.marquee ? `${name}__list--scrolling` : ''}`">
+        <div ref="listDOM" :class="`${name}__list ${scrollable ? `${name}__list--scrolling` : ''}`">
           <div
             ref="itemDOM"
-            :class="`${name}__item ${showExtraText ? `${name}__item-detail` : ''}`"
-            :style="scroll.marquee ? animateStyle : ''"
+            :class="`${name}__item ${showDetailText ? `${name}__item-detail` : ''}`"
+            :style="scrollable ? animateStyle : ''"
             @transitionend="handleTransitionend()"
           >
-            <span :class="`${name}__text`" :style="colorCustom" @click="() => handleClick('content')">
-              {{ content }}
-              <span
-                v-if="showExtraText"
+            <span :class="`${name}__text`" :style="colorCustom"
+              >{{ content
+              }}<span
+                v-if="showDetailText"
                 :class="`${name}__text-detail`"
                 :style="colorCustom"
-                @click.stop="() => handleClick('extra')"
+                @click="handleDetailLink"
+                >{{ detailText }}</span
               >
-                {{ extra }}
-              </span>
             </span>
           </div>
         </div>
       </div>
-
-      <div v-if="computedSuffixIcon !== undefined" :class="`${name}__ft`" @click="() => handleClick('suffix-icon')">
-        <t-node :content="computedSuffixIcon" :style="colorCustom"></t-node>
+      <div v-if="computedRightIcon !== undefined" :class="`${name}__ft`" @click="handleClickIcon">
+        <t-node :content="computedRightIcon" :style="iconColorCustom"></t-node>
       </div>
     </div>
   </div>
@@ -47,32 +44,24 @@ import {
   defineComponent,
   h,
   getCurrentInstance,
-  watch,
 } from 'vue';
-import { InfoCircleFilledIcon, CheckCircleFilledIcon, CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import NoticeBarProps from './props';
-import { NoticeBarTrigger, DrawMarquee } from './type';
 
 import config from '../config';
-import { useEmitEvent, renderTNode, TNode, useVModel } from '../shared';
+import { useEmitEvent, renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;
-const iconDefault = {
-  info: [h(InfoCircleFilledIcon)],
-  success: [h(CheckCircleFilledIcon)],
-  warning: [h(InfoCircleFilledIcon)],
-  error: [h(CloseCircleFilledIcon)],
-};
+
 export default defineComponent({
   name,
   components: { TNode },
   props: NoticeBarProps,
-  emits: ['click', 'change'],
+  emits: ['click', 'close', 'detail'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
-    // 初始化数据
     const state = reactive({
       duration: 0,
       offset: 0,
@@ -80,36 +69,47 @@ export default defineComponent({
       itemWidth: 0,
       timer: null,
       nextTimer: null,
-      scroll: {
-        marquee: false,
-        speed: 50,
-        loop: -1, // 值为 -1 表示循环播放，值为 0 表示不循环播放
-        delay: 0,
-      },
     });
 
-    const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
-    let computedPrefixIcon: any;
-    if ((props.prefixIcon as unknown as string) !== '') {
-      if (Object.keys(iconDefault).includes(props?.theme as string)) {
-        const key = props.theme as string;
-        computedPrefixIcon = computed(() => iconDefault?.[key]);
+    const rootClasses = computed(() => [`${name}`, `${name}--info`]);
+    const iconType = {
+      link: ChevronRightIcon,
+      closeable: CloseIcon,
+    };
+    const computedLeftIcon = computed(() => renderTNode(internalInstance, 'leftIcon'));
+    const computedRightIcon = computed(() => {
+      let rightIcon = renderTNode(internalInstance, 'rightIcon');
+      if (rightIcon === undefined) {
+        if (props.mode !== undefined) {
+          rightIcon = h(iconType[props.mode]);
+        }
       }
-      computedPrefixIcon = props.prefixIcon
-        ? computed(() => renderTNode(internalInstance, 'prefixIcon'))
-        : computedPrefixIcon;
-    }
-    // suffix-icon
-    const computedSuffixIcon = props.suffixIcon ? computed(() => renderTNode(internalInstance, 'suffixIcon')) : null;
-    // extra
-    const showExtraText = props.extra ? computed(() => renderTNode(internalInstance, 'extra')) : null;
-    // click
-    function handleClick(trigger: NoticeBarTrigger) {
-      emitEvent('click', trigger);
-    }
+      return rightIcon;
+    });
+    const showDetailText = computed(() => props.detailText !== '');
     const colorCustom = computed(() => (props.color ? `color:${props.color}` : ''));
     const bgColorCustom = computed(() => (props.bgColor ? `background-color:${props.bgColor}` : ''));
-    // 动画
+    const iconColorCustom = computed(() => (props.iconColor ? `color:${props.iconColor};` : ''));
+
+    function handleClose() {
+      emitEvent('close');
+    }
+
+    function handleClick() {
+      emitEvent('click');
+    }
+
+    const handleClickIcon = computed(() => {
+      if (props.mode === 'closeable') {
+        return handleClose;
+      }
+      return handleClick;
+    });
+
+    function handleDetailLink() {
+      emitEvent('detail');
+    }
+
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
       transitionDuration: `${state.duration}s`,
@@ -119,92 +119,59 @@ export default defineComponent({
     const listDOM = ref();
     const itemDOM = ref();
 
-    const { visible, modelValue } = toRefs(props);
-    const [isShow, setStatusValue] = useVModel(
-      visible,
-      modelValue,
-      props.defaultVisible,
-      props.onChange as (value: boolean | undefined) => void,
-    );
     function handleScrolling() {
-      if (!props?.marquee || (props?.marquee as DrawMarquee)?.loop === 0) {
-        return;
-      }
-      // 初始化动画参数
-      if (typeof props.marquee === 'boolean') {
-        state.scroll = { ...state.scroll, marquee: props.marquee };
-      }
-      const marquee = props.marquee as DrawMarquee;
-      state.scroll = {
-        marquee: true,
-        loop: typeof marquee?.loop === 'undefined' ? state.scroll.loop : marquee.loop,
-        speed: marquee?.speed && marquee?.speed > 0 ? marquee.speed : state.scroll.speed,
-        delay: marquee?.delay && marquee?.delay > 0 ? marquee.delay : state.scroll.delay,
-      };
-      // 设置动画
+      const delay = props.delay && props.delay > 0 ? props.delay * 1000 : 0;
+      const speed = props.speed && props.speed > 0 ? props.speed : 50;
+
       setTimeout(() => {
+        if (!props.scrollable) {
+          return;
+        }
+
+        // FIXME: getBoundingClientRect报错问题
         const listDOMWidth = listDOM.value?.getBoundingClientRect().width;
         const itemDOMWidth = itemDOM.value?.getBoundingClientRect().width;
+
         if (itemDOMWidth > listDOMWidth) {
           state.offset = -itemDOMWidth;
-          state.duration = itemDOMWidth / state.scroll.speed;
+          state.duration = itemDOMWidth / speed;
           state.listWidth = listDOMWidth;
           state.itemWidth = itemDOMWidth;
         }
-      }, state.scroll.delay);
+      }, delay);
     }
-    // 动画结束后，初始化动画
+
     function handleTransitionend() {
-      // 触发再次滚的
-      state.scroll.loop = --state.scroll.loop;
-      if (state.scroll.loop === 0) {
-        state.scroll = {
-          ...state.scroll,
-          marquee: false,
-        };
-        return;
-      }
+      const speed = props.speed && props.speed > 0 ? props.speed : 50;
+
       state.offset = state.listWidth;
       state.duration = 0;
 
       setTimeout(() => {
         state.offset = -state.itemWidth;
-        state.duration = (state.itemWidth + state.listWidth) / state.scroll.speed;
+        state.duration = (state.itemWidth + state.listWidth) / speed;
       }, 0);
     }
+
     onMounted(() => {
       nextTick(() => {
-        if (isShow.value) {
-          handleScrolling();
-        }
+        handleScrolling();
       });
     });
-    watch(
-      () => isShow.value,
-      () => {
-        emitEvent('change', isShow.value);
-        nextTick(() => {
-          if (isShow.value) {
-            state.offset = state.listWidth;
-            state.duration = 0;
-            handleScrolling();
-          }
-        });
-      },
-    );
 
     return {
       name,
       ...toRefs(props),
       ...toRefs(state),
       rootClasses,
+      computedLeftIcon,
+      computedRightIcon,
+      showDetailText,
       colorCustom,
       bgColorCustom,
-      computedPrefixIcon,
-      computedSuffixIcon,
-      showExtraText,
-      isShow,
-      handleClick,
+      iconColorCustom,
+      handleClickIcon,
+      handleDetailLink,
       listDOM,
       itemDOM,
       animateStyle,
