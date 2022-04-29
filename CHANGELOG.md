@@ -4,6 +4,19 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+## 0.8.5 (2022-04-29)
+
+
+### Bug Fixes
+
+* **Indexes:** 暂时从菜单栏中移除
+* **Picker:** 修复组件demo点击取消,无法收起蒙层问题
+* **DateTimePicker:** 修复组件传参错误问题、修复组件无法触发change事件问题
+* **Textarea:** 修复组件类名错误问题
+
+### Features
+* **Icon:** 完善组件文档
+
 ## 0.8.4 (2022-04-15)
 
 
