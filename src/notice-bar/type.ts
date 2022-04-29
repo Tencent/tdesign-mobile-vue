@@ -8,6 +8,16 @@ import { TNode } from '../common';
 
 export interface TdNoticeBarProps {
   /**
+   * 背景颜色
+   * @default ''
+   */
+  bgColor?: string;
+  /**
+   * 公告文字颜色
+   * @default ''
+   */
+  color?: string;
+  /**
    * 文本内容
    */
   content?: string | TNode;
@@ -49,9 +59,13 @@ export interface TdNoticeBarProps {
    */
   modelValue?: boolean;
   /**
+   * 展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏
+   */
+  onChange?: (value: boolean) => void;
+  /**
    * 点击事件
    */
-  onClick?: (trigger: NoticeBarTrigger)  => void;
+  onClick?: (trigger: NoticeBarTrigger) => void;
 }
 
 export interface DrawMarquee { speed?: number; loop?: number; delay?: number };

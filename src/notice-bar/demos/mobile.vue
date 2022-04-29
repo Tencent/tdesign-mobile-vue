@@ -3,7 +3,6 @@
     <tdesign-demo-block title="01 类型" summary="静态消息公告栏">
       <t-notice-bar visible content="提示文字描述提示文字描述提示文字描述" prefix-icon="" />
     </tdesign-demo-block>
-
     <tdesign-demo-block summary="带图标静态公告栏">
       <t-notice-bar visible content="提示文字描述提示文字描述提示文字描述" />
     </tdesign-demo-block>
@@ -11,16 +10,12 @@
     <tdesign-demo-block summary="滚动公告栏">
       <t-notice-bar
         :marquee="{ loop: 1 }"
-        content="提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字"
+        content="提示文字描述提示文字描述提示文字描述提示文字描"
         prefix-icon=""
         :visible="visible"
       >
       </t-notice-bar>
-      <t-notice-bar
-        visible
-        :marquee="{ loop: 1 }"
-        content="提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字"
-      />
+      <t-notice-bar visible :marquee="{ loop: 1 }" content="提示文字描述提示文字描述提示文字描述提示文" />
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="带操作公告栏">
@@ -86,7 +81,7 @@
 </template>
 
 <script lang="ts">
-import { reactive, defineComponent, toRefs, h, watch } from 'vue';
+import { reactive, defineComponent, toRefs, h } from 'vue';
 import { CloseIcon, ChevronRightIcon, SoundIcon } from 'tdesign-icons-vue-next';
 import { NoticeBarTrigger } from '../type';
 import { Toast } from '@/components';
@@ -104,17 +99,12 @@ export default defineComponent({
     const handleClick = (context: NoticeBarTrigger) => {
       Toast(`click:${context}`);
     };
-    const handleChange = (value: boolean) => {
-      state.visible = value;
-    };
-
     return {
       ...toRefs(state),
       iconFunc,
       arrowRight,
       soundIcon,
       handleClick,
-      handleChange,
     };
   },
 });

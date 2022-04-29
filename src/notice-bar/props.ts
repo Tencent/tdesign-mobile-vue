@@ -8,6 +8,16 @@ import { TdNoticeBarProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 背景颜色 */
+  bgColor: {
+    type: String,
+    default: '',
+  },
+  /** 公告文字颜色 */
+  color: {
+    type: String,
+    default: '',
+  },
   /** 文本内容 */
   content: {
     type: [String, Function] as PropType<TdNoticeBarProps['content']>,
@@ -20,15 +30,6 @@ export default {
   marquee: {
     type: [Boolean, Object] as PropType<TdNoticeBarProps['marquee']>,
     default: false,
-  },
-  color: {
-    type: String,
-  },
-  bgColor: {
-    type: String,
-  },
-  iconColor: {
-    type: String,
   },
   /** 前缀图标 */
   prefixIcon: {
@@ -58,6 +59,8 @@ export default {
   },
   /** 显示/隐藏，非受控属性 */
   defaultVisible: Boolean,
+  /** 展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏 */
+  onChange: Function as PropType<TdNoticeBarProps['onChange']>,
   /** 点击事件 */
   onClick: Function as PropType<TdNoticeBarProps['onClick']>,
 };

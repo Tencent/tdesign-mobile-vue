@@ -1,8 +1,8 @@
 <template>
-  <div v-if="visible || modelValue" :class="rootClasses" :style="bgColorCustom">
+  <div v-if="isShow" :class="rootClasses" :style="bgColorCustom">
     <div :class="`${name}__inner`">
       <div v-if="computedPrefixIcon !== undefined" :class="`${name}__hd`" @click="() => handleClick('prefix-icon')">
-        <t-node :content="computedPrefixIcon" :style="iconColorCustom"></t-node>
+        <t-node :content="computedPrefixIcon" :style="colorCustom"></t-node>
       </div>
 
       <div :class="`${name}__bd`">
@@ -29,7 +29,7 @@
       </div>
 
       <div v-if="computedSuffixIcon !== undefined" :class="`${name}__ft`" @click="() => handleClick('suffix-icon')">
-        <t-node :content="computedSuffixIcon" :style="iconColorCustom"></t-node>
+        <t-node :content="computedSuffixIcon" :style="colorCustom"></t-node>
       </div>
     </div>
   </div>
@@ -51,10 +51,10 @@ import {
 } from 'vue';
 import { InfoCircleFilledIcon, CheckCircleFilledIcon, CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import NoticeBarProps from './props';
-import { NoticeBarTrigger } from './type';
+import { NoticeBarTrigger, DrawMarquee } from './type';
 
 import config from '../config';
-import { useEmitEvent, renderTNode, TNode } from '../shared';
+import { useEmitEvent, renderTNode, TNode, useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;
@@ -68,7 +68,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: NoticeBarProps,
-  emits: ['click'],
+  emits: ['click', 'change'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
@@ -90,14 +90,10 @@ export default defineComponent({
 
     const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
     let computedPrefixIcon: any;
-    // eslint-disable-next-line
-    if (props.prefixIcon as unknown as string !== '') {
-      if (props.theme) {
-        if (Object.keys(iconDefault).includes(props.theme)) {
-          // eslint-disable-next-line
-          const key = props.theme;
-          computedPrefixIcon = computed(() => iconDefault?.[key]);
-        }
+    if ((props.prefixIcon as unknown as string) !== '') {
+      if (Object.keys(iconDefault).includes(props?.theme as string)) {
+        const key = props.theme as string;
+        computedPrefixIcon = computed(() => iconDefault?.[key]);
       }
       computedPrefixIcon = props.prefixIcon
         ? computed(() => renderTNode(internalInstance, 'prefixIcon'))
@@ -113,7 +109,6 @@ export default defineComponent({
     }
     const colorCustom = computed(() => (props.color ? `color:${props.color}` : ''));
     const bgColorCustom = computed(() => (props.bgColor ? `background-color:${props.bgColor}` : ''));
-    const iconColorCustom = computed(() => (props.iconColor ? `color:${props.iconColor};` : ''));
     // 动画
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
@@ -124,22 +119,28 @@ export default defineComponent({
     const listDOM = ref();
     const itemDOM = ref();
 
+    const { visible, modelValue } = toRefs(props);
+    const [isShow, setStatusValue] = useVModel(
+      visible,
+      modelValue,
+      props.defaultVisible,
+      props.onChange as (value: boolean | undefined) => void,
+    );
     function handleScrolling() {
+      if (!props?.marquee || (props?.marquee as DrawMarquee)?.loop === 0) {
+        return;
+      }
       // 初始化动画参数
       if (typeof props.marquee === 'boolean') {
         state.scroll = { ...state.scroll, marquee: props.marquee };
-      } else if (typeof props.marquee === 'object') {
-        const initScroll = {
-          marquee: true,
-          loop: typeof props.marquee.loop === 'undefined' ? state.scroll.loop : props.marquee.loop,
-          speed: props.marquee?.speed && props.marquee?.speed > 0 ? props.marquee.speed : state.scroll.speed,
-          delay: props.marquee?.delay && props.marquee?.delay > 0 ? props.marquee.delay : state.scroll.delay,
-        };
-        state.scroll = { ...initScroll };
       }
-      if (!state.scroll.marquee || state.scroll.loop === 0) {
-        return;
-      }
+      const marquee = props.marquee as DrawMarquee;
+      state.scroll = {
+        marquee: true,
+        loop: typeof marquee?.loop === 'undefined' ? state.scroll.loop : marquee.loop,
+        speed: marquee?.speed && marquee?.speed > 0 ? marquee.speed : state.scroll.speed,
+        delay: marquee?.delay && marquee?.delay > 0 ? marquee.delay : state.scroll.delay,
+      };
       // 设置动画
       setTimeout(() => {
         const listDOMWidth = listDOM.value?.getBoundingClientRect().width;
@@ -173,17 +174,17 @@ export default defineComponent({
     }
     onMounted(() => {
       nextTick(() => {
-        if (props.visible) {
+        if (isShow.value) {
           handleScrolling();
         }
       });
     });
-
     watch(
-      () => props.visible,
+      () => isShow.value,
       () => {
+        emitEvent('change', isShow.value);
         nextTick(() => {
-          if (props.visible) {
+          if (isShow.value) {
             state.offset = state.listWidth;
             state.duration = 0;
             handleScrolling();
@@ -199,10 +200,10 @@ export default defineComponent({
       rootClasses,
       colorCustom,
       bgColorCustom,
-      iconColorCustom,
       computedPrefixIcon,
       computedSuffixIcon,
       showExtraText,
+      isShow,
       handleClick,
       listDOM,
       itemDOM,

@@ -1,8 +1,10 @@
 <template>
   <div class="noticebar-demo">
-    <tdesign-demo-block title="01 类型" summary="静态消息公告栏">
-      <t-notice-bar v-model="visible" content="提示文字描述提示文字描述提示文字描述" prefix-icon="" />
+    <tdesign-demo-block title="visible属性">
       <t-notice-bar :visible="visible" content="提示文字描述提示文字描述提示文字描述" prefix-icon="" />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="v-model属性">
+      <t-notice-bar v-model="visible" content="提示文字描述提示文字描述提示文字描述" prefix-icon="" />
     </tdesign-demo-block>
   </div>
 </template>
