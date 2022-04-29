@@ -1,36 +1,27 @@
 <template>
   <div class="noticebar-demo">
-    <t-cell-group>
-      <t-cell value-align="left">
-        <t-notice-bar content="提示文字描述提示文字描述" mode="text" />
-        <t-notice-bar
-          content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-          mode="text"
-        />
-        <t-notice-bar content="提示文字描述提示文字描述" mode="text" type="error" />
-        <t-notice-bar
-          content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-          mode="text"
-          type="error"
-        />
-      </t-cell>
-    </t-cell-group>
+    <tdesign-demo-block title="visible属性">
+      <t-notice-bar :visible="visible" content="提示文字描述提示文字描述提示文字描述" prefix-icon="" />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="v-model属性">
+      <t-notice-bar v-model="visible" content="提示文字描述提示文字描述提示文字描述" prefix-icon="" />
+    </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { reactive, defineComponent, toRefs, h } from 'vue';
 
-export default defineComponent({});
+export default defineComponent({
+  components: {},
+  setup() {
+    const state = reactive({
+      visible: true,
+    });
+
+    return {
+      ...toRefs(state),
+    };
+  },
+});
 </script>
-
-<style lang="less" scoped>
-.noticebar-demo {
-  background-color: #f5f5f5;
-
-  .t-cell {
-    background-color: transparent;
-    padding: 0;
-  }
-}
-</style>
