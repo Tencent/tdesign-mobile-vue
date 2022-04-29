@@ -5360,7 +5360,7 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/mobile.vue correctly
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/indexes/demos/base-indexes.vue correctly 1`] = `
+exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = `
 <div class="component-wrap">
   <div style="" class="t-indexes">
     <div class="t-indexes__sidebar">
@@ -5374,7 +5374,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base-indexes.vue correctl
       <!--]-->
     </div>
     <!--[-->
-    <div data-index="A">
+    <div ref_for="true" data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5462,7 +5462,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base-indexes.vue correctl
         <!--]-->
       </div>
     </div>
-    <div data-index="B">
+    <div ref_for="true" data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5602,7 +5602,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base-indexes.vue correctl
 
 exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] = `
 <div class="component-wrap">
-  <div style="height:200px;" class="t-indexes">
+  <div style="" class="t-indexes">
     <div class="t-indexes__sidebar">
       <!--[-->
       <div class="t-indexes__sidebar-item" data-index="A">A
@@ -5629,7 +5629,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
       <!--]-->
     </div>
     <!--[-->
-    <div data-index="A">
+    <div ref_for="true" data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5717,7 +5717,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="B">
+    <div ref_for="true" data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5850,7 +5850,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="C">
+    <div ref_for="true" data-index="C">
       <div class="t-indexes__anchor">C开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6028,7 +6028,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="D">
+    <div ref_for="true" data-index="D">
       <div class="t-indexes__anchor">D开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6152,7 +6152,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="E">
+    <div ref_for="true" data-index="E">
       <div class="t-indexes__anchor">E开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6186,7 +6186,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="F">
+    <div ref_for="true" data-index="F">
       <div class="t-indexes__anchor">F开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6256,7 +6256,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="G">
+    <div ref_for="true" data-index="G">
       <div class="t-indexes__anchor">G开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -7846,7 +7846,7 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/custom-color.vue corre
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">自定义样式</p>
     <!--[-->
-    <div class="t-notice-bar t-notice-bar--info" style="background-color:gray">
+    <div class="t-notice-bar t-notice-bar--info" style="background-color:gray;" icon-color="#fff">
       <div class="t-notice-bar__inner">
         <div class="t-notice-bar__hd"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-sound" style="color:#fff;">
             <path fill="currentColor" d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z" fill-opacity="0.9"></path>
@@ -7860,6 +7860,37 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/custom-color.vue corre
         <div class="t-notice-bar__ft">
           <!---->
         </div>
+      </div>
+    </div>
+    <!--]-->
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/notice-bar/demos/event.vue correctly 1`] = `
+<div class="noticebar-demo">
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">事件</h2>
+    <!--v-if-->
+    <!--[--><button class="t-button t-size-m t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+      <!----><span class="t-button__text"><!--[-->显示/隐藏<!--]--></span>
+    </button>
+    <div class="t-notice-bar t-notice-bar--info" style="">
+      <div class="t-notice-bar__inner">
+        <div class="t-notice-bar__hd">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-info-circle-filled" style="">
+            <path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z" fill-opacity="0.9"></path>
+          </svg>
+          <!--]-->
+        </div>
+        <div class="t-notice-bar__bd">
+          <div class="t-notice-bar__list">
+            <div class="t-notice-bar__item t-notice-bar__item-detail" style=""><span class="t-notice-bar__text" style="">提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 <span class="t-notice-bar__text-detail" style="">详情</span></span></div>
+          </div>
+        </div>
+        <div class="t-notice-bar__ft"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close" style="">
+            <path fill="currentColor" d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z" fill-opacity="0.9"></path>
+          </svg></div>
       </div>
     </div>
     <!--]-->
@@ -7950,7 +7981,7 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/mobile.vue correctly 1
         <!--v-if-->
         <div class="t-notice-bar__bd">
           <div class="t-notice-bar__list">
-            <div class="t-notice-bar__item" style=""><span class="t-notice-bar__text" style="">提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字 <!--v-if--></span></div>
+            <div class="t-notice-bar__item" style=""><span class="t-notice-bar__text" style="">提示文字描述提示文字描述提示文字描述提示文字描 <!--v-if--></span></div>
           </div>
         </div>
         <div class="t-notice-bar__ft">
@@ -7968,7 +7999,7 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/mobile.vue correctly 1
         </div>
         <div class="t-notice-bar__bd">
           <div class="t-notice-bar__list">
-            <div class="t-notice-bar__item" style=""><span class="t-notice-bar__text" style="">提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字 <!--v-if--></span></div>
+            <div class="t-notice-bar__item" style=""><span class="t-notice-bar__text" style="">提示文字描述提示文字描述提示文字描述提示文 <!--v-if--></span></div>
           </div>
         </div>
         <div class="t-notice-bar__ft">
@@ -8024,7 +8055,7 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/mobile.vue correctly 1
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">自定义样式</p>
     <!--[-->
-    <div class="t-notice-bar t-notice-bar--info" style="background-color:gray">
+    <div class="t-notice-bar t-notice-bar--info" style="background-color:gray;" icon-color="#fff">
       <div class="t-notice-bar__inner">
         <div class="t-notice-bar__hd"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-sound" style="color:#fff;">
             <path fill="currentColor" d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z" fill-opacity="0.9"></path>
@@ -8319,8 +8350,8 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/scrolling.vue correctl
 exports[`ssr snapshot test renders ./src/notice-bar/demos/static.vue correctly 1`] = `
 <div class="noticebar-demo">
   <div class="tdesign-mobile-demo-block">
-    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
-    <p class="tdesign-mobile-demo-block__summary">静态消息公告栏</p>
+    <h2 class="tdesign-mobile-demo-block__title">visible属性</h2>
+    <!--v-if-->
     <!--[-->
     <div class="t-notice-bar t-notice-bar--info" style="">
       <div class="t-notice-bar__inner">
@@ -8335,6 +8366,12 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/static.vue correctly 1
         </div>
       </div>
     </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">v-model属性</h2>
+    <!--v-if-->
+    <!--[-->
     <div class="t-notice-bar t-notice-bar--info" style="">
       <div class="t-notice-bar__inner">
         <!--v-if-->
@@ -16710,7 +16747,7 @@ exports[`ssr snapshot test renders ./src/textarea/demos/mobile.vue correctly 1`]
     <p class="tdesign-mobile-demo-block__summary">设置最大字符个数</p>
     <!--[-->
     <div class="t-textarea"><textarea style="" name="标签文字" maxlength="10" placeholder="请输入文字"></textarea>
-      <div class="t-textarea--count">0/10</div>
+      <div class="t-textarea__count">0/10</div>
     </div>
     <!--]-->
   </div>
@@ -16719,7 +16756,7 @@ exports[`ssr snapshot test renders ./src/textarea/demos/mobile.vue correctly 1`]
     <p class="tdesign-mobile-demo-block__summary">设置最大字符个数，一个汉字表示两个字符</p>
     <!--[-->
     <div class="t-textarea"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
-      <div class="t-textarea--count">0/10</div>
+      <div class="t-textarea__count">0/10</div>
     </div>
     <!--]-->
   </div>
