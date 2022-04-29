@@ -180,7 +180,7 @@
   },
   "lint-staged": {
     "*.{vue,ts,tsx}": [
-      "eslint --fix"
+      "npm run lint"
     ]
   }
 }
