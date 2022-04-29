@@ -1,110 +1,93 @@
 <template>
-  <div class="noticebar-demo">
-    <tdesign-demo-block title="01 类型" summary="静态消息公告栏">
-      <t-notice-bar visible content="提示文字描述提示文字描述提示文字描述" prefix-icon="" />
+  <div class="tdesign-mobile-demo">
+    <h1 class="title">NoticeBar 公告栏</h1>
+    <p class="summary">在导航栏下方，用于给用户显示提示消息</p>
+    <tdesign-demo-block title="01 类型" summary="静态消息栏">
+      <t-notice-bar content="提示文字描述提示文字描述提示文字描述" />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="带图标静态公告栏">
-      <t-notice-bar visible content="提示文字描述提示文字描述提示文字描述" />
+    <tdesign-demo-block summary="带图标静态消息栏">
+      <t-notice-bar content="提示文字描述提示文字描述提示文字描述" :left-icon="iconFunc" />
     </tdesign-demo-block>
-
-    <tdesign-demo-block summary="滚动公告栏">
-      <t-notice-bar
-        :marquee="{ loop: 1 }"
-        content="提示文字描述提示文字描述提示文字描述提示文字描"
-        prefix-icon=""
-        :visible="visible"
-      >
+    <tdesign-demo-block summary="带操作消息栏">
+      <t-notice-bar mode="link" content="提示文字描述提示文字描述提示文字描述" :left-icon="iconFunc" />
+      <t-notice-bar mode="closeable" content="提示文字描述提示文字描述" detail-text="详情" :left-icon="iconFunc" />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="滚动消息栏">
+      <t-notice-bar mode="link" scrollable content="提示文字描述提示文字描述">
+        <template #leftIcon>
+          <icon name="error-circle-filled" size="22px" />
+        </template>
       </t-notice-bar>
-      <t-notice-bar visible :marquee="{ loop: 1 }" content="提示文字描述提示文字描述提示文字描述提示文" />
+      <t-notice-bar scrollable content="提示文字描述提示文字描述从右至左轮播从右至左轮">
+        <template #leftIcon>
+          <icon name="sound" size="22px" />
+        </template>
+      </t-notice-bar>
     </tdesign-demo-block>
-
-    <tdesign-demo-block summary="带操作公告栏">
+    <tdesign-demo-block title="02 状态" summary="多文字消息栏">
+      <t-notice-bar content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述" />
       <t-notice-bar
-        visible
-        content="提示文字描述提示文字描述提示文字描述"
-        :suffix-icon="arrowRight"
-        @click="handleClick"
-      />
-      <t-notice-bar
-        visible
-        content="提示文字描述提示文字描述"
-        extra="详情"
-        :suffix-icon="iconFunc"
-        @click="handleClick"
-      />
-    </tdesign-demo-block>
-
-    <tdesign-demo-block summary="自定义样式">
-      <t-notice-bar
-        visible
-        content="提示文字描述提示文字描述提示文字描述"
-        :prefix-icon="soundIcon"
-        color="#fff"
-        bg-color="gray"
-        icon-color="#fff"
-      />
-    </tdesign-demo-block>
-
-    <tdesign-demo-block title="02 状态">
-      <t-notice-bar visible theme="info" content="默认状态公告栏默认状态公告栏" />
-      <t-notice-bar visible theme="success" content="成功状态公告栏成功状态公告栏" />
-      <t-notice-bar visible theme="warning" content="警示状态公告栏警示状态公告栏" />
-      <t-notice-bar visible theme="error" content="错误状态公告栏错误状态公告栏" />
-    </tdesign-demo-block>
-
-    <tdesign-demo-block title="03 多行文字公告栏">
-      <t-notice-bar
-        visible
         content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-        prefix-icon=""
+        :left-icon="iconFunc"
       />
       <t-notice-bar
-        visible
-        content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-        @click="handleClick"
-      />
-      <t-notice-bar
-        visible
+        mode="link"
         content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述"
-        :suffix-icon="arrowRight"
-        @click="handleClick"
+        :left-icon="iconFunc"
       />
       <t-notice-bar
-        visible
+        mode="closeable"
         content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-        extra="详情"
-        :suffix-icon="iconFunc"
-        @click="handleClick"
+        detail-text="详情"
+        :left-icon="iconFunc"
+      />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="红色背景消息栏">
+      <t-notice-bar bg-color="#F9D7D9" color="#E34D59" content="提示文字描述提示文字描述提示文字描述" />
+      <t-notice-bar
+        bg-color="#F9D7D9"
+        color="#E34D59"
+        icon-color="#E34D59"
+        content="提示文字描述提示文字描述提示文字描述"
+        :left-icon="iconFunc"
+      />
+      <t-notice-bar
+        bg-color="#F9D7D9"
+        color="#E34D59"
+        icon-color="#E34D59"
+        content="提示文字描述提示文字描述提示文字描述"
+        mode="link"
+        :left-icon="iconFunc"
+      />
+      <t-notice-bar
+        bg-color="#F9D7D9"
+        color="#E34D59"
+        icon-color="#E34D59"
+        content="提示文字描述提示文字描述"
+        detail-text="详情"
+        mode="closeable"
+        :left-icon="iconFunc"
       />
     </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts">
-import { reactive, defineComponent, toRefs, h } from 'vue';
-import { CloseIcon, ChevronRightIcon, SoundIcon } from 'tdesign-icons-vue-next';
-import { NoticeBarTrigger } from '../type';
-import { Toast } from '@/components';
+import { reactive, defineComponent, toRefs, ref, h } from 'vue';
+import { Icon, ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
-  components: {},
+  components: { Icon },
   setup() {
     const state = reactive({
       visible: true,
     });
 
-    const iconFunc = () => h(CloseIcon);
-    const arrowRight = () => h(ChevronRightIcon);
-    const soundIcon = () => h(SoundIcon);
-    const handleClick = (context: NoticeBarTrigger) => {
-      Toast(`click:${context}`);
-    };
+    const iconFunc = () => h(ErrorCircleFilledIcon);
+
     return {
       ...toRefs(state),
       iconFunc,
-      arrowRight,
-      soundIcon,
-      handleClick,
     };
   },
 });
