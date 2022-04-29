@@ -13,7 +13,7 @@
       @input="handleInput"
       @compositionend="handleCompositionend"
     />
-    <div v-if="maxcharacter || maxlength" :class="`${componentName}--count`">
+    <div v-if="maxcharacter || maxlength" :class="`${componentName}__count`">
       {{ `${textareaLength}/${maxcharacter || maxlength}` }}
     </div>
   </div>
