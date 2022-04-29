@@ -2,15 +2,8 @@
   <div class="noticebar-demo">
     <t-cell-group>
       <t-cell value-align="left">
-        <t-notice-bar content="提示文字描述提示文字描述" mode="text" />
         <t-notice-bar
           content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-          mode="text"
-        />
-        <t-notice-bar content="提示文字描述提示文字描述" mode="text" type="error" />
-        <t-notice-bar
-          content="提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述"
-          mode="text"
           type="error"
         />
       </t-cell>
@@ -21,7 +14,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-export default defineComponent({});
+export default defineComponent({
+  setup() {
+    return {};
+  },
+});
 </script>
 
 <style lang="less" scoped>

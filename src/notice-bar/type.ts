@@ -8,66 +8,71 @@ import { TNode } from '../common';
 
 export interface TdNoticeBarProps {
   /**
-   * 背景颜色
+   * 背景色
    * @default ''
    */
   bgColor?: string;
   /**
-   * 公告文字颜色
+   * 文本颜色
    * @default ''
    */
   color?: string;
   /**
    * 文本内容
+   * @default ''
    */
-  content?: string | TNode;
+  content?: string;
   /**
-   * 右侧额外信息
+   * 延迟显示，单位：毫秒
+   * @default 0
    */
-  extra?: string | TNode;
+  delay?: number;
   /**
-   * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
-   * @default false
+   * 详情
+   * @default ''
    */
-  marquee?: boolean | DrawMarquee;
+  detailText?: string;
   /**
-   * 前缀图标
+   * 详情颜色
+   * @default ''
    */
-  prefixIcon?: TNode;
+  detailTextColor?: string;
   /**
-   * 后缀图标
+   * 图标颜色
+   * @default ''
    */
-  suffixIcon?: TNode;
+  iconColor?: string;
   /**
-   * 内置主题
-   * @default info
+   * 左边图标
    */
-  theme?: 'info' | 'success' | 'warning' | 'error';
+  leftIcon?: TNode;
   /**
-   * 显示/隐藏
-   * @default false
+   * 模式
    */
-  visible?: boolean;
+  mode?: 'link' | 'closeable';
   /**
-   * 显示/隐藏，非受控属性
-   * @default false
+   * 左边图标
    */
-  defaultVisible?: boolean;
+  rightIcon?: TNode;
   /**
-   * 显示/隐藏
-   * @default false
+   * 是否需要滚动
    */
-  modelValue?: boolean;
+  scrollable?: boolean;
   /**
-   * 展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏
+   * 滚动速度
+   * @default 50
    */
-  onChange?: (value: boolean) => void;
+  speed?: number;
   /**
    * 点击事件
    */
-  onClick?: (trigger: NoticeBarTrigger) => void;
+  onClick?: () => void;
+  /**
+   * 关闭
+   */
+  onClose?: () => void;
+  /**
+   * 详情点击
+   */
+  onDetail?: () => void;
 }
-
-export interface DrawMarquee { speed?: number; loop?: number; delay?: number };
-
-export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'extra' | 'suffix-icon';;
