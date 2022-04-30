@@ -215,6 +215,12 @@ export default {
           component: () => import('@/cell/cell.md'),
         },
         {
+          title: 'NoticeBar 公告栏',
+          name: 'notice-bar',
+          path: '/mobile-vue/components/notice-bar',
+          component: () => import('@/notice-bar/notice-bar.md'),
+        },
+        {
           title: 'SwipeCell 滑动单元格',
           name: 'swipe-cell',
           path: '/mobile-vue/components/swipe-cell',
@@ -267,7 +273,7 @@ export default {
           name: 'loading',
           path: '/mobile-vue/components/loading',
           component: () => import('@/loading/loading.md'),
-        }
+        },
       ],
     },
     {

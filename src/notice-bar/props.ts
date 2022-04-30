@@ -8,67 +8,59 @@ import { TdNoticeBarProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 背景色 */
+  /** 背景颜色 */
   bgColor: {
     type: String,
     default: '',
   },
-  /** 文本颜色 */
+  /** 公告文字颜色 */
   color: {
     type: String,
     default: '',
   },
   /** 文本内容 */
   content: {
-    type: String,
-    default: '',
+    type: [String, Function] as PropType<TdNoticeBarProps['content']>,
   },
-  /** 延迟显示，单位：毫秒 */
-  delay: {
-    type: Number,
-    default: 0,
+  /** 右侧额外信息 */
+  extra: {
+    type: [String, Function] as PropType<TdNoticeBarProps['extra']>,
   },
-  /** 详情 */
-  detailText: {
-    type: String,
-    default: '',
+  /** 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放 */
+  marquee: {
+    type: [Boolean, Object] as PropType<TdNoticeBarProps['marquee']>,
+    default: false,
   },
-  /** 详情颜色 */
-  detailTextColor: {
-    type: String,
-    default: '',
+  /** 前缀图标 */
+  prefixIcon: {
+    type: Function as PropType<TdNoticeBarProps['prefixIcon']>,
   },
-  /** 图标颜色 */
-  iconColor: {
-    type: String,
-    default: '',
+  /** 后缀图标 */
+  suffixIcon: {
+    type: Function as PropType<TdNoticeBarProps['suffixIcon']>,
   },
-  /** 左边图标 */
-  leftIcon: {
-    type: Function as PropType<TdNoticeBarProps['leftIcon']>,
-  },
-  /** 模式 */
-  mode: {
-    type: String as PropType<TdNoticeBarProps['mode']>,
-    validator(val: TdNoticeBarProps['mode']): boolean {
-      return ['link', 'closeable'].includes(val!);
+  /** 内置主题 */
+  theme: {
+    type: String as PropType<TdNoticeBarProps['theme']>,
+    default: 'info' as TdNoticeBarProps['theme'],
+    validator(val: TdNoticeBarProps['theme']): boolean {
+      if (!val) return true;
+      return ['info', 'success', 'warning', 'error'].includes(val);
     },
   },
-  /** 左边图标 */
-  rightIcon: {
-    type: Function as PropType<TdNoticeBarProps['rightIcon']>,
+  /** 显示/隐藏 */
+  visible: {
+    type: Boolean,
+    default: undefined,
   },
-  /** 是否需要滚动 */
-  scrollable: Boolean,
-  /** 滚动速度 */
-  speed: {
-    type: Number,
-    default: 50,
+  modelValue: {
+    type: Boolean,
+    default: undefined,
   },
+  /** 显示/隐藏，非受控属性 */
+  defaultVisible: Boolean,
+  /** 展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏 */
+  onChange: Function as PropType<TdNoticeBarProps['onChange']>,
   /** 点击事件 */
   onClick: Function as PropType<TdNoticeBarProps['onClick']>,
-  /** 关闭 */
-  onClose: Function as PropType<TdNoticeBarProps['onClose']>,
-  /** 详情点击 */
-  onDetail: Function as PropType<TdNoticeBarProps['onDetail']>,
 };
