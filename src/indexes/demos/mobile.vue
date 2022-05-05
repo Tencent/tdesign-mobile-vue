@@ -9,7 +9,7 @@
       </div>
     </tdesign-demo-block>
   </div>
-  <demo-indexes v-else-if="showIndexes" :type="type"></demo-indexes>
+  <demo-indexes v-else :type="type"></demo-indexes>
 </template>
 <script lang="ts">
 import { toRefs } from '@vueuse/core';
