@@ -1,18 +1,29 @@
 <template>
-  <div class="cell-base">
-    <t-progress :percentage="0" :show-text="false" />
-    <t-progress :percentage="30" :show-text="false" />
-    <t-progress :percentage="100" :show-text="false" />
-    <t-progress type="error" :percentage="88" :show-text="false" />
+  <div>
+    <tdesign-demo-block title="03 规格" summary="带数值进度条">
+      <div class="progress-demo">
+        <t-progress :percentage="88" />
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="无数值进度条">
+      <div class="progress-demo">
+        <t-progress :percentage="88" :label="false" />
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'TextDemo',
+});
+</script>
 
 <style lang="less" scoped>
-.cell-base {
-  .t-progress {
-    margin-bottom: 20px;
-  }
+.progress-demo {
+  padding: 8px 16px;
+  background-color: #fff;
 }
 </style>
