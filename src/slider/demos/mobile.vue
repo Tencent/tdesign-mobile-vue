@@ -9,7 +9,12 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="带数值滑动选择器">
       <div class="slider-demo">
-        <t-slider v-model="value1" show-value> </t-slider>
+        <t-slider v-model="value1" show-extreme-value> </t-slider>
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="起始非零滑动选择器">
+      <div class="slider-demo">
+        <t-slider default-value="30" min="30" show-extreme-value> </t-slider>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="带刻度滑动选择器">
@@ -49,3 +54,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.tdesign-mobile-demo {
+  background: #fff;
+}
+</style>

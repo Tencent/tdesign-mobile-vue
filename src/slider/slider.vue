@@ -21,7 +21,7 @@
           <div v-for="(v, k) in marks" :key="k" :class="`${name}__mark-text`" :style="`left:${k}%`" v-text="v"></div>
         </div>
       </div>
-      <template v-if="showValue">
+      <template v-if="showExtremeValue">
         <div v-for="(item, index) in value" :key="index" :class="`${name}-wrap__value`" v-text="item"></div>
       </template>
     </template>
@@ -57,45 +57,15 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, reactive, defineComponent, ExtractPropTypes, PropType } from 'vue';
+import { ref, toRefs, computed, SetupContext, reactive, defineComponent } from 'vue';
 import config from '../config';
+import props from './props';
+import useVModel from '../hooks/useVModel';
 
 const { prefix } = config;
 const name = `${prefix}-slider`;
 
-export const sliderProps = {
-  range: {
-    type: Boolean,
-    default: false,
-  },
-  // XXX: Props默认值定义有问题
-  marks: Object,
-  max: {
-    type: Number,
-    default: 100,
-  },
-  min: {
-    type: Number,
-    default: 0,
-  },
-  modelValue: {
-    type: [Number, Array] as PropType<number | number[]>,
-    default: 0,
-  },
-  showValue: {
-    type: Boolean,
-    default: false,
-  },
-  step: {
-    type: Number,
-    default: 1,
-  },
-  disabled: {
-    type: Boolean,
-    default: false,
-  },
-};
-export type SliderPropsType = ExtractPropTypes<typeof sliderProps>;
+// label\showExtremeValue => showValue\value\defaultValue
 
 export interface TouchData {
   startValue: number;
@@ -107,7 +77,7 @@ export interface TouchData {
 
 export default defineComponent({
   name,
-  props: sliderProps,
+  props,
   emits: ['drag-start', 'drag-end', 'update:modelValue', 'change'],
   setup(props, context: SetupContext) {
     const rootRef = ref<HTMLElement | null>(null);
@@ -118,7 +88,7 @@ export default defineComponent({
       {
         [`${prefix}-is-disabled`]: props.disabled,
         [`${prefix}-is-mark`]: props.marks,
-        [`${prefix}-is-value`]: props.showValue,
+        [`${prefix}-is-value`]: props.showExtremeValue,
       },
     ]);
     const handleClass = computed(() => [`${name}__handle`]);
@@ -133,24 +103,9 @@ export default defineComponent({
     });
 
     const dragStatus = ref<string>('');
-    const innerValue = ref<number[]>([]);
-    const value = computed<number[]>({
-      set(val) {
-        innerValue.value = val;
-      },
-      get() {
-        if (innerValue?.value?.length) {
-          return innerValue.value;
-        }
-        let initValue = [];
-        if (props.range) {
-          initValue = props.modelValue as number[];
-        } else {
-          initValue = [props.modelValue as number];
-        }
-        return initValue;
-      },
-    });
+    const { value, modelValue } = toRefs(props);
+
+    // const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const touchData = reactive<TouchData>({
       startValue: 0,

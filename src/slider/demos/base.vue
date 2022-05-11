@@ -1,7 +1,7 @@
 <template>
   <div class="cell-base">
     <t-cell-group title="基础滑动选择器">
-      <t-cell label="选择器标题">
+      <t-cell label="选1择器标题">
         <t-slider v-model="value" @change="onChange"> </t-slider>
       </t-cell>
       <t-cell label="禁用选择器">
