@@ -7,9 +7,9 @@ import { computed, defineComponent, SetupContext } from 'vue';
 import config from '../config';
 
 const { prefix } = config;
-const name = `${prefix}-mask`;
+const name = `${prefix}-overlay`;
 
-export interface MaskProps {
+export interface OverlayProps {
   transparent: boolean;
 }
 
@@ -22,7 +22,7 @@ export default defineComponent({
     },
   },
   emits: ['click'],
-  setup(props: MaskProps, context: SetupContext) {
+  setup(props: OverlayProps, context: SetupContext) {
     const classes = computed(() => ({
       [`${name}`]: !props.transparent,
       [`${name}--transparent`]: props.transparent,
