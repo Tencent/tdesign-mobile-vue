@@ -6,7 +6,7 @@
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
   "bugs": {
-    "url": "/tdesign-mobile-vue/issues"
+    "url": "https://github.com/tencent/tdesign-mobile-vue/issues"
   },
   "repository": {
     "type": "git",
