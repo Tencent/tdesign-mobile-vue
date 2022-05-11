@@ -7,7 +7,7 @@ export { default as Checkbox } from './checkbox';
 export { default as CheckboxGroup } from './checkbox-group';
 export { default as Input } from './input';
 export { default as Textarea } from './textarea';
-export { default as Mask } from './mask';
+export { default as Overlay } from './overlay';
 export { default as Progress } from './progress';
 export { default as Radio } from './radio';
 export { default as RadioGroup } from './radio-group';
