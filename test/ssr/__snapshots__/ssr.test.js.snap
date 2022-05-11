@@ -5478,7 +5478,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
       <!--]-->
     </div>
     <!--[-->
-    <div data-index="A">
+    <div ref_for="true" data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5566,7 +5566,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
         <!--]-->
       </div>
     </div>
-    <div data-index="B">
+    <div ref_for="true" data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5733,7 +5733,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
       <!--]-->
     </div>
     <!--[-->
-    <div data-index="A">
+    <div ref_for="true" data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5821,7 +5821,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="B">
+    <div ref_for="true" data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5954,7 +5954,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="C">
+    <div ref_for="true" data-index="C">
       <div class="t-indexes__anchor">C开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6132,7 +6132,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="D">
+    <div ref_for="true" data-index="D">
       <div class="t-indexes__anchor">D开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6256,7 +6256,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="E">
+    <div ref_for="true" data-index="E">
       <div class="t-indexes__anchor">E开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6290,7 +6290,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="F">
+    <div ref_for="true" data-index="F">
       <div class="t-indexes__anchor">F开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6360,7 +6360,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div data-index="G">
+    <div ref_for="true" data-index="G">
       <div class="t-indexes__anchor">G开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -7585,45 +7585,6 @@ exports[`ssr snapshot test renders ./src/loading/demos/vert.vue correctly 1`] = 
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/mask/demos/base.vue correctly 1`] = `
-<div class="t-mask-base-demo">
-  <div class="t-cell-group">
-    <div class="t-cell-group__title">
-      <!--[-->Mask遮罩
-      <!--]-->
-    </div>
-    <div class="t-cell-group__container">
-      <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[--><button class="t-button t-size-l t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
-            <!----><span class="t-button__text"><!--[-->带背景遮罩<!--]--></span>
-          </button>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[--><button class="t-button t-size-l t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
-            <!----><span class="t-button__text"><!--[-->无背景遮罩<!--]--></span>
-          </button>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <!--]-->
-    </div>
-  </div>
-  <div class="t-mask" style="display:none;"></div>
-  <div class="t-mask--transparent" style="display:none;"></div>
-</div>
-`;
-
 exports[`ssr snapshot test renders ./src/message/demos/align.vue correctly 1`] = `
 <!--[-->
 <div class="tdesign-demo-block"><button class="t-button t-size-m t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
@@ -8122,6 +8083,45 @@ exports[`ssr snapshot test renders ./src/notice-bar/demos/type-info.vue correctl
       <!--]-->
     </div>
   </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/overlay/demos/base.vue correctly 1`] = `
+<div class="t-overlay-base-demo">
+  <div class="t-cell-group">
+    <div class="t-cell-group__title">
+      <!--[-->Overlay 遮罩层
+      <!--]-->
+    </div>
+    <div class="t-cell-group__container">
+      <!--[-->
+      <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
+        <!--v-if-->
+        <!--v-if-->
+        <div class="t-cell__note">
+          <!--[--><button class="t-button t-size-l t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+            <!----><span class="t-button__text"><!--[-->带背景遮罩<!--]--></span>
+          </button>
+          <!--]-->
+        </div>
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
+        <!--v-if-->
+        <!--v-if-->
+        <div class="t-cell__note">
+          <!--[--><button class="t-button t-size-l t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
+            <!----><span class="t-button__text"><!--[-->无背景遮罩<!--]--></span>
+          </button>
+          <!--]-->
+        </div>
+        <!--v-if-->
+      </div>
+      <!--]-->
+    </div>
+  </div>
+  <div class="t-overlay" style="display:none;"></div>
+  <div class="t-overlay--transparent" style="display:none;"></div>
 </div>
 `;
 
