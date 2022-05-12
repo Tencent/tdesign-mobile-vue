@@ -1,58 +1,33 @@
 <template>
   <div ref="rootRef" :class="classes">
-    <template v-if="!range">
-      <div :class="`${name}`" @click="onClick">
-        <!-- 总长度 -->
-        <div ref="barRef" :class="`${name}__bar`"></div>
-        <!-- 滑块长度 -->
-        <div :class="`${name}__track`" :style="`width:${value[0]}%`"></div>
-        <!-- 滑块操作 -->
+    <div v-if="showExtremeValue" :class="`${name}-wrap__value-left`">{{ min }}</div>
+    <div :class="`${name}`" @click="onClick">
+      <!-- 总长度 -->
+      <div ref="barRef" :class="`${name}__bar`"></div>
+      <!-- 滑块长度 -->
+      <div :class="`${name}__track`" :style="trackStyle"></div>
+      <!-- 滑块操作 -->
+      <div
+        v-for="(item, index) in dots"
+        :key="index + 1"
+        :class="handleClass"
+        :style="`left:${getPercentage(item)}%`"
+        @touchstart="onTouchStart($event, item)"
+        @touchmove="onTouchMove($event, index)"
+        @touchend="onTouchEnd($event, index)"
+      ></div>
+      <!-- 刻度内容 -->
+      <div v-if="marks" :class="`${name}__mark`">
         <div
-          v-for="(item, index) in value"
-          :key="index + 1"
-          :class="handleClass"
-          :style="`left:${value[index]}%`"
-          @touchstart="onTouchStart($event, index)"
-          @touchmove="onTouchMove($event, index)"
-          @touchend="onTouchEnd($event, index)"
+          v-for="(v, k) in marks"
+          :key="k"
+          :class="`${name}__mark-text t-is-·${value && value > k ? 'active' : ''}`"
+          :style="`left:${k}%`"
+          v-text="v"
         ></div>
-        <!-- 刻度内容 -->
-        <div v-if="marks" :class="`${name}__mark`">
-          <div v-for="(v, k) in marks" :key="k" :class="`${name}__mark-text`" :style="`left:${k}%`" v-text="v"></div>
-        </div>
       </div>
-      <template v-if="showExtremeValue">
-        <div v-for="(item, index) in value" :key="index" :class="`${name}-wrap__value`" v-text="item"></div>
-      </template>
-    </template>
-    <template v-else>
-      <div :class="`${name}`" @click="onClick">
-        <!-- 总长度 -->
-        <div ref="barRef" :class="`${name}__bar`"></div>
-        <!-- 滑块长度 -->
-        <div :class="`${name}__track`" :style="`left:${value[0]}%;width:${value[1] - value[0]}%`"></div>
-        <!-- 滑块操作 -->
-        <div
-          v-for="(item, index) in value"
-          :key="index + 1"
-          :class="handleClass"
-          :style="`left:${value[index]}%`"
-          @touchstart="onTouchStart($event, index)"
-          @touchmove="onTouchMove($event, index)"
-          @touchend="onTouchEnd($event, index)"
-        ></div>
-        <!-- 刻度内容 -->
-        <div :class="`${name}__mark`">
-          <div
-            v-for="(item, index) in value"
-            :key="index"
-            :class="`${name}__mark-text`"
-            :style="`left:${value[index]}%`"
-            v-text="item"
-          ></div>
-        </div>
-      </div>
-    </template>
+    </div>
+    <div v-if="showExtremeValue" :class="`${name}-wrap__value`">{{ max }}</div>
   </div>
 </template>
 
@@ -64,8 +39,8 @@ import useVModel from '../hooks/useVModel';
 
 const { prefix } = config;
 const name = `${prefix}-slider`;
-
-// label\showExtremeValue => showValue\value\defaultValue
+const { isArray } = Array;
+// label\value\defaultValue
 
 export interface TouchData {
   startValue: number;
@@ -82,6 +57,18 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const rootRef = ref<HTMLElement | null>(null);
     const barRef = ref<HTMLElement | null>(null);
+    const defaultValue = props.defaultValue || props.min;
+    const { value, modelValue, max, min } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, defaultValue, props.onChange);
+    const isRange = computed(() => {
+      return props.range && isArray(innerValue.value) && innerValue.value.length === 2;
+    });
+    const dots = computed(() => {
+      if (isRange.value) return innerValue.value;
+
+      if (typeof innerValue.value === 'number') return [innerValue.value];
+      return [];
+    });
 
     const classes = computed(() => [
       `${name}-wrap`,
@@ -103,10 +90,6 @@ export default defineComponent({
     });
 
     const dragStatus = ref<string>('');
-    const { value, modelValue } = toRefs(props);
-
-    // const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-
     const touchData = reactive<TouchData>({
       startValue: 0,
       newValue: 0,
@@ -115,7 +98,7 @@ export default defineComponent({
       offsetX: 0,
     });
 
-    function onTouchStart(event: TouchEvent, index: number) {
+    function onTouchStart(event: TouchEvent, value: number) {
       if (props.disabled) {
         return;
       }
@@ -124,13 +107,13 @@ export default defineComponent({
       touchData.deltaX = 0;
       touchData.offsetX = 0;
       touchData.startX = event.touches[0].clientX;
-      touchData.startValue = format(value.value[index]);
+      touchData.startValue = format(value);
       dragStatus.value = 'start';
     }
 
     function onTouchMove(event: TouchEvent, index: number) {
       if (props.disabled) return;
-      if (!rootRef.value) return;
+      if (!barRef.value) return;
 
       event.stopPropagation();
       event.preventDefault();
@@ -142,7 +125,7 @@ export default defineComponent({
       touchData.offsetX = Math.abs(touchData.deltaX);
       dragStatus.value = 'dragging';
 
-      const rect = rootRef.value.getBoundingClientRect();
+      const rect = barRef.value.getBoundingClientRect();
       const delta = touchData.deltaX;
       const total = rect.width;
       const diff = (delta / total) * (props.max - props.min);
@@ -157,6 +140,7 @@ export default defineComponent({
       }
       event.stopPropagation();
       event.preventDefault();
+
       if (dragStatus.value === 'dragging') {
         updateValue(touchData.newValue, index, true);
         context.emit('drag-end');
@@ -177,12 +161,13 @@ export default defineComponent({
       const current = +props.min + (delta / total) * (props.max - props.min);
 
       let index = 0;
-      if (props.range) {
-        if (Math.abs(current - value.value[0]) > Math.abs(current - value.value[1])) {
+      if (props.range && innerValue.value) {
+        if (Math.abs(current - innerValue.value[0]) > Math.abs(current - innerValue.value[1])) {
           index = 1;
         }
       }
-      touchData.startValue = value.value[index];
+
+      touchData.startValue = innerValue.value?.[index];
       updateValue(current, index, true);
     }
 
@@ -204,31 +189,54 @@ export default defineComponent({
 
     function updateValue(newValue: number, index: number, end = false) {
       const formatValue = format(newValue);
-      if (props.range) {
+      if (props.range && Array.isArray(innerValue.value)) {
+        const tmpValue = [...innerValue.value];
+        tmpValue[index] = formatValue;
+
         if (end && formatValue !== touchData.startValue) {
-          value.value[index] = formatValue;
-          value.value = value.value.sort((a, b) => a - b);
-          context.emit('update:modelValue', value);
-          context.emit('change', value);
+          tmpValue.sort((a, b) => a - b);
+          setInnerValue(tmpValue);
+          // context.emit('update:modelValue', value);
+          // context.emit('change', value);
         } else if (formatValue !== touchData.startValue) {
-          value.value[index] = formatValue;
+          setInnerValue(tmpValue);
         }
       } else if (end && formatValue !== touchData.startValue) {
-        value.value = [formatValue];
-        context.emit('update:modelValue', formatValue);
-        context.emit('change', formatValue);
+        setInnerValue(formatValue);
       } else if (formatValue !== touchData.startValue) {
-        value.value = [formatValue];
+        setInnerValue(formatValue);
       }
     }
 
+    const getPercentage = (value: number | undefined): number =>
+      ((value ? value - props.min : 0) / (props.max - props.min)) * 100;
+    const trackStyle = computed(() => {
+      if (props.range && isArray(innerValue.value)) {
+        return {
+          left: `${getPercentage(Math.min(innerValue.value[0], innerValue.value[1]))}%`,
+          width: `${getPercentage(Math.abs(innerValue.value[1] - innerValue.value[0]))}%`,
+        };
+      }
+      if (!isArray(innerValue.value)) {
+        return {
+          width: `${getPercentage(innerValue.value)}%`,
+        };
+      }
+      return {};
+    });
+
     return {
+      max,
+      min,
       name: ref(name),
       rootRef,
       barRef,
-      value,
+      dots,
+      value: innerValue,
       classes,
       handleClass,
+      trackStyle,
+      getPercentage,
       onTouchStart,
       onTouchMove,
       onTouchEnd,
