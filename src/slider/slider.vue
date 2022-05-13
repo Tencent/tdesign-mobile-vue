@@ -17,14 +17,15 @@
         @touchend="onTouchEnd($event, index)"
       ></div>
       <!-- 刻度内容 -->
-      <div v-if="marks" :class="`${name}__mark`">
+      <div v-if="marksData" :class="`${name}__mark`">
         <div
-          v-for="(v, k) in marks"
+          v-for="(v, k) in marksData"
           :key="k"
-          :class="`${name}__mark-text t-is-${value && value > k ? 'active' : ''}`"
-          :style="`left:${k}%`"
-          v-text="v"
-        ></div>
+          :class="`${name}__mark-text t-is-${value && value > v[0] ? 'active' : ''}`"
+          :style="`left: ${getPercentage(v[0])}%`"
+        >
+          {{ typeof v[1] === 'function' ? v[1](v[0]) : v[1] }}
+        </div>
       </div>
     </div>
     <div v-if="showExtremeValue" :class="`${name}-wrap__value`">{{ max }}</div>
@@ -80,13 +81,16 @@ export default defineComponent({
     ]);
     const handleClass = computed(() => [`${name}__handle`]);
     const marksData = computed(() => {
-      const arr: Array<number> = [];
+      const sorter = (a: number[], b: number[]) => a[0] - b[0];
       if (!props.range && props.marks) {
-        Object.keys(props.marks).forEach((item) => {
-          arr.push(parseInt(item, 10));
-        });
+        if (isArray(props.marks)) {
+          return props.marks.map((val: number) => [val, val]).sort(sorter);
+        }
+        return Object.entries(props.marks)
+          .map(([key, value]) => [parseInt(key, 10), value])
+          .sort(sorter);
       }
-      return arr.sort((a, b) => a - b);
+      return [];
     });
 
     const dragStatus = ref<string>('');
@@ -175,8 +179,8 @@ export default defineComponent({
       let current = value;
       if (!props.range && props.marks) {
         if (marksData?.value?.length) {
-          let min = marksData.value[0];
-          marksData.value.forEach((marksDataItemValue) => {
+          let [min] = marksData.value[0];
+          marksData.value.forEach(([marksDataItemValue]) => {
             if (Math.abs(marksDataItemValue - value) < Math.abs(min - value)) {
               min = marksDataItemValue;
             }
@@ -201,8 +205,6 @@ export default defineComponent({
         } else if (formatValue !== touchData.startValue) {
           setInnerValue(tmpValue);
         }
-      } else if (end && formatValue !== touchData.startValue) {
-        setInnerValue(formatValue);
       } else if (formatValue !== touchData.startValue) {
         setInnerValue(formatValue);
       }
@@ -229,6 +231,7 @@ export default defineComponent({
       max,
       min,
       name: ref(name),
+      marksData,
       rootRef,
       barRef,
       dots,
