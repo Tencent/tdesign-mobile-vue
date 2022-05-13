@@ -9,7 +9,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="带数值滑动选择器">
       <div class="slider-demo">
-        <t-slider v-model="value1" disabled />
+        <ValueDemo />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="起始非零滑动选择器">
@@ -19,12 +19,17 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="带刻度滑动选择器">
       <div class="slider-demo">
-        <t-slider v-model="value2" disabled :marks="marks"> </t-slider>
+        <MarkDemo />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="区间滑动选择器">
       <div class="slider-demo">
-        <t-slider v-model="rangeValue" show-value range @change="onChange"> </t-slider>
+        <RangeDemo />
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block title="02 状态" summary="滑动选择器禁用状态">
+      <div class="slider-demo">
+        <DisableDemo />
       </div>
     </tdesign-demo-block>
   </div>
@@ -33,6 +38,10 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import BaseDemo from './base.vue';
+import MarkDemo from './mark.vue';
+import ValueDemo from './value.vue';
+import RangeDemo from './range.vue';
+import DisableDemo from './disable.vue';
 
 const value = ref(60);
 const value1 = ref(60);

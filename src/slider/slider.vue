@@ -21,7 +21,7 @@
         <div
           v-for="(v, k) in marks"
           :key="k"
-          :class="`${name}__mark-text t-is-·${value && value > k ? 'active' : ''}`"
+          :class="`${name}__mark-text t-is-${value && value > k ? 'active' : ''}`"
           :style="`left:${k}%`"
           v-text="v"
         ></div>
