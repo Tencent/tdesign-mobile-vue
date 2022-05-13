@@ -5478,7 +5478,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
       <!--]-->
     </div>
     <!--[-->
-    <div ref_for="true" data-index="A">
+    <div data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5566,7 +5566,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="B">
+    <div data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5733,7 +5733,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
       <!--]-->
     </div>
     <!--[-->
-    <div ref_for="true" data-index="A">
+    <div data-index="A">
       <div class="t-indexes__anchor">A开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5821,7 +5821,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="B">
+    <div data-index="B">
       <div class="t-indexes__anchor">B开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -5954,7 +5954,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="C">
+    <div data-index="C">
       <div class="t-indexes__anchor">C开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6132,7 +6132,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="D">
+    <div data-index="D">
       <div class="t-indexes__anchor">D开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6256,7 +6256,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="E">
+    <div data-index="E">
       <div class="t-indexes__anchor">E开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6290,7 +6290,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="F">
+    <div data-index="F">
       <div class="t-indexes__anchor">F开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -6360,7 +6360,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
-    <div ref_for="true" data-index="G">
+    <div data-index="G">
       <div class="t-indexes__anchor">G开头</div>
       <div class="t-indexes__group">
         <!--[-->
@@ -10722,140 +10722,130 @@ exports[`ssr snapshot test renders ./src/skeleton/demos/pic-text.vue correctly 1
 `;
 
 exports[`ssr snapshot test renders ./src/slider/demos/base.vue correctly 1`] = `
-<div class="cell-base">
-  <div class="t-cell-group">
-    <div class="t-cell-group__title">
-      <!--[-->基础滑动选择器
-      <!--]-->
-    </div>
-    <div class="t-cell-group__container">
+<div class="t-slider-wrap">
+  <!--v-if-->
+  <div class="t-slider">
+    <!-- 总长度 -->
+    <div class="t-slider__bar"></div><!-- 滑块长度 -->
+    <div class="t-slider__track" style="width:60%;"></div><!-- 滑块操作 -->
+    <!--[-->
+    <div class="t-slider__handle" style="left:60%"></div>
+    <!--]-->
+    <!-- 刻度内容 -->
+    <div class="t-slider__mark">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered" label="选择器标题">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap">
-            <!--[-->
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="width:60%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:60%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <div class="t-cell t-cell--middle t-cell--bordered" label="禁用选择器">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap t-is-disabled">
-            <!--[-->
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="width:60%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:60%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
       <!--]-->
     </div>
   </div>
+  <!--v-if-->
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/slider/demos/mark.vue correctly 1`] = `
-<div class="cell-base">
-  <div class="t-cell-group">
-    <div class="t-cell-group__title">
-      <!--[-->带刻度滑动选择器
-      <!--]-->
-    </div>
-    <div class="t-cell-group__container">
+exports[`ssr snapshot test renders ./src/slider/demos/disable.vue correctly 1`] = `
+<!--[-->
+<div class="section">
+  <div class="t-slider-wrap t-is-disabled">
+    <!--v-if-->
+    <div class="t-slider">
+      <!-- 总长度 -->
+      <div class="t-slider__bar"></div><!-- 滑块长度 -->
+      <div class="t-slider__track" style="width:60%;"></div><!-- 滑块操作 -->
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered" label="选择器标题">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap t-is-mark">
-            <!--[-->
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="width:50%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:50%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <div class="t-slider__mark">
-                <!--[-->
-                <div class="t-slider__mark-text" style="left:0%">小</div>
-                <div class="t-slider__mark-text" style="left:50%">中</div>
-                <div class="t-slider__mark-text" style="left:100%">大</div>
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
+      <div class="t-slider__handle" style="left:60%"></div>
+      <!--]-->
+      <!-- 刻度内容 -->
+      <div class="t-slider__mark">
+        <!--[-->
+        <!--]-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered" label="禁用选择器">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap t-is-disabled t-is-mark">
-            <!--[-->
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="width:50%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:50%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <div class="t-slider__mark">
-                <!--[-->
-                <div class="t-slider__mark-text" style="left:0%">小</div>
-                <div class="t-slider__mark-text" style="left:50%">中</div>
-                <div class="t-slider__mark-text" style="left:100%">大</div>
-                <!--]-->
-              </div>
-            </div>
-            <!--v-if-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+<div class="section">
+  <div class="t-slider-wrap t-is-disabled t-is-value">
+    <div class="t-slider-wrap__value-left">30</div>
+    <div class="t-slider">
+      <!-- 总长度 -->
+      <div class="t-slider__bar"></div><!-- 滑块长度 -->
+      <div class="t-slider__track" style="width:0%;"></div><!-- 滑块操作 -->
+      <!--[-->
+      <div class="t-slider__handle" style="left:0%"></div>
+      <!--]-->
+      <!-- 刻度内容 -->
+      <div class="t-slider__mark">
+        <!--[-->
+        <!--]-->
       </div>
+    </div>
+    <div class="t-slider-wrap__value">100</div>
+  </div>
+</div>
+<div class="section">
+  <div class="t-slider-wrap t-is-disabled t-is-mark">
+    <!--v-if-->
+    <div class="t-slider">
+      <!-- 总长度 -->
+      <div class="t-slider__bar"></div><!-- 滑块长度 -->
+      <div class="t-slider__track" style="width:50%;"></div><!-- 滑块操作 -->
+      <!--[-->
+      <div class="t-slider__handle" style="left:50%"></div>
+      <!--]-->
+      <!-- 刻度内容 -->
+      <div class="t-slider__mark">
+        <!--[-->
+        <div class="t-slider__mark-text t-is-active" style="left: 0%">小</div>
+        <div class="t-slider__mark-text t-is-" style="left: 50%">中</div>
+        <div class="t-slider__mark-text t-is-" style="left: 100%">大</div>
+        <!--]-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+<div class="section">
+  <div class="t-slider-wrap t-is-disabled">
+    <!--v-if-->
+    <div class="t-slider">
+      <!-- 总长度 -->
+      <div class="t-slider__bar"></div><!-- 滑块长度 -->
+      <div class="t-slider__track" style="left:30%;width:50%;"></div><!-- 滑块操作 -->
+      <!--[-->
+      <div class="t-slider__handle" style="left:30%"></div>
+      <div class="t-slider__handle" style="left:80%"></div>
+      <!--]-->
+      <!-- 刻度内容 -->
+      <div class="t-slider__mark">
+        <!--[-->
+        <!--]-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+<!--]-->
+`;
+
+exports[`ssr snapshot test renders ./src/slider/demos/mark.vue correctly 1`] = `
+<div class="t-slider-wrap t-is-mark">
+  <!--v-if-->
+  <div class="t-slider">
+    <!-- 总长度 -->
+    <div class="t-slider__bar"></div><!-- 滑块长度 -->
+    <div class="t-slider__track" style="width:50%;"></div><!-- 滑块操作 -->
+    <!--[-->
+    <div class="t-slider__handle" style="left:50%"></div>
+    <!--]-->
+    <!-- 刻度内容 -->
+    <div class="t-slider__mark">
+      <!--[-->
+      <div class="t-slider__mark-text t-is-active" style="left: 0%">小</div>
+      <div class="t-slider__mark-text t-is-" style="left: 50%">中</div>
+      <div class="t-slider__mark-text t-is-" style="left: 100%">大</div>
       <!--]-->
     </div>
   </div>
+  <!--v-if-->
 </div>
 `;
 
@@ -10869,19 +10859,21 @@ exports[`ssr snapshot test renders ./src/slider/demos/mobile.vue correctly 1`] =
     <!--[-->
     <div class="slider-demo">
       <div class="t-slider-wrap">
-        <!--[-->
+        <!--v-if-->
         <div class="t-slider">
           <!-- 总长度 -->
           <div class="t-slider__bar"></div><!-- 滑块长度 -->
-          <div class="t-slider__track" style="width:60%"></div><!-- 滑块操作 -->
+          <div class="t-slider__track" style="width:60%;"></div><!-- 滑块操作 -->
           <!--[-->
           <div class="t-slider__handle" style="left:60%"></div>
           <!--]-->
           <!-- 刻度内容 -->
-          <!--v-if-->
+          <div class="t-slider__mark">
+            <!--[-->
+            <!--]-->
+          </div>
         </div>
         <!--v-if-->
-        <!--]-->
       </div>
     </div>
     <!--]-->
@@ -10891,22 +10883,47 @@ exports[`ssr snapshot test renders ./src/slider/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">带数值滑动选择器</p>
     <!--[-->
     <div class="slider-demo">
-      <div class="t-slider-wrap t-is-value">
-        <!--[-->
+      <div class="t-slider-wrap" show-value>
+        <!--v-if-->
         <div class="t-slider">
           <!-- 总长度 -->
           <div class="t-slider__bar"></div><!-- 滑块长度 -->
-          <div class="t-slider__track" style="width:60%"></div><!-- 滑块操作 -->
+          <div class="t-slider__track" style="width:60%;"></div><!-- 滑块操作 -->
           <!--[-->
           <div class="t-slider__handle" style="left:60%"></div>
           <!--]-->
           <!-- 刻度内容 -->
-          <!--v-if-->
+          <div class="t-slider__mark">
+            <!--[-->
+            <!--]-->
+          </div>
         </div>
-        <!--[-->
-        <div class="t-slider-wrap__value">60</div>
-        <!--]-->
-        <!--]-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">起始非零滑动选择器</p>
+    <!--[-->
+    <div class="slider-demo">
+      <div class="t-slider-wrap t-is-value">
+        <div class="t-slider-wrap__value-left">30</div>
+        <div class="t-slider">
+          <!-- 总长度 -->
+          <div class="t-slider__bar"></div><!-- 滑块长度 -->
+          <div class="t-slider__track" style="width:0%;"></div><!-- 滑块操作 -->
+          <!--[-->
+          <div class="t-slider__handle" style="left:0%"></div>
+          <!--]-->
+          <!-- 刻度内容 -->
+          <div class="t-slider__mark">
+            <!--[-->
+            <!--]-->
+          </div>
+        </div>
+        <div class="t-slider-wrap__value">100</div>
       </div>
     </div>
     <!--]-->
@@ -10917,25 +10934,24 @@ exports[`ssr snapshot test renders ./src/slider/demos/mobile.vue correctly 1`] =
     <!--[-->
     <div class="slider-demo">
       <div class="t-slider-wrap t-is-mark">
-        <!--[-->
+        <!--v-if-->
         <div class="t-slider">
           <!-- 总长度 -->
           <div class="t-slider__bar"></div><!-- 滑块长度 -->
-          <div class="t-slider__track" style="width:50%"></div><!-- 滑块操作 -->
+          <div class="t-slider__track" style="width:50%;"></div><!-- 滑块操作 -->
           <!--[-->
           <div class="t-slider__handle" style="left:50%"></div>
           <!--]-->
           <!-- 刻度内容 -->
           <div class="t-slider__mark">
             <!--[-->
-            <div class="t-slider__mark-text" style="left:0%">小</div>
-            <div class="t-slider__mark-text" style="left:50%">中</div>
-            <div class="t-slider__mark-text" style="left:100%">大</div>
+            <div class="t-slider__mark-text t-is-active" style="left: 0%">小</div>
+            <div class="t-slider__mark-text t-is-" style="left: 50%">中</div>
+            <div class="t-slider__mark-text t-is-" style="left: 100%">大</div>
             <!--]-->
           </div>
         </div>
         <!--v-if-->
-        <!--]-->
       </div>
     </div>
     <!--]-->
@@ -10945,24 +10961,114 @@ exports[`ssr snapshot test renders ./src/slider/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">区间滑动选择器</p>
     <!--[-->
     <div class="slider-demo">
-      <div class="t-slider-wrap t-is-value">
+      <div class="t-slider-wrap" show-value>
+        <!--v-if-->
         <div class="t-slider">
           <!-- 总长度 -->
           <div class="t-slider__bar"></div><!-- 滑块长度 -->
-          <div class="t-slider__track" style="left:30%;width:40%"></div><!-- 滑块操作 -->
+          <div class="t-slider__track" style="left:30%;width:50%;"></div><!-- 滑块操作 -->
           <!--[-->
           <div class="t-slider__handle" style="left:30%"></div>
-          <div class="t-slider__handle" style="left:70%"></div>
+          <div class="t-slider__handle" style="left:80%"></div>
           <!--]-->
           <!-- 刻度内容 -->
           <div class="t-slider__mark">
             <!--[-->
-            <div class="t-slider__mark-text" style="left:30%">30</div>
-            <div class="t-slider__mark-text" style="left:70%">70</div>
             <!--]-->
           </div>
         </div>
+        <!--v-if-->
       </div>
+    </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">02 状态</h2>
+    <p class="tdesign-mobile-demo-block__summary">滑动选择器禁用状态</p>
+    <!--[-->
+    <div class="slider-demo">
+      <!--[-->
+      <div class="section">
+        <div class="t-slider-wrap t-is-disabled">
+          <!--v-if-->
+          <div class="t-slider">
+            <!-- 总长度 -->
+            <div class="t-slider__bar"></div><!-- 滑块长度 -->
+            <div class="t-slider__track" style="width:60%;"></div><!-- 滑块操作 -->
+            <!--[-->
+            <div class="t-slider__handle" style="left:60%"></div>
+            <!--]-->
+            <!-- 刻度内容 -->
+            <div class="t-slider__mark">
+              <!--[-->
+              <!--]-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div class="section">
+        <div class="t-slider-wrap t-is-disabled t-is-value">
+          <div class="t-slider-wrap__value-left">30</div>
+          <div class="t-slider">
+            <!-- 总长度 -->
+            <div class="t-slider__bar"></div><!-- 滑块长度 -->
+            <div class="t-slider__track" style="width:0%;"></div><!-- 滑块操作 -->
+            <!--[-->
+            <div class="t-slider__handle" style="left:0%"></div>
+            <!--]-->
+            <!-- 刻度内容 -->
+            <div class="t-slider__mark">
+              <!--[-->
+              <!--]-->
+            </div>
+          </div>
+          <div class="t-slider-wrap__value">100</div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="t-slider-wrap t-is-disabled t-is-mark">
+          <!--v-if-->
+          <div class="t-slider">
+            <!-- 总长度 -->
+            <div class="t-slider__bar"></div><!-- 滑块长度 -->
+            <div class="t-slider__track" style="width:50%;"></div><!-- 滑块操作 -->
+            <!--[-->
+            <div class="t-slider__handle" style="left:50%"></div>
+            <!--]-->
+            <!-- 刻度内容 -->
+            <div class="t-slider__mark">
+              <!--[-->
+              <div class="t-slider__mark-text t-is-active" style="left: 0%">小</div>
+              <div class="t-slider__mark-text t-is-" style="left: 50%">中</div>
+              <div class="t-slider__mark-text t-is-" style="left: 100%">大</div>
+              <!--]-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div class="section">
+        <div class="t-slider-wrap t-is-disabled">
+          <!--v-if-->
+          <div class="t-slider">
+            <!-- 总长度 -->
+            <div class="t-slider__bar"></div><!-- 滑块长度 -->
+            <div class="t-slider__track" style="left:30%;width:50%;"></div><!-- 滑块操作 -->
+            <!--[-->
+            <div class="t-slider__handle" style="left:30%"></div>
+            <div class="t-slider__handle" style="left:80%"></div>
+            <!--]-->
+            <!-- 刻度内容 -->
+            <div class="t-slider__mark">
+              <!--[-->
+              <!--]-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -10970,138 +11076,43 @@ exports[`ssr snapshot test renders ./src/slider/demos/mobile.vue correctly 1`] =
 `;
 
 exports[`ssr snapshot test renders ./src/slider/demos/range.vue correctly 1`] = `
-<div class="cell-base">
-  <div class="t-cell-group">
-    <div class="t-cell-group__title">
-      <!--[-->区间滑动选择器
-      <!--]-->
-    </div>
-    <div class="t-cell-group__container">
+<div class="t-slider-wrap" show-value>
+  <!--v-if-->
+  <div class="t-slider">
+    <!-- 总长度 -->
+    <div class="t-slider__bar"></div><!-- 滑块长度 -->
+    <div class="t-slider__track" style="left:30%;width:50%;"></div><!-- 滑块操作 -->
+    <!--[-->
+    <div class="t-slider__handle" style="left:30%"></div>
+    <div class="t-slider__handle" style="left:80%"></div>
+    <!--]-->
+    <!-- 刻度内容 -->
+    <div class="t-slider__mark">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered" label="选择器标题">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap t-is-value">
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="left:30%;width:50%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:30%"></div>
-              <div class="t-slider__handle" style="left:80%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <div class="t-slider__mark">
-                <!--[-->
-                <div class="t-slider__mark-text" style="left:30%">30</div>
-                <div class="t-slider__mark-text" style="left:80%">80</div>
-                <!--]-->
-              </div>
-            </div>
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <div class="t-cell t-cell--middle t-cell--bordered" label="禁用选择器">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap t-is-disabled">
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="left:30%;width:50%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:30%"></div>
-              <div class="t-slider__handle" style="left:80%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <div class="t-slider__mark">
-                <!--[-->
-                <div class="t-slider__mark-text" style="left:30%">30</div>
-                <div class="t-slider__mark-text" style="left:80%">80</div>
-                <!--]-->
-              </div>
-            </div>
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
       <!--]-->
     </div>
   </div>
+  <!--v-if-->
 </div>
 `;
 
 exports[`ssr snapshot test renders ./src/slider/demos/value.vue correctly 1`] = `
-<div class="cell-base">
-  <div class="t-cell-group">
-    <div class="t-cell-group__title">
-      <!--[-->带数字滑动选择器
-      <!--]-->
-    </div>
-    <div class="t-cell-group__container">
+<div class="t-slider-wrap" show-value>
+  <!--v-if-->
+  <div class="t-slider">
+    <!-- 总长度 -->
+    <div class="t-slider__bar"></div><!-- 滑块长度 -->
+    <div class="t-slider__track" style="width:60%;"></div><!-- 滑块操作 -->
+    <!--[-->
+    <div class="t-slider__handle" style="left:60%"></div>
+    <!--]-->
+    <!-- 刻度内容 -->
+    <div class="t-slider__mark">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered" label="选择器标题">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap t-is-value">
-            <!--[-->
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="width:60%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:60%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <!--v-if-->
-            </div>
-            <!--[-->
-            <div class="t-slider-wrap__value">60</div>
-            <!--]-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
-      <div class="t-cell t-cell--middle t-cell--bordered" label="禁用选择器">
-        <!--v-if-->
-        <!--v-if-->
-        <div class="t-cell__note">
-          <!--[-->
-          <div class="t-slider-wrap t-is-disabled t-is-value">
-            <!--[-->
-            <div class="t-slider">
-              <!-- 总长度 -->
-              <div class="t-slider__bar"></div><!-- 滑块长度 -->
-              <div class="t-slider__track" style="width:60%"></div><!-- 滑块操作 -->
-              <!--[-->
-              <div class="t-slider__handle" style="left:60%"></div>
-              <!--]-->
-              <!-- 刻度内容 -->
-              <!--v-if-->
-            </div>
-            <!--[-->
-            <div class="t-slider-wrap__value">60</div>
-            <!--]-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <!--v-if-->
-      </div>
       <!--]-->
     </div>
   </div>
+  <!--v-if-->
 </div>
 `;
 
