@@ -8435,47 +8435,143 @@ exports[`ssr snapshot test renders ./src/popup/demos/placement-top.vue correctly
 
 exports[`ssr snapshot test renders ./src/progress/demos/base.vue correctly 1`] = `
 <div>
-  <div class="tdesign-mobile-demo-block">
-    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
-    <p class="tdesign-mobile-demo-block__summary">基础进度条</p>
-    <!--[-->
-    <div class="progress-demo progress-demo--margin">
-      <div class="t-progress t-progress--status--undefined">
-        <div class="t-progress__inner">
-          <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-            <div class="t-progress__bar-percent" style="width:0%;background:;"></div>
-          </div>
-          <div class="t-progress__label">0%</div>
+  <div class="progress-demo progress-demo--margin">
+    <div class="t-progress t-progress--status--undefined">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:0%;background:;"></div>
         </div>
+        <div class="t-progress__label">0%</div>
       </div>
     </div>
-    <div class="progress-demo progress-demo--margin">
-      <div class="t-progress t-progress--status--undefined">
-        <div class="t-progress__inner">
-          <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-            <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-          </div>
-          <div class="t-progress__label">88%</div>
+  </div>
+  <div class="progress-demo progress-demo--margin">
+    <div class="t-progress t-progress--status--undefined">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
         </div>
+        <div class="t-progress__label">88%</div>
       </div>
     </div>
-    <div class="progress-demo progress-demo--margin">
-      <div class="t-progress t-progress--status--success">
-        <div class="t-progress__inner">
-          <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-            <div class="t-progress__bar-percent" style="width:100%;background:;"></div>
-          </div>
-          <div class="t-progress__label">100%</div>
+  </div>
+  <div class="progress-demo progress-demo--margin">
+    <div class="t-progress t-progress--status--success">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:100%;background:;"></div>
         </div>
+        <div class="t-progress__label">100%</div>
       </div>
     </div>
-    <!--]-->
   </div>
 </div>
 `;
 
 exports[`ssr snapshot test renders ./src/progress/demos/color.vue correctly 1`] = `
 <div>
+  <div class="progress-demo">
+    <div class="t-progress t-progress--status--undefined">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
+        </div>
+        <div class="t-progress__label">88%</div>
+      </div>
+    </div>
+  </div>
+  <div class="progress-demo">
+    <div class="t-progress t-progress--status--error">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
+        </div>
+        <div class="t-progress__label">88%</div>
+      </div>
+    </div>
+  </div>
+  <div class="progress-demo">
+    <div class="t-progress t-progress--status--warning">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
+        </div>
+        <div class="t-progress__label">88%</div>
+      </div>
+    </div>
+  </div>
+  <div class="progress-demo">
+    <div class="t-progress t-progress--status--success">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:100%;background:;"></div>
+        </div>
+        <div class="t-progress__label">100%</div>
+      </div>
+    </div>
+  </div>
+  <div class="progress-demo">
+    <div class="t-progress t-progress--status--undefined">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
+        </div>
+        <div class="t-progress__label">88%</div>
+      </div>
+    </div>
+    <div class="button-group"><button class="t-button t-size-s t-button--outline t-button--primary t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->减少<!--]--></span>
+      </button>
+      <div class="space"></div><button class="t-button t-size-s t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->增加<!--]--></span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/progress/demos/mobile.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <h1 class="title">Progress 进度条</h1>
+  <p class="summary">展示操作的当前进度</p>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
+    <p class="tdesign-mobile-demo-block__summary">基础进度条</p>
+    <!--[-->
+    <div>
+      <div class="progress-demo progress-demo--margin">
+        <div class="t-progress t-progress--status--undefined">
+          <div class="t-progress__inner">
+            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+              <div class="t-progress__bar-percent" style="width:0%;background:;"></div>
+            </div>
+            <div class="t-progress__label">0%</div>
+          </div>
+        </div>
+      </div>
+      <div class="progress-demo progress-demo--margin">
+        <div class="t-progress t-progress--status--undefined">
+          <div class="t-progress__inner">
+            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
+            </div>
+            <div class="t-progress__label">88%</div>
+          </div>
+        </div>
+      </div>
+      <div class="progress-demo progress-demo--margin">
+        <div class="t-progress t-progress--status--success">
+          <div class="t-progress__inner">
+            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+              <div class="t-progress__bar-percent" style="width:100%;background:;"></div>
+            </div>
+            <div class="t-progress__label">100%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--]-->
+  </div>
   <div class="tdesign-mobile-demo-block">
     <h2 class="tdesign-mobile-demo-block__title">02 状态</h2>
     <p class="tdesign-mobile-demo-block__summary">默认状态</p>
@@ -8563,200 +8659,25 @@ exports[`ssr snapshot test renders ./src/progress/demos/color.vue correctly 1`] 
     </div>
     <!--]-->
   </div>
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/progress/demos/mobile.vue correctly 1`] = `
-<div class="tdesign-mobile-demo">
-  <h1 class="title">Progress 进度条</h1>
-  <p class="summary">展示操作的当前进度</p>
-  <div>
-    <div class="tdesign-mobile-demo-block">
-      <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
-      <p class="tdesign-mobile-demo-block__summary">基础进度条</p>
-      <!--[-->
-      <div class="progress-demo progress-demo--margin">
-        <div class="t-progress t-progress--status--undefined">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:0%;background:;"></div>
-            </div>
-            <div class="t-progress__label">0%</div>
+  <div class="tdesign-mobile-demo-block">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">自定义颜色</p>
+    <!--[-->
+    <div class="progress-demo">
+      <div class="t-progress t-progress--status--undefined">
+        <div class="t-progress__inner">
+          <div class="t-progress__bar" style="height:undefinedpx;background-color:#EAC9FF;">
+            <div class="t-progress__bar-percent" style="width:88%;background:#CD04FF;"></div>
+          </div>
+          <div class="t-progress__label">
+            <!--[--><span class="label--color">88%</span>
+            <!--]-->
           </div>
         </div>
       </div>
-      <div class="progress-demo progress-demo--margin">
-        <div class="t-progress t-progress--status--undefined">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-            </div>
-            <div class="t-progress__label">88%</div>
-          </div>
-        </div>
-      </div>
-      <div class="progress-demo progress-demo--margin">
-        <div class="t-progress t-progress--status--success">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:100%;background:;"></div>
-            </div>
-            <div class="t-progress__label">100%</div>
-          </div>
-        </div>
-      </div>
-      <!--]-->
     </div>
+    <!--]-->
   </div>
-  <div>
-    <div class="tdesign-mobile-demo-block">
-      <!--v-if-->
-      <p class="tdesign-mobile-demo-block__summary">自定义颜色</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--undefined">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:#EAC9FF;">
-              <div class="t-progress__bar-percent" style="width:88%;background:#CD04FF;"></div>
-            </div>
-            <div class="t-progress__label">
-              <!--[--><span class="label--color">88%</span>
-              <!--]-->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-  </div>
-  <div>
-    <div class="tdesign-mobile-demo-block">
-      <h2 class="tdesign-mobile-demo-block__title">02 状态</h2>
-      <p class="tdesign-mobile-demo-block__summary">默认状态</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--undefined">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-            </div>
-            <div class="t-progress__label">88%</div>
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-    <div class="tdesign-mobile-demo-block">
-      <!--v-if-->
-      <p class="tdesign-mobile-demo-block__summary">进度状态发生重大错误</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--error">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-            </div>
-            <div class="t-progress__label">88%</div>
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-    <div class="tdesign-mobile-demo-block">
-      <!--v-if-->
-      <p class="tdesign-mobile-demo-block__summary">进度中止</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--warning">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-            </div>
-            <div class="t-progress__label">88%</div>
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-    <div class="tdesign-mobile-demo-block">
-      <!--v-if-->
-      <p class="tdesign-mobile-demo-block__summary">进度完成</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--success">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:100%;background:;"></div>
-            </div>
-            <div class="t-progress__label">100%</div>
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-    <div class="tdesign-mobile-demo-block">
-      <!--v-if-->
-      <p class="tdesign-mobile-demo-block__summary">过渡样式</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--undefined">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-            </div>
-            <div class="t-progress__label">88%</div>
-          </div>
-        </div>
-        <div class="button-group"><button class="t-button t-size-s t-button--outline t-button--primary t-button--square" role="button" aria-disabled="false">
-            <!----><span class="t-button__text"><!--[-->减少<!--]--></span>
-          </button>
-          <div class="space"></div><button class="t-button t-size-s t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
-            <!----><span class="t-button__text"><!--[-->增加<!--]--></span>
-          </button>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-  </div>
-  <div>
-    <div class="tdesign-mobile-demo-block">
-      <h2 class="tdesign-mobile-demo-block__title">03 规格</h2>
-      <p class="tdesign-mobile-demo-block__summary">带数值进度条</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--undefined">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-            </div>
-            <div class="t-progress__label">88%</div>
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-    <div class="tdesign-mobile-demo-block">
-      <!--v-if-->
-      <p class="tdesign-mobile-demo-block__summary">无数值进度条</p>
-      <!--[-->
-      <div class="progress-demo">
-        <div class="t-progress t-progress--status--undefined">
-          <div class="t-progress__inner">
-            <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
-              <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
-            </div>
-            <!--v-if-->
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/progress/demos/text.vue correctly 1`] = `
-<div>
   <div class="tdesign-mobile-demo-block">
     <h2 class="tdesign-mobile-demo-block__title">03 规格</h2>
     <p class="tdesign-mobile-demo-block__summary">带数值进度条</p>
@@ -8792,26 +8713,43 @@ exports[`ssr snapshot test renders ./src/progress/demos/text.vue correctly 1`] =
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/progress/demos/type.vue correctly 1`] = `
+exports[`ssr snapshot test renders ./src/progress/demos/text.vue correctly 1`] = `
 <div>
-  <div class="tdesign-mobile-demo-block">
-    <!--v-if-->
-    <p class="tdesign-mobile-demo-block__summary">自定义颜色</p>
-    <!--[-->
-    <div class="progress-demo">
-      <div class="t-progress t-progress--status--undefined">
-        <div class="t-progress__inner">
-          <div class="t-progress__bar" style="height:undefinedpx;background-color:#EAC9FF;">
-            <div class="t-progress__bar-percent" style="width:88%;background:#CD04FF;"></div>
-          </div>
-          <div class="t-progress__label">
-            <!--[--><span class="label--color">88%</span>
-            <!--]-->
-          </div>
+  <div class="progress-demo">
+    <div class="t-progress t-progress--status--undefined">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
         </div>
+        <div class="t-progress__label">88%</div>
       </div>
     </div>
-    <!--]-->
+  </div>
+  <div class="progress-demo">
+    <div class="t-progress t-progress--status--undefined">
+      <div class="t-progress__inner">
+        <div class="t-progress__bar" style="height:undefinedpx;background-color:;">
+          <div class="t-progress__bar-percent" style="width:88%;background:;"></div>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/progress/demos/type.vue correctly 1`] = `
+<div class="progress-demo">
+  <div class="t-progress t-progress--status--undefined">
+    <div class="t-progress__inner">
+      <div class="t-progress__bar" style="height:undefinedpx;background-color:#EAC9FF;">
+        <div class="t-progress__bar-percent" style="width:88%;background:#CD04FF;"></div>
+      </div>
+      <div class="t-progress__label">
+        <!--[--><span class="label--color">88%</span>
+        <!--]-->
+      </div>
+    </div>
   </div>
 </div>
 `;
