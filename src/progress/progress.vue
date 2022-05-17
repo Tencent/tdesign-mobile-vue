@@ -1,60 +1,75 @@
 <template>
   <div :class="rootClasses">
     <div :class="`${name}__inner`">
-      <div :class="`${name}__bd`" :style="progressBgColorStyle">
-        <div :class="`${name}__percent`" :style="progressStyle"></div>
+      <div :class="`${name}__bar`" :style="progressBarStyle">
+        <div :class="`${name}__bar-percent`" :style="progressBarPercenStyle"></div>
       </div>
-      <div v-if="showTextPercentage" :class="`${name}__ft`">
-        <span :class="`${name}__text-percentage`" :style="percentageTextStyle">{{ percentage }}%</span>
+      <div v-if="progressLabelContent" :class="`${name}__label`">
+        <t-node :content="progressLabelContent"></t-node>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { SetupContext, defineComponent, computed } from 'vue';
-import { progressProps, ProgressPropsType } from './progress.interface';
+import { defineComponent, computed, getCurrentInstance } from 'vue';
+import { renderTNode, TNode } from '../shared';
 import config from '../config';
+import { getBackgroundColor } from './utils';
+import progressProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-progress`;
 
 export default defineComponent({
   name,
+  components: {
+    TNode,
+  },
   props: progressProps,
-  setup(props: ProgressPropsType, context: SetupContext) {
-    console.log('context', context);
+  setup(props) {
+    const progressPercent = computed(() => {
+      return Math.max(0, Math.min(props.percentage, 100));
+    });
 
-    const rootClasses = computed(() => [
-      `${name}`,
-      {
-        [`${name}--info`]: props.type === 'info',
-        [`${name}--error`]: props.type === 'error',
-      },
-    ]);
+    const progressStatusStyle = computed(() => {
+      if (props.percentage >= 100) {
+        return 'success';
+      }
+      return props.status;
+    });
 
-    const showTextPercentage = computed(() => props.showText);
+    const progressBarStyle = computed(() => {
+      const height = typeof props.strokeWidth === 'string' ? props.strokeWidth : `${props.strokeWidth}px`;
+      return {
+        height,
+        backgroundColor: props.trackColor,
+      };
+    });
 
-    const progressStyle = computed(() => ({
-      width: `${props.percentage > 0 ? `${props.percentage}%` : 0}`,
-      backgroundColor: `${props.color ? props.color : ''}`,
-    }));
+    const progressBarPercenStyle = computed(() => {
+      return {
+        width: `${progressPercent.value}%`,
+        background: props.color && getBackgroundColor(props.color),
+      };
+    });
 
-    const progressBgColorStyle = computed(() => ({
-      backgroundColor: `${props.bgColor ? props.bgColor : ''}`,
-    }));
-
-    const percentageTextStyle = computed(() => ({
-      color: `${props.textColor ? props.textColor : ''}`,
-    }));
+    const rootClasses = computed(() => [`${name}`, `${name}--status--${progressStatusStyle.value}`]);
+    const internalInstance = getCurrentInstance();
+    const progressLabelContent = computed(
+      () =>
+        props.label &&
+        (typeof renderTNode(internalInstance, 'label') === 'object'
+          ? renderTNode(internalInstance, 'label')
+          : `${progressPercent.value}%`),
+    );
 
     return {
       name,
       rootClasses,
-      showTextPercentage,
-      progressStyle,
-      progressBgColorStyle,
-      percentageTextStyle,
+      progressBarPercenStyle,
+      progressBarStyle,
+      progressLabelContent,
     };
   },
 });
