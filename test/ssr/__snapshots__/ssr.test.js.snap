@@ -16376,10 +16376,68 @@ exports[`ssr snapshot test renders ./src/tag/demos/variant.vue correctly 1`] = `
 </div>
 `;
 
+exports[`ssr snapshot test renders ./src/textarea/demos/autosize.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div class="t-textarea">
+    <div class="t-textarea__name">标签文字</div>
+    <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
 exports[`ssr snapshot test renders ./src/textarea/demos/base.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
-  <div class="t-textarea"><textarea style="" name maxlength="-1"></textarea>
+  <div class="t-textarea">
     <!--v-if-->
+    <div class="t-textarea__wrapper"><textarea style="" name maxlength="-1"></textarea>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/textarea/demos/events.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div class="t-textarea">
+    <div class="t-textarea__name">标签文字</div>
+    <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/textarea/demos/label.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div class="t-textarea">
+    <!--v-if-->
+    <div class="t-textarea__wrapper"><textarea style="" name maxlength="-1"></textarea>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/textarea/demos/maxcharacter.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div class="t-textarea">
+    <div class="t-textarea__name">标签文字</div>
+    <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
+      <div class="t-textarea__count">0/10</div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/textarea/demos/maxlength.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div class="t-textarea">
+    <div class="t-textarea__name">标签文字</div>
+    <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="20" placeholder="请输入文字"></textarea>
+      <div class="t-textarea__count">0/20</div>
+    </div>
   </div>
 </div>
 `;
@@ -16392,8 +16450,23 @@ exports[`ssr snapshot test renders ./src/textarea/demos/mobile.vue correctly 1`]
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
     <p class="tdesign-mobile-demo-block__summary">基础多行文本框</p>
     <!--[-->
-    <div class="t-textarea"><textarea style="" name maxlength="-1" placeholder="请输入文字"></textarea>
+    <div class="t-textarea">
       <!--v-if-->
+      <div class="t-textarea__wrapper"><textarea style="" name maxlength="-1" placeholder="请输入文字"></textarea>
+        <!--v-if-->
+      </div>
+    </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">带标题多行文本框</p>
+    <!--[-->
+    <div class="t-textarea">
+      <div class="t-textarea__name">标签文字</div>
+      <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
+        <!--v-if-->
+      </div>
     </div>
     <!--]-->
   </div>
@@ -16401,8 +16474,15 @@ exports[`ssr snapshot test renders ./src/textarea/demos/mobile.vue correctly 1`]
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">自动增高多行文本框</p>
     <!--[-->
-    <div class="t-textarea"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
-      <!--v-if-->
+    <div class="t-textarea">
+      <div class="t-textarea__name">
+        <!--[-->
+        <div>标签文字</div>
+        <!--]-->
+      </div>
+      <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
+        <!--v-if-->
+      </div>
     </div>
     <!--]-->
   </div>
@@ -16410,8 +16490,11 @@ exports[`ssr snapshot test renders ./src/textarea/demos/mobile.vue correctly 1`]
     <h2 class="tdesign-mobile-demo-block__title">02 状态</h2>
     <p class="tdesign-mobile-demo-block__summary">禁用多行文本框</p>
     <!--[-->
-    <div class="t-textarea"><textarea style="" name="标签文字" maxlength="-1" disabled placeholder="请输入文字">不可编辑文字</textarea>
-      <!--v-if-->
+    <div class="t-textarea">
+      <div class="t-textarea__name">标签文字</div>
+      <div class="t-textarea__wrapper t-textarea-is-disabled"><textarea style="" name="标签文字" maxlength="-1" disabled placeholder="请输入文字">不可编辑文字</textarea>
+        <!--v-if-->
+      </div>
     </div>
     <!--]-->
   </div>
@@ -16419,8 +16502,11 @@ exports[`ssr snapshot test renders ./src/textarea/demos/mobile.vue correctly 1`]
     <h2 class="tdesign-mobile-demo-block__title">03 字符限制</h2>
     <p class="tdesign-mobile-demo-block__summary">设置最大字符个数</p>
     <!--[-->
-    <div class="t-textarea"><textarea style="" name="标签文字" maxlength="10" placeholder="请输入文字"></textarea>
-      <div class="t-textarea__count">0/10</div>
+    <div class="t-textarea">
+      <div class="t-textarea__name">标签文字</div>
+      <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="20" placeholder="请输入文字"></textarea>
+        <div class="t-textarea__count">0/20</div>
+      </div>
     </div>
     <!--]-->
   </div>
@@ -16428,10 +16514,36 @@ exports[`ssr snapshot test renders ./src/textarea/demos/mobile.vue correctly 1`]
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">设置最大字符个数，一个汉字表示两个字符</p>
     <!--[-->
-    <div class="t-textarea"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
-      <div class="t-textarea__count">0/10</div>
+    <div class="t-textarea">
+      <div class="t-textarea__name">标签文字</div>
+      <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
+        <div class="t-textarea__count">0/10</div>
+      </div>
     </div>
     <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">04 事件</h2>
+    <p class="tdesign-mobile-demo-block__summary">带事件文本框</p>
+    <!--[-->
+    <div class="t-textarea">
+      <div class="t-textarea__name">标签文字</div>
+      <div class="t-textarea__wrapper"><textarea style="" name="标签文字" maxlength="-1" placeholder="请输入文字"></textarea>
+        <!--v-if-->
+      </div>
+    </div>
+    <!--]-->
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/textarea/demos/type.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <div class="t-textarea">
+    <div class="t-textarea__name">标签文字</div>
+    <div class="t-textarea__wrapper t-textarea-is-disabled"><textarea style="" name="标签文字" maxlength="-1" disabled placeholder="请输入文字">不可编辑文字</textarea>
+      <!--v-if-->
+    </div>
   </div>
 </div>
 `;
