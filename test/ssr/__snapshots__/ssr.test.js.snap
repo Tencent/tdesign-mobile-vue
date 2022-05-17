@@ -5704,7 +5704,7 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
 </div>
 `;
 
-exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] = `
+exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctly 1`] = `
 <div class="component-wrap">
   <div style="" class="t-indexes">
     <div class="t-indexes__sidebar">
@@ -6457,6 +6457,24 @@ exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] 
         <!--]-->
       </div>
     </div>
+    <!--]-->
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/indexes/demos/mobile.vue correctly 1`] = `
+<div class="tdesign-mobile-demo">
+  <h1 class="title">DropdownMenu 下拉菜单</h1>
+  <p class="summary">向下弹出的菜单列表</p>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
+    <p class="tdesign-mobile-demo-block__summary">单选下拉菜单</p>
+    <!--[-->
+    <div class="indexes-demo"><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[--> 字母索引 <!--]--></span>
+      </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[--> 数字索引 <!--]--></span>
+      </button></div>
     <!--]-->
   </div>
 </div>
