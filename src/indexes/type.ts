@@ -10,14 +10,23 @@ export interface TdIndexesProps {
    */
   height?: number;
   /**
-   * 索引列表的列表数据。每个元素包含三个字元素，index(string)：索引值，例如1，2，3，...或A，B，C等；title(string): 索引标题，可不填将默认设为索引值；children(Array<{title: string}>): 子元素列表，title为子元素的展示文案。
+   * 索引列表的列表数据。每个元素包含三个子元素，index(string)：索引值，例如1，2，3，...或A，B，C等；title(string): 索引标题，可不填将默认设为索引值；children(Array<{title: string}>): 子元素列表，title为子元素的展示文案。
    * @default []
    */
-  list: ListItem[] ;
+  list: ListItem[];
+  /**
+   * 索引是否吸顶，默认为true
+   * @default true
+   */
+  sticky?: Boolean;
   /**
    * 点击行元素时触发事件
    */
   onSelect?: (indexes: { groupIndex: string; childrenIndex: number }) => void;
 }
 
-export interface ListItem { title: string;  index: string;  children: { title: string; [key: string]: any} [] };
+export interface ListItem {
+  title: string;
+  index: string;
+  children: { title: string; [key: string]: any }[];
+}
