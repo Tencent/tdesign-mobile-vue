@@ -8,16 +8,6 @@ import { TdNoticeBarProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 背景颜色 */
-  bgColor: {
-    type: String,
-    default: '',
-  },
-  /** 公告文字颜色 */
-  color: {
-    type: String,
-    default: '',
-  },
   /** 文本内容 */
   content: {
     type: [String, Function] as PropType<TdNoticeBarProps['content']>,
@@ -33,7 +23,7 @@ export default {
   },
   /** 前缀图标 */
   prefixIcon: {
-    type: Function as PropType<TdNoticeBarProps['prefixIcon']>,
+    type: [String, Function] as PropType<TdNoticeBarProps['prefixIcon']>,
   },
   /** 后缀图标 */
   suffixIcon: {

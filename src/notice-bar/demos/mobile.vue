@@ -15,7 +15,7 @@
         :visible="visible"
       >
       </t-notice-bar>
-      <t-notice-bar visible :marquee="{ loop: 1 }" content="提示文字描述提示文字描述提示文字描述提示文" />
+      <t-notice-bar visible :marquee="{ loop: 1 }" content="提示文字描述提示文字描述提示文字描述提示文字描提示文字" />
     </tdesign-demo-block>
 
     <tdesign-demo-block summary="带操作公告栏">
@@ -31,16 +31,6 @@
         extra="详情"
         :suffix-icon="iconFunc"
         @click="handleClick"
-      />
-    </tdesign-demo-block>
-
-    <tdesign-demo-block summary="自定义样式">
-      <t-notice-bar
-        visible
-        content="提示文字描述提示文字描述提示文字描述"
-        :prefix-icon="soundIcon"
-        color="#fff"
-        bg-color="gray"
       />
     </tdesign-demo-block>
 

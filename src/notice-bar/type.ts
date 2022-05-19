@@ -8,16 +8,6 @@ import { TNode } from '../common';
 
 export interface TdNoticeBarProps {
   /**
-   * 背景颜色
-   * @default ''
-   */
-  bgColor?: string;
-  /**
-   * 公告文字颜色
-   * @default ''
-   */
-  color?: string;
-  /**
    * 文本内容
    */
   content?: string | TNode;
@@ -33,7 +23,7 @@ export interface TdNoticeBarProps {
   /**
    * 前缀图标
    */
-  prefixIcon?: TNode;
+  prefixIcon?: string | TNode;
   /**
    * 后缀图标
    */
@@ -68,6 +58,10 @@ export interface TdNoticeBarProps {
   onClick?: (trigger: NoticeBarTrigger) => void;
 }
 
-export interface DrawMarquee { speed?: number; loop?: number; delay?: number };
+export interface DrawMarquee {
+  speed?: number;
+  loop?: number;
+  delay?: number;
+}
 
-export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'extra' | 'suffix-icon';;
+export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'extra' | 'suffix-icon';

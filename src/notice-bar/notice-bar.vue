@@ -1,8 +1,8 @@
 <template>
-  <div v-if="isShow" :class="rootClasses" :style="bgColorCustom">
+  <div v-if="isShow" :class="rootClasses">
     <div :class="`${name}__inner`">
       <div v-if="computedPrefixIcon !== undefined" :class="`${name}__hd`" @click="() => handleClick('prefix-icon')">
-        <t-node :content="computedPrefixIcon" :style="colorCustom"></t-node>
+        <t-node :content="computedPrefixIcon"></t-node>
       </div>
 
       <div :class="`${name}__bd`">
@@ -13,14 +13,9 @@
             :style="scroll.marquee ? animateStyle : ''"
             @transitionend="handleTransitionend()"
           >
-            <span :class="`${name}__text`" :style="colorCustom" @click="() => handleClick('content')">
+            <span :class="`${name}__text`" @click="() => handleClick('content')">
               {{ content }}
-              <span
-                v-if="showExtraText"
-                :class="`${name}__text-detail`"
-                :style="colorCustom"
-                @click.stop="() => handleClick('extra')"
-              >
+              <span v-if="showExtraText" :class="`${name}__text-detail`" @click.stop="() => handleClick('extra')">
                 {{ extra }}
               </span>
             </span>
@@ -29,7 +24,7 @@
       </div>
 
       <div v-if="computedSuffixIcon !== undefined" :class="`${name}__ft`" @click="() => handleClick('suffix-icon')">
-        <t-node :content="computedSuffixIcon" :style="colorCustom"></t-node>
+        <t-node :content="computedSuffixIcon"></t-node>
       </div>
     </div>
   </div>
@@ -59,10 +54,10 @@ import { useEmitEvent, renderTNode, TNode, useVModel } from '../shared';
 const { prefix } = config;
 const name = `${prefix}-notice-bar`;
 const iconDefault = {
-  info: [h(InfoCircleFilledIcon)],
-  success: [h(CheckCircleFilledIcon)],
-  warning: [h(InfoCircleFilledIcon)],
-  error: [h(CloseCircleFilledIcon)],
+  info: h(InfoCircleFilledIcon),
+  success: h(CheckCircleFilledIcon),
+  warning: h(InfoCircleFilledIcon),
+  error: h(CloseCircleFilledIcon),
 };
 export default defineComponent({
   name,
@@ -90,7 +85,7 @@ export default defineComponent({
 
     const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
     let computedPrefixIcon: any;
-    if ((props.prefixIcon as unknown as string) !== '') {
+    if (props.prefixIcon !== '') {
       if (Object.keys(iconDefault).includes(props?.theme as string)) {
         const key = props.theme as string;
         computedPrefixIcon = computed(() => iconDefault?.[key]);
@@ -100,15 +95,13 @@ export default defineComponent({
         : computedPrefixIcon;
     }
     // suffix-icon
-    const computedSuffixIcon = props.suffixIcon ? computed(() => renderTNode(internalInstance, 'suffixIcon')) : null;
+    const computedSuffixIcon = computed(() => renderTNode(internalInstance, 'suffixIcon'));
     // extra
-    const showExtraText = props.extra ? computed(() => renderTNode(internalInstance, 'extra')) : null;
+    const showExtraText = computed(() => renderTNode(internalInstance, 'extra'));
     // click
     function handleClick(trigger: NoticeBarTrigger) {
       emitEvent('click', trigger);
     }
-    const colorCustom = computed(() => (props.color ? `color:${props.color}` : ''));
-    const bgColorCustom = computed(() => (props.bgColor ? `background-color:${props.bgColor}` : ''));
     // 动画
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
@@ -138,8 +131,8 @@ export default defineComponent({
       state.scroll = {
         marquee: true,
         loop: typeof marquee?.loop === 'undefined' ? state.scroll.loop : marquee.loop,
-        speed: marquee?.speed && marquee?.speed > 0 ? marquee.speed : state.scroll.speed,
-        delay: marquee?.delay && marquee?.delay > 0 ? marquee.delay : state.scroll.delay,
+        speed: marquee.speed ?? state.scroll.speed,
+        delay: marquee.delay ?? state.scroll.delay,
       };
       // 设置动画
       setTimeout(() => {
@@ -198,8 +191,6 @@ export default defineComponent({
       ...toRefs(props),
       ...toRefs(state),
       rootClasses,
-      colorCustom,
-      bgColorCustom,
       computedPrefixIcon,
       computedSuffixIcon,
       showExtraText,
