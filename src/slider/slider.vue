@@ -36,7 +36,7 @@
 import { ref, toRefs, computed, SetupContext, reactive, defineComponent } from 'vue';
 import config from '../config';
 import props from './props';
-import useVModel from '../hooks/useVModel';
+import { useVModel } from '../shared/useVModel';
 
 const { prefix } = config;
 const name = `${prefix}-slider`;
@@ -200,8 +200,6 @@ export default defineComponent({
         if (end && formatValue !== touchData.startValue) {
           tmpValue.sort((a, b) => a - b);
           setInnerValue(tmpValue);
-          // context.emit('update:modelValue', value);
-          // context.emit('change', value);
         } else if (formatValue !== touchData.startValue) {
           setInnerValue(tmpValue);
         }
