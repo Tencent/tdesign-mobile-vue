@@ -14,10 +14,6 @@
       @selected="handleSelected"
       @cancel="handleCancel"
     >
-      <template #cell="slotProps">
-        <div :style="meunIconStyle(slotProps.item.icon)"></div>
-        <div>{{ slotProps.item.label }}</div>
-      </template>
     </t-action-sheet>
   </div>
 </template>
