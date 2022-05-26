@@ -1,15 +1,15 @@
 import { ref, Ref, getCurrentInstance, ComponentInternalInstance } from 'vue';
 
-export type ChangeHandler = (value: any, ...args: any[]) => void;
+export type ChangeHandler<T> = (value: T, ...args: any[]) => void;
 
 export function useVModel<T>(
   value: Ref<T>,
   modelValue: Ref<T>,
   defaultValue: T,
-  onChange?: ChangeHandler,
+  onChange?: (...args: any) => any,
   propName = 'value',
   // emit 和 eventName 用于支持 v-model 和 xxx.sync 语法糖
-): [Ref<T>, ChangeHandler] {
+): [Ref<T>, ChangeHandler<T>] {
   const { emit } = getCurrentInstance() as ComponentInternalInstance;
   const internalValue = ref<T>() as Ref<T>;
   internalValue.value = defaultValue;
