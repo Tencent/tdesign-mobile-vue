@@ -1,4 +1,4 @@
-/** Vue3 特有全局变量 */
+/** Vue3 特有全局类型 */
 type VNode = import('vue').VNode;
 export type ScopedSlot = () => SlotReturnValue;
 export type SlotReturnValue = VNode | string | boolean | null | undefined | SlotReturnArray;
@@ -16,9 +16,12 @@ export type TNode<T = undefined> = T extends undefined
 export type AttachNodeReturnValue = HTMLElement | Element | Document;
 export type AttachNode = CSSSelector | ((triggerNode?: HTMLElement) => AttachNodeReturnValue);
 
-// 与滚动相关的容器类型，因为 document 上没有 scroll 相关属性, 因此排除document
+// 与滚动相关的容器类型，因为 document 上没有 scroll 相关属性, 因此排除 document
 export type ScrollContainerElement = Window | HTMLElement;
 export type ScrollContainer = (() => ScrollContainerElement) | CSSSelector;
+
+// 组件 TS 类型，暂定 any
+export type ComponentType = any;
 
 export type FormResetEvent = Event;
 // export type FormSubmitEvent = SubmitEvent; (for higher typescript version)
@@ -27,7 +30,7 @@ export type FormSubmitEvent = Event;
 export interface Styles {
   [css: string]: string | number;
 }
-/** 通用全局变量 */
+/** 通用全局类型 */
 
 export type OptionData = {
   label?: string;

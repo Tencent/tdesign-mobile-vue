@@ -2,7 +2,7 @@
   <div ref="root" :class="className">
     <ul :class="wrapperClassName">
       <li v-for="(option, index) in options" :key="index" :class="itemClassName">
-        {{ formatter(typeof option === 'object' ? option.label : option) }}
+        {{ format ? format(option.label) : option.label }}
       </li>
     </ul>
   </div>
@@ -12,8 +12,7 @@
 import { ref, computed, onMounted, watch, nextTick, toRefs, defineComponent } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
-import { PickerItemProps } from './props';
-import { PickerItemChangeEvent } from './type';
+import PickerItemProps from './picker-item-props';
 
 const { prefix } = config;
 const name = `${prefix}-picker-item`;
@@ -21,8 +20,8 @@ const name = `${prefix}-picker-item`;
 export default defineComponent({
   name,
   props: PickerItemProps,
-  emits: ['change'],
-  setup(props, context) {
+  emits: ['pick'],
+  setup(props: any, context) {
     let picker: Picker | null = null;
     const el = document.createElement('div');
     const root = ref(el);
@@ -30,10 +29,7 @@ export default defineComponent({
     const getDefaultIndex = (val: number | string | undefined) => {
       let defaultIndex = 0;
       if (val !== undefined) {
-        defaultIndex =
-          typeof val === 'object'
-            ? props.options.findIndex((item: any) => item.value === val)
-            : props.options.indexOf(val);
+        defaultIndex = props.options.findIndex((item: any) => item.value === val);
       }
       return defaultIndex < 0 ? 0 : defaultIndex;
     };
@@ -41,18 +37,27 @@ export default defineComponent({
     const className = computed(() => `${name}`);
     const wrapperClassName = computed(() => [`${name}__wrapper`]);
     const itemClassName = computed(() => [`${name}__item`]);
-
+    const curValue = computed(() => {
+      return props.value;
+    });
+    const options = computed(() => {
+      return props.options;
+    });
     watch(
-      () => props.options,
+      options,
       () => {
+        console.log('有吗');
         nextTick(() => {
           if (picker) picker.update();
         });
       },
+      {
+        immediate: true,
+      },
     );
 
     watch(
-      () => props.value,
+      curValue,
       (val) => {
         nextTick(() => {
           if (picker) picker.updateIndex(getDefaultIndex(val));
@@ -69,9 +74,8 @@ export default defineComponent({
         defaultIndex: getDefaultIndex(props.value) || 0,
         onChange: (index: number) => {
           const curItem = props.options[index];
-          const curValue = typeof curItem === 'object' ? curItem.value : curItem;
-          const changeValue: PickerItemChangeEvent = { value: curValue, index };
-          context.emit('change', changeValue);
+          const changeValue = { value: curItem.value, index };
+          context.emit('pick', changeValue);
         },
       });
     });

@@ -8,13 +8,13 @@ import { TdPickerItemProps } from '../picker/type';
 import { PropType } from 'vue';
 
 export default {
+  /** 格式化标签 */
+  format: {
+    type: Function as PropType<TdPickerItemProps['format']>,
+  },
   /** 数据源 */
   options: {
     type: Array as PropType<TdPickerItemProps['options']>,
     default: (): TdPickerItemProps['options'] => [],
-  },
-  /** 默认选中的选项 */
-  value: {
-    type: [String, Number] as PropType<TdPickerItemProps['value']>,
   },
 };
