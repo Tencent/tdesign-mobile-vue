@@ -16,7 +16,7 @@ export default withInstall;
 
 export function extendAPI<T = Record<string, any>>(apis: T) {
   const instance = getCurrentInstance();
-  if (instance) {
+  if (instance && instance.proxy) {
     Object.assign(instance.proxy, apis);
   }
 }

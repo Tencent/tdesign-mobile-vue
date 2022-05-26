@@ -17,8 +17,8 @@ module.exports = {
   modulePathIgnorePatterns: ['<rootDir>/test/unit/coverage/'],
   transform: {
     '.*\\.(vue)$': 'vue3-jest',
-    '^.+\\.(ts|tsx)?$': 'ts-jest',
-    "^.+\\.(js|jsx)$": "babel-jest",
+    '^.+\\.tsx?$': 'ts-jest',
+    "^.+\\.jsx?$": "babel-jest",
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
   testRegex: '.*\\.test\\.js$',
