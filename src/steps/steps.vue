@@ -20,7 +20,7 @@ import TStepItem from './step-item.vue';
 import config from '../config';
 import { TdStepsProps } from './type';
 import { useDefault } from '../shared';
-
+// test
 const { prefix } = config;
 const name = `${prefix}-steps`;
 export default defineComponent({
