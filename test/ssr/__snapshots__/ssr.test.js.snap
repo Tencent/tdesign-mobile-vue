@@ -5479,7 +5479,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
     </div>
     <!--[-->
     <div data-index="A">
-      <div class="t-indexes__anchor">A开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->A开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿坝" link="true">
@@ -5567,7 +5572,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
       </div>
     </div>
     <div data-index="B">
-      <div class="t-indexes__anchor">B开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->B开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="北京" link="true">
@@ -5734,7 +5744,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
     </div>
     <!--[-->
     <div data-index="A">
-      <div class="t-indexes__anchor">A开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->A开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿坝" link="true">
@@ -5822,7 +5837,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       </div>
     </div>
     <div data-index="B">
-      <div class="t-indexes__anchor">B开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->B开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="北京" link="true">
@@ -5955,7 +5975,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       </div>
     </div>
     <div data-index="C">
-      <div class="t-indexes__anchor">C开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->C开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="重庆" link="true">
@@ -6133,7 +6158,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       </div>
     </div>
     <div data-index="D">
-      <div class="t-indexes__anchor">D开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->D开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="大连" link="true">
@@ -6257,7 +6287,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       </div>
     </div>
     <div data-index="E">
-      <div class="t-indexes__anchor">E开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->E开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="鄂尔多斯" link="true">
@@ -6291,7 +6326,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       </div>
     </div>
     <div data-index="F">
-      <div class="t-indexes__anchor">F开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->F开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="福州" link="true">
@@ -6361,7 +6401,12 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       </div>
     </div>
     <div data-index="G">
-      <div class="t-indexes__anchor">G开头</div>
+      <div class="t-indexes-anchor" style="height:0px;">
+        <div class="t-indexes__anchor" style="">
+          <!--[-->G开头
+          <!--]-->
+        </div>
+      </div>
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="广州" link="true">
