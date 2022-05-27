@@ -25,10 +25,10 @@
       </div>
     </div>
 
-    <div v-for="(item, index) in list" :ref="setAnchorRefs(index)" :key="item.index" :data-index="item.index">
-      <div :class="[`${componentName}__anchor`]">
+    <div v-for="(item, index) in list" :ref="setAnchorGroupRefs(index)" :key="item.index" :data-index="item.index">
+      <indexes-anchor :ref="setAnchorRefs(index)" :anchor-style="anchorStyle[index]">
         {{ item.title ?? item.index }}
-      </div>
+      </indexes-anchor>
       <div :class="[`${componentName}__group`]">
         <t-indexes-cell
           v-for="(child, childrenIndex) in item.children"
@@ -61,6 +61,7 @@ import config from '../config';
 import { ListItem } from './type';
 import IndexesProps from './props';
 import { useEmitEvent } from '../shared';
+import indexesAnchor from './indexes-anchor.vue';
 
 const { prefix } = config;
 
@@ -77,6 +78,7 @@ interface State {
   list: ListItem[];
   showSidebarTip: boolean;
   activeSidebar: string;
+  activeIndex: number;
 }
 
 const touch: Touch = {
@@ -92,6 +94,7 @@ const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
   name: componentName,
+  components: { indexesAnchor },
   props: IndexesProps,
   emits: ['select'],
   setup(props, context: SetupContext) {
@@ -103,9 +106,18 @@ export default defineComponent({
       list: props.list,
       showSidebarTip: false,
       activeSidebar: '',
+      activeIndex: -1,
     });
-    const anchor = ref<HTMLElement[]>([]);
 
+    const anchorGroup = ref<HTMLElement[]>([]);
+    const setAnchorGroupRefs = (index: number) => {
+      return (el: any) => {
+        anchorGroup.value[index] = el as HTMLElement;
+      };
+    };
+
+    const anchor = ref<any[]>([]);
+    const anchorStyle = reactive<string[]>([]);
     const setAnchorRefs = (index: number) => {
       return (el: any) => {
         anchor.value[index] = el as HTMLElement;
@@ -121,7 +133,7 @@ export default defineComponent({
     });
 
     const scrollToView = (): void => {
-      const children = anchor.value;
+      const children = anchorGroup.value;
       const targets = children.filter((ele) => {
         const { dataset } = ele;
         return dataset && dataset.index === state.activeSidebar;
@@ -129,19 +141,38 @@ export default defineComponent({
       targets[0]?.scrollIntoView();
     };
 
+    const calcSticky = (indexesRootTop: number) => {
+      const children = anchorGroup.value;
+      for (let i = 0; i < children.length; i++) {
+        const { top: childTop, width } = children[i].getBoundingClientRect();
+        anchorStyle[i] = `z-index: ${i + 1};`;
+        if (childTop < indexesRootTop && i === state.activeIndex) {
+          anchorStyle[i] += `position:fixed;top:${indexesRootTop}px;width: ${width}px;`;
+        } else {
+          anchorStyle[i] += '';
+        }
+        const anchorHeight = anchor.value[i - 1]?.$el.getBoundingClientRect()?.height;
+        const diff = childTop - indexesRootTop - anchorHeight;
+        if (i - 1 === state.activeIndex && diff < 0) {
+          anchorStyle[i - 1] += `transform: translateY(${diff}px)`;
+        }
+      }
+    };
+
     const calcChildPosition = (scrollTop: number) => {
-      const children = anchor.value;
-      let currentIndex = '';
+      const children = anchorGroup.value;
+      let currentIndex = -1;
       for (let i = 0; i < children.length - 1; i++) {
         if (scrollTop < children[i + 1].offsetTop) {
-          currentIndex = children[i].dataset.index ?? '';
+          currentIndex = i;
           break;
         }
       }
       if (scrollTop >= children[children.length - 1].offsetTop) {
-        currentIndex = children[children.length - 1].dataset.index ?? '';
+        currentIndex = children.length - 1;
       }
-      state.activeSidebar = currentIndex;
+      state.activeIndex = currentIndex;
+      state.activeSidebar = children[currentIndex].dataset.index ?? '';
     };
 
     const setActiveSidebarAndTip = (index: string) => {
@@ -185,6 +216,10 @@ export default defineComponent({
     const handleRootScroll = (event: UIEvent) => {
       if (indexesRoot.value) {
         calcChildPosition(indexesRoot.value.scrollTop);
+        if (props.sticky) {
+          const indexesRootTop = indexesRoot.value?.getBoundingClientRect()?.top ?? 0;
+          calcSticky(indexesRootTop);
+        }
       }
     };
 
@@ -202,7 +237,7 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      const children = anchor.value;
+      const children = anchorGroup.value;
       if (children.length > 0) {
         const { index } = children[0].dataset;
         if (index !== undefined) {
@@ -218,7 +253,9 @@ export default defineComponent({
       ...toRefs(state),
       indexesRoot,
       indexesRootStyle,
-      anchor,
+      anchorGroup,
+      anchorStyle,
+      setAnchorGroupRefs,
       setAnchorRefs,
       handleSidebarItemClick,
       handleSidebarTouchmove,

@@ -155,6 +155,12 @@ export default {
           component: () => import('@/search/search.md'),
         },
         {
+          title: 'Slider 滑动选择器',
+          name: 'slider',
+          path: '/mobile-vue/components/slider',
+          component: () => import('@/slider/slider.md'),
+        },
+        {
           title: 'Fab 悬浮按钮',
           name: 'fab',
           path: '/mobile-vue/components/fab',

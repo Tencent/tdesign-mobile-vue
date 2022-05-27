@@ -1,25 +1,31 @@
 import { ref, Ref, getCurrentInstance, ComponentInternalInstance } from 'vue';
 
-export type ChangeHandler<T, P extends any[]> = (value: T, ...args: P) => void;
+export type ChangeHandler<T> = (value: T, ...args: any[]) => void;
 
-// 用于实现 v-model
-export function useVModel<T, P extends any[]>(
+export function useVModel<T>(
   value: Ref<T>,
   modelValue: Ref<T>,
   defaultValue: T,
-  onChange: ChangeHandler<T, P>,
-  // emit 和 eventName 用于支持 v-model
-): [Ref<T>, ChangeHandler<T, P>] {
+  onChange?: (...args: any) => any,
+  propName = 'value',
+  // emit 和 eventName 用于支持 v-model 和 xxx.sync 语法糖
+): [Ref<T>, ChangeHandler<T>] {
   const { emit } = getCurrentInstance() as ComponentInternalInstance;
-  const internalValue = ref();
+  const internalValue = ref<T>() as Ref<T>;
   internalValue.value = defaultValue;
 
-  // 受控模式
+  // 受控模式 v-model:propName
   if (typeof value.value !== 'undefined') {
-    return [value, onChange || (() => {})];
+    return [
+      value,
+      (newValue, ...args) => {
+        emit?.(`update:${propName}`, newValue, ...args);
+        onChange?.(newValue, ...args);
+      },
+    ];
   }
 
-  // 受控模式:modelValue
+  // 受控模式:modelValue v-model
   if (typeof modelValue.value !== 'undefined') {
     return [
       modelValue,
@@ -32,10 +38,14 @@ export function useVModel<T, P extends any[]>(
 
   // 非受控模式
   return [
-    internalValue as Ref<T>,
+    internalValue,
     (newValue, ...args) => {
       internalValue.value = newValue;
       onChange?.(newValue, ...args);
     },
   ];
 }
+
+// emits name
+export const UPDATE_MODEL = 'update:modelValue';
+export const UPDATE_VALUE = 'update:value';

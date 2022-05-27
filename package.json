@@ -13,6 +13,7 @@
     "url": "/tdesign-mobile-vue.git"
   },
   "scripts": {
+    "start": "npm run dev",
     "prepare": "husky install .husky",
     "dev": "cd site && cross-env NODE_ENV=development vite",
     "dev:debug": "cd site && cross-env NODE_ENV=development vite --debug",
@@ -167,10 +168,10 @@
     "typescript": "^4.5.2",
     "vite": "^2.7.2",
     "vite-plugin-tdoc": "^2.0.1",
-    "vue": "^3.2.4",
+    "vue": "^3.2.33",
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
-    "vue-tsc": "^0.29.8",
+    "vue-tsc": "^0.34.16",
     "vue3-jest": "^27.0.0-alpha.2"
   },
   "config": {

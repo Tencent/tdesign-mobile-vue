@@ -1,36 +1,44 @@
 <template>
-  <t-cell-group :class="state.componentName" :data-index="state.index" :title="state.title" />
+  <div ref="boxRef" :class="boxClasses" :style="boxStyles">
+    <div ref="contentRef" class="t-indexes__anchor" :style="anchorStyle">
+      <t-node :content="stickyContent"></t-node>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { reactive, defineComponent } from 'vue';
+import { computed, getCurrentInstance, defineComponent } from 'vue';
+import { useElementBounding, templateRef } from '@vueuse/core';
 import config from '../config';
-import TCellGroup from '../cell-group';
+import { renderContent, TNode } from '../shared';
 
-const { prefix } = config;
-const componentName = `${prefix}-indexes-anchor`;
+const name = `${config.prefix}-indexes-anchor`;
 
 export default defineComponent({
-  name: componentName,
-  components: { TCellGroup },
+  name,
+  components: { TNode },
   props: {
-    index: {
-      type: String,
-      default: '',
-    },
-    title: {
+    anchorStyle: {
       type: String,
       default: '',
     },
   },
-  setup(props) {
-    const state = reactive({
-      componentName,
-      index: props.index || '',
-      title: props.title ? props.title : props.index,
-    });
+  setup(props, context) {
+    const boxClasses = name;
+    const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', ''));
+
+    // box 用于占位和记录边界
+    // content 用于实际定位
+    const boxRef = templateRef('boxRef');
+    const contentRef = templateRef('contentRef');
+    const { height } = useElementBounding(contentRef);
+
+    const boxStyles = computed(() => `height:${height.value}px;`);
+
     return {
-      state,
+      boxClasses,
+      boxStyles,
+      stickyContent,
     };
   },
 });
