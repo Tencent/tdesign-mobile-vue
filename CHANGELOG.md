@@ -1,5 +1,42 @@
 ---
 title: 更新日志
+## 0.8.6 (2022-05-27)
+
+
+### Bug Fixes
+
+* 修改本地提交的邮箱 2712cfe
+* 在_common目录的develop分支执行git push操作 e467dad
+* loop false c65c375
+* loop false 2b74e06
+* **progress:** adjustment demos 7f3a7e5
+* **progress:** refactor progress and update demo 270404b
+* **progress:** update ssr snapshot test 45533cb
+* **slider:** optimize 2d712cb
+* **slider:** resolve marks currectly b674c74
+* **slider:** update 9ca872c
+* **slider:** update demo 2e7057e
+* **textarea:** update ssr snapshot test 9387960
+
+
+### Features
+
+* 测试changelog 8dcb847
+* 恢复gitmodules 4f797f1
+* 提交_common 7d18299
+* 新的common文件 40db4d9
+* 修改gitmodules a20af23
+* 增加snap测试文件 80a1af4
+* 站点支持搜索 e260ac1
+* **indexes:** 补充indexes组件的示例 191451f
+* **indexes:** 补充indexes组件的示例 ffefea8
+* **indexes:** 补充indexes组件的示例 44d6437
+* **indexes:** 增加 indexes 组件的sticky属性 d3eff83
+* **indexes:** 增加 indexes 组件的sticky属性 464d965
+* noticebar组件 e507868
+* noticeBar组件去掉自定义样式，优化代码 670d62c
+* **textarea:** support label && update style a31bb1c
+
 docClass: timeline
 toc: false
 spline: explain
