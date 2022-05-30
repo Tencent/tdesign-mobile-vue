@@ -79,7 +79,7 @@ export default defineComponent({
       } else if (context.attrs.rows) {
         textareaStyle.value = { height: 'auto', minHeight: 'auto' };
       }
-      console.log('calc', textareaStyle.value);
+      // console.log('calc', textareaStyle.value);
     };
 
     const handleInput = (e: any) => {
