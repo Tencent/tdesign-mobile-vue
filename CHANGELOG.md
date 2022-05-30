@@ -19,7 +19,8 @@ spline: explain
 - Refactor: 重构 Slider 组件 @LeeJim ([#115](https://github.com/Tencent/tdesign-mobile-vue/pull/115))
 - Refactor: 重构 NoticeBar 组件 @xia7187 ([#99](https://github.com/Tencent/tdesign-mobile-vue/pull/99))
 - feat: 站点支持搜索 @HQ-Lin ([#120](https://github.com/Tencent/tdesign-mobile-vue/pull/120))
-## 0.8.5 (2022-04-29)
+
+## 0.8.5 `2022-04-29`
 
 
 ### Bug Fixes
@@ -32,7 +33,7 @@ spline: explain
 ### Features
 * **Icon:** 完善组件文档
 
-## 0.8.4 (2022-04-15)
+## 0.8.4 `2022-04-15`
 
 
 ### Bug Fixes
@@ -47,7 +48,7 @@ spline: explain
 * **Tabs:** 新增stickyProps，支持滚动到顶部时自动吸顶
 * **PullDownRefresh:** loadingBarHeight属性支持string类型，代码优化
 
-## 0.8.2 (2022-04-08)
+## 0.8.2 `2022-04-08`
 
 
 ### Bug Fixes
@@ -55,7 +56,7 @@ spline: explain
 * **popup:** 修复teleport失效问题
 
 
-## 0.8.1 (2022-04-02)
+## 0.8.1 `2022-04-02`
 
 ### Bug Fixes
 
