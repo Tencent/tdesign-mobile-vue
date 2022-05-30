@@ -4,6 +4,21 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+## 🌈 0.8.6 `2022-05-30` 
+### 🚀 Features
+- `Indexes`: 新增 Indexes 组件 @ruige24601 ([#117](https://github.com/Tencent/tdesign-mobile-vue/pull/117))
+- `ActionSheet`: 新增 ActionSheet 组件 @Dengzygx ([#121](https://github.com/Tencent/tdesign-mobile-vue/pull/121))
+- `Icon`: 更新图标 新增`file-icon`图标 调整`file-excel`、`file-pdf`、`file-powerpoint`、`file-unknown`、`file-word`和`star-filled`图标的绘制路径 @uyarn ([#111](https://github.com/Tencent/tdesign-mobile-vue/pull/111))
+### 🐞 Bug Fixes
+- `Textarea`: 修复label不生效问题；样式优化 @anlyyao ([#107](https://github.com/Tencent/tdesign-mobile-vue/pull/107))
+- `Badge`: 修复组件设置 color 属性无效问题 @Calvest ([#125](https://github.com/Tencent/tdesign-mobile-vue/pull/125))
+- `Swiper`: 支持通过修改loop值关闭循环 @MarvenGong ([#108](https://github.com/Tencent/tdesign-mobile-vue/pull/108))
+### 🚧 Others
+- Refactor: 将 mask 重命名为 overlay @LeeJim ([#113](https://github.com/Tencent/tdesign-mobile-vue/pull/113))
+- Refactor: 重构Progress组件，Api更新 @anlyyao ([#116](https://github.com/Tencent/tdesign-mobile-vue/pull/116))
+- Refactor: 重构 Slider 组件 @LeeJim ([#115](https://github.com/Tencent/tdesign-mobile-vue/pull/115))
+- Refactor: 重构 NoticeBar 组件 @xia7187 ([#99](https://github.com/Tencent/tdesign-mobile-vue/pull/99))
+- feat: 站点支持搜索 @HQ-Lin ([#120](https://github.com/Tencent/tdesign-mobile-vue/pull/120))
 ## 0.8.5 (2022-04-29)
 
 
