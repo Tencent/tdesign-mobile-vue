@@ -305,12 +305,12 @@ export default {
           path: '/mobile-vue/components/pull-down-refresh',
           component: () => import('@/pull-down-refresh/pull-down-refresh.md'),
         },
-        // {
-        //   title: 'ActionSheet 动作面板',
-        //   name: 'action-sheet',
-        //   path: '/mobile-vue/components/actionsheet',
-        //   component: () => import('@/action-sheet/action-sheet.md'),
-        // },
+        {
+          title: 'ActionSheet 动作面板',
+          name: 'action-sheet',
+          path: '/mobile-vue/components/actionsheet',
+          component: () => import('@/action-sheet/action-sheet.md'),
+        },
         {
           title: 'Toast 轻提示',
           name: 'toast',
