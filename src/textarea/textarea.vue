@@ -1,27 +1,32 @@
 <template>
   <div :class="componentName">
-    <textarea
-      ref="textareaRef"
-      v-model="innerValue"
-      :style="textareaStyle"
-      :name="name"
-      :maxlength="maxlength || -1"
-      :disabled="disabled"
-      :placeholder="placeholder"
-      @focus="handleFocus"
-      @blur="handleBlur"
-      @input="handleInput"
-      @compositionend="handleCompositionend"
-    />
-    <div v-if="maxcharacter || maxlength" :class="`${componentName}__count`">
-      {{ `${textareaLength}/${maxcharacter || maxlength}` }}
+    <div v-if="labelContent" :class="`${componentName}__name`">
+      <t-node :content="labelContent"></t-node>
+    </div>
+    <div :class="textareaClassNames">
+      <textarea
+        ref="textareaRef"
+        v-model="innerValue"
+        :style="textareaStyle"
+        :name="name"
+        :maxlength="maxlength || -1"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        @focus="handleFocus"
+        @blur="handleBlur"
+        @input="handleInput"
+        @compositionend="handleCompositionend"
+      />
+      <div v-if="maxcharacter || maxlength" :class="`${componentName}__count`">
+        {{ `${textareaLength}/${maxcharacter || maxlength}` }}
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, onMounted, defineComponent, toRefs, SetupContext, nextTick } from 'vue';
-import { useEmitEvent, getCharacterLength, useDefault } from '../shared';
+import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick } from 'vue';
+import { useEmitEvent, renderTNode, TNode, getCharacterLength, useDefault } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
@@ -32,6 +37,9 @@ const componentName = `${prefix}-textarea`;
 
 export default defineComponent({
   name: componentName,
+  components: {
+    TNode,
+  },
   props: TextareaProps,
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context: SetupContext) {
@@ -41,6 +49,15 @@ export default defineComponent({
     const textareaLength = ref(0);
     const [innerValue] = useDefault<string, TdTextareaProps>(props, context.emit, 'value', 'change');
     innerValue.value = innerValue.value || '';
+
+    const textareaClassNames = computed(() => [
+      `${componentName}__wrapper`,
+      {
+        [`${componentName}-is-disabled`]: props.disabled,
+      },
+    ]);
+    const internalInstance = getCurrentInstance();
+    const labelContent = computed(() => renderTNode(internalInstance, 'label'));
 
     const setInputValue = (v: TextareaValue = '') => {
       const input = textareaRef.value as HTMLTextAreaElement;
@@ -62,7 +79,7 @@ export default defineComponent({
       } else if (context.attrs.rows) {
         textareaStyle.value = { height: 'auto', minHeight: 'auto' };
       }
-      console.log('calc', textareaStyle.value);
+      // console.log('calc', textareaStyle.value);
     };
 
     const handleInput = (e: any) => {
@@ -113,9 +130,11 @@ export default defineComponent({
     return {
       componentName,
       ...toRefs(props),
+      labelContent,
       innerValue,
       textareaRef,
       textareaStyle,
+      textareaClassNames,
       textareaLength,
       handleClear,
       handleFocus,

@@ -8,20 +8,9 @@
       @touchend="handleTouchend"
     >
       <div v-for="(Items, i) in actionItems" :key="i" :class="`${name}__menu`">
-        <div :class="`${name}__menu-page`">
-          <button
-            v-for="(item, index) in Items"
-            :key="index"
-            :class="`${name}__cell`"
-            :disabled="item.disabled"
-            @click="handleSelected(index)"
-          >
-            <slot name="cell" :item="item">
-              <div v-if="item.icon" :class="`${name}__cell-icon`" :style="{ backgroundImage: `url(${item.icon})` }" />
-              <div :class="`${name}__cell-text`" :style="{ color: item.color }">{{ item.label }}</div>
-            </slot>
-          </button>
-        </div>
+        <t-grid :column="gridColumn">
+          <t-grid-item v-for="(item, index) in Items" :key="index" :text="item.label" :image="item.icon" />
+        </t-grid>
       </div>
     </div>
     <div v-if="pageNum > 1" :class="`${name}__indicator`">
@@ -40,13 +29,14 @@
 <script lang="ts">
 import { ref, SetupContext, defineComponent, computed } from 'vue';
 import config from '../config';
-import { ActionSheetItem } from './type';
+import { Grid as TGrid, GridItem as TGridItem } from '../grid';
 
 const { prefix } = config;
 
 const name = `${prefix}-action-sheet`;
 
 export default defineComponent({
+  components: { TGrid, TGridItem },
   props: {
     items: {
       type: Array,
@@ -71,6 +61,7 @@ export default defineComponent({
       transform: `translate3d(${moveOffset.value}px, 0, 0)`,
       transition: useTransition.value ? 'transform 300ms' : 'all',
     }));
+    const gridColumn = computed(() => Math.ceil(props.count / 2));
     const pageNum = computed(() => Math.ceil(props.items.length / props.count));
     // 分页数据处理
     const actionItems = computed(() => {
@@ -136,6 +127,7 @@ export default defineComponent({
 
     return {
       name: ref(name),
+      gridColumn,
       pageNum,
       actionItems,
       currentIndex,

@@ -107,7 +107,7 @@ export default defineComponent({
     const headDOM = ref();
     const updatePanelState = () => {
       if (!wrapDOM.value) {
-        console.log('[collapse] 组件尚未挂载', wrapDOM.value);
+        // console.log('[collapse] 组件尚未挂载', wrapDOM.value);
         return;
       }
       const { height: headHeight } = headDOM.value.getBoundingClientRect();

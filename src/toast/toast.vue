@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-mask v-show="preventScrollThrough" />
+    <t-overlay v-show="preventScrollThrough" />
     <div :class="classes">
       <t-node :content="iconContent"></t-node>
       <div v-if="messageContent" :class="`${name}__text`">
@@ -14,7 +14,7 @@
 import { LoadingIcon, CheckCircleIcon, ErrorCircleIcon } from 'tdesign-icons-vue-next';
 import { computed, toRefs, ref, defineComponent, getCurrentInstance, h, onMounted, onUnmounted } from 'vue';
 import { renderTNode, TNode } from '../shared';
-import TMask from '../mask';
+import TOverlay from '../overlay';
 import ToastProps from './props';
 import config from '../config';
 
@@ -23,7 +23,7 @@ const name = `${prefix}-toast`;
 
 export default defineComponent({
   name,
-  components: { TMask, TNode },
+  components: { TOverlay, TNode },
   props: ToastProps,
   setup(props) {
     const toastTypeIcon = {

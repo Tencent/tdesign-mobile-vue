@@ -32,7 +32,8 @@ export default {
   status: {
     type: String as PropType<TdProgressProps['status']>,
     validator(val: TdProgressProps['status']): boolean {
-      return ['success', 'error', 'warning', 'active'].includes(val!);
+      if (!val) return true;
+      return ['success', 'error', 'warning', 'active'].includes(val);
     },
   },
   /** 进度条线宽。宽度数值不能超过 size 的一半，否则不能输出环形进度 */
@@ -44,7 +45,8 @@ export default {
     type: String as PropType<TdProgressProps['theme']>,
     default: 'line' as TdProgressProps['theme'],
     validator(val: TdProgressProps['theme']): boolean {
-      return ['line', 'plump', 'circle'].includes(val!);
+      if (!val) return true;
+      return ['line', 'plump', 'circle'].includes(val);
     },
   },
   /** 进度条未完成部分颜色 */

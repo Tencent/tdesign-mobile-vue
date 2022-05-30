@@ -53,7 +53,9 @@ export default defineComponent({
 
     // 徽标自定义样式
     const badgeStyles = computed(() => {
-      if (!props.offset) return {};
+      if (!props.offset) {
+        return { background: props.color };
+      }
       let [xOffset, yOffset]: Array<string | number> = props.offset;
       xOffset = isNaN(Number(xOffset)) ? xOffset : `${xOffset}px`;
       yOffset = isNaN(Number(yOffset)) ? yOffset : `${yOffset}px`;

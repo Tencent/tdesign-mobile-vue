@@ -1,18 +1,23 @@
 <template>
-  <div class="cell-base">
-    <t-progress :percentage="0" />
-    <t-progress :percentage="30" />
-    <t-progress :percentage="100" />
-    <t-progress type="error" :percentage="88" />
+  <div>
+    <div class="progress-demo progress-demo--margin">
+      <t-progress :percentage="0" />
+    </div>
+    <div class="progress-demo progress-demo--margin">
+      <t-progress :percentage="88" />
+    </div>
+    <div class="progress-demo progress-demo--margin">
+      <t-progress :percentage="100" />
+    </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
-
 <style lang="less" scoped>
-.cell-base {
-  .t-progress {
-    margin-bottom: 20px;
-  }
+.progress-demo {
+  padding: 8px 16px;
+  background-color: #fff;
+}
+.progress-demo--margin:not(:last-child) {
+  margin-bottom: 16px;
 }
 </style>
