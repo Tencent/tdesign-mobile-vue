@@ -363,7 +363,7 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
             <!---->
           </div>
         </div>
@@ -372,7 +372,7 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
             <!---->
           </div>
         </div>
@@ -381,7 +381,7 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
+            <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
             <!---->
           </div>
         </div>
@@ -392,7 +392,7 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
             <!---->
           </div>
         </div>
@@ -401,7 +401,7 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
             <!---->
           </div>
         </div>
@@ -410,7 +410,7 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
+            <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
             <!---->
           </div>
         </div>
@@ -630,28 +630,28 @@ exports[`ssr snapshot test renders ./src/badge/demos/basic.vue correctly 1`] = `
       <div class="badge-demo">
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">16</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">16</div>
             <!--[-->消息
             <!--]-->
           </div>
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
             <!--[-->消息
             <!--]-->
           </div>
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
             <!--[-->消息
             <!--]-->
           </div>
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
             <!--[-->消息
             <!--]-->
           </div>
@@ -672,21 +672,21 @@ exports[`ssr snapshot test renders ./src/badge/demos/color.vue correctly 1`] = `
       <div class="badge-demo">
         <div class="badge-item">
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">12</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">12</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->按钮<!--]--></span>
             </button>
             <!--]-->
           </div>
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">999</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#52c41a;">999</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->绿色<!--]--></span>
             </button>
             <!--]-->
           </div>
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">1</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#f52fff;">1</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->自定义颜色<!--]--></span>
             </button>
@@ -704,7 +704,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/dist.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="badge-wrap">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->按钮<!--]--></span>
       </button>
@@ -740,28 +740,28 @@ exports[`ssr snapshot test renders ./src/badge/demos/max-count.vue correctly 1`]
 <div class="tdesign-mobile-demo">
   <div class="badge-demo">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">12</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">12</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->14<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">109</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">109</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->默认max:99<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">45</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">45</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:44<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">106</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">106</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:105<!--]--></span>
       </button>
@@ -804,28 +804,28 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
     <div class="badge-demo">
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
           <!--[-->消息
           <!--]-->
         </div>
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">16</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">16</div>
           <!--[-->消息
           <!--]-->
         </div>
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
           <!--[-->消息
           <!--]-->
         </div>
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">···</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">···</div>
           <!--[-->消息
           <!--]-->
         </div>
@@ -834,7 +834,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
     <div class="badge-demo">
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -843,7 +843,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">16</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">16</div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -852,7 +852,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -861,7 +861,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">···</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">···</div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -882,7 +882,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
+              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
               <!---->
             </div>
             <!--]-->
@@ -900,7 +900,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="">16</div>
+              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">16</div>
               <!---->
             </div>
             <!--]-->
@@ -918,11 +918,11 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--round" style="">NEW</div>
+              <div class="t-badge__inner t-badge--medium t-badge--round" style="background:;">NEW</div>
               <!---->
             </div>
             <div class="t-badge" style="margin-left:8px;">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="">NEW</div>
+              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">NEW</div>
               <!---->
             </div>
             <!--]-->
@@ -940,7 +940,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge t-badge__ribbon--outer">
-              <div class="t-badge__inner t-badge--medium t-badge--ribbon" style="">NEW</div>
+              <div class="t-badge__inner t-badge--medium t-badge--ribbon" style="background:;">NEW</div>
               <!---->
             </div>
             <!--]-->
@@ -1002,14 +1002,14 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="badge-demo">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">12</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">12</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->circle<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="">12</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="background:;">12</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->round<!--]--></span>
       </button>
@@ -1028,7 +1028,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
+              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
               <!---->
             </div>
             <!--]-->
@@ -1058,14 +1058,14 @@ exports[`ssr snapshot test renders ./src/badge/demos/text.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="badge-demo">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->NEW<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->省略号<!--]--></span>
       </button>
@@ -1084,16 +1084,16 @@ exports[`ssr snapshot test renders ./src/badge/demos/text.vue correctly 1`] = `
             <!--[--><span>单行标题</span>
             <div class="badge-tag-wrap">
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="">0</div>NEW
+                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="background:;">0</div>NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="">0</div>NEW
+                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="background:;">0</div>NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>NEW
+                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>NEW
+                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>NEW
               </div>
             </div>
             <!--]-->
@@ -1531,7 +1531,7 @@ exports[`ssr snapshot test renders ./src/cell/demos/mobile.vue correctly 1`] = `
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="">2</div>
+              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">2</div>
               <!---->
             </div>
             <!--]-->
@@ -4178,7 +4178,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4195,7 +4195,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">3</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">3</div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4212,7 +4212,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4229,7 +4229,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">...</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">...</div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4836,7 +4836,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->
@@ -4853,7 +4853,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">3</div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">3</div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->
@@ -4870,7 +4870,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->
@@ -4887,7 +4887,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">···</div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">···</div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->
