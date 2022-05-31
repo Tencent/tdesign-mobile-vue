@@ -47,6 +47,7 @@ exports[`Badge :props dot 1`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
+    style="background: green;"
   >
     
   </div>
@@ -60,6 +61,7 @@ exports[`Badge :props maxCount 1`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+    style="background: green;"
   >
     0
   </div>
@@ -73,6 +75,7 @@ exports[`Badge :props offset 1`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+    style="background: green;"
   >
     0
   </div>
@@ -86,6 +89,7 @@ exports[`Badge :props shape 1`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+    style="background: green;"
   >
     0
   </div>
@@ -99,6 +103,7 @@ exports[`Badge :props shape 2`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round"
+    style="background: green;"
   >
     0
   </div>
@@ -112,6 +117,7 @@ exports[`Badge :props shape 3`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--ribbon"
+    style="background: green;"
   >
     0
   </div>
@@ -125,6 +131,7 @@ exports[`Badge :props showZero 1`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+    style="background: green;"
   >
     0
   </div>
@@ -138,6 +145,7 @@ exports[`Badge :props size 1`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--small t-badge--circle"
+    style="background: green;"
   >
     0
   </div>
@@ -151,6 +159,7 @@ exports[`Badge :props size 2`] = `
 >
   <div
     class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+    style="background: green;"
   >
     0
   </div>
