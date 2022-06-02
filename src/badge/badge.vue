@@ -26,7 +26,14 @@ export default defineComponent({
       if (props.dot) {
         return '';
       }
-      return renderTNode(internalInstance, 'count');
+      if (typeof props.count === 'function') {
+        return renderTNode(internalInstance, 'count');
+      }
+      const count = Number(props.count);
+      if (isNaN(count)) {
+        return props.count;
+      }
+      return count > props.maxCount ? `${props.maxCount}+` : count;
     });
     // 是否独立使用
     const isIndependent = computed(() => badgeContent.value === undefined);
