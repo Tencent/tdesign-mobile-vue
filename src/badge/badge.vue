@@ -1,11 +1,8 @@
 <template>
   <div v-if="showBadge" :class="badgeClasses">
-    <div :class="badgeInnerClasses" :style="badgeStyles">
+    <div v-if="showDot" :class="badgeInnerClasses" :style="badgeStyles">
       <t-node :content="countContent"></t-node>
     </div>
-    <t-node :content="badgeContent"></t-node>
-  </div>
-  <div v-else :class="badgeClasses">
     <t-node :content="badgeContent"></t-node>
   </div>
 </template>
@@ -35,9 +32,10 @@ export default defineComponent({
     const isIndependent = computed(() => badgeContent.value === undefined);
 
     // 是否展示徽标
-    const showBadge = computed(
-      () => badgeContent.value !== undefined && (props.dot || props.count !== 0 || props.showZero),
-    );
+    const showBadge = computed(() => badgeContent.value !== undefined);
+
+    // 是否展示红点角标
+    const showDot = computed(() => props.dot || props.count !== 0 || props.showZero);
 
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
@@ -72,6 +70,7 @@ export default defineComponent({
     return {
       badgeContent,
       showBadge,
+      showDot,
       badgeStyles,
       badgeClasses,
       badgeInnerClasses,
