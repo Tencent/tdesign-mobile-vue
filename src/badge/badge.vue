@@ -5,6 +5,9 @@
     </div>
     <t-node :content="badgeContent"></t-node>
   </div>
+  <div v-else :class="badgeClasses">
+    <t-node :content="badgeContent"></t-node>
+  </div>
 </template>
 
 <script lang="ts">
@@ -33,7 +36,7 @@ export default defineComponent({
 
     // 是否展示徽标
     const showBadge = computed(
-      () => badgeContent.value !== undefined || props.showZero || props.dot || props.count !== 0,
+      () => badgeContent.value !== undefined && (props.dot || props.count !== 0 || props.showZero),
     );
 
     // 徽标外层样式类
