@@ -362,28 +362,19 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
       <div class="t-avatar t-size-l t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-m t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-s t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
     </div>
@@ -391,28 +382,19 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
       <div class="t-avatar t-size-l t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-m t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-s t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
     </div>
@@ -644,14 +626,14 @@ exports[`ssr snapshot test renders ./src/badge/demos/basic.vue correctly 1`] = `
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
+            <!--v-if-->
             <!--[-->消息
             <!--]-->
           </div>
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
+            <!--v-if-->
             <!--[-->消息
             <!--]-->
           </div>
@@ -721,10 +703,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/dist.vue correctly 1`] = `
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><span>单行标题</span>
-            <div class="t-badge list-item-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;right:10px;top:0px;"></div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -778,10 +757,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/max-count.vue correctly 1`]
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><span>单行标题</span>
-            <div class="t-badge list-item-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;right:10px;top:0px;">16</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -881,10 +857,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -899,10 +872,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">16</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -917,14 +887,8 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--round" style="background:;">NEW</div>
-              <!---->
-            </div>
-            <div class="t-badge" style="margin-left:8px;">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">NEW</div>
-              <!---->
-            </div>
+            <!--v-if-->
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -939,10 +903,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge t-badge__ribbon--outer">
-              <div class="t-badge__inner t-badge--medium t-badge--ribbon" style="background:;">NEW</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -1027,10 +988,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -1041,7 +999,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge t-badge__ribbon--outer">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--ribbon" style="background:;right:5px;top:0px;">0</div>NEW
+              <!--v-if-->NEW
             </div>
             <!--]-->
           </div>
@@ -1058,14 +1016,14 @@ exports[`ssr snapshot test renders ./src/badge/demos/text.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="badge-demo">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
+      <!--v-if-->
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->NEW<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>
+      <!--v-if-->
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->省略号<!--]--></span>
       </button>
@@ -1084,16 +1042,16 @@ exports[`ssr snapshot test renders ./src/badge/demos/text.vue correctly 1`] = `
             <!--[--><span>单行标题</span>
             <div class="badge-tag-wrap">
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="background:;">0</div>NEW
+                <!--v-if-->NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="background:;">0</div>NEW
+                <!--v-if-->NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>NEW
+                <!--v-if-->NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">0</div>NEW
+                <!--v-if-->NEW
               </div>
             </div>
             <!--]-->
@@ -1530,10 +1488,7 @@ exports[`ssr snapshot test renders ./src/cell/demos/mobile.vue correctly 1`] = `
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">2</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
