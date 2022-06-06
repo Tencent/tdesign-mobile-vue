@@ -8,18 +8,8 @@
     <tdesign-demo-block summary="手风琴模式">
       <accordionVue />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="更多（默认全部展开）">
-      <t-collapse expand-all>
-        <t-collapse-panel name="demoCustom">
-          <template #header
-            >自定义标题<span style="color: #ccc; font-size: 12px; margin-left: 6px">自定义内容</span></template
-          >
-          <template #extra>
-            <span style="color: red; font-size: 12px; margin-left: 6px; line-height: 1em">示例</span>
-          </template>
-          预设文本
-        </t-collapse-panel>
-      </t-collapse>
+    <tdesign-demo-block summary="默认全部展开">
+      <moreVue />
     </tdesign-demo-block>
   </div>
 </template>
@@ -28,11 +18,13 @@
 import { reactive, toRefs, defineComponent } from 'vue';
 import baseVue from './base.vue';
 import accordionVue from './accordion.vue';
+import moreVue from './more.vue';
 
 export default defineComponent({
   components: {
     baseVue,
     accordionVue,
+    moreVue,
   },
   setup() {
     const panels = [

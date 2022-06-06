@@ -2,7 +2,7 @@
   <div ref="wrapDOM" :class="className">
     <div ref="headDOM" :class="`${classPrefix}__header`" @click="(e) => onChange(e, 'header')">
       <div :class="`${classPrefix}__title`">
-        <slot name="title">{{ header }}</slot>
+        <slot name="header">{{ header }}</slot>
       </div>
       <div :class="`${classPrefix}__header-right`" @click="onChange">
         <div v-if="headerRightContent || $slots.extra" :class="`${classPrefix}__header-extra`">
