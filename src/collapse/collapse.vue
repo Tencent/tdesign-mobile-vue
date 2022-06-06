@@ -1,51 +1,62 @@
 <template>
-  <div :class="className">
-    <div v-if="title" :class="`${className}__title`">{{ title }}</div>
+  <div :class="classPrefix">
     <slot></slot>
   </div>
 </template>
 
 <script lang="ts">
-import { toRefs, provide, reactive, SetupContext, defineComponent, watch } from 'vue';
-import { CollapsePropsType, CollapseProps, onChangeEvent } from './collapse.interface';
+import { toRefs, provide, SetupContext, defineComponent, computed, Ref, ComputedRef } from 'vue';
+import props from './props';
 import config from '../config';
 import { toggleElem } from './util';
-import { useEmitEvent } from '../shared';
+import { useEmitEvent, useVModel } from '../shared';
+import { CollapseValue, TdCollapseProps } from './type';
+
+export interface CollapseProvide {
+  activeValue: Ref<CollapseValue | undefined>;
+  disabled: ComputedRef<boolean>;
+  expandIcon: ComputedRef<TdCollapseProps['expandIcon']>;
+  onPanelChange: (name: string | number) => void;
+  defaultExpandAll: boolean;
+}
 
 const { prefix } = config;
 const name = `${prefix}-collapse`;
 export default defineComponent({
   name,
-  props: CollapseProps,
+  props,
   emits: ['update:value', 'change'],
-  setup(props: CollapsePropsType, context: SetupContext) {
-    const emitEvent = useEmitEvent(props, context.emit);
-    // 根结点类名
-    const state = reactive({
-      className: name,
-      curValue: props.value,
-    });
+  setup(props) {
+    const { value, modelValue } = toRefs(props);
+    const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
-    watch(
-      () => props.value,
-      (v) => {
-        state.curValue = v;
-      },
-    );
-    const onPanelChange: onChangeEvent = (name: any) => {
-      const newV = toggleElem(name, state.curValue, !props.accordion);
-      state.curValue = newV;
-      emitEvent('update:value', newV);
-      emitEvent('change', newV);
+    const onPanelChange = (name: string | number) => {
+      let newVal;
+      if (props.expandMutex) {
+        newVal = [name];
+      } else if (activeValue.value?.includes(name)) {
+        newVal = activeValue.value.filter((item) => item !== name);
+      } else {
+        const exits = activeValue.value ?? [];
+        newVal = [...exits, name];
+      }
+      setActiveValue(newVal);
     };
 
-    // 提供子组件访问
-    provide('collapseProps', props);
-    provide('collapseState', state);
-    provide('onPanelChange', onPanelChange);
+    const disabled = computed(() => props.disabled);
+    const expandIcon = computed(() => props.expandIcon);
+
+    provide<CollapseProvide>('collapse', {
+      activeValue,
+      disabled,
+      expandIcon,
+      onPanelChange,
+      defaultExpandAll: props.defaultExpandAll,
+    });
+
     return {
-      ...toRefs(state),
-      ...toRefs(props),
+      prefix,
+      classPrefix: name,
     };
   },
 });

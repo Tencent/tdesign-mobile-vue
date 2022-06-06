@@ -1,7 +1,7 @@
 <template>
   <div class="accordion-demo">
     <!-- v-model:value="valueBase"  -->
-    <t-collapse :value="valueBase" title="基础型">
+    <t-collapse :value="valueBase">
       <t-collapse-panel v-for="(p, i) in panels" :key="i" :name="i" v-bind="p"> </t-collapse-panel>
     </t-collapse>
   </div>
@@ -59,6 +59,7 @@ export default defineComponent({
   },
 });
 </script>
+
 <style lang="less">
 .accordion-demo {
   background-color: #f9f9f9;
