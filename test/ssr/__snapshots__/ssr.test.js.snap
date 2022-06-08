@@ -2372,14 +2372,14 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
 `;
 
 exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 1`] = `
-<div class="accordion-demo">
+<div>
   <div class="t-collapse">
-    <div class="t-collapse__title">手风琴模式</div>
+    <!--[-->
     <!--[-->
     <div class="t-collapse-panel">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->仅点击右侧按钮展开
+          <!--[-->基础面板
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
@@ -2389,18 +2389,15 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
         </div>
       </div>
       <div class="t-collapse-panel__body">
-        <!--[-->
         <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-          <!--]-->
+          <div>此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容</div>
         </div>
-        <!--]-->
       </div>
     </div>
     <div class="t-collapse-panel">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->仅点击右侧按钮展开
+          <!--[-->仅点击面板右侧按钮展开
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
@@ -2410,12 +2407,27 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
         </div>
       </div>
       <div class="t-collapse-panel__body">
-        <!--[-->
         <div class="t-collapse-panel__content">
-          <!--[-->点击面板右侧按钮展开/折叠
+          <div>点击面板右侧按钮展开/折叠</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-collapse-panel">
+      <div class="t-collapse-panel__header">
+        <div class="t-collapse-panel__title">
+          <!--[-->面板右侧内容扩展
           <!--]-->
         </div>
-        <!--]-->
+        <div class="t-collapse-panel__header-right">
+          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="t-collapse-panel__body">
+        <div class="t-collapse-panel__content">
+          <div>此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容</div>
+        </div>
       </div>
     </div>
     <div class="t-collapse-panel t-collapse-panel--disabled">
@@ -2425,36 +2437,51 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
-          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+          <div class="t-collapse-panel__header-extra">
+            <!--[-->收起
+            <!--]-->
+          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
             <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
           </svg>
         </div>
       </div>
       <div class="t-collapse-panel__body">
-        <!--[-->
         <div class="t-collapse-panel__content">
-          <!--[-->预设文本
-          <!--]-->
+          <div></div>
         </div>
-        <!--]-->
       </div>
     </div>
-    <div class="t-collapse-panel">
+    <!--]-->
+    <!--]-->
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/collapse/demos/action.vue correctly 1`] = `
+<div>
+  <div class="t-collapse">
+    <!--[-->
+    <div class="t-collapse-panel t-collapse-panel--active">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->内容默认slot
+          <!--[-->自定义标题
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
-          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+          <div class="t-collapse-panel__header-extra">
+            <!--[-->收起
+            <!--]-->
+          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
+            <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
           </svg>
         </div>
       </div>
       <div class="t-collapse-panel__body">
-        <div class="t-collapse-panel__body-slot">
-          <!--[-->自定义内容
-          <!--]-->
+        <div class="t-collapse-panel__content">
+          <div>
+            <!--[--> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容
+            <!--]-->
+          </div>
         </div>
       </div>
     </div>
@@ -2464,16 +2491,13 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
 `;
 
 exports[`ssr snapshot test renders ./src/collapse/demos/base.vue correctly 1`] = `
-<div class="accordion-demo">
-  <!-- v-model:value="valueBase"  -->
+<div>
   <div class="t-collapse">
-    <div class="t-collapse__title">基础型</div>
-    <!--[-->
     <!--[-->
     <div class="t-collapse-panel t-collapse-panel--active">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->基础面板
+          <!--[-->基础折叠面板
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
@@ -2483,114 +2507,14 @@ exports[`ssr snapshot test renders ./src/collapse/demos/base.vue correctly 1`] =
         </div>
       </div>
       <div class="t-collapse-panel__body">
-        <!--[-->
         <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-          <!--]-->
-        </div>
-        <!--]-->
-      </div>
-    </div>
-    <div class="t-collapse-panel">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->内容列表
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <!--[-->
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字
-          <!--]-->
-        </div>
-        <!--]-->
-      </div>
-    </div>
-    <div class="t-collapse-panel">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->内容带标签
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <div class="t-collapse-panel__header-extra">
-            <!--[-->预设文本
+          <div>
+            <!--[--> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容
             <!--]-->
-          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-          </svg>
+          </div>
         </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <!--[-->
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="">标题1</div>
-          <div class="t-collapse-panel-list__content">预设文本</div>
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="">类目标题2</div>
-          <div class="t-collapse-panel-list__content">预设文本</div>
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="">很长很长很长的内容标题</div>
-          <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-          <!--]-->
-        </div>
-        <!--]-->
       </div>
     </div>
-    <div class="t-collapse-panel t-collapse-panel--active">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->内容带标签 - 宽度固定
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <div class="t-collapse-panel__header-extra">
-            <!--[-->预设文本
-            <!--]-->
-          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <!--[-->
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="width:80px;">标题1</div>
-          <div class="t-collapse-panel-list__content">预设文本</div>
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="width:80px;">很长很长很长的内容标题</div>
-          <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-          <!--]-->
-        </div>
-        <!--]-->
-      </div>
-    </div>
-    <!--]-->
     <!--]-->
   </div>
 </div>
@@ -2600,136 +2524,158 @@ exports[`ssr snapshot test renders ./src/collapse/demos/mobile.vue correctly 1`]
 <div class="tdesign-mobile-demo">
   <h1 class="title">Collapse 折叠面板</h1>
   <p class="summary">在折叠面板中放入内容，点击面板的标题可以展开或收缩其内容。</p>
-  <div class="tdesign-mobile-demo-block">
-    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
-    <p class="tdesign-mobile-demo-block__summary">基础型</p>
+  <div class="tdesign-mobile-demo-block" header="01 类型">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">基础折叠面板</p>
     <!--[-->
-    <div class="t-collapse">
-      <!--v-if-->
-      <!--[-->
-      <!--[-->
-      <div class="t-collapse-panel t-collapse-panel--active">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->基础面板
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容列表
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容带标签
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <div class="t-collapse-panel__header-extra">
-              <!--[-->预设文本
+    <div>
+      <div class="t-collapse">
+        <!--[-->
+        <div class="t-collapse-panel t-collapse-panel--active">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->基础折叠面板
               <!--]-->
-            </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>
+                <!--[--> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容
+                <!--]-->
+              </div>
+            </div>
           </div>
         </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="">标题1</div>
-            <div class="t-collapse-panel-list__content">预设文本</div>
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="">类目标题2</div>
-            <div class="t-collapse-panel-list__content">预设文本</div>
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="">很长很长很长的内容标题</div>
-            <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
+        <!--]-->
       </div>
-      <div class="t-collapse-panel t-collapse-panel--active">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容带标签 - 宽度固定
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <div class="t-collapse-panel__header-extra">
-              <!--[-->预设文本
+    </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">基础折叠面板（多个）</p>
+    <!--[-->
+    <div>
+      <div class="t-collapse">
+        <!--[-->
+        <!--[-->
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
               <!--]-->
-            </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
-            </svg>
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>一段很长很长的内容文字</div>
+            </div>
           </div>
         </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="width:80px;">标题1</div>
-            <div class="t-collapse-panel-list__content">预设文本</div>
-            <!--]-->
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
           </div>
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="width:80px;">很长很长很长的内容标题</div>
-            <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-            <!--]-->
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>一段很长很长的内容文字</div>
+            </div>
           </div>
-          <!--]-->
         </div>
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>一段很长很长的内容文字</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>一段很长很长的内容文字</div>
+            </div>
+          </div>
+        </div>
+        <!--]-->
+        <!--]-->
       </div>
-      <!--]-->
-      <!--]-->
+    </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">带操作说明</p>
+    <!--[-->
+    <div>
+      <div class="t-collapse">
+        <!--[-->
+        <div class="t-collapse-panel t-collapse-panel--active">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->自定义标题
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <div class="t-collapse-panel__header-extra">
+                <!--[-->收起
+                <!--]-->
+              </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>
+                <!--[--> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容
+                <!--]-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--]-->
+      </div>
     </div>
     <!--]-->
   </div>
@@ -2737,125 +2683,88 @@ exports[`ssr snapshot test renders ./src/collapse/demos/mobile.vue correctly 1`]
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">手风琴模式</p>
     <!--[-->
-    <div class="t-collapse">
-      <!--v-if-->
-      <!--[-->
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->基础面板
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->仅点击右侧按钮展开
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->点击面板右侧按钮展开/折叠
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel t-collapse-panel--disabled">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->禁用项
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->预设文本
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容默认slot
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <div class="t-collapse-panel__body-slot">
-            <!--[-->自定义内容
-            <!--]-->
-          </div>
-        </div>
-      </div>
-      <!--]-->
-    </div>
-    <!--]-->
-  </div>
-  <div class="tdesign-mobile-demo-block">
-    <!--v-if-->
-    <p class="tdesign-mobile-demo-block__summary">更多（默认全部展开）</p>
-    <!--[-->
-    <div class="t-collapse">
-      <!--v-if-->
-      <!--[-->
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->自定义标题<span style="color:#ccc;font-size:12px;margin-left:6px;">自定义内容</span>
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <div class="t-collapse-panel__header-extra">
-              <!--[--><span style="color:red;font-size:12px;margin-left:6px;line-height:1em;">示例</span>
+    <div>
+      <div class="t-collapse">
+        <!--[-->
+        <!--[-->
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->基础面板
               <!--]-->
-            </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容</div>
+            </div>
           </div>
         </div>
-        <div class="t-collapse-panel__body">
-          <div class="t-collapse-panel__body-slot">
-            <!--[--> 预设文本
-            <!--]-->
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->仅点击面板右侧按钮展开
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>点击面板右侧按钮展开/折叠</div>
+            </div>
           </div>
         </div>
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->面板右侧内容扩展
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div>此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容</div>
+            </div>
+          </div>
+        </div>
+        <div class="t-collapse-panel t-collapse-panel--disabled">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->禁用项
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <div class="t-collapse-panel__header-extra">
+                <!--[-->收起
+                <!--]-->
+              </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <div class="t-collapse-panel__content">
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <!--]-->
+        <!--]-->
       </div>
-      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -2863,33 +2772,83 @@ exports[`ssr snapshot test renders ./src/collapse/demos/mobile.vue correctly 1`]
 `;
 
 exports[`ssr snapshot test renders ./src/collapse/demos/more.vue correctly 1`] = `
-<div class="accordion-demo">
-  <!-- v-model:value="valueBase"  -->
-  <div class="t-collapse" default-expand-all>
-    <div class="t-collapse__title">更多（默认全部展开）</div>
+<div>
+  <div class="t-collapse">
+    <!--[-->
     <!--[-->
     <div class="t-collapse-panel">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->自定义标题<span style="color:#ccc;font-size:12px;margin-left:6px;">自定义内容</span>
+          <!--[-->折叠面板标题
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
-          <div class="t-collapse-panel__header-extra">
-            <!--[--><span style="color:red;font-size:12px;margin-left:6px;line-height:1em;">示例</span>
-            <!--]-->
-          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
             <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
           </svg>
         </div>
       </div>
       <div class="t-collapse-panel__body">
-        <div class="t-collapse-panel__body-slot">
-          <!--[--> 预设文本
-          <!--]-->
+        <div class="t-collapse-panel__content">
+          <div>一段很长很长的内容文字</div>
         </div>
       </div>
     </div>
+    <div class="t-collapse-panel">
+      <div class="t-collapse-panel__header">
+        <div class="t-collapse-panel__title">
+          <!--[-->折叠面板标题
+          <!--]-->
+        </div>
+        <div class="t-collapse-panel__header-right">
+          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="t-collapse-panel__body">
+        <div class="t-collapse-panel__content">
+          <div>一段很长很长的内容文字</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-collapse-panel">
+      <div class="t-collapse-panel__header">
+        <div class="t-collapse-panel__title">
+          <!--[-->折叠面板标题
+          <!--]-->
+        </div>
+        <div class="t-collapse-panel__header-right">
+          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="t-collapse-panel__body">
+        <div class="t-collapse-panel__content">
+          <div>一段很长很长的内容文字</div>
+        </div>
+      </div>
+    </div>
+    <div class="t-collapse-panel">
+      <div class="t-collapse-panel__header">
+        <div class="t-collapse-panel__title">
+          <!--[-->折叠面板标题
+          <!--]-->
+        </div>
+        <div class="t-collapse-panel__header-right">
+          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="t-collapse-panel__body">
+        <div class="t-collapse-panel__content">
+          <div>一段很长很长的内容文字</div>
+        </div>
+      </div>
+    </div>
+    <!--]-->
     <!--]-->
   </div>
 </div>
