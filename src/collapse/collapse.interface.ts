@@ -1,81 +1,6 @@
-export type onChangeEvent = (name: any) => void;
-export interface CollapsePropsType {
-  /**
-   * @description 展开的面板，支持 v-model 双向绑定
-   */
-  value?: string | number | any[];
-  /**
-   * @description 手风琴模式，每次只打开一个面板
-   * @default false
-   */
-  accordion?: boolean;
-  /**
-   * @description 折叠面板标题
-   */
-  title?: string;
-  /**
-   * @description: 默认`false`。若为`true`，默认展开全部
-   */
-  expandAll?: boolean;
-  /**
-   * @description 面板内列表标签宽度
-   */
-  labelWidth?: number;
-}
+import { CollapseValue } from './type';
 
-export const CollapseProps = {
-  value: [Array, String, Number],
-  accordion: {
-    type: Boolean,
-    default: false,
-  },
-  title: String,
-  expandAll: Boolean,
-  labelWidth: Number,
-};
-
-export interface CollapsePanelPropsType {
-  /**
-   * @description 面板标识
-   */
-  name?: string | number;
-  /**
-   * @description 标题，支持命名slot
-   */
-  title?: string | number;
-  /**
-   * @description 展开按钮左侧补充描述，支持命名slot
-   */
-  extra?: string | number;
-  /**
-   * @description 内容，默认slot；数组，则为列表内容
-   */
-  content?: any[] | string | number;
-  /**
-   * @description 若为`true`，面板将不可展开/折叠
-   */
-  disabled?: boolean;
-  /**
-   * @description 面板内列表标签宽度，单项设置优先级高
-   */
-  labelWidth?: number;
-  /**
-   * @description 若为`true`，面板头部可点，触发展开/折叠事件
-   */
-  headerClickable?: boolean;
-}
-export const CollapsePanelProps = {
-  name: [String, Number],
-  title: [String, Number],
-  extra: [String, Number],
-  content: [String, Number, Array],
-  disabled: Boolean,
-  labelWidth: Number,
-  headerClickable: {
-    type: Boolean,
-    default: true,
-  },
-};
+export type onChangeEvent = (value: any) => void;
 
 export interface CollapseStateType {
   /**
@@ -85,5 +10,5 @@ export interface CollapseStateType {
   /**
    * @description 展开的面板状态
    */
-  curValue?: string | number | any[];
+  curValue?: CollapseValue;
 }

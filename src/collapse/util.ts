@@ -35,7 +35,7 @@ export function toggleElem(
   set: unknown, // 集合
   multiple: boolean, // 是否多选
   atLeastOne = false, // 是否保留一个
-): any[] | string | number {
+): any[] {
   // 判断是否要返回数组。 多选 | 集合为 array/proxy等需要
   const toReturnArray: boolean = !!multiple || (!!set && typeof set === 'object');
 

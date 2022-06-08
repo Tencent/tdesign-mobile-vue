@@ -2,30 +2,24 @@
   <div ref="wrapDOM" :class="className">
     <div ref="headDOM" :class="`${baseClass}__header`" @click="(e) => onChange(e, 'header')">
       <div :class="`${baseClass}__title`">
-        <slot name="title">{{ title }}</slot>
+        <slot name="header">{{ header }}</slot>
       </div>
       <div :class="`${baseClass}__header-right`" @click="onChange">
-        <div v-if="extra || $slots.extra" :class="`${baseClass}__header-extra`">
-          <slot name="extra">{{ extra }}</slot>
+        <div v-if="headerRightContent || $slots.headerRightContent" :class="`${baseClass}__header-extra`">
+          <slot name="headerRightContent">{{ headerRightContent }}</slot>
         </div>
         <component :is="rightIcon" :class="`${baseClass}__header-icon`"> </component>
       </div>
     </div>
-    <div ref="bodyDOM" :class="`${baseClass}__body`">
-      <div v-if="$slots.default" :class="`${baseClass}__body-slot`">
-        <slot></slot>
-      </div>
-      <template v-else>
-        <div v-for="(c, i) in contList" :key="i" :class="contentClassName(c)">
-          <template v-if="typeof c === 'object'">
-            <div :class="`${baseClass}-list__label`" :style="listLabelStyle">
-              {{ c.label }}
-            </div>
-            <div :class="`${baseClass}-list__content`">{{ c.content }}</div>
-          </template>
-          <template v-else>{{ c }}</template>
+    <div v-if="!destroyOnCollapse || isActive" ref="bodyDOM" :class="`${baseClass}__body`">
+      <div :class="`${baseClass}__content`">
+        <div v-if="$slots.default">
+          <slot></slot>
         </div>
-      </template>
+        <div v-else>
+          {{ defaultContent || content }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -44,15 +38,11 @@ import {
   defineComponent,
 } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
-import {
-  CollapsePropsType,
-  CollapseStateType,
-  CollapsePanelPropsType,
-  CollapsePanelProps,
-  onChangeEvent,
-} from './collapse.interface';
+import { CollapseStateType, onChangeEvent } from './collapse.interface';
+import CollapsePanelProps from './collapse-panel-props';
+import { TdCollapseProps, TdCollapsePanelProps } from './type';
 import config from '../config';
-import { findIndex, isFalsy, toArray } from './util';
+import { findIndex } from './util';
 import { useEmitEvent } from '../shared';
 
 const { prefix } = config;
@@ -62,31 +52,31 @@ export default defineComponent({
   components: { ChevronDownIcon, ChevronUpIcon },
   props: CollapsePanelProps,
   emits: ['click'],
-  setup(props: CollapsePanelPropsType, context: SetupContext) {
+  setup(props: TdCollapsePanelProps, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     // 从父组件取属性、状态和控制函数
-    const collapseProps = inject('collapseProps') as CollapsePropsType;
+    const collapseProps = inject('collapseProps') as TdCollapseProps;
     const collapseState = inject('collapseState') as CollapseStateType;
     const onPanelChange = inject('onPanelChange') as onChangeEvent;
-    const rightIcon = computed(() => (isActive.value ? ChevronDownIcon : ChevronUpIcon));
-    // 内容转为数组统一处理
-    const contList = computed(() => toArray(props.content));
+
+    // 是否禁用
+    const isDisabled = computed(() => props.disabled || collapseProps.disabled);
     const className = computed(() => ({
       [`${name}`]: true,
       [`${name}--active`]: isActive.value,
-      [`${name}--disabled`]: props.disabled,
+      [`${name}--disabled`]: isDisabled.value,
     }));
-    const labelWidth = computed(() => props.labelWidth || collapseProps.labelWidth);
-    const contentClassName = computed(() => (c: number | string | Record<string, unknown>) => [
-      `${name}__content`,
-      typeof c === 'object' ? `${name}-list__item` : '',
-    ]);
-    const listLabelStyle = computed(() => (!isFalsy(labelWidth.value) ? { width: `${labelWidth.value}px` } : {}));
+
     // 是否展开态
-    const isActive = computed(() => findIndex(props.name, collapseState.curValue) > -1);
+    const isActive = computed(() => findIndex(props.value, collapseState.curValue) > -1);
     const state = reactive({
       baseClass: name,
     });
+
+    const showExpandIcon = computed(() =>
+      props.expandIcon === undefined ? collapseProps.expandIcon : props.expandIcon,
+    );
+    const rightIcon = computed(() => showExpandIcon.value && (isActive.value ? ChevronDownIcon : ChevronUpIcon));
 
     // 切换自身展开态
     const onChange = (e: any = null, from = '') => {
@@ -94,11 +84,11 @@ export default defineComponent({
       if (props.disabled) {
         return;
       }
-      emitEvent('click', props.name);
-      if (/^header$/i.test(from) && !props.headerClickable) {
+      emitEvent('click', props.value);
+      if (/^header$/i.test(from) && !props.expandOnRowClick) {
         return;
       }
-      onPanelChange(props.name);
+      onPanelChange(props.value);
     };
 
     // 设置折叠/展开高度过渡
@@ -126,7 +116,7 @@ export default defineComponent({
       });
     });
     onMounted(() => {
-      if (collapseProps.expandAll) {
+      if (collapseProps.defaultExpandAll) {
         // 展开未展开的
         !isActive.value && onChange();
       }
@@ -134,15 +124,14 @@ export default defineComponent({
     });
     return {
       ...toRefs(state),
-      contList,
       headDOM,
       rightIcon,
       bodyDOM,
       wrapDOM,
       className,
-      contentClassName,
-      listLabelStyle,
+      isActive,
       onChange,
+      defaultContent: props.default,
     };
   },
 });

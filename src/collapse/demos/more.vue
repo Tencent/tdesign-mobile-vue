@@ -1,23 +1,35 @@
 <template>
-  <div class="accordion-demo">
-    <!-- v-model:value="valueBase"  -->
-    <t-collapse title="更多（默认全部展开）" default-expand-all>
-      <t-collapse-panel name="demoCustom">
-        <template #title
-          >自定义标题<span style="color: #ccc; font-size: 12px; margin-left: 6px">自定义内容</span></template
-        >
-        <template #extra>
-          <span style="color: red; font-size: 12px; margin-left: 6px; line-height: 1em">示例</span>
-        </template>
-        预设文本
-      </t-collapse-panel>
+  <div>
+    <t-collapse default-expand-all expand-icon>
+      <t-collapse-panel v-for="(p, i) in panels" :key="i" v-bind="p" :expand-icon="true"> </t-collapse-panel>
     </t-collapse>
   </div>
 </template>
 
-<script lang="ts" setup></script>
-<style lang="less">
-.accordion-demo {
-  background-color: #f9f9f9;
-}
-</style>
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+const panelsValue = [
+  {
+    header: '折叠面板标题',
+    value: '0',
+    content: '一段很长很长的内容文字',
+  },
+  {
+    header: '折叠面板标题',
+    value: '1',
+    content: '一段很长很长的内容文字',
+  },
+  {
+    header: '折叠面板标题',
+    value: '2',
+    content: '一段很长很长的内容文字',
+  },
+  {
+    header: '折叠面板标题',
+    value: '3',
+    content: '一段很长很长的内容文字',
+  },
+];
+const panels = ref(panelsValue);
+</script>
