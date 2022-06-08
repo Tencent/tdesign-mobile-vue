@@ -2,14 +2,14 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Collapse 折叠面板</h1>
     <p class="summary">在折叠面板中放入内容，点击面板的标题可以展开或收缩其内容。</p>
-    <tdesign-demo-block header="01 类型" summary="基础型">
+    <tdesign-demo-block header="01 类型" summary="基础折叠面板">
       <baseVue />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="手风琴模式">
-      <accordionVue />
+    <tdesign-demo-block summary="带操作说明">
+      <actionVue />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="默认全部展开">
-      <moreVue />
+    <tdesign-demo-block summary="手风琴式">
+      <accordionVue />
     </tdesign-demo-block>
   </div>
 </template>
@@ -18,13 +18,13 @@
 import { reactive, toRefs, defineComponent } from 'vue';
 import baseVue from './base.vue';
 import accordionVue from './accordion.vue';
-import moreVue from './more.vue';
+import actionVue from './action.vue';
 
 export default defineComponent({
   components: {
     baseVue,
     accordionVue,
-    moreVue,
+    actionVue,
   },
   setup() {
     const panels = [

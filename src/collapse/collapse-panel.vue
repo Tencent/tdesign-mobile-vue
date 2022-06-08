@@ -1,18 +1,18 @@
 <template>
-  <div ref="wrapDOM" :class="className">
-    <div ref="headDOM" :class="`${classPrefix}__header`" @click="(e) => onChange(e, 'header')">
+  <div ref="$wrap" :class="className">
+    <div ref="$head" :class="`${classPrefix}__header`" @click="handleClick">
       <div :class="`${classPrefix}__title`">
         <slot name="header">{{ header }}</slot>
       </div>
-      <div :class="`${classPrefix}__header-right`" @click="onChange">
+      <div :class="`${classPrefix}__header-right`">
         <div v-if="headerRightContent || $slots.extra" :class="`${classPrefix}__header-extra`">
           <slot name="headerRightContent">{{ headerRightContent }}</slot>
         </div>
-        <component :is="rightIcon" :class="`${classPrefix}__header-icon`"> </component>
+        <component :is="rightIcon" :class="`${classPrefix}__header-icon`" />
       </div>
     </div>
-    <div ref="bodyDOM" :class="`${classPrefix}__body`">
-      <slot></slot>
+    <div ref="$body" :class="`${classPrefix}__body`">
+      <t-node :content="panelContent"></t-node>
     </div>
   </div>
 </template>
@@ -20,8 +20,6 @@
 <script lang="ts">
 import {
   ref,
-  reactive,
-  toRefs,
   computed,
   nextTick,
   watch,
@@ -29,66 +27,73 @@ import {
   inject,
   SetupContext,
   defineComponent,
+  getCurrentInstance,
 } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
-import {
-  CollapsePropsType,
-  CollapseStateType,
-  CollapsePanelPropsType,
-  CollapsePanelProps,
-  onChangeEvent,
-} from './collapse.interface';
 import props from './collapse-panel-props';
 import config from '../config';
-import { findIndex, isFalsy, toArray } from './util';
-import { useEmitEvent } from '../shared';
+import { findIndex } from './util';
+import { renderTNode, renderContent, TNode } from '../shared';
 import { CollapseProvide } from './collapse.vue';
 
 const { prefix } = config;
 const name = `${prefix}-collapse-panel`;
 export default defineComponent({
   name,
-  components: { ChevronDownIcon, ChevronUpIcon },
+  components: { ChevronDownIcon, ChevronUpIcon, TNode },
   props,
-  emits: ['click'],
   setup(props, context: SetupContext) {
-    const emitEvent = useEmitEvent(props, context.emit);
+    const internalInstance = getCurrentInstance();
     const parent = inject<CollapseProvide>('collapse');
-    const rightIcon = computed(() => (isActive.value ? ChevronDownIcon : ChevronUpIcon));
+    const isTrue = (val: any) => typeof val === 'boolean' && val;
+
+    const rightIcon = computed(() => {
+      if (props.expandIcon === false) return;
+      if (isTrue(props.expandIcon) || isTrue(parent?.expandIcon.value)) {
+        console.log(isTrue(parent?.expandIcon.value));
+
+        return isActive.value ? ChevronDownIcon : ChevronUpIcon;
+      }
+      return renderTNode(internalInstance, 'expand-icon')[0];
+    });
+    const disabled = computed(() => parent?.disabled.value || props.disabled);
     const className = computed(() => ({
       [`${name}`]: true,
       [`${name}--active`]: isActive.value,
-      [`${name}--disabled`]: props.disabled,
+      [`${name}--disabled`]: disabled.value,
     }));
-    const isActive = computed(() => findIndex(props.value, parent?.activeValue) > -1);
-    const onChange = (e: any = null, from = '') => {
-      e?.stopPropagation();
-      if (props.disabled) {
-        return;
-      }
-      emitEvent('click', props.value);
-      if (props.value) {
+    const isActive = computed(() => findIndex(props.value, parent?.activeValue.value) > -1);
+    const updatePanelValue = () => {
+      if (props.value != null) {
         parent?.onPanelChange(props.value);
       }
     };
+    const handleClick = (e: MouseEvent) => {
+      e?.stopPropagation();
+      if (disabled.value) {
+        return;
+      }
+      updatePanelValue();
+    };
+    const panelContent = renderContent(internalInstance, 'default', 'content');
 
     // 设置折叠/展开高度过渡
-    const bodyDOM = ref();
-    const wrapDOM = ref();
-    const headDOM = ref();
+    const $body = ref();
+    const $wrap = ref();
+    const $head = ref();
     const updatePanelState = () => {
-      if (!wrapDOM.value) {
-        // console.log('[collapse] 组件尚未挂载', wrapDOM.value);
+      if (!$wrap.value) {
+        // console.log('[collapse] 组件尚未挂载', $wrap.value);
         return;
       }
-      const { height: headHeight } = headDOM.value.getBoundingClientRect();
+      const { height: headHeight } = $head.value.getBoundingClientRect();
       if (!isActive.value) {
-        wrapDOM.value.style.height = `${headHeight}px`;
+        $wrap.value.style.height = `${headHeight}px`;
         return;
       }
-      const { height: bodyHeight } = bodyDOM.value.getBoundingClientRect();
+      const { height: bodyHeight } = $body.value.getBoundingClientRect();
       const height = headHeight + bodyHeight;
-      wrapDOM.value.style.height = `${height}px`;
+      $wrap.value.style.height = `${height}px`;
     };
 
     watch(isActive, () => {
@@ -96,20 +101,23 @@ export default defineComponent({
         updatePanelState();
       });
     });
+
     onMounted(() => {
       if (parent?.defaultExpandAll) {
-        !isActive.value && onChange();
+        updatePanelValue();
       }
       updatePanelState();
     });
+
     return {
       classPrefix: name,
-      headDOM,
       rightIcon,
-      bodyDOM,
-      wrapDOM,
+      $head,
+      $body,
+      $wrap,
       className,
-      onChange,
+      handleClick,
+      panelContent,
     };
   },
 });

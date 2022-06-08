@@ -29,6 +29,7 @@ export default {
   /** 展开的面板集合，非受控属性 */
   defaultValue: {
     type: Array as PropType<TdCollapseProps['defaultValue']>,
+    default: [],
   },
   /** 切换面板时触发，返回变化的值 */
   onChange: Function as PropType<TdCollapseProps['onChange']>,

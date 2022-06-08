@@ -29,18 +29,22 @@ export default defineComponent({
   setup(props) {
     const { value, modelValue } = toRefs(props);
     const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const calcActiveValues = (activeValues: any[], panelValue: any, expandMutex: boolean) => {
+      const hit = activeValues.indexOf(panelValue);
 
-    const onPanelChange = (name: string | number) => {
-      let newVal;
-      if (props.expandMutex) {
-        newVal = [name];
-      } else if (activeValue.value?.includes(name)) {
-        newVal = activeValue.value.filter((item) => item !== name);
-      } else {
-        const exits = activeValue.value ?? [];
-        newVal = [...exits, name];
+      if (hit > -1) {
+        return activeValues.filter((item) => item !== panelValue);
       }
-      setActiveValue(newVal);
+
+      return expandMutex ? [panelValue] : activeValues.concat(panelValue);
+    };
+
+    const onPanelChange = (value: string | number) => {
+      if (Array.isArray(activeValue.value)) {
+        const val = calcActiveValues(activeValue.value, value, props.expandMutex);
+
+        setActiveValue(val);
+      }
     };
 
     const disabled = computed(() => props.disabled);
@@ -57,6 +61,7 @@ export default defineComponent({
     return {
       prefix,
       classPrefix: name,
+      activeValue,
     };
   },
 });
