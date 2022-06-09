@@ -324,7 +324,7 @@ export default {
           component: () => import('@/message/message.md'),
         },
         {
-          title: 'Dialog 弹出框',
+          title: 'Dialog 对话框',
           name: 'dialog',
           path: '/mobile-vue/components/dialog',
           component: () => import('@/dialog/dialog.md'),
