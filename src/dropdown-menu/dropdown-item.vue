@@ -417,7 +417,7 @@ export default defineComponent({
       if (!state.isShowItems) return;
       const value = passInValue.value || [];
       if (value[0] === val) return;
-      if (val && Array.isArray(val)) {
+      if (val) {
         setValue(val);
       }
       collapseMenu();
