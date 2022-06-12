@@ -661,7 +661,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/color.vue correctly 1`] = `
             <!--]-->
           </div>
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#52c41a;">999</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#52c41a;">99+</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->绿色<!--]--></span>
             </button>
@@ -726,21 +726,21 @@ exports[`ssr snapshot test renders ./src/badge/demos/max-count.vue correctly 1`]
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">109</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">99+</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->默认max:99<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">45</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">44+</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:44<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">106</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">105+</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:105<!--]--></span>
       </button>
