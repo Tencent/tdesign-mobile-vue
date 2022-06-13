@@ -26,6 +26,11 @@ export interface TdToastProps {
    */
   message?: string | TNode;
   /**
+   * 遮罩层属性，透传至 Overlay
+   * @default {}
+   */
+  overlayProps?: object;
+  /**
    * 弹窗展示位置
    * @default middle
    */
@@ -35,6 +40,11 @@ export interface TdToastProps {
    * @default false
    */
   preventScrollThrough?: boolean;
+  /**
+   * 是否显示遮罩层
+   * @default false
+   */
+  showOverlay?: boolean;
   /**
    * 提示类型
    */
