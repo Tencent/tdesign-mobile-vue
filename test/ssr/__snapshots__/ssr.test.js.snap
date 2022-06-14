@@ -362,28 +362,19 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
       <div class="t-avatar t-size-l t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-m t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-s t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
     </div>
@@ -391,28 +382,19 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
       <div class="t-avatar t-size-l t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-m t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--circle" style="">10</div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div class="t-avatar t-size-s t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <div class="t-badge">
-            <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
-            <!---->
-          </div>
+          <!--v-if-->
         </div>
       </div>
     </div>
@@ -630,28 +612,28 @@ exports[`ssr snapshot test renders ./src/badge/demos/basic.vue correctly 1`] = `
       <div class="badge-demo">
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">16</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">16</div>
             <!--[-->消息
             <!--]-->
           </div>
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
             <!--[-->消息
             <!--]-->
           </div>
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+            <!--v-if-->
             <!--[-->消息
             <!--]-->
           </div>
         </div>
         <div class="badge-item">
           <div class="t-badge">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+            <!--v-if-->
             <!--[-->消息
             <!--]-->
           </div>
@@ -672,21 +654,21 @@ exports[`ssr snapshot test renders ./src/badge/demos/color.vue correctly 1`] = `
       <div class="badge-demo">
         <div class="badge-item">
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">12</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">12</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->按钮<!--]--></span>
             </button>
             <!--]-->
           </div>
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">999</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#52c41a;">999</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->绿色<!--]--></span>
             </button>
             <!--]-->
           </div>
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">1</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#f52fff;">1</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->自定义颜色<!--]--></span>
             </button>
@@ -704,7 +686,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/dist.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="badge-wrap">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->按钮<!--]--></span>
       </button>
@@ -721,10 +703,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/dist.vue correctly 1`] = `
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><span>单行标题</span>
-            <div class="t-badge list-item-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;right:10px;top:0px;"></div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -740,28 +719,28 @@ exports[`ssr snapshot test renders ./src/badge/demos/max-count.vue correctly 1`]
 <div class="tdesign-mobile-demo">
   <div class="badge-demo">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">12</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">12</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->14<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">109</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">109</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->默认max:99<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">45</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">45</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:44<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">106</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">106</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:105<!--]--></span>
       </button>
@@ -778,10 +757,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/max-count.vue correctly 1`]
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><span>单行标题</span>
-            <div class="t-badge list-item-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;right:10px;top:0px;">16</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -804,28 +780,28 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
     <div class="badge-demo">
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
           <!--[-->消息
           <!--]-->
         </div>
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">16</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">16</div>
           <!--[-->消息
           <!--]-->
         </div>
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
           <!--[-->消息
           <!--]-->
         </div>
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">···</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">···</div>
           <!--[-->消息
           <!--]-->
         </div>
@@ -834,7 +810,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
     <div class="badge-demo">
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -843,7 +819,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">16</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">16</div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -852,7 +828,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -861,7 +837,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
       </div>
       <div class="badge-item">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">···</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">···</div>
           <!--[--><button class="t-button t-size-s t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
             <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
           </button>
@@ -881,10 +857,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -899,10 +872,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="">16</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -917,14 +887,8 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--round" style="">NEW</div>
-              <!---->
-            </div>
-            <div class="t-badge" style="margin-left:8px;">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="">NEW</div>
-              <!---->
-            </div>
+            <!--v-if-->
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -939,10 +903,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge t-badge__ribbon--outer">
-              <div class="t-badge__inner t-badge--medium t-badge--ribbon" style="">NEW</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -1002,14 +963,14 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="badge-demo">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">12</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">12</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->circle<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="">12</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="background:;">12</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->round<!--]--></span>
       </button>
@@ -1027,10 +988,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--dot" style=""></div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <!--v-if-->
@@ -1041,7 +999,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
           <div class="t-cell__note">
             <!--[-->
             <div class="t-badge t-badge__ribbon--outer">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--ribbon" style="background:;right:5px;top:0px;">0</div>NEW
+              <!--v-if-->NEW
             </div>
             <!--]-->
           </div>
@@ -1058,14 +1016,14 @@ exports[`ssr snapshot test renders ./src/badge/demos/text.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="badge-demo">
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+      <!--v-if-->
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->NEW<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>
+      <!--v-if-->
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->省略号<!--]--></span>
       </button>
@@ -1084,16 +1042,16 @@ exports[`ssr snapshot test renders ./src/badge/demos/text.vue correctly 1`] = `
             <!--[--><span>单行标题</span>
             <div class="badge-tag-wrap">
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="">0</div>NEW
+                <!--v-if-->NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--round" style="">0</div>NEW
+                <!--v-if-->NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>NEW
+                <!--v-if-->NEW
               </div>
               <div class="t-badge badge-tag">
-                <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">0</div>NEW
+                <!--v-if-->NEW
               </div>
             </div>
             <!--]-->
@@ -1530,10 +1488,7 @@ exports[`ssr snapshot test renders ./src/cell/demos/mobile.vue correctly 1`] = `
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-badge">
-              <div class="t-badge__inner t-badge--medium t-badge--circle" style="">2</div>
-              <!---->
-            </div>
+            <!--v-if-->
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -2418,13 +2373,13 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
 
 exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 1`] = `
 <div class="accordion-demo">
-  <div class="t-collapse">
-    <div class="t-collapse__title">手风琴模式</div>
+  <div class="t-collapse" title="手风琴模式">
+    <!--[-->
     <!--[-->
     <div class="t-collapse-panel">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->仅点击右侧按钮展开
+          <!--[-->折叠面板标题
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
@@ -2435,17 +2390,14 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
       </div>
       <div class="t-collapse-panel__body">
         <!--[-->
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-          <!--]-->
-        </div>
+        <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
         <!--]-->
       </div>
     </div>
     <div class="t-collapse-panel">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->仅点击右侧按钮展开
+          <!--[-->折叠面板标题
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
@@ -2456,38 +2408,14 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
       </div>
       <div class="t-collapse-panel__body">
         <!--[-->
-        <div class="t-collapse-panel__content">
-          <!--[-->点击面板右侧按钮展开/折叠
-          <!--]-->
-        </div>
-        <!--]-->
-      </div>
-    </div>
-    <div class="t-collapse-panel t-collapse-panel--disabled">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->禁用项
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <!--[-->
-        <div class="t-collapse-panel__content">
-          <!--[-->预设文本
-          <!--]-->
-        </div>
+        <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
         <!--]-->
       </div>
     </div>
     <div class="t-collapse-panel">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->内容默认slot
+          <!--[-->折叠面板标题
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
@@ -2497,10 +2425,40 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
         </div>
       </div>
       <div class="t-collapse-panel__body">
-        <div class="t-collapse-panel__body-slot">
-          <!--[-->自定义内容
+        <!--[-->
+        <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
+        <!--]-->
+      </div>
+    </div>
+    <!--]-->
+    <!--]-->
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/collapse/demos/action.vue correctly 1`] = `
+<div class="accordion-demo">
+  <div class="t-collapse">
+    <!--[-->
+    <div class="t-collapse-panel t-collapse-panel--active">
+      <div class="t-collapse-panel__header">
+        <div class="t-collapse-panel__title">
+          <!--[-->1
           <!--]-->
         </div>
+        <div class="t-collapse-panel__header-right">
+          <div class="t-collapse-panel__header-extra">
+            <!--[-->收起
+            <!--]-->
+          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
+            <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="t-collapse-panel__body">
+        <!--[-->
+        <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
+        <!--]-->
       </div>
     </div>
     <!--]-->
@@ -2510,36 +2468,12 @@ exports[`ssr snapshot test renders ./src/collapse/demos/accordion.vue correctly 
 
 exports[`ssr snapshot test renders ./src/collapse/demos/base.vue correctly 1`] = `
 <div class="accordion-demo">
-  <!-- v-model:value="valueBase"  -->
   <div class="t-collapse">
-    <div class="t-collapse__title">基础型</div>
     <!--[-->
-    <!--[-->
-    <div class="t-collapse-panel t-collapse-panel--active">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->基础面板
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <!--[-->
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-          <!--]-->
-        </div>
-        <!--]-->
-      </div>
-    </div>
     <div class="t-collapse-panel">
       <div class="t-collapse-panel__header">
         <div class="t-collapse-panel__title">
-          <!--[-->内容列表
+          <!--[-->折叠面板标题
           <!--]-->
         </div>
         <div class="t-collapse-panel__header-right">
@@ -2550,92 +2484,10 @@ exports[`ssr snapshot test renders ./src/collapse/demos/base.vue correctly 1`] =
       </div>
       <div class="t-collapse-panel__body">
         <!--[-->
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content">
-          <!--[-->一段很长很长的内容文字
-          <!--]-->
-        </div>
+        <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
         <!--]-->
       </div>
     </div>
-    <div class="t-collapse-panel">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->内容带标签
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <div class="t-collapse-panel__header-extra">
-            <!--[-->预设文本
-            <!--]-->
-          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <!--[-->
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="">标题1</div>
-          <div class="t-collapse-panel-list__content">预设文本</div>
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="">类目标题2</div>
-          <div class="t-collapse-panel-list__content">预设文本</div>
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="">很长很长很长的内容标题</div>
-          <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-          <!--]-->
-        </div>
-        <!--]-->
-      </div>
-    </div>
-    <div class="t-collapse-panel t-collapse-panel--active">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->内容带标签 - 宽度固定
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <div class="t-collapse-panel__header-extra">
-            <!--[-->预设文本
-            <!--]-->
-          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <!--[-->
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="width:80px;">标题1</div>
-          <div class="t-collapse-panel-list__content">预设文本</div>
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__content t-collapse-panel-list__item">
-          <!--[-->
-          <div class="t-collapse-panel-list__label" style="width:80px;">很长很长很长的内容标题</div>
-          <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-          <!--]-->
-        </div>
-        <!--]-->
-      </div>
-    </div>
-    <!--]-->
     <!--]-->
   </div>
 </div>
@@ -2645,294 +2497,133 @@ exports[`ssr snapshot test renders ./src/collapse/demos/mobile.vue correctly 1`]
 <div class="tdesign-mobile-demo">
   <h1 class="title">Collapse 折叠面板</h1>
   <p class="summary">在折叠面板中放入内容，点击面板的标题可以展开或收缩其内容。</p>
-  <div class="tdesign-mobile-demo-block">
-    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
-    <p class="tdesign-mobile-demo-block__summary">基础型</p>
+  <div class="tdesign-mobile-demo-block" header="01 类型">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">基础折叠面板</p>
     <!--[-->
-    <div class="t-collapse">
-      <!--v-if-->
-      <!--[-->
-      <!--[-->
-      <div class="t-collapse-panel t-collapse-panel--active">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->基础面板
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容列表
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容带标签
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <div class="t-collapse-panel__header-extra">
-              <!--[-->预设文本
+    <div class="accordion-demo">
+      <div class="t-collapse">
+        <!--[-->
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
               <!--]-->
-            </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <!--[-->
+            <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
+            <!--]-->
           </div>
         </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="">标题1</div>
-            <div class="t-collapse-panel-list__content">预设文本</div>
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="">类目标题2</div>
-            <div class="t-collapse-panel-list__content">预设文本</div>
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="">很长很长很长的内容标题</div>
-            <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
+        <!--]-->
       </div>
-      <div class="t-collapse-panel t-collapse-panel--active">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容带标签 - 宽度固定
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <div class="t-collapse-panel__header-extra">
-              <!--[-->预设文本
-              <!--]-->
-            </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="width:80px;">标题1</div>
-            <div class="t-collapse-panel-list__content">预设文本</div>
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__content t-collapse-panel-list__item">
-            <!--[-->
-            <div class="t-collapse-panel-list__label" style="width:80px;">很长很长很长的内容标题</div>
-            <div class="t-collapse-panel-list__content">一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字</div>
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <!--]-->
-      <!--]-->
     </div>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
-    <p class="tdesign-mobile-demo-block__summary">手风琴模式</p>
+    <p class="tdesign-mobile-demo-block__summary">带操作说明</p>
     <!--[-->
-    <div class="t-collapse">
-      <!--v-if-->
-      <!--[-->
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->基础面板
+    <div class="accordion-demo">
+      <div class="t-collapse">
+        <!--[-->
+        <div class="t-collapse-panel t-collapse-panel--active">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->1
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <div class="t-collapse-panel__header-extra">
+                <!--[-->收起
+                <!--]-->
+              </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-down t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <!--[-->
+            <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
             <!--]-->
           </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
         </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
+        <!--]-->
       </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->仅点击右侧按钮展开
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->点击面板右侧按钮展开/折叠
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel t-collapse-panel--disabled">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->禁用项
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <!--[-->
-          <div class="t-collapse-panel__content">
-            <!--[-->预设文本
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->内容默认slot
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <div class="t-collapse-panel__body-slot">
-            <!--[-->自定义内容
-            <!--]-->
-          </div>
-        </div>
-      </div>
-      <!--]-->
     </div>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
-    <p class="tdesign-mobile-demo-block__summary">更多（默认全部展开）</p>
+    <p class="tdesign-mobile-demo-block__summary">手风琴式</p>
     <!--[-->
-    <div class="t-collapse">
-      <!--v-if-->
-      <!--[-->
-      <div class="t-collapse-panel">
-        <div class="t-collapse-panel__header">
-          <div class="t-collapse-panel__title">
-            <!--[-->自定义标题<span style="color:#ccc;font-size:12px;margin-left:6px;">自定义内容</span>
-            <!--]-->
-          </div>
-          <div class="t-collapse-panel__header-right">
-            <div class="t-collapse-panel__header-extra">
-              <!--[--><span style="color:red;font-size:12px;margin-left:6px;line-height:1em;">示例</span>
+    <div class="accordion-demo">
+      <div class="t-collapse" title="手风琴模式">
+        <!--[-->
+        <!--[-->
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
               <!--]-->
-            </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-              <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-            </svg>
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
           </div>
-        </div>
-        <div class="t-collapse-panel__body">
-          <div class="t-collapse-panel__body-slot">
-            <!--[--> 预设文本
+          <div class="t-collapse-panel__body">
+            <!--[-->
+            <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
             <!--]-->
           </div>
         </div>
-      </div>
-      <!--]-->
-    </div>
-    <!--]-->
-  </div>
-</div>
-`;
-
-exports[`ssr snapshot test renders ./src/collapse/demos/more.vue correctly 1`] = `
-<div class="accordion-demo">
-  <!-- v-model:value="valueBase"  -->
-  <div class="t-collapse" default-expand-all>
-    <div class="t-collapse__title">更多（默认全部展开）</div>
-    <!--[-->
-    <div class="t-collapse-panel">
-      <div class="t-collapse-panel__header">
-        <div class="t-collapse-panel__title">
-          <!--[-->自定义标题<span style="color:#ccc;font-size:12px;margin-left:6px;">自定义内容</span>
-          <!--]-->
-        </div>
-        <div class="t-collapse-panel__header-right">
-          <div class="t-collapse-panel__header-extra">
-            <!--[--><span style="color:red;font-size:12px;margin-left:6px;line-height:1em;">示例</span>
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <!--[-->
+            <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
             <!--]-->
-          </div><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
-            <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
-          </svg>
+          </div>
         </div>
-      </div>
-      <div class="t-collapse-panel__body">
-        <div class="t-collapse-panel__body-slot">
-          <!--[--> 预设文本
-          <!--]-->
+        <div class="t-collapse-panel">
+          <div class="t-collapse-panel__header">
+            <div class="t-collapse-panel__title">
+              <!--[-->折叠面板标题
+              <!--]-->
+            </div>
+            <div class="t-collapse-panel__header-right">
+              <!--v-if--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-up t-collapse-panel__header-icon" style="">
+                <path fill="currentColor" d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z" fill-opacity="0.9"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="t-collapse-panel__body">
+            <!--[-->
+            <div class="content"> 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 </div>
+            <!--]-->
+          </div>
         </div>
+        <!--]-->
+        <!--]-->
       </div>
     </div>
     <!--]-->
@@ -4178,7 +3869,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4195,7 +3886,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">3</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">3</div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4212,7 +3903,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4229,7 +3920,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/badge.vue correctly 1`] = `
     <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div class="t-grid-item__image-box">
         <div class="t-badge">
-          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">...</div>
+          <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">...</div>
           <!--[-->
           <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
           <!--]-->
@@ -4836,7 +4527,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style=""></div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot" style="background:;"></div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->
@@ -4853,7 +4544,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">3</div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">3</div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->
@@ -4870,7 +4561,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">NEW</div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">NEW</div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->
@@ -4887,7 +4578,7 @@ exports[`ssr snapshot test renders ./src/grid/demos/mobile.vue correctly 1`] = `
         <div class="t-grid-item" style="flex-basis:25%;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
           <div class="t-grid-item__image-box">
             <div class="t-badge">
-              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="">···</div>
+              <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">···</div>
               <!--[-->
               <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-grid-item__image" style="width:32px;height:32px;">
               <!--]-->

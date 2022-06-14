@@ -4,7 +4,7 @@
 
 | 属性             | 类型    | 默认值  | 必传 | 说明                                         |
 | ---------------- | ------- | ------- | ---- | -------------------------------------------- |
-| autofocus        | Boolean | true    | N    | 是否自动聚焦                                 |
+| autofocus        | Boolean | false    | N    | 是否自动聚焦                                 |
 | iconColor        | String  | #CCCCCC | N    | 图标颜色                                     |
 | clearable        | Boolean | true    | N    | 是否启用清除图标，点击清除图标后会清空输入框 |
 | placeholder      | String  | -       | N    | 占位提示文字                                 |
