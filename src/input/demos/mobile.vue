@@ -32,24 +32,57 @@
       </t-cell-group>
     </tdesign-demo-block>
     <tdesign-demo-block title="03 特殊类型" summary="特殊文本框类型">
-      <t-input v-model="passwd" label="密码" type="password" clearable />
-      <t-input label="验证码" placeholder="输入验证码">
-        <template #suffix>
-          <div style="font-size: 16px">XYDZ</div>
-        </template>
-      </t-input>
-      <t-input placeholder="请输入手机号码">
-        <template #suffix>
-          <t-button theme="primary" variant="text" size="small" style="height: 24px; padding: 0">发送验证码</t-button>
-        </template>
-      </t-input>
-      <t-input label="价格" align="right" placeholder="0.00" suffix="元" />
-      <t-input label="个数" align="right" placeholder="填写个数" suffix="个" />
+      <div class="input-demo">
+        <t-input v-model="passwd" label="输入密码" type="password" clearable />
+      </div>
+      <div class="input-demo">
+        <t-input label="验证码" placeholder="输入验证码">
+          <template #suffix>
+            <div style="font-size: 16px">XYDZ</div>
+          </template>
+        </t-input>
+      </div>
+      <div class="input-demo">
+        <t-input placeholder="请输入手机号码">
+          <template #suffix>
+            <t-button theme="primary" variant="text" size="small" style="height: 24px; padding: 0">发送验证码</t-button>
+          </template>
+        </t-input>
+      </div>
+      <div class="input-demo">
+        <t-input label="价格" align="right" placeholder="0.00" suffix="元" />
+      </div>
+      <div class="input-demo">
+        <t-input label="数量" align="right" placeholder="填写个数" suffix="个" />
+      </div>
     </tdesign-demo-block>
   </div>
+  <tdesign-demo-block title="04 规格" summary="文本框尺寸规格">
+    <div class="input-demo">
+      <t-input label="小规格H48" placeholder="请输入文字" />
+    </div>
+    <div class="input-demo">
+      <t-input label="中规格H56" placeholder="请输入文字" size="medium" />
+    </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block title="05 内容位置" summary="文本框内容位置">
+    <div class="input-demo">
+      <t-input label="左对齐" placeholder="请输入文字" />
+    </div>
+    <div class="input-demo">
+      <t-input label="居中" placeholder="请输入文字" align="center" />
+    </div>
+    <div class="input-demo">
+      <t-input label="右对齐" placeholder="请输入文字" align="right" />
+    </div>
+  </tdesign-demo-block>
   <tdesign-demo-block title="04 字数限制" summary="文本框字数限制">
-    <t-input placeholder="最大输入10个字符" :maxlength="10" />
-    <t-input placeholder="最大输入10个字符，汉字算两个" :maxcharacter="10" />
+    <div class="input-demo">
+      <t-input placeholder="最大输入10个字符" :maxlength="10" />
+    </div>
+    <div class="input-demo">
+      <t-input placeholder="最大输入10个字符，汉字算两个" :maxcharacter="10" />
+    </div>
   </tdesign-demo-block>
 </template>
 <script lang="ts">
@@ -76,3 +109,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped lang="less">
+.input-demo {
+  margin-bottom: 16px;
+}
+</style>
