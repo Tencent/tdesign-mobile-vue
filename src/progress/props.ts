@@ -23,11 +23,6 @@ export default {
     type: Number,
     default: 0,
   },
-  /** 进度条尺寸，示例：small/medium/large/240。small 值为 72； medium 值为 112；large 值为 160 */
-  size: {
-    type: [String, Number] as PropType<TdProgressProps['size']>,
-    default: 'medium',
-  },
   /** 进度条状态 */
   status: {
     type: String as PropType<TdProgressProps['status']>,
@@ -39,15 +34,6 @@ export default {
   /** 进度条线宽。宽度数值不能超过 size 的一半，否则不能输出环形进度 */
   strokeWidth: {
     type: [String, Number] as PropType<TdProgressProps['strokeWidth']>,
-  },
-  /** 进度条风格。值为 line，标签（label）显示在进度条右侧；值为 plump，标签（label）显示在进度条里面；值为 circle，标签（label）显示在进度条正中间 */
-  theme: {
-    type: String as PropType<TdProgressProps['theme']>,
-    default: 'line' as TdProgressProps['theme'],
-    validator(val: TdProgressProps['theme']): boolean {
-      if (!val) return true;
-      return ['line', 'plump', 'circle'].includes(val);
-    },
   },
   /** 进度条未完成部分颜色 */
   trackColor: {
