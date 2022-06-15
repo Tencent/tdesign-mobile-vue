@@ -3,7 +3,10 @@
 exports[`ssr snapshot test renders ./src/action-sheet/demos/grid.vue correctly 1`] = `
 <div class="action-sheet-base">
   <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
@@ -14,7 +17,10 @@ exports[`ssr snapshot test renders ./src/action-sheet/demos/grid.vue correctly 1
     <!--v-if-->
   </div>
   <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
@@ -30,7 +36,10 @@ exports[`ssr snapshot test renders ./src/action-sheet/demos/grid.vue correctly 1
 exports[`ssr snapshot test renders ./src/action-sheet/demos/list.vue correctly 1`] = `
 <div class="action-sheet-base">
   <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
@@ -41,7 +50,10 @@ exports[`ssr snapshot test renders ./src/action-sheet/demos/list.vue correctly 1
     <!--v-if-->
   </div>
   <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
@@ -52,7 +64,10 @@ exports[`ssr snapshot test renders ./src/action-sheet/demos/list.vue correctly 1
     <!--v-if-->
   </div>
   <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
@@ -362,19 +377,28 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
       <div class="t-avatar t-size-l t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <!--v-if-->
+          <div class="t-badge">
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
+            <!---->
+          </div>
         </div>
       </div>
       <div class="t-avatar t-size-m t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <!--v-if-->
+          <div class="t-badge">
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
+            <!---->
+          </div>
         </div>
       </div>
       <div class="t-avatar t-size-s t-avatar--circle" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <!--v-if-->
+          <div class="t-badge">
+            <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
+            <!---->
+          </div>
         </div>
       </div>
     </div>
@@ -382,19 +406,28 @@ exports[`ssr snapshot test renders ./src/avatar/demos/mobile.vue correctly 1`] =
       <div class="t-avatar t-size-l t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <!--v-if-->
+          <div class="t-badge">
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
+            <!---->
+          </div>
         </div>
       </div>
       <div class="t-avatar t-size-m t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <!--v-if-->
+          <div class="t-badge">
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">10</div>
+            <!---->
+          </div>
         </div>
       </div>
       <div class="t-avatar t-size-s t-avatar--round" style="">
         <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt="示例图片" style=""></div>
         <div class="t-avatar__badge">
-          <!--v-if-->
+          <div class="t-badge">
+            <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
+            <!---->
+          </div>
         </div>
       </div>
     </div>
@@ -699,11 +732,17 @@ exports[`ssr snapshot test renders ./src/badge/demos/dist.vue correctly 1`] = `
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><span>单行标题</span>
-            <!--v-if-->
+            <div class="t-badge list-item-badge">
+              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;right:10px;top:0px;"></div>
+              <!---->
+            </div>
             <!--]-->
           </div>
           <!--v-if-->
@@ -753,11 +792,17 @@ exports[`ssr snapshot test renders ./src/badge/demos/max-count.vue correctly 1`]
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><span>单行标题</span>
-            <!--v-if-->
+            <div class="t-badge list-item-badge">
+              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;right:10px;top:0px;">16</div>
+              <!---->
+            </div>
             <!--]-->
           </div>
           <!--v-if-->
@@ -850,14 +895,20 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">单行标题
             <!--v-if-->
             <!--v-if-->
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <!--v-if-->
+            <div class="t-badge">
+              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
+              <!---->
+            </div>
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -865,14 +916,20 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
             </svg></div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">单行标题
             <!--v-if-->
             <!--v-if-->
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <!--v-if-->
+            <div class="t-badge">
+              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">16</div>
+              <!---->
+            </div>
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -880,15 +937,24 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
             </svg></div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">单行标题
             <!--v-if-->
             <!--v-if-->
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <!--v-if-->
-            <!--v-if-->
+            <div class="t-badge">
+              <div class="t-badge__inner t-badge--medium t-badge--round" style="background:;">NEW</div>
+              <!---->
+            </div>
+            <div class="t-badge" style="margin-left:8px;">
+              <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">NEW</div>
+              <!---->
+            </div>
             <!--]-->
           </div>
           <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
@@ -896,14 +962,20 @@ exports[`ssr snapshot test renders ./src/badge/demos/mobile.vue correctly 1`] = 
             </svg></div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">单行标题
             <!--v-if-->
             <!--v-if-->
           </div>
           <div class="t-cell__note">
             <!--[-->
-            <!--v-if-->
+            <div class="t-badge t-badge__ribbon--outer">
+              <div class="t-badge__inner t-badge--medium t-badge--ribbon" style="background:;">NEW</div>
+              <!---->
+            </div>
             <!--]-->
           </div>
           <!--v-if-->
@@ -984,17 +1056,26 @@ exports[`ssr snapshot test renders ./src/badge/demos/shape.vue correctly 1`] = `
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered" label="单行标题">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <!--v-if-->
+            <div class="t-badge">
+              <div class="t-badge__inner t-badge--medium t-badge--dot" style="background:;"></div>
+              <!---->
+            </div>
             <!--]-->
           </div>
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered" label="单行标题">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
@@ -1036,7 +1117,10 @@ exports[`ssr snapshot test renders ./src/badge/demos/text.vue correctly 1`] = `
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><span>单行标题</span>
@@ -1304,15 +1388,18 @@ exports[`ssr snapshot test renders ./src/button/demos/test.vue correctly 1`] = `
 
 exports[`ssr snapshot test renders ./src/cell/demos/border.vue correctly 1`] = `
 <div class="cell-base">
-  <div class="t-cell-group" border>
+  <div class="t-cell-group">
     <div class="t-cell-group__title">
       <!--[-->显示组边框
       <!--]-->
     </div>
-    <div class="t-cell-group__container">
+    <div class="t-cell-group__container border--top-bottom">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div>自定义标题</div>
@@ -1328,7 +1415,10 @@ exports[`ssr snapshot test renders ./src/cell/demos/border.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div>自定义标题</div>
@@ -1350,15 +1440,18 @@ exports[`ssr snapshot test renders ./src/cell/demos/border.vue correctly 1`] = `
 `;
 
 exports[`ssr snapshot test renders ./src/cell/demos/click.vue correctly 1`] = `
-<div class="t-cell-group" border>
+<div class="t-cell-group">
   <div class="t-cell-group__title">
     <!--[-->单元格点击时触发
     <!--]-->
   </div>
-  <div class="t-cell-group__container">
+  <div class="t-cell-group__container border--top-bottom">
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div>自定义标题</div>
@@ -1374,7 +1467,10 @@ exports[`ssr snapshot test renders ./src/cell/demos/click.vue correctly 1`] = `
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div>自定义标题</div>
@@ -1395,7 +1491,7 @@ exports[`ssr snapshot test renders ./src/cell/demos/click.vue correctly 1`] = `
 `;
 
 exports[`ssr snapshot test renders ./src/cell/demos/group.vue correctly 1`] = `
-<div class="cell-base">
+<div>
   <div class="t-cell-group" summary="列表外常驻文字，常常用于辅助信息说明，列表外常驻文字，常常用于辅助信息说明">
     <div class="t-cell-group__title">
       <!--[-->分组标题
@@ -1404,7 +1500,10 @@ exports[`ssr snapshot test renders ./src/cell/demos/group.vue correctly 1`] = `
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">单行标题
           <!--v-if-->
           <!--v-if-->
@@ -1413,7 +1512,10 @@ exports[`ssr snapshot test renders ./src/cell/demos/group.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">单行标题
           <!--v-if-->
           <!--v-if-->
@@ -1437,91 +1539,125 @@ exports[`ssr snapshot test renders ./src/cell/demos/mobile.vue correctly 1`] = `
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
     <p class="tdesign-mobile-demo-block__summary">单行单元格</p>
     <!--[-->
-    <div class="t-cell-group">
-      <!--v-if-->
-      <div class="t-cell-group__container">
-        <!--[-->
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">单行标题
+    <div>
+      <div class="t-cell-group">
+        <!--v-if-->
+        <div class="t-cell-group__container border--top-bottom">
+          <!--[-->
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <!--v-if-->
             <!--v-if-->
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题<span class="t-cell--required"> *</span>
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__note">辅助信息</div>
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+                <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+              </svg></div>
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__note">辅助信息</div>
+            <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+                <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+              </svg></div>
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__note">
+              <!--[-->
+              <div class="t-badge">
+                <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">2</div>
+                <!---->
+              </div>
+              <!--]-->
+            </div>
+            <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+                <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+              </svg></div>
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__note">
+              <!--[--><span class="t-switch t-is-checked"><!--v-if--><span class="t-switch__node" style=""></span></span>
+              <!--]-->
+            </div>
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-app" style="">
+                <path fill="currentColor" d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z" fill-opacity="0.9"></path>
+              </svg>
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">单行标题
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--]-->
         </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">单行标题<span class="t-cell--required"> *</span>
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">单行标题
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div class="t-cell__note">辅助信息</div>
-          <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-              <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-            </svg></div>
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">单行标题
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-              <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-            </svg></div>
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">单行标题
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div class="t-cell__note">
-            <!--[-->
-            <!--v-if-->
-            <!--]-->
-          </div>
-          <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-              <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-            </svg></div>
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">单行标题
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div class="t-cell__note">
-            <!--[--><span class="t-switch"><!--v-if--><span class="t-switch__node" style=""></span></span>
-            <!--]-->
-          </div>
-          <!--v-if-->
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <div class="t-cell__left-icon">
-            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-app" style="">
-              <path fill="currentColor" d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z" fill-opacity="0.9"></path>
-            </svg>
-            <!--]-->
-          </div>
-          <div class="t-cell__title">单行标题
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--]-->
       </div>
     </div>
     <!--]-->
@@ -1530,82 +1666,98 @@ exports[`ssr snapshot test renders ./src/cell/demos/mobile.vue correctly 1`] = `
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">多行单元格</p>
     <!--[-->
-    <div class="t-cell-group">
-      <!--v-if-->
-      <div class="t-cell-group__container">
-        <!--[-->
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">多行标题
-            <!--v-if-->
-            <div class="t-cell__description">一段很长很长的内容文字</div>
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <div class="t-cell__left-icon">
-            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-app" style="">
-              <path fill="currentColor" d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z" fill-opacity="0.9"></path>
-            </svg>
-            <!--]-->
-          </div>
-          <div class="t-cell__title">多行带图标
-            <!--v-if-->
-            <div class="t-cell__description">一段很长很长的内容文字</div>
-          </div>
-          <!--v-if-->
-          <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-              <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-            </svg></div>
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <div class="t-cell__left-icon">
-            <!--[-->
-            <div class="t-avatar t-avatar--circle" style="">
-              <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt style=""></div>
+    <div>
+      <div class="t-cell-group">
+        <!--v-if-->
+        <div class="t-cell-group__container">
+          <!--[-->
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
               <!--v-if-->
             </div>
-            <!--]-->
-          </div>
-          <div class="t-cell__title">多行带头像
+            <div class="t-cell__title">多行标题
+              <!--v-if-->
+              <div class="t-cell__description">一段很长很长的内容文字</div>
+            </div>
             <!--v-if-->
-            <div class="t-cell__description">一段很长很长的内容文字</div>
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <div class="t-cell__left-icon">
-            <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" style="width:54px;height:54px;">
-            <!--]-->
-          </div>
-          <div class="t-cell__title">多行带图片
             <!--v-if-->
-            <div class="t-cell__description">一段很长很长的内容文字</div>
           </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">多行标题
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-app" style="">
+                <path fill="currentColor" d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z" fill-opacity="0.9"></path>
+              </svg>
+              <!--]-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">多行带图标
+              <!--v-if-->
+              <div class="t-cell__description">一段很长很长的内容文字</div>
+            </div>
             <!--v-if-->
-            <div class="t-cell__description">一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容</div>
+            <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+                <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+              </svg></div>
           </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
-          <div class="t-cell__title">多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--[-->
+              <div class="t-avatar t-avatar--circle" style="">
+                <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt style=""></div>
+                <!--v-if-->
+              </div>
+              <!--]-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">多行带头像
+              <!--v-if-->
+              <div class="t-cell__description">一段很长很长的内容文字</div>
+            </div>
             <!--v-if-->
-            <div class="t-cell__description">一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容</div>
+            <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+                <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+              </svg></div>
           </div>
-          <!--v-if-->
-          <!--v-if-->
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-cell__image">
+              <!--]-->
+            </div>
+            <div class="t-cell__title">多行带图片
+              <!--v-if-->
+              <div class="t-cell__description">一段很长很长的内容文字</div>
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">多行标题
+              <!--v-if-->
+              <div class="t-cell__description">一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容</div>
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div class="t-cell t-cell--middle t-cell--bordered">
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div class="t-cell__title">多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
+              <!--v-if-->
+              <div class="t-cell__description">一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容</div>
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--]-->
         </div>
-        <!--]-->
       </div>
     </div>
     <!--]-->
@@ -1614,125 +1766,222 @@ exports[`ssr snapshot test renders ./src/cell/demos/mobile.vue correctly 1`] = `
 `;
 
 exports[`ssr snapshot test renders ./src/cell/demos/multiple.vue correctly 1`] = `
-<div class="cell-base">
-  <div class="t-cell t-cell--middle t-cell--bordered">
+<div>
+  <div class="t-cell-group">
     <!--v-if-->
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <div class="t-cell__description">一段很长很长的内容文字</div>
-    </div>
-    <!--v-if-->
-    <!--v-if-->
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <div class="t-cell__description">一段很长很长的内容文字</div>
-    </div>
-    <!--v-if-->
-    <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-        <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-      </svg></div>
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <div class="t-cell__description">一段很长很长的内容文字</div>
-    </div>
-    <div class="t-cell__note">
-      <!--[--><button class="t-button t-size-s t-button--outline t-button--primary t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->小按钮<!--]--></span>
-      </button>
+    <div class="t-cell-group__container">
+      <!--[-->
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">多行标题
+          <!--v-if-->
+          <div class="t-cell__description">一段很长很长的内容文字</div>
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-app" style="">
+            <path fill="currentColor" d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z" fill-opacity="0.9"></path>
+          </svg>
+          <!--]-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">多行带图标
+          <!--v-if-->
+          <div class="t-cell__description">一段很长很长的内容文字</div>
+        </div>
+        <!--v-if-->
+        <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+            <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+          </svg></div>
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--[-->
+          <div class="t-avatar t-avatar--circle" style="">
+            <div class="t-avatar__inner"><img src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png" alt style=""></div>
+            <!--v-if-->
+          </div>
+          <!--]-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">多行带头像
+          <!--v-if-->
+          <div class="t-cell__description">一段很长很长的内容文字</div>
+        </div>
+        <!--v-if-->
+        <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+            <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+          </svg></div>
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--[--><img src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png" class="t-cell__image">
+          <!--]-->
+        </div>
+        <div class="t-cell__title">多行带图片
+          <!--v-if-->
+          <div class="t-cell__description">一段很长很长的内容文字</div>
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">多行标题
+          <!--v-if-->
+          <div class="t-cell__description">一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容</div>
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">多行高度不定，长文本自动换行，该选项的描述是一段很长的内容
+          <!--v-if-->
+          <div class="t-cell__description">一段很长很长的内容文字，长文本自动换行，该选项的描述是一段很长的内容</div>
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <!--]-->
     </div>
-    <!--v-if-->
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <div class="t-cell__description">一段很长很长的内容文字，一段很长很长的内容文字，一段很长很长的内容文字</div>
-    </div>
-    <!--v-if-->
-    <!--v-if-->
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <div class="t-cell__left-icon">
-      <!--[--><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" style="width:50px;height:50px;margin-right:8px;float:left;">
-      <!--]-->
-    </div>
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <div class="t-cell__description">一段很长很长的内容文字</div>
-    </div>
-    <!--v-if-->
-    <!--v-if-->
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
-    <div class="t-cell__title">双行标题，长文本自动换行，该选项的描述是一段很长的内容
-      <!--v-if-->
-      <div class="t-cell__description">一段很长很长的内容文字</div>
-    </div>
-    <!--v-if-->
-    <!--v-if-->
   </div>
 </div>
 `;
 
 exports[`ssr snapshot test renders ./src/cell/demos/single.vue correctly 1`] = `
-<div class="cell-base">
-  <div class="t-cell t-cell--middle t-cell--bordered">
+<div>
+  <div class="t-cell-group">
     <!--v-if-->
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <!--v-if-->
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div class="t-cell__note">
-      <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-        <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-      </svg>
+    <div class="t-cell-group__container border--top-bottom">
+      <!--[-->
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题<span class="t-cell--required"> *</span>
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">辅助信息</div>
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+            <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+          </svg></div>
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">辅助信息</div>
+        <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+            <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+          </svg></div>
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[-->
+          <div class="t-badge">
+            <div class="t-badge__inner t-badge--medium t-badge--circle" style="background:;">2</div>
+            <!---->
+          </div>
+          <!--]-->
+        </div>
+        <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
+            <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
+          </svg></div>
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[--><span class="t-switch t-is-checked"><!--v-if--><span class="t-switch__node" style=""></span></span>
+          <!--]-->
+        </div>
+        <!--v-if-->
+      </div>
+      <div class="t-cell t-cell--middle t-cell--bordered">
+        <div class="t-cell__left-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-app" style="">
+            <path fill="currentColor" d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z" fill-opacity="0.9"></path>
+          </svg>
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">单行标题
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <!--]-->
     </div>
-    <!--v-if-->
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
-    <div class="t-cell__title">单行标题
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div class="t-cell__note">辅助信息</div>
-    <div class="t-cell__right-icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-chevron-right" style="">
-        <path fill="currentColor" d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z" fill-opacity="0.9"></path>
-      </svg></div>
-  </div>
-  <div class="t-cell t-cell--middle t-cell--bordered">
-    <div class="t-cell__left-icon">
-      <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-user" style="">
-        <path fill="currentColor" d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z" fill-opacity="0.9"></path>
-      </svg>
-      <!--]-->
-    </div>
-    <div class="t-cell__title">
-      <!--[--><span>单行标题</span>
-      <!--]-->
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <!--v-if-->
   </div>
 </div>
 `;
@@ -1801,6 +2050,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -1821,6 +2071,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -1841,6 +2092,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -1861,6 +2113,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span> 多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选 多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选 多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选 </span>
@@ -1881,6 +2134,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -1910,7 +2164,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
         <div class="t-cell-group__container">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span>多选</span>
               <!--]-->
@@ -1930,7 +2187,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
             </div>
           </div>
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span>多选</span>
               <!--]-->
@@ -1950,7 +2210,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
             </div>
           </div>
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span>多选</span>
               <!--]-->
@@ -1970,7 +2233,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
             </div>
           </div>
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span>多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选</span>
               <!--]-->
@@ -2014,6 +2280,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>全选</span>
@@ -2034,6 +2301,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -2054,6 +2322,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -2074,6 +2343,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -2111,6 +2381,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
@@ -2131,6 +2402,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
@@ -2151,7 +2423,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
         <div class="t-cell-group__container">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
               <!--]-->
@@ -2171,7 +2446,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
             </div>
           </div>
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
               <!--]-->
@@ -2215,6 +2493,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>半选</span>
@@ -2252,6 +2531,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -2272,6 +2552,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -2292,6 +2573,7 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
                   </div>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span>多选</span>
@@ -2318,7 +2600,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
         <div class="t-cell-group__container">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[-->
               <div class="t-checkbox t-is-checked">
@@ -2347,7 +2632,10 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
         <div class="t-cell-group__container">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered" style="height:56px;">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[-->
               <div class="t-checkbox t-is-checked">
@@ -3060,7 +3348,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/base.vue correct
   <!--v-if-->
   <!--[-->
   <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <div class="t-cell__title">
       <!--[-->
       <div class="t-input--label">选择日期时间</div>
@@ -3089,7 +3380,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/disable-date.vue
   <!--v-if-->
   <!--[-->
   <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <div class="t-cell__title">
       <!--[-->
       <div class="t-input--label">选择日期</div>
@@ -3118,7 +3412,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/hour-minute.vue 
   <!--v-if-->
   <!--[-->
   <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <div class="t-cell__title">
       <!--[-->
       <div class="t-input--label">选择时分</div>
@@ -3150,7 +3447,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
     <p class="tdesign-mobile-demo-block__summary">时间选择器</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">日期时间</div>
@@ -3170,7 +3470,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">年月日</div>
@@ -3190,7 +3493,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">年月</div>
@@ -3210,7 +3516,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">时分</div>
@@ -3236,7 +3545,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
     <p class="tdesign-mobile-demo-block__summary">日期时间禁用</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">选择日期</div>
@@ -3266,7 +3578,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month.vue c
   <!--v-if-->
   <!--[-->
   <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <div class="t-cell__title">
       <!--[-->
       <div class="t-input--label">选择年月</div>
@@ -3295,7 +3610,10 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month-date.
   <!--v-if-->
   <!--[-->
   <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <div class="t-cell__title">
       <!--[-->
       <div class="t-input--label">选择年月日</div>
@@ -3325,7 +3643,10 @@ exports[`ssr snapshot test renders ./src/dialog/demos/confirm.vue correctly 1`] 
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -3354,7 +3675,10 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -3365,7 +3689,10 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -3376,7 +3703,10 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -3387,7 +3717,10 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -3407,7 +3740,10 @@ exports[`ssr snapshot test renders ./src/dialog/demos/feedback.vue correctly 1`]
 exports[`ssr snapshot test renders ./src/dialog/demos/input.vue correctly 1`] = `
 <div class="undefined">
   <div class="t-cell t-cell--middle t-cell--bordered tdesign-demo--dialog" value-align="left">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[--><button class="t-button t-button--base t-button--primary t-button--square button-item" role="button" aria-disabled="false">
@@ -4969,7 +5305,10 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/background.vue corre
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -5009,7 +5348,10 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/base.vue correctly 1
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -5049,7 +5391,10 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/imageList.vue correc
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -5089,7 +5434,10 @@ exports[`ssr snapshot test renders ./src/image-viewer/demos/initialIndex.vue cor
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-m t-button--base t-button--primary t-button--square" role="button" aria-disabled="false">
@@ -5179,7 +5527,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿坝" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阿坝
             <!--v-if-->
             <!--v-if-->
@@ -5188,7 +5539,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿拉善" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阿拉善
             <!--v-if-->
             <!--v-if-->
@@ -5197,7 +5551,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿里" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阿里
             <!--v-if-->
             <!--v-if-->
@@ -5206,7 +5563,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安康" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安康
             <!--v-if-->
             <!--v-if-->
@@ -5215,7 +5575,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安庆" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安庆
             <!--v-if-->
             <!--v-if-->
@@ -5224,7 +5587,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="鞍山" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">鞍山
             <!--v-if-->
             <!--v-if-->
@@ -5233,7 +5599,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安顺" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安顺
             <!--v-if-->
             <!--v-if-->
@@ -5242,7 +5611,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安阳" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安阳
             <!--v-if-->
             <!--v-if-->
@@ -5251,7 +5623,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="澳门" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">澳门
             <!--v-if-->
             <!--v-if-->
@@ -5272,7 +5647,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="北京" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">北京
             <!--v-if-->
             <!--v-if-->
@@ -5281,7 +5659,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="白银" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">白银
             <!--v-if-->
             <!--v-if-->
@@ -5290,7 +5671,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="保定" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">保定
             <!--v-if-->
             <!--v-if-->
@@ -5299,7 +5683,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="宝鸡" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">宝鸡
             <!--v-if-->
             <!--v-if-->
@@ -5308,7 +5695,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="保山" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">保山
             <!--v-if-->
             <!--v-if-->
@@ -5317,7 +5707,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="包头" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">包头
             <!--v-if-->
             <!--v-if-->
@@ -5326,7 +5719,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="巴中" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">巴中
             <!--v-if-->
             <!--v-if-->
@@ -5335,7 +5731,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="北海" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">北海
             <!--v-if-->
             <!--v-if-->
@@ -5344,7 +5743,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="蚌埠" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">蚌埠
             <!--v-if-->
             <!--v-if-->
@@ -5353,7 +5755,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="本溪" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">本溪
             <!--v-if-->
             <!--v-if-->
@@ -5362,7 +5767,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="毕节" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">毕节
             <!--v-if-->
             <!--v-if-->
@@ -5371,7 +5779,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="滨州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">滨州
             <!--v-if-->
             <!--v-if-->
@@ -5380,7 +5791,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="百色" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">百色
             <!--v-if-->
             <!--v-if-->
@@ -5389,7 +5803,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/base.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="亳州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">亳州
             <!--v-if-->
             <!--v-if-->
@@ -5444,7 +5861,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿坝" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阿坝
             <!--v-if-->
             <!--v-if-->
@@ -5453,7 +5873,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿拉善" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阿拉善
             <!--v-if-->
             <!--v-if-->
@@ -5462,7 +5885,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阿里" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阿里
             <!--v-if-->
             <!--v-if-->
@@ -5471,7 +5897,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安康" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安康
             <!--v-if-->
             <!--v-if-->
@@ -5480,7 +5909,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安庆" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安庆
             <!--v-if-->
             <!--v-if-->
@@ -5489,7 +5921,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="鞍山" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">鞍山
             <!--v-if-->
             <!--v-if-->
@@ -5498,7 +5933,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安顺" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安顺
             <!--v-if-->
             <!--v-if-->
@@ -5507,7 +5945,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="安阳" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">安阳
             <!--v-if-->
             <!--v-if-->
@@ -5516,7 +5957,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="澳门" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">澳门
             <!--v-if-->
             <!--v-if-->
@@ -5537,7 +5981,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="北京" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">北京
             <!--v-if-->
             <!--v-if-->
@@ -5546,7 +5993,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="白银" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">白银
             <!--v-if-->
             <!--v-if-->
@@ -5555,7 +6005,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="保定" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">保定
             <!--v-if-->
             <!--v-if-->
@@ -5564,7 +6017,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="宝鸡" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">宝鸡
             <!--v-if-->
             <!--v-if-->
@@ -5573,7 +6029,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="保山" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">保山
             <!--v-if-->
             <!--v-if-->
@@ -5582,7 +6041,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="包头" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">包头
             <!--v-if-->
             <!--v-if-->
@@ -5591,7 +6053,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="巴中" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">巴中
             <!--v-if-->
             <!--v-if-->
@@ -5600,7 +6065,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="北海" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">北海
             <!--v-if-->
             <!--v-if-->
@@ -5609,7 +6077,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="蚌埠" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">蚌埠
             <!--v-if-->
             <!--v-if-->
@@ -5618,7 +6089,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="本溪" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">本溪
             <!--v-if-->
             <!--v-if-->
@@ -5627,7 +6101,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="毕节" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">毕节
             <!--v-if-->
             <!--v-if-->
@@ -5636,7 +6113,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="滨州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">滨州
             <!--v-if-->
             <!--v-if-->
@@ -5645,7 +6125,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="百色" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">百色
             <!--v-if-->
             <!--v-if-->
@@ -5654,7 +6137,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="亳州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">亳州
             <!--v-if-->
             <!--v-if-->
@@ -5675,7 +6161,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="重庆" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">重庆
             <!--v-if-->
             <!--v-if-->
@@ -5684,7 +6173,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="成都" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">成都
             <!--v-if-->
             <!--v-if-->
@@ -5693,7 +6185,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="长沙" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">长沙
             <!--v-if-->
             <!--v-if-->
@@ -5702,7 +6197,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="长春" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">长春
             <!--v-if-->
             <!--v-if-->
@@ -5711,7 +6209,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="沧州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">沧州
             <!--v-if-->
             <!--v-if-->
@@ -5720,7 +6221,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="常德" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">常德
             <!--v-if-->
             <!--v-if-->
@@ -5729,7 +6233,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="昌都" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">昌都
             <!--v-if-->
             <!--v-if-->
@@ -5738,7 +6245,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="长治" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">长治
             <!--v-if-->
             <!--v-if-->
@@ -5747,7 +6257,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="常州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">常州
             <!--v-if-->
             <!--v-if-->
@@ -5756,7 +6269,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="巢湖" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">巢湖
             <!--v-if-->
             <!--v-if-->
@@ -5765,7 +6281,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="潮州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">潮州
             <!--v-if-->
             <!--v-if-->
@@ -5774,7 +6293,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="承德" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">承德
             <!--v-if-->
             <!--v-if-->
@@ -5783,7 +6305,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="郴州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">郴州
             <!--v-if-->
             <!--v-if-->
@@ -5792,7 +6317,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="赤峰" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">赤峰
             <!--v-if-->
             <!--v-if-->
@@ -5801,7 +6329,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="池州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">池州
             <!--v-if-->
             <!--v-if-->
@@ -5810,7 +6341,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="崇左" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">崇左
             <!--v-if-->
             <!--v-if-->
@@ -5819,7 +6353,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="楚雄" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">楚雄
             <!--v-if-->
             <!--v-if-->
@@ -5828,7 +6365,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="滁州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">滁州
             <!--v-if-->
             <!--v-if-->
@@ -5837,7 +6377,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="朝阳" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">朝阳
             <!--v-if-->
             <!--v-if-->
@@ -5858,7 +6401,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="大连" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">大连
             <!--v-if-->
             <!--v-if-->
@@ -5867,7 +6413,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="东莞" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">东莞
             <!--v-if-->
             <!--v-if-->
@@ -5876,7 +6425,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="大理" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">大理
             <!--v-if-->
             <!--v-if-->
@@ -5885,7 +6437,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="丹东" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">丹东
             <!--v-if-->
             <!--v-if-->
@@ -5894,7 +6449,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="大庆" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">大庆
             <!--v-if-->
             <!--v-if-->
@@ -5903,7 +6461,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="大同" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">大同
             <!--v-if-->
             <!--v-if-->
@@ -5912,7 +6473,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="大兴安岭" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">大兴安岭
             <!--v-if-->
             <!--v-if-->
@@ -5921,7 +6485,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="德宏" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">德宏
             <!--v-if-->
             <!--v-if-->
@@ -5930,7 +6497,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="德阳" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">德阳
             <!--v-if-->
             <!--v-if-->
@@ -5939,7 +6509,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="德州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">德州
             <!--v-if-->
             <!--v-if-->
@@ -5948,7 +6521,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="定西" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">定西
             <!--v-if-->
             <!--v-if-->
@@ -5957,7 +6533,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="迪庆" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">迪庆
             <!--v-if-->
             <!--v-if-->
@@ -5966,7 +6545,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="东营" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">东营
             <!--v-if-->
             <!--v-if-->
@@ -5987,7 +6569,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="鄂尔多斯" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">鄂尔多斯
             <!--v-if-->
             <!--v-if-->
@@ -5996,7 +6581,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="恩施" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">恩施
             <!--v-if-->
             <!--v-if-->
@@ -6005,7 +6593,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="鄂州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">鄂州
             <!--v-if-->
             <!--v-if-->
@@ -6026,7 +6617,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="福州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">福州
             <!--v-if-->
             <!--v-if-->
@@ -6035,7 +6629,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="防城港" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">防城港
             <!--v-if-->
             <!--v-if-->
@@ -6044,7 +6641,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="佛山" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">佛山
             <!--v-if-->
             <!--v-if-->
@@ -6053,7 +6653,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="抚顺" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">抚顺
             <!--v-if-->
             <!--v-if-->
@@ -6062,7 +6665,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="抚州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">抚州
             <!--v-if-->
             <!--v-if-->
@@ -6071,7 +6677,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阜新" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阜新
             <!--v-if-->
             <!--v-if-->
@@ -6080,7 +6689,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="阜阳" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">阜阳
             <!--v-if-->
             <!--v-if-->
@@ -6101,7 +6713,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
       <div class="t-indexes__group">
         <!--[-->
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="广州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">广州
             <!--v-if-->
             <!--v-if-->
@@ -6110,7 +6725,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="桂林" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">桂林
             <!--v-if-->
             <!--v-if-->
@@ -6119,7 +6737,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="贵阳" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">贵阳
             <!--v-if-->
             <!--v-if-->
@@ -6128,7 +6749,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="甘南" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">甘南
             <!--v-if-->
             <!--v-if-->
@@ -6137,7 +6761,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="赣州" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">赣州
             <!--v-if-->
             <!--v-if-->
@@ -6146,7 +6773,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="甘孜" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">甘孜
             <!--v-if-->
             <!--v-if-->
@@ -6155,7 +6785,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="广安" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">广安
             <!--v-if-->
             <!--v-if-->
@@ -6164,7 +6797,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="广元" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">广元
             <!--v-if-->
             <!--v-if-->
@@ -6173,7 +6809,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="贵港" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">贵港
             <!--v-if-->
             <!--v-if-->
@@ -6182,7 +6821,10 @@ exports[`ssr snapshot test renders ./src/indexes/demos/demo-indexes.vue correctl
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-indexes-cell" data-key value="果洛" link="true">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">果洛
             <!--v-if-->
             <!--v-if-->
@@ -6226,7 +6868,10 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">标准五个字</div>
@@ -6246,7 +6891,10 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">一个很长的标题需换行</div>
@@ -6266,7 +6914,10 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[-->
@@ -6280,7 +6931,10 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input" error="true">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">未填写警告</div>
@@ -6300,7 +6954,10 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">填写错误</div>
@@ -6320,7 +6977,10 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label t-is-disabled">不可编辑</div>
@@ -6355,7 +7015,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <p class="tdesign-mobile-demo-block__summary">基础文本框</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">标签文字</div>
@@ -6385,7 +7048,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered t-input">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[-->
             <div class="t-input--label">标签文字</div>
@@ -6404,7 +7070,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[-->
             <div class="t-input--label">标签文字</div>
@@ -6433,7 +7102,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <p class="tdesign-mobile-demo-block__summary">无标题文本框</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <!--v-if-->
       <div class="t-cell__note">
         <!--[-->
@@ -6453,7 +7125,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <p class="tdesign-mobile-demo-block__summary">带提示信息文本框</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">标准五个字</div>
@@ -6486,7 +7161,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <p class="tdesign-mobile-demo-block__summary">长标题文本框</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">超长需换行的标签</div>
@@ -6516,7 +7194,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered t-input">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[-->
             <div class="t-input--label">标签文字</div>
@@ -6536,7 +7217,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[-->
             <div class="t-input--label">填写错误</div>
@@ -6556,7 +7240,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[-->
             <div class="t-input--label">不可编辑</div>
@@ -6585,7 +7272,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <p class="tdesign-mobile-demo-block__summary">特殊文本框类型</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">密码</div>
@@ -6607,7 +7297,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">验证码</div>
@@ -6631,7 +7324,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <!--v-if-->
       <div class="t-cell__note">
         <!--[-->
@@ -6650,7 +7346,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">价格</div>
@@ -6670,7 +7369,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
     </div>
     <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">
         <!--[-->
         <div class="t-input--label">个数</div>
@@ -6697,7 +7399,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
   <p class="tdesign-mobile-demo-block__summary">文本框字数限制</p>
   <!--[-->
   <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[-->
@@ -6711,7 +7416,10 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <!--v-if-->
   </div>
   <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div class="t-cell__note">
       <!--[-->
@@ -6739,7 +7447,10 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">密码</div>
@@ -6761,7 +7472,10 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">验证码</div>
@@ -6785,7 +7499,10 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[-->
@@ -6804,7 +7521,10 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">价格</div>
@@ -6824,7 +7544,10 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered t-input">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">
           <!--[-->
           <div class="t-input--label">个数</div>
@@ -7438,7 +8161,10 @@ exports[`ssr snapshot test renders ./src/message/demos/offset.vue correctly 1`] 
 exports[`ssr snapshot test renders ./src/message/demos/text.vue correctly 1`] = `
 <!--[-->
 <div class="t-cell t-cell--middle t-cell--bordered tdesign-text-message-btn" value-align="left">
-  <!--v-if-->
+  <div class="t-cell__left-icon">
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <div class="t-cell__note">
     <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
@@ -8138,7 +8864,10 @@ exports[`ssr snapshot test renders ./src/overlay/demos/base.vue correctly 1`] = 
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-l t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
@@ -8149,7 +8878,10 @@ exports[`ssr snapshot test renders ./src/overlay/demos/base.vue correctly 1`] = 
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <!--v-if-->
         <div class="t-cell__note">
           <!--[--><button class="t-button t-size-l t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
@@ -8175,7 +8907,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/base.vue correctly 1`] = `
   <div class="t-cell-group__container">
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">城市
         <!--v-if-->
         <!--v-if-->
@@ -8193,7 +8928,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/base.vue correctly 1`] = `
   <div class="t-cell-group__container">
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">年份和季节
         <!--v-if-->
         <!--v-if-->
@@ -8211,7 +8949,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/base.vue correctly 1`] = `
   <div class="t-cell-group__container">
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">日期
         <!--v-if-->
         <!--v-if-->
@@ -8235,7 +8976,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/cascade.vue correctly 1`] 
   <div class="t-cell-group__container">
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">英雄
         <!--v-if-->
         <!--v-if-->
@@ -8266,7 +9010,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">城市
             <!--v-if-->
             <!--v-if-->
@@ -8284,7 +9031,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">年份和季节
             <!--v-if-->
             <!--v-if-->
@@ -8302,7 +9052,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">日期
             <!--v-if-->
             <!--v-if-->
@@ -8328,7 +9081,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">角色
             <!--v-if-->
             <!--v-if-->
@@ -8355,7 +9111,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">英雄
             <!--v-if-->
             <!--v-if-->
@@ -8381,7 +9140,10 @@ exports[`ssr snapshot test renders ./src/picker/demos/object.vue correctly 1`] =
   <div class="t-cell-group__container">
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">角色
         <!--v-if-->
         <!--v-if-->
@@ -8984,7 +9746,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/cell.vue correctly 1`] = `
         <!--v-if-->
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
@@ -8997,7 +9762,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/cell.vue correctly 1`] = `
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered" value-align="left">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
@@ -9142,6 +9910,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">单选
               <!--v-if-->
@@ -9158,6 +9927,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
               <!--v-if-->
@@ -9174,6 +9944,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">单选
               <!--v-if-->
@@ -9201,7 +9972,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[--><span>单选</span>
             <!--]-->
@@ -9219,7 +9993,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
           </div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[--><span>单选</span>
             <!--]-->
@@ -9237,7 +10014,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
           </div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[--><span>单选</span>
             <!--]-->
@@ -9278,6 +10058,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">
               <!--[--><span>单选</span>
@@ -9296,6 +10077,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">
               <!--[--><span>单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选</span>
@@ -9314,6 +10096,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">
               <!--[--><span>单选</span>
@@ -9343,7 +10126,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[--><span>单选</span>
             <!--]-->
@@ -9361,7 +10147,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
           </div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[--><span>单选</span>
             <!--]-->
@@ -9379,7 +10168,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
           </div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">
             <!--[--><span>单选</span>
             <!--]-->
@@ -9397,7 +10189,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
           </div>
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
             <!--v-if-->
             <!--v-if-->
@@ -9436,6 +10231,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
@@ -9454,6 +10250,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
@@ -9485,6 +10282,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                   <!--v-if--></span>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
@@ -9503,6 +10301,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                   <!--v-if--></span>
                 </div>
                 <!--]-->
+                <!--v-if-->
               </div>
               <div class="t-cell__title">
                 <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
@@ -9525,7 +10324,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
         <div class="t-cell-group__container">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
               <!--]-->
@@ -9543,7 +10345,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
             </div>
           </div>
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
               <!--]-->
@@ -9570,7 +10375,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
         <div class="t-cell-group__container">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
               <!--]-->
@@ -9588,7 +10396,10 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
             </div>
           </div>
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">
               <!--[--><span style="color:rgba(0, 0, 0, 0.26);">单选</span>
               <!--]-->
@@ -9630,6 +10441,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">
               <!--[--><span>单选</span>
@@ -9648,6 +10460,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
                 <!--v-if--></span>
               </div>
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">
               <!--[--><span>单选</span>
@@ -9677,6 +10490,7 @@ exports[`ssr snapshot test renders ./src/radio/demos/mobile.vue correctly 1`] = 
           <!--v-if--></span>
         </div>
         <!--]-->
+        <!--v-if-->
       </div>
       <div class="t-cell__title">
         <!--[--><span>单选 H48</span>
@@ -10291,7 +11105,10 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
           </svg></div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
@@ -10328,7 +11145,10 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
           </svg></div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
@@ -10371,7 +11191,10 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
@@ -10409,7 +11232,10 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
@@ -10447,7 +11273,10 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
@@ -10485,7 +11314,10 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
@@ -11286,7 +12118,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/base.vue correctly 1`] = 
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题文字
           <!--v-if-->
           <!--v-if-->
@@ -11314,7 +12149,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/disable-input.vue correct
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">禁止输入
           <!--v-if-->
           <!--v-if-->
@@ -11342,7 +12180,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/disabled.vue correctly 1`
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">失效
           <!--v-if-->
           <!--v-if-->
@@ -11370,7 +12211,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/event.vue correctly 1`] =
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题文字
           <!--v-if-->
           <!--v-if-->
@@ -11398,7 +12242,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/mobile.vue correctly 1`] 
     <!--[-->
     <div class="stepper-demo">
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题文字
           <!--v-if-->
           <!--v-if-->
@@ -11419,7 +12266,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/mobile.vue correctly 1`] 
     <!--[-->
     <div class="stepper-demo">
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题文字（单位）
           <!--v-if-->
           <!--v-if-->
@@ -11449,7 +12299,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/mobile.vue correctly 1`] 
     <!--[-->
     <div class="stepper-demo">
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">禁用
           <!--v-if-->
           <!--v-if-->
@@ -11464,7 +12317,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/mobile.vue correctly 1`] 
     </div>
     <div class="stepper-demo">
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">禁用单位
           <!--v-if-->
           <!--v-if-->
@@ -11479,7 +12335,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/mobile.vue correctly 1`] 
     </div>
     <div class="stepper-demo">
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">最大值
           <!--v-if-->
           <!--v-if-->
@@ -11494,7 +12353,10 @@ exports[`ssr snapshot test renders ./src/stepper/demos/mobile.vue correctly 1`] 
     </div>
     <div class="stepper-demo">
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">最小值
           <!--v-if-->
           <!--v-if-->
@@ -12603,7 +13465,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/bind.vue correctly 1`]
     <p class="tdesign-mobile-demo-block__summary">通过expanded实现父子组件联动</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">开关
         <!--v-if-->
         <!--v-if-->
@@ -12624,7 +13489,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/bind.vue correctly 1`]
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">父子组件联动
               <!--v-if-->
               <!--v-if-->
@@ -12664,7 +13532,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/btns.vue correctly 1`]
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">左右都有菜单
             <!--v-if-->
             <!--v-if-->
@@ -12721,7 +13592,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/content.vue correctly 
 exports[`ssr snapshot test renders ./src/swipe-cell/demos/disabled.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="t-cell t-cell--middle t-cell--bordered">
-    <!--v-if-->
+    <div class="t-cell__left-icon">
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <div class="t-cell__title">开关
       <!--v-if-->
       <!--v-if-->
@@ -12742,7 +13616,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/disabled.vue correctly
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">可以滑动
             <!--v-if-->
             <!--v-if-->
@@ -12782,7 +13659,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/event.vue correctly 1`
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">左右都有内容
             <!--v-if-->
             <!--v-if-->
@@ -12826,6 +13706,7 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-card.vue correctl
             <div class="t-cell__left-icon">
               <!--[--><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" style="width:50px;height:50px;margin-right:8px;float:left;">
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">左滑大列表
               <!--v-if-->
@@ -12865,6 +13746,7 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-card.vue correctl
             <div class="t-cell__left-icon">
               <!--[--><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" style="width:50px;height:50px;margin-right:8px;float:left;">
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">左滑大列表
               <!--v-if-->
@@ -12906,7 +13788,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-more-menu.vue cor
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">列表-左滑多操作
             <!--v-if-->
             <!--v-if-->
@@ -12946,7 +13831,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-more-menu.vue cor
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">列表-左滑多操作
             <!--v-if-->
             <!--v-if-->
@@ -12991,7 +13879,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-one-menu.vue corr
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑单操作
               <!--v-if-->
               <!--v-if-->
@@ -13027,7 +13918,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-one-menu.vue corr
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑单操作
               <!--v-if-->
               <!--v-if-->
@@ -13068,7 +13962,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-two-menu.vue corr
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">列表-左滑双操作
             <!--v-if-->
             <!--v-if-->
@@ -13106,7 +14003,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/left-two-menu.vue corr
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">列表-左滑双操作
             <!--v-if-->
             <!--v-if-->
@@ -13151,7 +14051,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑单操作
               <!--v-if-->
               <!--v-if-->
@@ -13187,7 +14090,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑单操作
               <!--v-if-->
               <!--v-if-->
@@ -13223,7 +14129,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑双操作
               <!--v-if-->
               <!--v-if-->
@@ -13261,7 +14170,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑双操作
               <!--v-if-->
               <!--v-if-->
@@ -13299,7 +14211,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑多操作
               <!--v-if-->
               <!--v-if-->
@@ -13339,7 +14254,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-左滑多操作
               <!--v-if-->
               <!--v-if-->
@@ -13382,6 +14300,7 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
             <div class="t-cell__left-icon">
               <!--[--><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" style="width:50px;height:50px;margin-right:8px;float:left;">
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">左滑大列表
               <!--v-if-->
@@ -13421,6 +14340,7 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
             <div class="t-cell__left-icon">
               <!--[--><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" style="width:50px;height:50px;margin-right:8px;float:left;">
               <!--]-->
+              <!--v-if-->
             </div>
             <div class="t-cell__title">左滑大列表
               <!--v-if-->
@@ -13460,7 +14380,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-右滑单操作
               <!--v-if-->
               <!--v-if-->
@@ -13496,7 +14419,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">列表-右滑单操作
               <!--v-if-->
               <!--v-if-->
@@ -13520,7 +14446,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
     <p class="tdesign-mobile-demo-block__summary">通过expanded实现父子组件联动</p>
     <!--[-->
     <div class="t-cell t-cell--middle t-cell--bordered">
-      <!--v-if-->
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
       <div class="t-cell__title">开关
         <!--v-if-->
         <!--v-if-->
@@ -13541,7 +14470,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/mobile.vue correctly 1
         <div class="content">
           <!--[-->
           <div class="t-cell t-cell--middle t-cell--bordered">
-            <!--v-if-->
+            <div class="t-cell__left-icon">
+              <!--v-if-->
+              <!--v-if-->
+            </div>
             <div class="t-cell__title">父子组件联动
               <!--v-if-->
               <!--v-if-->
@@ -13585,7 +14517,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/right-menu.vue correct
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">列表-右滑单操作
             <!--v-if-->
             <!--v-if-->
@@ -13621,7 +14556,10 @@ exports[`ssr snapshot test renders ./src/swipe-cell/demos/right-menu.vue correct
       <div class="content">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">列表-右滑单操作
             <!--v-if-->
             <!--v-if-->
@@ -13918,7 +14856,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/base.vue correctly 1`] = `
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题
           <!--v-if-->
           <!--v-if-->
@@ -13930,7 +14871,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/base.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题
           <!--v-if-->
           <!--v-if-->
@@ -13957,7 +14901,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/desc.vue correctly 1`] = `
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题
           <!--v-if-->
           <!--v-if-->
@@ -13969,7 +14916,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/desc.vue correctly 1`] = `
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题
           <!--v-if-->
           <!--v-if-->
@@ -13996,7 +14946,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/disabled.vue correctly 1`]
     <div class="t-cell-group__container">
       <!--[-->
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题
           <!--v-if-->
           <!--v-if-->
@@ -14008,7 +14961,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/disabled.vue correctly 1`]
         <!--v-if-->
       </div>
       <div class="t-cell t-cell--middle t-cell--bordered">
-        <!--v-if-->
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
         <div class="t-cell__title">标题
           <!--v-if-->
           <!--v-if-->
@@ -14038,7 +14994,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关
             <!--v-if-->
             <!--v-if-->
@@ -14050,7 +15009,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关
             <!--v-if-->
             <!--v-if-->
@@ -14062,7 +15024,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">自定义颜色
             <!--v-if-->
             <!--v-if-->
@@ -14074,7 +15039,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">异步操作
             <!--v-if-->
             <!--v-if-->
@@ -14099,7 +15067,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关
             <!--v-if-->
             <!--v-if-->
@@ -14111,7 +15082,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关
             <!--v-if-->
             <!--v-if-->
@@ -14123,7 +15097,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">自定义颜色
             <!--v-if-->
             <!--v-if-->
@@ -14148,7 +15125,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
       <div class="t-cell-group__container">
         <!--[-->
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关开启禁用
             <!--v-if-->
             <!--v-if-->
@@ -14160,7 +15140,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关关闭禁用
             <!--v-if-->
             <!--v-if-->
@@ -14172,7 +15155,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关开启禁用
             <!--v-if-->
             <!--v-if-->
@@ -14184,7 +15170,10 @@ exports[`ssr snapshot test renders ./src/switch/demos/mobile.vue correctly 1`] =
           <!--v-if-->
         </div>
         <div class="t-cell t-cell--middle t-cell--bordered">
-          <!--v-if-->
+          <div class="t-cell__left-icon">
+            <!--v-if-->
+            <!--v-if-->
+          </div>
           <div class="t-cell__title">开关关闭禁用
             <!--v-if-->
             <!--v-if-->
