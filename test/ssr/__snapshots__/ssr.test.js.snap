@@ -3841,23 +3841,30 @@ exports[`ssr snapshot test renders ./src/dropdown-menu/demos/tree-menu.vue corre
 `;
 
 exports[`ssr snapshot test renders ./src/fab/demos/display.vue correctly 1`] = `
-<div><button class="t-button t-size-m t-button--base t-button--primary t-button--round t-fab t-fab--icononly demo-fab-button" role="button" aria-disabled="false">
-    <!----><span class="t-button__text"><!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="color:#fff;"><path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path></svg><!--v-if--><!--]--></span>
+<div><button class="t-button t-button--base t-button--primary t-button--round t-fab t-fab--icononly" role="button" aria-disabled="false" style="right:16px;bottom:32px;">
+    <!----><span class="t-button__text"><!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style=""><path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path></svg><!--v-if--><!--]--></span>
   </button></div>
 `;
 
 exports[`ssr snapshot test renders ./src/fab/demos/mobile.vue correctly 1`] = `
-<div><button class="t-button t-size-m t-button--base t-button--primary t-button--round t-fab t-fab--icononly demo-fab-button" role="button" aria-disabled="false">
-    <!----><span class="t-button__text"><!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="color:#fff;"><path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path></svg><!--v-if--><!--]--></span>
-  </button><button class="t-button t-size-m t-button--base t-button--primary t-button--round t-fab demo-fab-button" role="button" aria-disabled="false">
-    <!----><span class="t-button__text"><!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="color:#fff;"><path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path></svg><span class="t-fab__text">按钮文案</span>
-    <!--]--></span>
-  </button></div>
+<div class="tdesign-mobile-demo">
+  <h1 class="title">Fab 悬浮按钮</h1>
+  <p class="summary">当功能使用图标即可表示清楚时，可使用纯图标悬浮按钮，例如：添加、发布。</p>
+  <div class="tdesign-mobile-demo-block">
+    <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
+    <p class="tdesign-mobile-demo-block__summary">纯图标悬浮按钮</p>
+    <!--[-->
+    <!--]-->
+  </div>
+  <div><button class="t-button t-button--base t-button--primary t-button--round t-fab t-fab--icononly" role="button" aria-disabled="false" style="right:16px;bottom:32px;">
+      <!----><span class="t-button__text"><!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style=""><path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path></svg><!--v-if--><!--]--></span>
+    </button></div>
+</div>
 `;
 
 exports[`ssr snapshot test renders ./src/fab/demos/text.vue correctly 1`] = `
-<div><button class="t-button t-size-m t-button--base t-button--primary t-button--round t-fab demo-fab-button" role="button" aria-disabled="false">
-    <!----><span class="t-button__text"><!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style="color:#fff;"><path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path></svg><span class="t-fab__text">按钮文案</span>
+<div><button class="t-button t-button--base t-button--default t-button--round t-fab" role="button" aria-disabled="false" style="right:16px;bottom:96px;">
+    <!----><span class="t-button__text"><!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-add" style=""><path fill="currentColor" d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z" fill-opacity="0.9"></path></svg><span class="t-fab__text">按钮文字</span>
     <!--]--></span>
   </button></div>
 `;
