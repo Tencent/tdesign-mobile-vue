@@ -1,19 +1,17 @@
 <template>
-  <t-rate v-model="value" clearable show-text allow-half>
+  <t-rate v-model="value[11]" clearable allow-half>
     <template #icon>
-      <t-icon name="user-filled" />
+      <CheckCircleFilledIcon @click="onIconClick" />
     </template>
   </t-rate>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
+import { CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 
-export default defineComponent({
-  setup() {
-    return {
-      value: ref(1),
-    };
-  },
-});
+const onIconClick = () => {
+  console.log('icon was clicked.');
+};
+const value = ref([1, 2, 3, 3.5, 3, 3, 3, 3, 3, 3, 3, 3]);
 </script>

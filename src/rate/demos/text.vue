@@ -1,25 +1,11 @@
 <template>
-  <t-rate v-model="value" clearable show-text allow-half />
-  <t-rate v-model="value1" clearable show-text allow-half text-color="#FA0" />
-  <t-rate v-model="value2" clearable show-text :texts="texts" />
+  <t-rate v-model="value[6]" clearable show-text :texts="texts" variant="outline" :gap="defaultGap" />
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const value = ref(0);
-    const value1 = ref(2.5);
-    const value2 = ref(3);
-    const texts = ref(['很差', '差', '一般', '好评', '优秀']);
-
-    return {
-      value,
-      value1,
-      value2,
-      texts,
-    };
-  },
-});
+const defaultGap = 8;
+const value = ref([1, 2, 3, 3.5, 3, 3, 3, 3, 3, 3, 3, 3]);
+const texts = ref(['很差', '差', '一般', '好评', '优秀']);
 </script>

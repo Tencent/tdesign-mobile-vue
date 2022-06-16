@@ -1,15 +1,10 @@
 <template>
-  <t-rate v-model="value" disabled />
+  <t-rate v-model="value[7]" disabled :gap="defaultGap" />
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    return {
-      value: ref(3.5),
-    };
-  },
-});
+const defaultGap = 8;
+const value = ref([1, 2, 3, 3.5, 3, 3, 3, 3, 3, 3, 3, 3]);
 </script>
