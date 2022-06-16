@@ -5,7 +5,7 @@
 
 名称 | 类型 | 默认值 | 说明 | 必传
 -- | -- | -- | -- | --
-activeColor | String | - | 菜单标题和选项的选中态颜色 | N
+activeColor | String | - |【讨论中】 菜单标题和选项的选中态颜色 | N
 closeOnClickOverlay | Boolean | true | 是否在点击遮罩层后关闭菜单 | N
 duration | String / Number | 200 | 动画时长 | N
 overlay | Boolean | true | 是否显示遮罩层 | N
