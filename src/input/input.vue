@@ -95,6 +95,7 @@ export default defineComponent({
 
     const styleWrapper = computed(() => ({
       [componentName]: true,
+      [`${componentName}--size-${props.size}`]: props.size,
       [`${componentName}__error`]: !!props.errorMessage,
     }));
 
