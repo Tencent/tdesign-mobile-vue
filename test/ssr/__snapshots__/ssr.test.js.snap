@@ -694,7 +694,7 @@ exports[`ssr snapshot test renders ./src/badge/demos/color.vue correctly 1`] = `
             <!--]-->
           </div>
           <div class="t-badge badge-item">
-            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#52c41a;">999</div>
+            <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:#52c41a;">99+</div>
             <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
               <!----><span class="t-button__text"><!--[-->绿色<!--]--></span>
             </button>
@@ -765,21 +765,21 @@ exports[`ssr snapshot test renders ./src/badge/demos/max-count.vue correctly 1`]
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">109</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">99+</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->默认max:99<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">45</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">44+</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:44<!--]--></span>
       </button>
       <!--]-->
     </div>
     <div class="t-badge badge-item">
-      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">106</div>
+      <div class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle" style="background:;">105+</div>
       <!--[--><button class="t-button t-size-s t-button--base t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[-->max:105<!--]--></span>
       </button>
@@ -3347,7 +3347,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/base.vue correct
   <!--v-if-->
   <!--v-if-->
   <!--[-->
-  <div class="t-cell t-cell--middle t-cell--bordered t-input">
+  <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
     <div class="t-cell__left-icon">
       <!--v-if-->
       <!--v-if-->
@@ -3379,7 +3379,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/disable-date.vue
   <!--v-if-->
   <!--v-if-->
   <!--[-->
-  <div class="t-cell t-cell--middle t-cell--bordered t-input">
+  <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
     <div class="t-cell__left-icon">
       <!--v-if-->
       <!--v-if-->
@@ -3411,7 +3411,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/hour-minute.vue 
   <!--v-if-->
   <!--v-if-->
   <!--[-->
-  <div class="t-cell t-cell--middle t-cell--bordered t-input">
+  <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
     <div class="t-cell__left-icon">
       <!--v-if-->
       <!--v-if-->
@@ -3446,7 +3446,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
     <p class="tdesign-mobile-demo-block__summary">时间选择器</p>
     <!--[-->
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -3469,7 +3469,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -3492,7 +3492,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -3515,7 +3515,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
       </div>
       <!--v-if-->
     </div>
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -3544,7 +3544,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/mobile.vue corre
     <h2 class="tdesign-mobile-demo-block__title">02 功能</h2>
     <p class="tdesign-mobile-demo-block__summary">日期时间禁用</p>
     <!--[-->
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -3577,7 +3577,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month.vue c
   <!--v-if-->
   <!--v-if-->
   <!--[-->
-  <div class="t-cell t-cell--middle t-cell--bordered t-input">
+  <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
     <div class="t-cell__left-icon">
       <!--v-if-->
       <!--v-if-->
@@ -3609,7 +3609,7 @@ exports[`ssr snapshot test renders ./src/date-time-picker/demos/year-month-date.
   <!--v-if-->
   <!--v-if-->
   <!--[-->
-  <div class="t-cell t-cell--middle t-cell--bordered t-input">
+  <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
     <div class="t-cell__left-icon">
       <!--v-if-->
       <!--v-if-->
@@ -6867,7 +6867,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
     </div>
     <div class="t-cell-group__container">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -6890,7 +6890,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -6913,7 +6913,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -6930,7 +6930,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input" error="true">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small" error="true">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -6953,7 +6953,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-input__error">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -6976,7 +6976,7 @@ exports[`ssr snapshot test renders ./src/input/demos/base.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -7014,7 +7014,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
     <p class="tdesign-mobile-demo-block__summary">基础文本框</p>
     <!--[-->
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -7047,7 +7047,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
       <div class="t-cell-group__container">
         <!--[-->
-        <div class="t-cell t-cell--middle t-cell--bordered t-input">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
           <div class="t-cell__left-icon">
             <!--v-if-->
             <!--v-if-->
@@ -7069,7 +7069,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <!--v-if-->
         </div>
-        <div class="t-cell t-cell--middle t-cell--bordered t-input">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
           <div class="t-cell__left-icon">
             <!--v-if-->
             <!--v-if-->
@@ -7101,7 +7101,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">无标题文本框</p>
     <!--[-->
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -7124,7 +7124,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">带提示信息文本框</p>
     <!--[-->
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -7160,7 +7160,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">长标题文本框</p>
     <!--[-->
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
       <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
@@ -7193,7 +7193,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
       <!--v-if-->
       <div class="t-cell-group__container">
         <!--[-->
-        <div class="t-cell t-cell--middle t-cell--bordered t-input">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
           <div class="t-cell__left-icon">
             <!--v-if-->
             <!--v-if-->
@@ -7216,7 +7216,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <!--v-if-->
         </div>
-        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input__error">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-input__error">
           <div class="t-cell__left-icon">
             <!--v-if-->
             <!--v-if-->
@@ -7239,7 +7239,7 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
           </div>
           <!--v-if-->
         </div>
-        <div class="t-cell t-cell--middle t-cell--bordered t-input">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
           <div class="t-cell__left-icon">
             <!--v-if-->
             <!--v-if-->
@@ -7271,166 +7271,317 @@ exports[`ssr snapshot test renders ./src/input/demos/mobile.vue correctly 1`] = 
     <h2 class="tdesign-mobile-demo-block__title">03 特殊类型</h2>
     <p class="tdesign-mobile-demo-block__summary">特殊文本框类型</p>
     <!--[-->
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <div class="t-cell__left-icon">
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__title">
-        <!--[-->
-        <div class="t-input--label">密码</div>
-        <!--]-->
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__note">
-        <!--[-->
-        <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off" maxlength="-1">
-          <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
-              <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
-            </svg></div>
+    <div class="input-demo">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
           <!--v-if-->
         </div>
-        <!--v-if-->
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </div>
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <div class="t-cell__left-icon">
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__title">
-        <!--[-->
-        <div class="t-input--label">验证码</div>
-        <!--]-->
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__note">
-        <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="输入验证码" maxlength="-1">
+        <div class="t-cell__title">
+          <!--[-->
+          <div class="t-input--label">输入密码</div>
+          <!--]-->
           <!--v-if-->
-          <div class="t-input__wrap--suffix">
-            <!--[-->
-            <div style="font-size:16px;">XYDZ</div>
-            <!--]-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[-->
+          <div class="t-input__wrap"><input value="12345678" name class="t-input__control" type="password" autocomplete="Off" maxlength="-1">
+            <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
+                <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
+              </svg></div>
+            <!--v-if-->
           </div>
+          <!--v-if-->
+          <!--]-->
         </div>
         <!--v-if-->
-        <!--]-->
       </div>
-      <!--v-if-->
     </div>
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <div class="t-cell__left-icon">
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <!--v-if-->
-      <div class="t-cell__note">
-        <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入手机号码" maxlength="-1">
+    <div class="input-demo">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+        <div class="t-cell__left-icon">
           <!--v-if-->
-          <div class="t-input__wrap--suffix">
-            <!--[--><button class="t-button t-size-s t-button--text t-button--primary t-button--square" role="button" aria-disabled="false" style="height:24px;padding:0;">
-              <!----><span class="t-button__text"><!--[-->发送验证码<!--]--></span>
-            </button>
-            <!--]-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">
+          <!--[-->
+          <div class="t-input--label">验证码</div>
+          <!--]-->
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[-->
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="输入验证码" maxlength="-1">
+            <!--v-if-->
+            <div class="t-input__wrap--suffix">
+              <!--[-->
+              <div style="font-size:16px;">XYDZ</div>
+              <!--]-->
+            </div>
           </div>
-        </div>
-        <!--v-if-->
-        <!--]-->
-      </div>
-      <!--v-if-->
-    </div>
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <div class="t-cell__left-icon">
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__title">
-        <!--[-->
-        <div class="t-input--label">价格</div>
-        <!--]-->
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__note">
-        <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="0.00" maxlength="-1">
           <!--v-if-->
-          <div class="t-input__wrap--suffix">元</div>
+          <!--]-->
         </div>
         <!--v-if-->
-        <!--]-->
       </div>
-      <!--v-if-->
     </div>
-    <div class="t-cell t-cell--middle t-cell--bordered t-input">
-      <div class="t-cell__left-icon">
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__title">
-        <!--[-->
-        <div class="t-input--label">个数</div>
-        <!--]-->
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div class="t-cell__note">
-        <!--[-->
-        <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="填写个数" maxlength="-1">
+    <div class="input-demo">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+        <div class="t-cell__left-icon">
           <!--v-if-->
-          <div class="t-input__wrap--suffix">个</div>
+          <!--v-if-->
         </div>
         <!--v-if-->
-        <!--]-->
+        <div class="t-cell__note">
+          <!--[-->
+          <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入手机号码" maxlength="-1">
+            <!--v-if-->
+            <div class="t-input__wrap--suffix">
+              <!--[--><button class="t-button t-size-s t-button--text t-button--primary t-button--square" role="button" aria-disabled="false" style="height:24px;padding:0;">
+                <!----><span class="t-button__text"><!--[-->发送验证码<!--]--></span>
+              </button>
+              <!--]-->
+            </div>
+          </div>
+          <!--v-if-->
+          <!--]-->
+        </div>
+        <!--v-if-->
       </div>
-      <!--v-if-->
+    </div>
+    <div class="input-demo">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">
+          <!--[-->
+          <div class="t-input--label">价格</div>
+          <!--]-->
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[-->
+          <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="0.00" maxlength="-1">
+            <!--v-if-->
+            <div class="t-input__wrap--suffix">元</div>
+          </div>
+          <!--v-if-->
+          <!--]-->
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    <div class="input-demo">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+        <div class="t-cell__left-icon">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__title">
+          <!--[-->
+          <div class="t-input--label">数量</div>
+          <!--]-->
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div class="t-cell__note">
+          <!--[-->
+          <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="填写个数" maxlength="-1">
+            <!--v-if-->
+            <div class="t-input__wrap--suffix">个</div>
+          </div>
+          <!--v-if-->
+          <!--]-->
+        </div>
+        <!--v-if-->
+      </div>
     </div>
     <!--]-->
   </div>
 </div>
 <div class="tdesign-mobile-demo-block">
+  <h2 class="tdesign-mobile-demo-block__title">04 规格</h2>
+  <p class="tdesign-mobile-demo-block__summary">文本框尺寸规格</p>
+  <!--[-->
+  <div class="input-demo">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__title">
+        <!--[-->
+        <div class="t-input--label">小规格H48</div>
+        <!--]-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__note">
+        <!--[-->
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--]-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="input-demo">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-medium">
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__title">
+        <!--[-->
+        <div class="t-input--label">中规格H56</div>
+        <!--]-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__note">
+        <!--[-->
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--]-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--]-->
+</div>
+<div class="tdesign-mobile-demo-block">
+  <h2 class="tdesign-mobile-demo-block__title">05 内容位置</h2>
+  <p class="tdesign-mobile-demo-block__summary">文本框内容位置</p>
+  <!--[-->
+  <div class="input-demo">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__title">
+        <!--[-->
+        <div class="t-input--label">左对齐</div>
+        <!--]-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__note">
+        <!--[-->
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--]-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="input-demo">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__title">
+        <!--[-->
+        <div class="t-input--label">居中</div>
+        <!--]-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__note">
+        <!--[-->
+        <div class="t-input__wrap"><input name class="t-input__control t-input__control--center" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--]-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div class="input-demo">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+      <div class="t-cell__left-icon">
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__title">
+        <!--[-->
+        <div class="t-input--label">右对齐</div>
+        <!--]-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div class="t-cell__note">
+        <!--[-->
+        <div class="t-input__wrap"><input name class="t-input__control t-input__control--right" type="text" autocomplete="Off" placeholder="请输入文字" maxlength="-1">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--]-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <!--]-->
+</div>
+<div class="tdesign-mobile-demo-block">
   <h2 class="tdesign-mobile-demo-block__title">04 字数限制</h2>
   <p class="tdesign-mobile-demo-block__summary">文本框字数限制</p>
   <!--[-->
-  <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <div class="t-cell__left-icon">
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div class="t-cell__note">
-      <!--[-->
-      <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="最大输入10个字符" maxlength="10">
+  <div class="input-demo">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+      <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
       </div>
       <!--v-if-->
-      <!--]-->
+      <div class="t-cell__note">
+        <!--[-->
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="最大输入10个字符" maxlength="10">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--]-->
+      </div>
+      <!--v-if-->
     </div>
-    <!--v-if-->
   </div>
-  <div class="t-cell t-cell--middle t-cell--bordered t-input">
-    <div class="t-cell__left-icon">
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div class="t-cell__note">
-      <!--[-->
-      <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="最大输入10个字符，汉字算两个" maxlength="-1">
+  <div class="input-demo">
+    <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
+      <div class="t-cell__left-icon">
         <!--v-if-->
         <!--v-if-->
       </div>
       <!--v-if-->
-      <!--]-->
+      <div class="t-cell__note">
+        <!--[-->
+        <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="最大输入10个字符，汉字算两个" maxlength="-1">
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <!--]-->
+      </div>
+      <!--v-if-->
     </div>
-    <!--v-if-->
   </div>
   <!--]-->
 </div>
@@ -7446,7 +7597,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
     </div>
     <div class="t-cell-group__container">
       <!--[-->
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -7471,7 +7622,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -7498,7 +7649,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -7520,7 +7671,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -7543,7 +7694,7 @@ exports[`ssr snapshot test renders ./src/input/demos/other.vue correctly 1`] = `
         </div>
         <!--v-if-->
       </div>
-      <div class="t-cell t-cell--middle t-cell--bordered t-input">
+      <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small">
         <div class="t-cell__left-icon">
           <!--v-if-->
           <!--v-if-->
@@ -11104,7 +11255,7 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
         <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
           </svg></div>
-        <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
           <div class="t-cell__left-icon">
             <!--v-if-->
             <!--v-if-->
@@ -11144,7 +11295,7 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
         <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
           </svg></div>
-        <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+        <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
           <div class="t-cell__left-icon">
             <!--v-if-->
             <!--v-if-->
@@ -11190,7 +11341,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
-          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
               <!--v-if-->
@@ -11231,7 +11382,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
-          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
               <!--v-if-->
@@ -11272,7 +11423,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
-          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
               <!--v-if-->
@@ -11313,7 +11464,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
           <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
             </svg></div>
-          <div class="t-cell t-cell--middle t-cell--bordered t-input t-search__input">
+          <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
               <!--v-if-->
