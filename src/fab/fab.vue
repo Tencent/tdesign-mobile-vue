@@ -35,9 +35,8 @@ export default defineComponent({
       [`${name}--icononly`]: props.icon && !props.text,
     }));
 
-    const onClick = (e: Event) => {
-      emitEvent('click', e);
-    };
+    const onClick = (e: MouseEvent) => emitEvent('click', { e });
+
     const baseButtonProps = {
       size: 'middle',
       shape: 'round',
