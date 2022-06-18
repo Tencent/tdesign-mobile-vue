@@ -1,6 +1,6 @@
 <template>
   <div class="cell-base">
-    <t-cell-group title="显示组边框" border>
+    <t-cell-group title="显示组边框" bordered>
       <t-cell>
         <template #title>
           <div>自定义标题</div>
@@ -16,9 +16,3 @@
     </t-cell-group>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({});
-</script>

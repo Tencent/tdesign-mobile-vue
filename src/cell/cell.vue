@@ -1,7 +1,11 @@
 <template>
   <div :class="styleCell" @click="onClick">
-    <div v-if="leftIconContent" :class="`${name}__left-icon`">
-      <t-node :content="leftIconContent"></t-node>
+    <div :class="`${name}__left-icon`">
+      <t-node v-if="leftIconContent" :content="leftIconContent"></t-node>
+      <template v-if="image">
+        <img v-if="typeof image === 'string'" :src="image" :class="`${name}__image`" />
+        <t-node v-else :content="imageContent"></t-node>
+      </template>
     </div>
     <div v-if="titleContent" :class="`${name}__title`">
       <t-node :content="titleContent"></t-node><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
@@ -45,7 +49,7 @@ export default defineComponent({
       }
       return renderTNode(internalInstance, 'rightIcon');
     });
-
+    const imageContent = computed(() => renderTNode(internalInstance, 'image'));
     const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon'));
 
     const styleCell = computed(() => [
@@ -64,6 +68,7 @@ export default defineComponent({
       name,
       onClick,
       styleCell,
+      imageContent,
       rightIconContent,
       leftIconContent,
       noteContent,
