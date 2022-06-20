@@ -1,18 +1,19 @@
 {
   "name": "tdesign-mobile-vue",
   "purename": "tdesign",
-  "version": "0.8.4",
+  "version": "0.8.6",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
   "bugs": {
-    "url": "/tdesign-mobile-vue/issues"
+    "url": "https://github.com/tencent/tdesign-mobile-vue/issues"
   },
   "repository": {
     "type": "git",
-    "url": "/tdesign-mobile-vue.git"
+    "url": "https://github.com/tencent/tdesign-mobile-vue"
   },
   "scripts": {
+    "start": "npm run dev",
     "prepare": "husky install .husky",
     "dev": "cd site && cross-env NODE_ENV=development vite",
     "dev:debug": "cd site && cross-env NODE_ENV=development vite --debug",
@@ -36,9 +37,9 @@
     "test:coverage": "jest --config scripts/test/jest.unit.conf.js --coverage",
     "test:e2e": "cypress run --config-file scripts/test/cypress.json",
     "test:e2e-gui": "cypress open --config-file scripts/test/cypress.json",
-    "lint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore",
+    "lint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 3 --ignore-path .gitignore --ignore-path .eslintignore",
     "lint:fix": "npm run lint:fix-prettier && npm run lint:fix-eslint",
-    "lint:fix-eslint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore --fix",
+    "lint:fix-eslint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 3 --ignore-path .gitignore --ignore-path .eslintignore --fix",
     "lint:fix-prettier": "prettier ./ --ignore-path .gitignore --ignore-path .eslintignore --write './*.{vue,ts,tsx}' --ignore-unknown",
     "lint:vue": "vue-tsc --noEmit -p tsconfig.build.json",
     "update:coverage-badge": "node scripts/test/generate-coverage.js",
@@ -83,7 +84,7 @@
     "@vueuse/core": "^8.2.5",
     "dayjs": "^1.10.7",
     "lodash": "^4.17.21",
-    "tdesign-icons-vue-next": "^0.0.7"
+    "tdesign-icons-vue-next": "^0.1.0"
   },
   "peerDependencies": {
     "vue": "^3.2.6"
@@ -159,17 +160,18 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-vue": "^6.0.0",
     "rollup-pluginutils": "^2.8.2",
-    "tdesign-publish-cli": "^0.0.9",
-    "tdesign-site-components": "^0.9.9",
+    "tdesign-icons-view": "^0.1.0",
+    "tdesign-publish-cli": "^0.0.10",
+    "tdesign-site-components": "^0.10.0",
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.2",
     "vite": "^2.7.2",
     "vite-plugin-tdoc": "^2.0.1",
-    "vue": "^3.2.4",
+    "vue": "^3.2.33",
     "vue-eslint-parser": "^8.0.1",
     "vue-router": "4.0.11",
-    "vue-tsc": "^0.29.8",
+    "vue-tsc": "^0.34.16",
     "vue3-jest": "^27.0.0-alpha.2"
   },
   "config": {

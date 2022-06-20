@@ -72,7 +72,7 @@ export default defineComponent({
         icon: () => h(AppIcon),
       },
     ]);
-    const openBase = ref(true);
+    const openBase = ref(false);
     const openIcon = ref(false);
     const openDrawer = (type: boolean) => {
       if (type) {

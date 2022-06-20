@@ -2,7 +2,7 @@
   <teleport :to="to" :disabled="!to">
     <div :class="[rootClasses, $attrs.class]" :style="rootStyles" @touchmove="handleMove">
       <transition name="fade">
-        <t-mask v-show="currentVisible" :transparent="!showOverlay" @click="handleMaskClick" />
+        <t-overlay v-show="currentVisible" :transparent="!showOverlay" @click="handleOverlayClick" />
       </transition>
       <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
         <div v-show="currentVisible" :class="contentClasses">
@@ -16,7 +16,7 @@
 <script lang="ts">
 import { ref, computed, SetupContext, watch, defineComponent } from 'vue';
 import popupProps from './props';
-import TMask from '../mask';
+import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
 import { useDefault, useEmitEvent } from '../shared';
@@ -27,7 +27,7 @@ const name = `${prefix}-popup`;
 
 export default defineComponent({
   name,
-  components: { TMask },
+  components: { TOverlay },
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context: SetupContext) {
@@ -70,7 +70,7 @@ export default defineComponent({
       },
     );
 
-    const handleMaskClick = () => {
+    const handleOverlayClick = () => {
       emitEvent('close');
       currentVisible.value = false;
     };
@@ -93,7 +93,7 @@ export default defineComponent({
       contentTransitionName,
       afterEnter,
       afterLeave,
-      handleMaskClick,
+      handleOverlayClick,
       handleMove,
     };
   },

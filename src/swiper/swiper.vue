@@ -114,12 +114,14 @@ export default defineComponent({
       const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       if (items.length <= 0) return false;
-      const first = items[0].cloneNode(true) as HTMLDivElement;
-      first.classList.add('copy-item');
-      const last = items[items.length - 1].cloneNode(true) as HTMLDivElement;
-      last.classList.add('copy-item');
-      _swiperContainer.appendChild(first);
-      _swiperContainer.insertBefore(last, items[0]);
+      if (props?.loop) {
+        const first = items[0].cloneNode(true) as HTMLDivElement;
+        first.classList.add('copy-item');
+        const last = items[items.length - 1].cloneNode(true) as HTMLDivElement;
+        last.classList.add('copy-item');
+        _swiperContainer.appendChild(first);
+        _swiperContainer.insertBefore(last, items[0]);
+      }
       move(0);
       startAutoplay();
       if (typeof props.current === 'number') {
@@ -154,7 +156,9 @@ export default defineComponent({
       const moveLength: number = props?.direction === 'vertical' ? height : state.itemWidth;
       actionIsTrust = isTrust;
       _swiperContainer.dataset.isTrust = `${isTrust}`;
-      _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * (targetIndex + 1)}px)`;
+      // do not translate one item if not loop
+      const toIndex = props?.loop ? targetIndex + 1 : targetIndex;
+      _swiperContainer.style.transform = `translate${moveDirection}(-${moveLength * toIndex}px)`;
     };
     const addAnimation = () => {
       const _swiperContainer = getContainer();
@@ -189,6 +193,12 @@ export default defineComponent({
       if (!props?.autoplay || autoplayTimer !== null) return false; // stop repeat autoplay
       autoplayTimer = setInterval(() => {
         state.activeIndex += 1;
+        if (!props?.loop && state.activeIndex >= state.children.length - 1) {
+          state.activeIndex = 0;
+        }
+        if (!props?.loop && state.activeIndex <= 0) {
+          state.activeIndex = state.children.length - 1;
+        }
         addAnimation();
         move(state.activeIndex);
       }, props?.interval);
@@ -202,7 +212,11 @@ export default defineComponent({
       setSwiperValue(resultIndex);
     };
     const prev = (step = 1) => {
-      if (state.btnDisabled) return false;
+      const cannotMovePrev = !props?.loop && state.activeIndex === 0;
+      if (state.btnDisabled || cannotMovePrev) {
+        move(state.activeIndex);
+        return false;
+      }
       stopAutoplay();
       state.activeIndex -= step;
       addAnimation();
@@ -211,7 +225,11 @@ export default defineComponent({
       state.btnDisabled = true;
     };
     const next = (step = 1) => {
-      if (state.btnDisabled) return false;
+      const cannotMoveLast = !props?.loop && state.activeIndex === state.itemLength - 1;
+      if (state.btnDisabled || cannotMoveLast) {
+        move(state.activeIndex);
+        return false;
+      }
       stopAutoplay();
       state.activeIndex += step;
       addAnimation();
@@ -240,11 +258,12 @@ export default defineComponent({
       const distanceY = lengthY.value;
       const _container = getContainer();
       removeAnimation();
+      const toIndex = props?.loop ? activeIndex + 1 : activeIndex;
       if (props?.direction === 'horizontal') {
-        setOffset(_container, -((activeIndex + 1) * itemWidth + distanceX));
+        setOffset(_container, -(toIndex * itemWidth + distanceX));
       } else {
         const { height = 180 } = props;
-        setOffset(_container, -((activeIndex + 1) * height + distanceY), 'Y');
+        setOffset(_container, -(toIndex * height + distanceY), 'Y');
       }
     };
     const onTouchEnd = () => {

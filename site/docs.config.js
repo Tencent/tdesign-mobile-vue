@@ -155,6 +155,12 @@ export default {
           component: () => import('@/search/search.md'),
         },
         {
+          title: 'Slider 滑动选择器',
+          name: 'slider',
+          path: '/mobile-vue/components/slider',
+          component: () => import('@/slider/slider.md'),
+        },
+        {
           title: 'Fab 悬浮按钮',
           name: 'fab',
           path: '/mobile-vue/components/fab',
@@ -215,6 +221,12 @@ export default {
           component: () => import('@/cell/cell.md'),
         },
         {
+          title: 'NoticeBar 公告栏',
+          name: 'notice-bar',
+          path: '/mobile-vue/components/notice-bar',
+          component: () => import('@/notice-bar/notice-bar.md'),
+        },
+        {
           title: 'SwipeCell 滑动单元格',
           name: 'swipe-cell',
           path: '/mobile-vue/components/swipe-cell',
@@ -267,7 +279,7 @@ export default {
           name: 'loading',
           path: '/mobile-vue/components/loading',
           component: () => import('@/loading/loading.md'),
-        }
+        },
       ],
     },
     {
@@ -293,12 +305,12 @@ export default {
           path: '/mobile-vue/components/pull-down-refresh',
           component: () => import('@/pull-down-refresh/pull-down-refresh.md'),
         },
-        // {
-        //   title: 'ActionSheet 动作面板',
-        //   name: 'action-sheet',
-        //   path: '/mobile-vue/components/actionsheet',
-        //   component: () => import('@/action-sheet/action-sheet.md'),
-        // },
+        {
+          title: 'ActionSheet 动作面板',
+          name: 'action-sheet',
+          path: '/mobile-vue/components/actionsheet',
+          component: () => import('@/action-sheet/action-sheet.md'),
+        },
         {
           title: 'Toast 轻提示',
           name: 'toast',
@@ -312,7 +324,7 @@ export default {
           component: () => import('@/message/message.md'),
         },
         {
-          title: 'Dialog 弹出框',
+          title: 'Dialog 对话框',
           name: 'dialog',
           path: '/mobile-vue/components/dialog',
           component: () => import('@/dialog/dialog.md'),

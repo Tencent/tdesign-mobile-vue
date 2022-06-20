@@ -1,4 +1,5 @@
 import { h, ComponentInternalInstance, Slots, VNode } from 'vue';
+import camelCase from 'lodash/camelCase';
 
 interface JSXRenderContext {
   defaultNode?: VNode;
@@ -21,11 +22,13 @@ export const renderTNode = (
   if (instance === null) {
     return h('', null);
   }
+  console.log(name);
+
   const params = typeof options === 'object' && 'params' in options ? options.params : null;
   const defaultNode = typeof options === 'object' && 'defaultNode' in options ? options.defaultNode : options;
   let propsNode: any;
-  if (name in instance.props) {
-    propsNode = instance.props[name];
+  if (name in instance.props || camelCase(name) in instance.props) {
+    propsNode = instance.props[name] || instance.props[camelCase(name)];
   }
   // if (propsNode === false) return;
 
@@ -37,7 +40,11 @@ export const renderTNode = (
   if (propsNode === true && defaultNode) {
     return instance.slots[name] ? instance.slots[name]?.call(params) : defaultNode;
   }
+  console.log(propsNode);
+
   if (typeof propsNode === 'function') return propsNode(h, params);
+  console.log(1);
+
   const isPropsEmpty = [undefined, params, ''].includes(propsNode);
   if (isPropsEmpty && instance.slots[name]) return instance.slots[name]?.call(params);
   return propsNode;

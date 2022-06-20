@@ -1,6 +1,8 @@
 <template>
   <td-doc-layout>
-    <td-header slot="header" platform="mobile" framework="vue"></td-header>
+    <td-header slot="header" platform="mobile" framework="vue">
+      <td-doc-search slot="search" ref="tdDocSearch"></td-doc-search>
+    </td-header>
     <td-doc-aside ref="tdDocAside" title="Vue Next for Mobile">
       <td-select ref="tdSelect" :value="version" slot="extra"></td-select>
     </td-doc-aside>
@@ -40,6 +42,7 @@ export default defineComponent({
 
   mounted() {
     this.docType = this.$route.meta.docType;
+    this.$refs.tdDocSearch.docsearchInfo = { indexName: 'tdesign_doc_vue_mobile' };
     this.$refs.tdDocAside.routerList = routerList;
     this.$refs.tdDocAside.onchange = ({ detail }) => {
       if (this.$route.path === detail) return;

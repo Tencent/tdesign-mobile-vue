@@ -67,12 +67,20 @@ export interface TdDateTimePickerProps {
 
 export type DisableDate = DateValue | DisableDateObj | ((date: DateValue) => boolean);
 
-export interface DisableDateObj { from?: string; to?: string; before?: string; after?: string };
+export interface DisableDateObj {
+  from?: string;
+  to?: string;
+  before?: string;
+  after?: string;
+}
 
-export type DateTimePickerMode = TimeModeValues | Array<TimeModeValues> ;
+export type DateTimePickerMode = TimeModeValues | Array<TimeModeValues>;
 
 export type TimeModeValues = 'year' | 'month' | 'date' | 'hour' | 'minute' | 'second';
 
 export type DateValue = string | number;
 
-export interface DatePickerColumnChangeContext { value: DateValue; index: number };
+export interface DatePickerColumnChangeContext {
+  value: DateValue;
+  index: number;
+}
