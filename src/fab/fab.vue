@@ -1,12 +1,5 @@
 <template>
-  <t-button
-    :class="classes"
-    :theme="customButtonProps.theme"
-    :shape="customButtonProps.shape"
-    :size="customButtonProps.size"
-    :style="style"
-    @click="onClick"
-  >
+  <t-button v-bind="customButtonProps" :class="classes" :style="style" @click="onClick">
     <t-node v-if="iconTNode" :content="iconTNode" />
     <span v-if="text" :class="`${name}__text`">{{ text }}</span>
   </t-button>
