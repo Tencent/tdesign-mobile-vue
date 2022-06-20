@@ -1,20 +1,28 @@
 <template>
   <div :class="`${name}`">
     <ul ref="rateWrapper" :class="`${name}--list`" @touchstart="onTouchstart" @touchmove="onTouchmove">
-      <li v-for="n in count" :key="n" :class="classes(n)">
+      <li v-for="n in count" :key="n" :class="classes(n)" :style="{ marginRight: `${count > n ? gap : 0}px` }">
         <span :class="`${name}--placeholder`">
-          <component :is="startComponent" :size="size" :style="{ color: colors[1] }" />
+          <slot name="icon">
+            <component :is="startComponent" :size="size" :style="{ color: colors[1] }" />
+          </slot>
         </span>
         <template v-if="allowHalf">
           <span :class="`${name}--icon-left`" @click="onClick(n - 0.5)">
-            <star-filled-icon :size="size" :style="iconHalfStyle(n)" />
+            <slot name="icon">
+              <star-filled-icon :size="size" :style="iconHalfStyle(n)" />
+            </slot>
           </span>
           <span :class="`${name}--icon-right`" @click="onClick(n)">
-            <star-filled-icon :size="size" :style="iconFullStyle(n)" />
+            <slot name="icon">
+              <star-filled-icon :size="size" :style="iconFullStyle(n)" />
+            </slot>
           </span>
         </template>
         <span v-else :class="`${name}--icon`" @click="onClick(n)">
-          <star-filled-icon :size="size" :style="iconFullStyle(n)" />
+          <slot name="icon">
+            <star-filled-icon :size="size" :style="iconFullStyle(n)" />
+          </slot>
         </span>
       </li>
     </ul>
@@ -42,7 +50,7 @@ export default defineComponent({
   name,
   components: { StarFilledIcon, StarIcon },
   props: rateProps,
-  emits: ['change'],
+  emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {
     const rateWrapper = ref<HTMLElement | null>(null);
     const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
