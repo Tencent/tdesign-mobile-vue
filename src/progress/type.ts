@@ -23,11 +23,6 @@ export interface TdProgressProps {
    */
   percentage?: number;
   /**
-   * 进度条尺寸，示例：small/medium/large/240。small 值为 72； medium 值为 112；large 值为 160
-   * @default 'medium'
-   */
-  size?: string | number;
-  /**
    * 进度条状态
    */
   status?: StatusEnum;
@@ -36,11 +31,6 @@ export interface TdProgressProps {
    */
   strokeWidth?: string | number;
   /**
-   * 进度条风格。值为 line，标签（label）显示在进度条右侧；值为 plump，标签（label）显示在进度条里面；值为 circle，标签（label）显示在进度条正中间
-   * @default line
-   */
-  theme?: ThemeEnum;
-  /**
    * 进度条未完成部分颜色
    * @default ''
    */
@@ -48,5 +38,3 @@ export interface TdProgressProps {
 }
 
 export type StatusEnum = 'success' | 'error' | 'warning' | 'active';
-
-export type ThemeEnum = 'line' | 'plump' | 'circle';

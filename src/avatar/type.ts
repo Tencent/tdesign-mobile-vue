@@ -35,7 +35,7 @@ export interface TdAvatarProps {
    * 形状
    * @default circle
    */
-  shape?: ShapeEnum ;
+  shape?: ShapeEnum;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large
    * @default ''

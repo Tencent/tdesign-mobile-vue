@@ -14,7 +14,7 @@ export interface TdLoadingProps {
   /**
    * 子元素
    */
-   content?: string | TNode;
+  content?: string | TNode;
   /**
    * 延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒
    * @default 0

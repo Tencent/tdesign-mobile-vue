@@ -3,6 +3,7 @@
     v-model="open"
     :placement="placement"
     :show-overlay="showOverlay"
+    :z-index="zIndex"
     @visible-change="onVisibleChange"
     @close="onClose"
   >
@@ -21,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { ref, watch, toRefs, computed, PropType, SetupContext, defineComponent, h } from 'vue';
+import { ref, watch, toRefs, computed, SetupContext, defineComponent } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
 import { useEmitEvent } from '../shared';
@@ -38,7 +39,7 @@ export default defineComponent({
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
-    const { visible, items, placement, showOverlay } = toRefs(props);
+    const { visible, items, placement, showOverlay, zIndex } = toRefs(props);
     const open = ref(visible.value || false);
 
     const dSideBarClassName = computed(() => `${name}__sidebar`);
@@ -72,6 +73,7 @@ export default defineComponent({
       items,
       placement,
       showOverlay,
+      zIndex,
       open,
       dSideBarClassName,
       dSideBarItemClassName,

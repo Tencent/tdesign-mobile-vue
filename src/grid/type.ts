@@ -17,7 +17,13 @@ export interface TdGridProps {
    * 边框，默认不显示。值为 true 则显示默认边框，值类型为 object 则表示自定义边框样式
    * @default false
    */
-  border?: boolean | { color?: string; width?: string; style?: 'solid' | 'dashed' | 'dotted' | 'double' | 'groove' | 'inset' | 'outset' };
+  border?:
+    | boolean
+    | {
+        color?: string;
+        width?: string;
+        style?: 'solid' | 'dashed' | 'dotted' | 'double' | 'groove' | 'inset' | 'outset';
+      };
   /**
    * 每一行的列数量
    * @default 4

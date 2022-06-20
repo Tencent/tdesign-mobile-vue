@@ -1,6 +1,6 @@
 <template>
-  <div v-if="showBadge" :class="badgeClasses">
-    <div :class="badgeInnerClasses" :style="badgeStyles">
+  <div :class="badgeClasses">
+    <div v-if="showDot" :class="badgeInnerClasses" :style="badgeStyles">
       <t-node :content="countContent"></t-node>
     </div>
     <t-node :content="badgeContent"></t-node>
@@ -26,15 +26,20 @@ export default defineComponent({
       if (props.dot) {
         return '';
       }
-      return renderTNode(internalInstance, 'count');
+      if (typeof props.count === 'function') {
+        return renderTNode(internalInstance, 'count');
+      }
+      const count = Number(props.count);
+      if (isNaN(count)) {
+        return props.count;
+      }
+      return count > props.maxCount ? `${props.maxCount}+` : count;
     });
     // 是否独立使用
     const isIndependent = computed(() => badgeContent.value === undefined);
 
-    // 是否展示徽标
-    const showBadge = computed(
-      () => badgeContent.value !== undefined || props.showZero || props.dot || props.count !== 0,
-    );
+    // 是否展示红点角标
+    const showDot = computed(() => props.dot || props.count !== 0 || props.showZero);
 
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
@@ -53,7 +58,9 @@ export default defineComponent({
 
     // 徽标自定义样式
     const badgeStyles = computed(() => {
-      if (!props.offset) return {};
+      if (!props.offset) {
+        return { background: props.color };
+      }
       let [xOffset, yOffset]: Array<string | number> = props.offset;
       xOffset = isNaN(Number(xOffset)) ? xOffset : `${xOffset}px`;
       yOffset = isNaN(Number(yOffset)) ? yOffset : `${yOffset}px`;
@@ -66,7 +73,7 @@ export default defineComponent({
 
     return {
       badgeContent,
-      showBadge,
+      showDot,
       badgeStyles,
       badgeClasses,
       badgeInnerClasses,

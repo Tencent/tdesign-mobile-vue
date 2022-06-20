@@ -1,4 +1,13 @@
 {
   "extends": "./tsconfig",
-  "exclude": ["site", "scripts", "./src/dropdown-menu", "./src/_common", "./**/demos/*", "node_modules", "vite.config.ts", "./es/**/*"]
+  "exclude": [
+    "site",
+    "scripts",
+    "./src/dropdown-menu",
+    "./src/_common",
+    "./**/demos/*",
+    "node_modules",
+    "vite.config.ts",
+    "./es/**/*"
+  ]
 }

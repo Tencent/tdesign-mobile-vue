@@ -1,66 +1,17 @@
 <template>
   <div class="accordion-demo">
-    <!-- v-model:value="valueBase"  -->
-    <t-collapse :value="valueBase" title="基础型">
-      <t-collapse-panel v-for="(p, i) in panels" :key="i" :name="i" v-bind="p"> </t-collapse-panel>
+    <t-collapse default-expand-all>
+      <t-collapse-panel value="0" header="折叠面板标题">
+        <div class="content">
+          此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容
+        </div>
+      </t-collapse-panel>
     </t-collapse>
   </div>
 </template>
 
-<script lang="ts">
-import { reactive, toRefs, defineComponent } from 'vue';
-
-export default defineComponent({
-  setup() {
-    const panels = [
-      {
-        title: '基础面板',
-        name: '0',
-        content:
-          '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字',
-      },
-      {
-        title: '内容列表',
-        name: '1',
-        content: ['一段很长很长的内容文字', '一段很长很长的内容文字', '一段很长很长的内容文字'],
-      },
-      {
-        title: '内容带标签',
-        extra: '预设文本',
-        content: [
-          { label: '标题1', content: '预设文本' },
-          { label: '类目标题2', content: '预设文本' },
-          {
-            label: '很长很长很长的内容标题',
-            content: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字',
-          },
-        ],
-      },
-      {
-        title: '内容带标签 - 宽度固定',
-        extra: '预设文本',
-        labelWidth: 80,
-        content: [
-          { label: '标题1', content: '预设文本' },
-          {
-            label: '很长很长很长的内容标题',
-            content: '一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字',
-          },
-        ],
-      },
-    ];
-    const state = reactive({
-      valueBase: ['0', 3],
-      panels,
-    });
-    return {
-      ...toRefs(state),
-    };
-  },
-});
-</script>
-<style lang="less">
-.accordion-demo {
-  background-color: #f9f9f9;
+<style scoped lang="less">
+.content {
+  padding: 16px 0;
 }
 </style>

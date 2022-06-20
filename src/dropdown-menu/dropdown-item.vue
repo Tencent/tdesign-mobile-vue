@@ -1,6 +1,6 @@
 <template>
   <div v-if="isShowItems" :class="classes" :style="{ ...expandStyle }">
-    <t-mask v-if="isShowItems && showOverlay" @click="onClickOverlay" />
+    <t-overlay v-if="isShowItems && showOverlay" @click="onClickOverlay" />
     <div :class="styleContent" :style="{ ...transitionStyle }">
       <div :class="`${name}__bd`">
         <slot>
@@ -115,7 +115,7 @@ import {
   defineComponent,
 } from 'vue';
 import { TNode } from '../common';
-import TMask from '../mask';
+import TOverlay from '../overlay';
 import TRadio from '../radio';
 import config from '../config';
 import TButton from '../button';
@@ -149,7 +149,7 @@ type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOpt
 
 export default defineComponent({
   name,
-  components: { TMask, TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
+  components: { TOverlay, TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {
@@ -417,7 +417,7 @@ export default defineComponent({
       if (!state.isShowItems) return;
       const value = passInValue.value || [];
       if (value[0] === val) return;
-      if (val && Array.isArray(val)) {
+      if (val) {
         setValue(val);
       }
       collapseMenu();
