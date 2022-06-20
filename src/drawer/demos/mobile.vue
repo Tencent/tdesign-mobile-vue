@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Drawer 抽屉</h1>
-    <p class="summary">用作一组平行关系页面/内容的切换器，相较于Tab，同屏可展示更多的选项数量。</p>
+    <p class="summary">用作一组平行关系页面/内容的切换器，相较于Tab，同屏可展示更多的选项数量。。</p>
     <tdesign-demo-block title="01 类型" summary="基础抽屉">
       <t-drawer v-model:visible="openBase" placement="left" :items="baseSidebar" @item-click="itemClick"></t-drawer>
       <t-button size="large" variant="outline" shape="round" @click="openDrawer(false)">基础抽屉</t-button>
