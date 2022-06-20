@@ -7859,7 +7859,7 @@ exports[`ssr snapshot test renders ./src/list/demos/pull-refresh.vue correctly 1
 
 exports[`ssr snapshot test renders ./src/loading/demos/bar.vue correctly 1`] = `
 <div>
-  <div class="t-loading t-loading--bar">
+  <div class="t-loading t-loading--bar" style="">
     <!--v-if-->
   </div><button class="t-button t-size-m t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
     <!----><span class="t-button__text"><!--[-->页面进度条加载<!--]--></span>
@@ -7868,37 +7868,37 @@ exports[`ssr snapshot test renders ./src/loading/demos/bar.vue correctly 1`] = `
 `;
 
 exports[`ssr snapshot test renders ./src/loading/demos/base.vue correctly 1`] = `
-<div>
-  <div class="t-loading">
-    <!--[-->
-    <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
-      <foreignObject x="1" y="1" width="12" height="12">
-        <div class="t-loading__gradient-conic"></div>
-      </foreignObject>
-    </svg>
-    <!--]-->
-    <!--v-if-->
-    <!---->
-    <!--]-->
-  </div>
-  <div class="t-loading">
-    <!--[-->
-    <!--[--><span class="t-loading__spinner"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
-    <!--]-->
-    <!--v-if-->
-    <!---->
-    <!--]-->
-  </div>
-  <div class="t-loading">
-    <!--[-->
-    <!--[-->
-    <div class="t-loading__dots"></div>
-    <!--]-->
-    <!--v-if-->
-    <!---->
-    <!--]-->
-  </div>
+<!--[-->
+<div class="t-loading" style="">
+  <!--[-->
+  <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject x="1" y="1" width="12" height="12">
+      <div class="t-loading__gradient-conic"></div>
+    </foreignObject>
+  </svg>
+  <!--]-->
+  <!--v-if-->
+  <!---->
+  <!--]-->
 </div>
+<div class="t-loading" style="">
+  <!--[-->
+  <!--[--><span class="t-loading__spinner" style="animation-duration:800ms;"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
+  <!--]-->
+  <!--v-if-->
+  <!---->
+  <!--]-->
+</div>
+<div class="t-loading" style="">
+  <!--[-->
+  <!--[-->
+  <div class="t-loading__dots" style="animation-duration:800ms;"></div>
+  <!--]-->
+  <!--v-if-->
+  <!---->
+  <!--]-->
+</div>
+<!--]-->
 `;
 
 exports[`ssr snapshot test renders ./src/loading/demos/delay.vue correctly 1`] = `
@@ -7906,7 +7906,7 @@ exports[`ssr snapshot test renders ./src/loading/demos/delay.vue correctly 1`] =
   <div class="switch-wrap"><span class="t-switch"><!--v-if--><span class="t-switch__node" style=""></span></span>
     <div>请求结束，隐藏loading</div>
   </div>
-  <div class="t-loading">
+  <div class="t-loading" style="">
     <!--[-->
     <!--v-if-->
     <!--v-if-->
@@ -7918,9 +7918,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/delay.vue correctly 1`] =
 
 exports[`ssr snapshot test renders ./src/loading/demos/horz.vue correctly 1`] = `
 <div>
-  <div class="t-loading">
+  <div class="t-loading" style="">
     <!--[-->
-    <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+    <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
       <foreignObject x="1" y="1" width="12" height="12">
         <div class="t-loading__gradient-conic"></div>
       </foreignObject>
@@ -7929,9 +7929,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/horz.vue correctly 1`] = 
     <!---->
     <!--]-->
   </div>
-  <div class="t-loading">
+  <div class="t-loading" style="">
     <!--[-->
-    <!--[--><span class="t-loading__spinner"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
+    <!--[--><span class="t-loading__spinner" style="animation-duration:800ms;"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
     <!--]--><span class="t-loading__text">加载中...</span>
     <!---->
     <!--]-->
@@ -7948,9 +7948,10 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
     <p class="tdesign-mobile-demo-block__summary">纯图标</p>
     <!--[-->
     <div class="loading-demo first">
-      <div class="t-loading">
+      <!--[-->
+      <div class="t-loading" style="">
         <!--[-->
-        <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+        <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
           <foreignObject x="1" y="1" width="12" height="12">
             <div class="t-loading__gradient-conic"></div>
           </foreignObject>
@@ -7960,36 +7961,24 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
         <!---->
         <!--]-->
       </div>
-      <div class="t-loading">
+      <div class="t-loading" style="">
         <!--[-->
-        <!--[--><span class="t-loading__spinner"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
+        <!--[--><span class="t-loading__spinner" style="animation-duration:800ms;"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
         <!--]-->
         <!--v-if-->
         <!---->
         <!--]-->
       </div>
-      <div class="t-loading dots-loading">
+      <div class="t-loading" style="">
         <!--[-->
         <!--[-->
-        <div class="t-loading__dots"></div>
+        <div class="t-loading__dots" style="animation-duration:800ms;"></div>
         <!--]-->
         <!--v-if-->
         <!---->
         <!--]-->
       </div>
-    </div>
-    <!--]-->
-  </div>
-  <div class="tdesign-mobile-demo-block">
-    <!--v-if-->
-    <p class="tdesign-mobile-demo-block__summary">页面进度条加载</p>
-    <!--[-->
-    <div class="loading-demo">
-      <div class="t-loading t-loading--bar">
-        <!--v-if-->
-      </div><button class="t-button t-size-m t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[-->页面进度条加载<!--]--></span>
-      </button>
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -7998,9 +7987,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
     <p class="tdesign-mobile-demo-block__summary">图标加文字横向</p>
     <!--[-->
     <div class="loading-demo second">
-      <div class="t-loading">
+      <div class="t-loading" style="">
         <!--[-->
-        <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+        <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
           <foreignObject x="1" y="1" width="12" height="12">
             <div class="t-loading__gradient-conic"></div>
           </foreignObject>
@@ -8009,9 +7998,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
         <!---->
         <!--]-->
       </div>
-      <div class="t-loading">
+      <div class="t-loading" style="">
         <!--[-->
-        <!--[--><span class="t-loading__spinner"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
+        <!--[--><span class="t-loading__spinner" style="animation-duration:800ms;"><!--[--><i class="t-loading__spinner--line t-loading__spinner--line-1"></i><i class="t-loading__spinner--line t-loading__spinner--line-2"></i><i class="t-loading__spinner--line t-loading__spinner--line-3"></i><i class="t-loading__spinner--line t-loading__spinner--line-4"></i><i class="t-loading__spinner--line t-loading__spinner--line-5"></i><i class="t-loading__spinner--line t-loading__spinner--line-6"></i><i class="t-loading__spinner--line t-loading__spinner--line-7"></i><i class="t-loading__spinner--line t-loading__spinner--line-8"></i><i class="t-loading__spinner--line t-loading__spinner--line-9"></i><i class="t-loading__spinner--line t-loading__spinner--line-10"></i><i class="t-loading__spinner--line t-loading__spinner--line-11"></i><i class="t-loading__spinner--line t-loading__spinner--line-12"></i><!--]--></span>
         <!--]--><span class="t-loading__text">加载中...</span>
         <!---->
         <!--]-->
@@ -8024,9 +8013,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
     <p class="tdesign-mobile-demo-block__summary">图标加文字竖向</p>
     <!--[-->
     <div class="loading-demo">
-      <div class="t-loading t-loading--vertical">
+      <div class="t-loading t-loading--vertical" style="">
         <!--[-->
-        <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+        <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
           <foreignObject x="1" y="1" width="12" height="12">
             <div class="t-loading__gradient-conic"></div>
           </foreignObject>
@@ -8043,21 +8032,21 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
     <p class="tdesign-mobile-demo-block__summary">纯文字</p>
     <!--[-->
     <div class="loading-demo loading-demo--column">
-      <div class="t-loading">
+      <div class="t-loading" style="">
         <!--[-->
         <!--v-if--><span class="t-loading__text t-loading__text--only">加载中...</span>
         <!---->
         <!--]-->
       </div>
-      <div class="t-loading">
-        <!--[-->
-        <!--[-->
-        <!--v-if-->
-        <!--]--><span class="t-loading__text t-loading__text--error t-loading__text--only">加载失败</span>
-        <!---->
-        <!--]-->
-      </div>
-      <div class="t-loading">
+    </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">加载失败</p>
+    <!--[-->
+    <div class="loading-demo loading-demo--column">
+      <div class="t-loading" style="">
         <!--[-->
         <!--v-if-->
         <!--v-if-->
@@ -8071,13 +8060,26 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
   </div>
   <div class="tdesign-mobile-demo-block">
     <!--v-if-->
+    <p class="tdesign-mobile-demo-block__summary">页面进度条加载</p>
+    <!--[-->
+    <div class="loading-demo">
+      <div class="t-loading t-loading--bar" style="">
+        <!--v-if-->
+      </div><button class="t-button t-size-m t-button--outline t-button--default t-button--square t-size-full-width" role="button" aria-disabled="false">
+        <!----><span class="t-button__text"><!--[-->页面进度条加载<!--]--></span>
+      </button>
+    </div>
+    <!--]-->
+  </div>
+  <div class="tdesign-mobile-demo-block">
+    <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">延迟加载</p>
     <!--[-->
     <div class="loading-demo loading-demo--column">
       <div class="switch-wrap"><span class="t-switch"><!--v-if--><span class="t-switch__node" style=""></span></span>
         <div>请求结束，隐藏loading</div>
       </div>
-      <div class="t-loading">
+      <div class="t-loading" style="">
         <!--[-->
         <!--v-if-->
         <!--v-if-->
@@ -8092,9 +8094,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
     <p class="tdesign-mobile-demo-block__summary">图标加文字横向</p>
     <!--[-->
     <div class="loading-demo loading-demo--column">
-      <div class="t-loading t-size-l">
+      <div class="t-loading t-size-l" style="">
         <!--[-->
-        <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+        <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
           <foreignObject x="1" y="1" width="12" height="12">
             <div class="t-loading__gradient-conic"></div>
           </foreignObject>
@@ -8103,9 +8105,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
         <!---->
         <!--]-->
       </div>
-      <div class="t-loading t-size-m">
+      <div class="t-loading t-size-m" style="">
         <!--[-->
-        <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+        <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
           <foreignObject x="1" y="1" width="12" height="12">
             <div class="t-loading__gradient-conic"></div>
           </foreignObject>
@@ -8114,9 +8116,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
         <!---->
         <!--]-->
       </div>
-      <div class="t-loading t-size-s">
+      <div class="t-loading t-size-s" style="">
         <!--[-->
-        <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+        <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
           <foreignObject x="1" y="1" width="12" height="12">
             <div class="t-loading__gradient-conic"></div>
           </foreignObject>
@@ -8133,13 +8135,13 @@ exports[`ssr snapshot test renders ./src/loading/demos/mobile.vue correctly 1`] 
 
 exports[`ssr snapshot test renders ./src/loading/demos/pure-text.vue correctly 1`] = `
 <div>
-  <div class="t-loading">
+  <div class="t-loading" style="">
     <!--[-->
     <!--v-if--><span class="t-loading__text t-loading__text--only">加载中...</span>
     <!---->
     <!--]-->
   </div>
-  <div class="t-loading">
+  <div class="t-loading" style="">
     <!--[-->
     <!--[-->
     <!--v-if-->
@@ -8147,7 +8149,7 @@ exports[`ssr snapshot test renders ./src/loading/demos/pure-text.vue correctly 1
     <!---->
     <!--]-->
   </div>
-  <div class="t-loading">
+  <div class="t-loading" style="">
     <!--[-->
     <!--v-if-->
     <!--v-if-->
@@ -8161,9 +8163,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/pure-text.vue correctly 1
 
 exports[`ssr snapshot test renders ./src/loading/demos/size.vue correctly 1`] = `
 <div>
-  <div class="t-loading t-size-l">
+  <div class="t-loading t-size-l" style="">
     <!--[-->
-    <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+    <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
       <foreignObject x="1" y="1" width="12" height="12">
         <div class="t-loading__gradient-conic"></div>
       </foreignObject>
@@ -8172,9 +8174,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/size.vue correctly 1`] = 
     <!---->
     <!--]-->
   </div>
-  <div class="t-loading t-size-m">
+  <div class="t-loading t-size-m" style="">
     <!--[-->
-    <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+    <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
       <foreignObject x="1" y="1" width="12" height="12">
         <div class="t-loading__gradient-conic"></div>
       </foreignObject>
@@ -8183,9 +8185,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/size.vue correctly 1`] = 
     <!---->
     <!--]-->
   </div>
-  <div class="t-loading t-size-s">
+  <div class="t-loading t-size-s" style="">
     <!--[-->
-    <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+    <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
       <foreignObject x="1" y="1" width="12" height="12">
         <div class="t-loading__gradient-conic"></div>
       </foreignObject>
@@ -8199,9 +8201,9 @@ exports[`ssr snapshot test renders ./src/loading/demos/size.vue correctly 1`] = 
 
 exports[`ssr snapshot test renders ./src/loading/demos/vert.vue correctly 1`] = `
 <div>
-  <div class="t-loading t-loading--vertical">
+  <div class="t-loading t-loading--vertical" style="">
     <!--[-->
-    <!--[--><svg class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+    <!--[--><svg style="animation-duration:800ms;" class="t-loading__gradient t-icon-loading" viewbox="0 0 14 14" version="1.1" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
       <foreignObject x="1" y="1" width="12" height="12">
         <div class="t-loading__gradient-conic"></div>
       </foreignObject>
