@@ -11,7 +11,7 @@
     <tdesign-demo-block summary="空心评分">
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
-        <t-rate :default-value="value[1]" variant="outline" clearable :gap="defaultGap" />
+        <t-rate :default-value="demoValue[0]" variant="outline" clearable :gap="defaultGap" />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="自定义数量评分">
@@ -29,11 +29,11 @@
     <tdesign-demo-block summary="带描述评分">
       <div class="rate-demo-cell rate-demo-cell--space">
         <div class="rate-demo-cell__label">请点击评分</div>
-        <t-rate v-model="value[4]" clearable show-text :gap="defaultGap" />
+        <t-rate v-model="demoValue[1]" clearable show-text :gap="defaultGap" />
       </div>
       <div class="rate-demo-cell rate-demo-cell--space">
         <div class="rate-demo-cell__label">请点击评分</div>
-        <t-rate v-model="value[5]" clearable show-text :texts="texts" :gap="defaultGap" />
+        <t-rate v-model="demoValue[2]" clearable show-text :texts="texts" :gap="defaultGap" />
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">请点击评分</div>
@@ -49,7 +49,7 @@
     <tdesign-demo-block summary="设置评分颜色">
       <div class="rate-demo-cell rate-demo-cell--space">
         <div class="rate-demo-cell__label">空心评分</div>
-        <t-rate v-model="value[8]" variant="outline" clearable :color="['#FFC51C', '#E8E8E8']" :gap="defaultGap" />
+        <t-rate v-model="demoValue[3]" variant="outline" clearable :color="['#FFC51C', '#E8E8E8']" :gap="defaultGap" />
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">实心评分</div>
@@ -59,7 +59,7 @@
     <tdesign-demo-block title="02 规格" summary="评价规格">
       <div class="rate-demo-cell rate-demo-cell--space">
         <div class="rate-demo-cell__label">评分20</div>
-        <t-rate v-model="value[10]" clearable :gap="defaultGap" />
+        <t-rate v-model="demoValue[4]" clearable :gap="defaultGap" />
       </div>
       <div class="rate-demo-cell">
         <div class="rate-demo-cell__label">评分16</div>
@@ -87,7 +87,7 @@ import TextDemo from './text.vue';
 import AllowHalfDemo from './allow-half.vue';
 
 const defaultGap = 8;
-const value = ref([1, 2, 3, 3.5, 3, 3, 3, 3, 3, 3, 3, 3]);
+const demoValue = ref([2, 3, 3, 3, 3]);
 const texts = ref(['很差', '差', '一般', '好评', '优秀']);
 </script>
 

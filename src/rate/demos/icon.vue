@@ -1,7 +1,7 @@
 <template>
-  <t-rate v-model="value[11]" clearable allow-half>
+  <t-rate v-model="value" clearable allow-half>
     <template #icon>
-      <CheckCircleFilledIcon @click="onIconClick" />
+      <CheckCircleFilledIcon />
     </template>
   </t-rate>
 </template>
@@ -10,8 +10,5 @@
 import { ref } from 'vue';
 import { CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 
-const onIconClick = () => {
-  console.log('icon was clicked.');
-};
-const value = ref([1, 2, 3, 3.5, 3, 3, 3, 3, 3, 3, 3, 3]);
+const value = ref(3);
 </script>

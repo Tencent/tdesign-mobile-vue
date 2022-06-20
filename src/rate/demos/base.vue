@@ -1,5 +1,5 @@
 <template>
-  <t-rate v-model="value[0]" clearable :gap="defaultGap" @change="changeValue" />
+  <t-rate v-model="value" clearable :gap="defaultGap" @change="changeValue" />
 </template>
 
 <script lang="ts" setup>
@@ -9,5 +9,5 @@ const changeValue = (val: Number) => {
   console.log('current value is', val);
 };
 const defaultGap = 8;
-const value = ref([1, 2, 3, 3.5, 3, 3, 3, 3, 3, 3, 3, 3]);
+const value = ref(1);
 </script>
