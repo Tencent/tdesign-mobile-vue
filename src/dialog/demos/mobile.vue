@@ -4,11 +4,11 @@
     <p class="summary">用于显示重要提示或请求用户进行重要操作，一种打断当前操作的模态视图。</p>
     <tdesign-demo-block title="01 类型" summary="反馈类对话框">
       <div class="dialog-demo">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
-        <t-button variant="outline" size="large" @click="eventDialog()"> 函数调用长文本对话框 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(1)"> 单行标题 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题最大高度 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 带说明文本 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 带说明文本最大高度 </t-button>
+        <!-- <t-button variant="outline" size="large" @click="eventDialog()"> 函数调用长文本对话框 </t-button> -->
         <t-dialog
           v-model:visible="isShowDialog1"
           :title="singleHeader"
@@ -20,7 +20,8 @@
         <t-dialog v-model:visible="isShowDialog2" :title="moreTextHeader" :confirm-btn="confirmButtonText"> </t-dialog>
         <t-dialog
           v-model:visible="isShowDialog3"
-          :content="content"
+          :title="title"
+          content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
           :confirm-btn="confirmButtonText"
           @confirm="onConfirm"
           @overlay-click="onClickOverlay"
@@ -36,8 +37,8 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="确认类对话框">
       <div class="dialog-demo">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示操作对话框 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(5)"> 双按钮 </t-button>
+        <t-button variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示按钮 </t-button>
         <t-dialog
           v-model:visible="isShowDialog5"
           type="confirm"
@@ -56,7 +57,7 @@
           :title="title"
           :content="moreTextContent"
           :cancel-btn="cancelButtonText"
-          :confirm-btn="confirmButtonText"
+          :confirm-btn="{ content: '警示操作', theme: 'danger' }"
           @confirm="onConfirm"
           @cancel="onCancel"
           @close="onClose"
@@ -65,7 +66,7 @@
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="输入对话框">
-      <div class="dialog-demo" style="margin-bottom: 20px">
+      <div class="dialog-demo" style="padding-bottom: 20px">
         <t-button variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
         <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog
@@ -123,10 +124,10 @@ export default defineComponent({
       singleHeader: '最小高度样式，文案上下居中',
       content: '告知当前状态、信息和解决方法',
       moreTextContent:
-        '告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很',
+        '告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很',
       placeholderText: '输入框提示文字',
-      cancelButtonText: '我再想想',
-      confirmButtonText: '我知道了',
+      cancelButtonText: '取消',
+      confirmButtonText: '知道了',
       buttonLayout: 'vertical',
       zIndex: 3000,
       width: 250,
@@ -142,6 +143,7 @@ export default defineComponent({
       isShowDialog6: false,
       isShowDialog7: false,
       isShowDialog8: false,
+      actions: ['abbb', 'asdasd'],
     };
   },
   methods: {
@@ -267,3 +269,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped lang="less">
+.tdesign-mobile-demo {
+  background-color: #fff;
+}
+</style>

@@ -3767,16 +3767,15 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">反馈类对话框</p>
     <!--[-->
     <div class="dialog-demo"><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[--> 单行标题对话框 <!--]--></span>
+        <!----><span class="t-button__text"><!--[--> 单行标题 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[--> 多行标题对话框 <!--]--></span>
+        <!----><span class="t-button__text"><!--[--> 多行标题最大高度 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[--> 短文本对话框 <!--]--></span>
+        <!----><span class="t-button__text"><!--[--> 带说明文本 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[--> 长文本对话框 <!--]--></span>
-      </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[--> 函数调用长文本对话框 <!--]--></span>
-      </button></div>
+        <!----><span class="t-button__text"><!--[--> 带说明文本最大高度 <!--]--></span>
+      </button><!-- <t-button variant="outline" size="large" @click="eventDialog()"> 函数调用长文本对话框 </t-button> -->
+    </div>
     <!--]-->
   </div>
   <div class="tdesign-mobile-demo-block">
@@ -3784,9 +3783,9 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
     <p class="tdesign-mobile-demo-block__summary">确认类对话框</p>
     <!--[-->
     <div class="dialog-demo"><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[--> 双操作对话框 <!--]--></span>
+        <!----><span class="t-button__text"><!--[--> 双按钮 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
-        <!----><span class="t-button__text"><!--[--> 带警示操作对话框 <!--]--></span>
+        <!----><span class="t-button__text"><!--[--> 带警示按钮 <!--]--></span>
       </button></div>
     <!--]-->
   </div>
@@ -3794,7 +3793,7 @@ exports[`ssr snapshot test renders ./src/dialog/demos/mobile.vue correctly 1`] =
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">输入对话框</p>
     <!--[-->
-    <div class="dialog-demo" style="margin-bottom:20px;"><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+    <div class="dialog-demo" style="padding-bottom:20px;"><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 单行标题对话框 <!--]--></span>
       </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
         <!----><span class="t-button__text"><!--[--> 带说明文本对话框 <!--]--></span>

@@ -4,6 +4,7 @@
     placement="center"
     :mask-transparent="!showOverlay"
     :teleport-disabled="true"
+    :lock-scroll="preventScrollThrough"
     @close="handleOverlayClick"
   >
     <div id="root" :class="dClassName" :style="rootStyles">
@@ -17,35 +18,36 @@
           <t-node :content="dialogContent"></t-node>
         </div>
       </div>
-      <div v-if="buttonLayout != 'vertical'" :class="dFooterClassName">
-        <div v-if="cancelBtn" :class="dDefaultBtnClassName" @click="handleCancel">
-          <slot name="footer-cancel">
-            {{ cancelBtn }}
+      <div :class="dFooterClassName">
+        <template v-if="actionsBtnProps">
+          <slot name="actions">
+            <t-button
+              v-for="(item, index) in actionsBtnProps"
+              :key="index"
+              v-bind="item"
+              variant="text"
+              :class="dDefaultBtnClassName"
+              @click="handleCancel"
+            />
           </slot>
-        </div>
-        <div v-if="confirmBtn" :class="dConformBtnClassName" @click="handleConfirm">
-          <slot name="footer-confirm">
-            {{ confirmBtn }}
+        </template>
+        <template v-if="cancelBtn">
+          <slot name="cancelBtn">
+            <t-button v-bind="cancelBtnProps" variant="text" :class="dDefaultBtnClassName" @click="handleCancel" />
           </slot>
-        </div>
-      </div>
-      <div v-if="buttonLayout == 'vertical'" :class="dFooterVerticalClassName">
-        <div v-if="confirmBtn" :class="dVerticalConformBtnClassName" @click="handleConfirm">
-          <slot name="footer-confirm">
-            {{ confirmBtn }}
+        </template>
+        <template v-if="confirmBtn">
+          <slot name="confirmBtn">
+            <t-button v-bind="confirmBtnProps" variant="text" :class="dConfirmBtnClassName" @click="handleConfirm" />
           </slot>
-        </div>
-        <div v-if="cancelBtn" :class="dVerticalDefaultBtnClassName" @click="handleCancel">
-          <slot name="footer-cancel">
-            {{ cancelBtn }}
-          </slot>
-        </div>
+        </template>
       </div>
     </div>
   </t-popup>
 </template>
 <script lang="ts">
 import { computed, ref, toRefs, watch, defineComponent, getCurrentInstance } from 'vue';
+import TButton from '../button';
 import TPopup from '../popup';
 import config from '../config';
 import DialogProps from './props';
@@ -56,7 +58,7 @@ const name = `${prefix}-dialog`;
 
 export default defineComponent({
   name,
-  components: { TPopup, TNode },
+  components: { TPopup, TNode, TButton },
   props: DialogProps,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
   setup(props, context) {
@@ -75,19 +77,21 @@ export default defineComponent({
     const dBodyClassName = computed(() => `${name}__body`);
     const dTextClassName = computed(() => `${name}__text`);
     const dInputClassName = computed(() => `${name}__input`);
-    const dFooterClassName = computed(() => `${name}__footer`);
-    const dFooterVerticalClassName = computed(() => [`${name}__vertical-footer`, `${name}__footer`]);
-    const dDefaultBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--default`, `${name}__horizontal-btn`]);
-    const dConformBtnClassName = computed(() => [`${name}__btn`, `${name}__btn--primary`, `${name}__horizontal-btn`]);
-    const dVerticalDefaultBtnClassName = computed(() => [
+    const dFooterClassName = computed(() => [
+      {
+        [`${name}__vertical-footer`]: props.buttonLayout === 'vertical',
+      },
+      `${name}__footer`,
+    ]);
+    const dDefaultBtnClassName = computed(() => [
       `${name}__btn`,
       `${name}__btn--default`,
-      `${name}__vertical-btn`,
+      `${name}__${props.buttonLayout}-btn`,
     ]);
-    const dVerticalConformBtnClassName = computed(() => [
+    const dConfirmBtnClassName = computed(() => [
       `${name}__btn`,
       `${name}__btn--primary`,
-      `${name}__vertical-btn`,
+      `${name}__${props.buttonLayout}-btn`,
     ]);
 
     const rootStyles = computed(() => ({
@@ -122,6 +126,11 @@ export default defineComponent({
       },
     );
 
+    const calcBtn = (btn: any) => (typeof btn === 'string' ? { content: btn } : btn);
+    const confirmBtnProps = computed(() => calcBtn(props.confirmBtn));
+    const cancelBtnProps = computed(() => calcBtn(props.cancelBtn));
+    const actionsBtnProps = computed(() => props.actions?.map((item) => calcBtn(item)));
+
     return {
       innerValue,
       dClassName,
@@ -132,12 +141,12 @@ export default defineComponent({
       dTextClassName,
       dInputClassName,
       dFooterClassName,
-      dFooterVerticalClassName,
       dDefaultBtnClassName,
-      dConformBtnClassName,
-      dVerticalDefaultBtnClassName,
-      dVerticalConformBtnClassName,
+      dConfirmBtnClassName,
       dialogContent,
+      confirmBtnProps,
+      cancelBtnProps,
+      actionsBtnProps,
       handleConfirm,
       handleCancel,
       handleOverlayClick,
