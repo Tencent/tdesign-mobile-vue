@@ -8,7 +8,7 @@ exports[`Radio :props align 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -34,6 +34,10 @@ exports[`Radio :props align 1`] = `
     <!--v-if-->
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -71,6 +75,10 @@ exports[`Radio :props align 2`] = `
       </svg>
     </span>
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--right"
+  />
 </div>
 `;
 
@@ -82,7 +90,7 @@ exports[`Radio :props checked 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -107,6 +115,10 @@ exports[`Radio :props checked 1`] = `
     <!--v-if-->
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -118,7 +130,7 @@ exports[`Radio :props content 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -155,6 +167,10 @@ exports[`Radio :props content 1`] = `
     </span>
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -166,7 +182,7 @@ exports[`Radio :props content 2`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -201,6 +217,10 @@ exports[`Radio :props content 2`] = `
     </span>
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -212,7 +232,7 @@ exports[`Radio :props contentDisabled 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -238,6 +258,10 @@ exports[`Radio :props contentDisabled 1`] = `
     <!--v-if-->
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -249,7 +273,7 @@ exports[`Radio :props default 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -286,6 +310,10 @@ exports[`Radio :props default 1`] = `
     </span>
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -297,7 +325,7 @@ exports[`Radio :props default 2`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -332,6 +360,10 @@ exports[`Radio :props default 2`] = `
     </span>
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -343,7 +375,7 @@ exports[`Radio :props label 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -380,6 +412,10 @@ exports[`Radio :props label 1`] = `
     </span>
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -391,7 +427,7 @@ exports[`Radio :props label 2`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -426,6 +462,10 @@ exports[`Radio :props label 2`] = `
     </span>
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -437,7 +477,7 @@ exports[`Radio :props name 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -463,6 +503,10 @@ exports[`Radio :props name 1`] = `
     <!--v-if-->
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
 
@@ -474,7 +518,7 @@ exports[`Radio :props value 1`] = `
     class="t-radio__content-wrap"
   >
     <span
-      class="t-radio__icon-wrap"
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
     >
       <input
         class="t-radio__original-left"
@@ -500,5 +544,9 @@ exports[`Radio :props value 1`] = `
     <!--v-if-->
     <!--v-if-->
   </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
 </div>
 `;
