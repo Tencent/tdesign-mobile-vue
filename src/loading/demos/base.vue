@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <t-loading />
-    <t-loading theme="spinner" />
-    <t-loading theme="dots" />
-  </div>
+  <t-loading />
+  <t-loading theme="spinner" />
+  <t-loading theme="dots" />
 </template>
 
-<script lang="ts"></script>
+<style scoped>
+.t-loading {
+  margin-right: 40px;
+}
+</style>

@@ -1,13 +1,13 @@
 <template>
-  <div :class="rootClass">
+  <div :class="rootClass" :style="rootStyle">
     <div v-if="theme === 'bar' && progress && ![0, 1].includes(progress)" :class="`${name}__bar`" :style="barStyle">
       <div :class="`${name}__shadow`"></div>
     </div>
     <template v-else-if="theme !== 'bar'">
       <template v-if="indicator && realLoading">
-        <gradient-icon v-if="theme === 'circular'" />
-        <spinner-icon v-else-if="theme === 'spinner'" />
-        <div v-else-if="theme === 'dots'" :class="`${name}__dots`" />
+        <gradient-icon v-if="theme === 'circular'" :style="animationStyle" />
+        <spinner-icon v-else-if="theme === 'spinner'" :style="animationStyle" />
+        <div v-else-if="theme === 'dots'" :class="`${name}__dots`" :style="animationStyle" />
       </template>
       <span v-if="textContent && realLoading" :class="textClass">
         <t-node :content="textContent"></t-node>
@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, getCurrentInstance, computed, ref, watch } from 'vue';
+import { defineComponent, getCurrentInstance, computed, ref, watch, toRefs } from 'vue';
 import GradientIcon from './icon/gradient.vue';
 import SpinnerIcon from './icon/spinner.vue';
 import { renderTNode, TNode, renderContent } from '../shared';
@@ -47,6 +47,7 @@ export default defineComponent({
   setup(props) {
     const internalInstance = getCurrentInstance();
     const delayShowLoading = ref(false);
+    const { pause } = toRefs(props);
 
     const countDelay = () => {
       delayShowLoading.value = false;
@@ -94,17 +95,39 @@ export default defineComponent({
 
     const defaultContent = computed(() => renderContent(internalInstance, 'default', 'content'));
 
+    const rootStyle = computed(() => {
+      if (props.inheritColor) {
+        return 'color: inherit';
+      }
+      return '';
+    });
     const barStyle = computed(() => ({
       transform: `translate3d(${toBarPerc(props.progress)}%, 0px, 0px)`,
     }));
+    const animationStyle = computed(() => {
+      const ans: Record<string, any> = {};
+      if (props.pause) {
+        ans['animation-play-state'] = 'paused';
+      }
+      if (props.reverse) {
+        ans['animation-direction'] = 'reverse';
+      }
+      if (props.duration) {
+        ans['animation-duration'] = `${props.duration}ms`;
+      }
+      return ans;
+    });
 
     return {
       name,
+      pause,
       rootClass,
       textClass,
       textContent,
       defaultContent,
+      rootStyle,
       barStyle,
+      animationStyle,
       realLoading,
     };
   },
