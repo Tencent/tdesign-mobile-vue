@@ -13,7 +13,7 @@ jobs:
       - name: mark-duplicate
         uses: actions-cool/issues-helper@v2
         with:
-          actions: "mark-duplicate"
+          actions: 'mark-duplicate'
           token: ${{ secrets.GITHUB_TOKEN }}
-          duplicate-labels: "duplicate"
+          duplicate-labels: 'duplicate'
           close-issue: true

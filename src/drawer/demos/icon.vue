@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="demo-drawer">
-      <t-drawer v-model="open" :sidebar="baseSidebar" shape="round"></t-drawer>
+      <t-drawer v-model:visible="open" placement="left" :items="baseSidebar"></t-drawer>
       <div class="demo-drawer-content">
         <div class="demo-drawer-text">单层级纯文本标签栏</div>
         <t-button size="large" variant="outline" shape="round" @click="openDrawer()">带图标抽屉</t-button>
@@ -17,27 +17,27 @@ export default defineComponent({
   setup() {
     const baseSidebar = ref([
       {
-        name: '菜单一',
+        title: '菜单一',
         icon: () => h(AppIcon),
       },
       {
-        name: '菜单二',
+        title: '菜单二',
         icon: () => h(AppIcon),
       },
       {
-        name: '菜单三',
+        title: '菜单三',
         icon: () => h(AppIcon),
       },
       {
-        name: '菜单四',
+        title: '菜单四',
         icon: () => h(AppIcon),
       },
       {
-        name: '菜单五',
+        title: '菜单五',
         icon: () => h(AppIcon),
       },
       {
-        name: '菜单六',
+        title: '菜单六',
         icon: () => h(AppIcon),
       },
     ]);

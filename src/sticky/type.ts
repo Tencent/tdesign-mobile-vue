@@ -27,5 +27,5 @@ export interface TdStickyProps {
   /**
    * 滚动时触发，scrollTop: 距离顶部位置，isFixed: 是否吸顶
    */
-  onScroll?: (context: { scrollTop: number, isFixed: boolean }) => void;
+  onScroll?: (context: { scrollTop: number; isFixed: boolean }) => void;
 }

@@ -41,6 +41,12 @@ export interface TdSkeletonProps {
   theme?: 'text' | 'avatar-text';
 }
 
-export interface SkeletonRowColObj { width?: string; height?: string; marginRight?: string; marginLeft?: string; margin?: string; };
+export interface SkeletonRowColObj {
+  width?: string;
+  height?: string;
+  marginRight?: string;
+  marginLeft?: string;
+  margin?: string;
+}
 
 export type SkeletonRowCol = Array<Number | SkeletonRowColObj | Array<SkeletonRowColObj>>;

@@ -22,9 +22,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "tdesign-moile-vue": ["./src/*"],
+      "tdesign-moile-vue": ["./src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "rules": { "trailing-comma": false },
   "include": [

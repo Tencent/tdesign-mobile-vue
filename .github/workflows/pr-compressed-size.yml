@@ -13,5 +13,5 @@ jobs:
           submodules: recursive
       - uses: 94dreamer/compressed-size-action@master
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          pattern: "./dist/**/*.{js,css}"
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          pattern: './dist/**/*.{js,css}'

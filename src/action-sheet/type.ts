@@ -58,4 +58,8 @@ export interface TdActionSheetProps {
   onSelected?: (selected: ActionSheetItem | String, index: number) => void;
 }
 
-export interface ActionSheetItem {label: string; color?: string; disabled?: boolean };
+export interface ActionSheetItem {
+  label: string;
+  color?: string;
+  disabled?: boolean;
+}
