@@ -1,14 +1,18 @@
 :: BASE_DOC ::
 
 ## API
+### Fab Props
 
-| 属性 | 类型   | 默认值 | 必传 | 说明                             |
-| ---- | ------ | ------ | ---- | -------------------------------- |
-| icon | String | -      | N    | 图标名称，可选值请查阅 Icon 组件 |
-| text | String | -      | N    | 按钮文案                         |
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+buttonProps | Object | - | 透传至 Button 组件 | N
+icon | Slot / Function | - | 图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+style | String | right: 16px; bottom: 32px; | 悬浮按钮的样式，常用于调整位置 | N
+text | String | - | 文本内容 | N
+onClick | Function |  | TS 类型：`({e: MouseEvent}) => void`<br/>悬浮按钮点击事件 | N
 
-### Events
+### Fab Events
 
-| 事件名 | 说明           | 回调参数 |
-| ------ | -------------- | -------- |
-| click  | 点击按钮时触发 | -        |
+名称 | 参数 | 描述
+-- | -- | --
+click | `({e: MouseEvent})` | 悬浮按钮点击事件

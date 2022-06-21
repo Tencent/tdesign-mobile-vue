@@ -1,55 +1,51 @@
 <template>
-  <t-button :class="classes" theme="primary" shape="round" @click="onClick">
-    <component :is="computedIcon" style="color: #fff"></component>
+  <t-button v-bind="customButtonProps" :class="classes" :style="style" @click="onClick">
+    <t-node v-if="iconTNode" :content="iconTNode" />
     <span v-if="text" :class="`${name}__text`">{{ text }}</span>
   </t-button>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
-import { AddIcon } from 'tdesign-icons-vue-next';
+import { computed, defineComponent, SetupContext, getCurrentInstance } from 'vue';
+import { renderTNode, TNode, useEmitEvent } from '../shared';
+import props from './props';
 import config from '../config';
-import TButton from '../button';
+import TButton, { TdButtonProps } from '../button';
 
 const { prefix } = config;
 const name = `${prefix}-fab`;
 
 export default defineComponent({
   name,
-  components: { TButton },
-  props: {
-    icon: {
-      type: Function,
-      default: () => AddIcon,
-    },
-    text: {
-      type: String,
-      default: '',
-    },
-  },
+  components: { TNode, TButton },
+  props,
   emits: ['click'],
-  setup(props, context) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
+
     const classes = computed(() => ({
       [`${name}`]: true,
       [`${name}--icononly`]: props.icon && !props.text,
     }));
 
-    const onClick = (e: Event) => {
-      context.emit('click', e);
-    };
+    const onClick = (e: MouseEvent) => emitEvent('click', { e });
 
-    const computedIcon = computed(() => {
-      if (typeof props.icon === 'function') {
-        return props.icon();
-      }
-      return context.slots?.icon;
-    });
+    const baseButtonProps = {
+      size: 'middle',
+      shape: 'round',
+      theme: 'primary',
+    };
+    const customButtonProps = computed(() => ({ ...(baseButtonProps as TdButtonProps), ...props.buttonProps }));
+
+    const internalInstance = getCurrentInstance();
+    const iconTNode = computed(() => renderTNode(internalInstance, 'icon'));
 
     return {
       name,
       classes,
+      iconTNode,
+      customButtonProps,
       onClick,
-      computedIcon,
     };
   },
 });
