@@ -161,14 +161,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped lang="less">
-.t-checkbox {
-  &__description:not(:empty) {
-    font-size: 14px;
-    line-height: 22px;
-    color: rgba(0, 0, 0, 0.4);
-    margin-top: 8px;
-  }
-}
-</style>
