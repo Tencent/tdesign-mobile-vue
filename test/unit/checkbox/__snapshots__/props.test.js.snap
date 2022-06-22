@@ -33,6 +33,10 @@ exports[`Checkbox :props align 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -69,6 +73,10 @@ exports[`Checkbox :props align 2`] = `
       </svg>
     </span>
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--right"
+  />
 </div>
 `;
 
@@ -105,6 +113,10 @@ exports[`Checkbox :props checkAll 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -140,6 +152,10 @@ exports[`Checkbox :props checked 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -173,9 +189,25 @@ exports[`Checkbox :props content 1`] = `
         />
       </svg>
     </span>
-    <!--v-if-->
+    <span
+      class="t-checkbox__label"
+    >
+      <!--v-if-->
+      <span
+        class="t-checkbox__description"
+        style="display: -webkit-box; overflow: hidden;"
+      >
+        <div>
+          text
+        </div>
+      </span>
+    </span>
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -209,9 +241,23 @@ exports[`Checkbox :props content 2`] = `
         />
       </svg>
     </span>
-    <!--v-if-->
+    <span
+      class="t-checkbox__label"
+    >
+      <!--v-if-->
+      <span
+        class="t-checkbox__description"
+        style="display: -webkit-box; overflow: hidden;"
+      >
+        text
+      </span>
+    </span>
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -248,6 +294,10 @@ exports[`Checkbox :props contentDisabled 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -284,12 +334,21 @@ exports[`Checkbox :props default 1`] = `
     <span
       class="t-checkbox__label"
     >
-      <div>
-        text
-      </div>
+      <span
+        style="display: -webkit-box; overflow: hidden;"
+      >
+        <div>
+          text
+        </div>
+      </span>
+      <!--v-if-->
     </span>
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -326,10 +385,19 @@ exports[`Checkbox :props default 2`] = `
     <span
       class="t-checkbox__label"
     >
-      text
+      <span
+        style="display: -webkit-box; overflow: hidden;"
+      >
+        text
+      </span>
+      <!--v-if-->
     </span>
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -366,6 +434,10 @@ exports[`Checkbox :props icon 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -403,6 +475,10 @@ exports[`Checkbox :props indeterminate 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -439,12 +515,21 @@ exports[`Checkbox :props label 1`] = `
     <span
       class="t-checkbox__label"
     >
-      <div>
-        text
-      </div>
+      <span
+        style="display: -webkit-box; overflow: hidden;"
+      >
+        <div>
+          text
+        </div>
+      </span>
+      <!--v-if-->
     </span>
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -481,10 +566,19 @@ exports[`Checkbox :props label 2`] = `
     <span
       class="t-checkbox__label"
     >
-      text
+      <span
+        style="display: -webkit-box; overflow: hidden;"
+      >
+        text
+      </span>
+      <!--v-if-->
     </span>
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -521,6 +615,10 @@ exports[`Checkbox :props maxContentRow 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -557,6 +655,10 @@ exports[`Checkbox :props maxLabelRow 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -593,6 +695,10 @@ exports[`Checkbox :props name 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -630,6 +736,10 @@ exports[`Checkbox :props readonly 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
 
@@ -667,5 +777,9 @@ exports[`Checkbox :props value 1`] = `
     <!--v-if-->
     <!--v-if-->
   </div>
+  <!--下边框 -->
+  <div
+    class="t-checkbox__border t-checkbox__border--left"
+  />
 </div>
 `;
