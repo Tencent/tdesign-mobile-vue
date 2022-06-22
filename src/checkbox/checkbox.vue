@@ -17,12 +17,18 @@
         <minus-circle-filled-icon v-else></minus-circle-filled-icon>
       </span>
       <span
-        v-if="labelContent"
+        v-if="labelContent || checkboxContent"
         :class="{ [`${flagName}__label`]: true, [`${flagName}__label-left`]: align === 'right' }"
         @click="(e) => handleChange(e, 'content')"
       >
-        <t-node :content="labelContent"></t-node>
+        <span v-if="labelContent" :style="labelStyle">
+          <t-node :content="labelContent"></t-node>
+        </span>
+        <span v-if="checkboxContent" :class="`${flagName}__description`" :style="contentStyle">
+          <t-node :content="checkboxContent"></t-node>
+        </span>
       </span>
+
       <span v-if="align === 'right'" :class="`${flagName}__icon-right`">
         <input
           type="checkbox"
@@ -39,15 +45,17 @@
         <minus-circle-filled-icon v-else></minus-circle-filled-icon>
       </span>
     </div>
+    <!--下边框 -->
+    <div v-if="!borderless" :class="`${flagName}__border ${flagName}__border--${align}`"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { inject, computed, SetupContext, defineComponent, getCurrentInstance, h, toRefs } from 'vue';
+import { inject, computed, SetupContext, defineComponent, getCurrentInstance, h, toRefs, CSSProperties } from 'vue';
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
-import { renderContent, TNode, useDefault } from '../shared';
+import { renderContent, renderTNode, TNode, useDefault, useVModel } from '../shared';
 import { TdCheckboxProps } from './type';
 import ClASSNAMES from '../shared/constants';
 
@@ -57,7 +65,13 @@ const name = `${prefix}-checkbox`;
 export default defineComponent({
   name,
   components: { TNode, MinusCircleFilledIcon },
-  props: CheckboxProps,
+  props: {
+    ...CheckboxProps,
+    borderless: {
+      type: Boolean,
+      value: false,
+    },
+  },
   emits: ['update:checked', 'update:modelValue', 'change'],
   setup(props, context: SetupContext) {
     const flagName = name;
@@ -68,9 +82,11 @@ export default defineComponent({
       'checked',
       'change',
     );
+
     const internalInstance = getCurrentInstance();
     const checkboxGroup: any = inject('checkboxGroup', undefined);
     const labelContent = computed(() => renderContent(internalInstance, 'label', 'default'));
+    const checkboxContent = computed(() => renderTNode(internalInstance, 'content'));
     const indeterminate = computed<boolean>(() => {
       if (props.checkAll && checkboxGroup !== undefined) return checkboxGroup.indeterminate.value;
       return props.indeterminate;
@@ -80,10 +96,13 @@ export default defineComponent({
       if (checkboxGroup !== undefined && props.value !== undefined) {
         return !!checkboxGroup.checkedMap.value[props.value];
       }
+
       return innerChecked.value;
     });
 
     const isDisabled = computed(() => {
+      if (checkboxGroup?.max.value)
+        return checkboxGroup.max.value <= checkboxGroup.groupCheckValue.value.length && !isChecked.value;
       if (props.disabled !== undefined) return props.disabled;
       return !!checkboxGroup?.disabled.value;
     });
@@ -96,6 +115,22 @@ export default defineComponent({
         [ClASSNAMES.STATUS.indeterminate]: indeterminate.value,
       },
     ]);
+
+    const getLimitRowStyle = (row: number): CSSProperties => ({
+      display: '-webkit-box',
+      overflow: 'hidden',
+      WebkitBoxOrient: 'vertical',
+      WebkitLineClamp: row,
+    });
+
+    const labelStyle = computed(() => ({
+      color: isDisabled.value ? '#dcdcdc' : 'inherit',
+      ...getLimitRowStyle(props.maxLabelRow),
+    }));
+
+    const contentStyle = computed(() => ({
+      ...getLimitRowStyle(props.maxContentRow),
+    }));
 
     const handleChange = (e: Event, source?: string) => {
       if (isDisabled.value) return;
@@ -114,6 +149,9 @@ export default defineComponent({
       isChecked,
       checkIcons,
       labelContent,
+      labelStyle,
+      checkboxContent,
+      contentStyle,
       isDisabled,
       flagName,
       componentClass,
@@ -123,3 +161,14 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped lang="less">
+.t-checkbox {
+  &__description:not(:empty) {
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.4);
+    margin-top: 8px;
+  }
+}
+</style>
