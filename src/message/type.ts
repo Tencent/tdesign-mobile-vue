@@ -26,6 +26,11 @@ export interface TdMessageProps {
    */
   duration?: number;
   /**
+   * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
+   * @default false
+   */
+  marquee?: boolean | DrawMarquee;
+  /**
    * 消息组件风格
    * @default info
    */
@@ -62,5 +67,11 @@ export interface TdMessageProps {
 }
 
 export type MessageAlignType = 'left' | 'center';
+
+export interface DrawMarquee {
+  speed?: number;
+  loop?: number;
+  delay?: number;
+}
 
 export type MessageThemeList = 'info' | 'success' | 'warning' | 'error';
