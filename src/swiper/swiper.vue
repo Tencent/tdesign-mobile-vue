@@ -11,7 +11,7 @@
     >
       <slot></slot>
     </div>
-    <template v-if="navigation">
+    <template v-if="navigation && state.showNavigation">
       <span v-if="direction === 'horizontal' && 'showSlideBtn' in navigation && navigation.showSlideBtn">
         <span :class="`${name}__btn btn-prev`" @click="prev(1)">
           <chevron-left-icon size="20px" />
@@ -80,6 +80,7 @@ export default defineComponent({
     // const { height = 180, current = null } = props;
     const height = props.height || 180;
     const state: {
+      showNavigation: boolean;
       activeIndex: number;
       itemLength: number;
       itemWidth: number;
@@ -87,6 +88,7 @@ export default defineComponent({
       btnDisabled: boolean;
       children: ComponentPublicInstance[];
     } = reactive({
+      showNavigation: true,
       activeIndex: 0,
       itemLength: 0,
       itemWidth: 0,
@@ -102,6 +104,7 @@ export default defineComponent({
       return activeIndex + 1;
     });
     const childCount = computed(() => state.children.length);
+
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
@@ -114,6 +117,9 @@ export default defineComponent({
       const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       if (items.length <= 0) return false;
+      if ('minShowNum' in computedNavigation.value && items.length < computedNavigation.value.minShowNum) {
+        state.showNavigation = false;
+      }
       if (props?.loop) {
         const first = items[0].cloneNode(true) as HTMLDivElement;
         first.classList.add('copy-item');
