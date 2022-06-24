@@ -12,6 +12,7 @@
           :key="index"
           :options="item"
           :default-value="pickerValue[index]"
+          :render-label="renderLabel"
           @pick="handlePick($event, index)"
         />
       </div>
