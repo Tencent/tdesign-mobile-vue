@@ -1,13 +1,14 @@
-import LocalPicker from './picker.vue';
+import _Picker from './picker.vue';
+import _Cascade from './cascade.vue';
 import LocalPickerItem from './picker-item.vue';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';
 
-import { TdPickerProps, TdPickerItemProps } from './type';
+import { TdPickerProps } from './type';
 
 export * from './type';
 export type PickerProps = TdPickerProps;
-export type PickerItemProps = TdPickerItemProps;
-export const Picker: WithInstallType<typeof LocalPicker> = withInstall(LocalPicker);
+export const Picker: WithInstallType<typeof _Picker> = withInstall(_Picker);
+export const Cascade: WithInstallType<typeof _Cascade> = withInstall(_Cascade);
 export const PickerItem: WithInstallType<typeof LocalPickerItem> = withInstall(LocalPickerItem);

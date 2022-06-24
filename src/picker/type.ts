@@ -2,73 +2,99 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-16 09:17:45
  * */
+
+import { ButtonProps } from '../button';
+import { TNode } from '../common';
 
 export interface TdPickerProps {
   /**
    * 取消按钮文字
-   * @default 取消
+   * @default '取消'
    */
-  cancelBtn: string;
+  cancelBtn?: string | ButtonProps;
+  /**
+   * 配置每一列的选项
+   * @default []
+   */
+  columns: Array<PickerColumn> | ((item: Array<PickerValue>) => Array<PickerColumn>);
   /**
    * 确定按钮文字
-   * @default 确认
+   * @default '确认'
    */
-  confirmBtn: string;
+  confirmBtn?: string | ButtonProps;
+  /**
+   * 底部内容
+   */
+  footer?: TNode;
+  /**
+   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容
+   * @default true
+   */
+  header?: boolean | TNode;
   /**
    * 标题
    * @default ''
    */
-  title: string;
+  title?: string;
   /**
    * 选中值
    */
-  modelValue: Array<PickerValue>;
+  value?: Array<PickerValue>;
   /**
    * 选中值，非受控属性
    */
-  defaultValue: Array<PickerValue>;
+  defaultValue?: Array<PickerValue>;
+  /**
+   * 选中值
+   */
+  modelValue?: Array<PickerValue>;
   /**
    * 是否显示
    * @default false
    */
-  visible: boolean;
+  visible?: boolean;
   /**
    * 点击取消按钮时触发
    * @default ''
    */
-  onCancel: ({ e }: { e: MouseEvent }) => void;
+  onCancel?: (context: { e: MouseEvent }) => void;
   /**
    * 选中变化时候触发
    * @default ''
    */
-  onChange: (value: Array<PickerValue>) => void;
+  onChange?: (value: Array<PickerValue>, context: { columns: Array<PickerContext>; e: MouseEvent }) => void;
   /**
-   * 点击确认确认按钮时触发
+   * 点击确认按钮时触发
    * @default ''
    */
-  onConfirm: ({ e }: { e: MouseEvent }) => void;
+  onConfirm?: (context: { value: Array<PickerValue>; columns: Array<PickerContext> }) => void;
+  /**
+   * 任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标
+   * @default ''
+   */
+  onPick?: (value: Array<PickerValue>, context: PickerContext) => void;
 }
 
-export interface TdPickerItemProps {
+/** 组件实例方法 */
+export interface PickerInstanceFunctions {
   /**
-   * 数据源
-   * @default []
+   * 自定义label
+   * @default 取消
    */
-  options: Array<PickerItemOption>;
-  /**
-   * 默认选中的侯选项
-   */
-  value: string | number;
-  /**
-   * 格式化选项
-   * @default (value: string): string => value
-   */
-  formatter: Function;
+  renderLabel?: (item: PickerColumnItem) => () => TNode | string;
+}
+
+export type PickerColumn = PickerColumnItem[];
+
+export interface PickerColumnItem {
+  label: string;
+  value: string;
 }
 
 export type PickerValue = string | number;
-export type PickerItemOptionObject = { label: string; value: string | number };
-export type PickerItemOption = PickerItemOptionObject | string | number;
-export type PickerItemChangeEvent = { index: number; value: string | number };
+
+export interface PickerContext {
+  column: number;
+  index: number;
+}

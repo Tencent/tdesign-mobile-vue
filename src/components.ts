@@ -29,7 +29,7 @@ export { default as Toast } from './toast';
 export { default as Search } from './search';
 export { Steps, Step } from './steps';
 export { Indexes, IndexesCell } from './indexes';
-export { Picker, PickerItem } from './picker';
+export { Picker, PickerItem, Cascade } from './picker';
 export { Tag, CheckTag } from './tag';
 export { TabBar, TabBarItem } from './tab-bar';
 export { DropdownMenu, DropdownItem } from './dropdown-menu';
