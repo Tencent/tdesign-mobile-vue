@@ -3,76 +3,67 @@
     <div :class="`${name}__form`">
       <div :class="`${name}__box`">
         <div :class="`${name}__icon-search`">
-          <t-icon-search></t-icon-search>
+          <slot name="leftIcon">
+            <t-icon-search />
+          </slot>
         </div>
         <t-input
           ref="searchInput"
-          v-model="currentValue"
+          v-model="value"
           :class="`${name}__input`"
-          type="search"
-          :autofocus="autofocus"
+          :autofocus="focus"
           :placeholder="placeholder"
+          :clearable="clearable"
+          @blur="onBlur"
+          @clear="onClear"
         />
-        <div :class="`${name}__icon-close`">
-          <t-close-icon v-if="clearable && currentValue.length > 0" @click="onClear"></t-close-icon>
-        </div>
       </div>
       <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">
         <div :class="`${name}__label-icon-search`">
-          <t-icon-search></t-icon-search>
+          <slot name="leftIcon">
+            <t-icon-search />
+          </slot>
         </div>
         <span :class="`${name}__label-text`">{{ placeholder }}</span>
       </label>
     </div>
-    <t-button v-show="!state.labelActive" variant="text" :class="`${name}__cancel-button`" @click="onCancel">
-      {{ cancelButtonText }}
-    </t-button>
+    <slot name="action">
+      <t-button
+        v-if="action"
+        v-show="!state.labelActive"
+        variant="text"
+        :class="`${name}__cancel-button`"
+        @click="onCancel"
+      >
+        {{ action }}
+      </t-button>
+    </slot>
   </div>
 </template>
 
 <script lang="ts">
-import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TCloseIcon } from 'tdesign-icons-vue-next';
-import { ref, reactive, computed, defineComponent, nextTick, watch, toRefs } from 'vue';
+import { SearchIcon as TIconSearch } from 'tdesign-icons-vue-next';
+import { ref, reactive, computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
 import TButton from '../button';
-import TInput from '../input';
+import TInput, { InputValue } from '../input';
 import { extendAPI } from '../shared';
+import searchProps from './props';
+import { useDefault } from '../shared/useDefault';
 
 const { prefix } = config;
 const name = `${prefix}-search`;
 
 export default defineComponent({
   name,
-  components: { TIconSearch, TCloseIcon, TButton, TInput },
-  props: {
-    autofocus: {
-      type: Boolean,
-      default: false,
-    },
-    clearable: {
-      type: Boolean,
-      default: true,
-    },
-    placeholder: {
-      type: String,
-      default: '',
-    },
-    modelValue: {
-      type: String,
-      default: '',
-    },
-    cancelButtonText: {
-      type: String,
-      default: '取消',
-    },
-  },
-  emits: ['change', 'update:modelValue', 'clear', 'cancel'],
+  components: { TIconSearch, TButton, TInput },
+  props: searchProps,
   setup(props, { emit }) {
     const classes = computed(() => ({
       [`${name}`]: true,
       [`${prefix}-is-focused`]: !state.labelActive,
     }));
-
+    const [value] = useDefault(props, emit, 'value', 'change');
     const searchInput = ref();
 
     const state = reactive({
@@ -80,53 +71,31 @@ export default defineComponent({
       inputVal: '',
     });
 
-    const curLabelActive = computed({
-      get() {
-        return state.labelActive;
-      },
-      set(val: boolean) {
-        state.labelActive = !val;
-      },
-    });
-
-    const currentValue = computed({
-      get() {
-        return props.modelValue || state.inputVal;
-      },
-      set(val: string) {
-        emit('change', val);
-        emit('update:modelValue', val);
-        state.inputVal = val;
-      },
-    });
-
-    const focus = () => {
+    const doFocus = () => {
       searchInput.value?.focus();
     };
 
-    const blur = () => {
-      searchInput.value?.blur();
+    const onBlur = (value: InputValue, { e }) => {
+      state.labelActive = true;
+      props.onBlur?.('blur', value, { e });
     };
 
     const onClick = () => {
-      curLabelActive.value = state.labelActive;
-      focus();
+      state.labelActive = !state.labelActive;
+      doFocus();
     };
 
-    const onCancel = (e: Event) => {
-      curLabelActive.value = state.labelActive;
-      currentValue.value = '';
-      blur();
-      emit('cancel', e);
+    const onCancel = (e: MouseEvent) => {
+      state.labelActive = !state.labelActive;
+      props.onCancel?.(e);
+      props.onActionClick?.({ e });
     };
 
     const onClear = (e: Event) => {
-      currentValue.value = '';
-      focus();
-      emit('clear', e);
+      props.onClean?.(e);
     };
 
-    extendAPI({ focus, blur });
+    extendAPI({ doFocus, blur });
 
     return {
       ...toRefs(props),
@@ -135,8 +104,9 @@ export default defineComponent({
       onClick,
       onCancel,
       onClear,
+      onBlur,
       state,
-      currentValue,
+      value,
       searchInput,
     };
   },
