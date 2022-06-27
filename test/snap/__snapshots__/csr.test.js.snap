@@ -34812,144 +34812,79 @@ exports[`csr snapshot test > csr test ./src/list/demos/mobile.vue 1`] = `
   <div
     class="list-demo"
   >
-    <div
-      class="t-tabs t-is-top t-size-m"
-    >
-      <div
-        class="t-sticky"
-        style="height: 0px;"
+    <div>
+      <h1
+        class="title"
       >
-        <div
-          style="z-index: 99;"
+        List 列表
+      </h1>
+      <p
+        class="summary"
+      >
+         瀑布流滚动加载，用于展示同一类型信息的长列表。当列表即将滚动到底部时，会触发事件并加载更多列表项。 
+      </p>
+      <div
+        class="tdesign-mobile-demo-block"
+      >
+        <h2
+          class="tdesign-mobile-demo-block__title"
         >
-          
-          <div
-            class="t-tabs__nav"
-          >
-            <div
-              class="t-tabs__nav-container"
-            >
-              <div
-                class="t-tabs__nav-wrap"
-              >
-                
-                <div
-                  class="t-tabs__nav-item t-is-active"
-                >
-                  基础列表
-                </div>
-                <div
-                  class="t-tabs__nav-item"
-                >
-                  错误提示
-                </div>
-                <div
-                  class="t-tabs__nav-item"
-                >
-                  下拉刷新
-                </div>
-                
-                <div
-                  class="t-tabs__nav-line"
-                  style=""
-                />
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      <div
-        class="t-tabs__content"
-      >
+          01 类型
+        </h2>
+        <p
+          class="tdesign-mobile-demo-block__summary"
+        >
+          基础列表
+        </p>
         
-        <div
-          class="t-tabs__panel"
-          value="base"
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          role="button"
         >
-          
-          <div
-            class="t-list"
+          <!---->
+          <span
+            class="t-button__text"
           >
-            <!---->
             
+             基础列表 
             
-            <div>
-              <!--v-if-->
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-        <div
-          class="t-tabs__panel"
-          style="display: none;"
-          value="error-tip"
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          role="button"
         >
-          
-          <div
-            class="t-list"
+          <!---->
+          <span
+            class="t-button__text"
           >
-            <!---->
             
+             下拉刷新 
             
-            <div>
-              <!--v-if-->
-            </div>
-            
-            <!--v-if-->
-            
-          </div>
-          
-        </div>
-        <div
-          class="t-tabs__panel"
-          style="display: none;"
-          value="pull-refresh"
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          role="button"
         >
-          
-          <div
-            class="pull-refresh-wrap"
+          <!---->
+          <span
+            class="t-button__text"
           >
-            <div
-              class="t-pull-down-refresh"
-            >
-              <div
-                class="t-pull-down-refresh__track"
-                style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
-              >
-                <div
-                  class="t-pull-down-refresh__max"
-                  style="height: 80px;"
-                >
-                  <div
-                    class="t-pull-down-refresh__loading"
-                    style="height: 50px;"
-                  >
-                    <div />
-                  </div>
-                </div>
-                
-                <div
-                  class="t-list"
-                >
-                  <!---->
-                  
-                  
-                  <div>
-                    <!--v-if-->
-                  </div>
-                  <!---->
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          
-        </div>
+            
+             错误提示 
+            
+          </span>
+        </button>
         
       </div>
     </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
   </div>
 </div>
 `;
@@ -51877,6 +51812,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/base.vue 1`] = `
         <div
           class="t-search__icon-search"
         >
+          
           <svg
             class="t-icon t-icon-search"
             fill="none"
@@ -51890,6 +51826,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/base.vue 1`] = `
               fill-opacity="0.9"
             />
           </svg>
+          
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
@@ -51914,7 +51851,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/base.vue 1`] = `
                 maxlength="-1"
                 name=""
                 placeholder="请输入关键字"
-                type="search"
+                type="text"
               />
               <!--v-if-->
               <!--v-if-->
@@ -51924,11 +51861,6 @@ exports[`csr snapshot test > csr test ./src/search/demos/base.vue 1`] = `
           </div>
           <!--v-if-->
         </div>
-        <div
-          class="t-search__icon-close"
-        >
-          <!--v-if-->
-        </div>
       </div>
       <label
         class="t-search__label"
@@ -51936,6 +51868,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/base.vue 1`] = `
         <div
           class="t-search__label-icon-search"
         >
+          
           <svg
             class="t-icon t-icon-search"
             fill="none"
@@ -51949,6 +51882,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/base.vue 1`] = `
               fill-opacity="0.9"
             />
           </svg>
+          
         </div>
         <span
           class="t-search__label-text"
@@ -51957,21 +51891,9 @@ exports[`csr snapshot test > csr test ./src/search/demos/base.vue 1`] = `
         </span>
       </label>
     </div>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button"
-      role="button"
-      style="display: none;"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        取消
-        
-      </span>
-    </button>
+    
+    <!--v-if-->
+    
   </div>
 </div>
 `;
@@ -51991,6 +51913,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/color.vue 1`] = `
         <div
           class="t-search__icon-search"
         >
+          
           <svg
             class="t-icon t-icon-search"
             fill="none"
@@ -52004,6 +51927,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/color.vue 1`] = `
               fill-opacity="0.9"
             />
           </svg>
+          
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
@@ -52028,7 +51952,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/color.vue 1`] = `
                 maxlength="-1"
                 name=""
                 placeholder="请输入关键字"
-                type="search"
+                type="text"
               />
               <!--v-if-->
               <!--v-if-->
@@ -52038,11 +51962,6 @@ exports[`csr snapshot test > csr test ./src/search/demos/color.vue 1`] = `
           </div>
           <!--v-if-->
         </div>
-        <div
-          class="t-search__icon-close"
-        >
-          <!--v-if-->
-        </div>
       </div>
       <label
         class="t-search__label"
@@ -52050,6 +51969,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/color.vue 1`] = `
         <div
           class="t-search__label-icon-search"
         >
+          
           <svg
             class="t-icon t-icon-search"
             fill="none"
@@ -52063,6 +51983,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/color.vue 1`] = `
               fill-opacity="0.9"
             />
           </svg>
+          
         </div>
         <span
           class="t-search__label-text"
@@ -52071,21 +51992,9 @@ exports[`csr snapshot test > csr test ./src/search/demos/color.vue 1`] = `
         </span>
       </label>
     </div>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button"
-      role="button"
-      style="display: none;"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        取消
-        
-      </span>
-    </button>
+    
+    <!--v-if-->
+    
   </div>
 </div>
 `;
@@ -52097,7 +52006,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
   <h1
     class="title"
   >
-    SearchField 搜索框
+    Search 搜索框
   </h1>
   <p
     class="summary"
@@ -52130,6 +52039,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52143,6 +52053,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <div
             class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
@@ -52167,7 +52078,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="search"
+                  type="text"
                 />
                 <!--v-if-->
                 <!--v-if-->
@@ -52177,11 +52088,6 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
             </div>
             <!--v-if-->
           </div>
-          <div
-            class="t-search__icon-close"
-          >
-            <!--v-if-->
-          </div>
         </div>
         <label
           class="t-search__label"
@@ -52189,6 +52095,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__label-icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52202,6 +52109,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <span
             class="t-search__label-text"
@@ -52210,21 +52118,9 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           </span>
         </label>
       </div>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button"
-        role="button"
-        style="display: none;"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          取消
-          
-        </span>
-      </button>
+      
+      <!--v-if-->
+      
     </div>
     
   </div>
@@ -52254,6 +52150,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52267,6 +52164,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <div
             class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
@@ -52291,7 +52189,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="search"
+                  type="text"
                 />
                 <!--v-if-->
                 <!--v-if-->
@@ -52301,11 +52199,6 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
             </div>
             <!--v-if-->
           </div>
-          <div
-            class="t-search__icon-close"
-          >
-            <!--v-if-->
-          </div>
         </div>
         <label
           class="t-search__label"
@@ -52313,6 +52206,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__label-icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52326,6 +52220,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <span
             class="t-search__label-text"
@@ -52334,21 +52229,9 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           </span>
         </label>
       </div>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button"
-        role="button"
-        style="display: none;"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          取消
-          
-        </span>
-      </button>
+      
+      <!--v-if-->
+      
     </div>
     
   </div>
@@ -52363,6 +52246,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
     </p>
     
     <div
+      autofocus="true"
       class="t-search"
     >
       <div
@@ -52374,6 +52258,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52387,6 +52272,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <div
             class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
@@ -52411,7 +52297,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="search"
+                  type="text"
                 />
                 <!--v-if-->
                 <!--v-if-->
@@ -52421,11 +52307,6 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
             </div>
             <!--v-if-->
           </div>
-          <div
-            class="t-search__icon-close"
-          >
-            <!--v-if-->
-          </div>
         </div>
         <label
           class="t-search__label"
@@ -52433,6 +52314,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__label-icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52446,6 +52328,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <span
             class="t-search__label-text"
@@ -52454,21 +52337,9 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           </span>
         </label>
       </div>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button"
-        role="button"
-        style="display: none;"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          取消
-          
-        </span>
-      </button>
+      
+      <!--v-if-->
+      
     </div>
     
   </div>
@@ -52483,6 +52354,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
     </p>
     
     <div
+      autofocus="true"
       class="t-search"
     >
       <div
@@ -52494,6 +52366,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52507,6 +52380,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <div
             class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
@@ -52531,32 +52405,31 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="search"
+                  type="text"
                 />
-                <!--v-if-->
+                <div
+                  class="t-input__wrap--icon"
+                >
+                  <svg
+                    class="t-icon t-icon-close-circle-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
                 <!--v-if-->
               </div>
               <!--v-if-->
               
             </div>
             <!--v-if-->
-          </div>
-          <div
-            class="t-search__icon-close"
-          >
-            <svg
-              class="t-icon t-icon-close-circle-filled"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
           </div>
         </div>
         <label
@@ -52565,6 +52438,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           <div
             class="t-search__label-icon-search"
           >
+            
             <svg
               class="t-icon t-icon-search"
               fill="none"
@@ -52578,6 +52452,7 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
                 fill-opacity="0.9"
               />
             </svg>
+            
           </div>
           <span
             class="t-search__label-text"
@@ -52586,21 +52461,9 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
           </span>
         </label>
       </div>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button"
-        role="button"
-        style="display: none;"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          取消
-          
-        </span>
-      </button>
+      
+      <!--v-if-->
+      
     </div>
     
   </div>
