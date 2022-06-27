@@ -7758,84 +7758,25 @@ exports[`ssr snapshot test renders ./src/list/demos/err-tip.vue correctly 1`] = 
 exports[`ssr snapshot test renders ./src/list/demos/mobile.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="list-demo">
-    <div class="t-tabs t-is-top t-size-m">
-      <div class="t-sticky" style="height:0px;">
-        <div style="z-index:99;">
-          <!--[-->
-          <div class="t-tabs__nav">
-            <div class="t-tabs__nav-container">
-              <div class="t-tabs__nav-wrap">
-                <!--[-->
-                <div class="t-tabs__nav-item t-is-active">基础列表</div>
-                <div class="t-tabs__nav-item">错误提示</div>
-                <div class="t-tabs__nav-item">下拉刷新</div>
-                <!--]-->
-                <div class="t-tabs__nav-line" style=""></div>
-              </div>
-            </div>
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-tabs__content">
-        <!--[-->
-        <div class="t-tabs__panel" value="base">
-          <!--[-->
-          <div class="t-list">
-            <!---->
-            <!--[-->
-            <!--]-->
-            <div>
-              <!--v-if-->
-            </div>
-            <!---->
-          </div>
-          <!--]-->
-        </div>
-        <div class="t-tabs__panel" value="error-tip" style="display:none;">
-          <!--[-->
-          <div class="t-list">
-            <!---->
-            <!--[-->
-            <!--]-->
-            <div>
-              <!--v-if-->
-            </div>
-            <!--[-->
-            <!--v-if-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <div class="t-tabs__panel" value="pull-refresh" style="display:none;">
-          <!--[-->
-          <div class="pull-refresh-wrap">
-            <div class="t-pull-down-refresh">
-              <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
-                <div class="t-pull-down-refresh__max" style="height:80px;">
-                  <div class="t-pull-down-refresh__loading" style="height:50px;">
-                    <div></div>
-                  </div>
-                </div>
-                <!--[-->
-                <div class="t-list">
-                  <!---->
-                  <!--[-->
-                  <!--]-->
-                  <div>
-                    <!--v-if-->
-                  </div>
-                  <!---->
-                </div>
-                <!--]-->
-              </div>
-            </div>
-          </div>
-          <!--]-->
-        </div>
+    <div>
+      <h1 class="title">List 列表</h1>
+      <p class="summary"> 瀑布流滚动加载，用于展示同一类型信息的长列表。当列表即将滚动到底部时，会触发事件并加载更多列表项。 </p>
+      <div class="tdesign-mobile-demo-block">
+        <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
+        <p class="tdesign-mobile-demo-block__summary">基础列表</p>
+        <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+          <!----><span class="t-button__text"><!--[--> 基础列表 <!--]--></span>
+        </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+          <!----><span class="t-button__text"><!--[--> 下拉刷新 <!--]--></span>
+        </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+          <!----><span class="t-button__text"><!--[--> 错误提示 <!--]--></span>
+        </button>
         <!--]-->
       </div>
     </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
   </div>
 </div>
 `;
