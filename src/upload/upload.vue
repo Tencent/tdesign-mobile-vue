@@ -233,8 +233,12 @@ export default defineComponent({
         handleBeforeUpload(fileRaw).then((canUpload) => {
           if (!canUpload) return;
           const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
-          newFiles.push(uploadFile);
-          toUploadFiles.value = [...new Set(newFiles)];
+
+          // 判断是否为重复文件条件，已选是否存在检验
+          if (props.allowUploadDuplicateFile || !toUploadFiles.value.find((file) => file.name === uploadFile.name)) {
+            newFiles.push(uploadFile);
+          }
+          toUploadFiles.value = newFiles;
           if (props.autoUpload) {
             upload(uploadFile);
           }
