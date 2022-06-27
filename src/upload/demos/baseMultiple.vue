@@ -15,7 +15,7 @@
       >
       </t-upload>
     </t-cell-group>
-    <message v-model="showMessage" :content="message" theme="warning" />
+    <t-message v-model="showMessage" :content="message" theme="warning" />
   </div>
 </template>
 <script lang="ts">

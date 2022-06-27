@@ -18,7 +18,6 @@ describe('Badge', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('count', () => {
-      const fn = jest.fn();
       const wrapper = mount(Badge, {
         propsData: {
           count: () => h('div', 'text')
@@ -28,7 +27,6 @@ describe('Badge', () => {
     });
 
     it('count', () => {
-      const fn = jest.fn();
       const wrapper = mount(Badge, {
         propsData: {
           count: 'text'

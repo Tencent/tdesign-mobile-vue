@@ -1,29 +1,28 @@
 import glob from 'glob';
 import MockDate from 'mockdate';
+import { vi } from 'vitest';
 import { config } from '@vue/test-utils';
 
 // 固定时间，当使用 new Date() 时，返回固定时间，防止“当前时间”的副作用影响，导致 snapshot 变更，mockdate 插件见 https://github.com/boblauer/MockDate
-MockDate.set('2020-12-28');
+MockDate.set('2020-12-28 00:00:00');
 
-function ssrSnapshotTest() {
-  const files = glob.sync('./src/**/demos/*.vue');
+function runTest() {
+  const files = glob.sync('./src/button/demos/*.vue');
+  const { createSSRApp } = config.global;
+
   describe('ssr snapshot test', () => {
-    beforeAll(() => {
-      jest.useFakeTimers();
-    });
+    HTMLCanvasElement.prototype.getContext = vi.fn();
+
     files.forEach((file) => {
-      if (file.indexOf('temp') > -1) {
-        return;
-      }
-      it(`renders ${file} correctly`, async () => {
-        const demo = require(`../.${file}`);
+      it(`ssr test ${file}`, async () => {
+        const demo = await import(`../.${file}`);
         const realDemoComp = demo.default ? demo.default : demo;
-        const { createSSRApp } = config.global;
+        realDemoComp.name = `test-ssr-${realDemoComp.name}`;
         const html = await createSSRApp(realDemoComp);
         expect(html).toMatchSnapshot();
-      }, 2000);
+      });
     });
   });
 }
 
-ssrSnapshotTest();
+runTest();

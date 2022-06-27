@@ -36,7 +36,6 @@ describe('Checkbox', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Checkbox, {
         propsData: {
           content: () => h('div', 'text')
@@ -46,7 +45,6 @@ describe('Checkbox', () => {
     });
 
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Checkbox, {
         propsData: {
           content: 'text'
@@ -61,7 +59,6 @@ describe('Checkbox', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('default', () => {
-      const fn = jest.fn();
       const wrapper = mount(Checkbox, {
         propsData: {
           default: () => h('div', 'text')
@@ -71,7 +68,6 @@ describe('Checkbox', () => {
     });
 
     it('default', () => {
-      const fn = jest.fn();
       const wrapper = mount(Checkbox, {
         propsData: {
           default: 'text'
@@ -92,7 +88,6 @@ describe('Checkbox', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('label', () => {
-      const fn = jest.fn();
       const wrapper = mount(Checkbox, {
         propsData: {
           label: () => h('div', 'text')
@@ -102,7 +97,6 @@ describe('Checkbox', () => {
     });
 
     it('label', () => {
-      const fn = jest.fn();
       const wrapper = mount(Checkbox, {
         propsData: {
           label: 'text'
