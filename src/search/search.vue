@@ -54,6 +54,8 @@ import { useDefault } from '../shared/useDefault';
 const { prefix } = config;
 const name = `${prefix}-search`;
 
+type InputBlurContext = { e: FocusEvent };
+
 export default defineComponent({
   name,
   components: { TIconSearch, TButton, TInput },
@@ -75,9 +77,9 @@ export default defineComponent({
       searchInput.value?.focus();
     };
 
-    const onBlur = (value: InputValue, { e }) => {
+    const onBlur = (value: InputValue, context: InputBlurContext) => {
       state.labelActive = true;
-      props.onBlur?.('blur', value, { e });
+      props.onBlur?.('blur', value, { e: context.e });
     };
 
     const onClick = () => {
