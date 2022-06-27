@@ -7,7 +7,7 @@ import { mount } from '@vue/test-utils';
 MockDate.set('2020-12-28 00:00:00');
 
 function runTest() {
-  const files = glob.sync('./src/button/demos/*.vue');
+  const files = glob.sync('./src/**/demos/*.vue');
 
   describe('csr snapshot test', () => {
     HTMLCanvasElement.prototype.getContext = vi.fn();

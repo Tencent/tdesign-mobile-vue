@@ -117,7 +117,11 @@ export default defineComponent({
       const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       if (items.length <= 0) return false;
-      if ('minShowNum' in computedNavigation.value && items.length < computedNavigation.value.minShowNum) {
+      if (
+        computedNavigation.value &&
+        'minShowNum' in computedNavigation.value &&
+        items.length < computedNavigation.value.minShowNum
+      ) {
         state.showNavigation = false;
       }
       if (props?.loop) {
