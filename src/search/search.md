@@ -1,19 +1,32 @@
 :: BASE_DOC ::
 
 ## API
+### Search Props
 
-| 属性             | 类型    | 默认值  | 必传 | 说明                                         |
-| ---------------- | ------- | ------- | ---- | -------------------------------------------- |
-| autofocus        | Boolean | false    | N    | 是否自动聚焦                                 |
-| iconColor        | String  | #CCCCCC | N    | 图标颜色                                     |
-| clearable        | Boolean | true    | N    | 是否启用清除图标，点击清除图标后会清空输入框 |
-| placeholder      | String  | -       | N    | 占位提示文字                                 |
-| cancelButtonText | String  | 取消    | N    | 取消按钮文字                                 |
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+action | String / Slot / Function | '' | 自定义右侧操作按钮文字。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+center | Boolean | false | 【讨论中】是否居中 | N
+clearable | Boolean | true | 是否可清空 | N
+disabled | Boolean | false | 【讨论中】是否禁用 | N
+focus | Boolean | false | 是否聚焦 | N
+leftIcon | Slot / Function | - | 左侧图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+placeholder | String | '' | 占位符 | N
+shape | String | 'square' | 【讨论中】搜索框形状。可选项：square/round | N
+value | String | - | 值。支持语法糖 `v-model` 或 `v-model:value` | N
+defaultValue | String | - | 值。非受控属性 | N
+onActionClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击右侧操作按钮文字时触发时触发 | N
+onBlur | Function |  | TS 类型：`(value: string, context: { e: FocusEvent }) => void`<br/>失去焦点时触发 | N
+onChange | Function |  | TS 类型：`(value: string, context?: { e?: InputEvent | MouseEvent }) => void`<br/>值发生变化时触发 | N
+onClear | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击清除时触发 | N
+onFocus | Function |  | TS 类型：`(value: string, context: { e: FocusEvent }) => void`<br/>获得焦点时触发 | N
 
-## Events
+### Search Events
 
-| 事件名 | 说明                 | 回调参数          |
-| ------ | -------------------- | ----------------- |
-| change | 输入框内容变化时触发 | val: 当前输入的值 |
-| clear  | 点击清除按钮后触发   | -                 |
-| cancel | 点击取消按钮时触发   | -                 |
+名称 | 参数 | 描述
+-- | -- | --
+action-click | `(context: { e: MouseEvent })` | 点击右侧操作按钮文字时触发时触发
+blur | `(value: string, context: { e: FocusEvent })` | 失去焦点时触发
+change | `(value: string, context?: { e?: InputEvent | MouseEvent })` | 值发生变化时触发
+clear | `(context: { e: MouseEvent })` | 点击清除时触发
+focus | `(value: string, context: { e: FocusEvent })` | 获得焦点时触发

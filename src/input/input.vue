@@ -27,7 +27,7 @@
           @compositionend="handleCompositionend"
         />
         <div
-          v-if="clearable && String(innerValue).length > 0"
+          v-if="clearable && innerValue && innerValue.length > 0"
           :class="`${componentName}__wrap--icon`"
           @click="handleClear"
         >
