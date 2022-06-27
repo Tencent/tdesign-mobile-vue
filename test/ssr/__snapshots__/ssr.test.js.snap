@@ -10852,9 +10852,12 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
   <div class="t-search">
     <div class="t-search__form">
       <div class="t-search__box">
-        <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div>
+          </svg>
+          <!--]-->
+        </div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
           <div class="t-cell__left-icon">
             <!--v-if-->
@@ -10863,7 +10866,7 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
+            <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -10872,17 +10875,18 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
           </div>
           <!--v-if-->
         </div>
-        <div class="t-search__icon-close">
-          <!--v-if-->
-        </div>
       </div><label class="t-search__label">
-        <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__label-icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div><span class="t-search__label-text">请输入关键字</span>
+          </svg>
+          <!--]-->
+        </div><span class="t-search__label-text">请输入关键字</span>
       </label>
-    </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-      <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-    </button>
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--]-->
   </div>
 </div>
 `;
@@ -10892,9 +10896,12 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
   <div class="t-search" icon-color="#0052d9">
     <div class="t-search__form">
       <div class="t-search__box">
-        <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div>
+          </svg>
+          <!--]-->
+        </div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
           <div class="t-cell__left-icon">
             <!--v-if-->
@@ -10903,7 +10910,7 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
+            <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -10912,24 +10919,25 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
           </div>
           <!--v-if-->
         </div>
-        <div class="t-search__icon-close">
-          <!--v-if-->
-        </div>
       </div><label class="t-search__label">
-        <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__label-icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div><span class="t-search__label-text">请输入关键字</span>
+          </svg>
+          <!--]-->
+        </div><span class="t-search__label-text">请输入关键字</span>
       </label>
-    </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-      <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-    </button>
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--]-->
   </div>
 </div>
 `;
 
 exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
-  <h1 class="title">SearchField 搜索框</h1>
+  <h1 class="title">Search 搜索框</h1>
   <p class="summary">用于用户输入搜索信息，并进行页面内容搜索</p>
   <div class="tdesign-mobile-demo-block">
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
@@ -10938,9 +10946,12 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <div class="t-search">
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -10949,7 +10960,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+              <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -10958,17 +10969,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close">
-            <!--v-if-->
-          </div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -10979,9 +10991,12 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <div class="t-search">
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -10990,7 +11005,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+              <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -10999,17 +11014,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close">
-            <!--v-if-->
-          </div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -11017,12 +11033,15 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">点击状态</p>
     <!--[-->
-    <div class="t-search">
+    <div class="t-search" autofocus>
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -11031,7 +11050,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+              <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -11040,17 +11059,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close">
-            <!--v-if-->
-          </div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -11058,12 +11078,15 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">输入状态</p>
     <!--[-->
-    <div class="t-search">
+    <div class="t-search" autofocus>
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -11072,8 +11095,10 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value="搜索预设文案" name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
-                <!--v-if-->
+              <div class="t-input__wrap"><input value="搜索预设文案" name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+                <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
+                    <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
+                  </svg></div>
                 <!--v-if-->
               </div>
               <!--v-if-->
@@ -11081,17 +11106,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
-              <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
-            </svg></div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>
