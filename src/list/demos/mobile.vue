@@ -1,42 +1,53 @@
 <template>
   <div class="tdesign-mobile-demo">
     <div class="list-demo">
-      <t-tabs default-value="base" @on-change="onChangeTab">
-        <t-tab-panel value="base" label="基础列表">
-          <t-list :async-loading="loading" @scroll="(e) => onScroll(e, 0)">
-            <t-cell v-for="item in list" :key="item" align="middle">
-              <span class="cell">{{ item }}</span>
-            </t-cell>
-          </t-list>
-        </t-tab-panel>
-        <t-tab-panel value="error-tip" label="错误提示">
-          <t-list :async-loading="errloading" @scroll="onLoadMore">
-            <t-cell v-for="item in listError" :key="item" align="middle">
-              <span class="cell">{{ item }}</span>
-            </t-cell>
-            <template #footer>
-              <div v-if="showError" class="error" @click.stop="onLoadMore">请求失败，点击重新加载</div>
-            </template>
-          </t-list>
-        </t-tab-panel>
-        <t-tab-panel value="pull-refresh" label="下拉刷新">
-          <div class="pull-refresh-wrap">
-            <t-pull-down-refresh v-model="refreshing" @refresh="onRefresh">
-              <t-list :async-loading="pullloading" @scroll="(e) => onScroll(e, 2)">
-                <t-cell v-for="item in listPull" :key="item" align="middle">
-                  <span class="cell">{{ item }}</span>
-                </t-cell>
-              </t-list>
-            </t-pull-down-refresh>
-          </div>
-        </t-tab-panel>
-      </t-tabs>
+      <div v-if="currentTab === 'info'">
+        <h1 class="title">List 列表</h1>
+        <p class="summary">
+          瀑布流滚动加载，用于展示同一类型信息的长列表。当列表即将滚动到底部时，会触发事件并加载更多列表项。
+        </p>
+        <tdesign-demo-block title="01 类型" summary="基础列表">
+          <t-button size="large" variant="outline" @click="onChangeTab('base')"> 基础列表 </t-button>
+          <t-button size="large" variant="outline" @click="onChangeTab('pull-refresh')"> 下拉刷新 </t-button>
+          <t-button size="large" variant="outline" @click="onChangeTab('error-tip')"> 错误提示 </t-button>
+        </tdesign-demo-block>
+      </div>
+      <div v-if="currentTab === 'base'">
+        <t-list :async-loading="loading" @scroll="(e) => onScroll(e, 0)">
+          <t-cell v-for="item in list" :key="item" align="middle">
+            <span class="cell">{{ item }}</span>
+          </t-cell>
+        </t-list>
+      </div>
+      <div v-if="currentTab === 'error-tip'">
+        <t-list :async-loading="errloading" @scroll="onLoadMore">
+          <t-cell v-for="item in listError" :key="item" align="middle">
+            <span class="cell">{{ item }}</span>
+          </t-cell>
+          <template #footer>
+            <t-loading v-if="showError" :indicator="false" @click.stop="onLoadMore">
+              <div class="custom-error">请求失败，点击重新<span>加载</span></div>
+            </t-loading>
+          </template>
+        </t-list>
+      </div>
+      <div v-if="currentTab === 'pull-refresh'">
+        <div class="pull-refresh-wrap">
+          <t-pull-down-refresh v-model="refreshing" @refresh="onRefresh">
+            <t-list :async-loading="pullloading" @scroll="(e) => onScroll(e, 2)">
+              <t-cell v-for="item in listPull" :key="item" align="middle">
+                <span class="cell">{{ item }}</span>
+              </t-cell>
+            </t-list>
+          </t-pull-down-refresh>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, computed, h } from 'vue';
+import { defineComponent, ref, onMounted, computed, h, onUnmounted } from 'vue';
 
 const MAX_DATA_LEN = 60;
 
@@ -67,6 +78,7 @@ const loadData = (data: any, isRefresh?: Boolean) => {
 
 export default defineComponent({
   setup(props, { emit }) {
+    const currentTab = ref('info');
     const list = ref([] as Array<any>);
     const listPull = ref([] as Array<any>);
     const listError = ref([] as Array<any>);
@@ -123,6 +135,13 @@ export default defineComponent({
 
     onMounted(() => {
       onLoad();
+      window.onpopstate = function (event) {
+        currentTab.value = 'info';
+      };
+    });
+
+    onUnmounted(() => {
+      window.onpopstate = null;
     });
 
     const onChangeTab = (val: any) => {
@@ -137,6 +156,8 @@ export default defineComponent({
       } else if (val === 'pull-refresh') {
         onLoadPull();
       }
+      currentTab.value = val;
+      history.pushState({}, '', '?tab=demo');
     };
 
     const onLoadMore = () => {
@@ -177,6 +198,7 @@ export default defineComponent({
       showError,
       onLoadMore,
       onRefresh,
+      currentTab,
     };
   },
   data() {
@@ -199,6 +221,23 @@ export default defineComponent({
       font-size: 14px;
       margin-top: 8px;
     }
+  }
+  .custom-error {
+    font-size: 14px;
+    color: #969799;
+    text-align: center;
+    padding-top: 16px;
+    cursor: default;
+
+    span {
+      color: #0052d9;
+      cursor: pointer;
+    }
+  }
+  .t-button {
+    background: #ffffff;
+    margin: 0 16px 16px 16px;
+    width: calc(100% - 32px);
   }
 }
 </style>

@@ -20,26 +20,6 @@ export interface TdListProps {
    */
   header?: string | TNode;
   /**
-   * 排列方式（待设计稿输出）
-   * @default horizontal
-   */
-  layout?: 'horizontal' | 'vertical';
-  /**
-   * 尺寸
-   * @default medium
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * 是否展示分割线
-   * @default false
-   */
-  split?: boolean;
-  /**
-   * 是否展示斑马纹
-   * @default false
-   */
-  stripe?: boolean;
-  /**
    * 点击加载更多时触发
    */
   onLoadMore?: () => void;

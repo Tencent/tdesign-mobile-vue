@@ -20,28 +20,6 @@ export default {
   header: {
     type: [String, Function] as PropType<TdListProps['header']>,
   },
-  /** 排列方式（待设计稿输出） */
-  layout: {
-    type: String as PropType<TdListProps['layout']>,
-    default: 'horizontal' as TdListProps['layout'],
-    validator(val: TdListProps['layout']): boolean {
-      if (!val) return true;
-      return ['horizontal', 'vertical'].includes(val);
-    },
-  },
-  /** 尺寸 */
-  size: {
-    type: String as PropType<TdListProps['size']>,
-    default: 'medium' as TdListProps['size'],
-    validator(val: TdListProps['size']): boolean {
-      if (!val) return true;
-      return ['small', 'medium', 'large'].includes(val);
-    },
-  },
-  /** 是否展示分割线 */
-  split: Boolean,
-  /** 是否展示斑马纹 */
-  stripe: Boolean,
   /** 点击加载更多时触发 */
   onLoadMore: Function as PropType<TdListProps['onLoadMore']>,
   /** 列表滚动时触发，scrollTop 表示顶部滚动距离 */
