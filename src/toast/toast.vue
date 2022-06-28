@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-overlay v-show="preventScrollThrough" />
+    <t-overlay v-show="showOverlay" v-bind="customOverlayProps" />
     <div :class="classes">
       <t-node :content="iconContent"></t-node>
       <div v-if="messageContent" :class="`${name}__text`">
@@ -53,20 +53,28 @@ export default defineComponent({
       },
     ]);
 
-    const cls = `${prefix}-overflow-hidden`;
+    const preventScrollCls = `${prefix}-overflow-hidden`;
+    const preventScrollThrough = computed(
+      () => props.preventScrollThrough || (props.showOverlay && props.preventScrollThrough !== false),
+    );
     onMounted(() => {
-      props.preventScrollThrough && document.body.classList.add(cls);
+      preventScrollThrough.value && document.body.classList.add(preventScrollCls);
+    });
+    onUnmounted(() => {
+      preventScrollThrough.value && document.body.classList.remove(preventScrollCls);
     });
 
-    onUnmounted(() => {
-      props.preventScrollThrough && document.body.classList.remove(cls);
-    });
+    const baseOverlayProps = {
+      transparent: false,
+    };
+    const customOverlayProps = computed(() => ({ ...baseOverlayProps, ...props.overlayProps }));
 
     return {
       name: ref(name),
       classes,
       iconContent,
       messageContent,
+      customOverlayProps,
       ...toRefs(props),
     };
   },
