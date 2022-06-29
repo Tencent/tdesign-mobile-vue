@@ -4,10 +4,10 @@
     <t-popup v-model="show.hm" position="bottom">
       <t-date-time-picker
         v-model="text.hm"
-        :mode="['hour', 'minute']"
+        :mode="[null, 'minute']"
         title="选择时分"
         @change="onChange"
-        @column-change="onColumnChange"
+        @pick="onPick"
         @confirm="onConfirm"
         @cancel="onCancel"
       />
@@ -15,8 +15,9 @@
   </tdesign-demo-block>
 </template>
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
-import { DateValue } from 'tdesign-mobile-vue';
+import { defineComponent, reactive, computed } from 'vue';
+import dayjs from 'dayjs';
+import { DateValue } from '../type';
 
 export default defineComponent({
   setup() {
@@ -27,12 +28,16 @@ export default defineComponent({
       hm: '12:01',
     });
 
+    const showHm = computed(() => {
+      return dayjs(text.hm).format('HH:mm');
+    });
+
     const onChange = (value: DateValue) => {
       console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = ({ value, index }: { value: DateValue; index: number }) => {
-      console.log('date-time-picker:columnChange', value, index);
+    const onPick = (value: DateValue) => {
+      console.log('date-time-picker:pick', value);
     };
 
     const onCancel = () => {
@@ -40,18 +45,19 @@ export default defineComponent({
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
-    const onConfirm = ({ value }: { value: DateValue }) => {
-      console.log('date-time-picker:confirm', JSON.stringify(value));
+    const onConfirm = (value: DateValue) => {
+      console.log('date-time-picker:confirm', value);
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
     return {
       onChange,
-      onColumnChange,
+      onPick,
       onCancel,
       onConfirm,
       show,
       text,
+      showHm,
     };
   },
 });

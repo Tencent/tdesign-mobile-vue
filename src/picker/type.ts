@@ -33,6 +33,10 @@ export interface TdPickerProps {
    */
   header?: boolean | TNode;
   /**
+   * 自定义label
+   */
+  renderLabel?: (item: PickerColumnItem) => string;
+  /**
    * 标题
    * @default ''
    */
@@ -74,15 +78,6 @@ export interface TdPickerProps {
    * @default ''
    */
   onPick?: (value: Array<PickerValue>, context: PickerContext) => void;
-}
-
-/** 组件实例方法 */
-export interface PickerInstanceFunctions {
-  /**
-   * 自定义label
-   * @default 取消
-   */
-  renderLabel?: (item: PickerColumnItem) => () => TNode | string;
 }
 
 export type PickerColumn = PickerColumnItem[];

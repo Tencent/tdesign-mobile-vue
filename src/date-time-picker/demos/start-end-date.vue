@@ -1,13 +1,15 @@
 <template>
   <tdesign-demo-block>
-    <t-input :value="text.ym" label="选择年月" placeholder="年月" @click="show.ym = true" />
-    <t-popup v-model="show.ym" position="bottom">
+    <t-input :value="text.ymd" label="选择年月日" placeholder="年月日" @click="show.ymd = true" />
+    <t-popup v-model="show.ymd" position="bottom">
       <t-date-time-picker
-        v-model="text.ym"
-        :mode="['year', 'month']"
-        title="选择年月"
+        v-model="text.ymd"
+        :mode="mode"
+        title="选择日期时间"
+        start="2020-6-30"
+        end="2025-6-30"
         @change="onChange"
-        @column-change="onColumnChange"
+        @pick="onPick"
         @confirm="onConfirm"
         @cancel="onCancel"
       />
@@ -16,23 +18,23 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import { DateValue } from 'tdesign-mobile-vue';
+import { DateValue } from '../type';
 
 export default defineComponent({
   setup() {
     const show = reactive({
-      ym: false,
+      ymd: false,
     });
     const text = reactive({
-      ym: '2020-08',
+      ymd: '2020-08-10',
     });
 
     const onChange = (value: DateValue) => {
       console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = ({ value, index }: { value: DateValue; index: number }) => {
-      console.log('date-time-picker:columnChange', value, index);
+    const onPick = (value: DateValue) => {
+      console.log('date-time-picker:pick', value);
     };
 
     const onCancel = () => {
@@ -40,14 +42,14 @@ export default defineComponent({
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
-    const onConfirm = ({ value }: { value: DateValue }) => {
-      console.log('date-time-picker:confirm', JSON.stringify(value));
+    const onConfirm = (value: DateValue) => {
+      console.log('date-time-picker:confirm', value);
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
     return {
       onChange,
-      onColumnChange,
+      onPick,
       onCancel,
       onConfirm,
       show,

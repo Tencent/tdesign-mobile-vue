@@ -91,7 +91,7 @@ export default defineComponent({
       if (curValueArray.value[column] !== context.value) {
         curValueArray.value[column] = context.value;
         curIndexArray[column] = context.index;
-        // 当使用cascade时，需要更新子节点的value和index
+        // 当使用cascade或者dateTimePicker时，需要更新子节点的value和index
         if (typeof props.columns === 'function') {
           const result = props.columns(curValueArray.value);
           result.forEach((item: PickerColumnItem[], index: number) => {

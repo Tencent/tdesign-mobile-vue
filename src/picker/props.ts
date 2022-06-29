@@ -33,6 +33,10 @@ export default {
     type: [Boolean, Function] as PropType<TdPickerProps['header']>,
     default: true,
   },
+  /** 自定义label */
+  renderLabel: {
+    type: [String, Function] as PropType<TdPickerProps['renderLabel']>,
+  },
   /** 标题 */
   title: {
     type: String,
