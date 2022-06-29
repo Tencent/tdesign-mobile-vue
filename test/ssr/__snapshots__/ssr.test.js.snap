@@ -1988,37 +1988,199 @@ exports[`ssr snapshot test renders ./src/cell/demos/single.vue correctly 1`] = `
 
 exports[`ssr snapshot test renders ./src/checkbox/demos/base.vue correctly 1`] = `
 <div>
-  <div class="t-checkbox">
-    <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label">多选</span>
-      <!--v-if-->
+  <div class="t-checkbox-group checkbox-group-demo">
+    <!--[-->
+    <div class="t-checkbox">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
     </div>
+    <div class="t-checkbox t-is-checked">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <div class="t-checkbox t-is-checked">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <div class="t-checkbox">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="4" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <div class="t-checkbox">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="5" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span><span class="t-checkbox__description" style="display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多</span></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <!--]-->
   </div>
-  <div class="t-checkbox">
-    <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="2" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label">多选</span>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/checkbox/demos/disable.vue correctly 1`] = `
+<div class="checkbox-demo">
+  <div class="t-checkbox t-is-disabled">
+    <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+      <!--v-if--></span>
       <!--v-if-->
     </div>
+    <!--下边框 -->
+    <div class="t-checkbox__border t-checkbox__border--left"></div>
+  </div>
+  <div class="t-checkbox t-is-checked t-is-disabled">
+    <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" disabled checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+      <!--v-if--></span>
+      <!--v-if-->
+    </div>
+    <!--下边框 -->
+    <div class="t-checkbox__border t-checkbox__border--left"></div>
+  </div>
+  <div class="t-checkbox t-is-disabled">
+    <div class="t-checkbox__content-wrap">
+      <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+      <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name class="t-checkbox__original-right" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
+    </div>
+    <!--下边框 -->
+    <div class="t-checkbox__border t-checkbox__border--right"></div>
+  </div>
+  <div class="t-checkbox t-is-checked t-is-disabled">
+    <div class="t-checkbox__content-wrap">
+      <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+      <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name class="t-checkbox__original-right" disabled checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
+    </div>
+    <!--下边框 -->
+    <div class="t-checkbox__border t-checkbox__border--right"></div>
   </div>
 </div>
 `;
 
 exports[`ssr snapshot test renders ./src/checkbox/demos/group.vue correctly 1`] = `
 <div>
-  <div class="t-checkbox-group">
+  <div class="t-checkbox-group checkbox-group-demo"><span><!--[--><div class="t-checkbox t-is-indeterminate"><div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" indeterminate="true"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-minus-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zm3.5-6.5h-7v-1h7v1z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">全选</span>
+    <!--v-if--></span>
+    <!--v-if-->
+  </div>
+  <!--下边框 -->
+  <div class="t-checkbox__border t-checkbox__border--left"></div>
+</div>
+<div class="t-checkbox t-is-checked">
+  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+    <!--v-if--></span>
+    <!--v-if-->
+  </div>
+  <!--下边框 -->
+  <div class="t-checkbox__border t-checkbox__border--left"></div>
+</div>
+<div class="t-checkbox">
+  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" value="2" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+    <!--v-if--></span>
+    <!--v-if-->
+  </div>
+  <!--下边框 -->
+  <div class="t-checkbox__border t-checkbox__border--left"></div>
+</div>
+<div class="t-checkbox">
+  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" value="3" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+    <!--v-if--></span>
+    <!--v-if-->
+  </div>
+  <!--下边框 -->
+  <div class="t-checkbox__border t-checkbox__border--left"></div>
+</div>
+<!--]--></span></div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/checkbox/demos/icon.vue correctly 1`] = `
+<div>
+  <div class="t-checkbox-group checkbox-group-demo">
+    <!--[-->
+    <div class="t-checkbox">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-rectangle" style=""><path fill="currentColor" d="M3 14a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3zm0-1V3h10v10H3z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <div class="t-checkbox t-is-checked">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-rectangle-filled" style=""><path fill="currentColor" d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <div class="t-checkbox t-is-checked">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-rectangle-filled" style=""><path fill="currentColor" d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <!--]-->
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/checkbox/demos/indeterminate.vue correctly 1`] = `
+<div class="checkbox-demo">
+  <div class="t-checkbox t-is-indeterminate">
+    <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" indeterminate="true"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-minus-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zm3.5-6.5h-7v-1h7v1z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+      <!--v-if--></span>
+      <!--v-if-->
+    </div>
+    <!--下边框 -->
+    <div class="t-checkbox__border t-checkbox__border--left"></div>
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/checkbox/demos/max.vue correctly 1`] = `
+<div>
+  <div class="t-checkbox-group checkbox-group-demo">
     <!--[-->
     <div class="t-checkbox t-is-checked">
-      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label">多选</span>
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
         <!--v-if-->
       </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
     </div>
     <div class="t-checkbox t-is-checked">
-      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label">多选</span>
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
         <!--v-if-->
       </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
     </div>
-    <div class="t-checkbox">
-      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="3" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label">多选</span>
+    <div class="t-checkbox t-is-disabled">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="3" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
         <!--v-if-->
       </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
     </div>
     <!--]-->
   </div>
@@ -2034,124 +2196,50 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
       <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
       <p class="tdesign-mobile-demo-block__summary">基础多选框</p>
       <!--[-->
-      <div class="t-checkbox-group">
-        <!--[-->
-        <div class="t-cell-group">
-          <!--v-if-->
-          <div class="t-cell-group__container">
-            <!--[-->
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
+      <div>
+        <div class="t-checkbox-group checkbox-group-demo">
+          <!--[-->
+          <div class="t-checkbox">
+            <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+              <!--v-if--></span>
               <!--v-if-->
             </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="2" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="4" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span> 多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选 多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选 多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选 </span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="5" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <div class="t-cell__description">
-                  <!--[--><span>多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选 多选多选多选多选多选多选多选多选多选多选多选 </span>
-                  <!--]-->
-                </div>
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--]-->
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--left"></div>
           </div>
+          <div class="t-checkbox t-is-checked">
+            <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+              <!--v-if--></span>
+              <!--v-if-->
+            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--left"></div>
+          </div>
+          <div class="t-checkbox t-is-checked">
+            <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+              <!--v-if--></span>
+              <!--v-if-->
+            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--left"></div>
+          </div>
+          <div class="t-checkbox">
+            <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="4" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多</span>
+              <!--v-if--></span>
+              <!--v-if-->
+            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--left"></div>
+          </div>
+          <div class="t-checkbox">
+            <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="5" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span><span class="t-checkbox__description" style="display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多</span></span>
+              <!--v-if-->
+            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--left"></div>
+          </div>
+          <!--]-->
         </div>
-        <!--]-->
       </div>
       <!--]-->
     </div>
@@ -2159,101 +2247,40 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
       <!--v-if-->
       <p class="tdesign-mobile-demo-block__summary">右侧圆形多选框</p>
       <!--[-->
-      <div class="t-cell-group">
-        <!--v-if-->
-        <div class="t-cell-group__container">
+      <div>
+        <div class="t-checkbox-group checkbox-group-demo">
           <!--[-->
-          <div class="t-cell t-cell--middle t-cell--bordered">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
+          <div class="t-checkbox">
+            <div class="t-checkbox__content-wrap">
+              <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+              <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
             </div>
-            <div class="t-cell__title">
-              <!--[--><span>多选</span>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div class="t-cell__right-icon">
-              <!--[-->
-              <div class="t-checkbox t-is-checked">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox2" class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--right"></div>
           </div>
-          <div class="t-cell t-cell--middle t-cell--bordered">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
+          <div class="t-checkbox t-is-checked">
+            <div class="t-checkbox__content-wrap">
+              <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+              <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
             </div>
-            <div class="t-cell__title">
-              <!--[--><span>多选</span>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div class="t-cell__right-icon">
-              <!--[-->
-              <div class="t-checkbox t-is-checked">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox2" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--right"></div>
           </div>
-          <div class="t-cell t-cell--middle t-cell--bordered">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
+          <div class="t-checkbox t-is-checked">
+            <div class="t-checkbox__content-wrap">
+              <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+              <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
             </div>
-            <div class="t-cell__title">
-              <!--[--><span>多选</span>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div class="t-cell__right-icon">
-              <!--[-->
-              <div class="t-checkbox">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox2" class="t-checkbox__original-left" value="3" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--right"></div>
           </div>
-          <div class="t-cell t-cell--middle t-cell--bordered">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
+          <div class="t-checkbox">
+            <div class="t-checkbox__content-wrap">
+              <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多</span>
+              <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="4" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
             </div>
-            <div class="t-cell__title">
-              <!--[--><span>多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选</span>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div class="t-cell__right-icon">
-              <!--[-->
-              <div class="t-checkbox">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox2" class="t-checkbox__original-left" value="4" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-            </div>
+            <!--下边框 -->
+            <div class="t-checkbox__border t-checkbox__border--right"></div>
           </div>
           <!--]-->
         </div>
@@ -2264,397 +2291,257 @@ exports[`ssr snapshot test renders ./src/checkbox/demos/mobile.vue correctly 1`]
       <!--v-if-->
       <p class="tdesign-mobile-demo-block__summary">带全选多选框</p>
       <!--[-->
-      <div class="t-checkbox-group">
-        <!--[-->
-        <div class="t-cell-group">
+      <div>
+        <div class="t-checkbox-group checkbox-group-demo"><span><!--[--><div class="t-checkbox t-is-indeterminate"><div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" indeterminate="true"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-minus-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zm3.5-6.5h-7v-1h7v1z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">全选</span>
+          <!--v-if--></span>
           <!--v-if-->
-          <div class="t-cell-group__container">
-            <!--[-->
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>全选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox2" class="t-checkbox__original-left" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox3" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox4" class="t-checkbox__original-left" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--]-->
-          </div>
         </div>
-        <!--]-->
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <div class="t-checkbox t-is-checked">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <div class="t-checkbox">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" value="2" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <div class="t-checkbox">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" value="3" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <!--]--></span>
+    </div>
+  </div>
+  <!--]-->
+</div>
+<div class="tdesign-mobile-demo-block">
+  <!--v-if-->
+  <p class="tdesign-mobile-demo-block__summary">限制最多可选数量</p>
+  <!--[-->
+  <div>
+    <div class="t-checkbox-group checkbox-group-demo">
+      <!--[-->
+      <div class="t-checkbox t-is-checked">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <div class="t-checkbox t-is-checked">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <div class="t-checkbox t-is-disabled">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox1" class="t-checkbox__original-left" value="3" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
       </div>
       <!--]-->
     </div>
-    <div class="tdesign-mobile-demo-block">
-      <h2 class="tdesign-mobile-demo-block__title">02 状态</h2>
-      <p class="tdesign-mobile-demo-block__summary">多选框禁用态</p>
-      <!--[-->
-      <div class="t-checkbox-group">
-        <!--[-->
-        <div class="t-cell-group">
-          <!--v-if-->
-          <div class="t-cell-group__container">
-            <!--[-->
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked t-is-disabled">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox4" class="t-checkbox__original-left" value="1" disabled checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-disabled">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox4" class="t-checkbox__original-left" value="2" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--]-->
-          </div>
-        </div>
-        <!--]-->
-      </div>
-      <div class="t-cell-group">
+  </div>
+  <!--]-->
+</div>
+<div class="tdesign-mobile-demo-block">
+  <h2 class="tdesign-mobile-demo-block__title">02 状态</h2>
+  <p class="tdesign-mobile-demo-block__summary">多选框禁用态</p>
+  <!--[-->
+  <div class="checkbox-demo">
+    <div class="t-checkbox t-is-disabled">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
         <!--v-if-->
-        <div class="t-cell-group__container">
-          <!--[-->
-          <div class="t-cell t-cell--middle t-cell--bordered">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell__title">
-              <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div class="t-cell__right-icon">
-              <!--[-->
-              <div class="t-checkbox t-is-checked t-is-disabled">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox4" class="t-checkbox__original-left" value="3" disabled checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-            </div>
-          </div>
-          <div class="t-cell t-cell--middle t-cell--bordered">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell__title">
-              <!--[--><span style="color:rgba(0, 0, 0, 0.26);">多选</span>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div class="t-cell__right-icon">
-              <!--[-->
-              <div class="t-checkbox t-is-disabled">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox4" class="t-checkbox__original-left" value="4" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-            </div>
-          </div>
-          <!--]-->
-        </div>
       </div>
-      <!--]-->
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
     </div>
-    <div class="tdesign-mobile-demo-block">
-      <!--v-if-->
-      <p class="tdesign-mobile-demo-block__summary">多选框半选态</p>
-      <!--[-->
-      <div class="t-checkbox-group">
-        <!--[-->
-        <div class="t-cell-group">
-          <!--v-if-->
-          <div class="t-cell-group__container">
-            <!--[-->
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked t-is-indeterminate">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox5" class="t-checkbox__original-left" checked indeterminate="true"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-minus-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zm3.5-6.5h-7v-1h7v1z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>半选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--]-->
-          </div>
-        </div>
-        <!--]-->
-      </div>
-      <!--]-->
-    </div>
-    <div class="tdesign-mobile-demo-block">
-      <h2 class="tdesign-mobile-demo-block__title">03 特殊类型</h2>
-      <p class="tdesign-mobile-demo-block__summary">自定义图标多选框</p>
-      <!--[-->
-      <div class="t-checkbox-group">
-        <!--[-->
-        <div class="t-cell-group">
-          <!--v-if-->
-          <div class="t-cell-group__container">
-            <!--[-->
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-rectangle" style=""><path fill="currentColor" d="M3 14a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3zm0-1V3h10v10H3z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-rectangle-filled" style=""><path fill="currentColor" d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell t-cell--middle t-cell--bordered">
-              <div class="t-cell__left-icon">
-                <!--[-->
-                <div class="t-checkbox t-is-checked">
-                  <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-rectangle-filled" style=""><path fill="currentColor" d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z" fill-opacity="0.9"></path></svg></span>
-                    <!--v-if-->
-                    <!--v-if-->
-                  </div>
-                </div>
-                <!--]-->
-                <!--v-if-->
-              </div>
-              <div class="t-cell__title">
-                <!--[--><span>多选</span>
-                <!--]-->
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--]-->
-          </div>
-        </div>
-        <!--]-->
-      </div>
-      <!--]-->
-    </div>
-    <div class="tdesign-mobile-demo-block">
-      <h2 class="tdesign-mobile-demo-block__title">04 规格</h2>
-      <p class="tdesign-mobile-demo-block__summary">多选框尺寸规格</p>
-      <!--[-->
-      <div class="t-cell-group">
+    <div class="t-checkbox t-is-checked t-is-disabled">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" disabled checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
         <!--v-if-->
-        <div class="t-cell-group__container">
-          <!--[-->
-          <div class="t-cell t-cell--middle t-cell--bordered">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell__title">
-              <!--[-->
-              <div class="t-checkbox t-is-checked">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox7" class="t-checkbox__original-left" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><!--[-->多选 H48<!--]--></span>
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--]-->
-        </div>
       </div>
-      <!--]-->
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
     </div>
-    <div class="tdesign-mobile-demo-block" style="margin-top:16px;">
-      <!--v-if-->
-      <!--v-if-->
-      <!--[-->
-      <div class="t-cell-group">
+    <div class="t-checkbox t-is-disabled">
+      <div class="t-checkbox__content-wrap">
+        <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name class="t-checkbox__original-right" disabled indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--right"></div>
+    </div>
+    <div class="t-checkbox t-is-checked t-is-disabled">
+      <div class="t-checkbox__content-wrap">
+        <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:#dcdcdc;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name class="t-checkbox__original-right" disabled checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--right"></div>
+    </div>
+  </div>
+  <!--]-->
+</div>
+<div class="tdesign-mobile-demo-block">
+  <!--v-if-->
+  <p class="tdesign-mobile-demo-block__summary">多选框半选态</p>
+  <!--[-->
+  <div class="checkbox-demo">
+    <div class="t-checkbox t-is-indeterminate">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name class="t-checkbox__original-left" indeterminate="true"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-minus-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zm3.5-6.5h-7v-1h7v1z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
         <!--v-if-->
-        <div class="t-cell-group__container">
-          <!--[-->
-          <div class="t-cell t-cell--middle t-cell--bordered" style="height:56px;">
-            <div class="t-cell__left-icon">
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div class="t-cell__title">
-              <!--[-->
-              <div class="t-checkbox t-is-checked">
-                <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox7" class="t-checkbox__original-left" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><!--[-->多选 H56<!--]--></span>
-                  <!--v-if-->
-                </div>
-              </div>
-              <!--]-->
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--]-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+  </div>
+  <!--]-->
+</div>
+<div class="tdesign-mobile-demo-block">
+  <h2 class="tdesign-mobile-demo-block__title">03 特殊类型</h2>
+  <p class="tdesign-mobile-demo-block__summary">自定义图标多选框</p>
+  <!--[-->
+  <div>
+    <div class="t-checkbox-group checkbox-group-demo">
+      <!--[-->
+      <div class="t-checkbox">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-rectangle" style=""><path fill="currentColor" d="M3 14a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3zm0-1V3h10v10H3z" fill-opacity="0.9" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
         </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <div class="t-checkbox t-is-checked">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-rectangle-filled" style=""><path fill="currentColor" d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
+      </div>
+      <div class="t-checkbox t-is-checked">
+        <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox6" class="t-checkbox__original-left" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-rectangle-filled" style=""><path fill="currentColor" d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+          <!--v-if--></span>
+          <!--v-if-->
+        </div>
+        <!--下边框 -->
+        <div class="t-checkbox__border t-checkbox__border--left"></div>
       </div>
       <!--]-->
     </div>
+  </div>
+  <!--]-->
+</div>
+<div class="tdesign-mobile-demo-block">
+  <h2 class="tdesign-mobile-demo-block__title">04 规格</h2>
+  <p class="tdesign-mobile-demo-block__summary">多选框尺寸规格</p>
+  <!--[-->
+  <div>
+    <div class="t-checkbox t-is-checked checkbox-demo checkbox-demo--size-small space">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox7" class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+    <div class="t-checkbox t-is-checked checkbox-demo">
+      <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox7" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span>
+        <!--v-if-->
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--left"></div>
+    </div>
+  </div>
+  <!--]-->
+</div>
+</div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/checkbox/demos/right.vue correctly 1`] = `
+<div>
+  <div class="t-checkbox-group checkbox-group-demo">
+    <!--[-->
+    <div class="t-checkbox">
+      <div class="t-checkbox__content-wrap">
+        <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="1" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--right"></div>
+    </div>
+    <div class="t-checkbox t-is-checked">
+      <div class="t-checkbox__content-wrap">
+        <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--right"></div>
+    </div>
+    <div class="t-checkbox t-is-checked">
+      <div class="t-checkbox__content-wrap">
+        <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+        <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="3" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span>
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--right"></div>
+    </div>
+    <div class="t-checkbox">
+      <div class="t-checkbox__content-wrap">
+        <!--v-if--><span class="t-checkbox__label t-checkbox__label-left"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多</span>
+        <!--v-if--></span><span class="t-checkbox__icon-right"><input type="checkbox" name="checkbox2" class="t-checkbox__original-right" value="4" indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-circle" style=""><path fill="currentColor" d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z" opacity="0.9" fill-opacity="0.9"></path></svg></span>
+      </div>
+      <!--下边框 -->
+      <div class="t-checkbox__border t-checkbox__border--right"></div>
+    </div>
+    <!--]-->
+  </div>
+</div>
+`;
+
+exports[`ssr snapshot test renders ./src/checkbox/demos/size.vue correctly 1`] = `
+<div>
+  <div class="t-checkbox t-is-checked checkbox-demo checkbox-demo--size-small space">
+    <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox7" class="t-checkbox__original-left" value="1" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+      <!--v-if--></span>
+      <!--v-if-->
+    </div>
+    <!--下边框 -->
+    <div class="t-checkbox__border t-checkbox__border--left"></div>
+  </div>
+  <div class="t-checkbox t-is-checked checkbox-demo">
+    <div class="t-checkbox__content-wrap"><span class="t-checkbox__icon-left"><input type="checkbox" name="checkbox7" class="t-checkbox__original-left" value="2" checked indeterminate="false"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-check-circle-filled" style=""><path fill="currentColor" d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z" fill-opacity="0.9"></path></svg></span><span class="t-checkbox__label"><span style="color:inherit;display:-webkit-box;overflow:hidden;webkit-box-orient:vertical;">多选</span>
+      <!--v-if--></span>
+      <!--v-if-->
+    </div>
+    <!--下边框 -->
+    <div class="t-checkbox__border t-checkbox__border--left"></div>
   </div>
 </div>
 `;
@@ -7755,84 +7642,25 @@ exports[`ssr snapshot test renders ./src/list/demos/err-tip.vue correctly 1`] = 
 exports[`ssr snapshot test renders ./src/list/demos/mobile.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
   <div class="list-demo">
-    <div class="t-tabs t-is-top t-size-m">
-      <div class="t-sticky" style="height:0px;">
-        <div style="z-index:99;">
-          <!--[-->
-          <div class="t-tabs__nav">
-            <div class="t-tabs__nav-container">
-              <div class="t-tabs__nav-wrap">
-                <!--[-->
-                <div class="t-tabs__nav-item t-is-active">基础列表</div>
-                <div class="t-tabs__nav-item">错误提示</div>
-                <div class="t-tabs__nav-item">下拉刷新</div>
-                <!--]-->
-                <div class="t-tabs__nav-line" style=""></div>
-              </div>
-            </div>
-          </div>
-          <!--]-->
-        </div>
-      </div>
-      <div class="t-tabs__content">
-        <!--[-->
-        <div class="t-tabs__panel" value="base">
-          <!--[-->
-          <div class="t-list">
-            <!---->
-            <!--[-->
-            <!--]-->
-            <div>
-              <!--v-if-->
-            </div>
-            <!---->
-          </div>
-          <!--]-->
-        </div>
-        <div class="t-tabs__panel" value="error-tip" style="display:none;">
-          <!--[-->
-          <div class="t-list">
-            <!---->
-            <!--[-->
-            <!--]-->
-            <div>
-              <!--v-if-->
-            </div>
-            <!--[-->
-            <!--v-if-->
-            <!--]-->
-          </div>
-          <!--]-->
-        </div>
-        <div class="t-tabs__panel" value="pull-refresh" style="display:none;">
-          <!--[-->
-          <div class="pull-refresh-wrap">
-            <div class="t-pull-down-refresh">
-              <div class="t-pull-down-refresh__track" style="transition-duration:300ms;transform:translate3d(0, 0px, 0);">
-                <div class="t-pull-down-refresh__max" style="height:80px;">
-                  <div class="t-pull-down-refresh__loading" style="height:50px;">
-                    <div></div>
-                  </div>
-                </div>
-                <!--[-->
-                <div class="t-list">
-                  <!---->
-                  <!--[-->
-                  <!--]-->
-                  <div>
-                    <!--v-if-->
-                  </div>
-                  <!---->
-                </div>
-                <!--]-->
-              </div>
-            </div>
-          </div>
-          <!--]-->
-        </div>
+    <div>
+      <h1 class="title">List 列表</h1>
+      <p class="summary"> 瀑布流滚动加载，用于展示同一类型信息的长列表。当列表即将滚动到底部时，会触发事件并加载更多列表项。 </p>
+      <div class="tdesign-mobile-demo-block">
+        <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
+        <p class="tdesign-mobile-demo-block__summary">基础列表</p>
+        <!--[--><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+          <!----><span class="t-button__text"><!--[--> 基础列表 <!--]--></span>
+        </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+          <!----><span class="t-button__text"><!--[--> 下拉刷新 <!--]--></span>
+        </button><button class="t-button t-size-l t-button--outline t-button--default t-button--square" role="button" aria-disabled="false">
+          <!----><span class="t-button__text"><!--[--> 错误提示 <!--]--></span>
+        </button>
         <!--]-->
       </div>
     </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
   </div>
 </div>
 `;
@@ -10794,9 +10622,12 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
   <div class="t-search">
     <div class="t-search__form">
       <div class="t-search__box">
-        <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div>
+          </svg>
+          <!--]-->
+        </div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
           <div class="t-cell__left-icon">
             <!--v-if-->
@@ -10805,7 +10636,7 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
+            <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -10814,17 +10645,18 @@ exports[`ssr snapshot test renders ./src/search/demos/base.vue correctly 1`] = `
           </div>
           <!--v-if-->
         </div>
-        <div class="t-search__icon-close">
-          <!--v-if-->
-        </div>
       </div><label class="t-search__label">
-        <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__label-icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div><span class="t-search__label-text">请输入关键字</span>
+          </svg>
+          <!--]-->
+        </div><span class="t-search__label-text">请输入关键字</span>
       </label>
-    </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-      <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-    </button>
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--]-->
   </div>
 </div>
 `;
@@ -10834,9 +10666,12 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
   <div class="t-search" icon-color="#0052d9">
     <div class="t-search__form">
       <div class="t-search__box">
-        <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div>
+          </svg>
+          <!--]-->
+        </div>
         <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
           <div class="t-cell__left-icon">
             <!--v-if-->
@@ -10845,7 +10680,7 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
           <!--v-if-->
           <div class="t-cell__note">
             <!--[-->
-            <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
+            <div class="t-input__wrap"><input value name class="t-input__control" type="text" autocomplete="Off" placeholder="请输入关键字" maxlength="-1">
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -10854,24 +10689,25 @@ exports[`ssr snapshot test renders ./src/search/demos/color.vue correctly 1`] = 
           </div>
           <!--v-if-->
         </div>
-        <div class="t-search__icon-close">
-          <!--v-if-->
-        </div>
       </div><label class="t-search__label">
-        <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+        <div class="t-search__label-icon-search">
+          <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
             <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-          </svg></div><span class="t-search__label-text">请输入关键字</span>
+          </svg>
+          <!--]-->
+        </div><span class="t-search__label-text">请输入关键字</span>
       </label>
-    </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-      <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-    </button>
+    </div>
+    <!--[-->
+    <!--v-if-->
+    <!--]-->
   </div>
 </div>
 `;
 
 exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] = `
 <div class="tdesign-mobile-demo">
-  <h1 class="title">SearchField 搜索框</h1>
+  <h1 class="title">Search 搜索框</h1>
   <p class="summary">用于用户输入搜索信息，并进行页面内容搜索</p>
   <div class="tdesign-mobile-demo-block">
     <h2 class="tdesign-mobile-demo-block__title">01 类型</h2>
@@ -10880,9 +10716,12 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <div class="t-search">
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -10891,7 +10730,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+              <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -10900,17 +10739,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close">
-            <!--v-if-->
-          </div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -10921,9 +10761,12 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <div class="t-search">
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -10932,7 +10775,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+              <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -10941,17 +10784,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close">
-            <!--v-if-->
-          </div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -10959,12 +10803,15 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">点击状态</p>
     <!--[-->
-    <div class="t-search">
+    <div class="t-search" autofocus>
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -10973,7 +10820,7 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+              <div class="t-input__wrap"><input name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
                 <!--v-if-->
                 <!--v-if-->
               </div>
@@ -10982,17 +10829,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close">
-            <!--v-if-->
-          </div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>
@@ -11000,12 +10848,15 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
     <!--v-if-->
     <p class="tdesign-mobile-demo-block__summary">输入状态</p>
     <!--[-->
-    <div class="t-search">
+    <div class="t-search" autofocus>
       <div class="t-search__form">
         <div class="t-search__box">
-          <div class="t-search__icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div>
+            </svg>
+            <!--]-->
+          </div>
           <div class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input">
             <div class="t-cell__left-icon">
               <!--v-if-->
@@ -11014,8 +10865,10 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             <!--v-if-->
             <div class="t-cell__note">
               <!--[-->
-              <div class="t-input__wrap"><input value="搜索预设文案" name class="t-input__control" type="search" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
-                <!--v-if-->
+              <div class="t-input__wrap"><input value="搜索预设文案" name class="t-input__control" type="text" autocomplete="Off" placeholder="搜索预设文案" maxlength="-1">
+                <div class="t-input__wrap--icon"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
+                    <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
+                  </svg></div>
                 <!--v-if-->
               </div>
               <!--v-if-->
@@ -11023,17 +10876,18 @@ exports[`ssr snapshot test renders ./src/search/demos/mobile.vue correctly 1`] =
             </div>
             <!--v-if-->
           </div>
-          <div class="t-search__icon-close"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-close-circle-filled" style="">
-              <path fill="currentColor" d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z" fill-opacity="0.9"></path>
-            </svg></div>
         </div><label class="t-search__label">
-          <div class="t-search__label-icon-search"><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
+          <div class="t-search__label-icon-search">
+            <!--[--><svg fill="none" viewbox="0 0 16 16" width="1em" height="1em" class="t-icon t-icon-search" style="">
               <path fill="currentColor" d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z" fill-opacity="0.9"></path>
-            </svg></div><span class="t-search__label-text">搜索预设文案</span>
+            </svg>
+            <!--]-->
+          </div><span class="t-search__label-text">搜索预设文案</span>
         </label>
-      </div><button class="t-button t-size-m t-button--text t-button--default t-button--square t-search__cancel-button" role="button" aria-disabled="false" style="display:none;">
-        <!----><span class="t-button__text"><!--[-->取消<!--]--></span>
-      </button>
+      </div>
+      <!--[-->
+      <!--v-if-->
+      <!--]-->
     </div>
     <!--]-->
   </div>

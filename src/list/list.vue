@@ -6,7 +6,7 @@
       <t-loading
         v-if="typeof asyncLoading === 'string' && ['loading', 'loadingMore'].includes(asyncLoading)"
         :loading="asyncLoading === 'loading'"
-        :content="typeof asyncLoading === 'string' ? LOADING_TEXT_MAP[asyncLoading] : ''"
+        :text="typeof asyncLoading === 'string' ? LOADING_TEXT_MAP[asyncLoading] : ''"
         :class="`${name}__loading`"
       />
     </div>
