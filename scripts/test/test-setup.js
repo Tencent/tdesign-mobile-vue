@@ -5,6 +5,9 @@ import TDesign from '@/index';
 import DemoBlock from '../../site/mobile/components/demo-block.vue';
 
 config.global.plugins = [TDesign];
+config.global.components = {
+  'tdesign-demo-block': DemoBlock,
+};
 
 config.global.createSSRApp = (comp) => {
   const app = createApp(comp);

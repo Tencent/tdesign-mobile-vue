@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Radio :props align 1`] = `
+exports[`Radio > :props > align 1`] = `
 <div
   class="t-radio"
 >
@@ -32,7 +32,7 @@ exports[`Radio :props align 1`] = `
 </div>
 `;
 
-exports[`Radio :props align 2`] = `
+exports[`Radio > :props > align 2`] = `
 <div
   class="t-radio"
 >
@@ -64,7 +64,7 @@ exports[`Radio :props align 2`] = `
 </div>
 `;
 
-exports[`Radio :props checked 1`] = `
+exports[`Radio > :props > checked 1`] = `
 <div
   class="t-radio t-is-checked"
 >
@@ -108,7 +108,7 @@ exports[`Radio :props checked 1`] = `
 </div>
 `;
 
-exports[`Radio :props content 1`] = `
+exports[`Radio > :props > content 1`] = `
 <div
   class="t-radio"
 >
@@ -151,7 +151,7 @@ exports[`Radio :props content 1`] = `
 </div>
 `;
 
-exports[`Radio :props content 2`] = `
+exports[`Radio > :props > content 2`] = `
 <div
   class="t-radio"
 >
@@ -192,7 +192,7 @@ exports[`Radio :props content 2`] = `
 </div>
 `;
 
-exports[`Radio :props contentDisabled 1`] = `
+exports[`Radio > :props > contentDisabled 1`] = `
 <div
   class="t-radio"
 >
@@ -224,91 +224,7 @@ exports[`Radio :props contentDisabled 1`] = `
 </div>
 `;
 
-exports[`Radio :props default 1`] = `
-<div
-  class="t-radio"
->
-  <span
-    class="t-radio__content-wrap"
-  >
-    <span
-      class="t-radio__icon-wrap t-radio__icon-left-wrap"
-    >
-      <input
-        class="t-radio__original-left"
-        name=""
-        type="radio"
-        value="false"
-      />
-      <div
-        class="t-radio__icon"
-      >
-        
-      </div>
-    </span>
-    <span
-      class="t-radio__label-wrap"
-    >
-      <span
-        class="t-radio__content-title"
-      >
-        <div>
-          text
-        </div>
-      </span>
-      <!--v-if-->
-    </span>
-    <!--v-if-->
-  </span>
-  <!--下边框 -->
-  <div
-    class="t-radio__border t-radio__border--left"
-  />
-</div>
-`;
-
-exports[`Radio :props default 2`] = `
-<div
-  class="t-radio"
->
-  <span
-    class="t-radio__content-wrap"
-  >
-    <span
-      class="t-radio__icon-wrap t-radio__icon-left-wrap"
-    >
-      <input
-        class="t-radio__original-left"
-        name=""
-        type="radio"
-        value="false"
-      />
-      <div
-        class="t-radio__icon"
-      >
-        
-      </div>
-    </span>
-    <span
-      class="t-radio__label-wrap"
-    >
-      <span
-        class="t-radio__content-title"
-      >
-        text
-      </span>
-      <!--v-if-->
-    </span>
-    <!--v-if-->
-  </span>
-  <!--下边框 -->
-  <div
-    class="t-radio__border t-radio__border--left"
-  />
-</div>
-`;
-
-exports[`Radio :props label 1`] = `
+exports[`Radio > :props > default 1`] = `
 <div
   class="t-radio"
 >
@@ -351,7 +267,7 @@ exports[`Radio :props label 1`] = `
 </div>
 `;
 
-exports[`Radio :props label 2`] = `
+exports[`Radio > :props > default 2`] = `
 <div
   class="t-radio"
 >
@@ -392,7 +308,91 @@ exports[`Radio :props label 2`] = `
 </div>
 `;
 
-exports[`Radio :props name 1`] = `
+exports[`Radio > :props > label 1`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <div
+        class="t-radio__icon"
+      >
+        
+      </div>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <span
+        class="t-radio__content-title"
+      >
+        <div>
+          text
+        </div>
+      </span>
+      <!--v-if-->
+    </span>
+    <!--v-if-->
+  </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
+</div>
+`;
+
+exports[`Radio > :props > label 2`] = `
+<div
+  class="t-radio"
+>
+  <span
+    class="t-radio__content-wrap"
+  >
+    <span
+      class="t-radio__icon-wrap t-radio__icon-left-wrap"
+    >
+      <input
+        class="t-radio__original-left"
+        name=""
+        type="radio"
+        value="false"
+      />
+      <div
+        class="t-radio__icon"
+      >
+        
+      </div>
+    </span>
+    <span
+      class="t-radio__label-wrap"
+    >
+      <span
+        class="t-radio__content-title"
+      >
+        text
+      </span>
+      <!--v-if-->
+    </span>
+    <!--v-if-->
+  </span>
+  <!--下边框 -->
+  <div
+    class="t-radio__border t-radio__border--left"
+  />
+</div>
+`;
+
+exports[`Radio > :props > name 1`] = `
 <div
   class="t-radio"
 >
@@ -424,7 +424,7 @@ exports[`Radio :props name 1`] = `
 </div>
 `;
 
-exports[`Radio :props value 1`] = `
+exports[`Radio > :props > value 1`] = `
 <div
   class="t-radio"
 >

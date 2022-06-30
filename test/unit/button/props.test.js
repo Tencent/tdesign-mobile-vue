@@ -7,6 +7,7 @@
 import { mount } from '@vue/test-utils';
 import Button from '../../../src/button';
 import { h } from 'vue';
+import { vi } from 'vitest';
 
 describe('Button', () => {
   describe(':props', () => {
@@ -18,7 +19,6 @@ describe('Button', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Button, {
         propsData: {
           content: () => h('div', 'text')
@@ -28,7 +28,6 @@ describe('Button', () => {
     });
 
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Button, {
         propsData: {
           content: 'text'
@@ -37,7 +36,7 @@ describe('Button', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('disabled', () => {
-      const fn = jest.fn();
+      const fn = vi.fn();
       const wrapper = mount(Button, {
         propsData: {
           disabled: true,
@@ -61,7 +60,6 @@ describe('Button', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('icon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Button, {
         propsData: {
           icon: () => h('div', 'text')
@@ -71,7 +69,6 @@ describe('Button', () => {
     });
 
     it('icon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Button, {
         propsData: {
           icon: 'text'

@@ -18,7 +18,6 @@ describe('BackTop', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('icon', () => {
-      const fn = jest.fn();
       const wrapper = mount(BackTop, {
         propsData: {
           icon: () => h('div', 'text')
@@ -28,7 +27,6 @@ describe('BackTop', () => {
     });
 
     it('icon', () => {
-      const fn = jest.fn();
       const wrapper = mount(BackTop, {
         propsData: {
           icon: 'text'

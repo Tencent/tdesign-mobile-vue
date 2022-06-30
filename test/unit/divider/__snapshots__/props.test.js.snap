@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Divider :props align 1`] = `
+exports[`Divider > :props > align 1`] = `
 <div
   class="t-divider t-divider--hairline"
   role="separator"
@@ -9,7 +9,7 @@ exports[`Divider :props align 1`] = `
 </div>
 `;
 
-exports[`Divider :props align 2`] = `
+exports[`Divider > :props > align 2`] = `
 <div
   class="t-divider t-divider--hairline"
   role="separator"
@@ -18,7 +18,7 @@ exports[`Divider :props align 2`] = `
 </div>
 `;
 
-exports[`Divider :props align 3`] = `
+exports[`Divider > :props > align 3`] = `
 <div
   class="t-divider t-divider--hairline"
   role="separator"
@@ -27,7 +27,7 @@ exports[`Divider :props align 3`] = `
 </div>
 `;
 
-exports[`Divider :props content 1`] = `
+exports[`Divider > :props > content 1`] = `
 <div
   class="t-divider t-divider--hairline t-divider--content-center"
   role="separator"
@@ -38,7 +38,7 @@ exports[`Divider :props content 1`] = `
 </div>
 `;
 
-exports[`Divider :props content 2`] = `
+exports[`Divider > :props > content 2`] = `
 <div
   class="t-divider t-divider--hairline t-divider--content-center"
   role="separator"
@@ -47,7 +47,7 @@ exports[`Divider :props content 2`] = `
 </div>
 `;
 
-exports[`Divider :props dashed 1`] = `
+exports[`Divider > :props > dashed 1`] = `
 <div
   class="t-divider t-divider--hairline t-divider--dashed"
   role="separator"
@@ -56,7 +56,7 @@ exports[`Divider :props dashed 1`] = `
 </div>
 `;
 
-exports[`Divider :props default 1`] = `
+exports[`Divider > :props > default 1`] = `
 <div
   class="t-divider t-divider--hairline t-divider--content-center"
   role="separator"
@@ -67,7 +67,7 @@ exports[`Divider :props default 1`] = `
 </div>
 `;
 
-exports[`Divider :props default 2`] = `
+exports[`Divider > :props > default 2`] = `
 <div
   class="t-divider t-divider--hairline t-divider--content-center"
   role="separator"
@@ -76,7 +76,7 @@ exports[`Divider :props default 2`] = `
 </div>
 `;
 
-exports[`Divider :props layout 1`] = `
+exports[`Divider > :props > layout 1`] = `
 <div
   class="t-divider t-divider--hairline"
   role="separator"
@@ -85,7 +85,7 @@ exports[`Divider :props layout 1`] = `
 </div>
 `;
 
-exports[`Divider :props layout 2`] = `
+exports[`Divider > :props > layout 2`] = `
 <div
   class="t-divider t-divider--hairline t-divider-vertical"
   role="separator"
@@ -94,7 +94,7 @@ exports[`Divider :props layout 2`] = `
 </div>
 `;
 
-exports[`Divider :props lineColor 1`] = `
+exports[`Divider > :props > lineColor 1`] = `
 <div
   class="t-divider t-divider--hairline"
   role="separator"

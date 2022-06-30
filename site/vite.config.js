@@ -9,6 +9,24 @@ const publicPathMap = {
   production: 'https://static.tdesign.tencent.com/mobile-vue/',
 };
 
+// 单元测试相关配置
+const testConfig = {
+  include:
+    process.env.NODE_ENV === 'test-snap'
+      ? ['test/snap/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}']
+      : ['test/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+  globals: true,
+  environment: 'jsdom',
+  testTimeout: 5000,
+  setupFiles: process.env.NODE_ENV === 'test-snap' ? path.resolve(__dirname, '../scripts/test/test-setup.js') : '',
+  transformMode: {
+    web: [/\.[jt]sx$/],
+  },
+  coverage: {
+    reporter: ['text', 'json', 'html'],
+  },
+};
+
 export default ({ mode }) => {
   return defineConfig({
     base: publicPathMap[mode],
@@ -16,7 +34,7 @@ export default ({ mode }) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '../src'),
-        'tdesign-moile-vue': path.resolve(__dirname, '../src'),
+        'tdesign-mobile-vue': path.resolve(__dirname, '../src'),
         '@common': path.resolve(__dirname, '../src/_common'),
       },
     },
@@ -45,5 +63,6 @@ export default ({ mode }) => {
       }),
       createTDesignPlugin(),
     ],
+    test: testConfig,
   });
 };
