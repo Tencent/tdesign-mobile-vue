@@ -20,7 +20,9 @@
     <tdesign-demo-block summary="带单位步进器">
       <div class="stepper-demo">
         <t-cell title="标题文字（单位）">
-          <t-stepper v-model.number="number2" :step="1" :min="0" :max="100" />
+          <template #rightIcon>
+            <t-stepper v-model.number="number2" :step="1" :min="0" :max="100" />
+          </template>
         </t-cell>
       </div>
     </tdesign-demo-block>
