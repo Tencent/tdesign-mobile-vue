@@ -34,7 +34,7 @@ import PickerItem from './picker-item.vue';
 const { prefix } = config;
 const name = `${prefix}-picker`;
 // 通过value和columns，生成对应的indexArray
-const getIndexFormColumns = (columns: PickerColumn[], value: PickerValue, column: number) => {
+const getIndexFromColumns = (columns: PickerColumn[], value: PickerValue, column: number) => {
   let resultIndex;
   columns[column]?.forEach((item: PickerColumnItem, index: number) => {
     if (item.value === value) {
@@ -64,7 +64,7 @@ export default defineComponent({
     const curValueArray = ref(pickerValue.value.map((item: PickerValue) => item));
     let lastTimeValueArray = [...curValueArray.value];
     let curIndexArray = pickerValue.value.map((item: PickerValue, index: number) => {
-      return getIndexFormColumns(realColumns.value, item, index);
+      return getIndexFromColumns(realColumns.value, item, index);
     });
     let lastTimeIndexArray = [...curIndexArray];
     const pickerItemInstanceArray = <any>ref([]);
