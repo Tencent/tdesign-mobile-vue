@@ -36,7 +36,7 @@ spline: explain
 - `Loading`: 新增支持 duration、inheritColor、pause、reverse 属性 @LeeJim ([#191](https://github.com/Tencent/tdesign-mobile-vue/pull/191))
 - `Dialog`: @LeeJim ([#193](https://github.com/Tencent/tdesign-mobile-vue/pull/193))
   - 新增支持 actions 和 preventScrollThrough 属性 
-  - 新增支持 支持 confirmBtn 和 cancelBtn 的插槽 @LeeJim
+  - 新增支持 支持 confirmBtn 和 cancelBtn 的插槽
 - `Checkbox`: 新增支持 maxContentRow 和 maxLabelRow 属性 @anlyyao ([#195](https://github.com/Tencent/tdesign-mobile-vue/pull/195))
 - `CheckboxGroup`: 新增支持 max 属性 @anlyyao ([#195](https://github.com/Tencent/tdesign-mobile-vue/pull/195))
 - `Swiper`: 新增支持 minShowNum 属性 @anlyyao ([#197](https://github.com/Tencent/tdesign-mobile-vue/pull/197))
