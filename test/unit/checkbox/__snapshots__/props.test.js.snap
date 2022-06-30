@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Checkbox :props align 1`] = `
+exports[`Checkbox > :props > align 1`] = `
 <div
   class="t-checkbox"
 >
@@ -40,7 +40,7 @@ exports[`Checkbox :props align 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props align 2`] = `
+exports[`Checkbox > :props > align 2`] = `
 <div
   class="t-checkbox"
 >
@@ -80,7 +80,7 @@ exports[`Checkbox :props align 2`] = `
 </div>
 `;
 
-exports[`Checkbox :props checkAll 1`] = `
+exports[`Checkbox > :props > checkAll 1`] = `
 <div
   class="t-checkbox"
 >
@@ -120,7 +120,7 @@ exports[`Checkbox :props checkAll 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props checked 1`] = `
+exports[`Checkbox > :props > checked 1`] = `
 <div
   class="t-checkbox t-is-checked"
 >
@@ -159,7 +159,7 @@ exports[`Checkbox :props checked 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props content 1`] = `
+exports[`Checkbox > :props > content 1`] = `
 <div
   class="t-checkbox"
 >
@@ -211,7 +211,7 @@ exports[`Checkbox :props content 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props content 2`] = `
+exports[`Checkbox > :props > content 2`] = `
 <div
   class="t-checkbox"
 >
@@ -261,7 +261,7 @@ exports[`Checkbox :props content 2`] = `
 </div>
 `;
 
-exports[`Checkbox :props contentDisabled 1`] = `
+exports[`Checkbox > :props > contentDisabled 1`] = `
 <div
   class="t-checkbox"
 >
@@ -301,7 +301,7 @@ exports[`Checkbox :props contentDisabled 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props default 1`] = `
+exports[`Checkbox > :props > default 1`] = `
 <div
   class="t-checkbox"
 >
@@ -352,7 +352,7 @@ exports[`Checkbox :props default 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props default 2`] = `
+exports[`Checkbox > :props > default 2`] = `
 <div
   class="t-checkbox"
 >
@@ -401,7 +401,7 @@ exports[`Checkbox :props default 2`] = `
 </div>
 `;
 
-exports[`Checkbox :props icon 1`] = `
+exports[`Checkbox > :props > icon 1`] = `
 <div
   class="t-checkbox"
 >
@@ -441,7 +441,7 @@ exports[`Checkbox :props icon 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props indeterminate 1`] = `
+exports[`Checkbox > :props > indeterminate 1`] = `
 <div
   class="t-checkbox t-is-indeterminate"
 >
@@ -482,7 +482,7 @@ exports[`Checkbox :props indeterminate 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props label 1`] = `
+exports[`Checkbox > :props > label 1`] = `
 <div
   class="t-checkbox"
 >
@@ -533,7 +533,7 @@ exports[`Checkbox :props label 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props label 2`] = `
+exports[`Checkbox > :props > label 2`] = `
 <div
   class="t-checkbox"
 >
@@ -582,7 +582,7 @@ exports[`Checkbox :props label 2`] = `
 </div>
 `;
 
-exports[`Checkbox :props maxContentRow 1`] = `
+exports[`Checkbox > :props > maxContentRow 1`] = `
 <div
   class="t-checkbox"
 >
@@ -622,7 +622,7 @@ exports[`Checkbox :props maxContentRow 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props maxLabelRow 1`] = `
+exports[`Checkbox > :props > maxLabelRow 1`] = `
 <div
   class="t-checkbox"
 >
@@ -662,7 +662,7 @@ exports[`Checkbox :props maxLabelRow 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props name 1`] = `
+exports[`Checkbox > :props > name 1`] = `
 <div
   class="t-checkbox"
 >
@@ -702,7 +702,7 @@ exports[`Checkbox :props name 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props readonly 1`] = `
+exports[`Checkbox > :props > readonly 1`] = `
 <div
   class="t-checkbox"
 >
@@ -743,7 +743,7 @@ exports[`Checkbox :props readonly 1`] = `
 </div>
 `;
 
-exports[`Checkbox :props value 1`] = `
+exports[`Checkbox > :props > value 1`] = `
 <div
   class="t-checkbox"
 >

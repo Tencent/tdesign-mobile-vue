@@ -30,7 +30,6 @@ describe('Radio', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Radio, {
         propsData: {
           content: () => h('div', 'text')
@@ -40,7 +39,6 @@ describe('Radio', () => {
     });
 
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Radio, {
         propsData: {
           content: 'text'
@@ -55,7 +53,6 @@ describe('Radio', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('default', () => {
-      const fn = jest.fn();
       const wrapper = mount(Radio, {
         propsData: {
           default: () => h('div', 'text')
@@ -65,7 +62,6 @@ describe('Radio', () => {
     });
 
     it('default', () => {
-      const fn = jest.fn();
       const wrapper = mount(Radio, {
         propsData: {
           default: 'text'
@@ -74,7 +70,6 @@ describe('Radio', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('label', () => {
-      const fn = jest.fn();
       const wrapper = mount(Radio, {
         propsData: {
           label: () => h('div', 'text')
@@ -84,7 +79,6 @@ describe('Radio', () => {
     });
 
     it('label', () => {
-      const fn = jest.fn();
       const wrapper = mount(Radio, {
         propsData: {
           label: 'text'

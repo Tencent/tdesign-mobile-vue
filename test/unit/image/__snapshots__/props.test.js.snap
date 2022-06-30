@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Image :props alt 1`] = `
+exports[`Image > :props > alt 1`] = `
 <div
   class="t-image t-image--round"
 >
@@ -30,7 +30,7 @@ exports[`Image :props alt 1`] = `
 </div>
 `;
 
-exports[`Image :props error 1`] = `
+exports[`Image > :props > error 1`] = `
 <div
   class="t-image t-image--round"
 >
@@ -60,7 +60,7 @@ exports[`Image :props error 1`] = `
 </div>
 `;
 
-exports[`Image :props error 2`] = `
+exports[`Image > :props > error 2`] = `
 <div
   class="t-image t-image--round"
 >
@@ -90,7 +90,7 @@ exports[`Image :props error 2`] = `
 </div>
 `;
 
-exports[`Image :props fit 1`] = `
+exports[`Image > :props > fit 1`] = `
 <div
   class="t-image t-image--round"
 >
@@ -120,7 +120,7 @@ exports[`Image :props fit 1`] = `
 </div>
 `;
 
-exports[`Image :props fit 2`] = `
+exports[`Image > :props > fit 2`] = `
 <div
   class="t-image t-image--round"
 >
@@ -150,7 +150,7 @@ exports[`Image :props fit 2`] = `
 </div>
 `;
 
-exports[`Image :props fit 3`] = `
+exports[`Image > :props > fit 3`] = `
 <div
   class="t-image t-image--round"
 >
@@ -180,7 +180,7 @@ exports[`Image :props fit 3`] = `
 </div>
 `;
 
-exports[`Image :props fit 4`] = `
+exports[`Image > :props > fit 4`] = `
 <div
   class="t-image t-image--round"
 >
@@ -210,7 +210,7 @@ exports[`Image :props fit 4`] = `
 </div>
 `;
 
-exports[`Image :props fit 5`] = `
+exports[`Image > :props > fit 5`] = `
 <div
   class="t-image t-image--round"
 >
@@ -240,7 +240,7 @@ exports[`Image :props fit 5`] = `
 </div>
 `;
 
-exports[`Image :props lazy 1`] = `
+exports[`Image > :props > lazy 1`] = `
 <div
   class="t-image t-image--round"
 >
@@ -270,7 +270,7 @@ exports[`Image :props lazy 1`] = `
 </div>
 `;
 
-exports[`Image :props loading 1`] = `
+exports[`Image > :props > loading 1`] = `
 <div
   class="t-image t-image--round"
 >
@@ -300,7 +300,7 @@ exports[`Image :props loading 1`] = `
 </div>
 `;
 
-exports[`Image :props loading 2`] = `
+exports[`Image > :props > loading 2`] = `
 <div
   class="t-image t-image--round"
 >
@@ -330,7 +330,7 @@ exports[`Image :props loading 2`] = `
 </div>
 `;
 
-exports[`Image :props position 1`] = `
+exports[`Image > :props > position 1`] = `
 <div
   class="t-image t-image--round"
 >
@@ -360,7 +360,7 @@ exports[`Image :props position 1`] = `
 </div>
 `;
 
-exports[`Image :props shape 1`] = `
+exports[`Image > :props > shape 1`] = `
 <div
   class="t-image t-image--circle"
 >
@@ -390,7 +390,7 @@ exports[`Image :props shape 1`] = `
 </div>
 `;
 
-exports[`Image :props shape 2`] = `
+exports[`Image > :props > shape 2`] = `
 <div
   class="t-image t-image--round"
 >
@@ -420,7 +420,7 @@ exports[`Image :props shape 2`] = `
 </div>
 `;
 
-exports[`Image :props shape 3`] = `
+exports[`Image > :props > shape 3`] = `
 <div
   class="t-image t-image--square"
 >
