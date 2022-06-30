@@ -22,7 +22,7 @@ import config from '../config';
 import DateTimePickerProps from './props';
 import { useEmitEvent, useVModel } from '../shared';
 import { Picker as TPicker } from '../picker';
-import { PickerColumn, PickerColumnItem, PickerValue } from '../picker/type';
+import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
 
 dayjs.extend(weekday);
 dayjs.extend(customParseFormat);
@@ -146,7 +146,7 @@ export default defineComponent({
 
     // 每次pick后，根据start,end生成最新的columns
     const generateDatePickerColumns = (
-      selected: string[],
+      selected: PickerValue[],
       min: any,
       max: any,
       renderLabel: (type: string, value: number) => string,
@@ -172,7 +172,7 @@ export default defineComponent({
       Object.keys(precisionRankRecord).forEach((item) => {
         const newKey = `selected${item.substr(0, 1).toUpperCase()}${item.substr(1, item.length)}`;
         if (isPrecision(item)) {
-          selectedDate[newKey] = parseInt(selected[selectedLength], 10);
+          selectedDate[newKey] = parseInt(`${selected[selectedLength]}`, 10);
           selectedLength++;
         } else {
           selectedDate[newKey] = undefined;
@@ -238,25 +238,25 @@ export default defineComponent({
       return ret;
     };
 
-    const onConfirm = (value: PickerValue[]) => {
+    const onConfirm = (value: Array<PickerValue>, context: { index: number[] }) => {
       lastTimePicker = [...currentPicker];
       const currentDate = getDateTimePickerValueByPickerValue(value);
       emitEvent('confirm', dayjs(currentDate).format(props.format));
     };
 
-    const onCancel = (e: MouseEvent) => {
+    const onCancel = (context: { e: MouseEvent }) => {
       currentPicker = [...lastTimePicker];
-      emitEvent('cancel', { e });
+      emitEvent('cancel', { e: context.e });
     };
 
-    const onChange = (value: PickerValue[]) => {
+    const onChange = (value: Array<PickerValue>, context: { columns: Array<PickerContext>; e: MouseEvent }) => {
       lastTimePicker = [...currentPicker];
       const currentDate = getDateTimePickerValueByPickerValue(value);
       const realDateValue = dayjs(currentDate).format(props.format);
       setDateTimePickerValue(realDateValue);
     };
 
-    const onPick = (value: PickerValue[]) => {
+    const onPick = (value: Array<PickerValue>, context: PickerContext) => {
       currentPicker = value;
       const currentDate = getDateTimePickerValueByPickerValue(value);
       emitEvent('pick', dayjs(currentDate).format(props.format));

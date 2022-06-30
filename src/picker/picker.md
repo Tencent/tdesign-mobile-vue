@@ -18,7 +18,7 @@ defaultValue | Array | - | 选中值。非受控属性。TS 类型：`Array<Pick
 visible | Boolean | false | 是否显示 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>点击取消按钮时触发 | N
 onChange | Function |  | TS 类型：`(value: Array<PickerValue>, context: { columns: Array<PickerContext>, e: MouseEvent })  => void`<br/>选中变化时候触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts)。<br/>`interface PickerContext{ column: number,index: number }`<br/> | N
-onConfirm | Function |  | TS 类型：`(context: { value: Array<PickerValue>; columns: Array<PickerContext> }) => void`<br/>点击确认按钮时触发 | N
+onConfirm | Function |  | TS 类型：`(value: Array<PickerValue>, context: {index: number[] }) => void`<br/>点击确认按钮时触发 | N
 onPick | Function |  | TS 类型：`(value: Array<PickerValue>,context: PickerContext) => void`<br/>任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标 | N
 
 ### Picker Events
@@ -27,5 +27,5 @@ onPick | Function |  | TS 类型：`(value: Array<PickerValue>,context: PickerCo
 -- | -- | --
 cancel | `(context: { e: MouseEvent })` | 点击取消按钮时触发
 change | `(value: Array<PickerValue>, context: { columns: Array<PickerContext>, e: MouseEvent }) ` | 选中变化时候触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts)。<br/>`interface PickerContext{ column: number,index: number }`<br/>
-confirm | `(context: { value: Array<PickerValue>; columns: Array<PickerContext> })` | 点击确认按钮时触发
+confirm | `(value: Array<PickerValue>, context: {index: number[] })` | 点击确认按钮时触发
 pick | `(value: Array<PickerValue>,context: PickerContext)` | 任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标

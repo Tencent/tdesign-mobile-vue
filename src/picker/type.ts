@@ -72,7 +72,7 @@ export interface TdPickerProps {
    * 点击确认按钮时触发
    * @default ''
    */
-  onConfirm?: (context: { value: Array<PickerValue>; columns: Array<PickerContext> }) => void;
+  onConfirm?: (value: Array<PickerValue>, context: { index: number[] }) => void;
   /**
    * 任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标
    * @default ''
