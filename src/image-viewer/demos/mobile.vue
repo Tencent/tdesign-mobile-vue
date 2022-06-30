@@ -4,10 +4,10 @@
     <p class="summary">图片全屏放大预览效果，包含全屏背景色、页码位置样式、增加操作等规范</p>
     <tdesign-demo-block title="01 类型" summary="图片预览类型">
       <div class="image-viewer-demo">
-        <t-button size="large" variant="outline" @click="tapShow"> 显示 </t-button>
-        <t-button size="large" variant="outline" @click="tapImgList"> 图片列表 </t-button>
-        <t-button size="large" variant="outline" @click="tapInitIndex"> 默认显示第二张图片 </t-button>
-        <t-button size="large" variant="outline" @click="tapBackGround"> 显示 </t-button>
+        <t-button block size="large" variant="outline" @click="tapShow"> 显示 </t-button>
+        <t-button block size="large" variant="outline" @click="tapImgList"> 图片列表 </t-button>
+        <t-button block size="large" variant="outline" @click="tapInitIndex"> 默认显示第二张图片 </t-button>
+        <t-button block size="large" variant="outline" @click="tapBackGround"> 显示 </t-button>
       </div>
     </tdesign-demo-block>
     <t-image-viewer

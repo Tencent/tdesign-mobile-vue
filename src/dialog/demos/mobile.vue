@@ -4,11 +4,11 @@
     <p class="summary">用于显示重要提示或请求用户进行重要操作，一种打断当前操作的模态视图。</p>
     <tdesign-demo-block title="01 类型" summary="反馈类对话框">
       <div class="dialog-demo">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(1)"> 单行标题 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题最大高度 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(3)"> 带说明文本 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(4)"> 带说明文本最大高度 </t-button>
-        <!-- <t-button variant="outline" size="large" @click="eventDialog()"> 函数调用长文本对话框 </t-button> -->
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(1)"> 单行标题 </t-button>
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(2)"> 多行标题最大高度 </t-button>
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(3)"> 带说明文本 </t-button>
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(4)"> 带说明文本最大高度 </t-button>
+        <!-- <t-button block variant="outline" size="large" @click="eventDialog()"> 函数调用长文本对话框 </t-button> -->
         <t-dialog
           v-model:visible="isShowDialog1"
           :title="singleHeader"
@@ -37,8 +37,8 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="确认类对话框">
       <div class="dialog-demo">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(5)"> 双按钮 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示按钮 </t-button>
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(5)"> 双按钮 </t-button>
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(6)"> 带警示按钮 </t-button>
         <t-dialog
           v-model:visible="isShowDialog5"
           type="confirm"
@@ -67,8 +67,8 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="输入对话框">
       <div class="dialog-demo" style="padding-bottom: 20px">
-        <t-button variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
-        <t-button variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(7)"> 单行标题对话框 </t-button>
+        <t-button block variant="outline" size="large" @click="changeDialogVisible(8)"> 带说明文本对话框 </t-button>
         <t-dialog
           v-model:visible="isShowDialog7"
           :title="singleHeader"

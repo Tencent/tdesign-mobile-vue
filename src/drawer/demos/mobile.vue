@@ -4,7 +4,7 @@
     <p class="summary">用作一组平行关系页面/内容的切换器，相较于Tab，同屏可展示更多的选项数量。</p>
     <tdesign-demo-block title="01 类型" summary="基础抽屉">
       <t-drawer v-model:visible="openBase" placement="left" :items="baseSidebar" @item-click="itemClick"></t-drawer>
-      <t-button size="large" variant="outline" shape="round" @click="openDrawer(false)">基础抽屉</t-button>
+      <t-button size="large" block variant="outline" shape="round" @click="openDrawer(false)">基础抽屉</t-button>
     </tdesign-demo-block>
     <tdesign-demo-block summary="带图标抽屉">
       <t-drawer
@@ -15,7 +15,7 @@
         @overlay-click="onOverlayClick"
         @close="onClose"
       ></t-drawer>
-      <t-button size="large" variant="outline" shape="round" @click="openDrawer(true)">带图标抽屉</t-button>
+      <t-button size="large" block variant="outline" shape="round" @click="openDrawer(true)">带图标抽屉</t-button>
     </tdesign-demo-block>
   </div>
 </template>

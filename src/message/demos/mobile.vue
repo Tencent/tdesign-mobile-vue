@@ -4,19 +4,19 @@
     <p class="summary">用于页面消息通知提示，具有成功提示、提醒、警示等功能，通常在顶部出现，可以自动消失或点击关闭</p>
     <tdesign-demo-block title="01 类型" summary="弹窗内容为存文本、标题和副标题、带输入框">
       <div class="button-demo" style="margin: 0 16px">
-        <t-button size="large" variant="outline" @click="visible = true">纯文字通知</t-button>
-        <t-button size="large" variant="outline" @click="visible1 = true">带图标通知</t-button>
-        <t-button size="large" variant="outline" @click="visible2 = true">带关闭通知</t-button>
-        <t-button size="large" variant="outline" @click="visible3 = true">带按钮通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible = true">纯文字通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible1 = true">带图标通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible2 = true">带关闭通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible3 = true">带按钮通知</t-button>
       </div>
     </tdesign-demo-block>
 
     <tdesign-demo-block title="02 状态" summary="弹窗内容为存文本、标题和副标题、带输入框">
       <div class="button-demo" style="margin: 0 16px">
-        <t-button size="large" variant="outline" @click="visible4 = true">普通通知</t-button>
-        <t-button size="large" variant="outline" @click="visible5 = true">成功提示通知</t-button>
-        <t-button size="large" variant="outline" @click="visible6 = true">警示提示通知</t-button>
-        <t-button size="large" variant="outline" @click="visible7 = true">错误提示通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible4 = true">普通通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible5 = true">成功提示通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible6 = true">警示提示通知</t-button>
+        <t-button block size="large" variant="outline" @click="visible7 = true">错误提示通知</t-button>
       </div>
     </tdesign-demo-block>
 
