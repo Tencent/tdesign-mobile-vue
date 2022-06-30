@@ -24,15 +24,6 @@ export default {
     type: [String, Object] as PropType<TdPickerProps['confirmBtn']>,
     default: '确认',
   },
-  /** 底部内容 */
-  footer: {
-    type: Function as PropType<TdPickerProps['footer']>,
-  },
-  /** 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容 */
-  header: {
-    type: [Boolean, Function] as PropType<TdPickerProps['header']>,
-    default: true,
-  },
   /** 自定义label */
   renderLabel: {
     type: [String, Function] as PropType<TdPickerProps['renderLabel']>,

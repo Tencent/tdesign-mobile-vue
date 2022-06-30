@@ -24,15 +24,6 @@ export interface TdPickerProps {
    */
   confirmBtn?: string | ButtonProps;
   /**
-   * 底部内容
-   */
-  footer?: TNode;
-  /**
-   * 头部内容。值为 true 显示空白头部，值为 false 不显示任何内容，值类型为 TNode 表示自定义头部内容
-   * @default true
-   */
-  header?: boolean | TNode;
-  /**
    * 自定义label
    */
   renderLabel?: (item: PickerColumnItem) => string;
