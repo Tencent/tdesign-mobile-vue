@@ -72,7 +72,17 @@ export default defineComponent({
     RefreshIcon,
   },
   props,
-  emits: ['update:files', 'update:modelValue', 'change', 'fail', 'preview', 'progress', 'remove', 'success'],
+  emits: [
+    'update:files',
+    'update:modelValue',
+    'change',
+    'fail',
+    'preview',
+    'progress',
+    'remove',
+    'success',
+    'select-change',
+  ],
   setup(props: any, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
@@ -148,7 +158,9 @@ export default defineComponent({
       const { files } = <HTMLInputElement>event.target;
       if (props.disabled || !files) return;
       const input = <HTMLInputElement>inputRef.value;
-      uploadFiles(formatFileToUploadFile(files));
+      const formatFiles = formatFileToUploadFile(files);
+      emitEvent('select-change', [...formatFiles]);
+      uploadFiles(formatFiles);
       input.value = '';
     };
 
@@ -221,8 +233,12 @@ export default defineComponent({
         handleBeforeUpload(fileRaw).then((canUpload) => {
           if (!canUpload) return;
           const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
-          newFiles.push(uploadFile);
-          toUploadFiles.value = [...new Set(newFiles)];
+
+          // 判断是否为重复文件条件，已选是否存在检验
+          if (props.allowUploadDuplicateFile || !toUploadFiles.value.find((file) => file.name === uploadFile.name)) {
+            newFiles.push(uploadFile);
+          }
+          toUploadFiles.value = newFiles;
           if (props.autoUpload) {
             upload(uploadFile);
           }

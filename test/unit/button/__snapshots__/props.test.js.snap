@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Button :props block 1`] = `
+exports[`Button > :props > block 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square t-size-full-width"
@@ -15,7 +15,7 @@ exports[`Button :props block 1`] = `
 </button>
 `;
 
-exports[`Button :props content 1`] = `
+exports[`Button > :props > content 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -32,7 +32,7 @@ exports[`Button :props content 1`] = `
 </button>
 `;
 
-exports[`Button :props content 2`] = `
+exports[`Button > :props > content 2`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -47,7 +47,7 @@ exports[`Button :props content 2`] = `
 </button>
 `;
 
-exports[`Button :props disabled 1`] = `
+exports[`Button > :props > disabled 1`] = `
 <button
   aria-disabled="true"
   class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled"
@@ -63,7 +63,7 @@ exports[`Button :props disabled 1`] = `
 </button>
 `;
 
-exports[`Button :props disabled 2`] = `
+exports[`Button > :props > disabled 2`] = `
 <button
   aria-disabled="true"
   class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled"
@@ -79,7 +79,7 @@ exports[`Button :props disabled 2`] = `
 </button>
 `;
 
-exports[`Button :props ghost 1`] = `
+exports[`Button > :props > ghost 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square t-button--ghost"
@@ -94,7 +94,7 @@ exports[`Button :props ghost 1`] = `
 </button>
 `;
 
-exports[`Button :props icon 1`] = `
+exports[`Button > :props > icon 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -111,7 +111,7 @@ exports[`Button :props icon 1`] = `
 </button>
 `;
 
-exports[`Button :props icon 2`] = `
+exports[`Button > :props > icon 2`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -126,7 +126,7 @@ exports[`Button :props icon 2`] = `
 </button>
 `;
 
-exports[`Button :props loading 1`] = `
+exports[`Button > :props > loading 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square t-is-loading"
@@ -153,7 +153,7 @@ exports[`Button :props loading 1`] = `
 </button>
 `;
 
-exports[`Button :props shape 1`] = `
+exports[`Button > :props > shape 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -168,7 +168,7 @@ exports[`Button :props shape 1`] = `
 </button>
 `;
 
-exports[`Button :props shape 2`] = `
+exports[`Button > :props > shape 2`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--round"
@@ -183,7 +183,7 @@ exports[`Button :props shape 2`] = `
 </button>
 `;
 
-exports[`Button :props size 1`] = `
+exports[`Button > :props > size 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-s t-button--base t-button--default t-button--square"
@@ -198,7 +198,7 @@ exports[`Button :props size 1`] = `
 </button>
 `;
 
-exports[`Button :props size 2`] = `
+exports[`Button > :props > size 2`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -213,7 +213,7 @@ exports[`Button :props size 2`] = `
 </button>
 `;
 
-exports[`Button :props size 3`] = `
+exports[`Button > :props > size 3`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-l t-button--base t-button--default t-button--square"
@@ -228,7 +228,7 @@ exports[`Button :props size 3`] = `
 </button>
 `;
 
-exports[`Button :props theme 1`] = `
+exports[`Button > :props > theme 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -243,7 +243,7 @@ exports[`Button :props theme 1`] = `
 </button>
 `;
 
-exports[`Button :props theme 2`] = `
+exports[`Button > :props > theme 2`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--primary t-button--square"
@@ -258,7 +258,7 @@ exports[`Button :props theme 2`] = `
 </button>
 `;
 
-exports[`Button :props theme 3`] = `
+exports[`Button > :props > theme 3`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--danger t-button--square"
@@ -273,7 +273,7 @@ exports[`Button :props theme 3`] = `
 </button>
 `;
 
-exports[`Button :props variant 1`] = `
+exports[`Button > :props > variant 1`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--base t-button--default t-button--square"
@@ -288,7 +288,7 @@ exports[`Button :props variant 1`] = `
 </button>
 `;
 
-exports[`Button :props variant 2`] = `
+exports[`Button > :props > variant 2`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--outline t-button--default t-button--square"
@@ -303,7 +303,7 @@ exports[`Button :props variant 2`] = `
 </button>
 `;
 
-exports[`Button :props variant 3`] = `
+exports[`Button > :props > variant 3`] = `
 <button
   aria-disabled="false"
   class="t-button t-size-m t-button--text t-button--default t-button--square"

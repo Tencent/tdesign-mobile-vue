@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`CheckboxGroup :props max 1`] = `
+exports[`CheckboxGroup > :props > max 1`] = `
 <div
   class="t-checkbox-group"
 >
@@ -9,7 +9,7 @@ exports[`CheckboxGroup :props max 1`] = `
 </div>
 `;
 
-exports[`CheckboxGroup :props name 1`] = `
+exports[`CheckboxGroup > :props > name 1`] = `
 <div
   class="t-checkbox-group"
 >
@@ -18,7 +18,7 @@ exports[`CheckboxGroup :props name 1`] = `
 </div>
 `;
 
-exports[`CheckboxGroup :props value 1`] = `
+exports[`CheckboxGroup > :props > value 1`] = `
 <div
   class="t-checkbox-group"
 >

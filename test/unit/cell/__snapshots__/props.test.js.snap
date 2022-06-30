@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Cell :props align 1`] = `
+exports[`Cell > :props > align 1`] = `
 <div
   class="t-cell t-cell--top t-cell--bordered"
 >
@@ -16,7 +16,7 @@ exports[`Cell :props align 1`] = `
 </div>
 `;
 
-exports[`Cell :props align 2`] = `
+exports[`Cell > :props > align 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -32,7 +32,7 @@ exports[`Cell :props align 2`] = `
 </div>
 `;
 
-exports[`Cell :props align 3`] = `
+exports[`Cell > :props > align 3`] = `
 <div
   class="t-cell t-cell--bottom t-cell--bordered"
 >
@@ -48,7 +48,7 @@ exports[`Cell :props align 3`] = `
 </div>
 `;
 
-exports[`Cell :props arrow 1`] = `
+exports[`Cell > :props > arrow 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -80,7 +80,7 @@ exports[`Cell :props arrow 1`] = `
 </div>
 `;
 
-exports[`Cell :props bordered 1`] = `
+exports[`Cell > :props > bordered 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -96,7 +96,7 @@ exports[`Cell :props bordered 1`] = `
 </div>
 `;
 
-exports[`Cell :props description 1`] = `
+exports[`Cell > :props > description 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -112,7 +112,7 @@ exports[`Cell :props description 1`] = `
 </div>
 `;
 
-exports[`Cell :props description 2`] = `
+exports[`Cell > :props > description 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -128,7 +128,7 @@ exports[`Cell :props description 2`] = `
 </div>
 `;
 
-exports[`Cell :props hover 1`] = `
+exports[`Cell > :props > hover 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--hover t-cell--bordered"
 >
@@ -144,7 +144,7 @@ exports[`Cell :props hover 1`] = `
 </div>
 `;
 
-exports[`Cell :props image 1`] = `
+exports[`Cell > :props > image 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -164,7 +164,7 @@ exports[`Cell :props image 1`] = `
 </div>
 `;
 
-exports[`Cell :props image 2`] = `
+exports[`Cell > :props > image 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -185,7 +185,7 @@ exports[`Cell :props image 2`] = `
 </div>
 `;
 
-exports[`Cell :props leftIcon 1`] = `
+exports[`Cell > :props > leftIcon 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -203,7 +203,7 @@ exports[`Cell :props leftIcon 1`] = `
 </div>
 `;
 
-exports[`Cell :props leftIcon 2`] = `
+exports[`Cell > :props > leftIcon 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -219,7 +219,7 @@ exports[`Cell :props leftIcon 2`] = `
 </div>
 `;
 
-exports[`Cell :props note 1`] = `
+exports[`Cell > :props > note 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -241,7 +241,7 @@ exports[`Cell :props note 1`] = `
 </div>
 `;
 
-exports[`Cell :props note 2`] = `
+exports[`Cell > :props > note 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -261,7 +261,7 @@ exports[`Cell :props note 2`] = `
 </div>
 `;
 
-exports[`Cell :props required 1`] = `
+exports[`Cell > :props > required 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -277,7 +277,7 @@ exports[`Cell :props required 1`] = `
 </div>
 `;
 
-exports[`Cell :props rightIcon 1`] = `
+exports[`Cell > :props > rightIcon 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -299,7 +299,7 @@ exports[`Cell :props rightIcon 1`] = `
 </div>
 `;
 
-exports[`Cell :props rightIcon 2`] = `
+exports[`Cell > :props > rightIcon 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -319,7 +319,7 @@ exports[`Cell :props rightIcon 2`] = `
 </div>
 `;
 
-exports[`Cell :props title 1`] = `
+exports[`Cell > :props > title 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -343,7 +343,7 @@ exports[`Cell :props title 1`] = `
 </div>
 `;
 
-exports[`Cell :props title 2`] = `
+exports[`Cell > :props > title 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >

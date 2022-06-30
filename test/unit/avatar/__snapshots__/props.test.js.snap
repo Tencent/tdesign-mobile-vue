@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Avatar :props alt 1`] = `
+exports[`Avatar > :props > alt 1`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
@@ -16,7 +16,7 @@ exports[`Avatar :props alt 1`] = `
 </div>
 `;
 
-exports[`Avatar :props badgeProps 1`] = `
+exports[`Avatar > :props > badgeProps 1`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
@@ -32,7 +32,7 @@ exports[`Avatar :props badgeProps 1`] = `
 </div>
 `;
 
-exports[`Avatar :props hideOnLoadFailed 1`] = `
+exports[`Avatar > :props > hideOnLoadFailed 1`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
@@ -47,7 +47,7 @@ exports[`Avatar :props hideOnLoadFailed 1`] = `
 </div>
 `;
 
-exports[`Avatar :props icon 1`] = `
+exports[`Avatar > :props > icon 1`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
@@ -66,7 +66,7 @@ exports[`Avatar :props icon 1`] = `
 </div>
 `;
 
-exports[`Avatar :props icon 2`] = `
+exports[`Avatar > :props > icon 2`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
@@ -83,7 +83,7 @@ exports[`Avatar :props icon 2`] = `
 </div>
 `;
 
-exports[`Avatar :props image 1`] = `
+exports[`Avatar > :props > image 1`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
@@ -98,7 +98,7 @@ exports[`Avatar :props image 1`] = `
 </div>
 `;
 
-exports[`Avatar :props shape 1`] = `
+exports[`Avatar > :props > shape 1`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
@@ -114,7 +114,7 @@ exports[`Avatar :props shape 1`] = `
 </div>
 `;
 
-exports[`Avatar :props shape 2`] = `
+exports[`Avatar > :props > shape 2`] = `
 <div
   class="t-avatar t-avatar--round"
 >
@@ -130,7 +130,7 @@ exports[`Avatar :props shape 2`] = `
 </div>
 `;
 
-exports[`Avatar :props size 1`] = `
+exports[`Avatar > :props > size 1`] = `
 <div
   class="t-avatar t-avatar--circle"
 >
