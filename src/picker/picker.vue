@@ -33,6 +33,7 @@ import PickerItem from './picker-item.vue';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
+// 通过value和columns，生成对应的indexArray
 const getIndexFormColumns = (columns: PickerColumn[], value: PickerValue, column: number) => {
   let resultIndex;
   columns[column]?.forEach((item: PickerColumnItem, index: number) => {
