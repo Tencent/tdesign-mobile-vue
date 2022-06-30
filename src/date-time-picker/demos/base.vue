@@ -4,11 +4,10 @@
     <t-popup v-model="show.ymdhms" position="bottom">
       <t-date-time-picker
         v-model="text.ymdhms"
-        :mode="['year', 'month', 'date', 'hour', 'minute', 'second']"
+        :mode="['date', 'second']"
         title="选择日期时间"
-        :show-week="true"
         @change="onChange"
-        @column-change="onColumnChange"
+        @pick="onPick"
         @confirm="onConfirm"
         @cancel="onCancel"
       />
@@ -17,7 +16,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
-import { DateValue } from 'tdesign-mobile-vue';
+import { DateValue } from '../type';
 
 export default defineComponent({
   setup() {
@@ -32,8 +31,8 @@ export default defineComponent({
       console.log('date-time-picker:change', value);
     };
 
-    const onColumnChange = ({ value, index }: { value: DateValue; index: number }) => {
-      console.log('date-time-picker:columnChange', value, index);
+    const onPick = (value: DateValue) => {
+      console.log('date-time-picker:pick', value);
     };
 
     const onCancel = () => {
@@ -41,14 +40,14 @@ export default defineComponent({
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
-    const onConfirm = ({ value }: { value: DateValue }) => {
-      console.log('date-time-picker:confirm', JSON.stringify(value));
+    const onConfirm = (value: DateValue) => {
+      console.log('date-time-picker:confirm', value);
       Object.keys(show).forEach((item) => (show[item] = false));
     };
 
     return {
       onChange,
-      onColumnChange,
+      onPick,
       onCancel,
       onConfirm,
       show,

@@ -2,22 +2,31 @@
 
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
- * updated at 2021-12-16 09:17:45
  * */
 
-import { TdPickerProps, TdPickerItemProps } from './type';
+import { TdPickerProps } from './type';
 import { PropType } from 'vue';
 
-export const PickerProps = {
+export default {
   /** 取消按钮文字 */
   cancelBtn: {
-    type: String,
+    type: [String, Object] as PropType<TdPickerProps['cancelBtn']>,
     default: '取消',
+  },
+  /** 配置每一列的选项 */
+  columns: {
+    type: [Array, Function] as PropType<TdPickerProps['columns']>,
+    default: (): TdPickerProps['columns'] => [],
+    required: true,
   },
   /** 确定按钮文字 */
   confirmBtn: {
-    type: String,
+    type: [String, Object] as PropType<TdPickerProps['confirmBtn']>,
     default: '确认',
+  },
+  /** 自定义label */
+  renderLabel: {
+    type: [String, Function] as PropType<TdPickerProps['renderLabel']>,
   },
   /** 标题 */
   title: {
@@ -25,8 +34,11 @@ export const PickerProps = {
     default: '',
   },
   /** 选中值 */
+  value: {
+    type: Array as PropType<TdPickerProps['value']>,
+  },
   modelValue: {
-    type: Array as PropType<TdPickerProps['modelValue']>,
+    type: Array as PropType<TdPickerProps['value']>,
   },
   /** 选中值，非受控属性 */
   defaultValue: {
@@ -38,23 +50,8 @@ export const PickerProps = {
   onCancel: Function as PropType<TdPickerProps['onCancel']>,
   /** 选中变化时候触发 */
   onChange: Function as PropType<TdPickerProps['onChange']>,
-  /** 点击确认确认按钮时触发 */
+  /** 点击确认按钮时触发 */
   onConfirm: Function as PropType<TdPickerProps['onConfirm']>,
-};
-
-export const PickerItemProps = {
-  /** 数据源 */
-  options: {
-    type: Array as PropType<TdPickerItemProps['options']>,
-    default: () => [],
-  },
-  /** 选中的值 */
-  value: {
-    type: [String, Number] as PropType<TdPickerItemProps['value']>,
-  },
-  /** 格式化选项 */
-  formatter: {
-    type: Function as PropType<TdPickerItemProps['formatter']>,
-    default: (value: string | number): string => String(value),
-  },
+  /** 任何一列选中都会触发，不同的列参数不同。`context.column` 表示第几列变化，`context.index` 表示变化那一列的选中项下标 */
+  onPick: Function as PropType<TdPickerProps['onPick']>,
 };
