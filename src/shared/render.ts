@@ -22,7 +22,6 @@ export const renderTNode = (
   if (instance === null) {
     return h('', null);
   }
-  console.log(name);
 
   const params = typeof options === 'object' && 'params' in options ? options.params : null;
   const defaultNode = typeof options === 'object' && 'defaultNode' in options ? options.defaultNode : options;
@@ -40,10 +39,8 @@ export const renderTNode = (
   if (propsNode === true && defaultNode) {
     return instance.slots[name] ? instance.slots[name]?.call(params) : defaultNode;
   }
-  console.log(propsNode);
 
   if (typeof propsNode === 'function') return propsNode(h, params);
-  console.log(1);
 
   const isPropsEmpty = [undefined, params, ''].includes(propsNode);
   if (isPropsEmpty && instance.slots[name]) return instance.slots[name]?.call(params);

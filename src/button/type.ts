@@ -36,7 +36,7 @@ export interface TdButtonProps {
    */
   loading?: boolean;
   /**
-   * 按钮形状，有二种：方形、圆角方形 
+   * 按钮形状，有二种：方形、圆角方形
    * @default square
    */
   shape?: 'square' | 'round';

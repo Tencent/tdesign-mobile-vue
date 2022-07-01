@@ -1,43 +1,63 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Cell :props align 1`] = `
+exports[`Cell > :props > align 1`] = `
 <div
   class="t-cell t-cell--top t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props align 2`] = `
+exports[`Cell > :props > align 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props align 3`] = `
+exports[`Cell > :props > align 3`] = `
 <div
   class="t-cell t-cell--bottom t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props arrow 1`] = `
+exports[`Cell > :props > arrow 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <div
@@ -60,73 +80,112 @@ exports[`Cell :props arrow 1`] = `
 </div>
 `;
 
-exports[`Cell :props bordered 1`] = `
+exports[`Cell > :props > bordered 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props description 1`] = `
+exports[`Cell > :props > description 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props description 2`] = `
+exports[`Cell > :props > description 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props hover 1`] = `
+exports[`Cell > :props > hover 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--hover t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props image 1`] = `
+exports[`Cell > :props > image 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    
+    <div>
+      text
+    </div>
+    
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props image 2`] = `
+exports[`Cell > :props > image 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    
+    <img
+      class="t-cell__image"
+      src="text"
+    />
+    
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props leftIcon 1`] = `
+exports[`Cell > :props > leftIcon 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -136,6 +195,7 @@ exports[`Cell :props leftIcon 1`] = `
     <div>
       text
     </div>
+    <!--v-if-->
   </div>
   <!--v-if-->
   <!--v-if-->
@@ -143,7 +203,7 @@ exports[`Cell :props leftIcon 1`] = `
 </div>
 `;
 
-exports[`Cell :props leftIcon 2`] = `
+exports[`Cell > :props > leftIcon 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
@@ -151,6 +211,7 @@ exports[`Cell :props leftIcon 2`] = `
     class="t-cell__left-icon"
   >
     text
+    <!--v-if-->
   </div>
   <!--v-if-->
   <!--v-if-->
@@ -158,11 +219,16 @@ exports[`Cell :props leftIcon 2`] = `
 </div>
 `;
 
-exports[`Cell :props note 1`] = `
+exports[`Cell > :props > note 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <div
     class="t-cell__note"
@@ -175,11 +241,16 @@ exports[`Cell :props note 1`] = `
 </div>
 `;
 
-exports[`Cell :props note 2`] = `
+exports[`Cell > :props > note 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <div
     class="t-cell__note"
@@ -190,22 +261,32 @@ exports[`Cell :props note 2`] = `
 </div>
 `;
 
-exports[`Cell :props required 1`] = `
+exports[`Cell > :props > required 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
 </div>
 `;
 
-exports[`Cell :props rightIcon 1`] = `
+exports[`Cell > :props > rightIcon 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <div
@@ -218,11 +299,16 @@ exports[`Cell :props rightIcon 1`] = `
 </div>
 `;
 
-exports[`Cell :props rightIcon 2`] = `
+exports[`Cell > :props > rightIcon 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <!--v-if-->
   <!--v-if-->
   <div
@@ -233,11 +319,16 @@ exports[`Cell :props rightIcon 2`] = `
 </div>
 `;
 
-exports[`Cell :props title 1`] = `
+exports[`Cell > :props > title 1`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <div
     class="t-cell__title"
   >
@@ -252,11 +343,16 @@ exports[`Cell :props title 1`] = `
 </div>
 `;
 
-exports[`Cell :props title 2`] = `
+exports[`Cell > :props > title 2`] = `
 <div
   class="t-cell t-cell--middle t-cell--bordered"
 >
-  <!--v-if-->
+  <div
+    class="t-cell__left-icon"
+  >
+    <!--v-if-->
+    <!--v-if-->
+  </div>
   <div
     class="t-cell__title"
   >

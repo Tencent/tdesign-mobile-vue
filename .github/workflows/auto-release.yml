@@ -5,7 +5,7 @@ on:
     branches: [develop]
     types: [opened, synchronize, reopened, closed]
     paths:
-      - "package.json"
+      - 'package.json'
   issue_comment:
     types: [edited]
 
@@ -44,7 +44,7 @@ jobs:
           headrefreg='"ref": "(release/[[:digit:]]{1,2}\.[[:digit:]]{1,2}\.[[:digit:]]{1,2})",'
           if [[ $result =~ $headrefreg ]]
           then
-            echo "属于 release pr 的 comment ${BASH_REMATCH[1]}" 
+            echo "属于 release pr 的 comment ${BASH_REMATCH[1]}"
           else
             echo "不属于 release pr 的 comment" && exit 1
           fi

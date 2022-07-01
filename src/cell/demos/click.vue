@@ -1,5 +1,5 @@
 <template>
-  <t-cell-group title="单元格点击时触发" border>
+  <t-cell-group title="单元格点击时触发" bordered>
     <t-cell @click="onClick">
       <template #title>
         <div>自定义标题</div>
@@ -15,18 +15,10 @@
   </t-cell-group>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
 import Message from '../../message';
 
-export default defineComponent({
-  setup() {
-    const onClick = () => {
-      Message.info('cell click');
-    };
-    return {
-      onClick,
-    };
-  },
-});
+const onClick = () => {
+  Message.info('cell click');
+};
 </script>

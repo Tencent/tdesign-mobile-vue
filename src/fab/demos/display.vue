@@ -1,17 +1,17 @@
 <template>
   <div>
-    <t-fab class="demo-fab-button"></t-fab>
+    <t-fab :icon="iconFunc" @click="onClick" />
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { h } from 'vue';
+import { AddIcon } from 'tdesign-icons-vue-next';
 
-export default defineComponent({});
+const iconFunc = () => h(AddIcon);
+const onClick = () => {
+  console.log('click Fab');
+};
 </script>
 
-<style lang="less" scoped>
-.demo-fab-button {
-  position: relative;
-}
-</style>
+<style lang="less" scoped></style>

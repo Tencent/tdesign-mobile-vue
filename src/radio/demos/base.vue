@@ -1,49 +1,32 @@
 <template>
   <div>
-    <t-radio name="radio1" value="1" label="单选" :icon="circleFilledIcons" :on-change="onChangeFn"></t-radio>
-    <t-radio
-      name="radio1"
-      value="2"
-      label="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选"
-      :icon="circleFilledIcons"
-      :on-change="onChangeFn"
-    ></t-radio>
-    <t-radio
-      name="radio1"
-      value="3"
-      label="单选"
-      content="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选"
-      :icon="circleFilledIcons"
-      :on-change="onChangeFn"
-    ></t-radio>
+    <t-radio-group :default-value="radio" class="radio-group-demo" @change="groupChangeFn">
+      <t-radio name="radio" value="1" label="单选"></t-radio>
+      <t-radio name="radio" value="2" label="单选"></t-radio>
+      <t-radio
+        name="radio"
+        value="3"
+        label="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选"
+      ></t-radio>
+      <t-radio
+        name="radio"
+        value="4"
+        label="单选"
+        content="单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选"
+      ></t-radio>
+    </t-radio-group>
   </div>
 </template>
-<script lang="ts">
-import { ref, defineComponent, h, watch } from 'vue';
-import { CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const radio = ref('1');
-    const TIconCircleFilled = h(CheckCircleFilledIcon);
-    const TIconCircle = h(CircleIcon);
-
-    watch(
-      () => radio.value,
-      (val) => {
-        console.log(val);
-      },
-    );
-
-    const onChangeFn = (checked: boolean, context: { e: Event }) => {
-      console.log(checked, context);
-    };
-
-    return {
-      radio,
-      circleFilledIcons: [TIconCircleFilled, TIconCircle],
-      onChangeFn,
-    };
-  },
-});
+const radio = ref('3');
+const groupChangeFn = (value: any, context: { e: Event }) => {
+  console.log(value, context);
+};
 </script>
+<style>
+.radio-group-demo {
+  background: #fff;
+}
+</style>

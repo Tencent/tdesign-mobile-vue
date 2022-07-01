@@ -18,12 +18,12 @@ export default {
   },
   /** 是否选中 */
   checked: {
-   type: Boolean,
-   default: undefined 
+    type: Boolean,
+    default: undefined,
   },
   modelValue: {
-   type: Boolean,
-   default: undefined 
+    type: Boolean,
+    default: undefined,
   },
   /** 是否选中，非受控属性 */
   defaultChecked: Boolean,

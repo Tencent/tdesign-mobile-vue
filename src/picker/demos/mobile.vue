@@ -5,9 +5,6 @@
     <tdesign-demo-block title="01 类型" summary="基础选择器">
       <BaseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="object选择器">
-      <ObjectDemo />
-    </tdesign-demo-block>
     <tdesign-demo-block title="02 联动" summary="数据联动选择器">
       <CasCadeDemo />
     </tdesign-demo-block>
@@ -15,6 +12,5 @@
 </template>
 <script lang="ts" setup>
 import BaseDemo from './base.vue';
-import ObjectDemo from './object.vue';
 import CasCadeDemo from './cascade.vue';
 </script>

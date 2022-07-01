@@ -34,7 +34,7 @@ export default defineComponent({
         [`${name}--${props.theme}`]: props.theme,
         [`${name}--${props.shape}`]: props.shape,
         [`${name}--ghost`]: props.ghost,
-        [`${prefix}-size-full-width`]: props.block,
+        [`${prefix}-is-block`]: props.block,
         [CLASSNAMES.STATUS.disabled]: props.disabled,
         [CLASSNAMES.STATUS.loading]: props.loading,
       },

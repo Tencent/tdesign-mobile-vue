@@ -18,7 +18,6 @@ describe('Image', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('error', () => {
-      const fn = jest.fn();
       const wrapper = mount(Image, {
         propsData: {
           error: () => h('div', 'text')
@@ -28,7 +27,6 @@ describe('Image', () => {
     });
 
     it('error', () => {
-      const fn = jest.fn();
       const wrapper = mount(Image, {
         propsData: {
           error: 'text'
@@ -73,7 +71,6 @@ describe('Image', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('loading', () => {
-      const fn = jest.fn();
       const wrapper = mount(Image, {
         propsData: {
           loading: () => h('div', 'text')
@@ -83,7 +80,6 @@ describe('Image', () => {
     });
 
     it('loading', () => {
-      const fn = jest.fn();
       const wrapper = mount(Image, {
         propsData: {
           loading: 'text'

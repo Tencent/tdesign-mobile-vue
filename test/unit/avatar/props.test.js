@@ -30,7 +30,6 @@ describe('Avatar', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('icon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Avatar, {
         propsData: {
           icon: () => h('div', 'text')
@@ -40,7 +39,6 @@ describe('Avatar', () => {
     });
 
     it('icon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Avatar, {
         propsData: {
           icon: 'text'

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`BackTop :props fixed 1`] = `
+exports[`BackTop > :props > fixed 1`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--round"
 >
@@ -25,7 +25,7 @@ exports[`BackTop :props fixed 1`] = `
 </div>
 `;
 
-exports[`BackTop :props icon 1`] = `
+exports[`BackTop > :props > icon 1`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--round"
 >
@@ -36,7 +36,7 @@ exports[`BackTop :props icon 1`] = `
 </div>
 `;
 
-exports[`BackTop :props icon 2`] = `
+exports[`BackTop > :props > icon 2`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--round"
 >
@@ -57,7 +57,7 @@ exports[`BackTop :props icon 2`] = `
 </div>
 `;
 
-exports[`BackTop :props target 1`] = `
+exports[`BackTop > :props > target 1`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--round"
 >
@@ -82,7 +82,7 @@ exports[`BackTop :props target 1`] = `
 </div>
 `;
 
-exports[`BackTop :props theme 1`] = `
+exports[`BackTop > :props > theme 1`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--round"
 >
@@ -107,7 +107,7 @@ exports[`BackTop :props theme 1`] = `
 </div>
 `;
 
-exports[`BackTop :props theme 2`] = `
+exports[`BackTop > :props > theme 2`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--half-round"
 >
@@ -132,7 +132,7 @@ exports[`BackTop :props theme 2`] = `
 </div>
 `;
 
-exports[`BackTop :props theme 3`] = `
+exports[`BackTop > :props > theme 3`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--round-dark"
 >
@@ -157,7 +157,7 @@ exports[`BackTop :props theme 3`] = `
 </div>
 `;
 
-exports[`BackTop :props theme 4`] = `
+exports[`BackTop > :props > theme 4`] = `
 <div
   class="t-back-top t-is-fixed t-back-top--half-round-dark"
 >

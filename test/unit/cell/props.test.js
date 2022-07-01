@@ -42,7 +42,6 @@ describe('Cell', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('description', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           description: () => h('div', 'text')
@@ -52,7 +51,6 @@ describe('Cell', () => {
     });
 
     it('description', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           description: 'text'
@@ -67,7 +65,6 @@ describe('Cell', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('image', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           image: () => h('div', 'text')
@@ -77,7 +74,6 @@ describe('Cell', () => {
     });
 
     it('image', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           image: 'text'
@@ -86,7 +82,6 @@ describe('Cell', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('leftIcon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           leftIcon: () => h('div', 'text')
@@ -96,7 +91,6 @@ describe('Cell', () => {
     });
 
     it('leftIcon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           leftIcon: 'text'
@@ -105,7 +99,6 @@ describe('Cell', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('note', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           note: () => h('div', 'text')
@@ -115,7 +108,6 @@ describe('Cell', () => {
     });
 
     it('note', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           note: 'text'
@@ -130,7 +122,6 @@ describe('Cell', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('rightIcon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           rightIcon: () => h('div', 'text')
@@ -140,7 +131,6 @@ describe('Cell', () => {
     });
 
     it('rightIcon', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           rightIcon: 'text'
@@ -149,7 +139,6 @@ describe('Cell', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('title', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           title: () => h('div', 'text')
@@ -159,7 +148,6 @@ describe('Cell', () => {
     });
 
     it('title', () => {
-      const fn = jest.fn();
       const wrapper = mount(Cell, {
         propsData: {
           title: 'text'

@@ -13,7 +13,8 @@ export default {
     type: String as PropType<TdMessageProps['align']>,
     default: 'left' as TdMessageProps['align'],
     validator(val: TdMessageProps['align']): boolean {
-      return ['left', 'center'].includes(val!);
+      if (!val) return true;
+      return ['left', 'center'].includes(val);
     },
   },
   /** 关闭按钮，可以自定义。值为 true 显示默认关闭按钮，值为 false 不显示关闭按钮。值类型为 string 则直接显示值，如：“关闭”。也可以完全自定义按钮 */
@@ -30,23 +31,22 @@ export default {
     type: Number,
     default: 3000,
   },
+  /** 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放 */
+  marquee: {
+    type: [Boolean, Object] as PropType<TdMessageProps['marquee']>,
+    default: false,
+  },
   /** 消息组件风格 */
   theme: {
     type: String as PropType<TdMessageProps['theme']>,
     default: 'info' as TdMessageProps['theme'],
     validator(val: TdMessageProps['theme']): boolean {
-      return ['info', 'success', 'warning', 'error'].includes(val!);
+      if (!val) return true;
+      return ['info', 'success', 'warning', 'error'].includes(val);
     },
   },
   /** 是否显示，隐藏时默认销毁组件 */
-  visible: {
-    type: Boolean,
-    default: undefined
-  },
-  modelValue: {
-    type: Boolean,
-    default: undefined
-   },
+  visible: Boolean,
   /** 元素层级，样式默认为 5000 */
   zIndex: {
     type: Number,

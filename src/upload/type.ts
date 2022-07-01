@@ -68,19 +68,19 @@ export interface TdUploadProps {
   /**
    * 用于格式化文件上传后的响应数据。error 用于显示错误提示，如果 error 值为真，组件会判定为上传失败；url 用于上传文件/图片地址。
    */
-  formatResponse?: (response: any, context: FormatResponseContext) => ResponseType ;
+  formatResponse?: (response: any, context: FormatResponseContext) => ResponseType;
   /**
    * upload组件每行上传图片列数以及图片的宽度和高度
    */
   gridConfig?: {
-  column?: number;
-  width?: number;
-  height?: number;
-};
+    column?: number;
+    width?: number;
+    height?: number;
+  };
   /**
    * 设置上传的请求头部
    */
-  headers?: {[key: string]: string};
+  headers?: { [key: string]: string };
   /**
    * 透传 Image 组件全部属性
    */
@@ -186,7 +186,7 @@ export interface UploadFile {
    * 文件上传状态：上传成功，上传失败，上传中，等待上传
    * @default ''
    */
-  status:  'success' | 'fail' | 'progress' | 'waiting';
+  status: 'success' | 'fail' | 'progress' | 'waiting';
   /**
    * 文件类型
    * @default ''
@@ -201,24 +201,58 @@ export interface UploadFile {
 
 export type ResponseType = { error?: string; url?: string } & Record<string, any>;
 
-export interface FormatResponseContext { file: UploadFile; currentFiles?: UploadFile[] };
+export interface FormatResponseContext {
+  file: UploadFile;
+  currentFiles?: UploadFile[];
+}
 
-export interface RequestMethodResponse { status: 'success' | 'fail'; error?: string; response: { url?: string; [key: string]: any } };
+export interface RequestMethodResponse {
+  status: 'success' | 'fail';
+  error?: string;
+  response: { url?: string; [key: string]: any };
+}
 
-export interface SizeLimitObj { size: number; unit: SizeUnit ; message?: string };
+export interface SizeLimitObj {
+  size: number;
+  unit: SizeUnit;
+  message?: string;
+}
 
 export type SizeUnitArray = ['B', 'KB', 'MB', 'GB'];
 
 export type SizeUnit = SizeUnitArray[number];
 
-export interface TriggerContext { dragActive?: boolean; uploadingFile?: UploadFile | Array<UploadFile> };
+export interface TriggerContext {
+  dragActive?: boolean;
+  uploadingFile?: UploadFile | Array<UploadFile>;
+}
 
-export interface UploadChangeContext { e?: MouseEvent | ProgressEvent; response?: any; trigger: string; index?: number; file?: UploadFile };
+export interface UploadChangeContext {
+  e?: MouseEvent | ProgressEvent;
+  response?: any;
+  trigger: string;
+  index?: number;
+  file?: UploadFile;
+}
 
-export interface ProgressContext { e?: ProgressEvent; file: UploadFile; percent: number; type: UploadProgressType };
+export interface ProgressContext {
+  e?: ProgressEvent;
+  file: UploadFile;
+  percent: number;
+  type: UploadProgressType;
+}
 
 export type UploadProgressType = 'real' | 'mock';
 
-export interface UploadRemoveContext { index?: number; file?: UploadFile; e: MouseEvent };
+export interface UploadRemoveContext {
+  index?: number;
+  file?: UploadFile;
+  e: MouseEvent;
+}
 
-export interface SuccessContext { e?: ProgressEvent; file?: UploadFile; fileList?: UploadFile[]; response: any };
+export interface SuccessContext {
+  e?: ProgressEvent;
+  file?: UploadFile;
+  fileList?: UploadFile[];
+  response: any;
+}

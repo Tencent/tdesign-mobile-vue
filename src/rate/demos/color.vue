@@ -1,15 +1,10 @@
 <template>
-  <t-rate v-model="value" color="#0052d9" />
+  <t-rate v-model="value" clearable :color="['#FFC51C', '#E8E8E8']" :gap="defaultGap" />
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    return {
-      value: ref(5),
-    };
-  },
-});
+const defaultGap = 8;
+const value = ref(3);
 </script>

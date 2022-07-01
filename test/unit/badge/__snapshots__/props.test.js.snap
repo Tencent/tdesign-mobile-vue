@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`Badge :props color 1`] = `
+exports[`Badge > :props > color 1`] = `
 <div
   class="t-badge"
 >
@@ -9,11 +9,35 @@ exports[`Badge :props color 1`] = `
 </div>
 `;
 
-exports[`Badge :props count 1`] = `<!--v-if-->`;
+exports[`Badge > :props > count 1`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--medium t-badge--circle"
+  >
+    <div>
+      text
+    </div>
+  </div>
+  <!---->
+</div>
+`;
 
-exports[`Badge :props count 2`] = `<!--v-if-->`;
+exports[`Badge > :props > count 2`] = `
+<div
+  class="t-badge"
+>
+  <div
+    class="t-badge__inner t-badge--medium t-badge--circle"
+  >
+    text
+  </div>
+  <!---->
+</div>
+`;
 
-exports[`Badge :props dot 1`] = `
+exports[`Badge > :props > dot 1`] = `
 <div
   class="t-badge"
 >
@@ -27,7 +51,7 @@ exports[`Badge :props dot 1`] = `
 </div>
 `;
 
-exports[`Badge :props maxCount 1`] = `
+exports[`Badge > :props > maxCount 1`] = `
 <div
   class="t-badge"
 >
@@ -36,7 +60,7 @@ exports[`Badge :props maxCount 1`] = `
 </div>
 `;
 
-exports[`Badge :props offset 1`] = `
+exports[`Badge > :props > offset 1`] = `
 <div
   class="t-badge"
 >
@@ -45,7 +69,7 @@ exports[`Badge :props offset 1`] = `
 </div>
 `;
 
-exports[`Badge :props shape 1`] = `
+exports[`Badge > :props > shape 1`] = `
 <div
   class="t-badge"
 >
@@ -54,7 +78,7 @@ exports[`Badge :props shape 1`] = `
 </div>
 `;
 
-exports[`Badge :props shape 2`] = `
+exports[`Badge > :props > shape 2`] = `
 <div
   class="t-badge"
 >
@@ -63,7 +87,7 @@ exports[`Badge :props shape 2`] = `
 </div>
 `;
 
-exports[`Badge :props shape 3`] = `
+exports[`Badge > :props > shape 3`] = `
 <div
   class="t-badge t-badge__ribbon--outer"
 >
@@ -72,7 +96,7 @@ exports[`Badge :props shape 3`] = `
 </div>
 `;
 
-exports[`Badge :props showZero 1`] = `
+exports[`Badge > :props > showZero 1`] = `
 <div
   class="t-badge"
 >
@@ -86,7 +110,7 @@ exports[`Badge :props showZero 1`] = `
 </div>
 `;
 
-exports[`Badge :props size 1`] = `
+exports[`Badge > :props > size 1`] = `
 <div
   class="t-badge"
 >
@@ -95,7 +119,7 @@ exports[`Badge :props size 1`] = `
 </div>
 `;
 
-exports[`Badge :props size 2`] = `
+exports[`Badge > :props > size 2`] = `
 <div
   class="t-badge"
 >

@@ -30,7 +30,6 @@ describe('Divider', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Divider, {
         propsData: {
           content: () => h('div', 'text')
@@ -40,7 +39,6 @@ describe('Divider', () => {
     });
 
     it('content', () => {
-      const fn = jest.fn();
       const wrapper = mount(Divider, {
         propsData: {
           content: 'text'
@@ -55,7 +53,6 @@ describe('Divider', () => {
       expect(wrapper.wrapperElement).toMatchSnapshot();
     });
     it('default', () => {
-      const fn = jest.fn();
       const wrapper = mount(Divider, {
         propsData: {
           default: () => h('div', 'text')
@@ -65,7 +62,6 @@ describe('Divider', () => {
     });
 
     it('default', () => {
-      const fn = jest.fn();
       const wrapper = mount(Divider, {
         propsData: {
           default: 'text'

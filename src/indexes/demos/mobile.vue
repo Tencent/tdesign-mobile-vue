@@ -4,8 +4,8 @@
     <p class="summary">向下弹出的菜单列表</p>
     <tdesign-demo-block title="01 类型" summary="单选下拉菜单">
       <div class="indexes-demo">
-        <t-button size="large" variant="outline" @click="handleClick('letter')"> 字母索引 </t-button>
-        <t-button size="large" variant="outline" @click="handleClick('number')"> 数字索引 </t-button>
+        <t-button size="large" variant="outline" block @click="handleClick('letter')"> 字母索引 </t-button>
+        <t-button size="large" variant="outline" block @click="handleClick('number')"> 数字索引 </t-button>
       </div>
     </tdesign-demo-block>
   </div>

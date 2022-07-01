@@ -15,24 +15,24 @@
       summary="通过设置theme属性，可以分别展示圆+白、半圆+白、圆+黑、半圆+黑四种样式类型"
     >
       <div class="button-group">
-        <t-button data-index="0" @click="onBtnClick">圆角白底</t-button>
-        <t-button data-index="1" @click="onBtnClick">圆角黑底</t-button>
-        <t-button data-index="2" @click="onBtnClick">半圆白底</t-button>
-        <t-button data-index="3" @click="onBtnClick">半圆黑底</t-button>
+        <t-button block size="large" variant="outline" data-index="0" @click="onBtnClick">圆角白底</t-button>
+        <t-button block size="large" variant="outline" data-index="1" @click="onBtnClick">圆角黑底</t-button>
+        <t-button block size="large" variant="outline" data-index="2" @click="onBtnClick">半圆白底</t-button>
+        <t-button block size="large" variant="outline" data-index="3" @click="onBtnClick">半圆黑底</t-button>
       </div>
     </tdesign-demo-block>
 
     <tdesign-demo-block title="02 内容" summary="通过设置text、icon属性，可以控制悬浮按钮的展示内容">
       <div class="button-group">
-        <t-button data-index="4" @click="onBtnClick">纯图标</t-button>
-        <t-button @click="onBtnClick2">纯文字</t-button>
-        <t-button @click="onBtnClick3">自定义图标</t-button>
+        <t-button block size="large" variant="outline" data-index="4" @click="onBtnClick">纯图标</t-button>
+        <t-button block size="large" variant="outline" @click="onBtnClick2">纯文字</t-button>
+        <t-button block size="large" variant="outline" @click="onBtnClick3">自定义图标</t-button>
       </div>
     </tdesign-demo-block>
 
     <tdesign-demo-block title="03 返回" summary="通过设置target属性，可以控制页面滚动到对应的DOM元素">
       <div ref="myDOM" class="button-group">
-        <t-button @click="onBtnClick4">回到此按钮</t-button>
+        <t-button block size="large" variant="outline" @click="onBtnClick4">回到此按钮</t-button>
       </div>
     </tdesign-demo-block>
 
@@ -119,15 +119,8 @@ export default defineComponent({
 <style lang="less" scoped>
 .button-group {
   padding: 8px 16px 16px;
-  display: flex;
-  flex-wrap: wrap;
-  button {
-    width: 100px;
-    margin-right: 20px;
+  .t-button {
     margin-bottom: 10px;
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
   }
 }
 .blank {

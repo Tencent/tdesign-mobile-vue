@@ -1,9 +1,8 @@
 <template>
   <div :class="[`${name}`, `${disabled ? disabledClass : ''}`, `${isPureMode ? `${name}__pure` : ''}`]">
-    <span
-      :class="[`${name}__minus`, `${disabled || stepperValue <= min ? 't-is-disabled' : ''}`]"
-      @click="minusValue"
-    ></span>
+    <div :class="[`${name}__minus`, `${disabled || stepperValue <= min ? 't-is-disabled' : ''}`]" @click="minusValue">
+      <remove-icon :class="`${name}__icon`" />
+    </div>
     <input
       v-model="stepperValue"
       :class="`${name}__input`"
@@ -14,15 +13,15 @@
       :readonly="disableInput"
       @blur="handleBlur"
     />
-    <span
-      :class="[`${name}__plus`, `${disabled || stepperValue >= max ? 't-is-disabled' : ''}`]"
-      @click="plusValue"
-    ></span>
+    <div :class="[`${name}__plus`, `${disabled || stepperValue >= max ? 't-is-disabled' : ''}`]" @click="plusValue">
+      <add-icon :class="`${name}__icon`" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { toRefs, computed, reactive, defineComponent, SetupContext } from 'vue';
+import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
 import CLASSNAMES from '../shared/constants';
@@ -34,6 +33,10 @@ const name = `${prefix}-stepper`;
 const disabledClass = CLASSNAMES.STATUS.disabled;
 export default defineComponent({
   name,
+  components: {
+    AddIcon,
+    RemoveIcon,
+  },
   props: StepperProps,
   emits: ['update:value', 'update:modelValue', 'blur', 'change', 'overlimit'],
   setup(props, context: SetupContext) {

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`RadioGroup :props name 1`] = `
+exports[`RadioGroup > :props > name 1`] = `
 <div
   class="t-radio-group"
   role="radiogroup"
@@ -11,7 +11,7 @@ exports[`RadioGroup :props name 1`] = `
 </div>
 `;
 
-exports[`RadioGroup :props options 1`] = `
+exports[`RadioGroup > :props > options 1`] = `
 <div
   class="t-radio-group"
   role="radiogroup"
@@ -22,7 +22,7 @@ exports[`RadioGroup :props options 1`] = `
 </div>
 `;
 
-exports[`RadioGroup :props value 1`] = `
+exports[`RadioGroup > :props > value 1`] = `
 <div
   class="t-radio-group"
   role="radiogroup"

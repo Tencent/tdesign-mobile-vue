@@ -1,15 +1,10 @@
 <template>
-  <t-rate v-model="value" size="36px" allow-half clearable />
+  <t-rate v-model="value" size="16" clearable :gap="defaultGap" />
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    return {
-      value: ref(3),
-    };
-  },
-});
+const defaultGap = 8;
+const value = ref(3);
 </script>
