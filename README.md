@@ -4,6 +4,18 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/Tencent/tdesign-mobile-vue/blob/develop/LICENSE">
+    <img src="https://img.shields.io/npm/l/tdesign-mobile-vue.svg?sanitize=true" alt="License">
+  </a>
+  <a href="https://www.npmjs.com/package/tdesign-mobile-vue">
+    <img src="https://img.shields.io/npm/v/tdesign-mobile-vue.svg?sanitize=true" alt="Version">
+  </a>
+  <a href="https://www.npmjs.com/package/tdesign-mobile-vue">
+    <img src="https://img.shields.io/npm/dw/tdesign-mobile-vue" alt="Downloads">
+  </a>
+</p>
+
 TDesign 适配移动端的组件库，适合在 vue 3 技术栈项目中使用。
 
 # 🎉 特性
