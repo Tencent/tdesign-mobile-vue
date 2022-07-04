@@ -54,14 +54,12 @@ export default defineComponent({
     ]);
 
     const preventScrollCls = `${prefix}-overflow-hidden`;
-    const preventScrollThrough = computed(
-      () => props.preventScrollThrough || (props.showOverlay && props.preventScrollThrough !== false),
-    );
+
     onMounted(() => {
-      preventScrollThrough.value && document.body.classList.add(preventScrollCls);
+      props.preventScrollThrough && document.body.classList.add(preventScrollCls);
     });
     onUnmounted(() => {
-      preventScrollThrough.value && document.body.classList.remove(preventScrollCls);
+      props.preventScrollThrough && document.body.classList.remove(preventScrollCls);
     });
 
     const baseOverlayProps = {
