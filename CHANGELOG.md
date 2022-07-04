@@ -27,6 +27,21 @@ spline: explain
   - 新增 `value` 和 `default-value` 控制输入框的值
   - `cancel` 事件更名为 `action-click`
   - 新增 `blur` 和 `focus` 事件
+- `Collapse`: @LeeJim ([#145](https://github.com/Tencent/tdesign-mobile-vue/pull/145))
+  - `accordion` 更名为 `expandMutex`
+  - 移除 `title`、`labelWidth` 属性
+  - 新增 `disabled`、`expandIcon`、`onChange` 属性无效的问题
+- `CollapsePanel`: @LeeJim ([#145](https://github.com/Tencent/tdesign-mobile-vue/pull/145))
+  - `name` 更为为 `value`
+  - `title` 更名为 `header`
+  - `extra` 更名为 `headerRightContent`
+  - 移除 `labelWidth`、`headerClickable` 属性
+  - 新增 `default`、`expandIcon` 属性
+  - 移除 `click` 事件
+- `Drawer`:  @ruige24601 ([#190](https://github.com/Tencent/tdesign-mobile-vue/pull/190))
+  - 移除 `slider` 属性
+  - 新增 `items`、`placement`、`showOverlay`、`zIndex` 等属性
+  - 新增 `close`、`item-click`、`overlay-click` 等事件
 ### 🚀 Features
 - `Indexes`: 新增 Indexes 组件 @ruige24601 ([#117](https://github.com/Tencent/tdesign-mobile-vue/pull/117))
 - `Input`: 新增支持 size 属性 @anlyyao ([#181](https://github.com/Tencent/tdesign-mobile-vue/pull/181))
@@ -48,9 +63,6 @@ spline: explain
 - `Badge`: 修复 maxCount 属性无效的问题 @robinWongM ([#142](https://github.com/Tencent/tdesign-mobile-vue/pull/142))
 - `DropdownMenu`: 修复单选 update:value 失效的问题 @wwlh200 ([#146](https://github.com/Tencent/tdesign-mobile-vue/pull/146))
 - `Radio`: 修复非受控用法错误的问题 @anlyyao ([#192](https://github.com/Tencent/tdesign-mobile-vue/pull/192))
-### 🚧 Others
-- `Refactor`: 重构 API，以及优化代码 @LeeJim ([#145](https://github.com/Tencent/tdesign-mobile-vue/pull/145))
-- `Drawer`: 重构 API，以及优化代码 @ruige24601 ([#190](https://github.com/Tencent/tdesign-mobile-vue/pull/190))
 
 
 ## 🌈 0.8.6 `2022-05-30` 
