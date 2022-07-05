@@ -3,7 +3,7 @@
 exports[`Button > :props > block 1`] = `
 <button
   aria-disabled="false"
-  class="t-button t-size-m t-button--base t-button--default t-button--square t-size-full-width"
+  class="t-button t-size-m t-button--base t-button--default t-button--square t-is-block"
   role="button"
 >
   <!---->

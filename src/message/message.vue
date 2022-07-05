@@ -15,12 +15,11 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, defineComponent, getCurrentInstance, PropType, SetupContext } from 'vue';
+import { ref, computed, watch, defineComponent, getCurrentInstance, SetupContext, toRefs } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import messageProps from './props';
 import config from '../config';
-import { renderTNode, TNode, useDefault, useEmitEvent } from '../shared';
-import { TdMessageProps } from './type';
+import { renderTNode, TNode, useEmitEvent, useVModel } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-message`;
@@ -30,17 +29,13 @@ export default defineComponent({
   components: { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon, TNode },
   props: messageProps,
   emits: ['visible-change', 'open', 'opened', 'close', 'closed'],
-  setup(props, context: SetupContext) {
+  setup(props: any, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const root = ref(null);
     const internalInstance = getCurrentInstance();
     const closeBtnContent = computed(() => renderTNode(internalInstance, 'closeBtn'));
-    const [currentVisible] = useDefault<TdMessageProps['visible'], TdMessageProps>(
-      props,
-      context.emit,
-      'visible',
-      'visible-change',
-    );
+    const { visible, modelValue } = toRefs(props);
+    const [currentVisible, setVisible] = useVModel(visible, modelValue, props.defaultValue, props.onChange);
     const rootClasses = computed(() => ({
       [name]: true,
       [`${name}--${props.theme}`]: true,
@@ -52,7 +47,7 @@ export default defineComponent({
 
     const onClose = () => {
       emitEvent('close');
-      currentVisible.value = false;
+      setVisible(false);
     };
 
     watch(
@@ -61,7 +56,7 @@ export default defineComponent({
         if (val === false) return;
 
         emitEvent('open');
-        currentVisible.value = true;
+        setVisible(true);
 
         if (props.duration > 0) {
           setTimeout(onClose, props.duration);
