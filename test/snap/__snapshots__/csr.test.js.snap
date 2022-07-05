@@ -20,7 +20,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/grid.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -52,7 +52,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/grid.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -405,7 +405,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/list.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -437,7 +437,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/list.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -469,7 +469,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/list.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -758,7 +758,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -788,7 +788,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -802,7 +802,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -2953,7 +2953,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-index="0"
         data-v-806aae90=""
         role="button"
@@ -2969,7 +2969,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-index="1"
         data-v-806aae90=""
         role="button"
@@ -2985,7 +2985,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-index="2"
         data-v-806aae90=""
         role="button"
@@ -3001,7 +3001,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-index="3"
         data-v-806aae90=""
         role="button"
@@ -3039,7 +3039,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-index="4"
         data-v-806aae90=""
         role="button"
@@ -3055,7 +3055,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-806aae90=""
         role="button"
       >
@@ -3070,7 +3070,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-806aae90=""
         role="button"
       >
@@ -3107,7 +3107,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-806aae90=""
         role="button"
       >
@@ -3309,7 +3309,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/color.vue 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-s t-button--base t-button--default t-button--square"
+              class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
               role="button"
             >
               <!---->
@@ -3335,7 +3335,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/color.vue 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-s t-button--base t-button--default t-button--square"
+              class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
               role="button"
             >
               <!---->
@@ -3361,7 +3361,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/color.vue 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-s t-button--base t-button--default t-button--square"
+              class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
               role="button"
             >
               <!---->
@@ -3404,7 +3404,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/dist.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         data-v-03ebeeaa=""
         role="button"
       >
@@ -3495,7 +3495,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/max-count.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -3520,7 +3520,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/max-count.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -3545,7 +3545,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/max-count.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -3570,7 +3570,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/max-count.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -3749,7 +3749,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--outline t-button--default t-button--square"
+            class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -3778,7 +3778,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--outline t-button--default t-button--square"
+            class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -3807,7 +3807,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--outline t-button--default t-button--square"
+            class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -3836,7 +3836,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--outline t-button--default t-button--square"
+            class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -4089,7 +4089,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/offset.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--default t-button--square"
+          class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -4122,7 +4122,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/offset.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--default t-button--square"
+          class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -4155,7 +4155,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/offset.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--default t-button--square"
+          class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -4188,7 +4188,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/offset.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--default t-button--square"
+          class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -4225,7 +4225,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/shape.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -4250,7 +4250,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/shape.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         role="button"
       >
         <!---->
@@ -4356,7 +4356,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/text.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         data-v-9223ea9e=""
         role="button"
       >
@@ -4379,7 +4379,7 @@ exports[`csr snapshot test > csr test ./src/badge/demos/text.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--default t-button--square"
+        class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
         data-v-9223ea9e=""
         role="button"
       >
@@ -4475,413 +4475,127 @@ exports[`csr snapshot test > csr test ./src/badge/demos/text.vue 1`] = `
 
 exports[`csr snapshot test > csr test ./src/button/demos/base.vue 1`] = `
 <div>
-  <div
-    class="tdesign-demo-block"
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+    role="button"
   >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square"
-      role="button"
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        默认按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        主要按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--text t-button--default t-button--square"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        文本按钮
-        
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`csr snapshot test > csr test ./src/button/demos/bottom.vue 1`] = `
-<div
-  class="button-group-base"
->
-  <div
-    class="t-cell-group"
+      
+      强按钮
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    role="button"
   >
-    <div
-      class="t-cell-group__title"
+    <!---->
+    <span
+      class="t-button__text"
     >
       
-      块状风格
+       弱按钮 
       
-    </div>
-    <div
-      class="t-cell-group__container"
-    >
-      
-      <div
-        class="t-button-group t-button-group--default"
-      >
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--square"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--primary t-button--square"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        
-      </div>
-      <div
-        class="t-button-group t-button-group--default"
-      >
-        
-        <button
-          aria-disabled="true"
-          class="t-button t-size-m t-button--base t-button--square t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="true"
-          class="t-button t-size-m t-button--base t-button--primary t-button--square t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="t-cell-group"
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
   >
-    <div
-      class="t-cell-group__title"
+    <!---->
+    <span
+      class="t-button__text"
     >
       
-      菜单风格
+      次按钮
       
-    </div>
-    <div
-      class="t-cell-group__container"
-    >
-      
-      <div
-        class="t-button-group t-button-group--menu"
-      >
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--square"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--square"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--square"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        
-      </div>
-      <div
-        class="t-button-group t-button-group--menu"
-      >
-        
-        <button
-          aria-disabled="true"
-          class="t-button t-size-m t-button--base t-button--square t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="true"
-          class="t-button t-size-m t-button--base t-button--square t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="true"
-          class="t-button t-size-m t-button--base t-button--square t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            置底按钮
-            
-          </span>
-        </button>
-        
-      </div>
-      
-    </div>
-  </div>
-</div>
-`;
-
-exports[`csr snapshot test > csr test ./src/button/demos/disabled.vue 1`] = `
-<div>
-  <div
-    class="tdesign-demo-block"
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    role="button"
   >
-    <button
-      aria-disabled="true"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled"
-      disabled=""
-      role="button"
+    <svg
+      class="t-icon t-icon-app"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        主要按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-m t-button--outline t-button--default t-button--square t-is-disabled"
-      disabled=""
-      role="button"
+      <path
+        d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        次要按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-m t-button--base t-button--danger t-button--square t-is-disabled"
-      disabled=""
-      role="button"
+      
+       带图标按钮 
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle t-is-block"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        警告按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-button--ghost t-is-disabled"
-      disabled=""
-      role="button"
+      
+      强警告按钮
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--danger t-button--shape-rectangle t-is-block"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        幽灵按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-m t-button--text t-button--default t-button--square t-is-disabled"
-      disabled=""
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        文本按钮
-        
-      </span>
-    </button>
-  </div>
+      
+       弱警告按钮 
+      
+    </span>
+  </button>
 </div>
 `;
 
 exports[`csr snapshot test > csr test ./src/button/demos/icon.vue 1`] = `
-<div>
+<div
+  data-v-app=""
+>
+  
   <div
-    class="tdesign-demo-block"
+    class="flex align-center margin-right"
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--text t-button--default t-button--square"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
       role="button"
     >
-      <span
-        class="t-button__text"
-      >
-        
-        带图标文字按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square"
-      role="button"
-    >
-      
       <svg
-        class="t-icon t-icon-star"
+        class="t-icon t-icon-app"
         fill="none"
         height="1em"
         viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M9.54 6.38L8 3.26 6.46 6.38l-3.44.5L5.5 9.31l-.59 3.43L8 11.12l3.08 1.62-.59-3.43L13 6.88l-3.45-.5zm5-.29a.3.3 0 01.16.52l-3.13 3.05.74 4.3a.3.3 0 01-.44.32L8 12.25l-3.87 2.03a.3.3 0 01-.43-.31l.73-4.31L1.3 6.6a.3.3 0 01.17-.52l4.33-.62 1.93-3.92a.3.3 0 01.54 0l1.94 3.92 4.32.62z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      
-      <span
-        class="t-button__text"
-      >
-        
-         带图标的按钮 
-        
-      </span>
-    </button>
-  </div>
-  <div
-    class="tdesign-demo-block"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-is-loading"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-loading"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
           fill="currentColor"
           fill-opacity="0.9"
         />
@@ -4889,35 +4603,177 @@ exports[`csr snapshot test > csr test ./src/button/demos/icon.vue 1`] = `
       <span
         class="t-button__text"
       >
-        
-        带图标的按钮-加载
-        
+        <!---->
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
       </span>
     </button>
   </div>
+  <div
+    class="flex align-center margin-right"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/button/demos/loading.vue 1`] = `
+<div
+  class="button-demo flex"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--base t-button--primary t-button--shape-square t-is-loading"
+    role="button"
+  >
+    <svg
+      class="t-icon t-icon-loading"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+    <span
+      class="t-button__text"
+    >
+      <!---->
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-loading"
+    role="button"
+  >
+    <svg
+      class="t-icon t-icon-loading"
+      fill="none"
+      height="1em"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+    <span
+      class="t-button__text"
+    >
+      
+      加载中...
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      Click me!
+      
+    </span>
+  </button>
 </div>
 `;
 
 exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-7c375b15=""
 >
   <h1
     class="title"
-    data-v-7c375b15=""
   >
     Button 按钮
   </h1>
   <p
     class="summary"
-    data-v-7c375b15=""
   >
     按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -4932,13 +4788,113 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
     
     <div
       class="button-demo"
-      data-v-7c375b15=""
-      style="margin: 0px 16px 0px;"
+    >
+      <div>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            强按钮
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             弱按钮 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            次按钮
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            
+             带图标按钮 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            强警告按钮
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--danger t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             弱警告按钮 
+            
+          </span>
+        </button>
+      </div>
+    </div>
+    
+    <div
+      style="background: rgb(166, 166, 166); padding: 8px 16px; margin-bottom: 16px;"
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--primary t-button--square"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-button--ghost t-is-block"
         role="button"
       >
         <!---->
@@ -4946,14 +4902,17 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
           class="t-button__text"
         >
           
-          强按钮
+           幽灵按钮 
           
         </span>
       </button>
+    </div>
+    <div
+      class="margin-button"
+    >
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--primary t-button--square"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -4961,14 +4920,35 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
           class="t-button__text"
         >
           
-          弱按钮
+           文字按钮 
           
         </span>
       </button>
+    </div>
+    <div
+      class="no-border-radius margin-button"
+    >
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+           通栏按钮 
+          
+        </span>
+      </button>
+    </div>
+    <div
+      class="no-border-radius no-border flex margin-button"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -4982,138 +4962,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--primary t-button--square"
-        data-v-7c375b15=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          带图标按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--danger t-button--square"
-        data-v-7c375b15=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          警告按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--danger t-button--square"
-        data-v-7c375b15=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          弱警告按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--text t-button--primary t-button--square"
-        data-v-7c375b15=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          文字按钮
-          
-        </span>
-      </button>
-    </div>
-    <div
-      class="button-demo"
-      data-v-7c375b15=""
-      style="background: rgb(166, 166, 166); padding: 16px 16px 0px 16px;"
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square t-button--ghost"
-        data-v-7c375b15=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          幽灵按钮
-          
-        </span>
-      </button>
-    </div>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square t-is-block"
-      data-v-7c375b15=""
-      role="button"
-      style="margin: 8px 0px;"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        通栏按钮
-        
-      </span>
-    </button>
-    <div
-      class="t-button-group t-button-group--default"
-      data-v-7c375b15=""
-    >
-      
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square"
-        data-v-7c375b15=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          次按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--primary t-button--square"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -5125,13 +4974,194 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
           
         </span>
       </button>
+    </div>
+    
+    <div
+      class="button-demo align-center margin-right"
+    >
       
+      <div
+        class="flex align-center margin-right"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+      </div>
+      <div
+        class="flex align-center margin-right"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+      </div>
+      
+    </div>
+    <div
+      class="flex align-center margin-right button-demo-loading"
+    >
+      <div
+        class="button-demo flex"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-square t-is-loading"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-loading"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-loading"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-loading"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            
+            加载中...
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            Click me!
+            
+          </span>
+        </button>
+      </div>
     </div>
     
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -5146,13 +5176,119 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
     
     <div
       class="button-demo"
-      data-v-7c375b15=""
-      style="margin: 0px 16px;"
+    >
+      <div>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            强按钮
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             弱按钮 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            次按钮
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            
+             带图标按钮 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle t-is-block t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            强警告按钮
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--outline t-button--danger t-button--shape-rectangle t-is-block t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             弱警告按钮 
+            
+          </span>
+        </button>
+      </div>
+    </div>
+    
+    <div
+      style="background: rgb(166, 166, 166); padding: 8px 16px; margin-bottom: 16px;"
     >
       <button
         aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--primary t-button--square t-is-disabled"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-button--ghost t-is-block t-is-disabled"
         disabled=""
         role="button"
       >
@@ -5161,14 +5297,17 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
           class="t-button__text"
         >
           
-          强按钮
+           幽灵按钮 
           
         </span>
       </button>
+    </div>
+    <div
+      class="margin-button"
+    >
       <button
         aria-disabled="true"
-        class="t-button t-size-m t-button--outline t-button--primary t-button--square t-is-disabled"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
         disabled=""
         role="button"
       >
@@ -5177,14 +5316,36 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
           class="t-button__text"
         >
           
-          弱按钮
+           文字按钮 
           
         </span>
       </button>
+    </div>
+    <div
+      class="no-border-radius margin-button"
+    >
       <button
         aria-disabled="true"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square t-is-disabled"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+        disabled=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+           通栏按钮 
+          
+        </span>
+      </button>
+    </div>
+    <div
+      class="no-border-radius no-border flex margin-button"
+    >
+      <button
+        aria-disabled="true"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block t-is-disabled"
         disabled=""
         role="button"
       >
@@ -5199,146 +5360,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="true"
-        class="t-button t-size-m t-button--outline t-button--primary t-button--square t-is-disabled"
-        data-v-7c375b15=""
-        disabled=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          带图标按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--danger t-button--square t-is-disabled"
-        data-v-7c375b15=""
-        disabled=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          警告按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--outline t-button--danger t-button--square t-is-disabled"
-        data-v-7c375b15=""
-        disabled=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          弱警告按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--text t-button--primary t-button--square t-is-disabled"
-        data-v-7c375b15=""
-        disabled=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          文字按钮
-          
-        </span>
-      </button>
-    </div>
-    <div
-      class="button-demo"
-      data-v-7c375b15=""
-      style="background: rgb(166, 166, 166); padding: 16px 16px 0px 16px;"
-    >
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square t-button--ghost t-is-disabled"
-        data-v-7c375b15=""
-        disabled=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          幽灵按钮
-          
-        </span>
-      </button>
-    </div>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square t-is-block t-is-disabled"
-      data-v-7c375b15=""
-      disabled=""
-      role="button"
-      style="margin: 8px 0px;"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        通栏按钮
-        
-      </span>
-    </button>
-    <div
-      class="t-button-group t-button-group--default"
-      data-v-7c375b15=""
-      style="margin-top: 8px;"
-    >
-      
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square t-is-disabled"
-        data-v-7c375b15=""
-        disabled=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          次按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--primary t-button--square t-is-disabled"
-        data-v-7c375b15=""
+        class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
         disabled=""
         role="button"
       >
@@ -5351,13 +5373,201 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
           
         </span>
       </button>
+    </div>
+    
+    <div
+      class="button-demo align-center margin-right"
+    >
       
+      <div
+        class="flex align-center margin-right"
+      >
+        <button
+          aria-disabled="true"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-round t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+      </div>
+      <div
+        class="flex align-center margin-right"
+      >
+        <button
+          aria-disabled="true"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-square t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+      </div>
+      
+    </div>
+    <div
+      class="flex align-center margin-right button-demo-loading"
+    >
+      <div
+        class="button-demo flex"
+      >
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-square t-is-disabled t-is-loading"
+          disabled=""
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-loading"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-disabled t-is-loading"
+          disabled=""
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-loading"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            
+            加载中...
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="true"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-disabled"
+          disabled=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            Click me!
+            
+          </span>
+        </button>
+      </div>
     </div>
     
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-7c375b15=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -5367,136 +5577,456 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      文字按钮尺寸
+      按钮尺寸
     </p>
     
     <div
       class="button-demo"
-      data-v-7c375b15=""
-      style="margin: 0px 16px;"
     >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--base t-button--primary t-button--square"
-        data-v-7c375b15=""
-        role="button"
+      
+      <div
+        class="flex align-center margin-right"
       >
-        <!---->
-        <span
-          class="t-button__text"
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            按钮 44
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            按钮 40
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            按钮 36
+            
+          </span>
+        </button>
+      </div>
+      <div
+        class="flex align-center margin-right"
+      >
+        <!-- &lt;t-button size="large" :icon="iconFunc" shape="round" theme="primary"&gt;按钮&lt;/t-button&gt; -->
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-round"
+          role="button"
         >
           
-          按钮 44
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
           
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--primary t-button--square"
-        data-v-7c375b15=""
-        role="button"
-        style="width: 240px;"
-      >
-        <!---->
-        <span
-          class="t-button__text"
+          <span
+            class="t-button__text"
+          >
+            
+             按钮 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
+          role="button"
         >
-          
-          按钮 40
-          
-        </span>
-      </button>
-      <br
-        data-v-7c375b15=""
-      />
-      <button
-        aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--primary t-button--square"
-        data-v-7c375b15=""
-        role="button"
-        style="width: 90px;"
-      >
-        <!---->
-        <span
-          class="t-button__text"
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            
+            按钮
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-s t-button--base t-button--primary t-button--shape-round"
+          role="button"
         >
-          
-          按钮 36
-          
-        </span>
-      </button>
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            
+            按钮
+            
+          </span>
+        </button>
+      </div>
+      <div
+        class="flex align-center margin-right"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-square"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-s t-button--base t-button--primary t-button--shape-square"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+      </div>
+      <div
+        class="flex align-center margin-right"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--base t-button--primary t-button--shape-circle"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-s t-button--base t-button--primary t-button--shape-circle"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-app"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+      </div>
+      
     </div>
     
   </div>
 </div>
 `;
 
+exports[`csr snapshot test > csr test ./src/button/demos/other.vue 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    style="background: rgb(166, 166, 166); padding: 8px 16px; margin-bottom: 16px;"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-button--ghost t-is-block"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+         幽灵按钮 
+        
+      </span>
+    </button>
+  </div>
+  <div
+    class="margin-button"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-is-block"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+         文字按钮 
+        
+      </span>
+    </button>
+  </div>
+  <div
+    class="no-border-radius margin-button"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+         通栏按钮 
+        
+      </span>
+    </button>
+  </div>
+  <div
+    class="no-border-radius no-border flex margin-button"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        次按钮
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        主按钮
+        
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
 exports[`csr snapshot test > csr test ./src/button/demos/shape.vue 1`] = `
 <div>
-  <div
-    class="tdesign-demo-block"
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+    role="button"
   >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--round"
-      role="button"
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        小圆角
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        无圆角
-        
-      </span>
-    </button>
-  </div>
-  <div
-    class="tdesign-demo-block"
+      
+      长方形按钮
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--default t-button--shape-square"
+    role="button"
   >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--round"
-      role="button"
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        小圆角
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square"
-      role="button"
+      
+      正方形按钮
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--default t-button--shape-round"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        无圆角
-        
-      </span>
-    </button>
-  </div>
+      
+      圆角长方形按钮
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--default t-button--shape-circle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      圆形按钮
+      
+    </span>
+  </button>
 </div>
 `;
 
@@ -5506,11 +6036,11 @@ exports[`csr snapshot test > csr test ./src/button/demos/size.vue 1`] = `
 >
   
   <div
-    class="tdesign-demo-block"
+    class="flex align-center margin-right"
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--default t-button--square"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -5518,44 +6048,273 @@ exports[`csr snapshot test > csr test ./src/button/demos/size.vue 1`] = `
         class="t-button__text"
       >
         
-        大按钮
+        按钮 44
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        按钮 40
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        按钮 36
         
       </span>
     </button>
   </div>
   <div
-    class="tdesign-demo-block"
+    class="flex align-center margin-right"
   >
+    <!-- &lt;t-button size="large" :icon="iconFunc" shape="round" theme="primary"&gt;按钮&lt;/t-button&gt; -->
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-round"
       role="button"
     >
-      <!---->
+      
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
       <span
         class="t-button__text"
       >
         
-        中按钮
+         按钮 
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        
+        按钮
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-s t-button--base t-button--primary t-button--shape-round"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        
+        按钮
         
       </span>
     </button>
   </div>
   <div
-    class="tdesign-demo-block"
+    class="flex align-center margin-right"
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--square"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-square"
       role="button"
     >
-      <!---->
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
       <span
         class="t-button__text"
       >
-        
-        小按钮
-        
+        <!---->
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-s t-button--base t-button--primary t-button--shape-square"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
+      </span>
+    </button>
+  </div>
+  <div
+    class="flex align-center margin-right"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-circle"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-s t-button--base t-button--primary t-button--shape-circle"
+      role="button"
+    >
+      <svg
+        class="t-icon t-icon-app"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__text"
+      >
+        <!---->
       </span>
     </button>
   </div>
@@ -5573,7 +6332,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/test.vue 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -5587,7 +6346,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/test.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--square"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -5609,7 +6368,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/test.vue 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -5623,7 +6382,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/test.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square"
+      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -11913,7 +12672,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/base.vue 1`] 
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -11932,7 +12691,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/base.vue 1`] 
               </div>
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -13157,7 +13916,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/hour-minute.v
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -13176,7 +13935,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/hour-minute.v
               </div>
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -13758,7 +14517,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
               >
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                   role="button"
                 >
                   <!---->
@@ -13777,7 +14536,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
                 </div>
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                   role="button"
                 >
                   <!---->
@@ -14991,7 +15750,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
               >
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                   role="button"
                 >
                   <!---->
@@ -15010,7 +15769,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
                 </div>
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                   role="button"
                 >
                   <!---->
@@ -15471,7 +16230,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
               >
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                   role="button"
                 >
                   <!---->
@@ -15490,7 +16249,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
                 </div>
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                   role="button"
                 >
                   <!---->
@@ -15785,7 +16544,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
               >
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                   role="button"
                 >
                   <!---->
@@ -15804,7 +16563,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
                 </div>
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                   role="button"
                 >
                   <!---->
@@ -16370,7 +17129,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
               >
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                   role="button"
                 >
                   <!---->
@@ -16389,7 +17148,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
                 </div>
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                   role="button"
                 >
                   <!---->
@@ -17519,7 +18278,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
               >
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                   role="button"
                 >
                   <!---->
@@ -17538,7 +18297,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
                 </div>
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                   role="button"
                 >
                   <!---->
@@ -18764,7 +19523,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/render-label-
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -18783,7 +19542,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/render-label-
               </div>
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -19255,7 +20014,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/start-end-dat
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -19274,7 +20033,7 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/start-end-dat
               </div>
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -19599,7 +20358,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/confirm.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
             data-v-25064f1a=""
             role="button"
           >
@@ -19614,7 +20373,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/confirm.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
             data-v-25064f1a=""
             role="button"
           >
@@ -19781,7 +20540,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--square"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
               role="button"
             >
               <!---->
@@ -19859,7 +20618,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--square"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
               role="button"
             >
               <!---->
@@ -19937,7 +20696,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--square"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
               role="button"
             >
               <!---->
@@ -20013,7 +20772,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--square"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
               role="button"
             >
               <!---->
@@ -20104,7 +20863,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/input.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-button--base t-button--primary t-button--square button-item"
+        class="t-button t-button--base t-button--primary t-button--shape-rectangle button-item"
         data-v-4a76bf3d=""
         role="button"
       >
@@ -20119,7 +20878,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/input.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-button--base t-button--primary t-button--square"
+        class="t-button t-button--base t-button--primary t-button--shape-rectangle"
         data-v-4a76bf3d=""
         role="button"
       >
@@ -20275,7 +21034,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20290,7 +21049,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20305,7 +21064,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20320,7 +21079,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20374,7 +21133,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20432,7 +21191,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20498,7 +21257,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20564,7 +21323,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20602,7 +21361,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20617,7 +21376,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20677,7 +21436,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20691,7 +21450,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20756,7 +21515,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20770,7 +21529,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--danger t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--danger t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20809,7 +21568,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20824,7 +21583,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -20876,7 +21635,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20890,7 +21649,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
                 >
                   <!---->
@@ -20955,7 +21714,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--default t-dialog__vertical-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__vertical-btn"
                   role="button"
                 >
                   <!---->
@@ -20969,7 +21728,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--square t-dialog__btn t-dialog__btn--primary t-dialog__vertical-btn"
+                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__vertical-btn"
                   role="button"
                 >
                   <!---->
@@ -21418,7 +22177,7 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/base.vue 1`] = `
       </div>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--round"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-round"
         data-v-2da634e5=""
         role="button"
       >
@@ -21639,7 +22398,7 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/icon.vue 1`] = `
       </div>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--round"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-round"
         data-v-6846568d=""
         role="button"
       >
@@ -21778,7 +22537,7 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/mobile.vue 1`] = `
     <!--teleport end-->
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--round t-is-block"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-round t-is-block"
       data-v-4e345f36=""
       role="button"
     >
@@ -21989,7 +22748,7 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/mobile.vue 1`] = `
     <!--teleport end-->
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--round t-is-block"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-round t-is-block"
       data-v-4e345f36=""
       role="button"
     >
@@ -22621,7 +23380,7 @@ exports[`csr snapshot test > csr test ./src/fab/demos/display.vue 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="t-button t-button--base t-button--primary t-button--round t-fab t-fab--icononly"
+    class="t-button t-button--base t-button--primary t-button--shape-round t-fab t-fab--icononly"
     role="button"
     style="right: 16px; bottom: 32px;"
   >
@@ -22683,7 +23442,7 @@ exports[`csr snapshot test > csr test ./src/fab/demos/mobile.vue 1`] = `
   <div>
     <button
       aria-disabled="false"
-      class="t-button t-button--base t-button--primary t-button--round t-fab t-fab--icononly"
+      class="t-button t-button--base t-button--primary t-button--shape-round t-fab t-fab--icononly"
       role="button"
       style="right: 16px; bottom: 32px;"
     >
@@ -22717,7 +23476,7 @@ exports[`csr snapshot test > csr test ./src/fab/demos/text.vue 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="t-button t-button--base t-button--default t-button--round t-fab"
+    class="t-button t-button--base t-button--default t-button--shape-round t-fab"
     role="button"
     style="right: 16px; bottom: 96px;"
   >
@@ -26216,7 +26975,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/background.vue 1`
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -26303,7 +27062,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/base.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -26390,7 +27149,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/imageList.vue 1`]
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -26477,7 +27236,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/initialIndex.vue 
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -26569,7 +27328,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -26584,7 +27343,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -26599,7 +27358,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -26614,7 +27373,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -29163,7 +29922,7 @@ exports[`csr snapshot test > csr test ./src/indexes/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -29177,7 +29936,7 @@ exports[`csr snapshot test > csr test ./src/indexes/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -30219,7 +30978,7 @@ exports[`csr snapshot test > csr test ./src/input/demos/mobile.vue 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-s t-button--text t-button--primary t-button--square"
+                  class="t-button t-size-s t-button--text t-button--primary t-button--shape-rectangle"
                   data-v-12c1c142=""
                   role="button"
                   style="height: 24px; padding: 0px;"
@@ -30904,7 +31663,7 @@ exports[`csr snapshot test > csr test ./src/input/demos/other.vue 1`] = `
               
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle"
                 role="button"
               >
                 <!---->
@@ -31092,7 +31851,7 @@ exports[`csr snapshot test > csr test ./src/list/demos/mobile.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -31106,7 +31865,7 @@ exports[`csr snapshot test > csr test ./src/list/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -31120,7 +31879,7 @@ exports[`csr snapshot test > csr test ./src/list/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -31188,7 +31947,7 @@ exports[`csr snapshot test > csr test ./src/loading/demos/bar.vue 1`] = `
   </div>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--outline t-button--default t-button--square"
+    class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -31853,7 +32612,7 @@ exports[`csr snapshot test > csr test ./src/loading/demos/mobile.vue 1`] = `
       </div>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         data-v-448d2bed=""
         role="button"
       >
@@ -32265,7 +33024,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/align.vue 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--square"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -32295,7 +33054,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/close.vue 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--square"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -32309,7 +33068,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/close.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--square"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -32342,7 +33101,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/duration.vue 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--square"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -32368,7 +33127,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/function.vue 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--square"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -32382,7 +33141,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/function.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--square"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -32397,7 +33156,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/function.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--square"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -32412,7 +33171,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/function.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--square"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -32462,7 +33221,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32476,7 +33235,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32490,7 +33249,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32504,7 +33263,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32539,7 +33298,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32553,7 +33312,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32567,7 +33326,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32581,7 +33340,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -32633,7 +33392,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/offset.vue 1`] = `
   />
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--outline t-button--default t-button--square"
+    class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -32677,7 +33436,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/text.vue 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         data-v-9078f4e6=""
         role="button"
       >
@@ -32692,7 +33451,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/text.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         data-v-9078f4e6=""
         role="button"
       >
@@ -32707,7 +33466,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/text.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         data-v-9078f4e6=""
         role="button"
       >
@@ -32722,7 +33481,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/text.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
         data-v-9078f4e6=""
         role="button"
       >
@@ -32773,7 +33532,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/theme.vue 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--square"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -32787,7 +33546,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/theme.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--square"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
       style="margin-top: 8px;"
     >
@@ -32802,7 +33561,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/theme.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--square"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
       style="margin-top: 8px;"
     >
@@ -32817,7 +33576,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/theme.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--square"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
       role="button"
       style="margin-top: 8px;"
     >
@@ -33396,7 +34155,7 @@ exports[`csr snapshot test > csr test ./src/notice-bar/demos/event.vue 1`] = `
     
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -34917,7 +35676,7 @@ exports[`csr snapshot test > csr test ./src/overlay/demos/base.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--default t-button--square"
+            class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
             data-v-255855c8=""
             role="button"
           >
@@ -34952,7 +35711,7 @@ exports[`csr snapshot test > csr test ./src/overlay/demos/base.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--default t-button--square"
+            class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
             data-v-255855c8=""
             role="button"
           >
@@ -35171,7 +35930,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
           >
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
               role="button"
             >
               <!---->
@@ -35188,7 +35947,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
             />
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
               role="button"
             >
               <!---->
@@ -35293,7 +36052,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
           >
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
               role="button"
             >
               <!---->
@@ -35310,7 +36069,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
             />
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
               role="button"
             >
               <!---->
@@ -35461,7 +36220,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
           >
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
               role="button"
             >
               <!---->
@@ -35478,7 +36237,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
             />
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
               role="button"
             >
               <!---->
@@ -35895,7 +36654,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/cascade.vue 1`] = `
           >
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
               role="button"
             >
               <!---->
@@ -35914,7 +36673,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/cascade.vue 1`] = `
             </div>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+              class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
               role="button"
             >
               <!---->
@@ -36215,7 +36974,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -36232,7 +36991,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -36337,7 +37096,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -36354,7 +37113,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -36505,7 +37264,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -36522,7 +37281,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -36948,7 +37707,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__cancel"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__cancel"
                 role="button"
               >
                 <!---->
@@ -36967,7 +37726,7 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
               </div>
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--text t-button--default t-button--square t-picker__confirm"
+                class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-picker__confirm"
                 role="button"
               >
                 <!---->
@@ -37064,7 +37823,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/custom-animation.vue 1`]
 <div>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--default t-button--square"
+    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37141,7 +37900,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -37155,7 +37914,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -37169,7 +37928,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -37183,7 +37942,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -37197,7 +37956,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
         >
           <!---->
@@ -37345,7 +38104,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37359,7 +38118,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37373,7 +38132,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37387,7 +38146,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37401,7 +38160,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37542,7 +38301,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-bottom.vue 1`]
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37587,7 +38346,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-center.vue 1`]
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37632,7 +38391,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-left.vue 1`] =
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37677,7 +38436,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-right.vue 1`] 
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37722,7 +38481,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-top.vue 1`] = 
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -37993,7 +38752,7 @@ exports[`csr snapshot test > csr test ./src/progress/demos/color.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--outline t-button--primary t-button--square"
+        class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
         data-v-64db40fb=""
         role="button"
       >
@@ -38012,7 +38771,7 @@ exports[`csr snapshot test > csr test ./src/progress/demos/color.vue 1`] = `
       />
       <button
         aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--primary t-button--square"
+        class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
         data-v-64db40fb=""
         role="button"
       >
@@ -38357,7 +39116,7 @@ exports[`csr snapshot test > csr test ./src/progress/demos/mobile.vue 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--outline t-button--primary t-button--square"
+          class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
           data-v-6de369ba=""
           role="button"
         >
@@ -38376,7 +39135,7 @@ exports[`csr snapshot test > csr test ./src/progress/demos/mobile.vue 1`] = `
         />
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--primary t-button--square"
+          class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
           data-v-6de369ba=""
           role="button"
         >
@@ -53468,7 +54227,7 @@ exports[`csr snapshot test > csr test ./src/sticky/demos/base.vue 1`] = `
     
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
       role="button"
     >
       <!---->
@@ -53524,7 +54283,7 @@ exports[`csr snapshot test > csr test ./src/sticky/demos/mobile.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--primary t-button--square"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
           data-v-3246353e=""
           role="button"
         >
@@ -53568,7 +54327,7 @@ exports[`csr snapshot test > csr test ./src/sticky/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle"
             data-v-3246353e=""
             role="button"
           >
@@ -53613,7 +54372,7 @@ exports[`csr snapshot test > csr test ./src/sticky/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
             data-v-3246353e=""
             role="button"
           >
@@ -53729,7 +54488,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/bind.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -53770,7 +54529,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/btns.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--theme t-button--square"
+          class="t-button t-size-m t-button--base t-button--theme t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -53819,7 +54578,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/btns.vue 1`] = `
         <div>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--theme t-button--square"
+            class="t-button t-size-m t-button--base t-button--theme t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -53833,7 +54592,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/btns.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle"
             role="button"
           >
             <!---->
@@ -53893,7 +54652,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/content.vue 1`] = `
         <div>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
             role="button"
             style="height: 100%;"
             type="submit"
@@ -54001,7 +54760,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/disabled.vue 1`] = 
         
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--primary t-button--square"
+          class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
           role="button"
           style="height: 100%;"
         >
@@ -54016,7 +54775,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/disabled.vue 1`] = 
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--danger t-button--square"
+          class="t-button t-size-s t-button--base t-button--danger t-button--shape-rectangle"
           role="button"
           style="height: 100%;"
         >
@@ -54056,7 +54815,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/event.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--default t-button--square"
+          class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
           role="button"
         >
           <!---->
@@ -54110,7 +54869,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/event.vue 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--default t-button--square"
+          class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
           role="button"
           style="height: 100%;"
         >
@@ -54125,7 +54884,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/event.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--default t-button--square"
+          class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
           role="button"
           style="height: 100%;"
         >
@@ -54215,7 +54974,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-card.vue 1`] =
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54298,7 +55057,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-card.vue 1`] =
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54387,7 +55146,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-more-menu.vue 
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54401,7 +55160,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-more-menu.vue 
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--warning t-button--square"
+            class="t-button t-size-m t-button--base t-button--warning t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54415,7 +55174,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-more-menu.vue 
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54493,7 +55252,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-more-menu.vue 
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54507,7 +55266,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-more-menu.vue 
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--warning t-button--square"
+            class="t-button t-size-m t-button--base t-button--warning t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54521,7 +55280,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-more-menu.vue 
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54610,7 +55369,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-one-menu.vue 1
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54688,7 +55447,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-one-menu.vue 1
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -54779,7 +55538,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-two-menu.vue 1
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--primary"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
             role="button"
             style="height: 100%;"
           >
@@ -54794,7 +55553,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-two-menu.vue 1
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--danger"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
             role="button"
             style="height: 100%;"
           >
@@ -54873,7 +55632,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-two-menu.vue 1
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--primary"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
             role="button"
             style="height: 100%;"
           >
@@ -54888,7 +55647,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/left-two-menu.vue 1
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--danger"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
             role="button"
             style="height: 100%;"
           >
@@ -54986,7 +55745,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55064,7 +55823,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55147,7 +55906,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--primary"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
             role="button"
             style="height: 100%;"
           >
@@ -55162,7 +55921,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--danger"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
             role="button"
             style="height: 100%;"
           >
@@ -55241,7 +56000,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--primary"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
             role="button"
             style="height: 100%;"
           >
@@ -55256,7 +56015,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--square t-button--danger"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
             role="button"
             style="height: 100%;"
           >
@@ -55336,7 +56095,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55350,7 +56109,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--warning t-button--square"
+            class="t-button t-size-m t-button--base t-button--warning t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55364,7 +56123,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55442,7 +56201,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55456,7 +56215,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--warning t-button--square"
+            class="t-button t-size-m t-button--base t-button--warning t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55470,7 +56229,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55556,7 +56315,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55639,7 +56398,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55683,7 +56442,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55761,7 +56520,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55908,7 +56667,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/mobile.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--square"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
             role="button"
           >
             <!---->
@@ -55960,7 +56719,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/right-menu.vue 1`] 
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -56038,7 +56797,7 @@ exports[`csr snapshot test > csr test ./src/swipe-cell/demos/right-menu.vue 1`] 
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--square"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
             role="button"
           >
             <!---->
@@ -56321,7 +57080,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/control.vue 1`] = `
      手动指定页数： 
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--square"
+      class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
       data-v-7617ffc0=""
       role="button"
     >
@@ -56336,7 +57095,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/control.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--default t-button--square"
+      class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
       data-v-7617ffc0=""
       role="button"
     >
@@ -56351,7 +57110,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/control.vue 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--square"
+      class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
       data-v-7617ffc0=""
       role="button"
     >
@@ -63228,7 +63987,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     
     <button
       aria-checked="true"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-checked t-tag--checked"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-checked t-tag--checked"
       role="button"
     >
       <!---->
@@ -63254,7 +64013,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     </button>
     <button
       aria-checked="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-large"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-large"
       role="button"
     >
       <!---->
@@ -63280,7 +64039,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     </button>
     <button
       aria-checked="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-large"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-large"
       role="button"
     >
       <!---->
@@ -63307,7 +64066,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     <button
       aria-checked="false"
       aria-disabled="true"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-disabled t-tag--disabled"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-large t-is-disabled t-tag--disabled"
       disabled=""
       role="button"
     >
@@ -63336,7 +64095,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     
     <button
       aria-checked="true"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked"
       role="button"
     >
       <!---->
@@ -63362,7 +64121,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     </button>
     <button
       aria-checked="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-medium"
       role="button"
     >
       <!---->
@@ -63388,7 +64147,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     </button>
     <button
       aria-checked="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-medium"
       role="button"
     >
       <!---->
@@ -63415,7 +64174,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     <button
       aria-checked="false"
       aria-disabled="true"
-      class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled"
       disabled=""
       role="button"
     >
@@ -63945,7 +64704,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
       <button
         aria-checked="true"
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked"
+        class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-checked t-tag--checked"
         role="button"
       >
         <!---->
@@ -63972,7 +64731,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
       <button
         aria-checked="false"
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square t-tag t-tag--checkable t-tag--square t-tag--size-medium"
+        class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-tag t-tag--checkable t-tag--square t-tag--size-medium"
         role="button"
       >
         <!---->
@@ -63998,7 +64757,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--default t-button--square t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled"
+        class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-is-disabled t-tag t-tag--checkable t-tag--square t-tag--size-medium t-is-disabled t-tag--disabled"
         disabled=""
         role="button"
       >
@@ -64881,7 +65640,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/icon.vue 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -64895,7 +65654,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/icon.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -64909,7 +65668,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/icon.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -64924,7 +65683,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/icon.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -64946,7 +65705,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/iconText.vue 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -64960,7 +65719,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/iconText.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -64974,7 +65733,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/iconText.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -64989,7 +65748,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/iconText.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -65011,7 +65770,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mask.vue 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -65059,7 +65818,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65073,7 +65832,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65087,7 +65846,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65101,7 +65860,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65131,7 +65890,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65145,7 +65904,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65159,7 +65918,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65173,7 +65932,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65187,7 +65946,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65221,7 +65980,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65235,7 +65994,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65249,7 +66008,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65283,7 +66042,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
@@ -65307,7 +66066,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/position.vue 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -65321,7 +66080,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/position.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -65335,7 +66094,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/position.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
     style="margin-top: 8px;"
   >
@@ -65357,7 +66116,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/text.vue 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
@@ -65371,7 +66130,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/text.vue 1`] = `
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--square"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
     role="button"
   >
     <!---->
