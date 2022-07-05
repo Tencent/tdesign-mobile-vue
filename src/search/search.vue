@@ -77,9 +77,9 @@ export default defineComponent({
       searchInput.value?.focus();
     };
 
-    const onBlur = (value: InputValue, context: InputBlurContext) => {
+    const onBlur = (value: any, context: InputBlurContext) => {
       state.labelActive = true;
-      props.onBlur?.('blur', value, { e: context.e });
+      props.onBlur?.(value, { e: context.e });
     };
 
     const onClick = () => {
