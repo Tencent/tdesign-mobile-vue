@@ -4,11 +4,11 @@
     <p class="summary">由其他控件触发，屏幕滑出或弹出一块自定义内容区域</p>
     <tdesign-demo-block title="类型" summary="弹出层出现为止可能为顶部、底部、中部、左侧或右侧">
       <div class="button-demo" style="margin: 0 16px">
-        <t-button variant="outline" size="large" @click="top = true">顶部弹出</t-button>
-        <t-button variant="outline" size="large" @click="bottom = true">底部弹出</t-button>
-        <t-button variant="outline" size="large" @click="center = true">中部弹出</t-button>
-        <t-button variant="outline" size="large" @click="left = true">左侧弹出</t-button>
-        <t-button variant="outline" size="large" @click="right = true">右侧弹出</t-button>
+        <t-button block variant="outline" size="large" @click="top = true">顶部弹出</t-button>
+        <t-button block variant="outline" size="large" @click="bottom = true">底部弹出</t-button>
+        <t-button block variant="outline" size="large" @click="center = true">中部弹出</t-button>
+        <t-button block variant="outline" size="large" @click="left = true">左侧弹出</t-button>
+        <t-button block variant="outline" size="large" @click="right = true">右侧弹出</t-button>
       </div>
     </tdesign-demo-block>
   </div>

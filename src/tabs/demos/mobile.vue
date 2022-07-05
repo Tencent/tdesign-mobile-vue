@@ -5,11 +5,11 @@
     <tdesign-demo-block title="01 类型" summary="横向选项卡">
       <t-tabs :value="currentValue" :sticky-props="stickyProps" @on-change="onChange">
         <t-tab-panel value="first">
-          <template #label> <div>标签一内容区</div> </template>
+          <template #label> <div>标签页一</div> </template>
           <p>标签一内容区</p>
         </t-tab-panel>
         <t-tab-panel value="second">
-          <template #label> 标签页一内容区 </template>
+          <template #label> 标签页二 </template>
           <p>标签二内容区</p>
         </t-tab-panel>
       </t-tabs>

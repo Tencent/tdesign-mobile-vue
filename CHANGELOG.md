@@ -4,6 +4,67 @@ docClass: timeline
 toc: false
 spline: explain
 ---
+
+## 🌈 0.9.0 `2022-06-30` 
+
+### ❗️ BREAKING CHANGES
+
+- `Progress`: 移除 size 和 theme 属性 @anlyyao ([#179](https://github.com/Tencent/tdesign-mobile-vue/pull/179))
+- `Picker`:重构`Picker`组件 @Dengzygx ([#199](https://github.com/Tencent/tdesign-mobile-vue/pull/199))
+    - 移除子组件`<picker-item/>`，新增基于Picker开发的级联选择组件`<cascade />`
+    - 新增`columns`，代表配置每一列的选项；新增`renderLabel`，用于自定义渲染label；新增`onPick`，选中任何一列时均会触发
+    - 修改`onChange`，`onConfirm`的回调参数
+- `DateTimePicker`:重构`DateTimePicker`组件 @Dengzygx ([#199](https://github.com/Tencent/tdesign-mobile-vue/pull/199))
+    - 移除`disableDate`、`showWeek`
+    - 新增`start`，用于设置最小可选时间；新增`end`，用于设置最大可选时间
+    - 将`onColumnChange`改名为`onPick`，修改回调参数
+    - 修改`onChange`，`onConfirm`的回调参数
+- `Search`: @LeeJim ([#201](https://github.com/Tencent/tdesign-mobile-vue/pull/201))
+  - 移除 `iconColor` 属性
+  - `autofocus` 更名为 `focus`
+  - `cancelButtonText` 更名为 `action`
+  - 新增 `leftIcon` 支持左侧图标定制
+  - 新增 `value` 和 `default-value` 控制输入框的值
+  - `cancel` 事件更名为 `action-click`
+  - 新增 `blur` 和 `focus` 事件
+- `Collapse`: @LeeJim ([#145](https://github.com/Tencent/tdesign-mobile-vue/pull/145))
+  - `accordion` 更名为 `expandMutex`
+  - 移除 `title`、`labelWidth` 属性
+  - 新增 `disabled`、`expandIcon`、`onChange` 属性无效的问题
+- `CollapsePanel`: @LeeJim ([#145](https://github.com/Tencent/tdesign-mobile-vue/pull/145))
+  - `name` 更为为 `value`
+  - `title` 更名为 `header`
+  - `extra` 更名为 `headerRightContent`
+  - 移除 `labelWidth`、`headerClickable` 属性
+  - 新增 `default`、`expandIcon` 属性
+  - 移除 `click` 事件
+- `Drawer`:  @ruige24601 ([#190](https://github.com/Tencent/tdesign-mobile-vue/pull/190))
+  - 移除 `slider` 属性
+  - 新增 `items`、`placement`、`showOverlay`、`zIndex` 等属性
+  - 新增 `close`、`item-click`、`overlay-click` 等事件
+### 🚀 Features
+- `Indexes`: 新增 Indexes 组件 @ruige24601 ([#117](https://github.com/Tencent/tdesign-mobile-vue/pull/117))
+- `Input`: 新增支持 size 属性 @anlyyao ([#181](https://github.com/Tencent/tdesign-mobile-vue/pull/181))
+- `Fab`: 新增支持 buttonProps 和 style 属性 @anlyyao ([#182](https://github.com/Tencent/tdesign-mobile-vue/pull/182))
+- `Cell`: 新增支持 image 插槽 @anlyyao ([#184](https://github.com/Tencent/tdesign-mobile-vue/pull/184))
+- `Rate`: 新增支持 gap 属性 @anlyyao ([#185](https://github.com/Tencent/tdesign-mobile-vue/pull/185))
+- `Loading`: 新增支持 duration、inheritColor、pause、reverse 属性 @LeeJim ([#191](https://github.com/Tencent/tdesign-mobile-vue/pull/191))
+- `Dialog`: @LeeJim ([#193](https://github.com/Tencent/tdesign-mobile-vue/pull/193))
+  - 新增支持 actions 和 preventScrollThrough 属性 
+  - 新增支持 支持 confirmBtn 和 cancelBtn 的插槽
+- `Checkbox`: 新增支持 maxContentRow 和 maxLabelRow 属性 @anlyyao ([#195](https://github.com/Tencent/tdesign-mobile-vue/pull/195))
+- `CheckboxGroup`: 新增支持 max 属性 @anlyyao ([#195](https://github.com/Tencent/tdesign-mobile-vue/pull/195))
+- `Swiper`: 新增支持 minShowNum 属性 @anlyyao ([#197](https://github.com/Tencent/tdesign-mobile-vue/pull/197))
+- `Upload`: @wwlh200 ([#205](https://github.com/Tencent/tdesign-mobile-vue/pull/205))
+  - 新增 select-change 事件
+  - 新增支持 allowUploadDuplicateFile 属性
+### 🐞 Bug Fixes
+- `Badge`: 修复 showZero 属性无效的问题 @renxm ([#141](https://github.com/Tencent/tdesign-mobile-vue/pull/141))
+- `Badge`: 修复 maxCount 属性无效的问题 @robinWongM ([#142](https://github.com/Tencent/tdesign-mobile-vue/pull/142))
+- `DropdownMenu`: 修复单选 update:value 失效的问题 @wwlh200 ([#146](https://github.com/Tencent/tdesign-mobile-vue/pull/146))
+- `Radio`: 修复非受控用法错误的问题 @anlyyao ([#192](https://github.com/Tencent/tdesign-mobile-vue/pull/192))
+
+
 ## 🌈 0.8.6 `2022-05-30` 
 ### 🚀 Features
 - `Indexes`: 新增 Indexes 组件 @ruige24601 ([#117](https://github.com/Tencent/tdesign-mobile-vue/pull/117))

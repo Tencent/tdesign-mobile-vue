@@ -5,22 +5,22 @@
     <tdesign-demo-block title="01 类型" summary="基础开关">
       <t-cell-group>
         <t-cell title="开关">
-          <template #note>
+          <template #rightIcon>
             <t-switch :value="checked"></t-switch>
           </template>
         </t-cell>
         <t-cell title="开关">
-          <template #note>
+          <template #rightIcon>
             <t-switch :value="checked2" @change="onChange2"> </t-switch>
           </template>
         </t-cell>
         <t-cell title="自定义颜色">
-          <template #note>
+          <template #rightIcon>
             <t-switch :default-value="true" :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']"></t-switch>
           </template>
         </t-cell>
         <t-cell title="异步操作">
-          <template #note>
+          <template #rightIcon>
             <t-switch v-model="checked3"> </t-switch>
           </template>
         </t-cell>
@@ -29,17 +29,17 @@
     <tdesign-demo-block summary="带描述信息开关">
       <t-cell-group>
         <t-cell title="开关">
-          <template #note>
+          <template #rightIcon>
             <t-switch v-model="value" label="描述信息"> </t-switch>
           </template>
         </t-cell>
         <t-cell title="开关">
-          <template #note>
+          <template #rightIcon>
             <t-switch label="描述信息"> </t-switch>
           </template>
         </t-cell>
         <t-cell title="自定义颜色">
-          <template #note>
+          <template #rightIcon>
             <t-switch :value="true" :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']" label="描述信息" />
           </template>
         </t-cell>
@@ -48,22 +48,22 @@
     <tdesign-demo-block title="02 状态" summary="开关状态">
       <t-cell-group>
         <t-cell title="开关开启禁用">
-          <template #note>
+          <template #rightIcon>
             <t-switch v-model="value" disabled> </t-switch>
           </template>
         </t-cell>
         <t-cell title="开关关闭禁用">
-          <template #note>
+          <template #rightIcon>
             <t-switch disabled></t-switch>
           </template>
         </t-cell>
         <t-cell title="开关开启禁用">
-          <template #note>
+          <template #rightIcon>
             <t-switch v-model="value" disabled label="描述信息"> </t-switch>
           </template>
         </t-cell>
         <t-cell title="开关关闭禁用">
-          <template #note>
+          <template #rightIcon>
             <t-switch label="描述信息" disabled></t-switch>
           </template>
         </t-cell>
