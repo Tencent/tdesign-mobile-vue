@@ -3,71 +3,45 @@
     <h1 class="title">Button 按钮</h1>
     <p class="summary">按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</p>
     <tdesign-demo-block title="01 类型" summary="基础按钮">
-      <div class="button-demo" style="margin: 0 16px 0">
-        <t-button theme="primary" @click="onClick">强按钮</t-button>
-        <t-button theme="primary" variant="outline">弱按钮</t-button>
-        <t-button variant="outline">次按钮</t-button>
-        <t-button theme="primary" variant="outline" :icon="iconFunc">带图标按钮</t-button>
-        <t-button theme="danger">警告按钮</t-button>
-        <t-button theme="danger" variant="outline">弱警告按钮</t-button>
-        <t-button theme="primary" variant="text">文字按钮</t-button>
+      <div class="button-demo">
+        <BaseButtonDemo />
       </div>
-      <div class="button-demo" style="background: #a6a6a6; padding: 16px 16px 0 16px">
-        <t-button variant="outline" ghost>幽灵按钮</t-button>
+      <OtherButtonDemo />
+      <div class="button-demo align-center margin-right">
+        <IconButtonDemo />
       </div>
-      <t-button theme="primary" block style="margin: 8px 0">通栏按钮</t-button>
-      <t-button-group>
-        <t-button variant="outline">次按钮</t-button>
-        <t-button theme="primary">主按钮</t-button>
-      </t-button-group>
+      <div class="flex align-center margin-right button-demo-loading">
+        <LoadingButtonDemo />
+      </div>
     </tdesign-demo-block>
+
     <tdesign-demo-block title="02 状态" summary="按钮禁用态">
-      <div class="button-demo" style="margin: 0 16px">
-        <t-button theme="primary" disabled @click="onClick">强按钮</t-button>
-        <t-button theme="primary" variant="outline" disabled>弱按钮</t-button>
-        <t-button variant="outline" disabled>次按钮</t-button>
-        <t-button theme="primary" variant="outline" :icon="iconFunc" disabled>带图标按钮</t-button>
-        <t-button theme="danger" disabled>警告按钮</t-button>
-        <t-button theme="danger" variant="outline" disabled>弱警告按钮</t-button>
-        <t-button theme="primary" variant="text" disabled>文字按钮</t-button>
+      <div class="button-demo">
+        <BaseButtonDemo :disabled="disabled" />
       </div>
-      <div class="button-demo" style="background: #a6a6a6; padding: 16px 16px 0 16px">
-        <t-button variant="outline" disabled ghost>幽灵按钮</t-button>
+      <OtherButtonDemo :disabled="disabled" />
+      <div class="button-demo align-center margin-right">
+        <IconButtonDemo :disabled="disabled" />
       </div>
-      <t-button theme="primary" block disabled style="margin: 8px 0">通栏按钮</t-button>
-      <t-button-group style="margin-top: 8px">
-        <t-button variant="outline" disabled>次按钮</t-button>
-        <t-button theme="primary" disabled>主按钮</t-button>
-      </t-button-group>
+      <div class="flex align-center margin-right button-demo-loading">
+        <LoadingButtonDemo :disabled="disabled" />
+      </div>
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 规格" summary="文字按钮尺寸">
-      <div class="button-demo" style="margin: 0 16px">
-        <t-button theme="primary" size="large">按钮 44</t-button>
-        <t-button theme="primary" style="width: 240px">按钮 40</t-button><br />
-        <t-button theme="primary" size="small" style="width: 90px">按钮 36</t-button>
+    <tdesign-demo-block title="03 规格" summary="按钮尺寸">
+      <div className="button-demo">
+        <SizeButtonDemo />
       </div>
     </tdesign-demo-block>
   </div>
 </template>
-<script lang="ts">
-import { ref, defineComponent, h } from 'vue';
-import { AppIcon } from 'tdesign-icons-vue-next';
+<script lang="ts" setup>
+import { ref } from 'vue';
+import './style/index.less';
+import BaseButtonDemo from './base.vue';
+import IconButtonDemo from './icon.vue';
+import LoadingButtonDemo from './loading.vue';
+import SizeButtonDemo from './size.vue';
+import OtherButtonDemo from './other.vue';
 
-export default defineComponent({
-  setup() {
-    const onClick = () => {
-      console.log('强按钮');
-    };
-    const loading = ref(true);
-    const iconFunc = () => h(AppIcon);
-    return { onClick, loading, iconFunc };
-  },
-});
+const disabled = ref(true);
 </script>
-<style lang="less" scoped>
-.button-demo {
-  .t-button {
-    width: 100%;
-  }
-}
-</style>
