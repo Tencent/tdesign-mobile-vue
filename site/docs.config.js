@@ -41,6 +41,12 @@ export default {
           component: () => import('@/divider/divider.md'),
         },
         {
+          title: 'Fab 悬浮按钮',
+          name: 'fab',
+          path: '/mobile-vue/components/fab',
+          component: () => import('@/fab/fab.md'),
+        },
+        {
           title: 'Icon 图标',
           name: 'icon',
           path: '/mobile-vue/components/icon',
@@ -81,12 +87,6 @@ export default {
           name: 'tabs',
           path: '/mobile-vue/components/tabs',
           component: () => import('@/tabs/tabs.md'),
-        },
-        {
-          title: 'DropdownMenu 下拉菜单',
-          name: 'dropdown-menu',
-          path: '/mobile-vue/components/dropdown-menu',
-          component: () => import('@/dropdown-menu/dropdown-menu.md'),
         },
       ],
     },
@@ -161,12 +161,6 @@ export default {
           component: () => import('@/slider/slider.md'),
         },
         {
-          title: 'Fab 悬浮按钮',
-          name: 'fab',
-          path: '/mobile-vue/components/fab',
-          component: () => import('@/fab/fab.md'),
-        },
-        {
           title: 'Upload 上传',
           name: 'upload',
           path: '/mobile-vue/components/upload',
@@ -201,6 +195,12 @@ export default {
           name: 'count-down',
           path: '/mobile-vue/components/count-down',
           component: () => import('@/count-down/count-down.md'),
+        },
+        {
+          title: 'DropdownMenu 下拉菜单',
+          name: 'dropdown-menu',
+          path: '/mobile-vue/components/dropdown-menu',
+          component: () => import('@/dropdown-menu/dropdown-menu.md'),
         },
         {
           title: 'Tag 标签',
