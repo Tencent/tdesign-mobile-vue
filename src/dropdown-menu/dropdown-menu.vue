@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, ref, reactive, onBeforeMount, provide } from 'vue';
+import { defineComponent, computed, toRefs, ref, reactive, watch, provide } from 'vue';
 import config from '../config';
 import { context as menuContext, DropdownMenuState, DropdownMenuControl, DropdownMenuExpandState } from './context';
 import TransAniControl from './trans-ani-control';
@@ -43,7 +43,10 @@ export default defineComponent({
         });
       }
     };
-    onBeforeMount(updateItems);
+    watch(() => slots?.default?.(), updateItems, {
+      deep: true,
+      immediate: true,
+    });
 
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>

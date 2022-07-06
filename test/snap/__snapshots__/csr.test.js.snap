@@ -22783,14 +22783,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/customized-menu.
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          自定义内容
+        </div>
       </div>
       
     </div>
@@ -22847,14 +22851,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/disabled.vue 1`]
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          禁用菜单
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          禁用选项
+        </div>
       </div>
       
     </div>
@@ -22887,14 +22895,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/events.vue 1`] =
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          多选菜单
+        </div>
       </div>
       
     </div>
@@ -23178,14 +23190,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/multi-choice.vue
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          多选菜单1
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          多选菜单2
+        </div>
       </div>
       
     </div>
@@ -23223,21 +23239,27 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/options-layout.v
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单列
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          双列
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          三列
+        </div>
       </div>
       
     </div>
@@ -23294,14 +23316,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/single-choice.vu
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单1
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单2
+        </div>
       </div>
       
     </div>
@@ -23344,14 +23370,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/tree-menu.vue 1`
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          两列多选
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          三列多选
+        </div>
       </div>
       
     </div>
