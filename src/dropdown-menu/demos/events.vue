@@ -3,7 +3,7 @@
     <t-dropdown-menu>
       <t-dropdown-item
         v-model="valueS"
-        title="单选菜单"
+        label="单选菜单"
         :options="optionsN"
         select-mode="multi"
         options-layout="columns"
@@ -16,7 +16,7 @@
       />
       <t-dropdown-item
         v-model="valueM"
-        title="多选菜单"
+        label="多选菜单"
         :options="optionsC"
         select-mode="multi"
         options-layout="columns"

@@ -1,8 +1,8 @@
 <template>
   <demo-container>
     <t-dropdown-menu>
-      <t-dropdown-item v-model="value1" title="单选菜单1" :options="optionsN" />
-      <t-dropdown-item v-model="value2" title="单选菜单2" :options="optionsC" />
+      <t-dropdown-item v-model="value1" label="单选菜单1" :options="optionsN" />
+      <t-dropdown-item v-model="value2" label="单选菜单2" :options="optionsC" />
     </t-dropdown-menu>
     <p>
       单选菜单1 选中项:
