@@ -41,6 +41,16 @@ export interface TdMessageProps {
    */
   visible?: boolean;
   /**
+   * 是否显示，隐藏时默认销毁组件，非受控属性
+   * @default false
+   */
+  defaultVisible?: boolean;
+  /**
+   * 是否显示，隐藏时默认销毁组件
+   * @default false
+   */
+  modelValue?: boolean;
+  /**
    * 元素层级，样式默认为 5000
    */
   zIndex?: number;
@@ -63,7 +73,7 @@ export interface TdMessageProps {
   /**
    * 可见性变化时触发
    */
-  onVisibleChange?: (visible: boolean) => void;
+  onChange?: (visible: boolean) => void;
 }
 
 export type MessageAlignType = 'left' | 'center';

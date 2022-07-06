@@ -25,7 +25,7 @@ export default defineComponent({
       hm: false,
     });
     const text = reactive({
-      hm: '12:01',
+      hm: '2020-08-10 12:01',
     });
 
     const showHm = computed(() => {
