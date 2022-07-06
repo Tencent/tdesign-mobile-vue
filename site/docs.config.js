@@ -335,6 +335,12 @@ export default {
           path: '/mobile-vue/components/popup',
           component: () => import('@/popup/popup.md'),
         },
+        {
+          title: 'Overlay 遮罩层',
+          name: 'overlay',
+          path: '/mobile-vue/components/overlay',
+          component: () => import('@/overlay/overlay.md'),
+        },
       ],
     },
   ],
