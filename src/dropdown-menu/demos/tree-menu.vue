@@ -3,14 +3,14 @@
     <t-dropdown-menu>
       <t-dropdown-item
         v-model="treeValue1"
-        title="两列多选"
+        label="两列多选"
         :options="optionsT1"
         options-layout="tree"
         select-mode="multi"
       />
       <t-dropdown-item
         v-model="treeValue2"
-        title="三列多选"
+        label="三列多选"
         :options="optionsT2"
         options-layout="tree"
         select-mode="multi"

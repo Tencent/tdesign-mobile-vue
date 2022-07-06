@@ -1,10 +1,10 @@
 <template>
   <demo-container>
     <t-dropdown-menu>
-      <t-dropdown-item v-model="valueS" title="单列" :options="optionsN" select-mode="multi" options-columns="1" />
+      <t-dropdown-item v-model="valueS" label="单列" :options="optionsN" select-mode="multi" options-columns="1" />
       <t-dropdown-item
         v-model="valueM1"
-        title="双列"
+        label="双列"
         :options="optionsN"
         select-mode="multi"
         options-layout="columns"
@@ -12,7 +12,7 @@
       />
       <t-dropdown-item
         v-model="valueM2"
-        title="三列"
+        label="三列"
         :options="optionsC"
         select-mode="multi"
         options-layout="columns"
