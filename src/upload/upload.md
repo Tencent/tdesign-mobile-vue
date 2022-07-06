@@ -41,11 +41,7 @@ files | Array | - | 已上传文件列表。支持语法糖 `v-model` 或 `v-mod
 defaultFiles | Array | - | 已上传文件列表。非受控属性。TS 类型：`Array<UploadFile>` | N
 format | Function | - | 文件上传前转换文件数据。TS 类型：`(file: File) => UploadFile` | N
 formatResponse | Function | - | 用于格式化文件上传后的响应数据。error 用于显示错误提示，如果 error 值为真，组件会判定为上传失败；url 用于上传文件/图片地址。。TS 类型：`(response: any, context: FormatResponseContext) => ResponseType ` `type ResponseType = { error?: string; url?: string } & Record<string, any>` `interface FormatResponseContext { file: UploadFile; currentFiles?: UploadFile[] }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
-gridConfig | Object | - | upload组件每行上传图片列数以及图片的宽度和高度。TS 类型：`{
-  column?: number;
-  width?: number;
-  height?: number;
-}` | N
+gridConfig | Object | - | upload组件每行上传图片列数以及图片的宽度和高度。TS 类型：`{column?: number;width?: number;height?: number;}` | N
 headers | Object | - | 设置上传的请求头部。TS 类型：`{[key: string]: string}` | N
 imageProps | Object | - | 透传 Image 组件全部属性。TS 类型：`ImageProps`，[Image API Documents](./image?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/upload/type.ts) | N
 max | Number | 0 | 用于控制文件上传数量，值为 0 则不限制 | N
