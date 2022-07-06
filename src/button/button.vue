@@ -32,7 +32,7 @@ export default defineComponent({
       `${name}--${props.variant}`,
       {
         [`${name}--${props.theme}`]: props.theme,
-        [`${name}--${props.shape}`]: props.shape,
+        [`${name}--shape-${props.shape}`]: props.shape,
         [`${name}--ghost`]: props.ghost,
         [`${prefix}-is-block`]: props.block,
         [CLASSNAMES.STATUS.disabled]: props.disabled,

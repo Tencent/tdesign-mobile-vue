@@ -44,7 +44,7 @@ const defaultProps: TdMessageProps = {
   onClosed: () => {},
   onOpen: () => {},
   onOpened: () => {},
-  onVisibleChange: () => {},
+  onChange: () => {},
 };
 
 (['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((theme: MessageThemeList): void => {

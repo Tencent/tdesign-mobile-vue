@@ -97,17 +97,17 @@ export default defineComponent({
         case 'hour':
           return (
             (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 3) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[0]] >= 3)
+            (typeof props.mode === 'object' && precisionRankRecord[props.mode[1]] >= 3)
           );
         case 'minute':
           return (
             (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 4) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[0]] >= 4)
+            (typeof props.mode === 'object' && precisionRankRecord[props.mode[1]] >= 4)
           );
         case 'second':
           return (
             (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 5) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[0]] >= 5)
+            (typeof props.mode === 'object' && precisionRankRecord[props.mode[1]] >= 5)
           );
         default:
           return true;
@@ -126,7 +126,8 @@ export default defineComponent({
       return ret;
     };
 
-    const pickerValue = ref(getPickerValueByDateTimePickerValue(dateTimePickerValue.value));
+    // 当默认v-model为空时，当前value取最小日期
+    const pickerValue = ref(getPickerValueByDateTimePickerValue(dateTimePickerValue.value || start.value));
 
     let lastTimePicker = [...pickerValue.value];
     let currentPicker = [...pickerValue.value];

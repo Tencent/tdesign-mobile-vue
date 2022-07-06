@@ -46,11 +46,22 @@ export default {
     },
   },
   /** 是否显示，隐藏时默认销毁组件 */
-  visible: Boolean,
+  visible: {
+    type: Boolean,
+    default: undefined,
+  },
+  modelValue: {
+    type: Boolean,
+    default: undefined,
+  },
+  /** 是否显示，隐藏时默认销毁组件，非受控属性 */
+  defaultVisible: Boolean,
   /** 元素层级，样式默认为 5000 */
   zIndex: {
     type: Number,
   },
+  /** 可见性变化时触发 */
+  onChange: Function as PropType<TdMessageProps['onChange']>,
   /** 关闭Message时触发 */
   onClose: Function as PropType<TdMessageProps['onClose']>,
   /** 关闭Message时并且动画结束后触发 */
@@ -59,6 +70,4 @@ export default {
   onOpen: Function as PropType<TdMessageProps['onOpen']>,
   /** 展示Message时并且动画结束后触发 */
   onOpened: Function as PropType<TdMessageProps['onOpened']>,
-  /** 可见性变化时触发 */
-  onVisibleChange: Function as PropType<TdMessageProps['onVisibleChange']>,
 };
