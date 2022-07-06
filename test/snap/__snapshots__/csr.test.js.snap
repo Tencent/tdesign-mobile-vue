@@ -758,7 +758,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -788,7 +788,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -802,7 +802,7 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -2953,7 +2953,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-index="0"
         data-v-806aae90=""
         role="button"
@@ -2969,7 +2969,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-index="1"
         data-v-806aae90=""
         role="button"
@@ -2985,7 +2985,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-index="2"
         data-v-806aae90=""
         role="button"
@@ -3001,7 +3001,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-index="3"
         data-v-806aae90=""
         role="button"
@@ -3039,7 +3039,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-index="4"
         data-v-806aae90=""
         role="button"
@@ -3055,7 +3055,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-806aae90=""
         role="button"
       >
@@ -3070,7 +3070,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-806aae90=""
         role="button"
       >
@@ -3107,7 +3107,7 @@ exports[`csr snapshot test > csr test ./src/back-top/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-806aae90=""
         role="button"
       >
@@ -5076,7 +5076,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
     </div>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square t-size-full-width"
+      class="t-button t-size-m t-button--base t-button--primary t-button--square t-is-block"
       data-v-7c375b15=""
       role="button"
       style="margin: 8px 0px;"
@@ -5298,7 +5298,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
     </div>
     <button
       aria-disabled="true"
-      class="t-button t-size-m t-button--base t-button--primary t-button--square t-size-full-width t-is-disabled"
+      class="t-button t-size-m t-button--base t-button--primary t-button--square t-is-block t-is-disabled"
       data-v-7c375b15=""
       disabled=""
       role="button"
@@ -16379,7 +16379,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -16394,7 +16394,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -16409,7 +16409,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -16424,7 +16424,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -16437,7 +16437,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
           
         </span>
       </button>
-      <!-- &lt;t-button variant="outline" size="large" @click="eventDialog()"&gt; 函数调用长文本对话框 &lt;/t-button&gt; -->
+      <!-- &lt;t-button block variant="outline" size="large" @click="eventDialog()"&gt; 函数调用长文本对话框 &lt;/t-button&gt; -->
       <!--teleport start-->
       <div
         class="t-popup"
@@ -16706,7 +16706,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -16721,7 +16721,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -16913,7 +16913,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -16928,7 +16928,7 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-35efb3bf=""
         role="button"
       >
@@ -17882,7 +17882,7 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/mobile.vue 1`] = `
     <!--teleport end-->
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--round"
+      class="t-button t-size-l t-button--outline t-button--default t-button--round t-is-block"
       data-v-4e345f36=""
       role="button"
     >
@@ -18093,7 +18093,7 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/mobile.vue 1`] = `
     <!--teleport end-->
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--round"
+      class="t-button t-size-l t-button--outline t-button--default t-button--round t-is-block"
       data-v-4e345f36=""
       role="button"
     >
@@ -18128,14 +18128,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/customized-menu.
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          自定义内容
+        </div>
       </div>
       
     </div>
@@ -18192,14 +18196,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/disabled.vue 1`]
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          禁用菜单
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          禁用选项
+        </div>
       </div>
       
     </div>
@@ -18232,14 +18240,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/events.vue 1`] =
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          多选菜单
+        </div>
       </div>
       
     </div>
@@ -18523,14 +18535,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/multi-choice.vue
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          多选菜单1
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          多选菜单2
+        </div>
       </div>
       
     </div>
@@ -18568,21 +18584,27 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/options-layout.v
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单列
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          双列
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          三列
+        </div>
       </div>
       
     </div>
@@ -18639,14 +18661,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/single-choice.vu
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单1
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          单选菜单2
+        </div>
       </div>
       
     </div>
@@ -18689,14 +18715,18 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/tree-menu.vue 1`
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          两列多选
+        </div>
       </div>
       <div
         class="t-dropdown-menu__item"
       >
         <div
           class="t-dropdown-menu__title"
-        />
+        >
+          三列多选
+        </div>
       </div>
       
     </div>
@@ -22673,7 +22703,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -22688,7 +22718,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -22703,7 +22733,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -22718,7 +22748,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         data-v-ef8302fa=""
         role="button"
       >
@@ -25267,7 +25297,7 @@ exports[`csr snapshot test > csr test ./src/indexes/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -25281,7 +25311,7 @@ exports[`csr snapshot test > csr test ./src/indexes/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -27957,7 +27987,7 @@ exports[`csr snapshot test > csr test ./src/loading/demos/mobile.vue 1`] = `
       </div>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--default t-button--square t-size-full-width"
+        class="t-button t-size-m t-button--outline t-button--default t-button--square t-is-block"
         data-v-448d2bed=""
         role="button"
       >
@@ -28574,7 +28604,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -28588,7 +28618,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -28602,7 +28632,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -28616,7 +28646,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -28651,7 +28681,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -28665,7 +28695,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -28679,7 +28709,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -28693,7 +28723,7 @@ exports[`csr snapshot test > csr test ./src/message/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -33282,7 +33312,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -33296,7 +33326,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -33310,7 +33340,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -33324,7 +33354,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -33338,7 +33368,7 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--square"
+          class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
           role="button"
         >
           <!---->
@@ -45971,17 +46001,45 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/base.vue 1`] = `
             class="t-stepper"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46035,9 +46093,23 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/disable-input.vue 1`] 
             class="t-stepper"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               disabled=""
@@ -46045,9 +46117,23 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/disable-input.vue 1`] 
               readonly=""
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46101,18 +46187,46 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/disabled.vue 1`] = `
             class="t-stepper t-is-disabled"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               disabled=""
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46166,18 +46280,46 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/event.vue 1`] = `
             class="t-stepper"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               pattern="[0-9]*"
               style="width: 70px;"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46243,17 +46385,45 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
           <div
             class="t-stepper"
           >
-            <span
+            <div
               class="t-stepper__minus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46291,29 +46461,57 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
           <!--v-if-->
           <!--v-if-->
         </div>
+        <!--v-if-->
         <div
-          class="t-cell__note"
+          class="t-cell__right-icon"
         >
           
           <div
             class="t-stepper"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
-        <!--v-if-->
       </div>
     </div>
     
@@ -46335,17 +46533,45 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
         class="t-stepper t-stepper__pure"
         modelmodifiers="[object Object]"
       >
-        <span
+        <div
           class="t-stepper__minus"
-        />
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
         <input
           class="t-stepper__input"
           pattern="[0-9]*"
           type="tel"
         />
-        <span
+        <div
           class="t-stepper__plus"
-        />
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     
@@ -46391,18 +46617,46 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
             class="t-stepper t-is-disabled"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               disabled=""
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46436,18 +46690,46 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
             class="t-stepper t-is-disabled"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               disabled=""
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46481,17 +46763,45 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
             class="t-stepper"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46525,17 +46835,45 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
             class="t-stepper"
             modelmodifiers="[object Object]"
           >
-            <span
+            <div
               class="t-stepper__minus t-is-disabled"
-            />
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             <input
               class="t-stepper__input"
               pattern="[0-9]*"
               type="tel"
             />
-            <span
+            <div
               class="t-stepper__plus"
-            />
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
         </div>
@@ -46549,50 +46887,134 @@ exports[`csr snapshot test > csr test ./src/stepper/demos/mobile.vue 1`] = `
         class="t-stepper t-is-disabled t-stepper__pure"
         modelmodifiers="[object Object]"
       >
-        <span
+        <div
           class="t-stepper__minus t-is-disabled"
-        />
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
         <input
           class="t-stepper__input"
           disabled=""
           pattern="[0-9]*"
           type="tel"
         />
-        <span
+        <div
           class="t-stepper__plus t-is-disabled"
-        />
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
       <div
         class="t-stepper t-stepper__pure"
         modelmodifiers="[object Object]"
       >
-        <span
+        <div
           class="t-stepper__minus"
-        />
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
         <input
           class="t-stepper__input"
           pattern="[0-9]*"
           type="tel"
         />
-        <span
+        <div
           class="t-stepper__plus t-is-disabled"
-        />
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
       <div
         class="t-stepper t-stepper__pure"
         modelmodifiers="[object Object]"
       >
-        <span
+        <div
           class="t-stepper__minus t-is-disabled"
-        />
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
         <input
           class="t-stepper__input"
           pattern="[0-9]*"
           type="tel"
         />
-        <span
+        <div
           class="t-stepper__plus"
-        />
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     
@@ -52976,8 +53398,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -52991,7 +53414,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53009,8 +53431,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53024,7 +53447,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53042,8 +53464,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53057,7 +53480,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53075,8 +53497,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53090,7 +53513,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         
       </div>
@@ -53131,8 +53553,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53150,7 +53573,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53168,8 +53590,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53187,7 +53610,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53205,8 +53627,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53224,7 +53647,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         
       </div>
@@ -53269,8 +53691,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53284,7 +53707,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53302,8 +53724,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53317,7 +53740,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53335,8 +53757,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53354,7 +53777,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         <div
           class="t-cell t-cell--middle t-cell--bordered"
@@ -53372,8 +53794,9 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             <!--v-if-->
             <!--v-if-->
           </div>
+          <!--v-if-->
           <div
-            class="t-cell__note"
+            class="t-cell__right-icon"
           >
             
             <span
@@ -53391,7 +53814,6 @@ exports[`csr snapshot test > csr test ./src/switch/demos/mobile.vue 1`] = `
             </span>
             
           </div>
-          <!--v-if-->
         </div>
         
       </div>
@@ -57443,13 +57865,13 @@ exports[`csr snapshot test > csr test ./src/tabs/demos/mobile.vue 1`] = `
                   <div
                     data-v-14dd2c09=""
                   >
-                    标签一内容区
+                    标签页一
                   </div>
                 </div>
                 <div
                   class="t-tabs__nav-item"
                 >
-                   标签页一内容区 
+                   标签页二 
                 </div>
                 
                 <div
@@ -60808,7 +61230,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60822,7 +61244,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60836,7 +61258,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60850,7 +61272,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60880,7 +61302,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60894,7 +61316,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60908,7 +61330,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60922,7 +61344,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60936,7 +61358,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60970,7 +61392,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60984,7 +61406,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -60998,7 +61420,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
       </button>
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
@@ -61032,7 +61454,7 @@ exports[`csr snapshot test > csr test ./src/toast/demos/mobile.vue 1`] = `
     >
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--square"
+        class="t-button t-size-l t-button--outline t-button--default t-button--square t-is-block"
         role="button"
       >
         <!---->
