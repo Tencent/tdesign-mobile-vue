@@ -73,10 +73,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/grid.vue 1`] = `
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -490,10 +497,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/list.vue 1`] = `
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -578,10 +592,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/list.vue 1`] = `
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -657,10 +678,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/list.vue 1`] = `
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -823,10 +851,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -912,10 +947,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -992,10 +1034,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -1242,10 +1291,17 @@ exports[`csr snapshot test > csr test ./src/action-sheet/demos/mobile.vue 1`] = 
     class="t-popup t-action-sheet"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -12650,10 +12706,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/base.vue 1`] 
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -13894,10 +13957,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/hour-minute.v
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -14495,10 +14565,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -15728,10 +15805,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -16208,10 +16292,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -16522,10 +16613,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -17107,10 +17205,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -18256,10 +18361,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/mobile.vue 1`
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -19501,10 +19613,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/render-label-
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -19992,10 +20111,17 @@ exports[`csr snapshot test > csr test ./src/date-time-picker/demos/start-end-dat
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -20391,10 +20517,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/confirm.vue 1`] = `
             class="t-popup"
           >
             <transition-stub>
-              <div
-                class="t-overlay"
+              <transition-stub
                 style="display: none;"
-              />
+              >
+                <div
+                  class="t-overlay t-overlay--active"
+                  style="z-index: 1000; transition-duration: 300ms;"
+                >
+                  
+                  
+                </div>
+              </transition-stub>
             </transition-stub>
             <transition-stub>
               <div
@@ -20444,10 +20577,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/confirm.vue 1`] = `
             class="t-popup"
           >
             <transition-stub>
-              <div
-                class="t-overlay"
+              <transition-stub
                 style="display: none;"
-              />
+              >
+                <div
+                  class="t-overlay t-overlay--active"
+                  style="z-index: 1000; transition-duration: 300ms;"
+                >
+                  
+                  
+                </div>
+              </transition-stub>
             </transition-stub>
             <transition-stub>
               <div
@@ -20557,10 +20697,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
               class="t-popup"
             >
               <transition-stub>
-                <div
-                  class="t-overlay"
+                <transition-stub
                   style="display: none;"
-                />
+                >
+                  <div
+                    class="t-overlay t-overlay--active"
+                    style="z-index: 1000; transition-duration: 300ms;"
+                  >
+                    
+                    
+                  </div>
+                </transition-stub>
               </transition-stub>
               <transition-stub>
                 <div
@@ -20635,10 +20782,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
               class="t-popup"
             >
               <transition-stub>
-                <div
-                  class="t-overlay"
+                <transition-stub
                   style="display: none;"
-                />
+                >
+                  <div
+                    class="t-overlay t-overlay--active"
+                    style="z-index: 1000; transition-duration: 300ms;"
+                  >
+                    
+                    
+                  </div>
+                </transition-stub>
               </transition-stub>
               <transition-stub>
                 <div
@@ -20713,10 +20867,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
               class="t-popup"
             >
               <transition-stub>
-                <div
-                  class="t-overlay"
+                <transition-stub
                   style="display: none;"
-                />
+                >
+                  <div
+                    class="t-overlay t-overlay--active"
+                    style="z-index: 1000; transition-duration: 300ms;"
+                  >
+                    
+                    
+                  </div>
+                </transition-stub>
               </transition-stub>
               <transition-stub>
                 <div
@@ -20789,10 +20950,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
               class="t-popup"
             >
               <transition-stub>
-                <div
-                  class="t-overlay"
+                <transition-stub
                   style="display: none;"
-                />
+                >
+                  <div
+                    class="t-overlay t-overlay--active"
+                    style="z-index: 1000; transition-duration: 300ms;"
+                  >
+                    
+                    
+                  </div>
+                </transition-stub>
               </transition-stub>
               <transition-stub>
                 <div
@@ -20900,10 +21068,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/input.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -20945,10 +21120,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/input.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -21098,10 +21280,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -21156,10 +21345,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -21214,10 +21410,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -21280,10 +21483,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -21394,10 +21604,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -21473,10 +21690,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -21601,10 +21825,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -21672,10 +21903,17 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
         class="t-popup"
       >
         <transition-stub>
-          <div
-            class="t-overlay"
+          <transition-stub
             style="display: none;"
-          />
+          >
+            <div
+              class="t-overlay t-overlay--active"
+              style="z-index: 1000; transition-duration: 300ms;"
+            >
+              
+              
+            </div>
+          </transition-stub>
         </transition-stub>
         <transition-stub>
           <div
@@ -22083,10 +22321,17 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/base.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -22208,10 +22453,17 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/icon.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -22453,10 +22705,17 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/mobile.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -22568,10 +22827,17 @@ exports[`csr snapshot test > csr test ./src/drawer/demos/mobile.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -35670,107 +35936,161 @@ exports[`csr snapshot test > csr test ./src/notice-bar/demos/theme.vue 1`] = `
 
 exports[`csr snapshot test > csr test ./src/overlay/demos/base.vue 1`] = `
 <div
-  class="t-overlay-base-demo"
-  data-v-255855c8=""
+  data-v-app=""
 >
-  <div
-    class="t-cell-group"
+  
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    data-v-255855c8=""
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      基础遮罩
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    data-v-255855c8=""
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      内嵌内容的遮罩
+      
+    </span>
+  </button>
+  <transition-stub
     data-v-255855c8=""
   >
     <div
-      class="t-cell-group__title"
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
       
-      Overlay 遮罩层
       
     </div>
+  </transition-stub>
+  <transition-stub
+    data-v-255855c8=""
+  >
     <div
-      class="t-cell-group__container"
+      class="t-overlay t-overlay--transparent"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
       
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="box"
         data-v-255855c8=""
-        value-align="left"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
-            data-v-255855c8=""
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-              带背景遮罩
-              
-            </span>
-          </button>
-          
-        </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-        data-v-255855c8=""
-        value-align="left"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
-            data-v-255855c8=""
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-              无背景遮罩
-              
-            </span>
-          </button>
-          
-        </div>
-        <!--v-if-->
-      </div>
+      />
       
     </div>
+  </transition-stub>
+  
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/overlay/demos/mobile.vue 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Overlay 遮罩层
+  </h1>
+  <p
+    class="summary"
+  >
+    通过遮罩层，可以强调部分内容
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      基础遮罩层
+    </p>
+    
+    <div
+      class="demo-block"
+    >
+      
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-255855c8=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          基础遮罩
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-255855c8=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          内嵌内容的遮罩
+          
+        </span>
+      </button>
+      <transition-stub
+        data-v-255855c8=""
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+      <transition-stub
+        data-v-255855c8=""
+      >
+        <div
+          class="t-overlay t-overlay--transparent"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          <div
+            class="box"
+            data-v-255855c8=""
+          />
+          
+        </div>
+      </transition-stub>
+      
+    </div>
+    
   </div>
-  <div
-    class="t-overlay"
-    data-v-255855c8=""
-    style="display: none;"
-  />
-  <div
-    class="t-overlay--transparent"
-    data-v-255855c8=""
-    style="display: none;"
-  />
 </div>
 `;
 
@@ -35941,10 +36261,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -36063,10 +36390,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -36231,10 +36565,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/base.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -36665,10 +37006,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/cascade.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -36985,10 +37333,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -37107,10 +37462,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -37275,10 +37637,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -37718,10 +38087,17 @@ exports[`csr snapshot test > csr test ./src/picker/demos/mobile.vue 1`] = `
       class="t-popup"
     >
       <transition-stub>
-        <div
-          class="t-overlay"
+        <transition-stub
           style="display: none;"
-        />
+        >
+          <div
+            class="t-overlay t-overlay--active"
+            style="z-index: 1000; transition-duration: 300ms;"
+          >
+            
+            
+          </div>
+        </transition-stub>
       </transition-stub>
       <transition-stub>
         <div
@@ -37870,10 +38246,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/custom-animation.vue 1`]
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38007,10 +38390,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38031,10 +38421,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38055,10 +38452,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38079,10 +38483,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38105,10 +38516,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/mobile.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38207,10 +38625,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38231,10 +38656,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38255,10 +38687,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38279,10 +38718,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38303,10 +38749,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement.vue 1`] = `
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38348,10 +38801,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-bottom.vue 1`]
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38393,10 +38853,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-center.vue 1`]
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38438,10 +38905,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-left.vue 1`] =
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38483,10 +38957,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-right.vue 1`] 
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
@@ -38528,10 +39009,17 @@ exports[`csr snapshot test > csr test ./src/popup/demos/placement-top.vue 1`] = 
     class="t-popup"
   >
     <transition-stub>
-      <div
-        class="t-overlay"
+      <transition-stub
         style="display: none;"
-      />
+      >
+        <div
+          class="t-overlay t-overlay--active"
+          style="z-index: 1000; transition-duration: 300ms;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </transition-stub>
     <transition-stub>
       <div
