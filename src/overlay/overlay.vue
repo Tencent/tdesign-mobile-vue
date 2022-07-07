@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent, onMounted, onUnmounted } from 'vue';
 import config from '../config';
 import props from './props';
 import { TdOverlayProps } from './type';
@@ -38,6 +38,16 @@ export default defineComponent({
     const handleClick = (e: MouseEvent) => {
       props.onClick?.({ e });
     };
+
+    const cls = `${prefix}-overflow-hidden`;
+
+    onMounted(() => {
+      props.preventScrollThrough && document.body.classList.add(cls);
+    });
+
+    onUnmounted(() => {
+      props.preventScrollThrough && document.body.classList.remove(cls);
+    });
 
     return {
       name,
