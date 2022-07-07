@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-overlay v-show="showOverlay" v-bind="customOverlayProps" />
+    <t-overlay v-bind="customOverlayProps" />
     <div :class="classes">
       <t-node :content="iconContent"></t-node>
       <div v-if="messageContent" :class="`${name}__text`">
@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { LoadingIcon, CheckCircleIcon, ErrorCircleIcon } from 'tdesign-icons-vue-next';
-import { computed, toRefs, ref, defineComponent, getCurrentInstance, h, onMounted, onUnmounted } from 'vue';
+import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
 import { renderTNode, TNode } from '../shared';
 import TOverlay from '../overlay';
 import ToastProps from './props';
@@ -53,19 +53,15 @@ export default defineComponent({
       },
     ]);
 
-    const preventScrollCls = `${prefix}-overflow-hidden`;
-
-    onMounted(() => {
-      props.preventScrollThrough && document.body.classList.add(preventScrollCls);
-    });
-    onUnmounted(() => {
-      props.preventScrollThrough && document.body.classList.remove(preventScrollCls);
-    });
-
-    const baseOverlayProps = {
-      transparent: false,
+    const toastOverlayProps = {
+      preventScrollThrough: props.preventScrollThrough,
+      visible: props.showOverlay,
     };
-    const customOverlayProps = computed(() => ({ ...baseOverlayProps, ...props.overlayProps }));
+
+    const customOverlayProps = computed(() => ({
+      ...props.overlayProps,
+      ...toastOverlayProps,
+    }));
 
     return {
       name: ref(name),

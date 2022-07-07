@@ -134,7 +134,7 @@ export default defineComponent({
         theme: 'loading',
         message: '加载中...',
         showOverlay: true,
-        overlayProps: { transparent: true },
+        overlayProps: { transparent: true, visible: true },
         preventScrollThrough: false,
       });
     },
