@@ -1,38 +1,28 @@
 <template>
-  <div :class="`${name}`">
-    <t-cell-group title="Overlay 遮罩层">
-      <t-cell value-align="left">
-        <t-button size="large" @click="cur = 1">带背景遮罩</t-button>
-      </t-cell>
-      <t-cell value-align="left">
-        <t-button size="large" @click="cur = 2">无背景遮罩</t-button>
-      </t-cell>
-    </t-cell-group>
-
-    <t-overlay v-show="cur == 1" />
-    <t-overlay v-show="cur == 2" transparent="true" />
-  </div>
+  <t-button size="large" block variant="outline" @click="overlayVisible1 = true">基础遮罩</t-button>
+  <t-button size="large" block variant="outline" @click="overlayVisible2 = true">内嵌内容的遮罩</t-button>
+  <t-overlay :visible="overlayVisible1" @click="overlayVisible1 = false" />
+  <t-overlay :visible="overlayVisible2" transparent @click="overlayVisible2 = false">
+    <div class="box"></div>
+  </t-overlay>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
-import config from '../../config';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-const { prefix } = config;
-const name = `${prefix}-overlay-base-demo`;
-export default defineComponent({
-  setup() {
-    return {
-      name: ref(name),
-      cur: 0,
-    };
-  },
-});
+const overlayVisible1 = ref(false);
+const overlayVisible2 = ref(false);
 </script>
+
 <style lang="less" scoped>
-.t-overlay-base-demo {
-  background: #fff;
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  background-color: red;
   position: relative;
-  height: 100vh;
+  left: 50%;
+  top: 100px;
+  margin-left: -50px;
 }
 </style>
