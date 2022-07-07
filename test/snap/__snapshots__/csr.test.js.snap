@@ -23052,6 +23052,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/customized-menu.
         >
           单选菜单
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       <div
         class="t-dropdown-menu__item"
@@ -23061,6 +23074,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/customized-menu.
         >
           自定义内容
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       
     </div>
@@ -23120,6 +23146,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/disabled.vue 1`]
         >
           禁用菜单
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       <div
         class="t-dropdown-menu__item"
@@ -23129,6 +23168,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/disabled.vue 1`]
         >
           禁用选项
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       
     </div>
@@ -23164,6 +23216,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/events.vue 1`] =
         >
           单选菜单
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       <div
         class="t-dropdown-menu__item"
@@ -23173,6 +23238,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/events.vue 1`] =
         >
           多选菜单
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       
     </div>
@@ -23200,23 +23278,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/events.vue 1`] =
 exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-282366a4=""
 >
   <h1
     class="title"
-    data-v-282366a4=""
   >
     DropdownMenu 下拉菜单
   </h1>
   <p
     class="summary"
-    data-v-282366a4=""
   >
     向下弹出的菜单列表
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-282366a4=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -23229,9 +23303,12 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
       单选下拉菜单
     </p>
     
+    <!-- &lt;t-dropdown-menu&gt;
+        &lt;t-dropdown-item :value="valueS1" label="菜单名称" :options="optionsN" @change="onChange" /&gt;
+        &lt;t-dropdown-item v-model="valueS2" label="菜单名称" :options="optionsC" /&gt;
+      &lt;/t-dropdown-menu&gt; -->
     <div
       class="t-dropdown-menu"
-      data-v-282366a4=""
     >
       <div
         class="t-dropdown-menu__bar"
@@ -23243,8 +23320,21 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
           <div
             class="t-dropdown-menu__title"
           >
-            菜单名称
+            菜单
           </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         <div
           class="t-dropdown-menu__item"
@@ -23252,12 +23342,71 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
           <div
             class="t-dropdown-menu__title"
           >
-            菜单名称
+            菜单
           </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         
       </div>
       
+      <!--v-if-->
+      <!--v-if-->
       <!--v-if-->
       <!--v-if-->
       
@@ -23266,7 +23415,6 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-282366a4=""
   >
     <!--v-if-->
     <p
@@ -23277,7 +23425,6 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
     
     <div
       class="t-dropdown-menu"
-      data-v-282366a4=""
     >
       <div
         class="t-dropdown-menu__bar"
@@ -23289,8 +23436,21 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
           <div
             class="t-dropdown-menu__title"
           >
-            单列
+            单列多选
           </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         <div
           class="t-dropdown-menu__item"
@@ -23298,8 +23458,21 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
           <div
             class="t-dropdown-menu__title"
           >
-            双列
+            双列多选
           </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         <div
           class="t-dropdown-menu__item"
@@ -23307,8 +23480,21 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
           <div
             class="t-dropdown-menu__title"
           >
-            三列
+            三列多选
           </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         
       </div>
@@ -23322,53 +23508,6 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-282366a4=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      单选下拉菜单
-    </p>
-    
-    <div
-      class="t-dropdown-menu"
-      data-v-282366a4=""
-    >
-      <div
-        class="t-dropdown-menu__bar"
-      >
-        
-        <div
-          class="t-dropdown-menu__item"
-        >
-          <div
-            class="t-dropdown-menu__title"
-          >
-            菜单名称
-          </div>
-        </div>
-        <div
-          class="t-dropdown-menu__item"
-        >
-          <div
-            class="t-dropdown-menu__title"
-          >
-            菜单名称
-          </div>
-        </div>
-        
-      </div>
-      
-      <!--v-if-->
-      <!--v-if-->
-      
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-282366a4=""
   >
     <!--v-if-->
     <p
@@ -23379,7 +23518,6 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
     
     <div
       class="t-dropdown-menu"
-      data-v-282366a4=""
     >
       <div
         class="t-dropdown-menu__bar"
@@ -23391,8 +23529,21 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
           <div
             class="t-dropdown-menu__title"
           >
-            菜单
+            树形双列
           </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         <div
           class="t-dropdown-menu__item"
@@ -23400,32 +23551,99 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
           <div
             class="t-dropdown-menu__title"
           >
-            菜单
+            选项最多六字超出1
           </div>
-        </div>
-        <div
-          class="t-dropdown-menu__item"
-        >
-          <div
-            class="t-dropdown-menu__title"
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
           >
-            菜单
-          </div>
-        </div>
-        <div
-          class="t-dropdown-menu__item"
-        >
-          <div
-            class="t-dropdown-menu__title"
-          >
-            菜单
-          </div>
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         
       </div>
       
       <!--v-if-->
       <!--v-if-->
+      
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 状态
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      下拉菜单状态
+    </p>
+    
+    <div
+      class="t-dropdown-menu"
+    >
+      <div
+        class="t-dropdown-menu__bar"
+      >
+        
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        
+      </div>
+      
       <!--v-if-->
       <!--v-if-->
       
@@ -23433,55 +23651,91 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/mobile.vue 1`] =
     
   </div>
   <div
-    data-v-282366a4=""
     style="height: 300px;"
   />
 </div>
 `;
 
-exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/multi-choice.vue 1`] = `
+exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/multiple.vue 1`] = `
 <div
-  class="tdesign-demo-dropdown-menu"
+  class="t-dropdown-menu"
 >
-  
   <div
-    class="t-dropdown-menu"
+    class="t-dropdown-menu__bar"
   >
+    
     <div
-      class="t-dropdown-menu__bar"
+      class="t-dropdown-menu__item"
     >
-      
       <div
-        class="t-dropdown-menu__item"
+        class="t-dropdown-menu__title"
       >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          多选菜单1
-        </div>
+        单列多选
       </div>
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <div
+      class="t-dropdown-menu__item"
+    >
       <div
-        class="t-dropdown-menu__item"
+        class="t-dropdown-menu__title"
       >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          多选菜单2
-        </div>
+        双列多选
       </div>
-      
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <div
+      class="t-dropdown-menu__item"
+    >
+      <div
+        class="t-dropdown-menu__title"
+      >
+        三列多选
+      </div>
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
     </div>
     
-    <!--v-if-->
-    <!--v-if-->
-    
   </div>
-  <p>
-     单选菜单 选中项: 
-    <strong>
-      option_2
-    </strong>
-  </p>
+  
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
   
 </div>
 `;
@@ -23508,6 +23762,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/options-layout.v
         >
           单列
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       <div
         class="t-dropdown-menu__item"
@@ -23517,6 +23784,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/options-layout.v
         >
           双列
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       <div
         class="t-dropdown-menu__item"
@@ -23526,6 +23806,19 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/options-layout.v
         >
           三列
         </div>
+        <svg
+          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11 6H5l3 4.5L11 6z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
       
     </div>
@@ -23565,109 +23858,170 @@ exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/options-layout.v
 </div>
 `;
 
-exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/single-choice.vue 1`] = `
+exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/single.vue 1`] = `
 <div
-  class="tdesign-demo-dropdown-menu"
+  class="t-dropdown-menu"
 >
-  
   <div
-    class="t-dropdown-menu"
+    class="t-dropdown-menu__bar"
   >
+    
     <div
-      class="t-dropdown-menu__bar"
+      class="t-dropdown-menu__item"
     >
-      
       <div
-        class="t-dropdown-menu__item"
+        class="t-dropdown-menu__title"
       >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          单选菜单1
-        </div>
+        菜单
       </div>
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <div
+      class="t-dropdown-menu__item"
+    >
       <div
-        class="t-dropdown-menu__item"
+        class="t-dropdown-menu__title"
       >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          单选菜单2
-        </div>
+        菜单
       </div>
-      
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <div
+      class="t-dropdown-menu__item"
+    >
+      <div
+        class="t-dropdown-menu__title"
+      >
+        菜单
+      </div>
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <div
+      class="t-dropdown-menu__item"
+    >
+      <div
+        class="t-dropdown-menu__title"
+      >
+        菜单
+      </div>
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
     </div>
     
-    <!--v-if-->
-    <!--v-if-->
-    
   </div>
-  <p>
-     单选菜单1 选中项: 
-    <strong>
-      option_2
-    </strong>
-  </p>
-  <p>
-     单选菜单2 选中项: 
-    <strong>
-      options_A
-    </strong>
-  </p>
-  <!-- &lt;t-button @click="updateOptions"&gt;更新选项&lt;/t-button&gt; -->
+  
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
+  <!--v-if-->
   
 </div>
 `;
 
-exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/tree-menu.vue 1`] = `
+exports[`csr snapshot test > csr test ./src/dropdown-menu/demos/tree.vue 1`] = `
 <div
-  class="tdesign-demo-dropdown-menu"
+  class="t-dropdown-menu"
 >
-  
   <div
-    class="t-dropdown-menu"
+    class="t-dropdown-menu__bar"
   >
+    
     <div
-      class="t-dropdown-menu__bar"
+      class="t-dropdown-menu__item"
     >
-      
       <div
-        class="t-dropdown-menu__item"
+        class="t-dropdown-menu__title"
       >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          两列多选
-        </div>
+        树形双列
       </div>
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <div
+      class="t-dropdown-menu__item"
+    >
       <div
-        class="t-dropdown-menu__item"
+        class="t-dropdown-menu__title"
       >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          三列多选
-        </div>
+        选项最多六字超出1
       </div>
-      
+      <svg
+        class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M11 6H5l3 4.5L11 6z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
     </div>
     
-    <!--v-if-->
-    <!--v-if-->
-    
   </div>
-  <p>
-     多选树形菜单（两列） 选中路径: 
-    <strong>
-      null
-    </strong>
-  </p>
-  <p>
-     多选树形菜单（三列） 选中路径: 
-    <strong>
-      ["options_1","options_3",["options_2","options_3"]]
-    </strong>
-  </p>
+  
+  <!--v-if-->
+  <!--v-if-->
   
 </div>
 `;
