@@ -1,17 +1,9 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <div class="tag-demo">
-      <t-tag theme="primary">重要</t-tag>
-      <t-tag theme="danger">危险</t-tag>
-      <t-tag theme="warning">警告</t-tag>
-      <t-tag theme="success">成功</t-tag>
-      <t-tag theme="default">信息</t-tag>
-    </div>
+  <div class="tag-demo">
+    <t-tag theme="primary">标签</t-tag>
+    <t-tag theme="danger">标签</t-tag>
+    <t-tag theme="warning">标签</t-tag>
+    <t-tag theme="success">标签</t-tag>
+    <t-tag>标签</t-tag>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({});
-</script>
