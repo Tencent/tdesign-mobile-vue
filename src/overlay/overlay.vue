@@ -39,16 +39,6 @@ export default defineComponent({
       props.onClick?.({ e });
     };
 
-    const cls = `${prefix}-overflow-hidden`;
-
-    onMounted(() => {
-      props.preventScrollThrough && document.body.classList.add(cls);
-    });
-
-    onUnmounted(() => {
-      props.preventScrollThrough && document.body.classList.remove(cls);
-    });
-
     return {
       name,
       classes,
