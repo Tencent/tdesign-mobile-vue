@@ -64504,7 +64504,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
   >
     
     <span
-      class="t-tag t-tag--checkable t-tag--square t-is-checked t-tag--checked t-tag--size-medium"
+      class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium t-is-checked t-tag--checked"
       role="button"
     >
       <span
@@ -64522,7 +64522,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
       <!--v-if-->
     </span>
     <span
-      class="t-tag t-tag--checkable t-tag--square t-tag--size-medium"
+      class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium"
       role="button"
     >
       <span
@@ -64541,7 +64541,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/checkable.vue 1`] = `
     </span>
     <span
       aria-disabled="true"
-      class="t-tag t-tag--checkable t-tag--square t-is-disabled t-tag--disabled t-tag--size-medium"
+      class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium t-is-disabled t-tag--disabled"
       role="button"
     >
       <span
@@ -64570,7 +64570,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/closable.vue 1`] = `
   
   <span
     aria-disabled="false"
-    class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-is-closable t-tag--closable t-tag--size-medium"
+    class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-tag--size-medium t-is-closable t-tag--closable"
     role="button"
   >
     <span
@@ -64605,7 +64605,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/closable.vue 1`] = `
   </span>
   <span
     aria-disabled="false"
-    class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-is-closable t-tag--closable t-tag--size-medium"
+    class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-tag--size-medium t-is-closable t-tag--closable"
     role="button"
   >
     <span
@@ -65045,7 +65045,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
       
       <span
         aria-disabled="false"
-        class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-is-closable t-tag--closable t-tag--size-medium"
+        class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-tag--size-medium t-is-closable t-tag--closable"
         role="button"
       >
         <span
@@ -65080,7 +65080,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
       </span>
       <span
         aria-disabled="false"
-        class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-is-closable t-tag--closable t-tag--size-medium"
+        class="t-tag t-tag--theme-primary t-tag--shape-square t-tag--variant-dark t-tag--size-medium t-is-closable t-tag--closable"
         role="button"
       >
         <span
@@ -65187,7 +65187,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
       >
         
         <span
-          class="t-tag t-tag--checkable t-tag--square t-is-checked t-tag--checked t-tag--size-medium"
+          class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium t-is-checked t-tag--checked"
           role="button"
         >
           <span
@@ -65205,7 +65205,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
           <!--v-if-->
         </span>
         <span
-          class="t-tag t-tag--checkable t-tag--square t-tag--size-medium"
+          class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium"
           role="button"
         >
           <span
@@ -65224,7 +65224,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
         </span>
         <span
           aria-disabled="true"
-          class="t-tag t-tag--checkable t-tag--square t-is-disabled t-tag--disabled t-tag--size-medium"
+          class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium t-is-disabled t-tag--disabled"
           role="button"
         >
           <span
@@ -65308,7 +65308,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
       >
         <span
           aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--size-large"
+          class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-large"
           role="button"
         >
           <span
@@ -65327,7 +65327,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/mobile.vue 1`] = `
         </span>
         <span
           aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--size-medium"
+          class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium"
           role="button"
         >
           <span
@@ -65445,7 +65445,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/size.vue 1`] = `
   >
     <span
       aria-disabled="false"
-      class="t-tag t-tag--checkable t-tag--square t-tag--size-large"
+      class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-large"
       role="button"
     >
       <span
@@ -65464,7 +65464,7 @@ exports[`csr snapshot test > csr test ./src/tag/demos/size.vue 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--checkable t-tag--square t-tag--size-medium"
+      class="t-tag t-tag--checkable t-tag--shape-square t-tag--size-medium"
       role="button"
     >
       <span

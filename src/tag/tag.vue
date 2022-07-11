@@ -38,18 +38,20 @@ const Tag = defineComponent({
     const baseClass = name;
 
     const tagStyle = computed(() => {
-      return props.maxWidth ? { maxWidth: `${props.maxWidth}px` } : {};
+      return props.maxWidth
+        ? { maxWidth: typeof props.maxWidth === 'number' ? `${props.maxWidth}px` : props.maxWidth }
+        : {};
     });
 
     const classes = computed(() => [
       `${baseClass}`,
       `${baseClass}--theme-${props.theme}`,
       `${baseClass}--shape-${props.shape}`,
+      `${baseClass}--variant-${props.variant}`,
+      `${baseClass}--size-${props.size}`,
       {
-        [`${baseClass}--variant-${props.variant}`]: props.variant,
         [`${prefix}-is-closable ${baseClass}--closable`]: props.closable,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: props.disabled,
-        [`${baseClass}--size-${props.size}`]: props.size,
       },
     ]);
 
