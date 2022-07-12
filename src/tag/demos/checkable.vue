@@ -1,92 +1,39 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <div class="tag-demo">
-      <t-check-tag
-        v-for="(fruit, index) in fruits"
-        :key="fruit.name"
-        v-model:checked="fruit.checked"
-        size="large"
-        :disabled="fruit.disabled"
-        @click="onClickFruit(index)"
-        @change="change"
-        >{{ fruit.name }}
-      </t-check-tag>
-      <t-check-tag
-        v-for="(fruit, index) in fruits2"
-        :key="fruit.name"
-        :checked="fruit.checked"
-        :disabled="fruit.disabled"
-        @click="onClickFruit2(index)"
-        >{{ fruit.name }}
-      </t-check-tag>
-    </div>
-  </div>
+  <t-check-tag
+    v-for="(item, index) in items"
+    :key="item.name"
+    v-model:checked="item.checked"
+    :disabled="item.disabled"
+    @click="handleClick(index)"
+    @change="handleChange"
+    >{{ item.name }}
+  </t-check-tag>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const fruits = ref([
-      {
-        name: '苹果',
-        checked: true,
-      },
-      {
-        name: '香蕉',
-        checked: false,
-      },
-      {
-        name: '桃子',
-        checked: false,
-      },
-      {
-        name: '火龙果',
-        checked: false,
-        disabled: true,
-      },
-    ]);
-
-    const fruits2 = ref([
-      {
-        name: '小苹果',
-        checked: true,
-      },
-      {
-        name: '小香蕉',
-        checked: false,
-      },
-      {
-        name: '小桃子',
-        checked: false,
-      },
-      {
-        name: '小火龙果',
-        checked: false,
-        disabled: true,
-      },
-    ]);
-
-    function onClickFruit(index: number) {
-      fruits.value[index].checked = !fruits.value[index].checked;
-    }
-
-    function onClickFruit2(index: number) {
-      fruits2.value[index].checked = !fruits2.value[index].checked;
-    }
-
-    function change(checked: boolean) {
-      console.log(checked);
-    }
-
-    return {
-      fruits,
-      fruits2,
-      change,
-      onClickFruit,
-      onClickFruit2,
-    };
+const items = ref([
+  {
+    name: '选中',
+    checked: true,
   },
-});
+  {
+    name: '未选中',
+    checked: false,
+  },
+  {
+    name: '不可选',
+    checked: false,
+    disabled: true,
+  },
+]);
+
+function handleClick(index: number) {
+  items.value[index].checked = !items.value[index].checked;
+}
+
+function handleChange(checked: boolean) {
+  console.log(checked);
+}
 </script>

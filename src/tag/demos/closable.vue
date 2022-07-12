@@ -1,52 +1,34 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <div class="tag-demo">
-      <t-tag
-        v-for="(tag, index) in closableTags"
-        :key="tag"
-        :closable="true"
-        :disabled="tag.disabled"
-        theme="primary"
-        :size="tag.size"
-        @close="onClickClose(index)"
-        >{{ tag.name }}
-      </t-tag>
-    </div>
-  </div>
+  <t-tag
+    v-for="(tag, index) in closableTags"
+    :key="tag"
+    closable
+    theme="primary"
+    :icon="tag.icon"
+    :size="tag.size"
+    @close="onClickClose(index)"
+    >{{ tag.name }}</t-tag
+  >
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref, h } from 'vue';
+import { AppIcon } from 'tdesign-icons-vue-next';
 
-export default defineComponent({
-  setup() {
-    const closableTags = ref([
-      {
-        name: '可关闭',
-        size: 'large',
-      },
-      {
-        name: '可关闭',
-      },
-      {
-        name: '可关闭',
-        size: 'small',
-      },
-      {
-        name: '失效标签',
-        size: 'small',
-        disabled: true,
-      },
-    ]);
-
-    function onClickClose(index: number) {
-      closableTags.value.splice(index, 1);
-    }
-
-    return {
-      closableTags,
-      onClickClose,
-    };
+const closableTags = ref([
+  {
+    name: '标签',
+    size: 'medium',
   },
-});
+  {
+    name: '标签',
+    size: 'medium',
+    icon: () => h(AppIcon),
+  },
+]);
+
+function onClickClose(index: number) {
+  console.log(index);
+  closableTags.value.splice(index, 1);
+}
 </script>

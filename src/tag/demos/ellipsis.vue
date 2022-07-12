@@ -1,11 +1,3 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <t-tag size="large" max-width="130" theme="primary">听说超长可以省略</t-tag>
-  </div>
+  <t-tag max-width="130px">听说超长可以省略听说超长</t-tag>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({});
-</script>
