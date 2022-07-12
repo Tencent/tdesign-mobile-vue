@@ -28,7 +28,7 @@ export default defineComponent({
   name,
   components: { CaretDownSmallIcon },
   props: DropdownMenuProps,
-  setup(props, { slots }) {
+  setup(props, { slots, expose }) {
     // 菜单状态
     const state = reactive<DropdownMenuState>({
       activeId: null,
@@ -121,6 +121,16 @@ export default defineComponent({
     const control: DropdownMenuControl = { expandMenu, collapseMenu };
     // 提供子组件访问
     provide('dropdownMenuControl', control);
+    expose({
+      toggle(idx?: number) {
+        if (idx != null) {
+          const item = menuTitles.value[idx];
+          expandMenu(item, idx);
+        } else {
+          collapseMenu();
+        }
+      },
+    });
     return {
       name: ref(name),
       classes,
