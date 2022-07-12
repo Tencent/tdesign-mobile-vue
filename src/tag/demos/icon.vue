@@ -1,7 +1,5 @@
 <template>
-  <div class="tag-demo">
-    <t-tag theme="primary" :icon="iconTags.icon">{{ iconTags.name }}</t-tag>
-  </div>
+  <t-tag theme="primary" :icon="iconTags.icon">{{ iconTags.name }}</t-tag>
 </template>
 
 <script lang="ts" setup>

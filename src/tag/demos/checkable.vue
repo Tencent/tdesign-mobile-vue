@@ -1,17 +1,13 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <div class="tag-demo">
-      <t-check-tag
-        v-for="(item, index) in items"
-        :key="item.name"
-        v-model:checked="item.checked"
-        :disabled="item.disabled"
-        @click="handleClick(index)"
-        @change="handleChange"
-        >{{ item.name }}
-      </t-check-tag>
-    </div>
-  </div>
+  <t-check-tag
+    v-for="(item, index) in items"
+    :key="item.name"
+    v-model:checked="item.checked"
+    :disabled="item.disabled"
+    @click="handleClick(index)"
+    @change="handleChange"
+    >{{ item.name }}
+  </t-check-tag>
 </template>
 
 <script lang="ts" setup>

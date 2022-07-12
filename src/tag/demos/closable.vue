@@ -1,16 +1,14 @@
 <template>
-  <div class="tag-demo">
-    <t-tag
-      v-for="(tag, index) in closableTags"
-      :key="tag"
-      closable
-      theme="primary"
-      :icon="tag.icon"
-      :size="tag.size"
-      @close="onClickClose(index)"
-      >{{ tag.name }}</t-tag
-    >
-  </div>
+  <t-tag
+    v-for="(tag, index) in closableTags"
+    :key="tag"
+    closable
+    theme="primary"
+    :icon="tag.icon"
+    :size="tag.size"
+    @close="onClickClose(index)"
+    >{{ tag.name }}</t-tag
+  >
 </template>
 
 <script lang="ts" setup>
