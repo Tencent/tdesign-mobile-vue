@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, onUnmounted } from 'vue';
+import { computed, defineComponent } from 'vue';
 import config from '../config';
 import props from './props';
 import { TdOverlayProps } from './type';
