@@ -262,6 +262,18 @@ export default {
           path: '/mobile-vue/components/list',
           component: () => import('@/list/list.md'),
         },
+        {
+          title: 'Loading 加载中',
+          name: 'loading',
+          path: '/mobile-vue/components/loading',
+          component: () => import('@/loading/loading.md'),
+        },
+        {
+          title: 'Result 结果',
+          name: 'result',
+          path: '/mobile-vue/components/result',
+          component: () => import('@/result/result.md'),
+        },
       ],
     },
     {
