@@ -1,8 +1,8 @@
 <template>
   <demo-container>
     <t-dropdown-menu>
-      <t-dropdown-item title="单选菜单" disabled />
-      <t-dropdown-item title="自定义内容">
+      <t-dropdown-item label="单选菜单" disabled />
+      <t-dropdown-item label="自定义内容">
         <t-cell-group>
           <t-cell label="开关 1">
             <t-switch v-model="switch1" text="描述信息"></t-switch>

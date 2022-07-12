@@ -1,6 +1,6 @@
 <template>
   <div v-if="isShowItems" :class="classes" :style="{ ...expandStyle }">
-    <t-overlay v-if="isShowItems && showOverlay" @click="onClickOverlay" />
+    <!-- <t-overlay v-if="isShowItems && showOverlay" @click="onClickOverlay" /> -->
     <div :class="styleContent" :style="{ ...transitionStyle }">
       <div :class="`${name}__bd`">
         <slot>
@@ -8,23 +8,25 @@
             <template v-if="!multiple">
               <!-- 单选列表 -->
               <t-radio-group v-model="radioSelect">
-                <div v-for="option in options" :key="option.value" :class="`${name}__cell`">
+                <template v-for="option in options" :key="option.value">
                   <t-radio
                     :value="option.value"
                     :label="option.title"
                     :disabled="option.disabled"
                     :class="styleDropRadio(option.value)"
+                    align="right"
                     :checked="isCheckedRadio(option.value)"
+                    :icon="renderCheckIcon"
                   />
-                </div>
+                </template>
               </t-radio-group>
             </template>
             <template v-else>
               <!-- 多选列表 -->
               <t-checkbox-group v-model="checkSelect">
-                <div v-for="option in options" :key="option.value" :class="`${name}__cell`">
-                  <t-checkbox :value="option.value" :label="option.title" :disabled="option.disabled" />
-                </div>
+                <template v-for="option in options" :key="option.value">
+                  <t-checkbox borderless :value="option.value" :label="option.title" :disabled="option.disabled" />
+                </template>
               </t-checkbox-group>
             </template>
           </template>
@@ -37,19 +39,17 @@
                 @update:model-value="selectTreeNode(level, $event)"
               >
                 <!-- 树形列表 - 父级节点 ST -->
-                <div
-                  v-for="option in treeOptions[level]"
-                  :key="option.value"
-                  :data-value="option.value"
-                  :class="`${name}__cell`"
-                >
+                <template v-for="option in treeOptions[level]" :key="option.value">
                   <t-radio
                     :class="styleTreeRadio(option.value, level)"
                     :value="option.value"
                     :label="option.title"
                     :disabled="option.disabled"
+                    align="right"
+                    :icon="[]"
+                    borderless
                   />
-                </div>
+                </template>
                 <!-- 树形列表 - 父级节点 ED -->
               </t-radio-group>
               <template v-else>
@@ -60,15 +60,16 @@
                     :value="convertTreeRadioType(treeState.selectList[level])"
                     @update:value="selectTreeNode(level, $event)"
                   >
-                    <div v-for="option in treeOptions[level]" :key="option.value" :class="`${name}__cell`">
+                    <template v-for="option in treeOptions[level]" :key="option.value">
                       <t-radio
                         :value="option.value"
                         :label="option.title"
                         :disabled="option.disabled"
                         :class="styleTreeRadio(option.value, level)"
-                        :icon="option.value === treeState.selectList[level] ? renderCheckIcon : undefined"
+                        align="right"
+                        borderless
                       />
-                    </div>
+                    </template>
                   </t-radio-group>
                   <!-- 树形列表 - 叶子节点（单选） ED -->
                 </template>
@@ -78,9 +79,15 @@
                     :value="convertTreeCheckType(treeState.selectList[level])"
                     @update:value="selectTreeNode(level, $event)"
                   >
-                    <div v-for="option in treeOptions[level]" :key="option.value" :class="`${name}__cell`">
-                      <t-checkbox :value="option.value" :label="option.title" :disabled="option.disabled"></t-checkbox>
-                    </div>
+                    <template v-for="option in treeOptions[level]" :key="option.value">
+                      <t-checkbox
+                        :value="option.value"
+                        :label="option.title"
+                        :disabled="option.disabled"
+                        align="right"
+                        borderless
+                      ></t-checkbox>
+                    </template>
                   </t-checkbox-group>
                   <!-- 树形列表 - 叶子节点（多选） ED -->
                 </template>
@@ -115,7 +122,6 @@ import {
   defineComponent,
 } from 'vue';
 import { TNode } from '../common';
-import TOverlay from '../overlay';
 import TRadio from '../radio';
 import config from '../config';
 import TButton from '../button';
@@ -149,7 +155,7 @@ type TdDropdownTreeValueType = TdDropdownItemOptionValueType | TdDropdownItemOpt
 
 export default defineComponent({
   name,
-  components: { TOverlay, TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
+  components: { TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
   setup(props, context: SetupContext) {

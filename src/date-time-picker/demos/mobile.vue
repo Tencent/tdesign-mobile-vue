@@ -19,7 +19,7 @@
       <t-popup v-model="show.ymd" placement="bottom">
         <t-date-time-picker
           v-model="text.ymd"
-          :mode="'date'"
+          :mode="['date']"
           title="选择年月日"
           format="YYYY-MM-DD"
           @change="onChange"

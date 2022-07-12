@@ -5,6 +5,20 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.9.1 `2022-07-12` 
+### 🚀 Features
+- `Toast`: 新增 overlayProps 属性透传至 overlay 组件，新增 showOverlay 属性控制遮罩层显示 @oceanlvr ([#204](https://github.com/Tencent/tdesign-mobile-vue/pull/204))
+- `Button`: 支持 4 种类型 @anlyyao ([#218](https://github.com/Tencent/tdesign-mobile-vue/pull/218))
+- `Overlay`: 新增组件 @LeeJim ([#223](https://github.com/Tencent/tdesign-mobile-vue/pull/223))
+- `DropdownMenu`: 新增 toggle 方法用于切换菜单 @LeeJim ([#230](https://github.com/Tencent/tdesign-mobile-vue/pull/230))
+- `Tag`: 升级样式以及支持左图标 @anlyyao ([#229](https://github.com/Tencent/tdesign-mobile-vue/pull/229))
+### 🐞 Bug Fixes
+- `Message`: 优化用法，支持 `v-model` @Dengzygx ([#216](https://github.com/Tencent/tdesign-mobile-vue/pull/216))
+- `DateTimePicker`: 修复DateTimePicker组件value为空时无法正常展示的问题 @Dengzygx ([#215](https://github.com/Tencent/tdesign-mobile-vue/pull/215))
+- `Search`: 修复 blur 事件参数返回错误的问题 @Dengzygx ([#217](https://github.com/Tencent/tdesign-mobile-vue/pull/217))
+- `DropdownMenu`: 修复 dropdownmenu-item 的 label 不支持动态更新等问题 @krimeshu ([#220](https://github.com/Tencent/tdesign-mobile-vue/pull/220))
+- `DropdownMenu`: 修复 radio、checkbox 样式问题 @LeeJim ([#219](https://github.com/Tencent/tdesign-mobile-vue/pull/219))
+
 ## 🌈 0.9.0 `2022-06-30` 
 
 ### ❗️ BREAKING CHANGES

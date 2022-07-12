@@ -24,13 +24,13 @@ export default {
   },
   /** 是否显示为加载状态 */
   loading: Boolean,
-  /** 按钮形状，有二种：方形、圆角方形  */
+  /** 按钮形状，有 4 种：长方形、正方形、圆角长方形、圆形 */
   shape: {
     type: String as PropType<TdButtonProps['shape']>,
-    default: 'square' as TdButtonProps['shape'],
+    default: 'rectangle' as TdButtonProps['shape'],
     validator(val: TdButtonProps['shape']): boolean {
       if (!val) return true;
-      return ['square', 'round'].includes(val);
+      return ['rectangle', 'square', 'round', 'circle'].includes(val);
     },
   },
   /** 组件尺寸 */

@@ -2,7 +2,10 @@
   <div :class="classes">
     <div ref="refBar" :class="styleBar">
       <div v-for="(item, idx) in menuTitles" :key="idx" :class="styleBarItem(item, idx)" @click="expandMenu(item, idx)">
-        <div :class="`${name}__title`">{{ item.label }}</div>
+        <div :class="`${name}__title`">
+          {{ item.label }}
+        </div>
+        <caret-down-small-icon :class="`${name}__arrow`" size="24" />
       </div>
     </div>
     <slot />
@@ -10,7 +13,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, ref, reactive, onBeforeMount, provide } from 'vue';
+import { defineComponent, computed, toRefs, ref, reactive, watch, provide } from 'vue';
+import { CaretDownSmallIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import { context as menuContext, DropdownMenuState, DropdownMenuControl, DropdownMenuExpandState } from './context';
 import TransAniControl from './trans-ani-control';
@@ -22,8 +26,9 @@ const name = `${prefix}-dropdown-menu`;
 
 export default defineComponent({
   name,
+  components: { CaretDownSmallIcon },
   props: DropdownMenuProps,
-  setup(props, { slots }) {
+  setup(props, { slots, expose }) {
     // 菜单状态
     const state = reactive<DropdownMenuState>({
       activeId: null,
@@ -43,7 +48,10 @@ export default defineComponent({
         });
       }
     };
-    onBeforeMount(updateItems);
+    watch(() => slots?.default?.(), updateItems, {
+      deep: true,
+      immediate: true,
+    });
 
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
@@ -113,6 +121,16 @@ export default defineComponent({
     const control: DropdownMenuControl = { expandMenu, collapseMenu };
     // 提供子组件访问
     provide('dropdownMenuControl', control);
+    expose({
+      toggle(idx?: number) {
+        if (idx != null) {
+          const item = menuTitles.value[idx];
+          expandMenu(item, idx);
+        } else {
+          collapseMenu();
+        }
+      },
+    });
     return {
       name: ref(name),
       classes,

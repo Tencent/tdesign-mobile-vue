@@ -4,6 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { TdOverlayProps } from '../overlay/type';
 import { TNode } from '../common';
 
 export interface TdToastProps {
@@ -26,6 +27,11 @@ export interface TdToastProps {
    */
   message?: string | TNode;
   /**
+   * 遮罩层属性，透传至 Overlay
+   * @default {}
+   */
+  overlayProps?: TdOverlayProps;
+  /**
    * 弹窗展示位置
    * @default middle
    */
@@ -35,6 +41,11 @@ export interface TdToastProps {
    * @default false
    */
   preventScrollThrough?: boolean;
+  /**
+   * 是否显示遮罩层
+   * @default false
+   */
+  showOverlay?: boolean;
   /**
    * 提示类型
    */
