@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, toRefs, watchEffect, ref } from 'vue';
 import { isNumber } from '../shared';
 
 import config from '../config';
@@ -39,24 +39,27 @@ export default defineComponent({
   components: {},
   props: SkeletonProps,
   setup(props) {
-    const showContent = !props.loading;
+    const { loading, theme, animation } = toRefs(props);
+    const showContent = computed(() => !loading.value);
 
     const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
 
-    const rowCols = [];
+    const rowCols = ref<any>([]);
 
-    if (props.theme === 'avatar-text') {
-      rowCols.push(...defaultRowcols);
-    } else if (props.rowCol) {
-      rowCols.push(...props.rowCol);
-    } else {
-      rowCols.push(...defaultRowcols);
-    }
+    watchEffect(() => {
+      if (theme.value === 'avatar-text') {
+        rowCols.value = [...defaultRowcols];
+      } else if (props.rowCol) {
+        rowCols.value = [...props.rowCol];
+      } else {
+        rowCols.value = [...defaultRowcols];
+      }
+    });
 
     const rowClass = `${name}__row`;
     const colClass = computed(() => [
       `${name}__col`,
-      { [`${name}--animation-${props.animation}`]: props.animation },
+      { [`${name}--animation-${animation.value}`]: animation.value },
       `${name}--type-text`,
     ]);
 
@@ -86,31 +89,33 @@ export default defineComponent({
       return style;
     };
 
-    const parsedRowcols = rowCols.map((item) => {
-      if (isNumber(item)) {
+    const parsedRowcols = computed(() => {
+      return rowCols.value.map((item: any) => {
+        if (isNumber(item)) {
+          return [
+            {
+              type: 'text',
+              style: {},
+            },
+          ];
+        }
+        if (Array.isArray(item)) {
+          return item.map((col) => {
+            return {
+              ...col,
+              style: getColItemStyle(col),
+            };
+          });
+        }
+
+        const nItem = item as SkeletonRowColObj;
         return [
           {
-            type: 'text',
-            style: {},
+            ...nItem,
+            style: getColItemStyle(nItem),
           },
         ];
-      }
-      if (Array.isArray(item)) {
-        return item.map((col) => {
-          return {
-            ...col,
-            style: getColItemStyle(col),
-          };
-        });
-      }
-
-      const nItem = item as SkeletonRowColObj;
-      return [
-        {
-          ...nItem,
-          style: getColItemStyle(nItem),
-        },
-      ];
+      });
     });
 
     return {
