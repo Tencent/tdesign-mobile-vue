@@ -19,7 +19,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { IconFont } from 'tdesign-icons-vue-next';
 
 const newIconfontUrl = 'https://tdesign.gtimg.com/icon/default-demo/index.css';
