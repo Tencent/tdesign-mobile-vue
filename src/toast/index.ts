@@ -93,7 +93,6 @@ type ToastApi = {
 };
 
 export const ToastPlugin: WithInstallType<typeof vueToast> & ToastApi = Toast as any;
-console.log('phrbug', typeof vueToast )
 export default ToastPlugin;
 
 declare module '@vue/runtime-core' {
