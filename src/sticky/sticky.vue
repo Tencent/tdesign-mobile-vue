@@ -1,6 +1,6 @@
 <template>
   <div ref="boxRef" :class="boxClasses" :style="boxStyles">
-    <div ref="contentRef" :style="contentStyles">
+    <div ref="contentRef" :class="`${boxClasses}__content`" :style="contentStyles">
       <t-node :content="stickyContent"></t-node>
     </div>
   </div>

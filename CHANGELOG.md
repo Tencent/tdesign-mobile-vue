@@ -5,6 +5,12 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.9.2 `2022-07-18` 
+### 🐞 Bug Fixes
+- `DropdownMenu`: 修复树形状态下溢出时无法滚动的问题 @LeeJim ([#236](https://github.com/Tencent/tdesign-mobile-vue/pull/236))
+- `Sticky`: 修复 fixed 状态下丢失宽度的问题 @LeeJim ([#237](https://github.com/Tencent/tdesign-mobile-vue/pull/237))
+- `Skeleton`: 修复 props 变化不重新渲染的问题 @VeryHandSomeBoy ([#238](https://github.com/Tencent/tdesign-mobile-vue/pull/238))
+
 ## 🌈 0.9.1 `2022-07-12` 
 ### 🚀 Features
 - `Toast`: 新增 overlayProps 属性透传至 overlay 组件，新增 showOverlay 属性控制遮罩层显示 @oceanlvr ([#204](https://github.com/Tencent/tdesign-mobile-vue/pull/204))
