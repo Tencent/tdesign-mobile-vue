@@ -11,6 +11,11 @@
 <script lang="ts" setup>
 import { toRefs, defineProps, ref } from 'vue';
 
+const props = defineProps({
+  disabled: Boolean,
+});
+
+const { disabled } = toRefs(props);
 const loading = ref(false);
 const mockSubmit = () => {
   loading.value = true;
@@ -18,10 +23,4 @@ const mockSubmit = () => {
     loading.value = false;
   }, 2e3);
 };
-
-const props = defineProps({
-  disabled: Boolean,
-});
-
-const { disabled } = toRefs(props);
 </script>
