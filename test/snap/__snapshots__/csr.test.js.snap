@@ -4595,7 +4595,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/base.vue 1`] = `
       class="t-button__text"
     >
       
-       带图标按钮 
+      带图标按钮
       
     </span>
   </button>
@@ -4910,7 +4910,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
             class="t-button__text"
           >
             
-             带图标按钮 
+            带图标按钮
             
           </span>
         </button>
@@ -5302,7 +5302,7 @@ exports[`csr snapshot test > csr test ./src/button/demos/mobile.vue 1`] = `
             class="t-button__text"
           >
             
-             带图标按钮 
+            带图标按钮
             
           </span>
         </button>
