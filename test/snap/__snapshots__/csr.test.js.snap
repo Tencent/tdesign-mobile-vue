@@ -50412,7 +50412,7 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="height: 171px; border-radius: 8px;"
+                style="height: 171px;"
               />
               
             </div>
@@ -50431,7 +50431,7 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="width: 80%;"
+                style="width: 107px;"
               />
               
             </div>
@@ -50441,11 +50441,11 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="width: 60%;"
+                style="width: 93px;"
               />
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="width: 20%;"
+                style="width: 32px; margin-left: 41px;"
               />
               
             </div>
@@ -50468,7 +50468,7 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="height: 171px; border-radius: 8px;"
+                style="height: 171px;"
               />
               
             </div>
@@ -50487,7 +50487,7 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="width: 80%;"
+                style="width: 107px;"
               />
               
             </div>
@@ -50497,11 +50497,11 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="width: 60%;"
+                style="width: 93px;"
               />
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="width: 20%;"
+                style="width: 32px; margin-left: 41px;"
               />
               
             </div>
