@@ -1,3 +1,4 @@
+import { ImageProps } from '../image';
 import { TNode } from '../common';
 
 export interface TdResultProps {
@@ -25,4 +26,8 @@ export interface TdResultProps {
    * @default default
    */
   theme?: 'default' | 'success' | 'warning' | 'error';
+  /**
+   * 透传 Image 组件全部属性
+   */
+  imageProps?: ImageProps;
 }

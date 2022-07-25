@@ -2,7 +2,7 @@
   <div :class="classes">
     <div :class="`${name}__thumb`">
       <template v-if="imageContent">
-        <img v-if="typeof image === 'string'" :src="image" />
+        <t-image v-if="typeof image === 'string'" v-bind="customImageProps"></t-image>
         <t-node v-else :content="imageContent"></t-node>
       </template>
       <template v-else>
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { h, computed, getCurrentInstance, SetupContext, defineComponent } from 'vue';
+import { h, computed, toRefs, getCurrentInstance, SetupContext, defineComponent } from 'vue';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import resultProps from './props';
 import config from '../config';
@@ -59,13 +59,24 @@ export default defineComponent({
       iconContent = props.icon ? computed(() => renderTNode(internalInstance, 'icon')) : iconContent;
     }
 
+    const baseImageProps = {
+      src: props.image,
+    };
+
+    const customImageProps = computed(() => ({
+      ...props.imageProps,
+      ...baseImageProps,
+    }));
+
     return {
       name,
       classes,
       imageContent,
+      customImageProps,
       iconContent,
       titleContent,
       descriptionContent,
+      ...toRefs(props),
     };
   },
 });

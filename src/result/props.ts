@@ -27,4 +27,8 @@ export default {
       return ['default', 'success', 'warning', 'error'].includes(val);
     },
   },
+  /** 透传 Image 组件全部属性 */
+  imageProps: {
+    type: Object as PropType<TdResultProps['imageProps']>,
+  },
 };

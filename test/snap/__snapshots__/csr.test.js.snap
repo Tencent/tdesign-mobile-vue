@@ -49188,7 +49188,7 @@ exports[`csr snapshot test > csr test ./src/result/demos/custom.vue 1`] = `
         alt=""
         class="t-image__img"
         src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-        style="object-fit: fill; object-position: center;"
+        style="object-fit: cover; object-position: center;"
       />
     </div>
     
@@ -49499,7 +49499,7 @@ exports[`csr snapshot test > csr test ./src/result/demos/mobile.vue 1`] = `
             alt=""
             class="t-image__img"
             src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
+            style="object-fit: cover; object-position: center;"
           />
         </div>
         
