@@ -49829,194 +49829,85 @@ exports[`csr snapshot test > csr test ./src/search/demos/mobile.vue 1`] = `
 
 exports[`csr snapshot test > csr test ./src/skeleton/demos/avatar-text.vue 1`] = `
 <div
-  class="t-skeleton t-skeleton--avatar-text"
+  class="group"
+  data-v-3ed9d44e=""
 >
-  
   <div
-    class="t-skeleton__col t-skeleton--type-circle"
-  />
-  <div
-    class="t-skeleton__paragraph"
+    class="t-skeleton group-avatar"
+    data-v-3ed9d44e=""
   >
-    
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="width: 70%;"
-      />
-      
-    </div>
-    
+    <!---->
   </div>
-  
+  <div
+    class="t-skeleton group-content"
+    data-v-3ed9d44e=""
+  >
+    <!---->
+  </div>
 </div>
 `;
 
 exports[`csr snapshot test > csr test ./src/skeleton/demos/base.vue 1`] = `
 <div
-  class="t-skeleton t-skeleton--text"
+  class="t-skeleton"
 >
-  
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--type-text"
-    />
-    
-  </div>
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--type-text"
-    />
-    
-  </div>
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--type-text"
-    />
-    
-  </div>
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--type-text"
-      style="width: 70%;"
-    />
-    
-  </div>
-  
+  <!---->
 </div>
 `;
 
 exports[`csr snapshot test > csr test ./src/skeleton/demos/flashed.vue 1`] = `
 <div
-  class="t-skeleton t-skeleton--text"
+  class="group"
+  data-v-51a62a47=""
 >
-  
   <div
-    class="t-skeleton__row"
+    class="t-skeleton group-avatar"
+    data-v-51a62a47=""
   >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-    />
-    
+    <!---->
   </div>
   <div
-    class="t-skeleton__row"
+    class="t-skeleton group-content"
+    data-v-51a62a47=""
   >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-    />
-    
+    <!---->
   </div>
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-    />
-    
-  </div>
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-      style="width: 70%;"
-    />
-    
-  </div>
-  
 </div>
 `;
 
 exports[`csr snapshot test > csr test ./src/skeleton/demos/gradient.vue 1`] = `
 <div
-  class="t-skeleton t-skeleton--text"
+  class="t-skeleton"
 >
-  
+  <!---->
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/skeleton/demos/grid.vue 1`] = `
+<div
+  class="t-skeleton"
+>
+  <!---->
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/skeleton/demos/image-group.vue 1`] = `
+<div
+  class="group"
+  data-v-ac6b2376=""
+>
   <div
-    class="t-skeleton__row"
+    class="t-skeleton item"
+    data-v-ac6b2376=""
   >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-    />
-    
+    <!---->
   </div>
   <div
-    class="t-skeleton__row"
+    class="t-skeleton item"
+    data-v-ac6b2376=""
   >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-    />
-    
+    <!---->
   </div>
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-    />
-    
-  </div>
-  <div
-    class="t-skeleton__row"
-  >
-    
-    <div
-      class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-      style="width: 70%;"
-    />
-    
-  </div>
-  
 </div>
 `;
 
@@ -50046,63 +49937,11 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
     >
       01 类型
     </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      基础
-    </p>
+    <!--v-if-->
     
-    <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
-    >
-      <div
-        class="t-skeleton t-skeleton--text"
-        data-v-9b6b90cc=""
-      >
-        
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="width: 70%;"
-          />
-          
-        </div>
-        
-      </div>
-    </div>
     
   </div>
+  
   <div
     class="tdesign-mobile-demo-block"
     data-v-9b6b90cc=""
@@ -50111,7 +49950,7 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      头像组合
+      头像骨架屏
     </p>
     
     <div
@@ -50119,15 +49958,12 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
       data-v-9b6b90cc=""
     >
       <div
-        class="t-skeleton t-skeleton--avatar-text"
+        class="t-skeleton"
         data-v-9b6b90cc=""
       >
         
         <div
-          class="t-skeleton__col t-skeleton--type-circle"
-        />
-        <div
-          class="t-skeleton__paragraph"
+          class="t-skeleton__content"
         >
           
           <div
@@ -50135,35 +49971,8 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
           >
             
             <div
-              class="t-skeleton__col t-skeleton--type-text"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 70%;"
+              class="t-skeleton__col t-skeleton--type-circle"
+              style="width: 64px; height: 64px;"
             />
             
           </div>
@@ -50182,112 +49991,524 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      图片组合
+      图片骨架屏
     </p>
     
     <div
-      class="skeleton-demo pic-compose"
+      class="skeleton-demo"
       data-v-9b6b90cc=""
     >
       <div
-        class="t-skeleton t-skeleton--text item"
+        class="t-skeleton"
         data-v-9b6b90cc=""
       >
         
         <div
-          class="t-skeleton__row"
+          class="t-skeleton__content"
         >
           
           <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="height: 171px; border-radius: 8px;"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="width: 80%;"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="width: 60%;"
-          />
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="width: 20%;"
-          />
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-rect"
+              style="width: 64px; height: 64px;"
+            />
+            
+          </div>
           
         </div>
         
       </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      文本骨架屏
+    </p>
+    
+    <div
+      class="skeleton-demo"
+      data-v-9b6b90cc=""
+    >
       <div
-        class="t-skeleton t-skeleton--text item"
+        class="t-skeleton"
         data-v-9b6b90cc=""
       >
         
         <div
-          class="t-skeleton__row"
+          class="t-skeleton__content"
         >
           
           <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="height: 171px; border-radius: 8px;"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+            />
+            
+          </div>
           <div
-            class="t-skeleton__col t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="width: 80%;"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="width: 60%;"
-          />
-          <div
-            class="t-skeleton__col t-skeleton--type-text"
-            style="width: 20%;"
-          />
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 24%; height: 16px; margin-right: 16px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 76%; height: 16px;"
+            />
+            
+          </div>
           
         </div>
         
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      段落骨架屏
+    </p>
+    
+    <div
+      class="skeleton-demo"
+      data-v-9b6b90cc=""
+    >
+      <div
+        class="t-skeleton"
+        data-v-9b6b90cc=""
+      >
+        
+        <div
+          class="t-skeleton__content"
+        >
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 55%;"
+            />
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      宫格骨架屏
+    </p>
+    
+    <div
+      class="skeleton-demo"
+      data-v-9b6b90cc=""
+    >
+      <div
+        class="t-skeleton"
+        data-v-9b6b90cc=""
+      >
+        
+        <div
+          class="t-skeleton__content"
+        >
+          
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 48px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 48px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 48px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 48px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 48px;"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 16px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 16px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 16px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 16px;"
+            />
+            <div
+              class="t-skeleton__col t-skeleton--type-text"
+              style="width: 48px; height: 16px;"
+            />
+            
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      单元格骨架屏
+    </p>
+    
+    <div
+      class="skeleton-demo"
+      data-v-9b6b90cc=""
+    >
+      <div
+        class="group"
+        data-v-3ed9d44e=""
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="t-skeleton group-avatar"
+          data-v-3ed9d44e=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-circle"
+                style="width: 48px; height: 48px;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        <div
+          class="t-skeleton group-content"
+          data-v-3ed9d44e=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 50%;"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 100%;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div
+      class="skeleton-demo"
+      data-v-9b6b90cc=""
+    >
+      <div
+        class="group"
+        data-v-58b278f0=""
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="t-skeleton group-avatar"
+          data-v-58b278f0=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-rect"
+                style="width: 48px; height: 48px;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        <div
+          class="t-skeleton group-content"
+          data-v-58b278f0=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 50%;"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 100%;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      图片组合骨架屏
+    </p>
+    
+    <div
+      class="skeleton-demo"
+      data-v-9b6b90cc=""
+    >
+      <div
+        class="group"
+        data-v-9b6b90cc=""
+        data-v-ac6b2376=""
+      >
+        <div
+          class="t-skeleton item"
+          data-v-ac6b2376=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="height: 171px;"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 107px;"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 93px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 32px; margin-left: 41px;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        <div
+          class="t-skeleton item"
+          data-v-ac6b2376=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="height: 171px;"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 107px;"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 93px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 32px; margin-left: 41px;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
       </div>
     </div>
     
@@ -50312,45 +50533,51 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
       data-v-9b6b90cc=""
     >
       <div
-        class="t-skeleton t-skeleton--text"
+        class="t-skeleton"
         data-v-9b6b90cc=""
       >
         
         <div
-          class="t-skeleton__row"
+          class="t-skeleton__content"
         >
           
           <div
-            class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+            />
+            
+          </div>
           <div
-            class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+            />
+            
+          </div>
           <div
-            class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+            />
+            
+          </div>
           <div
-            class="t-skeleton__col t-skeleton--animation-gradient t-skeleton--type-text"
-            style="width: 70%;"
-          />
+            class="t-skeleton__row"
+          >
+            
+            <div
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+              style="width: 55%;"
+            />
+            
+          </div>
           
         </div>
         
@@ -50374,48 +50601,83 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
       data-v-9b6b90cc=""
     >
       <div
-        class="t-skeleton t-skeleton--text"
+        class="group"
+        data-v-51a62a47=""
         data-v-9b6b90cc=""
       >
-        
         <div
-          class="t-skeleton__row"
+          class="t-skeleton group-avatar"
+          data-v-51a62a47=""
         >
           
           <div
-            class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-          />
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-circle"
+                style="width: 48px; height: 48px;"
+              />
+              
+            </div>
+            
+          </div>
           
         </div>
         <div
-          class="t-skeleton__row"
+          class="t-skeleton group-content"
+          data-v-51a62a47=""
         >
           
           <div
-            class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-          />
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                style="width: 55%;"
+              />
+              
+            </div>
+            
+          </div>
           
         </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-          />
-          
-        </div>
-        <div
-          class="t-skeleton__row"
-        >
-          
-          <div
-            class="t-skeleton__col t-skeleton--animation-flashed t-skeleton--type-text"
-            style="width: 70%;"
-          />
-          
-        </div>
-        
       </div>
     </div>
     
@@ -50425,108 +50687,20 @@ exports[`csr snapshot test > csr test ./src/skeleton/demos/mobile.vue 1`] = `
 
 exports[`csr snapshot test > csr test ./src/skeleton/demos/pic-text.vue 1`] = `
 <div
-  class="pic-compose"
+  class="group"
   data-v-58b278f0=""
 >
   <div
-    class="t-skeleton t-skeleton--text item"
+    class="t-skeleton group-avatar"
     data-v-58b278f0=""
   >
-    
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="height: 171px; border-radius: 8px;"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="width: 80%;"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="width: 60%;"
-      />
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="width: 20%;"
-      />
-      
-    </div>
-    
+    <!---->
   </div>
   <div
-    class="t-skeleton t-skeleton--text item"
+    class="t-skeleton group-content"
     data-v-58b278f0=""
   >
-    
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="height: 171px; border-radius: 8px;"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="width: 80%;"
-      />
-      
-    </div>
-    <div
-      class="t-skeleton__row"
-    >
-      
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="width: 60%;"
-      />
-      <div
-        class="t-skeleton__col t-skeleton--type-text"
-        style="width: 20%;"
-      />
-      
-    </div>
-    
+    <!---->
   </div>
 </div>
 `;
