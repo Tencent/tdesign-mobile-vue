@@ -5,6 +5,18 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.10.0 `2022-07-25` 
+### 🚀 Features
+- `Skeleton`: 属性 theme 移除 avatar-text；新增 avatar、image、paragraph @anlyyao ([#239](https://github.com/Tencent/tdesign-mobile-vue/pull/239))
+- `Result`: 新增结果组件 @anlyyao ([#243](https://github.com/Tencent/tdesign-mobile-vue/pull/243))
+### 🐞 Bug Fixes
+- `Button`: 修复 loading 值改变时，控制台报错 @anlyyao ([#247](https://github.com/Tencent/tdesign-mobile-vue/pull/247))
+- `Skeleton`: 属性 rowCol 移除默认值 `[1, 1, 1, { width: 70% }]` @anlyyao ([#239](https://github.com/Tencent/tdesign-mobile-vue/pull/239))
+- `Toast`: 修复指令调用时不现实图标的问题 @douxpang ([#241](https://github.com/Tencent/tdesign-mobile-vue/pull/241))
+### 🚧 Others
+- 官网更新组件分类 @LeeJim ([#248](https://github.com/Tencent/tdesign-mobile-vue/pull/248))
+- `Skeleton`: 更新示例代码 @anlyyao ([#239](https://github.com/Tencent/tdesign-mobile-vue/pull/239))
+
 ## 🌈 0.9.2 `2022-07-18` 
 ### 🐞 Bug Fixes
 - `DropdownMenu`: 修复树形状态下溢出时无法滚动的问题 @LeeJim ([#236](https://github.com/Tencent/tdesign-mobile-vue/pull/236))
