@@ -18,6 +18,8 @@ import config from '../config';
 const { prefix } = config;
 const name = `${prefix}-button`;
 
+const loadingContent = h(LoadingIcon);
+
 export default defineComponent({
   name,
   components: { TNode },
@@ -40,7 +42,7 @@ export default defineComponent({
       },
     ]);
     const buttonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const iconContent = computed(() => (props.loading ? h(LoadingIcon) : renderTNode(internalInstance, 'icon')));
+    const iconContent = computed(() => (props.loading ? loadingContent : renderTNode(internalInstance, 'icon')));
     const onClick = (e: Event) => {
       if (!props.loading && !props.disabled) {
         emitEvent('click', e);

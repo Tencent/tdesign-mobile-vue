@@ -13,8 +13,8 @@
           :indeterminate="indeterminate"
           @click="handleChange"
         />
-        <t-node v-if="!indeterminate" :content="checkIcons[isChecked ? 0 : 1]"></t-node>
-        <minus-circle-filled-icon v-else></minus-circle-filled-icon>
+        <t-node v-if="!indeterminate" :content="checkIcons[isChecked ? 0 : 1]" />
+        <minus-circle-filled-icon v-else />
       </span>
       <span
         v-if="labelContent || checkboxContent"
@@ -22,10 +22,10 @@
         @click="(e) => handleChange(e, 'content')"
       >
         <span v-if="labelContent" :style="labelStyle">
-          <t-node :content="labelContent"></t-node>
+          <t-node :content="labelContent" />
         </span>
         <span v-if="checkboxContent" :class="`${flagName}__description`" :style="contentStyle">
-          <t-node :content="checkboxContent"></t-node>
+          <t-node :content="checkboxContent" />
         </span>
       </span>
 
@@ -41,8 +41,8 @@
           :indeterminate="indeterminate"
           @click="handleChange"
         />
-        <t-node v-if="!indeterminate" :content="checkIcons[isChecked ? 0 : 1]"></t-node>
-        <minus-circle-filled-icon v-else></minus-circle-filled-icon>
+        <t-node v-if="!indeterminate" :content="checkIcons[isChecked ? 0 : 1]" />
+        <minus-circle-filled-icon v-else />
       </span>
     </div>
     <!--下边框 -->
@@ -88,13 +88,13 @@ export default defineComponent({
     const labelContent = computed(() => renderContent(internalInstance, 'label', 'default'));
     const checkboxContent = computed(() => renderTNode(internalInstance, 'content'));
     const indeterminate = computed<boolean>(() => {
-      if (props.checkAll && checkboxGroup !== undefined) return checkboxGroup.indeterminate.value;
+      if (props.checkAll && checkboxGroup != null) return checkboxGroup.checkAllStatus.value === 'indeterminate';
       return props.indeterminate;
     });
     const isChecked = computed(() => {
-      if (props.checkAll) return checkboxGroup?.isCheckAll.value;
-      if (checkboxGroup !== undefined && props.value !== undefined) {
-        return !!checkboxGroup.checkedMap.value[props.value];
+      if (props.checkAll) return checkboxGroup?.checkAllStatus.value === 'checked';
+      if (checkboxGroup != null && props.value != null) {
+        return !!checkboxGroup.checkedSet.value?.has(props.value);
       }
 
       return innerChecked.value;
@@ -102,8 +102,8 @@ export default defineComponent({
 
     const isDisabled = computed(() => {
       if (checkboxGroup?.max.value)
-        return checkboxGroup.max.value <= checkboxGroup.groupCheckValue.value.length && !isChecked.value;
-      if (props.disabled !== undefined) return props.disabled;
+        return checkboxGroup.max.value <= checkboxGroup.innerValue.value.length && !isChecked.value;
+      if (props.disabled != null) return props.disabled;
       return !!checkboxGroup?.disabled.value;
     });
 

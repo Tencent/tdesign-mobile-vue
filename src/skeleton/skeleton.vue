@@ -1,20 +1,12 @@
 <template>
   <div :class="rootClasses">
     <template v-if="showContent">
-      <template v-if="content">{{ content }}</template>
-      <template v-else-if="defaultContent">{{ defaultContent }}</template>
-      <slot v-else></slot>
+      <t-node :content="skeletonContent" />
     </template>
-    <template v-else-if="theme === 'text'">
-      <div v-for="(item, index) of parsedRowcols" :key="`${rowClass}-${index}`" :class="rowClass">
-        <div v-for="(col, idx) of item" :key="`${colClass}-${idx}`" :class="colClass" :style="col.style"></div>
-      </div>
-    </template>
-    <template v-else-if="theme === 'avatar-text'">
-      <div :class="`${name}__col ${name}--type-circle`"></div>
-      <div :class="`${name}__paragraph`">
-        <div v-for="(item, index) of parsedRowcols" :key="`${rowClass}-${index}`" :class="rowClass">
-          <div v-for="(col, idx) of item" :key="`${colClass}-${idx}`" :class="colClass" :style="col.style"></div>
+    <template v-else>
+      <div v-if="parsedRowcols.length" :class="`${baseClass}__content`">
+        <div v-for="(row, index) of parsedRowcols" :key="`row-${index}`" :class="`${baseClass}__row`">
+          <div v-for="(col, idx) of row" :key="`col-${idx}`" :class="col.class" :style="col.style"></div>
         </div>
       </div>
     </template>
@@ -22,47 +14,58 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, watchEffect, ref } from 'vue';
-import { isNumber } from '../shared';
-
+import { defineComponent, computed, toRefs, watchEffect, ref, getCurrentInstance } from 'vue';
+import { isNumber, renderContent, TNode } from '../shared';
 import config from '../config';
 import SkeletonProps from './props';
 import { SkeletonRowColObj } from './type';
-import { Styles } from '../common';
+import { ClassName, Styles } from '../common';
 
 const { prefix } = config;
 const name = `${prefix}-skeleton`;
-const defaultRowcols = [1, 1, 1, { width: '70%' }];
+const ThemeMap = {
+  avatar: [{ type: 'circle', height: '64px', width: '64px' }],
+  image: [{ type: 'rect', height: '64px', width: '64px' }],
+  text: [
+    1,
+    [
+      { width: '24%', height: '16px', marginRight: '16px' },
+      { width: '76%', height: '16px' },
+    ],
+  ],
+  paragraph: [1, 1, 1, { width: '55%' }],
+};
 
 export default defineComponent({
   name,
-  components: {},
+  components: {
+    TNode,
+  },
   props: SkeletonProps,
   setup(props) {
-    const { loading, theme, animation } = toRefs(props);
+    const { loading, animation } = toRefs(props);
     const showContent = computed(() => !loading.value);
 
-    const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
+    const internalInstance = getCurrentInstance();
+    const skeletonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
+    const baseClass = name;
+    const rootClasses = computed(() => [`${name}`]);
 
     const rowCols = ref<any>([]);
 
     watchEffect(() => {
-      if (theme.value === 'avatar-text') {
-        rowCols.value = [...defaultRowcols];
-      } else if (props.rowCol) {
+      if (props.rowCol?.length) {
         rowCols.value = [...props.rowCol];
       } else {
-        rowCols.value = [...defaultRowcols];
+        rowCols.value = [...ThemeMap[props.theme || 'text']];
       }
     });
 
-    const rowClass = `${name}__row`;
-    const colClass = computed(() => [
+    const getColItemClass = (obj: SkeletonRowColObj): ClassName => [
       `${name}__col`,
+      `${name}--type-${obj.type || 'text'}`,
       { [`${name}--animation-${animation.value}`]: animation.value },
-      `${name}--type-text`,
-    ]);
-
+    ];
     const getColItemStyle = (obj: SkeletonRowColObj): Styles => {
       const styleName = [
         'width',
@@ -94,7 +97,7 @@ export default defineComponent({
         if (isNumber(item)) {
           return [
             {
-              type: 'text',
+              class: getColItemClass({ type: 'text' }),
               style: {},
             },
           ];
@@ -103,6 +106,7 @@ export default defineComponent({
           return item.map((col) => {
             return {
               ...col,
+              class: getColItemClass(col),
               style: getColItemStyle(col),
             };
           });
@@ -112,6 +116,7 @@ export default defineComponent({
         return [
           {
             ...nItem,
+            class: getColItemClass(nItem),
             style: getColItemStyle(nItem),
           },
         ];
@@ -119,13 +124,11 @@ export default defineComponent({
     });
 
     return {
-      name,
+      baseClass,
       rootClasses,
-      rowClass,
-      colClass,
       parsedRowcols,
       showContent,
-      defaultContent: props.default,
+      skeletonContent,
     };
   },
 });

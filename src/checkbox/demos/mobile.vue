@@ -1,43 +1,65 @@
 <template>
-  <div>
-    <div class="tdesign-mobile-demo">
-      <h1 class="title">Checkbox 多选框</h1>
-      <p class="summary">描述文字</p>
-      <tdesign-demo-block title="01 类型" summary="基础多选框">
-        <BaseDemo />
-      </tdesign-demo-block>
-      <tdesign-demo-block summary="右侧圆形多选框">
-        <RightDemo />
-      </tdesign-demo-block>
-      <tdesign-demo-block summary="带全选多选框">
-        <GroupDemo />
-      </tdesign-demo-block>
-      <tdesign-demo-block summary="限制最多可选数量">
-        <MaxDemo />
-      </tdesign-demo-block>
-      <tdesign-demo-block title="02 状态" summary="多选框禁用态">
-        <DisableDemo />
-      </tdesign-demo-block>
-      <tdesign-demo-block summary="多选框半选态">
-        <IndeterminateDemo />
-      </tdesign-demo-block>
-      <tdesign-demo-block title="03 特殊类型" summary="自定义图标多选框">
-        <IconDemo />
-      </tdesign-demo-block>
-      <tdesign-demo-block title="04 规格" summary="多选框尺寸规格">
-        <SizeDemo />
-      </tdesign-demo-block>
+  <div class="tdesign-demo-block-column">
+    <div>方式一：业务侧自定义全选功能。选中值: {{ value1.join(',') }}</div>
+    <div>
+      <t-checkbox :checked="checkAll" :indeterminate="indeterminate" :on-change="handleSelectAll">全选</t-checkbox>
     </div>
+    <t-checkbox-group v-model="value1" :options="options1" @change="onChange1" />
+
+    <br />
+    <div>方式二：组件内置全选功能，使用插槽定义选项。选中值: {{ value2.join(', ') }}</div>
+    <t-checkbox-group v-model="value2" @change="onChange2">
+      <t-checkbox :check-all="true" label="全选" />
+      <t-checkbox value="选项一">选项一</t-checkbox>
+      <t-checkbox label="选项二" value="选项二" />
+      <t-checkbox label="选项三" value="选项三" />
+    </t-checkbox-group>
+
+    <br />
+    <div>方式三：组件内置全选功能，使用 `options` 定义选项。选中值: {{ value3.join(', ') }}</div>
+    <t-checkbox-group v-model="value3" :options="options2" @change="onChange3" />
+
+    <br />
+    <div>方式四：组件内置全选功能，非受控用法</div>
+    <t-checkbox-group :default-value="['选项一']" :options="options2" />
   </div>
 </template>
-<script lang="ts" setup>
-import { ref, watch } from 'vue';
-import BaseDemo from './base.vue';
-import GroupDemo from './group.vue';
-import RightDemo from './right.vue';
-import DisableDemo from './disable.vue';
-import IndeterminateDemo from './indeterminate.vue';
-import IconDemo from './icon.vue';
-import MaxDemo from './max.vue';
-import SizeDemo from './size.vue';
+
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+
+const options1 = [
+  { value: '选项一', label: '1' },
+  { value: '选项二', label: '选项二' },
+  { value: '选项三', label: '选项三' },
+];
+
+const options2 = [
+  { label: '全选', checkAll: true },
+  { value: '选项一', label: '选项一' },
+  { value: '选项二', label: '1' },
+  { value: '选项三', label: '选项三' },
+];
+
+const value1 = ref(['选项一']);
+const value2 = ref(['选项一']);
+const value3 = ref(['选项一', '选项二', '选项三']);
+
+const checkAll = computed(() => options1.length === value1.value.length);
+
+const indeterminate = computed(() => !!(options1.length > value1.value.length && value1.value.length));
+
+const handleSelectAll = (checked) => {
+  value1.value = checked ? ['选项一', '选项二', '选项三'] : [];
+};
+
+const onChange1 = (val) => {
+  console.log(value1.value, val);
+};
+const onChange2 = (val) => {
+  console.log(value2.value, val);
+};
+const onChange3 = (val) => {
+  console.log(value3.value, val);
+};
 </script>
