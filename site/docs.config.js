@@ -262,6 +262,12 @@ export default {
           path: '/mobile-vue/components/list',
           component: () => import('@/list/list.md'),
         },
+        {
+          title: 'Result 结果',
+          name: 'result',
+          path: '/mobile-vue/components/result',
+          component: () => import('@/result/result.md'),
+        },
       ],
     },
     {

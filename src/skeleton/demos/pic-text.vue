@@ -1,44 +1,30 @@
 <template>
-  <div class="pic-compose">
-    <t-skeleton :row-col="rowCols" class="item"></t-skeleton>
-    <t-skeleton :row-col="rowCols" class="item"></t-skeleton>
+  <div class="group">
+    <t-skeleton class="group-avatar" :row-col="rowColsImage" :loading="loading"></t-skeleton>
+    <t-skeleton class="group-content" :row-col="rowColsContent" :loading="loading"></t-skeleton>
   </div>
 </template>
+<script lang="ts" setup>
+import { toRefs, defineProps } from 'vue';
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  setup() {
-    return {
-      rowCols: [
-        {
-          height: '171px',
-          borderRadius: '8px',
-        },
-        1,
-        {
-          width: '80%',
-        },
-        [
-          {
-            width: '60%',
-          },
-          {
-            width: '20%',
-          },
-        ],
-      ],
-    };
-  },
+const props = defineProps({
+  loading: Boolean,
 });
+
+const { loading } = toRefs(props);
+const rowColsImage = [{ size: '48px', type: 'rect' }];
+const rowColsContent = [{ width: '50%' }, { width: '100%' }];
 </script>
-<style scoped lang="less">
-.pic-compose {
+<style lang="less" scoped>
+.group {
   display: flex;
-  justify-content: space-between;
-  .item {
-    width: 47%;
-  }
+}
+
+.group-avatar {
+  margin-right: 12px;
+}
+
+.group-content {
+  width: 100%;
 }
 </style>
