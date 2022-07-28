@@ -12,14 +12,17 @@ const publicPathMap = {
 
 // 单元测试相关配置
 const testConfig = {
-  include:
-    process.env.NODE_ENV === 'test-snap'
-      ? ['test/snap/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}']
-      : ['test/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+  // include:
+  //   process.env.NODE_ENV === 'test-snap'
+  //     ? ['test/snap/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}']
+  //     : ['test/unit/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+  include: ['{test,src}/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+  exclude: ['**/ssr/**'],
   globals: true,
   environment: 'jsdom',
   testTimeout: 5000,
-  setupFiles: process.env.NODE_ENV === 'test-snap' ? path.resolve(__dirname, '../scripts/test/test-setup.js') : '',
+  setupFiles: path.resolve(__dirname, '../scripts/test/test-setup.js'),
+  // setupFiles: process.env.NODE_ENV === 'test-snap' ? path.resolve(__dirname, '../scripts/test/test-setup.js') : '',
   transformMode: {
     web: [/\.[jt]sx$/],
   },
