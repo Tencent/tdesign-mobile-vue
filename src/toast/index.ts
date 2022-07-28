@@ -54,7 +54,7 @@ Toast.clear = () => {
     return;
   }
   Toast[type] = (options: TdToastProps | string) => {
-    let props = { message: '', type } as unknown as TdToastProps;
+    let props = { message: '', theme: type } as unknown as TdToastProps;
 
     if (typeof options === 'string') {
       props.message = options;
