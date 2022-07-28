@@ -106,7 +106,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@rollup/plugin-replace": "^2.3.4",
-    "@rollup/plugin-url": "^6.0.0",
+    "@rollup/plugin-url": "^7.0.0",
     "@soerenmartius/vue3-clipboard": "^0.1.1",
     "@types/jest": "^28.1.6",
     "@types/prismjs": "^1.16.2",
