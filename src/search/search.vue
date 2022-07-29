@@ -78,7 +78,7 @@ export default defineComponent({
     };
 
     const onBlur = (value: any, context: InputBlurContext) => {
-      state.labelActive = true;
+      state.labelActive = !value;
       props.onBlur?.(value, { e: context.e });
     };
 
