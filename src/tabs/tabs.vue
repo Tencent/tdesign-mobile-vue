@@ -55,7 +55,7 @@ export default defineComponent({
   name,
   components: { TabNavItem, TSticky },
   props: TabsProps,
-  emits: ['onChange'],
+  emits: ['onChange', 'update:value', 'update:modelValue'],
   setup(props, { emit, slots }) {
     const placement = computed(() => props.placement);
     const showBottomLine = computed(() => props.showBottomLine);
@@ -73,7 +73,7 @@ export default defineComponent({
     watch(
       () => props.value,
       (newValue) => {
-        newValue && setValue(newValue);
+        newValue != null && newValue !== currentValue.value && setValue(newValue);
         nextTick(() => {
           moveToActiveTab();
         });
@@ -141,6 +141,8 @@ export default defineComponent({
       currentValue.value = val;
     };
     const tabChange = (event: Event, value: string | number) => {
+      emit('update:modelValue', value);
+      emit('update:value', value);
       setValue(value);
     };
     const tabClick = (event: Event, item: Record<string, unknown>) => {
