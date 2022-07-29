@@ -73,7 +73,7 @@ export default defineComponent({
     watch(
       () => props.value,
       (newValue) => {
-        newValue && newValue !== currentValue.value && setValue(newValue);
+        newValue != null && newValue !== currentValue.value && setValue(newValue);
         nextTick(() => {
           moveToActiveTab();
         });
