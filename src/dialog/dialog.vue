@@ -8,9 +8,9 @@
     @close="handleOverlayClick"
   >
     <div id="root" :class="dClassName" :style="rootStyles">
-      <div v-if="title" :class="dHeaderClassName">
+      <div :class="dHeaderClassName">
         <slot name="header">
-          <div :class="dTitleClassName">{{ title }}</div>
+          <div v-if="title" :class="dTitleClassName">{{ title }}</div>
         </slot>
       </div>
       <div v-if="content" :class="dBodyClassName">
@@ -19,8 +19,8 @@
         </div>
       </div>
       <div :class="dFooterClassName">
-        <template v-if="actionsBtnProps">
-          <slot name="actions">
+        <slot name="actions">
+          <template v-if="actionsBtnProps">
             <t-button
               v-for="(item, index) in actionsBtnProps"
               :key="index"
@@ -29,18 +29,18 @@
               :class="dDefaultBtnClassName"
               @click="handleCancel"
             />
-          </slot>
-        </template>
-        <template v-if="cancelBtn">
-          <slot name="cancelBtn">
+          </template>
+        </slot>
+        <slot name="cancelBtn">
+          <template v-if="cancelBtn">
             <t-button v-bind="cancelBtnProps" variant="text" :class="dDefaultBtnClassName" @click="handleCancel" />
-          </slot>
-        </template>
-        <template v-if="confirmBtn">
-          <slot name="confirmBtn">
+          </template>
+        </slot>
+        <slot name="confirmBtn">
+          <template v-if="confirmBtn">
             <t-button v-bind="confirmBtnProps" variant="text" :class="dConfirmBtnClassName" @click="handleConfirm" />
-          </slot>
-        </template>
+          </template>
+        </slot>
       </div>
     </div>
   </t-popup>
