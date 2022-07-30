@@ -2,7 +2,7 @@
   <teleport :to="to" :disabled="!to">
     <div :class="[rootClasses, $attrs.class]" :style="rootStyles" @touchmove="handleMove">
       <transition name="fade">
-        <t-overlay v-show="currentVisible" :transparent="!showOverlay" @click="handleOverlayClick" />
+        <t-overlay :visible="currentVisible" :transparent="!showOverlay" @click="handleOverlayClick" />
       </transition>
       <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
         <div v-show="currentVisible" :class="contentClasses">
