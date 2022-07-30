@@ -20524,9 +20524,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/confirm.vue 1`] = `
                   <div
                     class="t-dialog__footer"
                   >
+                    
                     <!--v-if-->
+                    
+                    
                     <!--v-if-->
+                    
+                    
                     <!--v-if-->
+                    
                   </div>
                 </div>
                 
@@ -20582,9 +20588,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/confirm.vue 1`] = `
                   <div
                     class="t-dialog__footer"
                   >
+                    
                     <!--v-if-->
+                    
+                    
                     <!--v-if-->
+                    
+                    
                     <!--v-if-->
+                    
                   </div>
                 </div>
                 
@@ -20692,9 +20704,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
                     <div
                       class="t-dialog__footer"
                     >
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
                     </div>
                   </div>
                   
@@ -20775,9 +20793,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
                     <div
                       class="t-dialog__footer"
                     >
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
                     </div>
                   </div>
                   
@@ -20843,7 +20867,13 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
                     class="t-dialog"
                     id="root"
                   >
-                    <!--v-if-->
+                    <div
+                      class="t-dialog__header t-dialog__header--has-content"
+                    >
+                      
+                      <!--v-if-->
+                      
+                    </div>
                     <div
                       class="t-dialog__body"
                     >
@@ -20856,9 +20886,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
                     <div
                       class="t-dialog__footer"
                     >
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
                     </div>
                   </div>
                   
@@ -20939,9 +20975,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/feedback.vue 1`] = `
                     <div
                       class="t-dialog__footer"
                     >
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
+                      
                       <!--v-if-->
+                      
                     </div>
                   </div>
                   
@@ -21055,9 +21097,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/input.vue 1`] = `
           <div
             class="t-dialog__footer"
           >
+            
             <!--v-if-->
+            
+            
             <!--v-if-->
+            
+            
             <!--v-if-->
+            
           </div>
         </div>
         
@@ -21113,9 +21161,15 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/input.vue 1`] = `
           <div
             class="t-dialog__footer"
           >
+            
             <!--v-if-->
+            
+            
             <!--v-if-->
+            
+            
             <!--v-if-->
+            
           </div>
         </div>
         
@@ -21263,8 +21317,12 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
@@ -21326,8 +21384,12 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
@@ -21397,8 +21459,12 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
@@ -21468,8 +21534,12 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
@@ -21587,7 +21657,9 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
@@ -21671,7 +21743,9 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
@@ -21796,7 +21870,9 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
@@ -21880,7 +21956,9 @@ exports[`csr snapshot test > csr test ./src/dialog/demos/mobile.vue 1`] = `
               <div
                 class="t-dialog__vertical-footer t-dialog__footer"
               >
+                
                 <!--v-if-->
+                
                 
                 <button
                   aria-disabled="false"
