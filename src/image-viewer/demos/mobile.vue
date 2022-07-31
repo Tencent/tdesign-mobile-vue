@@ -4,68 +4,47 @@
     <p class="summary">图片全屏放大预览效果，包含全屏背景色、页码位置样式、增加操作等规范</p>
     <tdesign-demo-block title="01 类型" summary="图片预览类型">
       <div class="image-viewer-demo">
-        <t-button block size="large" variant="outline" @click="tapShow"> 显示 </t-button>
-        <t-button block size="large" variant="outline" @click="tapImgList"> 图片列表 </t-button>
-        <t-button block size="large" variant="outline" @click="tapInitIndex"> 默认显示第二张图片 </t-button>
-        <t-button block size="large" variant="outline" @click="tapBackGround"> 显示 </t-button>
+        <t-button block size="large" variant="outline" @click="tapShowBasic"> 基础用法 </t-button>
+        <t-button block size="large" variant="outline" @click="tapShowCloseBtn"> 不展示关闭按钮 </t-button>
+        <t-button block size="large" variant="outline" @click="tapShowCloseEvent"> 监听关闭事件 </t-button>
       </div>
     </tdesign-demo-block>
-    <t-image-viewer
-      v-model:images="images"
-      v-model="showViewer"
-      :initial-index="initialIndex"
-      :background-color="color"
-      @change="change"
-    ></t-image-viewer>
+    <t-image-viewer v-model:images="images" v-model:visible="showViewer"></t-image-viewer>
+    <t-image-viewer v-model:images="images" v-model:visible="showViewer2" :close-btn="false"></t-image-viewer>
+    <t-image-viewer v-model:images="images" v-model:visible="showViewer3" @close="onClose"></t-image-viewer>
   </div>
 </template>
 <script lang="ts">
 import { ref, defineComponent, Ref } from 'vue';
+import { TdImageViewerProps } from '../type';
 
 export default defineComponent({
   setup() {
-    const images: Ref<Array<string>> = ref([]);
+    const images: Ref<Array<string>> = ref([
+      'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
+      'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
+      'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
+    ]);
     const showViewer = ref(false);
-    const initialIndex = ref(0);
-    const color = ref('rgba(0, 0, 0, .6)');
+    const showViewer2 = ref(false);
+    const showViewer3 = ref(false);
 
-    function tapShow() {
+    function tapShowBasic() {
       showViewer.value = true;
-      images.value = [
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-      ];
     }
-    function tapImgList() {
-      showViewer.value = true;
-      initialIndex.value = 0;
-      images.value = [
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-      ];
+    function tapShowCloseBtn() {
+      showViewer2.value = true;
     }
 
-    function tapInitIndex() {
-      showViewer.value = true;
-      images.value = [
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-      ];
-      initialIndex.value = 1;
+    function tapShowCloseEvent() {
+      showViewer3.value = true;
     }
-    function tapBackGround() {
-      showViewer.value = true;
-      images.value = [
-        'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-      ];
-      color.value = 'rgba(0, 0, 0, 1)';
+
+    function onClose(context: any) {
+      console.log('onClose: ', context);
     }
-    /** 翻页页数变化 */
-    function change(page: number) {
-      console.log(`当前页数${page}`);
-    }
-    return { tapShow, tapImgList, tapInitIndex, tapBackGround, color, initialIndex, images, showViewer, change };
+
+    return { images, showViewer, showViewer2, showViewer3, tapShowBasic, tapShowCloseBtn, tapShowCloseEvent, onClose };
   },
 });
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <t-cell-group class="dialog-type-title" title="基础用法">
+    <t-cell-group class="dialog-type-title" title="不展示关闭按钮">
       <t-cell value-align="left">
-        <t-button block size="large" variant="outline" @click="tapShow"> 基础用法 </t-button>
-        <t-image-viewer v-model:images="images" v-model:visible="showViewer"></t-image-viewer>
+        <t-button block size="large" variant="outline" @click="tapShow">不展示关闭按钮</t-button>
+        <t-image-viewer v-model:images="images" v-model:visible="showViewer" :close-btn="false"></t-image-viewer>
       </t-cell>
     </t-cell-group>
   </div>

@@ -33,7 +33,7 @@
         </span>
       </span>
     </template>
-    <template v-if="computedNavigation !== undefined">
+    <template v-else-if="computedNavigation !== undefined">
       <t-node :content="computedNavigation" :style="{}"></t-node>
     </template>
   </div>
@@ -214,7 +214,7 @@ export default defineComponent({
       }, props?.interval);
     };
     const emitCurrentChange = (index: number) => {
-      if (!state.isControl) return false;
+      // if (!state.isControl) return false;
       let resultIndex = index;
       if (index >= state.itemLength) resultIndex = 0;
       if (index < 0) resultIndex = state.itemLength - 1;

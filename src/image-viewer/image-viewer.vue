@@ -1,241 +1,250 @@
 <template>
-  <div v-show="showViewer" :class="`${prefix}-image-viewer`">
-    <div :class="`${prefix}-image-mask`" :style="{ background: backgroundColor }"></div>
-    <div class="image-viewer-container">
-      <div
-        :ref="myRef"
-        :class="classes"
-        @touchstart="onTouchstart"
-        @touchmove="onTouchMove"
-        @touchend="onTouchEnd"
-        @touchcancel="onTouchEnd"
-      >
-        <div :class="`${prefix}-swiper-box`">
-          <div :class="`${prefix}-swiper-container`">
-            <div
-              v-for="(item, itemIndex) in images"
-              :key="itemIndex"
-              :class="`${prefix}-swiper-item image-viewer-item-wrap`"
-            >
-              <div class="item">
-                <img :src="item" />
-              </div>
-            </div>
-          </div>
-        </div>
+  <t-overlay :class="`${prefix}-image-viewer`" :visible="visible">
+    <template v-if="lazyVisible">
+      <div :class="`${name}__close-icon`" @click="handleClose($event, 'close-btn')">
+        <t-node v-if="!(typeof closeBtnTNode === 'boolean')" :content="closeBtnTNode"></t-node>
+        <close-circle-filled-icon v-else-if="typeof closeBtn === 'boolean' && closeBtn" />
       </div>
-      <div v-if="showIndex" class="image-viewer-index">{{ index }}/{{ count > 2 ? count - 2 : count }}</div>
-    </div>
-  </div>
+      <t-swiper
+        :autoplay="false"
+        :class="`${name}__swipe`"
+        :default-current="initialIndex"
+        :navigation="navigation"
+        :on-change="onSwiperChange"
+      >
+        <t-swiper-item
+          v-for="(image, index) in images"
+          :key="image + index"
+          :class="`${name}__swipe-item`"
+          @touchstart="onTouchStart"
+          @touchmove="onTouchMove"
+          @touchend="onTouchEnd"
+        >
+          <img :src="image" :style="imageStyle" :class="`${name}__image`" />
+        </t-swiper-item>
+      </t-swiper>
+    </template>
+  </t-overlay>
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, defineComponent, reactive, watch, nextTick, PropType } from 'vue';
+import {
+  computed,
+  toRefs,
+  ref,
+  defineComponent,
+  reactive,
+  watch,
+  nextTick,
+  PropType,
+  getCurrentInstance,
+  CSSProperties,
+  SetupContext,
+} from 'vue';
+import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import { DragState } from './image-viewer.interface';
+import ImageViewerProps from './props';
+import { renderTNode, TNode, useEmitEvent, useDefault, useTouch } from '../shared';
+import { TdImageViewerProps } from './type';
+import { Toast } from '..';
 
+export type TriggerType = 'close-btn' | 'overlay' | 'esc';
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
 
+/*
+initialIndex, 因 swiper 不支持 defaultCurrent
+
+
+onIndexChange, 因 swiper 未提供 'prev' | 'next'， 所以没有 context
+*/
+const getDistance = (touches: TouchList) =>
+  Math.sqrt((touches[0].clientX - touches[1].clientX) ** 2 + (touches[0].clientY - touches[1].clientY) ** 2);
+
 export default defineComponent({
   name,
-  props: {
-    modelValue: {
-      type: Boolean,
-      default: false,
-    },
-    images: {
-      type: Array as PropType<Array<string>>,
-      default: () => [],
-    },
-    visible: {
-      type: Boolean,
-      default: false,
-    },
-    showIndex: {
-      type: Boolean,
-      default: true,
-    },
-    initialIndex: {
-      type: Number,
-      default: 0,
-    },
-    backgroundColor: {
-      type: String,
-      default: 'rgba(0, 0, 0, 0.6)',
-    },
+  components: {
+    CloseCircleFilledIcon,
+    TNode,
   },
-  emits: ['update:modelValue', 'change'],
-  setup(props, context) {
-    const classes = computed(() => [`${name}`]);
-    const dragState: DragState = reactive({
-      startTime: new Date().getTime(),
-      startLeft: -1,
-      startTop: -1,
-      itemWidth: -1,
-      itemHeight: -1,
-      currentLeft: -1,
-      currentTop: -1,
+  props: ImageViewerProps,
+  emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'change'],
+  setup(props, context: SetupContext) {
+    const state = reactive({
+      zooming: false,
+      scale: 1,
+    });
+    const emitEvent = useEmitEvent(props, context.emit);
+    const [visible, setVisible] = useDefault<TdImageViewerProps['visible'], TdImageViewerProps>(
+      props,
+      context.emit,
+      'visible',
+      'change',
+    );
+    // 因 Overlay 未提供lazy属性，先暂时自行实现
+    const lazyVisible = ref(visible.value);
+    const touch = useTouch();
+    const internalInstance = getCurrentInstance();
+    const closeBtnTNode = computed(() => {
+      return renderTNode(internalInstance, 'closeBtn');
+    });
+    const navigation = computed(() => {
+      if (props.showIndex) {
+        return { type: 'fraction' };
+      }
+      return { type: 'dots', showSlideBtn: false };
     });
 
-    let eleSwiper: HTMLDivElement;
-    const images = ref(props.images);
-    const index = ref(Math.min(props.initialIndex, images.value.length - 1) + 1);
-    const count = ref(images.value.length);
-    const PAGING_DURATION = 300;
-    const PAGING_SCALE = 0.5;
+    const imageStyle = computed(() => {
+      const { scale, zooming } = state;
+      const style: CSSProperties = {
+        transitionDuration: zooming ? '0s' : '.3s',
+      };
 
-    let element: HTMLDivElement;
-
-    const myRef = (el: any) => {
-      element = el;
-    };
-    const showViewer = computed(() => props.modelValue || props.visible);
-    watch([() => props.images, () => props.initialIndex], () => {
-      images.value = props.images;
-      index.value = Math.min(props.initialIndex, images.value.length - 1) + 1;
-      if (!showViewer.value) {
-        return;
+      if (scale !== 1) {
+        style.transform = `scale(${scale}, ${scale})`;
       }
-      nextTick(() => {
-        eleSwiper = element.querySelector(`.${prefix}-swiper-container`) as HTMLDivElement;
-        initNode();
-      });
+
+      return style;
     });
-    function initNode() {
-      const clientWidth = `${element.clientWidth}px`;
-      const container = element.querySelector(`.${prefix}-swiper-container`) as HTMLDivElement;
-      const children = container.querySelectorAll(`.${prefix}-swiper-item`) as NodeListOf<HTMLDivElement>;
-      children.forEach((el) => {
-        // eslint-disable-next-line no-param-reassign
-        el.style.width = clientWidth;
-      });
-      if (children.length >= 1) {
-        const firstNodeCopy = container.querySelector(`.${prefix}-swiper-item-first-copy`);
-        const lastNodeCopy = container.querySelector(`.${prefix}-swiper-item-last-copy`);
-        if (firstNodeCopy && container.lastElementChild === firstNodeCopy) {
-          container.removeChild(firstNodeCopy);
-        }
-        if (lastNodeCopy && container.firstElementChild === lastNodeCopy) {
-          container.removeChild(lastNodeCopy);
-        }
-        let firstNode = container.firstElementChild as HTMLDivElement;
-        firstNode = firstNode.cloneNode(true) as HTMLDivElement;
-        let lastNode = container.lastElementChild as HTMLDivElement;
-        lastNode = lastNode.cloneNode(true) as HTMLDivElement;
-        firstNode.classList.add(`${prefix}-swiper-item-first-copy`);
-        lastNode.classList.add(`${prefix}-swiper-item-last-copy`);
-        firstNode.style.width = clientWidth;
-        lastNode.style.width = clientWidth;
-        container.appendChild(firstNode);
-        container.insertBefore(lastNode, container.firstElementChild);
-        count.value = images.value.length + 2;
-        setTransform(-element.clientWidth * index.value);
-      }
-    }
-    function setTransform(left: number) {
-      eleSwiper.style.transform = `translate3d(${left}px, 0px, 0px) scale(1)`;
-    }
-    function getPoint(event: TouchEvent) {
-      const point: Touch = (event as TouchEvent).changedTouches[0];
-      return point;
-    }
-    let moveLock = true;
-    const onTouchstart = (event: TouchEvent) => {
-      const point = getPoint(event);
-      dragState.startTime = new Date().getTime();
-      dragState.startLeft = point.pageX;
-      dragState.startTop = point.pageY;
-      dragState.itemWidth = element.offsetWidth;
-      dragState.itemHeight = element.offsetHeight;
-      if (count.value <= 1) {
-        return;
-      }
-      moveLock = false;
-      eleSwiper.style.transition = 'none';
+
+    const handleClose = (e: Event, trigger: TriggerType) => {
+      setVisible(false);
+      emitEvent('close', { trigger, e });
     };
-    const onTouchMove = (event: TouchEvent) => {
-      if (count.value <= 3 || moveLock) {
-        return;
-      }
-      const point = getPoint(event);
-      dragState.currentLeft = point.pageX;
-      dragState.currentTop = point.pageY;
-      const offsetLeft = dragState.currentLeft - dragState.startLeft;
-      const offsetTop = dragState.currentTop - dragState.startTop;
+
+    const onSwiperChange = (index: number, context: any) => {
+      emitEvent('index-change', index);
+    };
+
+    let fingerNum: number;
+    let startScale: number;
+    let startDistance: number;
+    let doubleTapTimer: number | null;
+    let touchStartTime: number;
+    const onTouchStart = (event: TouchEvent) => {
       event.preventDefault();
-      const newOffsetLeft = Math.min(Math.max(-dragState.itemWidth + 1, offsetLeft), dragState.itemWidth - 1);
-      const offset = newOffsetLeft - dragState.itemWidth * index.value;
-      setTransform(offset);
-    };
-    const onTouchEnd = (event: TouchEvent) => {
-      const point = getPoint(event);
-      if (dragState.startLeft === point.pageX) {
-        moveLock = true;
-        context.emit('update:modelValue', false);
-        return;
-      }
-      if (count.value <= 3 || moveLock) {
-        return;
-      }
-      moveLock = true;
-      const dragDuration = Math.min(new Date().getTime() - dragState.startTime, 500);
-      const offsetLeft = dragState.currentLeft - dragState.startLeft;
-      const { itemWidth } = dragState;
-      const isFastDrag = dragDuration < PAGING_DURATION;
-      let action = '';
-      if (isFastDrag && dragState.currentLeft === -1) {
-        return;
-      }
-      if (Math.abs(offsetLeft) > itemWidth * PAGING_SCALE || isFastDrag) {
-        if (offsetLeft < 0) {
-          setTransform(-element.clientWidth * (index.value + 1));
-          // index.value += 1;
-          action = 'next';
-        } else {
-          setTransform(-element.clientWidth * (index.value - 1));
-          // index.value -= 1;
-          action = 'prev';
-        }
-      } else {
-        setTransform(-element.clientWidth * index.value);
-      }
-      eleSwiper.style.transition = `${dragDuration / 1000}s`;
+      event.stopPropagation();
+      const { touches } = event;
+      const { offsetX } = touch;
 
-      setTimeout(() => {
-        if (action) {
-          action === 'next' ? (index.value += 1) : (index.value -= 1);
-        }
-        // 翻到最后一个
-        if (index.value === count.value - 1) {
-          index.value = 1;
-          // 翻到第一个
-        } else if (index.value === 0) {
-          index.value = count.value - 2;
-        }
-        context.emit('change', index.value - 1);
-        setTransform(-element.clientWidth * index.value);
-        eleSwiper.style.transition = 'none';
-      }, dragDuration);
-      Object.assign(dragState, {
-        startTime: new Date().getTime(),
-        startLeft: 0,
-        startTop: 0,
-        itemWidth: 0,
-        itemHeight: 0,
-        currentLeft: 0,
-        currentTop: 0,
-      });
+      touch.start(event);
+
+      fingerNum = touches.length;
+      touchStartTime = Date.now();
+      state.zooming = fingerNum === 2;
+      if (state.zooming) {
+        startScale = state.scale;
+        startDistance = getDistance(event.touches);
+      }
     };
+
+    const onTouchMove = (event: TouchEvent) => {
+      const { touches } = event;
+
+      touch.move(event);
+      event.preventDefault();
+      event.stopPropagation();
+      if (state.zooming) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      if (state.zooming && touches.length === 2) {
+        const distance = getDistance(touches);
+        const scale = (startScale * distance) / startDistance;
+
+        setScale(scale);
+      }
+    };
+
+    const setScale = (scale: number) => {
+      scale = Math.min(scale, +props.maxZoom + 1);
+
+      if (scale !== state.scale) {
+        state.scale = scale;
+      }
+    };
+    const resetScale = () => {
+      setScale(1);
+    };
+
+    const toggleScale = () => {
+      const scale = state.scale > 1 ? 1 : 2;
+
+      setScale(scale);
+    };
+
+    const checkTap = (event: Event) => {
+      if (fingerNum > 1) {
+        return;
+      }
+
+      const { offsetX, offsetY } = touch;
+      const deltaTime = Date.now() - touchStartTime;
+      const TAP_TIME = 250;
+      const TAP_OFFSET = 5;
+
+      if (offsetX.value < TAP_OFFSET && offsetY.value < TAP_OFFSET && deltaTime < TAP_TIME) {
+        if (doubleTapTimer) {
+          clearTimeout(doubleTapTimer);
+          doubleTapTimer = null;
+          toggleScale();
+        } else {
+          doubleTapTimer = window.setTimeout(() => {
+            handleClose(event, 'overlay');
+            doubleTapTimer = null;
+          }, TAP_TIME);
+        }
+      }
+    };
+
+    const onTouchEnd = (event: TouchEvent) => {
+      // eliminate tap delay on safari
+      event.preventDefault();
+
+      if (state.zooming) {
+        event.stopPropagation();
+        if (!event.touches.length) {
+          if (state.zooming) {
+            state.zooming = false;
+          }
+          startScale = 1;
+          if (state.scale < 1) {
+            resetScale();
+          }
+          if (state.scale > props.maxZoom) {
+            state.scale = +props.maxZoom;
+          }
+        }
+      }
+
+      checkTap(event);
+      touch.reset();
+    };
+
+    watch(
+      () => visible.value,
+      (value) => {
+        if (!value) {
+          resetScale();
+        }
+        setTimeout(() => {
+          lazyVisible.value = value;
+        }, 300);
+      },
+    );
     return {
+      name,
       prefix,
-      showViewer,
-      index,
-      count,
-      myRef,
-      classes,
+      closeBtnTNode,
+      navigation,
+      imageStyle,
+      lazyVisible,
       ...toRefs(props),
-      onTouchstart,
+      visible,
+      handleClose,
+      onSwiperChange,
+      onTouchStart,
       onTouchMove,
       onTouchEnd,
     };
