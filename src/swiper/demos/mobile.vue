@@ -6,7 +6,7 @@
       <div style="padding: 0 16px">
         <t-swiper
           :interval="3000"
-          :autoplay="true"
+          :autoplay="false"
           :navigation="{ type: 'dots', showSlideBtn: false }"
           @change="handleChange"
         >
@@ -21,7 +21,7 @@
           </t-swiper-item>
         </t-swiper>
 
-        <t-swiper :autoplay="false" :height="180" direction="vertical" :navigation="{ type: 'fraction' }">
+        <!-- <t-swiper :autoplay="false" :height="180" direction="vertical" :navigation="{ type: 'fraction' }" @change="handleChange">
           <t-swiper-item class="swiper-item--demo1">
             <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
           </t-swiper-item>
@@ -61,7 +61,6 @@
             <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
           </t-swiper-item>
         </t-swiper>
-        <!-- no loop -->
         <t-swiper :interval="3000" :loop="false" :navigation="{ showSlideBtn: true }">
           <t-swiper-item class="swiper-item--demo">
             <img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" />
@@ -72,7 +71,7 @@
           <t-swiper-item class="swiper-item--demo">
             <img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" />
           </t-swiper-item>
-        </t-swiper>
+        </t-swiper> -->
         <!-- <h2>异步内容</h2>
         <demo-async /> -->
         <!-- <t-swiper :interval="3000" :autoplay="true">
