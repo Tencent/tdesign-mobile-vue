@@ -5,7 +5,7 @@
  * */
 
 import { mount } from '@vue/test-utils';
-import CheckboxGroup from '../../../src/checkbox-group';
+import { CheckboxGroup } from '../../../src/checkbox';
 import { h } from 'vue';
 
 describe('CheckboxGroup', () => {
