@@ -58361,7 +58361,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/async.vue 1`] = `
         </span>
       </span>
       <span
-        class="t-swiper__pagination t-swiper__pagination-dots-bar"
+        class="t-swiper__pagination t-swiper__pagination-dots-bar t-swiper__pagination-bottom"
       >
         
         
@@ -58375,56 +58375,56 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/async.vue 1`] = `
 
 exports[`csr snapshot test > csr test ./src/swiper/demos/base.vue 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-swiper"
+  style="overflow: hidden;"
 >
   <div
-    style="padding: 0px 16px;"
+    class="t-swiper__container"
+    style="flex-direction: row;"
   >
+    
     <div
-      class="t-swiper"
-      style="overflow: hidden;"
+      class="t-swiper-item swiper-item--demo"
     >
-      <div
-        class="t-swiper__container"
-        style="flex-direction: row;"
-      >
-        
-        <div
-          class="t-swiper-item swiper-item--demo"
-        >
-          
-          <img
-            class="img"
-            src="https://tdesign.gtimg.com/site/swiper/01.png"
-          />
-          
-        </div>
-        <div
-          class="t-swiper-item swiper-item--demo"
-        >
-          
-          <img
-            class="img"
-            src="https://tdesign.gtimg.com/site/swiper/02.png"
-          />
-          
-        </div>
-        <div
-          class="t-swiper-item swiper-item--demo"
-        >
-          
-          <img
-            class="img"
-            src="https://tdesign.gtimg.com/site/swiper/03.png"
-          />
-          
-        </div>
-        
-      </div>
-      <!--v-if-->
-      <!--v-if-->
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/01.png"
+      />
+      
     </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/02.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/03.png"
+      />
+      
+    </div>
+    
   </div>
+  
+  <!--v-if-->
+  <span
+    class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+  >
+    
+    
+    <!--v-if-->
+  </span>
+  
 </div>
 `;
 
@@ -58510,7 +58510,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/control.vue 1`] = `
       </span>
     </span>
     <span
-      class="t-swiper__pagination t-swiper__pagination-dots-bar"
+      class="t-swiper__pagination t-swiper__pagination-dots-bar t-swiper__pagination-bottom"
     >
       
       
@@ -58578,54 +58578,145 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/control.vue 1`] = `
 </div>
 `;
 
-exports[`csr snapshot test > csr test ./src/swiper/demos/direction.vue 1`] = `
-<div>
+exports[`csr snapshot test > csr test ./src/swiper/demos/controlled.vue 1`] = `
+<div
+  class="t-swiper"
+  style="overflow: hidden;"
+>
   <div
-    class="t-swiper"
-    style="height: 180px; overflow: hidden;"
+    class="t-swiper__container"
+    style="flex-direction: row;"
   >
+    
     <div
-      class="t-swiper__container"
-      style="height: 180px; flex-direction: column;"
+      class="t-swiper-item swiper-item--demo"
     >
       
-      <div
-        class="t-swiper-item swiper-item--demo"
-      >
-        
-         itme1 
-        
-      </div>
-      <div
-        class="t-swiper-item swiper-item--demo"
-        style="background: blue;"
-      >
-        
-         item2 
-        
-      </div>
-      <div
-        class="t-swiper-item swiper-item--demo"
-        style="background: green;"
-      >
-        
-         item3 
-        
-      </div>
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/01.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/02.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/03.png"
+      />
       
     </div>
     
-    <!--v-if-->
+  </div>
+  
+  <span>
     <span
-      class="t-swiper__pagination t-swiper__pagination-fraction"
+      class="t-swiper__btn btn-prev"
     >
-      <!--v-if-->
-      <span>
-        0/0
-      </span>
+      <svg
+        class="t-icon t-icon-chevron-left"
+        fill="none"
+        height="1em"
+        style="font-size: 20px;"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
     </span>
+    <span
+      class="t-swiper__btn btn-next"
+    >
+      <svg
+        class="t-icon t-icon-chevron-right"
+        fill="none"
+        height="1em"
+        style="font-size: 20px;"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </span>
+  </span>
+  <!--v-if-->
+  
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/swiper/demos/direction.vue 1`] = `
+<div
+  class="t-swiper"
+  style="height: 180px; overflow: hidden;"
+>
+  <div
+    class="t-swiper__container"
+    style="height: 180px; flex-direction: column;"
+  >
+    
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/01.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/02.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/03.png"
+      />
+      
+    </div>
     
   </div>
+  
+  <!--v-if-->
+  <span
+    class="t-swiper__pagination t-swiper__pagination-fraction t-swiper__pagination-bottom"
+  >
+    <!--v-if-->
+    <span>
+      0/0
+    </span>
+  </span>
+  
 </div>
 `;
 
@@ -58704,7 +58795,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/mobile.vue 1`] = `
         
         <!--v-if-->
         <span
-          class="t-swiper__pagination t-swiper__pagination-dots"
+          class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
         >
           
           
@@ -58722,7 +58813,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/mobile.vue 1`] = `
         >
           
           <div
-            class="t-swiper-item swiper-item--demo1"
+            class="t-swiper-item swiper-item--demo"
           >
             
             <img
@@ -58732,7 +58823,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/mobile.vue 1`] = `
             
           </div>
           <div
-            class="t-swiper-item swiper-item--demo1"
+            class="t-swiper-item swiper-item--demo"
           >
             
             <img
@@ -58742,7 +58833,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/mobile.vue 1`] = `
             
           </div>
           <div
-            class="t-swiper-item swiper-item--demo1"
+            class="t-swiper-item swiper-item--demo"
           >
             
             <img
@@ -58756,7 +58847,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/mobile.vue 1`] = `
         
         <!--v-if-->
         <span
-          class="t-swiper__pagination t-swiper__pagination-fraction"
+          class="t-swiper__pagination t-swiper__pagination-fraction t-swiper__pagination-bottom"
         >
           <!--v-if-->
           <span>
@@ -58809,7 +58900,7 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/mobile.vue 1`] = `
         
         <!--v-if-->
         <span
-          class="t-swiper__pagination t-swiper__pagination-dots-bar"
+          class="t-swiper__pagination t-swiper__pagination-dots-bar t-swiper__pagination-bottom"
         >
           
           
@@ -58984,116 +59075,150 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/mobile.vue 1`] = `
         <!--v-if-->
         
       </div>
-      <!-- &lt;h2&gt;异步内容&lt;/h2&gt;
-        &lt;demo-async /&gt; -->
-      <!-- &lt;t-swiper :interval="3000" :autoplay="true"&gt;
-          &lt;t-swiper-item class="swiper-item--demo"&gt;
-            &lt;img src="https://tdesign.gtimg.com/site/swiper/01.png" class="img" /&gt;
-          &lt;/t-swiper-item&gt;
-          &lt;t-swiper-item class="swiper-item--demo"&gt;
-            &lt;img src="https://tdesign.gtimg.com/site/swiper/02.png" class="img" /&gt;
-          &lt;/t-swiper-item&gt;
-          &lt;t-swiper-item class="swiper-item--demo"&gt;
-            &lt;img src="https://tdesign.gtimg.com/site/swiper/03.png" class="img" /&gt;
-          &lt;/t-swiper-item&gt;
-          &lt;template #navigation&gt;
-            &lt;span&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;/span&gt;
-            &lt;span&gt;&lt;/span&gt;
-          &lt;/template&gt;
-        &lt;/t-swiper&gt; -->
     </div>
     
   </div>
 </div>
 `;
 
-exports[`csr snapshot test > csr test ./src/swiper/demos/pagination-type.vue 1`] = `
-<div>
+exports[`csr snapshot test > csr test ./src/swiper/demos/navigation-type.vue 1`] = `
+<div
+  class="t-swiper"
+  style="overflow: hidden;"
+>
   <div
-    class="t-swiper"
-    style="overflow: hidden;"
+    class="t-swiper__container"
+    style="flex-direction: row;"
   >
+    
     <div
-      class="t-swiper__container"
-      style="flex-direction: row;"
+      class="t-swiper-item swiper-item--demo"
     >
       
-      <div
-        class="t-swiper-item swiper-item--demo"
-      >
-        
-         itme1 
-        
-      </div>
-      <div
-        class="t-swiper-item swiper-item--demo"
-        style="background: blue;"
-      >
-        
-         item2 
-        
-      </div>
-      <div
-        class="t-swiper-item swiper-item--demo"
-        style="background: green;"
-      >
-        
-         item3 
-        
-      </div>
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/01.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/02.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/03.png"
+      />
       
     </div>
     
-    <span>
-      <span
-        class="t-swiper__btn btn-prev"
-      >
-        <svg
-          class="t-icon t-icon-chevron-left"
-          fill="none"
-          height="1em"
-          style="font-size: 20px;"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </span>
-      <span
-        class="t-swiper__btn btn-next"
-      >
-        <svg
-          class="t-icon t-icon-chevron-right"
-          fill="none"
-          height="1em"
-          style="font-size: 20px;"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </span>
-    </span>
-    <span
-      class="t-swiper__pagination t-swiper__pagination-fraction"
+  </div>
+  
+  <!--v-if-->
+  <span
+    class="t-swiper__pagination t-swiper__pagination-dots-bar t-swiper__pagination-bottom"
+  >
+    
+    
+    <!--v-if-->
+  </span>
+  
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/swiper/demos/no-loop.vue 1`] = `
+<div
+  class="t-swiper"
+  style="overflow: hidden;"
+>
+  <div
+    class="t-swiper__container"
+    style="flex-direction: row;"
+  >
+    
+    <div
+      class="t-swiper-item swiper-item--demo"
     >
-      <!--v-if-->
-      <span>
-        0/0
-      </span>
-    </span>
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/01.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/02.png"
+      />
+      
+    </div>
+    <div
+      class="t-swiper-item swiper-item--demo"
+    >
+      
+      <img
+        class="img"
+        src="https://tdesign.gtimg.com/site/swiper/03.png"
+      />
+      
+    </div>
     
   </div>
+  
+  <span>
+    <span
+      class="t-swiper__btn btn-prev"
+    >
+      <svg
+        class="t-icon t-icon-chevron-left"
+        fill="none"
+        height="1em"
+        style="font-size: 20px;"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </span>
+    <span
+      class="t-swiper__btn btn-next"
+    >
+      <svg
+        class="t-icon t-icon-chevron-right"
+        fill="none"
+        height="1em"
+        style="font-size: 20px;"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </span>
+  </span>
+  <!--v-if-->
+  
 </div>
 `;
 
