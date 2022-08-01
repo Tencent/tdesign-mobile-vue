@@ -5,6 +5,13 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.10.1 `2022-08-01` 
+### 🐞 Bug Fixes
+- `search`: 修复失去焦点后输入内容被隐藏和清除按钮无法使用的问题 @VeryHandSomeBoy ([#257](https://github.com/Tencent/tdesign-mobile-vue/pull/257))
+- `Tabs`: 修复传入相同的值时仍触发 onChange 的问题 @VeryHandSomeBoy ([#254](https://github.com/Tencent/tdesign-mobile-vue/pull/254))
+- `Popup`: 修复使用 overlay 组件没传入 visible 导致告警的问题 @LeeJim ([#251](https://github.com/Tencent/tdesign-mobile-vue/pull/251))
+- `Dialog`: 修复 slot 渲染逻辑 @LeeJim ([#258](https://github.com/Tencent/tdesign-mobile-vue/pull/258))
+
 ## 🌈 0.10.0 `2022-07-25` 
 ### 🚀 Features
 - `Skeleton`: 属性 theme 移除 avatar-text；新增 avatar、image、paragraph @anlyyao ([#239](https://github.com/Tencent/tdesign-mobile-vue/pull/239))
