@@ -1,4 +1,4 @@
-import Calendar from './calendar.vue'
+import Calendar from './calendar.vue';
 import { withInstall, WithInstallType } from '../shared';
 
 import './style';

@@ -8,10 +8,6 @@
 <script lang="ts" setup>
 import { defineComponent, ref } from 'vue';
 
-const visible = ref(false)
-const value = new Date('2022-08-08')
+const visible = ref(false);
+const value = new Date('2022-08-08');
 </script>
-
-<style lang='scss' scoped>
-
-</style>

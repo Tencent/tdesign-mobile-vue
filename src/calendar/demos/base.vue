@@ -8,15 +8,11 @@
 <script lang="ts" setup>
 import { defineComponent, ref } from 'vue';
 
-const visible = ref(false)
+const visible = ref(false);
 const handleConfirm = (val: string) => {
-  console.log(val)
-}
+  console.log(val);
+};
 const cellClick = (val: any) => {
-  console.log(val)
-}
+  console.log(val);
+};
 </script>
-
-<style lang='scss' scoped>
-
-</style>

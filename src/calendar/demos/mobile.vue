@@ -35,12 +35,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue';
 import BaseCalendarDemo from './base.vue';
-import ValueCalendarDemo from './value.vue'
-import HeadCalendarDemo from './head.vue'
-import CellCalendarDemo from './cell.vue'
-import ColorCalendarDemo from './color.vue'
-
-const disabled = ref(true);
+import ValueCalendarDemo from './value.vue';
+import HeadCalendarDemo from './head.vue';
+import CellCalendarDemo from './cell.vue';
+import ColorCalendarDemo from './color.vue';
 </script>

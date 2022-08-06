@@ -3,7 +3,6 @@
 **/*_common*
 **/*types*
 !.*.js
-/src
 # build files
 es
 esm
