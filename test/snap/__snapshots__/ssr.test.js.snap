@@ -494,57 +494,7 @@ exports[`ssr snapshot test > ssr test ./src/swiper/demos/control.vue 1`] = `"<di
 exports[`ssr snapshot test > ssr test ./src/swiper/demos/direction.vue 1`] = `"<div><div style=\\"height:180px;overflow:hidden;\\" class=\\"t-swiper\\"><div class=\\"t-swiper__container\\" style=\\"height:180px;flex-direction:column;\\"><!--[--><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--> itme1 <!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\" style=\\"background:blue;\\"><!--[--> item2 <!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\" style=\\"background:green;\\"><!--[--> item3 <!--]--></div><!--]--></div><!--[--><!--v-if--><span class=\\"t-swiper__pagination t-swiper__pagination-fraction\\"><!--v-if--><span>0/0</span></span><!--]--></div></div>"`;
 
 exports[`ssr snapshot test > ssr test ./src/swiper/demos/mobile.vue 1`] = `
-"<div class=\\"tdesign-mobile-demo\\"><h1 class=\\"title\\">Swiper 轮播</h1><p class=\\"summary\\">用于循环轮播一组图片或内容，也可以滑动进行切换，轮播动效时间可以设置</p><div class=\\"tdesign-mobile-demo-block\\"><h2 class=\\"tdesign-mobile-demo-block__title\\">01 类型</h2><p class=\\"tdesign-mobile-demo-block__summary\\">轮播图的多种样式</p><!--[--><div style=\\"padding:0 16px;\\"><div style=\\"height:undefinedpx;overflow:hidden;\\" class=\\"t-swiper\\"><div class=\\"t-swiper__container\\" style=\\"height:undefinedpx;flex-direction:row;\\"><!--[--><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\"><!--]--></div><!--]--></div><!--[--><!--v-if--><span class=\\"t-swiper__pagination t-swiper__pagination-dots\\"><!--[--><!--]--><!--v-if--></span><!--]--></div><!-- <t-swiper :autoplay=\\"false\\" :height=\\"180\\" direction=\\"vertical\\" :navigation=\\"{ type: 'fraction' }\\" @change=\\"handleChange\\">
-          <t-swiper-item class=\\"swiper-item--demo1\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo1\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo1\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\" />
-          </t-swiper-item>
-        </t-swiper>
-
-        <t-swiper :autoplay=\\"false\\" :navigation=\\"{ type: 'dots-bar' }\\">
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\" />
-          </t-swiper-item>
-        </t-swiper>
-
-        <t-swiper
-          v-model:current=\\"state.currentPage\\"
-          :interval=\\"3000\\"
-          :autoplay=\\"true\\"
-          :navigation=\\"{ showSlideBtn: true }\\"
-        >
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\" />
-          </t-swiper-item>
-        </t-swiper>
-        <t-swiper :interval=\\"3000\\" :loop=\\"false\\" :navigation=\\"{ showSlideBtn: true }\\">
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\" />
-          </t-swiper-item>
-          <t-swiper-item class=\\"swiper-item--demo\\">
-            <img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\" />
-          </t-swiper-item>
-        </t-swiper> --><!-- <h2>异步内容</h2>
+"<div class=\\"tdesign-mobile-demo\\"><h1 class=\\"title\\">Swiper 轮播</h1><p class=\\"summary\\">用于循环轮播一组图片或内容，也可以滑动进行切换，轮播动效时间可以设置</p><div class=\\"tdesign-mobile-demo-block\\"><h2 class=\\"tdesign-mobile-demo-block__title\\">01 类型</h2><p class=\\"tdesign-mobile-demo-block__summary\\">轮播图的多种样式</p><!--[--><div style=\\"padding:0 16px;\\"><div style=\\"height:undefinedpx;overflow:hidden;\\" class=\\"t-swiper\\"><div class=\\"t-swiper__container\\" style=\\"height:undefinedpx;flex-direction:row;\\"><!--[--><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\"><!--]--></div><!--]--></div><!--[--><!--v-if--><span class=\\"t-swiper__pagination t-swiper__pagination-dots\\"><!--[--><!--]--><!--v-if--></span><!--]--></div><div style=\\"height:180px;overflow:hidden;\\" class=\\"t-swiper\\"><div class=\\"t-swiper__container\\" style=\\"height:180px;flex-direction:column;\\"><!--[--><div class=\\"t-swiper-item swiper-item--demo1\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo1\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo1\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\"><!--]--></div><!--]--></div><!--[--><!--v-if--><span class=\\"t-swiper__pagination t-swiper__pagination-fraction\\"><!--v-if--><span>0/0</span></span><!--]--></div><div style=\\"height:undefinedpx;overflow:hidden;\\" class=\\"t-swiper\\"><div class=\\"t-swiper__container\\" style=\\"height:undefinedpx;flex-direction:row;\\"><!--[--><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\"><!--]--></div><!--]--></div><!--[--><!--v-if--><span class=\\"t-swiper__pagination t-swiper__pagination-dots-bar\\"><!--[--><!--]--><!--v-if--></span><!--]--></div><div style=\\"height:undefinedpx;overflow:hidden;\\" class=\\"t-swiper\\"><div class=\\"t-swiper__container\\" style=\\"height:undefinedpx;flex-direction:row;\\"><!--[--><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\"><!--]--></div><!--]--></div><!--[--><span><span class=\\"t-swiper__btn btn-prev\\"><svg fill=\\"none\\" viewbox=\\"0 0 16 16\\" width=\\"1em\\" height=\\"1em\\" class=\\"t-icon t-icon-chevron-left\\" style=\\"font-size:20px;\\"><path fill=\\"currentColor\\" d=\\"M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z\\" fill-opacity=\\"0.9\\"></path></svg></span><span class=\\"t-swiper__btn btn-next\\"><svg fill=\\"none\\" viewbox=\\"0 0 16 16\\" width=\\"1em\\" height=\\"1em\\" class=\\"t-icon t-icon-chevron-right\\" style=\\"font-size:20px;\\"><path fill=\\"currentColor\\" d=\\"M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z\\" fill-opacity=\\"0.9\\"></path></svg></span></span><!--v-if--><!--]--></div><!-- no loop --><div style=\\"height:undefinedpx;overflow:hidden;\\" class=\\"t-swiper\\"><div class=\\"t-swiper__container\\" style=\\"height:undefinedpx;flex-direction:row;\\"><!--[--><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/02.png\\" class=\\"img\\"><!--]--></div><div class=\\"t-swiper-item swiper-item--demo\\"><!--[--><img src=\\"https://tdesign.gtimg.com/site/swiper/03.png\\" class=\\"img\\"><!--]--></div><!--]--></div><!--[--><span><span class=\\"t-swiper__btn btn-prev\\"><svg fill=\\"none\\" viewbox=\\"0 0 16 16\\" width=\\"1em\\" height=\\"1em\\" class=\\"t-icon t-icon-chevron-left\\" style=\\"font-size:20px;\\"><path fill=\\"currentColor\\" d=\\"M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z\\" fill-opacity=\\"0.9\\"></path></svg></span><span class=\\"t-swiper__btn btn-next\\"><svg fill=\\"none\\" viewbox=\\"0 0 16 16\\" width=\\"1em\\" height=\\"1em\\" class=\\"t-icon t-icon-chevron-right\\" style=\\"font-size:20px;\\"><path fill=\\"currentColor\\" d=\\"M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z\\" fill-opacity=\\"0.9\\"></path></svg></span></span><!--v-if--><!--]--></div><!-- <h2>异步内容</h2>
         <demo-async /> --><!-- <t-swiper :interval=\\"3000\\" :autoplay=\\"true\\">
           <t-swiper-item class=\\"swiper-item--demo\\">
             <img src=\\"https://tdesign.gtimg.com/site/swiper/01.png\\" class=\\"img\\" />
