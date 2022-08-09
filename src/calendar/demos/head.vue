@@ -1,6 +1,8 @@
 <template>
   <div>
-    <t-calendar v-model="visible" @confirm="handleConfirm" @cell-click="cellClick"></t-calendar>
+    <t-calendar v-model="visible">
+      <template #head> 自定义标题 </template>
+    </t-calendar>
     <t-cell title="选择日期" note="请选择日期" arrow @click="visible = true"></t-cell>
   </div>
 </template>
@@ -9,10 +11,4 @@
 import { defineComponent, ref } from 'vue';
 
 const visible = ref(false);
-const handleConfirm = (val: string) => {
-  console.log(val);
-};
-const cellClick = (val: any) => {
-  console.log(val);
-};
 </script>
