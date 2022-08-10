@@ -27639,38 +27639,18 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/background.vue 1`
               
             </span>
           </button>
-          <div
+          <transition-stub
+            background-color="rgba(0, 0, 0, 1)"
             class="t-image-viewer"
-            style="display: none;"
           >
             <div
-              class="t-image-mask"
-              style="background: rgb(0, 0, 0);"
-            />
-            <div
-              class="image-viewer-container"
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              <div
-                class="t-image-viewer"
-              >
-                <div
-                  class="t-swiper-box"
-                >
-                  <div
-                    class="t-swiper-container"
-                  >
-                    
-                    
-                  </div>
-                </div>
-              </div>
-              <div
-                class="image-viewer-index"
-              >
-                0/0
-              </div>
+              
+              
             </div>
-          </div>
+          </transition-stub>
           
         </div>
         <!--v-if-->
@@ -27690,7 +27670,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/base.vue 1`] = `
       class="t-cell-group__title"
     >
       
-      显示和隐藏
+      基础用法
       
     </div>
     <div
@@ -27714,7 +27694,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/base.vue 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
             role="button"
           >
             <!---->
@@ -27722,42 +27702,153 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/base.vue 1`] = `
               class="t-button__text"
             >
               
-              显示
+               基础用法 
               
             </span>
           </button>
-          <div
+          <transition-stub
             class="t-image-viewer"
-            style="display: none;"
           >
             <div
-              class="t-image-mask"
-              style="background: rgba(0, 0, 0, 0.6);"
-            />
-            <div
-              class="image-viewer-container"
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              <div
-                class="t-image-viewer"
-              >
-                <div
-                  class="t-swiper-box"
-                >
-                  <div
-                    class="t-swiper-container"
-                  >
-                    
-                    
-                  </div>
-                </div>
-              </div>
-              <div
-                class="image-viewer-index"
-              >
-                0/0
-              </div>
+              
+              
             </div>
-          </div>
+          </transition-stub>
+          
+        </div>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/image-viewer/demos/closeBtn.vue 1`] = `
+<div>
+  <div
+    class="t-cell-group dialog-type-title"
+  >
+    <div
+      class="t-cell-group__title"
+    >
+      
+      不展示关闭按钮
+      
+    </div>
+    <div
+      class="t-cell-group__container"
+    >
+      
+      <div
+        class="t-cell t-cell--middle t-cell--bordered"
+        value-align="left"
+      >
+        <div
+          class="t-cell__left-icon"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <div
+          class="t-cell__note"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              不展示关闭按钮
+              
+            </span>
+          </button>
+          <transition-stub
+            class="t-image-viewer"
+          >
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+          
+        </div>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`csr snapshot test > csr test ./src/image-viewer/demos/closeEvent.vue 1`] = `
+<div>
+  <div
+    class="t-cell-group dialog-type-title"
+  >
+    <div
+      class="t-cell-group__title"
+    >
+      
+      监听关闭事件
+      
+    </div>
+    <div
+      class="t-cell-group__container"
+    >
+      
+      <div
+        class="t-cell t-cell--middle t-cell--bordered"
+        value-align="left"
+      >
+        <div
+          class="t-cell__left-icon"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <!--v-if-->
+        <div
+          class="t-cell__note"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              监听关闭事件
+              
+            </span>
+          </button>
+          <transition-stub
+            class="t-image-viewer"
+          >
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
           
         </div>
         <!--v-if-->
@@ -27813,38 +27904,17 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/imageList.vue 1`]
               
             </span>
           </button>
-          <div
+          <transition-stub
             class="t-image-viewer"
-            style="display: none;"
           >
             <div
-              class="t-image-mask"
-              style="background: rgba(0, 0, 0, 0.6);"
-            />
-            <div
-              class="image-viewer-container"
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              <div
-                class="t-image-viewer"
-              >
-                <div
-                  class="t-swiper-box"
-                >
-                  <div
-                    class="t-swiper-container"
-                  >
-                    
-                    
-                  </div>
-                </div>
-              </div>
-              <div
-                class="image-viewer-index"
-              >
-                0/0
-              </div>
+              
+              
             </div>
-          </div>
+          </transition-stub>
           
         </div>
         <!--v-if-->
@@ -27900,38 +27970,17 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/initialIndex.vue 
               
             </span>
           </button>
-          <div
+          <transition-stub
             class="t-image-viewer"
-            style="display: none;"
           >
             <div
-              class="t-image-mask"
-              style="background: rgba(0, 0, 0, 0.6);"
-            />
-            <div
-              class="image-viewer-container"
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              <div
-                class="t-image-viewer"
-              >
-                <div
-                  class="t-swiper-box"
-                >
-                  <div
-                    class="t-swiper-container"
-                  >
-                    
-                    
-                  </div>
-                </div>
-              </div>
-              <div
-                class="image-viewer-index"
-              >
-                0/0
-              </div>
+              
+              
             </div>
-          </div>
+          </transition-stub>
           
         </div>
         <!--v-if-->
@@ -27989,7 +28038,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
           class="t-button__text"
         >
           
-           显示 
+           基础用法 
           
         </span>
       </button>
@@ -28004,7 +28053,7 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
           class="t-button__text"
         >
           
-           图片列表 
+           不展示关闭按钮 
           
         </span>
       </button>
@@ -28019,61 +28068,49 @@ exports[`csr snapshot test > csr test ./src/image-viewer/demos/mobile.vue 1`] = 
           class="t-button__text"
         >
           
-           默认显示第二张图片 
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-ef8302fa=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-           显示 
+           监听关闭事件 
           
         </span>
       </button>
     </div>
     
   </div>
-  <div
+  <transition-stub
     class="t-image-viewer"
     data-v-ef8302fa=""
-    style="display: none;"
   >
     <div
-      class="t-image-mask"
-      style="background: rgba(0, 0, 0, 0.6);"
-    />
-    <div
-      class="image-viewer-container"
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <div
-        class="t-image-viewer"
-      >
-        <div
-          class="t-swiper-box"
-        >
-          <div
-            class="t-swiper-container"
-          >
-            
-            
-          </div>
-        </div>
-      </div>
-      <div
-        class="image-viewer-index"
-      >
-        0/0
-      </div>
+      
+      
     </div>
-  </div>
+  </transition-stub>
+  <transition-stub
+    class="t-image-viewer"
+    data-v-ef8302fa=""
+  >
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
+    >
+      
+      
+    </div>
+  </transition-stub>
+  <transition-stub
+    class="t-image-viewer"
+    data-v-ef8302fa=""
+  >
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
+    >
+      
+      
+    </div>
+  </transition-stub>
 </div>
 `;
 
@@ -58422,7 +58459,6 @@ exports[`csr snapshot test > csr test ./src/swiper/demos/base.vue 1`] = `
         
       </div>
       <!--v-if-->
-      <!--v-if-->
     </div>
   </div>
 </div>
@@ -67654,38 +67690,17 @@ exports[`csr snapshot test > csr test ./src/upload/demos/baseMultiple.vue 1`] = 
           multiple=""
           type="file"
         />
-        <div
+        <transition-stub
           class="t-image-viewer"
-          style="display: none;"
         >
           <div
-            class="t-image-mask"
-            style="background: rgba(0, 0, 0, 0.6);"
-          />
-          <div
-            class="image-viewer-container"
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-image-viewer"
-            >
-              <div
-                class="t-swiper-box"
-              >
-                <div
-                  class="t-swiper-container"
-                >
-                  
-                  
-                </div>
-              </div>
-            </div>
-            <div
-              class="image-viewer-index"
-            >
-              0/0
-            </div>
+            
+            
           </div>
-        </div>
+        </transition-stub>
       </div>
       
     </div>
@@ -67752,38 +67767,17 @@ exports[`csr snapshot test > csr test ./src/upload/demos/baseSingle.vue 1`] = `
           hidden=""
           type="file"
         />
-        <div
+        <transition-stub
           class="t-image-viewer"
-          style="display: none;"
         >
           <div
-            class="t-image-mask"
-            style="background: rgba(0, 0, 0, 0.6);"
-          />
-          <div
-            class="image-viewer-container"
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-image-viewer"
-            >
-              <div
-                class="t-swiper-box"
-              >
-                <div
-                  class="t-swiper-container"
-                >
-                  
-                  
-                </div>
-              </div>
-            </div>
-            <div
-              class="image-viewer-index"
-            >
-              0/0
-            </div>
+            
+            
           </div>
-        </div>
+        </transition-stub>
       </div>
       
     </div>
@@ -67868,38 +67862,17 @@ exports[`csr snapshot test > csr test ./src/upload/demos/mobile.vue 1`] = `
           hidden=""
           type="file"
         />
-        <div
+        <transition-stub
           class="t-image-viewer"
-          style="display: none;"
         >
           <div
-            class="t-image-mask"
-            style="background: rgba(0, 0, 0, 0.6);"
-          />
-          <div
-            class="image-viewer-container"
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-image-viewer"
-            >
-              <div
-                class="t-swiper-box"
-              >
-                <div
-                  class="t-swiper-container"
-                >
-                  
-                  
-                </div>
-              </div>
-            </div>
-            <div
-              class="image-viewer-index"
-            >
-              0/0
-            </div>
+            
+            
           </div>
-        </div>
+        </transition-stub>
       </div>
       <div
         class="upload-title"
@@ -67943,38 +67916,17 @@ exports[`csr snapshot test > csr test ./src/upload/demos/mobile.vue 1`] = `
           multiple=""
           type="file"
         />
-        <div
+        <transition-stub
           class="t-image-viewer"
-          style="display: none;"
         >
           <div
-            class="t-image-mask"
-            style="background: rgba(0, 0, 0, 0.6);"
-          />
-          <div
-            class="image-viewer-container"
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-image-viewer"
-            >
-              <div
-                class="t-swiper-box"
-              >
-                <div
-                  class="t-swiper-container"
-                >
-                  
-                  
-                </div>
-              </div>
-            </div>
-            <div
-              class="image-viewer-index"
-            >
-              0/0
-            </div>
+            
+            
           </div>
-        </div>
+        </transition-stub>
       </div>
     </div>
     
