@@ -1,9 +1,9 @@
-import {h} from 'vue'
+import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Button from '../button.vue';
 import { TdButtonProps } from '../type';
-import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
 const TEXT = 'tdesign-mobile-vue';
 const iconFunc = () => h(TIconApp);
@@ -11,8 +11,6 @@ const themeList: TdButtonProps['theme'][] = ['default', 'primary', 'danger'];
 const shapeList: TdButtonProps['shape'][] = ['rectangle', 'square', 'round', 'circle'];
 const sizeList: TdButtonProps['size'][] = ['small', 'medium', 'large'];
 const variantList: TdButtonProps['variant'][] = ['base', 'outline', 'text'];
-
-
 
 describe('Button.vue', () => {
   it('create render', async () => {
@@ -65,12 +63,12 @@ describe('Button.vue', () => {
 
   it('icon render', async () => {
     const wrapper = mount(() => <Button icon={iconFunc}>{TEXT}</Button>);
-    expect(wrapper.findComponent(TIconApp)).toBeTruthy()
-  })
+    expect(wrapper.findComponent(TIconApp)).toBeTruthy();
+  });
 
   it('click emit', async () => {
-    const wrapper = mount(() => <Button >{TEXT}</Button>);
-    await wrapper.trigger('click')
-    expect(wrapper.emitted('click')).toBeDefined()
-  })
+    const wrapper = mount(() => <Button>{TEXT}</Button>);
+    await wrapper.trigger('click');
+    expect(wrapper.emitted('click')).toBeDefined;
+  });
 });
