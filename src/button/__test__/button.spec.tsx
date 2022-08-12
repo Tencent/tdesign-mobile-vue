@@ -63,7 +63,7 @@ describe('Button.vue', () => {
 
   it('icon render', async () => {
     const wrapper = mount(() => <Button icon={iconFunc}>{TEXT}</Button>);
-    expect(wrapper.findComponent(TIconApp)).toBeTruthy();
+    expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
   });
 
   it('click emit', async () => {

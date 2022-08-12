@@ -65,9 +65,8 @@ describe('Tag.vue', async () => {
 
   it('click render', async () => {
     const wrapper = mount(() => <Tag>{TEXT}</Tag>);
-    const com = wrapper.findComponent(Tag);
-    await com.trigger('click');
-    expect(com.emitted().click).toBeTruthy();
+    await wrapper.trigger('click');
+    expect(wrapper.emitted('click')).toBeTruthy();
   });
 
   it('close render', async () => {
@@ -78,6 +77,6 @@ describe('Tag.vue', async () => {
     expect(closeBtn.exists()).toBeTruthy();
 
     await closeBtn.trigger('click');
-    expect(com.emitted().close).toBeTruthy();
+    expect(com.emitted('close')).toBeTruthy();
   });
 });

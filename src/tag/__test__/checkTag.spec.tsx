@@ -50,7 +50,7 @@ describe('CheckTag render', async () => {
   it('click render', async () => {
     const wrapper = mount(() => <TCheckTag>{TEXT}</TCheckTag>);
     await wrapper.trigger('click');
-    expect(wrapper.emitted().click).toBeTruthy();
+    expect(wrapper.emitted('click')).toBeTruthy();
   });
 
   it('change render', async () => {
