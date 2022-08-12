@@ -3,13 +3,8 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Result from '../result.vue';
-import { TdResultProps } from '../type';
-import { TNode } from '@/common';
 
 const appIcon = () => h(AppIcon);
-const infoCircleIcon = () => h(InfoCircleIcon);
-const checkCircleIcon = () => h(CheckCircleIcon);
-const closeCircleIcon = () => h(CloseCircleIcon);
 const imageUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
 
 describe('Result.vue', () => {
