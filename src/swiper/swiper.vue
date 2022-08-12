@@ -109,7 +109,6 @@ export default defineComponent({
       return activeIndex + 1;
     });
     const childCount = computed(() => state.children.length);
-    console.log('==paginationPosition==', props.paginationPosition);
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
