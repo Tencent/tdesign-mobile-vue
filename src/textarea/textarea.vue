@@ -6,7 +6,7 @@
     <div :class="textareaClassNames">
       <textarea
         ref="textareaRef"
-        v-model="innerValue"
+        :value="innerValue"
         :style="textareaStyle"
         :name="name"
         :maxlength="maxlength || -1"
@@ -26,7 +26,7 @@
 
 <script lang="ts">
 import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick } from 'vue';
-import { useEmitEvent, renderTNode, TNode, getCharacterLength, useDefault } from '../shared';
+import { useEmitEvent, renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
@@ -41,14 +41,14 @@ export default defineComponent({
     TNode,
   },
   props: TextareaProps,
-  emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
+  emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'clear', 'change'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();
     const textareaLength = ref(0);
-    const [innerValue] = useDefault<string, TdTextareaProps>(props, context.emit, 'value', 'change');
-    innerValue.value = innerValue.value || '';
+    const { value, modelValue } = toRefs(props);
+    const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const textareaClassNames = computed(() => [
       `${componentName}__wrapper`,
@@ -79,7 +79,6 @@ export default defineComponent({
       } else if (context.attrs.rows) {
         textareaStyle.value = { height: 'auto', minHeight: 'auto' };
       }
-      // console.log('calc', textareaStyle.value);
     };
 
     const handleInput = (e: any) => {
@@ -95,10 +94,10 @@ export default defineComponent({
           length: number;
           characters: string;
         };
-        innerValue.value = characters;
+        setInnerValue(characters);
         textareaLength.value = length;
       } else {
-        innerValue.value = value;
+        setInnerValue(value);
         textareaLength.value = String(innerValue.value).length;
       }
       nextTick(() => setInputValue(innerValue.value));
@@ -110,7 +109,7 @@ export default defineComponent({
     };
 
     const handleClear = (e: MouseEvent) => {
-      innerValue.value = '';
+      setInnerValue('');
       emitEvent('clear', { e });
     };
     const handleFocus = (e: FocusEvent) => {
