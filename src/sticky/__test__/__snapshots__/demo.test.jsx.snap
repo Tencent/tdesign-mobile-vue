@@ -1,0 +1,183 @@
+// Vitest Snapshot v1
+
+exports[`Sticky > Sticky baseVue demo works fine 1`] = `
+<div
+  class="t-sticky"
+  style="height: 0px;"
+>
+  <div
+    class="t-sticky__content"
+    style="z-index: 99; position: fixed; top: 50px;"
+  >
+    
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        吸顶按钮
+        
+      </span>
+    </button>
+    
+  </div>
+</div>
+`;
+
+exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo sticky-demo"
+  data-v-3246353e=""
+>
+  <h1
+    class="title"
+    data-v-3246353e=""
+  >
+    Sticky 吸顶容器
+  </h1>
+  <p
+    class="summary"
+    data-v-3246353e=""
+  >
+    用于常驻页面顶部的信息、操作展示。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-3246353e=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      01 基础吸顶
+    </p>
+    
+    <div
+      class="t-sticky"
+      data-v-3246353e=""
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 5; position: fixed; top: 0px;"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          data-v-3246353e=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            吸顶按钮
+            
+          </span>
+        </button>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-3246353e=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      02 吸顶距离
+    </p>
+    
+    <div
+      class="block-2"
+      data-v-3246353e=""
+    >
+      <div
+        class="t-sticky"
+        data-v-3246353e=""
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99; position: fixed; top: 50px;"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle"
+            data-v-3246353e=""
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              吸顶按钮
+              
+            </span>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-3246353e=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      03 指定容器
+    </p>
+    
+    <div
+      class="block-3"
+      data-v-3246353e=""
+    >
+      <div
+        class="t-sticky"
+        data-v-3246353e=""
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99; position: fixed; top: 0px;"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+            data-v-3246353e=""
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              吸顶按钮
+              
+            </span>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;

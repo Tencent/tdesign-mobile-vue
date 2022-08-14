@@ -37,7 +37,7 @@
     "test:snap-update": "cross-env NODE_ENV=test-snap vitest run --config site/vite.config.js -u",
     "test:e2e": "cypress run --config-file scripts/test/cypress.json",
     "test:e2e-gui": "cypress open --config-file scripts/test/cypress.json",
-    "test:demo": "node src/_common/test/script/generate-demo-test.js",
+    "test:demo": "node scripts/test/generate-demo-test.js",
     "lint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore",
     "lint:fix": "npm run lint:fix-prettier && npm run lint:fix-eslint",
     "lint:fix-eslint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore --fix",

@@ -1,0 +1,2974 @@
+// Vitest Snapshot v1
+
+exports[`Radio > Radio baseVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-radio-group radio-group-demo"
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio t-is-checked"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="3"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="4"
+          />
+          <div
+            class="t-radio__icon"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <div
+            class="t-radio__content-inner"
+          >
+            单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+          </div>
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio groupVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-radio-group"
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio t-is-checked"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--custom"
+          >
+            <svg
+              class="t-icon t-icon-check-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--custom"
+          >
+            <svg
+              class="t-icon t-icon-circle"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+                fill="currentColor"
+                fill-opacity="0.9"
+                opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="3"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--custom"
+          >
+            <svg
+              class="t-icon t-icon-circle"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+                fill="currentColor"
+                fill-opacity="0.9"
+                opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <div
+            class="t-radio__content-inner"
+          >
+            单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+          </div>
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio iconVue demo works fine 1`] = `
+<div
+  data-v-9c2f6eb6=""
+>
+  <div
+    class="t-radio-group radio-group-demo"
+    data-v-9c2f6eb6=""
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio"
+      data-v-9c2f6eb6=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--custom"
+          >
+            <svg
+              class="t-icon t-icon-check-rectangle"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M10.77 5.58L7 9.36 5.22 7.58l-.7.7L7 10.78l4.48-4.5-.7-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M3 14a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3zm0-1h10V3H3v10z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio t-is-checked"
+      data-v-9c2f6eb6=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--custom"
+          >
+            <svg
+              class="t-icon t-icon-check-rectangle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio leftStrokeLineVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-radio-group radio-group-demo"
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio t-is-checked"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--strock"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio3"
+            type="radio"
+            value="3"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio3"
+            type="radio"
+            value="4"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选
+          </span>
+          <div
+            class="t-radio__content-inner"
+          >
+            单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+          </div>
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Radio 单选框
+  </h1>
+  <p
+    class="summary"
+  >
+    用于在预设的一组选项中执行单项选择，并呈现选择结果。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      左侧圆形单选框
+    </p>
+    
+    <div>
+      <div
+        class="t-radio-group radio-group-demo"
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio t-is-checked"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="3"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="4"
+              />
+              <div
+                class="t-radio__icon"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <div
+                class="t-radio__content-inner"
+              >
+                单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+              </div>
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      右侧圆形单选框
+    </p>
+    
+    <div>
+      <div
+        class="t-radio-group radio-group-demo"
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio t-is-checked"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio3"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio3"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio3"
+                type="radio"
+                value="3"
+              />
+              <div
+                class="t-radio__icon"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选单选单选单选单选单选单选单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio3"
+                type="radio"
+                value="4"
+              />
+              <div
+                class="t-radio__icon"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      左侧勾形单选框
+    </p>
+    
+    <div>
+      <div
+        class="t-radio-group radio-group-demo"
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio t-is-checked"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked t-radio__icon--strock"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio3"
+                type="radio"
+                value="3"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio3"
+                type="radio"
+                value="4"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <div
+                class="t-radio__content-inner"
+              >
+                单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
+              </div>
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      右侧勾形单选框
+    </p>
+    
+    <div>
+      <div
+        class="t-radio-group radio-group-demo"
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio t-is-checked"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked t-radio__icon--strock"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio"
+                type="radio"
+                value="3"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-radio__content-right-title"
+              >
+                单选单选单选单选单选单选单选单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                name="radio4"
+                type="radio"
+                value="4"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 状态
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      单选框禁用态
+    </p>
+    
+    <div
+      data-v-4455429e=""
+    >
+      <div
+        class="t-radio-group radio-group-demo space"
+        data-v-4455429e=""
+        role="radiogroup"
+      >
+        
+        <div
+          class="t-radio t-is-disabled"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                disabled=""
+                name=""
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--disabled"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio t-is-checked t-is-disabled"
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                disabled=""
+                name=""
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-radio-group radio-group-demo space"
+        data-v-4455429e=""
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio t-is-disabled"
+          data-v-4455429e=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                disabled=""
+                name="radio"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--disabled t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio t-is-checked t-is-disabled"
+          data-v-4455429e=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                disabled=""
+                name="radio"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled t-radio__icon--strock"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        
+      </div>
+      <div
+        class="t-radio-group radio-group-demo space"
+        data-v-4455429e=""
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio t-is-disabled"
+          data-v-4455429e=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                disabled=""
+                name="radio"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--disabled"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio t-is-checked t-is-disabled"
+          data-v-4455429e=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                disabled=""
+                name="radio"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        
+      </div>
+      <div
+        class="t-radio-group radio-group-demo space"
+        data-v-4455429e=""
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio t-is-checked t-is-disabled"
+          data-v-4455429e=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                disabled=""
+                name="radio8"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled t-radio__icon--strock"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        <div
+          class="t-radio t-is-disabled"
+          data-v-4455429e=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <!--v-if-->
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              class="t-radio__icon-wrap t-radio__icon-right-wrap"
+            >
+              <input
+                class="t-radio__original-right"
+                disabled=""
+                name="radio8"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--disabled t-radio__icon--strock"
+              >
+                
+              </div>
+            </span>
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--right"
+          />
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      03 特殊类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      自定义图标多选框
+    </p>
+    
+    <div
+      data-v-9c2f6eb6=""
+    >
+      <div
+        class="t-radio-group radio-group-demo"
+        data-v-9c2f6eb6=""
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio"
+          data-v-9c2f6eb6=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--custom"
+              >
+                <svg
+                  class="t-icon t-icon-check-rectangle"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M10.77 5.58L7 9.36 5.22 7.58l-.7.7L7 10.78l4.48-4.5-.7-.7z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                  <path
+                    d="M3 14a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3zm0-1h10V3H3v10z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio t-is-checked"
+          data-v-9c2f6eb6=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked t-radio__icon--custom"
+              >
+                <svg
+                  class="t-icon t-icon-check-rectangle-filled"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      04 规格
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      单选框尺寸规格
+    </p>
+    
+    <div
+      data-v-105fe82d=""
+    >
+      <div
+        class="t-radio-group"
+        data-v-105fe82d=""
+        role="radiogroup"
+      >
+        <!--v-if-->
+        
+        <div
+          class="t-radio t-is-checked radio-demo radio-demo--size-small space"
+          data-v-105fe82d=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio3"
+                type="radio"
+                value="1"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--checked"
+              >
+                <svg
+                  class="t-icon t-icon-check"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选 H48
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        <div
+          class="t-radio radio-demo"
+          data-v-105fe82d=""
+        >
+          <span
+            class="t-radio__content-wrap"
+          >
+            <span
+              class="t-radio__icon-wrap t-radio__icon-left-wrap"
+            >
+              <input
+                class="t-radio__original-left"
+                name="radio3"
+                type="radio"
+                value="2"
+              />
+              <div
+                class="t-radio__icon"
+              >
+                
+              </div>
+            </span>
+            <span
+              class="t-radio__label-wrap"
+            >
+              <span
+                class="t-radio__content-title"
+              >
+                单选 H56
+              </span>
+              <!--v-if-->
+            </span>
+            <!--v-if-->
+          </span>
+          <!--下边框 -->
+          <div
+            class="t-radio__border t-radio__border--left"
+          />
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio rightStrovkeLineVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-radio-group radio-group-demo"
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio t-is-checked"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--strock"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio"
+            type="radio"
+            value="3"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选单选单选单选单选单选单选单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio4"
+            type="radio"
+            value="4"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio rightVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-radio-group radio-group-demo"
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio t-is-checked"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio3"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio3"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio3"
+            type="radio"
+            value="3"
+          />
+          <div
+            class="t-radio__icon"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-radio__content-right-title"
+          >
+            单选单选单选单选单选单选单选单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            name="radio3"
+            type="radio"
+            value="4"
+          />
+          <div
+            class="t-radio__icon"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio sizeVue demo works fine 1`] = `
+<div
+  data-v-105fe82d=""
+>
+  <div
+    class="t-radio-group"
+    data-v-105fe82d=""
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio t-is-checked radio-demo radio-demo--size-small space"
+      data-v-105fe82d=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio3"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选 H48
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio radio-demo"
+      data-v-105fe82d=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            name="radio3"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title"
+          >
+            单选 H56
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Radio > Radio statusVue demo works fine 1`] = `
+<div
+  data-v-4455429e=""
+>
+  <div
+    class="t-radio-group radio-group-demo space"
+    data-v-4455429e=""
+    role="radiogroup"
+  >
+    
+    <div
+      class="t-radio t-is-disabled"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            disabled=""
+            name=""
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--disabled"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio t-is-checked t-is-disabled"
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            disabled=""
+            name=""
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    
+    <!--v-if-->
+  </div>
+  <div
+    class="t-radio-group radio-group-demo space"
+    data-v-4455429e=""
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio t-is-disabled"
+      data-v-4455429e=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            disabled=""
+            name="radio"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--disabled t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    <div
+      class="t-radio t-is-checked t-is-disabled"
+      data-v-4455429e=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <span
+          class="t-radio__icon-wrap t-radio__icon-left-wrap"
+        >
+          <input
+            class="t-radio__original-left"
+            disabled=""
+            name="radio"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled t-radio__icon--strock"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <!--v-if-->
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--left"
+      />
+    </div>
+    
+  </div>
+  <div
+    class="t-radio-group radio-group-demo space"
+    data-v-4455429e=""
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio t-is-disabled"
+      data-v-4455429e=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            disabled=""
+            name="radio"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--disabled"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio t-is-checked t-is-disabled"
+      data-v-4455429e=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            disabled=""
+            name="radio"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    
+  </div>
+  <div
+    class="t-radio-group radio-group-demo space"
+    data-v-4455429e=""
+    role="radiogroup"
+  >
+    <!--v-if-->
+    
+    <div
+      class="t-radio t-is-checked t-is-disabled"
+      data-v-4455429e=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            disabled=""
+            name="radio8"
+            type="radio"
+            value="1"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--checked t-radio__icon--disabled t-radio__icon--strock"
+          >
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    <div
+      class="t-radio t-is-disabled"
+      data-v-4455429e=""
+    >
+      <span
+        class="t-radio__content-wrap"
+      >
+        <!--v-if-->
+        <span
+          class="t-radio__label-wrap"
+        >
+          <span
+            class="t-radio__content-title t-is-disabled t-radio__content-right-title"
+          >
+            单选
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          class="t-radio__icon-wrap t-radio__icon-right-wrap"
+        >
+          <input
+            class="t-radio__original-right"
+            disabled=""
+            name="radio8"
+            type="radio"
+            value="2"
+          />
+          <div
+            class="t-radio__icon t-radio__icon--disabled t-radio__icon--strock"
+          >
+            
+          </div>
+        </span>
+      </span>
+      <!--下边框 -->
+      <div
+        class="t-radio__border t-radio__border--right"
+      />
+    </div>
+    
+  </div>
+</div>
+`;
