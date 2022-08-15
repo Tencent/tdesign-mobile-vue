@@ -35,7 +35,16 @@
     "src/**/*.js",
     "babel.config.js",
     "src/style/index.js",
-    "scripts/rollup.config.js"
+    "scripts/rollup.config.js",
+    "src/button/__test__/button.test.jsx",
+    "src/divider/__test__/divider.test.jsx",
+    "src/badge/__test__/badge.test.jsx",
+    "src/avatar/__test__/avatar-group.test.jsx",
+    "src/avatar/__test__/avatar.test.jsx",
+    "src/tag/__test__/tag.test.jsx",
+    "src/tag/__test__/checkTag.test.jsx",
+    "src/skeleton/__test__/skeleton.test.jsx",
+    "src/rate/__test__/rate.test.jsx"
   ],
   "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "site"]
 }
