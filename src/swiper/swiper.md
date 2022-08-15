@@ -15,6 +15,7 @@ height | Number | - | 当使用垂直方向滚动时的高度 | N
 interval | Number | 5000 | 轮播间隔时间 | N
 loop | Boolean | true | 是否循环播放 | N
 navigation | Object / Slot / Function | - | 导航器全部配置。TS 类型：`SwiperNavigation | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+paginationPosition | String | bottom | 页码信息展示位置。可选项：top-left/top/top-right/bottom-left/bottom/bottom-right | N
 onChange | Function |  | TS 类型：`(current: number, context: { source: SwiperChangeSource }) => void`<br/>轮播切换时触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' | 'touch' | ''`<br/> | N
 
 ### Swiper Events
