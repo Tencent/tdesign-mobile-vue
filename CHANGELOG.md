@@ -5,6 +5,15 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.10.2 `2022-08-15` 
+### 🚀 Features
+- `ImageViewer`: 新增 maxZoom、closeBtn、onClose 属性 @ruige24601 ([#259](https://github.com/Tencent/tdesign-mobile-vue/pull/259))
+- `ImageViewer`: 新增 close 事件 @ruige24601 ([#259](https://github.com/Tencent/tdesign-mobile-vue/pull/259))
+- `Swiper`: 新增 `paginationPosition` 属性 @anlyyao ([#262](https://github.com/Tencent/tdesign-mobile-vue/pull/262))
+### 🐞 Bug Fixes
+- `Textarea`: 修复onchange事件会执行两次的问题 @Dengzygx ([#270](https://github.com/Tencent/tdesign-mobile-vue/pull/270))
+- `Image`: 修复 src 变更没有重新渲染的问题 @VeryHandSomeBoy ([#264](https://github.com/Tencent/tdesign-mobile-vue/pull/264))
+
 ## 🌈 0.10.1 `2022-08-01` 
 ### 🐞 Bug Fixes
 - `search`: 修复失去焦点后输入内容被隐藏和清除按钮无法使用的问题 @VeryHandSomeBoy ([#257](https://github.com/Tencent/tdesign-mobile-vue/pull/257))
