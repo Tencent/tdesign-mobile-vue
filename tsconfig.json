@@ -44,7 +44,8 @@
     "src/tag/__test__/tag.test.jsx",
     "src/tag/__test__/checkTag.test.jsx",
     "src/skeleton/__test__/skeleton.test.jsx",
-    "src/rate/__test__/rate.test.jsx"
+    "src/rate/__test__/rate.test.jsx",
+    "src/result/__test__/result.test.jsx"
   ],
   "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "site"]
 }
