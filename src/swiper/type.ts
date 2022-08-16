@@ -28,6 +28,11 @@ export interface TdSwiperProps {
    */
   defaultCurrent?: number;
   /**
+   * 当前轮播在哪一项（下标）
+   * @default 0
+   */
+  modelValue?: number;
+  /**
    * 轮播滑动方向，包括横向滑动和纵向滑动两个方向
    * @default horizontal
    */
@@ -55,6 +60,11 @@ export interface TdSwiperProps {
    * 导航器全部配置
    */
   navigation?: SwiperNavigation | TNode;
+  /**
+   * 页码信息展示位置
+   * @default bottom-right
+   */
+  paginationPosition?: 'top-left' | 'top' | 'top-right' | 'bottom-left' | 'bottom' | 'bottom-right';
   /**
    * 轮播切换时触发
    */

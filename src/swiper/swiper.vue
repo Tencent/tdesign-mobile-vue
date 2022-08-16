@@ -20,7 +20,12 @@
           <chevron-right-icon size="20px" />
         </span>
       </span>
-      <span v-if="'type' in navigation" :class="`${name}__pagination ${name}__pagination-${navigation.type || ''}`">
+      <span
+        v-if="'type' in navigation"
+        :class="`${name}__pagination ${name}__pagination-${
+          navigation.type || ''
+        } ${name}__pagination-${paginationPosition}`"
+      >
         <template v-if="['dots', 'dots-bar'].includes(navigation.type || '')">
           <span
             v-for="(item, index) in state.children.length"
@@ -33,7 +38,7 @@
         </span>
       </span>
     </template>
-    <template v-if="computedNavigation !== undefined">
+    <template v-else-if="computedNavigation !== undefined">
       <t-node :content="computedNavigation" :style="{}"></t-node>
     </template>
   </div>
@@ -104,7 +109,6 @@ export default defineComponent({
       return activeIndex + 1;
     });
     const childCount = computed(() => state.children.length);
-
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
@@ -214,7 +218,7 @@ export default defineComponent({
       }, props?.interval);
     };
     const emitCurrentChange = (index: number) => {
-      if (!state.isControl) return false;
+      // if (!state.isControl) return false;
       let resultIndex = index;
       if (index >= state.itemLength) resultIndex = 0;
       if (index < 0) resultIndex = state.itemLength - 1;

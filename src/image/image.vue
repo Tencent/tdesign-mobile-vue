@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent, SetupContext, getCurrentInstance, h, watch } from 'vue';
+import { ref, computed, defineComponent, SetupContext, getCurrentInstance, h, watchEffect } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { EllipsisIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { useEmitEvent, renderTNode, TNode } from '../shared';
@@ -69,7 +69,10 @@ export default defineComponent({
 
     // 图片懒加载
     const imageDOM = ref();
-    const realSrc = ref(props.lazy ? '' : props.src);
+    const realSrc = ref('');
+    watchEffect(() => {
+      realSrc.value = props.lazy ? '' : props.src;
+    });
     const { stop } = useIntersectionObserver(imageDOM, ([{ isIntersecting }], observerElement) => {
       if (isIntersecting && props.lazy) {
         // 停止监听

@@ -12,3 +12,4 @@ export * from './useDefault';
 export * from './useEmitEvent';
 export * from './useChildSlots';
 export * from './useVModel';
+export * from './useTouch';

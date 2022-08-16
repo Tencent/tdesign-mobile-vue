@@ -14,7 +14,7 @@ export default {
     default: 'slide' as TdSwiperProps['animation'],
     validator(val: TdSwiperProps['animation']): boolean {
       if (!val) return true;
-      return ['slide'].includes(`${val}`);
+      return ['slide'].includes(val);
     },
   },
   /** 是否自动播放 */
@@ -41,7 +41,8 @@ export default {
     type: String as PropType<TdSwiperProps['direction']>,
     default: 'horizontal' as TdSwiperProps['direction'],
     validator(val: TdSwiperProps['direction']): boolean {
-      return ['horizontal', 'vertical'].includes(`${val}`);
+      if (!val) return true;
+      return ['horizontal', 'vertical'].includes(val);
     },
   },
   /** 滑动动画时长 */
@@ -66,6 +67,15 @@ export default {
   /** 导航器全部配置 */
   navigation: {
     type: [Object, Function] as PropType<TdSwiperProps['navigation']>,
+  },
+  /** 页码信息展示位置 */
+  paginationPosition: {
+    type: String as PropType<TdSwiperProps['paginationPosition']>,
+    default: 'bottom' as TdSwiperProps['paginationPosition'],
+    validator(val: TdSwiperProps['paginationPosition']): boolean {
+      if (!val) return true;
+      return ['top-left', 'top', 'top-right', 'bottom-left', 'bottom', 'bottom-right'].includes(val);
+    },
   },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,
