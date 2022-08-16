@@ -122,8 +122,10 @@ export default defineComponent({
 
       const { deltaY } = touch;
       const nextDistance = easeDistance(deltaY.value, loadingBarHeight.value);
-      if (nextDistance >= 0 && nextDistance < maxBarHeight.value) {
+      if (deltaY.value > 0) {
         e.preventDefault();
+      }
+      if (nextDistance >= 0 && nextDistance < maxBarHeight.value) {
         distance.value = nextDistance;
       }
       touch.move(e);
