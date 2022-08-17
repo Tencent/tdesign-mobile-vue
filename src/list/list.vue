@@ -15,11 +15,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, getCurrentInstance } from 'vue';
+import { defineComponent, ref, computed, getCurrentInstance, SetupContext } from 'vue';
+import { useElementBounding, useWindowSize, useEventListener } from '@vueuse/core';
 import TLoading from '../loading';
 import config from '../config';
 import ListProps from './props';
-import { renderTNode, TNode } from '../shared';
+import { renderTNode, TNode, useScrollParent, useEmitEvent } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-list`;
@@ -36,10 +37,12 @@ export default defineComponent({
   },
   props: ListProps,
   emits: ['load-more', 'scroll'],
-  setup(props, { emit }) {
+  setup(props, context: SetupContext) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const root = ref<HTMLElement>();
     const empty = ref<HTMLElement>();
-
+    const scrollParent = useScrollParent(root);
+    const { height } = useWindowSize();
     const internalInstance = getCurrentInstance();
 
     const headerContent = computed(() => renderTNode(internalInstance, 'header'));
@@ -47,40 +50,27 @@ export default defineComponent({
 
     const onLoadMore = (e: MouseEvent) => {
       if (props.asyncLoading === 'loading-more') {
-        emit('load-more', { e });
-        if (props.onLoadMore) {
-          props.onLoadMore();
-        }
+        emitEvent('load-more');
       }
     };
+
+    const handleScroll = (e: WheelEvent | Event) => {
+      const { bottom } = useElementBounding(root);
+      emitEvent('scroll', bottom.value - height.value);
+    };
+
+    useEventListener(scrollParent, 'scroll', handleScroll);
 
     return {
       name,
       root,
       empty,
       onLoadMore,
+      handleScroll,
       headerContent,
       footerContent,
       LOADING_TEXT_MAP,
     };
-  },
-  methods: {
-    handleScroll(e: WheelEvent | Event) {
-      const listElement = this.$el as HTMLElement;
-      const { scrollTop, scrollHeight, clientHeight } = listElement;
-      this.$emit('scroll', {
-        $event: e,
-        scrollTop,
-        scrollBottom: scrollHeight - clientHeight - scrollTop,
-      });
-      if (this.onScroll) {
-        this.onScroll({
-          e,
-          scrollTop,
-          scrollBottom: scrollHeight - clientHeight - scrollTop,
-        });
-      }
-    },
   },
 });
 </script>

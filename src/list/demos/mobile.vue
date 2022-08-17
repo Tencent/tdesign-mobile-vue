@@ -13,7 +13,7 @@
         </tdesign-demo-block>
       </div>
       <div v-if="currentTab === 'base'">
-        <t-list :async-loading="loading" @scroll="(e) => onScroll(e, 0)">
+        <t-list :async-loading="loading" @scroll="(value) => onScroll(value)">
           <t-cell v-for="item in list" :key="item" align="middle">
             <span class="cell">{{ item }}</span>
           </t-cell>
@@ -34,7 +34,7 @@
       <div v-if="currentTab === 'pull-refresh'">
         <div class="pull-refresh-wrap">
           <t-pull-down-refresh v-model="refreshing" @refresh="onRefresh">
-            <t-list :async-loading="pullloading" @scroll="(e) => onScroll(e, 2)">
+            <t-list :async-loading="pullloading" @scroll="(value) => onScroll(value, 'listPull')">
               <t-cell v-for="item in listPull" :key="item" align="middle">
                 <span class="cell">{{ item }}</span>
               </t-cell>
@@ -123,13 +123,9 @@ export default defineComponent({
       }, 1000);
     };
 
-    const onScroll = ({ scrollBottom }: { scrollBottom: number }, type: number) => {
+    const onScroll = (scrollBottom: number, type?: string) => {
       if (scrollBottom === 0) {
-        if (type === 0) {
-          onLoad();
-        } else if (type === 2) {
-          onLoadPull();
-        }
+        type === 'listPull' ? onLoadPull() : onLoad();
       }
     };
 
@@ -210,7 +206,6 @@ export default defineComponent({
 <style lang="less">
 .list-demo {
   .t-list {
-    height: 567px;
     .cell {
       width: 100%;
       text-align: center;
