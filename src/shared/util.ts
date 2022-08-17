@@ -34,6 +34,8 @@ export function toCamel(str: string): string {
   return str.replace(/^\S/, (m) => m.toUpperCase());
 }
 
+export const inBrowser = typeof window !== 'undefined';
+
 /**
  * 计算字符串字符的长度并可以截取字符串。
  * @param str 传入字符串
