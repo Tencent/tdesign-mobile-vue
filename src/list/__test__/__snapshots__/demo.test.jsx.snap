@@ -1,0 +1,151 @@
+// Vitest Snapshot v1
+
+exports[`List > List baseVue demo works fine 1`] = `
+<div
+  class="t-list"
+>
+  <!---->
+  
+  
+  <div>
+    <!--v-if-->
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`List > List errTipVue demo works fine 1`] = `
+<div
+  class="t-list"
+>
+  <!---->
+  
+  
+  <div>
+    <!--v-if-->
+  </div>
+  
+  <!--v-if-->
+  
+</div>
+`;
+
+exports[`List > List mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <div
+    class="list-demo"
+  >
+    <div>
+      <h1
+        class="title"
+      >
+        List 列表
+      </h1>
+      <p
+        class="summary"
+      >
+         瀑布流滚动加载，用于展示同一类型信息的长列表。当列表即将滚动到底部时，会触发事件并加载更多列表项。 
+      </p>
+      <div
+        class="tdesign-mobile-demo-block"
+      >
+        <h2
+          class="tdesign-mobile-demo-block__title"
+        >
+          01 类型
+        </h2>
+        <p
+          class="tdesign-mobile-demo-block__summary"
+        >
+          基础列表
+        </p>
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             基础列表 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             下拉刷新 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             错误提示 
+            
+          </span>
+        </button>
+        
+      </div>
+    </div>
+    <!--v-if-->
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`List > List pullRefreshVue demo works fine 1`] = `
+<div
+  class="t-pull-down-refresh"
+>
+  <div
+    class="t-pull-down-refresh__track"
+    style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+  >
+    <div
+      class="t-pull-down-refresh__max"
+      style="height: 80px;"
+    >
+      <div
+        class="t-pull-down-refresh__loading"
+        style="height: 50px;"
+      >
+        <div />
+      </div>
+    </div>
+    
+    <div
+      class="t-list"
+    >
+      <!---->
+      
+      
+      <div>
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+    
+  </div>
+</div>
+`;

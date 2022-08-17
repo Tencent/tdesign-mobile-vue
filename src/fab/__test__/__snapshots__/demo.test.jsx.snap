@@ -1,0 +1,134 @@
+// Vitest Snapshot v1
+
+exports[`Fab > Fab displayVue demo works fine 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--base t-button--primary t-button--shape-round t-fab t-fab--icononly"
+    role="button"
+    style="right: 16px; bottom: 32px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      <svg
+        class="t-icon t-icon-add"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <!--v-if-->
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Fab > Fab mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Fab 悬浮按钮
+  </h1>
+  <p
+    class="summary"
+  >
+    当功能使用图标即可表示清楚时，可使用纯图标悬浮按钮，例如：添加、发布。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      纯图标悬浮按钮
+    </p>
+    
+    
+  </div>
+  <div>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--base t-button--primary t-button--shape-round t-fab t-fab--icononly"
+      role="button"
+      style="right: 16px; bottom: 32px;"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        <svg
+          class="t-icon t-icon-add"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        <!--v-if-->
+        
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Fab > Fab textVue demo works fine 1`] = `
+<div>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--base t-button--default t-button--shape-round t-fab"
+    role="button"
+    style="right: 16px; bottom: 96px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      <svg
+        class="t-icon t-icon-add"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-fab__text"
+      >
+        按钮文字
+      </span>
+      
+    </span>
+  </button>
+</div>
+`;

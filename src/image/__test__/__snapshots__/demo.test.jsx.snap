@@ -1,0 +1,987 @@
+// Vitest Snapshot v1
+
+exports[`Image > Image baseVue demo works fine 1`] = `
+<div
+  data-v-37d8259d=""
+>
+  <div
+    class="tdesign-demo-block"
+    data-v-37d8259d=""
+  >
+    <div
+      class="t-image t-image--round image-container"
+      data-v-37d8259d=""
+    >
+      <div
+        class="t-image__status"
+      >
+        <svg
+          class="t-icon t-icon-ellipsis"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <img
+        alt="一张图片"
+        class="t-image__img"
+        src="https://tdesign.gtimg.com/site/upload1.png"
+        style="object-fit: fill; object-position: center;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Image > Image errorVue demo works fine 1`] = `
+<div
+  class="image-group"
+>
+  <div
+    class="image-demo"
+  >
+    <div
+      class="t-image t-image--round image-container"
+    >
+      <div
+        class="t-image__status"
+      >
+        <svg
+          class="t-icon t-icon-ellipsis"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <img
+        alt=""
+        class="t-image__img"
+        src="x"
+        style="object-fit: fill; object-position: center;"
+      />
+    </div>
+    <p
+      class="image-demo-tip"
+    >
+      默认提示
+    </p>
+  </div>
+  <div
+    class="image-demo"
+  >
+    <div
+      class="t-image t-image--round image-container"
+    >
+      <div
+        class="t-image__status"
+      >
+        <svg
+          class="t-icon t-icon-ellipsis"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <img
+        alt=""
+        class="t-image__img"
+        src=""
+        style="object-fit: fill; object-position: center;"
+      />
+    </div>
+    <p
+      class="image-demo-tip"
+    >
+      自定义提示
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Image > Image fitVue demo works fine 1`] = `
+<div
+  data-v-77a82af5=""
+>
+  <div
+    class="t-image t-image--round image-container"
+    data-v-77a82af5=""
+  >
+    <div
+      class="t-image__status"
+    >
+      <svg
+        class="t-icon t-icon-ellipsis"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <img
+      alt=""
+      class="t-image__img"
+      src="https://tdesign.gtimg.com/site/upload1.png"
+      style="object-fit: fill; object-position: center;"
+    />
+  </div>
+</div>
+`;
+
+exports[`Image > Image lazyVue demo works fine 1`] = `
+<div
+  data-v-53afa8c0=""
+>
+  <div
+    class="t-image t-image--round image-container"
+    data-v-53afa8c0=""
+  >
+    <div
+      class="t-image__status"
+    >
+      <svg
+        class="t-icon t-icon-ellipsis"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <img
+      alt=""
+      class="t-image__img"
+      src=""
+      style="object-fit: fill; object-position: center;"
+    />
+  </div>
+</div>
+`;
+
+exports[`Image > Image loadingVue demo works fine 1`] = `
+<div
+  class="image-group"
+>
+  <div
+    class="image-demo"
+  >
+    <div
+      class="t-image t-image--round image-container"
+    >
+      <div
+        class="t-image__status"
+      >
+        <svg
+          class="t-icon t-icon-ellipsis"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <img
+        alt=""
+        class="t-image__img"
+        src=""
+        style="object-fit: fill; object-position: center;"
+      />
+    </div>
+    <p
+      class="image-demo-tip"
+    >
+      默认提示
+    </p>
+  </div>
+  <div
+    class="image-demo"
+  >
+    <div
+      class="t-image t-image--round image-container"
+    >
+      <div
+        class="t-image__status"
+      >
+        
+        <t-icon-loading />
+        
+      </div>
+      <img
+        alt=""
+        class="t-image__img"
+        src=""
+        style="object-fit: fill; object-position: center;"
+      />
+    </div>
+    <p
+      class="image-demo-tip"
+    >
+      自定义提示
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Image > Image mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-d8a5fc24=""
+>
+  <h1
+    class="title"
+    data-v-d8a5fc24=""
+  >
+    Image 图片
+  </h1>
+  <p
+    class="summary"
+    data-v-d8a5fc24=""
+  >
+    用于展示效果，主要为上下左右居中裁切、拉伸、平铺等方式。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-d8a5fc24=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 基本类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      图片样式可为圆形、圆角方形、方形
+    </p>
+    
+    <div
+      class="image-group"
+      data-v-d8a5fc24=""
+    >
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--circle image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="一张图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--square image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-d8a5fc24=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 填充方式
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      可以个性化设置图片的填充模式和填充位置
+    </p>
+    
+    <div
+      class="image-group"
+      data-v-d8a5fc24=""
+    >
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: contain; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          自适应宽高
+        </p>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: cover; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          裁剪
+        </p>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+        style="width: 150px;"
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          拉伸
+        </p>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: contain; object-position: center top;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          center top
+        </p>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: contain; object-position: 0px 5px;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          0px 10px
+        </p>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/upload1.png"
+            style="object-fit: contain; object-position: 50%;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          50%
+        </p>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-d8a5fc24=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      03 图片状态
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      加载中提示
+    </p>
+    
+    <div
+      class="image-group"
+      data-v-d8a5fc24=""
+    >
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src=""
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          默认提示
+        </p>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            
+            <svg
+              class="t-icon t-icon-loading"
+              data-v-d8a5fc24=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src=""
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          自定义提示
+        </p>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-d8a5fc24=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      加载失败提示
+    </p>
+    
+    <div
+      class="image-group"
+      data-v-d8a5fc24=""
+    >
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="x"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          默认提示
+        </p>
+      </div>
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src=""
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          自定义提示
+        </p>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-d8a5fc24=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      04 懒加载
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      通过设置lazy属性，实现图片懒加载
+    </p>
+    
+    <div
+      class="image-group"
+      data-v-d8a5fc24=""
+    >
+      <div
+        class="image-demo"
+        data-v-d8a5fc24=""
+      >
+        <div
+          class="t-image t-image--round image-container"
+          data-v-d8a5fc24=""
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src=""
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+        <p
+          class="image-demo-tip"
+          data-v-d8a5fc24=""
+        >
+          懒加载图片
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Image > Image positionVue demo works fine 1`] = `
+<div
+  data-v-2d6651f5=""
+>
+  <div
+    class="t-image t-image--round image-container"
+    data-v-2d6651f5=""
+  >
+    <div
+      class="t-image__status"
+    >
+      <svg
+        class="t-icon t-icon-ellipsis"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <img
+      alt=""
+      class="t-image__img"
+      src="https://tdesign.gtimg.com/site/upload1.png"
+      style="object-fit: contain; object-position: left top;"
+    />
+  </div>
+</div>
+`;
+
+exports[`Image > Image shapeVue demo works fine 1`] = `
+<div
+  data-v-5f48b8f6=""
+>
+  <div
+    class="t-image t-image--circle image-container"
+    data-v-5f48b8f6=""
+  >
+    <div
+      class="t-image__status"
+    >
+      <svg
+        class="t-icon t-icon-ellipsis"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <img
+      alt=""
+      class="t-image__img"
+      src="https://tdesign.gtimg.com/site/upload1.png"
+      style="object-fit: fill; object-position: center;"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,593 @@
+// Vitest Snapshot v1
+
+exports[`Message > Message alignVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-demo-block"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        居中对齐
+        
+      </span>
+    </button>
+  </div>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  
+</div>
+`;
+
+exports[`Message > Message closeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-demo-block"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        带关闭通知
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        带按钮通知
+        
+      </span>
+    </button>
+  </div>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  
+</div>
+`;
+
+exports[`Message > Message durationVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-demo-block"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        5000ms
+        
+      </span>
+    </button>
+  </div>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  
+</div>
+`;
+
+exports[`Message > Message functionVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      普通
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      成功
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      警示
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      错误
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Message > Message mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Message 消息通知
+  </h1>
+  <p
+    class="summary"
+  >
+    用于页面消息通知提示，具有成功提示、提醒、警示等功能，通常在顶部出现，可以自动消失或点击关闭
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      弹窗内容为存文本、标题和副标题、带输入框
+    </p>
+    
+    <div
+      class="button-demo"
+      style="margin: 0px 16px;"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          纯文字通知
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          带图标通知
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          带关闭通知
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          带按钮通知
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 状态
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      弹窗内容为存文本、标题和副标题、带输入框
+    </p>
+    
+    <div
+      class="button-demo"
+      style="margin: 0px 16px;"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          普通通知
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          成功提示通知
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          警示提示通知
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          错误提示通知
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+</div>
+`;
+
+exports[`Message > Message offsetVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-demo-block"
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+       偏移 
+      
+    </span>
+  </button>
+  <transition-stub
+    offset="400,100,100"
+  >
+    <!--v-if-->
+  </transition-stub>
+  
+</div>
+`;
+
+exports[`Message > Message textVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-cell t-cell--middle t-cell--bordered tdesign-text-message-btn"
+    data-v-9078f4e6=""
+    value-align="left"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        data-v-9078f4e6=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          普通
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        data-v-9078f4e6=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          成功
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        data-v-9078f4e6=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          警示
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        data-v-9078f4e6=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          错误
+          
+        </span>
+      </button>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <transition-stub
+    data-v-9078f4e6=""
+  >
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub
+    data-v-9078f4e6=""
+  >
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub
+    data-v-9078f4e6=""
+  >
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub
+    data-v-9078f4e6=""
+  >
+    <!--v-if-->
+  </transition-stub>
+  
+</div>
+`;
+
+exports[`Message > Message themeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-demo-block"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        普通
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+      style="margin-top: 8px;"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        成功
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+      style="margin-top: 8px;"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        警示
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+      role="button"
+      style="margin-top: 8px;"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        错误
+        
+      </span>
+    </button>
+  </div>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  
+</div>
+`;

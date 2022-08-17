@@ -26,5 +26,5 @@ export interface TdListProps {
   /**
    * 列表滚动时触发，scrollTop 表示顶部滚动距离
    */
-  onScroll?: ({ scrollTop: number }: any) => void;
+  onScroll?: (scrollTop: number) => void;
 }

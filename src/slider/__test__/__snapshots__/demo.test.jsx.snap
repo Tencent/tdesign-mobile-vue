@@ -1,0 +1,890 @@
+// Vitest Snapshot v1
+
+exports[`Slider > Slider baseVue demo works fine 1`] = `
+<div
+  class="t-slider-wrap"
+>
+  <!--v-if-->
+  <div
+    class="t-slider"
+  >
+    <!-- 总长度 -->
+    <div
+      class="t-slider__bar"
+    />
+    <!-- 滑块长度 -->
+    <div
+      class="t-slider__track"
+      style="width: 60%;"
+    />
+    <!-- 滑块操作 -->
+    
+    <div
+      class="t-slider__handle"
+      style="left: 60%;"
+    />
+    
+    <!-- 刻度内容 -->
+    <div
+      class="t-slider__mark"
+    >
+      
+      
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Slider > Slider disableVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="section"
+    data-v-65b1e7f4=""
+  >
+    <div
+      class="t-slider-wrap t-is-disabled"
+      data-v-65b1e7f4=""
+    >
+      <!--v-if-->
+      <div
+        class="t-slider"
+      >
+        <!-- 总长度 -->
+        <div
+          class="t-slider__bar"
+        />
+        <!-- 滑块长度 -->
+        <div
+          class="t-slider__track"
+          style="width: 60%;"
+        />
+        <!-- 滑块操作 -->
+        
+        <div
+          class="t-slider__handle"
+          style="left: 60%;"
+        />
+        
+        <!-- 刻度内容 -->
+        <div
+          class="t-slider__mark"
+        >
+          
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="section"
+    data-v-65b1e7f4=""
+  >
+    <div
+      class="t-slider-wrap t-is-disabled t-is-value"
+      data-v-65b1e7f4=""
+    >
+      <div
+        class="t-slider-wrap__value-left"
+      >
+        30
+      </div>
+      <div
+        class="t-slider"
+      >
+        <!-- 总长度 -->
+        <div
+          class="t-slider__bar"
+        />
+        <!-- 滑块长度 -->
+        <div
+          class="t-slider__track"
+          style="width: 0%;"
+        />
+        <!-- 滑块操作 -->
+        
+        <div
+          class="t-slider__handle"
+          style="left: 0%;"
+        />
+        
+        <!-- 刻度内容 -->
+        <div
+          class="t-slider__mark"
+        >
+          
+          
+        </div>
+      </div>
+      <div
+        class="t-slider-wrap__value"
+      >
+        100
+      </div>
+    </div>
+  </div>
+  <div
+    class="section"
+    data-v-65b1e7f4=""
+  >
+    <div
+      class="t-slider-wrap t-is-disabled t-is-mark"
+      data-v-65b1e7f4=""
+    >
+      <!--v-if-->
+      <div
+        class="t-slider"
+      >
+        <!-- 总长度 -->
+        <div
+          class="t-slider__bar"
+        />
+        <!-- 滑块长度 -->
+        <div
+          class="t-slider__track"
+          style="width: 50%;"
+        />
+        <!-- 滑块操作 -->
+        
+        <div
+          class="t-slider__handle"
+          style="left: 50%;"
+        />
+        
+        <!-- 刻度内容 -->
+        <div
+          class="t-slider__mark"
+        >
+          
+          <div
+            class="t-slider__mark-text t-is-active"
+            style="left: 0%;"
+          >
+            小
+          </div>
+          <div
+            class="t-slider__mark-text t-is-"
+            style="left: 50%;"
+          >
+            中
+          </div>
+          <div
+            class="t-slider__mark-text t-is-"
+            style="left: 100%;"
+          >
+            大
+          </div>
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="section"
+    data-v-65b1e7f4=""
+  >
+    <div
+      class="t-slider-wrap t-is-disabled"
+      data-v-65b1e7f4=""
+    >
+      <!--v-if-->
+      <div
+        class="t-slider"
+      >
+        <!-- 总长度 -->
+        <div
+          class="t-slider__bar"
+        />
+        <!-- 滑块长度 -->
+        <div
+          class="t-slider__track"
+          style="left: 30%; width: 50%;"
+        />
+        <!-- 滑块操作 -->
+        
+        <div
+          class="t-slider__handle"
+          style="left: 30%;"
+        />
+        <div
+          class="t-slider__handle"
+          style="left: 80%;"
+        />
+        
+        <!-- 刻度内容 -->
+        <div
+          class="t-slider__mark"
+        >
+          
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Slider > Slider markVue demo works fine 1`] = `
+<div
+  class="t-slider-wrap t-is-mark"
+>
+  <!--v-if-->
+  <div
+    class="t-slider"
+  >
+    <!-- 总长度 -->
+    <div
+      class="t-slider__bar"
+    />
+    <!-- 滑块长度 -->
+    <div
+      class="t-slider__track"
+      style="width: 50%;"
+    />
+    <!-- 滑块操作 -->
+    
+    <div
+      class="t-slider__handle"
+      style="left: 50%;"
+    />
+    
+    <!-- 刻度内容 -->
+    <div
+      class="t-slider__mark"
+    >
+      
+      <div
+        class="t-slider__mark-text t-is-active"
+        style="left: 0%;"
+      >
+        小
+      </div>
+      <div
+        class="t-slider__mark-text t-is-"
+        style="left: 50%;"
+      >
+        中
+      </div>
+      <div
+        class="t-slider__mark-text t-is-"
+        style="left: 100%;"
+      >
+        大
+      </div>
+      
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Slider > Slider mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-98828574=""
+>
+  <h1
+    class="title"
+    data-v-98828574=""
+  >
+    Slider 滑动选择器
+  </h1>
+  <p
+    class="summary"
+    data-v-98828574=""
+  >
+    滑动滑块来选择一个数值，在具体场景中也可以增加来刻度和展示数值来方便用户使用
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-98828574=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      基础滑动选择器
+    </p>
+    
+    <div
+      class="slider-demo"
+      data-v-98828574=""
+    >
+      <div
+        class="t-slider-wrap"
+        data-v-98828574=""
+      >
+        <!--v-if-->
+        <div
+          class="t-slider"
+        >
+          <!-- 总长度 -->
+          <div
+            class="t-slider__bar"
+          />
+          <!-- 滑块长度 -->
+          <div
+            class="t-slider__track"
+            style="width: 60%;"
+          />
+          <!-- 滑块操作 -->
+          
+          <div
+            class="t-slider__handle"
+            style="left: 60%;"
+          />
+          
+          <!-- 刻度内容 -->
+          <div
+            class="t-slider__mark"
+          >
+            
+            
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-98828574=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      带数值滑动选择器
+    </p>
+    
+    <div
+      class="slider-demo"
+      data-v-98828574=""
+    >
+      <div
+        class="t-slider-wrap"
+        data-v-98828574=""
+        show-value=""
+      >
+        <!--v-if-->
+        <div
+          class="t-slider"
+        >
+          <!-- 总长度 -->
+          <div
+            class="t-slider__bar"
+          />
+          <!-- 滑块长度 -->
+          <div
+            class="t-slider__track"
+            style="width: 60%;"
+          />
+          <!-- 滑块操作 -->
+          
+          <div
+            class="t-slider__handle"
+            style="left: 60%;"
+          />
+          
+          <!-- 刻度内容 -->
+          <div
+            class="t-slider__mark"
+          >
+            
+            
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-98828574=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      起始非零滑动选择器
+    </p>
+    
+    <div
+      class="slider-demo"
+      data-v-98828574=""
+    >
+      <div
+        class="t-slider-wrap t-is-value"
+        data-v-98828574=""
+      >
+        <div
+          class="t-slider-wrap__value-left"
+        >
+          30
+        </div>
+        <div
+          class="t-slider"
+        >
+          <!-- 总长度 -->
+          <div
+            class="t-slider__bar"
+          />
+          <!-- 滑块长度 -->
+          <div
+            class="t-slider__track"
+            style="width: 0%;"
+          />
+          <!-- 滑块操作 -->
+          
+          <div
+            class="t-slider__handle"
+            style="left: 0%;"
+          />
+          
+          <!-- 刻度内容 -->
+          <div
+            class="t-slider__mark"
+          >
+            
+            
+          </div>
+        </div>
+        <div
+          class="t-slider-wrap__value"
+        >
+          100
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-98828574=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      带刻度滑动选择器
+    </p>
+    
+    <div
+      class="slider-demo"
+      data-v-98828574=""
+    >
+      <div
+        class="t-slider-wrap t-is-mark"
+        data-v-98828574=""
+      >
+        <!--v-if-->
+        <div
+          class="t-slider"
+        >
+          <!-- 总长度 -->
+          <div
+            class="t-slider__bar"
+          />
+          <!-- 滑块长度 -->
+          <div
+            class="t-slider__track"
+            style="width: 50%;"
+          />
+          <!-- 滑块操作 -->
+          
+          <div
+            class="t-slider__handle"
+            style="left: 50%;"
+          />
+          
+          <!-- 刻度内容 -->
+          <div
+            class="t-slider__mark"
+          >
+            
+            <div
+              class="t-slider__mark-text t-is-active"
+              style="left: 0%;"
+            >
+              小
+            </div>
+            <div
+              class="t-slider__mark-text t-is-"
+              style="left: 50%;"
+            >
+              中
+            </div>
+            <div
+              class="t-slider__mark-text t-is-"
+              style="left: 100%;"
+            >
+              大
+            </div>
+            
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-98828574=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      区间滑动选择器
+    </p>
+    
+    <div
+      class="slider-demo"
+      data-v-98828574=""
+    >
+      <div
+        class="t-slider-wrap"
+        data-v-98828574=""
+        show-value=""
+      >
+        <!--v-if-->
+        <div
+          class="t-slider"
+        >
+          <!-- 总长度 -->
+          <div
+            class="t-slider__bar"
+          />
+          <!-- 滑块长度 -->
+          <div
+            class="t-slider__track"
+            style="left: 30%; width: 50%;"
+          />
+          <!-- 滑块操作 -->
+          
+          <div
+            class="t-slider__handle"
+            style="left: 30%;"
+          />
+          <div
+            class="t-slider__handle"
+            style="left: 80%;"
+          />
+          
+          <!-- 刻度内容 -->
+          <div
+            class="t-slider__mark"
+          >
+            
+            
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-98828574=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 状态
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      滑动选择器禁用状态
+    </p>
+    
+    <div
+      class="slider-demo"
+      data-v-98828574=""
+    >
+      
+      <div
+        class="section"
+        data-v-65b1e7f4=""
+      >
+        <div
+          class="t-slider-wrap t-is-disabled"
+          data-v-65b1e7f4=""
+        >
+          <!--v-if-->
+          <div
+            class="t-slider"
+          >
+            <!-- 总长度 -->
+            <div
+              class="t-slider__bar"
+            />
+            <!-- 滑块长度 -->
+            <div
+              class="t-slider__track"
+              style="width: 60%;"
+            />
+            <!-- 滑块操作 -->
+            
+            <div
+              class="t-slider__handle"
+              style="left: 60%;"
+            />
+            
+            <!-- 刻度内容 -->
+            <div
+              class="t-slider__mark"
+            >
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="section"
+        data-v-65b1e7f4=""
+      >
+        <div
+          class="t-slider-wrap t-is-disabled t-is-value"
+          data-v-65b1e7f4=""
+        >
+          <div
+            class="t-slider-wrap__value-left"
+          >
+            30
+          </div>
+          <div
+            class="t-slider"
+          >
+            <!-- 总长度 -->
+            <div
+              class="t-slider__bar"
+            />
+            <!-- 滑块长度 -->
+            <div
+              class="t-slider__track"
+              style="width: 0%;"
+            />
+            <!-- 滑块操作 -->
+            
+            <div
+              class="t-slider__handle"
+              style="left: 0%;"
+            />
+            
+            <!-- 刻度内容 -->
+            <div
+              class="t-slider__mark"
+            >
+              
+              
+            </div>
+          </div>
+          <div
+            class="t-slider-wrap__value"
+          >
+            100
+          </div>
+        </div>
+      </div>
+      <div
+        class="section"
+        data-v-65b1e7f4=""
+      >
+        <div
+          class="t-slider-wrap t-is-disabled t-is-mark"
+          data-v-65b1e7f4=""
+        >
+          <!--v-if-->
+          <div
+            class="t-slider"
+          >
+            <!-- 总长度 -->
+            <div
+              class="t-slider__bar"
+            />
+            <!-- 滑块长度 -->
+            <div
+              class="t-slider__track"
+              style="width: 50%;"
+            />
+            <!-- 滑块操作 -->
+            
+            <div
+              class="t-slider__handle"
+              style="left: 50%;"
+            />
+            
+            <!-- 刻度内容 -->
+            <div
+              class="t-slider__mark"
+            >
+              
+              <div
+                class="t-slider__mark-text t-is-active"
+                style="left: 0%;"
+              >
+                小
+              </div>
+              <div
+                class="t-slider__mark-text t-is-"
+                style="left: 50%;"
+              >
+                中
+              </div>
+              <div
+                class="t-slider__mark-text t-is-"
+                style="left: 100%;"
+              >
+                大
+              </div>
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="section"
+        data-v-65b1e7f4=""
+      >
+        <div
+          class="t-slider-wrap t-is-disabled"
+          data-v-65b1e7f4=""
+        >
+          <!--v-if-->
+          <div
+            class="t-slider"
+          >
+            <!-- 总长度 -->
+            <div
+              class="t-slider__bar"
+            />
+            <!-- 滑块长度 -->
+            <div
+              class="t-slider__track"
+              style="left: 30%; width: 50%;"
+            />
+            <!-- 滑块操作 -->
+            
+            <div
+              class="t-slider__handle"
+              style="left: 30%;"
+            />
+            <div
+              class="t-slider__handle"
+              style="left: 80%;"
+            />
+            
+            <!-- 刻度内容 -->
+            <div
+              class="t-slider__mark"
+            >
+              
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Slider > Slider rangeVue demo works fine 1`] = `
+<div
+  class="t-slider-wrap"
+  show-value=""
+>
+  <!--v-if-->
+  <div
+    class="t-slider"
+  >
+    <!-- 总长度 -->
+    <div
+      class="t-slider__bar"
+    />
+    <!-- 滑块长度 -->
+    <div
+      class="t-slider__track"
+      style="left: 30%; width: 50%;"
+    />
+    <!-- 滑块操作 -->
+    
+    <div
+      class="t-slider__handle"
+      style="left: 30%;"
+    />
+    <div
+      class="t-slider__handle"
+      style="left: 80%;"
+    />
+    
+    <!-- 刻度内容 -->
+    <div
+      class="t-slider__mark"
+    >
+      
+      
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Slider > Slider valueVue demo works fine 1`] = `
+<div
+  class="t-slider-wrap"
+  show-value=""
+>
+  <!--v-if-->
+  <div
+    class="t-slider"
+  >
+    <!-- 总长度 -->
+    <div
+      class="t-slider__bar"
+    />
+    <!-- 滑块长度 -->
+    <div
+      class="t-slider__track"
+      style="width: 60%;"
+    />
+    <!-- 滑块操作 -->
+    
+    <div
+      class="t-slider__handle"
+      style="left: 60%;"
+    />
+    
+    <!-- 刻度内容 -->
+    <div
+      class="t-slider__mark"
+    >
+      
+      
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;

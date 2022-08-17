@@ -1,0 +1,1245 @@
+// Vitest Snapshot v1
+
+exports[`Avatar > Avatar adjustVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+  data-v-df42478a=""
+>
+  <div
+    class="tdesign-demo-avatar"
+    data-v-df42478a=""
+  >
+    <div
+      class="t-avatar t-avatar--circle"
+      data-v-df42478a=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          陈
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--circle"
+      data-v-df42478a=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          陈晚
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--circle"
+      data-v-df42478a=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          陈晚晚
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  style="background-color: rgb(255, 255, 255);"
+>
+  <h1
+    class="title"
+  >
+    Avatar 头像
+  </h1>
+  <p
+    class="summary"
+  >
+    用于展示用户头像信息，除了纯展示也可点击进入个人详情等操作。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 头像类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      头像样式可为默认头像、微信头像圆形、方形、自定义文字
+    </p>
+    
+    <div
+      class="avatar-demo"
+    >
+      <div
+        class="t-avatar t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <div
+            class="t-avatar__icon"
+          >
+            <svg
+              class="t-icon t-icon-user"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <div
+            class="t-avatar__icon"
+          >
+            
+            <img
+              alt="示例图片"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            />
+            
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-avatar--round"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt=""
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-avatar--circle custom"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <span>
+            
+            A
+            
+          </span>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 特殊类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      纯展示 从上往下
+    </p>
+    
+    <div
+      class="avatar-group-demo"
+    >
+      <div
+        class="t-avatar-group t-avatar--offset-right"
+      >
+        
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        
+        <!--v-if-->
+      </div>
+    </div>
+    <div
+      class="avatar-group-demo"
+    >
+      <div
+        class="t-avatar-group t-avatar--offset-right"
+      >
+        
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        
+        <!--v-if-->
+      </div>
+    </div>
+    <div
+      class="avatar-group-demo"
+    >
+      <div
+        class="t-avatar-group t-avatar--offset-right"
+      >
+        
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      带操作 从下往上
+    </p>
+    
+    <div
+      class="avatar-group-demo"
+    >
+      <div
+        class="t-avatar-group t-avatar--offset-left"
+      >
+        
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        
+        <!--v-if-->
+      </div>
+    </div>
+    <div
+      class="avatar-group-demo"
+    >
+      <div
+        class="t-avatar-group t-avatar--offset-left"
+      >
+        
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-avatar--circle"
+          style="height: 40px; width: 40px;"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+              style="height: 40px; width: 40px;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        
+        <!--v-if-->
+      </div>
+    </div>
+    <div
+      class="avatar-group-demo"
+    >
+      <div
+        class="t-avatar-group t-avatar--offset-left"
+      >
+        
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <img
+              alt=""
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+        
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      03 规格
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      头像大小尺寸
+    </p>
+    
+    <div
+      class="avatar-demo"
+    >
+      <div
+        class="t-avatar t-size-l t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <div
+            class="t-avatar__icon"
+          >
+            <svg
+              class="t-icon t-icon-user"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-size-m t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <div
+            class="t-avatar__icon"
+          >
+            <svg
+              class="t-icon t-icon-user"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-size-s t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <div
+            class="t-avatar__icon"
+          >
+            <svg
+              class="t-icon t-icon-user"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    <div
+      class="avatar-demo"
+    >
+      <div
+        class="t-avatar t-size-l t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__inner t-badge--medium t-badge--circle"
+            >
+              10
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-avatar t-size-m t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__inner t-badge--medium t-badge--circle"
+            >
+              10
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-avatar t-size-s t-avatar--circle"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__inner t-badge--medium t-badge--dot"
+            >
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="avatar-demo"
+    >
+      <div
+        class="t-avatar t-size-l t-avatar--round"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__inner t-badge--medium t-badge--circle"
+            >
+              10
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-avatar t-size-m t-avatar--round"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__inner t-badge--medium t-badge--circle"
+            >
+              10
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-avatar t-size-s t-avatar--round"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
+        </div>
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__inner t-badge--medium t-badge--dot"
+            >
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="avatar-demo"
+    >
+      <div
+        class="t-avatar t-size-l t-avatar--circle custom"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <span>
+            
+            A
+            
+          </span>
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-size-m t-avatar--circle custom"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <span>
+            
+            A
+            
+          </span>
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-avatar t-size-s t-avatar--circle custom"
+      >
+        <div
+          class="t-avatar__inner"
+        >
+          <span>
+            
+            A
+            
+          </span>
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Avatar > Avatar shapeVue demo works fine 1`] = `
+<div>
+  <div
+    class="tdesign-demo-block"
+  >
+    <div
+      class="t-avatar t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--round"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-avatar"
+  data-v-a1c55ea6=""
+>
+  <div
+    class="tdesign-demo-block"
+    data-v-a1c55ea6=""
+  >
+    <div
+      class="t-avatar t-size-s t-avatar--circle"
+      data-v-a1c55ea6=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-size-m t-avatar--circle"
+      data-v-a1c55ea6=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-size-l t-avatar--circle"
+      data-v-a1c55ea6=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--circle"
+      data-v-a1c55ea6=""
+      style="height: 88px; width: 88px;"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="tdesign-demo-block"
+    data-v-a1c55ea6=""
+  >
+    <div
+      class="t-avatar t-size-s t-avatar--round"
+      data-v-a1c55ea6=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-size-m t-avatar--round"
+      data-v-a1c55ea6=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-size-l t-avatar--round"
+      data-v-a1c55ea6=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--round"
+      data-v-a1c55ea6=""
+      style="height: 88px; width: 88px;"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Avatar > Avatar typeVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+>
+  <div
+    class="t-avatar t-avatar--circle"
+  >
+    <div
+      class="t-avatar__inner"
+    >
+      <img
+        alt=""
+        src="https://tdesign.gtimg.com/site/avatar.jpg"
+      />
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-avatar t-avatar--circle"
+  >
+    <div
+      class="t-avatar__inner"
+    >
+      <div
+        class="t-avatar__icon"
+      />
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-avatar t-avatar--circle"
+  >
+    <div
+      class="t-avatar__inner"
+    >
+      <div
+        class="t-avatar__icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-user"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-avatar t-avatar--circle"
+  >
+    <div
+      class="t-avatar__inner"
+    >
+      <span>
+        
+        U
+        
+      </span>
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+`;
