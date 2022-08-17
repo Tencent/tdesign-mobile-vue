@@ -8,11 +8,13 @@ const alignList = ['center', 'right'];
 
 describe('Input.vue', async () => {
   it('create', async () => {
-    const wrapper = mount(<Input />);
+    const value = ref('123');
+    const wrapper = mount(<Input v-model={value.value} />);
     expect(wrapper.classes()).toContain('t-input');
     expect(wrapper.classes()).toContain('t-cell');
     const input = wrapper.find('.t-input__wrap input');
     expect(input.exists()).toBeTruthy();
+    expect(input.element.value).toBe('123');
   });
 
   it('placeholder render', async () => {
