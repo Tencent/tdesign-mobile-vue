@@ -1,0 +1,2004 @@
+// Vitest Snapshot v1
+
+exports[`Tabs > Tabs baseVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-47b21a78=""
+>
+  <div
+    border="false"
+    class="t-cell-group"
+    data-v-47b21a78=""
+  >
+    <div
+      class="t-cell-group__title"
+    >
+      
+      横向选项卡
+      
+    </div>
+    <div
+      class="t-cell-group__container"
+    >
+      
+      <div
+        class="t-tabs t-is-top t-size-m"
+        data-v-47b21a78=""
+      >
+        <div
+          class="t-sticky"
+          style="height: 0px;"
+        >
+          <div
+            class="t-sticky__content"
+            style="z-index: 99;"
+          >
+            
+            <div
+              class="t-tabs__nav"
+            >
+              <div
+                class="t-tabs__nav-container"
+              >
+                <div
+                  class="t-tabs__nav-wrap"
+                >
+                  
+                  <div
+                    class="t-tabs__nav-item t-is-active"
+                  >
+                    标签页一
+                  </div>
+                  <div
+                    class="t-tabs__nav-item"
+                  >
+                    标签页二
+                  </div>
+                  
+                  <div
+                    class="t-tabs__nav-line"
+                    style=""
+                  />
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-tabs__content"
+        >
+          
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            value="first"
+          >
+            
+            <!---->
+            
+          </div>
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            style="display: none;"
+            value="second"
+          >
+            
+            <!---->
+            
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs t-is-top t-size-m"
+        data-v-47b21a78=""
+      >
+        <div
+          class="t-sticky"
+          style="height: 0px;"
+        >
+          <div
+            class="t-sticky__content"
+            style="z-index: 99;"
+          >
+            
+            <div
+              class="t-tabs__nav"
+            >
+              <div
+                class="t-tabs__nav-container"
+              >
+                <div
+                  class="t-tabs__nav-wrap"
+                >
+                  
+                  <div
+                    class="t-tabs__nav-item t-is-active"
+                  >
+                    标签页一
+                  </div>
+                  <div
+                    class="t-tabs__nav-item"
+                  >
+                    标签页二
+                  </div>
+                  <div
+                    class="t-tabs__nav-item"
+                  >
+                    标签页三
+                  </div>
+                  
+                  <div
+                    class="t-tabs__nav-line"
+                    style=""
+                  />
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-tabs__content"
+        >
+          
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            value="first"
+          >
+            
+            <!---->
+            
+          </div>
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            style="display: none;"
+            value="second"
+          >
+            
+            <!---->
+            
+          </div>
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            style="display: none;"
+            value="third"
+          >
+            
+            <!---->
+            
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs t-is-top t-size-m"
+        data-v-47b21a78=""
+      >
+        <div
+          class="t-sticky"
+          style="height: 0px;"
+        >
+          <div
+            class="t-sticky__content"
+            style="z-index: 99;"
+          >
+            
+            <div
+              class="t-tabs__nav"
+            >
+              <div
+                class="t-tabs__nav-container"
+              >
+                <div
+                  class="t-tabs__nav-wrap"
+                >
+                  
+                  <div
+                    class="t-tabs__nav-item t-is-active"
+                  >
+                    标签页一
+                  </div>
+                  <div
+                    class="t-tabs__nav-item"
+                  >
+                    标签页二
+                  </div>
+                  <div
+                    class="t-tabs__nav-item"
+                  >
+                    标签页三
+                  </div>
+                  <div
+                    class="t-tabs__nav-item"
+                  >
+                    标签页四
+                  </div>
+                  
+                  <div
+                    class="t-tabs__nav-line"
+                    style=""
+                  />
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-tabs__content"
+        >
+          
+          
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            value="first"
+          >
+            
+            <!---->
+            
+          </div>
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            style="display: none;"
+            value="second"
+          >
+            
+            <!---->
+            
+          </div>
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            style="display: none;"
+            value="third"
+          >
+            
+            <!---->
+            
+          </div>
+          <div
+            class="t-tabs__panel"
+            data-v-47b21a78=""
+            style="display: none;"
+            value="four"
+          >
+            
+            <!---->
+            
+          </div>
+          
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > Tabs horizontalVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-7033170b=""
+>
+  <div
+    class="t-tabs t-is-left t-size-m"
+    data-v-7033170b=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页一
+              </div>
+              <div
+                class="t-tabs__nav-item"
+              >
+                标签页二
+              </div>
+              <div
+                class="t-tabs__nav-item"
+              >
+                标签页三
+              </div>
+              <div
+                class="t-tabs__nav-item"
+              >
+                标签页四
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      <div
+        class="t-tabs__panel"
+        data-v-7033170b=""
+        value="1"
+      >
+        
+        <p
+          data-v-7033170b=""
+        >
+          标签一内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-7033170b=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <p
+          data-v-7033170b=""
+        >
+          标签二内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-7033170b=""
+        style="display: none;"
+        value="3"
+      >
+        
+        <p
+          data-v-7033170b=""
+        >
+          标签三内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-7033170b=""
+        style="display: none;"
+        value="4"
+      >
+        
+        <p
+          data-v-7033170b=""
+        >
+          标签四内容区
+        </p>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-14dd2c09=""
+>
+  <h1
+    class="title"
+    data-v-14dd2c09=""
+  >
+    Tabs 选项卡
+  </h1>
+  <p
+    class="summary"
+    data-v-14dd2c09=""
+  >
+    用作一组平行关系页面/内容的切换器
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-14dd2c09=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      横向选项卡
+    </p>
+    
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99; position: fixed; top: 0px;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  <div
+                    data-v-14dd2c09=""
+                  >
+                    标签页一
+                  </div>
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                   标签页二 
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="first"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="second"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  标签页一
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="first"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="second"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="third"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  标签页一
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页四
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="first"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="second"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="third"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="four"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签四内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-14dd2c09=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      超过屏幕滑动
+    </p>
+    
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  标签页一
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页四
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页五
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页六
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页七
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页八
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页九
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="1"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="2"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="3"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="4"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签四内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="5"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签五内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="6"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签六内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="7"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签七内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="8"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签八内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="9"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签九内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-14dd2c09=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      无下划线
+    </p>
+    
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  标签页一
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页四
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页五
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页六
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页七
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页八
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页九
+                </div>
+                
+                <!--v-if-->
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="1"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="2"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="3"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="4"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签四内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="5"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签五内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="6"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签六内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="7"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签七内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="8"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签八内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="9"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签九内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-14dd2c09=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      运动时间可调整
+    </p>
+    
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  标签页一
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页四
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="1"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="2"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="3"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="4"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签四内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-14dd2c09=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 状态
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      选项卡状态
+    </p>
+    
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  标签页一
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item t-is-disabled"
+                >
+                  标签页三
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="first"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="second"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="third"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-14dd2c09=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      03 特殊类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      竖向选项卡
+    </p>
+    
+    <div
+      class="t-tabs t-is-left t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页一
+                </div>
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页四
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页五
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="1"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="2"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="3"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="4"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签四内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="5"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签五内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-14dd2c09=""
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      03 规格
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      选中态文字尺寸规格
+    </p>
+    
+    <div
+      class="t-tabs t-is-top t-size-l"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  大尺寸
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="1"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="2"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="3"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs t-is-top t-size-m"
+      data-v-14dd2c09=""
+    >
+      <div
+        class="t-sticky"
+        style="height: 0px;"
+      >
+        <div
+          class="t-sticky__content"
+          style="z-index: 99;"
+        >
+          
+          <div
+            class="t-tabs__nav"
+          >
+            <div
+              class="t-tabs__nav-container"
+            >
+              <div
+                class="t-tabs__nav-wrap"
+              >
+                
+                <div
+                  class="t-tabs__nav-item t-is-active"
+                >
+                  小尺寸
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页二
+                </div>
+                <div
+                  class="t-tabs__nav-item"
+                >
+                  标签页三
+                </div>
+                
+                <div
+                  class="t-tabs__nav-line"
+                  style=""
+                />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="t-tabs__content"
+      >
+        
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          value="1"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签一内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="2"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签二内容区
+          </p>
+          
+        </div>
+        <div
+          class="t-tabs__panel"
+          data-v-14dd2c09=""
+          style="display: none;"
+          value="3"
+        >
+          
+          <p
+            data-v-14dd2c09=""
+          >
+            标签三内容区
+          </p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Tabs > Tabs scrollVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-d1891698=""
+>
+  <div
+    active-name="1"
+    class="t-tabs t-is-top t-size-m"
+    data-v-d1891698=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页一
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active t-is-disabled"
+              >
+                标签页二
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页三
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页四
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页五
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页六
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页七
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页八
+              </div>
+              <div
+                class="t-tabs__nav-item t-is-active"
+              >
+                标签页九
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="1"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签一内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="2"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签二内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="3"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签三内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="4"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签四内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="5"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签五内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="6"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签六内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="7"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签七内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="8"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签八内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tabs__panel"
+        data-v-d1891698=""
+        name="9"
+      >
+        
+        <p
+          data-v-d1891698=""
+        >
+          标签九内容区
+        </p>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;

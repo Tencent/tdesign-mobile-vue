@@ -1,0 +1,594 @@
+// Vitest Snapshot v1
+
+exports[`Toast > Toast iconTextVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      成功
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      失败
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      加载
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      自定义图标
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Toast > Toast iconVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      成功
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      失败
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      加载
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      自定义图标
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Toast > Toast maskVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      背景遮罩
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Toast > Toast mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Toast 轻提示
+  </h1>
+  <p
+    class="summary"
+  >
+    一种轻量级反馈或提示，不会打断用户操作。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      基础提示
+    </p>
+    
+    <div
+      class="toast-demo"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          纯文本
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          带图标-横向
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          带图标-竖向
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          纯文本最大高度
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      默认提示
+    </p>
+    
+    <div
+      class="toast-demo"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          成功-横向
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          警告-横向
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          成功-竖向
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          警告-竖向
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          加载
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 展示位置和展示时间
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      弹窗展示位置为顶部、中部、底部三种，展示时间可自定义
+    </p>
+    
+    <div
+      class="toast-demo"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          顶部Top
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          中间Middle
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          底部Bottom
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          显示 5 秒 
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      03 显示遮罩
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      弹窗可显示遮罩，可配置 Overlay 属性
+    </p>
+    
+    <div
+      class="toast-demo"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          弹窗显示遮罩
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      04 透传 Overlay
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      向 Overlay 遮罩透传属性
+    </p>
+    
+    <div
+      class="toast-demo"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          可滑动和点击透明遮罩
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      05 禁止滑动和点击
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      弹窗禁止滑动和点击
+    </p>
+    
+    <div
+      class="toast-demo"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          禁止滑动和点击
+          
+        </span>
+      </button>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`Toast > Toast positionVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      顶部Top
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      中间Middle
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+    style="margin-top: 8px;"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      底部Bottom
+      
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Toast > Toast textVue demo works fine 1`] = `
+<div
+  class="tdesign-demo-block"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      文字提示
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      文字长提示
+      
+    </span>
+  </button>
+</div>
+`;
