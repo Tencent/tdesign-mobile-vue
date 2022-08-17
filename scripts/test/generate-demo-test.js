@@ -15,10 +15,9 @@ const framework = pkg.name;
 const fixedDateComponentList = ['config-provider', 'time-picker', 'date-picker', 'table', 'form', 'calendar']; // 需要在测试阶段固定日期的组件，table中因为有filter例子 渲染datepicker需要固定
 
 // TODO 过滤掉一些导致挂掉的demo
-const filterCom = ['table', 'swiper'];
+const filterCom = ['table'];
 const filterDemo = {
   table: ['virtual-scroll'],
-  swiper: ['all'],
 };
 
 const CONFIG = {
@@ -111,8 +110,7 @@ function main() {
           if (err1) {
             console.log('Error', err1);
           } else {
-            // TODO: swiper组件的所有demo都会让流水线挂掉， 暂时过滤该组件
-            if (['icon', 'local-provider', 'swiper'].includes(componentFolder)) return;
+            if (['icon', 'local-provider'].includes(componentFolder)) return;
             const finalDemoFiles = filterFileFunction(demoFiles);
             outputOneComponentTestFile(componentFolder, finalDemoFiles);
           }
