@@ -5,6 +5,13 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.10.3 `2022-08-17` 
+### 🐞 Bug Fixes
+- `PulldownRefresh`: 修复下拉时偶尔失效的问题 @LeeJim ([#278](https://github.com/Tencent/tdesign-mobile-vue/pull/278))
+- `List`: 修复list组件滚动无法触发scroll的问题 @Dengzygx ([#283](https://github.com/Tencent/tdesign-mobile-vue/pull/283))
+### 🚧 Others
+- test: update vitest config @anlyyao ([#272](https://github.com/Tencent/tdesign-mobile-vue/pull/272))
+
 ## 🌈 0.10.2 `2022-08-15` 
 ### 🚀 Features
 - `ImageViewer`: 新增 maxZoom、closeBtn、onClose 属性 @ruige24601 ([#259](https://github.com/Tencent/tdesign-mobile-vue/pull/259))
