@@ -1,40 +1,40 @@
 <template>
   <div>
     <t-popup v-model="flag" placement="bottom">
-      <div class="cc-calendar">
-        <div v-if="$slots.head" class="cc-calendar-title">
+      <div class="t-calendar">
+        <div v-if="$slots.head" class="t-calendar__title">
           <slot name="head"></slot>
         </div>
-        <div class="cc-calendar-text">
-          <div class="cc-calendar-text-year" @click="preYear">
+        <div class="t-calendar__text">
+          <div class="t-calendar__text--year" @click="preYear">
             <chevron-left-icon size="10" />
             <chevron-left-icon size="10" style="position: relative; right: 6px" />
           </div>
-          <div class="cc-calendar-text-month" @click="preMonth">
+          <div class="t-calendar__text--month" @click="preMonth">
             <chevron-left-icon size="10" />
           </div>
-          <div class="cc-calendar-text-current">{{ time.year }}年{{ time.month + 1 }}月</div>
-          <div class="cc-calendar-text-month" @click="nextMonth">
+          <div class="t-calendar__text--current">{{ time.year }}年{{ time.month + 1 }}月</div>
+          <div class="t-calendar__text--month" @click="nextMonth">
             <chevron-right-icon size="10" />
           </div>
-          <div class="cc-calendar-text-year" @click="nextYear">
+          <div class="t-calendar__text--year" @click="nextYear">
             <chevron-right-icon size="10" />
             <chevron-right-icon size="10" style="position: relative; left: -6px" />
           </div>
         </div>
-        <div class="cc-calendar-days">
-          <div v-for="(item, index) in days" :key="index" class="cc-calendar-days-item">{{ item }}</div>
+        <div class="t-calendar__days">
+          <div v-for="(item, index) in days" :key="index" class="t-calendar__days--item">{{ item }}</div>
         </div>
-        <div class="cc-calendar-content">
-          <div v-for="i in 6" :key="i" class="cc-calendar-content-item">
-            <div v-for="j in 7" :key="j" class="cc-calendar-content-item-text">
+        <div class="t-calendar__content">
+          <div v-for="i in 6" :key="i" class="t-calendar__content--item">
+            <div v-for="j in 7" :key="j" class="t-calendar__content--item--text">
               <div
                 v-if="showDays[(i - 1) * 7 + (j - 1)]"
                 :key="j"
-                class="cc-calendar-content-item-text-value"
+                class="t-calendar__content--item--text--value"
                 :class="{
-                  'cc-calendar-content-item-text-nocurrent': !isCurrentMonth(showDays[(i - 1) * 7 + (j - 1)]),
-                  'cc-calendar-content-item-text-today': isToday(showDays[(i - 1) * 7 + (j - 1)]),
+                  't-calendar__content--item--text--nocurrent': !isCurrentMonth(showDays[(i - 1) * 7 + (j - 1)]),
+                  't-calendar__content--item--text--today': isToday(showDays[(i - 1) * 7 + (j - 1)]),
                 }"
                 :style="{
                   background: isToday(showDays[(i - 1) * 7 + (j - 1)]) ? bgColor : '#fff',
@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="cc-calendar-btn" @click="confirm">
+        <div class="t-calendar__btn" @click="confirm">
           <t-button block :style="{ background: bgColor, color: '#fff' }">{{ confirmBtn }}</t-button>
         </div>
       </div>
@@ -68,7 +68,7 @@ const { prefix } = config;
 const name = `${prefix}-calendar`;
 
 export default defineComponent({
-  name: 'TCalendar',
+  name,
   components: {
     ChevronRightIcon,
     ChevronLeftIcon,
@@ -163,6 +163,7 @@ export default defineComponent({
     };
     // 确认
     const confirm = () => {
+      flag.value = false;
       emit('confirm', dateValue.value);
     };
     // 格式化时间

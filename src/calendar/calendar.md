@@ -2,10 +2,11 @@
 
 ## API
 
-### Calendar Props
+### Calendar Events
 
-名称 | 类型 | 默认值 | 说明 | 必传
--- | -- | -- | -- | --
+名称 | 参数 | 描述
+-- | -- | --
+=======
 modelValue | Boolean | false | 控制日历显示与隐藏 | Y
 bgColor | String |  #0053DB | 按钮和单元格背景颜色 | N
 confirmBtn | String |  确认 | 确认按钮文案 | N
@@ -20,3 +21,4 @@ value | String / Date |  new Date | 当前高亮的日期，默认今天 | N
 cell-click | cell: `type CalendarCell = {year: number;month: number;day: number;}`| 点击单元格触发 |
 confirm | dateValue: `type CalendarValue = {year: number;month: number;day: number;week: number;date: string;isToday: boolean;}` | 点击确认按钮触发 |
 
+>>>>>>> 057622505dd728d31eb5ce1f7a82cf9104451e2c
