@@ -51,6 +51,11 @@ export default {
   zIndex: {
     type: Number,
   },
+  /** 点击遮罩层是否触发关闭 */
+  closeOverlayClick: {
+    type: Boolean,
+    default: true,
+  },
   /** 组件准备关闭时触发 */
   onClose: Function as PropType<TdPopupProps['onClose']>,
   /** 组件关闭且动画结束后执行 */
