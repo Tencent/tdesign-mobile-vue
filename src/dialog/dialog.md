@@ -16,7 +16,7 @@ preventScrollThrough | Boolean | true | 防止滚动穿透 | N
 showInAttachedElement | Boolean | false | 【开发中】仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
 title | String / Slot / Function | - | 标题。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-visible | Boolean | false | 控制对话框是否显示 | N
+visible | Boolean | false | 控制对话框是否显示,支持语法糖 `v-model:visible`。TS 类型：`boolean` | N
 width | String / Number | - | 对话框宽度，示例：320, '500px', '80%' | N
 zIndex | Number | - | 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 | N
 onCancel | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 | N
