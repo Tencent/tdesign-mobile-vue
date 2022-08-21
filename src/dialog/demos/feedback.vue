@@ -4,16 +4,16 @@
       <t-cell-group title="反馈类对话框">
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
-          <t-dialog v-model="isShowDialog1" :title="singleHeader"> </t-dialog>
+          <t-dialog v-model:visible="isShowDialog1" :title="singleHeader"> </t-dialog>
         </t-cell>
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
-          <t-dialog v-model="isShowDialog2" :title="moreTextHeader"> </t-dialog>
+          <t-dialog v-model:visible="isShowDialog2" :title="moreTextHeader"> </t-dialog>
         </t-cell>
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
           <t-dialog
-            v-model="isShowDialog3"
+            v-model:visible="isShowDialog3"
             :content="content"
             @confirm="onConfirm"
             @opened="openDialog"
@@ -25,7 +25,7 @@
         </t-cell>
         <t-cell value-align="left">
           <t-button theme="primary" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
-          <t-dialog v-model="isShowDialog4" :title="title"> </t-dialog>
+          <t-dialog v-model:visible="isShowDialog4" :title="title"> </t-dialog>
         </t-cell>
       </t-cell-group>
     </div>
