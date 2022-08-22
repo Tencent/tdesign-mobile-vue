@@ -47,7 +47,7 @@ import { SearchIcon as TIconSearch } from 'tdesign-icons-vue-next';
 import { ref, reactive, computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
 import TButton from '../button';
-import TInput from '../input';
+import TInput, { InputValue } from '../input';
 import { extendAPI } from '../shared';
 import searchProps from './props';
 import { useDefault } from '../shared/useDefault';
@@ -89,7 +89,7 @@ export default defineComponent({
       doFocus();
     };
 
-    const onFocus = (value: string, context: InputFocusContent) => {
+    const onFocus = (value: InputValue, context: InputFocusContent) => {
       state.labelActive = false;
       props.onFocus?.(value, { e: context.e });
     };
