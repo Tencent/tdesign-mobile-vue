@@ -17,6 +17,7 @@
           @blur="onBlur"
           @clear="onClear"
           @focus="onFocus"
+          @change="onChange"
         />
       </div>
       <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">
@@ -57,6 +58,7 @@ const name = `${prefix}-search`;
 
 type InputBlurContext = { e: FocusEvent };
 type InputFocusContent = { e: FocusEvent };
+type InputChangeContext = { e?: MouseEvent | InputEvent | undefined } | undefined;
 
 export default defineComponent({
   name,
@@ -104,6 +106,10 @@ export default defineComponent({
       props.onClean?.(e);
     };
 
+    const onChange = (value: InputValue, context: InputChangeContext) => {
+      props.onChange?.(value, { e: context?.e });
+    };
+
     extendAPI({ doFocus, blur });
 
     return {
@@ -115,6 +121,7 @@ export default defineComponent({
       onClear,
       onBlur,
       onFocus,
+      onChange,
       state,
       value,
       searchInput,
