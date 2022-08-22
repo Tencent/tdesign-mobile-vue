@@ -10,6 +10,7 @@
         <t-input
           ref="searchInput"
           v-model="value"
+          type="search"
           :class="`${name}__input`"
           :autofocus="focus"
           :placeholder="placeholder"
