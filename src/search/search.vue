@@ -16,6 +16,7 @@
           :clearable="clearable"
           @blur="onBlur"
           @clear="onClear"
+          @focus="onFocus"
         />
       </div>
       <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">
@@ -46,7 +47,7 @@ import { SearchIcon as TIconSearch } from 'tdesign-icons-vue-next';
 import { ref, reactive, computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
 import TButton from '../button';
-import TInput, { InputValue } from '../input';
+import TInput from '../input';
 import { extendAPI } from '../shared';
 import searchProps from './props';
 import { useDefault } from '../shared/useDefault';
@@ -55,6 +56,7 @@ const { prefix } = config;
 const name = `${prefix}-search`;
 
 type InputBlurContext = { e: FocusEvent };
+type InputFocusContent = { e: FocusEvent };
 
 export default defineComponent({
   name,
@@ -69,7 +71,7 @@ export default defineComponent({
     const searchInput = ref();
 
     const state = reactive({
-      labelActive: true,
+      labelActive: !value.value,
       inputVal: '',
     });
 
@@ -85,6 +87,11 @@ export default defineComponent({
     const onClick = () => {
       state.labelActive = !state.labelActive;
       doFocus();
+    };
+
+    const onFocus = (value: string, context: InputFocusContent) => {
+      state.labelActive = false;
+      props.onFocus?.(value, { e: context.e });
     };
 
     const onCancel = (e: MouseEvent) => {
@@ -107,6 +114,7 @@ export default defineComponent({
       onCancel,
       onClear,
       onBlur,
+      onFocus,
       state,
       value,
       searchInput,
