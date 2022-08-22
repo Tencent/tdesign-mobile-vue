@@ -17,6 +17,8 @@
           :clearable="clearable"
           @blur="onBlur"
           @clear="onClear"
+          @focus="onFocus"
+          @change="onChange"
         />
       </div>
       <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">
@@ -56,6 +58,8 @@ const { prefix } = config;
 const name = `${prefix}-search`;
 
 type InputBlurContext = { e: FocusEvent };
+type InputFocusContent = { e: FocusEvent };
+type InputChangeContext = { e?: MouseEvent | InputEvent | undefined } | undefined;
 
 export default defineComponent({
   name,
@@ -70,7 +74,7 @@ export default defineComponent({
     const searchInput = ref();
 
     const state = reactive({
-      labelActive: true,
+      labelActive: !value.value,
       inputVal: '',
     });
 
@@ -88,6 +92,11 @@ export default defineComponent({
       doFocus();
     };
 
+    const onFocus = (value: InputValue, context: InputFocusContent) => {
+      state.labelActive = false;
+      props.onFocus?.(value, { e: context.e });
+    };
+
     const onCancel = (e: MouseEvent) => {
       state.labelActive = !state.labelActive;
       props.onCancel?.(e);
@@ -96,6 +105,10 @@ export default defineComponent({
 
     const onClear = (e: Event) => {
       props.onClean?.(e);
+    };
+
+    const onChange = (value: InputValue, context: InputChangeContext) => {
+      props.onChange?.(value, { e: context?.e });
     };
 
     extendAPI({ doFocus, blur });
@@ -108,6 +121,8 @@ export default defineComponent({
       onCancel,
       onClear,
       onBlur,
+      onFocus,
+      onChange,
       state,
       value,
       searchInput,
