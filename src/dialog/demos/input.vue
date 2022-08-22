@@ -5,7 +5,7 @@
       <t-button theme="primary" size="middle" @click="changeDialogVisible(2)"> 带说明文本 </t-button>
     </t-cell>
     <t-dialog
-      v-model="isShowDialog1"
+      v-model:visible="isShowDialog1"
       :show-overlay="showOverlay"
       type="confirm"
       :is-input="isInput"
@@ -24,7 +24,7 @@
       </template>
     </t-dialog>
     <t-dialog
-      v-model="isShowDialog2"
+      v-model:visible="isShowDialog2"
       :show-overlay="showOverlay"
       type="confirm"
       :is-input="isInput"
