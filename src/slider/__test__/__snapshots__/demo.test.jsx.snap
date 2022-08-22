@@ -89,7 +89,7 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
       data-v-65b1e7f4=""
     >
       <div
-        class="t-slider-wrap__value-left"
+        class="t-slider-wrap__value--left"
       >
         30
       </div>
@@ -431,7 +431,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
         data-v-98828574=""
       >
         <div
-          class="t-slider-wrap__value-left"
+          class="t-slider-wrap__value--left"
         >
           30
         </div>
@@ -666,7 +666,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           data-v-65b1e7f4=""
         >
           <div
-            class="t-slider-wrap__value-left"
+            class="t-slider-wrap__value--left"
           >
             30
           </div>
