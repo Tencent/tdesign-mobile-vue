@@ -53,7 +53,7 @@ exports[`Search > Search baseVue demo works fine 1`] = `
                 maxlength="-1"
                 name=""
                 placeholder="请输入关键字"
-                type="text"
+                type="search"
               />
               <!--v-if-->
               <!--v-if-->
@@ -154,7 +154,7 @@ exports[`Search > Search colorVue demo works fine 1`] = `
                 maxlength="-1"
                 name=""
                 placeholder="请输入关键字"
-                type="text"
+                type="search"
               />
               <!--v-if-->
               <!--v-if-->
@@ -280,7 +280,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="text"
+                  type="search"
                 />
                 <!--v-if-->
                 <!--v-if-->
@@ -391,7 +391,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="text"
+                  type="search"
                 />
                 <!--v-if-->
                 <!--v-if-->
@@ -499,7 +499,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="text"
+                  type="search"
                 />
                 <!--v-if-->
                 <!--v-if-->
@@ -607,7 +607,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                   maxlength="-1"
                   name=""
                   placeholder="搜索预设文案"
-                  type="text"
+                  type="search"
                 />
                 <div
                   class="t-input__wrap--icon"
