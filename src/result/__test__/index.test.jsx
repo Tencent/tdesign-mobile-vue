@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Result from '../result.vue';
+import Image from '../../image/image.vue'
 
 const appIcon = () => h(AppIcon);
 const imageUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
@@ -35,7 +36,10 @@ describe('Result.vue', () => {
   });
 
   it('image render', async () => {
-    const wrapper = mount(() => <Result image={imageUrl}></Result>);
+    const slots = {
+      image: () => <Image src={imageUrl} />
+    }
+    const wrapper = mount(() => <Result v-slots={slots}></Result>);
     const img = wrapper.find('.t-image > img');
     expect(img.exists()).toBeTruthy();
     expect(img.attributes('src')).toBe(imageUrl);
