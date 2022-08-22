@@ -557,7 +557,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
     
     <div
       autofocus="true"
-      class="t-search"
+      class="t-search t-is-focused"
     >
       <div
         class="t-search__form"
@@ -636,6 +636,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
         </div>
         <label
           class="t-search__label"
+          style="display: none;"
         >
           <div
             class="t-search__label-icon-search"
