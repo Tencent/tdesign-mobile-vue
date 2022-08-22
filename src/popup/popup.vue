@@ -71,6 +71,9 @@ export default defineComponent({
     );
 
     const handleOverlayClick = () => {
+      if (!props.closeOverlayClick) {
+        return;
+      }
       emitEvent('close');
       currentVisible.value = false;
     };
