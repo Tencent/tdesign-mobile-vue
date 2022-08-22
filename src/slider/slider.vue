@@ -1,6 +1,6 @@
 <template>
   <div ref="rootRef" :class="classes">
-    <div v-if="showExtremeValue" :class="`${name}-wrap__value-left`">{{ min }}</div>
+    <div v-if="showExtremeValue" :class="`${name}-wrap__value--left`">{{ min }}</div>
     <div :class="`${name}`" @click="onClick">
       <!-- 总长度 -->
       <div ref="barRef" :class="`${name}__bar`"></div>
