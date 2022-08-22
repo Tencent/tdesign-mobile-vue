@@ -5,6 +5,17 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.10.4 `2022-08-22` 
+### 🚀 Features
+- `Search`: 内嵌 input 组件 type 调整为 search @VeryHandSomeBoy ([#293](https://github.com/Tencent/tdesign-mobile-vue/pull/293))
+- `Drawer`: 新增 closeOnOverlayClick 属性 @deadlyAce ([#287](https://github.com/Tencent/tdesign-mobile-vue/pull/287))
+- `Popup`: 新增 closeOnOverlayClick 属性 @deadlyAce ([#287](https://github.com/Tencent/tdesign-mobile-vue/pull/287))
+### 🐞 Bug Fixes
+- `Dialog`: 修复 `demo` 示例弹窗不显示问题 @zyqq ([#289](https://github.com/Tencent/tdesign-mobile-vue/pull/289))
+- `Slider`: 修复滑块滑到最左侧时，左侧文本被遮挡 @HelKyle ([#286](https://github.com/Tencent/tdesign-mobile-vue/pull/286))
+- `Search`: 修复传入默认值后需要点击才显示的问题 @VeryHandSomeBoy ([#292](https://github.com/Tencent/tdesign-mobile-vue/pull/292))
+- `Search`: 修复不触发 focus 事件的问题 @VeryHandSomeBoy ([#292](https://github.com/Tencent/tdesign-mobile-vue/pull/292))
+
 ## 🌈 0.10.3 `2022-08-17` 
 ### 🐞 Bug Fixes
 - `PulldownRefresh`: 修复下拉时偶尔失效的问题 @LeeJim ([#278](https://github.com/Tencent/tdesign-mobile-vue/pull/278))

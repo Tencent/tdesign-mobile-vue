@@ -5,7 +5,7 @@
         <t-button theme="primary" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
         <t-button theme="primary" @click="eventDialog()"> 带警示操作对话框 </t-button>
         <t-dialog
-          v-model="isShowDialog5"
+          v-model:visible="isShowDialog5"
           type="confirm"
           :title="title"
           :content="content"
@@ -16,7 +16,7 @@
         >
         </t-dialog>
         <t-dialog
-          v-model="isShowDialog6"
+          v-model:visible="isShowDialog6"
           type="confirm"
           :title="title"
           :content="moreTextContent"

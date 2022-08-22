@@ -75,6 +75,11 @@ export default {
   zIndex: {
     type: Number,
   },
+  /** 点击遮罩层是否触发关闭 */
+  closeOverlayClick: {
+    type: Boolean,
+    default: true,
+  },
   /** 关闭事件，取消按钮点击时、关闭按钮点击时、ESC 按下时、点击蒙层时均会触发 */
   onClose: Function as PropType<TdDrawerProps['onClose']>,
   /** 点击抽屉里的列表项 */

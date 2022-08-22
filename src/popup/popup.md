@@ -13,6 +13,7 @@ transitionName | String | - | 弹出层内容区的动画名，等价于transiti
 visible | Boolean | false | 是否显示浮层。支持语法糖 `v-model` 或 `v-model:visible`。TS 类型：`boolean` | N
 defaultVisible | Boolean | false | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
 zIndex | Number | - | 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 | N
+closeOverlayClick | Boolean | - | 点击遮罩层是否触发关闭事件 | N
 onClose | Function |  | TS 类型：`() => void`<br/>组件准备关闭时触发 | N
 onClosed | Function |  | TS 类型：`() => void`<br/>组件关闭且动画结束后执行 | N
 onOpen | Function |  | TS 类型：`() => void`<br/>组件准备展示时触发 | N
