@@ -71,6 +71,7 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -493,6 +494,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -586,6 +588,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -670,6 +673,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -841,6 +845,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -935,6 +940,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -1020,6 +1026,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -1275,6 +1282,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>

@@ -55,6 +55,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -1304,6 +1305,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -1910,6 +1912,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
+      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -3148,6 +3151,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
+      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -3633,6 +3637,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
+      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -3952,6 +3957,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
+      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -4542,6 +4548,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
+      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -5696,6 +5703,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
+      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -6946,6 +6954,7 @@ exports[`DateTimePicker > DateTimePicker renderLabelDateVue demo works fine 1`] 
   <!--teleport start-->
   <div
     class="t-popup"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -7442,6 +7451,7 @@ exports[`DateTimePicker > DateTimePicker startEndDateVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
+    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
