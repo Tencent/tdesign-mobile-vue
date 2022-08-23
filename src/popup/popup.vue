@@ -45,7 +45,11 @@ export default defineComponent({
     );
 
     const rootClasses = computed(() => name);
-    const rootStyles = computed(() => `${props.customStyle}z-index:${props.zIndex};`);
+    const rootStyles = computed(() =>
+      props.customStyle || props.zIndex
+        ? (props.customStyle && `${props.customStyle};`) + (props.zIndex && `z-index:${props.zIndex};`)
+        : undefined,
+    );
 
     const contentClasses = computed(() => ({
       [`${name}--content`]: true,

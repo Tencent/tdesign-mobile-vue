@@ -165,7 +165,6 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -293,7 +292,6 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -467,7 +465,6 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -907,7 +904,6 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -1233,7 +1229,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
-      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -1361,7 +1356,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
-      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -1535,7 +1529,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
-      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>
@@ -1984,7 +1977,6 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <!--teleport start-->
     <div
       class="t-popup"
-      style="z-index: undefined;"
     >
       <transition-stub>
         <transition-stub>

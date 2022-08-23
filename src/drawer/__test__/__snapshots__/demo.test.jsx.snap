@@ -8,7 +8,6 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -129,7 +128,6 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -373,7 +371,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -503,7 +500,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>

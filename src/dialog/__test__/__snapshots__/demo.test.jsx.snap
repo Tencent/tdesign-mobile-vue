@@ -63,7 +63,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           <!--teleport start-->
           <div
             class="t-popup"
-            style="z-index: undefined;"
           >
             <transition-stub>
               <transition-stub>
@@ -128,7 +127,6 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           <!--teleport start-->
           <div
             class="t-popup"
-            style="z-index: undefined;"
           >
             <transition-stub>
               <transition-stub>
@@ -253,7 +251,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <!--teleport start-->
             <div
               class="t-popup"
-              style="z-index: undefined;"
             >
               <transition-stub>
                 <transition-stub>
@@ -343,7 +340,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <!--teleport start-->
             <div
               class="t-popup"
-              style="z-index: undefined;"
             >
               <transition-stub>
                 <transition-stub>
@@ -433,7 +429,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <!--teleport start-->
             <div
               class="t-popup"
-              style="z-index: undefined;"
             >
               <transition-stub>
                 <transition-stub>
@@ -527,7 +522,6 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <!--teleport start-->
             <div
               class="t-popup"
-              style="z-index: undefined;"
             >
               <transition-stub>
                 <transition-stub>
@@ -650,7 +644,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -707,7 +700,6 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -872,7 +864,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -940,7 +931,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -1008,7 +998,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -1084,7 +1073,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -1208,7 +1196,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -1295,7 +1282,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -1431,7 +1417,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -1510,7 +1495,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>

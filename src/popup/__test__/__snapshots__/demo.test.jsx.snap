@@ -25,7 +25,6 @@ exports[`Popup > Popup customAnimationVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -107,7 +106,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -159,7 +157,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -211,7 +208,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -263,7 +259,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -315,7 +310,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -367,7 +361,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <!--teleport start-->
       <div
         class="t-popup"
-        style="z-index: undefined;"
       >
         <transition-stub>
           <transition-stub>
@@ -425,7 +418,6 @@ exports[`Popup > Popup placementBottomVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -480,7 +472,6 @@ exports[`Popup > Popup placementCenterVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -535,7 +526,6 @@ exports[`Popup > Popup placementLeftVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -590,7 +580,6 @@ exports[`Popup > Popup placementRightVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
@@ -645,7 +634,6 @@ exports[`Popup > Popup placementTopVue demo works fine 1`] = `
   <!--teleport start-->
   <div
     class="t-popup"
-    style="z-index: undefined;"
   >
     <transition-stub>
       <transition-stub>
