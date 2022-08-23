@@ -4,7 +4,7 @@
     :placement="placement"
     :show-overlay="showOverlay"
     :z-index="zIndex"
-    :close-overlay-click="closeOverlayClick"
+    :close-on-overlay-click="closeOnOverlayClick"
     @visible-change="onVisibleChange"
     @close="onClose"
   >
@@ -40,7 +40,7 @@ export default defineComponent({
   emits: ['update:visible', 'itemClick', 'overlayClick'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
-    const { visible, items, placement, showOverlay, zIndex, closeOverlayClick } = toRefs(props);
+    const { visible, items, placement, showOverlay, zIndex, closeOnOverlayClick } = toRefs(props);
     const open = ref(visible.value || false);
 
     const dSideBarClassName = computed(() => `${name}__sidebar`);
@@ -75,7 +75,7 @@ export default defineComponent({
       placement,
       showOverlay,
       zIndex,
-      closeOverlayClick,
+      closeOnOverlayClick,
       open,
       dSideBarClassName,
       dSideBarItemClassName,

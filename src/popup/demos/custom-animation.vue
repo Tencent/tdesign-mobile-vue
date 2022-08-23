@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <t-button @click="bottom = true">1.5s的slide-fade动画</t-button>
-
+  <div class="popup-demo">
+    <div class="button-group">
+      <t-button block variant="outline" size="large" @click="bottom = true">自定义动画</t-button>
+    </div>
     <t-popup
       v-model="bottom"
       placement="bottom"
@@ -16,24 +17,26 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const bottom = ref(false);
-    return {
-      bottom,
-      open: () => console.log('open--------'),
-      opened: () => console.log('opened--------'),
-      close: () => console.log('close--------'),
-      closed: () => console.log('closed--------'),
-    };
-  },
-});
+const bottom = ref(false);
+const open = () => console.log('open--------');
+const opened = () => console.log('opened--------');
+const close = () => console.log('close--------');
+const closed = () => console.log('closed--------');
 </script>
 
 <style lang="less">
+.popup-demo {
+  .button-group {
+    padding: 0 16px;
+    .t-button {
+      margin-bottom: 16px;
+    }
+  }
+}
+
 @keyframes slideFadeIn {
   from {
     opacity: 0;

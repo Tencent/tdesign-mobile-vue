@@ -1,59 +1,47 @@
 <template>
-  <div>
-    <div class="demo-drawer">
-      <t-drawer v-model:visible="open" placement="left" :items="baseSidebar"></t-drawer>
-      <div class="demo-drawer-content">
-        <div class="demo-drawer-text">单层级纯文本标签栏</div>
-        <t-button size="large" variant="outline" shape="round" @click="openDrawer()">基础抽屉</t-button>
-      </div>
+  <div class="demo-drawer">
+    <t-drawer v-model:visible="openBase" placement="left" :items="baseSidebar" @item-click="itemClick"></t-drawer>
+    <div class="button-group">
+      <t-button block variant="outline" size="large" @click="openDrawer(false)">基础抽屉</t-button>
     </div>
   </div>
 </template>
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
+import { DrawerItem } from '../type';
 
-export default defineComponent({
-  setup() {
-    const baseSidebar = ref([
-      {
-        title: '菜单一',
-      },
-      {
-        title: '菜单二',
-      },
-      {
-        title: '菜单三',
-      },
-      {
-        title: '菜单四',
-      },
-      {
-        title: '菜单五',
-      },
-      {
-        title: '菜单六',
-      },
-    ]);
-    const open = ref(false);
-    const openDrawer = () => {
-      open.value = true;
-    };
-
-    return {
-      baseSidebar,
-      open,
-      openDrawer,
-    };
+const baseSidebar = ref([
+  {
+    title: '菜单一',
   },
-});
+  {
+    title: '菜单二',
+  },
+  {
+    title: '菜单三',
+  },
+  {
+    title: '菜单四',
+  },
+  {
+    title: '菜单五',
+  },
+  {
+    title: '菜单六',
+  },
+]);
+const openBase = ref(false);
+const openDrawer = (type: boolean) => {
+  openBase.value = true;
+};
+
+const itemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) => {
+  console.log('itemclick: ', index, item, context);
+};
 </script>
 <style lang="less" scoped>
 .demo-drawer {
-  &-text {
-    margin: 24px 0 12px 0;
-    color: #999999;
-  }
-  &-content {
+  .button-group {
     padding: 0 16px;
   }
 }
