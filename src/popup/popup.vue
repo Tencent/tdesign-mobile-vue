@@ -71,7 +71,7 @@ export default defineComponent({
     );
 
     const handleOverlayClick = () => {
-      if (!props.closeOverlayClick) {
+      if (!props.closeOnOverlayClick) {
         return;
       }
       emitEvent('close');
