@@ -12,6 +12,7 @@
       :disabled="disableInput || disabled"
       :readonly="disableInput"
       @blur="handleBlur"
+      @input="handleInput"
     />
     <div :class="[`${name}__plus`, `${disabled || stepperValue >= max ? 't-is-disabled' : ''}`]" @click="plusValue">
       <add-icon :class="`${name}__icon`" />
@@ -20,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { toRefs, computed, reactive, defineComponent, SetupContext } from 'vue';
+import { toRefs, computed, defineComponent, SetupContext } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
@@ -43,40 +44,56 @@ export default defineComponent({
     const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
     const emitEvent = useEmitEvent(props, context.emit);
 
-    const { min, max, inputWidth, theme } = toRefs(props);
-    const isPureMode = theme.value === 'grey';
-    const inputStyle = inputWidth ? { width: `${inputWidth.value}px` } : '';
+    const { min, max, step, inputWidth, theme, disabled } = toRefs(props);
+    const isPureMode = computed(() => theme.value === 'grey');
+    const inputStyle = computed(() => (inputWidth ? { width: `${inputWidth.value}px` } : ''));
 
-    const format = (val: number) =>
-      Math.min(Math.max(min.value, val, Number.MIN_SAFE_INTEGER), max.value, Number.MAX_SAFE_INTEGER);
+    const isDisabled = (type: 'minus' | 'plus') => {
+      if (disabled.value) return true;
+      if (type === 'minus' && stepperValue.value <= min.value) {
+        return true;
+      }
+      if (type === 'plus' && stepperValue.value >= max.value) {
+        return true;
+      }
+      return false;
+    };
+
+    const formatValue = (value: number) =>
+      Math.max(Math.min(max.value, value, Number.MAX_SAFE_INTEGER), min.value, Number.MIN_SAFE_INTEGER);
+
+    const updateValue = (value: number) => {
+      stepperValue.value = formatValue(value);
+    };
+
     const plusValue = () => {
-      if (stepperValue.value + props.step > props.max || props.disabled) return;
-      stepperValue.value += props.step;
-    };
-    const minusValue = () => {
-      if (stepperValue.value - props.step < props.min || props.disabled) return;
-      stepperValue.value -= props.step;
-    };
-    const changeValue = (e: Event) => {
-      const value = (e.target as HTMLTextAreaElement).value.split('.')[0].replace(/[^-0-9]/g, '');
-      if (value.trim() === '') {
-        stepperValue.value = 0;
-      } else {
-        handleOverlimit(Number(value));
-        stepperValue.value = format(Number(value));
-      }
-    };
-    const handleBlur = (e: FocusEvent) => {
-      changeValue(e);
-      emitEvent('blur', stepperValue.value);
-    };
-    const handleOverlimit = (value: number) => {
-      if (value < Math.max(min.value, Number.MIN_SAFE_INTEGER)) {
-        emitEvent('overlimit', 'minus');
-      }
-      if (value > Math.min(max.value, Number.MAX_SAFE_INTEGER)) {
+      if (isDisabled('plus')) {
         emitEvent('overlimit', 'plus');
+        return;
       }
+      updateValue(Number(stepperValue.value) + step.value);
+    };
+
+    const minusValue = () => {
+      if (isDisabled('minus')) {
+        emitEvent('overlimit', 'minus');
+        return;
+      }
+      updateValue(Number(stepperValue.value) - step.value);
+    };
+
+    const handleInput = (e: Event) => {
+      handleChange(e);
+    };
+
+    const handleChange = (e: Event) => {
+      const value = (e.target as HTMLTextAreaElement).value.split('.')[0].replace(/[^-0-9]/g, '') || 0;
+      updateValue(Number(value));
+    };
+
+    const handleBlur = (e: FocusEvent) => {
+      handleChange(e);
+      emitEvent('blur', stepperValue.value);
     };
 
     return {
@@ -85,7 +102,8 @@ export default defineComponent({
       minusValue,
       stepperValue,
       plusValue,
-      changeValue,
+      handleInput,
+      handleChange,
       inputStyle,
       handleBlur,
       isPureMode,
