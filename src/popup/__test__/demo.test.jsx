@@ -10,7 +10,6 @@ import placementCenterVue from '@/popup/demos/placement-center.vue';
 import placementLeftVue from '@/popup/demos/placement-left.vue';
 import placementRightVue from '@/popup/demos/placement-right.vue';
 import placementTopVue from '@/popup/demos/placement-top.vue';
-import placementVue from '@/popup/demos/placement.vue';
 
 const mapper = {
   customAnimationVue,
@@ -20,7 +19,6 @@ const mapper = {
   placementLeftVue,
   placementRightVue,
   placementTopVue,
-  placementVue,
 };
 
 describe('Popup', () => {

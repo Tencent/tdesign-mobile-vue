@@ -6,10 +6,25 @@
 
 export interface TdPopupProps {
   /**
+   * 点击遮罩层是否关闭
+   * @default true
+   */
+  closeOnOverlayClick?: boolean;
+  /**
+   * 弹出层的自定义样式
+   * @default ''
+   */
+  customStyle?: string;
+  /**
    * 是否锁定内容滚动
    * @default true
    */
   lockScroll?: boolean;
+  /**
+   * 遮罩层的属性，透传至 overlay
+   * @default {}
+   */
+  overlayProps?: object;
   /**
    * 浮层出现位置
    * @default top
@@ -21,13 +36,8 @@ export interface TdPopupProps {
    */
   showOverlay?: boolean;
   /**
-   * 是否禁用teleport
-   * @default false
-   */
-  teleportDisabled?: boolean;
-  /**
    * 透传给teleport组件的to属性
-   * @default body
+   * @default ''
    */
   to?: string;
   /**
@@ -45,6 +55,11 @@ export interface TdPopupProps {
    * @default false
    */
   defaultVisible?: boolean;
+  /**
+   * 是否显示浮层
+   * @default false
+   */
+  modelValue?: boolean;
   /**
    * 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500
    */
@@ -68,5 +83,7 @@ export interface TdPopupProps {
   /**
    * 当浮层隐藏或显示时触发
    */
-  onVisibleChange?: (visible: boolean) => void;
+  onVisibleChange?: (visible: boolean, trigger: PopupSource) => void;
 }
+
+export type PopupSource = 'close-btn' | 'overlay';

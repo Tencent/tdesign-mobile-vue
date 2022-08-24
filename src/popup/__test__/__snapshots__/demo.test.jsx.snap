@@ -1,21 +1,27 @@
 // Vitest Snapshot v1
 
 exports[`Popup > Popup customAnimationVue demo works fine 1`] = `
-<div>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
-    role="button"
+<div
+  class="popup-demo"
+>
+  <div
+    class="button-group"
   >
-    <!---->
-    <span
-      class="t-button__text"
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
     >
-      
-      1.5s的slide-fade动画
-      
-    </span>
-  </button>
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        自定义动画
+        
+      </span>
+    </button>
+  </div>
   <!--teleport start-->
   <div
     class="t-popup"
@@ -50,39 +56,37 @@ exports[`Popup > Popup customAnimationVue demo works fine 1`] = `
 
 exports[`Popup > Popup mobileVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="tdesign-mobile-demo"
 >
-  
-  <div
-    class="tdesign-mobile-demo"
+  <h1
+    class="title"
   >
-    <h1
-      class="title"
+    Popup 弹窗层
+  </h1>
+  <p
+    class="summary"
+  >
+    由其他控件触发，屏幕滑出或弹出一块自定义内容区域
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
     >
-      Popup 弹窗层
-    </h1>
+      类型
+    </h2>
     <p
-      class="summary"
+      class="tdesign-mobile-demo-block__summary"
     >
-      由其他控件触发，屏幕滑出或弹出一块自定义内容区域
+      弹出层出现为止可能为顶部、底部、中部、左侧或右侧
     </p>
+    
     <div
-      class="tdesign-mobile-demo-block"
+      class="popup-demo"
     >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        类型
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        弹出层出现为止可能为顶部、底部、中部、左侧或右侧
-      </p>
-      
       <div
-        class="button-demo"
-        style="margin: 0px 16px;"
+        class="button-group"
       >
         <button
           aria-disabled="false"
@@ -98,6 +102,43 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             
           </span>
         </button>
+      </div>
+      <!--teleport start-->
+      <div
+        class="t-popup"
+      >
+        <transition-stub>
+          <transition-stub>
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+        </transition-stub>
+        <transition-stub>
+          <div
+            class="t-popup--content t-popup--content-top"
+            style="display: none;"
+          >
+            
+            <div
+              style="height: 200px; background: rgb(255, 255, 255);"
+            />
+            
+          </div>
+        </transition-stub>
+      </div>
+      <!--teleport end-->
+    </div>
+    <div
+      class="popup-demo"
+    >
+      <div
+        class="button-group"
+      >
         <button
           aria-disabled="false"
           class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
@@ -112,20 +153,43 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             
           </span>
         </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
+      </div>
+      <!--teleport start-->
+      <div
+        class="t-popup"
+      >
+        <transition-stub>
+          <transition-stub>
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+        </transition-stub>
+        <transition-stub>
+          <div
+            class="t-popup--content t-popup--content-bottom"
+            style="display: none;"
           >
             
-            中部弹出
+            <div
+              style="height: 200px; background: rgb(255, 255, 255);"
+            />
             
-          </span>
-        </button>
+          </div>
+        </transition-stub>
+      </div>
+      <!--teleport end-->
+    </div>
+    <div
+      class="popup-demo"
+    >
+      <div
+        class="button-group"
+      >
         <button
           aria-disabled="false"
           class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
@@ -140,6 +204,43 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             
           </span>
         </button>
+      </div>
+      <!--teleport start-->
+      <div
+        class="t-popup"
+      >
+        <transition-stub>
+          <transition-stub>
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+        </transition-stub>
+        <transition-stub>
+          <div
+            class="t-popup--content t-popup--content-left"
+            style="display: none;"
+          >
+            
+            <div
+              style="width: 200px; height: 100%; background: rgb(255, 255, 255);"
+            />
+            
+          </div>
+        </transition-stub>
+      </div>
+      <!--teleport end-->
+    </div>
+    <div
+      class="popup-demo"
+    >
+      <div
+        class="button-group"
+      >
         <button
           aria-disabled="false"
           class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
@@ -155,178 +256,165 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           </span>
         </button>
       </div>
-      
+      <!--teleport start-->
+      <div
+        class="t-popup"
+      >
+        <transition-stub>
+          <transition-stub>
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+        </transition-stub>
+        <transition-stub>
+          <div
+            class="t-popup--content t-popup--content-right"
+            style="display: none;"
+          >
+            
+            <div
+              style="width: 200px; height: 100%; background: rgb(255, 255, 255);"
+            />
+            
+          </div>
+        </transition-stub>
+      </div>
+      <!--teleport end-->
     </div>
-  </div>
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
+    <div
+      class="popup-demo"
+    >
       <div
-        class="t-popup--content t-popup--content-left"
-        style="display: none;"
+        class="button-group"
       >
-        
-        <div
-          style="width: 200px; height: 100%; background: rgb(255, 255, 255);"
-        />
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
         >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-right"
-        style="display: none;"
-      >
-        
-        <div
-          style="width: 200px; height: 100%; background: rgb(255, 255, 255);"
-        />
-        
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            中部弹出
+            
+          </span>
+        </button>
       </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+      <!--teleport start-->
+      <div
+        class="t-popup"
+      >
+        <transition-stub>
+          <transition-stub>
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+        </transition-stub>
+        <transition-stub>
+          <div
+            class="t-popup--content t-popup--content-center"
+            style="display: none;"
+          >
+            
+            <div
+              style="width: 200px; height: 200px; background: rgb(255, 255, 255);"
+            />
+            
+          </div>
+        </transition-stub>
+      </div>
+      <!--teleport end-->
+    </div>
+    <div
+      class="popup-demo"
+    >
+      <div
+        class="button-group"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
         >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-top"
-        style="display: none;"
-      >
-        
-        <div
-          style="height: 200px; background: rgb(255, 255, 255);"
-        />
-        
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            自定义动画
+            
+          </span>
+        </button>
       </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
+      <!--teleport start-->
       <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
+        class="t-popup"
       >
-        
-        <div
-          style="height: 200px; background: rgb(255, 255, 255);"
-        />
-        
+        <transition-stub>
+          <transition-stub>
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+        </transition-stub>
+        <transition-stub>
+          <div
+            class="t-popup--content t-popup--content-bottom"
+            style="display: none;"
+          >
+            
+            <div
+              style="height: 200px; background: rgb(255, 255, 255);"
+            />
+            
+          </div>
+        </transition-stub>
       </div>
-    </transition-stub>
+      <!--teleport end-->
+    </div>
+    
   </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          style="height: 200px; background: rgb(255, 255, 255);"
-        />
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  
 </div>
 `;
 
 exports[`Popup > Popup placementBottomVue demo works fine 1`] = `
 <div
-  class="popup-base"
+  class="popup-demo"
 >
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
+  <div
+    class="button-group"
   >
-    <!---->
-    <span
-      class="t-button__text"
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
     >
-      
-      底部弹出
-      
-    </span>
-  </button>
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        底部弹出
+        
+      </span>
+    </button>
+  </div>
   <!--teleport start-->
   <div
     class="t-popup"
@@ -361,22 +449,26 @@ exports[`Popup > Popup placementBottomVue demo works fine 1`] = `
 
 exports[`Popup > Popup placementCenterVue demo works fine 1`] = `
 <div
-  class="popup-base"
+  class="popup-demo"
 >
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
+  <div
+    class="button-group"
   >
-    <!---->
-    <span
-      class="t-button__text"
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
     >
-      
-      中部弹出
-      
-    </span>
-  </button>
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        中部弹出
+        
+      </span>
+    </button>
+  </div>
   <!--teleport start-->
   <div
     class="t-popup"
@@ -411,22 +503,26 @@ exports[`Popup > Popup placementCenterVue demo works fine 1`] = `
 
 exports[`Popup > Popup placementLeftVue demo works fine 1`] = `
 <div
-  class="popup-base"
+  class="popup-demo"
 >
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
+  <div
+    class="button-group"
   >
-    <!---->
-    <span
-      class="t-button__text"
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
     >
-      
-      左侧弹出
-      
-    </span>
-  </button>
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        左侧弹出
+        
+      </span>
+    </button>
+  </div>
   <!--teleport start-->
   <div
     class="t-popup"
@@ -461,22 +557,26 @@ exports[`Popup > Popup placementLeftVue demo works fine 1`] = `
 
 exports[`Popup > Popup placementRightVue demo works fine 1`] = `
 <div
-  class="popup-base"
+  class="popup-demo"
 >
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
+  <div
+    class="button-group"
   >
-    <!---->
-    <span
-      class="t-button__text"
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
     >
-      
-      右侧弹出
-      
-    </span>
-  </button>
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        右侧弹出
+        
+      </span>
+    </button>
+  </div>
   <!--teleport start-->
   <div
     class="t-popup"
@@ -511,22 +611,26 @@ exports[`Popup > Popup placementRightVue demo works fine 1`] = `
 
 exports[`Popup > Popup placementTopVue demo works fine 1`] = `
 <div
-  class="popup-base"
+  class="popup-demo"
 >
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
+  <div
+    class="button-group"
   >
-    <!---->
-    <span
-      class="t-button__text"
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
     >
-      
-      顶部弹出
-      
-    </span>
-  </button>
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        顶部弹出
+        
+      </span>
+    </button>
+  </div>
   <!--teleport start-->
   <div
     class="t-popup"
@@ -550,228 +654,6 @@ exports[`Popup > Popup placementTopVue demo works fine 1`] = `
         
         <div
           style="height: 200px; background: rgb(255, 255, 255);"
-        />
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-</div>
-`;
-
-exports[`Popup > Popup placementVue demo works fine 1`] = `
-<div
-  class="popup-base"
->
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      上方
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      下方
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      左侧
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      右侧
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      中间
-      
-    </span>
-  </button>
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-left"
-        style="display: none;"
-      >
-        
-        <div
-          style="width: 200px; height: 100%; background: rgb(255, 255, 255);"
-        />
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-right"
-        style="display: none;"
-      >
-        
-        <div
-          style="width: 200px; height: 100%; background: rgb(255, 255, 255);"
-        />
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-top"
-        style="display: none;"
-      >
-        
-        <div
-          style="height: 200px; background: rgb(255, 255, 255);"
-        />
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          style="height: 200px; background: rgb(255, 255, 255);"
-        />
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub>
-      <transition-stub>
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub>
-      <div
-        class="t-popup--content t-popup--content-center"
-        style="display: none;"
-      >
-        
-        <div
-          style="width: 200px; height: 200px; background: rgb(255, 255, 255);"
         />
         
       </div>

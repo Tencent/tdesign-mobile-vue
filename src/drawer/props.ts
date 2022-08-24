@@ -76,7 +76,7 @@ export default {
     type: Number,
   },
   /** 点击遮罩层是否触发关闭 */
-  closeOverlayClick: {
+  closeOnOverlayClick: {
     type: Boolean,
     default: true,
   },
