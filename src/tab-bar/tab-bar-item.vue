@@ -91,6 +91,7 @@ export default defineComponent({
         isSpread.value = !isSpread.value;
         if (!isToggleCurrent.value) {
           updateChild([currentName]);
+          return;
         }
       }
       updateChild(currentName);

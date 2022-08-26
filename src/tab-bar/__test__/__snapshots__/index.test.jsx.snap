@@ -1,0 +1,116 @@
+// Vitest Snapshot v1
+
+exports[`TabBar > props > snapshot 1`] = `
+<div
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
+  role="tablist"
+>
+  
+  
+  <div
+    aria-label="TabBar"
+    aria-selected="false"
+    class="t-tab-bar-item t-no-border"
+    name="label_1"
+    role="tab"
+    text="标签一"
+  >
+    <div
+      class="t-tab-bar-item__content"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            style="right: 0px; top: 5px;"
+          >
+            1
+          </div>
+          
+          icon
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub>
+  </div>
+  <div
+    aria-label="TabBar"
+    aria-selected="false"
+    class="t-tab-bar-item t-no-border"
+    name="label_2"
+    role="tab"
+    text="标签二"
+  >
+    <div
+      class="t-tab-bar-item__content"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            style="right: 0px; top: 5px;"
+          >
+            1
+          </div>
+          
+          icon
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub>
+  </div>
+  <div
+    aria-haspopup="true"
+    aria-label="TabBar"
+    aria-selected="false"
+    class="t-tab-bar-item t-no-border"
+    name="label_3"
+    role="tab"
+    text="此处展开"
+  >
+    <div
+      class="t-tab-bar-item__content"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            style="right: 0px; top: 5px;"
+          >
+            1
+          </div>
+          
+          icon
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub>
+  </div>
+  
+  
+</div>
+`;
