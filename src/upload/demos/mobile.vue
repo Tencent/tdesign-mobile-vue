@@ -45,7 +45,7 @@ export default defineComponent({
   components: {},
   setup() {
     const addIcon = () => h(AddIcon);
-    const onFail = ({ e, file }) => {
+    const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }) => {
       console.log('---onFail', file, e);
       return null;
     };
@@ -58,7 +58,7 @@ export default defineComponent({
     const onChange = (files: Array<UploadFile>, { e, response, trigger, index, file }: UploadChangeContext) => {
       console.log('====onChange', files, e, response, trigger, index, file);
     };
-    const onPreview = ({ file, e }) => {
+    const onPreview = ({ file, e }: { file: UploadFile; e: MouseEvent }) => {
       console.log('====onPreview', file, e);
     };
     const onSuccess = ({ file, fileList, response, e }: SuccessContext) => {
@@ -71,7 +71,6 @@ export default defineComponent({
       console.log('====onSelectChange', files);
     };
     const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
-    // const action = 'www';
     const max = 10;
     return {
       action,

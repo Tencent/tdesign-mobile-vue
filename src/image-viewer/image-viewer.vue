@@ -44,8 +44,8 @@ import config from '../config';
 import ImageViewerProps from './props';
 import { renderTNode, TNode, useEmitEvent, useDefault, useTouch } from '../shared';
 import { TdImageViewerProps } from './type';
-import { Swiper as TSwiper, SwiperItem as TSwiperItem, SwiperNavigation } from '../swiper';
 import TOverlay from '../overlay';
+import { Swiper as TSwiper, SwiperItem as TSwiperItem, SwiperNavigation } from '../swiper';
 
 export type TriggerType = 'close-btn' | 'overlay' | 'esc';
 const { prefix } = config;

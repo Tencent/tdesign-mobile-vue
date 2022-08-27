@@ -57,9 +57,10 @@ import xhr from '../_common/js/upload/xhr';
 import { useDefault, useEmitEvent, isFunction, isArray, isObject, renderTNode, TNode } from '../shared';
 import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
 import { SuccessContext, InnerProgressContext } from './interface';
-import props from './props';
+import UploadProps from './props';
 import config from '../config';
 import { isOverSizeLimit } from './util';
+import TImageViewer from '../image-viewer';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
@@ -70,8 +71,9 @@ export default defineComponent({
     TNode,
     CloseIcon,
     RefreshIcon,
+    TImageViewer,
   },
-  props,
+  props: UploadProps,
   emits: [
     'update:files',
     'update:modelValue',
@@ -83,7 +85,7 @@ export default defineComponent({
     'success',
     'select-change',
   ],
-  setup(props: any, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
@@ -163,20 +165,19 @@ export default defineComponent({
       input.value = '';
     };
 
-    const formatFileToUploadFile = (files: FileList): File[] => {
-      if (!props.format || !isFunction(props.format)) {
-        const res = [];
-        for (let i = 0; i < files.length; i++) {
-          res.push(files[i]);
-        }
-        return res;
-      }
-
-      const NewFiles = [...files];
-      NewFiles.forEach((item) => {
-        item = props.format?.(item);
+    const formatFileToUploadFile = (files: FileList): UploadFile[] => {
+      const defaultFormat = (file: File) => ({
+        ...file,
+        lastModified: file.lastModified,
+        name: file.name,
+        size: file.size,
+        type: file.type,
+        raw: file,
       });
-      return NewFiles;
+      const formatter = (props.format && isFunction(props.format) ? props.format : defaultFormat) as (
+        file: File,
+      ) => UploadFile;
+      return [...files].map((item) => formatter(item));
     };
 
     const handleBeforeUpload = (file: File | UploadFile): Promise<boolean> => {
@@ -211,7 +212,7 @@ export default defineComponent({
       return isOverSize;
     };
 
-    const uploadFiles = (files: File[]) => {
+    const uploadFiles = (files: UploadFile[]) => {
       const { max } = toRefs(props);
       let tmpFiles = [...files];
       if (max.value) {
@@ -220,10 +221,9 @@ export default defineComponent({
           console.warn(`TDesign Upload Warn: you can only upload ${max.value} files`);
         }
       }
-      tmpFiles.forEach((fileRaw: any) => {
+      tmpFiles.forEach((fileRaw: UploadFile) => {
         const uploadFile: UploadFile = {
           ...fileRaw,
-          fileRaw,
           lastModified: fileRaw.lastModified,
           name: fileRaw.name,
           size: fileRaw.size,
@@ -232,7 +232,7 @@ export default defineComponent({
           status: 'waiting',
         };
         const reader = new FileReader();
-        reader.readAsDataURL(fileRaw as any);
+        reader.readAsDataURL(uploadFile.raw);
         reader.onload = (event: ProgressEvent<FileReader>) => {
           uploadFile.url = event.target?.result as string;
         };
