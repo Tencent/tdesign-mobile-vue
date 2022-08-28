@@ -1,4 +1,7 @@
 module.exports = {
-  "": "100%",
-  "checkbox": "17.64%"
+  "": "40.86%",
+  "button": "100%",
+  "checkbox": "100%",
+  "fab": "100%",
+  "loading": "17.64%"
 }
