@@ -1,7 +1,1 @@
-module.exports = {
-  "": "100%",
-  "button": "100%",
-  "checkbox": "100%",
-  "fab": "100%",
-  "message": "88.23%"
-}
+module.exports = {"button":{"statements":"98.57%","branches":"58.82%","functions":"100%","lines":"98.57%"},"checkbox":{"statements":"93.47%","branches":"75.8%","functions":"80%","lines":"93.47%"},"fab":{"statements":"100%","branches":"100%","functions":"100%","lines":"100%"},"message":{"statements":"100%","branches":"88.23%","functions":"66.66%","lines":"100%"},"shared":{"statements":"70.46%","branches":"61.11%","functions":"25%","lines":"70.46%"}}
