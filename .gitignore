@@ -28,3 +28,6 @@ pnpm-lock.yaml
 
 Dockerfile
 robotMsg.json
+
+# error files
+yarn-error.log
