@@ -241,16 +241,21 @@ class Picker {
    * @param index
    * @param duration
    */
-  updateIndex(index: number, duration = 460): void {
+  updateIndex(index: number, options?: any): void {
+    const realOptions = {
+      duration: 460,
+      isChange: true,
+      ...options,
+    };
     this.curIndex = index;
     this.setSelectedClassName();
     const moveOffsetY = (-index + 2) * this.itemHeight;
     if (this.list) {
       this.list.style.transform = `translate(0,${moveOffsetY}px) translateZ(0)`;
-      this.list.style.transitionDuration = `${duration}ms`;
+      this.list.style.transitionDuration = `${realOptions.duration}ms`;
       this.list.style.transitionTimingFunction = 'ease-out';
     }
-    this.onChange(index);
+    realOptions.isChange && this.onChange(index);
   }
 
   /**
