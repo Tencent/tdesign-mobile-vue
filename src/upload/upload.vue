@@ -150,22 +150,27 @@ export default defineComponent({
       });
     };
 
-    const handleReload = (file: UploadFile) => {
+    const handleReload = (file: File) => {
       uploadFiles([file]);
     };
 
     const handleChange = (event: Event) => {
-      const { files } = <HTMLInputElement>event.target;
-      if (props.disabled || !files) return;
       const input = <HTMLInputElement>inputRef.value;
-      const formatFiles = formatFileToUploadFile(files);
+      if (props.disabled || !input.files) return;
+      const formatFiles = formatFileToUploadFile(input.files);
       emitEvent('select-change', [...formatFiles]);
       uploadFiles(formatFiles);
       input.value = '';
     };
 
-    const formatFileToUploadFile = (files: any): UploadFile[] => {
-      if (!props.format || !isFunction(props.format)) return files;
+    const formatFileToUploadFile = (files: FileList): File[] => {
+      if (!props.format || !isFunction(props.format)) {
+        const res = [];
+        for (let i = 0; i < files.length; i++) {
+          res.push(files[i]);
+        }
+        return res;
+      }
 
       const NewFiles = [...files];
       NewFiles.forEach((item) => {
@@ -206,7 +211,7 @@ export default defineComponent({
       return isOverSize;
     };
 
-    const uploadFiles = (files: UploadFile[]) => {
+    const uploadFiles = (files: File[]) => {
       const { max } = toRefs(props);
       let tmpFiles = [...files];
       if (max.value) {
@@ -215,9 +220,10 @@ export default defineComponent({
           console.warn(`TDesign Upload Warn: you can only upload ${max.value} files`);
         }
       }
-      tmpFiles.forEach((fileRaw: UploadFile) => {
+      tmpFiles.forEach((fileRaw: any) => {
         const uploadFile: UploadFile = {
           ...fileRaw,
+          fileRaw,
           lastModified: fileRaw.lastModified,
           name: fileRaw.name,
           size: fileRaw.size,
@@ -301,9 +307,11 @@ export default defineComponent({
         const request = xhr;
         xhrReq.value = request({
           action: props.action,
-          data: props.data || {},
+          data: {
+            file: file.fileRaw,
+            ...props.data,
+          },
           method: props.method,
-          file,
           headers: props.headers || {},
           withCredentials: props.withCredentials,
           onError: handleError,
