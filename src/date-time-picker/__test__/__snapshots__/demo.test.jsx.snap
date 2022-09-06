@@ -69,7 +69,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
     </transition-stub>
     <transition-stub>
       <div
-        class="t-popup--content t-popup--content-top"
+        class="t-popup--content t-popup--content-bottom"
         style="display: none;"
       >
         
@@ -1318,7 +1318,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
     </transition-stub>
     <transition-stub>
       <div
-        class="t-popup--content t-popup--content-top"
+        class="t-popup--content t-popup--content-bottom"
         style="display: none;"
       >
         
@@ -6960,7 +6960,7 @@ exports[`DateTimePicker > DateTimePicker renderLabelDateVue demo works fine 1`] 
     </transition-stub>
     <transition-stub>
       <div
-        class="t-popup--content t-popup--content-top"
+        class="t-popup--content t-popup--content-bottom"
         style="display: none;"
       >
         
@@ -7456,7 +7456,7 @@ exports[`DateTimePicker > DateTimePicker startEndDateVue demo works fine 1`] = `
     </transition-stub>
     <transition-stub>
       <div
-        class="t-popup--content t-popup--content-top"
+        class="t-popup--content t-popup--content-bottom"
         style="display: none;"
       >
         
