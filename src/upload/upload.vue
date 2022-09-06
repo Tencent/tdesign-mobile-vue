@@ -150,7 +150,7 @@ export default defineComponent({
       });
     };
 
-    const handleReload = (file: File) => {
+    const handleReload = (file: any) => {
       uploadFiles([file]);
     };
 
