@@ -14,3 +14,4 @@ export * from './useChildSlots';
 export * from './useVModel';
 export * from './useTouch';
 export * from './useScrollParent';
+export * from './useExpose';
