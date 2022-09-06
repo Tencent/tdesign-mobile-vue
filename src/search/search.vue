@@ -16,7 +16,6 @@
           :placeholder="placeholder"
           :clearable="clearable"
           @blur="onBlur"
-          @clear="onClear"
           @focus="onFocus"
           @change="onChange"
         />
@@ -99,12 +98,7 @@ export default defineComponent({
 
     const onCancel = (e: MouseEvent) => {
       state.labelActive = !state.labelActive;
-      props.onCancel?.(e);
       props.onActionClick?.({ e });
-    };
-
-    const onClear = (e: Event) => {
-      props.onClean?.(e);
     };
 
     const onChange = (value: InputValue, context: InputChangeContext) => {
@@ -119,7 +113,6 @@ export default defineComponent({
       classes,
       onClick,
       onCancel,
-      onClear,
       onBlur,
       onFocus,
       onChange,
