@@ -94,7 +94,7 @@ export default defineComponent({
 
     const onFocus = (value: InputValue, context: InputFocusContent) => {
       state.labelActive = false;
-      props.onFocus?.(value, { e: context.e });
+      props.onFocus?.(value as string, { e: context.e });
     };
 
     const onCancel = (e: MouseEvent) => {
@@ -108,7 +108,7 @@ export default defineComponent({
     };
 
     const onChange = (value: InputValue, context: InputChangeContext) => {
-      props.onChange?.(value, { e: context?.e });
+      props.onChange?.(value as string, { e: context?.e });
     };
 
     extendAPI({ doFocus, blur });
