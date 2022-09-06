@@ -77,6 +77,10 @@ export interface TdDrawerProps {
    */
   zIndex?: number;
   /**
+   * 点击蒙层时是否触发抽屉关闭事件
+   */
+  closeOnOverlayClick?: boolean;
+  /**
    * 关闭事件，取消按钮点击时、关闭按钮点击时、ESC 按下时、点击蒙层时均会触发
    */
   onClose?: (context: DrawerCloseContext) => void;

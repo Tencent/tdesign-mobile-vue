@@ -1,6 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
+      ref="pickeInstance"
       :value="currentPicker"
       :title="title"
       :columns="(selected) => generateDatePickerColumns(selected, start, end, renderLabel)"
@@ -14,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent, SetupContext, toRefs } from 'vue';
+import { ref, computed, defineComponent, SetupContext, toRefs, watch, nextTick } from 'vue';
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
@@ -43,10 +44,12 @@ export default defineComponent({
   name,
   components: { TPicker },
   props: DateTimePickerProps,
-  emits: ['change', 'cancel', 'confirm', 'pick'],
+  emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
-
+    const pickeInstance = ref<any>(null);
+    const isChanged = ref(false);
+    const realDateValue = ref();
     const className = computed(() => [`${name}`]);
     const { value, modelValue } = toRefs(props);
     const [dateTimePickerValue, setDateTimePickerValue] = useVModel(
@@ -127,7 +130,7 @@ export default defineComponent({
     };
 
     // 当默认v-model为空时，当前value取最小日期
-    const pickerValue = ref(getPickerValueByDateTimePickerValue(dateTimePickerValue.value || start.value));
+    const pickerValue = ref(getPickerValueByDateTimePickerValue(dateTimePickerValue.value || start.value.valueOf()));
 
     let lastTimePicker = [...pickerValue.value];
     let currentPicker = [...pickerValue.value];
@@ -215,7 +218,7 @@ export default defineComponent({
 
       if (isPrecision('date')) {
         const lower = isInMinMonth ? minDay : 1;
-        const upper = isInMaxMonth ? maxDay : dayjs(`${selected[0]}-${selected[1]}`).daysInMonth();
+        const upper = isInMaxMonth ? maxDay : dayjs(`${selected[0]}-${+selected[1] + 1}`).daysInMonth();
         generateColumn(lower, upper, 'date');
       }
 
@@ -253,8 +256,8 @@ export default defineComponent({
     const onChange = (value: Array<PickerValue>, context: { columns: Array<PickerContext>; e: MouseEvent }) => {
       lastTimePicker = [...currentPicker];
       const currentDate = getDateTimePickerValueByPickerValue(value);
-      const realDateValue = dayjs(currentDate).format(props.format);
-      setDateTimePickerValue(realDateValue);
+      realDateValue.value = dayjs(currentDate).format(props.format);
+      isChanged.value = true;
     };
 
     const onPick = (value: Array<PickerValue>, context: PickerContext) => {
@@ -263,7 +266,46 @@ export default defineComponent({
       emitEvent('pick', dayjs(currentDate).format(props.format));
     };
 
+    /**
+     * 监听v-model变化，当modelValue发生变化时，更新数据和ui
+     * isChanged用来区分用户直接修改v-model，和滑动picker修改value两种方式
+     * 只有用户滑动picker时，isChanged为true，滑动结束后设为false
+     */
+    watch(
+      () => dateTimePickerValue,
+      (val) => {
+        nextTick(() => {
+          if (isChanged.value) {
+            isChanged.value = false;
+          } else {
+            pickeInstance.value?.setValues(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf()));
+            currentPicker = [...ref(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf())).value];
+            lastTimePicker = [...currentPicker];
+            isChanged.value = false;
+          }
+        });
+      },
+      {
+        immediate: true,
+        deep: true,
+      },
+    );
+
+    watch(
+      () => isChanged,
+      (val) => {
+        if (val.value) {
+          setDateTimePickerValue(realDateValue.value);
+        }
+      },
+      {
+        immediate: true,
+        deep: true,
+      },
+    );
+
     return {
+      pickeInstance,
       className,
       confirmButtonText,
       cancelButtonText,
@@ -273,6 +315,8 @@ export default defineComponent({
       renderLabel,
       pickerValue,
       currentPicker,
+      realDateValue,
+      isChanged,
       generateDatePickerColumns,
       onConfirm,
       onCancel,

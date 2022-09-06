@@ -63,7 +63,8 @@ export default defineComponent({
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
   setup(props, context) {
     const internalInstance = getCurrentInstance();
-    const dialogContent = renderContent(internalInstance, 'default', 'content');
+    const dialogContent = computed(() => renderContent(internalInstance, 'default', 'content'));
+
     const innerValue = ref('');
     const dClassName = computed(() => `${name}`);
     const dBoxClassName = computed(() => `${name}__box`);

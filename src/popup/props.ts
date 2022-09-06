@@ -8,17 +8,33 @@ import { TdPopupProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 点击遮罩层是否关闭 */
+  closeOnOverlayClick: {
+    type: Boolean,
+    default: true,
+  },
+  /** 弹出层的自定义样式 */
+  customStyle: {
+    type: String,
+    default: '',
+  },
   /** 是否锁定内容滚动 */
   lockScroll: {
     type: Boolean,
     default: true,
+  },
+  /** 遮罩层的属性，透传至 overlay */
+  overlayProps: {
+    type: Object as PropType<TdPopupProps['overlayProps']>,
+    default: () => ({}),
   },
   /** 浮层出现位置 */
   placement: {
     type: String as PropType<TdPopupProps['placement']>,
     default: 'top' as TdPopupProps['placement'],
     validator(val: TdPopupProps['placement']): boolean {
-      return ['top', 'left', 'right', 'bottom', 'center'].includes(val!);
+      if (!val) return true;
+      return ['top', 'left', 'right', 'bottom', 'center'].includes(val);
     },
   },
   /** 是否显示遮罩层 */
@@ -43,18 +59,10 @@ export default {
     default: undefined,
   },
   /** 是否显示浮层，非受控属性 */
-  defaultVisible: {
-    type: Boolean,
-    default: undefined,
-  },
+  defaultVisible: Boolean,
   /** 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 */
   zIndex: {
     type: Number,
-  },
-  /** 点击遮罩层是否触发关闭 */
-  closeOverlayClick: {
-    type: Boolean,
-    default: true,
   },
   /** 组件准备关闭时触发 */
   onClose: Function as PropType<TdPopupProps['onClose']>,

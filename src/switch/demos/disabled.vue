@@ -1,25 +1,32 @@
 <template>
-  <div class="cell-base">
-    <t-cell-group title="禁用开关">
-      <t-cell title="标题">
-        <t-switch v-model="disabledValue" disabled> </t-switch>
+  <div class="">
+    <t-cell-group>
+      <t-cell title="开关开启禁用">
+        <template #rightIcon>
+          <t-switch v-model="value" disabled> </t-switch>
+        </template>
       </t-cell>
-      <t-cell title="标题">
-        <t-switch disabled label="描述信息"> </t-switch>
+      <t-cell title="开关关闭禁用">
+        <template #rightIcon>
+          <t-switch disabled></t-switch>
+        </template>
+      </t-cell>
+      <t-cell title="开关开启禁用">
+        <template #rightIcon>
+          <t-switch v-model="value" disabled label="描述信息"> </t-switch>
+        </template>
+      </t-cell>
+      <t-cell title="开关关闭禁用">
+        <template #rightIcon>
+          <t-switch label="描述信息" disabled></t-switch>
+        </template>
       </t-cell>
     </t-cell-group>
   </div>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const disabledValue = ref(true);
-    return {
-      disabledValue,
-    };
-  },
-});
+const value = ref(true);
 </script>

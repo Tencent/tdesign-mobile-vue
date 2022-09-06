@@ -16,9 +16,9 @@ export default function mdToVue(options) {
   const mdSegment = customRender(options);
   const { demoCodesDefsStr, demoCodeInstallStr } = options;
 
-  let coverage = '';
+  let coverage = {};
   if (mdSegment.isComponent) {
-    coverage = testCoverage[camelCase(mdSegment.componentName)] || '0%';
+    coverage = testCoverage[camelCase(mdSegment.componentName)] || {};
   }
 
   const sfc = `
@@ -34,7 +34,12 @@ export default function mdToVue(options) {
             spline="${mdSegment.spline}"
             component-name="${mdSegment.isComponent ? mdSegment.componentName : ''}"
           >
-          ${mdSegment.isComponent ? `<td-doc-badge slot="badge" label="coverage" message="${coverage}" />` : ''}
+          ${mdSegment.isComponent ? `
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: lines" message="${coverage.lines || '0%'}" />
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: functions" message="${coverage.functions || '0%'}" />
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: statements" message="${coverage.statements || '0%'}" />
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: branches" message="${coverage.branches || '0%'}" />`
+          : ''}
           </td-doc-header>` : ''
         }
         ${
@@ -112,7 +117,7 @@ export default function mdToVue(options) {
           }
 
           Prismjs.highlightAll();
-    
+
           this.$emit('loaded', () => {
             tdDocContent.pageStatus = 'show';
           });
