@@ -20,6 +20,7 @@ describe('drawer', () => {
       await wrapper.setProps({
         visible: false,
       })
+      expect(wrapper.find('.t-overlay').isVisible()).toBe(false)
     })
 
     it(': closeOnOverlayClick', async () => {
@@ -32,7 +33,7 @@ describe('drawer', () => {
       const visible = ref(true);
       const wrapper = mount({
         render() {
-          return <drawer visible={visible} closeOverlayClick={closeOverlayClick} onClose={onClose}/>
+          return <drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose}/>
         }
       })
 
@@ -54,7 +55,7 @@ describe('drawer', () => {
 
       const wrapper = mount({
         render() {
-          return <drawer items={titleSidebar} />
+          return <drawer items={titleSidebar.value} />
         }
       })
 
@@ -73,7 +74,7 @@ describe('drawer', () => {
       const visible = ref(true);
       const wrapper = mount({
         render() {
-          return <drawer visible={visible} onOverlayClick={onOverlayClick}/>
+          return <drawer visible={visible.value} onOverlayClick={onOverlayClick}/>
         }
       })
 
@@ -100,7 +101,7 @@ describe('drawer', () => {
 
       const wrapper = mount({
         render() {
-          return <drawer items={iconSidebar} onClose={onClose} />
+          return <drawer items={iconSidebar.value} onClose={onClose} />
         }
       })
 
@@ -131,7 +132,7 @@ describe('drawer', () => {
 
       const wrapper = mount({
         render() {
-          return <drawer items={iconSidebar} onItemClick={ onItemClick } />
+          return <drawer items={iconSidebar.value} onItemClick={ onItemClick } />
         }
       })
 
