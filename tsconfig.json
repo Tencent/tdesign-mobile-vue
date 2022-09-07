@@ -24,6 +24,7 @@
       "@/*": ["./src/*"],
       "tdesign-moile-vue": ["./src/*"]
     },
+    "types": ["vitest/globals"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "rules": { "trailing-comma": false },
