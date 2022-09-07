@@ -26,7 +26,6 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
       
       <div
         class="t-stepper"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus t-is-disabled"
@@ -47,7 +46,6 @@ exports[`Stepper > Stepper baseVue demo works fine 1`] = `
         </div>
         <input
           class="t-stepper__input"
-          pattern="[0-9]*"
           type="tel"
         />
         <div
@@ -101,7 +99,6 @@ exports[`Stepper > Stepper disableInputVue demo works fine 1`] = `
       
       <div
         class="t-stepper"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus t-is-disabled"
@@ -123,7 +120,6 @@ exports[`Stepper > Stepper disableInputVue demo works fine 1`] = `
         <input
           class="t-stepper__input"
           disabled=""
-          pattern="[0-9]*"
           readonly=""
           type="tel"
         />
@@ -178,7 +174,6 @@ exports[`Stepper > Stepper disabledVue demo works fine 1`] = `
       
       <div
         class="t-stepper t-is-disabled"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus t-is-disabled"
@@ -200,7 +195,6 @@ exports[`Stepper > Stepper disabledVue demo works fine 1`] = `
         <input
           class="t-stepper__input"
           disabled=""
-          pattern="[0-9]*"
           type="tel"
         />
         <div
@@ -255,7 +249,6 @@ exports[`Stepper > Stepper eventVue demo works fine 1`] = `
       
       <div
         class="t-stepper"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus t-is-disabled"
@@ -276,7 +269,6 @@ exports[`Stepper > Stepper eventVue demo works fine 1`] = `
         </div>
         <input
           class="t-stepper__input"
-          pattern="[0-9]*"
           type="tel"
         />
         <div
@@ -356,7 +348,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           
           <div
             class="t-stepper"
-            modelmodifiers="[object Object]"
           >
             <div
               class="t-stepper__minus t-is-disabled"
@@ -377,7 +368,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input"
-              pattern="[0-9]*"
               type="tel"
             />
             <div
@@ -441,7 +431,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           
           <div
             class="t-stepper"
-            modelmodifiers="[object Object]"
           >
             <div
               class="t-stepper__minus t-is-disabled"
@@ -462,7 +451,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input"
-              pattern="[0-9]*"
               type="tel"
             />
             <div
@@ -504,7 +492,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
     >
       <div
         class="t-stepper t-stepper__pure"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus"
@@ -525,7 +512,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
         </div>
         <input
           class="t-stepper__input"
-          pattern="[0-9]*"
           type="tel"
         />
         <div
@@ -588,7 +574,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           
           <div
             class="t-stepper t-is-disabled"
-            modelmodifiers="[object Object]"
           >
             <div
               class="t-stepper__minus t-is-disabled"
@@ -610,7 +595,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             <input
               class="t-stepper__input"
               disabled=""
-              pattern="[0-9]*"
               type="tel"
             />
             <div
@@ -661,7 +645,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           
           <div
             class="t-stepper"
-            modelmodifiers="[object Object]"
           >
             <div
               class="t-stepper__minus t-is-disabled"
@@ -683,7 +666,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             <input
               class="t-stepper__input"
               disabled=""
-              pattern="[0-9]*"
               readonly=""
               type="tel"
             />
@@ -735,7 +717,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           
           <div
             class="t-stepper"
-            modelmodifiers="[object Object]"
           >
             <div
               class="t-stepper__minus"
@@ -756,7 +737,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input"
-              pattern="[0-9]*"
               type="tel"
             />
             <div
@@ -807,7 +787,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           
           <div
             class="t-stepper"
-            modelmodifiers="[object Object]"
           >
             <div
               class="t-stepper__minus t-is-disabled"
@@ -828,7 +807,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
             </div>
             <input
               class="t-stepper__input"
-              pattern="[0-9]*"
               type="tel"
             />
             <div
@@ -859,7 +837,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
     >
       <div
         class="t-stepper t-is-disabled t-stepper__pure"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus t-is-disabled"
@@ -881,7 +858,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
         <input
           class="t-stepper__input"
           disabled=""
-          pattern="[0-9]*"
           type="tel"
         />
         <div
@@ -904,7 +880,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-stepper t-stepper__pure"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus"
@@ -925,7 +900,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
         </div>
         <input
           class="t-stepper__input"
-          pattern="[0-9]*"
           type="tel"
         />
         <div
@@ -948,7 +922,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-stepper t-stepper__pure"
-        modelmodifiers="[object Object]"
       >
         <div
           class="t-stepper__minus t-is-disabled"
@@ -969,7 +942,6 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
         </div>
         <input
           class="t-stepper__input"
-          pattern="[0-9]*"
           type="tel"
         />
         <div

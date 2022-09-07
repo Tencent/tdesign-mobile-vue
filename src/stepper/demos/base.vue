@@ -1,7 +1,7 @@
 <template>
   <div class="stepper-demo">
     <t-cell title="标题文字">
-      <t-stepper v-model.number="number" />
+      <t-stepper v-model="number" />
     </t-cell>
   </div>
 </template>

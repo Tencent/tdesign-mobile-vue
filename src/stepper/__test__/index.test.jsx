@@ -3,16 +3,14 @@ import { describe, it, expect, vi } from 'vitest';
 import { nextTick } from 'vue';
 import Stepper from '../stepper.vue';
 import { ref } from 'vue';
-import { async } from 'regenerator-runtime';
-import { min, wrap } from 'lodash';
 
 describe('stepper', () => {
-	describe('props', () => {
-		it(': disabled', async () => {
-			const wrapper = mount(Stepper, {
-					props: {
-						disabled: true,
-					},
+  describe('props', () => {
+    it(': disabled', async () => {
+      const wrapper = mount(Stepper, {
+          props: {
+            disabled: true,
+          },
       });
       expect(wrapper.classes()).toContain('t-is-disabled');
 
@@ -24,10 +22,10 @@ describe('stepper', () => {
     });
 
     it(': input-width', async () => {
-			const wrapper = mount(Stepper, {
-					props: {
-						inputWidth: 80,
-					},
+      const wrapper = mount(Stepper, {
+          props: {
+            inputWidth: 80,
+          },
       });
       const $input = wrapper.find('.t-stepper__input');
       expect(getComputedStyle($input.element, null).width).toBe('80px');

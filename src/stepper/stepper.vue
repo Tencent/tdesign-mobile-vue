@@ -8,7 +8,6 @@
       :class="`${name}__input`"
       type="tel"
       :style="inputStyle"
-      pattern="[0-9]*"
       :disabled="disableInput || disabled"
       :readonly="disableInput"
       @blur="handleBlur"
@@ -21,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { toRefs, computed, defineComponent, SetupContext } from 'vue';
+import { toRefs, computed, defineComponent, SetupContext, nextTick } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
@@ -87,8 +86,10 @@ export default defineComponent({
     };
 
     const handleChange = (e: Event) => {
-      const value = (e.target as HTMLTextAreaElement).value.split('.')[0].replace(/[^-0-9]/g, '') || 0;
-      updateValue(Number(value));
+      const value = (e.target as HTMLTextAreaElement).value.match(/^\d+\.\d+|^\d+/g);
+      if (isNaN(Number(value))) return;
+      const formattedValue = formatValue(Number(value));
+      updateValue(Number(formattedValue));
     };
 
     const handleBlur = (e: FocusEvent) => {

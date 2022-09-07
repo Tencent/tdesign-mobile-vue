@@ -1,7 +1,7 @@
 <template>
   <div class="stepper-demo">
     <t-cell title="禁用">
-      <t-stepper v-model.number="number" :step="1" :min="0" :max="100" disabled />
+      <t-stepper v-model="number" :step="1" :min="0" :max="100" disabled />
     </t-cell>
   </div>
 </template>

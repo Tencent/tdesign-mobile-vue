@@ -10,7 +10,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="纯步进器">
       <div style="margin-left: 16px">
-        <t-stepper v-model.number="number1" theme="grey" :step="1" :min="0" :max="100" />
+        <t-stepper v-model="number1" theme="grey" :step="1" :min="0" :max="100" />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 类型" summary="步进器状态">
@@ -19,18 +19,18 @@
 
       <div class="stepper-demo">
         <t-cell title="最大值">
-          <t-stepper v-model.number="number2" :step="1" :min="0" :max="999" />
+          <t-stepper v-model="number2" :step="1" :min="0" :max="999" />
         </t-cell>
       </div>
       <div class="stepper-demo">
         <t-cell title="最小值">
-          <t-stepper v-model.number="number3" :step="1" :min="0" :max="999" />
+          <t-stepper v-model="number3" :step="1" :min="0" :max="999" />
         </t-cell>
       </div>
       <div class="stepper-inline-demo">
-        <t-stepper v-model.number="number4" theme="grey" :step="1" :min="0" :max="100" disabled />
-        <t-stepper v-model.number="number5" theme="grey" :step="1" :min="0" :max="100" />
-        <t-stepper v-model.number="number6" theme="grey" :step="1" :min="0" :max="100" />
+        <t-stepper v-model="number4" theme="grey" :step="1" :min="0" :max="100" disabled />
+        <t-stepper v-model="number5" theme="grey" :step="1" :min="0" :max="100" />
+        <t-stepper v-model="number6" theme="grey" :step="1" :min="0" :max="100" />
       </div>
     </tdesign-demo-block>
   </div>

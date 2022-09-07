@@ -3,7 +3,7 @@
     <t-cell title="标题文字（单位）">
       <template #rightIcon>
         <t-stepper
-          v-model.number="number"
+          v-model="number"
           :step="1"
           :min="0"
           :max="100"
