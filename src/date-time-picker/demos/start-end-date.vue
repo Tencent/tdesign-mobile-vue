@@ -1,7 +1,7 @@
 <template>
   <tdesign-demo-block>
     <t-input :value="text.ymd" label="选择年月日" placeholder="年月日" @click="show.ymd = true" />
-    <t-popup v-model="show.ymd" position="bottom">
+    <t-popup v-model="show.ymd" placement="bottom">
       <t-date-time-picker
         v-model="text.ymd"
         :mode="mode"

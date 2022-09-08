@@ -16,7 +16,6 @@
           :placeholder="placeholder"
           :clearable="clearable"
           @blur="onBlur"
-          @clear="onClear"
           @focus="onFocus"
           @change="onChange"
         />
@@ -94,21 +93,16 @@ export default defineComponent({
 
     const onFocus = (value: InputValue, context: InputFocusContent) => {
       state.labelActive = false;
-      props.onFocus?.(value, { e: context.e });
+      props.onFocus?.(value as string, { e: context.e });
     };
 
     const onCancel = (e: MouseEvent) => {
       state.labelActive = !state.labelActive;
-      props.onCancel?.(e);
       props.onActionClick?.({ e });
     };
 
-    const onClear = (e: Event) => {
-      props.onClean?.(e);
-    };
-
     const onChange = (value: InputValue, context: InputChangeContext) => {
-      props.onChange?.(value, { e: context?.e });
+      props.onChange?.(value as string, { e: context?.e });
     };
 
     extendAPI({ doFocus, blur });
@@ -119,7 +113,6 @@ export default defineComponent({
       classes,
       onClick,
       onCancel,
-      onClear,
       onBlur,
       onFocus,
       onChange,
