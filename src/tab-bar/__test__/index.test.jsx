@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import TabBar from '../tab-bar.vue'
 import TabBarItem from '../tab-bar-item.vue'
 import { nextTick, ref } from 'vue';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
 const list = [
   {
@@ -89,12 +90,13 @@ describe('TabBar', () => {
     })
 
     it ('snapshot', () => {
+      const icon = () => <TIconApp />
       const wrapper = mount({
         render: () => (
           <TabBar>
             {
               list.map((item) => {
-                return <TabBarItem {...item} icon="icon" badgeProps={{count: 1}} />
+                return <TabBarItem {...item} icon={icon} badgeProps={{count: 1}} />
               })
             }
           </TabBar>
