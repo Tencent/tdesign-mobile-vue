@@ -127,6 +127,7 @@ describe('MenuGrid', () => {
   }
   async function simulateSwipe(ele, dir) {
     await triggerTouchEvent('touchstart', ele, 0)
+    await triggerTouchEvent('touchmove', ele, 0)
     const distance = 51
     await triggerTouchEvent('touchend', ele, dir === 'prev' ? distance : -distance)
   }
