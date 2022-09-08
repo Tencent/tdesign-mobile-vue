@@ -1,25 +1,29 @@
 import { describe, it, expect, vi } from 'vitest';
+import { getBackgroundColor } from '../utils'
 import Progress from '../progress.vue'
 import { mount } from '@vue/test-utils';
-import * as utils from '../utils'
-
-
-// jsdom 不支持 linear-gradient 等 css 样式 https://github.com/jsdom/jsdom/issues/2166
-// 这里 mock getBackgroundColor 方法断言输出结果是否正确
-vi.mock('../utils', async () => {
-  const originalModule = await vi.importActual('../utils');
-
-  return {
-    __esModule: true,
-    ...originalModule,
-    getBackgroundColor: vi.fn()
-      .mockImplementation(originalModule.getBackgroundColor.bind(originalModule))
-  };
-});
 
 describe('Progress', () => {
+   // jsdom 不支持 linear-gradient 等 css 样式 https://github.com/jsdom/jsdom/issues/2166
+  //  这里对 getBackgroundColor 方法单独验证
+  describe('utils/getBackgroundColor', () => {
+    it('color types', () => {
+      expect(getBackgroundColor('red'))
+        .toEqual('red')
+
+      expect(getBackgroundColor(['#000', '#fff']))
+        .toEqual('linear-gradient( 90deg,#000,#fff )')
+
+      expect(getBackgroundColor({
+        '0%': '#f00', '100%': '#0ff'
+      }))
+        .toEqual('linear-gradient(to right, #f00 0%,#0ff 100%)')
+    })
+  })
+
   describe('props', () => {
     it(': color', async () => {
+      const utils = await import('../utils')
       const wrapper = mount(Progress, {
         props: { color: 'orange' }
       })
@@ -30,22 +34,6 @@ describe('Progress', () => {
         color: 'red'
       })
       expect(getComputedStyle(percentBar.element).backgroundColor).toBe('red')
-
-      await wrapper.setProps({
-        color: ['#000', '#fff']
-      })
-      expect(utils.getBackgroundColor).toHaveBeenLastCalledWith(['90deg', '#000', '#fff'])
-      expect(utils.getBackgroundColor).toHaveLastReturnedWith('linear-gradient( 90deg,#000,#fff )')
-
-      await wrapper.setProps({
-        color: {
-          '0%': '#f00', '100%': '#0ff'
-        }
-      })
-      expect(utils.getBackgroundColor).toHaveBeenLastCalledWith({
-        '0%': '#f00', '100%': '#0ff'
-      })
-      expect(utils.getBackgroundColor).toHaveLastReturnedWith('linear-gradient(to right, #f00 0%,#0ff 100%)')
     })
 
     it(': label', async () => {
