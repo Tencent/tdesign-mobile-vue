@@ -18,12 +18,14 @@ describe('Toast', () => {
     })
 
     it(': icon', async () => {
+      const icon = () => <LoadingIcon />
+
       const wrapper = mount(Toast, {
         props: {
-          icon: () => 'Icon'
+          icon
         }
       })
-      expect(wrapper.find('.t-toast').text()).toEqual('Icon')
+      expect(wrapper.find('.t-toast > svg').classes()).toContain('t-icon')
     })
 
     it(': message', async () => {
