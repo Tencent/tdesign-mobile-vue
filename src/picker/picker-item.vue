@@ -51,18 +51,32 @@ export default defineComponent({
     const wrapperClassName = computed(() => [`${name}__wrapper`]);
     const itemClassName = computed(() => [`${name}__item`]);
     const setIndex = (index: number) => {
-      picker && picker.updateIndex(index);
+      if (picker) {
+        picker.updateItems();
+        picker.updateIndex(index, {
+          isChange: false,
+        });
+      }
     };
     const setValue = (value: number | string | undefined) => {
-      picker && picker.updateIndex(getIndexByValue(value));
+      if (picker) {
+        picker.updateItems();
+        picker.updateIndex(getIndexByValue(value), {
+          isChange: false,
+        });
+      }
     };
     const setOptions = () => {
       picker && picker.update();
+    };
+    const setUpdateItems = () => {
+      picker && picker.updateItems();
     };
     context.expose({
       setIndex,
       setValue,
       setOptions,
+      setUpdateItems,
     });
 
     onMounted(() => {

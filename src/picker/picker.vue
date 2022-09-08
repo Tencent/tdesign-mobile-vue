@@ -28,7 +28,7 @@ import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
 import TButton from '../button';
-import { useEmitEvent, useVModel, useChildSlots, TNode } from '../shared';
+import { useEmitEvent, useVModel, useChildSlots, useExpose } from '../shared';
 import PickerItem from './picker-item.vue';
 
 const { prefix } = config;
@@ -47,7 +47,7 @@ export default defineComponent({
   name,
   components: { TButton, PickerItem },
   props: PickerProps,
-  emits: ['change', 'cancel', 'pick', 'update:modelValue'],
+  emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
@@ -76,7 +76,7 @@ export default defineComponent({
       // 点击确认后，更新最近一次的picker状态
       lastTimeValueArray = [...curValueArray.value];
       lastTimeIndexArray = [...curIndexArray];
-      setPickerValue(curValueArray.value, { index: curIndexArray });
+      setPickerValue(curValueArray.value);
       emitEvent('confirm', curValueArray.value, { index: curIndexArray });
     };
     const handleCancel = (e: MouseEvent) => {
@@ -102,12 +102,31 @@ export default defineComponent({
               nextTick(() => {
                 pickerItemInstanceArray.value[index]?.exposed?.setIndex(0);
               });
+            } else {
+              nextTick(() => {
+                pickerItemInstanceArray.value[index]?.exposed?.setUpdateItems();
+              });
             }
           });
         }
         emitEvent('pick', curValueArray.value, { index: context.index, column });
       }
     };
+
+    const setValues = (values: string[]) => {
+      curValueArray.value = values;
+      setPickerValue(values);
+      // 等columns更新完后，再更新value
+      nextTick(() => {
+        pickerItemInstanceArray.value.forEach((item: any, index: number) => {
+          item.exposed?.setValue(values[index]);
+        });
+      });
+    };
+
+    useExpose({
+      setValues,
+    });
 
     return {
       name,

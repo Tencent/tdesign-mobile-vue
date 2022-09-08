@@ -9,7 +9,13 @@
     >
       <div v-for="(Items, i) in actionItems" :key="i" :class="`${name}__menu`">
         <t-grid :column="gridColumn">
-          <t-grid-item v-for="(item, index) in Items" :key="index" :text="item.label" :image="item.icon" />
+          <t-grid-item
+            v-for="(item, index) in Items"
+            :key="index"
+            :text="item.label"
+            :image="item.icon"
+            @click="handleSelected(i * count + index)"
+          />
         </t-grid>
       </div>
     </div>
