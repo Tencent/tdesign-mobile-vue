@@ -274,7 +274,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
                     id="root"
                   >
                     <div
-                      class="t-dialog__header"
+                      class="t-dialog__header t-dialog__header--has-content"
                     >
                       
                       <div
@@ -363,7 +363,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
                     id="root"
                   >
                     <div
-                      class="t-dialog__header"
+                      class="t-dialog__header t-dialog__header--has-content"
                     >
                       
                       <div
@@ -545,7 +545,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
                     id="root"
                   >
                     <div
-                      class="t-dialog__header"
+                      class="t-dialog__header t-dialog__header--has-content"
                     >
                       
                       <div
@@ -667,7 +667,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
           id="root"
         >
           <div
-            class="t-dialog__header"
+            class="t-dialog__header t-dialog__header--has-content"
           >
             
             <div
@@ -887,7 +887,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               id="root"
             >
               <div
-                class="t-dialog__header"
+                class="t-dialog__header t-dialog__header--has-content"
               >
                 
                 <div
@@ -954,7 +954,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               id="root"
             >
               <div
-                class="t-dialog__header"
+                class="t-dialog__header t-dialog__header--has-content"
               >
                 
                 <div
@@ -1440,7 +1440,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               id="root"
             >
               <div
-                class="t-dialog__header"
+                class="t-dialog__header t-dialog__header--has-content"
               >
                 
                 <div
