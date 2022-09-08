@@ -5,6 +5,25 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.10.5 `2022-09-06` 
+### 🚀 Features
+- `Popup`: 新增 `customStyle` 和 `overlayProps` 属性 @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))
+- `Popup`: 更新示例代码 @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))
+- `Drawer`: 更新示例代码 @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))
+- `Switch`: 更新示例代码 @anlyyao ([#307](https://github.com/Tencent/tdesign-mobile-vue/pull/307))
+- `Switch`: 新增单元测试 @anlyyao ([#307](https://github.com/Tencent/tdesign-mobile-vue/pull/307))
+### 🐞 Bug Fixes
+- `Popup`: `closeOverlayClick`属性更名为 `closeOnOverlayClick` @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))
+- `Drawer`: `closeOverlayClick`属性更名为 `closeOnOverlayClick` @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))
+- `Dialog`: 修复 content 变更没有响应的问题 @TingShine ([#306](https://github.com/Tencent/tdesign-mobile-vue/pull/306))
+- `ActionSheet`: 修复type=grid时没有触发 onSelected的问题 @HelKyle ([#317](https://github.com/Tencent/tdesign-mobile-vue/pull/317))
+- `DateTimePicker`: 修复组件修改model无法双向绑定的问题；修复组件默认value为空时，无法正常滑动的问题；优化List组件demo展示；修复Upload组件无法正常上传文件的问题 @Dengzygx ([#344](https://github.com/Tencent/tdesign-mobile-vue/pull/344))
+-  `List`: 优化List组件demo展示；修复Upload组件无法正常上传文件的问题 @Dengzygx ([#344](https://github.com/Tencent/tdesign-mobile-vue/pull/344))
+- `Upload`: 修复Upload组件无法正常上传文件的问题 @Dengzygx ([#344](https://github.com/Tencent/tdesign-mobile-vue/pull/344))
+### 🚧 Others
+- style: update _common @anlyyao ([#308](https://github.com/Tencent/tdesign-mobile-vue/pull/308))
+- fix: enrich coverage badge type @anlyyao ([#315](https://github.com/Tencent/tdesign-mobile-vue/pull/315))
+
 ## 🌈 0.10.4 `2022-08-22` 
 ### 🚀 Features
 - `Search`: 内嵌 input 组件 type 调整为 search @VeryHandSomeBoy ([#293](https://github.com/Tencent/tdesign-mobile-vue/pull/293))
