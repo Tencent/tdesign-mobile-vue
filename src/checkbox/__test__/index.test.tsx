@@ -13,21 +13,21 @@ describe('Checkbox', () => {
               <Checkbox value="1" ref="1" />
               <Checkbox value="2" ref="2" />
             </CheckboxGroup>
-          )
-        }
+          );
+        },
       });
 
       expect(checked.value.length).toBe(0);
 
-      const target = wrapper.findComponent({ ref: '1'});     
-      await target.find('.t-checkbox__original-left').trigger('click')
-      
-      expect(wrapper.findComponent({ ref: '1'}).vm.isChecked).toBe(true);
+      const target = wrapper.findComponent({ ref: '1' });
+      await target.find('.t-checkbox__original-left').trigger('click');
+
+      expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(true);
       expect(checked.value).toContain('1');
 
-      await target.find('.t-checkbox__original-left').trigger('click')
+      await target.find('.t-checkbox__original-left').trigger('click');
 
-      expect(wrapper.findComponent({ ref: '1'}).vm.isChecked).toBe(false);
+      expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(false);
       expect(checked.value.length).toBe(0);
     });
 
@@ -40,20 +40,20 @@ describe('Checkbox', () => {
               <Checkbox value="2" ref="2" />
               <Checkbox value="3" ref="3" />
             </CheckboxGroup>
-          )
-        }
+          );
+        },
       });
 
-      await wrapper.findComponent({ ref: '1'}).find('.t-checkbox__original-left').trigger('click')
-      
-      expect(wrapper.findComponent({ ref: '2'}).vm.isChecked).toBe(true);
-      expect(wrapper.findComponent({ ref: '3'}).vm.isChecked).toBe(true);
+      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox__original-left').trigger('click');
 
-      await wrapper.findComponent({ ref: '1'}).find('.t-checkbox__original-left').trigger('click')
+      expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(true);
+      expect(wrapper.findComponent({ ref: '3' }).vm.isChecked).toBe(true);
 
-      expect(wrapper.findComponent({ ref: '2'}).vm.isChecked).toBe(false);
-      expect(wrapper.findComponent({ ref: '3'}).vm.isChecked).toBe(false);
-    })
+      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox__original-left').trigger('click');
+
+      expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(false);
+      expect(wrapper.findComponent({ ref: '3' }).vm.isChecked).toBe(false);
+    });
 
     test('max', async () => {
       const checked = ref([]);
@@ -65,18 +65,18 @@ describe('Checkbox', () => {
               <Checkbox value="2" ref="2" />
               <Checkbox value="3" ref="3" />
             </CheckboxGroup>
-          )
-        }
+          );
+        },
       });
 
-      await wrapper.findComponent({ ref: '1'}).find('.t-checkbox__original-left').trigger('click')
-      
-      expect(wrapper.findComponent({ ref: '1'}).vm.isChecked).toBe(true);
+      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox__original-left').trigger('click');
 
-      await wrapper.findComponent({ ref: '2'}).find('.t-checkbox__original-left').trigger('click')
+      expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(true);
 
-      expect(wrapper.findComponent({ ref: '2'}).vm.isChecked).toBe(true);
-      expect(wrapper.findComponent({ ref: '3'}).vm.isDisabled).toBe(true);
-    })
-  })
-})
+      await wrapper.findComponent({ ref: '2' }).find('.t-checkbox__original-left').trigger('click');
+
+      expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(true);
+      expect(wrapper.findComponent({ ref: '3' }).vm.isDisabled).toBe(true);
+    });
+  });
+});
