@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import BackTop from '../back-top.vue'
 import { mount } from '@vue/test-utils';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
 describe('BackTop', () => {
   describe('props', () => {
@@ -59,12 +60,14 @@ describe('BackTop', () => {
 
   describe('slots', () => {
     it(': icon', () => {
+      const icon = () => <TIconApp />
+
       const wrapper = mount(BackTop, {
         slots: {
-          icon: '图标'
+          icon
         }
       })
-      expect(wrapper.find('.t-back-top').text()).toEqual('图标')
+      expect(wrapper.find('.t-back-top > svg').classes()).toContain('t-icon')
     })
   })
 
