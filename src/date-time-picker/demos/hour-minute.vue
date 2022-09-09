@@ -1,7 +1,7 @@
 <template>
   <tdesign-demo-block>
     <t-input :value="text.hm" label="选择时分" placeholder="时分" @click="show.hm = true" />
-    <t-popup v-model="show.hm" position="bottom">
+    <t-popup v-model="show.hm" placement="bottom">
       <t-date-time-picker
         v-model="text.hm"
         :mode="[null, 'minute']"
