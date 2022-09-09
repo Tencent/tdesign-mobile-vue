@@ -28,6 +28,18 @@ describe('Message.vue', () => {
       closeBtn.trigger('click');
       expect(fn).toBeCalledTimes(1);
     });
+
+    it('after-enter-leave', async () => {
+      const fn = vi.fn();
+      const wrapper = mount(() => (
+        <Message visible={true} onOpened={fn} onClosed={fn}/>
+      ));
+      expect(fn).not.toBeCalled();
+      wrapper.findComponent(Message).vm.afterEnter();
+      expect(fn).toBeCalledTimes(1);
+      wrapper.findComponent(Message).vm.afterLeave();
+      expect(fn).toBeCalledTimes(2);
+    });
   })
 
   describe('slots', () => {
