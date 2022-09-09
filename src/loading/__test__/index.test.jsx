@@ -47,7 +47,7 @@ describe('Loading.vue', () => {
           <Loading inheritColor={true}/>
         </div>
       ));
-      const block = wrapper.find('.t-loadin')
+      const block = wrapper.find('.t-loading')
       // 这里是希望获取到元素的样式，但是获取不到，看 issue 中也有类似的问题，这里先保留
     });
 
