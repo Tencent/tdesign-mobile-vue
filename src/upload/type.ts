@@ -158,6 +158,10 @@ export interface TdUploadProps {
 
 export interface UploadFile {
   /**
+   * 源文件
+   */
+  fileRaw: File;
+  /**
    * 上一次变更的时间
    */
   lastModified: number;

@@ -52,7 +52,7 @@ import { defineComponent, ref, onMounted, computed, h, onUnmounted } from 'vue';
 const MAX_DATA_LEN = 60;
 
 const loadData = (data: any, isRefresh?: Boolean) => {
-  const ONCE_LOAD_NUM = 15;
+  const ONCE_LOAD_NUM = 20;
 
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -124,7 +124,7 @@ export default defineComponent({
     };
 
     const onScroll = (scrollBottom: number, type?: string) => {
-      if (scrollBottom === 0) {
+      if (scrollBottom < 50) {
         type === 'listPull' ? onLoadPull() : onLoad();
       }
     };
