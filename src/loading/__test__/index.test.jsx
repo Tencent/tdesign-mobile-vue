@@ -42,13 +42,12 @@ describe('Loading.vue', () => {
     });
 
     it(':inheritColor', () => {
-      const wrapper = mount(() => (
-        <div style={{ color: 'red' }}>
-          <Loading inheritColor={true}/>
-        </div>
-      ));
-      const block = wrapper.find('.t-loading')
-      // 这里是希望获取到元素的样式，但是获取不到，看 issue 中也有类似的问题，这里先保留
+      const wrapper = mount(Loading, {
+        props: {
+          inheritColor: true
+        },
+      });
+      expect(wrapper.vm.rootStyle).toBe('color: inherit')
     });
 
     it(':pause', () => {
@@ -74,16 +73,6 @@ describe('Loading.vue', () => {
       const text = wrapper.find('.t-loading__text');
       expect(text.exists()).toBeTruthy();
     });
-  })
-
-  describe('functions', () => {
-    it(':toBarPerc', () => {
-      const wrapper = mount(() => (
-          <Loading text="text"/>
-      ));
-      const text = wrapper.find('.t-loading');
-    });
-    // 同上
   })
 })
 
