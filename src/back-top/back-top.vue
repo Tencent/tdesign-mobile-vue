@@ -45,7 +45,7 @@ export default defineComponent({
 
     const clickBackBtn = () => {
       window.document.documentElement.scrollTop += top.value;
-      emitEvent('toTop');
+      emitEvent('to-top');
     };
 
     return {
