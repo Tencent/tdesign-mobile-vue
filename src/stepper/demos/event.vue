@@ -1,38 +1,32 @@
 <template>
-  <div class="cell-base">
-    <t-cell-group title="绑定事件">
-      <t-cell title="标题文字">
+  <div class="stepper-demo">
+    <t-cell title="标题文字（单位）">
+      <template #rightIcon>
         <t-stepper
-          v-model.number="number"
+          v-model="number"
           :step="1"
           :min="0"
           :max="100"
-          :input-width="70"
           @overlimit="onOverlimit"
           @change="onChange"
           @blur="onBlur"
         />
-      </t-cell>
-    </t-cell-group>
+      </template>
+    </t-cell>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const onChange = ($event: number) => {
-      console.log(`change to ${$event}`);
-    };
-    const onBlur = ($event: number) => {
-      console.log(`onBlur to ${$event}`);
-    };
-    return {
-      number: ref(10),
-      onChange,
-      onBlur,
-    };
-  },
-});
+const number = ref(0);
+const onChange = ($event: number) => {
+  console.log(`change to ${$event}`);
+};
+const onBlur = ($event: number) => {
+  console.log(`blur to ${$event}`);
+};
+const onOverlimit = ($type: string) => {
+  console.log(`onOverlimit ${$type}`);
+};
 </script>
