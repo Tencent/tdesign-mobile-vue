@@ -178,8 +178,9 @@
     }
   },
   "lint-staged": {
-    "*.{vue,ts,tsx}": [
-      "eslint --fix"
+    "*.{vue,ts,tsx,js}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   }
 }
