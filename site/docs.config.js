@@ -8,7 +8,7 @@ export default {
           title: '快速开始',
           name: 'getting-started',
           path: '/mobile-vue/getting-started',
-          component: () => import('@/../getting-started.md'),
+          component: () => import('@docs/getting-started.md'),
         },
         {
           title: '更新日志',
