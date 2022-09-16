@@ -16,7 +16,6 @@
 </template>
 <script lang="ts">
 import { ref, defineComponent, Ref } from 'vue';
-import { TdImageViewerProps } from '../type';
 
 export default defineComponent({
   setup() {
