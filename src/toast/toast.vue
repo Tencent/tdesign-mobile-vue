@@ -53,15 +53,17 @@ export default defineComponent({
       },
     ]);
 
-    const toastOverlayProps = {
-      preventScrollThrough: props.preventScrollThrough,
-      visible: props.showOverlay,
-    };
+    const customOverlayProps = computed(() => {
+      const toastOverlayProps = {
+        preventScrollThrough: props.preventScrollThrough,
+        visible: props.showOverlay,
+      };
 
-    const customOverlayProps = computed(() => ({
-      ...props.overlayProps,
-      ...toastOverlayProps,
-    }));
+      return {
+        ...props.overlayProps,
+        ...toastOverlayProps,
+      };
+    });
 
     return {
       name: ref(name),
