@@ -59,7 +59,7 @@ import {
   ComponentPublicInstance,
 } from 'vue';
 import { ChevronLeftIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { SwipeDirection, useSwipe } from '@vueuse/core';
+import { useSwipe } from '@vueuse/core';
 import SwiperProps from './props';
 import config from '../config';
 import { renderTNode, useDefault, TNode } from '../shared';
@@ -109,16 +109,16 @@ export default defineComponent({
       return activeIndex + 1;
     });
     const childCount = computed(() => state.children.length);
-    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector('.t-swiper__container');
+    const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector(`.${name}__container`);
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
       const _swiperContainer = getContainer();
       _swiperContainer.querySelectorAll('.copy-item').forEach((ele) => {
         _swiperContainer.removeChild(ele);
       });
-      const items = _swiperContainer.querySelectorAll('.t-swiper-item');
+      const items = _swiperContainer.querySelectorAll(`.${name}-item`);
       state.itemLength = _swiperContainer.children?.length || 0;
-      const itemWidth = _swiperContainer.querySelector('.t-swiper-item')?.getBoundingClientRect().width || 0;
+      const itemWidth = _swiperContainer.querySelector(`.${name}-item`)?.getBoundingClientRect().width || 0;
       state.itemWidth = itemWidth;
       if (items.length <= 0) return false;
       if (

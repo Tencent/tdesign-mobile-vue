@@ -35,8 +35,6 @@ import {
   defineComponent,
   reactive,
   watch,
-  nextTick,
-  PropType,
   getCurrentInstance,
   CSSProperties,
   SetupContext,
@@ -46,7 +44,8 @@ import config from '../config';
 import ImageViewerProps from './props';
 import { renderTNode, TNode, useEmitEvent, useDefault, useTouch } from '../shared';
 import { TdImageViewerProps } from './type';
-import { Toast } from '..';
+import { Swiper as TSwiper, SwiperItem as TSwiperItem, SwiperNavigation } from '../swiper';
+import TOverlay from '../overlay';
 
 export type TriggerType = 'close-btn' | 'overlay' | 'esc';
 const { prefix } = config;
@@ -65,6 +64,9 @@ export default defineComponent({
   name,
   components: {
     CloseCircleFilledIcon,
+    TSwiper,
+    TSwiperItem,
+    TOverlay,
     TNode,
   },
   props: ImageViewerProps,
@@ -88,7 +90,7 @@ export default defineComponent({
     const closeBtnTNode = computed(() => {
       return renderTNode(internalInstance, 'closeBtn');
     });
-    const navigation = computed(() => {
+    const navigation = computed<SwiperNavigation>(() => {
       if (props.showIndex) {
         return { type: 'fraction' };
       }
@@ -126,7 +128,6 @@ export default defineComponent({
       event.preventDefault();
       event.stopPropagation();
       const { touches } = event;
-      const { offsetX } = touch;
 
       touch.start(event);
 
