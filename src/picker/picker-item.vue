@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, onMounted, watch, nextTick, toRefs, defineComponent, PropType, SetupContext } from 'vue';
+import { ref, computed, onMounted, toRefs, defineComponent, PropType, SetupContext } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
 import { PickerColumnItem, PickerValue } from './type';

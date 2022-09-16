@@ -16,10 +16,10 @@ const quartEaseOut = function (t: number, b: number, c: number, d: number) {
 /**
  * constant var
  */
-const DEFAULT_ITEM_HEIGHT = 40;
+export const DEFAULT_ITEM_HEIGHT = 40;
 const DEFAULT_HOLDER_HEIGHT = 200;
 const OFFSET_OF_BOUND = 60;
-const ANIMATION_TIME_LIMIT = 460;
+export const ANIMATION_TIME_LIMIT = 460;
 const ANIMATION_DURATION = 150;
 
 /**
