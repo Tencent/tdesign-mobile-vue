@@ -38,7 +38,7 @@ describe('Loading.vue', () => {
           <Loading theme="error"/>
       ));
       const errorBlock = wrapper.find('.t-loading__text');
-      expect(errorBlock.element.innerHTML).toBeTruthy('加载失败');
+      expect(errorBlock.element.innerHTML).toBe('加载失败');
     });
 
     it(':inheritColor', () => {
@@ -51,10 +51,15 @@ describe('Loading.vue', () => {
     });
 
     it(':pause', () => {
-      const wrapper = mount(() => (
-          <Loading pause={true}/>
-      ));
+      const wrapper = mount(Loading, {
+        props: {
+          pause: true
+        },
+      });
       expect(wrapper.element).toMatchSnapshot();
+      const iconWrapper = wrapper.find('.t-loading__gradient')
+      const iconWrapperStyle = iconWrapper.attributes().style;
+      expect(iconWrapperStyle).toContain('animation-play-state: paused')
     });
 
     it(':reverse', () => {
@@ -62,16 +67,21 @@ describe('Loading.vue', () => {
           <Loading reverse={true}/>
       ));
       expect(wrapper.element).toMatchSnapshot();
+      const iconWrapper = wrapper.find('.t-loading__gradient')
+      const iconWrapperStyle = iconWrapper.attributes().style;
+      expect(iconWrapperStyle).toContain('animation-direction: reverse')
     });
   })
 
   describe('slots', () => {
     it(':text', () => {
+      const custonLoading = 'custon-loading-text'
       const wrapper = mount(() => (
-          <Loading text="text"/>
+          <Loading>{{ text: () => <p className={custonLoading}>{custonLoading}</p> }}</Loading>
       ));
       const text = wrapper.find('.t-loading__text');
       expect(text.exists()).toBeTruthy();
+      expect(text.element.innerHTML).toBe(`<p class="${custonLoading}">${custonLoading}</p>`);
     });
   })
 })
