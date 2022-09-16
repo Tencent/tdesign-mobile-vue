@@ -109,9 +109,6 @@ describe('TabBar', () => {
   describe('events', () => {
     it ('click to change', async () => {
       const onChange = vi.fn()
-        .mockImplementation((nextVal) => {
-          value.value = nextVal
-        })
       const value = ref('1')
       const wrapper = mount({
         render: () => (
