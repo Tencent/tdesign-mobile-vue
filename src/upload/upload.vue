@@ -165,19 +165,20 @@ export default defineComponent({
       input.value = '';
     };
 
-    const formatFileToUploadFile = (files: FileList): UploadFile[] => {
-      const defaultFormat = (file: File) => ({
-        ...file,
-        lastModified: file.lastModified,
-        name: file.name,
-        size: file.size,
-        type: file.type,
-        raw: file,
+    const formatFileToUploadFile = (files: FileList): File[] => {
+      if (!props.format || !isFunction(props.format)) {
+        const res = [];
+        for (let i = 0; i < files.length; i++) {
+          res.push(files[i]);
+        }
+        return res;
+      }
+
+      const NewFiles = [...files];
+      NewFiles.forEach((item) => {
+        item = props.format?.(item);
       });
-      const formatter = (props.format && isFunction(props.format) ? props.format : defaultFormat) as (
-        file: File,
-      ) => UploadFile;
-      return [...files].map((item) => formatter(item));
+      return NewFiles;
     };
 
     const handleBeforeUpload = (file: File | UploadFile): Promise<boolean> => {
@@ -212,7 +213,7 @@ export default defineComponent({
       return isOverSize;
     };
 
-    const uploadFiles = (files: UploadFile[]) => {
+    const uploadFiles = (files: File[]) => {
       const { max } = toRefs(props);
       let tmpFiles = [...files];
       if (max.value) {
@@ -221,9 +222,10 @@ export default defineComponent({
           console.warn(`TDesign Upload Warn: you can only upload ${max.value} files`);
         }
       }
-      tmpFiles.forEach((fileRaw: UploadFile) => {
+      tmpFiles.forEach((fileRaw: any) => {
         const uploadFile: UploadFile = {
           ...fileRaw,
+          fileRaw,
           lastModified: fileRaw.lastModified,
           name: fileRaw.name,
           size: fileRaw.size,
@@ -232,7 +234,7 @@ export default defineComponent({
           status: 'waiting',
         };
         const reader = new FileReader();
-        reader.readAsDataURL(uploadFile.raw);
+        reader.readAsDataURL(fileRaw);
         reader.onload = (event: ProgressEvent<FileReader>) => {
           uploadFile.url = event.target?.result as string;
         };
@@ -311,6 +313,7 @@ export default defineComponent({
             file: file.fileRaw,
             ...props.data,
           },
+          file,
           method: props.method,
           headers: props.headers || {},
           withCredentials: props.withCredentials,
