@@ -152,8 +152,8 @@ export default defineComponent({
       });
     };
 
-    const handleReload = (file: any) => {
-      uploadFiles([file]);
+    const handleReload = (file: UploadFile) => {
+      uploadFiles([file.fileRaw]);
     };
 
     const handleChange = (event: Event) => {
@@ -166,7 +166,8 @@ export default defineComponent({
     };
 
     const formatFileToUploadFile = (files: FileList): File[] => {
-      if (!props.format || !isFunction(props.format)) {
+      const { format } = props;
+      if (!format || !isFunction(format)) {
         const res = [];
         for (let i = 0; i < files.length; i++) {
           res.push(files[i]);
@@ -176,7 +177,7 @@ export default defineComponent({
 
       const NewFiles = [...files];
       NewFiles.forEach((item) => {
-        item = props.format?.(item);
+        item = format(item) as any;
       });
       return NewFiles;
     };
@@ -382,7 +383,7 @@ export default defineComponent({
       }
       file.url = res?.url || file.url;
       // 从待上传文件队列中移除上传成功的文件
-      const index = findIndex(toUploadFiles.value, (o: any) => o.name === file.name);
+      const index = findIndex(toUploadFiles.value, (o: UploadFile) => o.name === file.name);
       toUploadFiles.value.splice(index, 1);
       // 上传成功的文件发送到 files
       const newFile = { ...file, response: res };
@@ -402,7 +403,7 @@ export default defineComponent({
       file: UploadFile;
       response?: any;
       resFormatted?: boolean;
-    }): any => {
+    }) => {
       const { event, file, response, resFormatted } = options;
       file.status = 'fail';
       let res = response;
