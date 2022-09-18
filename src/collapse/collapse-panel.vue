@@ -5,7 +5,7 @@
         <slot name="header">{{ header }}</slot>
       </div>
       <div :class="`${classPrefix}__header-right`">
-        <div v-if="headerRightContent || $slots.extra" :class="`${classPrefix}__header-extra`">
+        <div v-if="headerRightContent || $slots.headerRightContent" :class="`${classPrefix}__header-extra`">
           <slot name="headerRightContent">{{ headerRightContent }}</slot>
         </div>
         <component :is="rightIcon" :class="`${classPrefix}__header-icon`" />
