@@ -60,7 +60,7 @@ describe('PullDownRefresh', () => {
       trigger(track, 'touchmove', 50, 170);
       expect(window.getComputedStyle(maxBar.element).height).toBe(`${80}px`);
       trigger(track, 'touchend', 50, 170);
-      expect(wrapper).toMatchSnapshot();
+      expect(wrapper.element).toMatchSnapshot();
 
       await new Promise((resolve, reject) => {
         setTimeout(() => resolve(), 350); // 大于 300ms

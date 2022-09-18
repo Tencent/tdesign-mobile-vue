@@ -1,0 +1,26 @@
+// Vitest Snapshot v1
+
+exports[`PullDownRefresh > : props > : loadingProps and maxBarHeight 1`] = `
+<div
+  class="t-pull-down-refresh"
+>
+  <div
+    class="t-pull-down-refresh__track"
+    style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+  >
+    <div
+      class="t-pull-down-refresh__max"
+      style="height: 80px;"
+    >
+      <div
+        class="t-pull-down-refresh__loading"
+        style="height: 50px;"
+      >
+        <div />
+      </div>
+    </div>
+    
+    
+  </div>
+</div>
+`;
