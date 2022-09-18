@@ -79,7 +79,7 @@ export default ({ mode }) => {
         },
       }),
       vueJsx({
-        isCustomElement
+        isCustomElement,
       }),
       createTDesignPlugin(),
     ],

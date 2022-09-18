@@ -70,7 +70,7 @@ export default {
           path: '/mobile-vue/components/grid',
           component: () => import('@/grid/grid.md'),
         },
-      ]
+      ],
     },
     {
       title: '导航',
