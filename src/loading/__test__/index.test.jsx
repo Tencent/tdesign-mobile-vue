@@ -75,13 +75,13 @@ describe('Loading.vue', () => {
 
   describe('slots', () => {
     it(':text', () => {
-      const custonLoading = 'custon-loading-text'
+      const customLoading = 'custom-loading-text'
       const wrapper = mount(() => (
-          <Loading>{{ text: () => <p className={custonLoading}>{custonLoading}</p> }}</Loading>
+          <Loading>{{ text: () => <p className={customLoading}>{customLoading}</p> }}</Loading>
       ));
       const text = wrapper.find('.t-loading__text');
       expect(text.exists()).toBeTruthy();
-      expect(text.element.innerHTML).toBe(`<p class="${custonLoading}">${custonLoading}</p>`);
+      expect(text.element.innerHTML).toBe(`<p class="${customLoading}">${customLoading}</p>`);
     });
   })
 })
