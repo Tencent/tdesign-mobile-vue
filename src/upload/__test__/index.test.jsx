@@ -34,12 +34,22 @@ const triggerUploadFile = (node, fileList) => {
   const target = node.find('input');
   const { element } = target;
 
-  if (element.files.length > 0) {
-    element.files = [...fileList];
+  // 判断 HTMLInputElement 对象是否被处理过
+  if (target.element._hijack) {
+    element.files = [...element.files, ...fileList];
   } else {
+    target.element._hijack = true;
     Object.defineProperty(target.element, 'files', {
       value: fileList,
       writable: true,
+    });
+    // handleChange() 之后会执行 input.value = ''，因此需要清空 files，否则会持续积攒
+    Object.defineProperty(target.element, 'value', {
+      set(value) {
+        if (value === '') {
+          target.element.files = [];
+        }
+      },
     });
   }
 
@@ -60,7 +70,7 @@ describe('Upload', () => {
 
       triggerUploadFile(wrapper, [mockFileFoo]);
 
-      await sleep(0);
+      await sleep(1000);
       expect(onProgress).toHaveBeenCalled();
     });
 
@@ -75,6 +85,15 @@ describe('Upload', () => {
       });
 
       triggerUploadFile(wrapper, [mockFileFoo]);
+      triggerUploadFile(wrapper, [mockFileFoo]);
+
+      await nextTick();
+      expect(wrapper.vm.toUploadFiles.length).toBe(2);
+
+      wrapper.setProps({
+        allowUploadDuplicateFile: false,
+      });
+
       triggerUploadFile(wrapper, [mockFileFoo]);
 
       await nextTick();
