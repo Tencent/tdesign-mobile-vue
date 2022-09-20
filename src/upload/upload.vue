@@ -154,9 +154,9 @@ export default defineComponent({
       uploadFiles([file]);
     };
 
-    const handleChange = (event: Event) => {
-      const input = <HTMLInputElement>inputRef.value;
-      if (props.disabled || !input.files) return;
+    const handleChange = () => {
+      const input = inputRef.value;
+      if (props.disabled || !input || !input.files) return;
       const formatFiles = formatFileToUploadFile(input.files);
       emitEvent('select-change', [...formatFiles]);
       uploadFiles(formatFiles);
