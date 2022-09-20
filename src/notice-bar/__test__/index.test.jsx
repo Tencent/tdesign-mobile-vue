@@ -1,14 +1,7 @@
-import { nextTick, h } from 'vue';
+import { nextTick } from 'vue';
 import { expect, it, vi, describe } from 'vitest';
 import { mount } from '@vue/test-utils';
 import NoticeBar from '../notice-bar.vue';
-
-const sleep = (delay) =>
-  new Promise((resolve) =>
-    setTimeout(() => {
-      resolve();
-    }, delay),
-  );
 
 describe('NoticeBar', async () => {
   describe('props', async () => {
@@ -55,20 +48,22 @@ describe('NoticeBar', async () => {
     });
 
     it('theme', async () => {
+      const prefix = 't-notice-bar';
+
       const wrapper = mount(<NoticeBar visible />);
-      expect(wrapper.find('.t-notice-bar--info').exists()).toBe(true);
+      expect(wrapper.find('.t-notice-bar').classes().includes(`${prefix}--info`)).toBeTruthy();
 
-      const wrapper2 = mount(<NoticeBar visible theme="success" />);
-      expect(wrapper2.find('.t-notice-bar--success').exists()).toBe(true);
+      await wrapper.setProps({ theme: 'success' });
+      expect(wrapper.find('.t-notice-bar').classes().includes(`${prefix}--success`)).toBeTruthy();
 
-      const wrapper3 = mount(<NoticeBar visible theme="warning" />);
-      expect(wrapper3.find('.t-notice-bar--warning').exists()).toBe(true);
+      await wrapper.setProps({ theme: 'warning' });
+      expect(wrapper.find('.t-notice-bar').classes().includes(`${prefix}--warning`)).toBeTruthy();
 
-      const wrapper4 = mount(<NoticeBar visible theme="error" />);
-      expect(wrapper4.find('.t-notice-bar--error').exists()).toBe(true);
+      await wrapper.setProps({ theme: 'error' });
+      expect(wrapper.find('.t-notice-bar').classes().includes(`${prefix}--error`)).toBeTruthy();
 
-      const wrapper5 = mount(<NoticeBar visible theme="" />);
-      expect(wrapper5.find('.t-notice-bar--info').exists()).toBe(false);
+      await wrapper.setProps({ theme: '' });
+      expect(wrapper.find('.t-notice-bar').classes().includes(`${prefix}--info`)).toBeFalsy();
     });
 
     it('visible', async () => {
@@ -140,14 +135,21 @@ describe('NoticeBar', async () => {
     });
 
     it('click', async () => {
-      const fn = vi.fn();
+      let triggerName = '';
+      const fn = vi.fn((name) => {
+        triggerName = name;
+      });
       const wrapper = mount(
         <NoticeBar visible prefix-icon="pre" content="test" extra="extra" suffix-icon="suffix" onClick={fn} />,
       );
       await wrapper.find('.t-notice-bar__hd').trigger('click');
+      expect(triggerName).toBe('prefix-icon');
       await wrapper.find('.t-notice-bar__text').trigger('click');
+      expect(triggerName).toBe('content');
       await wrapper.find('.t-notice-bar__text-detail').trigger('click');
+      expect(triggerName).toBe('extra');
       await wrapper.find('.t-notice-bar__ft').trigger('click');
+      expect(triggerName).toBe('suffix-icon');
       expect(fn).toHaveBeenCalledTimes(4);
     });
   });
@@ -163,6 +165,13 @@ describe('NoticeBar', async () => {
       const temp = () => '测试';
       const wrapper = mount(<NoticeBar visible extra={temp} />);
       expect(wrapper.text()).toContain('测试');
+    });
+
+    it('transitionend', async () => {
+      const wrapper = mount(<NoticeBar visible />);
+      const $bar = wrapper.find('.t-notice-bar__item');
+      expect($bar.exists()).toBe(true);
+      $bar.trigger('transitionend');
     });
   });
 });
