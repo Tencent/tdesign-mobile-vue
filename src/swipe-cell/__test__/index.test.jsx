@@ -33,7 +33,8 @@ describe('swipe-cell', () => {
       const $right = wrapper.find('.t-swipe-cell__right');
       const $buttons = wrapper.findAllComponents(Button);
       expect($buttons).toHaveLength(right.length);
-      right.map(async (item, index)=> {
+
+      right.forEach((item, index)=> {
         expect($buttons.at(index).text()).toBe(right[index].text);
       });
 
@@ -48,10 +49,7 @@ describe('swipe-cell', () => {
 
     it(': left', async () => {
       const onClick = vi.fn();
-      let SwipeDirection;
-      const onChange = vi.fn((direction) => {
-        SwipeDirection = direction;
-      });
+      const onChange = vi.fn();
       const swipeAction = [
         { text: '编辑', className: 't-button--primary'}
       ];
@@ -73,9 +71,8 @@ describe('swipe-cell', () => {
       const $buttons = wrapper.findAllComponents(Button);
       $buttons.at(0).trigger('click');
       expect(onClick).toBeCalledTimes(1);
-
       expect(onChange).toBeCalledTimes(1);
-      expect(SwipeDirection).toBe(undefined);
+      expect(onChange).toHaveBeenCalledWith(undefined)
 
       const $target = wrapper.find('.t-swipe-cell__content');
       // disabled = true, 滑动操作无效
@@ -90,10 +87,7 @@ describe('swipe-cell', () => {
 
     it(': right', async () => {
       const onClick = vi.fn();
-      let SwipeDirection;
-      const onChange = vi.fn((direction) => {
-        SwipeDirection = direction;
-      });
+      const onChange = vi.fn();
       const swipeAction = [
         { text: '默认', className: 't-button--primary'},
         { text: '删除', className: 't-button--danger'},
@@ -112,7 +106,7 @@ describe('swipe-cell', () => {
       wrapper.vm.initData.rightWidth = 40;
       await wrapper.setProps({ expanded: 'right' });
       expect(onChange).toBeCalledTimes(1);
-      expect(SwipeDirection).toBe('right');
+      expect(onChange).toHaveBeenCalledWith('right')
 
       const $buttons = wrapper.findAllComponents(Button);
       $buttons.at(0).trigger('click');
@@ -121,14 +115,12 @@ describe('swipe-cell', () => {
       $buttons.at(1).trigger('click');
       expect(onClick).toBeCalledTimes(2);
       expect(onChange).toBeCalledTimes(2);
-      expect(SwipeDirection).toBe(undefined);
+      expect(onChange).toHaveBeenCalledWith(undefined)
 
       const $target = wrapper.find('.t-swipe-cell__content');
       move($target);
       expect(wrapper.vm.initData.moving).toBe(true);
     })
-
-
   });
 
   describe('slots', () => {
