@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, provide, watch, Ref, computed, SetupContext } from 'vue';
+import { defineComponent, ref, provide, Ref, computed, SetupContext } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
 import { useDefault } from '../shared';

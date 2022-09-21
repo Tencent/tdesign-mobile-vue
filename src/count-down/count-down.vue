@@ -29,11 +29,9 @@ export default defineComponent({
     ...CountDownProps,
   },
   setup(props) {
-    const { content, size = 'small', theme = 'default', ...other } = props || {};
-    //
-    const { time, showTimes } = useCountDown(other);
+    const { time, showTimes } = useCountDown(props);
     const internalInstance = getCurrentInstance();
-    const hasChinese = /.*[\u4e00-\u9fa5]+.*$/?.test?.(other?.format);
+    const hasChinese = /.*[\u4e00-\u9fa5]+.*$/?.test?.(props?.format);
     const contentLayout = computed(() => renderTNode(internalInstance, 'content'));
     // return
     return {

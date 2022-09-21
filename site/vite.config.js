@@ -4,6 +4,8 @@ import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
+const resolvePath = (r) => path.resolve(__dirname, r);
+
 const publicPathMap = {
   preview: '/',
   intranet: '/mobile-vue/',
@@ -47,9 +49,10 @@ export default ({ mode }) => {
     root: '.',
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '../src'),
-        'tdesign-mobile-vue': path.resolve(__dirname, '../src'),
-        '@common': path.resolve(__dirname, '../src/_common'),
+        '@': resolvePath('../src'),
+        '@docs': resolvePath('./docs'),
+        '@common': resolvePath('../src/_common'),
+        'tdesign-mobile-vue': resolvePath('../src'),
       },
     },
     server: {
@@ -76,7 +79,7 @@ export default ({ mode }) => {
         },
       }),
       vueJsx({
-        isCustomElement
+        isCustomElement,
       }),
       createTDesignPlugin(),
     ],
