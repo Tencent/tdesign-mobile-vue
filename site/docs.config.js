@@ -125,6 +125,12 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Calendar 日历',
+          name: 'calendar',
+          path: '/mobile-vue/components/calendar',
+          component: () => import('@/calendar/calendar.md'),
+        },
+        {
           title: 'CheckBox 复选框',
           name: 'checkbox',
           path: '/mobile-vue/components/checkbox',
