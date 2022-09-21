@@ -24,7 +24,7 @@ export interface TdCalendarProps {
   /**
    * 头部插槽（左上角处，默认不显示任何内容）
    */
-  head?: string;
+  title?: string;
   /**
    * 当前高亮的日期
    */
@@ -40,7 +40,7 @@ export type CalendarCell = {
   year: number;
   month: number;
   day: number;
-}
+};
 
 export type CalendarValue = {
   year: number;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-calendar v-model="visible" @confirm="handleConfirm" @cell-click="cellClick"></t-calendar>
+    <t-calendar v-model="visible" title="请选择日期" @confirm="handleConfirm" @cell-click="cellClick"></t-calendar>
     <t-cell title="选择日期" note="请选择日期" arrow @click="visible = true"></t-cell>
   </div>
 </template>

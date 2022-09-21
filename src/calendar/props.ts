@@ -6,6 +6,7 @@
 
 import { TdCalendarProps } from './type';
 import { PropType } from 'vue';
+import { timestamp } from '@vueuse/core';
 
 export default {
   /**
@@ -35,14 +36,25 @@ export default {
   /**
    * 头部插槽（左上角处，默认不显示任何内容）
    */
-  head: {
+  title: {
     type: String,
   },
   /**
    * 当前高亮的日期
    */
   value: {
-    type:  Date as unknown as PropType<TdCalendarProps['value']>,
+    type: Date as unknown as PropType<TdCalendarProps['value']>,
     default: new Date(),
+  },
+  minDate: {
+    type: Number,
+    default: null,
+  },
+  maxDate: {
+    type: Number,
+    default: null,
+  },
+  onSelect: {
+    type: Function,
   },
 };
