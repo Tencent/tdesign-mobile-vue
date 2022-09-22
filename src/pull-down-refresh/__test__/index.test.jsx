@@ -19,11 +19,12 @@ describe('PullDownRefresh', () => {
       expect(window.getComputedStyle(loadingBar.element).height).toBe(`${90}px`);
     });
 
-    it(': loadingProps and maxBarHeight', async () => {
+    it(': others', async () => {
       const status = ref(false);
       const loadingProps = {
         theme: 'circular',
       };
+      const loadingTexts = ['a', 'b', 'c', 'd'];
       const maxBarHeight = ref(80);
       const onChange = vi.fn((value) => {
         status.value = value;
@@ -39,6 +40,7 @@ describe('PullDownRefresh', () => {
         <PullDownRefresh
           value={status.value}
           loadingProps={loadingProps}
+          loadingTexts={loadingTexts}
           maxBarHeight={maxBarHeight.value}
           onChange={onChange}
           onRefresh={onRefresh}
@@ -58,6 +60,7 @@ describe('PullDownRefresh', () => {
       trigger(track, 'touchmove', 50, 70);
       trigger(track, 'touchmove', 50, 120);
       trigger(track, 'touchmove', 50, 170);
+      expect(wrapper.vm.loadingText).toBe('b'); // loosing
       expect(window.getComputedStyle(maxBar.element).height).toBe(`${80}px`);
       trigger(track, 'touchend', 50, 170);
       expect(wrapper.element).toMatchSnapshot();
@@ -65,24 +68,6 @@ describe('PullDownRefresh', () => {
       await new Promise((resolve, reject) => {
         setTimeout(() => resolve(), 350); // 大于 300ms
       });
-    });
-
-    it(': loadingTexts', () => {
-      const loadingTexts = ['a', 'b', 'c', 'd'];
-      const wrapper = mount(<PullDownRefresh loadingTexts={loadingTexts} />);
-      expect(wrapper.vm.loadingText).toBeUndefined(); // 对应 'initial'
-    });
-
-    it(': value', () => {
-      const value = ref(true);
-      const wrapper = mount(<PullDownRefresh value={value.value} />);
-      expect(wrapper.findComponent(PullDownRefresh).vm.status).toBe('initial');
-    });
-
-    it(': defaultValue', () => {
-      const value = ref(true);
-      const wrapper = mount(<PullDownRefresh value={value.value} />);
-      expect(wrapper.findComponent(PullDownRefresh).vm.status).toBe('initial');
     });
   });
 
@@ -123,7 +108,8 @@ describe('PullDownRefresh', () => {
       trigger(target, 'touchstart', 50, 0);
       await wrapper.setProps({ value: true });
       trigger(target, 'touchmove', 50, 20);
-      trigger(target, 'touchmove', 50, 50);
+      trigger(target, 'touchmove', 50, 70);
+      trigger(target, 'touchmove', 50, 120);
       trigger(target, 'touchmove', 50, 170);
       trigger(target, 'touchend', 50, 180);
 

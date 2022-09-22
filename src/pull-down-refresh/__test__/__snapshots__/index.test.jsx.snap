@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`PullDownRefresh > : props > : loadingProps and maxBarHeight 1`] = `
+exports[`PullDownRefresh > : props > : others 1`] = `
 <div
   class="t-pull-down-refresh"
 >
