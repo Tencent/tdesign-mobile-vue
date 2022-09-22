@@ -12,7 +12,7 @@ export default {
   /**
    * 控制日历显示隐藏
    */
-  modelValue: {
+  visible: {
     type: Boolean,
   },
   // 按钮颜色
@@ -43,8 +43,7 @@ export default {
    * 当前高亮的日期
    */
   value: {
-    type: Date as unknown as PropType<TdCalendarProps['value']>,
-    default: new Date(),
+    type: Number,
   },
   minDate: {
     type: Number,
@@ -56,5 +55,12 @@ export default {
   },
   onSelect: {
     type: Function,
+  },
+  format: {
+    type: Function,
+  },
+  type: {
+    type: String,
+    default: 'single',
   },
 };
