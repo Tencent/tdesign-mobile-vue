@@ -41,7 +41,7 @@ const value = new Date(2022, 1, 15);
 </script>
 
 <style lang="less">
-.is-holiday:not(.t-calendar__dates-item--active) {
+.is-holiday:not(.t-calendar__dates-item--selected) {
   color: #e34d59;
 }
 </style>

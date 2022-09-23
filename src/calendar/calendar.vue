@@ -43,8 +43,8 @@
             </div>
           </template>
         </div>
-        <div class="t-calendar__footer" @click="confirm">
-          <t-button block :style="{ background: bgColor, color: '#fff' }">{{ confirmBtn }}</t-button>
+        <div class="t-calendar__footer">
+          <t-button block theme="primary" @click="handleConfirm">{{ confirmBtn }}</t-button>
         </div>
       </div>
     </t-popup>
@@ -52,12 +52,11 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, defineProps, computed, watch, ref, onMounted } from 'vue';
+import { defineEmits, defineProps, computed, watch, ref } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import calendarProps from './props';
-import type { CalendarCell, CalendarValue } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-calendar`;
@@ -69,7 +68,7 @@ export default {
 
 <script setup lang="ts">
 const props = defineProps(calendarProps);
-const emit = defineEmits(['select', 'confirm', 'update:modelValue']);
+const emit = defineEmits(['select', 'confirm', 'update:modelValue', 'update:value', 'update:visible']);
 
 // 获取时间年月日起
 const getYearMonthDay = (date: Date) => {
@@ -81,12 +80,9 @@ const getYearMonthDay = (date: Date) => {
 };
 
 const popup = ref<boolean>(props.visible);
-const selectedDate = computed(() => {
-  if (Array.isArray(props.value)) {
-    return props.value.map((item) => new Date(item));
-  }
-  return props.value ? new Date(props.value) : new Date();
-});
+const valueRef = ref(props.value);
+const selectedDate = ref();
+
 const type = computed(() => props.type);
 const days = ref<string[]>(['日', '一', '二', '三', '四', '五', '六']);
 const today = new Date();
@@ -95,21 +91,35 @@ const maxDate = props.maxDate
   ? new Date(props.maxDate)
   : new Date(today.getFullYear(), today.getMonth() + 6, today.getDate());
 
-const dateValue = ref<CalendarValue>();
-
 // 获取日期
 const getDate = (year: number, month: number, day: number) => new Date(year, month, day);
-
+interface TDateItem {
+  type: 'selected' | 'disabled' | 'start' | 'centre' | 'end';
+}
 // 选择日期
-const handleSelect = (year: number, month: number, date: number, dateItem) => {
+const handleSelect = (year: number, month: number, date: number, dateItem: TDateItem) => {
   if (dateItem.type === 'disabled') return;
   const selected = new Date(year, month, date);
-  props.onSelect?.({ value: selected });
+
+  if (type.value === 'range' && Array.isArray(selectedDate.value)) {
+    if (selectedDate.value.length === 1) {
+      if (selectedDate.value[0] > selected) {
+        selectedDate.value = [selected];
+      } else {
+        selectedDate.value = [selectedDate.value[0], selected];
+      }
+    } else {
+      selectedDate.value = [selected];
+    }
+  } else {
+    selectedDate.value = selected;
+  }
+  props.onSelect?.({ value: selectedDate.value });
 };
 // 确认
-const confirm = () => {
+const handleConfirm = () => {
   popup.value = false;
-  emit('confirm', dateValue.value);
+  props.onConfirm?.({ value: selectedDate.value });
 };
 const getMonthDates = (date: Date) => {
   const { year, month } = getYearMonthDay(date);
@@ -124,7 +134,8 @@ const getMonthDates = (date: Date) => {
     lastDate,
   };
 };
-const isSameDate = (date1, date2) => {
+type TDate = Date | number | { year: number; month: number; date: number };
+const isSameDate = (date1: TDate, date2: TDate) => {
   if (date1 instanceof Date) date1 = getYearMonthDay(date1);
   if (date2 instanceof Date) date2 = getYearMonthDay(date2);
   const keys = ['year', 'month', 'date'];
@@ -195,5 +206,17 @@ watch(
   (val) => {
     emit('update:visible', val);
   },
+);
+
+watch(
+  valueRef,
+  () => {
+    if (Array.isArray(valueRef.value)) {
+      selectedDate.value = valueRef.value.map((item) => new Date(item));
+    } else {
+      selectedDate.value = valueRef.value ? new Date(valueRef.value) : new Date();
+    }
+  },
+  { immediate: true },
 );
 </script>

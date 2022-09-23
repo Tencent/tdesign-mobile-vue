@@ -56,6 +56,9 @@ export default {
   onSelect: {
     type: Function,
   },
+  onConfirm: {
+    type: Function,
+  },
   format: {
     type: Function,
   },

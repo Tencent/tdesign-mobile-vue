@@ -28,7 +28,7 @@ export interface TdCalendarProps {
   /**
    * 当前高亮的日期
    */
-  value?: Date;
+  value?: CalendarValue;
 }
 
 export interface DateCellDescription {
@@ -42,11 +42,4 @@ export type CalendarCell = {
   day: number;
 };
 
-export type CalendarValue = {
-  year: number;
-  month: number;
-  day: number;
-  week: number;
-  date: string;
-  isToday: boolean;
-};
+export type CalendarValue = number | number[];
