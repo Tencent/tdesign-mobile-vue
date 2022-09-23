@@ -14,7 +14,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="起始非零滑动选择器">
       <div class="slider-demo">
-        <t-slider :default-value="30" :min="30" show-extreme-value> </t-slider>
+        <t-slider :default-value="30" :min="30"> </t-slider>
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="带刻度滑动选择器">
@@ -36,22 +36,11 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
 import BaseDemo from './base.vue';
 import MarkDemo from './mark.vue';
 import ValueDemo from './value.vue';
 import RangeDemo from './range.vue';
 import DisableDemo from './disable.vue';
-
-const value = ref(60);
-const value1 = ref(60);
-const value2 = ref(50);
-const marks = ref({ 0: '小', 50: '中', 100: '大' });
-const rangeValue = ref([30, 70]);
-
-function onChange($event: number | number[]) {
-  console.log(`change to ${$event}`);
-}
 </script>
 
 <style scoped>
