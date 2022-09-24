@@ -14,8 +14,8 @@ export interface TdCalendarProps {
    */
   confirmBtn?: string | TNode | ButtonProps | null;
   /**
-   * 第一天从星期几开始，默认周日
-   * @default 7
+   * 第一天从星期几开始，默认 0 = 周日
+   * @default 0
    */
   firstDayOfWeek?: number;
   /**
@@ -58,13 +58,15 @@ export interface TdCalendarProps {
   onSelect?: (value: Date) => void;
 }
 
-export type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end';
+export type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | '';
 
 export interface TDate {
   date: Date;
   day: number;
   type: TDateType;
-  className: string;
+  className?: string;
+  prefix?: string;
+  suffix?: string;
 }
 
 export type TCalendarValue = number | Date;

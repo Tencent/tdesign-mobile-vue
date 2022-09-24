@@ -13,10 +13,10 @@ export default {
     type: [String, Object, Function] as PropType<TdCalendarProps['confirmBtn']>,
     default: '',
   },
-  /** 第一天从星期几开始，默认周日 */
+  /** 第一天从星期几开始，默认 0 = 周日 */
   firstDayOfWeek: {
     type: Number,
-    default: 7,
+    default: 0,
   },
   /** 用于格式化日期的函数 */
   format: {

@@ -18,10 +18,10 @@
                   :class="{
                     [`${name}__dates-item`]: true,
                     [`${name}__dates-item--${dateItem.type}`]: !!dateItem.type,
-                    [`${dateItem.classname ?? ''}`]: true,
+                    [`${dateItem.className ?? ''}`]: true,
                   }"
                   :style="{
-                    marginLeft: dateIndex === 0 ? `${49 * item.weekdayOfFirstDay}px` : 0,
+                    marginLeft: dateIndex === 0 ? `${49 * ((item.weekdayOfFirstDay - firstDayOfWeek + 7) % 7)}px` : 0,
                   }"
                   @click="handleSelect(item.year, item.month, dateItem.day, dateItem)"
                 >
@@ -44,7 +44,11 @@
           </template>
         </div>
         <div class="t-calendar__footer">
-          <t-button block theme="primary" @click="handleConfirm">{{ confirmBtn }}</t-button>
+          <slot name="confirmBtn">
+            <template v-if="confirmBtn">
+              <t-button v-bind="confirmBtn" block theme="primary" @click="handleConfirm" />
+            </template>
+          </slot>
         </div>
       </div>
     </t-popup>
@@ -57,6 +61,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import config from '../config';
 import calendarProps from './props';
+import { TDate, TDateType } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-calendar`;
@@ -82,9 +87,20 @@ const getYearMonthDay = (date: Date) => {
 const popup = ref<boolean>(props.visible);
 const valueRef = ref(props.value);
 const selectedDate = ref();
-
+const firstDayOfWeek = computed(() => props.firstDayOfWeek);
 const type = computed(() => props.type);
-const days = ref<string[]>(['日', '一', '二', '三', '四', '五', '六']);
+const days = computed(() => {
+  const raw = '日一二三四五六';
+  const ans = [];
+  let i = firstDayOfWeek.value % 7;
+
+  while (ans.length < 7) {
+    ans.push(raw[i]);
+    i = (i + 1) % 7;
+  }
+
+  return ans;
+});
 const today = new Date();
 const minDate = props.minDate ? new Date(props.minDate) : today;
 const maxDate = props.maxDate
@@ -93,11 +109,9 @@ const maxDate = props.maxDate
 
 // 获取日期
 const getDate = (year: number, month: number, day: number) => new Date(year, month, day);
-interface TDateItem {
-  type: 'selected' | 'disabled' | 'start' | 'centre' | 'end';
-}
+
 // 选择日期
-const handleSelect = (year: number, month: number, date: number, dateItem: TDateItem) => {
+const handleSelect = (year: number, month: number, date: number, dateItem: TDate) => {
   if (dateItem.type === 'disabled') return;
   const selected = new Date(year, month, date);
 
@@ -114,18 +128,19 @@ const handleSelect = (year: number, month: number, date: number, dateItem: TDate
   } else {
     selectedDate.value = selected;
   }
-  props.onSelect?.({ value: selectedDate.value });
+  props.onSelect?.(selectedDate.value);
 };
 // 确认
 const handleConfirm = () => {
   popup.value = false;
-  props.onConfirm?.({ value: selectedDate.value });
+  props.onConfirm?.(selectedDate.value);
 };
 const getMonthDates = (date: Date) => {
   const { year, month } = getYearMonthDay(date);
   const firstDay = getDate(year, month, 1);
   const weekdayOfFirstDay = firstDay.getDay();
-  const lastDate = new Date(+getDate(year, month + 1, 1) - 24 * 3600).getDate();
+  const lastDate = new Date(+getDate(year, month + 1, 1) - 24 * 3600 * 1000).getDate();
+  console.log(lastDate);
 
   return {
     year,
@@ -134,8 +149,8 @@ const getMonthDates = (date: Date) => {
     lastDate,
   };
 };
-type TDate = Date | number | { year: number; month: number; date: number };
-const isSameDate = (date1: TDate, date2: TDate) => {
+type CompareDate = Date | number | { year: number; month: number; date: number };
+const isSameDate = (date1: CompareDate, date2: CompareDate) => {
   if (date1 instanceof Date) date1 = getYearMonthDay(date1);
   if (date2 instanceof Date) date2 = getYearMonthDay(date2);
   const keys = ['year', 'month', 'date'];
@@ -146,7 +161,7 @@ const months = computed(() => {
   const ans = [];
   let { year: minYear, month: minMonth } = getYearMonthDay(minDate);
   const { year: maxYear, month: maxMonth } = getYearMonthDay(maxDate);
-  const calcType = (year: number, month: number, date: number) => {
+  const calcType = (year: number, month: number, date: number): TDateType => {
     const curDate = new Date(year, month, date, 23, 59, 59);
 
     if (type.value === 'single') {
@@ -171,10 +186,10 @@ const months = computed(() => {
 
   while (minYear < maxYear || (minYear === maxYear && minMonth <= maxMonth)) {
     const target = getMonthDates(getDate(minYear, minMonth, 1));
-    const months = [];
+    const months: TDate[] = [];
     for (let i = 1; i <= 31; i++) {
       if (i > target.lastDate) break;
-      const dateObj = {
+      const dateObj: TDate = {
         date: getDate(minYear, minMonth, i),
         day: i,
         type: calcType(minYear, minMonth, i),
@@ -193,6 +208,11 @@ const months = computed(() => {
   }
 
   return ans;
+});
+
+const confirmBtn = computed(() => {
+  if (props.confirmBtn === 'string') return { content: props.confirmBtn };
+  return props.confirmBtn;
 });
 
 watch(
