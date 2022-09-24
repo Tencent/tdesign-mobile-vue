@@ -56,8 +56,9 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, defineProps, computed, watch, ref } from 'vue';
+import { defineEmits, defineProps, computed, watch, ref, toRaw } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
+import pull from 'lodash/pull';
 
 import config from '../config';
 import calendarProps from './props';
@@ -125,22 +126,30 @@ const handleSelect = (year: number, month: number, date: number, dateItem: TDate
     } else {
       selectedDate.value = [selected];
     }
+  } else if (props.type === 'multiple') {
+    const newVal = [...selectedDate.value];
+    const index = selectedDate.value.findIndex((item: Date) => isSameDate(item, selected));
+    if (index > -1) {
+      newVal.splice(index, 1);
+    } else {
+      newVal.push(selected);
+    }
+    selectedDate.value = newVal;
   } else {
     selectedDate.value = selected;
   }
-  props.onSelect?.(selectedDate.value);
+  props.onSelect?.(toRaw(selectedDate.value));
 };
 // 确认
 const handleConfirm = () => {
   popup.value = false;
-  props.onConfirm?.(selectedDate.value);
+  props.onConfirm?.(toRaw(selectedDate.value));
 };
 const getMonthDates = (date: Date) => {
   const { year, month } = getYearMonthDay(date);
   const firstDay = getDate(year, month, 1);
   const weekdayOfFirstDay = firstDay.getDay();
   const lastDate = new Date(+getDate(year, month + 1, 1) - 24 * 3600 * 1000).getDate();
-  console.log(lastDate);
 
   return {
     year,
@@ -166,6 +175,12 @@ const months = computed(() => {
 
     if (type.value === 'single') {
       if (isSameDate({ year, month, date }, selectedDate.value)) return 'selected';
+    }
+    if (type.value === 'multiple') {
+      const hit = selectedDate.value.some((item: Date) => isSameDate({ year, month, date }, item));
+      if (hit) {
+        return 'selected';
+      }
     }
     if (type.value === 'range') {
       if (Array.isArray(selectedDate.value)) {
@@ -211,7 +226,7 @@ const months = computed(() => {
 });
 
 const confirmBtn = computed(() => {
-  if (props.confirmBtn === 'string') return { content: props.confirmBtn };
+  if (props.confirmBtn === 'string' || props.confirmBtn === '') return { content: props.confirmBtn || '确认' };
   return props.confirmBtn;
 });
 
@@ -233,8 +248,10 @@ watch(
   () => {
     if (Array.isArray(valueRef.value)) {
       selectedDate.value = valueRef.value.map((item) => new Date(item));
+    } else if (valueRef.value) {
+      selectedDate.value = new Date(valueRef.value);
     } else {
-      selectedDate.value = valueRef.value ? new Date(valueRef.value) : new Date();
+      selectedDate.value = props.type === 'multiple' ? [new Date()] : new Date();
     }
   },
   { immediate: true },

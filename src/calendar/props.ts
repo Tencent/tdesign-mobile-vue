@@ -34,7 +34,7 @@ export default {
   title: {
     type: [String, Function] as PropType<TdCalendarProps['title']>,
   },
-  /** 日历的选择类型，singe = 单选；multiple = 多选; range = 区间选择 */
+  /** 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择 */
   type: {
     type: String as PropType<TdCalendarProps['type']>,
     default: 'single' as TdCalendarProps['type'],

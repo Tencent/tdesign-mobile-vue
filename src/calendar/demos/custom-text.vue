@@ -28,7 +28,7 @@ const format = (day) => {
       if (curDate in map) {
         day.prefix = map[curDate];
         day.suffix = '¥100';
-        day.classname = 'is-holiday';
+        day.className = 'is-holiday';
       }
     }
   }

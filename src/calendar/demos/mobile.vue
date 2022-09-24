@@ -6,6 +6,7 @@
     <tdesign-demo-block title="01 基础" summary="基础用法">
       <div class="Calendar-demo">
         <BaseCalendarDemo />
+        <multipleVue />
         <rangeDemo />
       </div>
     </tdesign-demo-block>
@@ -35,11 +36,7 @@
 </template>
 <script lang="ts" setup>
 import BaseCalendarDemo from './base.vue';
-import ValueCalendarDemo from './value.vue';
-import HeadCalendarDemo from './head.vue';
-import CellCalendarDemo from './cell.vue';
-import ColorCalendarDemo from './color.vue';
-
+import multipleVue from './multiple.vue';
 import customTextDemo from './custom-text.vue';
 import rangeDemo from './range.vue';
 </script>

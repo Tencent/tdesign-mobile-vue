@@ -35,7 +35,7 @@ export interface TdCalendarProps {
    */
   title?: string | TNode;
   /**
-   * 日历的选择类型，singe = 单选；multiple = 多选; range = 区间选择
+   * 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择
    * @default 'single'
    */
   type?: 'single' | 'multiple' | 'range';

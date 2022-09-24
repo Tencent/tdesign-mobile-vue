@@ -1,7 +1,7 @@
 <template>
   <div>
-    <t-calendar v-model:visible="visible" @confirm="handleConfirm" @select="handleSelect"></t-calendar>
-    <t-cell title="单个选择日期" arrow @click="visible = true"></t-cell>
+    <t-calendar v-model:visible="visible" type="multiple" @confirm="handleConfirm" @select="handleSelect"></t-calendar>
+    <t-cell title="多个选择日期" arrow @click="visible = true"></t-cell>
   </div>
 </template>
 
