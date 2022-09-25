@@ -13,6 +13,8 @@
 
     <tdesign-demo-block title="02 自定义" summary=" ">
       <customTextDemo />
+      <customButtonVue />
+      <customRangeVue />
     </tdesign-demo-block>
 
     <!-- <tdesign-demo-block title="03 设置标题" summary="自定义标题">
@@ -39,4 +41,6 @@ import BaseCalendarDemo from './base.vue';
 import multipleVue from './multiple.vue';
 import customTextDemo from './custom-text.vue';
 import rangeDemo from './range.vue';
+import customButtonVue from './custom-button.vue';
+import customRangeVue from './custom-range.vue';
 </script>

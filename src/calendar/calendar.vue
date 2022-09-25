@@ -46,7 +46,7 @@
         <div class="t-calendar__footer">
           <slot name="confirmBtn">
             <template v-if="confirmBtn">
-              <t-button v-bind="confirmBtn" block theme="primary" @click="handleConfirm" />
+              <t-button block theme="primary" v-bind="confirmBtn" @click="handleConfirm" />
             </template>
           </slot>
         </div>
@@ -193,7 +193,8 @@ const months = computed(() => {
       }
     }
 
-    if (curDate.getTime() < minDate.getTime() || curDate.getTime() > maxDate.getTime()) {
+    const minCurDate = new Date(year, month, date, 0, 0, 0);
+    if (curDate.getTime() < minDate.getTime() || minCurDate.getTime() > maxDate.getTime()) {
       return 'disabled';
     }
     return '';
