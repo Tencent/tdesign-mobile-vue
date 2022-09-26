@@ -57,9 +57,10 @@ import xhr from '../_common/js/upload/xhr';
 import { useDefault, useEmitEvent, isFunction, isArray, isObject, renderTNode, TNode } from '../shared';
 import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
 import { SuccessContext, InnerProgressContext } from './interface';
-import props from './props';
+import UploadProps from './props';
 import config from '../config';
 import { isOverSizeLimit } from './util';
+import TImageViewer from '../image-viewer';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
@@ -70,8 +71,9 @@ export default defineComponent({
     TNode,
     CloseIcon,
     RefreshIcon,
+    TImageViewer,
   },
-  props,
+  props: UploadProps,
   emits: [
     'update:files',
     'update:modelValue',
@@ -83,7 +85,7 @@ export default defineComponent({
     'success',
     'select-change',
   ],
-  setup(props: any, context: SetupContext) {
+  setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
@@ -150,8 +152,8 @@ export default defineComponent({
       });
     };
 
-    const handleReload = (file: any) => {
-      uploadFiles([file]);
+    const handleReload = (file: UploadFile) => {
+      uploadFiles([file.fileRaw]);
     };
 
     const handleChange = () => {
@@ -164,7 +166,8 @@ export default defineComponent({
     };
 
     const formatFileToUploadFile = (files: FileList): File[] => {
-      if (!props.format || !isFunction(props.format)) {
+      const { format } = props;
+      if (!format || !isFunction(format)) {
         const res = [];
         for (let i = 0; i < files.length; i++) {
           res.push(files[i]);
@@ -174,7 +177,7 @@ export default defineComponent({
 
       const NewFiles = [...files];
       NewFiles.forEach((item) => {
-        item = props.format?.(item);
+        item = format(item) as any;
       });
       return NewFiles;
     };
@@ -232,7 +235,7 @@ export default defineComponent({
           status: 'waiting',
         };
         const reader = new FileReader();
-        reader.readAsDataURL(fileRaw as any);
+        reader.readAsDataURL(fileRaw);
         reader.onload = (event: ProgressEvent<FileReader>) => {
           uploadFile.url = event.target?.result as string;
         };
@@ -311,6 +314,7 @@ export default defineComponent({
             file: file.fileRaw,
             ...props.data,
           },
+          file,
           method: props.method,
           headers: props.headers || {},
           withCredentials: props.withCredentials,
@@ -379,7 +383,7 @@ export default defineComponent({
       }
       file.url = res?.url || file.url;
       // 从待上传文件队列中移除上传成功的文件
-      const index = findIndex(toUploadFiles.value, (o: any) => o.name === file.name);
+      const index = findIndex(toUploadFiles.value, (o: UploadFile) => o.name === file.name);
       toUploadFiles.value.splice(index, 1);
       // 上传成功的文件发送到 files
       const newFile = { ...file, response: res };
@@ -399,7 +403,7 @@ export default defineComponent({
       file: UploadFile;
       response?: any;
       resFormatted?: boolean;
-    }): any => {
+    }) => {
       const { event, file, response, resFormatted } = options;
       file.status = 'fail';
       let res = response;

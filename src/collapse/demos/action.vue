@@ -11,14 +11,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, h } from 'vue';
+import { ref } from 'vue';
 
 const values = ref([0]);
-const handleChange = (val) => {
+const handleChange = (val: number[]) => {
   values.value = val;
 };
-
-// const header = () => h('div', '123');
 </script>
 
 <style scoped lang="less">

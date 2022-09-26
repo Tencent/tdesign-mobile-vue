@@ -2,7 +2,6 @@
 **/*_common*
 **/*types*
 !.*.js
-
 # build files
 es
 esm

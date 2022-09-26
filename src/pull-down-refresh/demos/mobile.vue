@@ -4,7 +4,7 @@
     <p class="summary">用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。</p>
     <p class="blank"></p> -->
     <tdesign-demo-block title="" summary="">
-      <t-tabs default-value="first" @on-change="onChange">
+      <t-tabs default-value="first">
         <t-tab-panel value="first" label="基础用法">
           <div class="refresh-content">
             <t-pull-down-refresh
@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, reactive } from 'vue';
+import { ref, defineComponent } from 'vue';
 import { Toast } from '@/components';
 
 export default defineComponent({
