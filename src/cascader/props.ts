@@ -8,12 +8,38 @@ import { TdCascaderProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 透传 TagInput 标签输入框组件的全部属性 */
-  tagInputProps: {
-    type: Object as PropType<TdCascaderProps['tagInputProps']>,
+  /** 选项值 */
+  value: {
+    type: [String, Number] as PropType<TdCascaderProps['value']>,
+    default: undefined,
   },
-  /** 透传 Tag 标签组件全部属性 */
-  tagProps: {
-    type: Object as PropType<TdCascaderProps['tagProps']>,
+  modelValue: {
+    type: [String, Number] as PropType<TdCascaderProps['value']>,
+    default: undefined,
+  },
+  /** 选项数据 */
+  options: {
+    type: Array as PropType<TdCascaderProps['options']>,
+    default: () => [],
+  },
+  /** 关闭 icon 图标 */
+  closeIcon: {
+    type: [Boolean, Function] as PropType<TdCascaderProps['closeIcon']>,
+    default: true,
+  },
+  /** 标题 */
+  title: {
+    type: [String, Function] as PropType<TdCascaderProps['title']>,
+    default: '',
+  },
+  /** 懒加载 */
+  lazy: {
+    type: [Boolean] as PropType<TdCascaderProps['lazy']>,
+    default: false,
+  },
+  /** 懒加载方法  */
+  lazyLoad: {
+    type: [Function] as PropType<TdCascaderProps['lazyLoad']>,
+    default: undefined,
   },
 };
