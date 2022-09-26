@@ -39,8 +39,8 @@ export default defineComponent({
   name,
   components: { TLoading },
   props: PullDownRefreshProps,
-  emits: ['refresh', 'timeout'],
-  setup(props: any, context: SetupContext) {
+  emits: ['refresh', 'timeout', 'update:value', 'update:modelValue'],
+  setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
 
     // 动态生成style
