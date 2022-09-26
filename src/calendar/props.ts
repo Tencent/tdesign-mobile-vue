@@ -8,41 +8,49 @@ import { TdCalendarProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /**
-   * 控制日历显示隐藏
-   */
-  modelValue: {
-    type: Boolean,
-  },
-  // 按钮颜色
-  bgColor: {
-    type: String,
-    default: '#0053DB',
-  },
-  /**
-   * 确认按钮
-   */
+  /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。 */
   confirmBtn: {
-    type: String,
-    default: '确认',
+    type: [String, Object, Function] as PropType<TdCalendarProps['confirmBtn']>,
+    default: '',
   },
-  /**
-   * 第一天从星期几开始，仅在日历展示维度为月份时（mode = month）有效。默认为 1
-   */
+  /** 第一天从星期几开始，默认 0 = 周日 */
   firstDayOfWeek: {
     type: Number,
+    default: 0,
   },
-  /**
-   * 头部插槽（左上角处，默认不显示任何内容）
-   */
-  head: {
-    type: String,
+  /** 用于格式化日期的函数 */
+  format: {
+    type: Function as PropType<TdCalendarProps['format']>,
   },
-  /**
-   * 当前高亮的日期
-   */
+  /** 最大可选的日期，不传则默认半年后 */
+  maxDate: {
+    type: [Number, Date] as PropType<TdCalendarProps['maxDate']>,
+  },
+  /** 最小可选的日期，不传则默认今天 */
+  minDate: {
+    type: [Number, Date] as PropType<TdCalendarProps['minDate']>,
+  },
+  /** 标题，不传默认为“请选择日期” */
+  title: {
+    type: [String, Function] as PropType<TdCalendarProps['title']>,
+  },
+  /** 日历的选择类型，single = 单选；multiple = 多选; range = 区间选择 */
+  type: {
+    type: String as PropType<TdCalendarProps['type']>,
+    default: 'single' as TdCalendarProps['type'],
+    validator(val: TdCalendarProps['type']): boolean {
+      if (!val) return true;
+      return ['single', 'multiple', 'range'].includes(val);
+    },
+  },
+  /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组 */
   value: {
-    type:  Date as unknown as PropType<TdCalendarProps['value']>,
-    default: new Date(),
+    type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
   },
+  /** 是否显示日历 */
+  visible: Boolean,
+  /** 点击确认按钮时触发 */
+  onConfirm: Function as PropType<TdCalendarProps['onConfirm']>,
+  /** 选择日期时触发 */
+  onSelect: Function as PropType<TdCalendarProps['onSelect']>,
 };

@@ -6,16 +6,18 @@
     <tdesign-demo-block title="01 基础" summary="基础用法">
       <div class="Calendar-demo">
         <BaseCalendarDemo />
+        <multipleVue />
+        <rangeDemo />
       </div>
     </tdesign-demo-block>
 
-    <tdesign-demo-block title="02 默认日期" summary="设置默认日期">
-      <div class="Calendar-demo">
-        <ValueCalendarDemo />
-      </div>
+    <tdesign-demo-block title="02 自定义" summary=" ">
+      <customTextDemo />
+      <customButtonVue />
+      <customRangeVue />
     </tdesign-demo-block>
 
-    <tdesign-demo-block title="03 设置标题" summary="自定义标题">
+    <!-- <tdesign-demo-block title="03 设置标题" summary="自定义标题">
       <div class="Calendar-demo">
         <HeadCalendarDemo />
       </div>
@@ -31,13 +33,14 @@
       <div class="Calendar-demo">
         <ColorCalendarDemo />
       </div>
-    </tdesign-demo-block>
+    </tdesign-demo-block> -->
   </div>
 </template>
 <script lang="ts" setup>
 import BaseCalendarDemo from './base.vue';
-import ValueCalendarDemo from './value.vue';
-import HeadCalendarDemo from './head.vue';
-import CellCalendarDemo from './cell.vue';
-import ColorCalendarDemo from './color.vue';
+import multipleVue from './multiple.vue';
+import customTextDemo from './custom-text.vue';
+import rangeDemo from './range.vue';
+import customButtonVue from './custom-button.vue';
+import customRangeVue from './custom-range.vue';
 </script>
