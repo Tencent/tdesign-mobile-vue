@@ -8,7 +8,7 @@ spline: explain
 ## 🌈 0.11.0 `2022-09-26` 
 ### 🚀 Features
 
-- `Calendar`: 新增日历组件 @josonyang ([#325](https://github.com/Tencent/tdesign-mobile-vue/pull/325))
+- `Calendar`: 新增日历组件 @LadyChatterleyLover ([#325](https://github.com/Tencent/tdesign-mobile-vue/pull/325))
 - `Calendar`: 视觉升级，功能增强 @LeeJim ([#366](https://github.com/Tencent/tdesign-mobile-vue/pull/366))
 
 ### 🐞 Bug Fixes
