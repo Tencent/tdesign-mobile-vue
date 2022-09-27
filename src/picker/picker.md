@@ -9,7 +9,7 @@
 cancelBtn | String / Object | '取消' | 取消按钮文字。TS 类型：`string | ButtonProps` | N
 columns | Array / Function | [] | 必需。配置每一列的选项。TS 类型：`Array<PickerColumn> | ((item: Array<PickerValue>)  => Array<PickerColumn>)` `type PickerColumn = PickerColumnItem[]` `interface PickerColumnItem { label: string,value: string}`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | Y
 confirmBtn | String / Object | '确认' | 确定按钮文字。TS 类型：`string | ButtonProps`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N
-renderLabel | String / Function | - | 自定义label。TS 类型：`(item: PickerColumnItem) => string` | N
+renderLabel | Function | - | 自定义label。TS 类型：`(item: PickerColumnItem) => string` | N
 title | String | '' | 标题 | N
 value | Array | - | 选中值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`Array<PickerValue>` `type PickerValue = string | number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N
 defaultValue | Array | - | 选中值。非受控属性。TS 类型：`Array<PickerValue>` `type PickerValue = string | number`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/picker/type.ts) | N

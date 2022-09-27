@@ -52,8 +52,9 @@ export default defineComponent({
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
     const [pickerValue, setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-    const confirmButtonText = computed(() => props.confirmBtn || '确定');
-    const cancelButtonText = computed(() => props.cancelBtn || '取消');
+    const confirmButtonText = computed(() => props.confirmBtn);
+    const cancelButtonText = computed(() => props.cancelBtn);
+    const curValueArray = ref(pickerValue.value.map((item: PickerValue) => item));
     const realColumns = computed(() => {
       if (typeof props.columns === 'function') {
         const data = props.columns(curValueArray.value);
@@ -61,13 +62,12 @@ export default defineComponent({
       }
       return props.columns;
     });
-    const curValueArray = ref(pickerValue.value.map((item: PickerValue) => item));
     let lastTimeValueArray = [...curValueArray.value];
     let curIndexArray = pickerValue.value.map((item: PickerValue, index: number) => {
       return getIndexFromColumns(realColumns.value, item, index);
     });
     let lastTimeIndexArray = [...curIndexArray];
-    const pickerItemInstanceArray = <any>ref([]);
+    const pickerItemInstanceArray = ref([]) as any;
     onMounted(() => {
       // 获取pickerItem实例，用于更新每个item的value和index
       pickerItemInstanceArray.value = useChildSlots('t-picker-item').map((item) => item.component);
