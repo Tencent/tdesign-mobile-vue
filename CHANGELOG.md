@@ -12,7 +12,7 @@ spline: explain
 - `Calendar`: 视觉升级，功能增强 @LeeJim ([#366](https://github.com/Tencent/tdesign-mobile-vue/pull/366))
 
 ### 🐞 Bug Fixes
-- `CountDown`: 修复 milisecond 配置无效的问题 @TingShine ([#313](https://github.com/Tencent/tdesign-mobile-vue/pull/313))
+- `CountDown`: 修复 millisecond 配置无效的问题 @TingShine ([#313](https://github.com/Tencent/tdesign-mobile-vue/pull/313))
 - `Upload`: 修复上传失败后，再次上传会产生报错的问题 @palmcivet ([#318](https://github.com/Tencent/tdesign-mobile-vue/pull/318))
 
 ### 🚧 Others
