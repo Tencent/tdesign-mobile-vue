@@ -32,14 +32,4 @@ export default {
     type: [String, Function] as PropType<TdCascaderProps['title']>,
     default: '',
   },
-  /** 懒加载 */
-  lazy: {
-    type: [Boolean] as PropType<TdCascaderProps['lazy']>,
-    default: false,
-  },
-  /** 懒加载方法  */
-  lazyLoad: {
-    type: [Function] as PropType<TdCascaderProps['lazyLoad']>,
-    default: undefined,
-  },
 };
