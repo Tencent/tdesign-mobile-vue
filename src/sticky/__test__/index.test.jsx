@@ -107,19 +107,13 @@ describe('sticky', () => {
 
     it(': onScroll', async () => {
       const { makeScroll, sleep } = useTestUtils();
-      const onScroll = vi.fn(function ({ scrollTop, isFixed }) {
-        this.onScrollParam.isFixed = isFixed;
-      });
-
+      const onScrollParameterFn = vi.fn((isFixed) => {});
+      const onScroll = ({ isFixed }) => onScrollParameterFn(isFixed);
       const wrapper = _mount(
         `
         <Sticky :onScroll="onScroll">${TRUTH}</Sticky>
       `,
-        () => ({
-          onScrollParam: {
-            isFixed: undefined,
-          },
-        }),
+        () => ({}),
         {
           onScroll,
         },
@@ -144,34 +138,29 @@ describe('sticky', () => {
       // 未吸顶的事件
       await makeScroll(document.documentElement, 'scrollTop', 10);
       await sleep(TIMEOUT);
-      expect(onScroll).toHaveBeenCalled();
-      const vm = wrapper.vm;
-      expect(vm.onScrollParam).toEqual({
-        isFixed: false,
-      });
+
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 99;');
       mockRestore();
 
       // 吸顶后的事件
       await makeScroll(document.documentElement, 'scrollTop', 200);
       await sleep(TIMEOUT);
-      expect(onScroll).toHaveBeenCalled();
-      expect(vm.onScrollParam).toEqual({
-        isFixed: true,
-      });
+
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain(
         'z-index: 99; position: fixed; top: 0px;',
       );
       mockRestore();
+
+      expect(onScrollParameterFn).toHaveBeenCalledWith(false);
+      expect(onScrollParameterFn).toHaveBeenCalledWith(true);
     });
   });
 
   describe('event', () => {
     it(': onScroll', async () => {
       const { makeScroll, sleep } = useTestUtils();
-      const onScroll = vi.fn(function ({ scrollTop, isFixed }) {
-        this.onScrollParam.isFixed = isFixed;
-      });
+      const onScrollParameterFn = vi.fn((isFixed) => {});
+      const onScroll = ({ isFixed }) => onScrollParameterFn(isFixed);
 
       const wrapper = _mount(
         `
@@ -206,25 +195,21 @@ describe('sticky', () => {
       // 未吸顶的事件
       await makeScroll(document.documentElement, 'scrollTop', 10);
       await sleep(TIMEOUT);
-      expect(onScroll).toHaveBeenCalled();
-      const vm = wrapper.vm;
-      expect(vm.onScrollParam).toEqual({
-        isFixed: false,
-      });
+
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 99;');
       mockRestore();
 
       // 吸顶后的事件
       await makeScroll(document.documentElement, 'scrollTop', 200);
       await sleep(TIMEOUT);
-      expect(onScroll).toHaveBeenCalled();
-      expect(vm.onScrollParam).toEqual({
-        isFixed: true,
-      });
+
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain(
         'z-index: 99; position: fixed; top: 0px;',
       );
       mockRestore();
+
+      expect(onScrollParameterFn).toHaveBeenCalledWith(false);
+      expect(onScrollParameterFn).toHaveBeenCalledWith(true);
     });
   });
 });
