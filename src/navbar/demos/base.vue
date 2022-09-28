@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="tdesign-demo-block">
-      <t-navbar> 界面标题 </t-navbar>
+      <t-navbar title="标题" />
     </div>
   </div>
 </template>

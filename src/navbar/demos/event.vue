@@ -1,10 +1,9 @@
 <template>
   <div>
     <div class="tdesign-demo-block">
-      <t-navbar @click-text="onClickText" @click-right="onClickMore">
-        界面标题
-        <template #left>
-          <t-icon name="close" @click="onClickLeft"></t-icon>
+      <t-navbar title="标题" home-icon @home-click="onClickHome">
+        <template #right-icon>
+          <t-ellipsis-icon @click="onClickRight" />
         </template>
       </t-navbar>
     </div>
@@ -13,24 +12,22 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { EllipsisIcon as TEllipsisIcon } from 'tdesign-icons-vue-next';
 
 export default defineComponent({
+  components: { TEllipsisIcon },
   setup() {
-    return {};
-  },
-  methods: {
-    onClickMore() {
-      this.$toast('Click More');
-      console.log('on click more');
-    },
-    onClickText() {
-      this.$toast('Click Text');
-      console.log('on click Text');
-    },
-    onClickLeft() {
-      this.$toast('Click close');
-      console.log('on click left');
-    },
+    const onClickHome = () => {
+      console.log('on click home');
+    };
+    const onClickRight = () => {
+      console.log('on click right');
+    };
+
+    return {
+      onClickHome,
+      onClickRight,
+    };
   },
 });
 </script>
