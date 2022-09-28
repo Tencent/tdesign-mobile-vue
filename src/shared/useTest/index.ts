@@ -1,6 +1,8 @@
 import sleep from 'lodash';
-
-export function useTest() {
+/**
+ * 测试相关的工具方法
+ */
+export function useTestUtils() {
   const makeScroll = async (dom: Element, name: 'scrollTop' | 'scrollLeft', offset: number) => {
     const eventTarget = dom === document.documentElement ? window : dom;
     dom[name] = offset;
@@ -17,4 +19,13 @@ export function useTest() {
   };
 
   return { makeScroll, sleep };
+}
+
+/**
+ * 测试相关的vitest方法
+ */
+export function useVitest(vi: typeof import('vitest')['vitest']) {
+  const getBoundingClientRect = (dom: Element) => vi.spyOn(dom, 'getBoundingClientRect');
+
+  return { getBoundingClientRect };
 }

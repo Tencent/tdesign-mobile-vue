@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { ref, nextTick } from 'vue';
+import { nextTick } from 'vue';
 import Sticky from '../sticky.vue';
-import { useTest } from '../../shared';
+import { useTestUtils, useVitest } from '../../shared';
 
 const _mount = (template, data = () => ({}), methods = {}) =>
   mount(
@@ -21,26 +21,49 @@ const TIMEOUT = 250;
 
 const TRUTH = 'expect(meimei === 4xi lover).toBe(true)';
 
+/**
+ * 创建sticky测试用容器
+ */
+const stickyRectMock = (wrapper, { stickyMockReturnValue, documentMockReturnValue }) => {
+  const { getBoundingClientRect } = useVitest(vi);
+  const mockStickyRect = getBoundingClientRect(wrapper.find('.t-sticky').element).mockReturnValue(
+    stickyMockReturnValue,
+  );
+
+  const mockDocumentRect = getBoundingClientRect(document.documentElement).mockReturnValue(documentMockReturnValue);
+
+  const mockStickyRectRestore = mockStickyRect.mockRestore;
+  const mockDocumentRectRestore = mockDocumentRect.mockRestore;
+
+  const mockRestore = () => {
+    mockStickyRectRestore();
+    mockDocumentRectRestore();
+  };
+
+  return { mockStickyRect, mockDocumentRect, mockStickyRectRestore, mockDocumentRectRestore, mockRestore };
+};
+
 describe('sticky', () => {
   describe('props', () => {
     it(': offsetTop', async () => {
-      const { makeScroll } = useTest();
+      const { makeScroll } = useTestUtils();
       const wrapper = _mount(`
         <Sticky :offsetTop="30">${TRUTH}</Sticky>
       `);
 
       await nextTick();
-
-      const mockStickyRect = vi.spyOn(wrapper.find('.t-sticky').element, 'getBoundingClientRect').mockReturnValue({
-        height: 40,
-        width: 1000,
-        top: 29,
-      });
-      const mockDocumentRect = vi.spyOn(document.documentElement, 'getBoundingClientRect').mockReturnValue({
-        height: 200,
-        width: 1000,
-        top: 0,
-        bottom: 200,
+      const { mockRestore } = stickyRectMock(wrapper, {
+        stickyMockReturnValue: {
+          height: 40,
+          width: 1000,
+          top: 29,
+        },
+        documentMockReturnValue: {
+          height: 200,
+          width: 1000,
+          top: 0,
+          bottom: 200,
+        },
       });
 
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 99;');
@@ -49,66 +72,41 @@ describe('sticky', () => {
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain(
         'z-index: 99; position: fixed; top: 30px;',
       );
-      mockStickyRect.mockRestore();
-      mockDocumentRect.mockRestore();
+
+      mockRestore();
     });
 
     it(': z-index', async () => {
-      const { makeScroll } = useTest();
+      const { makeScroll } = useTestUtils();
       const wrapper = _mount(`
         <Sticky :zIndex="1000" :offsetTop="30">${TRUTH}</Sticky>
       `);
 
       await nextTick();
+      const { mockRestore } = stickyRectMock(wrapper, {
+        stickyMockReturnValue: {
+          height: 40,
+          width: 1000,
+          top: 29,
+        },
+        documentMockReturnValue: {
+          height: 200,
+          width: 1000,
+          top: 0,
+          bottom: 200,
+        },
+      });
 
-      const mockStickyRect = vi.spyOn(wrapper.find('.t-sticky').element, 'getBoundingClientRect').mockReturnValue({
-        height: 40,
-        width: 1000,
-        top: 29,
-      });
-      const mockDocumentRect = vi.spyOn(document.documentElement, 'getBoundingClientRect').mockReturnValue({
-        height: 200,
-        width: 1000,
-        top: 0,
-        bottom: 200,
-      });
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 1000;');
       await makeScroll(document.documentElement, 'scrollTop', 300);
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain(
         'z-index: 1000; position: fixed; top: 30px;',
       );
-      mockStickyRect.mockRestore();
-      mockDocumentRect.mockRestore();
-    });
-
-    it(': disabled', async () => {
-      const { makeScroll } = useTest();
-      const wrapper = _mount(`
-        <Sticky :zIndex="1000" :offsetTop="30">${TRUTH}</Sticky>
-      `);
-
-      await nextTick();
-
-      const mockStickyRect = vi.spyOn(wrapper.find('.t-sticky').element, 'getBoundingClientRect').mockReturnValue({
-        height: 40,
-        width: 1000,
-        top: 29,
-      });
-      const mockDocumentRect = vi.spyOn(document.documentElement, 'getBoundingClientRect').mockReturnValue({
-        height: 200,
-        width: 1000,
-        top: 0,
-        bottom: 200,
-      });
-      expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 1000;');
-      await makeScroll(document.documentElement, 'scrollTop', 300);
-      expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 1000;');
-      mockStickyRect.mockRestore();
-      mockDocumentRect.mockRestore();
+      mockRestore();
     });
 
     it(': onScroll', async () => {
-      const { makeScroll, sleep } = useTest();
+      const { makeScroll, sleep } = useTestUtils();
       const onScroll = vi.fn(function ({ scrollTop, isFixed }) {
         this.onScrollParam.isFixed = isFixed;
       });
@@ -129,16 +127,18 @@ describe('sticky', () => {
 
       await nextTick();
 
-      const mockStickyRect = vi.spyOn(wrapper.find('.t-sticky').element, 'getBoundingClientRect').mockReturnValue({
-        height: 40,
-        width: 1000,
-        top: 30,
-      });
-      const mockDocumentRect = vi.spyOn(document.documentElement, 'getBoundingClientRect').mockReturnValue({
-        height: 200,
-        width: 1000,
-        top: 0,
-        bottom: 200,
+      const { mockRestore } = stickyRectMock(wrapper, {
+        stickyMockReturnValue: {
+          height: 40,
+          width: 1000,
+          top: 30,
+        },
+        documentMockReturnValue: {
+          height: 200,
+          width: 1000,
+          top: 0,
+          bottom: 200,
+        },
       });
 
       // 未吸顶的事件
@@ -150,8 +150,7 @@ describe('sticky', () => {
         isFixed: false,
       });
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 99;');
-      mockStickyRect.mockRestore();
-      mockDocumentRect.mockRestore();
+      mockRestore();
 
       // 吸顶后的事件
       await makeScroll(document.documentElement, 'scrollTop', 200);
@@ -163,14 +162,13 @@ describe('sticky', () => {
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain(
         'z-index: 99; position: fixed; top: 0px;',
       );
-      mockStickyRect.mockRestore();
-      mockDocumentRect.mockRestore();
+      mockRestore();
     });
   });
 
   describe('event', () => {
     it(': onScroll', async () => {
-      const { makeScroll, sleep } = useTest();
+      const { makeScroll, sleep } = useTestUtils();
       const onScroll = vi.fn(function ({ scrollTop, isFixed }) {
         this.onScrollParam.isFixed = isFixed;
       });
@@ -191,16 +189,18 @@ describe('sticky', () => {
 
       await nextTick();
 
-      const mockStickyRect = vi.spyOn(wrapper.find('.t-sticky').element, 'getBoundingClientRect').mockReturnValue({
-        height: 40,
-        width: 1000,
-        top: 30,
-      });
-      const mockDocumentRect = vi.spyOn(document.documentElement, 'getBoundingClientRect').mockReturnValue({
-        height: 200,
-        width: 1000,
-        top: 0,
-        bottom: 200,
+      const { mockRestore } = stickyRectMock(wrapper, {
+        stickyMockReturnValue: {
+          height: 40,
+          width: 1000,
+          top: 30,
+        },
+        documentMockReturnValue: {
+          height: 200,
+          width: 1000,
+          top: 0,
+          bottom: 200,
+        },
       });
 
       // 未吸顶的事件
@@ -212,8 +212,7 @@ describe('sticky', () => {
         isFixed: false,
       });
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 99;');
-      mockStickyRect.mockRestore();
-      mockDocumentRect.mockRestore();
+      mockRestore();
 
       // 吸顶后的事件
       await makeScroll(document.documentElement, 'scrollTop', 200);
@@ -225,8 +224,7 @@ describe('sticky', () => {
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain(
         'z-index: 99; position: fixed; top: 0px;',
       );
-      mockStickyRect.mockRestore();
-      mockDocumentRect.mockRestore();
+      mockRestore();
     });
   });
 });
