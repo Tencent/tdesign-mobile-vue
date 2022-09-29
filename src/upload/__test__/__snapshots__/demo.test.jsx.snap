@@ -56,7 +56,11 @@ exports[`Upload > Upload baseMultipleVue demo works fine 1`] = `
           type="file"
         />
         <transition-stub
+          appear="false"
           class="t-image-viewer"
+          css="true"
+          name="t-overlay"
+          persisted="true"
         >
           <div
             class="t-overlay"
@@ -71,7 +75,11 @@ exports[`Upload > Upload baseMultipleVue demo works fine 1`] = `
     </div>
   </div>
   <transition-stub
+    appear="false"
+    css="true"
     data-v-0c024305=""
+    name="message"
+    persisted="false"
   >
     <!--v-if-->
   </transition-stub>
@@ -133,7 +141,11 @@ exports[`Upload > Upload baseSingleVue demo works fine 1`] = `
           type="file"
         />
         <transition-stub
+          appear="false"
           class="t-image-viewer"
+          css="true"
+          name="t-overlay"
+          persisted="true"
         >
           <div
             class="t-overlay"
@@ -228,7 +240,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           type="file"
         />
         <transition-stub
+          appear="false"
           class="t-image-viewer"
+          css="true"
+          name="t-overlay"
+          persisted="true"
         >
           <div
             class="t-overlay"
@@ -282,7 +298,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           type="file"
         />
         <transition-stub
+          appear="false"
           class="t-image-viewer"
+          css="true"
+          name="t-overlay"
+          persisted="true"
         >
           <div
             class="t-overlay"

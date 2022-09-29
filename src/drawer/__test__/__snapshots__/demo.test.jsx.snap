@@ -9,8 +9,18 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -20,7 +30,12 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-left"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-left"
         style="display: none;"
@@ -129,8 +144,18 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -140,7 +165,12 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-left"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-left"
         style="display: none;"
@@ -372,8 +402,18 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -383,7 +423,12 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="slide-left"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-left"
             style="display: none;"
@@ -501,8 +546,18 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -512,7 +567,12 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="slide-left"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-left"
             style="display: none;"

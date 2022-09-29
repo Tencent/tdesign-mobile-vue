@@ -26,8 +26,18 @@ exports[`Popup > Popup customAnimationVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -37,7 +47,12 @@ exports[`Popup > Popup customAnimationVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-fade"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-bottom"
         style="display: none;"
@@ -107,8 +122,18 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -118,7 +143,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="slide-top"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-top"
             style="display: none;"
@@ -158,8 +188,18 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -169,7 +209,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="slide-bottom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-bottom"
             style="display: none;"
@@ -209,8 +254,18 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -220,7 +275,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="slide-left"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-left"
             style="display: none;"
@@ -260,8 +320,18 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -271,7 +341,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="slide-right"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-right"
             style="display: none;"
@@ -311,8 +386,18 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -322,7 +407,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -362,8 +452,18 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -373,7 +473,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="slide-fade"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-bottom"
             style="display: none;"
@@ -419,8 +524,18 @@ exports[`Popup > Popup placementBottomVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -430,7 +545,12 @@ exports[`Popup > Popup placementBottomVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-bottom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-bottom"
         style="display: none;"
@@ -473,8 +593,18 @@ exports[`Popup > Popup placementCenterVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -484,7 +614,12 @@ exports[`Popup > Popup placementCenterVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade-zoom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-center"
         style="display: none;"
@@ -527,8 +662,18 @@ exports[`Popup > Popup placementLeftVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -538,7 +683,12 @@ exports[`Popup > Popup placementLeftVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-left"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-left"
         style="display: none;"
@@ -581,8 +731,18 @@ exports[`Popup > Popup placementRightVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -592,7 +752,12 @@ exports[`Popup > Popup placementRightVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-right"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-right"
         style="display: none;"
@@ -635,8 +800,18 @@ exports[`Popup > Popup placementTopVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -646,7 +821,12 @@ exports[`Popup > Popup placementTopVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-top"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-top"
         style="display: none;"

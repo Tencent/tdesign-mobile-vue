@@ -49,7 +49,12 @@ exports[`TabBar > props > snapshot 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="spread"
+      persisted="false"
+    >
       <!--v-if-->
     </transition-stub>
   </div>
@@ -95,7 +100,12 @@ exports[`TabBar > props > snapshot 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="spread"
+      persisted="false"
+    >
       <!--v-if-->
     </transition-stub>
   </div>
@@ -142,7 +152,12 @@ exports[`TabBar > props > snapshot 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="spread"
+      persisted="false"
+    >
       <!--v-if-->
     </transition-stub>
   </div>

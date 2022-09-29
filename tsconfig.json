@@ -35,17 +35,7 @@
     "src/**/*.js",
     "babel.config.js",
     "src/style/index.js",
-    "scripts/rollup.config.js",
-    "src/button/__test__/index.test.jsx",
-    "src/divider/__test__/index.test.jsx",
-    "src/badge/__test__/index.test.jsx",
-    "src/avatar/__test__/avatar-group.test.jsx",
-    "src/avatar/__test__/index.test.jsx",
-    "src/tag/__test__/index.test.jsx",
-    "src/tag/__test__/checkTag.test.jsx",
-    "src/skeleton/__test__/index.test.jsx",
-    "src/rate/__test__/index.test.jsx",
-    "src/result/__test__/index.test.jsx"
+    "scripts/rollup.config.js"
   ],
   "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "site"]
 }
