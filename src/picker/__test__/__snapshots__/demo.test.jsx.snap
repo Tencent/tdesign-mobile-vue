@@ -166,8 +166,18 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -177,7 +187,12 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-bottom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-bottom"
         style="display: none;"
@@ -293,8 +308,18 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -304,7 +329,12 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-bottom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-bottom"
         style="display: none;"
@@ -466,8 +496,18 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -477,7 +517,12 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-bottom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-bottom"
         style="display: none;"
@@ -905,8 +950,18 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -916,7 +971,12 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-bottom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-bottom"
         style="display: none;"
@@ -1230,8 +1290,18 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <div
       class="t-popup"
     >
-      <transition-stub>
-        <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="fade"
+        persisted="false"
+      >
+        <transition-stub
+          appear="false"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1241,7 +1311,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </transition-stub>
       </transition-stub>
-      <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="slide-bottom"
+        persisted="true"
+      >
         <div
           class="t-popup--content t-popup--content-bottom"
           style="display: none;"
@@ -1357,8 +1432,18 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <div
       class="t-popup"
     >
-      <transition-stub>
-        <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="fade"
+        persisted="false"
+      >
+        <transition-stub
+          appear="false"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1368,7 +1453,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </transition-stub>
       </transition-stub>
-      <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="slide-bottom"
+        persisted="true"
+      >
         <div
           class="t-popup--content t-popup--content-bottom"
           style="display: none;"
@@ -1530,8 +1620,18 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <div
       class="t-popup"
     >
-      <transition-stub>
-        <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="fade"
+        persisted="false"
+      >
+        <transition-stub
+          appear="false"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1541,7 +1641,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </transition-stub>
       </transition-stub>
-      <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="slide-bottom"
+        persisted="true"
+      >
         <div
           class="t-popup--content t-popup--content-bottom"
           style="display: none;"
@@ -1978,8 +2083,18 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     <div
       class="t-popup"
     >
-      <transition-stub>
-        <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="fade"
+        persisted="false"
+      >
+        <transition-stub
+          appear="false"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1989,7 +2104,12 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </transition-stub>
       </transition-stub>
-      <transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="slide-bottom"
+        persisted="true"
+      >
         <div
           class="t-popup--content t-popup--content-bottom"
           style="display: none;"
