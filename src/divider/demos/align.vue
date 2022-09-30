@@ -1,12 +1,19 @@
 <template>
-  <div class="demo-6">
-    <span>正直</span>
-    <t-divider align="left">TDesign</t-divider>
-    <span>进取</span>
-    <t-divider>TDesign</t-divider>
-    <span>合作</span>
-    <t-divider align="right">TDesign</t-divider>
-    <span>创新</span>
+  <div>
+    <h3>文字+直线</h3>
+    <t-divider class="demo-5"> 文字信息 </t-divider>
+
+    <h3>纯文字</h3>
+    <t-divider line-color="transparent"> 没有更多了~ </t-divider>
   </div>
 </template>
-<script lang="ts" setup></script>
+
+<style lang="less" scoped>
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'PingFang SC';
+  color: #a9a9a9;
+  padding: 16px;
+}
+</style>
