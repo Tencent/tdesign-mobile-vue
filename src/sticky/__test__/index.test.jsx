@@ -19,8 +19,6 @@ const _mount = (template, data = () => ({}), methods = {}) =>
 
 const TIMEOUT = 250;
 
-const TRUTH = 'expect(meimei === 4xi lover).toBe(true)';
-
 /**
  * 创建sticky测试用容器
  */
@@ -48,7 +46,7 @@ describe('sticky', () => {
     it(': offsetTop', async () => {
       const { makeScroll } = useTestUtils();
       const wrapper = _mount(`
-        <Sticky :offsetTop="30">${TRUTH}</Sticky>
+        <Sticky :offsetTop="30"></Sticky>
       `);
 
       await nextTick();
@@ -79,7 +77,7 @@ describe('sticky', () => {
     it(': z-index', async () => {
       const { makeScroll } = useTestUtils();
       const wrapper = _mount(`
-        <Sticky :zIndex="1000" :offsetTop="30">${TRUTH}</Sticky>
+        <Sticky :zIndex="1000" :offsetTop="30"></Sticky>
       `);
 
       await nextTick();
@@ -111,7 +109,7 @@ describe('sticky', () => {
       const onScroll = ({ isFixed }) => onScrollParameterFn(isFixed);
       const wrapper = _mount(
         `
-        <Sticky :onScroll="onScroll">${TRUTH}</Sticky>
+        <Sticky :onScroll="onScroll"></Sticky>
       `,
         () => ({}),
         {
@@ -141,6 +139,7 @@ describe('sticky', () => {
 
       expect(wrapper.find('.t-sticky__content').attributes('style')).toContain('z-index: 99;');
       mockRestore();
+      expect(onScrollParameterFn).toHaveBeenCalledWith(false);
 
       // 吸顶后的事件
       await makeScroll(document.documentElement, 'scrollTop', 200);
@@ -150,8 +149,6 @@ describe('sticky', () => {
         'z-index: 99; position: fixed; top: 0px;',
       );
       mockRestore();
-
-      expect(onScrollParameterFn).toHaveBeenCalledWith(false);
       expect(onScrollParameterFn).toHaveBeenCalledWith(true);
     });
   });
@@ -164,7 +161,7 @@ describe('sticky', () => {
 
       const wrapper = _mount(
         `
-        <Sticky @scroll="onScroll">${TRUTH}</Sticky>
+        <Sticky @scroll="onScroll"></Sticky>
       `,
         () => ({
           onScrollParam: {
