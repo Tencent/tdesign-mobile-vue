@@ -64,7 +64,7 @@ export default defineComponent({
     const colors = computed(() => {
       if (Array.isArray(props.color)) return props.color;
 
-      return [props.color, null];
+      return [props.color, undefined];
     });
 
     const iconHalfStyle = (n: number) => ({
