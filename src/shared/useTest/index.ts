@@ -1,4 +1,5 @@
-import sleep from 'lodash';
+import { sleep } from '../util';
+
 /**
  * 测试相关的工具方法
  */

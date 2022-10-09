@@ -77,3 +77,5 @@ export function getCharacterLength(str: string, maxCharacter?: number) {
   }
   return len;
 }
+
+export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms)); // eslint-disable-line
