@@ -202,6 +202,12 @@ export default {
           path: '/mobile-vue/components/upload',
           component: () => import('@/upload/upload.md'),
         },
+        {
+          title: 'Cascader 级联选择器',
+          name: 'cascader',
+          path: '/mobile-vue/components/cascader',
+          component: () => import('@/cascader/cascader.md'),
+        },
       ],
     },
     {
