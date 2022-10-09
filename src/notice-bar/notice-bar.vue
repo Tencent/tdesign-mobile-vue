@@ -94,12 +94,12 @@ export default defineComponent({
         const key = props.theme as string;
         computedPrefixIcon.value = iconDefault?.[key] || '';
       } else {
-        computedPrefixIcon.value = renderTNode(internalInstance, 'prefix-icon');
+        computedPrefixIcon.value = renderTNode(internalInstance, 'prefixIcon');
       }
     });
 
     // suffix-icon
-    const computedSuffixIcon = computed(() => renderTNode(internalInstance, 'suffix-icon'));
+    const computedSuffixIcon = computed(() => renderTNode(internalInstance, 'suffixIcon'));
     // extra
     const showExtraText = computed(() => renderTNode(internalInstance, 'extra'));
     const showContent = computed(() => renderTNode(internalInstance, 'content'));
