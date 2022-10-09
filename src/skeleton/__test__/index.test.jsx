@@ -2,32 +2,87 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Skeleton from '../skeleton.vue';
 
-describe('Skeleton.vue', async () => {
-  it('create', async () => {
-    const wrapper = mount(() => <Skeleton />);
-    expect(wrapper.classes()).toContain('t-skeleton');
-    const content = wrapper.find('.t-skeleton__content');
-    expect(content.exists()).toBeTruthy();
-  });
+const prefix = 't'
+const name = `${prefix}-skeleton`;
+const TEXT = 'tdesign-mobile-vue';
 
-  it('theme render', async () => {
-    const wrapper1 = mount(() => <Skeleton theme="avatar" />);
-    const wrapper2 = mount(() => <Skeleton theme="image" />);
-    const wrapper3 = mount(() => <Skeleton theme="paragraph" />);
-    const content1 = wrapper1.find('.t-skeleton--type-circle');
-    const content2 = wrapper2.find('.t-skeleton--type-rect');
-    const content3 = wrapper3.find('.t-skeleton--type-text');
-    expect(content1.exists()).toBeTruthy();
-    expect(content2.exists()).toBeTruthy();
-    expect(content3.exists()).toBeTruthy();
-  });
+describe('Skeleton', () => {
+  describe('props', async () => {
+    it(': theme', async () => {
+      const wrapper = mount(Skeleton, {
+        props: {
+          theme: '',
+        }
+      });
+      // theme = '', 默认取 'text', 此时 rowCol = [1, [{ width: '24%', height: '16px', marginRight: '16px' },{ width: '76%', height: '16px' }]
+      const $skeleton = wrapper.findComponent(Skeleton);
+      const $rows = $skeleton.findAll(`.${name}__row`);
+      // 2行
+      expect($rows.length).toBe(2);
+      // 第1行1列， 第2行2列
+      const firstRowCol = $rows[0].findAll(`.${name}__col`);
+      const secondRowCol = $rows[1].findAll(`.${name}__col`);
+      expect(firstRowCol.length).toBe(1);
+      expect(firstRowCol[0].classes()).toContain(`${name}--type-text`);
+      expect(secondRowCol.length).toBe(2);
+      expect(secondRowCol[0].classes()).toContain(`${name}--type-text`);
+      expect(secondRowCol[1].classes()).toContain(`${name}--type-text`);
 
-  it('animation render', async () => {
-    const wrapper1 = mount(() => <Skeleton animation="gradient" />);
-    const wrapper2 = mount(() => <Skeleton animation="flashed" />);
-    const row1 = wrapper1.find('.t-skeleton__row > .t-skeleton__col');
-    const row2 = wrapper2.find('.t-skeleton__row > .t-skeleton__col');
-    expect(row1.classes()).toContain('t-skeleton--animation-gradient');
-    expect(row2.classes()).toContain('t-skeleton--animation-flashed');
-  });
+      const image = 'image';
+      await wrapper.setProps({
+        theme: image,
+      });
+      // rowCol = [{ type: 'rect', height: '64px', width: '64px' }],
+      // 1行1列
+      const thirdRowCol = $rows[0].findAll(`.${name}__col`);
+      expect(thirdRowCol.length).toBe(1);
+      expect(thirdRowCol[0].classes()).toContain(`${name}--type-rect`);
+    });
+
+    it(': loading', async () => {
+      const loading = false;
+      const wrapper = mount(Skeleton, {
+        props: {
+          loading,
+          content: TEXT,
+        }
+      })
+      const $skeleton = wrapper.findComponent(Skeleton);
+      // loading = false, 非加载状态, 显示加载完成的内容
+      expect($skeleton.text()).toEqual(TEXT);
+      expect($skeleton.find(`.${name}__content`).exists()).toBeFalsy();
+      await wrapper.setProps({
+        loading: true,
+      });
+      // loading = true, 加载状态, 默认取 theme = 'text', 2行
+      expect($skeleton.find(`.${name}__content`).exists()).toBeTruthy();
+      const $rows = $skeleton.findAll(`.${name}__row`);
+      expect($rows.length).toBe(2);
+    })
+
+    it(': animation', async () => {
+      const rowCol = [1];
+      const wrapper = mount(Skeleton, {
+        props: {
+          rowCol,
+          animation: '',
+        }
+      })
+      // animation = '', 值为空则表示没有动画
+      const $skeleton = wrapper.findComponent(Skeleton);
+
+      // 自定义 rowCol, 1行1列
+      const $rows = $skeleton.findAll(`.${name}__row`);
+      expect($rows.length).toEqual(rowCol.length);
+      expect($rows[0].findAll(`.${name}__col`)[0].classes().includes(`${name}--animation-gradient`)).toBeFalsy();
+      expect($rows[0].findAll(`.${name}__col`)[0].classes().includes(`${name}--animation-flashed`)).toBeFalsy();
+
+      const animation = 'flashed';
+      await wrapper.setProps({
+        animation,
+      });
+      // animation = 'flashed'
+      expect($rows[0].findAll(`.${name}__col`)[0].classes().includes(`${name}--animation-${animation}`)).toBeTruthy();
+    });
+  })
 });
