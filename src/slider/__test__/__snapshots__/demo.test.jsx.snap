@@ -33,6 +33,7 @@ exports[`Slider > Slider baseVue demo works fine 1`] = `
     </div>
   </div>
   <!--v-if-->
+  <!--v-if-->
 </div>
 `;
 
@@ -77,6 +78,11 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
           
         </div>
       </div>
+      <div
+        class="t-slider-wrap__value"
+      >
+        60
+      </div>
       <!--v-if-->
     </div>
   </div>
@@ -85,14 +91,10 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
     data-v-65b1e7f4=""
   >
     <div
-      class="t-slider-wrap t-is-disabled t-is-value"
+      class="t-slider-wrap t-is-disabled"
       data-v-65b1e7f4=""
     >
-      <div
-        class="t-slider-wrap__value--left"
-      >
-        30
-      </div>
+      <!--v-if-->
       <div
         class="t-slider"
       >
@@ -123,8 +125,9 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
       <div
         class="t-slider-wrap__value"
       >
-        100
+        30
       </div>
+      <!--v-if-->
     </div>
   </div>
   <div
@@ -182,6 +185,7 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
         </div>
       </div>
       <!--v-if-->
+      <!--v-if-->
     </div>
   </div>
   <div
@@ -203,7 +207,7 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
         <!-- 滑块长度 -->
         <div
           class="t-slider__track"
-          style="left: 30%; width: 50%;"
+          style="left: 30%; width: 40%;"
         />
         <!-- 滑块操作 -->
         
@@ -213,7 +217,7 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
         />
         <div
           class="t-slider__handle"
-          style="left: 80%;"
+          style="left: 70%;"
         />
         
         <!-- 刻度内容 -->
@@ -224,6 +228,7 @@ exports[`Slider > Slider disableVue demo works fine 1`] = `
           
         </div>
       </div>
+      <!--v-if-->
       <!--v-if-->
     </div>
   </div>
@@ -281,6 +286,7 @@ exports[`Slider > Slider markVue demo works fine 1`] = `
       
     </div>
   </div>
+  <!--v-if-->
   <!--v-if-->
 </div>
 `;
@@ -354,6 +360,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           </div>
         </div>
         <!--v-if-->
+        <!--v-if-->
       </div>
     </div>
     
@@ -376,7 +383,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       <div
         class="t-slider-wrap"
         data-v-98828574=""
-        show-value=""
       >
         <!--v-if-->
         <div
@@ -406,6 +412,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
             
           </div>
         </div>
+        <div
+          class="t-slider-wrap__value"
+        >
+          60
+        </div>
         <!--v-if-->
       </div>
     </div>
@@ -427,14 +438,10 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       data-v-98828574=""
     >
       <div
-        class="t-slider-wrap t-is-value"
+        class="t-slider-wrap"
         data-v-98828574=""
       >
-        <div
-          class="t-slider-wrap__value--left"
-        >
-          30
-        </div>
+        <!--v-if-->
         <div
           class="t-slider"
         >
@@ -465,8 +472,9 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
         <div
           class="t-slider-wrap__value"
         >
-          100
+          30
         </div>
+        <!--v-if-->
       </div>
     </div>
     
@@ -537,6 +545,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           </div>
         </div>
         <!--v-if-->
+        <!--v-if-->
       </div>
     </div>
     
@@ -557,11 +566,14 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       data-v-98828574=""
     >
       <div
-        class="t-slider-wrap"
+        class="t-slider-wrap t-is-value"
         data-v-98828574=""
-        show-value=""
       >
-        <!--v-if-->
+        <div
+          class="t-slider-wrap__value--left"
+        >
+          0
+        </div>
         <div
           class="t-slider"
         >
@@ -572,7 +584,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           <!-- 滑块长度 -->
           <div
             class="t-slider__track"
-            style="left: 30%; width: 50%;"
+            style="left: 30%; width: 40%;"
           />
           <!-- 滑块操作 -->
           
@@ -582,7 +594,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           />
           <div
             class="t-slider__handle"
-            style="left: 80%;"
+            style="left: 70%;"
           />
           
           <!-- 刻度内容 -->
@@ -594,6 +606,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           </div>
         </div>
         <!--v-if-->
+        <div
+          class="t-slider-wrap__value"
+        >
+          100
+        </div>
       </div>
     </div>
     
@@ -654,6 +671,11 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               
             </div>
           </div>
+          <div
+            class="t-slider-wrap__value"
+          >
+            60
+          </div>
           <!--v-if-->
         </div>
       </div>
@@ -662,14 +684,10 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
         data-v-65b1e7f4=""
       >
         <div
-          class="t-slider-wrap t-is-disabled t-is-value"
+          class="t-slider-wrap t-is-disabled"
           data-v-65b1e7f4=""
         >
-          <div
-            class="t-slider-wrap__value--left"
-          >
-            30
-          </div>
+          <!--v-if-->
           <div
             class="t-slider"
           >
@@ -700,8 +718,9 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
           <div
             class="t-slider-wrap__value"
           >
-            100
+            30
           </div>
+          <!--v-if-->
         </div>
       </div>
       <div
@@ -759,6 +778,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
             </div>
           </div>
           <!--v-if-->
+          <!--v-if-->
         </div>
       </div>
       <div
@@ -780,7 +800,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
             <!-- 滑块长度 -->
             <div
               class="t-slider__track"
-              style="left: 30%; width: 50%;"
+              style="left: 30%; width: 40%;"
             />
             <!-- 滑块操作 -->
             
@@ -790,7 +810,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
             />
             <div
               class="t-slider__handle"
-              style="left: 80%;"
+              style="left: 70%;"
             />
             
             <!-- 刻度内容 -->
@@ -801,6 +821,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
               
             </div>
           </div>
+          <!--v-if-->
           <!--v-if-->
         </div>
       </div>
@@ -813,10 +834,13 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
 
 exports[`Slider > Slider rangeVue demo works fine 1`] = `
 <div
-  class="t-slider-wrap"
-  show-value=""
+  class="t-slider-wrap t-is-value"
 >
-  <!--v-if-->
+  <div
+    class="t-slider-wrap__value--left"
+  >
+    0
+  </div>
   <div
     class="t-slider"
   >
@@ -827,7 +851,7 @@ exports[`Slider > Slider rangeVue demo works fine 1`] = `
     <!-- 滑块长度 -->
     <div
       class="t-slider__track"
-      style="left: 30%; width: 50%;"
+      style="left: 30%; width: 40%;"
     />
     <!-- 滑块操作 -->
     
@@ -837,7 +861,7 @@ exports[`Slider > Slider rangeVue demo works fine 1`] = `
     />
     <div
       class="t-slider__handle"
-      style="left: 80%;"
+      style="left: 70%;"
     />
     
     <!-- 刻度内容 -->
@@ -849,13 +873,17 @@ exports[`Slider > Slider rangeVue demo works fine 1`] = `
     </div>
   </div>
   <!--v-if-->
+  <div
+    class="t-slider-wrap__value"
+  >
+    100
+  </div>
 </div>
 `;
 
 exports[`Slider > Slider valueVue demo works fine 1`] = `
 <div
   class="t-slider-wrap"
-  show-value=""
 >
   <!--v-if-->
   <div
@@ -884,6 +912,11 @@ exports[`Slider > Slider valueVue demo works fine 1`] = `
       
       
     </div>
+  </div>
+  <div
+    class="t-slider-wrap__value"
+  >
+    60
   </div>
   <!--v-if-->
 </div>

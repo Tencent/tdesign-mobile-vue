@@ -63,7 +63,7 @@ exports[`SwipeCell > SwipeCell bindVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -152,7 +152,7 @@ exports[`SwipeCell > SwipeCell btnsVue demo works fine 1`] = `
         
       </div>
       <div
-        class="content"
+        class="t-swipe-cell__content"
       >
         
         <div
@@ -240,7 +240,7 @@ exports[`SwipeCell > SwipeCell contentVue demo works fine 1`] = `
         
       </div>
       <div
-        class="content"
+        class="t-swipe-cell__content"
       >
         
         <div
@@ -335,7 +335,7 @@ exports[`SwipeCell > SwipeCell disabledVue demo works fine 1`] = `
         
       </div>
       <div
-        class="content"
+        class="t-swipe-cell__content"
       >
         
         <div
@@ -438,7 +438,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
         
       </div>
       <div
-        class="content"
+        class="t-swipe-cell__content"
       >
         
         <div
@@ -540,7 +540,7 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -623,7 +623,7 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -717,7 +717,7 @@ exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -823,7 +823,7 @@ exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -940,7 +940,7 @@ exports[`SwipeCell > SwipeCell leftOneMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1018,7 +1018,7 @@ exports[`SwipeCell > SwipeCell leftOneMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1107,7 +1107,7 @@ exports[`SwipeCell > SwipeCell leftTwoMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1201,7 +1201,7 @@ exports[`SwipeCell > SwipeCell leftTwoMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1316,7 +1316,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1394,7 +1394,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1475,7 +1475,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1569,7 +1569,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1666,7 +1666,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1772,7 +1772,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1881,7 +1881,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -1964,7 +1964,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -2065,7 +2065,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -2143,7 +2143,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -2242,7 +2242,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -2342,7 +2342,7 @@ exports[`SwipeCell > SwipeCell rightMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div
@@ -2420,7 +2420,7 @@ exports[`SwipeCell > SwipeCell rightMenuVue demo works fine 1`] = `
           
         </div>
         <div
-          class="content"
+          class="t-swipe-cell__content"
         >
           
           <div

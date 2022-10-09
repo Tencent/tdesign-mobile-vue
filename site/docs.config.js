@@ -8,7 +8,7 @@ export default {
           title: '快速开始',
           name: 'getting-started',
           path: '/mobile-vue/getting-started',
-          component: () => import('@/../getting-started.md'),
+          component: () => import('@docs/getting-started.md'),
         },
         {
           title: '更新日志',
@@ -70,7 +70,7 @@ export default {
           path: '/mobile-vue/components/grid',
           component: () => import('@/grid/grid.md'),
         },
-      ]
+      ],
     },
     {
       title: '导航',
@@ -124,6 +124,12 @@ export default {
       title: '输入',
       type: 'component',
       children: [
+        {
+          title: 'Calendar 日历',
+          name: 'calendar',
+          path: '/mobile-vue/components/calendar',
+          component: () => import('@/calendar/calendar.md'),
+        },
         {
           title: 'CheckBox 复选框',
           name: 'checkbox',

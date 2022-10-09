@@ -145,7 +145,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
       >
         
         <div
-          class="t-tabs__panel"
+          class="t-tab-panel t-tabs__panel"
           data-v-43d0a031=""
           value="first"
         >
@@ -187,7 +187,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-tabs__panel"
+          class="t-tab-panel t-tabs__panel"
           data-v-43d0a031=""
           style="display: none;"
           value="second"
@@ -230,7 +230,7 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-tabs__panel"
+          class="t-tab-panel t-tabs__panel"
           data-v-43d0a031=""
           style="display: none;"
           value="third"

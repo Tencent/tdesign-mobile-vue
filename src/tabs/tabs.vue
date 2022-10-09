@@ -34,17 +34,17 @@ import {
   onMounted,
   provide,
   ref,
+  toRefs,
+  SetupContext,
   nextTick,
   onBeforeUnmount,
   readonly,
   Fragment,
-  watch,
-  getCurrentInstance,
 } from 'vue';
 import config from '../config';
 import TabsProps from './props';
 import TabNavItem from './tab-nav-item.vue';
-import { renderContent, renderTNode, TNode } from '../shared';
+import { useVModel } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 
@@ -55,8 +55,8 @@ export default defineComponent({
   name,
   components: { TabNavItem, TSticky },
   props: TabsProps,
-  emits: ['onChange', 'update:value', 'update:modelValue'],
-  setup(props, { emit, slots }) {
+  emits: ['update:value', 'update:modelValue'],
+  setup(props, context: SetupContext) {
     const placement = computed(() => props.placement);
     const showBottomLine = computed(() => props.showBottomLine);
     const stickyProps = computed(() => ({ disabled: true, ...props.stickyProps }));
@@ -69,21 +69,15 @@ export default defineComponent({
     ]);
     const navClasses = ref([`${name}__nav`]);
     const isScroll = ref(false);
-    const currentValue = ref(props.value ? props.value : props.defaultValue);
-    watch(
-      () => props.value,
-      (newValue) => {
-        newValue != null && newValue !== currentValue.value && setValue(newValue);
-        nextTick(() => {
-          moveToActiveTab();
-        });
-      },
-    );
+
+    const { value, modelValue } = toRefs(props);
+    const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+
     const itemProps = computed(() => {
       if (props.list) {
         return props.list;
       }
-      let children: any[] = slots.default ? slots.default() : [];
+      let children: any[] = context.slots.default ? context.slots.default() : [];
 
       const res: any[] = [];
       const label: any[] = [];
@@ -136,21 +130,13 @@ export default defineComponent({
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
     });
-    const setValue = (val: string | number) => {
-      emit('onChange', val);
-      currentValue.value = val;
-    };
-    const tabChange = (event: Event, value: string | number) => {
-      emit('update:modelValue', value);
-      emit('update:value', value);
-      setValue(value);
-    };
+
     const tabClick = (event: Event, item: Record<string, unknown>) => {
       const { value, disabled } = item as any;
       if (disabled || currentValue.value === value) {
         return false;
       }
-      tabChange(event, value);
+      setCurrentValue(value);
       nextTick(() => {
         moveToActiveTab();
       });

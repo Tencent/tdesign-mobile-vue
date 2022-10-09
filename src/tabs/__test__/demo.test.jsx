@@ -3,16 +3,24 @@
  */
 
 import { mount } from '@vue/test-utils';
+import animationVue from '@/tabs/demos/animation.vue';
 import baseVue from '@/tabs/demos/base.vue';
-import horizontalVue from '@/tabs/demos/horizontal.vue';
+import disabledVue from '@/tabs/demos/disabled.vue';
 import mobileVue from '@/tabs/demos/mobile.vue';
 import scrollVue from '@/tabs/demos/scroll.vue';
+import sizeVue from '@/tabs/demos/size.vue';
+import underscoreVue from '@/tabs/demos/underscore.vue';
+import verticalVue from '@/tabs/demos/vertical.vue';
 
 const mapper = {
+  animationVue,
   baseVue,
-  horizontalVue,
+  disabledVue,
   mobileVue,
   scrollVue,
+  sizeVue,
+  underscoreVue,
+  verticalVue,
 };
 
 describe('Tabs', () => {

@@ -30,7 +30,17 @@ export const getRemainTimes = (time?: number): TimeData => {
  * @param num
  * @returns
  */
-export const fillZero = (num: number): string | number => (num >= 10 ? num : `0${num}`);
+export const fillZero = (num: number, isMillieconds = false): string | number => {
+  if (isMillieconds) {
+    if (num >= 100) {
+      return num;
+    }
+
+    return num >= 10 ? `0${num}` : `00${num}`;
+  }
+
+  return num >= 10 ? num : `0${num}`;
+};
 
 /**
  * getMark
@@ -45,8 +55,9 @@ export const getMark = (format: string, type: string): string => format?.split?.
  * @param time
  * @returns
  */
-export const getShowTimes = (times: TimeData, format: string): TdUseCountDownShowTimes => {
+export const getShowTimes = (times: TimeData, format: string, milliseconds = false): TdUseCountDownShowTimes => {
   format = (format || 'DD:HH:mm:ss')?.toUpperCase?.();
+  milliseconds && !format.includes(':SSS') && (format = format.concat(':SSS'));
   const showTimes: TdUseCountDownShowTimes = [];
   if (format?.indexOf('DD') > -1) {
     showTimes?.push({
@@ -75,7 +86,7 @@ export const getShowTimes = (times: TimeData, format: string): TdUseCountDownSho
   if (format?.indexOf('SSS') > -1) {
     showTimes?.push({
       mark: getMark(format, 'SSS'),
-      value: fillZero(times?.milliseconds),
+      value: fillZero(times?.milliseconds, true),
     });
   }
 

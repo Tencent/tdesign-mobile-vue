@@ -2,123 +2,130 @@
 
 exports[`Divider > Divider alignVue demo works fine 1`] = `
 <div
-  class="demo-6"
+  data-v-7ac68ae7=""
 >
-  <span>
-    正直
-  </span>
+  <h3
+    data-v-7ac68ae7=""
+  >
+    文字+直线
+  </h3>
   <div
-    class="t-divider t-divider--hairline t-divider--content-left"
+    class="t-divider t-divider--hairline t-divider--content-center demo-5"
+    data-v-7ac68ae7=""
     role="separator"
   >
     
-    TDesign
+     文字信息 
     
   </div>
-  <span>
-    进取
-  </span>
+  <h3
+    data-v-7ac68ae7=""
+  >
+    纯文字
+  </h3>
   <div
     class="t-divider t-divider--hairline t-divider--content-center"
+    data-v-7ac68ae7=""
     role="separator"
+    style="border-color: transparent;"
   >
     
-    TDesign
+     没有更多了~ 
     
   </div>
-  <span>
-    合作
-  </span>
-  <div
-    class="t-divider t-divider--hairline t-divider--content-right"
-    role="separator"
-  >
-    
-    TDesign
-    
-  </div>
-  <span>
-    创新
-  </span>
 </div>
 `;
 
 exports[`Divider > Divider baseVue demo works fine 1`] = `
 <div
-  class="demo-6"
+  data-v-589c0842=""
 >
-  <h3>
+  <h3
+    data-v-589c0842=""
+  >
     直线拉通
   </h3>
   <div
     class="t-divider t-divider--hairline"
+    data-v-589c0842=""
     role="separator"
   >
     <!---->
   </div>
-  <h3>
-    直线拉通
+  <h3
+    data-v-589c0842=""
+  >
+    虚线拉通
   </h3>
+  <div
+    class="t-divider t-divider--hairline t-divider--dashed"
+    data-v-589c0842=""
+    role="separator"
+  >
+    <!---->
+  </div>
 </div>
 `;
 
 exports[`Divider > Divider horizontalVue demo works fine 1`] = `
 <div
-  class="demo-6"
+  data-v-63a80f32=""
 >
-  <span>
-    正直
-  </span>
+  <h3
+    data-v-63a80f32=""
+  >
+    左右间距
+  </h3>
   <div
-    class="t-divider t-divider--hairline"
+    class="t-divider t-divider--hairline demo-2"
+    data-v-63a80f32=""
     role="separator"
   >
     <!---->
   </div>
-  <span>
-    进取
-  </span>
+  <h3
+    data-v-63a80f32=""
+  >
+    右侧拉通
+  </h3>
   <div
-    class="t-divider t-divider--hairline"
+    class="t-divider t-divider--hairline demo-3"
+    data-v-63a80f32=""
     role="separator"
   >
     <!---->
   </div>
-  <span>
-    合作
-  </span>
+  <h3
+    data-v-63a80f32=""
+  >
+    自定义左侧间距
+  </h3>
   <div
-    class="t-divider t-divider--hairline"
+    class="t-divider t-divider--hairline demo-4"
+    data-v-63a80f32=""
     role="separator"
   >
     <!---->
   </div>
-  <span>
-    创新
-  </span>
 </div>
 `;
 
 exports[`Divider > Divider mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-bf2b60a0=""
 >
   <h1
     class="title"
-    data-v-bf2b60a0=""
   >
     Divider 分割符
   </h1>
   <p
     class="summary"
-    data-v-bf2b60a0=""
   >
      分割线是一个呈线状的轻量化组件，起到分割、组织、细化的作用，用于有逻辑的组织元素内容和页面结构。 
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-bf2b60a0=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -132,136 +139,151 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      data-v-bf2b60a0=""
       style="background: rgb(255, 255, 255);"
     >
-      <h3
-        data-v-bf2b60a0=""
-      >
-        直线拉通
-      </h3>
       <div
-        class="t-divider t-divider--hairline"
-        data-v-bf2b60a0=""
-        role="separator"
+        data-v-589c0842=""
       >
-        <!---->
-      </div>
-      <h3
-        data-v-bf2b60a0=""
-      >
-        虚线拉通
-      </h3>
-      <div
-        class="t-divider t-divider--hairline t-divider--dashed"
-        data-v-bf2b60a0=""
-        role="separator"
-      >
-        <!---->
-      </div>
-      <h3
-        data-v-bf2b60a0=""
-      >
-        左右间距
-      </h3>
-      <div
-        class="t-divider t-divider--hairline demo-2"
-        data-v-bf2b60a0=""
-        role="separator"
-      >
-        <!---->
-      </div>
-      <h3
-        data-v-bf2b60a0=""
-      >
-        右侧拉通
-      </h3>
-      <div
-        class="t-divider t-divider--hairline demo-3"
-        data-v-bf2b60a0=""
-        role="separator"
-      >
-        <!---->
-      </div>
-      <h3
-        data-v-bf2b60a0=""
-      >
-        自定义左侧间距
-      </h3>
-      <div
-        class="t-divider t-divider--hairline demo-4"
-        data-v-bf2b60a0=""
-        role="separator"
-      >
-        <!---->
-      </div>
-      <h3
-        data-v-bf2b60a0=""
-      >
-        文字+直线
-      </h3>
-      <div
-        class="t-divider t-divider--hairline t-divider--content-center demo-5"
-        data-v-bf2b60a0=""
-        role="separator"
-      >
-        
-         文字信息 
-        
-      </div>
-      <h3
-        data-v-bf2b60a0=""
-      >
-        纯文字
-      </h3>
-      <div
-        class="t-divider t-divider--hairline t-divider--content-center"
-        data-v-bf2b60a0=""
-        role="separator"
-        style="border-color: transparent;"
-      >
-        
-         没有更多了~ 
-        
-      </div>
-      <h3
-        data-v-bf2b60a0=""
-      >
-        垂直分割
-      </h3>
-      <div
-        class="demo-6"
-        data-v-bf2b60a0=""
-      >
-        <span
-          data-v-bf2b60a0=""
+        <h3
+          data-v-589c0842=""
         >
-          文字信息
-        </span>
+          直线拉通
+        </h3>
         <div
-          class="t-divider t-divider--hairline t-divider-vertical"
-          data-v-bf2b60a0=""
+          class="t-divider t-divider--hairline"
+          data-v-589c0842=""
           role="separator"
         >
           <!---->
         </div>
-        <span
-          data-v-bf2b60a0=""
+        <h3
+          data-v-589c0842=""
         >
-          文字信息
-        </span>
+          虚线拉通
+        </h3>
         <div
-          class="t-divider t-divider--hairline t-divider-vertical"
-          data-v-bf2b60a0=""
+          class="t-divider t-divider--hairline t-divider--dashed"
+          data-v-589c0842=""
           role="separator"
         >
           <!---->
         </div>
-        <span
-          data-v-bf2b60a0=""
+      </div>
+      <div
+        data-v-63a80f32=""
+      >
+        <h3
+          data-v-63a80f32=""
         >
-          文字信息
-        </span>
+          左右间距
+        </h3>
+        <div
+          class="t-divider t-divider--hairline demo-2"
+          data-v-63a80f32=""
+          role="separator"
+        >
+          <!---->
+        </div>
+        <h3
+          data-v-63a80f32=""
+        >
+          右侧拉通
+        </h3>
+        <div
+          class="t-divider t-divider--hairline demo-3"
+          data-v-63a80f32=""
+          role="separator"
+        >
+          <!---->
+        </div>
+        <h3
+          data-v-63a80f32=""
+        >
+          自定义左侧间距
+        </h3>
+        <div
+          class="t-divider t-divider--hairline demo-4"
+          data-v-63a80f32=""
+          role="separator"
+        >
+          <!---->
+        </div>
+      </div>
+      <div
+        data-v-7ac68ae7=""
+      >
+        <h3
+          data-v-7ac68ae7=""
+        >
+          文字+直线
+        </h3>
+        <div
+          class="t-divider t-divider--hairline t-divider--content-center demo-5"
+          data-v-7ac68ae7=""
+          role="separator"
+        >
+          
+           文字信息 
+          
+        </div>
+        <h3
+          data-v-7ac68ae7=""
+        >
+          纯文字
+        </h3>
+        <div
+          class="t-divider t-divider--hairline t-divider--content-center"
+          data-v-7ac68ae7=""
+          role="separator"
+          style="border-color: transparent;"
+        >
+          
+           没有更多了~ 
+          
+        </div>
+      </div>
+      <div
+        data-v-0851d1f8=""
+      >
+        <h3
+          data-v-0851d1f8=""
+        >
+          垂直分割
+        </h3>
+        <div
+          class="demo-6"
+          data-v-0851d1f8=""
+        >
+          <span
+            data-v-0851d1f8=""
+          >
+            文字信息
+          </span>
+          <div
+            class="t-divider t-divider--hairline t-divider-vertical"
+            data-v-0851d1f8=""
+            role="separator"
+          >
+            <!---->
+          </div>
+          <span
+            data-v-0851d1f8=""
+          >
+            文字信息
+          </span>
+          <div
+            class="t-divider t-divider--hairline t-divider-vertical"
+            data-v-0851d1f8=""
+            role="separator"
+          >
+            <!---->
+          </div>
+          <span
+            data-v-0851d1f8=""
+          >
+            文字信息
+          </span>
+        </div>
       </div>
     </div>
     
@@ -271,49 +293,46 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
 
 exports[`Divider > Divider verticalVue demo works fine 1`] = `
 <div
-  class="demo-6"
   data-v-0851d1f8=""
 >
-  <span
+  <h3
     data-v-0851d1f8=""
   >
-    正直信息
-  </span>
+    垂直分割
+  </h3>
   <div
-    class="t-divider t-divider--hairline t-divider-vertical"
+    class="demo-6"
     data-v-0851d1f8=""
-    role="separator"
   >
-    <!---->
+    <span
+      data-v-0851d1f8=""
+    >
+      文字信息
+    </span>
+    <div
+      class="t-divider t-divider--hairline t-divider-vertical"
+      data-v-0851d1f8=""
+      role="separator"
+    >
+      <!---->
+    </div>
+    <span
+      data-v-0851d1f8=""
+    >
+      文字信息
+    </span>
+    <div
+      class="t-divider t-divider--hairline t-divider-vertical"
+      data-v-0851d1f8=""
+      role="separator"
+    >
+      <!---->
+    </div>
+    <span
+      data-v-0851d1f8=""
+    >
+      文字信息
+    </span>
   </div>
-  <span
-    data-v-0851d1f8=""
-  >
-    进取
-  </span>
-  <div
-    class="t-divider t-divider--hairline t-divider-vertical"
-    data-v-0851d1f8=""
-    role="separator"
-  >
-    <!---->
-  </div>
-  <span
-    data-v-0851d1f8=""
-  >
-    合作
-  </span>
-  <div
-    class="t-divider t-divider--hairline t-divider-vertical"
-    data-v-0851d1f8=""
-    role="separator"
-  >
-    <!---->
-  </div>
-  <span
-    data-v-0851d1f8=""
-  >
-    创新
-  </span>
 </div>
 `;

@@ -128,7 +128,7 @@ import TButton from '../button';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import TRadioGroup from '../radio-group';
 import TransAniControl from './trans-ani-control';
-import { useDefault, useEmitEvent } from '../shared';
+import { useVModel, useEmitEvent } from '../shared';
 import DropdownItemProps from './dropdown-item-props';
 import { DropdownMenuState, DropdownMenuControl } from './context';
 import { TdDropdownMenuProps, TdDropdownItemProps, TdDropdownItemOption, TdDropdownItemOptionValueType } from './type';
@@ -160,11 +160,8 @@ export default defineComponent({
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     // 受控 value 属性
-    const [passInValue, setValue] = useDefault<
-      TdDropdownItemOptionValueType | Array<TdDropdownItemOptionValueType>,
-      TdDropdownItemProps
-    >(props, context.emit, 'value', 'change');
-
+    const { value, modelValue } = toRefs(props);
+    const [passInValue, setValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     // 从父组件取属性、状态和控制函数
     const menuProps = inject('dropdownMenuProps') as TdDropdownMenuProps;
     const menuState = inject('dropdownMenuState') as DropdownMenuState;
@@ -367,13 +364,15 @@ export default defineComponent({
       }
     };
     // 初始值更新一次选中项
-    updateSelectValue(passInValue.value);
+    updateSelectValue(passInValue.value || null);
     // 跟踪 modelValue 更新选项
     watch(
       () => passInValue.value,
-      (val) => updateSelectValue(val),
+      (val) => {
+        if (!val) return;
+        updateSelectValue(val);
+      },
     );
-
     // 底部按键是否可用
     const isBtnDisabled = computed(() => {
       switch (props.optionsLayout) {

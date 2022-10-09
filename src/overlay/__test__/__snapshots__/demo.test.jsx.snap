@@ -36,7 +36,11 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
     </span>
   </button>
   <transition-stub
+    appear="false"
+    css="true"
     data-v-255855c8=""
+    name="t-overlay"
+    persisted="true"
   >
     <div
       class="t-overlay"
@@ -47,7 +51,11 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
     </div>
   </transition-stub>
   <transition-stub
+    appear="false"
+    css="true"
     data-v-255855c8=""
+    name="t-overlay"
+    persisted="true"
   >
     <div
       class="t-overlay t-overlay--transparent"
@@ -128,7 +136,11 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
         </span>
       </button>
       <transition-stub
+        appear="false"
+        css="true"
         data-v-255855c8=""
+        name="t-overlay"
+        persisted="true"
       >
         <div
           class="t-overlay"
@@ -139,7 +151,11 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
         </div>
       </transition-stub>
       <transition-stub
+        appear="false"
+        css="true"
         data-v-255855c8=""
+        name="t-overlay"
+        persisted="true"
       >
         <div
           class="t-overlay t-overlay--transparent"

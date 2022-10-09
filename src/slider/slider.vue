@@ -28,20 +28,23 @@
         </div>
       </div>
     </div>
+    <div v-if="labelContent" :class="`${name}-wrap__value`">
+      <t-node :content="labelContent"></t-node>
+    </div>
     <div v-if="showExtremeValue" :class="`${name}-wrap__value`">{{ max }}</div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, toRefs, computed, SetupContext, reactive, defineComponent } from 'vue';
+import { ref, toRefs, computed, SetupContext, reactive, defineComponent, getCurrentInstance } from 'vue';
 import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
+import { renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-slider`;
 const { isArray } = Array;
-// label\value\defaultValue
 
 export interface TouchData {
   startValue: number;
@@ -53,6 +56,7 @@ export interface TouchData {
 
 export default defineComponent({
   name,
+  components: { TNode },
   props,
   emits: ['drag-start', 'drag-end', 'update:modelValue', 'change'],
   setup(props, context: SetupContext) {
@@ -61,6 +65,16 @@ export default defineComponent({
     const defaultValue = props.defaultValue || props.min;
     const { value, modelValue, max, min } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, defaultValue, props.onChange);
+    const internalInstance = getCurrentInstance();
+    const labelContent = computed(
+      () =>
+        !props.range &&
+        props.label &&
+        (typeof renderTNode(internalInstance, 'label') === 'object'
+          ? renderTNode(internalInstance, 'label')
+          : `${innerValue.value}`),
+    );
+
     const isRange = computed(() => {
       return props.range && isArray(innerValue.value) && innerValue.value.length === 2;
     });
@@ -234,6 +248,7 @@ export default defineComponent({
       barRef,
       dots,
       value: innerValue,
+      labelContent,
       classes,
       handleClass,
       trackStyle,

@@ -5,6 +5,45 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.11.0 `2022-09-26` 
+### 🚀 Features
+
+- `Calendar`: 新增日历组件 @LadyChatterleyLover ([#325](https://github.com/Tencent/tdesign-mobile-vue/pull/325))
+- `Calendar`: 视觉升级，功能增强 @LeeJim ([#366](https://github.com/Tencent/tdesign-mobile-vue/pull/366))
+
+### 🐞 Bug Fixes
+- `CountDown`: 修复 millisecond 配置无效的问题 @TingShine ([#313](https://github.com/Tencent/tdesign-mobile-vue/pull/313))
+- `Upload`: 修复上传失败后，再次上传会产生报错的问题 @palmcivet ([#318](https://github.com/Tencent/tdesign-mobile-vue/pull/318))
+
+### 🚧 Others
+- `Collapse`: 新增单元测试 @isanxia ([#331](https://github.com/Tencent/tdesign-mobile-vue/pull/331))
+- `Loading`: 新增单元测试 @zhangpaopao0609 ([#320](https://github.com/Tencent/tdesign-mobile-vue/pull/320))
+- `PullDownRefresh`: 新增单元测试 @palmcivet ([#356](https://github.com/Tencent/tdesign-mobile-vue/pull/356))
+- `CountDown`: 新增单元测试 @TingShine ([#313](https://github.com/Tencent/tdesign-mobile-vue/pull/313))
+- `Message`: 新增单元测试 @zhangpaopao0609 ([#321](https://github.com/Tencent/tdesign-mobile-vue/pull/321))
+- `Upload`: 新增单元测试 @palmcivet ([#318](https://github.com/Tencent/tdesign-mobile-vue/pull/318))
+
+## 🌈 0.10.6 `2022-09-20` 
+### 🚀 Features
+- `Drawer`: 新增单元测试 @anlyyao ([#311](https://github.com/Tencent/tdesign-mobile-vue/pull/311))
+- `Popup`: 新增单元测试 @anlyyao ([#310](https://github.com/Tencent/tdesign-mobile-vue/pull/310))
+- `Stepper`: 新增单元测试 @anlyyao ([#304](https://github.com/Tencent/tdesign-mobile-vue/pull/304))
+- `Overlay`: 新增单元测试 @HelKyle ([#336](https://github.com/Tencent/tdesign-mobile-vue/pull/336))
+- `BackTop`: 新增单元测试 @HelKyle ([#335](https://github.com/Tencent/tdesign-mobile-vue/pull/335))
+- `Toast`: 新增单元测试 @HelKyle ([#334](https://github.com/Tencent/tdesign-mobile-vue/pull/334))
+- `ActionSheet`: 新增单元测试 @HelKyle ([#319](https://github.com/Tencent/tdesign-mobile-vue/pull/319))
+- `Progress`: 新增单元测试 @HelKyle ([#337](https://github.com/Tencent/tdesign-mobile-vue/pull/337))
+- `ImageViewer`: 新增单元测试 @palmcivet ([#332](https://github.com/Tencent/tdesign-mobile-vue/pull/332))
+- `TabBar`: 新增单元测试 @HelKyle ([#314](https://github.com/Tencent/tdesign-mobile-vue/pull/314))
+- `Dialog`: 新增单元测试 @anlyyao ([#361](https://github.com/Tencent/tdesign-mobile-vue/pull/361))
+### 🐞 Bug Fixes
+- `Stepper`: 修复输入非 `number` 字符时，出现 `NaN` 问题 @anlyyao ([#304](https://github.com/Tencent/tdesign-mobile-vue/pull/304))
+- `Stepper`: 修复输入值能超出 `max` 的问题 @anlyyao ([#304](https://github.com/Tencent/tdesign-mobile-vue/pull/304))
+- `Stepper`: 修复 `value` 值小于 `min` 或超出 `max` 时，不触发 `overlimit` 的问题 @anlyyao ([#304](https://github.com/Tencent/tdesign-mobile-vue/pull/304))
+- `Collapse`: 修复 `headerRightContent` 插槽与文档描述不一致的问题 @isanxia ([#330](https://github.com/Tencent/tdesign-mobile-vue/pull/330))
+### 🚧 Others
+- `官网`: 更新浏览器兼容性说明文档 @anlyyao ([#349](https://github.com/Tencent/tdesign-mobile-vue/pull/349))
+
 ## 🌈 0.10.5 `2022-09-06` 
 ### 🚀 Features
 - `Popup`: 新增 `customStyle` 和 `overlayProps` 属性 @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))

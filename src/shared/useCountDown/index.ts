@@ -8,7 +8,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
   // state
   const fps = ref();
   const count = ref(Number(time));
-  const showTimes = reactive(getShowTimes(getRemainTimes(time), format));
+  const showTimes = reactive(getShowTimes(getRemainTimes(time), format, !!millisecond));
 
   // raf
   const { pause, resume } = useRafFn(

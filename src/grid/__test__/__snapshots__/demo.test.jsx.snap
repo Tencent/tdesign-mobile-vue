@@ -1,13 +1,18 @@
 // Vitest Snapshot v1
 
 exports[`Grid > Grid badgeVue demo works fine 1`] = `
-<div>
+<div
+  class="grid-demo"
+  data-v-26858cd4=""
+>
   <div
     class="t-grid"
+    data-v-26858cd4=""
   >
     
     <div
       class="t-grid-item"
+      data-v-26858cd4=""
       style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
     >
       <div
@@ -51,6 +56,7 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item"
+      data-v-26858cd4=""
       style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
     >
       <div
@@ -94,6 +100,7 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item"
+      data-v-26858cd4=""
       style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
     >
       <div
@@ -137,6 +144,7 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
     </div>
     <div
       class="t-grid-item"
+      data-v-26858cd4=""
       style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
     >
       <div
@@ -148,7 +156,7 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
           <div
             class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
           >
-            ...
+            ···
           </div>
           
           
@@ -320,7 +328,7 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
             class="t-grid-item__title"
             style="padding-top: 8px; margin-bottom: 4px;"
           >
-            最多四字
+            标题五字内
           </div>
           <div
             class="t-grid-item__description"
@@ -802,132 +810,219 @@ exports[`Grid > Grid baseVue demo works fine 1`] = `
 `;
 
 exports[`Grid > Grid descVue demo works fine 1`] = `
-<div>
+<div
+  data-v-app=""
+>
+  
   <div
-    class="t-grid"
+    class="grid-demo"
+    data-v-f7d95d20=""
   >
-    
     <div
-      class="t-grid-item"
-      style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+      class="t-grid"
+      data-v-f7d95d20=""
     >
+      
       <div
-        class="t-grid-item__image-box"
-      >
-        
-        <img
-          class="t-grid-item__image"
-          src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-          style="width: 48px; height: 48px;"
-        />
-        
-      </div>
-      <div
-        class="t-grid-item__text"
-        style="padding-left: 0px;"
+        class="t-grid-item"
+        data-v-f7d95d20=""
+        style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
       >
         <div
-          class="t-grid-item__title"
-          style="padding-top: 8px; margin-bottom: 4px;"
+          class="t-grid-item__image-box"
         >
-          标题文字
+          
+          <img
+            class="t-grid-item__image"
+            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+            style="width: 48px; height: 48px;"
+          />
+          
         </div>
         <div
-          class="t-grid-item__description"
+          class="t-grid-item__text"
+          style="padding-left: 0px;"
         >
-          说明文字
+          <div
+            class="t-grid-item__title"
+            style="padding-top: 8px; margin-bottom: 4px;"
+          >
+            标题文字
+          </div>
+          <div
+            class="t-grid-item__description"
+          >
+            说明文字
+          </div>
         </div>
       </div>
+      <div
+        class="t-grid-item"
+        data-v-f7d95d20=""
+        style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+      >
+        <div
+          class="t-grid-item__image-box"
+        >
+          
+          <img
+            class="t-grid-item__image"
+            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+            style="width: 48px; height: 48px;"
+          />
+          
+        </div>
+        <div
+          class="t-grid-item__text"
+          style="padding-left: 0px;"
+        >
+          <div
+            class="t-grid-item__title"
+            style="padding-top: 8px; margin-bottom: 4px;"
+          >
+            标题文字
+          </div>
+          <div
+            class="t-grid-item__description"
+          >
+            说明文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-grid-item"
+        data-v-f7d95d20=""
+        style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+      >
+        <div
+          class="t-grid-item__image-box"
+        >
+          
+          <img
+            class="t-grid-item__image"
+            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+            style="width: 48px; height: 48px;"
+          />
+          
+        </div>
+        <div
+          class="t-grid-item__text"
+          style="padding-left: 0px;"
+        >
+          <div
+            class="t-grid-item__title"
+            style="padding-top: 8px; margin-bottom: 4px;"
+          >
+            标题最多六字
+          </div>
+          <div
+            class="t-grid-item__description"
+          >
+            说明最多六字
+          </div>
+        </div>
+      </div>
+      
     </div>
-    <div
-      class="t-grid-item"
-      style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-    >
-      <div
-        class="t-grid-item__image-box"
-      >
-        
-        <img
-          class="t-grid-item__image"
-          src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-          style="width: 48px; height: 48px;"
-        />
-        
-      </div>
-      <div
-        class="t-grid-item__text"
-        style="padding-left: 0px;"
-      >
-        <div
-          class="t-grid-item__title"
-          style="padding-top: 8px; margin-bottom: 4px;"
-        >
-          标题文字
-        </div>
-        <div
-          class="t-grid-item__description"
-        >
-          说明文字
-        </div>
-      </div>
-    </div>
-    <div
-      class="t-grid-item"
-      style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-    >
-      <div
-        class="t-grid-item__image-box"
-      >
-        
-        <img
-          class="t-grid-item__image"
-          src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-          style="width: 48px; height: 48px;"
-        />
-        
-      </div>
-      <div
-        class="t-grid-item__text"
-        style="padding-left: 0px;"
-      >
-        <div
-          class="t-grid-item__title"
-          style="padding-top: 8px; margin-bottom: 4px;"
-        >
-          标题最多六字
-        </div>
-        <div
-          class="t-grid-item__description"
-        >
-          说明最多六字
-        </div>
-      </div>
-    </div>
-    
   </div>
+  <div
+    class="grid-demo"
+    data-v-f7d95d20=""
+  >
+    <div
+      class="t-grid"
+      data-v-f7d95d20=""
+    >
+      
+      <div
+        class="t-grid-item"
+        data-v-f7d95d20=""
+        style="flex-basis: 50%; flex-direction: row; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+      >
+        <div
+          class="t-grid-item__image-box"
+        >
+          
+          <img
+            class="t-grid-item__image"
+            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+            style="width: 48px; height: 48px;"
+          />
+          
+        </div>
+        <div
+          class="t-grid-item__text"
+          style="padding-left: 12px;"
+        >
+          <div
+            class="t-grid-item__title"
+            style="padding-top: 0px; margin-bottom: 4px;"
+          >
+            标题文字
+          </div>
+          <div
+            class="t-grid-item__description"
+          >
+            说明文字
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-grid-item"
+        data-v-f7d95d20=""
+        style="flex-basis: 50%; flex-direction: row; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+      >
+        <div
+          class="t-grid-item__image-box"
+        >
+          
+          <img
+            class="t-grid-item__image"
+            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+            style="width: 48px; height: 48px;"
+          />
+          
+        </div>
+        <div
+          class="t-grid-item__text"
+          style="padding-left: 12px;"
+        >
+          <div
+            class="t-grid-item__title"
+            style="padding-top: 0px; margin-bottom: 4px;"
+          >
+            标题文字
+          </div>
+          <div
+            class="t-grid-item__description"
+          >
+            说明文字
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>
 `;
 
 exports[`Grid > Grid mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-2417457e=""
 >
   <h1
     class="title"
-    data-v-2417457e=""
   >
     Grid 宫格
   </h1>
   <p
     class="summary"
-    data-v-2417457e=""
   >
     用于功能入口布局，将页面或特定区域切分成若干等大的区块，形成若干功能入口。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-2417457e=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -940,18 +1035,19 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
        
     </p>
     
+    
     <div
       class="grid-demo"
-      data-v-2417457e=""
+      data-v-3e578ca0=""
     >
       <div
         class="t-grid"
-        data-v-2417457e=""
+        data-v-3e578ca0=""
       >
         
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -984,7 +1080,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1017,7 +1113,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1050,7 +1146,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1086,16 +1182,16 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     </div>
     <div
       class="grid-demo"
-      data-v-2417457e=""
+      data-v-3e578ca0=""
     >
       <div
         class="t-grid"
-        data-v-2417457e=""
+        data-v-3e578ca0=""
       >
         
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1128,7 +1224,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1161,7 +1257,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1194,7 +1290,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1227,7 +1323,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1263,16 +1359,16 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     </div>
     <div
       class="grid-demo"
-      data-v-2417457e=""
+      data-v-3e578ca0=""
     >
       <div
         class="t-grid"
-        data-v-2417457e=""
+        data-v-3e578ca0=""
       >
         
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1305,7 +1401,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1338,7 +1434,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1374,16 +1470,16 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     </div>
     <div
       class="grid-demo short-width"
-      data-v-2417457e=""
+      data-v-3e578ca0=""
     >
       <div
         class="t-grid"
-        data-v-2417457e=""
+        data-v-3e578ca0=""
       >
         
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1416,7 +1512,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1449,7 +1545,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1482,7 +1578,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1515,7 +1611,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-3e578ca0=""
           style="flex-basis: 20%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1550,10 +1646,10 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       </div>
     </div>
     
+    
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-2417457e=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -1566,18 +1662,19 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
        
     </p>
     
+    
     <div
       class="grid-demo"
-      data-v-2417457e=""
+      data-v-f7d95d20=""
     >
       <div
         class="t-grid"
-        data-v-2417457e=""
+        data-v-f7d95d20=""
       >
         
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-f7d95d20=""
           style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1610,7 +1707,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-f7d95d20=""
           style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1643,7 +1740,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-f7d95d20=""
           style="flex-basis: 33.333333333333336%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1679,16 +1776,16 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     </div>
     <div
       class="grid-demo"
-      data-v-2417457e=""
+      data-v-f7d95d20=""
     >
       <div
         class="t-grid"
-        data-v-2417457e=""
+        data-v-f7d95d20=""
       >
         
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-f7d95d20=""
           style="flex-basis: 50%; flex-direction: row; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1721,7 +1818,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-f7d95d20=""
           style="flex-basis: 50%; flex-direction: row; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1756,10 +1853,10 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
       </div>
     </div>
     
+    
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-2417457e=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -1774,16 +1871,16 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     
     <div
       class="grid-demo"
-      data-v-2417457e=""
+      data-v-26858cd4=""
     >
       <div
         class="t-grid"
-        data-v-2417457e=""
+        data-v-26858cd4=""
       >
         
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-26858cd4=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1827,7 +1924,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-26858cd4=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1871,7 +1968,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-26858cd4=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
@@ -1915,7 +2012,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-grid-item"
-          data-v-2417457e=""
+          data-v-26858cd4=""
           style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
         >
           <div
