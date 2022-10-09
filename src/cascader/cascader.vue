@@ -12,7 +12,7 @@
     </div>
     <div :class="`${name}__content`">
       <div :class="`${name}__indexes`">
-        <t-steps v-model="stepState.stepIndex" layout="vertical" :readonly="false" :class="`${name}__steps`">
+        <!-- <t-steps v-model="stepState.stepIndex" theme="dot" layout="vertical" :class="`${name}__steps`">
           <t-step
             v-for="(label, index) in stepState.stepLabels"
             :key="index"
@@ -20,7 +20,8 @@
             @click="onClickTab(index, $event)"
           >
           </t-step>
-        </t-steps>
+        </t-steps> -->
+        <cascader-steps v-model="stepState.stepIndex" :items="treeOptions" />
       </div>
       <t-divider></t-divider>
       <div :class="`${name}__options_title`">选项标题</div>
@@ -47,6 +48,7 @@
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, toRefs, getCurrentInstance, SetupContext, computed, reactive } from 'vue';
 import { TdCascaderItems, TdCascaderItem, TdCascaderItemValueType } from './type';
+import CascaderSteps from './steps.vue';
 import config from '@/config';
 import CascaderProps from './props';
 import { useEmitEvent, useVModel, renderTNode, TNode } from '@/shared';
@@ -61,7 +63,7 @@ type cascaderClickTabContext = { e: MouseEvent };
 
 export default defineComponent({
   name,
-  components: { CloseIcon, CascaderItem, TNode },
+  components: { CloseIcon, CascaderItem, TNode, CascaderSteps },
   props: CascaderProps,
   emits: ['change', 'cancel', 'pick', 'click-tab', 'update:modelValue', 'update:value'],
   setup(props: any, context: SetupContext) {

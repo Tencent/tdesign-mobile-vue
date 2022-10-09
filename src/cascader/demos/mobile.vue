@@ -3,7 +3,7 @@
     <h1 class="title">Cascader 级联选择器</h1>
     <p class="summary">用于多层级数据选择，主要为树形结构，可展示更多的数据</p>
     <tdesign-demo-block title="01 基本用法" summary="基本用法">
-      <t-input :value="address.address1" label="地址" placeholder="选择地址" @click="show.show1 = true" />
+      <t-input :value="address.address1" label="地址" placeholder="选择地址" readonly @click="show.show1 = true" />
       <t-popup v-model="show.show1" placement="bottom">
         <t-cascader
           v-model="address.address1"
@@ -16,7 +16,7 @@
       </t-popup>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 关闭icon" summary="可自定义的icon">
-      <t-input :value="address.address2" label="地址" placeholder="选择地址" @click="show.show2 = true" />
+      <t-input :value="address.address2" label="地址" placeholder="选择地址" readonly @click="show.show2 = true" />
       <t-popup v-model="show.show2" placement="bottom">
         <t-cascader
           v-model="address.address2"
@@ -33,7 +33,7 @@
       </t-popup>
     </tdesign-demo-block>
     <tdesign-demo-block title="03 标题" summary="可自定义的标题">
-      <t-input :value="address.address3" label="地址" placeholder="选择地址" @click="show.show3 = true" />
+      <t-input :value="address.address3" label="地址" placeholder="选择地址" readonly @click="show.show3 = true" />
       <t-popup v-model="show.show3" placement="bottom">
         <t-cascader
           v-model="address.address3"
@@ -47,7 +47,7 @@
       </t-popup>
     </tdesign-demo-block>
     <tdesign-demo-block title="04 禁用选项" summary="禁用可选项">
-      <t-input :value="address.address4" label="地址" placeholder="选择地址" @click="show.show4 = true" />
+      <t-input :value="address.address4" label="地址" placeholder="选择地址" readonly @click="show.show4 = true" />
       <t-popup v-model="show.show4" placement="bottom">
         <t-cascader
           v-model="address.address4"
