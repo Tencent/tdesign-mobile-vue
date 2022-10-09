@@ -3,88 +3,112 @@ import { describe, it, expect } from 'vitest';
 import Badge from '../badge.vue';
 import Button from '../../button/button.vue';
 
-const shapeList = ['circle', 'ribbon', 'round'];
-const sizeList = ['medium', 'small'];
+const prefix = 't';
+const name = `${prefix}-badge`;
+const TEXT = 'Badge 徽标';
 
-describe('Badge.vue', async () => {
-  it('create', async () => {
+describe('Badge', () => {
+  it(': dot', () => {
     const wrapper = mount(() => (
       <Badge dot>
         <Button>按钮</Button>
       </Badge>
     ));
-    expect(wrapper.classes()).toContain('t-badge');
-    const dot = wrapper.find('.t-badge--dot');
-    const button = wrapper.findComponent(Button);
+    const dot = wrapper.find(`.${name}--dot`);
     expect(dot.exists()).toBeTruthy();
-    expect(button.exists()).toBeTruthy();
+    expect(wrapper.findComponent(Button).text()).toEqual(`按钮`);
   });
 
-  it('count render', async () => {
+  it(': count', () => {
     const wrapper = mount(() => (
       <Badge count={5}>
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find('.t-badge__inner');
-    expect(inner.exists()).toBeTruthy();
-    expect(inner.text()).toBe('5');
+    const inner = wrapper.find(`.${name}__inner`);
+    expect(inner.text()).toEqual('5');
   });
 
-  it('maxCount render', async () => {
+  it(': maxCount', () => {
+    const count = 100;
+    const maxCount = 50;
     const wrapper = mount(() => (
-      <Badge count={100} maxCount={50}>
+      <Badge count={count} maxCount={maxCount}>
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find('.t-badge__inner');
+    const inner = wrapper.find(`.${name}__inner`);
     expect(inner.exists()).toBeTruthy();
-    expect(inner.text()).toBe('50+');
+    expect(inner.text()).toEqual(`${maxCount}+`);
   });
 
-  it('shape render', async () => {
-    shapeList.forEach((s) => {
-      const wrapper = mount(() => (
-        <Badge shape={s} count={5}>
-          <Button>按钮</Button>
-        </Badge>
-      ));
-      const inner = wrapper.find('.t-badge__inner');
-      expect(inner.classes()).toContain(`t-badge--${s}`);
+  it(': shape', async () => {
+    const count = 16;
+    const wrapper = mount(Badge, {
+      props: {
+        count,
+        shape: '',
+        content: TEXT,
+      },
     });
-  });
-
-  it('size render', async () => {
-    sizeList.forEach((s) => {
-      const wrapper = mount(() => (
-        <Badge size={s} count={5}>
-          <Button>按钮</Button>
-        </Badge>
-      ));
-      const inner = wrapper.find('.t-badge__inner');
-      expect(inner.classes()).toContain(`t-badge--${s}`);
+    // shape = ''
+    const $badge = wrapper.findComponent(Badge);
+    const inner = $badge.find(`.${name}__inner`);
+    ['circle', 'ribbon', 'round'].forEach((s) => {
+      expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
     });
+    expect($badge.text()).toEqual(`${count + TEXT}`);
+
+    const shape = 'ribbon';
+    await wrapper.setProps({
+      shape,
+    });
+    expect(inner.classes()).toContain(`${name}--${shape}`);
   });
 
-  it('showZero render', async () => {
+  it(': size', async () => {
+    const wrapper = mount(Badge, {
+      props: {
+        dot: true,
+        size: '',
+        content: TEXT,
+      },
+    });
+    // size = ''
+    const $badge = wrapper.findComponent(Badge);
+    const inner = $badge.find(`.${name}__inner`);
+    ['medium', 'small'].forEach((s) => {
+      expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
+    });
+    expect($badge.text()).toEqual(`${TEXT}`);
+
+    const size = 'small';
+    await wrapper.setProps({
+      size,
+    });
+    expect(inner.classes()).toContain(`${name}--${size}`);
+  });
+
+  it(': showZero', () => {
     const wrapper = mount(() => (
-      <Badge count={0} showZero>
+      <Badge showZero>
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find('.t-badge__inner');
+    const inner = wrapper.find(`.${name}__inner`);
     expect(inner.exists()).toBeTruthy();
-    expect(inner.text()).toBe('0');
+    expect(inner.text()).toEqual('0');
   });
 
-  it('offset render', async () => {
+  it(': offset', () => {
+    const count = 100;
+    const offset = [20, 30];
     const wrapper = mount(() => (
-      <Badge count={100} offset={[20, 30]}>
+      <Badge count={count} offset={offset}>
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find('.t-badge__inner');
-    expect(getComputedStyle(inner.element, null).right).toBe('20px');
-    expect(getComputedStyle(inner.element, null).top).toBe('30px');
+    const inner = wrapper.find(`.${name}__inner`);
+    expect(inner.attributes('style').includes(`right: ${offset[0]}px; top: ${offset[1]}px`)).toBeTruthy();
   });
 });
