@@ -1,12 +1,13 @@
 <template>
-  <div v-show="visible" :class="name" :style="`background: ${background || ''}`">
-    <div v-if="leftIcon || homeIcon || leftContent" :class="`${name}__back`">
-      <span v-if="leftIcon" :class="`${name}__back--arrow`" @click="handleBack">
+  <div v-show="visible" :class="name" :style="`${navStyle}`">
+    <div v-if="homeContent || leftContent" :class="`${name}__back`">
+      <span v-if="leftIcon === true" :class="`${name}__back--arrow`" @click="handleBack">
         <t-chevron-left-icon />
       </span>
-      <span v-if="homeIcon" :class="`${name}__back--arrow`" @click="handleHomeClick">
+      <span v-if="homeIcon === true" :class="`${name}__back--arrow`" @click="handleHomeClick">
         <t-home-icon />
       </span>
+      <t-node :content="homeContent"></t-node>
       <t-node :content="leftContent"></t-node>
     </div>
 
@@ -33,10 +34,17 @@ export default defineComponent({
   name,
   components: { TChevronLeftIcon, TNode, THomeIcon },
   props: NavbarProps,
-  emits: ['click-text', 'home-click'],
+  emits: ['left-click', 'home-click'],
   setup(props, context: SetupContext) {
     const internalInstance = getCurrentInstance();
-    const { title, titleMaxLength } = toRefs(props);
+    const { title, titleMaxLength, fixed, background } = toRefs(props);
+
+    const navStyle = computed(
+      () =>
+        `position: ${fixed.value ? 'fixed' : 'relative'}; top: 0; left: 0; width: 100%; background: ${
+          background.value || ''
+        };`,
+    );
 
     const titleContent = computed(() => {
       if (titleMaxLength.value != null && title.value) {
@@ -56,6 +64,7 @@ export default defineComponent({
 
     const leftContent = computed(() => renderTNode(internalInstance, 'left-icon'));
     const rightContent = computed(() => renderTNode(internalInstance, 'right-icon'));
+    const homeContent = computed(() => renderTNode(internalInstance, 'home-icon'));
 
     const emitEvent = useEmitEvent(props, context.emit);
 
@@ -71,22 +80,14 @@ export default defineComponent({
       emitEvent('home-click');
     };
 
-    const handleRightClick = (evt: MouseEvent) => {
-      context.emit('click-right', evt);
-    };
-
-    const handleTitleClick = (evt: MouseEvent) => {
-      context.emit('click-text', evt);
-    };
-
     return {
       name,
       titleContent,
       leftContent,
       rightContent,
+      navStyle,
+      homeContent,
       handleBack,
-      handleRightClick,
-      handleTitleClick,
       handleHomeClick,
     };
   },
