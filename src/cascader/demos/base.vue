@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <t-input :value="address" label="地址" placeholder="选择地址" @click="show = true" />
-    <t-popup v-model="show" placement="bottom">
-      <t-cascader
-        v-model="address"
-        title="选择地址"
-        :options="options"
-        @change="onChange"
-        @cancel="show = false"
-        @confirm="onConfirm"
-      />
-    </t-popup>
-  </div>
+  <t-input :value="address" readonly label="地址" placeholder="选择地址" @click="show = true" />
+  <t-popup v-model="show" placement="bottom">
+    <t-cascader
+      v-model="address"
+      title="选择地址"
+      :options="options"
+      @change="onChange"
+      @cancel="show = false"
+      @confirm="onConfirm"
+    />
+  </t-popup>
 </template>
 
 <script lang="ts" setup>
@@ -20,8 +18,9 @@ import { TdCascaderItems } from '../type';
 
 const address = ref('');
 const show = ref(false);
-const onChange = (value: TdCascaderItems) => {
-  console.log(value);
+const onChange = (value: string, options: TdCascaderItems) => {
+  address.value = options.map((item) => item.label).join('/');
+  show.value = false;
 };
 
 const onConfirm = () => {
@@ -30,30 +29,50 @@ const onConfirm = () => {
 
 const options: TdCascaderItems = [
   {
-    label: '上海市',
-    value: '上海市',
+    label: '广东省',
+    value: 'gd',
     children: [
       {
-        label: '普陀区',
-        value: '普陀区',
+        label: '深圳市',
+        value: 'sz',
+        children: [
+          {
+            label: '南山区',
+            value: 'ns',
+          },
+          {
+            label: '福田区',
+            value: 'ft',
+          },
+        ],
       },
       {
-        label: '长宁区',
-        value: '长宁区',
+        label: '广州市',
+        value: 'gz',
+        children: [
+          {
+            label: '白云区',
+            value: 'by',
+          },
+          {
+            label: '海珠区',
+            value: 'hz',
+          },
+        ],
       },
     ],
   },
   {
-    label: '北京市',
-    value: '北京市',
+    label: '福建省',
+    value: 'fj',
     children: [
       {
-        label: '朝阳区',
-        value: '朝阳区',
+        label: '厦门市',
+        value: 'xm',
       },
       {
-        label: '丰台区',
-        value: '丰台区',
+        label: '泉州市',
+        value: 'qz',
       },
     ],
   },

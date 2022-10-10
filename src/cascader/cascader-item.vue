@@ -5,7 +5,7 @@
       {{ label }}
     </div>
     <div v-show="active" :class="`${name}-active-icon`">
-      <check-icon />
+      <check-icon size="24" />
     </div>
   </div>
 </template>
