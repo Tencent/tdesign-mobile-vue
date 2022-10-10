@@ -90,7 +90,7 @@ export default defineComponent({
 
     const computedPrefixIcon = ref();
     watchEffect(() => {
-      if (!props.prefixIcon && !context.slots['prefix-icon']) {
+      if (!props.prefixIcon && !context.slots.prefixIcon) {
         const key = props.theme as string;
         computedPrefixIcon.value = iconDefault?.[key] || '';
       } else {
