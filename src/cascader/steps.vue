@@ -1,20 +1,20 @@
 <template>
-  <div class="t-cascader__steps">
+  <div v-if="Array.isArray(items)" class="t-cascader__steps">
     <div v-for="(item, index) in items" :key="index" class="t-cascader__step" @click="handleClick(index)">
       <div
         :class="{
           't-cascader__step-dot': true,
-          't-cascader__step-dot--active': index === modelValue,
+          't-cascader__step-dot--active': index === value,
           't-cascader__step-dot--last': index === items.length - 1,
         }"
       ></div>
       <div
         :class="{
           't-cascader__step-label': true,
-          't-cascader__step-label--active': index === modelValue,
+          't-cascader__step-label--active': index === value,
         }"
       >
-        {{ item.label }}
+        {{ item }}
       </div>
     </div>
   </div>
@@ -25,12 +25,12 @@ import { defineProps, defineEmits } from 'vue';
 
 defineProps({
   items: Array,
-  modelValue: Number,
+  value: Number,
 });
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:value']);
 
 const handleClick = (index: number) => {
-  emit('update:modelValue', index);
+  emit('update:value', index);
 };
 </script>

@@ -58,7 +58,6 @@
 <script lang="ts">
 import { defineEmits, defineProps, computed, watch, ref, toRaw } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import pull from 'lodash/pull';
 
 import config from '../config';
 import calendarProps from './props';
