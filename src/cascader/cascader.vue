@@ -81,6 +81,8 @@ export default defineComponent({
       selectedIndexes.length = level + 1;
       steps[level] = item.label;
 
+      emitEvent('pick', item.value, index, { e });
+
       if (item?.children?.length) {
         items[level + 1] = item.children;
         items.length = level + 2;
