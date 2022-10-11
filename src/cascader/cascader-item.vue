@@ -13,8 +13,8 @@
 <script lang="ts">
 import { defineComponent, SetupContext, computed, toRefs, getCurrentInstance } from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
-import config from '@/config';
-import { useEmitEvent, renderTNode } from '@/shared';
+import config from '../config';
+import { useEmitEvent, renderTNode } from '../shared';
 import CascaderItemProps from './cascader-item-prop';
 
 const { prefix } = config;

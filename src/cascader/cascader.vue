@@ -35,9 +35,9 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, toRefs, getCurrentInstance, SetupContext, computed, ref, toRaw, reactive } from 'vue';
 import { TdCascaderItems, TdCascaderItem } from './type';
 import CascaderSteps from './steps.vue';
-import config from '@/config';
+import config from '../config';
 import CascaderProps from './props';
-import { useEmitEvent, useVModel, renderTNode, TNode } from '@/shared';
+import { useEmitEvent, useVModel, renderTNode, TNode } from '../shared';
 import CascaderItem from './cascader-item.vue';
 
 const { prefix } = config;
