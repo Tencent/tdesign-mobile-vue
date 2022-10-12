@@ -24,12 +24,12 @@ describe('Image', () => {
       await nextTick();
       const $image = wrapper.find(`.${name}__img`);
       expect(wrapper.find(`.${name}__status`).exists()).toBeTruthy();
-      // 触发 IntersectionObserver , 但图片加载完成不会触发 Load 回调,
+      // 触发 IntersectionObserver , 但图片加载完成不会触发 load 回调,
       $image.trigger('resize');
       await nextTick();
       expect($image.attributes('src')).toBe(IMAGE);
       // 手动触发 图片加载完成的回调函数
-      await $image.trigger('Load');
+      await $image.trigger('load');
       expect(wrapper.element).toMatchSnapshot();
       expect(wrapper.find(`.${name}__status`).exists()).toBeFalsy();
     });
@@ -108,7 +108,7 @@ describe('Image', () => {
       await nextTick();
       const $image = wrapper.find(`.${name}__img`);
       // 手动触发 图片加载失败的回调函数
-      await $image.trigger('Error');
+      await $image.trigger('error');
       expect(wrapper.find(`.${name}__status`).exists()).toBeTruthy();
       // src = ''，不会触发 error
       expect(onError).toBeCalledTimes(0);
@@ -123,7 +123,7 @@ describe('Image', () => {
       await nextTick();
       const $image = wrapper.find(`.${name}__img`);
       // 手动触发 图片加载失败的回调函数
-      await $image.trigger('Error');
+      await $image.trigger('error');
       const status = wrapper.find(`.${name}__status`);
       expect(status.exists()).toBeTruthy();
       expect(status.text()).toBe('加载失败');
@@ -137,7 +137,7 @@ describe('Image', () => {
       const $image = wrapper.find(`.${name}__img`);
       expect($image.attributes('src')).toBe(IMAGE);
       // 手动触发 图片加载完成的回调函数
-      await $image.trigger('Load');
+      await $image.trigger('load');
       expect(onLoad).toBeCalledTimes(1);
     });
   });
