@@ -126,7 +126,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -1390,7 +1390,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -2011,7 +2011,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -3264,7 +3264,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -3764,7 +3764,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -4098,7 +4098,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -4703,7 +4703,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -5872,7 +5872,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -7137,7 +7137,7 @@ exports[`DateTimePicker > DateTimePicker renderLabelDateVue demo works fine 1`] 
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -7648,7 +7648,7 @@ exports[`DateTimePicker > DateTimePicker startEndDateVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>

@@ -4,7 +4,9 @@
       ref="pickeInstance"
       :value="currentPicker"
       :title="title"
-      :columns="(selected) => generateDatePickerColumns(selected, start, end, renderLabel)"
+      :confirm-btn="confirmButtonText"
+      :cancel-btn="cancelButtonText"
+      :columns="getColumnsOptions"
       @change="onChange"
       @confirm="onConfirm"
       @cancel="onCancel"
@@ -127,6 +129,10 @@ export default defineComponent({
         }
       });
       return ret;
+    };
+
+    const getColumnsOptions = (selected: PickerValue[]) => {
+      return generateDatePickerColumns(selected, start.value, end.value, renderLabel.value);
     };
 
     // 当默认v-model为空时，当前value取最小日期
@@ -322,6 +328,7 @@ export default defineComponent({
       onCancel,
       onPick,
       onChange,
+      getColumnsOptions,
     };
   },
 });
