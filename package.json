@@ -168,7 +168,7 @@
     "vite-plugin-tdoc": "^2.0.1",
     "vitest": "^0.16.0",
     "vue": "^3.2.33",
-    "vue-eslint-parser": "^8.0.1",
+    "vue-eslint-parser": "^9.1.0",
     "vue-router": "4.0.11",
     "vue-tsc": "^0.40.0"
   },
