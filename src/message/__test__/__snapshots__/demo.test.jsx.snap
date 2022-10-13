@@ -23,7 +23,12 @@ exports[`Message > Message alignVue demo works fine 1`] = `
       </span>
     </button>
   </div>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
   
@@ -67,10 +72,20 @@ exports[`Message > Message closeVue demo works fine 1`] = `
       </span>
     </button>
   </div>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
   
@@ -100,7 +115,12 @@ exports[`Message > Message durationVue demo works fine 1`] = `
       </span>
     </button>
   </div>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
   
@@ -341,28 +361,68 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
     </div>
     
   </div>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
 </div>
@@ -391,7 +451,11 @@ exports[`Message > Message offsetVue demo works fine 1`] = `
     </span>
   </button>
   <transition-stub
+    appear="false"
+    css="true"
+    name="message"
     offset="400,100,100"
+    persisted="false"
   >
     <!--v-if-->
   </transition-stub>
@@ -485,22 +549,38 @@ exports[`Message > Message textVue demo works fine 1`] = `
     <!--v-if-->
   </div>
   <transition-stub
+    appear="false"
+    css="true"
     data-v-9078f4e6=""
+    name="message"
+    persisted="false"
   >
     <!--v-if-->
   </transition-stub>
   <transition-stub
+    appear="false"
+    css="true"
     data-v-9078f4e6=""
+    name="message"
+    persisted="false"
   >
     <!--v-if-->
   </transition-stub>
   <transition-stub
+    appear="false"
+    css="true"
     data-v-9078f4e6=""
+    name="message"
+    persisted="false"
   >
     <!--v-if-->
   </transition-stub>
   <transition-stub
+    appear="false"
+    css="true"
     data-v-9078f4e6=""
+    name="message"
+    persisted="false"
   >
     <!--v-if-->
   </transition-stub>
@@ -576,16 +656,36 @@ exports[`Message > Message themeVue demo works fine 1`] = `
       </span>
     </button>
   </div>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
-  <transition-stub>
+  <transition-stub
+    appear="false"
+    css="true"
+    name="message"
+    persisted="false"
+  >
     <!--v-if-->
   </transition-stub>
   

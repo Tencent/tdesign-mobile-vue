@@ -3,13 +3,13 @@
     <t-slider :default-value="60" disabled />
   </div>
   <div class="section">
-    <t-slider :default-value="30" show-extreme-value :min="30" disabled />
+    <t-slider :default-value="30" :min="30" disabled />
   </div>
   <div class="section">
-    <t-slider :default-value="50" :marks="marks" disabled />
+    <t-slider :default-value="50" :label="label" :marks="marks" disabled />
   </div>
   <div class="section">
-    <t-slider :default-value="[30, 80]" range disabled />
+    <t-slider :default-value="[30, 70]" range disabled />
   </div>
 </template>
 
@@ -17,6 +17,7 @@
 import { ref } from 'vue';
 
 const marks = ref({ 0: '小', 50: '中', 100: '大' });
+const label = ref(false);
 </script>
 
 <style lang="less" scoped>

@@ -64,8 +64,18 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           <div
             class="t-popup"
           >
-            <transition-stub>
-              <transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade"
+              persisted="false"
+            >
+              <transition-stub
+                appear="false"
+                css="true"
+                name="t-overlay"
+                persisted="true"
+              >
                 <div
                   class="t-overlay"
                   style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -75,7 +85,12 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
                 </div>
               </transition-stub>
             </transition-stub>
-            <transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade-zoom"
+              persisted="true"
+            >
               <div
                 class="t-popup--content t-popup--content-center"
                 style="display: none;"
@@ -128,8 +143,18 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           <div
             class="t-popup"
           >
-            <transition-stub>
-              <transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade"
+              persisted="false"
+            >
+              <transition-stub
+                appear="false"
+                css="true"
+                name="t-overlay"
+                persisted="true"
+              >
                 <div
                   class="t-overlay"
                   style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -139,7 +164,12 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
                 </div>
               </transition-stub>
             </transition-stub>
-            <transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade-zoom"
+              persisted="true"
+            >
               <div
                 class="t-popup--content t-popup--content-center"
                 style="display: none;"
@@ -252,8 +282,18 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <div
               class="t-popup"
             >
-              <transition-stub>
-                <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade"
+                persisted="false"
+              >
+                <transition-stub
+                  appear="false"
+                  css="true"
+                  name="t-overlay"
+                  persisted="true"
+                >
                   <div
                     class="t-overlay"
                     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -263,7 +303,12 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
                   </div>
                 </transition-stub>
               </transition-stub>
-              <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade-zoom"
+                persisted="true"
+              >
                 <div
                   class="t-popup--content t-popup--content-center"
                   style="display: none;"
@@ -341,8 +386,18 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <div
               class="t-popup"
             >
-              <transition-stub>
-                <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade"
+                persisted="false"
+              >
+                <transition-stub
+                  appear="false"
+                  css="true"
+                  name="t-overlay"
+                  persisted="true"
+                >
                   <div
                     class="t-overlay"
                     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -352,7 +407,12 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
                   </div>
                 </transition-stub>
               </transition-stub>
-              <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade-zoom"
+                persisted="true"
+              >
                 <div
                   class="t-popup--content t-popup--content-center"
                   style="display: none;"
@@ -430,8 +490,18 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <div
               class="t-popup"
             >
-              <transition-stub>
-                <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade"
+                persisted="false"
+              >
+                <transition-stub
+                  appear="false"
+                  css="true"
+                  name="t-overlay"
+                  persisted="true"
+                >
                   <div
                     class="t-overlay"
                     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -441,7 +511,12 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
                   </div>
                 </transition-stub>
               </transition-stub>
-              <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade-zoom"
+                persisted="true"
+              >
                 <div
                   class="t-popup--content t-popup--content-center"
                   style="display: none;"
@@ -523,8 +598,18 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
             <div
               class="t-popup"
             >
-              <transition-stub>
-                <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade"
+                persisted="false"
+              >
+                <transition-stub
+                  appear="false"
+                  css="true"
+                  name="t-overlay"
+                  persisted="true"
+                >
                   <div
                     class="t-overlay"
                     style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -534,7 +619,12 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
                   </div>
                 </transition-stub>
               </transition-stub>
-              <transition-stub>
+              <transition-stub
+                appear="false"
+                css="true"
+                name="fade-zoom"
+                persisted="true"
+              >
                 <div
                   class="t-popup--content t-popup--content-center"
                   style="display: none;"
@@ -645,8 +735,18 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -656,7 +756,12 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade-zoom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-center"
         style="display: none;"
@@ -701,8 +806,18 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <div
     class="t-popup"
   >
-    <transition-stub>
-      <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -712,7 +827,12 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
         </div>
       </transition-stub>
     </transition-stub>
-    <transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade-zoom"
+      persisted="true"
+    >
       <div
         class="t-popup--content t-popup--content-center"
         style="display: none;"
@@ -865,8 +985,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -876,7 +1006,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -932,8 +1067,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -943,7 +1088,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -999,8 +1149,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1010,7 +1170,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -1074,8 +1239,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1085,7 +1260,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -1197,8 +1377,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1208,7 +1398,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -1283,8 +1478,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1294,7 +1499,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -1418,8 +1628,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1429,7 +1649,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"
@@ -1496,8 +1721,18 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <div
         class="t-popup"
       >
-        <transition-stub>
-          <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade"
+          persisted="false"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
             <div
               class="t-overlay"
               style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1507,7 +1742,12 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             </div>
           </transition-stub>
         </transition-stub>
-        <transition-stub>
+        <transition-stub
+          appear="false"
+          css="true"
+          name="fade-zoom"
+          persisted="true"
+        >
           <div
             class="t-popup--content t-popup--content-center"
             style="display: none;"

@@ -5,14 +5,57 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.12.0 `2022-10-10` 
+### 🚀 Features
+
+- `Cascader`: 新增级联选择器 @oceanlvr ([#368](https://github.com/Tencent/tdesign-mobile-vue/pull/368))
+- `Cascader`: 优化逻辑和视觉 @LeeJim ([#395](https://github.com/Tencent/tdesign-mobile-vue/pull/395))
+
+### 🐞 Bug Fixes
+- `Slider`: 修复 `label` 属性无效的问题 @anlyyao ([#364](https://github.com/Tencent/tdesign-mobile-vue/pull/364))
+- `Tabs`: 修复 `change` 事件和 `onChange` 属性无效的问题 @anlyyao ([#367](https://github.com/Tencent/tdesign-mobile-vue/pull/367))
+- `Grid`: 修复 `gutter` 无效 @anlyyao ([#381](https://github.com/Tencent/tdesign-mobile-vue/pull/381))
+- `Grid`: 修复 `border` 无效 @anlyyao ([#381](https://github.com/Tencent/tdesign-mobile-vue/pull/381))
+- `DropdownMenu`: 修复 `onChange` 事件无效的问题 @anlyyao ([#374](https://github.com/Tencent/tdesign-mobile-vue/pull/374))
+- `Rate`: 修复 ts 类型错误 @anlyyao ([#386](https://github.com/Tencent/tdesign-mobile-vue/pull/386))
+- `NoticeBar`: 修复 content、extra 失效的问题 @TingShine ([#302](https://github.com/Tencent/tdesign-mobile-vue/pull/302))
+- `NoticeBar`: 使用正确的 prefixIcon 插槽名 @anlyyao ([#393](https://github.com/Tencent/tdesign-mobile-vue/pull/393))
+
+### 🚧 Others
+- `Grid`: 提升测试覆盖率 @anlyyao ([#381](https://github.com/Tencent/tdesign-mobile-vue/pull/381))
+- `Divider`: 提升测试覆盖率 @anlyyao ([#380](https://github.com/Tencent/tdesign-mobile-vue/pull/380))
+- `Button`: 提升测试覆盖率 @anlyyao ([#379](https://github.com/Tencent/tdesign-mobile-vue/pull/379))
+- `Badge`: 提升组件单元测试覆盖率 @anlyyao ([#388](https://github.com/Tencent/tdesign-mobile-vue/pull/388))
+- `Skeleton`: 提升组件单元测试覆盖率 @anlyyao ([#387](https://github.com/Tencent/tdesign-mobile-vue/pull/387))
+- `Rate`: 提升组件单元测试覆盖率 @anlyyao ([#386](https://github.com/Tencent/tdesign-mobile-vue/pull/386))
+- `Radio`: 提升组件单元测试覆盖率 @anlyyao ([#385](https://github.com/Tencent/tdesign-mobile-vue/pull/385))
+- `Slider`: 新增单元测试 @anlyyao ([#364](https://github.com/Tencent/tdesign-mobile-vue/pull/364))
+- `SwipeCell`: 新增单元测试 @anlyyao ([#360](https://github.com/Tencent/tdesign-mobile-vue/pull/360))
+- `Result`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Divider`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Grid`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Image`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Input`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Rate`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Radio`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Skeleton`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Cell`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Badge`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Avatar`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Tag`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Button`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Textarea`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Steps`: 新增单元测试 @anlyyao ([#375](https://github.com/Tencent/tdesign-mobile-vue/pull/375))
+- `DropdownMenu`: 新增单元测试 @anlyyao ([#374](https://github.com/Tencent/tdesign-mobile-vue/pull/374))
+
 ## 🌈 0.11.0 `2022-09-26` 
 ### 🚀 Features
 
-- `Calendar`: 新增日历组件 @josonyang ([#325](https://github.com/Tencent/tdesign-mobile-vue/pull/325))
+- `Calendar`: 新增日历组件 @LadyChatterleyLover ([#325](https://github.com/Tencent/tdesign-mobile-vue/pull/325))
 - `Calendar`: 视觉升级，功能增强 @LeeJim ([#366](https://github.com/Tencent/tdesign-mobile-vue/pull/366))
 
 ### 🐞 Bug Fixes
-- `CountDown`: 修复 milisecond 配置无效的问题 @TingShine ([#313](https://github.com/Tencent/tdesign-mobile-vue/pull/313))
+- `CountDown`: 修复 millisecond 配置无效的问题 @TingShine ([#313](https://github.com/Tencent/tdesign-mobile-vue/pull/313))
 - `Upload`: 修复上传失败后，再次上传会产生报错的问题 @palmcivet ([#318](https://github.com/Tencent/tdesign-mobile-vue/pull/318))
 
 ### 🚧 Others

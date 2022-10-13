@@ -26,7 +26,7 @@
           </t-button>
         </template>
       </div>
-      <div ref="swipeCell" class="content">
+      <div ref="swipeCell" :class="classes + '__content'">
         <t-node :content="swipeContent"></t-node>
       </div>
       <div

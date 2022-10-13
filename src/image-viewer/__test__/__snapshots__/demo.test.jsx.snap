@@ -46,8 +46,12 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
             </span>
           </button>
           <transition-stub
+            appear="false"
             background-color="rgba(0, 0, 0, 1)"
             class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
           >
             <div
               class="t-overlay"
@@ -113,7 +117,11 @@ exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
             </span>
           </button>
           <transition-stub
+            appear="false"
             class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
           >
             <div
               class="t-overlay"
@@ -179,7 +187,11 @@ exports[`ImageViewer > ImageViewer closeBtnVue demo works fine 1`] = `
             </span>
           </button>
           <transition-stub
+            appear="false"
             class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
           >
             <div
               class="t-overlay"
@@ -245,7 +257,11 @@ exports[`ImageViewer > ImageViewer closeEventVue demo works fine 1`] = `
             </span>
           </button>
           <transition-stub
+            appear="false"
             class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
           >
             <div
               class="t-overlay"
@@ -311,7 +327,11 @@ exports[`ImageViewer > ImageViewer imageListVue demo works fine 1`] = `
             </span>
           </button>
           <transition-stub
+            appear="false"
             class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
           >
             <div
               class="t-overlay"
@@ -377,7 +397,11 @@ exports[`ImageViewer > ImageViewer initialIndexVue demo works fine 1`] = `
             </span>
           </button>
           <transition-stub
+            appear="false"
             class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
           >
             <div
               class="t-overlay"
@@ -482,8 +506,12 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
     
   </div>
   <transition-stub
+    appear="false"
     class="t-image-viewer"
+    css="true"
     data-v-ef8302fa=""
+    name="t-overlay"
+    persisted="true"
   >
     <div
       class="t-overlay"
@@ -494,8 +522,12 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
     </div>
   </transition-stub>
   <transition-stub
+    appear="false"
     class="t-image-viewer"
+    css="true"
     data-v-ef8302fa=""
+    name="t-overlay"
+    persisted="true"
   >
     <div
       class="t-overlay"
@@ -506,8 +538,12 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
     </div>
   </transition-stub>
   <transition-stub
+    appear="false"
     class="t-image-viewer"
+    css="true"
     data-v-ef8302fa=""
+    name="t-overlay"
+    persisted="true"
   >
     <div
       class="t-overlay"

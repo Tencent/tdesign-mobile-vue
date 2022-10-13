@@ -1,7 +1,7 @@
 <template>
   <div v-if="isShow" :class="rootClasses">
     <div :class="`${name}__inner`">
-      <div v-if="computedPrefixIcon !== undefined" :class="`${name}__hd`" @click="() => handleClick('prefix-icon')">
+      <div v-if="computedPrefixIcon" :class="`${name}__hd`" @click="() => handleClick('prefix-icon')">
         <t-node :content="computedPrefixIcon"></t-node>
       </div>
 
@@ -14,8 +14,10 @@
             @transitionend="handleTransitionend()"
           >
             <span :class="`${name}__text`" @click="() => handleClick('content')">
+              <t-node v-if="showContent" :content="showContent"></t-node>
               {{ content }}
-              <span v-if="showExtraText" :class="`${name}__text-detail`" @click.stop="() => handleClick('extra')">
+              <span :class="`${name}__text-detail`" @click.stop="() => handleClick('extra')">
+                <t-node v-if="showExtraText" :content="showExtraText"></t-node>
                 {{ extra }}
               </span>
             </span>
@@ -43,6 +45,7 @@ import {
   h,
   getCurrentInstance,
   watch,
+  watchEffect,
 } from 'vue';
 import { InfoCircleFilledIcon, CheckCircleFilledIcon, CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import NoticeBarProps from './props';
@@ -84,25 +87,27 @@ export default defineComponent({
     });
 
     const rootClasses = computed(() => [`${name}`, `${name}--${props.theme}`]);
-    let computedPrefixIcon: any;
-    if (props.prefixIcon !== '') {
-      if (Object.keys(iconDefault).includes(props?.theme as string)) {
+
+    const computedPrefixIcon = ref();
+    watchEffect(() => {
+      if (!props.prefixIcon && !context.slots.prefixIcon) {
         const key = props.theme as string;
-        computedPrefixIcon = computed(() => iconDefault?.[key]);
+        computedPrefixIcon.value = iconDefault?.[key] || '';
+      } else {
+        computedPrefixIcon.value = renderTNode(internalInstance, 'prefixIcon');
       }
-      computedPrefixIcon = props.prefixIcon
-        ? computed(() => renderTNode(internalInstance, 'prefixIcon'))
-        : computedPrefixIcon;
-    }
+    });
+
     // suffix-icon
     const computedSuffixIcon = computed(() => renderTNode(internalInstance, 'suffixIcon'));
     // extra
     const showExtraText = computed(() => renderTNode(internalInstance, 'extra'));
+    const showContent = computed(() => renderTNode(internalInstance, 'content'));
     // click
     function handleClick(trigger: NoticeBarTrigger) {
       emitEvent('click', trigger);
     }
-    // 动画
+    // 动画 i
     const animateStyle = computed(() => ({
       transform: state.offset ? `translateX(${state.offset}px)` : '',
       transitionDuration: `${state.duration}s`,
@@ -194,6 +199,7 @@ export default defineComponent({
       computedPrefixIcon,
       computedSuffixIcon,
       showExtraText,
+      showContent,
       isShow,
       handleClick,
       listDOM,

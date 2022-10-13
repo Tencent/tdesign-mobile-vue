@@ -2,7 +2,11 @@
 
 exports[`ImageViewer > function > : onIndexChange 1`] = `
 <transition-stub
+  appear="false"
   class="t-image-viewer"
+  css="true"
+  name="t-overlay"
+  persisted="true"
 >
   <div
     class="t-overlay t-overlay--active"

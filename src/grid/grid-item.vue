@@ -62,7 +62,7 @@ export default defineComponent({
       const borderStyle = {};
       if (border.value) {
         if (typeof border.value !== 'boolean') {
-          const { color, width, style } = border;
+          const { color, width, style } = border.value;
           return {
             borderColor: color,
             borderWidth: width,
@@ -74,8 +74,8 @@ export default defineComponent({
       const style = {
         flexBasis: percent,
         flexDirection: isHorz ? ('row' as const) : ('column' as const),
-        paddingLeft: gutter.value ? `${gutter}px` : 0,
-        paddingRight: gutter.value ? `${gutter}px` : 0,
+        paddingLeft: gutter.value ? `${gutter.value}px` : 0,
+        paddingRight: gutter.value ? `${gutter.value}px` : 0,
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: ['center', 'left'].includes(align.value) ? align.value : 'center',

@@ -1,0 +1,100 @@
+// Vitest Snapshot v1
+
+exports[`Radio > props > : checked 1`] = `
+<div
+  class="t-radio-group"
+  role="radiogroup"
+>
+  
+  <div
+    class="t-radio"
+  >
+    <span
+      class="t-radio__content-wrap"
+    >
+      <span
+        class="t-radio__icon-wrap t-radio__icon-left-wrap"
+      >
+        <input
+          class="t-radio__original-left"
+          name=""
+          type="radio"
+          value="0"
+        />
+        <div
+          class="t-radio__icon"
+        >
+          
+        </div>
+      </span>
+      <span
+        class="t-radio__label-wrap"
+      >
+        <span
+          class="t-radio__content-title"
+        >
+          单选
+        </span>
+        <!--v-if-->
+      </span>
+      <!--v-if-->
+    </span>
+    <!--下边框 -->
+    <div
+      class="t-radio__border t-radio__border--left"
+    />
+  </div>
+  <div
+    class="t-radio t-is-checked"
+  >
+    <span
+      class="t-radio__content-wrap"
+    >
+      <span
+        class="t-radio__icon-wrap t-radio__icon-left-wrap"
+      >
+        <input
+          class="t-radio__original-left"
+          name=""
+          type="radio"
+          value="1"
+        />
+        <div
+          class="t-radio__icon t-radio__icon--checked"
+        >
+          <svg
+            class="t-icon t-icon-check"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </span>
+      <span
+        class="t-radio__label-wrap"
+      >
+        <span
+          class="t-radio__content-title"
+        >
+          单选
+        </span>
+        <!--v-if-->
+      </span>
+      <!--v-if-->
+    </span>
+    <!--下边框 -->
+    <div
+      class="t-radio__border t-radio__border--left"
+    />
+  </div>
+  
+  <!--v-if-->
+</div>
+`;

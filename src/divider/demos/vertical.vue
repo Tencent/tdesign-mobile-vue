@@ -1,16 +1,25 @@
 <template>
-  <div class="demo-6">
-    <span>正直信息</span>
-    <t-divider layout="vertical"></t-divider>
-    <span>进取</span>
-    <t-divider layout="vertical"></t-divider>
-    <span>合作</span>
-    <t-divider layout="vertical"></t-divider>
-    <span>创新</span>
+  <div>
+    <h3>垂直分割</h3>
+    <div class="demo-6">
+      <span>文字信息</span>
+      <t-divider layout="vertical"></t-divider>
+      <span>文字信息</span>
+      <t-divider layout="vertical"></t-divider>
+      <span>文字信息</span>
+    </div>
   </div>
 </template>
-<script lang="ts" setup></script>
+
 <style lang="less" scoped>
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'PingFang SC';
+  color: #a9a9a9;
+  padding: 16px;
+}
+
 .demo-6 {
   display: flex;
   height: 20px;

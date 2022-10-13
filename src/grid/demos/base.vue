@@ -4,7 +4,7 @@
       <t-grid-item text="标题文字" :image="imgUrl" />
       <t-grid-item text="标题文字" :image="imgUrl" />
       <t-grid-item text="标题文字" :image="imgUrl" />
-      <t-grid-item text="最多四字" :image="imgUrl" />
+      <t-grid-item text="标题五字内" :image="imgUrl" />
     </t-grid>
   </div>
   <div class="grid-demo">
@@ -34,16 +34,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  setup() {
-    return {
-      imgUrl: 'https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png',
-    };
-  },
-});
+<script lang="ts" setup>
+const imgUrl = 'https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png';
 </script>
 <style scoped lang="less">
 .grid-demo {

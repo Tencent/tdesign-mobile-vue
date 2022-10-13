@@ -42,7 +42,7 @@
 
 <script lang="ts">
 import { ref, defineComponent, reactive, toRefs } from 'vue';
-import config from '@/config';
+import config from '../../config';
 
 const { prefix } = config;
 const name = `${prefix}-back-top`;
