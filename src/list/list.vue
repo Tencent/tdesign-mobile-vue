@@ -4,7 +4,7 @@
     <slot />
     <div @click.stop="onLoadMore">
       <t-loading
-        v-if="typeof asyncLoading === 'string' && ['loading', 'loadingMore'].includes(asyncLoading)"
+        v-if="typeof asyncLoading === 'string' && ['loading', 'load-more'].includes(asyncLoading)"
         :loading="asyncLoading === 'loading'"
         :text="typeof asyncLoading === 'string' ? LOADING_TEXT_MAP[asyncLoading] : ''"
         :class="`${name}__loading`"
@@ -26,7 +26,7 @@ const { prefix } = config;
 const name = `${prefix}-list`;
 const LOADING_TEXT_MAP = {
   loading: '加载中...',
-  'loading-more': '点击加载更多',
+  'load-more': '点击加载更多',
 };
 
 export default defineComponent({
@@ -49,7 +49,7 @@ export default defineComponent({
     const footerContent = computed(() => renderTNode(internalInstance, 'footer'));
 
     const onLoadMore = (e: MouseEvent) => {
-      if (props.asyncLoading === 'loading-more') {
+      if (props.asyncLoading === 'load-more') {
         emitEvent('load-more');
       }
     };
