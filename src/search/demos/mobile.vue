@@ -9,10 +9,10 @@
       <t-search placeholder="搜索预设文案" @change="onChange"></t-search>
     </tdesign-demo-block>
     <tdesign-demo-block summary="点击状态">
-      <t-search placeholder="搜索预设文案" :autofocus="true" @change="onChange"></t-search>
+      <t-search placeholder="搜索预设文案" :focus="true" @change="onChange"></t-search>
     </tdesign-demo-block>
     <tdesign-demo-block summary="输入状态">
-      <t-search v-model="value2" placeholder="搜索预设文案" :autofocus="true" @change="onChange"></t-search>
+      <t-search v-model="value2" placeholder="搜索预设文案" :focus="true" @change="onChange"></t-search>
     </tdesign-demo-block>
   </div>
 </template>
