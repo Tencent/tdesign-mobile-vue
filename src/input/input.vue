@@ -137,7 +137,8 @@ export default defineComponent({
     };
 
     const blur = () => {
-      inputRef.value?.blur();
+      focused.value = false;
+      // inputRef.value?.blur();
     };
 
     extendAPI({ focus, blur });
