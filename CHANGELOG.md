@@ -5,6 +5,23 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.12.1 `2022-10-17` 
+### 🚀 Features
+- `Overlay`: 新增 `customStyle`属性，支持自定义遮罩样式 @anlyyao ([#403](https://github.com/Tencent/tdesign-mobile-vue/pull/403))
+
+### 🐞 Bug Fixes
+- `Search`: 修复 `shape` 属性无效的问题 @anlyyao ([#392](https://github.com/Tencent/tdesign-mobile-vue/pull/392))
+- `Search`: 修复 `clear` 事件无效的问题 @anlyyao ([#392](https://github.com/Tencent/tdesign-mobile-vue/pull/392))
+- `List`: 修复 `load-more` 可选参数问题 @byq1213 ([#376](https://github.com/Tencent/tdesign-mobile-vue/pull/376))
+- `List`: 修复 `load-more` 可选参数问题 @byq1213 ([#376](https://github.com/Tencent/tdesign-mobile-vue/pull/376))
+### 🚧 Others
+- `Search`: 新增组件单元测试 @anlyyao ([#392](https://github.com/Tencent/tdesign-mobile-vue/pull/392))
+- `Input`: 提升单元测试覆盖率 @anlyyao ([#399](https://github.com/Tencent/tdesign-mobile-vue/pull/399))
+- `Textarea`: 提升单元测试覆盖率 @anlyyao ([#400](https://github.com/Tencent/tdesign-mobile-vue/pull/400))
+- `Image`: 提升单元测试覆盖率 @anlyyao ([#401](https://github.com/Tencent/tdesign-mobile-vue/pull/401))
+- `List`:  提升单元测试覆盖率 @byq1213 ([#376](https://github.com/Tencent/tdesign-mobile-vue/pull/376))
+- `DateTimePicker`: 优化示例代码 @LeeJim ([#411](https://github.com/Tencent/tdesign-mobile-vue/pull/411))
+
 ## 🌈 0.12.0 `2022-10-10` 
 ### 🚀 Features
 
