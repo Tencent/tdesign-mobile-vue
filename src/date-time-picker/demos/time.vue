@@ -1,11 +1,11 @@
 <template>
-  <t-cell title="选择日期(年月日)" :note="pickerValue || '年 月 日'" @click="visible = true" />
+  <t-cell title="选择日期(时分)" :note="pickerValue || '时 分'" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      :value="pickerValue"
-      :mode="['date']"
+      default-value="2022-10-10 10:10"
+      :mode="[null, 'minute']"
       title="选择日期"
-      format="YYYY-MM-DD"
+      format="HH:mm"
       @change="onChange"
       @pick="onPick"
       @confirm="onConfirm"

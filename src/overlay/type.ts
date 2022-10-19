@@ -31,6 +31,11 @@ export interface TdOverlayProps {
    */
   zIndex?: number;
   /**
+   * 遮罩的自定义样式
+   * @default ''
+   */
+  customStyle?: string;
+  /**
    * 遮罩层的点击事件
    */
   onClick?: (context: { e: MouseEvent }) => void;

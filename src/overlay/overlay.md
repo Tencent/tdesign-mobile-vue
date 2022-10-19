@@ -10,6 +10,7 @@ preventScrollThrough | Boolean | true | 防止滚动穿透 | N
 transparent | Boolean | false | 遮罩层是否透明 | N
 visible | Boolean | true | 必需。是否展示 | Y
 zIndex | Number | 1000 | 遮罩的层级 | N
+customStyle | String | '' | 弹出层的自定义样式 | N
 onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>遮罩层的点击事件 | N
 
 ### Overlay Events

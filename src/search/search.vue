@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <div :class="`${name}__form`">
+    <div :class="`${name}__form`" :style="shapeStyle">
       <div :class="`${name}__box`">
         <div :class="`${name}__icon-search`">
           <slot name="leftIcon">
@@ -14,13 +14,15 @@
           :class="`${name}__input`"
           :autofocus="focus"
           :placeholder="placeholder"
-          :clearable="clearable"
           @blur="onBlur"
           @focus="onFocus"
           @change="onChange"
         />
+        <div :class="`${name}__icon-close`">
+          <t-icon-clear @click="onClear" />
+        </div>
       </div>
-      <label v-show="state.labelActive" :class="`${name}__label`" @click="onClick">
+      <label v-show="state.labelActive" :class="`${name}__label`" :style="shapeStyle" @click="onClick">
         <div :class="`${name}__label-icon-search`">
           <slot name="leftIcon">
             <t-icon-search />
@@ -44,7 +46,7 @@
 </template>
 
 <script lang="ts">
-import { SearchIcon as TIconSearch } from 'tdesign-icons-vue-next';
+import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
 import { ref, reactive, computed, defineComponent, toRefs } from 'vue';
 import config from '../config';
 import TButton from '../button';
@@ -62,7 +64,7 @@ type InputChangeContext = { e?: MouseEvent | InputEvent | undefined } | undefine
 
 export default defineComponent({
   name,
-  components: { TIconSearch, TButton, TInput },
+  components: { TIconSearch, TIconClear, TButton, TInput },
   props: searchProps,
   setup(props, { emit }) {
     const classes = computed(() => ({
@@ -70,6 +72,9 @@ export default defineComponent({
       [`${prefix}-is-focused`]: !state.labelActive,
     }));
     const [value] = useDefault(props, emit, 'value', 'change');
+    const shapeStyle = computed(() => ({
+      borderRadius: props.shape === 'square' ? undefined : '50px',
+    }));
     const searchInput = ref();
 
     const state = reactive({
@@ -96,6 +101,11 @@ export default defineComponent({
       props.onFocus?.(value as string, { e: context.e });
     };
 
+    const onClear = (e: MouseEvent) => {
+      searchInput.value.innerValue = '';
+      props.onClear?.({ e });
+    };
+
     const onCancel = (e: MouseEvent) => {
       state.labelActive = !state.labelActive;
       props.onActionClick?.({ e });
@@ -111,10 +121,12 @@ export default defineComponent({
       ...toRefs(props),
       name: ref(name),
       classes,
+      shapeStyle,
       onClick,
       onCancel,
       onBlur,
       onFocus,
+      onClear,
       onChange,
       state,
       value,

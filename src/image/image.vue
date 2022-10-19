@@ -9,8 +9,8 @@
       :style="imageStyles"
       :src="realSrc"
       :alt="alt"
-      @Load="handleImgLoadCompleted"
-      @Error="handleImgLoadError"
+      @load="handleImgLoadCompleted"
+      @error="handleImgLoadError"
     />
   </div>
 </template>

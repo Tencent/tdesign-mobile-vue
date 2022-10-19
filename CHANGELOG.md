@@ -5,6 +5,66 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.12.1 `2022-10-17` 
+### 🚀 Features
+- `Overlay`: 新增 `customStyle`属性，支持自定义遮罩样式 @anlyyao ([#403](https://github.com/Tencent/tdesign-mobile-vue/pull/403))
+
+### 🐞 Bug Fixes
+- `Search`: 修复 `shape` 属性无效的问题 @anlyyao ([#392](https://github.com/Tencent/tdesign-mobile-vue/pull/392))
+- `Search`: 修复 `clear` 事件无效的问题 @anlyyao ([#392](https://github.com/Tencent/tdesign-mobile-vue/pull/392))
+- `List`: 修复 `load-more` 可选参数问题 @byq1213 ([#376](https://github.com/Tencent/tdesign-mobile-vue/pull/376))
+- `List`: 修复 `load-more` 可选参数问题 @byq1213 ([#376](https://github.com/Tencent/tdesign-mobile-vue/pull/376))
+### 🚧 Others
+- `Search`: 新增组件单元测试 @anlyyao ([#392](https://github.com/Tencent/tdesign-mobile-vue/pull/392))
+- `Input`: 提升单元测试覆盖率 @anlyyao ([#399](https://github.com/Tencent/tdesign-mobile-vue/pull/399))
+- `Textarea`: 提升单元测试覆盖率 @anlyyao ([#400](https://github.com/Tencent/tdesign-mobile-vue/pull/400))
+- `Image`: 提升单元测试覆盖率 @anlyyao ([#401](https://github.com/Tencent/tdesign-mobile-vue/pull/401))
+- `List`:  提升单元测试覆盖率 @byq1213 ([#376](https://github.com/Tencent/tdesign-mobile-vue/pull/376))
+- `DateTimePicker`: 优化示例代码 @LeeJim ([#411](https://github.com/Tencent/tdesign-mobile-vue/pull/411))
+
+## 🌈 0.12.0 `2022-10-10` 
+### 🚀 Features
+
+- `Cascader`: 新增级联选择器 @oceanlvr ([#368](https://github.com/Tencent/tdesign-mobile-vue/pull/368))
+- `Cascader`: 优化逻辑和视觉 @LeeJim ([#395](https://github.com/Tencent/tdesign-mobile-vue/pull/395))
+
+### 🐞 Bug Fixes
+- `Slider`: 修复 `label` 属性无效的问题 @anlyyao ([#364](https://github.com/Tencent/tdesign-mobile-vue/pull/364))
+- `Tabs`: 修复 `change` 事件和 `onChange` 属性无效的问题 @anlyyao ([#367](https://github.com/Tencent/tdesign-mobile-vue/pull/367))
+- `Grid`: 修复 `gutter` 无效 @anlyyao ([#381](https://github.com/Tencent/tdesign-mobile-vue/pull/381))
+- `Grid`: 修复 `border` 无效 @anlyyao ([#381](https://github.com/Tencent/tdesign-mobile-vue/pull/381))
+- `DropdownMenu`: 修复 `onChange` 事件无效的问题 @anlyyao ([#374](https://github.com/Tencent/tdesign-mobile-vue/pull/374))
+- `Rate`: 修复 ts 类型错误 @anlyyao ([#386](https://github.com/Tencent/tdesign-mobile-vue/pull/386))
+- `NoticeBar`: 修复 content、extra 失效的问题 @TingShine ([#302](https://github.com/Tencent/tdesign-mobile-vue/pull/302))
+- `NoticeBar`: 使用正确的 prefixIcon 插槽名 @anlyyao ([#393](https://github.com/Tencent/tdesign-mobile-vue/pull/393))
+
+### 🚧 Others
+- `Grid`: 提升测试覆盖率 @anlyyao ([#381](https://github.com/Tencent/tdesign-mobile-vue/pull/381))
+- `Divider`: 提升测试覆盖率 @anlyyao ([#380](https://github.com/Tencent/tdesign-mobile-vue/pull/380))
+- `Button`: 提升测试覆盖率 @anlyyao ([#379](https://github.com/Tencent/tdesign-mobile-vue/pull/379))
+- `Badge`: 提升组件单元测试覆盖率 @anlyyao ([#388](https://github.com/Tencent/tdesign-mobile-vue/pull/388))
+- `Skeleton`: 提升组件单元测试覆盖率 @anlyyao ([#387](https://github.com/Tencent/tdesign-mobile-vue/pull/387))
+- `Rate`: 提升组件单元测试覆盖率 @anlyyao ([#386](https://github.com/Tencent/tdesign-mobile-vue/pull/386))
+- `Radio`: 提升组件单元测试覆盖率 @anlyyao ([#385](https://github.com/Tencent/tdesign-mobile-vue/pull/385))
+- `Slider`: 新增单元测试 @anlyyao ([#364](https://github.com/Tencent/tdesign-mobile-vue/pull/364))
+- `SwipeCell`: 新增单元测试 @anlyyao ([#360](https://github.com/Tencent/tdesign-mobile-vue/pull/360))
+- `Result`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Divider`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Grid`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Image`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Input`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Rate`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Radio`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Skeleton`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Cell`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Badge`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Avatar`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Tag`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Button`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Textarea`: 新增单元测试 @LadyChatterleyLover ([#280](https://github.com/Tencent/tdesign-mobile-vue/pull/280))
+- `Steps`: 新增单元测试 @anlyyao ([#375](https://github.com/Tencent/tdesign-mobile-vue/pull/375))
+- `DropdownMenu`: 新增单元测试 @anlyyao ([#374](https://github.com/Tencent/tdesign-mobile-vue/pull/374))
+
 ## 🌈 0.11.0 `2022-09-26` 
 ### 🚀 Features
 
