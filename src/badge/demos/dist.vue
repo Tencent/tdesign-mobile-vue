@@ -9,7 +9,7 @@
       <t-cell-group>
         <t-cell value-align="left">
           <span>单行标题</span>
-          <t-badge dot :offset="[10, 0]" class="list-item-badge" />
+          <t-badge dot :offset="[0, 10]" class="list-item-badge" />
         </t-cell>
       </t-cell-group>
     </div>
@@ -28,7 +28,7 @@ export default defineComponent({});
 }
 
 .list-item-badge {
-  float: right;
+  float: left;
   vertical-align: middle;
 }
 </style>

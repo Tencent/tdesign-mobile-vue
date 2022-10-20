@@ -7,12 +7,18 @@
       <t-badge :count="12" shape="round" class="badge-item">
         <t-button size="small">round</t-button>
       </t-badge>
-      <t-cell-group title="列表带徽标">
-        <t-cell label="单行标题">
-          <t-badge dot />
+    </div>
+    <div class="">
+      <t-cell-group title="列表带徽标" bordered>
+        <t-cell title="单行标题">
+          <template #note>
+            <t-badge dot />
+          </template>
         </t-cell>
-        <t-cell label="单行标题">
-          <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
+        <t-cell title="单行标题">
+          <template #note>
+            <t-badge content="NEW" :offset="[5, 0]" shape="ribbon" />
+          </template>
         </t-cell>
       </t-cell-group>
     </div>
@@ -24,3 +30,9 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({});
 </script>
+
+<style lang="less" scoped>
+.badge-item {
+  margin-right: 25px;
+}
+</style>
