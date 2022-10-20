@@ -52,7 +52,7 @@ describe('Indexes', () => {
           list: number,
           onSelect: (i: { groupIndex: number; childrenIndex: number }) => {
             const info = log(i);
-            console.log('selected info :>> ', info);
+            console.log('`indexes` unit test: selected info :>> ', info);
           },
         },
       });
