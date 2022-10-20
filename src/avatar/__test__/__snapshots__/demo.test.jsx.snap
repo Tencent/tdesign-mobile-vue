@@ -3,15 +3,12 @@
 exports[`Avatar > Avatar adjustVue demo works fine 1`] = `
 <div
   class="tdesign-demo-block"
-  data-v-df42478a=""
 >
   <div
-    class="tdesign-demo-avatar"
-    data-v-df42478a=""
+    class="avatar-demo"
   >
     <div
       class="t-avatar t-avatar--circle"
-      data-v-df42478a=""
     >
       <div
         class="t-avatar__inner"
@@ -26,7 +23,6 @@ exports[`Avatar > Avatar adjustVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar t-avatar--circle"
-      data-v-df42478a=""
     >
       <div
         class="t-avatar__inner"
@@ -41,7 +37,6 @@ exports[`Avatar > Avatar adjustVue demo works fine 1`] = `
     </div>
     <div
       class="t-avatar t-avatar--circle"
-      data-v-df42478a=""
     >
       <div
         class="t-avatar__inner"
@@ -88,92 +83,142 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="avatar-demo"
+      class="tdesign-demo-block"
     >
       <div
-        class="t-avatar t-avatar--circle"
+        class="avatar-demo"
       >
         <div
-          class="t-avatar__inner"
+          class="t-avatar t-avatar--circle"
         >
           <div
-            class="t-avatar__icon"
+            class="t-avatar__inner"
           >
-            <svg
-              class="t-icon t-icon-user"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-avatar__icon"
             >
-              <path
-                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-user"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-avatar--circle"
-      >
         <div
-          class="t-avatar__inner"
-        >
-          <img
-            alt="示例图片"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
-        </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-avatar--circle"
-      >
-        <div
-          class="t-avatar__inner"
+          class="t-avatar t-avatar--circle"
         >
           <div
-            class="t-avatar__icon"
+            class="t-avatar__inner"
           >
-            
-            <img
-              alt="示例图片"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            />
-            
+            <div
+              class="t-image t-image--round"
+            >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt="示例图片"
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-avatar--round"
-      >
         <div
-          class="t-avatar__inner"
+          class="t-avatar t-avatar--circle"
         >
-          <img
-            alt=""
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-avatar__icon"
+            >
+              
+              <img
+                alt="示例图片"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              />
+              
+            </div>
+          </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-avatar--circle custom"
-      >
         <div
-          class="t-avatar__inner"
+          class="t-avatar t-avatar--round"
         >
-          <span>
-            
-            A
-            
-          </span>
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-image t-image--round"
+            >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
+          </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
+        <div
+          class="t-avatar t-avatar--circle custom"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <span>
+              
+              A
+              
+            </span>
+          </div>
+          <!--v-if-->
+        </div>
       </div>
     </div>
     
@@ -193,241 +238,590 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="avatar-group-demo"
+      class="tdesign-demo-block"
     >
       <div
-        class="t-avatar-group t-avatar--offset-right"
+        class="avatar-group-demo"
       >
-        
         <div
-          class="t-avatar t-size-s t-avatar--circle"
+          class="t-avatar-group t-avatar--offset-right"
         >
+          
           <div
-            class="t-avatar__inner"
+            class="t-avatar t-size-s t-avatar--circle"
           >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            />
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
           </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          
           <!--v-if-->
         </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        
-        <!--v-if-->
       </div>
-    </div>
-    <div
-      class="avatar-group-demo"
-    >
       <div
-        class="t-avatar-group t-avatar--offset-right"
+        class="avatar-group-demo"
       >
-        
         <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
+          class="t-avatar-group t-avatar--offset-right"
         >
+          
           <div
-            class="t-avatar__inner"
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
           >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="height: 40px; width: 40px;"
-            />
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
           </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          
           <!--v-if-->
         </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        
-        <!--v-if-->
       </div>
-    </div>
-    <div
-      class="avatar-group-demo"
-    >
       <div
-        class="t-avatar-group t-avatar--offset-right"
+        class="avatar-group-demo"
       >
-        
         <div
-          class="t-avatar t-size-m t-avatar--circle"
+          class="t-avatar-group t-avatar--offset-right"
         >
+          
           <div
-            class="t-avatar__inner"
+            class="t-avatar t-size-m t-avatar--circle"
           >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            />
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
           </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          
           <!--v-if-->
         </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        
-        <!--v-if-->
       </div>
     </div>
     
@@ -443,241 +837,590 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="avatar-group-demo"
+      class="tdesign-demo-block"
     >
       <div
-        class="t-avatar-group t-avatar--offset-left"
+        class="avatar-group-demo"
       >
-        
         <div
-          class="t-avatar t-size-s t-avatar--circle"
+          class="t-avatar-group t-avatar--offset-left"
         >
+          
           <div
-            class="t-avatar__inner"
+            class="t-avatar t-size-s t-avatar--circle"
           >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            />
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
           </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-s t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          
           <!--v-if-->
         </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-s t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        
-        <!--v-if-->
       </div>
-    </div>
-    <div
-      class="avatar-group-demo"
-    >
       <div
-        class="t-avatar-group t-avatar--offset-left"
+        class="avatar-group-demo"
       >
-        
         <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
+          class="t-avatar-group t-avatar--offset-left"
         >
+          
           <div
-            class="t-avatar__inner"
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
           >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="height: 40px; width: 40px;"
-            />
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
           </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-avatar--circle"
+            style="height: 40px; width: 40px;"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+                style="height: 40px; width: 40px;"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          
           <!--v-if-->
         </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-avatar--circle"
-          style="height: 40px; width: 40px;"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="height: 40px; width: 40px;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        
-        <!--v-if-->
       </div>
-    </div>
-    <div
-      class="avatar-group-demo"
-    >
       <div
-        class="t-avatar-group t-avatar--offset-left"
+        class="avatar-group-demo"
       >
-        
         <div
-          class="t-avatar t-size-m t-avatar--circle"
+          class="t-avatar-group t-avatar--offset-left"
         >
+          
           <div
-            class="t-avatar__inner"
+            class="t-avatar t-size-m t-avatar--circle"
           >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            />
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
           </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          <div
+            class="t-avatar t-size-m t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-image t-image--round"
+              >
+                <div
+                  class="t-image__status"
+                >
+                  <svg
+                    class="t-icon t-icon-ellipsis"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </div>
+            </div>
+            <!--v-if-->
+          </div>
+          
           <!--v-if-->
         </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-avatar t-size-m t-avatar--circle"
-        >
-          <div
-            class="t-avatar__inner"
-          >
-            <img
-              alt=""
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-        
-        <!--v-if-->
       </div>
     </div>
     
@@ -697,295 +1440,437 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="avatar-demo"
+      class="tdesign-demo-avatar"
     >
       <div
-        class="t-avatar t-size-l t-avatar--circle"
+        class="avatar-demo"
       >
         <div
-          class="t-avatar__inner"
+          class="t-avatar t-size-l t-avatar--circle"
         >
           <div
-            class="t-avatar__icon"
-          >
-            <svg
-              class="t-icon t-icon-user"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-        </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-size-m t-avatar--circle"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <div
-            class="t-avatar__icon"
-          >
-            <svg
-              class="t-icon t-icon-user"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-        </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-size-s t-avatar--circle"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <div
-            class="t-avatar__icon"
-          >
-            <svg
-              class="t-icon t-icon-user"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="avatar-demo"
-    >
-      <div
-        class="t-avatar t-size-l t-avatar--circle"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <img
-            alt="示例图片"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
-        </div>
-        <div
-          class="t-avatar__badge"
-        >
-          <div
-            class="t-badge"
+            class="t-avatar__inner"
           >
             <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
+              class="t-avatar__icon"
             >
-              10
+              <svg
+                class="t-icon t-icon-user"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
             </div>
-            <!---->
           </div>
-        </div>
-      </div>
-      <div
-        class="t-avatar t-size-m t-avatar--circle"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <img
-            alt="示例图片"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
+          <!--v-if-->
         </div>
         <div
-          class="t-avatar__badge"
+          class="t-avatar t-size-m t-avatar--circle"
         >
           <div
-            class="t-badge"
+            class="t-avatar__inner"
           >
             <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
+              class="t-avatar__icon"
             >
-              10
+              <svg
+                class="t-icon t-icon-user"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
             </div>
-            <!---->
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-avatar__icon"
+            >
+              <svg
+                class="t-icon t-icon-user"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="avatar-demo"
+      >
+        <div
+          class="t-avatar t-size-l t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-image t-image--round"
+            >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt="示例图片"
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
+          </div>
+          <div
+            class="t-avatar__badge"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--circle"
+              >
+                10
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-image t-image--round"
+            >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt="示例图片"
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
+          </div>
+          <div
+            class="t-avatar__badge"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--circle"
+              >
+                10
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--circle"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-image t-image--round"
+            >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt="示例图片"
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
+          </div>
+          <div
+            class="t-avatar__badge"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--dot"
+              >
+                
+              </div>
+              <!---->
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="t-avatar t-size-s t-avatar--circle"
+        class="avatar-demo"
       >
         <div
-          class="t-avatar__inner"
-        >
-          <img
-            alt="示例图片"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
-        </div>
-        <div
-          class="t-avatar__badge"
+          class="t-avatar t-size-l t-avatar--round"
         >
           <div
-            class="t-badge"
+            class="t-avatar__inner"
           >
             <div
-              class="t-badge__inner t-badge--medium t-badge--dot"
+              class="t-image t-image--round"
             >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt="示例图片"
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
+          </div>
+          <div
+            class="t-avatar__badge"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--circle"
+              >
+                10
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div
+          class="t-avatar t-size-m t-avatar--round"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-image t-image--round"
+            >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt="示例图片"
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
+          </div>
+          <div
+            class="t-avatar__badge"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--circle"
+              >
+                10
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div
+          class="t-avatar t-size-s t-avatar--round"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <div
+              class="t-image t-image--round"
+            >
+              <div
+                class="t-image__status"
+              >
+                <svg
+                  class="t-icon t-icon-ellipsis"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+              <img
+                alt="示例图片"
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </div>
+          </div>
+          <div
+            class="t-avatar__badge"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--dot"
+              >
+                
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="avatar-demo"
+      >
+        <div
+          class="t-avatar t-size-l t-avatar--circle custom"
+        >
+          <div
+            class="t-avatar__inner"
+          >
+            <span>
               
-            </div>
-            <!---->
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="avatar-demo"
-    >
-      <div
-        class="t-avatar t-size-l t-avatar--round"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <img
-            alt="示例图片"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
-        </div>
-        <div
-          class="t-avatar__badge"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
-            >
-              10
-            </div>
-            <!---->
-          </div>
-        </div>
-      </div>
-      <div
-        class="t-avatar t-size-m t-avatar--round"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <img
-            alt="示例图片"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
-        </div>
-        <div
-          class="t-avatar__badge"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
-            >
-              10
-            </div>
-            <!---->
-          </div>
-        </div>
-      </div>
-      <div
-        class="t-avatar t-size-s t-avatar--round"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <img
-            alt="示例图片"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-          />
-        </div>
-        <div
-          class="t-avatar__badge"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--dot"
-            >
+              A
               
-            </div>
-            <!---->
+            </span>
           </div>
+          <!--v-if-->
         </div>
-      </div>
-    </div>
-    <div
-      class="avatar-demo"
-    >
-      <div
-        class="t-avatar t-size-l t-avatar--circle custom"
-      >
         <div
-          class="t-avatar__inner"
+          class="t-avatar t-size-m t-avatar--circle custom"
         >
-          <span>
-            
-            A
-            
-          </span>
+          <div
+            class="t-avatar__inner"
+          >
+            <span>
+              
+              A
+              
+            </span>
+          </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-size-m t-avatar--circle custom"
-      >
         <div
-          class="t-avatar__inner"
+          class="t-avatar t-size-s t-avatar--circle custom"
         >
-          <span>
-            
-            A
-            
-          </span>
+          <div
+            class="t-avatar__inner"
+          >
+            <span>
+              
+              A
+              
+            </span>
+          </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-avatar t-size-s t-avatar--circle custom"
-      >
-        <div
-          class="t-avatar__inner"
-        >
-          <span>
-            
-            A
-            
-          </span>
-        </div>
-        <!--v-if-->
       </div>
     </div>
     
@@ -994,9 +1879,11 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
 `;
 
 exports[`Avatar > Avatar shapeVue demo works fine 1`] = `
-<div>
+<div
+  class="tdesign-demo-block"
+>
   <div
-    class="tdesign-demo-block"
+    class="avatar-demo"
   >
     <div
       class="t-avatar t-avatar--circle"
@@ -1004,11 +1891,78 @@ exports[`Avatar > Avatar shapeVue demo works fine 1`] = `
       <div
         class="t-avatar__inner"
       >
-        <span>
+        <div
+          class="t-avatar__icon"
+        >
+          <svg
+            class="t-icon t-icon-user"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="示例图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-avatar__icon"
+        >
           
-          U
+          <img
+            alt="示例图片"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+          />
           
-        </span>
+        </div>
       </div>
       <!--v-if-->
     </div>
@@ -1018,9 +1972,45 @@ exports[`Avatar > Avatar shapeVue demo works fine 1`] = `
       <div
         class="t-avatar__inner"
       >
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--circle custom"
+    >
+      <div
+        class="t-avatar__inner"
+      >
         <span>
           
-          U
+          A
           
         </span>
       </div>
@@ -1033,134 +2023,431 @@ exports[`Avatar > Avatar shapeVue demo works fine 1`] = `
 exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
 <div
   class="tdesign-demo-avatar"
-  data-v-a1c55ea6=""
 >
   <div
-    class="tdesign-demo-block"
-    data-v-a1c55ea6=""
+    class="avatar-demo"
   >
     <div
-      class="t-avatar t-size-s t-avatar--circle"
-      data-v-a1c55ea6=""
+      class="t-avatar t-size-l t-avatar--circle"
     >
       <div
         class="t-avatar__inner"
       >
-        <span>
-          
-          U
-          
-        </span>
+        <div
+          class="t-avatar__icon"
+        >
+          <svg
+            class="t-icon t-icon-user"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
       <!--v-if-->
     </div>
     <div
       class="t-avatar t-size-m t-avatar--circle"
-      data-v-a1c55ea6=""
     >
       <div
         class="t-avatar__inner"
       >
-        <span>
-          
-          U
-          
-        </span>
+        <div
+          class="t-avatar__icon"
+        >
+          <svg
+            class="t-icon t-icon-user"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
       <!--v-if-->
     </div>
     <div
-      class="t-avatar t-size-l t-avatar--circle"
-      data-v-a1c55ea6=""
+      class="t-avatar t-size-s t-avatar--circle"
     >
       <div
         class="t-avatar__inner"
       >
-        <span>
-          
-          U
-          
-        </span>
-      </div>
-      <!--v-if-->
-    </div>
-    <div
-      class="t-avatar t-avatar--circle"
-      data-v-a1c55ea6=""
-      style="height: 88px; width: 88px;"
-    >
-      <div
-        class="t-avatar__inner"
-      >
-        <span>
-          
-          U
-          
-        </span>
+        <div
+          class="t-avatar__icon"
+        >
+          <svg
+            class="t-icon t-icon-user"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
       <!--v-if-->
     </div>
   </div>
   <div
-    class="tdesign-demo-block"
-    data-v-a1c55ea6=""
+    class="avatar-demo"
   >
     <div
-      class="t-avatar t-size-s t-avatar--round"
-      data-v-a1c55ea6=""
+      class="t-avatar t-size-l t-avatar--circle"
     >
       <div
         class="t-avatar__inner"
       >
-        <span>
-          
-          U
-          
-        </span>
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="示例图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
       </div>
-      <!--v-if-->
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--circle"
+          >
+            10
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-avatar t-size-m t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="示例图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--circle"
+          >
+            10
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-avatar t-size-s t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="示例图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--dot"
+          >
+            
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="avatar-demo"
+  >
+    <div
+      class="t-avatar t-size-l t-avatar--round"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="示例图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--circle"
+          >
+            10
+          </div>
+          <!---->
+        </div>
+      </div>
     </div>
     <div
       class="t-avatar t-size-m t-avatar--round"
-      data-v-a1c55ea6=""
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="示例图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--circle"
+          >
+            10
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-avatar t-size-s t-avatar--round"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-image t-image--round"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt="示例图片"
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--dot"
+          >
+            
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="avatar-demo"
+  >
+    <div
+      class="t-avatar t-size-l t-avatar--circle custom"
     >
       <div
         class="t-avatar__inner"
       >
         <span>
           
-          U
+          A
           
         </span>
       </div>
       <!--v-if-->
     </div>
     <div
-      class="t-avatar t-size-l t-avatar--round"
-      data-v-a1c55ea6=""
+      class="t-avatar t-size-m t-avatar--circle custom"
     >
       <div
         class="t-avatar__inner"
       >
         <span>
           
-          U
+          A
           
         </span>
       </div>
       <!--v-if-->
     </div>
     <div
-      class="t-avatar t-avatar--round"
-      data-v-a1c55ea6=""
-      style="height: 88px; width: 88px;"
+      class="t-avatar t-size-s t-avatar--circle custom"
     >
       <div
         class="t-avatar__inner"
       >
         <span>
           
-          U
+          A
           
         </span>
       </div>
@@ -1175,71 +2462,98 @@ exports[`Avatar > Avatar typeVue demo works fine 1`] = `
   class="tdesign-demo-block"
 >
   <div
-    class="t-avatar t-avatar--circle"
+    class="avatar-demo"
   >
     <div
-      class="t-avatar__inner"
-    >
-      <img
-        alt=""
-        src="https://tdesign.gtimg.com/site/avatar.jpg"
-      />
-    </div>
-    <!--v-if-->
-  </div>
-  <div
-    class="t-avatar t-avatar--circle"
-  >
-    <div
-      class="t-avatar__inner"
+      class="t-avatar t-avatar--circle"
     >
       <div
-        class="t-avatar__icon"
-      />
-    </div>
-    <!--v-if-->
-  </div>
-  <div
-    class="t-avatar t-avatar--circle"
-  >
-    <div
-      class="t-avatar__inner"
-    >
-      <div
-        class="t-avatar__icon"
+        class="t-avatar__inner"
       >
-        
-        <svg
-          class="t-icon t-icon-user"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
+        <div
+          class="t-image t-image--round"
         >
-          <path
-            d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
-            fill="currentColor"
-            fill-opacity="0.9"
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/site/avatar.jpg"
+            style="object-fit: fill; object-position: center;"
           />
-        </svg>
-        
+        </div>
       </div>
+      <!--v-if-->
     </div>
-    <!--v-if-->
-  </div>
-  <div
-    class="t-avatar t-avatar--circle"
-  >
     <div
-      class="t-avatar__inner"
+      class="t-avatar t-avatar--circle"
     >
-      <span>
-        
-        U
-        
-      </span>
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-avatar__icon"
+        />
+      </div>
+      <!--v-if-->
     </div>
-    <!--v-if-->
+    <div
+      class="t-avatar t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-avatar__icon"
+        >
+          
+          <svg
+            class="t-icon t-icon-user"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-avatar t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <span>
+          
+          U
+          
+        </span>
+      </div>
+      <!--v-if-->
+    </div>
   </div>
 </div>
 `;

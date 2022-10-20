@@ -1,7 +1,13 @@
 <template>
   <div :class="avatarClass" :style="customSize">
     <div :class="`${name}__inner`">
-      <img v-if="image && !hideOnLoadFailed" :src="image" :alt="alt" :style="customSize" @error="handleImgLoadError" />
+      <t-image
+        v-if="image && !hideOnLoadFailed"
+        :style="customSize"
+        v-bind="customImageProps"
+        @load="handleImgLoadCompleted"
+        @error="handleImgLoadError"
+      />
       <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
         <t-node :content="iconContent"></t-node>
       </div>
@@ -26,6 +32,7 @@
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, inject, ref, SetupContext } from 'vue';
 import TBadge from '../badge';
+import TImage from '../image';
 import config from '../config';
 import AvatarProps from './props';
 import { TdAvatarGroupProps } from './type';
@@ -37,15 +44,15 @@ const name = `${prefix}-avatar`;
 
 export default defineComponent({
   name,
-  components: { TNode, TBadge },
+  components: { TNode, TBadge, TImage },
   props: AvatarProps,
   emits: ['error'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const avatarGroupProps = inject('avatarGroup', {}) as TdAvatarGroupProps;
-    const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
+    const avatarContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const sizeValue = ref(props.size || (avatarGroupProps && avatarGroupProps.size));
     const avatarClass = computed(() => [
       `${name}`,
@@ -64,18 +71,32 @@ export default defineComponent({
           }
         : {};
     });
-    const handleImgLoadError = (e: Event) => {
+    const handleImgLoadCompleted = (e: any) => {
+      emitEvent('load', e);
+    };
+    const handleImgLoadError = (e: any) => {
       emitEvent('error', e);
     };
+
+    const baseImageProps = {
+      src: props.image,
+      alt: props.alt,
+    };
+    const customImageProps = computed(() => ({
+      ...props.imageProps,
+      ...baseImageProps,
+    }));
 
     return {
       name,
       ...toRefs(props),
-      avatarContent,
       iconContent,
+      avatarContent,
       avatarClass,
       customSize,
+      handleImgLoadCompleted,
       handleImgLoadError,
+      customImageProps,
     };
   },
 });

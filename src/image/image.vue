@@ -35,18 +35,21 @@ export default defineComponent({
 
     // 默认loading和error状态展示，slot支持Node和Function
     const internalInstance = getCurrentInstance();
+
+    const closeIcon = h(CloseIcon);
+    const ellipsisIcon = h(EllipsisIcon);
     const statusContent = computed(() => {
       if (context.slots?.loading && loadingValue.value) {
         return renderTNode(internalInstance, 'loading');
       }
       if (!context.slots?.loading && loadingValue.value) {
-        return h(EllipsisIcon);
+        return ellipsisIcon;
       }
       if (context.slots?.error && errorValue.value) {
         return renderTNode(internalInstance, 'error');
       }
       if (!context.slots?.error && errorValue.value) {
-        return h(CloseIcon);
+        return closeIcon;
       }
       return '';
     });

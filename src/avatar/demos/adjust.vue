@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-demo-block">
-    <div class="tdesign-demo-avatar">
+    <div class="avatar-demo">
       <t-avatar>陈</t-avatar>
       <t-avatar>陈晚</t-avatar>
       <t-avatar>陈晚晚</t-avatar>
@@ -8,12 +8,12 @@
   </div>
 </template>
 
-<script lang="ts" setup></script>
-
-<style lang="less" scoped>
-.tdesign-demo-avatar {
+<style lang="less">
+.avatar-demo {
+  margin-left: 16px;
+  margin-bottom: 16px;
   .t-avatar {
-    margin-right: 40px;
+    margin-right: 20px;
   }
 }
 </style>
