@@ -31,6 +31,11 @@ export default {
     type: Number,
     default: 1000,
   },
+  /** 遮罩的自定义样式 */
+  customStyle: {
+    type: String,
+    default: '',
+  },
   /** 遮罩层的点击事件 */
   onClick: Function as PropType<TdOverlayProps['onClick']>,
 };

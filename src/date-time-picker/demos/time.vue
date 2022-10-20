@@ -1,11 +1,11 @@
 <template>
-  <t-cell title="选择日期(年月日)" :note="pickerValueText || '年 月 日'" @click="visible = true" />
+  <t-cell title="选择日期(时分)" :note="pickerValue || '时 分'" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      :value="pickerValue"
-      :mode="['date']"
+      default-value="2022-10-10 10:10"
+      :mode="[null, 'minute']"
       title="选择日期"
-      format="YYYY-MM-DD"
+      format="HH:mm"
       @change="onChange"
       @pick="onPick"
       @confirm="onConfirm"
@@ -17,8 +17,8 @@
 import { ref } from 'vue';
 
 const visible = ref(false);
-const pickerValue = ref('2021-12-23');
-const pickerValueText = ref('');
+const pickerValue = ref('');
+
 const onChange = (value: string) => {
   console.log('change: ', value);
 };
@@ -35,7 +35,6 @@ const onCancel = () => {
 const onConfirm = (value: string) => {
   console.log('confirm: ', value);
   pickerValue.value = value;
-  pickerValueText.value = value;
   visible.value = false;
 };
 </script>

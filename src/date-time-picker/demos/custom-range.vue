@@ -1,10 +1,12 @@
 <template>
-  <t-cell title="选择日期(年月日)" :note="pickerValueText || '年 月 日'" @click="visible = true" />
+  <t-cell title="选择日期" :note="pickerValueText || '年 月 日'" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
       :value="pickerValue"
       :mode="['date']"
       title="选择日期"
+      start="2020-6-30"
+      end="2025-6-30"
       format="YYYY-MM-DD"
       @change="onChange"
       @pick="onPick"

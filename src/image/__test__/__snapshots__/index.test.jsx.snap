@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`Image > props > : lazy 1`] = `
+<div
+  class="t-image t-image--round"
+>
+  <!--v-if-->
+  <img
+    alt=""
+    class="t-image__img"
+    src="https://tdesign.gtimg.com/site/upload1.png"
+    style="object-fit: fill; object-position: center;"
+  />
+</div>
+`;
