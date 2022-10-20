@@ -15,7 +15,8 @@
 
 <script lang="ts">
 import { defineComponent, computed, toRefs, watchEffect, ref, getCurrentInstance } from 'vue';
-import { isNumber, renderContent, TNode } from '../shared';
+import isNumber from 'lodash/isNumber';
+import { renderContent, TNode } from '../shared';
 import config from '../config';
 import SkeletonProps from './props';
 import { SkeletonRowColObj } from './type';

@@ -53,8 +53,11 @@
 import { defineComponent, SetupContext, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
 import { AddIcon, CloseIcon, RefreshIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
+import isObject from 'lodash/isObject';
+import isFunction from 'lodash/isFunction';
+
 import xhr from '../_common/js/upload/xhr';
-import { useDefault, useEmitEvent, isFunction, isArray, isObject, renderTNode, TNode } from '../shared';
+import { useDefault, useEmitEvent, renderTNode, TNode } from '../shared';
 import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
 import { SuccessContext, InnerProgressContext } from './interface';
 import UploadProps from './props';
@@ -64,6 +67,8 @@ import TImageViewer from '../image-viewer';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
+const { isArray } = Array;
+
 export default defineComponent({
   name,
   components: {

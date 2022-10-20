@@ -1,33 +1,3 @@
-export const { isArray } = Array;
-
-export function isNumber(x: unknown): x is number {
-  return Object.prototype.toString.call(x) === '[object Number]';
-}
-
-export function isString(x: unknown): x is string {
-  return typeof x === 'string';
-}
-
-export function isBoolean(x: unknown): x is boolean {
-  return typeof x === 'boolean';
-}
-
-export function isNull(s: unknown): s is null {
-  return s === null;
-}
-
-export function isObject(x: unknown): x is Record<any, any> {
-  return x === null ? false : Object.prototype.toString.call(x) === '[object Object]';
-}
-
-export function isDate(x: unknown): x is Date {
-  return Object.prototype.toString.call(x) === '[object Date]';
-}
-
-export function isFunction(x: unknown): x is Function {
-  return Object.prototype.toString.call(x) === '[object Function]';
-}
-
 export function toCamel(str: string): string {
   return str.replace(/^\S/, (m) => m.toUpperCase());
 }
