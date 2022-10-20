@@ -11,7 +11,7 @@ export interface TdAvatarProps {
   /**
    * 透传至 Image 组件
    */
-  ImageProps?: object;
+  imageProps?: object;
   /**
    * 头像替换文本，仅当图片加载失败时有效
    * @default ''
