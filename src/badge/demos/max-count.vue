@@ -7,6 +7,8 @@
       <t-badge :count="109" class="badge-item">
         <t-button size="small">默认max:99</t-button>
       </t-badge>
+    </div>
+    <div class="badge-demo">
       <t-badge :count="45" :max-count="44" class="badge-item">
         <t-button size="small">max:44</t-button>
       </t-badge>
@@ -14,7 +16,7 @@
         <t-button size="small">max:105</t-button>
       </t-badge>
     </div>
-    <div class="badge-demo">
+    <div class="">
       <t-cell-group>
         <t-cell value-align="left">
           <span>单行标题</span>
@@ -30,3 +32,10 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({});
 </script>
+
+<style lang="less" scoped>
+.badge-item {
+  width: auto;
+  margin-right: 25px;
+}
+</style>

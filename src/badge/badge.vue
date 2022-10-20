@@ -44,7 +44,7 @@ export default defineComponent({
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
       [`${name}`]: true,
-      [`${name}__ribbon--outer`]: props.shape === 'ribbon',
+      [`${name}--ribbon ${name}__inner ${name}--medium`]: props.shape === 'ribbon',
     }));
 
     // 徽标内层样式类

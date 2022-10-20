@@ -8,14 +8,11 @@
         <t-button size="small">省略号</t-button>
       </t-badge>
     </div>
-    <div class="badge-wrap">
+    <div class="">
       <t-cell-group>
-        <t-cell value-align="left">
-          <span>单行标题</span>
+        <t-cell title="单行标题">
           <div class="badge-tag-wrap">
             <t-badge content="NEW" shape="round" class="badge-tag" />
-            <t-badge content="NEW" shape="round" class="badge-tag" />
-            <t-badge content="NEW" shape="circle" class="badge-tag" />
             <t-badge content="NEW" shape="circle" class="badge-tag" />
           </div>
         </t-cell>
@@ -31,6 +28,10 @@ export default defineComponent({});
 </script>
 
 <style lang="less" scoped>
+.badge-item {
+  margin-right: 25px;
+}
+
 .badge-tag {
   margin-right: 8px;
 }
