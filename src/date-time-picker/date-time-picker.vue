@@ -4,6 +4,8 @@
       ref="pickeInstance"
       :value="currentPicker"
       :title="title"
+      :confirm-btn="confirmButtonText"
+      :cancel-btn="cancelButtonText"
       :columns="(selected) => generateDatePickerColumns(selected, start, end, renderLabel)"
       @change="onChange"
       @confirm="onConfirm"
