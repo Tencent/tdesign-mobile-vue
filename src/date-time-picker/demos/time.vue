@@ -15,7 +15,6 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
-import { cell } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
 const pickerValue = ref('');

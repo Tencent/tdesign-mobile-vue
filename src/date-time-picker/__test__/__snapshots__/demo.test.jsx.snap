@@ -102,7 +102,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -119,11 +119,11 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
+                    style="transform: translate3d(0, -280px, 0);"
                   >
                     
                     <li
-                      class="t-picker-item__item t-picker-item__item--selected"
+                      class="t-picker-item__item"
                     >
                       2012
                     </li>
@@ -168,7 +168,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                       2020
                     </li>
                     <li
-                      class="t-picker-item__item"
+                      class="t-picker-item__item t-picker-item__item--selected"
                     >
                       2021
                     </li>
@@ -235,11 +235,127 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
+                    style="transform: translate3d(0, -360px, 0);"
                   >
                     
                     <li
+                      class="t-picker-item__item"
+                    >
+                      1
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      3
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      4
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      5
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      6
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      7
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      8
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      9
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      10
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      11
+                    </li>
+                    <li
                       class="t-picker-item__item t-picker-item__item--selected"
+                    >
+                      12
+                    </li>
+                    
+                  </ul>
+                </div>
+                <div
+                  class="t-picker-item"
+                >
+                  <ul
+                    class="t-picker-item__wrapper"
+                    style="transform: translate3d(0, -800px, 0);"
+                  >
+                    
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      1
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      3
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      4
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      5
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      6
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      7
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      8
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      9
+                    </li>
+                    <li
+                      class="t-picker-item__item"
                     >
                       10
                     </li>
@@ -253,19 +369,28 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                     >
                       12
                     </li>
-                    
-                  </ul>
-                </div>
-                <div
-                  class="t-picker-item"
-                >
-                  <ul
-                    class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
                     <li
-                      class="t-picker-item__item t-picker-item__item--selected"
+                      class="t-picker-item__item"
+                    >
+                      13
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      14
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      15
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      16
+                    </li>
+                    <li
+                      class="t-picker-item__item"
                     >
                       17
                     </li>
@@ -295,7 +420,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                       22
                     </li>
                     <li
-                      class="t-picker-item__item"
+                      class="t-picker-item__item t-picker-item__item--selected"
                     >
                       23
                     </li>
@@ -464,7 +589,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -481,16 +606,16 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
+                    style="transform: translate3d(0, 40px, 0);"
                   >
                     
                     <li
-                      class="t-picker-item__item t-picker-item__item--selected"
+                      class="t-picker-item__item"
                     >
                       2020
                     </li>
                     <li
-                      class="t-picker-item__item"
+                      class="t-picker-item__item t-picker-item__item--selected"
                     >
                       2021
                     </li>
@@ -522,11 +647,107 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
+                    style="transform: translate3d(0, -360px, 0);"
                   >
                     
                     <li
+                      class="t-picker-item__item"
+                    >
+                      1
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      3
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      4
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      5
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      6
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      7
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      8
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      9
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      10
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      11
+                    </li>
+                    <li
                       class="t-picker-item__item t-picker-item__item--selected"
+                    >
+                      12
+                    </li>
+                    
+                  </ul>
+                </div>
+                <div
+                  class="t-picker-item"
+                >
+                  <ul
+                    class="t-picker-item__wrapper"
+                    style="transform: translate3d(0, -800px, 0);"
+                  >
+                    
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      1
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      3
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      4
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      5
+                    </li>
+                    <li
+                      class="t-picker-item__item"
                     >
                       6
                     </li>
@@ -560,21 +781,100 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                     >
                       12
                     </li>
-                    
-                  </ul>
-                </div>
-                <div
-                  class="t-picker-item"
-                >
-                  <ul
-                    class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      13
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      14
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      15
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      16
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      17
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      18
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      19
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      20
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      21
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      22
+                    </li>
                     <li
                       class="t-picker-item__item t-picker-item__item--selected"
                     >
+                      23
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      24
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      25
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      26
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      27
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      28
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      29
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
                       30
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      31
                     </li>
                     
                   </ul>
@@ -701,7 +1001,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -1965,7 +2265,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -1982,11 +2282,11 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
+                      style="transform: translate3d(0, -280px, 0);"
                     >
                       
                       <li
-                        class="t-picker-item__item t-picker-item__item--selected"
+                        class="t-picker-item__item"
                       >
                         2012
                       </li>
@@ -2031,7 +2331,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                         2020
                       </li>
                       <li
-                        class="t-picker-item__item"
+                        class="t-picker-item__item t-picker-item__item--selected"
                       >
                         2021
                       </li>
@@ -2098,11 +2398,127 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
+                      style="transform: translate3d(0, -360px, 0);"
                     >
                       
                       <li
+                        class="t-picker-item__item"
+                      >
+                        1
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        2
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        3
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        4
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        5
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        6
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        7
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        8
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        9
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        10
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        11
+                      </li>
+                      <li
                         class="t-picker-item__item t-picker-item__item--selected"
+                      >
+                        12
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  <div
+                    class="t-picker-item"
+                  >
+                    <ul
+                      class="t-picker-item__wrapper"
+                      style="transform: translate3d(0, -800px, 0);"
+                    >
+                      
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        1
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        2
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        3
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        4
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        5
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        6
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        7
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        8
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        9
+                      </li>
+                      <li
+                        class="t-picker-item__item"
                       >
                         10
                       </li>
@@ -2116,19 +2532,28 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       >
                         12
                       </li>
-                      
-                    </ul>
-                  </div>
-                  <div
-                    class="t-picker-item"
-                  >
-                    <ul
-                      class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
-                    >
-                      
                       <li
-                        class="t-picker-item__item t-picker-item__item--selected"
+                        class="t-picker-item__item"
+                      >
+                        13
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        14
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        15
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        16
+                      </li>
+                      <li
+                        class="t-picker-item__item"
                       >
                         17
                       </li>
@@ -2158,7 +2583,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                         22
                       </li>
                       <li
-                        class="t-picker-item__item"
+                        class="t-picker-item__item t-picker-item__item--selected"
                       >
                         23
                       </li>
@@ -2320,7 +2745,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -2337,11 +2762,11 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
+                      style="transform: translate3d(0, -280px, 0);"
                     >
                       
                       <li
-                        class="t-picker-item__item t-picker-item__item--selected"
+                        class="t-picker-item__item"
                       >
                         2012
                       </li>
@@ -2386,7 +2811,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                         2020
                       </li>
                       <li
-                        class="t-picker-item__item"
+                        class="t-picker-item__item t-picker-item__item--selected"
                       >
                         2021
                       </li>
@@ -2453,11 +2878,56 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
+                      style="transform: translate3d(0, -240px, 0);"
                     >
                       
                       <li
+                        class="t-picker-item__item"
+                      >
+                        1
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        2
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        3
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        4
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        5
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        6
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        7
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        8
+                      </li>
+                      <li
                         class="t-picker-item__item t-picker-item__item--selected"
+                      >
+                        9
+                      </li>
+                      <li
+                        class="t-picker-item__item"
                       >
                         10
                       </li>
@@ -2589,7 +3059,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -3174,7 +3644,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     class="t-button__text"
                   >
                     
-                    确认
+                    确定
                     
                   </span>
                 </button>
@@ -3191,16 +3661,16 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
+                      style="transform: translate3d(0, 40px, 0);"
                     >
                       
                       <li
-                        class="t-picker-item__item t-picker-item__item--selected"
+                        class="t-picker-item__item"
                       >
                         2020
                       </li>
                       <li
-                        class="t-picker-item__item"
+                        class="t-picker-item__item t-picker-item__item--selected"
                       >
                         2021
                       </li>
@@ -3232,11 +3702,107 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
+                      style="transform: translate3d(0, -360px, 0);"
                     >
                       
                       <li
+                        class="t-picker-item__item"
+                      >
+                        1
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        2
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        3
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        4
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        5
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        6
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        7
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        8
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        9
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        10
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        11
+                      </li>
+                      <li
                         class="t-picker-item__item t-picker-item__item--selected"
+                      >
+                        12
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  <div
+                    class="t-picker-item"
+                  >
+                    <ul
+                      class="t-picker-item__wrapper"
+                      style="transform: translate3d(0, -800px, 0);"
+                    >
+                      
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        1
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        2
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        3
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        4
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        5
+                      </li>
+                      <li
+                        class="t-picker-item__item"
                       >
                         6
                       </li>
@@ -3270,21 +3836,100 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       >
                         12
                       </li>
-                      
-                    </ul>
-                  </div>
-                  <div
-                    class="t-picker-item"
-                  >
-                    <ul
-                      class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, 80px, 0);"
-                    >
-                      
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        13
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        14
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        15
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        16
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        17
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        18
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        19
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        20
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        21
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        22
+                      </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
+                        23
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        24
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        25
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        26
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        27
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        28
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        29
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
                         30
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        31
                       </li>
                       
                     </ul>
@@ -3413,7 +4058,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -3989,7 +4634,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                   class="t-button__text"
                 >
                   
-                  确认
+                  确定
                   
                 </span>
               </button>
@@ -4006,11 +4651,11 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
+                    style="transform: translate3d(0, -280px, 0);"
                   >
                     
                     <li
-                      class="t-picker-item__item t-picker-item__item--selected"
+                      class="t-picker-item__item"
                     >
                       2012
                     </li>
@@ -4055,7 +4700,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                       2020
                     </li>
                     <li
-                      class="t-picker-item__item"
+                      class="t-picker-item__item t-picker-item__item--selected"
                     >
                       2021
                     </li>
@@ -4122,11 +4767,56 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, 80px, 0);"
+                    style="transform: translate3d(0, -240px, 0);"
                   >
                     
                     <li
+                      class="t-picker-item__item"
+                    >
+                      1
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      3
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      4
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      5
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      6
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      7
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      8
+                    </li>
+                    <li
                       class="t-picker-item__item t-picker-item__item--selected"
+                    >
+                      9
+                    </li>
+                    <li
+                      class="t-picker-item__item"
                     >
                       10
                     </li>
