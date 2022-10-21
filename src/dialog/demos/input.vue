@@ -1,115 +1,55 @@
 <template>
-  <div :class="`${name}`">
-    <t-cell value-align="left" class="tdesign-demo--dialog">
-      <t-button theme="primary" size="middle" class="button-item" @click="changeDialogVisible(1)"> 单行标题 </t-button>
-      <t-button theme="primary" size="middle" @click="changeDialogVisible(2)"> 带说明文本 </t-button>
-    </t-cell>
-    <t-dialog
-      v-model:visible="isShowDialog1"
-      :show-overlay="showOverlay"
-      type="confirm"
-      :is-input="isInput"
-      :title="title"
-      :placeholder-text="placeholderText"
-      :cancel-button-text="cancelButtonText"
-      :confirm-button-text="confirmButtonText"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-    >
-      <template #footer-cancel>
-        <div style="color: #000000; font-size: 18px">我不同意</div>
-      </template>
-      <template #footer-confirm>
-        <div style="color: #0052d9; font-size: 18px">我同意</div>
-      </template>
-    </t-dialog>
-    <t-dialog
-      v-model:visible="isShowDialog2"
-      :show-overlay="showOverlay"
-      type="confirm"
-      :is-input="isInput"
-      :title="title"
-      :content="content"
-      :placeholder-text="placeholderText"
-      :cancel-button-text="cancelButtonText"
-      :confirm-button-text="confirmButtonText"
-      @confirm="onConfirm"
-      @cancel="onCancel"
-    >
-      <template #footer-cancel>
-        <div style="color: #000000; font-size: 18px">我不同意</div>
-      </template>
-      <template #footer-confirm>
-        <div style="color: #0052d9; font-size: 18px">我同意</div>
-      </template>
-    </t-dialog>
-  </div>
+  <t-button block variant="outline" size="large" @click="isShowDialog1 = true"> 单行标题对话框 </t-button>
+  <t-button block variant="outline" size="large" @click="isShowDialog2 = true"> 带说明文本对话框 </t-button>
+  <t-dialog
+    v-model:visible="isShowDialog1"
+    title="最小高度样式，文案上下居中"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+    @change="onChange"
+  >
+    <template #footer-confirm>
+      <div>我同意</div>
+    </template>
+    <template #footer-cancel>
+      <div>我不同意</div>
+    </template>
+  </t-dialog>
+  <t-dialog
+    v-model:visible="isShowDialog2"
+    title="对话框标题"
+    content="告知当前状态、信息和解决方法"
+    button-layout="vertical"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+    @change="onChange"
+  >
+    <template #other-content>
+      <t-input type="text" placeholder="输入文案" />
+    </template>
+    <template #footer-confirm>
+      <div>我同意</div>
+    </template>
+    <template #footer-cancel>
+      <div>我不同意</div>
+    </template>
+  </t-dialog>
 </template>
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {},
-  data() {
-    return {
-      title: '标题',
-      content: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-      placeholderText: '输入框提示文字',
-      cancelButtonText: '我再想想',
-      confirmButtonText: '继续',
-      zIndex: 3000,
-      width: 250,
-      showHeader: false,
-      showFooter: false,
-      showOverlay: false,
-      isInput: true,
-      isShowDialog1: false,
-      isShowDialog2: false,
-    };
-  },
-  methods: {
-    changeDialogVisible(idx: number) {
-      switch (idx) {
-        case 1: {
-          this.isShowDialog1 = true;
-          this.isShowDialog2 = false;
-          break;
-        }
-        case 2: {
-          this.isShowDialog1 = false;
-          this.isShowDialog2 = true;
-          break;
-        }
-        default: {
-          break;
-        }
-      }
-    },
-    onConfirm(e: string) {
-      console.log('dialog:confirm', e);
-    },
+const isShowDialog1 = ref(false);
+const isShowDialog2 = ref(false);
 
-    onCancel() {
-      console.log('dialog:cancel');
-    },
-
-    openDialog() {
-      console.log('dialog:opened');
-    },
-
-    closeDialog() {
-      console.log('dialog:closed');
-    },
-
-    changeVisible(e: boolean) {
-      console.log('dialog:visible-change', e);
-    },
-
-    clickoverlay() {
-      console.log('dialog:clickoverlay');
-    },
-  },
-});
+const onConfirm = () => {
+  console.log('dialog:confirm');
+};
+const onCancel = () => {
+  console.log('dialog:cancel');
+};
+const onChange = () => {
+  console.log('dialog:change');
+};
 </script>
 
 <style lang="less" scoped>
