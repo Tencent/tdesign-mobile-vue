@@ -3,23 +3,23 @@
  */
 
 import { mount } from '@vue/test-utils';
-import controllerVue from '@/notice-bar/demos/controller.vue';
+import baseVue from '@/notice-bar/demos/base.vue';
+import customVue from '@/notice-bar/demos/custom.vue';
+import customizationVue from '@/notice-bar/demos/customization.vue';
 import eventVue from '@/notice-bar/demos/event.vue';
 import iconVue from '@/notice-bar/demos/icon.vue';
 import mobileVue from '@/notice-bar/demos/mobile.vue';
-import multiLineVue from '@/notice-bar/demos/multi-line.vue';
 import scrollingVue from '@/notice-bar/demos/scrolling.vue';
-import staticVue from '@/notice-bar/demos/static.vue';
 import themeVue from '@/notice-bar/demos/theme.vue';
 
 const mapper = {
-  controllerVue,
+  baseVue,
+  customVue,
+  customizationVue,
   eventVue,
   iconVue,
   mobileVue,
-  multiLineVue,
   scrollingVue,
-  staticVue,
   themeVue,
 };
 
