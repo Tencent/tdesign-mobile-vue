@@ -5,6 +5,25 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.12.2 `2022-10-24` 
+### 🚀 Features
+- `Avatar`: 新增 `imageProps` 属性透传至 `Image` 组件 @anlyyao ([#417](https://github.com/Tencent/tdesign-mobile-vue/pull/417))
+- `List`: `scroll` 事件新增 `scrollTop` 参数 @LeeJim ([#427](https://github.com/Tencent/tdesign-mobile-vue/pull/427))
+### 🐞 Bug Fixes
+- `DateTimePicker`: 修复 `cancelBtn` 和 `confirmBtn` 无效的问题 @anlyyao ([#407](https://github.com/Tencent/tdesign-mobile-vue/pull/407))
+- `Cell`: 修复 `RightIcon` 渲染错误 @anlyyao ([#416](https://github.com/Tencent/tdesign-mobile-vue/pull/416))
+- `NoticeBar`:  修复 `prefixIcon`  类型错误，取消 `String` 类型，新增 `Boolean` 类型 @anlyyao ([#421](https://github.com/Tencent/tdesign-mobile-vue/pull/421))
+- `NoticeBar`: 修复 `content` 和 `extra` 内容重复渲染问题 @anlyyao ([#421](https://github.com/Tencent/tdesign-mobile-vue/pull/421))
+- `Grid`: 修复 `image` 插槽无法正常渲染的问题 @LeeJim ([#423](https://github.com/Tencent/tdesign-mobile-vue/pull/423))
+### 🚧 Others
+- `Sticky`: 新增单元测试 @4xii ([#348](https://github.com/Tencent/tdesign-mobile-vue/pull/348))
+- `DateTimePicker`: 新增单元测试 @anlyyao ([#407](https://github.com/Tencent/tdesign-mobile-vue/pull/407))
+- `NoticeBar`: 更新示例代码 @anlyyao ([#421](https://github.com/Tencent/tdesign-mobile-vue/pull/421))
+- `Avatar`: 更新示例代码 @anlyyao ([#417](https://github.com/Tencent/tdesign-mobile-vue/pull/417))
+- `Dialog`: 更新示例代码 @LeeJim ([#422](https://github.com/Tencent/tdesign-mobile-vue/pull/422))
+- `List`: 更新示例代码 @LeeJim ([#427](https://github.com/Tencent/tdesign-mobile-vue/pull/427))
+- 移除部分工具函数使用 loadsh 代替 @LeeJim ([#419](https://github.com/Tencent/tdesign-mobile-vue/pull/419))
+
 ## 🌈 0.12.1 `2022-10-17` 
 ### 🚀 Features
 - `Overlay`: 新增 `customStyle`属性，支持自定义遮罩样式 @anlyyao ([#403](https://github.com/Tencent/tdesign-mobile-vue/pull/403))
