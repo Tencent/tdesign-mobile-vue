@@ -2,6 +2,7 @@ import { nextTick } from 'vue';
 import { expect, it, vi, describe } from 'vitest';
 import { mount } from '@vue/test-utils';
 import NoticeBar from '../notice-bar.vue';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
 describe('NoticeBar', async () => {
   describe('props', async () => {
@@ -40,8 +41,9 @@ describe('NoticeBar', async () => {
     });
 
     it('prefixIcon', async () => {
-      const wrapper = mount(<NoticeBar visible prefix-icon="test" />);
-      expect(wrapper.text()).toContain('test');
+      const icon = () => <TIconApp />;
+      const wrapper = mount(<NoticeBar visible prefix-icon={icon} />);
+      expect(wrapper.find('.t-icon-app').exists()).toBe(true);
 
       const wrapper2 = mount(<NoticeBar visible />);
       expect(wrapper2.find('.t-icon-info-circle-filled').exists()).toBe(true);
