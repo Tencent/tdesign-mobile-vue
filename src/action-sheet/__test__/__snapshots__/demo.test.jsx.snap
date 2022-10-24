@@ -131,13 +131,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -163,13 +162,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -195,13 +193,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -227,13 +224,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -259,13 +255,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -291,13 +286,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -323,13 +317,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -355,13 +348,12 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1170,13 +1162,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1202,13 +1193,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1234,13 +1224,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1266,13 +1255,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1298,13 +1286,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1330,13 +1317,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1440,13 +1426,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1472,13 +1457,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1504,13 +1488,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1536,13 +1519,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1568,13 +1550,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1600,13 +1581,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1632,13 +1612,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
@@ -1664,13 +1643,12 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                     <div
                       class="t-grid-item__image-box"
                     >
-                      
+                      <!--v-if-->
                       <img
                         class="t-grid-item__image"
                         src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
                         style="width: 32px; height: 32px;"
                       />
-                      
                     </div>
                     <div
                       class="t-grid-item__text"
