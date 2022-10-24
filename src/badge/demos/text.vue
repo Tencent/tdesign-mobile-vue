@@ -8,7 +8,7 @@
         <t-button size="small">省略号</t-button>
       </t-badge>
     </div>
-    <div class="">
+    <div>
       <t-cell-group>
         <t-cell title="单行标题">
           <div class="badge-tag-wrap">
