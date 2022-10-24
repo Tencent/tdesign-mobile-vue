@@ -3,23 +3,13 @@
  */
 
 import { mount } from '@vue/test-utils';
-import alignVue from '@/message/demos/align.vue';
-import closeVue from '@/message/demos/close.vue';
-import durationVue from '@/message/demos/duration.vue';
-import functionVue from '@/message/demos/function.vue';
+import baseVue from '@/message/demos/base.vue';
 import mobileVue from '@/message/demos/mobile.vue';
-import offsetVue from '@/message/demos/offset.vue';
-import textVue from '@/message/demos/text.vue';
 import themeVue from '@/message/demos/theme.vue';
 
 const mapper = {
-  alignVue,
-  closeVue,
-  durationVue,
-  functionVue,
+  baseVue,
   mobileVue,
-  offsetVue,
-  textVue,
   themeVue,
 };
 
