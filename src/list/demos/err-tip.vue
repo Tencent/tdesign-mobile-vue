@@ -1,64 +1,37 @@
 <template>
-  <t-list :async-loading="loading" @scroll="onLoadMore">
-    <t-cell v-for="item in list" :key="item" align="middle">
+  <t-list :async-loading="errloading" @scroll="onLoadMore">
+    <t-cell v-for="item in listError" :key="item" align="middle">
       <span class="cell">{{ item }}</span>
     </t-cell>
     <template #footer>
-      <div v-if="showError" class="error" @click.stop="onLoadMore">请求失败，点击重新加载</div>
+      <t-loading v-if="showError" :indicator="false" @click.stop="onLoadMore">
+        <div class="custom-error">请求失败，点击重新<span>加载</span></div>
+      </t-loading>
     </template>
   </t-list>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, onMounted, h } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const list = ref([] as Array<any>);
-    const loading = ref(false);
-    const showError = ref(false);
+const listError = ref<any[]>([]);
 
-    const onLoad = () => {
-      loading.value = true;
+const errloading = ref('');
+const showError = ref(false);
 
-      setTimeout(() => {
-        for (let i = 0; i < 8; i++) {
-          list.value.push(`${list.value.length + 1}`);
-        }
-        showError.value = true;
-        loading.value = false;
-      }, 1000);
-    };
+const onLoadMore = () => {
+  showError.value = false;
+  if (listError.value.length >= 60 || errloading.value) {
+    return;
+  }
 
-    onMounted(() => {
-      onLoad();
-    });
+  errloading.value = 'loading';
 
-    const onLoadMore = () => {
-      showError.value = false;
-      if (list.value.length >= 60 || loading.value) {
-        return;
-      }
-
-      loading.value = true;
-
-      setTimeout(() => {
-        for (let i = 0; i < 15; i++) {
-          list.value.push(`${list.value.length + 1}`);
-        }
-        loading.value = false;
-      }, 1000);
-    };
-
-    return {
-      list,
-      loading,
-      showError,
-      onLoadMore,
-    };
-  },
-  data() {
-    return {};
-  },
-});
+  setTimeout(() => {
+    for (let i = 0; i < 15; i++) {
+      listError.value.push(`${listError.value.length + 1}`);
+    }
+    errloading.value = '';
+  }, 1000);
+};
 </script>
