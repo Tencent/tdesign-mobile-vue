@@ -139,7 +139,7 @@ export default defineComponent({
         const { dataset } = ele;
         return dataset && dataset.index === state.activeSidebar;
       });
-      targets[0].scrollIntoView && targets[0]?.scrollIntoView();
+      targets[0]?.scrollIntoView?.();
     };
 
     const calcSticky = (indexesRootTop: number) => {

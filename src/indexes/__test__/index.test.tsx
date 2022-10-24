@@ -47,18 +47,18 @@ describe('Indexes', () => {
       const log = vi.fn((info) => {
         return info.childrenIndex;
       });
+      const selectFn = vi.fn();
       const wrapper = mount(TIndexes, {
         props: {
           list: number,
-          onSelect: (i: { groupIndex: number; childrenIndex: number }) => {
-            const info = log(i);
-            console.log('`indexes` unit test: selected info :>> ', info);
-          },
+          onSelect: selectFn,
         },
       });
       wrapper.findComponent(TIndexesCell).trigger('click'); // 模拟点击第一个单元格
-      expect(log).toHaveBeenCalled(); // 检查是否被调用
-      expect(log).toHaveNthReturnedWith(1, 0); // 第一次调用返回0
+      expect(selectFn).toBeCalledWith({
+        groupIndex: '1',
+        childrenIndex: 0,
+      }); // 检查onSelect 是否被按指定参数调用
     });
   });
 });
