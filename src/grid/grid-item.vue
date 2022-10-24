@@ -10,16 +10,11 @@
         :size="badgeProps.size"
         :offset="badgeProps.offset"
       >
-        <template v-if="image">
-          <img v-if="typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
-          <t-node v-else :content="imageContent"></t-node>
-        </template>
-      </t-badge>
-
-      <template v-else-if="image">
-        <img v-if="typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
+        <img v-if="image && typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
         <t-node v-else :content="imageContent"></t-node>
-      </template>
+      </t-badge>
+      <img v-if="image && typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
+      <t-node v-else :content="imageContent"></t-node>
     </div>
     <div :class="`${name}__text`" :style="textStyle">
       <div :class="`${name}__title`" :style="titleStyle">
