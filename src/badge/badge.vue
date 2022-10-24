@@ -3,7 +3,10 @@
     <div v-if="showDot" :class="badgeInnerClasses" :style="badgeStyles">
       <t-node :content="countContent"></t-node>
     </div>
-    <t-node :content="badgeContent"></t-node>
+    <div v-if="shape === 'ribbon'" :class="badgeInnerClasses" :style="badgeStyles">
+      <t-node :content="badgeContent"></t-node>
+    </div>
+    <t-node v-else :content="badgeContent"></t-node>
   </div>
 </template>
 
@@ -44,7 +47,7 @@ export default defineComponent({
     // 徽标外层样式类
     const badgeClasses = computed(() => ({
       [`${name}`]: true,
-      [`${name}--ribbon ${name}__inner ${name}--medium`]: props.shape === 'ribbon',
+      [`${name}__ribbon--outer`]: props.shape === 'ribbon',
     }));
 
     // 徽标内层样式类

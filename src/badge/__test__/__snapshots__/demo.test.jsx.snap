@@ -1056,11 +1056,16 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-badge t-badge--ribbon t-badge__inner t-badge--medium"
+                  class="t-badge t-badge__ribbon--outer"
                   data-v-059605cd=""
                 >
                   <!--v-if-->
-                  NEW
+                  <div
+                    class="t-badge__inner t-badge--has-children t-badge--medium t-badge--ribbon"
+                    style="right: 5px; top: 0px;"
+                  >
+                    NEW
+                  </div>
                 </div>
                 
               </div>
@@ -1667,11 +1672,16 @@ exports[`Badge > Badge shapeVue demo works fine 1`] = `
           >
             
             <div
-              class="t-badge t-badge--ribbon t-badge__inner t-badge--medium"
+              class="t-badge t-badge__ribbon--outer"
               data-v-059605cd=""
             >
               <!--v-if-->
-              NEW
+              <div
+                class="t-badge__inner t-badge--has-children t-badge--medium t-badge--ribbon"
+                style="right: 5px; top: 0px;"
+              >
+                NEW
+              </div>
             </div>
             
           </div>
