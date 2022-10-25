@@ -1,6 +1,4 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <t-textarea>请输入文字</t-textarea>
-  </div>
+  <t-textarea placeholder="请输入文字"></t-textarea>
 </template>
 <script lang="ts" setup></script>
