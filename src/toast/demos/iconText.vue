@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-demo-block">
+  <div class="toast-demo">
     <t-button block size="large" variant="outline" @click="showSuccessRow('成功文案')">成功-横向</t-button>
     <t-button block size="large" variant="outline" @click="showFailRow('失败文案')">警告-横向</t-button>
     <t-button block size="large" variant="outline" @click="showSuccess('成功文案')">成功-竖向</t-button>

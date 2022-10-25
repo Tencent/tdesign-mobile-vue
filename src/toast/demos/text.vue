@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-demo-block">
+  <div class="toast-demo">
     <t-button block size="large" variant="outline" @click="showText(text1)">纯文本</t-button>
     <t-button block size="large" variant="outline" @click="showWithIcon(text1, 'row')">带图标-横向</t-button>
     <t-button block size="large" variant="outline" @click="showWithIcon(text1, 'column')">带图标-竖向</t-button>

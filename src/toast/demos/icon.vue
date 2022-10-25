@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-demo-block">
+  <div class="toast-demo">
     <t-button theme="primary" @click="showSuccess">成功</t-button>
     <t-button theme="primary" @click="showFail">警告</t-button>
     <t-button theme="primary" style="margin-top: 8px" @click="showLoading">加载</t-button>

@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-demo-block">
+  <div class="toast-demo">
     <t-button block size="large" variant="outline" @click="showPositionAndDuration('top', 1000, '顶部-展示1秒')"
       >顶部展示1秒</t-button
     >
