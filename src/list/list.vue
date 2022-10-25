@@ -55,8 +55,9 @@ export default defineComponent({
     };
 
     const handleScroll = (e: WheelEvent | Event) => {
-      const { bottom } = useElementBounding(root);
-      emitEvent('scroll', bottom.value - height.value);
+      const { top } = useElementBounding(root);
+
+      emitEvent('scroll', top.value - height.value, document.documentElement.scrollTop);
     };
 
     useEventListener(scrollParent, 'scroll', handleScroll);

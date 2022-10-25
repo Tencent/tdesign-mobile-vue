@@ -3,14 +3,18 @@
  */
 
 import { mount } from '@vue/test-utils';
+import actionVue from '@/avatar/demos/action.vue';
 import adjustVue from '@/avatar/demos/adjust.vue';
+import exhibitionVue from '@/avatar/demos/exhibition.vue';
 import mobileVue from '@/avatar/demos/mobile.vue';
 import shapeVue from '@/avatar/demos/shape.vue';
 import sizeVue from '@/avatar/demos/size.vue';
 import typeVue from '@/avatar/demos/type.vue';
 
 const mapper = {
+  actionVue,
   adjustVue,
+  exhibitionVue,
   mobileVue,
   shapeVue,
   sizeVue,

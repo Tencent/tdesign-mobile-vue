@@ -1,122 +1,331 @@
 // Vitest Snapshot v1
 
-exports[`NoticeBar > NoticeBar controllerVue demo works fine 1`] = `
+exports[`NoticeBar > NoticeBar baseVue demo works fine 1`] = `
 <div
   class="noticebar-demo"
 >
   <div
-    class="tdesign-mobile-demo-block"
+    class="t-notice-bar t-notice-bar--info"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      带操作公告栏
-    </p>
-    
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="t-notice-bar__inner"
     >
+      <!--v-if-->
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              提示文字描述提示文字描述提示文字描述
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar > NoticeBar customVue demo works fine 1`] = `
+<div
+  class="noticebar-demo"
+>
+  <div
+    class="t-notice-bar t-notice-bar--info cover-class"
+  >
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        
+        <svg
+          class="t-icon t-icon-sound"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M11.5 8c0-.87-.36-1.75-1.07-2.45l.7-.72c.9.88 1.37 2.02 1.37 3.17 0 1.16-.48 2.29-1.38 3.17l-.7-.72A3.44 3.44 0 0011.5 8z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item t-notice-bar__item-detail"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              提示文字描述提示文字描述提示文字描述
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                提示文字描述提示文字描述
-                 提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  详情
-                   详情
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NoticeBar > NoticeBar customizationVue demo works fine 1`] = `
+<div>
+  <div
+    class="t-notice-bar t-notice-bar--info"
+  >
+    <div
+      class="t-notice-bar__inner"
+    >
+      <!--v-if-->
+      <div
+        class="t-notice-bar__bd"
+      >
+        <div
+          class="t-notice-bar__list"
+        >
+          <div
+            class="t-notice-bar__item"
+            style=""
+          >
+            <span
+              class="t-notice-bar__text"
+            >
+              提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
+              <span
+                class="t-notice-bar__text-detail"
+              >
+                <!--v-if-->
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="t-notice-bar t-notice-bar--info"
+  >
+    <div
+      class="t-notice-bar__inner"
+    >
+      <div
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
+      >
+        <div
+          class="t-notice-bar__list"
+        >
+          <div
+            class="t-notice-bar__item"
+            style=""
+          >
+            <span
+              class="t-notice-bar__text"
+            >
+              提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
+              <span
+                class="t-notice-bar__text-detail"
+              >
+                <!--v-if-->
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="t-notice-bar t-notice-bar--info"
+  >
+    <div
+      class="t-notice-bar__inner"
+    >
+      <div
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
+      >
+        <div
+          class="t-notice-bar__list"
+        >
+          <div
+            class="t-notice-bar__item t-notice-bar__item-detail"
+            style=""
+          >
+            <span
+              class="t-notice-bar__text"
+            >
+              提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
+              <span
+                class="t-notice-bar__text-detail"
+              >
+                详情
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-notice-bar__ft"
+      >
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
     </div>
-    
+  </div>
+  <!-- slot实现自定义content内容 -->
+  <div
+    class="t-notice-bar t-notice-bar--info"
+  >
+    <div
+      class="t-notice-bar__inner"
+    >
+      <div
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
+      >
+        <div
+          class="t-notice-bar__list"
+        >
+          <div
+            class="t-notice-bar__item"
+            style=""
+          >
+            <span
+              class="t-notice-bar__text"
+            >
+              
+               提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
+              <text
+                class="extra"
+              >
+                 详情 
+              </text>
+              
+              <span
+                class="t-notice-bar__text-detail"
+              >
+                <!--v-if-->
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-notice-bar__ft"
+      >
+        
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -126,97 +335,134 @@ exports[`NoticeBar > NoticeBar eventVue demo works fine 1`] = `
   class="noticebar-demo"
 >
   <div
-    class="tdesign-mobile-demo-block"
+    class="t-notice-bar t-notice-bar--info"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      事件
-    </h2>
-    <!--v-if-->
-    
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        显示/隐藏
-        
-      </span>
-    </button>
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item t-notice-bar__item-detail"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              提示文字描述提示文字描述提示文字描述
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  详情
-                   详情
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <div
-          class="t-notice-bar__ft"
+      </div>
+      <div
+        class="t-notice-bar__ft"
+      >
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
         >
-          <svg
-            class="t-icon t-icon-close"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
     </div>
-    
+  </div>
+  <div
+    class="t-notice-bar t-notice-bar--info"
+  >
+    <div
+      class="t-notice-bar__inner"
+    >
+      <div
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
+      >
+        <div
+          class="t-notice-bar__list"
+        >
+          <div
+            class="t-notice-bar__item t-notice-bar__item-detail"
+            style=""
+          >
+            <span
+              class="t-notice-bar__text"
+            >
+              提示文字描述提示文字描述
+              <span
+                class="t-notice-bar__text-detail"
+              >
+                详情
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-notice-bar__ft"
+      >
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -226,67 +472,53 @@ exports[`NoticeBar > NoticeBar iconVue demo works fine 1`] = `
   class="noticebar-demo"
 >
   <div
-    class="tdesign-mobile-demo-block"
+    class="t-notice-bar t-notice-bar--info"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      带图标静态公告栏
-    </p>
-    
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              提示文字描述提示文字描述提示文字描述
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
-    
   </div>
 </div>
 `;
@@ -310,54 +542,40 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="noticebar-demo"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
+          class="t-notice-bar__inner"
         >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
+          <!--v-if-->
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  提示文字描述提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
       </div>
     </div>
     
@@ -373,168 +591,56 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="noticebar-demo"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
           </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      滚动公告栏
-    </p>
-    
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                提示文字描述提示文字描述提示文字描述提示文字描提示文字
-                 提示文字描述提示文字描述提示文字描述提示文字描提示文字 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  提示文字描述提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
-          <div
-            class="t-notice-bar__list"
-          >
-            <div
-              class="t-notice-bar__item"
-              style=""
-            >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述提示文字描提示文字
-                 提示文字描述提示文字描述提示文字描述提示文字描提示文字 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!--v-if-->
       </div>
     </div>
     
@@ -550,136 +656,306 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="noticebar-demo"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  提示文字描述提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-notice-bar__ft"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+          <div
+            class="t-notice-bar__ft"
           >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+            <svg
+              class="t-icon t-icon-chevron-right"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-notice-bar t-notice-bar--info"
+      >
+        <div
+          class="t-notice-bar__inner"
+        >
+          <div
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
+          >
+            <div
+              class="t-notice-bar__list"
+            >
+              <div
+                class="t-notice-bar__item t-notice-bar__item-detail"
+                style=""
+              >
+                <span
+                  class="t-notice-bar__text"
+                >
+                  提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    详情
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-notice-bar__ft"
+          >
+            <svg
+              class="t-icon t-icon-close"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      滚动公告栏
+    </p>
+    
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="noticebar-demo"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
+          class="t-notice-bar__inner"
         >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
+          <!--v-if-->
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item t-notice-bar__item-detail"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                提示文字描述提示文字描述
-                 提示文字描述提示文字描述 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  详情
-                   详情
+                  提示文字描述提示文字描述提示文字描述提示文字描提示文字
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+          <!--v-if-->
         </div>
+      </div>
+      <div
+        class="t-notice-bar t-notice-bar--info"
+      >
         <div
-          class="t-notice-bar__ft"
+          class="t-notice-bar__inner"
         >
-          <svg
-            class="t-icon t-icon-close"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+          <div
+            class="t-notice-bar__hd"
           >
-            <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
+          >
+            <div
+              class="t-notice-bar__list"
+            >
+              <div
+                class="t-notice-bar__item"
+                style=""
+              >
+                <span
+                  class="t-notice-bar__text"
+                >
+                  提示文字描述提示文字描述提示文字描述提示文字描提示文字
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      自定义样式
+    </p>
+    
+    <div
+      class="noticebar-demo"
+    >
+      <div
+        class="t-notice-bar t-notice-bar--info cover-class"
+      >
+        <div
+          class="t-notice-bar__inner"
+        >
+          <div
+            class="t-notice-bar__hd"
+          >
+            
+            <svg
+              class="t-icon t-icon-sound"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M4 11l4.24 2.55a.5.5 0 00.76-.43V2.88a.5.5 0 00-.76-.43L4 5H2.1a.6.6 0 00-.6.6v4.8c0 .33.27.6.6.6H4zm1-5.43l3-1.8v8.46l-3-1.8V5.57zM4 10H2.5V6H4v4zM13.52 5.73a6 6 0 00-1.4-1.95l.68-.73c.7.65 1.25 1.42 1.63 2.27a6.6 6.6 0 01-1.63 7.63l-.68-.73a6 6 0 001.4-1.95 5.6 5.6 0 000-4.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M11.5 8c0-.87-.36-1.75-1.07-2.45l.7-.72c.9.88 1.37 2.02 1.37 3.17 0 1.16-.48 2.29-1.38 3.17l-.7-.72A3.44 3.44 0 0011.5 8z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <div
+            class="t-notice-bar__bd"
+          >
+            <div
+              class="t-notice-bar__list"
+            >
+              <div
+                class="t-notice-bar__item"
+                style=""
+              >
+                <span
+                  class="t-notice-bar__text"
+                >
+                  提示文字描述提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
         </div>
       </div>
     </div>
@@ -696,207 +972,203 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
     <!--v-if-->
     
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="noticebar-demo"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                默认状态公告栏默认状态公告栏
-                 默认状态公告栏默认状态公告栏 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  默认状态公告栏默认状态公告栏
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
       </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--success"
-    >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--success"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-check-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-check-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                成功状态公告栏成功状态公告栏
-                 成功状态公告栏成功状态公告栏 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  成功状态公告栏成功状态公告栏
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
       </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--warning"
-    >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--warning"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                警示状态公告栏警示状态公告栏
-                 警示状态公告栏警示状态公告栏 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  警示状态公告栏警示状态公告栏
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
       </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--error"
-    >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--error"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-close-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-close-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                错误状态公告栏错误状态公告栏
-                 错误状态公告栏错误状态公告栏 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  错误状态公告栏错误状态公告栏
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+          <!--v-if-->
         </div>
-        <!--v-if-->
       </div>
     </div>
     
@@ -911,494 +1183,227 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
     </h2>
     <!--v-if-->
     
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
+    <div>
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
+          class="t-notice-bar__inner"
         >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
+          <!--v-if-->
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
-          <div
-            class="t-notice-bar__list"
-          >
-            <div
-              class="t-notice-bar__item"
-              style=""
-            >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
-          <div
-            class="t-notice-bar__list"
-          >
-            <div
-              class="t-notice-bar__item"
-              style=""
-            >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-notice-bar__ft"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+          <!--v-if-->
         </div>
       </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item t-notice-bar__item-detail"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  详情
-                   详情
+                  提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-notice-bar__ft"
-        >
-          <svg
-            class="t-icon t-icon-close"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+          <!--v-if-->
         </div>
       </div>
-    </div>
-    
-  </div>
-</div>
-`;
-
-exports[`NoticeBar > NoticeBar multiLineVue demo works fine 1`] = `
-<div
-  class="noticebar-demo"
->
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      03 多行文字公告栏
-    </h2>
-    <!--v-if-->
-    
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
           </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item t-notice-bar__item-detail"
+                style=""
               >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  <!--v-if-->
-                   
+                  提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    详情
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__ft"
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <svg
+              class="t-icon t-icon-chevron-right"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述文字描述文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
+              <path
+                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
           </div>
-        </div>
-        <div
-          class="t-notice-bar__ft"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
         </div>
       </div>
-    </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
+      <!-- slot实现自定义content内容 -->
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar t-notice-bar--info"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__inner"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__hd"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-notice-bar__bd"
           >
             <div
-              class="t-notice-bar__item t-notice-bar__item-detail"
-              style=""
+              class="t-notice-bar__list"
             >
-              <span
-                class="t-notice-bar__text"
+              <div
+                class="t-notice-bar__item"
+                style=""
               >
-                提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
                 <span
-                  class="t-notice-bar__text-detail"
+                  class="t-notice-bar__text"
                 >
-                  详情
-                   详情
+                  
+                   提示文字描述提示文字描述提示文字描述提示文字描述提示文字描述 
+                  <text
+                    class="extra"
+                  >
+                     详情 
+                  </text>
+                  
+                  <span
+                    class="t-notice-bar__text-detail"
+                  >
+                    <!--v-if-->
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-notice-bar__ft"
-        >
-          <svg
-            class="t-icon t-icon-close"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+          <div
+            class="t-notice-bar__ft"
           >
-            <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+            
+            <svg
+              class="t-icon t-icon-close"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
         </div>
       </div>
     </div>
@@ -1412,251 +1417,86 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
   class="noticebar-demo"
 >
   <div
-    class="tdesign-mobile-demo-block"
+    class="t-notice-bar t-notice-bar--info"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      滚动公告栏
-    </p>
-    
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="t-notice-bar__inner"
     >
+      <!--v-if-->
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              提示文字描述提示文字描述提示文字描述提示文字描提示文字
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字
-                 提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
-          <div
-            class="t-notice-bar__list"
-          >
-            <div
-              class="t-notice-bar__item"
-              style=""
-            >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字
-                 提示文字描述提示文字描述提示文字描述提示文字描述文提示文字描述提示文字 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    
-  </div>
-</div>
-`;
-
-exports[`NoticeBar > NoticeBar staticVue demo works fine 1`] = `
-<div
-  class="noticebar-demo"
->
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      visible属性
-    </h2>
-    <!--v-if-->
-    
-    <div
-      class="t-notice-bar t-notice-bar--info"
-    >
-      <div
-        class="t-notice-bar__inner"
-      >
-        <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
-        >
-          <div
-            class="t-notice-bar__list"
-          >
-            <div
-              class="t-notice-bar__item"
-              style=""
-            >
-              <span
-                class="t-notice-bar__text"
-              >
-                提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="t-notice-bar t-notice-bar--info"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      v-model属性
-    </h2>
-    <!--v-if-->
-    
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              提示文字描述提示文字描述提示文字描述提示文字描提示文字
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                提示文字描述提示文字描述提示文字描述
-                 提示文字描述提示文字描述提示文字描述 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
-    
   </div>
 </div>
 `;
@@ -1666,220 +1506,200 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
   class="noticebar-demo"
 >
   <div
-    class="tdesign-mobile-demo-block"
+    class="t-notice-bar t-notice-bar--info"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      状态
-    </h2>
-    <!--v-if-->
-    
     <div
-      class="t-notice-bar t-notice-bar--info"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              默认状态公告栏默认状态公告栏
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                默认状态公告栏默认状态公告栏
-                 默认状态公告栏默认状态公告栏 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
+  </div>
+  <div
+    class="t-notice-bar t-notice-bar--success"
+  >
     <div
-      class="t-notice-bar t-notice-bar--success"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-check-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-check-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              成功状态公告栏成功状态公告栏
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                成功状态公告栏成功状态公告栏
-                 成功状态公告栏成功状态公告栏 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
+  </div>
+  <div
+    class="t-notice-bar t-notice-bar--warning"
+  >
     <div
-      class="t-notice-bar t-notice-bar--warning"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-info-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-info-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              警示状态公告栏警示状态公告栏
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                警示状态公告栏警示状态公告栏
-                 警示状态公告栏警示状态公告栏 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
+  </div>
+  <div
+    class="t-notice-bar t-notice-bar--error"
+  >
     <div
-      class="t-notice-bar t-notice-bar--error"
+      class="t-notice-bar__inner"
     >
       <div
-        class="t-notice-bar__inner"
+        class="t-notice-bar__hd"
+      >
+        <svg
+          class="t-icon t-icon-close-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-notice-bar__bd"
       >
         <div
-          class="t-notice-bar__hd"
-        >
-          <svg
-            class="t-icon t-icon-close-circle-filled"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-notice-bar__bd"
+          class="t-notice-bar__list"
         >
           <div
-            class="t-notice-bar__list"
+            class="t-notice-bar__item"
+            style=""
           >
-            <div
-              class="t-notice-bar__item"
-              style=""
+            <span
+              class="t-notice-bar__text"
             >
+              错误状态公告栏错误状态公告栏
               <span
-                class="t-notice-bar__text"
+                class="t-notice-bar__text-detail"
               >
-                错误状态公告栏错误状态公告栏
-                 错误状态公告栏错误状态公告栏 
-                <span
-                  class="t-notice-bar__text-detail"
-                >
-                  <!--v-if-->
-                   
-                </span>
+                <!--v-if-->
               </span>
-            </div>
+            </span>
           </div>
         </div>
-        <!--v-if-->
       </div>
+      <!--v-if-->
     </div>
-    
   </div>
 </div>
 `;

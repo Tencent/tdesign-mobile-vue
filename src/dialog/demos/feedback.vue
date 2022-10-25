@@ -1,122 +1,50 @@
 <template>
-  <div class="dialog-base">
-    <div class="tdesign-demo-block">
-      <t-cell-group title="反馈类对话框">
-        <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(1)"> 单行标题对话框 </t-button>
-          <t-dialog v-model:visible="isShowDialog1" :title="singleHeader"> </t-dialog>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(2)"> 多行标题对话框 </t-button>
-          <t-dialog v-model:visible="isShowDialog2" :title="moreTextHeader"> </t-dialog>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(3)"> 短文本对话框 </t-button>
-          <t-dialog
-            v-model:visible="isShowDialog3"
-            :content="content"
-            @confirm="onConfirm"
-            @opened="openDialog"
-            @closed="closeDialog"
-            @overlay-click="clickOverlay"
-            @visible-change="changeVisible"
-          >
-          </t-dialog>
-        </t-cell>
-        <t-cell value-align="left">
-          <t-button theme="primary" @click="changeDialogVisible(4)"> 长文本对话框 </t-button>
-          <t-dialog v-model:visible="isShowDialog4" :title="title"> </t-dialog>
-        </t-cell>
-      </t-cell-group>
-    </div>
-  </div>
+  <t-button block variant="outline" size="large" @click="isShowDialog1 = true"> 单行标题 </t-button>
+  <t-button block variant="outline" size="large" @click="isShowDialog2 = true"> 多行标题最大高度 </t-button>
+  <t-button block variant="outline" size="large" @click="isShowDialog3 = true"> 带说明文本 </t-button>
+  <t-button block variant="outline" size="large" @click="isShowDialog4 = true"> 带说明文本最大高度 </t-button>
+  <!-- <t-button block variant="outline" size="large" @click="eventDialog()"> 函数调用长文本对话框 </t-button> -->
+  <t-dialog
+    v-model:visible="isShowDialog1"
+    :title="singleHeader"
+    confirm-btn="知道了"
+    :close-on-overlay-click="false"
+    :show-overlay="showOverlay"
+  >
+  </t-dialog>
+  <t-dialog v-model:visible="isShowDialog2" :title="moreTextHeader" confirm-btn="知道了"> </t-dialog>
+  <t-dialog
+    v-model:visible="isShowDialog3"
+    :title="title"
+    content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+    confirm-btn="知道了"
+    @confirm="onConfirm"
+    @overlay-click="onClickOverlay"
+  >
+  </t-dialog>
+  <t-dialog v-model:visible="isShowDialog4" :title="title" :content="moreTextContent" confirm-btn="知道了"></t-dialog>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {},
-  data() {
-    return {
-      title: '对话框标题',
-      moreTextHeader: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-      singleHeader: '最小高度样式，文案上下居中',
-      content: '告知当前状态、信息和解决方法',
-      moreTextContent: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-      width: 250,
-      showHeader: false,
-      showFooter: false,
-      showOverlay: false,
-      isInput: true,
-      isShowDialog1: false,
-      isShowDialog2: false,
-      isShowDialog3: false,
-      isShowDialog4: false,
-    };
-  },
-  methods: {
-    changeDialogVisible(idx: number) {
-      switch (idx) {
-        case 1: {
-          this.isShowDialog1 = true;
-          this.isShowDialog2 = false;
-          this.isShowDialog3 = false;
-          this.isShowDialog4 = false;
-          break;
-        }
-        case 2: {
-          this.isShowDialog1 = false;
-          this.isShowDialog2 = true;
-          this.isShowDialog3 = false;
-          this.isShowDialog4 = false;
-          break;
-        }
-        case 3: {
-          this.isShowDialog1 = false;
-          this.isShowDialog2 = false;
-          this.isShowDialog3 = true;
-          this.isShowDialog4 = false;
-          break;
-        }
-        case 4: {
-          this.isShowDialog1 = false;
-          this.isShowDialog2 = false;
-          this.isShowDialog3 = false;
-          this.isShowDialog4 = true;
-          break;
-        }
-        default: {
-          break;
-        }
-      }
-    },
+const title = '对话框标题';
+const moreTextHeader = '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内';
+const singleHeader = '最小高度样式，文案上下居中';
+const moreTextContent = '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内';
+const showOverlay = false;
+const isShowDialog1 = ref(false);
+const isShowDialog2 = ref(false);
+const isShowDialog3 = ref(false);
+const isShowDialog4 = ref(false);
 
-    onConfirm(e: string) {
-      console.log('dialog:confirm', e);
-    },
+const onConfirm = (e: string) => {
+  console.log('dialog:confirm', e);
+};
 
-    onCancel() {
-      console.log('dialog:cancel');
-    },
-
-    openDialog() {
-      console.log('dialog:opened');
-    },
-
-    closeDialog() {
-      console.log('dialog:closed');
-    },
-
-    changeVisible(e: boolean) {
-      console.log('dialog:visible-change', e);
-    },
-
-    clickOverlay() {
-      console.log('dialog:clickOverlay');
-    },
-  },
-});
+const onClickOverlay = () => {
+  console.log('dialog:clickOverlay');
+};
 </script>
 
 <style lang="less">

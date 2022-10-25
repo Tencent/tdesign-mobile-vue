@@ -1,92 +1,48 @@
 <template>
-  <div :class="`${name}`">
-    <t-cell-group class="tdesign-demo--dialog">
-      <t-cell value-align="left">
-        <t-button theme="primary" @click="changeDialogVisible(5)"> 双操作对话框 </t-button>
-        <t-button theme="primary" @click="eventDialog()"> 带警示操作对话框 </t-button>
-        <t-dialog
-          v-model:visible="isShowDialog5"
-          type="confirm"
-          :title="title"
-          :content="content"
-          :cancel-button-text="cancelButtonText"
-          :confirm-button-text="confirmButtonText"
-          @confirm="onConfirm"
-          @cancel="onCancel"
-        >
-        </t-dialog>
-        <t-dialog
-          v-model:visible="isShowDialog6"
-          type="confirm"
-          :title="title"
-          :content="moreTextContent"
-          :cancel-button-text="cancelButtonText"
-          :confirm-button-text="confirmButtonText"
-          @confirm="onConfirm"
-          @cancel="onCancel"
-        >
-          <template #footer-cancel>
-            <div style="color: #000; font-size: 18px">辅助操作</div>
-          </template>
-          <template #footer-confirm>
-            <div style="color: #e34d59; font-size: 18px">我同意</div>
-          </template>
-        </t-dialog>
-      </t-cell>
-    </t-cell-group>
-  </div>
+  <t-button block variant="outline" size="large" @click="isShowDialog5 = true"> 双按钮 </t-button>
+  <t-button block variant="outline" size="large" @click="isShowDialog6 = true"> 带警示按钮 </t-button>
+  <t-dialog
+    v-model:visible="isShowDialog5"
+    type="confirm"
+    title="对话框标题"
+    content="告知当前状态、信息和解决方法"
+    placeholder-text="输入框提示文字"
+    cancel-btn="取消"
+    confirm-btn="确认"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+  >
+  </t-dialog>
+  <t-dialog
+    v-model:visible="isShowDialog6"
+    type="confirm"
+    title="对话框标题"
+    content="告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很"
+    cancel-btn="取消"
+    :confirm-btn="{ content: '警示操作', theme: 'danger' }"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+    @close="onClose"
+  >
+  </t-dialog>
 </template>
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {},
-  data() {
-    return {
-      title: '对话框标题',
-      content: '告知当前状态、信息和解决方法',
-      moreTextContent: '告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内',
-      cancelButtonText: '我再想想',
-      confirmButtonText: '继续',
-      width: 250,
-      showHeader: false,
-      showFooter: false,
-      showOverlay: false,
-      isInput: true,
-      isShowDialog5: false,
-      isShowDialog6: false,
-    };
-  },
-  methods: {
-    changeDialogVisible(idx: number) {
-      switch (idx) {
-        case 5: {
-          this.isShowDialog5 = true;
-          this.isShowDialog6 = false;
-          break;
-        }
-        case 6: {
-          this.isShowDialog5 = false;
-          this.isShowDialog6 = true;
-          break;
-        }
-        default: {
-          break;
-        }
-      }
-    },
-    eventDialog() {
-      this.$dialog.alert('event dialog');
-    },
-    onConfirm(e: string) {
-      console.log('dialog:confirm', e);
-    },
+const isShowDialog5 = ref(false);
+const isShowDialog6 = ref(false);
 
-    onCancel() {
-      console.log('dialog:cancel');
-    },
-  },
-});
+const onConfirm = () => {
+  console.log('dialog:confirm');
+};
+
+const onCancel = () => {
+  console.log('dialog: cancel');
+};
+
+const onClose = () => {
+  console.log('dialog: close');
+};
 </script>
 
 <style lang="less" scoped>

@@ -21,9 +21,10 @@ export interface TdNoticeBarProps {
    */
   marquee?: boolean | DrawMarquee;
   /**
-   * 前缀图标
+   * 前缀图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标
+   * @default true
    */
-  prefixIcon?: string | TNode;
+  prefixIcon?: boolean | TNode;
   /**
    * 后缀图标
    */
