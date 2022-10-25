@@ -3,10 +3,7 @@
     <div v-if="showDot" :class="badgeInnerClasses" :style="badgeStyles">
       <t-node :content="countContent"></t-node>
     </div>
-    <div v-if="shape === 'ribbon'" :class="badgeInnerClasses" :style="badgeStyles">
-      <t-node :content="badgeContent"></t-node>
-    </div>
-    <t-node v-else :content="badgeContent"></t-node>
+    <t-node :content="badgeContent"></t-node>
   </div>
 </template>
 
