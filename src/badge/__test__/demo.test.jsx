@@ -3,24 +3,16 @@
  */
 
 import { mount } from '@vue/test-utils';
-import basicVue from '@/badge/demos/basic.vue';
-import colorVue from '@/badge/demos/color.vue';
-import distVue from '@/badge/demos/dist.vue';
-import maxCountVue from '@/badge/demos/max-count.vue';
+import buttonVue from '@/badge/demos/button.vue';
 import mobileVue from '@/badge/demos/mobile.vue';
-import offsetVue from '@/badge/demos/offset.vue';
-import shapeVue from '@/badge/demos/shape.vue';
-import textVue from '@/badge/demos/text.vue';
+import normalVue from '@/badge/demos/normal.vue';
+import singleLineVue from '@/badge/demos/single-line.vue';
 
 const mapper = {
-  basicVue,
-  colorVue,
-  distVue,
-  maxCountVue,
+  buttonVue,
   mobileVue,
-  offsetVue,
-  shapeVue,
-  textVue,
+  normalVue,
+  singleLineVue,
 };
 
 describe('Badge', () => {
