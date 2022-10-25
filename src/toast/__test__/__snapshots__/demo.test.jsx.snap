@@ -2,7 +2,7 @@
 
 exports[`Toast > Toast iconTextVue demo works fine 1`] = `
 <div
-  class="tdesign-demo-block"
+  class="toast-demo"
 >
   <button
     aria-disabled="false"
@@ -79,7 +79,7 @@ exports[`Toast > Toast iconTextVue demo works fine 1`] = `
 
 exports[`Toast > Toast iconVue demo works fine 1`] = `
 <div
-  class="tdesign-demo-block"
+  class="toast-demo"
 >
   <button
     aria-disabled="false"
@@ -144,22 +144,8 @@ exports[`Toast > Toast iconVue demo works fine 1`] = `
 
 exports[`Toast > Toast maskVue demo works fine 1`] = `
 <div
-  class="tdesign-demo-block"
+  class="toast-demo"
 >
-  <button
-    aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      禁止滑动和点击
-      
-    </span>
-  </button>
   <button
     aria-disabled="false"
     class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
@@ -185,20 +171,6 @@ exports[`Toast > Toast maskVue demo works fine 1`] = `
     >
       
       关闭提示
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      可滑动和点击透明遮罩
       
     </span>
   </button>
@@ -542,29 +514,58 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
     <div
       class="toast-demo"
     >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
+      <div
+        class="toast-demo"
       >
-        <!---->
-        <span
-          class="t-button__text"
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
         >
-          
-          可滑动和点击透明遮罩
-          
-        </span>
-      </button>
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            可滑动和点击透明遮罩
+            
+          </span>
+        </button>
+      </div>
     </div>
     
   </div>
 </div>
 `;
 
+exports[`Toast > Toast overlayVue demo works fine 1`] = `
+<div
+  class="toast-demo"
+>
+  <div
+    class="toast-demo"
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        可滑动和点击透明遮罩
+        
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Toast > Toast positionVue demo works fine 1`] = `
 <div
-  class="tdesign-demo-block"
+  class="toast-demo"
 >
   <button
     aria-disabled="false"
@@ -611,9 +612,30 @@ exports[`Toast > Toast positionVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Toast > Toast preventScrollThroughVue demo works fine 1`] = `
+<div
+  class="toast-demo"
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+      禁止滑动和点击
+      
+    </span>
+  </button>
+</div>
+`;
+
 exports[`Toast > Toast textVue demo works fine 1`] = `
 <div
-  class="tdesign-demo-block"
+  class="toast-demo"
 >
   <button
     aria-disabled="false"
