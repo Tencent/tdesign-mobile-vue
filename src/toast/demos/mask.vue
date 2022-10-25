@@ -1,18 +1,17 @@
 <template>
-  <div class="tdesign-demo-block">
-    <t-button theme="primary" @click="onClick()">背景遮罩</t-button>
+  <div class="toast-demo">
+    <t-button block size="large" variant="outline" @click="showOverlay">显示提示</t-button>
+    <t-button block size="large" variant="outline" @click="hideToast">关闭提示</t-button>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
 import { Toast } from 'tdesign-mobile-vue';
 
-export default defineComponent({
-  setup() {
-    return {
-      onClick: () => Toast({ showOverlay: true, message: '提示内容' }),
-    };
-  },
-});
+const showOverlay = () => {
+  Toast({ message: '未知点击事件' });
+};
+const hideToast = () => {
+  Toast.clear();
+};
 </script>
