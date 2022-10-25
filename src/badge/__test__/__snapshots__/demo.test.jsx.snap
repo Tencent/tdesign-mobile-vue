@@ -841,7 +841,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class=""
         data-v-9223ea9e=""
       >
         <div
@@ -1751,7 +1750,6 @@ exports[`Badge > Badge textVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class=""
     data-v-9223ea9e=""
   >
     <div
