@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo" style="padding-top: 10px">
+  <div>
     <t-cell-group style="overflow: hidden">
       <t-cell title="单行标题" arrow>
         <template #note>

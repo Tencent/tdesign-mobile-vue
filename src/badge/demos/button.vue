@@ -24,10 +24,3 @@
     </div>
   </div>
 </template>
-
-<style lang="less" scoped>
-.badge-item {
-  width: auto;
-  margin-right: 10px;
-}
-</style>
