@@ -4,6 +4,7 @@
     <t-checkbox label="多选" default-checked disabled />
     <t-checkbox label="多选" align="right" disabled />
     <t-checkbox label="多选" align="right" checked disabled />
+    <t-checkbox label="半选" indeterminate></t-checkbox>
   </div>
 </template>
 

@@ -6,7 +6,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const checkBox = ref(['1']);
+const checkBox = ref(['1', '2']);
 const options = [
   {
     label: '全选',
@@ -14,15 +14,15 @@ const options = [
     indeterminate: true,
   },
   {
-    label: '多选',
+    label: '多选1',
     value: '1',
   },
   {
-    label: '多选',
+    label: '多选2',
     value: '2',
   },
   {
-    label: '多选',
+    label: '多选3',
     value: '3',
   },
 ];
