@@ -7,7 +7,6 @@
     <tdesign-demo-block title="01 类型" summary="分割符主要是由直线和文字组成">
       <div style="background: #fff">
         <baseDemo />
-        <horizontalDemo />
         <alignDemo />
         <verticalDemo />
       </div>
@@ -17,6 +16,5 @@
 <script lang="ts" setup>
 import baseDemo from './base.vue';
 import alignDemo from './align.vue';
-import horizontalDemo from './horizontal.vue';
 import verticalDemo from './vertical.vue';
 </script>

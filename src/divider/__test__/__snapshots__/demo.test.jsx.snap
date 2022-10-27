@@ -21,16 +21,15 @@ exports[`Divider > Divider alignVue demo works fine 1`] = `
   <h3
     data-v-7ac68ae7=""
   >
-    纯文字
+    文字+虚线
   </h3>
   <div
-    class="t-divider t-divider--hairline t-divider--content-center"
+    class="t-divider t-divider--hairline t-divider--content-center t-divider--dashed demo-5"
     data-v-7ac68ae7=""
     role="separator"
-    style="border-color: transparent;"
   >
     
-     没有更多了~ 
+     文字信息 
     
   </div>
 </div>
@@ -64,45 +63,38 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
   >
     <!---->
   </div>
-</div>
-`;
-
-exports[`Divider > Divider horizontalVue demo works fine 1`] = `
-<div
-  data-v-63a80f32=""
->
   <h3
-    data-v-63a80f32=""
+    data-v-589c0842=""
   >
     左右间距
   </h3>
   <div
     class="t-divider t-divider--hairline demo-2"
-    data-v-63a80f32=""
+    data-v-589c0842=""
     role="separator"
   >
     <!---->
   </div>
   <h3
-    data-v-63a80f32=""
+    data-v-589c0842=""
   >
     右侧拉通
   </h3>
   <div
     class="t-divider t-divider--hairline demo-3"
-    data-v-63a80f32=""
+    data-v-589c0842=""
     role="separator"
   >
     <!---->
   </div>
   <h3
-    data-v-63a80f32=""
+    data-v-589c0842=""
   >
     自定义左侧间距
   </h3>
   <div
     class="t-divider t-divider--hairline demo-4"
-    data-v-63a80f32=""
+    data-v-589c0842=""
     role="separator"
   >
     <!---->
@@ -168,42 +160,38 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         >
           <!---->
         </div>
-      </div>
-      <div
-        data-v-63a80f32=""
-      >
         <h3
-          data-v-63a80f32=""
+          data-v-589c0842=""
         >
           左右间距
         </h3>
         <div
           class="t-divider t-divider--hairline demo-2"
-          data-v-63a80f32=""
+          data-v-589c0842=""
           role="separator"
         >
           <!---->
         </div>
         <h3
-          data-v-63a80f32=""
+          data-v-589c0842=""
         >
           右侧拉通
         </h3>
         <div
           class="t-divider t-divider--hairline demo-3"
-          data-v-63a80f32=""
+          data-v-589c0842=""
           role="separator"
         >
           <!---->
         </div>
         <h3
-          data-v-63a80f32=""
+          data-v-589c0842=""
         >
           自定义左侧间距
         </h3>
         <div
           class="t-divider t-divider--hairline demo-4"
-          data-v-63a80f32=""
+          data-v-589c0842=""
           role="separator"
         >
           <!---->
@@ -229,11 +217,30 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         <h3
           data-v-7ac68ae7=""
         >
+          文字+虚线
+        </h3>
+        <div
+          class="t-divider t-divider--hairline t-divider--content-center t-divider--dashed demo-5"
+          data-v-7ac68ae7=""
+          role="separator"
+        >
+          
+           文字信息 
+          
+        </div>
+      </div>
+      <div
+        class="divider-container"
+        data-v-0851d1f8=""
+      >
+        <h3
+          data-v-0851d1f8=""
+        >
           纯文字
         </h3>
         <div
           class="t-divider t-divider--hairline t-divider--content-center"
-          data-v-7ac68ae7=""
+          data-v-0851d1f8=""
           role="separator"
           style="border-color: transparent;"
         >
@@ -241,10 +248,6 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
            没有更多了~ 
           
         </div>
-      </div>
-      <div
-        data-v-0851d1f8=""
-      >
         <h3
           data-v-0851d1f8=""
         >
@@ -293,8 +296,24 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
 
 exports[`Divider > Divider verticalVue demo works fine 1`] = `
 <div
+  class="divider-container"
   data-v-0851d1f8=""
 >
+  <h3
+    data-v-0851d1f8=""
+  >
+    纯文字
+  </h3>
+  <div
+    class="t-divider t-divider--hairline t-divider--content-center"
+    data-v-0851d1f8=""
+    role="separator"
+    style="border-color: transparent;"
+  >
+    
+     没有更多了~ 
+    
+  </div>
   <h3
     data-v-0851d1f8=""
   >
