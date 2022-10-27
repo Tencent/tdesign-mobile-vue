@@ -1,6 +1,6 @@
 <template>
   <t-tab-bar v-model="value" @change="change">
-    <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :value="item.name">
+    <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :value="item.name" :badge-props="item.badgeProps">
       {{ item.text }}
       <template #icon>
         <icon :name="item.icon" />
@@ -15,10 +15,10 @@ import { Icon } from 'tdesign-icons-vue-next';
 
 const value = ref('label_1');
 const list = ref([
-  { name: 'label_1', text: '文字', icon: 'app' },
-  { name: 'label_2', text: '文字', icon: 'app' },
-  { name: 'label_3', text: '文字', icon: 'app' },
-  { name: 'label_4', text: '文字', icon: 'app' },
+  { name: 'label_1', text: '文字', icon: 'app', badgeProps: { count: 16 } },
+  { name: 'label_2', text: '文字', icon: 'app', badgeProps: { dot: true } },
+  { name: 'label_3', text: '文字', icon: 'app', badgeProps: { count: 'New' } },
+  { name: 'label_4', text: '文字', icon: 'app', badgeProps: { count: '···' } },
 ]);
 
 watch(
