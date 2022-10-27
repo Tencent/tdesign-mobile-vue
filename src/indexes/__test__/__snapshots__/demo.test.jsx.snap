@@ -4,591 +4,43 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
 <div
   class="component-wrap"
 >
-  <div
-    class="t-indexes"
+  <button
+    aria-disabled="false"
+    class="t-button t-button--outline t-button--primary t-button--shape-round t-fab"
+    role="button"
+    style="z-index: 100; right: 16px; bottom: 32px;"
   >
-    <div
-      class="t-indexes__sidebar"
+    <!---->
+    <span
+      class="t-button__text"
     >
       
-      <div
-        class="t-indexes__sidebar-item"
-        data-index="A"
+      <svg
+        class="t-icon t-icon-chevron-left-double"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
       >
-        A 
-        <!--v-if-->
-      </div>
-      <div
-        class="t-indexes__sidebar-item"
-        data-index="B"
+        <path
+          d="M13.04 4.46l-.92-.92L7.66 8l4.46 4.46.92-.92L9.5 8l3.54-3.54z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M8.04 4.46l-.92-.92L2.66 8l4.46 4.46.92-.92L4.5 8l3.54-3.54z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-fab__text"
       >
-        B 
-        <!--v-if-->
-      </div>
+        返回
+      </span>
       
-    </div>
-    
-    <div
-      data-index="A"
-    >
-      <div
-        class="t-indexes-anchor"
-        style="height: 0px;"
-      >
-        <div
-          class="t-indexes__anchor"
-          style=""
-        >
-          
-          A开头
-          
-        </div>
-      </div>
-      <div
-        class="t-indexes__group"
-      >
-        
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="阿坝"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            阿坝
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="阿拉善"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            阿拉善
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="阿里"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            阿里
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="安康"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            安康
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="安庆"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            安庆
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="鞍山"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            鞍山
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="安顺"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            安顺
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="安阳"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            安阳
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="澳门"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            澳门
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        
-      </div>
-    </div>
-    <div
-      data-index="B"
-    >
-      <div
-        class="t-indexes-anchor"
-        style="height: 0px;"
-      >
-        <div
-          class="t-indexes__anchor"
-          style=""
-        >
-          
-          B开头
-          
-        </div>
-      </div>
-      <div
-        class="t-indexes__group"
-      >
-        
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="北京"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            北京
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="白银"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            白银
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="保定"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            保定
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="宝鸡"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            宝鸡
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="保山"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            保山
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="包头"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            包头
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="巴中"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            巴中
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="北海"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            北海
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="蚌埠"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            蚌埠
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="本溪"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            本溪
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="毕节"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            毕节
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="滨州"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            滨州
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="百色"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            百色
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-indexes-cell"
-          data-key=""
-          link="true"
-          value="亳州"
-        >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            亳州
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-</div>
-`;
-
-exports[`Indexes > Indexes demoIndexesVue demo works fine 1`] = `
-<div
-  class="component-wrap"
->
+    </span>
+  </button>
   <div
     class="t-indexes"
   >
@@ -2471,12 +1923,12 @@ exports[`Indexes > Indexes mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    DropdownMenu 下拉菜单
+    Indexes 索引
   </h1>
   <p
     class="summary"
   >
-    向下弹出的菜单列表
+    用于页面中信息快速检索，可以根据目录中的页码快速找到所需的内容
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -2489,7 +1941,7 @@ exports[`Indexes > Indexes mobileVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      单选下拉菜单
+      基础索引类型
     </p>
     
     <div
