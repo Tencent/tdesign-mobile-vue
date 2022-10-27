@@ -14,7 +14,7 @@ exports[`Sticky > Sticky baseVue demo works fine 1`] = `
       class="t-sticky__content"
       style="z-index: 50; position: fixed; top: 0px;"
     >
-      
+
       <button
         aria-disabled="false"
         class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle custom-common-button"
@@ -25,12 +25,12 @@ exports[`Sticky > Sticky baseVue demo works fine 1`] = `
         <span
           class="t-button__text"
         >
-          
+
           基础吸顶
-          
+
         </span>
       </button>
-      
+
     </div>
   </div>
 </div>
@@ -50,7 +50,7 @@ exports[`Sticky > Sticky containerVue demo works fine 1`] = `
       class="t-sticky__content"
       style="z-index: 99; position: fixed; top: 0px;"
     >
-      
+
       <button
         aria-disabled="false"
         class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle custom-common-button green-button"
@@ -61,12 +61,12 @@ exports[`Sticky > Sticky containerVue demo works fine 1`] = `
         <span
           class="t-button__text"
         >
-          
+
           指定容器
-          
+
         </span>
       </button>
-      
+
     </div>
   </div>
 </div>
@@ -81,7 +81,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     class="title"
     data-v-3246353e=""
   >
-    Sticky 吸顶容器
+    Sticky 吸顶
   </h1>
   <p
     class="summary"
@@ -99,7 +99,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     >
       基础吸顶
     </p>
-    
+
     <div
       class="block-1"
       data-v-3246353e=""
@@ -114,7 +114,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
           class="t-sticky__content"
           style="z-index: 50; position: fixed; top: 0px;"
         >
-          
+
           <button
             aria-disabled="false"
             class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle custom-common-button"
@@ -125,16 +125,16 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
             <span
               class="t-button__text"
             >
-              
+
               基础吸顶
-              
+
             </span>
           </button>
-          
+
         </div>
       </div>
     </div>
-    
+
   </div>
   <div
     class="tdesign-mobile-demo-block"
@@ -146,7 +146,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     >
       吸顶距离
     </p>
-    
+
     <div
       class="block-2"
       data-v-3246353e=""
@@ -161,7 +161,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
           class="t-sticky__content"
           style="z-index: 99; position: fixed; top: 50px;"
         >
-          
+
           <button
             aria-disabled="false"
             class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle custom-common-button"
@@ -172,16 +172,16 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
             <span
               class="t-button__text"
             >
-              
+
               吸顶距离
-              
+
             </span>
           </button>
-          
+
         </div>
       </div>
     </div>
-    
+
   </div>
   <div
     class="tdesign-mobile-demo-block"
@@ -193,7 +193,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     >
       指定容器
     </p>
-    
+
     <div
       class="block-3"
       data-v-046295d6=""
@@ -208,7 +208,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
           class="t-sticky__content"
           style="z-index: 99; position: fixed; top: 0px;"
         >
-          
+
           <button
             aria-disabled="false"
             class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle custom-common-button green-button"
@@ -219,16 +219,16 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
             <span
               class="t-button__text"
             >
-              
+
               指定容器
-              
+
             </span>
           </button>
-          
+
         </div>
       </div>
     </div>
-    
+
   </div>
 </div>
 `;
@@ -247,7 +247,7 @@ exports[`Sticky > Sticky offsetTopVue demo works fine 1`] = `
       class="t-sticky__content"
       style="z-index: 99; position: fixed; top: 50px;"
     >
-      
+
       <button
         aria-disabled="false"
         class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle custom-common-button"
@@ -258,12 +258,12 @@ exports[`Sticky > Sticky offsetTopVue demo works fine 1`] = `
         <span
           class="t-button__text"
         >
-          
+
           吸顶距离
-          
+
         </span>
       </button>
-      
+
     </div>
   </div>
 </div>
