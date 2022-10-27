@@ -5,6 +5,15 @@
 
     <h3>虚线拉通</h3>
     <t-divider dashed></t-divider>
+
+    <h3>左右间距</h3>
+    <t-divider class="demo-2"></t-divider>
+
+    <h3>右侧拉通</h3>
+    <t-divider class="demo-3"></t-divider>
+
+    <h3>自定义左侧间距</h3>
+    <t-divider class="demo-4"></t-divider>
   </div>
 </template>
 
@@ -18,7 +27,7 @@ h3 {
 }
 
 .demo-2 {
-  margin: 0 16px;
+  margin: 10px 16px;
 }
 
 .demo-3 {
