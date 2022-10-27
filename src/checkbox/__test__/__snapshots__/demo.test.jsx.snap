@@ -452,6 +452,55 @@ exports[`Checkbox > Checkbox disableVue demo works fine 1`] = `
       class="t-checkbox__border t-checkbox__border--right"
     />
   </div>
+  <div
+    class="t-checkbox t-is-disabled t-is-indeterminate"
+    data-v-3fba2a16=""
+  >
+    <div
+      class="t-checkbox__content-wrap"
+    >
+      <span
+        class="t-checkbox__icon-left"
+      >
+        <input
+          class="t-checkbox__original-left"
+          disabled=""
+          name=""
+          type="checkbox"
+        />
+        <svg
+          class="t-icon t-icon-minus-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M8 15A7 7 0 108 1a7 7 0 000 14zm3.5-6.5h-7v-1h7v1z"
+            fill="currentColor"
+            fill-opacity="0.9"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </span>
+      <span
+        class="t-checkbox__label"
+      >
+        <span
+          style="color: rgb(220, 220, 220); display: -webkit-box; overflow: hidden;"
+        >
+          半选
+        </span>
+        <!--v-if-->
+      </span>
+      <!--v-if-->
+    </div>
+    <!--下边框 -->
+    <div
+      class="t-checkbox__border t-checkbox__border--left"
+    />
+  </div>
 </div>
 `;
 
@@ -547,7 +596,7 @@ exports[`Checkbox > Checkbox groupVue demo works fine 1`] = `
             <span
               style="display: -webkit-box; overflow: hidden;"
             >
-              多选
+              多选1
             </span>
             <!--v-if-->
           </span>
@@ -559,7 +608,7 @@ exports[`Checkbox > Checkbox groupVue demo works fine 1`] = `
         />
       </div>
       <div
-        class="t-checkbox"
+        class="t-checkbox t-is-checked"
       >
         <div
           class="t-checkbox__content-wrap"
@@ -574,17 +623,16 @@ exports[`Checkbox > Checkbox groupVue demo works fine 1`] = `
               value="2"
             />
             <svg
-              class="t-icon t-icon-circle"
+              class="t-icon t-icon-check-circle-filled"
               fill="none"
               height="1em"
               viewBox="0 0 16 16"
               width="1em"
             >
               <path
-                d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
                 fill="currentColor"
                 fill-opacity="0.9"
-                opacity="0.9"
               />
             </svg>
           </span>
@@ -594,7 +642,7 @@ exports[`Checkbox > Checkbox groupVue demo works fine 1`] = `
             <span
               style="display: -webkit-box; overflow: hidden;"
             >
-              多选
+              多选2
             </span>
             <!--v-if-->
           </span>
@@ -641,7 +689,7 @@ exports[`Checkbox > Checkbox groupVue demo works fine 1`] = `
             <span
               style="display: -webkit-box; overflow: hidden;"
             >
-              多选
+              多选3
             </span>
             <!--v-if-->
           </span>
@@ -1320,7 +1368,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        右侧圆形多选框
+        右侧多选框
       </p>
       
       <div
@@ -1627,7 +1675,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <span
                     style="display: -webkit-box; overflow: hidden;"
                   >
-                    多选
+                    多选1
                   </span>
                   <!--v-if-->
                 </span>
@@ -1639,7 +1687,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               />
             </div>
             <div
-              class="t-checkbox"
+              class="t-checkbox t-is-checked"
             >
               <div
                 class="t-checkbox__content-wrap"
@@ -1654,17 +1702,16 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                     value="2"
                   />
                   <svg
-                    class="t-icon t-icon-circle"
+                    class="t-icon t-icon-check-circle-filled"
                     fill="none"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
                   >
                     <path
-                      d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+                      d="M8 15A7 7 0 108 1a7 7 0 000 14zM4.5 8.2l.7-.7L7 9.3l3.8-3.8.7.7L7 10.7 4.5 8.2z"
                       fill="currentColor"
                       fill-opacity="0.9"
-                      opacity="0.9"
                     />
                   </svg>
                 </span>
@@ -1674,7 +1721,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <span
                     style="display: -webkit-box; overflow: hidden;"
                   >
-                    多选
+                    多选2
                   </span>
                   <!--v-if-->
                 </span>
@@ -1721,7 +1768,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   <span
                     style="display: -webkit-box; overflow: hidden;"
                   >
-                    多选
+                    多选3
                   </span>
                   <!--v-if-->
                 </span>
@@ -2112,26 +2159,9 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             class="t-checkbox__border t-checkbox__border--right"
           />
         </div>
-      </div>
-      
-    </div>
-    <div
-      class="tdesign-mobile-demo-block"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        多选框半选态
-      </p>
-      
-      <div
-        class="checkbox-demo"
-        data-v-72ea89e9=""
-      >
         <div
-          class="t-checkbox t-is-indeterminate"
-          data-v-72ea89e9=""
+          class="t-checkbox t-is-disabled t-is-indeterminate"
+          data-v-3fba2a16=""
         >
           <div
             class="t-checkbox__content-wrap"
@@ -2141,6 +2171,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             >
               <input
                 class="t-checkbox__original-left"
+                disabled=""
                 name=""
                 type="checkbox"
               />
@@ -2164,9 +2195,9 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__label"
             >
               <span
-                style="display: -webkit-box; overflow: hidden;"
+                style="color: rgb(220, 220, 220); display: -webkit-box; overflow: hidden;"
               >
-                多选
+                半选
               </span>
               <!--v-if-->
             </span>
@@ -2403,7 +2434,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <span
                 style="display: -webkit-box; overflow: hidden;"
               >
-                多选
+                多选 H48
               </span>
               <!--v-if-->
             </span>
@@ -2450,7 +2481,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <span
                 style="display: -webkit-box; overflow: hidden;"
               >
-                多选
+                多选 H56
               </span>
               <!--v-if-->
             </span>
@@ -2712,7 +2743,7 @@ exports[`Checkbox > Checkbox sizeVue demo works fine 1`] = `
         <span
           style="display: -webkit-box; overflow: hidden;"
         >
-          多选
+          多选 H48
         </span>
         <!--v-if-->
       </span>
@@ -2759,7 +2790,7 @@ exports[`Checkbox > Checkbox sizeVue demo works fine 1`] = `
         <span
           style="display: -webkit-box; overflow: hidden;"
         >
-          多选
+          多选 H56
         </span>
         <!--v-if-->
       </span>
