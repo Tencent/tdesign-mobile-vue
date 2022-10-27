@@ -453,7 +453,7 @@ exports[`Checkbox > Checkbox disableVue demo works fine 1`] = `
     />
   </div>
   <div
-    class="t-checkbox t-is-indeterminate"
+    class="t-checkbox t-is-disabled t-is-indeterminate"
     data-v-3fba2a16=""
   >
     <div
@@ -464,6 +464,7 @@ exports[`Checkbox > Checkbox disableVue demo works fine 1`] = `
       >
         <input
           class="t-checkbox__original-left"
+          disabled=""
           name=""
           type="checkbox"
         />
@@ -487,7 +488,7 @@ exports[`Checkbox > Checkbox disableVue demo works fine 1`] = `
         class="t-checkbox__label"
       >
         <span
-          style="display: -webkit-box; overflow: hidden;"
+          style="color: rgb(220, 220, 220); display: -webkit-box; overflow: hidden;"
         >
           半选
         </span>
@@ -2159,7 +2160,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           />
         </div>
         <div
-          class="t-checkbox t-is-indeterminate"
+          class="t-checkbox t-is-disabled t-is-indeterminate"
           data-v-3fba2a16=""
         >
           <div
@@ -2170,6 +2171,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             >
               <input
                 class="t-checkbox__original-left"
+                disabled=""
                 name=""
                 type="checkbox"
               />
@@ -2193,7 +2195,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__label"
             >
               <span
-                style="display: -webkit-box; overflow: hidden;"
+                style="color: rgb(220, 220, 220); display: -webkit-box; overflow: hidden;"
               >
                 半选
               </span>
