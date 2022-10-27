@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-demo sticky-demo">
-    <h1 class="title">Sticky 吸顶容器</h1>
+    <h1 class="title">Sticky 吸顶</h1>
     <p class="summary">用于常驻页面顶部的信息、操作展示。</p>
     <tdesign-demo-block summary="基础吸顶">
       <BaseDemo />
