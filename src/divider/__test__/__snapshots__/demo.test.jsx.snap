@@ -114,7 +114,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-     分割线是一个呈线状的轻量化组件，起到分割、组织、细化的作用，用于有逻辑的组织元素内容和页面结构。 
+    用于分割、组织、细化有一定逻辑的组织元素内容和页面结构。
   </p>
   <div
     class="tdesign-mobile-demo-block"

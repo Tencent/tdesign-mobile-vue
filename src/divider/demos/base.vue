@@ -27,7 +27,7 @@ h3 {
 }
 
 .demo-2 {
-  margin: 0 16px;
+  margin: 10px 16px;
 }
 
 .demo-3 {
