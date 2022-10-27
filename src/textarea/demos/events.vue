@@ -9,28 +9,17 @@
     @change="onChange"
   />
 </template>
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const value = ref('');
-    const onFocus = (value: string, e: Event) => {
-      console.log('onFocus: ', value, e);
-    };
-    const onBlur = (value: string, e: Event) => {
-      console.log('onBlur: ', value, e);
-    };
-    const onChange = (value: string) => {
-      console.log('change: ', value);
-    };
-
-    return {
-      value,
-      onFocus,
-      onBlur,
-      onChange,
-    };
-  },
-});
+const value = ref('');
+const onFocus = (value: string, e: Event) => {
+  console.log('onFocus: ', value, e);
+};
+const onBlur = (value: string, e: Event) => {
+  console.log('onBlur: ', value, e);
+};
+const onChange = (value: string) => {
+  console.log('change: ', value);
+};
 </script>
