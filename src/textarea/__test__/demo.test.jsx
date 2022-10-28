@@ -10,7 +10,7 @@ import labelVue from '@/textarea/demos/label.vue';
 import maxcharacterVue from '@/textarea/demos/maxcharacter.vue';
 import maxlengthVue from '@/textarea/demos/maxlength.vue';
 import mobileVue from '@/textarea/demos/mobile.vue';
-import typeVue from '@/textarea/demos/type.vue';
+import statusVue from '@/textarea/demos/status.vue';
 
 const mapper = {
   autosizeVue,
@@ -20,7 +20,7 @@ const mapper = {
   maxcharacterVue,
   maxlengthVue,
   mobileVue,
-  typeVue,
+  statusVue,
 };
 
 describe('Textarea', () => {

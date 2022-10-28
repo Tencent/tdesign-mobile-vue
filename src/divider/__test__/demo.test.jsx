@@ -5,14 +5,12 @@
 import { mount } from '@vue/test-utils';
 import alignVue from '@/divider/demos/align.vue';
 import baseVue from '@/divider/demos/base.vue';
-import horizontalVue from '@/divider/demos/horizontal.vue';
 import mobileVue from '@/divider/demos/mobile.vue';
 import verticalVue from '@/divider/demos/vertical.vue';
 
 const mapper = {
   alignVue,
   baseVue,
-  horizontalVue,
   mobileVue,
   verticalVue,
 };
