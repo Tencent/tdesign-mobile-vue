@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
-import CustomCell from './custom-cell.vue';
+import CustomCell from './components/custom-cell.vue';
 
 const value = ref(3);
 </script>

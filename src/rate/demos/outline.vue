@@ -4,5 +4,5 @@
   </CustomCell>
 </template>
 <script lang="ts" setup>
-import CustomCell from './custom-cell.vue';
+import CustomCell from './components/custom-cell.vue';
 </script>

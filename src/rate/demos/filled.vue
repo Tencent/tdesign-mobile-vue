@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import CustomCell from './custom-cell.vue';
+import CustomCell from './components/custom-cell.vue';
 
 const changeValue = (val: Number) => {
   console.log('current value is', val);

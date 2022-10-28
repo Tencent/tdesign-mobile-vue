@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import CustomCell from './custom-cell.vue';
+import CustomCell from './components/custom-cell.vue';
 
 const defaultGap = 8;
 const value = ref(3);
