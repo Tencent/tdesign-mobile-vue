@@ -3084,7 +3084,8 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
     
     
     <div
-      class="rate-demo-cell"
+      class="rate-demo-cell space"
+      data-v-2d1e8132=""
     >
       <div
         class="rate-demo-cell__label"
@@ -3094,6 +3095,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
       <div
         class="t-rate"
+        data-v-2d1e8132=""
       >
         <ul
           class="t-rate--list"
@@ -3327,7 +3329,8 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
     </div>
     <div
-      class="rate-demo-cell"
+      class="rate-demo-cell space"
+      data-v-2d1e8132=""
     >
       <div
         class="rate-demo-cell__label"
@@ -3337,6 +3340,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
       <div
         class="t-rate"
+        data-v-2d1e8132=""
       >
         <ul
           class="t-rate--list"
@@ -3570,7 +3574,8 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
     </div>
     <div
-      class="rate-demo-cell"
+      class="rate-demo-cell space"
+      data-v-2d1e8132=""
     >
       <div
         class="rate-demo-cell__label"
@@ -3580,6 +3585,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
       <div
         class="t-rate"
+        data-v-2d1e8132=""
       >
         <ul
           class="t-rate--list"
@@ -6272,7 +6278,8 @@ exports[`Rate > Rate textVue demo works fine 1`] = `
 >
   
   <div
-    class="rate-demo-cell"
+    class="rate-demo-cell space"
+    data-v-2d1e8132=""
   >
     <div
       class="rate-demo-cell__label"
@@ -6282,6 +6289,7 @@ exports[`Rate > Rate textVue demo works fine 1`] = `
     
     <div
       class="t-rate"
+      data-v-2d1e8132=""
     >
       <ul
         class="t-rate--list"
@@ -6515,7 +6523,8 @@ exports[`Rate > Rate textVue demo works fine 1`] = `
     
   </div>
   <div
-    class="rate-demo-cell"
+    class="rate-demo-cell space"
+    data-v-2d1e8132=""
   >
     <div
       class="rate-demo-cell__label"
@@ -6525,6 +6534,7 @@ exports[`Rate > Rate textVue demo works fine 1`] = `
     
     <div
       class="t-rate"
+      data-v-2d1e8132=""
     >
       <ul
         class="t-rate--list"
@@ -6758,7 +6768,8 @@ exports[`Rate > Rate textVue demo works fine 1`] = `
     
   </div>
   <div
-    class="rate-demo-cell"
+    class="rate-demo-cell space"
+    data-v-2d1e8132=""
   >
     <div
       class="rate-demo-cell__label"
@@ -6768,6 +6779,7 @@ exports[`Rate > Rate textVue demo works fine 1`] = `
     
     <div
       class="t-rate"
+      data-v-2d1e8132=""
     >
       <ul
         class="t-rate--list"
