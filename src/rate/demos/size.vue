@@ -1,16 +1,15 @@
 <template>
-  <div class="rate-demo-cell rate-demo-cell--space">
-    <div class="rate-demo-cell__label">规格20</div>
+  <CustomCell title="规格20">
     <t-rate v-model="value1" clearable :gap="defaultGap" />
-  </div>
-  <div class="rate-demo-cell">
-    <div class="rate-demo-cell__label">规格16</div>
+  </CustomCell>
+  <CustomCell title="规格16">
     <t-rate v-model="value" size="16" clearable :gap="defaultGap" />
-  </div>
+  </CustomCell>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import CustomCell from './custom-cell.vue';
 
 const defaultGap = 8;
 const value = ref(3);

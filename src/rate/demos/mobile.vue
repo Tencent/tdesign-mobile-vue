@@ -33,7 +33,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
 import IconDemo from './icon.vue';
 import SizeDemo from './size.vue';
 import ColorDemo from './color.vue';

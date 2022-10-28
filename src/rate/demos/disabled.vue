@@ -1,12 +1,12 @@
 <template>
-  <div class="rate-demo-cell">
-    <div class="rate-demo-cell__label">仅展示</div>
+  <CustomCell title="仅展示">
     <t-rate v-model="value" disabled :gap="defaultGap" />
-  </div>
+  </CustomCell>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import CustomCell from './custom-cell.vue';
 
 const defaultGap = 8;
 const value = ref(3);
