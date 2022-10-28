@@ -9,16 +9,25 @@
       </div>
     </tdesign-demo-block>
   </div>
-  <BaseDemo v-else :type="type" @go-back="goBack" />
+  <div v-else>
+    <BaseDemo :type="type" @go-back="goBack" />
+    <t-fab
+      :icon="iconFunc"
+      text="返回"
+      :style="{ 'z-index': 100, right: '16px', bottom: '32px' }"
+      :button-props="{ variant: 'outline' }"
+      @click="goBack"
+    />
+  </div>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, h } from 'vue';
+import { ChevronLeftDoubleIcon } from 'tdesign-icons-vue-next';
 import BaseDemo from './base.vue';
 
 const showIndexes = ref(false);
 const type = ref('letter');
-const router = useRouter();
+const iconFunc = () => h(ChevronLeftDoubleIcon);
 
 const goBack = () => (showIndexes.value = false);
 

@@ -1,18 +1,10 @@
 <template>
   <div class="component-wrap">
-    <t-fab
-      :icon="iconFunc"
-      text="返回"
-      :style="{ 'z-index': 100, right: '16px', bottom: '32px' }"
-      :button-props="{ variant: 'outline' }"
-      @click="emit('go-back')"
-    />
     <t-indexes :list="list" @select="onSelect"> </t-indexes>
   </div>
 </template>
 <script setup lang="ts">
-import { computed, defineProps, defineEmits, h } from 'vue';
-import { ChevronLeftDoubleIcon } from 'tdesign-icons-vue-next';
+import { computed, defineProps } from 'vue';
 import { Toast } from 'tdesign-mobile-vue';
 
 const props = defineProps({
@@ -22,8 +14,6 @@ const props = defineProps({
   },
 });
 
-const emit = defineEmits(['go-back']);
-const iconFunc = () => h(ChevronLeftDoubleIcon);
 const letter = [
   {
     title: 'A开头',
