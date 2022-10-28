@@ -11,7 +11,7 @@
     />
     <t-dropdown-item
       v-model="value3"
-      label="三列多选"
+      label="最多四字项"
       :options="options"
       multiple
       options-layout="columns"
