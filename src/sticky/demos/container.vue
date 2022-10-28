@@ -1,6 +1,6 @@
 <template>
-  <div ref="container" class="block-3">
-    <t-sticky container=".block-3" @scroll="onScroll">
+  <div id="container" class="sticky-demo">
+    <t-sticky container="#container" @scroll="onScroll">
       <t-button class="custom-common-button green-button">指定容器</t-button>
     </t-sticky>
   </div>
@@ -12,7 +12,7 @@ const onScroll = (context: { scrollTop: number; isFixed: boolean }) => {
 </script>
 
 <style lang="less" scoped>
-.block-3 {
+.sticky-demo {
   background: white;
   height: 200px;
   padding-left: 250px;

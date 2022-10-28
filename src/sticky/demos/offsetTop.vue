@@ -1,5 +1,5 @@
 <template>
-  <div class="block-2">
+  <div class="sticky-demo">
     <t-sticky :offset-top="50">
       <t-button theme="danger" class="custom-common-button">吸顶距离</t-button>
     </t-sticky>
@@ -7,7 +7,7 @@
 </template>
 
 <style lang="less" scoped>
-.block-2 {
+.sticky-demo {
   padding-left: 120px;
 }
 .custom-common-button {
