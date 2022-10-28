@@ -1,6 +1,6 @@
 <template>
   <t-dropdown-menu>
-    <t-dropdown-item v-model="treeValue1" label="树形双列" :options="optionsT1" options-layout="tree" multiple />
+    <t-dropdown-item v-model="treeValue1" label="树型双列" :options="optionsT1" options-layout="tree" multiple />
     <t-dropdown-item
       v-model="treeValue2"
       label="选项最多六字超出1"
