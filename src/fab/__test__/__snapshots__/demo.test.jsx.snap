@@ -61,6 +61,38 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       纯图标悬浮按钮
     </p>
     
+    <div
+      class="toast-demo"
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          基础使用
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          进阶使用
+          
+        </span>
+      </button>
+    </div>
     
   </div>
   <div>
@@ -93,6 +125,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       </span>
     </button>
   </div>
+  <!--v-if-->
 </div>
 `;
 
@@ -100,9 +133,9 @@ exports[`Fab > Fab textVue demo works fine 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="t-button t-button--base t-button--default t-button--shape-round t-fab"
+    class="t-button t-button--outline t-button--primary t-button--shape-round t-fab"
     role="button"
-    style="right: 16px; bottom: 96px;"
+    style="right: 16px; bottom: 32px;"
   >
     <!---->
     <span
