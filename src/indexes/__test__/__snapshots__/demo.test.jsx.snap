@@ -4,43 +4,6 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
 <div
   class="component-wrap"
 >
-  <button
-    aria-disabled="false"
-    class="t-button t-button--outline t-button--primary t-button--shape-round t-fab"
-    role="button"
-    style="z-index: 100; right: 16px; bottom: 32px;"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      <svg
-        class="t-icon t-icon-chevron-left-double"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M13.04 4.46l-.92-.92L7.66 8l4.46 4.46.92-.92L9.5 8l3.54-3.54z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-        <path
-          d="M8.04 4.46l-.92-.92L2.66 8l4.46 4.46.92-.92L4.5 8l3.54-3.54z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-fab__text"
-      >
-        返回
-      </span>
-      
-    </span>
-  </button>
   <div
     class="t-indexes"
   >
