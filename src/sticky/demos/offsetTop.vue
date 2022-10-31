@@ -1,14 +1,14 @@
 <template>
   <div class="sticky-demo">
-    <t-sticky :z-index="50">
-      <t-button theme="primary" class="custom-common-button">基础吸顶</t-button>
+    <t-sticky :offset-top="50">
+      <t-button theme="danger" class="custom-common-button">吸顶距离</t-button>
     </t-sticky>
   </div>
 </template>
 
 <style lang="less" scoped>
 .sticky-demo {
-  padding-left: 16px;
+  padding-left: 120px;
 }
 .custom-common-button {
   color: #fff;
