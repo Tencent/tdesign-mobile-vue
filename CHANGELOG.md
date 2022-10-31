@@ -5,6 +5,31 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.13.0 `2022-10-31` 
+### ❗️BREAKING CHANGES
+- `Message`:  `closeBtn` 属性不再支持 `string` 类型 @anlyyao ([#429](https://github.com/Tencent/tdesign-mobile-vue/pull/429))
+
+### 🚀 Features
+- `Message`: 新增 `icon` ，`offset` 属性 @anlyyao ([#429](https://github.com/Tencent/tdesign-mobile-vue/pull/429))
+
+### 🐞 Bug Fixes
+- `Message`: 修复 `marquee` 属性无效问题 @anlyyao ([#429](https://github.com/Tencent/tdesign-mobile-vue/pull/429))
+
+### 🚧 Others
+- `Swiper`: 新增单元测试 @palmcivet ([#441](https://github.com/Tencent/tdesign-mobile-vue/pull/441))
+- `Badge`: 更新示例代码 @teal-front ([#420](https://github.com/Tencent/tdesign-mobile-vue/pull/420))
+- `TabBar`: 更新示例代码 @yuanmeda ([#433](https://github.com/Tencent/tdesign-mobile-vue/pull/433))
+- `Input`: 更新示例代码 @palmcivet ([#431](https://github.com/Tencent/tdesign-mobile-vue/pull/431))
+- `Textarea`: 更新示例代码 @palmcivet ([#432](https://github.com/Tencent/tdesign-mobile-vue/pull/432))
+- `Fab`: 更新示例代码 @yuanmeda ([#435](https://github.com/Tencent/tdesign-mobile-vue/pull/435))
+- `Indexes`: 更新示例代码 @yuanmeda ([#437](https://github.com/Tencent/tdesign-mobile-vue/pull/437))
+- `DropdownMenu`: 更新示例代码 @yuanmeda ([#440](https://github.com/Tencent/tdesign-mobile-vue/pull/440))
+- `Sticky`: 更新示例代码 @yuanmeda ([#438](https://github.com/Tencent/tdesign-mobile-vue/pull/438))
+- `Rate`: 更新示例代码 @yuanmeda ([#439](https://github.com/Tencent/tdesign-mobile-vue/pull/439))
+- `Toast`: 更新示例代码 @yuanmeda ([#430](https://github.com/Tencent/tdesign-mobile-vue/pull/430))
+- `CheckBox`: 更新示例代码 @yuanmeda ([#434](https://github.com/Tencent/tdesign-mobile-vue/pull/434))
+- `Divider`: 更新示例代码 @yuanmeda ([#436](https://github.com/Tencent/tdesign-mobile-vue/pull/436))
+
 ## 🌈 0.12.2 `2022-10-24` 
 ### 🚀 Features
 - `Avatar`: 新增 `imageProps` 属性透传至 `Image` 组件 @anlyyao ([#417](https://github.com/Tencent/tdesign-mobile-vue/pull/417))
