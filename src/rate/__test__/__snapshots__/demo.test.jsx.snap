@@ -354,7 +354,8 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
 >
   
   <div
-    class="rate-demo-cell"
+    class="rate-demo-cell space"
+    data-v-2d3c8e2e=""
   >
     <div
       class="rate-demo-cell__label"
@@ -364,6 +365,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
     
     <div
       class="t-rate"
+      data-v-2d3c8e2e=""
     >
       <ul
         class="t-rate--list"
@@ -601,7 +603,8 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
     
   </div>
   <div
-    class="rate-demo-cell"
+    class="rate-demo-cell space"
+    data-v-2d3c8e2e=""
   >
     <div
       class="rate-demo-cell__label"
@@ -611,6 +614,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
     
     <div
       class="t-rate"
+      data-v-2d3c8e2e=""
     >
       <ul
         class="t-rate--list"
@@ -4084,7 +4088,8 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
     
     
     <div
-      class="rate-demo-cell"
+      class="rate-demo-cell space"
+      data-v-2d3c8e2e=""
     >
       <div
         class="rate-demo-cell__label"
@@ -4094,6 +4099,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
       <div
         class="t-rate"
+        data-v-2d3c8e2e=""
       >
         <ul
           class="t-rate--list"
@@ -4331,7 +4337,8 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
     </div>
     <div
-      class="rate-demo-cell"
+      class="rate-demo-cell space"
+      data-v-2d3c8e2e=""
     >
       <div
         class="rate-demo-cell__label"
@@ -4341,6 +4348,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
       <div
         class="t-rate"
+        data-v-2d3c8e2e=""
       >
         <ul
           class="t-rate--list"
@@ -4706,7 +4714,8 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
     
     
     <div
-      class="rate-demo-cell"
+      class="rate-demo-cell space"
+      data-v-c926dbf4=""
     >
       <div
         class="rate-demo-cell__label"
@@ -4716,6 +4725,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
       <div
         class="t-rate"
+        data-v-c926dbf4=""
       >
         <ul
           class="t-rate--list"
@@ -4945,7 +4955,8 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
     </div>
     <div
-      class="rate-demo-cell"
+      class="rate-demo-cell space"
+      data-v-c926dbf4=""
     >
       <div
         class="rate-demo-cell__label"
@@ -4955,6 +4966,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
       
       <div
         class="t-rate"
+        data-v-c926dbf4=""
       >
         <ul
           class="t-rate--list"
@@ -5791,7 +5803,8 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
 >
   
   <div
-    class="rate-demo-cell"
+    class="rate-demo-cell space"
+    data-v-c926dbf4=""
   >
     <div
       class="rate-demo-cell__label"
@@ -5801,6 +5814,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
     
     <div
       class="t-rate"
+      data-v-c926dbf4=""
     >
       <ul
         class="t-rate--list"
@@ -6030,7 +6044,8 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
     
   </div>
   <div
-    class="rate-demo-cell"
+    class="rate-demo-cell space"
+    data-v-c926dbf4=""
   >
     <div
       class="rate-demo-cell__label"
@@ -6040,6 +6055,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
     
     <div
       class="t-rate"
+      data-v-c926dbf4=""
     >
       <ul
         class="t-rate--list"
