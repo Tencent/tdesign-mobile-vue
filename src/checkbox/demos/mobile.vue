@@ -6,7 +6,7 @@
       <tdesign-demo-block title="01 类型" summary="基础多选框">
         <BaseDemo />
       </tdesign-demo-block>
-      <tdesign-demo-block summary="右侧圆形多选框">
+      <tdesign-demo-block summary="右侧多选框">
         <RightDemo />
       </tdesign-demo-block>
       <tdesign-demo-block summary="带全选多选框">
@@ -18,9 +18,6 @@
       <tdesign-demo-block title="02 状态" summary="多选框禁用态">
         <DisableDemo />
       </tdesign-demo-block>
-      <tdesign-demo-block summary="多选框半选态">
-        <IndeterminateDemo />
-      </tdesign-demo-block>
       <tdesign-demo-block title="03 特殊类型" summary="自定义图标多选框">
         <IconDemo />
       </tdesign-demo-block>
@@ -31,12 +28,10 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, watch } from 'vue';
 import BaseDemo from './base.vue';
 import GroupDemo from './group.vue';
 import RightDemo from './right.vue';
 import DisableDemo from './disable.vue';
-import IndeterminateDemo from './indeterminate.vue';
 import IconDemo from './icon.vue';
 import MaxDemo from './max.vue';
 import SizeDemo from './size.vue';

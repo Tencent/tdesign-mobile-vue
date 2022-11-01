@@ -96,70 +96,276 @@ exports[`DropdownMenu > DropdownMenu demoContainerVue demo works fine 1`] = `
 
 exports[`DropdownMenu > DropdownMenu disabledVue demo works fine 1`] = `
 <div
-  class="tdesign-demo-dropdown-menu"
+  data-v-app=""
 >
   
   <div
-    class="t-dropdown-menu"
+    class="tdesign-demo-dropdown-menu"
+    data-v-3decac88=""
   >
+    
     <div
-      class="t-dropdown-menu__bar"
+      class="t-dropdown-menu space"
+      data-v-3decac88=""
     >
+      <div
+        class="t-dropdown-menu__bar"
+      >
+        
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        
+      </div>
       
-      <div
-        class="t-dropdown-menu__item t-is-disabled"
-      >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          禁用菜单
-        </div>
-        <svg
-          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11 6H5l3 4.5L11 6z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-      <div
-        class="t-dropdown-menu__item"
-      >
-        <div
-          class="t-dropdown-menu__title"
-        >
-          禁用选项
-        </div>
-        <svg
-          class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11 6H5l3 4.5L11 6z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
       
     </div>
     
-    <!--v-if-->
-    <!--v-if-->
+  </div>
+  <div
+    class="tdesign-demo-dropdown-menu"
+    data-v-3decac88=""
+  >
+    
+    <div
+      class="t-dropdown-menu space"
+      data-v-3decac88=""
+    >
+      <div
+        class="t-dropdown-menu__bar"
+      >
+        
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        
+      </div>
+      
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+      
+    </div>
     
   </div>
-  <p>
-    禁用了序号是3的倍数的选项。
-  </p>
+  <div
+    class="tdesign-demo-dropdown-menu"
+    data-v-3decac88=""
+  >
+    
+    <div
+      class="t-dropdown-menu space"
+      data-v-3decac88=""
+    >
+      <div
+        class="t-dropdown-menu__bar"
+      >
+        
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-dropdown-menu__item t-is-disabled"
+        >
+          <div
+            class="t-dropdown-menu__title"
+          >
+            禁用菜单
+          </div>
+          <svg
+            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11 6H5l3 4.5L11 6z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        
+      </div>
+      
+      <!--v-if-->
+      <!--v-if-->
+      
+    </div>
+    
+  </div>
   
 </div>
 `;
@@ -255,7 +461,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    向下弹出的菜单列表
+    菜单呈现数个并列的选项类目，用于整个页面的内容筛选，由菜单面板和菜单选项组成。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -271,10 +477,6 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       单选下拉菜单
     </p>
     
-    <!-- &lt;t-dropdown-menu&gt;
-        &lt;t-dropdown-item :value="valueS1" label="菜单名称" :options="optionsN" @change="onChange" /&gt;
-        &lt;t-dropdown-item v-model="valueS2" label="菜单名称" :options="optionsC" /&gt;
-      &lt;/t-dropdown-menu&gt; -->
     <div
       class="t-dropdown-menu"
     >
@@ -354,7 +556,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
           <div
             class="t-dropdown-menu__title"
           >
-            菜单
+            两字菜单
           </div>
           <svg
             class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
@@ -448,7 +650,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
           <div
             class="t-dropdown-menu__title"
           >
-            三列多选
+            最多四字项
           </div>
           <svg
             class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
@@ -481,7 +683,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      树形下拉菜单
+      树型下拉菜单
     </p>
     
     <div
@@ -497,7 +699,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
           <div
             class="t-dropdown-menu__title"
           >
-            树形双列
+            树型双列
           </div>
           <svg
             class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
@@ -558,68 +760,279 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
       下拉菜单状态
     </p>
     
+    
     <div
-      class="t-dropdown-menu"
+      class="tdesign-demo-dropdown-menu"
+      data-v-3decac88=""
     >
+      
       <div
-        class="t-dropdown-menu__bar"
+        class="t-dropdown-menu space"
+        data-v-3decac88=""
       >
+        <div
+          class="t-dropdown-menu__bar"
+        >
+          
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          
+        </div>
         
-        <div
-          class="t-dropdown-menu__item t-is-disabled"
-        >
-          <div
-            class="t-dropdown-menu__title"
-          >
-            禁用菜单
-          </div>
-          <svg
-            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M11 6H5l3 4.5L11 6z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <div
-          class="t-dropdown-menu__item t-is-disabled"
-        >
-          <div
-            class="t-dropdown-menu__title"
-          >
-            禁用菜单
-          </div>
-          <svg
-            class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M11 6H5l3 4.5L11 6z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
         
       </div>
       
-      <!--v-if-->
-      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-demo-dropdown-menu"
+      data-v-3decac88=""
+    >
+      
+      <div
+        class="t-dropdown-menu space"
+        data-v-3decac88=""
+      >
+        <div
+          class="t-dropdown-menu__bar"
+        >
+          
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用菜单
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用菜单
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用菜单
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          
+        </div>
+        
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+        
+      </div>
+      
+    </div>
+    <div
+      class="tdesign-demo-dropdown-menu"
+      data-v-3decac88=""
+    >
+      
+      <div
+        class="t-dropdown-menu space"
+        data-v-3decac88=""
+      >
+        <div
+          class="t-dropdown-menu__bar"
+        >
+          
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用菜单
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <div
+            class="t-dropdown-menu__item t-is-disabled"
+          >
+            <div
+              class="t-dropdown-menu__title"
+            >
+              禁用菜单
+            </div>
+            <svg
+              class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11 6H5l3 4.5L11 6z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          
+        </div>
+        
+        <!--v-if-->
+        <!--v-if-->
+        
+      </div>
       
     </div>
     
+    
   </div>
   <div
-    style="height: 300px;"
+    style="height: 40px;"
   />
 </div>
 `;
@@ -682,7 +1095,7 @@ exports[`DropdownMenu > DropdownMenu multipleVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu__title"
       >
-        三列多选
+        最多四字项
       </div>
       <svg
         class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
@@ -906,7 +1319,7 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu__title"
       >
-        菜单
+        两字菜单
       </div>
       <svg
         class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
@@ -947,7 +1360,7 @@ exports[`DropdownMenu > DropdownMenu treeVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu__title"
       >
-        树形双列
+        树型双列
       </div>
       <svg
         class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"

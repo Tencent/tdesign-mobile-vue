@@ -3,18 +3,20 @@
  */
 
 import { mount } from '@vue/test-utils';
+import badgePropsVue from '@/tab-bar/demos/badge-props.vue';
 import baseVue from '@/tab-bar/demos/base.vue';
-import iconTextVue from '@/tab-bar/demos/icon-text.vue';
 import mobileVue from '@/tab-bar/demos/mobile.vue';
 import pureIconVue from '@/tab-bar/demos/pure-icon.vue';
 import textSpreadVue from '@/tab-bar/demos/text-spread.vue';
+import textVue from '@/tab-bar/demos/text.vue';
 
 const mapper = {
+  badgePropsVue,
   baseVue,
-  iconTextVue,
   mobileVue,
   pureIconVue,
   textSpreadVue,
+  textVue,
 };
 
 describe('TabBar', () => {

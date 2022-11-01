@@ -1,16 +1,19 @@
 // Vitest Snapshot v1
 
-exports[`Message > Message alignVue demo works fine 1`] = `
+exports[`Message > Message baseVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
   <div
-    class="tdesign-demo-block"
+    class="button-demo"
+    data-v-e60c559e=""
+    style="margin: 0px 16px;"
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-e60c559e=""
       role="button"
     >
       <!---->
@@ -18,34 +21,29 @@ exports[`Message > Message alignVue demo works fine 1`] = `
         class="t-button__text"
       >
         
-        居中对齐
+        纯文字通知
         
       </span>
     </button>
-  </div>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  
-</div>
-`;
-
-exports[`Message > Message closeVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="tdesign-demo-block"
-  >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-e60c559e=""
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        带图标通知
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-e60c559e=""
       role="button"
     >
       <!---->
@@ -59,7 +57,23 @@ exports[`Message > Message closeVue demo works fine 1`] = `
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-e60c559e=""
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        滚动通知
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-e60c559e=""
       role="button"
     >
       <!---->
@@ -72,124 +86,57 @@ exports[`Message > Message closeVue demo works fine 1`] = `
       </span>
     </button>
   </div>
+  <!-- 纯文字通知 -->
   <transition-stub
     appear="false"
     css="true"
+    data-v-e60c559e=""
     name="message"
     persisted="false"
   >
     <!--v-if-->
   </transition-stub>
+  <!-- 带图标通知 -->
   <transition-stub
     appear="false"
     css="true"
+    data-v-e60c559e=""
+    name="message"
+    persisted="false"
+  >
+    <!--v-if-->
+  </transition-stub>
+  <!-- 带关闭通知 -->
+  <transition-stub
+    appear="false"
+    css="true"
+    data-v-e60c559e=""
+    name="message"
+    persisted="false"
+  >
+    <!--v-if-->
+  </transition-stub>
+  <!-- 滚动通知 -->
+  <transition-stub
+    appear="false"
+    css="true"
+    data-v-e60c559e=""
+    name="message"
+    persisted="false"
+  >
+    <!--v-if-->
+  </transition-stub>
+  <!-- 带按钮通知 -->
+  <transition-stub
+    appear="false"
+    css="true"
+    data-v-e60c559e=""
     name="message"
     persisted="false"
   >
     <!--v-if-->
   </transition-stub>
   
-</div>
-`;
-
-exports[`Message > Message durationVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="tdesign-demo-block"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        5000ms
-        
-      </span>
-    </button>
-  </div>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  
-</div>
-`;
-
-exports[`Message > Message functionVue demo works fine 1`] = `
-<div
-  class="tdesign-demo-block"
->
-  <button
-    aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      普通
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-    role="button"
-    style="margin-top: 8px;"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      成功
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-    role="button"
-    style="margin-top: 8px;"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      警示
-      
-    </span>
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-    role="button"
-    style="margin-top: 8px;"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      错误
-      
-    </span>
-  </button>
 </div>
 `;
 
@@ -221,13 +168,17 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       弹窗内容为存文本、标题和副标题、带输入框
     </p>
     
+    <!-- &lt;functionDemo /&gt; -->
+    
     <div
       class="button-demo"
+      data-v-e60c559e=""
       style="margin: 0px 16px;"
     >
       <button
         aria-disabled="false"
         class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-e60c559e=""
         role="button"
       >
         <!---->
@@ -242,6 +193,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-e60c559e=""
         role="button"
       >
         <!---->
@@ -256,6 +208,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-e60c559e=""
         role="button"
       >
         <!---->
@@ -270,6 +223,22 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       <button
         aria-disabled="false"
         class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-e60c559e=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          滚动通知
+          
+        </span>
+      </button>
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-e60c559e=""
         role="button"
       >
         <!---->
@@ -282,6 +251,57 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         </span>
       </button>
     </div>
+    <!-- 纯文字通知 -->
+    <transition-stub
+      appear="false"
+      css="true"
+      data-v-e60c559e=""
+      name="message"
+      persisted="false"
+    >
+      <!--v-if-->
+    </transition-stub>
+    <!-- 带图标通知 -->
+    <transition-stub
+      appear="false"
+      css="true"
+      data-v-e60c559e=""
+      name="message"
+      persisted="false"
+    >
+      <!--v-if-->
+    </transition-stub>
+    <!-- 带关闭通知 -->
+    <transition-stub
+      appear="false"
+      css="true"
+      data-v-e60c559e=""
+      name="message"
+      persisted="false"
+    >
+      <!--v-if-->
+    </transition-stub>
+    <!-- 滚动通知 -->
+    <transition-stub
+      appear="false"
+      css="true"
+      data-v-e60c559e=""
+      name="message"
+      persisted="false"
+    >
+      <!--v-if-->
+    </transition-stub>
+    <!-- 带按钮通知 -->
+    <transition-stub
+      appear="false"
+      css="true"
+      data-v-e60c559e=""
+      name="message"
+      persisted="false"
+    >
+      <!--v-if-->
+    </transition-stub>
+    
     
   </div>
   <div
@@ -326,7 +346,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           class="t-button__text"
         >
           
-          成功提示通知
+          警示提示通知
           
         </span>
       </button>
@@ -340,7 +360,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           class="t-button__text"
         >
           
-          警示提示通知
+          成功提示通知
           
         </span>
       </button>
@@ -361,84 +381,17 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
     </div>
     
   </div>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
 </div>
 `;
 
-exports[`Message > Message offsetVue demo works fine 1`] = `
+exports[`Message > Message themeVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="button-demo"
+  style="margin: 0px 16px;"
 >
-  
-  <div
-    class="tdesign-demo-block"
-  />
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
     role="button"
   >
     <!---->
@@ -446,248 +399,51 @@ exports[`Message > Message offsetVue demo works fine 1`] = `
       class="t-button__text"
     >
       
-       偏移 
+      普通通知
       
     </span>
   </button>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    offset="400,100,100"
-    persisted="false"
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
   >
-    <!--v-if-->
-  </transition-stub>
-  
-</div>
-`;
-
-exports[`Message > Message textVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="t-cell t-cell--middle t-cell--bordered tdesign-text-message-btn"
-    data-v-9078f4e6=""
-    value-align="left"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__note"
+    <!---->
+    <span
+      class="t-button__text"
     >
       
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        data-v-9078f4e6=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          普通
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        data-v-9078f4e6=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          成功
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        data-v-9078f4e6=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          警示
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        data-v-9078f4e6=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          错误
-          
-        </span>
-      </button>
+      警示提示通知
       
-    </div>
-    <!--v-if-->
-  </div>
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-9078f4e6=""
-    name="message"
-    persisted="false"
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
   >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-9078f4e6=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-9078f4e6=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-9078f4e6=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  
-</div>
-`;
-
-exports[`Message > Message themeVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="tdesign-demo-block"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-      role="button"
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        普通
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-      role="button"
-      style="margin-top: 8px;"
+      
+      成功提示通知
+      
+    </span>
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
     >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        成功
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-      role="button"
-      style="margin-top: 8px;"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        警示
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-      role="button"
-      style="margin-top: 8px;"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        错误
-        
-      </span>
-    </button>
-  </div>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
-  
+      
+      错误提示通知
+      
+    </span>
+  </button>
 </div>
 `;
