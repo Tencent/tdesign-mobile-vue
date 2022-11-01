@@ -5,10 +5,12 @@
 import { mount } from '@vue/test-utils';
 import baseVue from '@/cascader/demos/base.vue';
 import mobileVue from '@/cascader/demos/mobile.vue';
+import statusVue from '@/cascader/demos/status.vue';
 
 const mapper = {
   baseVue,
   mobileVue,
+  statusVue,
 };
 
 describe('Cascader', () => {
