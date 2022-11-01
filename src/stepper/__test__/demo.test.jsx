@@ -4,8 +4,6 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/stepper/demos/base.vue';
-import disableInputVue from '@/stepper/demos/disable-input.vue';
-import disabledVue from '@/stepper/demos/disabled.vue';
 import mobileVue from '@/stepper/demos/mobile.vue';
 import pureStepperVue from '@/stepper/demos/pure-stepper.vue';
 import statusVue from '@/stepper/demos/status.vue';
@@ -13,8 +11,6 @@ import unitStepperVue from '@/stepper/demos/unit-stepper.vue';
 
 const mapper = {
   baseVue,
-  disableInputVue,
-  disabledVue,
   mobileVue,
   pureStepperVue,
   statusVue,
