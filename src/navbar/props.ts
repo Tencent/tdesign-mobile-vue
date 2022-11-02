@@ -49,8 +49,8 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 点击 home 图标时触发 */
-  onHomeClick: Function as PropType<TdNavbarProps['onHomeClick']>,
-  /** 点击左边按钮时触发 */
+  /** 点击左侧按钮时触发 */
   onLeftClick: Function as PropType<TdNavbarProps['onLeftClick']>,
+  /** 点击右侧图标时触发 */
+  onRightClick: Function as PropType<TdNavbarProps['onRightClick']>,
 };

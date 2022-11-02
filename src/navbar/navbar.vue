@@ -1,10 +1,10 @@
 <template>
   <div v-show="visible" :class="name" :style="`${navStyle}`">
     <div v-if="homeContent || leftContent" :class="`${name}__back`">
-      <span v-if="leftIcon === true" :class="`${name}__back--arrow`" @click="handleBack">
+      <span v-if="leftIcon === true" :class="`${name}__back--arrow`" @click="handleLeftClick">
         <t-chevron-left-icon />
       </span>
-      <span v-if="homeIcon === true" :class="`${name}__back--arrow`" @click="handleHomeClick">
+      <span v-if="homeIcon === true" :class="`${name}__back--arrow`">
         <t-home-icon />
       </span>
       <t-node :content="homeContent"></t-node>
@@ -15,7 +15,7 @@
       <t-node :content="titleContent"></t-node>
     </div>
 
-    <div :class="`${name}__right`">
+    <div :class="`${name}__right`" @click="handleRightClick">
       <t-node :content="rightContent"></t-node>
     </div>
   </div>
@@ -24,7 +24,7 @@
 import { computed, defineComponent, getCurrentInstance, SetupContext, toRefs } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon, HomeIcon as THomeIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import { renderTNode, TNode, isNumber, useEmitEvent } from '../shared';
+import { renderTNode, TNode, useEmitEvent } from '../shared';
 import NavbarProps from './props';
 
 const { prefix } = config;
@@ -34,23 +34,18 @@ export default defineComponent({
   name,
   components: { TChevronLeftIcon, TNode, THomeIcon },
   props: NavbarProps,
-  emits: ['left-click', 'home-click'],
+  emits: ['left-click', 'right-click'],
   setup(props, context: SetupContext) {
     const internalInstance = getCurrentInstance();
     const { title, titleMaxLength, fixed, background } = toRefs(props);
 
     const navStyle = computed(
-      () =>
-        `position: ${fixed.value ? 'fixed' : 'relative'}; top: 0; left: 0; width: 100%; background: ${
-          background.value || ''
-        };`,
+      () => `position: ${fixed.value ? 'fixed' : 'relative'}; background: ${background.value || ''};`,
     );
 
     const titleContent = computed(() => {
       if (titleMaxLength.value != null && title.value) {
-        if (!isNumber(titleMaxLength.value)) {
-          console.warn('titleMaxLength must be number');
-        } else if (titleMaxLength.value <= 0) {
+        if (titleMaxLength.value <= 0) {
           console.warn('titleMaxLength must be greater than 0');
         } else {
           return title.value.length <= titleMaxLength.value
@@ -68,16 +63,12 @@ export default defineComponent({
 
     const emitEvent = useEmitEvent(props, context.emit);
 
-    const handleBack = () => {
+    const handleLeftClick = () => {
       emitEvent('left-click');
-
-      if (history.length > 1) {
-        history.back();
-      }
     };
 
-    const handleHomeClick = () => {
-      emitEvent('home-click');
+    const handleRightClick = () => {
+      emitEvent('right-click');
     };
 
     return {
@@ -87,8 +78,8 @@ export default defineComponent({
       rightContent,
       navStyle,
       homeContent,
-      handleBack,
-      handleHomeClick,
+      handleLeftClick,
+      handleRightClick,
     };
   },
 });

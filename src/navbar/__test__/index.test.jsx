@@ -36,8 +36,6 @@ describe('navbar', () => {
       const navbar = mount(<NavBar title="标题超过了六个字符" titleMaxLength={6} />);
       expect(navbar.text()).toContain('标题超过了六...');
 
-      await navbar.setProps({ titleMaxLength: '123' });
-      expect(navbar.text()).toContain('标题超过了六个字符');
       await navbar.setProps({ titleMaxLength: -1 });
       expect(navbar.text()).toContain('标题超过了六个字符');
       await navbar.setProps({ titleMaxLength: 10, title: '测试标题' });
@@ -51,13 +49,6 @@ describe('navbar', () => {
   });
 
   describe('events', () => {
-    it('home-click', async () => {
-      const fn = vi.fn();
-      const navbar = mount(<NavBar title="标题" homeIcon onHomeClick={fn} />);
-      await navbar.find('.t-icon-home').trigger('click');
-      expect(fn).toHaveBeenCalled();
-    });
-
     it('left-click', async () => {
       const fn = vi.fn();
       const navbar = mount(<NavBar title="标题" leftIcon onLeftClick={fn} />);

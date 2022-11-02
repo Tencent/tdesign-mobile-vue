@@ -4,15 +4,15 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/navbar/demos/base.vue';
-import eventVue from '@/navbar/demos/event.vue';
-import iconVue from '@/navbar/demos/icon.vue';
+import leftIconVue from '@/navbar/demos/left-icon.vue';
 import mobileVue from '@/navbar/demos/mobile.vue';
+import rightIconVue from '@/navbar/demos/right-icon.vue';
 
 const mapper = {
   baseVue,
-  eventVue,
-  iconVue,
+  leftIconVue,
   mobileVue,
+  rightIconVue,
 };
 
 describe('Navbar', () => {

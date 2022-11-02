@@ -49,11 +49,13 @@ export interface TdNavbarProps {
    */
   visible?: boolean;
   /**
-   * 点击 home 图标时触发
+   * 点击左侧按钮时触发
    */
-  onHomeClick?: () => void;
+  onLeftClick?: (trigger: NavBarTrigger) => void;
   /**
-   * 点击左边按钮时触发
+   * 点击右侧图标时触发
    */
-  onLeftClick?: () => void;
+  onRightClick?: () => void;
 }
+
+export type NavBarTrigger = 'home-icon' | 'left-icon';

@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div class="tdesign-demo-block">
-      <t-navbar title="标题" />
-    </div>
-  </div>
+  <t-navbar title="标题" left-icon :fixed="false" @left-click="handleClick" />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const handleClick = () => {
+  console.log('left-click');
+};
+</script>
