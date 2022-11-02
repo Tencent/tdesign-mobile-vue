@@ -1,14 +1,6 @@
 <template>
   <div class="flex">
-    <p
-      style="
-         {
-          width: 100;
-        }
-      "
-    >
-      选择器标题
-    </p>
+    <span :style="{ width: '120px', 'margin-right': '10px' }"> 选择器标题 </span>
     <t-slider v-model="value" :label="false" />
   </div>
 </template>
@@ -21,7 +13,6 @@ const value = ref(0);
 <style>
 .flex {
   display: flex;
-  text-align: center;
   align-items: center;
 }
 </style>
