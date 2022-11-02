@@ -286,7 +286,7 @@ export default defineComponent({
       }
     };
     // 处理后的树形选项列表
-    const treeOptions = ref(<TdDropdownItemOption[]>[]);
+    const treeOptions = ref<TdDropdownItemOption[]>([]);
     const buildTreeOptions = () => {
       const { options } = props;
       const { selectList } = treeState;

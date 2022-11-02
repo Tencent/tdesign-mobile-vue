@@ -10,10 +10,9 @@ import { AddIcon } from 'tdesign-icons-vue-next';
 
 const iconFunc = () => h(AddIcon);
 const baseButtonProps = {
-  shape: 'round',
-  theme: 'default',
+  variant: 'outline',
 };
-const customStyle = 'right: 16px; bottom: 96px;';
+const customStyle = 'right: 16px; bottom: 32px;';
 const onClick = () => {
   console.log('click Fab');
 };

@@ -2,123 +2,113 @@
 
 exports[`Textarea > Textarea autosizeVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-textarea"
 >
   <div
-    class="t-textarea"
+    class="t-textarea__name"
   >
-    <div
-      class="t-textarea__name"
-    >
+    
+    <div>
       标签文字
     </div>
-    <div
-      class="t-textarea__wrapper"
-    >
-      <textarea
-        maxlength="-1"
-        name="标签文字"
-        placeholder="请输入文字"
-      />
-      <!--v-if-->
-    </div>
+    
+  </div>
+  <div
+    class="t-textarea__wrapper"
+  >
+    <textarea
+      maxlength="-1"
+      name="标签文字"
+      placeholder="请输入文字"
+    />
+    <!--v-if-->
   </div>
 </div>
 `;
 
 exports[`Textarea > Textarea baseVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-textarea"
 >
+  <!--v-if-->
   <div
-    class="t-textarea"
+    class="t-textarea__wrapper"
   >
+    <textarea
+      maxlength="-1"
+      name=""
+      placeholder="请输入文字"
+    />
     <!--v-if-->
-    <div
-      class="t-textarea__wrapper"
-    >
-      <textarea
-        maxlength="-1"
-        name=""
-      />
-      <!--v-if-->
-    </div>
   </div>
 </div>
 `;
 
 exports[`Textarea > Textarea eventsVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-textarea"
 >
   <div
-    class="t-textarea"
+    class="t-textarea__name"
   >
-    <div
-      class="t-textarea__name"
-    >
-      标签文字
-    </div>
-    <div
-      class="t-textarea__wrapper"
-    >
-      <textarea
-        maxlength="-1"
-        name="标签文字"
-        placeholder="请输入文字"
-      />
-      <!--v-if-->
-    </div>
+    标签文字
+  </div>
+  <div
+    class="t-textarea__wrapper"
+  >
+    <textarea
+      maxlength="-1"
+      name="标签文字"
+      placeholder="请输入文字"
+    />
+    <!--v-if-->
   </div>
 </div>
 `;
 
 exports[`Textarea > Textarea labelVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-textarea"
 >
   <div
-    class="t-textarea"
+    class="t-textarea__name"
   >
+    标签文字
+  </div>
+  <div
+    class="t-textarea__wrapper"
+  >
+    <textarea
+      maxlength="-1"
+      name="标签文字"
+      placeholder="请输入文字"
+    />
     <!--v-if-->
-    <div
-      class="t-textarea__wrapper"
-    >
-      <textarea
-        maxlength="-1"
-        name=""
-      />
-      <!--v-if-->
-    </div>
   </div>
 </div>
 `;
 
 exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-textarea"
 >
   <div
-    class="t-textarea"
+    class="t-textarea__name"
   >
+    标签文字
+  </div>
+  <div
+    class="t-textarea__wrapper"
+  >
+    <textarea
+      maxlength="-1"
+      name="标签文字"
+      placeholder="请输入文字"
+    />
     <div
-      class="t-textarea__name"
+      class="t-textarea__count"
     >
-      标签文字
-    </div>
-    <div
-      class="t-textarea__wrapper"
-    >
-      <textarea
-        maxlength="-1"
-        name="标签文字"
-        placeholder="请输入文字"
-      />
-      <div
-        class="t-textarea__count"
-      >
-        0/10
-      </div>
+      0/100
     </div>
   </div>
 </div>
@@ -126,29 +116,25 @@ exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
 
 exports[`Textarea > Textarea maxlengthVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-textarea"
 >
   <div
-    class="t-textarea"
+    class="t-textarea__name"
   >
+    标签文字
+  </div>
+  <div
+    class="t-textarea__wrapper"
+  >
+    <textarea
+      maxlength="100"
+      name="标签文字"
+      placeholder="请输入文字"
+    />
     <div
-      class="t-textarea__name"
+      class="t-textarea__count"
     >
-      标签文字
-    </div>
-    <div
-      class="t-textarea__wrapper"
-    >
-      <textarea
-        maxlength="20"
-        name="标签文字"
-        placeholder="请输入文字"
-      />
-      <div
-        class="t-textarea__count"
-      >
-        0/20
-      </div>
+      0/100
     </div>
   </div>
 </div>
@@ -215,7 +201,11 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       <div
         class="t-textarea__name"
       >
-        标签文字
+        
+        <div>
+          标签文字
+        </div>
+        
       </div>
       <div
         class="t-textarea__wrapper"
@@ -246,11 +236,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
       <div
         class="t-textarea__name"
       >
-        
-        <div>
-          标签文字
-        </div>
-        
+        标签文字
       </div>
       <div
         class="t-textarea__wrapper"
@@ -288,10 +274,9 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         标签文字
       </div>
       <div
-        class="t-textarea__wrapper t-textarea-is-disabled"
+        class="t-textarea__wrapper"
       >
         <textarea
-          disabled=""
           maxlength="-1"
           name="标签文字"
           placeholder="请输入文字"
@@ -327,14 +312,14 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         class="t-textarea__wrapper"
       >
         <textarea
-          maxlength="20"
+          maxlength="-1"
           name="标签文字"
           placeholder="请输入文字"
         />
         <div
           class="t-textarea__count"
         >
-          0/20
+          0/100
         </div>
       </div>
     </div>
@@ -362,14 +347,14 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         class="t-textarea__wrapper"
       >
         <textarea
-          maxlength="-1"
+          maxlength="100"
           name="标签文字"
           placeholder="请输入文字"
         />
         <div
           class="t-textarea__count"
         >
-          0/10
+          0/100
         </div>
       </div>
     </div>
@@ -398,9 +383,10 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
         标签文字
       </div>
       <div
-        class="t-textarea__wrapper"
+        class="t-textarea__wrapper t-textarea-is-disabled"
       >
         <textarea
+          disabled=""
           maxlength="-1"
           name="标签文字"
           placeholder="请输入文字"
@@ -413,29 +399,25 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Textarea > Textarea typeVue demo works fine 1`] = `
+exports[`Textarea > Textarea statusVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-textarea"
 >
   <div
-    class="t-textarea"
+    class="t-textarea__name"
   >
-    <div
-      class="t-textarea__name"
-    >
-      标签文字
-    </div>
-    <div
-      class="t-textarea__wrapper t-textarea-is-disabled"
-    >
-      <textarea
-        disabled=""
-        maxlength="-1"
-        name="标签文字"
-        placeholder="请输入文字"
-      />
-      <!--v-if-->
-    </div>
+    标签文字
+  </div>
+  <div
+    class="t-textarea__wrapper t-textarea-is-disabled"
+  >
+    <textarea
+      disabled=""
+      maxlength="-1"
+      name="标签文字"
+      placeholder="请输入文字"
+    />
+    <!--v-if-->
   </div>
 </div>
 `;

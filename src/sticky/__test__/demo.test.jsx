@@ -4,11 +4,15 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/sticky/demos/base.vue';
+import containerVue from '@/sticky/demos/container.vue';
 import mobileVue from '@/sticky/demos/mobile.vue';
+import offsetTopVue from '@/sticky/demos/offsetTop.vue';
 
 const mapper = {
   baseVue,
+  containerVue,
   mobileVue,
+  offsetTopVue,
 };
 
 describe('Sticky', () => {

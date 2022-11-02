@@ -43,12 +43,15 @@ export default defineComponent({
     const noteContent = computed(() => renderContent(internalInstance, 'default', 'note'));
     const titleContent = computed(() => renderTNode(internalInstance, 'title'));
     const descriptionContent = computed(() => renderTNode(internalInstance, 'description'));
+
+    const chevronRightIcon = h(ChevronRightIcon);
     const rightIconContent = computed(() => {
       if (props.arrow) {
-        return h(ChevronRightIcon);
+        return chevronRightIcon;
       }
       return renderTNode(internalInstance, 'rightIcon');
     });
+
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
     const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon'));
 

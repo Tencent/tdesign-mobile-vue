@@ -3,8 +3,8 @@
     <h3>文字+直线</h3>
     <t-divider class="demo-5"> 文字信息 </t-divider>
 
-    <h3>纯文字</h3>
-    <t-divider line-color="transparent"> 没有更多了~ </t-divider>
+    <h3>文字+虚线</h3>
+    <t-divider class="demo-5" dashed> 文字信息 </t-divider>
   </div>
 </template>
 

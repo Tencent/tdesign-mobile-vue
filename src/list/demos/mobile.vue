@@ -13,11 +13,7 @@
         </tdesign-demo-block>
       </div>
       <div v-if="currentTab === 'base'">
-        <t-list :async-loading="loading" @scroll="(value) => onScroll(value)">
-          <t-cell v-for="item in list" :key="item" align="middle">
-            <span class="cell">{{ item }}</span>
-          </t-cell>
-        </t-list>
+        <baseVue />
       </div>
       <div v-if="currentTab === 'error-tip'">
         <t-list :async-loading="errloading" @scroll="onLoadMore">
@@ -46,8 +42,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, onMounted, computed, h, onUnmounted } from 'vue';
+<script lang="ts" setup>
+import { ref, onMounted, computed, h, onUnmounted } from 'vue';
+import baseVue from './base.vue';
 
 const MAX_DATA_LEN = 60;
 
@@ -76,131 +73,106 @@ const loadData = (data: any, isRefresh?: Boolean) => {
   });
 };
 
-export default defineComponent({
-  setup(props, { emit }) {
-    const currentTab = ref('info');
-    const list = ref([] as Array<any>);
-    const listPull = ref([] as Array<any>);
-    const listError = ref([] as Array<any>);
+const currentTab = ref('info');
+const list = ref([] as Array<any>);
+const listPull = ref([] as Array<any>);
+const listError = ref([] as Array<any>);
 
-    const loading = ref('');
-    const errloading = ref('');
-    const pullloading = ref('');
-    const refreshing = ref(false);
-    const showError = ref(false);
+const loading = ref('');
+const errloading = ref('');
+const pullloading = ref('');
+const refreshing = ref(false);
+const showError = ref(false);
 
-    const onLoad = (isRefresh?: Boolean) => {
-      if ((list.value.length >= MAX_DATA_LEN && !isRefresh) || loading.value) {
-        return;
-      }
-      loading.value = 'loading';
-      loadData(list, isRefresh).then(() => {
-        loading.value = '';
-        refreshing.value = false;
-      });
-    };
+const onLoad = (isRefresh?: Boolean) => {
+  if ((list.value.length >= MAX_DATA_LEN && !isRefresh) || loading.value) {
+    return;
+  }
+  loading.value = 'loading';
+  loadData(list, isRefresh).then(() => {
+    loading.value = '';
+    refreshing.value = false;
+  });
+};
 
-    const onLoadPull = (isRefresh?: Boolean) => {
-      if ((listPull.value.length >= MAX_DATA_LEN && !isRefresh) || pullloading.value) {
-        return;
-      }
-      pullloading.value = 'loading';
-      loadData(listPull, isRefresh).then(() => {
-        pullloading.value = '';
-        refreshing.value = false;
-      });
-    };
+const onLoadPull = (isRefresh?: Boolean) => {
+  if ((listPull.value.length >= MAX_DATA_LEN && !isRefresh) || pullloading.value) {
+    return;
+  }
+  pullloading.value = 'loading';
+  loadData(listPull, isRefresh).then(() => {
+    pullloading.value = '';
+    refreshing.value = false;
+  });
+};
 
-    const onLoadError = () => {
-      errloading.value = 'loading';
+const onLoadError = () => {
+  errloading.value = 'loading';
 
-      setTimeout(() => {
-        for (let i = 0; i < 8; i++) {
-          listError.value.push(`${listError.value.length + 1}`);
-        }
-        showError.value = true;
-        errloading.value = '';
-      }, 1000);
-    };
+  setTimeout(() => {
+    for (let i = 0; i < 8; i++) {
+      listError.value.push(`${listError.value.length + 1}`);
+    }
+    showError.value = true;
+    errloading.value = '';
+  }, 1000);
+};
 
-    const onScroll = (scrollBottom: number, type?: string) => {
-      if (scrollBottom < 50) {
-        type === 'listPull' ? onLoadPull() : onLoad();
-      }
-    };
+const onScroll = (scrollBottom: number, type?: string) => {
+  if (scrollBottom < 50) {
+    type === 'listPull' ? onLoadPull() : onLoad();
+  }
+};
 
-    onMounted(() => {
-      onLoad();
-      window.onpopstate = function (event) {
-        currentTab.value = 'info';
-      };
-    });
-
-    onUnmounted(() => {
-      window.onpopstate = null;
-    });
-
-    const onChangeTab = (val: any) => {
-      list.value = [];
-      listError.value = [];
-      showError.value = false;
-
-      if (val === 'base') {
-        onLoad();
-      } else if (val === 'error-tip') {
-        onLoadError();
-      } else if (val === 'pull-refresh') {
-        onLoadPull();
-      }
-      currentTab.value = val;
-      history.pushState({}, '', '?tab=demo');
-    };
-
-    const onLoadMore = () => {
-      showError.value = false;
-      if (listError.value.length >= 60 || errloading.value) {
-        return;
-      }
-
-      errloading.value = 'loading';
-
-      setTimeout(() => {
-        for (let i = 0; i < 15; i++) {
-          listError.value.push(`${listError.value.length + 1}`);
-        }
-        errloading.value = '';
-      }, 1000);
-    };
-
-    const loadingPullData = computed(() => Boolean(pullloading.value));
-
-    const onRefresh = () => {
-      refreshing.value = true;
-      onLoadPull(true);
-    };
-
-    return {
-      list,
-      listError,
-      listPull,
-      refreshing,
-      onLoad,
-      onScroll,
-      onChangeTab,
-      loading,
-      pullloading,
-      errloading,
-      loadingPullData,
-      showError,
-      onLoadMore,
-      onRefresh,
-      currentTab,
-    };
-  },
-  data() {
-    return {};
-  },
+onMounted(() => {
+  onLoad();
+  window.onpopstate = function (event) {
+    currentTab.value = 'info';
+  };
 });
+
+onUnmounted(() => {
+  window.onpopstate = null;
+});
+
+const onChangeTab = (val: any) => {
+  list.value = [];
+  listError.value = [];
+  showError.value = false;
+
+  if (val === 'base') {
+    onLoad();
+  } else if (val === 'error-tip') {
+    onLoadError();
+  } else if (val === 'pull-refresh') {
+    onLoadPull();
+  }
+  currentTab.value = val;
+  history.pushState({}, '', '?tab=demo');
+};
+
+const onLoadMore = () => {
+  showError.value = false;
+  if (listError.value.length >= 60 || errloading.value) {
+    return;
+  }
+
+  errloading.value = 'loading';
+
+  setTimeout(() => {
+    for (let i = 0; i < 15; i++) {
+      listError.value.push(`${listError.value.length + 1}`);
+    }
+    errloading.value = '';
+  }, 1000);
+};
+
+const loadingPullData = computed(() => Boolean(pullloading.value));
+
+const onRefresh = () => {
+  refreshing.value = true;
+  onLoadPull(true);
+};
 </script>
 
 <style lang="less">

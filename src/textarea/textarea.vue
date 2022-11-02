@@ -41,7 +41,7 @@ export default defineComponent({
     TNode,
   },
   props: TextareaProps,
-  emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'clear', 'change'],
+  emits: ['update:value', 'update:modelValue', 'focus', 'blur', 'change'],
   setup(props, context: SetupContext) {
     const emitEvent = useEmitEvent(props, context.emit);
     const textareaRef = ref<null | HTMLElement>(null);
@@ -108,10 +108,6 @@ export default defineComponent({
       textareaValueChangeHandle(e as InputEvent);
     };
 
-    const handleClear = (e: MouseEvent) => {
-      setInnerValue('');
-      emitEvent('clear', { e });
-    };
     const handleFocus = (e: FocusEvent) => {
       emitEvent('focus', innerValue.value, { e });
     };
@@ -135,7 +131,6 @@ export default defineComponent({
       textareaStyle,
       textareaClassNames,
       textareaLength,
-      handleClear,
       handleFocus,
       handleBlur,
       handleInput,

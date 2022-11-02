@@ -14,7 +14,7 @@ title | `String | Slot` | - | 标题 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(value: TdCascaderItems, context: { e: MouseEvent })` | 选中值改变时触发
-finish | `(context: { e: MouseEvent })` | 全部选项完成选择触发
+change | `(value: string | number, selectedItems: TdCascaderItems, context: { e: MouseEvent })` | 全部选项完成选择触发
+pick | `(value: string | number, index: number, context: { e: MouseEvent })` | 点击选项时触发
 cancel | `(context: { e: MouseEvent })` | 关闭 Cascader 触发
-click-tab | `(context: { e: MouseEvent })` | 点击 tab 触发
+click-tab | `(index: number)` | 点击 tab 触发

@@ -16,4 +16,4 @@ onScroll | Function |  | TS 类型：`(scrollTop: number) => void`<br/>列表滚
 名称 | 参数 | 描述
 -- | -- | --
 load-more | \- | 点击加载更多时触发
-scroll | `(scrollTop: number)` | 列表滚动时触发，scrollTop 表示顶部滚动距离
+scroll | `(bottomDistance:number, scrollTop: number)` | 列表滚动时触发，bottomDistance 表示与底部的距离；scrollTop 表示顶部滚动距离

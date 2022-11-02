@@ -34,7 +34,7 @@ function create(props: TdMessageProps): void {
 
 const defaultProps: TdMessageProps = {
   align: 'left',
-  closeBtn: '',
+  closeBtn: false,
   content: '',
   duration: 3000,
   theme: 'info',
