@@ -62,6 +62,7 @@ import { ListItem } from './type';
 import IndexesProps from './props';
 import { useEmitEvent } from '../shared';
 import indexesAnchor from './indexes-anchor.vue';
+import TIndexesCell from './indexes-cell.vue';
 
 const { prefix } = config;
 
@@ -94,7 +95,7 @@ const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
   name: componentName,
-  components: { indexesAnchor },
+  components: { indexesAnchor, TIndexesCell },
   props: IndexesProps,
   emits: ['select'],
   setup(props, context: SetupContext) {
@@ -138,7 +139,7 @@ export default defineComponent({
         const { dataset } = ele;
         return dataset && dataset.index === state.activeSidebar;
       });
-      targets[0]?.scrollIntoView();
+      targets[0]?.scrollIntoView?.();
     };
 
     const calcSticky = (indexesRootTop: number) => {
