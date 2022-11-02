@@ -252,7 +252,6 @@ export default defineComponent({
       state.btnDisabled = true;
     };
     const { lengthX, lengthY } = useSwipe(swiperContainer, {
-      passive: false,
       onSwipeStart(e: TouchEvent) {
         if (state.btnDisabled) return false;
         stopAutoplay();
