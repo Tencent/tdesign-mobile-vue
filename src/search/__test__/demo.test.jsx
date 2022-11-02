@@ -4,13 +4,13 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/search/demos/base.vue';
-import colorVue from '@/search/demos/color.vue';
 import mobileVue from '@/search/demos/mobile.vue';
+import statusVue from '@/search/demos/status.vue';
 
 const mapper = {
   baseVue,
-  colorVue,
   mobileVue,
+  statusVue,
 };
 
 describe('Search', () => {

@@ -1,24 +1,15 @@
 <template>
-  <div>
+  <t-cell-group title="基础搜索框">
     <t-search v-model="value" :clearable="true" placeholder="请输入关键字" @change="onChange"></t-search>
-  </div>
+  </t-cell-group>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const onChange = (val: string) => {
-      console.log('change: ', val);
-    };
+const onChange = (val: string) => {
+  console.log('change: ', val);
+};
 
-    const value = ref('');
-
-    return {
-      onChange,
-      value,
-    };
-  },
-});
+const value = ref('');
 </script>
