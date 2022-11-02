@@ -50,13 +50,19 @@ describe('Overlay', () => {
       const wrapper = mount(Overlay, {
         props: {
           visible: true,
+
         }
       })
-      expect(getComputedStyle(wrapper.find('.t-overlay').element)['transition-duration']).toEqual('300ms')
+      // duration = 300，默认
+      const $overlay = wrapper.find('.t-overlay');
+      expect(wrapper.find('.t-overlay').attributes('style').includes(`transition-duration: 300ms`)).toBeTruthy();
+
+      // duration = 100
+      const duration = 100;
       await wrapper.setProps({
-        duration: 100
+        duration,
       })
-      expect(getComputedStyle(wrapper.find('.t-overlay').element)['transition-duration']).toEqual('100ms')
+      expect(wrapper.find('.t-overlay').attributes('style').includes(`transition-duration: ${duration}ms`)).toBeTruthy();
     });
 
     it (': zIndex', async () => {
@@ -70,6 +76,18 @@ describe('Overlay', () => {
         zIndex: 99
       })
       expect(getComputedStyle(wrapper.find('.t-overlay').element)['z-index']).toEqual('99')
+    })
+
+    it(': customStyle', async () => {
+      const customStyle = 'color: red';
+      const wrapper = mount(Overlay, {
+        props: {
+          visible: true,
+          customStyle,
+        }
+      })
+      const $overlay = wrapper.find('.t-overlay');
+      expect($overlay.attributes('style').includes(customStyle)).toBeTruthy();
     })
 
   })
