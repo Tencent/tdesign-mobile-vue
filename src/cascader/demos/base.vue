@@ -1,14 +1,7 @@
 <template>
   <t-input :value="address" readonly label="地址" placeholder="选择地址" @click="show = true" />
   <t-popup v-model="show" placement="bottom">
-    <t-cascader
-      v-model="address"
-      title="选择地址"
-      :options="options"
-      @change="onChange"
-      @cancel="show = false"
-      @confirm="onConfirm"
-    />
+    <t-cascader v-model="address" title="选择地址" :options="options" @change="onChange" @cancel="show = false" />
   </t-popup>
 </template>
 
@@ -21,10 +14,6 @@ const show = ref(false);
 const onChange = (value: string, options: TdCascaderItems) => {
   address.value = options.map((item) => item.label).join('/');
   show.value = false;
-};
-
-const onConfirm = () => {
-  console.log('confirm');
 };
 
 const options: TdCascaderItems = [
