@@ -1,9 +1,47 @@
+import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { ref, nextTick } from "vue";
 import Message from '../message.vue';
-
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+const prefix = 't'
+const name = `${prefix}-message`;
 describe('Message.vue', () => {
+  describe('event', () => {
+    const offset = [-10, 20];
+    it(': offset', () => {
+      const wrapper = mount(<Message visible offset={offset} />);
+      const $message = wrapper.find(`.${name}`);
+      expect($message.attributes('style').includes(`top: ${offset[0]}px; right: ${offset[1]}px; left: ${offset[1]}px`)).toBeTruthy();
+    });
+
+    it(': closeBtn is a function', () => {
+      const closeBtn = () => h(TIconApp);
+      const wrapper = mount(<Message visible closeBtn={closeBtn} />);
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
+    it(': marquee', async () => {
+      const wrapper0 = mount(<Message visible />);
+      await nextTick();
+      expect(wrapper0.vm.scroll.marquee).toBe(false);
+
+      const wrapper = mount(<Message visible marquee />);
+      await nextTick();
+      expect(wrapper.vm.scroll.marquee).toBe(true);
+
+      const params = { loop: -1 };
+      const wrapper2 = mount(<Message visible marquee={params} />);
+      await nextTick();
+      expect(wrapper2.vm.scroll.marquee).toBe(true);
+
+      params.loop = 0;
+      const wrapper3 = mount(<Message visible marquee={params} />);
+      await nextTick();
+      expect(wrapper3.vm.scroll.marquee).toBe(false);
+    });
+  });
+
   describe('event', () => {
     it('open', async () => {
       const fn = vi.fn();
