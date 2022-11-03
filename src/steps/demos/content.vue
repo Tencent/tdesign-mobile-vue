@@ -1,14 +1,12 @@
 <template>
-  <div class="cell-base">
-    <t-steps v-model="current" layout="vertical" class="demo-steps">
+  <div class="step-demo">
+    <t-steps v-model="current" layout="vertical" :readonly="true">
       <t-step
         title="已完成步骤"
         content="可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。"
       >
         <template #extra>
-          <div class="extra-img">
-            <img src="https://0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png" alt="" />
-          </div>
+          <img src="https://0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png" alt="" />
         </template>
       </t-step>
       <t-step
@@ -23,24 +21,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const current = ref(0);
-    return {
-      current,
-    };
-  },
-});
+const current = ref(1);
 </script>
-
-<style lang="less" scoped>
-.demo-steps {
-  padding-top: 12px;
-}
-.extra-img {
-  display: flex;
-}
-</style>
