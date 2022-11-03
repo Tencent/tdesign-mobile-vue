@@ -91,6 +91,7 @@ export default defineComponent({
       itemWidth: number;
       isControl: boolean;
       btnDisabled: boolean;
+      moving: boolean;
       children: ComponentPublicInstance[];
     } = reactive({
       showNavigation: true,
@@ -99,6 +100,7 @@ export default defineComponent({
       itemWidth: 0,
       isControl: false,
       btnDisabled: false,
+      moving: false,
       children: [] as ComponentPublicInstance[],
     });
     const paginationList = computed(() => new Array(state.itemLength).fill(1));
@@ -112,6 +114,7 @@ export default defineComponent({
     const getContainer = (): HTMLDivElement => self?.proxy?.$el.querySelector(`.${name}__container`);
     // const getContainer = (): HTMLDivElement => swiperContainer.value as any;
     const initSwiper = () => {
+      stopAutoplay();
       const _swiperContainer = getContainer();
       _swiperContainer.querySelectorAll('.copy-item').forEach((ele) => {
         _swiperContainer.removeChild(ele);
@@ -253,8 +256,10 @@ export default defineComponent({
     };
     const { lengthX, lengthY } = useSwipe(swiperContainer, {
       onSwipeStart(e: TouchEvent) {
+        e.stopPropagation();
         if (state.btnDisabled) return false;
         stopAutoplay();
+        state.moving = true;
       },
       onSwipe(e: TouchEvent) {
         if (state.btnDisabled) return false;
@@ -265,7 +270,7 @@ export default defineComponent({
       },
     });
     const onTouchMove = (event: TouchEvent) => {
-      event.preventDefault();
+      if (!state.moving) return false;
       const { activeIndex, itemWidth } = state;
       const distanceX = lengthX.value;
       const distanceY = lengthY.value;
@@ -280,6 +285,7 @@ export default defineComponent({
       }
     };
     const onTouchEnd = () => {
+      if (!state.moving) return false;
       const distanceX = lengthX.value;
       const distanceY = lengthY.value;
       addAnimation();
@@ -296,6 +302,7 @@ export default defineComponent({
       } else {
         move(state.activeIndex);
       }
+      state.moving = false;
       startAutoplay();
     };
     const relation = (child: ComponentInternalInstance) => {
