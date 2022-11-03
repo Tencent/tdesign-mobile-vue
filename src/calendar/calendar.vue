@@ -45,7 +45,7 @@
         </div>
         <div class="t-calendar__footer">
           <slot name="confirmBtn">
-            <template v-if="confirmBtn">
+            <template v-if="confirmBtn && typeof confirmBtn === 'object'">
               <t-button block theme="primary" v-bind="confirmBtn" @click="handleConfirm" />
             </template>
           </slot>
@@ -58,7 +58,8 @@
 <script lang="ts">
 import { defineEmits, defineProps, computed, watch, ref, toRaw } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
-
+import TPopup from '../popup';
+import TButton from '../button';
 import config from '../config';
 import calendarProps from './props';
 import { TDate, TDateType } from './type';
@@ -68,6 +69,10 @@ const name = `${prefix}-calendar`;
 
 export default {
   name,
+  components: {
+    TPopup,
+    TButton,
+  },
 };
 </script>
 
@@ -226,7 +231,7 @@ const months = computed(() => {
 });
 
 const confirmBtn = computed(() => {
-  if (props.confirmBtn === 'string' || props.confirmBtn === '') return { content: props.confirmBtn || '确认' };
+  if (typeof props.confirmBtn === 'string' || props.confirmBtn === '') return { content: props.confirmBtn || '确认' };
   return props.confirmBtn;
 });
 
