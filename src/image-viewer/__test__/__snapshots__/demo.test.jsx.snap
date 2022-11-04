@@ -72,212 +72,119 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
 `;
 
 exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
-<div>
-  <div
-    class="t-cell-group dialog-type-title"
+<div
+  class="image-viewer-demo"
+  data-v-734c791c=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    data-v-734c791c=""
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+       基础用法 
+      
+    </span>
+  </button>
+  <transition-stub
+    appear="false"
+    class="t-image-viewer"
+    css="true"
+    data-v-734c791c=""
+    name="t-overlay"
+    persisted="true"
   >
     <div
-      class="t-cell-group__title"
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
       
-      基础用法
       
     </div>
-    <div
-      class="t-cell-group__container"
-    >
-      
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-        value-align="left"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-               基础用法 
-              
-            </span>
-          </button>
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-          
-        </div>
-        <!--v-if-->
-      </div>
-      
-    </div>
-  </div>
+  </transition-stub>
 </div>
 `;
 
 exports[`ImageViewer > ImageViewer closeBtnVue demo works fine 1`] = `
-<div>
-  <div
-    class="t-cell-group dialog-type-title"
+<div
+  class="image-viewer-demo"
+  data-v-04bcb836=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    data-v-04bcb836=""
+    role="button"
   >
-    <div
-      class="t-cell-group__title"
+    <!---->
+    <span
+      class="t-button__text"
     >
       
       不展示关闭按钮
       
-    </div>
+    </span>
+  </button>
+  <transition-stub
+    appear="false"
+    class="t-image-viewer"
+    css="true"
+    data-v-04bcb836=""
+    name="t-overlay"
+    persisted="true"
+  >
     <div
-      class="t-cell-group__container"
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
       
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-        value-align="left"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-              不展示关闭按钮
-              
-            </span>
-          </button>
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-          
-        </div>
-        <!--v-if-->
-      </div>
       
     </div>
-  </div>
+  </transition-stub>
 </div>
 `;
 
 exports[`ImageViewer > ImageViewer closeEventVue demo works fine 1`] = `
-<div>
-  <div
-    class="t-cell-group dialog-type-title"
+<div
+  class="image-viewer-demo"
+  data-v-3939d0e3=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    data-v-3939d0e3=""
+    role="button"
   >
-    <div
-      class="t-cell-group__title"
+    <!---->
+    <span
+      class="t-button__text"
     >
       
       监听关闭事件
       
-    </div>
+    </span>
+  </button>
+  <transition-stub
+    appear="false"
+    class="t-image-viewer"
+    css="true"
+    data-v-3939d0e3=""
+    name="t-overlay"
+    persisted="true"
+  >
     <div
-      class="t-cell-group__container"
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
       
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-        value-align="left"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-              监听关闭事件
-              
-            </span>
-          </button>
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-          
-        </div>
-        <!--v-if-->
-      </div>
       
     </div>
-  </div>
+  </transition-stub>
 </div>
 `;
 
@@ -424,23 +331,19 @@ exports[`ImageViewer > ImageViewer initialIndexVue demo works fine 1`] = `
 exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-ef8302fa=""
 >
   <h1
     class="title"
-    data-v-ef8302fa=""
   >
     ImageViewer 图片预览
   </h1>
   <p
     class="summary"
-    data-v-ef8302fa=""
   >
     图片全屏放大预览效果，包含全屏背景色、页码位置样式、增加操作等规范
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-ef8302fa=""
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -455,12 +358,12 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
     
     <div
       class="image-viewer-demo"
-      data-v-ef8302fa=""
+      data-v-734c791c=""
     >
       <button
         aria-disabled="false"
         class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-ef8302fa=""
+        data-v-734c791c=""
         role="button"
       >
         <!---->
@@ -472,10 +375,31 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
           
         </span>
       </button>
+      <transition-stub
+        appear="false"
+        class="t-image-viewer"
+        css="true"
+        data-v-734c791c=""
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+    </div>
+    <div
+      class="image-viewer-demo"
+      data-v-04bcb836=""
+    >
       <button
         aria-disabled="false"
         class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-ef8302fa=""
+        data-v-04bcb836=""
         role="button"
       >
         <!---->
@@ -483,14 +407,35 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
           class="t-button__text"
         >
           
-           不展示关闭按钮 
+          不展示关闭按钮
           
         </span>
       </button>
+      <transition-stub
+        appear="false"
+        class="t-image-viewer"
+        css="true"
+        data-v-04bcb836=""
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+    </div>
+    <div
+      class="image-viewer-demo"
+      data-v-3939d0e3=""
+    >
       <button
         aria-disabled="false"
         class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-ef8302fa=""
+        data-v-3939d0e3=""
         role="button"
       >
         <!---->
@@ -498,60 +443,28 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
           class="t-button__text"
         >
           
-           监听关闭事件 
+          监听关闭事件
           
         </span>
       </button>
+      <transition-stub
+        appear="false"
+        class="t-image-viewer"
+        css="true"
+        data-v-3939d0e3=""
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
     </div>
     
   </div>
-  <transition-stub
-    appear="false"
-    class="t-image-viewer"
-    css="true"
-    data-v-ef8302fa=""
-    name="t-overlay"
-    persisted="true"
-  >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    class="t-image-viewer"
-    css="true"
-    data-v-ef8302fa=""
-    name="t-overlay"
-    persisted="true"
-  >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    class="t-image-viewer"
-    css="true"
-    data-v-ef8302fa=""
-    name="t-overlay"
-    persisted="true"
-  >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
 </div>
 `;
