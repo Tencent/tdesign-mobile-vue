@@ -8,6 +8,8 @@ import disableVue from '@/slider/demos/disable.vue';
 import markVue from '@/slider/demos/mark.vue';
 import mobileVue from '@/slider/demos/mobile.vue';
 import rangeVue from '@/slider/demos/range.vue';
+import titleVue from '@/slider/demos/title.vue';
+import unZeroVue from '@/slider/demos/unZero.vue';
 import valueVue from '@/slider/demos/value.vue';
 
 const mapper = {
@@ -16,6 +18,8 @@ const mapper = {
   markVue,
   mobileVue,
   rangeVue,
+  titleVue,
+  unZeroVue,
   valueVue,
 };
 

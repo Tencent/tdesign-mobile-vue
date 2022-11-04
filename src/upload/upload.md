@@ -1,27 +1,4 @@
----
-title: Upload 上传
-description: 上传图片或者视频
-spline: base
-isComponent: true
-toc: false
----
-### 图片上传
-
-## 1. 组件类型
-
-拥有两种不同类型的图片上传：单选图片上传、多选图片上传
-
-### 1.1 单选图片上传
-
-使用场景：用于单张图片上传
-::: demo demos/baseSingle
-:::
-
-### 1.2 多选图片上传
-
-使用场景：用于多张图片上传
-::: demo demos/baseMultiple
-:::
+:: BASE_DOC ::
 
 ## API
 ### Upload Props

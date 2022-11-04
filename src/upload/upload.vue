@@ -112,7 +112,7 @@ export default defineComponent({
     const uploadedFiles: ComputedRef<UploadFile[]> = computed(() => {
       if (innerFiles.value && isArray(innerFiles.value)) {
         // 上传失败的文件用localUrl展示，并且可上传重试
-        return innerFiles.value.filter((file) => file.status === 'success' || file.status === 'fail');
+        return innerFiles.value;
       }
       return [];
     });

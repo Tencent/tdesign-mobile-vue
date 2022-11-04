@@ -8,8 +8,7 @@
 import { toRefs, provide, SetupContext, defineComponent, computed, Ref, ComputedRef } from 'vue';
 import props from './props';
 import config from '../config';
-import { toggleElem } from './util';
-import { useEmitEvent, useVModel } from '../shared';
+import { useVModel } from '../shared';
 import { CollapseValue, TdCollapseProps } from './type';
 
 export interface CollapseProvide {
@@ -26,7 +25,7 @@ export default defineComponent({
   name,
   props,
   emits: ['update:value', 'change'],
-  setup(props) {
+  setup(props, context: SetupContext) {
     const { value, modelValue } = toRefs(props);
     const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const calcActiveValues = (activeValues: any[], panelValue: any, expandMutex: boolean) => {

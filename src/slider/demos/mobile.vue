@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Slider 滑动选择器</h1>
-    <p class="summary">滑动滑块来选择一个数值，在具体场景中也可以增加来刻度和展示数值来方便用户使用</p>
+    <p class="summary">用于选择横轴上的数值、区间、档位</p>
     <tdesign-demo-block title="01 类型" summary="基础滑动选择器">
       <div class="slider-demo">
         <BaseDemo />
@@ -14,7 +14,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block summary="起始非零滑动选择器">
       <div class="slider-demo">
-        <t-slider :default-value="30" :min="30"> </t-slider>
+        <UnZeroDemo />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="带刻度滑动选择器">
@@ -32,6 +32,16 @@
         <DisableDemo />
       </div>
     </tdesign-demo-block>
+    <tdesign-demo-block title="03 规格" summary="无标题滑动选择器">
+      <div class="slider-demo">
+        <BaseDemo />
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="有标题滑动选择器">
+      <div class="slider-demo">
+        <TitleDemo />
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -41,6 +51,8 @@ import MarkDemo from './mark.vue';
 import ValueDemo from './value.vue';
 import RangeDemo from './range.vue';
 import DisableDemo from './disable.vue';
+import UnZeroDemo from './unZero.vue';
+import TitleDemo from './title.vue';
 </script>
 
 <style scoped>
