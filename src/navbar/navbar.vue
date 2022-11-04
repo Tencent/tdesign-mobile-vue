@@ -1,82 +1,85 @@
 <template>
-  <div :class="name">
-    <div :class="`${name}__back`">
-      <span v-if="leftArrow" :class="`${name}__back--arrow`" @click="handleBack">
+  <div v-show="visible" :class="name" :style="`${navStyle}`">
+    <div v-if="homeContent || leftContent" :class="`${name}__back`">
+      <span v-if="leftIcon === true" :class="`${name}__back--arrow`" @click="handleLeftClick">
         <t-chevron-left-icon />
       </span>
-      <slot name="left"> </slot>
+      <span v-if="homeIcon === true" :class="`${name}__back--arrow`">
+        <t-home-icon />
+      </span>
+      <t-node :content="homeContent"></t-node>
+      <t-node :content="leftContent"></t-node>
     </div>
 
-    <div :class="`${name}__text`" @click="clickText">
-      <slot>{{ nTitleContent }}</slot>
+    <div :class="`${name}__text`">
+      <t-node :content="titleContent"></t-node>
     </div>
 
-    <div :class="`${name}__right`">
-      <slot name="right"> </slot>
-      <i v-if="rightShow" :class="`${name}__right--more`" @click="handleMore">
-        <svg
-          t="1614321969302"
-          class="icon"
-          viewBox="0 0 1024 1024"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          p-id="2091"
-          width="24"
-          height="24"
-        >
-          <path
-            d="M512 449.749333a64 64 0 1 1 0 128 64 64 0 0 1 0-128z m-318.805333-1.109333a64 64 0 1 1 0 128 64 64 0 0 1 0-128z m638.677333 0a64 64 0 1 1 0 128 64 64 0 0 1 0-128z"
-            fill="#444444"
-            p-id="2092"
-          ></path>
-        </svg>
-      </i>
+    <div :class="`${name}__right`" @click="handleRightClick">
+      <t-node :content="rightContent"></t-node>
     </div>
   </div>
 </template>
 <script lang="ts">
-import { computed, defineComponent, SetupContext } from 'vue';
-import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
+import { computed, defineComponent, getCurrentInstance, SetupContext, toRefs } from 'vue';
+import { ChevronLeftIcon as TChevronLeftIcon, HomeIcon as THomeIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
-import { NavbarProps } from './navbar.interface';
+import { renderTNode, TNode, useEmitEvent } from '../shared';
+import NavbarProps from './props';
 
 const { prefix } = config;
 const name = `${prefix}-navbar`;
 
 export default defineComponent({
   name,
-  components: { TChevronLeftIcon },
+  components: { TChevronLeftIcon, TNode, THomeIcon },
   props: NavbarProps,
-  emits: ['click-right', 'click-text'],
+  emits: ['left-click', 'right-click'],
   setup(props, context: SetupContext) {
-    const nTitleContent = computed(() => {
-      const { title, maxLen } = props;
-      if (title && title.trim().length > maxLen) {
-        return `${title.slice(0, maxLen)}...`;
+    const internalInstance = getCurrentInstance();
+    const { title, titleMaxLength, fixed, background } = toRefs(props);
+
+    const navStyle = computed(
+      () => `position: ${fixed.value ? 'fixed' : 'relative'}; background: ${background.value || ''};`,
+    );
+
+    const titleContent = computed(() => {
+      if (titleMaxLength.value != null && title.value) {
+        if (titleMaxLength.value <= 0) {
+          console.warn('titleMaxLength must be greater than 0');
+        } else {
+          return title.value.length <= titleMaxLength.value
+            ? props.title
+            : `${(title.value as string).slice(0, titleMaxLength.value)}...`;
+        }
       }
-      return title;
+
+      return renderTNode(internalInstance, 'title');
     });
 
-    const handleBack = () => {
-      if (history.length > 1) {
-        history.back();
-      }
+    const leftContent = computed(() => renderTNode(internalInstance, 'left-icon'));
+    const rightContent = computed(() => renderTNode(internalInstance, 'right-icon'));
+    const homeContent = computed(() => renderTNode(internalInstance, 'home-icon'));
+
+    const emitEvent = useEmitEvent(props, context.emit);
+
+    const handleLeftClick = () => {
+      emitEvent('left-click');
     };
 
-    const handleMore = (evt: MouseEvent) => {
-      context.emit('click-right', evt);
-    };
-
-    const clickText = (evt: MouseEvent) => {
-      context.emit('click-text', evt);
+    const handleRightClick = () => {
+      emitEvent('right-click');
     };
 
     return {
       name,
-      nTitleContent,
-      handleBack,
-      handleMore,
-      clickText,
+      titleContent,
+      leftContent,
+      rightContent,
+      navStyle,
+      homeContent,
+      handleLeftClick,
+      handleRightClick,
     };
   },
 });
