@@ -1,5 +1,5 @@
 <template>
-  <t-list :async-loading="errloading" @scroll="onLoadMore">
+  <t-list :async-loading="loading" @scroll="onLoadMore">
     <t-cell v-for="item in listError" :key="item" align="middle">
       <span class="cell">{{ item }}</span>
     </t-cell>
@@ -12,26 +12,42 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const listError = ref<any[]>([]);
 
-const errloading = ref('');
+const loading = ref('');
 const showError = ref(false);
+
+const onLoadError = () => {
+  loading.value = 'loading';
+
+  setTimeout(() => {
+    for (let i = 0; i < 8; i++) {
+      listError.value.push(`${listError.value.length + 1}`);
+    }
+    showError.value = true;
+    loading.value = '';
+  }, 1000);
+};
 
 const onLoadMore = () => {
   showError.value = false;
-  if (listError.value.length >= 60 || errloading.value) {
+  if (listError.value.length >= 60 || loading.value) {
     return;
   }
 
-  errloading.value = 'loading';
+  loading.value = 'loading';
 
   setTimeout(() => {
     for (let i = 0; i < 15; i++) {
       listError.value.push(`${listError.value.length + 1}`);
     }
-    errloading.value = '';
+    loading.value = '';
   }, 1000);
 };
+
+onMounted(() => {
+  onLoadError();
+});
 </script>
