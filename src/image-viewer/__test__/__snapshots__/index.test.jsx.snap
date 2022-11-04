@@ -38,7 +38,7 @@ exports[`ImageViewer > function > : onIndexChange 1`] = `
       <div
         class="t-swiper__container"
         data-is-trust="true"
-        style="flex-direction: row; transform: translateX(-0px); transition: transform 300ms;"
+        style="flex-direction: row; transform: translateX(-0px);"
       >
         
         
@@ -96,7 +96,7 @@ exports[`ImageViewer > function > : onIndexChange 1`] = `
       >
         
         <span
-          class="t-swiper-dot"
+          class="t-swiper-dot t-swiper-dot--active"
         />
         <span
           class="t-swiper-dot"
