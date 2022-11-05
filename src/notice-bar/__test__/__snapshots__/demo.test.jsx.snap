@@ -804,6 +804,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
     <div
       class="noticebar-demo"
     >
+      <!-- 不带静态图标 -->
       <div
         class="t-notice-bar t-notice-bar--info"
       >
@@ -824,7 +825,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 <span
                   class="t-notice-bar__text"
                 >
-                  提示文字描述提示文字描述提示文字描述提示文字描提示文字
+                  提示文字描述提示文字描述提示文字描述
                   <span
                     class="t-notice-bar__text-detail"
                   >
@@ -837,6 +838,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
       </div>
+      <!-- 默认带静态图标 -->
       <div
         class="t-notice-bar t-notice-bar--info"
       >
@@ -873,7 +875,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
                 <span
                   class="t-notice-bar__text"
                 >
-                  提示文字描述提示文字描述提示文字描述提示文字描提示文字
+                  提示文字描述提示文字描述提示文字描述
                   <span
                     class="t-notice-bar__text-detail"
                   >
@@ -1416,6 +1418,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
 <div
   class="noticebar-demo"
 >
+  <!-- 不带静态图标 -->
   <div
     class="t-notice-bar t-notice-bar--info"
   >
@@ -1436,7 +1439,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             <span
               class="t-notice-bar__text"
             >
-              提示文字描述提示文字描述提示文字描述提示文字描提示文字
+              提示文字描述提示文字描述提示文字描述
               <span
                 class="t-notice-bar__text-detail"
               >
@@ -1449,6 +1452,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
       <!--v-if-->
     </div>
   </div>
+  <!-- 默认带静态图标 -->
   <div
     class="t-notice-bar t-notice-bar--info"
   >
@@ -1485,7 +1489,7 @@ exports[`NoticeBar > NoticeBar scrollingVue demo works fine 1`] = `
             <span
               class="t-notice-bar__text"
             >
-              提示文字描述提示文字描述提示文字描述提示文字描提示文字
+              提示文字描述提示文字描述提示文字描述
               <span
                 class="t-notice-bar__text-detail"
               >
