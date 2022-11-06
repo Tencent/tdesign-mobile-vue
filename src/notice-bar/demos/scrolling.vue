@@ -1,11 +1,15 @@
 <template>
   <div class="noticebar-demo">
-    <t-notice-bar
-      visible
-      :prefix-icon="false"
-      marquee
-      content="提示文字描述提示文字描述提示文字描述提示文字描提示文字"
-    />
-    <t-notice-bar visible marquee content="提示文字描述提示文字描述提示文字描述提示文字描提示文字" />
+    <!-- 不带静态图标 -->
+    <t-notice-bar :visible="visible" :prefix-icon="false" marquee :content="content" />
+    <!-- 默认带静态图标 -->
+    <t-notice-bar :visible="visible" marquee :content="content" />
   </div>
 </template>
+
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+const content = ref<string>('提示文字描述提示文字描述提示文字描述');
+const visible = ref<boolean>(true);
+</script>
