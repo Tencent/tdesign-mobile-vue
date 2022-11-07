@@ -13,29 +13,14 @@
         </tdesign-demo-block>
       </div>
       <div v-if="currentTab === 'base'">
-        <baseVue />
+        <BaseVue />
       </div>
       <div v-if="currentTab === 'error-tip'">
-        <t-list :async-loading="errloading" @scroll="onLoadMore">
-          <t-cell v-for="item in listError" :key="item" align="middle">
-            <span class="cell">{{ item }}</span>
-          </t-cell>
-          <template #footer>
-            <t-loading v-if="showError" :indicator="false" @click.stop="onLoadMore">
-              <div class="custom-error">请求失败，点击重新<span>加载</span></div>
-            </t-loading>
-          </template>
-        </t-list>
+        <ErrTipDemo />
       </div>
       <div v-if="currentTab === 'pull-refresh'">
         <div class="pull-refresh-wrap">
-          <t-pull-down-refresh v-model="refreshing" @refresh="onRefresh">
-            <t-list :async-loading="pullloading" @scroll="(value) => onScroll(value, 'listPull')">
-              <t-cell v-for="item in listPull" :key="item" align="middle">
-                <span class="cell">{{ item }}</span>
-              </t-cell>
-            </t-list>
-          </t-pull-down-refresh>
+          <PullRefreshDemo />
         </div>
       </div>
     </div>
@@ -43,90 +28,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, computed, h, onUnmounted } from 'vue';
-import baseVue from './base.vue';
-
-const MAX_DATA_LEN = 60;
-
-const loadData = (data: any, isRefresh?: Boolean) => {
-  const ONCE_LOAD_NUM = 20;
-
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      const temp = [];
-      for (let i = 0; i < ONCE_LOAD_NUM; i++) {
-        if (isRefresh) {
-          temp.push(`${i + 1}`);
-        } else {
-          temp.push(`${data.value.length + 1 + i}`);
-        }
-      }
-
-      if (isRefresh) {
-        data.value = temp;
-      } else {
-        data.value.push(...temp);
-      }
-
-      resolve(data);
-    }, 1000);
-  });
-};
+import { ref, onMounted, onUnmounted } from 'vue';
+import BaseVue from './base.vue';
+import ErrTipDemo from './err-tip.vue';
+import PullRefreshDemo from './pull-refresh.vue';
 
 const currentTab = ref('info');
-const list = ref([] as Array<any>);
-const listPull = ref([] as Array<any>);
-const listError = ref([] as Array<any>);
-
-const loading = ref('');
-const errloading = ref('');
-const pullloading = ref('');
-const refreshing = ref(false);
-const showError = ref(false);
-
-const onLoad = (isRefresh?: Boolean) => {
-  if ((list.value.length >= MAX_DATA_LEN && !isRefresh) || loading.value) {
-    return;
-  }
-  loading.value = 'loading';
-  loadData(list, isRefresh).then(() => {
-    loading.value = '';
-    refreshing.value = false;
-  });
-};
-
-const onLoadPull = (isRefresh?: Boolean) => {
-  if ((listPull.value.length >= MAX_DATA_LEN && !isRefresh) || pullloading.value) {
-    return;
-  }
-  pullloading.value = 'loading';
-  loadData(listPull, isRefresh).then(() => {
-    pullloading.value = '';
-    refreshing.value = false;
-  });
-};
-
-const onLoadError = () => {
-  errloading.value = 'loading';
-
-  setTimeout(() => {
-    for (let i = 0; i < 8; i++) {
-      listError.value.push(`${listError.value.length + 1}`);
-    }
-    showError.value = true;
-    errloading.value = '';
-  }, 1000);
-};
-
-const onScroll = (scrollBottom: number, type?: string) => {
-  if (scrollBottom < 50) {
-    type === 'listPull' ? onLoadPull() : onLoad();
-  }
-};
 
 onMounted(() => {
-  onLoad();
-  window.onpopstate = function (event) {
+  window.onpopstate = function () {
     currentTab.value = 'info';
   };
 });
@@ -136,42 +46,8 @@ onUnmounted(() => {
 });
 
 const onChangeTab = (val: any) => {
-  list.value = [];
-  listError.value = [];
-  showError.value = false;
-
-  if (val === 'base') {
-    onLoad();
-  } else if (val === 'error-tip') {
-    onLoadError();
-  } else if (val === 'pull-refresh') {
-    onLoadPull();
-  }
   currentTab.value = val;
   history.pushState({}, '', '?tab=demo');
-};
-
-const onLoadMore = () => {
-  showError.value = false;
-  if (listError.value.length >= 60 || errloading.value) {
-    return;
-  }
-
-  errloading.value = 'loading';
-
-  setTimeout(() => {
-    for (let i = 0; i < 15; i++) {
-      listError.value.push(`${listError.value.length + 1}`);
-    }
-    errloading.value = '';
-  }, 1000);
-};
-
-const loadingPullData = computed(() => Boolean(pullloading.value));
-
-const onRefresh = () => {
-  refreshing.value = true;
-  onLoadPull(true);
 };
 </script>
 
