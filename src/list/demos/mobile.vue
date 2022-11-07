@@ -78,7 +78,6 @@ const onChangeTab = (val: any) => {
     }
   }
   .t-button {
-    background: #ffffff;
     margin: 0 16px 16px 16px;
     width: calc(100% - 32px);
   }
