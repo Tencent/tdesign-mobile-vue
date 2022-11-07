@@ -3,9 +3,11 @@
     <h1 class="title">BackTop 回到顶部</h1>
     <p class="summary">当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部</p>
     <tdesign-demo-block title="01 类型" summary="圆型返回顶部">
-      <BaseDemo />
+      <RoundDemo :visible="visible" @close="handleClose" />
     </tdesign-demo-block>
-
+    <tdesign-demo-block summary="半圆型返回顶部">
+      <HalfRoundDemo :visible="visible1" @close="handleClose1" />
+    </tdesign-demo-block>
     <tdesign-demo-block>
       <div className="content">
         <div v-for="i in 4" :key="i" class="row">
@@ -21,7 +23,22 @@
 </template>
 
 <script lang="ts" setup>
-import BaseDemo from './base.vue';
+import { ref } from 'vue';
+import RoundDemo from './round.vue';
+import HalfRoundDemo from './half-round.vue';
+
+const visible = ref(false);
+const visible1 = ref(false);
+
+const handleClose = () => {
+  visible.value = true;
+  visible1.value = false;
+};
+
+const handleClose1 = () => {
+  visible.value = false;
+  visible1.value = true;
+};
 
 const rowCols = [
   {
