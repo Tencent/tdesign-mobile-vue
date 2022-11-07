@@ -5,6 +5,32 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.14.0 `2022-11-07` 
+### ❗ Breaking Changes
+- `NavBar`: 重构组件，支持更完整的 props 和 event @TingShine ([#391](https://github.com/Tencent/tdesign-mobile-vue/pull/391))
+### 🐞 Bug Fixes
+- `Calendar`: 修复 confirmBtn 属性传递 `string` 类型时渲染错误 @anlyyao ([#454](https://github.com/Tencent/tdesign-mobile-vue/pull/454))
+- `Upload`: 修复不支持 v-model 的问题 @yuanmeda ([#460](https://github.com/Tencent/tdesign-mobile-vue/pull/460))
+### 🚧 Others
+- `Indexes`: 新增单元测试 @byq1213 ([#425](https://github.com/Tencent/tdesign-mobile-vue/pull/425))
+- `Stepper`: 更新示例代码 @TingShine ([#443](https://github.com/Tencent/tdesign-mobile-vue/pull/443))
+- `Cascader`: 更新示例代码 @TingShine ([#444](https://github.com/Tencent/tdesign-mobile-vue/pull/444))
+- `Search`: 更新示例代码 @palmcivet ([#445](https://github.com/Tencent/tdesign-mobile-vue/pull/445))
+- `Slider`: 更新示例文档 @yuanmeda ([#458](https://github.com/Tencent/tdesign-mobile-vue/pull/458))
+- `Cascader`: 新增单元测试 @anlyyao ([#452](https://github.com/Tencent/tdesign-mobile-vue/pull/452))
+- `Calendar`: 新增单元测试 @anlyyao ([#454](https://github.com/Tencent/tdesign-mobile-vue/pull/454))
+- `Overlay`: 提升组件单元测试覆盖率 @anlyyao ([#455](https://github.com/Tencent/tdesign-mobile-vue/pull/455))
+- `Message`: 提升组件单元测试覆盖率 @anlyyao ([#456](https://github.com/Tencent/tdesign-mobile-vue/pull/456))
+- `Collapse`: 移除无用代码 @anlyyao ([#457](https://github.com/Tencent/tdesign-mobile-vue/pull/457))
+- `Upload`: 更新组件示例代码 @yuanmeda ([#460](https://github.com/Tencent/tdesign-mobile-vue/pull/460))
+- `Steps`: 更新示例代码 @yuanmeda ([#459](https://github.com/Tencent/tdesign-mobile-vue/pull/459))
+- `NoticeBar`: 更新示例代码 @byq1213 ([#465](https://github.com/Tencent/tdesign-mobile-vue/pull/465))
+- `Collapse`: 更新示例代码 @yuanmeda ([#461](https://github.com/Tencent/tdesign-mobile-vue/pull/461))
+- `List`: 更新示例代码 @yuanmeda ([#464](https://github.com/Tencent/tdesign-mobile-vue/pull/464))
+- `ActionSheet`: 更新示例代码 @yuanmeda ([#462](https://github.com/Tencent/tdesign-mobile-vue/pull/462))
+- `List`: 更新示例代码 @yuanmeda ([#466](https://github.com/Tencent/tdesign-mobile-vue/pull/466))
+- `ImageViewer`: 更新示例代码 @yuanmeda ([#463](https://github.com/Tencent/tdesign-mobile-vue/pull/463))
+
 ## 🌈 0.13.0 `2022-10-31` 
 ### ❗️BREAKING CHANGES
 - `Message`:  `closeBtn` 属性不再支持 `string` 类型 @anlyyao ([#429](https://github.com/Tencent/tdesign-mobile-vue/pull/429))
