@@ -1,1104 +1,30 @@
 // Vitest Snapshot v1
 
-exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
-<div
-  class="action-sheet-base"
->
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__note"
-    >
-      
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          显示
-          
-        </span>
-      </button>
-      
-    </div>
-    <!--v-if-->
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__note"
-    >
-      
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          每页显示4个
-          
-        </span>
-      </button>
-      
-    </div>
-    <!--v-if-->
-  </div>
-  <!--teleport start-->
-  <div
-    class="t-popup t-action-sheet"
-  >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
-    >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
-    >
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          class="t-action-sheet__panel t-action-sheet__panel-grid"
-        >
-          <!-- @ts-ignore -->
-          <div
-            class="t-action-sheet__menu-wrapper"
-          >
-            <div
-              class="t-action-sheet__menu-slider"
-              style="transform: translate3d(0px, 0, 0); transition: transform 300ms;"
-            >
-              
-              <div
-                class="t-action-sheet__menu"
-              >
-                <div
-                  class="t-grid"
-                >
-                  
-                  
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="t-grid-item"
-                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
-                  >
-                    <div
-                      class="t-grid-item__image-box"
-                    >
-                      <!--v-if-->
-                      <img
-                        class="t-grid-item__image"
-                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
-                        style="width: 32px; height: 32px;"
-                      />
-                    </div>
-                    <div
-                      class="t-grid-item__text"
-                      style="padding-left: 0px;"
-                    >
-                      <div
-                        class="t-grid-item__title"
-                        style="padding-top: 8px; margin-bottom: 4px;"
-                      >
-                        文字
-                      </div>
-                      <div
-                        class="t-grid-item__description"
-                      >
-                        <!---->
-                      </div>
-                    </div>
-                  </div>
-                  
-                  
-                </div>
-              </div>
-              
-            </div>
-            <!--v-if-->
-          </div>
-          
-          <!--v-if-->
-          <button
-            class="t-action-sheet__action"
-          >
-            取消
-          </button>
-          
-        </div>
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-</div>
-`;
-
-exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
-<div
-  class="action-sheet-base"
->
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__note"
-    >
-      
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          显示
-          
-        </span>
-      </button>
-      
-    </div>
-    <!--v-if-->
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__note"
-    >
-      
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          隐藏取消选项
-          
-        </span>
-      </button>
-      
-    </div>
-    <!--v-if-->
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__note"
-    >
-      
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          自定义颜色
-          
-        </span>
-      </button>
-      
-    </div>
-    <!--v-if-->
-  </div>
-  <!--teleport start-->
-  <div
-    class="t-popup t-action-sheet"
-  >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
-    >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
-    >
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          class="t-action-sheet__panel t-action-sheet__panel-list"
-        >
-          <!-- @ts-ignore -->
-          <div
-            class="t-action-sheet__menu"
-          >
-            
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                按钮一
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                按钮二
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-              disabled=""
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                失效按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: red;"
-              >
-                告警按钮
-              </div>
-              
-            </button>
-            
-          </div>
-          
-          <div
-            class="t-action-sheet__separation"
-          />
-          <button
-            class="t-action-sheet__action"
-          >
-            取消
-          </button>
-          
-        </div>
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup t-action-sheet"
-  >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
-    >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
-    >
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          class="t-action-sheet__panel t-action-sheet__panel-list"
-        >
-          <!-- @ts-ignore -->
-          <div
-            class="t-action-sheet__menu"
-          >
-            
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                按钮一
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                按钮二
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-              disabled=""
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                失效按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: red;"
-              >
-                告警按钮
-              </div>
-              
-            </button>
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup t-action-sheet"
-  >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
-    >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
-    >
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          class="t-action-sheet__panel t-action-sheet__panel-list"
-        >
-          <!-- @ts-ignore -->
-          <div
-            class="t-action-sheet__menu"
-          >
-            
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: rgb(0, 82, 217);"
-              >
-                确定
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: red;"
-              >
-                删除
-              </div>
-              
-            </button>
-            
-          </div>
-          
-          <div
-            class="t-action-sheet__separation"
-          />
-          <button
-            class="t-action-sheet__action"
-          >
-            取消
-          </button>
-          
-        </div>
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-</div>
-`;
-
-exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
+exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
   <div
-    class="tdesign-mobile-demo"
+    class="action-sheet-demo"
+    data-v-1719f7aa=""
   >
-    <h1
-      class="title"
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-1719f7aa=""
+      role="button"
     >
-      ActionSheet 动作面板
-    </h1>
-    <p
-      class="summary"
-    >
-      从底部弹出的模态框，提供和当前场景相关的操作动作，也支持提供信息输入和描述。
-    </p>
-    <div
-      class="tdesign-mobile-demo-block"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
+      <!---->
+      <span
+        class="t-button__text"
       >
-        类型
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        列表型
-      </p>
-      
-      <div
-        class="action-sheet-demo"
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            列表型
-            
-          </span>
-        </button>
-      </div>
-      
-    </div>
-    <div
-      class="tdesign-mobile-demo-block"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        宫格型
-      </p>
-      
-      <div
-        class="action-sheet-demo"
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            宫格型-单页宫格
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            宫格型-多页宫格
-            
-          </span>
-        </button>
-      </div>
-      
-    </div>
+        
+        宫格型-多页
+        
+      </span>
+    </button>
   </div>
-  <!--teleport start-->
-  <div
-    class="t-popup t-action-sheet"
-  >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
-    >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
-    >
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          class="t-action-sheet__panel t-action-sheet__panel-list"
-        >
-          <!-- @ts-ignore -->
-          <div
-            class="t-action-sheet__menu"
-          >
-            
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                默认按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: rgb(0, 82, 217);"
-              >
-                自定义按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-              disabled=""
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                失效按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: rgb(227, 77, 89);"
-              >
-                告警按钮
-              </div>
-              
-            </button>
-            
-          </div>
-          
-          <div
-            class="t-action-sheet__separation"
-          />
-          <button
-            class="t-action-sheet__action"
-          >
-            取消
-          </button>
-          
-        </div>
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup t-action-sheet"
-  >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
-    >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
-    >
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          class="t-action-sheet__panel t-action-sheet__panel-list"
-        >
-          <!-- @ts-ignore -->
-          <div
-            class="t-action-sheet__menu"
-          >
-            
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                默认按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: rgb(0, 82, 217);"
-              >
-                自定义按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-              disabled=""
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-              >
-                失效按钮
-              </div>
-              
-            </button>
-            <button
-              class="t-action-sheet__cell"
-            >
-              
-              <div
-                class="t-action-sheet__cell-text"
-                style="color: rgb(227, 77, 89);"
-              >
-                告警按钮
-              </div>
-              
-            </button>
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
@@ -1341,13 +267,346 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                       </div>
                     </div>
                   </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              <div
+                class="t-action-sheet__menu"
+              >
+                <div
+                  class="t-grid"
+                >
+                  
+                  
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-grid-item"
+                    style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                  >
+                    <div
+                      class="t-grid-item__image-box"
+                    >
+                      <!--v-if-->
+                      <img
+                        class="t-grid-item__image"
+                        src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                        style="width: 32px; height: 32px;"
+                      />
+                    </div>
+                    <div
+                      class="t-grid-item__text"
+                      style="padding-left: 0px;"
+                    >
+                      <div
+                        class="t-grid-item__title"
+                        style="padding-top: 8px; margin-bottom: 4px;"
+                      >
+                        文字
+                      </div>
+                      <div
+                        class="t-grid-item__description"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
                   
                   
                 </div>
               </div>
               
             </div>
-            <!--v-if-->
+            <div
+              class="t-action-sheet__indicator"
+            >
+              
+              <div
+                class="t-action-sheet__indicator-item on"
+              />
+              <div
+                class="t-action-sheet__indicator-item"
+              />
+              
+            </div>
           </div>
           
           <!--v-if-->
@@ -1363,6 +622,35 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
     </transition-stub>
   </div>
   <!--teleport end-->
+  
+</div>
+`;
+
+exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="action-sheet-demo"
+    data-v-06f7cca3=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-06f7cca3=""
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        宫格型
+        
+      </span>
+    </button>
+  </div>
   <!--teleport start-->
   <div
     class="t-popup t-action-sheet"
@@ -1690,5 +978,1275 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
   </div>
   <!--teleport end-->
   
+</div>
+`;
+
+exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="action-sheet-demo"
+    data-v-443785fb=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      data-v-443785fb=""
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        列表型
+        
+      </span>
+    </button>
+  </div>
+  <!--teleport start-->
+  <div
+    class="t-popup t-action-sheet"
+  >
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+    </transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="slide-bottom"
+      persisted="true"
+    >
+      <div
+        class="t-popup--content t-popup--content-bottom"
+        style="display: none;"
+      >
+        
+        <div
+          class="t-action-sheet__panel t-action-sheet__panel-list"
+        >
+          <!-- @ts-ignore -->
+          <div
+            class="t-action-sheet__menu"
+          >
+            
+            <button
+              class="t-action-sheet__cell"
+            >
+              
+              <div
+                class="t-action-sheet__cell-text"
+              >
+                默认按钮
+              </div>
+              
+            </button>
+            <button
+              class="t-action-sheet__cell"
+            >
+              
+              <div
+                class="t-action-sheet__cell-text"
+                style="color: rgb(0, 82, 217);"
+              >
+                自定义按钮
+              </div>
+              
+            </button>
+            <button
+              class="t-action-sheet__cell"
+              disabled=""
+            >
+              
+              <div
+                class="t-action-sheet__cell-text"
+              >
+                失效按钮
+              </div>
+              
+            </button>
+            <button
+              class="t-action-sheet__cell"
+            >
+              
+              <div
+                class="t-action-sheet__cell-text"
+                style="color: rgb(227, 77, 89);"
+              >
+                告警按钮
+              </div>
+              
+            </button>
+            
+          </div>
+          
+          <div
+            class="t-action-sheet__separation"
+          />
+          <button
+            class="t-action-sheet__action"
+          >
+            取消
+          </button>
+          
+        </div>
+        
+      </div>
+    </transition-stub>
+  </div>
+  <!--teleport end-->
+  
+</div>
+`;
+
+exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  style="background-color: rgb(255, 255, 255); height: 100vh;"
+>
+  <h1
+    class="title"
+  >
+    ActionSheet 动作面板
+  </h1>
+  <p
+    class="summary"
+  >
+    底部弹起的模态面板，包含与当前情境相关的多个选项。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      01 类型
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      列表型
+    </p>
+    
+    
+    <div
+      class="action-sheet-demo"
+      data-v-443785fb=""
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-443785fb=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          列表型
+          
+        </span>
+      </button>
+    </div>
+    <!--teleport start-->
+    <div
+      class="t-popup t-action-sheet"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="fade"
+        persisted="false"
+      >
+        <transition-stub
+          appear="false"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+      </transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="slide-bottom"
+        persisted="true"
+      >
+        <div
+          class="t-popup--content t-popup--content-bottom"
+          style="display: none;"
+        >
+          
+          <div
+            class="t-action-sheet__panel t-action-sheet__panel-list"
+          >
+            <!-- @ts-ignore -->
+            <div
+              class="t-action-sheet__menu"
+            >
+              
+              <button
+                class="t-action-sheet__cell"
+              >
+                
+                <div
+                  class="t-action-sheet__cell-text"
+                >
+                  默认按钮
+                </div>
+                
+              </button>
+              <button
+                class="t-action-sheet__cell"
+              >
+                
+                <div
+                  class="t-action-sheet__cell-text"
+                  style="color: rgb(0, 82, 217);"
+                >
+                  自定义按钮
+                </div>
+                
+              </button>
+              <button
+                class="t-action-sheet__cell"
+                disabled=""
+              >
+                
+                <div
+                  class="t-action-sheet__cell-text"
+                >
+                  失效按钮
+                </div>
+                
+              </button>
+              <button
+                class="t-action-sheet__cell"
+              >
+                
+                <div
+                  class="t-action-sheet__cell-text"
+                  style="color: rgb(227, 77, 89);"
+                >
+                  告警按钮
+                </div>
+                
+              </button>
+              
+            </div>
+            
+            <div
+              class="t-action-sheet__separation"
+            />
+            <button
+              class="t-action-sheet__action"
+            >
+              取消
+            </button>
+            
+          </div>
+          
+        </div>
+      </transition-stub>
+    </div>
+    <!--teleport end-->
+    
+    
+    <div
+      class="action-sheet-demo"
+      data-v-06f7cca3=""
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-06f7cca3=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          宫格型
+          
+        </span>
+      </button>
+    </div>
+    <!--teleport start-->
+    <div
+      class="t-popup t-action-sheet"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="fade"
+        persisted="false"
+      >
+        <transition-stub
+          appear="false"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+      </transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="slide-bottom"
+        persisted="true"
+      >
+        <div
+          class="t-popup--content t-popup--content-bottom"
+          style="display: none;"
+        >
+          
+          <div
+            class="t-action-sheet__panel t-action-sheet__panel-grid"
+          >
+            <!-- @ts-ignore -->
+            <div
+              class="t-action-sheet__menu-wrapper"
+            >
+              <div
+                class="t-action-sheet__menu-slider"
+                style="transform: translate3d(0px, 0, 0); transition: transform 300ms;"
+              >
+                
+                <div
+                  class="t-action-sheet__menu"
+                >
+                  <div
+                    class="t-grid"
+                  >
+                    
+                    
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+                
+              </div>
+              <!--v-if-->
+            </div>
+            
+            <!--v-if-->
+            <button
+              class="t-action-sheet__action"
+            >
+              取消
+            </button>
+            
+          </div>
+          
+        </div>
+      </transition-stub>
+    </div>
+    <!--teleport end-->
+    
+    
+    <div
+      class="action-sheet-demo"
+      data-v-1719f7aa=""
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+        data-v-1719f7aa=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          宫格型-多页
+          
+        </span>
+      </button>
+    </div>
+    <!--teleport start-->
+    <div
+      class="t-popup t-action-sheet"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="fade"
+        persisted="false"
+      >
+        <transition-stub
+          appear="false"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+      </transition-stub>
+      <transition-stub
+        appear="false"
+        css="true"
+        name="slide-bottom"
+        persisted="true"
+      >
+        <div
+          class="t-popup--content t-popup--content-bottom"
+          style="display: none;"
+        >
+          
+          <div
+            class="t-action-sheet__panel t-action-sheet__panel-grid"
+          >
+            <!-- @ts-ignore -->
+            <div
+              class="t-action-sheet__menu-wrapper"
+            >
+              <div
+                class="t-action-sheet__menu-slider"
+                style="transform: translate3d(0px, 0, 0); transition: transform 300ms;"
+              >
+                
+                <div
+                  class="t-action-sheet__menu"
+                >
+                  <div
+                    class="t-grid"
+                  >
+                    
+                    
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+                <div
+                  class="t-action-sheet__menu"
+                >
+                  <div
+                    class="t-grid"
+                  >
+                    
+                    
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-grid-item"
+                      style="flex-basis: 25%; flex-direction: column; padding-left: 0px; padding-right: 0px; align-items: center; justify-content: center; text-align: center;"
+                    >
+                      <div
+                        class="t-grid-item__image-box"
+                      >
+                        <!--v-if-->
+                        <img
+                          class="t-grid-item__image"
+                          src="https://sola.gtimg.cn/aoi/sola/20210202154301_WqMVBt9mQS.png"
+                          style="width: 32px; height: 32px;"
+                        />
+                      </div>
+                      <div
+                        class="t-grid-item__text"
+                        style="padding-left: 0px;"
+                      >
+                        <div
+                          class="t-grid-item__title"
+                          style="padding-top: 8px; margin-bottom: 4px;"
+                        >
+                          文字
+                        </div>
+                        <div
+                          class="t-grid-item__description"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+                
+              </div>
+              <div
+                class="t-action-sheet__indicator"
+              >
+                
+                <div
+                  class="t-action-sheet__indicator-item on"
+                />
+                <div
+                  class="t-action-sheet__indicator-item"
+                />
+                
+              </div>
+            </div>
+            
+            <!--v-if-->
+            <button
+              class="t-action-sheet__action"
+            >
+              取消
+            </button>
+            
+          </div>
+          
+        </div>
+      </transition-stub>
+    </div>
+    <!--teleport end-->
+    
+    
+  </div>
 </div>
 `;
