@@ -23,7 +23,6 @@ function tapShow() {
   margin: 0 16px;
   button {
     margin-bottom: 16px;
-    background-color: #fff;
   }
 }
 </style>
