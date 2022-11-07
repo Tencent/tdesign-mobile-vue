@@ -6,3 +6,5 @@
     <t-notice-bar visible theme="error" content="错误状态公告栏错误状态公告栏"></t-notice-bar>
   </div>
 </template>
+
+<script lang="ts" setup></script>
