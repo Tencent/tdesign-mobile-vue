@@ -1122,7 +1122,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
 exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  style="background-color: rgb(255, 255, 255);"
+  style="background-color: rgb(255, 255, 255); height: 100vh;"
 >
   <h1
     class="title"
