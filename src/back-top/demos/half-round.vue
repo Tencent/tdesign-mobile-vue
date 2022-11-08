@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <div class="button-group">
-      <t-button block size="large" variant="outline" @click="onBtnClick1('half-round')">半圆白底</t-button>
-      <t-button block size="large" variant="outline" @click="onBtnClick1('half-round-dark')">半圆黑底</t-button>
-    </div>
-    <t-back-top v-show="visible" :theme="theme" text="返回顶部" />
+  <div class="button-group">
+    <t-button block size="large" variant="outline" @click="onBtnClick1('half-round')">半圆白底</t-button>
+    <t-button block size="large" variant="outline" @click="onBtnClick1('half-round-dark')">半圆黑底</t-button>
   </div>
+  <t-back-top v-show="visible" :theme="theme" text="返回顶部" />
 </template>
 
 <script lang="ts" setup>

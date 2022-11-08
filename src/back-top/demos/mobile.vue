@@ -9,12 +9,8 @@
       <HalfRoundDemo :visible="visible1" @close="handleClose1" />
     </tdesign-demo-block>
     <tdesign-demo-block>
-      <div className="content">
-        <div v-for="i in 4" :key="i" class="row">
-          <div v-for="j in 2" :key="j" class="item">
-            <t-skeleton theme="text" :row-col="rowCols" />
-          </div>
-        </div>
+      <div class="group">
+        <t-skeleton v-for="i in 4" :key="i" :row-col="rowCols" class="item" />
       </div>
     </tdesign-demo-block>
 
@@ -39,24 +35,16 @@ const handleClose1 = () => {
   visible.value = false;
   visible1.value = true;
 };
-
 const rowCols = [
   {
-    height: '171px',
-    borderRadius: '16px',
+    width: '165.5px',
+    height: '165.5px',
+    borderRadius: '12px',
   },
   1,
   {
-    width: '80%',
+    width: '100px',
   },
-  [
-    {
-      width: '60%',
-    },
-    {
-      width: '20%',
-    },
-  ],
 ];
 </script>
 
@@ -68,18 +56,14 @@ const rowCols = [
     background-color: #fff;
   }
 }
-.content {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 16px;
-
-  .row {
-    display: flex;
-    justify-content: space-between;
-    .item {
-      width: 47%;
-      margin-bottom: 16px;
-    }
+.group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 16px 30px 16px;
+  .item {
+    width: 47%;
+    margin-bottom: 16px;
   }
 }
 </style>

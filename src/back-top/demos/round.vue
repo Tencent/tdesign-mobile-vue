@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <div class="button-group">
-      <t-button block size="large" variant="outline" @click="onBtnClick('round', '顶部')">圆角白底</t-button>
-      <t-button block size="large" variant="outline" @click="onBtnClick('round-dark', '顶部')">圆角黑底</t-button>
-      <t-button block size="large" variant="outline" @click="onBtnClick('round', '')">圆白底纯图标</t-button>
-      <t-button block size="large" variant="outline" @click="onBtnClick('round-dark', '')">圆黑底纯图标</t-button>
-    </div>
-    <t-back-top v-show="visible" :theme="theme" :text="text" />
+  <div class="button-group">
+    <t-button block size="large" variant="outline" @click="onBtnClick('round', '顶部')">圆角白底</t-button>
+    <t-button block size="large" variant="outline" @click="onBtnClick('round-dark', '顶部')">圆角黑底</t-button>
+    <t-button block size="large" variant="outline" @click="onBtnClick('round', '')">圆白底纯图标</t-button>
+    <t-button block size="large" variant="outline" @click="onBtnClick('round-dark', '')">圆黑底纯图标</t-button>
   </div>
+  <t-back-top v-show="visible" :theme="theme" :text="text" />
 </template>
 
 <script lang="ts" setup>
