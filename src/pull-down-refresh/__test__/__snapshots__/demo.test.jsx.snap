@@ -119,108 +119,91 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
           拖拽该区域演示 顶部下拉刷新
         </div>
         <div
-          class="content"
+          class="group"
           data-v-43d0a031=""
         >
           
           <div
-            class="row"
+            class="t-skeleton item"
             data-v-43d0a031=""
           >
             
             <div
-              class="item"
-              data-v-43d0a031=""
+              class="t-skeleton__content"
             >
+              
               <div
-                class="t-skeleton"
-                data-v-43d0a031=""
+                class="t-skeleton__row"
               >
                 
                 <div
-                  class="t-skeleton__content"
-                >
-                  
-                  <div
-                    class="t-skeleton__row"
-                  >
-                    
-                    <div
-                      class="t-skeleton__col t-skeleton--type-text"
-                    />
-                    
-                  </div>
-                  <div
-                    class="t-skeleton__row"
-                  >
-                    
-                    <div
-                      class="t-skeleton__col t-skeleton--type-text"
-                      style="width: 80%;"
-                    />
-                    
-                  </div>
-                  <div
-                    class="t-skeleton__row"
-                  >
-                    
-                    <div
-                      class="t-skeleton__col t-skeleton--type-text"
-                      style="height: 171px; border-radius: 16px;"
-                    />
-                    
-                  </div>
-                  
-                </div>
+                  class="t-skeleton__col t-skeleton--type-text"
+                />
                 
               </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 100px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                />
+                
+              </div>
+              
             </div>
+            
+          </div>
+          <div
+            class="t-skeleton item"
+            data-v-43d0a031=""
+          >
+            
             <div
-              class="item"
-              data-v-43d0a031=""
+              class="t-skeleton__content"
             >
+              
               <div
-                class="t-skeleton"
-                data-v-43d0a031=""
+                class="t-skeleton__row"
               >
                 
                 <div
-                  class="t-skeleton__content"
-                >
-                  
-                  <div
-                    class="t-skeleton__row"
-                  >
-                    
-                    <div
-                      class="t-skeleton__col t-skeleton--type-text"
-                    />
-                    
-                  </div>
-                  <div
-                    class="t-skeleton__row"
-                  >
-                    
-                    <div
-                      class="t-skeleton__col t-skeleton--type-text"
-                      style="width: 80%;"
-                    />
-                    
-                  </div>
-                  <div
-                    class="t-skeleton__row"
-                  >
-                    
-                    <div
-                      class="t-skeleton__col t-skeleton--type-text"
-                      style="height: 171px; border-radius: 16px;"
-                    />
-                    
-                  </div>
-                  
-                </div>
+                  class="t-skeleton__col t-skeleton--type-text"
+                />
                 
               </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 100px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                />
+                
+              </div>
+              
             </div>
             
           </div>
