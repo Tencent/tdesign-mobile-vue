@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="progress-demo">
-      <t-progress :percentage="88" />
+      <t-progress :percentage="customPercentage" status="active" />
     </div>
     <div class="progress-demo">
-      <t-progress :percentage="88" status="error" />
+      <t-progress :percentage="customPercentage" status="error" />
     </div>
     <div class="progress-demo">
-      <t-progress :percentage="88" status="warning" />
+      <t-progress :percentage="customPercentage" status="warning" />
     </div>
     <div class="progress-demo">
-      <t-progress :percentage="100" />
+      <t-progress :percentage="customPercentage" status="success" />
     </div>
     <div class="progress-demo">
       <t-progress :percentage="percentage" />
@@ -32,7 +32,6 @@ const percentage = ref(88);
 function clickAdd() {
   percentage.value = Math.min(100, percentage.value + 10);
 }
-
 function clickReduce() {
   percentage.value = Math.max(0, percentage.value - 10);
 }

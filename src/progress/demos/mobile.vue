@@ -1,28 +1,41 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Progress 进度条</h1>
-    <p class="summary">展示操作的当前进度</p>
+    <p class="summary">用于展示任务当前的进度</p>
     <tdesign-demo-block title="01 类型" summary="基础进度条">
       <BaseDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="隐藏数值进度条">
+      <div class="progress-demo">
+        <t-progress :percentage="88" :label="false" />
+      </div>
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="自定义样式">
+      <CustomDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="自定义线宽">
+      <div class="progress-demo">
+        <t-progress :percentage="88" :stroke-width="20" />
+      </div>
     </tdesign-demo-block>
     <tdesign-demo-block title="02 状态" summary="默认状态">
       <div class="progress-demo">
         <t-progress :percentage="88" />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block summary="进度状态发生重大错误">
+    <tdesign-demo-block summary="错误状态">
       <div class="progress-demo">
         <t-progress :percentage="88" status="error" />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block summary="进度中止">
+    <tdesign-demo-block summary="警告状态">
       <div class="progress-demo">
         <t-progress :percentage="88" status="warning" />
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block summary="进度完成">
+    <tdesign-demo-block summary="成功状态">
       <div class="progress-demo">
-        <t-progress :percentage="100" />
+        <t-progress :percentage="88" status="success" />
       </div>
     </tdesign-demo-block>
     <tdesign-demo-block summary="过渡样式">
@@ -35,26 +48,13 @@
         </div>
       </div>
     </tdesign-demo-block>
-    <tdesign-demo-block summary="自定义颜色">
-      <TypeDemo />
-    </tdesign-demo-block>
-    <tdesign-demo-block title="03 规格" summary="带数值进度条">
-      <div class="progress-demo">
-        <t-progress :percentage="88" />
-      </div>
-    </tdesign-demo-block>
-    <tdesign-demo-block summary="无数值进度条">
-      <div class="progress-demo">
-        <t-progress :percentage="88" :label="false" />
-      </div>
-    </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 import BaseDemo from './base.vue';
-import TypeDemo from './type.vue';
+import CustomDemo from './custom.vue';
 
 const customPercentage = ref(88);
 const percentage = ref(88);

@@ -88,182 +88,39 @@ exports[`Progress > Progress baseVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Progress > Progress colorVue demo works fine 1`] = `
+exports[`Progress > Progress customVue demo works fine 1`] = `
 <div
-  data-v-64db40fb=""
+  class="progress-demo"
+  data-v-e3f135ee=""
 >
   <div
-    class="progress-demo"
-    data-v-64db40fb=""
+    class="t-progress t-progress--status--undefined"
+    data-v-e3f135ee=""
   >
     <div
-      class="t-progress t-progress--status--undefined"
-      data-v-64db40fb=""
+      class="t-progress__inner"
     >
       <div
-        class="t-progress__inner"
+        class="t-progress__bar"
+        style="background-color: rgb(234, 201, 255);"
       >
         <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
+          class="t-progress__bar-percent"
+          style="width: 88%; background: rgb(205, 4, 255);"
+        />
       </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-64db40fb=""
-  >
-    <div
-      class="t-progress t-progress--status--error"
-      data-v-64db40fb=""
-    >
       <div
-        class="t-progress__inner"
+        class="t-progress__label"
       >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-64db40fb=""
-  >
-    <div
-      class="t-progress t-progress--status--warning"
-      data-v-64db40fb=""
-    >
-      <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-64db40fb=""
-  >
-    <div
-      class="t-progress t-progress--status--success"
-      data-v-64db40fb=""
-    >
-      <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 100%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          100%
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-64db40fb=""
-  >
-    <div
-      class="t-progress t-progress--status--undefined"
-      data-v-64db40fb=""
-    >
-      <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-    <div
-      class="button-group"
-      data-v-64db40fb=""
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
-        data-v-64db40fb=""
-        role="button"
-      >
-        <!---->
+        
         <span
-          class="t-button__text"
+          class="label--color"
+          data-v-e3f135ee=""
         >
-          
-          减少
-          
+          88%
         </span>
-      </button>
-      <div
-        class="space"
-        data-v-64db40fb=""
-      />
-      <button
-        aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
-        data-v-64db40fb=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          增加
-          
-        </span>
-      </button>
+        
+      </div>
     </div>
   </div>
 </div>
@@ -284,7 +141,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     class="summary"
     data-v-6de369ba=""
   >
-    展示操作的当前进度
+    用于展示任务当前的进度
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -393,6 +250,132 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     class="tdesign-mobile-demo-block"
     data-v-6de369ba=""
   >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      隐藏数值进度条
+    </p>
+    
+    <div
+      class="progress-demo"
+      data-v-6de369ba=""
+    >
+      <div
+        class="t-progress t-progress--status--undefined"
+        data-v-6de369ba=""
+      >
+        <div
+          class="t-progress__inner"
+        >
+          <div
+            class="t-progress__bar"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%;"
+            />
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-6de369ba=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      自定义样式
+    </p>
+    
+    <div
+      class="progress-demo"
+      data-v-6de369ba=""
+      data-v-e3f135ee=""
+    >
+      <div
+        class="t-progress t-progress--status--undefined"
+        data-v-e3f135ee=""
+      >
+        <div
+          class="t-progress__inner"
+        >
+          <div
+            class="t-progress__bar"
+            style="background-color: rgb(234, 201, 255);"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%; background: rgb(205, 4, 255);"
+            />
+          </div>
+          <div
+            class="t-progress__label"
+          >
+            
+            <span
+              class="label--color"
+              data-v-e3f135ee=""
+            >
+              88%
+            </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-6de369ba=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      自定义线宽
+    </p>
+    
+    <div
+      class="progress-demo"
+      data-v-6de369ba=""
+    >
+      <div
+        class="t-progress t-progress--status--undefined"
+        data-v-6de369ba=""
+      >
+        <div
+          class="t-progress__inner"
+        >
+          <div
+            class="t-progress__bar"
+            style="height: 20px;"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%;"
+            />
+          </div>
+          <div
+            class="t-progress__label"
+          >
+            88%
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-6de369ba=""
+  >
     <h2
       class="tdesign-mobile-demo-block__title"
     >
@@ -441,7 +424,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      进度状态发生重大错误
+      错误状态
     </p>
     
     <div
@@ -481,7 +464,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      进度中止
+      警告状态
     </p>
     
     <div
@@ -521,7 +504,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      进度完成
+      成功状态
     </p>
     
     <div
@@ -540,13 +523,13 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
           >
             <div
               class="t-progress__bar-percent"
-              style="width: 100%;"
+              style="width: 88%;"
             />
           </div>
           <div
             class="t-progress__label"
           >
-            100%
+            88%
           </div>
         </div>
       </div>
@@ -632,149 +615,46 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     </div>
     
   </div>
+</div>
+`;
+
+exports[`Progress > Progress noTextVue demo works fine 1`] = `
+<div
+  class="progress-demo"
+  data-v-14ddfcb4=""
+>
   <div
-    class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
+    class="t-progress t-progress--status--undefined"
+    data-v-14ddfcb4=""
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      自定义颜色
-    </p>
-    
     <div
-      class="progress-demo"
-      data-v-3a2a3c52=""
-      data-v-6de369ba=""
+      class="t-progress__inner"
     >
       <div
-        class="t-progress t-progress--status--undefined"
-        data-v-3a2a3c52=""
+        class="t-progress__bar"
       >
         <div
-          class="t-progress__inner"
-        >
-          <div
-            class="t-progress__bar"
-            style="background-color: rgb(234, 201, 255);"
-          >
-            <div
-              class="t-progress__bar-percent"
-              style="width: 88%; background: rgb(205, 4, 255);"
-            />
-          </div>
-          <div
-            class="t-progress__label"
-          >
-            
-            <span
-              class="label--color"
-              data-v-3a2a3c52=""
-            >
-              88%
-            </span>
-            
-          </div>
-        </div>
+          class="t-progress__bar-percent"
+          style="width: 88%;"
+        />
       </div>
+      <!--v-if-->
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
-  >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      03 规格
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      带数值进度条
-    </p>
-    
-    <div
-      class="progress-demo"
-      data-v-6de369ba=""
-    >
-      <div
-        class="t-progress t-progress--status--undefined"
-        data-v-6de369ba=""
-      >
-        <div
-          class="t-progress__inner"
-        >
-          <div
-            class="t-progress__bar"
-          >
-            <div
-              class="t-progress__bar-percent"
-              style="width: 88%;"
-            />
-          </div>
-          <div
-            class="t-progress__label"
-          >
-            88%
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      无数值进度条
-    </p>
-    
-    <div
-      class="progress-demo"
-      data-v-6de369ba=""
-    >
-      <div
-        class="t-progress t-progress--status--undefined"
-        data-v-6de369ba=""
-      >
-        <div
-          class="t-progress__inner"
-        >
-          <div
-            class="t-progress__bar"
-          >
-            <div
-              class="t-progress__bar-percent"
-              style="width: 88%;"
-            />
-          </div>
-          <!--v-if-->
-        </div>
-      </div>
-    </div>
-    
   </div>
 </div>
 `;
 
-exports[`Progress > Progress textVue demo works fine 1`] = `
+exports[`Progress > Progress statusVue demo works fine 1`] = `
 <div
-  data-v-26a7c0c5=""
+  data-v-09d2fdec=""
 >
   <div
     class="progress-demo"
-    data-v-26a7c0c5=""
+    data-v-09d2fdec=""
   >
     <div
-      class="t-progress t-progress--status--undefined"
-      data-v-26a7c0c5=""
+      class="t-progress t-progress--status--active"
+      data-v-09d2fdec=""
     >
       <div
         class="t-progress__inner"
@@ -797,11 +677,11 @@ exports[`Progress > Progress textVue demo works fine 1`] = `
   </div>
   <div
     class="progress-demo"
-    data-v-26a7c0c5=""
+    data-v-09d2fdec=""
   >
     <div
-      class="t-progress t-progress--status--undefined"
-      data-v-26a7c0c5=""
+      class="t-progress t-progress--status--error"
+      data-v-09d2fdec=""
     >
       <div
         class="t-progress__inner"
@@ -814,45 +694,162 @@ exports[`Progress > Progress textVue demo works fine 1`] = `
             style="width: 88%;"
           />
         </div>
-        <!--v-if-->
+        <div
+          class="t-progress__label"
+        >
+          88%
+        </div>
       </div>
+    </div>
+  </div>
+  <div
+    class="progress-demo"
+    data-v-09d2fdec=""
+  >
+    <div
+      class="t-progress t-progress--status--warning"
+      data-v-09d2fdec=""
+    >
+      <div
+        class="t-progress__inner"
+      >
+        <div
+          class="t-progress__bar"
+        >
+          <div
+            class="t-progress__bar-percent"
+            style="width: 88%;"
+          />
+        </div>
+        <div
+          class="t-progress__label"
+        >
+          88%
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="progress-demo"
+    data-v-09d2fdec=""
+  >
+    <div
+      class="t-progress t-progress--status--success"
+      data-v-09d2fdec=""
+    >
+      <div
+        class="t-progress__inner"
+      >
+        <div
+          class="t-progress__bar"
+        >
+          <div
+            class="t-progress__bar-percent"
+            style="width: 88%;"
+          />
+        </div>
+        <div
+          class="t-progress__label"
+        >
+          88%
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="progress-demo"
+    data-v-09d2fdec=""
+  >
+    <div
+      class="t-progress t-progress--status--undefined"
+      data-v-09d2fdec=""
+    >
+      <div
+        class="t-progress__inner"
+      >
+        <div
+          class="t-progress__bar"
+        >
+          <div
+            class="t-progress__bar-percent"
+            style="width: 88%;"
+          />
+        </div>
+        <div
+          class="t-progress__label"
+        >
+          88%
+        </div>
+      </div>
+    </div>
+    <div
+      class="button-group"
+      data-v-09d2fdec=""
+    >
+      <button
+        aria-disabled="false"
+        class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
+        data-v-09d2fdec=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          减少
+          
+        </span>
+      </button>
+      <div
+        class="space"
+        data-v-09d2fdec=""
+      />
+      <button
+        aria-disabled="false"
+        class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+        data-v-09d2fdec=""
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          增加
+          
+        </span>
+      </button>
     </div>
   </div>
 </div>
 `;
 
-exports[`Progress > Progress typeVue demo works fine 1`] = `
+exports[`Progress > Progress strokeWidthVue demo works fine 1`] = `
 <div
   class="progress-demo"
-  data-v-3a2a3c52=""
+  data-v-4cd01e86=""
 >
   <div
     class="t-progress t-progress--status--undefined"
-    data-v-3a2a3c52=""
+    data-v-4cd01e86=""
   >
     <div
       class="t-progress__inner"
     >
       <div
         class="t-progress__bar"
-        style="background-color: rgb(234, 201, 255);"
+        style="height: 20px;"
       >
         <div
           class="t-progress__bar-percent"
-          style="width: 88%; background: rgb(205, 4, 255);"
+          style="width: 88%;"
         />
       </div>
       <div
         class="t-progress__label"
       >
-        
-        <span
-          class="label--color"
-          data-v-3a2a3c52=""
-        >
-          88%
-        </span>
-        
+        88%
       </div>
     </div>
   </div>
