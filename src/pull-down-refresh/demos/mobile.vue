@@ -1,130 +1,60 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <!-- <h1 class="title">PullDownRefresh 下拉刷新</h1>
-    <p class="summary">用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。</p>
-    <p class="blank"></p> -->
-    <tdesign-demo-block title="" summary="">
-      <t-tabs default-value="first">
-        <t-tab-panel value="first" label="基础用法">
-          <div class="refresh-content">
-            <t-pull-down-refresh
-              :value="refreshing1"
-              class="demo-pull-down-refresh"
-              @refresh="handleRefresh(1)"
-              @change="handleChangeRefreshing1"
-              ><div class="content-text">已下拉{{ refreshCount1 }}次</div></t-pull-down-refresh
-            >
+  <div class="tdesign-mobile-demo" :style="{ 'background-color': '#fff', height: '100vh' }">
+    <tdesign-demo-block>
+      <BaseDemo>
+        <h1 class="title">PullDownRefresh 下拉刷新</h1>
+        <p class="summary">用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。</p>
+        <div className="tdesign-mobile-block">拖拽该区域演示 顶部下拉刷新</div>
+        <div className="content">
+          <div v-for="i in 1" :key="i" class="row">
+            <div v-for="j in 2" :key="j" class="item">
+              <t-skeleton theme="text" :row-col="rowCols" />
+            </div>
           </div>
-        </t-tab-panel>
-        <t-tab-panel value="second" label="自定义文案">
-          <div class="refresh-content">
-            <t-pull-down-refresh
-              :value="refreshing2"
-              :on-change="handleChangeRefreshing2"
-              class="demo-pull-down-refresh"
-              :loading-texts="['下拉即可刷新...', '释放即可刷新...', '加载中...', '刷新成功']"
-              @refresh="handleRefresh(2)"
-            >
-              <div class="content-text">已下拉{{ refreshCount2 }}次</div></t-pull-down-refresh
-            >
-          </div>
-        </t-tab-panel>
-        <t-tab-panel value="third" label="超时事件">
-          <div class="refresh-content">
-            <t-pull-down-refresh
-              v-model="refreshing3"
-              class="demo-pull-down-refresh"
-              :loading-texts="['下拉即可刷新...', '释放即可刷新...', '加载中...', '刷新成功']"
-              :refresh-timeout="2000"
-              @refresh="handleRefresh(3)"
-              @timeout="handleTimeout"
-              ><div class="content-text">已下拉{{ refreshCount3 }}次</div></t-pull-down-refresh
-            >
-          </div>
-        </t-tab-panel>
-      </t-tabs>
+        </div>
+      </BaseDemo>
     </tdesign-demo-block>
   </div>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
-import { Toast } from '@/components';
+<script lang="ts" setup>
+import BaseDemo from './base.vue';
 
-export default defineComponent({
-  setup(props, context) {
-    const refreshing1 = ref(false);
-    const refreshCount1 = ref(0);
-    const refreshing2 = ref(false);
-    const refreshCount2 = ref(0);
-    const refreshing3 = ref(false);
-    const refreshCount3 = ref(0);
-    const handleRefresh = (value: any) => {
-      switch (value) {
-        case 1:
-          setTimeout(() => {
-            handleChangeRefreshing1(false);
-            refreshCount1.value = 1 + refreshCount1.value;
-          }, 1000);
-          break;
-        case 2:
-          setTimeout(() => {
-            handleChangeRefreshing2(false);
-            refreshCount2.value = 1 + refreshCount2.value;
-          }, 1000);
-          break;
-        default:
-          setTimeout(() => {
-            refreshing3.value = false;
-            refreshCount3.value = 1 + refreshCount3.value;
-          }, 3000);
-      }
-    };
-    const handleTimeout = () => {
-      Toast('已超时');
-      refreshCount3.value = 1 + refreshCount3.value;
-    };
-    const handleChangeRefreshing1 = (value: boolean) => {
-      refreshing1.value = value;
-    };
-    const handleChangeRefreshing2 = (value: boolean) => {
-      refreshing2.value = value;
-    };
-    const handleChangeRefreshing3 = (value: boolean) => {
-      refreshing3.value = value;
-    };
-    return {
-      refreshing1,
-      refreshing2,
-      refreshing3,
-      refreshCount1,
-      refreshCount2,
-      refreshCount3,
-      handleRefresh,
-      handleTimeout,
-      handleChangeRefreshing1,
-      handleChangeRefreshing2,
-      handleChangeRefreshing3,
-    };
+const rowCols = [
+  1,
+  {
+    width: '80%',
   },
-  data() {
-    return {};
+  {
+    height: '171px',
+    borderRadius: '16px',
   },
-  methods: {},
-});
+];
 </script>
 
 <style lang="less" scoped>
-.blank {
-  height: 30px;
+.tdesign-mobile-block {
+  box-sizing: border-box;
+  background-color: rgba(243, 243, 243, 1);
+  border-radius: 8px;
+  height: 171px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.26);
+  line-height: 171px;
+  text-align: center;
+  margin: 16px;
 }
-.demo-pull-down-refresh {
-  height: calc(100vh - 95px);
-}
-.refresh-content {
-  padding: 0 16px;
-  .content-text {
-    padding: 20px 0;
+.content {
+  box-sizing: border-box;
+  margin: 16px;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    .item {
+      width: 47%;
+      margin-bottom: 16px;
+    }
   }
 }
 </style>

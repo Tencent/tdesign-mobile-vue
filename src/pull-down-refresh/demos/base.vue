@@ -1,33 +1,23 @@
 <template>
-  <div class="tdesign-mobile-demo">
-    <tdesign-demo-block title="" summary="">
-      <t-pull-down-refresh v-model="refreshing" @refresh="handleRefresh">下拉刷新</t-pull-down-refresh>
-    </tdesign-demo-block>
-  </div>
+  <t-pull-down-refresh
+    v-model="refreshing"
+    :loading-texts="['下拉刷新', '松开刷新', '正在刷新', '刷新完成']"
+    @refresh="handleRefresh"
+  >
+    <slot> 下拉刷新 </slot>
+  </t-pull-down-refresh>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({
-  setup(props, context) {
-    const refreshing = ref(false);
-    const handleRefresh = (value: any) => {
-      refreshing.value = true;
-      setTimeout(() => {
-        refreshing.value = false;
-      }, 1000);
-    };
-    return {
-      refreshing,
-      handleRefresh,
-    };
-  },
-  data() {
-    return {};
-  },
-  methods: {},
-});
+const refreshing = ref(false);
+const handleRefresh = (value: any) => {
+  refreshing.value = true;
+  setTimeout(() => {
+    refreshing.value = false;
+  }, 1000);
+};
 </script>
 
 <style lang="less" scoped></style>
