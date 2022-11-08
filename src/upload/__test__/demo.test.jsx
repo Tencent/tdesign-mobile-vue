@@ -3,14 +3,14 @@
  */
 
 import { mount } from '@vue/test-utils';
-import baseMultipleVue from '@/upload/demos/baseMultiple.vue';
-import baseSingleVue from '@/upload/demos/baseSingle.vue';
+import baseVue from '@/upload/demos/base.vue';
 import mobileVue from '@/upload/demos/mobile.vue';
+import multipleVue from '@/upload/demos/multiple.vue';
 
 const mapper = {
-  baseMultipleVue,
-  baseSingleVue,
+  baseVue,
   mobileVue,
+  multipleVue,
 };
 
 describe('Upload', () => {

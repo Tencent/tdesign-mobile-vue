@@ -1,6 +1,6 @@
 <template>
   <t-pull-down-refresh v-model="refreshing" @refresh="onRefresh">
-    <t-list :async-loading="pullloading" @scroll="onScroll">
+    <t-list :async-loading="loading" @scroll="onScroll">
       <t-cell v-for="item in listPull" :key="item" align="middle">
         <span class="cell">{{ item }}</span>
       </t-cell>
@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const MAX_DATA_LEN = 60;
 
@@ -39,16 +39,16 @@ const loadData = (data: any, isRefresh?: Boolean) => {
 };
 
 const listPull = ref([] as Array<any>);
-const pullloading = ref('');
+const loading = ref('');
 const refreshing = ref(false);
 
 const onLoadPull = (isRefresh?: Boolean) => {
-  if ((listPull.value.length >= MAX_DATA_LEN && !isRefresh) || pullloading.value) {
+  if ((listPull.value.length >= MAX_DATA_LEN && !isRefresh) || loading.value) {
     return;
   }
-  pullloading.value = 'loading';
+  loading.value = 'loading';
   loadData(listPull, isRefresh).then(() => {
-    pullloading.value = '';
+    loading.value = '';
     refreshing.value = false;
   });
 };
@@ -63,4 +63,8 @@ const onRefresh = () => {
   refreshing.value = true;
   onLoadPull(true);
 };
+
+onMounted(() => {
+  onLoadPull();
+});
 </script>

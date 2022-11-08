@@ -1,39 +1,46 @@
 <template>
-  <div class="cell-base">
-    <t-steps v-model="current4" :readonly="false">
-      <t-step title="步骤描述1" content="辅助信息文字最多两行">
+  <div class="step-demo">
+    <t-steps v-model="current" :readonly="false">
+      <t-step title="步骤描述">
         <template #icon>
-          <t-icon name="user-filled"></t-icon>
+          <t-icon name="user"></t-icon>
         </template>
       </t-step>
-      <t-step title="未完成" content="辅助信息文字最多两行">
+      <t-step title="步骤描述">
         <template #icon>
-          <t-icon name="user-filled"></t-icon>
+          <t-icon name="location"></t-icon>
         </template>
       </t-step>
-      <t-step title="未完成" content="辅助信息文字最多两行">
+      <t-step title="步骤描述">
         <template #icon>
-          <t-icon name="user-filled"></t-icon>
+          <t-icon name="time"></t-icon>
         </template>
       </t-step>
-      <t-step title="未完成" content="辅助信息文字最多两行">
+    </t-steps>
+    <t-steps v-model="current1" :readonly="false">
+      <t-step title="步骤描述" content="辅助信息文字最多两行">
         <template #icon>
-          <t-icon name="user-filled"></t-icon>
+          <t-icon name="user"></t-icon>
+        </template>
+      </t-step>
+      <t-step title="步骤描述" content="辅助信息文字最多两行">
+        <template #icon>
+          <t-icon name="location"></t-icon>
+        </template>
+      </t-step>
+      <t-step title="步骤描述" content="辅助信息文字最多两行">
+        <template #icon>
+          <t-icon name="time"></t-icon>
         </template>
       </t-step>
     </t-steps>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
+import { Icon as TIcon } from 'tdesign-icons-vue-next';
 
-export default defineComponent({
-  setup() {
-    const current4 = ref(1);
-    return {
-      current4,
-    };
-  },
-});
+const current = ref(1);
+const current1 = ref(1);
 </script>
