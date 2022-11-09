@@ -1,17 +1,25 @@
 <template>
-  <div>
+  <tdesign-demo-block summary="默认状态">
     <div class="progress-demo">
-      <t-progress :percentage="customPercentage" status="active" />
+      <t-progress :percentage="88" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="错误状态">
     <div class="progress-demo">
-      <t-progress :percentage="customPercentage" status="error" />
+      <t-progress :percentage="88" status="error" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="警告状态">
     <div class="progress-demo">
-      <t-progress :percentage="customPercentage" status="warning" />
+      <t-progress :percentage="88" status="warning" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="成功状态">
     <div class="progress-demo">
-      <t-progress :percentage="customPercentage" status="success" />
+      <t-progress :percentage="88" status="success" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="过渡样式">
     <div class="progress-demo">
       <t-progress :percentage="percentage" />
       <div class="button-group">
@@ -20,7 +28,7 @@
         <t-button theme="primary" size="small" @click="clickAdd">增加</t-button>
       </div>
     </div>
-  </div>
+  </tdesign-demo-block>
 </template>
 
 <script lang="ts" setup>
