@@ -259,11 +259,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     
     <div
       class="progress-demo"
+      data-v-14ddfcb4=""
       data-v-6de369ba=""
     >
       <div
         class="t-progress t-progress--status--undefined"
-        data-v-6de369ba=""
+        data-v-14ddfcb4=""
       >
         <div
           class="t-progress__inner"
@@ -344,11 +345,12 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     
     <div
       class="progress-demo"
+      data-v-4cd01e86=""
       data-v-6de369ba=""
     >
       <div
         class="t-progress t-progress--status--undefined"
-        data-v-6de369ba=""
+        data-v-4cd01e86=""
       >
         <div
           class="t-progress__inner"
@@ -381,238 +383,249 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     >
       02 状态
     </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      默认状态
-    </p>
-    
-    <div
-      class="progress-demo"
-      data-v-6de369ba=""
-    >
-      <div
-        class="t-progress t-progress--status--undefined"
-        data-v-6de369ba=""
-      >
-        <div
-          class="t-progress__inner"
-        >
-          <div
-            class="t-progress__bar"
-          >
-            <div
-              class="t-progress__bar-percent"
-              style="width: 88%;"
-            />
-          </div>
-          <div
-            class="t-progress__label"
-          >
-            88%
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
-  >
     <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      错误状态
-    </p>
+    
     
     <div
-      class="progress-demo"
-      data-v-6de369ba=""
+      class="tdesign-mobile-demo-block"
+      data-v-09d2fdec=""
     >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        默认状态
+      </p>
+      
       <div
-        class="t-progress t-progress--status--error"
-        data-v-6de369ba=""
+        class="progress-demo"
+        data-v-09d2fdec=""
       >
         <div
-          class="t-progress__inner"
+          class="t-progress t-progress--status--undefined"
+          data-v-09d2fdec=""
         >
           <div
-            class="t-progress__bar"
+            class="t-progress__inner"
           >
             <div
-              class="t-progress__bar-percent"
-              style="width: 88%;"
-            />
-          </div>
-          <div
-            class="t-progress__label"
-          >
-            88%
+              class="t-progress__bar"
+            >
+              <div
+                class="t-progress__bar-percent"
+                style="width: 88%;"
+              />
+            </div>
+            <div
+              class="t-progress__label"
+            >
+              88%
+            </div>
           </div>
         </div>
       </div>
+      
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      警告状态
-    </p>
-    
     <div
-      class="progress-demo"
-      data-v-6de369ba=""
+      class="tdesign-mobile-demo-block"
+      data-v-09d2fdec=""
     >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        错误状态
+      </p>
+      
       <div
-        class="t-progress t-progress--status--warning"
-        data-v-6de369ba=""
+        class="progress-demo"
+        data-v-09d2fdec=""
       >
         <div
-          class="t-progress__inner"
+          class="t-progress t-progress--status--error"
+          data-v-09d2fdec=""
         >
           <div
-            class="t-progress__bar"
+            class="t-progress__inner"
           >
             <div
-              class="t-progress__bar-percent"
-              style="width: 88%;"
-            />
-          </div>
-          <div
-            class="t-progress__label"
-          >
-            88%
+              class="t-progress__bar"
+            >
+              <div
+                class="t-progress__bar-percent"
+                style="width: 88%;"
+              />
+            </div>
+            <div
+              class="t-progress__label"
+            >
+              88%
+            </div>
           </div>
         </div>
       </div>
+      
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      成功状态
-    </p>
-    
     <div
-      class="progress-demo"
-      data-v-6de369ba=""
+      class="tdesign-mobile-demo-block"
+      data-v-09d2fdec=""
     >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        警告状态
+      </p>
+      
       <div
-        class="t-progress t-progress--status--success"
-        data-v-6de369ba=""
+        class="progress-demo"
+        data-v-09d2fdec=""
       >
         <div
-          class="t-progress__inner"
+          class="t-progress t-progress--status--warning"
+          data-v-09d2fdec=""
         >
           <div
-            class="t-progress__bar"
+            class="t-progress__inner"
           >
             <div
-              class="t-progress__bar-percent"
-              style="width: 88%;"
-            />
-          </div>
-          <div
-            class="t-progress__label"
-          >
-            88%
+              class="t-progress__bar"
+            >
+              <div
+                class="t-progress__bar-percent"
+                style="width: 88%;"
+              />
+            </div>
+            <div
+              class="t-progress__label"
+            >
+              88%
+            </div>
           </div>
         </div>
       </div>
+      
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-6de369ba=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      过渡样式
-    </p>
-    
     <div
-      class="progress-demo"
-      data-v-6de369ba=""
+      class="tdesign-mobile-demo-block"
+      data-v-09d2fdec=""
     >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        成功状态
+      </p>
+      
       <div
-        class="t-progress t-progress--status--undefined"
-        data-v-6de369ba=""
+        class="progress-demo"
+        data-v-09d2fdec=""
       >
         <div
-          class="t-progress__inner"
+          class="t-progress t-progress--status--success"
+          data-v-09d2fdec=""
         >
           <div
-            class="t-progress__bar"
+            class="t-progress__inner"
           >
             <div
-              class="t-progress__bar-percent"
-              style="width: 88%;"
-            />
-          </div>
-          <div
-            class="t-progress__label"
-          >
-            88%
+              class="t-progress__bar"
+            >
+              <div
+                class="t-progress__bar-percent"
+                style="width: 88%;"
+              />
+            </div>
+            <div
+              class="t-progress__label"
+            >
+              88%
+            </div>
           </div>
         </div>
       </div>
-      <div
-        class="button-group"
-        data-v-6de369ba=""
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
-          data-v-6de369ba=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            减少
-            
-          </span>
-        </button>
-        <div
-          class="space"
-          data-v-6de369ba=""
-        />
-        <button
-          aria-disabled="false"
-          class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
-          data-v-6de369ba=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            增加
-            
-          </span>
-        </button>
-      </div>
+      
     </div>
+    <div
+      class="tdesign-mobile-demo-block"
+      data-v-09d2fdec=""
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        过渡样式
+      </p>
+      
+      <div
+        class="progress-demo"
+        data-v-09d2fdec=""
+      >
+        <div
+          class="t-progress t-progress--status--undefined"
+          data-v-09d2fdec=""
+        >
+          <div
+            class="t-progress__inner"
+          >
+            <div
+              class="t-progress__bar"
+            >
+              <div
+                class="t-progress__bar-percent"
+                style="width: 88%;"
+              />
+            </div>
+            <div
+              class="t-progress__label"
+            >
+              88%
+            </div>
+          </div>
+        </div>
+        <div
+          class="button-group"
+          data-v-09d2fdec=""
+        >
+          <button
+            aria-disabled="false"
+            class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
+            data-v-09d2fdec=""
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              减少
+              
+            </span>
+          </button>
+          <div
+            class="space"
+            data-v-09d2fdec=""
+          />
+          <button
+            aria-disabled="false"
+            class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+            data-v-09d2fdec=""
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              增加
+              
+            </span>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+    
     
   </div>
 </div>
@@ -646,182 +659,249 @@ exports[`Progress > Progress noTextVue demo works fine 1`] = `
 
 exports[`Progress > Progress statusVue demo works fine 1`] = `
 <div
-  data-v-09d2fdec=""
+  data-v-app=""
 >
+  
   <div
-    class="progress-demo"
+    class="tdesign-mobile-demo-block"
     data-v-09d2fdec=""
   >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      默认状态
+    </p>
+    
     <div
-      class="t-progress t-progress--status--active"
+      class="progress-demo"
       data-v-09d2fdec=""
     >
       <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-09d2fdec=""
-  >
-    <div
-      class="t-progress t-progress--status--error"
-      data-v-09d2fdec=""
-    >
-      <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-09d2fdec=""
-  >
-    <div
-      class="t-progress t-progress--status--warning"
-      data-v-09d2fdec=""
-    >
-      <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-09d2fdec=""
-  >
-    <div
-      class="t-progress t-progress--status--success"
-      data-v-09d2fdec=""
-    >
-      <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="progress-demo"
-    data-v-09d2fdec=""
-  >
-    <div
-      class="t-progress t-progress--status--undefined"
-      data-v-09d2fdec=""
-    >
-      <div
-        class="t-progress__inner"
-      >
-        <div
-          class="t-progress__bar"
-        >
-          <div
-            class="t-progress__bar-percent"
-            style="width: 88%;"
-          />
-        </div>
-        <div
-          class="t-progress__label"
-        >
-          88%
-        </div>
-      </div>
-    </div>
-    <div
-      class="button-group"
-      data-v-09d2fdec=""
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
+        class="t-progress t-progress--status--undefined"
         data-v-09d2fdec=""
-        role="button"
       >
-        <!---->
-        <span
-          class="t-button__text"
+        <div
+          class="t-progress__inner"
         >
-          
-          减少
-          
-        </span>
-      </button>
-      <div
-        class="space"
-        data-v-09d2fdec=""
-      />
-      <button
-        aria-disabled="false"
-        class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
-        data-v-09d2fdec=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          增加
-          
-        </span>
-      </button>
+          <div
+            class="t-progress__bar"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%;"
+            />
+          </div>
+          <div
+            class="t-progress__label"
+          >
+            88%
+          </div>
+        </div>
+      </div>
     </div>
+    
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-09d2fdec=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      错误状态
+    </p>
+    
+    <div
+      class="progress-demo"
+      data-v-09d2fdec=""
+    >
+      <div
+        class="t-progress t-progress--status--error"
+        data-v-09d2fdec=""
+      >
+        <div
+          class="t-progress__inner"
+        >
+          <div
+            class="t-progress__bar"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%;"
+            />
+          </div>
+          <div
+            class="t-progress__label"
+          >
+            88%
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-09d2fdec=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      警告状态
+    </p>
+    
+    <div
+      class="progress-demo"
+      data-v-09d2fdec=""
+    >
+      <div
+        class="t-progress t-progress--status--warning"
+        data-v-09d2fdec=""
+      >
+        <div
+          class="t-progress__inner"
+        >
+          <div
+            class="t-progress__bar"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%;"
+            />
+          </div>
+          <div
+            class="t-progress__label"
+          >
+            88%
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-09d2fdec=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      成功状态
+    </p>
+    
+    <div
+      class="progress-demo"
+      data-v-09d2fdec=""
+    >
+      <div
+        class="t-progress t-progress--status--success"
+        data-v-09d2fdec=""
+      >
+        <div
+          class="t-progress__inner"
+        >
+          <div
+            class="t-progress__bar"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%;"
+            />
+          </div>
+          <div
+            class="t-progress__label"
+          >
+            88%
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-09d2fdec=""
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      过渡样式
+    </p>
+    
+    <div
+      class="progress-demo"
+      data-v-09d2fdec=""
+    >
+      <div
+        class="t-progress t-progress--status--undefined"
+        data-v-09d2fdec=""
+      >
+        <div
+          class="t-progress__inner"
+        >
+          <div
+            class="t-progress__bar"
+          >
+            <div
+              class="t-progress__bar-percent"
+              style="width: 88%;"
+            />
+          </div>
+          <div
+            class="t-progress__label"
+          >
+            88%
+          </div>
+        </div>
+      </div>
+      <div
+        class="button-group"
+        data-v-09d2fdec=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
+          data-v-09d2fdec=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            减少
+            
+          </span>
+        </button>
+        <div
+          class="space"
+          data-v-09d2fdec=""
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+          data-v-09d2fdec=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            增加
+            
+          </span>
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  
 </div>
 `;
 
