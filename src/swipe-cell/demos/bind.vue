@@ -14,33 +14,23 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive } from 'vue';
+<script setup lang="ts">
+import { reactive } from 'vue';
 import Toast from '../../toast/index';
 
 interface InitData {
   expanded: 'left' | 'right' | undefined;
 }
-export default defineComponent({
-  setup() {
-    const initData: InitData = reactive({
-      expanded: 'right',
-    });
-    const handleClick = () => {
-      Toast('click');
-    };
-    const handleChange = (value: InitData['expanded']) => {
-      initData.expanded = value;
-    };
-    const handleChangeSwitch = (value: boolean) => {
-      initData.expanded = value ? 'right' : undefined;
-    };
-    return {
-      initData,
-      handleClick,
-      handleChange,
-      handleChangeSwitch,
-    };
-  },
+const initData: InitData = reactive({
+  expanded: 'right',
 });
+const handleClick = () => {
+  Toast('click');
+};
+const handleChange = (value: InitData['expanded']) => {
+  initData.expanded = value;
+};
+const handleChangeSwitch = (value: boolean) => {
+  initData.expanded = value ? 'right' : undefined;
+};
 </script>

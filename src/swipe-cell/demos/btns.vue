@@ -15,28 +15,19 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive, ref } from 'vue';
+<script setup lang="ts">
+import { reactive } from 'vue';
 import Toast from '../../toast/index';
 import { SwipeActionItem } from '../type';
 
-export default defineComponent({
-  setup() {
-    const initData = reactive({
-      showDialog: false,
-      disabled: false,
-    });
-    const handleClick = (value: { action: SwipeActionItem; source: String }) => {
-      Toast(JSON.stringify(value));
-    };
-    const handleClickLeft = () => {
-      Toast('click');
-    };
-    return {
-      initData,
-      handleClick,
-      handleClickLeft,
-    };
-  },
+const initData = reactive({
+  showDialog: false,
+  disabled: false,
 });
+const handleClick = (value: { action: SwipeActionItem; source: String }) => {
+  Toast(JSON.stringify(value));
+};
+const handleClickLeft = () => {
+  Toast('click');
+};
 </script>

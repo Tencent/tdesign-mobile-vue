@@ -2293,6 +2293,419 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
     </div>
     
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      通过直接传入内容或者使用 slot#content 来渲染
+    </p>
+    
+    <div
+      class="t-swipe-cell"
+    >
+      <div
+        class="t-swipe-cell__wrapper"
+        style="transform: translate3d(0px,0,0);"
+      >
+        <div
+          class="t-swipe-cell__left"
+          style="width: auto;"
+        >
+          <!---->
+          
+          
+        </div>
+        <div
+          class="t-swipe-cell__content"
+        >
+          
+          <div
+            style="padding: 10px;"
+          >
+            直接写组件
+          </div>
+          
+        </div>
+        <div
+          class="t-swipe-cell__right"
+          style="width: auto;"
+        >
+          
+          <div>
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+              role="button"
+              style="height: 100%;"
+              type="submit"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                
+                收藏
+                
+              </span>
+            </button>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      是否启用滑动功能
+    </p>
+    
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        开关
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        
+        <span
+          class="t-switch"
+        >
+          <!--v-if-->
+          <span
+            class="t-switch__node"
+            style=""
+          />
+        </span>
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="t-swipe-cell"
+    >
+      <div
+        class="t-swipe-cell__wrapper"
+        style="transform: translate3d(0px,0,0);"
+      >
+        <div
+          class="t-swipe-cell__left"
+          style="width: auto;"
+        >
+          <!---->
+          
+          
+        </div>
+        <div
+          class="t-swipe-cell__content"
+        >
+          
+          <div
+            class="t-cell t-cell--middle t-cell--bordered"
+          >
+            <div
+              class="t-cell__left-icon"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              可以滑动
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          
+        </div>
+        <div
+          class="t-swipe-cell__right"
+          style="width: auto;"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+            role="button"
+            style="height: 100%;"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              收藏
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-s t-button--base t-button--danger t-button--shape-rectangle"
+            role="button"
+            style="height: 100%;"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              删除
+              
+            </span>
+          </button>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      左右两侧都有菜单
+    </p>
+    
+    <div
+      class="t-swipe-cell"
+    >
+      <div
+        class="t-swipe-cell__wrapper"
+        style="transform: translate3d(0px,0,0);"
+      >
+        <div
+          class="t-swipe-cell__left"
+          style="width: auto;"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--theme t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              选择
+              
+            </span>
+          </button>
+          
+          
+          
+        </div>
+        <div
+          class="t-swipe-cell__content"
+        >
+          
+          <div
+            class="t-cell t-cell--middle t-cell--bordered"
+          >
+            <div
+              class="t-cell__left-icon"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              左右都有菜单
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          
+        </div>
+        <div
+          class="t-swipe-cell__right"
+          style="width: auto;"
+        >
+          
+          <div>
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--theme t-button--shape-rectangle"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                
+                收藏
+                
+              </span>
+            </button>
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                
+                删除
+                
+              </span>
+            </button>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      点击事件
+    </p>
+    
+    <div
+      class="t-swipe-cell"
+    >
+      <div
+        class="t-swipe-cell__wrapper"
+        style="transform: translate3d(0px,0,0);"
+      >
+        <div
+          class="t-swipe-cell__left"
+          style="width: auto;"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              选择
+              
+            </span>
+          </button>
+          
+          
+          
+        </div>
+        <div
+          class="t-swipe-cell__content"
+        >
+          
+          <div
+            class="t-cell t-cell--middle t-cell--bordered"
+          >
+            <div
+              class="t-cell__left-icon"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              左右都有内容
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+        </div>
+        <div
+          class="t-swipe-cell__right"
+          style="width: auto;"
+        >
+          
+          
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+            role="button"
+            style="height: 100%;"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              编辑
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+            role="button"
+            style="height: 100%;"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              删除
+              
+            </span>
+          </button>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
 </div>
 `;
 

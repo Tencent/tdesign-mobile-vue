@@ -13,21 +13,13 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive } from 'vue';
+<script setup lang="ts">
+import { reactive } from 'vue';
 
-export default defineComponent({
-  setup() {
-    const initData = reactive({
-      disabled: false,
-    });
-    const handleChange = (value: boolean) => {
-      initData.disabled = value;
-    };
-    return {
-      initData,
-      handleChange,
-    };
-  },
+const initData = reactive({
+  disabled: false,
 });
+const handleChange = (value: boolean) => {
+  initData.disabled = value;
+};
 </script>

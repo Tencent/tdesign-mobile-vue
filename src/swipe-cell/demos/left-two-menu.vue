@@ -11,32 +11,29 @@
   </tdesign-demo-block>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive } from 'vue';
+<script setup lang="ts">
+import { reactive } from 'vue';
 import Toast from '../../toast/index';
 import { SwipeActionItem } from '../type';
 
 interface InitData {
   btns: {}[];
 }
-export default defineComponent({
-  setup() {
-    const handleEdit = () => {
-      Toast.success(`编辑成功`);
-    };
-    const handleClickBtns = (value: { action: SwipeActionItem; source: String }) => {
-      Toast(JSON.stringify(value));
-    };
-    const initData: InitData = reactive({
-      btns: [
-        { text: '编辑', className: 't-button--primary', onClick: handleEdit },
-        { text: '删除', className: 't-button--danger' },
-      ],
-    });
-    return {
-      initData,
-      handleClickBtns,
-    };
-  },
+const handleEdit = () => {
+  Toast.success(`编辑成功`);
+};
+
+const handleDelete = () => {
+  Toast.success(`删除成功`);
+};
+
+const handleClickBtns = (value: { action: SwipeActionItem; source: String }) => {
+  Toast(JSON.stringify(value));
+};
+const initData: InitData = reactive({
+  btns: [
+    { text: '编辑', className: 't-button--primary', onClick: handleEdit },
+    { text: '删除', className: 't-button--danger', onClick: handleDelete },
+  ],
 });
 </script>
