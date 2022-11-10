@@ -1,17 +1,25 @@
 <template>
-  <div>
+  <tdesign-demo-block summary="默认状态">
     <div class="progress-demo">
       <t-progress :percentage="88" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="错误状态">
     <div class="progress-demo">
       <t-progress :percentage="88" status="error" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="警告状态">
     <div class="progress-demo">
       <t-progress :percentage="88" status="warning" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="成功状态">
     <div class="progress-demo">
-      <t-progress :percentage="100" />
+      <t-progress :percentage="88" status="success" />
     </div>
+  </tdesign-demo-block>
+  <tdesign-demo-block summary="过渡样式">
     <div class="progress-demo">
       <t-progress :percentage="percentage" />
       <div class="button-group">
@@ -20,7 +28,7 @@
         <t-button theme="primary" size="small" @click="clickAdd">增加</t-button>
       </div>
     </div>
-  </div>
+  </tdesign-demo-block>
 </template>
 
 <script lang="ts" setup>
@@ -32,7 +40,6 @@ const percentage = ref(88);
 function clickAdd() {
   percentage.value = Math.min(100, percentage.value + 10);
 }
-
 function clickReduce() {
   percentage.value = Math.max(0, percentage.value - 10);
 }
