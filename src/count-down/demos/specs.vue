@@ -77,25 +77,21 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { TimeData } from '../type';
+<script lang="ts" setup>
+interface TimeData {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  milliseconds: number;
+}
 
-export default defineComponent({
-  setup() {
-    const onChange = (val: TimeData) => {
-      // console.log('onChange', val);
-    };
-    const onFinish = () => {
-      console.log('onFinish');
-    };
-
-    return {
-      onChange,
-      onFinish,
-    };
-  },
-});
+const onChange = (val: TimeData) => {
+  console.log('onChange', val);
+};
+const onFinish = () => {
+  console.log('onFinish');
+};
 </script>
 
 <style lang="less">
