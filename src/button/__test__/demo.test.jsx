@@ -4,22 +4,16 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/button/demos/base.vue';
-import iconVue from '@/button/demos/icon.vue';
-import loadingVue from '@/button/demos/loading.vue';
 import mobileVue from '@/button/demos/mobile.vue';
-import otherVue from '@/button/demos/other.vue';
-import shapeVue from '@/button/demos/shape.vue';
 import sizeVue from '@/button/demos/size.vue';
+import statusVue from '@/button/demos/status.vue';
 import testVue from '@/button/demos/test.vue';
 
 const mapper = {
   baseVue,
-  iconVue,
-  loadingVue,
   mobileVue,
-  otherVue,
-  shapeVue,
   sizeVue,
+  statusVue,
   testVue,
 };
 
