@@ -2,7 +2,12 @@
   <div :class="classes" @click="clickBackBtn">
     <t-node v-if="iconTNode" :content="iconTNode" />
     <t-icon-back-top v-else />
-    <span v-if="text" :class="`${name}__text`">{{ text }}</span>
+    <span
+      v-if="text"
+      :class="`${name}__text`"
+      :style="{ 'min-width': '12px', 'max-width': '24px', width: 'auto', display: 'inline-block' }"
+      >{{ text }}</span
+    >
   </div>
 </template>
 

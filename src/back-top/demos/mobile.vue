@@ -1,38 +1,16 @@
 <template>
-  <div class="tdesign-mobile-demo">
+  <div class="tdesign-mobile-demo" :style="{ 'background-color': '#fff' }">
     <h1 class="title">BackTop 回到顶部</h1>
-    <p class="summary">用于当页面过长往下滑动时，帮助用户快速回到页面顶部</p>
-    <t-back-top v-show="showBackTop" :theme="theme" :text="text" />
-    <t-back-top v-show="showBackTop2" text="顶部">
-      <template #icon>
-        <div></div>
-      </template>
-    </t-back-top>
-    <t-back-top v-show="showBackTop3" text="顶部" />
-    <t-back-top v-show="showBackTop4" :target="myDOMTarget" text="target" />
-    <tdesign-demo-block
-      title="01 类型"
-      summary="通过设置theme属性，可以分别展示圆+白、半圆+白、圆+黑、半圆+黑四种样式类型"
-    >
-      <div class="button-group">
-        <t-button block size="large" variant="outline" data-index="0" @click="onBtnClick">圆角白底</t-button>
-        <t-button block size="large" variant="outline" data-index="1" @click="onBtnClick">圆角黑底</t-button>
-        <t-button block size="large" variant="outline" data-index="2" @click="onBtnClick">半圆白底</t-button>
-        <t-button block size="large" variant="outline" data-index="3" @click="onBtnClick">半圆黑底</t-button>
-      </div>
+    <p class="summary">当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部</p>
+    <tdesign-demo-block title="01 类型" summary="圆型返回顶部">
+      <RoundDemo :visible="visible" :style="style" @close="handleClose" />
     </tdesign-demo-block>
-
-    <tdesign-demo-block title="02 内容" summary="通过设置text、icon属性，可以控制悬浮按钮的展示内容">
-      <div class="button-group">
-        <t-button block size="large" variant="outline" data-index="4" @click="onBtnClick">纯图标</t-button>
-        <t-button block size="large" variant="outline" @click="onBtnClick2">纯文字</t-button>
-        <t-button block size="large" variant="outline" @click="onBtnClick3">自定义图标</t-button>
-      </div>
+    <tdesign-demo-block summary="半圆型返回顶部">
+      <HalfRoundDemo :visible="visible1" :style="style" @close="handleClose1" />
     </tdesign-demo-block>
-
-    <tdesign-demo-block title="03 返回" summary="通过设置target属性，可以控制页面滚动到对应的DOM元素">
-      <div ref="myDOM" class="button-group">
-        <t-button block size="large" variant="outline" @click="onBtnClick4">回到此按钮</t-button>
+    <tdesign-demo-block>
+      <div class="group">
+        <t-skeleton v-for="i in 4" :key="i" :row-col="rowCols" class="item" />
       </div>
     </tdesign-demo-block>
 
@@ -40,79 +18,43 @@
   </div>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent, reactive, toRefs } from 'vue';
-import config from '../../config';
+<script lang="ts" setup>
+import { ref } from 'vue';
+import RoundDemo from './round.vue';
+import HalfRoundDemo from './half-round.vue';
 
-const { prefix } = config;
-const name = `${prefix}-back-top`;
-const backTopDemos = [
-  { text: '顶部', theme: 'round' },
-  { text: '顶部', theme: 'round-dark' },
-  { text: '返回', theme: 'half-round' },
-  { text: '返回', theme: 'half-round-dark' },
-  { text: '', theme: 'round' },
-];
-export default defineComponent({
-  setup() {
-    const showBackTop = ref(false);
-    const showBackTop2 = ref(false);
-    const showBackTop3 = ref(false);
-    const showBackTop4 = ref(false);
-    const myDOM = ref(null);
-    const text = ref(backTopDemos[0].text);
-    const theme = ref(backTopDemos[0].theme);
-    const onBtnClick = (e: any) => {
-      text.value = backTopDemos[e.currentTarget.dataset.index].text;
-      theme.value = backTopDemos[e.currentTarget.dataset.index].theme;
-      showBackTop2.value = false;
-      showBackTop3.value = false;
-      showBackTop4.value = false;
-      showBackTop.value = true;
-      window.scrollTo(0, 1200);
-    };
+const visible = ref(false);
+const visible1 = ref(false);
+const style = ref({});
 
-    const onBtnClick2 = () => {
-      showBackTop.value = false;
-      showBackTop2.value = true;
-      showBackTop3.value = false;
-      showBackTop4.value = false;
-      window.scrollTo(0, 1200);
-    };
+const handleClose = () => {
+  visible.value = true;
+  visible1.value = false;
+};
 
-    const onBtnClick3 = () => {
-      showBackTop.value = false;
-      showBackTop2.value = false;
-      showBackTop3.value = true;
-      showBackTop4.value = false;
-      window.scrollTo(0, 1200);
-    };
-
-    const onBtnClick4 = () => {
-      showBackTop.value = false;
-      showBackTop2.value = false;
-      showBackTop3.value = false;
-      showBackTop4.value = true;
-      window.scrollTo(0, 1200);
-    };
-
-    const myDOMTarget = () => myDOM.value;
-    return {
-      name,
-      myDOM,
-      text,
-      theme,
-      showBackTop,
-      showBackTop2,
-      showBackTop3,
-      showBackTop4,
-      onBtnClick,
-      onBtnClick2,
-      onBtnClick3,
-      onBtnClick4,
-      myDOMTarget,
-    };
+const handleClose1 = () => {
+  visible.value = false;
+  visible1.value = true;
+};
+const rowCols = [
+  {
+    width: '165.5px',
+    height: '165.5px',
+    borderRadius: '12px',
   },
+  1,
+  {
+    width: '100px',
+  },
+];
+
+window.document.addEventListener('scroll', function (e: Event) {
+  const { scrollTop } = e.currentTarget?.scrollingElement || {};
+  if (scrollTop <= 300) {
+    style.value = { display: 'none' };
+  } else {
+    style.value = { display: 'block' };
+  }
 });
 </script>
 
@@ -121,9 +63,17 @@ export default defineComponent({
   padding: 8px 16px 16px;
   .t-button {
     margin-bottom: 10px;
+    background-color: #fff;
   }
 }
-.blank {
-  height: 800px;
+.group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 16px 30px 16px;
+  .item {
+    width: 47%;
+    margin-bottom: 16px;
+  }
 }
 </style>
