@@ -3,11 +3,13 @@
  */
 
 import { mount } from '@vue/test-utils';
+import gridMultipleVue from '@/action-sheet/demos/grid-multiple.vue';
 import gridVue from '@/action-sheet/demos/grid.vue';
 import listVue from '@/action-sheet/demos/list.vue';
 import mobileVue from '@/action-sheet/demos/mobile.vue';
 
 const mapper = {
+  gridMultipleVue,
   gridVue,
   listVue,
   mobileVue,

@@ -4,17 +4,19 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/progress/demos/base.vue';
-import colorVue from '@/progress/demos/color.vue';
+import customVue from '@/progress/demos/custom.vue';
 import mobileVue from '@/progress/demos/mobile.vue';
-import textVue from '@/progress/demos/text.vue';
-import typeVue from '@/progress/demos/type.vue';
+import noTextVue from '@/progress/demos/noText.vue';
+import statusVue from '@/progress/demos/status.vue';
+import strokeWidthVue from '@/progress/demos/strokeWidth.vue';
 
 const mapper = {
   baseVue,
-  colorVue,
+  customVue,
   mobileVue,
-  textVue,
-  typeVue,
+  noTextVue,
+  statusVue,
+  strokeWidthVue,
 };
 
 describe('Progress', () => {
