@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo">
+  <tdesign-demo-block summary="通过直接传入内容或者使用 slot#content 来渲染">
     <t-swipe-cell>
       <template #content>
         <div style="padding: 10px">使用slot#content</div>
@@ -11,7 +11,7 @@
         </div>
       </template>
     </t-swipe-cell>
-  </div>
+  </tdesign-demo-block>
 </template>
 
 <script setup lang="ts"></script>

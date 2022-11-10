@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo">
+  <tdesign-demo-block summary="左右两侧都有菜单">
     <t-swipe-cell>
       <t-cell title="左右都有菜单"></t-cell>
       <template #left>
@@ -12,7 +12,7 @@
         </div>
       </template>
     </t-swipe-cell>
-  </div>
+  </tdesign-demo-block>
 </template>
 
 <script setup lang="ts">

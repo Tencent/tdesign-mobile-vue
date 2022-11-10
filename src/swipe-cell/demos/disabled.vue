@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo">
+  <tdesign-demo-block summary="是否启用滑动功能">
     <t-cell title="开关">
       <t-switch v-model="initData.disabled" @change="(value) => handleChange(value)"> </t-switch>
     </t-cell>
@@ -10,7 +10,7 @@
         <t-button theme="danger" style="height: 100%" size="small">删除</t-button>
       </template>
     </t-swipe-cell>
-  </div>
+  </tdesign-demo-block>
 </template>
 
 <script setup lang="ts">
