@@ -164,7 +164,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                         class="t-cascader-item-content"
                       >
                         <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                        广东省
+                         广东省
                       </div>
                       <div
                         class="t-cascader-item-active-icon"
@@ -192,7 +192,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                         class="t-cascader-item-content"
                       >
                         <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                        福建省
+                         福建省
                       </div>
                       <div
                         class="t-cascader-item-active-icon"
@@ -418,7 +418,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-cascader-item-content"
                         >
                           <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                          广东省
+                           广东省
                         </div>
                         <div
                           class="t-cascader-item-active-icon"
@@ -446,7 +446,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-cascader-item-content"
                         >
                           <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                          福建省
+                           福建省
                         </div>
                         <div
                           class="t-cascader-item-active-icon"
@@ -657,7 +657,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-cascader-item-content"
                         >
                           <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                          浙江省
+                           浙江省
                         </div>
                         <div
                           class="t-cascader-item-active-icon"
@@ -685,7 +685,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                           class="t-cascader-item-content"
                         >
                           <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                          江苏省
+                           江苏省
                         </div>
                         <div
                           class="t-cascader-item-active-icon"
@@ -889,7 +889,7 @@ exports[`Cascader > Cascader statusVue demo works fine 1`] = `
                         class="t-cascader-item-content"
                       >
                         <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                        浙江省
+                         浙江省
                       </div>
                       <div
                         class="t-cascader-item-active-icon"
@@ -917,7 +917,7 @@ exports[`Cascader > Cascader statusVue demo works fine 1`] = `
                         class="t-cascader-item-content"
                       >
                         <!-- &lt;t-node v-if="!(typeof labelTNode === 'string')" :content="labelTNode"&gt;&lt;/t-node&gt; -->
-                        江苏省
+                         江苏省
                       </div>
                       <div
                         class="t-cascader-item-active-icon"
