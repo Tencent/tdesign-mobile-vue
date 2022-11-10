@@ -5,7 +5,6 @@
     <t-button size="small" theme="primary">按钮 36</t-button>
   </div>
   <div class="flex align-center margin-right">
-    <!-- <t-button size="large" :icon="iconFunc" shape="round" theme="primary">按钮</t-button> -->
     <t-button size="large" theme="primary" shape="round">
       <template #icon>
         <t-icon-app />
