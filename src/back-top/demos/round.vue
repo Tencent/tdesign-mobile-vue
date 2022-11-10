@@ -5,7 +5,9 @@
     <t-button block size="large" variant="outline" @click="onBtnClick('round', '')">圆白底纯图标</t-button>
     <t-button block size="large" variant="outline" @click="onBtnClick('round-dark', '')">圆黑底纯图标</t-button>
   </div>
-  <t-back-top v-show="visible" :theme="theme" :text="text" />
+  <div :style="{ ...style }">
+    <t-back-top v-show="visible" :theme="theme" :text="text" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -15,6 +17,10 @@ defineProps({
   visible: {
     type: Boolean,
     default: false,
+  },
+  style: {
+    type: Object,
+    default: () => {},
   },
 });
 const emit = defineEmits(['close']);
