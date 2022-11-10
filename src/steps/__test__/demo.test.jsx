@@ -8,6 +8,7 @@ import contentVue from '@/steps/demos/content.vue';
 import horizontalVue from '@/steps/demos/horizontal.vue';
 import iconVue from '@/steps/demos/icon.vue';
 import mobileVue from '@/steps/demos/mobile.vue';
+import verticalReadonlyVue from '@/steps/demos/vertical-readonly.vue';
 import verticalVue from '@/steps/demos/vertical.vue';
 
 const mapper = {
@@ -16,6 +17,7 @@ const mapper = {
   horizontalVue,
   iconVue,
   mobileVue,
+  verticalReadonlyVue,
   verticalVue,
 };
 
