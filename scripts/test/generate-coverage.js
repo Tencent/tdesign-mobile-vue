@@ -23,19 +23,19 @@ fs.readFile(resolveCwd('test/unit/coverage/index.html'), 'utf8', (err, html) => 
     const groups = Math.ceil(tds.length / size);
     let componentCoverage = [];
     for (let i = 0; i < groups; i++) {
-      componentCoverage.push(tds.slice(i * size, (i + 1) * size))
+      componentCoverage.push(tds.slice(i * size, (i + 1) * size));
     }
 
     let resultCoverage = {};
     componentCoverage.forEach((item, index) => {
-      if ( item[0].getAttribute('data-value').indexOf('/') != -1  && item[0].getAttribute('data-value').indexOf('/') === item[0].getAttribute('data-value').lastIndexOf('/')) {
-        const [, name] = item[0].getAttribute('data-value').split('/');
+      if (item[0].getAttribute('data-value').indexOf('/') === -1) {
+        const name = item[0].getAttribute('data-value');
         const statements = `${item[2].getAttribute('data-value')}%`;
         const branches = `${item[4].getAttribute('data-value')}%`;
         const functions = `${item[6].getAttribute('data-value')}%`;
         const lines = `${item[8].getAttribute('data-value')}%`;
 
-        const key = camelCase(name)
+        const key = camelCase(name);
         resultCoverage[key] = {
           statements,
           branches,
@@ -43,7 +43,7 @@ fs.readFile(resolveCwd('test/unit/coverage/index.html'), 'utf8', (err, html) => 
           lines,
         };
       }
-    })
+    });
 
     const finalRes = `module.exports = ${JSON.stringify(resultCoverage)}`;
     fs.writeFileSync(resolveCwd('site/web/test-coverage.js'), finalRes);

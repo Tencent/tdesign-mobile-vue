@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
-import {Tabs, TabPanel} from '../index';
+import { Tabs, TabPanel } from '../index';
 import TTabNav from '../tab-nav-item.vue';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-tabs`;
 const list = [
   {
@@ -45,9 +45,13 @@ describe('Tabs', () => {
       const $navLine = wrapper.find(`.${name}__nav-line`);
       const linWidth = 56;
       const navWidth = 88;
-      $tabNavItems.map(async (item, index)=> {
+      $tabNavItems.map(async (item, index) => {
         await item.trigger('click');
-        expect($navLine.attributes('style').includes(`transform: translateY(${navWidth * index + navWidth / 2 - linWidth / 2}px);`))
+        expect(
+          $navLine
+            .attributes('style')
+            .includes(`transform: translateY(${navWidth * index + navWidth / 2 - linWidth / 2}px);`),
+        );
       });
 
       // t-tab-nav 首项为激活态，点击激活态的 tab-nav 不会触发 change 事件
@@ -82,19 +86,24 @@ describe('Tabs', () => {
       const navWidth = 88;
       $tabNavItems.map(async (item, index) => {
         await item.trigger('click');
-        expect($navLine.attributes('style').includes(`transform: translateX(${navWidth * index + navWidth / 2 - linWidth / 2}px); transition-duration: ${animation.value}ms;`))
+        expect(
+          $navLine
+            .attributes('style')
+            .includes(
+              `transform: translateX(${navWidth * index + navWidth / 2 - linWidth / 2}px); transition-duration: ${
+                animation.value
+              }ms;`,
+            ),
+        );
       });
       expect(onChange).toHaveBeenCalledTimes($tabNavItems.length - 1);
-
     });
     it(': list', async () => {
       const defaultValue = list[0].value;
       const onChange = vi.fn();
       const wrapper = mount({
         setup() {
-          return () => (
-            <Tabs defaultValue={defaultValue} list={list} onChange={onChange} />
-          );
+          return () => <Tabs defaultValue={defaultValue} list={list} onChange={onChange} />;
         },
       });
 
@@ -102,7 +111,7 @@ describe('Tabs', () => {
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
       $tabNavItems.map(async (item, index) => {
         await item.trigger('click');
-        expect(item.text()).toEqual(list[index].label)
+        expect(item.text()).toEqual(list[index].label);
       });
       // 非受控模式，也能触发 change 事件
       expect(onChange).toHaveBeenCalledTimes($tabNavItems.length - 1);
@@ -123,10 +132,9 @@ describe('Tabs', () => {
       const size = 'large';
       await wrapper.setProps({
         size,
-      })
+      });
       expect($tabs.attributes('class').includes(`${SIZE_CLASSNAMES[size]}`)).toBeTruthy();
     });
-
   });
 
   describe('slots', () => {
@@ -180,4 +188,4 @@ describe('Tabs', () => {
       expect(onChange).toHaveBeenCalledTimes($tabNavItems.length - 1);
     });
   });
-})
+});

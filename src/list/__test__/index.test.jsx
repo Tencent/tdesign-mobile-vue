@@ -1,9 +1,19 @@
-import { ref, nextTick } from 'vue';
+import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import List from '../list.vue';
 import TLoading from '@/loading/loading.vue';
 import TCell from '@/cell/index';
+
+const prefix = 't';
+const name = `${prefix}-list`;
+
+const sleep = (duration) =>
+  new Promise((resolve) =>
+    setTimeout(() => {
+      resolve();
+    }, duration),
+  );
 
 const LOADING_TEXT_MAP = {
   loading: '加载中...',
@@ -60,15 +70,17 @@ describe('list', () => {
   });
 
   describe('event', () => {
-    it(': load-more', () => {
-      const LIST_COUNT = 10;
-      const MOCK_LIST = Array(LIST_COUNT).fill(1);
+    it(': load-more', async () => {
+      const LIST_COUNT = 20;
+      const MOCK_LIST = Array(LIST_COUNT).fill(0);
+      const onLoadMore = vi.fn(() => {
+        MOCK_LIST.push(...Array(LIST_COUNT).fill(1));
+      });
+      const loading = ref('');
       const wrapper = mount(List, {
         props: {
-          asyncLoading: 'load-more', // 点击加载更多, 用于 onLoadMore 点击事件, 当前演示页暂无演示代码
-          onLoadMore: () => {
-            MOCK_LIST.push(...Array(LIST_COUNT).fill(1));
-          },
+          asyncLoading: loading.value,
+          onLoadMore,
         },
         slots: {
           default: MOCK_LIST.map((item, index) => (
@@ -78,24 +90,27 @@ describe('list', () => {
           )),
         },
       });
+      expect(wrapper.element).toMatchSnapshot();
       expect(wrapper.findAllComponents(TCell).length).toEqual(LIST_COUNT);
+      await wrapper.setProps({
+        asyncLoading: 'load-more',
+      });
+      // 点击 loading 区域内容，模拟触发 loadMore
+      const $loadingWrapper = wrapper.find(`.t-list__loading--wrapper`);
+      await $loadingWrapper.trigger('click');
+      expect(onLoadMore).toHaveBeenCalled();
     });
-    it(': scroll', async (ctx) => {
-      beforeEach(() => {
-        vi.useFakeTimers();
-      });
-      afterEach(() => {
-        vi.restoreAllMocks();
-      });
 
+    it(': scroll', async (ctx) => {
       const LIST_COUNT = 10;
-      const MOCK_LIST = ref(Array(LIST_COUNT).fill(1));
+      const MOCK_LIST = ref(Array(LIST_COUNT).fill(0));
+      const onScroll = vi.fn(() => {
+        MOCK_LIST.value.push(...Array(LIST_COUNT).fill(1));
+      });
       const wrapper = mount(List, {
         props: {
           asyncLoading: 'loading', // 点击加载更多, 用于 onLoadMore 点击事件, 当前演示页暂无演示代码
-          onScroll: () => {
-            MOCK_LIST.value.push(...Array(LIST_COUNT).fill(1));
-          },
+          onScroll,
         },
         slots: {
           default: MOCK_LIST.value.map((item, index) => (
@@ -105,11 +120,10 @@ describe('list', () => {
           )),
         },
       });
-
-      wrapper.vm.$emit('scroll');
-      nextTick(() => {
-        expect(MOCK_LIST.value.length).toEqual(LIST_COUNT * 2);
-      });
+      const $list = wrapper.find(`.t-list`);
+      await $list.trigger('scroll');
+      expect(onScroll).toHaveBeenCalled();
+      expect(MOCK_LIST.value.length).toEqual(LIST_COUNT * 2);
     });
   });
 });

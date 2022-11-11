@@ -51,7 +51,7 @@ describe('avatar', () => {
 
     it(': onLoad', async () => {
       const onLoad = vi.fn();
-      const wrapper = mount(() => <Avatar image={IMAGE} onLoad={onLoad}/>);
+      const wrapper = mount(() => <Avatar image={IMAGE} onLoad={onLoad} />);
       expect(wrapper.classes()).toContain('t-avatar');
       const img = wrapper.find('img');
       expect(img.exists()).toBeTruthy();

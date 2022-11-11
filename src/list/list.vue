@@ -2,7 +2,7 @@
   <div ref="root" :class="name" @scroll="handleScroll">
     <t-node :content="headerContent" />
     <slot />
-    <div @click.stop="onLoadMore">
+    <div :class="`${name}__loading--wrapper`" @click.stop="onLoadMore">
       <t-loading
         v-if="typeof asyncLoading === 'string' && ['loading', 'load-more'].includes(asyncLoading)"
         :loading="asyncLoading === 'loading'"

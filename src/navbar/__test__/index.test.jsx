@@ -1,7 +1,10 @@
+import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import NavBar from '../navbar.vue';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
+const iconFunc = () => h(TIconApp);
 describe('navbar', () => {
   describe('props', () => {
     it('fixed', async () => {
@@ -53,6 +56,21 @@ describe('navbar', () => {
       const fn = vi.fn();
       const navbar = mount(<NavBar title="标题" leftIcon onLeftClick={fn} />);
       await navbar.find('.t-icon-chevron-left').trigger('click');
+      expect(fn).toHaveBeenCalled();
+    });
+
+    it(': right-click', async () => {
+      const fn = vi.fn();
+      const wrapper = mount(<NavBar title="标题" onRightClick={fn} />, {
+        // 插槽名称必须要和组件内部保持一致'right-icon'
+        slots: {
+          'right-icon': iconFunc,
+        },
+      });
+      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+      const rightIcon = wrapper.find('.t-navbar__right');
+      await rightIcon.trigger('click');
       expect(fn).toHaveBeenCalled();
     });
   });

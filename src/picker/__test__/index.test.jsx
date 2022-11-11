@@ -18,9 +18,10 @@ const commonProps = {
   defaultValue: [seasonOptions[0].value],
 };
 
-const mountPicker = (props) => mount(Picker, {
-  props: {...commonProps, ...props}
-});
+const mountPicker = (props) =>
+  mount(Picker, {
+    props: { ...commonProps, ...props },
+  });
 
 const makeTouch = (el, eventName, touchPosition) => {
   const event = new Event(eventName);
@@ -40,9 +41,9 @@ const simulateMoveOption = async (optionContainerEl, distance) => {
   vi.useRealTimers();
 
   await nextTick();
-}
+};
 
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 describe('picker', () => {
   describe('props', () => {
@@ -51,7 +52,7 @@ describe('picker', () => {
         const wrapper = mountPicker({ cancelBtn });
         const textContainer = wrapper.find('.t-picker__cancel');
         expect(textContainer.text()).toBe(cancelBtn || '取消');
-      }
+      };
 
       testCancelBtn();
       testCancelBtn('Cancel');
@@ -59,10 +60,10 @@ describe('picker', () => {
 
     it(': confirmBtn', () => {
       const testConfirmBtn = (confirmBtn) => {
-        const wrapper = mountPicker({ confirmBtn })
+        const wrapper = mountPicker({ confirmBtn });
         const textContainer = wrapper.find('.t-picker__confirm');
         expect(textContainer.text()).toBe(confirmBtn || '确认');
-      }
+      };
 
       testConfirmBtn();
       testConfirmBtn('Confirm');
@@ -70,7 +71,7 @@ describe('picker', () => {
 
     it(': title', () => {
       const testTitle = (title) => {
-        const wrapper = mountPicker({ title })
+        const wrapper = mountPicker({ title });
         const textContainer = wrapper.find('.t-picker__title');
         expect(textContainer.text()).toBe(title || '');
       };
@@ -85,13 +86,11 @@ describe('picker', () => {
       const itemContainers = wrapper.findAll('.t-picker-item__item');
       expect(itemContainers).toHaveLength(seasonOptions.length);
 
-      itemContainers.forEach(
-        (container, index) => expect(container.text()).toBe(renderLabel(seasonOptions[index]))
-      );
-    })
+      itemContainers.forEach((container, index) => expect(container.text()).toBe(renderLabel(seasonOptions[index])));
+    });
 
     it(': defaultValue', () => {
-      const selector = '.t-picker-item__item--selected'
+      const selector = '.t-picker-item__item--selected';
       // valid option value
       let wrapper = mountPicker({ defaultValue: [seasonOptions[1].value] });
       let textContainer = wrapper.find(selector);
@@ -104,7 +103,7 @@ describe('picker', () => {
     });
 
     it(': columns', () => {
-      const testColumns = (columns, isValidColumns = true ) => {
+      const testColumns = (columns, isValidColumns = true) => {
         const wrapper = mountPicker({ columns });
         const itemContainers = wrapper.findAll('.t-picker-item__item');
 
@@ -113,20 +112,18 @@ describe('picker', () => {
         }
 
         expect(itemContainers).toHaveLength(seasonOptions.length);
-        itemContainers.forEach(
-          (container, index) => expect(container.text()).toBe(seasonOptions[index].label)
-        );
+        itemContainers.forEach((container, index) => expect(container.text()).toBe(seasonOptions[index].label));
       };
 
-      testColumns([ undefined ], false);
+      testColumns([undefined], false);
       testColumns(undefined, false);
       testColumns([seasonOptions]);
-      testColumns(() => ([seasonOptions]));
+      testColumns(() => [seasonOptions]);
     });
 
     it(': value', async () => {
       const value = ref([seasonOptions[1].value]);
-      const wrapper =  mount( <Picker v-model={value.value} {...commonProps}/>);
+      const wrapper = mount(<Picker v-model={value.value} {...commonProps} />);
       const textContainer = wrapper.find('.t-picker-item__item--selected');
       expect(textContainer.text()).toBe(seasonOptions[1].label);
 
@@ -151,7 +148,7 @@ describe('picker', () => {
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       await wrapper.find('.t-picker__confirm').trigger('click');
       expect(onChange).toBeCalledTimes(1);
-      expect(onChange).toBeCalledWith([ seasonOptions[2].value ]);
+      expect(onChange).toBeCalledWith([seasonOptions[2].value]);
     });
 
     it(': confirm', async () => {
@@ -160,16 +157,16 @@ describe('picker', () => {
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       await wrapper.find('.t-picker__confirm').trigger('click');
       expect(onConfirm).toBeCalledTimes(1);
-      expect(onConfirm).toBeCalledWith([ seasonOptions[2].value ], { index: [ 2 ] });
+      expect(onConfirm).toBeCalledWith([seasonOptions[2].value], { index: [2] });
     });
 
     it(': pick', async () => {
       // columns is static array
       const onPick = vi.fn();
-      let wrapper = mountPicker({ onPick, columns: [ seasonOptions ] });
+      let wrapper = mountPicker({ onPick, columns: [seasonOptions] });
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       expect(onPick).toBeCalledTimes(1);
-      expect(onPick).toBeCalledWith([ seasonOptions[2].value ], { column: 0, index: 2 });
+      expect(onPick).toBeCalledWith([seasonOptions[2].value], { column: 0, index: 2 });
 
       // columns is function, can change dynamically
       let monthOptions = [];
@@ -206,16 +203,13 @@ describe('picker', () => {
           default:
             throw new Error('unexpected item!');
         }
-        return [
-          seasonOptions,
-          monthOptions,
-        ]
+        return [seasonOptions, monthOptions];
       };
 
       wrapper = mountPicker({ onPick, columns });
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       expect(onPick).toBeCalledTimes(2);
-      expect(onPick).toBeCalledWith([ seasonOptions[2].value ], { column: 0, index: 2 });
+      expect(onPick).toBeCalledWith([seasonOptions[2].value], { column: 0, index: 2 });
       const itemContainers = wrapper.findAll('.t-picker-item__item');
 
       expect(itemContainers).toHaveLength(seasonOptions.length + monthOptions.length);
@@ -234,7 +228,7 @@ describe('picker', () => {
       const pickerItemRef = ref(null);
       const wrapper = mount({
         render() {
-          return <PickerItem ref={pickerItemRef} options={seasonOptions} />
+          return <PickerItem ref={pickerItemRef} options={seasonOptions} />;
         },
       });
 
@@ -249,7 +243,7 @@ describe('picker', () => {
       const pickerItemRef = ref(null);
       const wrapper = mount({
         render() {
-          return <PickerItem ref={pickerItemRef} options={seasonOptions} />
+          return <PickerItem ref={pickerItemRef} options={seasonOptions} />;
         },
       });
 
@@ -265,7 +259,7 @@ describe('picker', () => {
       const optionsRef = ref(seasonOptions);
       const wrapper = mount({
         render() {
-          return <PickerItem ref={pickerItemRef} options={optionsRef.value} />
+          return <PickerItem ref={pickerItemRef} options={optionsRef.value} />;
         },
       });
 
@@ -278,7 +272,7 @@ describe('picker', () => {
 
       itemContainers = wrapper.findAll('.t-picker-item__item');
       expect(itemContainers).toHaveLength(optionsRef.value.length);
-    })
+    });
   });
 
   describe('picker.class.ts', () => {
@@ -317,6 +311,6 @@ describe('picker', () => {
       simulateMoveOption(el, 2);
       const textContainer = wrapper.find('.t-picker-item__item--selected');
       expect(textContainer.text()).toBe(seasonOptions[2].label);
-    })
+    });
   });
 });

@@ -5,7 +5,7 @@ import { AppIcon as TIconApp, LoadingIcon } from 'tdesign-icons-vue-next';
 import Button from '../button.vue';
 import ButtonGroup from '../../button-group/button-group.vue';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-button`;
 const SIZE_CLASSNAMES = {
   small: `${prefix}-size-s`,
@@ -21,14 +21,14 @@ describe('button', () => {
       const wrapper = mount(Button, {
         props: {
           theme: '',
-          content: TEXT
-        }
-      })
+          content: TEXT,
+        },
+      });
       // theme = ''
       const $button = wrapper.findComponent(Button);
-      ['default', 'primary', 'danger'].map(item => {
+      ['default', 'primary', 'danger'].map((item) => {
         expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
-      })
+      });
       expect(wrapper.text()).toBe(TEXT);
       const theme = 'danger';
       await wrapper.setProps({
@@ -41,15 +41,15 @@ describe('button', () => {
     it(': content', async () => {
       const wrapper = mount(Button, {
         props: {
-          content: TEXT
-        }
-      })
+          content: TEXT,
+        },
+      });
       const $button = wrapper.findComponent(Button);
       expect($button.text()).toBe(TEXT);
 
       const newContent = 'new content';
       await wrapper.setProps({
-        content: newContent
+        content: newContent,
       });
       expect($button.text()).toBe(newContent);
     });
@@ -58,14 +58,14 @@ describe('button', () => {
       const wrapper = mount(Button, {
         props: {
           shape: '',
-          content: TEXT
-        }
-      })
+          content: TEXT,
+        },
+      });
       // shape = ''
       const $button = wrapper.findComponent(Button);
-      ['rectangle', 'square', 'round', 'circle'].map(item => {
+      ['rectangle', 'square', 'round', 'circle'].map((item) => {
         expect($button.classes().includes(`${name}--shape-${item}`)).toBeFalsy();
-      })
+      });
       expect(wrapper.text()).toBe(TEXT);
       const shape = 'square';
       await wrapper.setProps({
@@ -79,12 +79,12 @@ describe('button', () => {
       const wrapper = mount(Button, {
         props: {
           size: '',
-          content: TEXT
-        }
-      })
+          content: TEXT,
+        },
+      });
       // size = ''
       const $button = wrapper.findComponent(Button);
-      ['small', 'medium', 'large'].map(item => {
+      ['small', 'medium', 'large'].map((item) => {
         expect($button.classes().includes(`${SIZE_CLASSNAMES[item]}`)).toBeFalsy();
       });
       expect(wrapper.text()).toBe(TEXT);
@@ -100,14 +100,14 @@ describe('button', () => {
       const wrapper = mount(Button, {
         props: {
           variant: '',
-          content: TEXT
-        }
-      })
+          content: TEXT,
+        },
+      });
       // variant = ''
       const $button = wrapper.findComponent(Button);
-      ['base', 'outline', 'text'].map(item => {
+      ['base', 'outline', 'text'].map((item) => {
         expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
-      })
+      });
       expect(wrapper.text()).toBe(TEXT);
       const variant = 'outline';
       await wrapper.setProps({
@@ -126,7 +126,7 @@ describe('button', () => {
           content: TEXT,
           onClick,
         },
-      })
+      });
       const $button = wrapper.findComponent(Button);
       // disabled = true, 不会触发 click
       expect($button.classes()).toContain('t-is-disabled');
@@ -150,7 +150,7 @@ describe('button', () => {
           content: TEXT,
           onClick,
         },
-      })
+      });
       const $button = wrapper.findComponent(Button);
 
       // loading = true，不触发 click
@@ -174,7 +174,7 @@ describe('button', () => {
           icon: iconFunc,
           content: TEXT,
         },
-      })
+      });
       const $button = wrapper.findComponent(Button);
       expect($button.classes()).toContain('t-is-loading');
       expect($button.findComponent(LoadingIcon).exists()).toBeTruthy();
@@ -188,7 +188,7 @@ describe('button', () => {
           ghost,
           content: TEXT,
         },
-      })
+      });
       const $button = wrapper.findComponent(Button);
 
       // ghost = true
@@ -207,7 +207,7 @@ describe('button', () => {
           block,
           content: TEXT,
         },
-      })
+      });
       const $button = wrapper.findComponent(Button);
 
       // block = true
@@ -229,22 +229,22 @@ describe('button', () => {
         {
           content: TEXT,
         },
-      ]
+      ];
       const wrapper = mount({
         setup() {
           return () => (
             <ButtonGroup>
               {{
                 default: items.map((item, index) => {
-                  return <Button content={item.content} />
-                })
+                  return <Button content={item.content} />;
+                }),
               }}
             </ButtonGroup>
-          )
-        }
+          );
+        },
       });
       expect(wrapper.element).toMatchSnapshot();
-      const $buttonGroup = wrapper.findComponent(ButtonGroup)
+      const $buttonGroup = wrapper.findComponent(ButtonGroup);
       expect($buttonGroup.exists()).toBeTruthy();
       expect(wrapper.findAllComponents(Button).length).toEqual(items.length);
     });
