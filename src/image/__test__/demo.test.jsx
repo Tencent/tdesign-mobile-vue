@@ -4,23 +4,15 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/image/demos/base.vue';
-import errorVue from '@/image/demos/error.vue';
-import fitVue from '@/image/demos/fit.vue';
-import lazyVue from '@/image/demos/lazy.vue';
-import loadingVue from '@/image/demos/loading.vue';
 import mobileVue from '@/image/demos/mobile.vue';
-import positionVue from '@/image/demos/position.vue';
-import shapeVue from '@/image/demos/shape.vue';
+import sizeVue from '@/image/demos/size.vue';
+import statusVue from '@/image/demos/status.vue';
 
 const mapper = {
   baseVue,
-  errorVue,
-  fitVue,
-  lazyVue,
-  loadingVue,
   mobileVue,
-  positionVue,
-  shapeVue,
+  sizeVue,
+  statusVue,
 };
 
 describe('Image', () => {

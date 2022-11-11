@@ -1,20 +1,70 @@
 <template>
-  <div>
-    <div class="tdesign-demo-block">
-      <t-image class="image-container" src="https://tdesign.gtimg.com/site/upload1.png" alt="一张图片"></t-image>
+  <div class="image-group">
+    <div class="image-demo">
+      <t-image class="image-container" fit="cover" :src="imageSrc"></t-image>
+      <p class="image-demo-tip">裁切</p>
+    </div>
+    <div class="image-demo">
+      <t-image class="image-container" fit="contain" :src="imageSrc"></t-image>
+      <p class="image-demo-tip">适应高</p>
+    </div>
+    <div class="image-demo" style="width: 134px">
+      <t-image class="image-container" fit="fill" :src="imageSrc"></t-image>
+      <p class="image-demo-tip">拉伸</p>
+    </div>
+  </div>
+
+  <p class="summary summary-center">圆角样式</p>
+
+  <div class="image-group">
+    <div class="image-demo">
+      <t-image class="image-container" :src="imageSrc" shape="round"></t-image>
+      <p class="image-demo-tip">方形</p>
+    </div>
+    <div class="image-demo">
+      <t-image class="image-container" :src="imageSrc" shape="square"></t-image>
+      <p class="image-demo-tip">圆角方形</p>
+    </div>
+    <div class="image-demo">
+      <t-image class="image-container" alt="一张图片" :src="imageSrc" shape="circle"></t-image>
+      <p class="image-demo-tip">圆形</p>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script lang="ts" setup>
+import { ref } from 'vue';
 
-export default defineComponent({});
+const imageSrc = ref('https://tdesign.gtimg.com/site/upload1.png');
 </script>
 
-<style scoped>
-.image-container {
-  width: 72px;
-  height: 72px;
+<style lang="less" scoped>
+.image-group {
+  display: flex;
+  padding: 0 16px;
+  flex-wrap: wrap;
+  margin-bottom: -10px;
+  .image-demo {
+    margin-bottom: 10px;
+    margin-right: 7%;
+    width: 72px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    .image-container {
+      width: 100%;
+      height: 72px;
+    }
+    .image-demo-tip {
+      color: #646566;
+      font-size: 14px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+}
+
+.summary-center {
+  margin: 16px 0;
 }
 </style>
