@@ -1,23 +1,6 @@
 <template>
   <div class="image-group">
     <div class="image-demo">
-      <t-image class="image-container" fit="cover" :src="imageSrc"></t-image>
-      <p class="image-demo-tip">裁切</p>
-    </div>
-    <div class="image-demo">
-      <t-image class="image-container" fit="contain" :src="imageSrc"></t-image>
-      <p class="image-demo-tip">适应高</p>
-    </div>
-    <div class="image-demo" style="width: 134px">
-      <t-image class="image-container" fit="fill" :src="imageSrc"></t-image>
-      <p class="image-demo-tip">拉伸</p>
-    </div>
-  </div>
-
-  <p class="summary summary-center">圆角样式</p>
-
-  <div class="image-group">
-    <div class="image-demo">
       <t-image class="image-container" :src="imageSrc" shape="round"></t-image>
       <p class="image-demo-tip">方形</p>
     </div>
@@ -62,9 +45,5 @@ const imageSrc = ref('https://tdesign.gtimg.com/site/upload1.png');
       white-space: nowrap;
     }
   }
-}
-
-.summary-center {
-  margin: 16px 0;
 }
 </style>
