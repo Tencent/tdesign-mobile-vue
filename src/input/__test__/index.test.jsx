@@ -5,7 +5,7 @@ import Input from '../input.vue';
 
 import { CloseCircleFilledIcon, InfoCircleFilledIcon, AppIcon } from 'tdesign-icons-vue-next';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-input`;
 const alignList = ['center', 'right'];
 
@@ -29,8 +29,8 @@ describe('Input.vue', async () => {
     it(': maxcharacter', async () => {
       const value = ref('');
       const maxcharacter = 2;
-      const onChange = vi.fn()
-      const wrapper = mount(<Input v-model={value.value} maxcharacter={maxcharacter} onChange={onChange}/>);
+      const onChange = vi.fn();
+      const wrapper = mount(<Input v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />);
       const el = wrapper.find('input').element;
       await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
       expect(onChange).toBeCalledTimes(1);
@@ -158,7 +158,7 @@ describe('Input.vue', async () => {
       const onFocus = vi.fn();
       const wrapper = mount({
         render() {
-          return <Input ref={inputRef} placeholder={placeholder} onBlur={onBlur} onFocus={onFocus} />
+          return <Input ref={inputRef} placeholder={placeholder} onBlur={onBlur} onFocus={onFocus} />;
         },
       });
       const input = wrapper.find(`.${name}__wrap input`);

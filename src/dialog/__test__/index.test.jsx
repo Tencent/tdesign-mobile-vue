@@ -16,14 +16,13 @@ describe('dialog', () => {
         },
       });
 
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(true)
+      expect(wrapper.find('.t-overlay').isVisible()).toBe(true);
       expect(wrapper.find('.t-dialog__header').text()).toBe(title);
       await wrapper.setProps({
         visible: false,
-      })
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(false)
-
-    })
+      });
+      expect(wrapper.find('.t-overlay').isVisible()).toBe(false);
+    });
 
     it(': title', async () => {
       const visible = true;
@@ -35,12 +34,12 @@ describe('dialog', () => {
         },
       });
       expect(wrapper.find('.t-dialog__header').text()).toBe(title);
-      const newTitle = 'new title'
+      const newTitle = 'new title';
       await wrapper.setProps({
-        title: newTitle
-      })
+        title: newTitle,
+      });
       expect(wrapper.find('.t-dialog__header').text()).toBe(newTitle);
-    })
+    });
 
     it(': content', async () => {
       const visible = true;
@@ -52,14 +51,14 @@ describe('dialog', () => {
           visible,
           title,
           content,
-        }
+        },
       });
 
       expect(wrapper.find('.t-dialog__body').text()).toBe(content);
       const newContent = 'new content';
       await wrapper.setProps({
-        content: newContent
-      })
+        content: newContent,
+      });
       expect(wrapper.find('.t-dialog__body').text()).toBe(newContent);
     });
 
@@ -73,10 +72,10 @@ describe('dialog', () => {
       });
       expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeFalsy();
       await wrapper.setProps({
-        buttonLayout: 'vertical'
-      })
+        buttonLayout: 'vertical',
+      });
       expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeTruthy();
-    })
+    });
 
     it(': width', async () => {
       const visible = true;
@@ -92,10 +91,10 @@ describe('dialog', () => {
       // width 为 number 类型
       const newWidth = 320;
       await wrapper.setProps({
-        width: newWidth
-      })
+        width: newWidth,
+      });
       expect(wrapper.find('.t-dialog').attributes('style').includes(`width: ${newWidth}px`)).toBeTruthy();
-    })
+    });
 
     it(': zIndex', async () => {
       const visible = true;
@@ -110,10 +109,10 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog').attributes('style').includes(`z-index: ${zIndex}`)).toBeTruthy();
       const newZIndex = 12000;
       await wrapper.setProps({
-        zIndex: newZIndex
-      })
+        zIndex: newZIndex,
+      });
       expect(wrapper.find('.t-dialog').attributes('style').includes(`z-index: ${newZIndex}`)).toBeTruthy();
-    })
+    });
 
     it(': closeOnOverlayClick', async () => {
       let triggerOrigin = {};
@@ -128,19 +127,18 @@ describe('dialog', () => {
           visible,
           closeOverlayClick,
           onClose,
-          onOverlayClick
+          onOverlayClick,
         },
       });
 
-      const $overlay = wrapper.findComponent({ name: 't-overlay' })
+      const $overlay = wrapper.findComponent({ name: 't-overlay' });
       expect($overlay.exists()).toBeTruthy();
       $overlay.vm.$emit('click');
       await nextTick();
-      expect(onClose).toBeCalledTimes(1)
-      expect(onOverlayClick).toBeCalledTimes(1)
-      expect(triggerOrigin).toBe('overlay')
-    })
-
+      expect(onClose).toBeCalledTimes(1);
+      expect(onOverlayClick).toBeCalledTimes(1);
+      expect(triggerOrigin).toBe('overlay');
+    });
   });
 
   describe('event', () => {
@@ -163,7 +161,7 @@ describe('dialog', () => {
           confirmBtn,
           onCancel,
           onConfirm,
-          onClose
+          onClose,
         },
       });
       // expect(wrapper).toMatchSnapshot()
@@ -173,11 +171,11 @@ describe('dialog', () => {
       expect($buttons.at(0).text()).toBe(cancelBtn);
       expect($buttons.at(1).text()).toBe(confirmBtn);
       $buttons.at(0).trigger('click');
-      expect(onClose).toBeCalledTimes(1)
-      expect(triggerOrigin).toBe('cancel')
-      expect(onCancel).toBeCalledTimes(1)
+      expect(onClose).toBeCalledTimes(1);
+      expect(triggerOrigin).toBe('cancel');
+      expect(onCancel).toBeCalledTimes(1);
       $buttons.at(1).trigger('click');
-      expect(onConfirm).toBeCalledTimes(1)
+      expect(onConfirm).toBeCalledTimes(1);
     });
   });
-})
+});

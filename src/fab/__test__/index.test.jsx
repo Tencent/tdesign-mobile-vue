@@ -1,12 +1,11 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Fab from '../fab.vue';
-import { AppIcon as TIconApp , MoreIcon} from 'tdesign-icons-vue-next';
+import { AppIcon as TIconApp, MoreIcon } from 'tdesign-icons-vue-next';
 
 describe('fab', () => {
-
-	describe('props', () => {
-    it(': icon is a function', async() => {
+  describe('props', () => {
+    it(': icon is a function', async () => {
       const icon = () => <TIconApp />;
       const wrapper = mount(Fab, {
         props: { icon },
@@ -15,12 +14,12 @@ describe('fab', () => {
     });
 
     it(': text', async () => {
-      const text = 'fab'
+      const text = 'fab';
       const wrapper = mount(Fab, {
         props: { text },
       });
       const textContainer = wrapper.find('.t-fab__text');
-			expect(textContainer.text()).toBe(text);
+      expect(textContainer.text()).toBe(text);
     });
 
     it(': style', () => {
@@ -29,8 +28,8 @@ describe('fab', () => {
         props: { style },
       });
       const buttonContainer = wrapper.find('.t-button');
-      expect(getComputedStyle(wrapper.element, null).right).toBe('32px')
-      expect(getComputedStyle(wrapper.element, null).bottom).toBe('48px')
+      expect(getComputedStyle(wrapper.element, null).right).toBe('32px');
+      expect(getComputedStyle(wrapper.element, null).bottom).toBe('48px');
     });
 
     it(': buttonProps', () => {
@@ -47,7 +46,7 @@ describe('fab', () => {
       expect(wrapper.classes()).toContain(`t-button--shape-circle`);
       expect(wrapper.classes()).toContain(`t-size-l`);
     });
-  })
+  });
 
   describe('slots', () => {
     it(': icon', () => {
@@ -60,21 +59,20 @@ describe('fab', () => {
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
       expect(wrapper.element).toMatchSnapshot();
     });
-  })
+  });
 
-	describe('event', () => {
+  describe('event', () => {
     it(': click', async () => {
       const onClick = vi.fn();
       const wrapper = mount({
         render() {
-          return <Fab onClick={onClick} />
-        }
-      })
+          return <Fab onClick={onClick} />;
+        },
+      });
       // 触发事件的节点
       await wrapper.trigger('click');
       // 判断事件是否被触发
-      expect(onClick).toBeCalledTimes(1)
-    })
-	})
-
-})
+      expect(onClick).toBeCalledTimes(1);
+    });
+  });
+});

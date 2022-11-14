@@ -23,9 +23,9 @@ const simulateMoveOption = async (optionContainerEl, distance) => {
   vi.useRealTimers();
 
   await nextTick();
-}
+};
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-date-time-picker`;
 
 const renderLabel = (type, value) => {
@@ -42,17 +42,17 @@ const renderLabel = (type, value) => {
 };
 
 const addZero = (el) => {
-  return el < 10 ? `0${el}` : el
-}
+  return el < 10 ? `0${el}` : el;
+};
 
 // 获取当前月份的天数
 const getDateCount = (Y, M) => {
   var d = new Date(Y, M, 0);
   return d.getDate();
-}
+};
 
 // 相关日期计算
-const precisionRankRecord = ['year', 'month', 'date', 'hour', 'minute','second'];
+const precisionRankRecord = ['year', 'month', 'date', 'hour', 'minute', 'second'];
 const currentDate = new Date('2022-10-13');
 const Y = currentDate.getFullYear();
 const M = currentDate.getMonth() + 1;
@@ -82,9 +82,9 @@ describe('DateTimePicker', () => {
         props: {
           title,
           confirmBtn,
-          cancelBtn
-        }
-      })
+          cancelBtn,
+        },
+      });
       const $title = wrapper.find(`.${prefix}-picker__title`);
       const $confirmButton = wrapper.find(`.${prefix}-picker__confirm`);
       const $cancelButton = wrapper.find(`.${prefix}-picker__cancel`);
@@ -98,8 +98,8 @@ describe('DateTimePicker', () => {
       await wrapper.setProps({
         title: newTitle,
         confirmBtn: newConfirmBtn,
-        cancelBtn: newCancelBtn
-      })
+        cancelBtn: newCancelBtn,
+      });
       expect($title.text()).toBe(newTitle || '选择时间');
       expect($confirmButton.text()).toBe(newConfirmBtn || '确定');
       expect($cancelButton.text()).toBe(newCancelBtn || '取消');
@@ -113,47 +113,47 @@ describe('DateTimePicker', () => {
           defaultValue,
           title: 'mode 测试',
           mode: modeArray,
-        }
-      })
+        },
+      });
       // mode = ['date', 'second'], 渲染年月日时分秒，6列
       const pickerItem = wrapper.findComponent(PickerItem);
       expect(pickerItem.exists()).toBeTruthy();
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       expect($pickerItems).toHaveLength(6);
       await wrapper.setProps({
-        mode: false
-      })
+        mode: false,
+      });
       // mode = false, 不渲染列
       expect(pickerItem.exists()).toBeFalsy();
     });
 
     it(': start && end ', async () => {
       const defaultValue = defaultDateTime;
-      const start = "2020-6-30";
-      const end = "2025-6-30";
+      const start = '2020-6-30';
+      const end = '2025-6-30';
 
       const startYear = start.split('-')[0];
-      const endYear =end.split('-')[0];
+      const endYear = end.split('-')[0];
 
       const wrapper = mount(DateTimePicker, {
         props: {
           defaultValue,
           start,
           end,
-        }
-      })
+        },
+      });
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       let res = {};
       $pickerItems.forEach((item, index) => {
-        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`)
+        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
       });
       expect(res[precisionRankRecord[0]].length).toEqual(endYear - startYear + 1);
     });
 
     it(': renderLabel', async () => {
-      generateColumn(Y - 10, Y + 10, 'year')
-      generateColumn(1, 12, 'month')
-      generateColumn(1, getDateCount(Y, M), 'date')
+      generateColumn(Y - 10, Y + 10, 'year');
+      generateColumn(1, 12, 'month');
+      generateColumn(1, getDateCount(Y, M), 'date');
 
       const defaultValue = defaultDateTime;
       const wrapper = mount(DateTimePicker, {
@@ -161,35 +161,35 @@ describe('DateTimePicker', () => {
           defaultValue,
           title: '自定义label',
           renderLabel,
-        }
-      })
+        },
+      });
       // mode = 'date', 渲染年月日，3列
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       expect($pickerItems.length).toEqual(3);
 
       let res = {};
       $pickerItems.forEach((item, index) => {
-        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`)
+        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
       });
 
       Object.keys(res).forEach((key, keyIndex) => {
-        expect(res[key].length).toEqual(ret[keyIndex].length)
+        expect(res[key].length).toEqual(ret[keyIndex].length);
         res[key].forEach((item, itemIndex) => {
-          expect(item.text()).toEqual(ret[keyIndex][itemIndex].label)
-        })
-      })
-    })
+          expect(item.text()).toEqual(ret[keyIndex][itemIndex].label);
+        });
+      });
+    });
     it(': onCancel', async () => {
       const onCancel = vi.fn();
       const wrapper = mount(DateTimePicker, {
         props: {
           onCancel,
-        }
-      })
+        },
+      });
       const $cancelButton = wrapper.find(`.${prefix}-picker__cancel`);
       await $cancelButton.trigger('click');
       expect(onCancel).toBeCalledTimes(1);
-    })
+    });
 
     it(': onPick', async () => {
       const initValue = ref(defaultDateTime);
@@ -205,9 +205,9 @@ describe('DateTimePicker', () => {
           value: initValue.value,
           onConfirm,
           onChange,
-          onPick
-        }
-      })
+          onPick,
+        },
+      });
       const $confirmButton = wrapper.find(`.${prefix}-picker__confirm`);
       await $confirmButton.trigger('click');
       expect(onConfirm).toBeCalledTimes(1);
@@ -222,7 +222,7 @@ describe('DateTimePicker', () => {
       await $confirmButton.trigger('click');
       expect(onConfirm).toBeCalledTimes(2);
       expect(onChange).toBeCalledTimes(1);
-      expect(initValue.value).toEqual(`${ret[touchItemIndex][10 + touchIndex].value}-${addZero(M)}-${addZero(D)}`)
-    })
+      expect(initValue.value).toEqual(`${ret[touchItemIndex][10 + touchIndex].value}-${addZero(M)}-${addZero(D)}`);
+    });
   });
-})
+});

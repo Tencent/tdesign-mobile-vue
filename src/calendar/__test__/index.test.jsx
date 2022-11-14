@@ -4,7 +4,7 @@ import { describe, it, expect, vi } from 'vitest';
 import Button from '../../button/index';
 import Calendar from '../calendar.vue';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-calendar`;
 
 const raw = '日一二三四五六';
@@ -14,7 +14,7 @@ const day = 15;
 const minDate = new Date(year, month, 1);
 const maxDate = new Date(year, month, 31);
 const value = new Date(year, month, day);
-const confirmBtn = 'confirmBtn'
+const confirmBtn = 'confirmBtn';
 
 const dayFormat = (date, character) => {
   const D = new Date(date);
@@ -29,31 +29,31 @@ describe('calendar', () => {
     it(': visible', async () => {
       const wrapper = mount(Calendar, {
         props: {
-          visible: false
-        }
-      })
+          visible: false,
+        },
+      });
       await wrapper.setProps({
-        visible: true
-      })
+        visible: true,
+      });
     });
 
     it(': title', async () => {
       const title = '';
-      const wrapper = mount(<Calendar title={title} />)
-      const $title = wrapper.find(`.${name}__title`)
-      expect($title.text()).toEqual(title || '请选择日期')
+      const wrapper = mount(<Calendar title={title} />);
+      const $title = wrapper.find(`.${name}__title`);
+      expect($title.text()).toEqual(title || '请选择日期');
     });
 
     it(': confirmBtn', async () => {
-      const wrapper = mount(<Calendar visible={true} value={value} confirmBtn={confirmBtn} />)
-      const $confirmBtn = wrapper.find(`.${name}__footer`)
-      expect($confirmBtn.text()).toEqual(confirmBtn)
+      const wrapper = mount(<Calendar visible={true} value={value} confirmBtn={confirmBtn} />);
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
+      expect($confirmBtn.text()).toEqual(confirmBtn);
     });
 
     it(': firstDayOfWeek', async () => {
       const firstDayOfWeek = 1;
-      const wrapper = mount(<Calendar visible={true} value={value} firstDayOfWeek={firstDayOfWeek} />)
-      const $firstDay = wrapper.find(`.${name}__days-item`)
+      const wrapper = mount(<Calendar visible={true} value={value} firstDayOfWeek={firstDayOfWeek} />);
+      const $firstDay = wrapper.find(`.${name}__days-item`);
       expect($firstDay.text()).toEqual(raw.split('')[firstDayOfWeek]);
     });
 
@@ -65,7 +65,17 @@ describe('calendar', () => {
       const onConfirm = vi.fn((e) => {
         time.value = dayFormat(e, character);
       });
-      const wrapper = mount(<Calendar visible={true} value={value} type='range' minDate={minDate} maxDate={maxDate} onConfirm={onConfirm} onSelect={onSelect}/>)
+      const wrapper = mount(
+        <Calendar
+          visible={true}
+          value={value}
+          type="range"
+          minDate={minDate}
+          maxDate={maxDate}
+          onConfirm={onConfirm}
+          onSelect={onSelect}
+        />,
+      );
       const $dates = wrapper.findAll(`.t-calendar__dates-item`);
       expect($dates).toHaveLength(31);
 
@@ -78,15 +88,24 @@ describe('calendar', () => {
 
       // confirm
       const $button = wrapper.findComponent(Button);
-      await $button.trigger('click')
+      await $button.trigger('click');
 
       // TODO：区间选择器时，返回的应该是数组，但测试环境下只有单条 Date 对象数据
       expect(time.value).toEqual([year, month + 1, selectLastIndex + 1].join(character));
       // TODO: && type = 'multiple'
 
       // 覆盖 type = '' 情况
-      const wrapper1 = mount(<Calendar visible={true} value={value} type='' minDate={minDate} maxDate={maxDate} onConfirm={onConfirm} onSelect={onSelect} />)
-
+      const wrapper1 = mount(
+        <Calendar
+          visible={true}
+          value={value}
+          type=""
+          minDate={minDate}
+          maxDate={maxDate}
+          onConfirm={onConfirm}
+          onSelect={onSelect}
+        />,
+      );
     });
 
     it(': format', async () => {
@@ -95,14 +114,15 @@ describe('calendar', () => {
         day.suffix = suffix;
         return day;
       };
-      const wrapper = mount(<Calendar visible={true} value={value} format={format} minDate={minDate} maxDate={maxDate} />)
+      const wrapper = mount(
+        <Calendar visible={true} value={value} format={format} minDate={minDate} maxDate={maxDate} />,
+      );
       expect(wrapper.element).toMatchSnapshot();
       const $dates = wrapper.findAll(`.${name}__dates-item-suffix`);
       $dates.forEach((item) => {
-        expect(item.text()).toEqual(suffix)
-      })
+        expect(item.text()).toEqual(suffix);
+      });
     });
-
   });
 
   describe('slots', () => {
@@ -110,9 +130,9 @@ describe('calendar', () => {
       const wrapper = mount(<Calendar visible={true} value={value} />, {
         slots: {
           confirmBtn,
-        }
-      })
-      const $confirmBtn = wrapper.find(`.${name}__footer`)
+        },
+      });
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
       expect($confirmBtn.text()).toEqual(confirmBtn);
     });
   });
@@ -124,9 +144,9 @@ describe('calendar', () => {
       const onConfirm = vi.fn((e) => {
         time.value = dayFormat(e, character);
       });
-      const wrapper = mount(<Calendar visible={true} value={value} onConfirm={onConfirm} />)
+      const wrapper = mount(<Calendar visible={true} value={value} onConfirm={onConfirm} />);
       const $button = wrapper.findComponent(Button);
-      await $button.trigger('click')
+      await $button.trigger('click');
       expect(onConfirm).toHaveBeenCalledTimes(1);
       expect(time.value).toEqual([year, month + 1, day].join(character));
     });
@@ -142,7 +162,16 @@ describe('calendar', () => {
       const onSelect = vi.fn((e) => {
         selectTime.value = dayFormat(e, character);
       });
-      const wrapper = mount(<Calendar visible={true} value={value} minDate={minDate} maxDate={maxDate} onSelect={onSelect} onConfirm={onConfirm}/>)
+      const wrapper = mount(
+        <Calendar
+          visible={true}
+          value={value}
+          minDate={minDate}
+          maxDate={maxDate}
+          onSelect={onSelect}
+          onConfirm={onConfirm}
+        />,
+      );
       const $dates = wrapper.findAll(`.${name}__dates-item`);
       expect($dates).toHaveLength(31);
 
@@ -152,9 +181,9 @@ describe('calendar', () => {
       expect(onSelect).toHaveBeenCalledTimes(1);
       expect(selectTime.value).toEqual([year, month + 1, selectIndex + 1].join(character));
       const $button = wrapper.findComponent(Button);
-      await $button.trigger('click')
+      await $button.trigger('click');
       expect(onConfirm).toHaveBeenCalledTimes(1);
       expect(selectTime).toEqual(time);
     });
   });
-})
+});

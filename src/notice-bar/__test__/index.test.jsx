@@ -109,7 +109,7 @@ describe('NoticeBar', async () => {
       const prefixIcon = <div>测试</div>;
       const wrapper = mount(<NoticeBar visible />, {
         slots: {
-          'prefixIcon': prefixIcon,
+          prefixIcon: prefixIcon,
         },
       });
       await nextTick();
@@ -120,7 +120,7 @@ describe('NoticeBar', async () => {
       const suffixIcon = <div>测试</div>;
       const wrapper = mount(<NoticeBar visible />, {
         slots: {
-          'suffixIcon': suffixIcon,
+          suffixIcon: suffixIcon,
         },
       });
       await nextTick();

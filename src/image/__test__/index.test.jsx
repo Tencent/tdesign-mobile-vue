@@ -5,7 +5,7 @@ import { nextTick } from 'vue';
 import Image from '../image.vue';
 import { MockIntersectionObserver } from './utils';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-image`;
 const IMAGE = 'https://tdesign.gtimg.com/site/upload1.png';
 const FAIL_IMAGE = 'https://123.jpg';
@@ -46,13 +46,13 @@ describe('Image', () => {
         props: {
           fit: '',
           src: IMAGE,
-        }
-      })
+        },
+      });
       const $image = wrapper.find(`.${name}__img`);
       // fit = ''
-      fitList.forEach(item => {
+      fitList.forEach((item) => {
         expect($image.attributes('style').includes(`object-fit: ${item}`)).toBeFalsy();
-      })
+      });
 
       const fit = 'cover';
       await wrapper.setProps({
@@ -67,14 +67,14 @@ describe('Image', () => {
         props: {
           shape: '',
           src: IMAGE,
-        }
-      })
+        },
+      });
       const $image = wrapper.findComponent(Image);
 
       // shape = ''
-      shapeList.forEach(item => {
+      shapeList.forEach((item) => {
         expect($image.classes().includes(`${name}--${item}`)).toBeFalsy();
-      })
+      });
 
       const shape = 'square';
       await wrapper.setProps({
@@ -104,7 +104,7 @@ describe('Image', () => {
 
     it(': src', async () => {
       const onError = vi.fn();
-      const wrapper = mount(() => <Image src='' onError={onError} />);
+      const wrapper = mount(() => <Image src="" onError={onError} />);
       await nextTick();
       const $image = wrapper.find(`.${name}__img`);
       // 手动触发 图片加载失败的回调函数

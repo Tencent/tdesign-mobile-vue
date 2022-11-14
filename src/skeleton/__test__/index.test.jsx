@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Skeleton from '../skeleton.vue';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-skeleton`;
 const TEXT = 'tdesign-mobile-vue';
 
@@ -12,7 +12,7 @@ describe('Skeleton', () => {
       const wrapper = mount(Skeleton, {
         props: {
           theme: '',
-        }
+        },
       });
       // theme = '', 默认取 'text', 此时 rowCol = [1, [{ width: '24%', height: '16px', marginRight: '16px' },{ width: '76%', height: '16px' }]
       const $skeleton = wrapper.findComponent(Skeleton);
@@ -45,8 +45,8 @@ describe('Skeleton', () => {
         props: {
           loading,
           content: TEXT,
-        }
-      })
+        },
+      });
       const $skeleton = wrapper.findComponent(Skeleton);
       // loading = false, 非加载状态, 显示加载完成的内容
       expect($skeleton.text()).toEqual(TEXT);
@@ -58,7 +58,7 @@ describe('Skeleton', () => {
       expect($skeleton.find(`.${name}__content`).exists()).toBeTruthy();
       const $rows = $skeleton.findAll(`.${name}__row`);
       expect($rows.length).toBe(2);
-    })
+    });
 
     it(': animation', async () => {
       const rowCol = [1];
@@ -66,8 +66,8 @@ describe('Skeleton', () => {
         props: {
           rowCol,
           animation: '',
-        }
-      })
+        },
+      });
       // animation = '', 值为空则表示没有动画
       const $skeleton = wrapper.findComponent(Skeleton);
 
@@ -84,5 +84,5 @@ describe('Skeleton', () => {
       // animation = 'flashed'
       expect($rows[0].findAll(`.${name}__col`)[0].classes().includes(`${name}--animation-${animation}`)).toBeTruthy();
     });
-  })
+  });
 });

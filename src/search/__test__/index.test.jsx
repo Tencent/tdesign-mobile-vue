@@ -6,7 +6,7 @@ import Input from '../../input/index';
 import Button from '../../button/index';
 import { CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-search`;
 
 describe('search', () => {
@@ -16,8 +16,8 @@ describe('search', () => {
       const wrapper = mount(Search, {
         props: {
           placeholder,
-        }
-      })
+        },
+      });
       const $input = wrapper.findComponent(Input).find(`input`);
       expect($input.attributes('placeholder')).toEqual(placeholder);
     });
@@ -27,8 +27,8 @@ describe('search', () => {
       const wrapper = mount(Search, {
         props: {
           action,
-        }
-      })
+        },
+      });
       const $actionBtn = wrapper.findComponent(Button);
       const $input = wrapper.findComponent(Input).find(`input`);
 
@@ -46,8 +46,8 @@ describe('search', () => {
       const wrapper = mount(Search, {
         props: {
           placeholder,
-        }
-      })
+        },
+      });
       const $search = wrapper.find(`.${name}`);
       const $iconSearch = wrapper.find(`.${name}__label`);
       await $iconSearch.trigger('click'); // 触发 click, 组件变成聚焦态
@@ -59,17 +59,17 @@ describe('search', () => {
       const wrapper = mount(Search, {
         props: {
           placeholder,
-          shape: ''
-        }
-      })
+          shape: '',
+        },
+      });
       const $form = wrapper.find(`.${name}__form`);
-      const $label = wrapper.find(`.${name}__label`)
+      const $label = wrapper.find(`.${name}__label`);
       // shape = '', 则取 'round'
       expect($form.attributes('style').includes(`border-radius: 50px;`)).toBeTruthy();
       expect($label.attributes('style').includes(`border-radius: 50px;`)).toBeTruthy();
 
       await wrapper.setProps({
-        shape: 'square'
+        shape: 'square',
       });
       // shape = 'square'
       expect($form.attributes('style')).toEqual('');
@@ -84,11 +84,11 @@ describe('search', () => {
         props: {
           value: value.value,
           action,
-          onActionClick
-        }
-      })
+          onActionClick,
+        },
+      });
       const $actionBtn = wrapper.findComponent(Button).find(`button`);
-      await $actionBtn.trigger('click')
+      await $actionBtn.trigger('click');
       expect(onActionClick).toBeCalled();
     });
 
@@ -102,8 +102,8 @@ describe('search', () => {
         props: {
           value,
           onFocus,
-        }
-      })
+        },
+      });
       const $search = wrapper.find(`.${name}`);
       const $input = wrapper.findComponent(Input).find(`input`);
 
@@ -117,15 +117,15 @@ describe('search', () => {
       const value = ref('清除测试');
       const onClear = vi.fn();
       const onChange = vi.fn((e) => {
-        value.value = e
+        value.value = e;
       });
       const wrapper = mount(Search, {
         props: {
           value: value.value,
           onClear,
-          onChange
-        }
-      })
+          onChange,
+        },
+      });
       const $search = wrapper.find(`.${name}`);
       const closeIcon = wrapper.findComponent(TIconClear);
       // clearable = true, 清除图标存在
@@ -144,8 +144,8 @@ describe('search', () => {
         props: {
           onFocus,
           onBlur,
-        }
-      })
+        },
+      });
       const $search = wrapper.find(`.${name}`);
       const $input = wrapper.findComponent(Input).find(`input`);
       await $input.trigger('focus'); // 聚焦
@@ -158,14 +158,14 @@ describe('search', () => {
 
   describe('slots', () => {
     it(': action', async () => {
-      const action = "插槽"
+      const action = '插槽';
       const wrapper = mount(Search, {
         slots: {
           action,
         },
       });
       // TODO: 插槽实现的 dom 结构不正确，后期另提 pr 修复
-      const $search = wrapper.find(`.${name}`)
+      const $search = wrapper.find(`.${name}`);
       expect($search.text()).toEqual(action);
     });
   });
@@ -173,4 +173,4 @@ describe('search', () => {
   // describe('event', () => {
   //   it(': event name', () => {});
   // });
-})
+});

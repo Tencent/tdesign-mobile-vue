@@ -21,8 +21,10 @@ describe('Textarea.vue', () => {
   it(': maxcharacter ', async () => {
     const value = ref('');
     const maxcharacter = 2;
-    const onChange = vi.fn()
-    const wrapper = mount(<Textarea label="标题" v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />);
+    const onChange = vi.fn();
+    const wrapper = mount(
+      <Textarea label="标题" v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />,
+    );
     const el = wrapper.find('textarea').element;
     await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
     expect(onChange).toBeCalledTimes(1);
@@ -31,7 +33,7 @@ describe('Textarea.vue', () => {
 
   it(': autosize ', async () => {
     const value = ref('');
-    const onChange = vi.fn()
+    const onChange = vi.fn();
     const wrapper = mount(<Textarea label="标题" v-model={value.value} autosize onChange={onChange} />);
     const el = wrapper.find('textarea').element;
     await simulateEvent(el, '这里是一段很长很长很长的长文本，支持自动换行', 'input');
@@ -70,7 +72,7 @@ describe('Textarea.vue', () => {
   it(': onBlur', async () => {
     const onBlur = vi.fn();
     const onFocus = vi.fn();
-    const wrapper = mount(<Textarea label="标题" autofocus onBlur={onBlur} onFocus={onFocus}/>);
+    const wrapper = mount(<Textarea label="标题" autofocus onBlur={onBlur} onFocus={onFocus} />);
     const textarea = wrapper.find('textarea');
     await textarea.trigger('blur');
     expect(onBlur).toBeCalled();

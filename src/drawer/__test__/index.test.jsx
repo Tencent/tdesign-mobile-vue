@@ -9,19 +9,19 @@ describe('drawer', () => {
   // test props
   describe('props', () => {
     it(': visible	', async () => {
-			const wrapper = mount(drawer, {
-				props: {
-					visible: true,
-				},
+      const wrapper = mount(drawer, {
+        props: {
+          visible: true,
+        },
       });
 
-      expect(wrapper.find('.t-overlay').classes('t-overlay--active')).toBe(true)
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(true)
+      expect(wrapper.find('.t-overlay').classes('t-overlay--active')).toBe(true);
+      expect(wrapper.find('.t-overlay').isVisible()).toBe(true);
       await wrapper.setProps({
         visible: false,
-      })
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(false)
-    })
+      });
+      expect(wrapper.find('.t-overlay').isVisible()).toBe(false);
+    });
 
     it(': closeOnOverlayClick', async () => {
       let triggerOrigin = {};
@@ -33,38 +33,38 @@ describe('drawer', () => {
       const visible = ref(true);
       const wrapper = mount({
         render() {
-          return <drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose}/>
-        }
-      })
+          return <drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose} />;
+        },
+      });
 
-      const $overlay = wrapper.findComponent({ name: 't-overlay' })
-      expect($overlay.exists()).toBeTruthy()
-      $overlay.vm.$emit('click')
-      expect(triggerOrigin).toBe('overlay')
-    })
+      const $overlay = wrapper.findComponent({ name: 't-overlay' });
+      expect($overlay.exists()).toBeTruthy();
+      $overlay.vm.$emit('click');
+      expect(triggerOrigin).toBe('overlay');
+    });
 
     it(': items', async () => {
       const titleSidebar = ref([
         {
-          title: '菜单一'
+          title: '菜单一',
         },
         {
-          title: '菜单二'
-        }
+          title: '菜单二',
+        },
       ]);
 
       const wrapper = mount({
         render() {
-          return <drawer items={titleSidebar.value} />
-        }
-      })
-
-      const $items = wrapper.findAll('.t-drawer__sidebar-item')
-      expect($items).toHaveLength(2)
-      titleSidebar.value.map(async (item, index)=> {
-        expect($items.at(index).text()).toEqual(item.title)
+          return <drawer items={titleSidebar.value} />;
+        },
       });
-    })
+
+      const $items = wrapper.findAll('.t-drawer__sidebar-item');
+      expect($items).toHaveLength(2);
+      titleSidebar.value.map(async (item, index) => {
+        expect($items.at(index).text()).toEqual(item.title);
+      });
+    });
   });
 
   // test events
@@ -74,17 +74,17 @@ describe('drawer', () => {
       const visible = ref(true);
       const wrapper = mount({
         render() {
-          return <drawer visible={visible.value} onOverlayClick={onOverlayClick}/>
-        }
-      })
+          return <drawer visible={visible.value} onOverlayClick={onOverlayClick} />;
+        },
+      });
 
-      const $popup = wrapper.findComponent({ name: 't-popup' })
-      expect($popup.exists()).toBeTruthy()
-      $popup.vm.$emit('visible-change', visible.value)
-      expect($popup.emitted()['visible-change'].length).toBe(1)
-      expect($popup.emitted()['visible-change'][0]).toEqual([true])
-      expect(onOverlayClick).toBeCalledTimes(1)
-    })
+      const $popup = wrapper.findComponent({ name: 't-popup' });
+      expect($popup.exists()).toBeTruthy();
+      $popup.vm.$emit('visible-change', visible.value);
+      expect($popup.emitted()['visible-change'].length).toBe(1);
+      expect($popup.emitted()['visible-change'][0]).toEqual([true]);
+      expect(onOverlayClick).toBeCalledTimes(1);
+    });
 
     it(': close', async () => {
       const onClose = vi.fn();
@@ -96,22 +96,22 @@ describe('drawer', () => {
         {
           title: '菜单二',
           icon: () => h(AppIcon),
-        }
+        },
       ]);
 
       const wrapper = mount({
         render() {
-          return <drawer items={iconSidebar.value} onClose={onClose} />
-        }
-      })
+          return <drawer items={iconSidebar.value} onClose={onClose} />;
+        },
+      });
 
-      const $popup = wrapper.findComponent({ name: 't-popup' })
-      expect($popup.exists()).toBeTruthy()
-      $popup.vm.$emit('close')
-      expect($popup.emitted().close).toBeTruthy()
-      expect($popup.emitted().close.length).toBe(1)
-      expect(onClose).toBeCalledTimes(1)
-    })
+      const $popup = wrapper.findComponent({ name: 't-popup' });
+      expect($popup.exists()).toBeTruthy();
+      $popup.vm.$emit('close');
+      expect($popup.emitted().close).toBeTruthy();
+      expect($popup.emitted().close.length).toBe(1);
+      expect(onClose).toBeCalledTimes(1);
+    });
 
     it(': itemClick', async () => {
       let clickItemValue = {};
@@ -127,28 +127,27 @@ describe('drawer', () => {
         {
           title: '菜单二',
           icon: () => h(AppIcon),
-        }
+        },
       ]);
 
       const wrapper = mount({
         render() {
-          return <drawer items={iconSidebar.value} onItemClick={ onItemClick } />
-        }
-      })
+          return <drawer items={iconSidebar.value} onItemClick={onItemClick} />;
+        },
+      });
 
-      const $items = wrapper.findAll('.t-drawer__sidebar-item')
-      expect($items).toHaveLength(2)
+      const $items = wrapper.findAll('.t-drawer__sidebar-item');
+      expect($items).toHaveLength(2);
 
       const triggerClick = (index) => {
         $items.at(index).trigger('click');
-        expect(clickItemValue.index).toEqual(index)
-        expect(clickItemValue.item).toEqual(iconSidebar.value[index])
-      }
+        expect(clickItemValue.index).toEqual(index);
+        expect(clickItemValue.item).toEqual(iconSidebar.value[index]);
+      };
 
-      iconSidebar.value.map(async (item, index)=> {
-        await triggerClick(index)
+      iconSidebar.value.map(async (item, index) => {
+        await triggerClick(index);
       });
-
     });
   });
-})
+});

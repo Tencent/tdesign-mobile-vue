@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Divider from '../divider.vue';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-divider`;
 const TEXT = 'tdesign-mobile-vue';
 
@@ -22,16 +22,16 @@ describe('divider.vue', async () => {
       const wrapper = mount(Divider, {
         props: {
           align: '',
-          content: TEXT
-        }
-      })
+          content: TEXT,
+        },
+      });
       const $divider = wrapper.findComponent(Divider);
       expect($divider.text()).toEqual(TEXT);
 
       // align = ''
-      ['left', 'right', 'center'].map(item => {
+      ['left', 'right', 'center'].map((item) => {
         expect($divider.classes().includes(`${name}--content-${item}`)).toBeFalsy();
-      })
+      });
 
       const align = 'left';
       await wrapper.setProps({
@@ -45,16 +45,16 @@ describe('divider.vue', async () => {
       const wrapper = mount(Divider, {
         props: {
           layout: '',
-          content: TEXT
-        }
-      })
+          content: TEXT,
+        },
+      });
       const $divider = wrapper.findComponent(Divider);
       expect($divider.text()).toEqual(TEXT);
 
       // layout = ''
-      ['horizontal', 'vertical'].map(item => {
+      ['horizontal', 'vertical'].map((item) => {
         expect($divider.classes().includes(`${name}-${item}`)).toBeFalsy();
-      })
+      });
 
       const layout = 'vertical';
       await wrapper.setProps({
@@ -76,15 +76,15 @@ describe('divider.vue', async () => {
           return () => (
             <Divider>
               {{
-                content: TEXT
+                content: TEXT,
               }}
             </Divider>
-          )
-        }
+          );
+        },
       });
       const $divider = wrapper.findComponent(Divider);
       expect($divider.text()).toEqual(TEXT);
-    })
+    });
 
     it(': default', async () => {
       const wrapper = mount({
@@ -92,14 +92,14 @@ describe('divider.vue', async () => {
           return () => (
             <Divider>
               {{
-                default: TEXT
+                default: TEXT,
               }}
             </Divider>
-          )
-        }
+          );
+        },
       });
       const $divider = wrapper.findComponent(Divider);
       expect($divider.text()).toEqual(TEXT);
-    })
+    });
   });
 });

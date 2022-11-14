@@ -114,7 +114,7 @@ describe('Collapse', () => {
       });
 
       const panel = wrapper.findComponent({ ref: '1' });
-      await panel.find('.t-collapse-panel__header').trigger('click')
+      await panel.find('.t-collapse-panel__header').trigger('click');
 
       expect(handleChange).toHaveBeenCalled();
     });
@@ -177,7 +177,7 @@ describe('Collapse', () => {
 
       const panel = wrapper.findComponent({ ref: '1' });
 
-      await panel.find('.t-collapse-panel__header').trigger('click')
+      await panel.find('.t-collapse-panel__header').trigger('click');
 
       expect(handleChange).not.toHaveBeenCalled();
     });
