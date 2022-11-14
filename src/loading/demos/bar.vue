@@ -1,6 +1,6 @@
 <template>
   <t-loading theme="bar" :progress="progress" />
-  <t-button variant="outline" @click.stop="onShowLoadingBar">{{
+  <t-button variant="outline" block @click.stop="onShowLoadingBar">{{
     progress > 0 && progress < 1 ? '页面加载中...' : '页面进度条加载'
   }}</t-button>
 </template>

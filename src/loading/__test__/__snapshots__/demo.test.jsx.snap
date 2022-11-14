@@ -13,7 +13,7 @@ exports[`Loading > Loading barVue demo works fine 1`] = `
   </div>
   <button
     aria-disabled="false"
-    class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+    class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle t-is-block"
     role="button"
   >
     <!---->
@@ -704,7 +704,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       </div>
       <button
         aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+        class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle t-is-block"
         role="button"
       >
         <!---->
