@@ -37,7 +37,7 @@ export interface TdSkeletonProps {
    * 骨架图风格，有基础、头像组合等两大类
    * @default text
    */
-   theme?: 'text' | 'avatar' | 'paragraph' | 'image';
+  theme?: 'text' | 'avatar' | 'paragraph' | 'image';
 }
 
 export interface SkeletonRowColObj {

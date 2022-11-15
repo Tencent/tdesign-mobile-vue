@@ -5,6 +5,19 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.14.1 `2022-11-14` 
+### 🚧 Others
+- `Badge`: 提升测试覆盖率 @anlyyao ([#479](https://github.com/Tencent/tdesign-mobile-vue/pull/479))
+- `Progress`: 更新示例代码 @xxxlj ([#472](https://github.com/Tencent/tdesign-mobile-vue/pull/472))
+- `BackTop`: 更新示例代码 @yuanmeda ([#468](https://github.com/Tencent/tdesign-mobile-vue/pull/468))
+- `SwipeCell`: 更新示例代码 @wwlh200 ([#473](https://github.com/Tencent/tdesign-mobile-vue/pull/473))
+- `PullDownRefresh`: 更新示例代码 @yuanmeda ([#470](https://github.com/Tencent/tdesign-mobile-vue/pull/470))
+- `Button`: 更新示例代码 @TingShine ([#475](https://github.com/Tencent/tdesign-mobile-vue/pull/475))
+- `CountDown`: 更新示例代码 @TingShine ([#477](https://github.com/Tencent/tdesign-mobile-vue/pull/477))
+- `Image`: 更新示例代码 @TingShine ([#478](https://github.com/Tencent/tdesign-mobile-vue/pull/478))
+- `Progress`: 更新示例代码 @xxxlj ([#472](https://github.com/Tencent/tdesign-mobile-vue/pull/472))
+- `Loading`: 更新示例代码 @lockiechen ([#481](https://github.com/Tencent/tdesign-mobile-vue/pull/481))
+
 ## 🌈 0.14.0 `2022-11-07` 
 ### ❗ Breaking Changes
 - `NavBar`: 重构组件，支持更完整的 props 和 event @TingShine ([#391](https://github.com/Tencent/tdesign-mobile-vue/pull/391))

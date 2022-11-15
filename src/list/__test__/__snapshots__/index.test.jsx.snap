@@ -1,0 +1,477 @@
+// Vitest Snapshot v1
+
+exports[`list > event > : load-more 1`] = `
+<div
+  class="t-list"
+>
+  <!---->
+  
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        0
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        1
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        2
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        3
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        4
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        5
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        6
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        7
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        8
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        9
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        10
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        11
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        12
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        13
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        14
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        15
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        16
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        17
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        18
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__note"
+    >
+      
+      <span
+        class="cell"
+      >
+        19
+      </span>
+      
+    </div>
+    <!--v-if-->
+  </div>
+  
+  <div
+    class="t-list__loading--wrapper"
+  >
+    <!--v-if-->
+  </div>
+  <!---->
+</div>
+`;

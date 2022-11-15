@@ -22,7 +22,7 @@ describe('slider', () => {
           value,
           range,
           disabled,
-          onChange
+          onChange,
         },
       });
 
@@ -32,19 +32,19 @@ describe('slider', () => {
 
       const event = {
         clientX: 82,
-        stopPropagation: vi.fn()
-      }
+        stopPropagation: vi.fn(),
+      };
 
       // disabled = true, 禁止点击
-      await $slider.trigger('click', {...event})
-      expect(onChange).toHaveBeenCalledTimes(0)
+      await $slider.trigger('click', { ...event });
+      expect(onChange).toHaveBeenCalledTimes(0);
 
       // disabled = false
       await wrapper.setProps({
-        disabled: false
+        disabled: false,
       });
-      await $slider.trigger('click', {...event})
-      expect(onChange).toHaveBeenCalledTimes(1)
+      await $slider.trigger('click', { ...event });
+      expect(onChange).toHaveBeenCalledTimes(1);
     });
 
     it(': showExtremeValue', async () => {
@@ -54,9 +54,8 @@ describe('slider', () => {
         props: {
           label: false,
           value,
-          showExtremeValue
+          showExtremeValue,
         },
-
       });
       const $left = wrapper.find(`.${classPrefix}-wrap__value--left`);
       const $right = wrapper.find(`.${classPrefix}-wrap__value`);
@@ -91,11 +90,11 @@ describe('slider', () => {
       $mark.forEach((item, index) => {
         expect(Number(item.text())).toStrictEqual(marks[index]);
         expect(item.attributes('style').includes(`left: ${marks[index]}%;`)).toBeTruthy();
-      })
+      });
 
       const newMarks = { 0: '小', 50: '中', 100: '大' }; // Object
       await wrapper.setProps({
-        marks: newMarks
+        marks: newMarks,
       });
 
       const $newMarks = wrapper.findAll(`.${classPrefix}__mark-text`);
@@ -104,7 +103,7 @@ describe('slider', () => {
       $newMarks.forEach((item, index) => {
         expect(item.text()).toStrictEqual(marks2[index][1]);
         expect(item.attributes('style').includes(`left: ${marks2[index][0]}%;`)).toBeTruthy();
-      })
+      });
     });
 
     it(': label', async () => {
@@ -125,7 +124,7 @@ describe('slider', () => {
 
       const newValue = 30;
       await wrapper.setProps({
-        value: newValue
+        value: newValue,
       });
       expect(Number($label.text())).toEqual(newValue);
       expect($bar[0].attributes('style').includes(`left: ${newValue}%;`)).toBeTruthy();
@@ -134,7 +133,7 @@ describe('slider', () => {
 
   describe('slots', () => {
     it(': label', () => {
-      const label = `<div class="t-slider__label">label</div>`
+      const label = `<div class="t-slider__label">label</div>`;
       const wrapper = mount(Slider, {
         slots: {
           label,
@@ -171,12 +170,12 @@ describe('slider', () => {
 
       // disabled = false
       await wrapper.setProps({
-        disabled: false
+        disabled: false,
       });
       await move($bar, 120);
-      expect(onDragStart).toHaveBeenCalledTimes(1)
-      expect(onDragEnd).toHaveBeenCalledTimes(1)
-      expect(onChange).toHaveBeenCalledTimes(2)
+      expect(onDragStart).toHaveBeenCalledTimes(1);
+      expect(onDragEnd).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenCalledTimes(2);
     });
   });
-})
+});

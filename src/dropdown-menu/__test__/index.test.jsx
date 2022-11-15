@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { nextTick, ref } from 'vue';
-import {DropdownMenu, DropdownItem} from '../index';
+import { DropdownMenu, DropdownItem } from '../index';
 import RadioGroup from '../../radio-group';
 import Radio from '../../radio';
-import CheckBox, { CheckboxGroup } from '../../checkbox'
+import CheckBox, { CheckboxGroup } from '../../checkbox';
 import Button from '../../button';
 
 const sleep = (duration) =>
@@ -14,8 +14,7 @@ const sleep = (duration) =>
     }, duration),
   );
 
-
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-dropdown-menu`;
 
 const chineseMap = '一二';
@@ -32,7 +31,6 @@ options.push({
   disabled: true,
 });
 
-
 describe('dropdown-menu', () => {
   describe('props', () => {
     // TODO：overlay 遮罩相关
@@ -42,17 +40,17 @@ describe('dropdown-menu', () => {
       const items = [
         {
           value: value1,
-          label: "菜单",
+          label: '菜单',
           disabled: true,
-          options: options
+          options: options,
         },
         {
           value: value2,
-          label: "菜单",
+          label: '菜单',
           disabled: false,
-          options: options
-        }
-      ]
+          options: options,
+        },
+      ];
       const duration = 500;
       const onChange = vi.fn();
       const wrapper = mount({
@@ -61,33 +59,46 @@ describe('dropdown-menu', () => {
             <DropdownMenu duration={duration}>
               {{
                 default: items.map((item, index) => {
-                  return <DropdownItem v-model={item.value.value} label={item.label} disabled={item.disabled} options={item.options} onChange={onChange} />
-                })
+                  return (
+                    <DropdownItem
+                      v-model={item.value.value}
+                      label={item.label}
+                      disabled={item.disabled}
+                      options={item.options}
+                      onChange={onChange}
+                    />
+                  );
+                }),
               }}
             </DropdownMenu>
-          )
-        }
+          );
+        },
       });
 
       const $menuLabels = wrapper.findAll(`.${name}__item`);
       $menuLabels.map(async (item, index) => {
         expect(item.attributes('class').includes(`${prefix}-is-disabled`)).toEqual(items[index].disabled);
-        expect(item.text()).toEqual(items[index].label)
-        await item.trigger('click', { item, index })
+        expect(item.text()).toEqual(items[index].label);
+        await item.trigger('click', { item, index });
       });
       // 动画延迟时间
       await sleep(duration ?? 200);
       expect(wrapper.element).toMatchSnapshot();
-      expect(wrapper.find(`.${prefix}-dropdown-item__content`).attributes('style').includes(`transition: transform ${duration}ms ease;`)).toBeTruthy();
+      expect(
+        wrapper
+          .find(`.${prefix}-dropdown-item__content`)
+          .attributes('style')
+          .includes(`transition: transform ${duration}ms ease;`),
+      ).toBeTruthy();
 
       // 此时，$menuLabels[1]为激活态，再次点击时收起
       const index = 1;
       const itemTemp = items[index];
       expect($menuLabels[index].attributes('class').includes(`${prefix}-is-active`)).toBeTruthy();
-      $menuLabels[1].trigger('click', { itemTemp, index })
-      await sleep( duration?? 200);
+      $menuLabels[1].trigger('click', { itemTemp, index });
+      await sleep(duration ?? 200);
       expect($menuLabels[index].attributes('class').includes(`${prefix}-is-active`)).toBeFalsy();
-    })
+    });
 
     it(': button', async () => {
       // 底部 button 仅在 multiple/optionsLayout === 'tree'时，有效
@@ -95,28 +106,36 @@ describe('dropdown-menu', () => {
       const items = [
         {
           value: value1,
-          label: "菜单",
+          label: '菜单',
           multiple: true,
-          options: options
-        }
-      ]
-      const onChange = vi.fn()
+          options: options,
+        },
+      ];
+      const onChange = vi.fn();
       const wrapper = mount({
         setup() {
           return () => (
             <DropdownMenu>
               {{
                 default: items.map((item, index) => {
-                  return <DropdownItem value={item.value.value} label={item.label} multiple={item.multiple} options={item.options} onChange={onChange} />
-                })
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      multiple={item.multiple}
+                      options={item.options}
+                      onChange={onChange}
+                    />
+                  );
+                }),
               }}
             </DropdownMenu>
-          )
-        }
+          );
+        },
       });
       const $menuLabels = wrapper.findAll(`.${name}__item`);
       $menuLabels.map((item, index) => {
-        item.trigger('click', { item, index })
+        item.trigger('click', { item, index });
       });
       await sleep(200);
 
@@ -148,17 +167,17 @@ describe('dropdown-menu', () => {
       const items = [
         {
           value: value1,
-          label: "菜单",
+          label: '菜单',
           disabled: true,
-          options: options
+          options: options,
         },
         {
           value: value2,
-          label: "菜单",
+          label: '菜单',
           disabled: false,
-          options: options
-        }
-      ]
+          options: options,
+        },
+      ];
 
       const wrapper = mount({
         setup() {
@@ -166,21 +185,28 @@ describe('dropdown-menu', () => {
             <DropdownMenu>
               {{
                 default: items.map((item, index) => {
-                  return <DropdownItem value={item.value.value} label={item.label} disabled={item.disabled} options={item.options} />
-                })
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      disabled={item.disabled}
+                      options={item.options}
+                    />
+                  );
+                }),
               }}
             </DropdownMenu>
-          )
-        }
+          );
+        },
       });
 
       const $menuLabels = wrapper.findAll(`.${name}__item`);
       $menuLabels.map(async (item, index) => {
         expect(item.attributes('class').includes(`${prefix}-is-disabled`)).toEqual(items[index].disabled);
-        expect(item.text()).toEqual(items[index].label)
-        await item.trigger('click', { item, index })
+        expect(item.text()).toEqual(items[index].label);
+        await item.trigger('click', { item, index });
       });
-    })
+    });
 
     it(': multiple', async () => {
       const value1 = ref('option_1');
@@ -188,17 +214,17 @@ describe('dropdown-menu', () => {
       const items = [
         {
           value: value1,
-          label: "菜单",
+          label: '菜单',
           options: options,
           multiple: false,
         },
         {
           value: value2,
-          label: "菜单",
+          label: '菜单',
           options: options,
           multiple: true,
-        }
-      ]
+        },
+      ];
 
       const wrapper = mount({
         setup() {
@@ -206,19 +232,26 @@ describe('dropdown-menu', () => {
             <DropdownMenu>
               {{
                 default: items.map((item, index) => {
-                  return <DropdownItem value={item.value.value} label={item.label} multiple={item.multiple} options={item.options} />
-                })
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      multiple={item.multiple}
+                      options={item.options}
+                    />
+                  );
+                }),
               }}
             </DropdownMenu>
-          )
-        }
+          );
+        },
       });
       const $menuLabels = wrapper.findAll(`.${name}__item`);
 
       // multiple = false, 单选列表, t-radio-group, t-radio
       const index0 = 0;
       const item0 = items[0];
-      await $menuLabels[0].trigger('click', { item0, index0 })
+      await $menuLabels[0].trigger('click', { item0, index0 });
       expect(wrapper.findComponent(RadioGroup).exists()).toBeTruthy();
       expect(wrapper.findAllComponents(Radio).length).toEqual(item0.options.length);
 
@@ -230,7 +263,7 @@ describe('dropdown-menu', () => {
       // multiple = true, 多选列表, t-checkbox-group, t-checkbox
       const index1 = 1;
       const item1 = items[1];
-      await $menuLabels[1].trigger('click', { item1, index1 })
+      await $menuLabels[1].trigger('click', { item1, index1 });
       expect(wrapper.findComponent(CheckboxGroup).exists()).toBeTruthy();
       expect(wrapper.findAllComponents(CheckBox).length).toEqual(item1.options.length);
       // 初始选中1项
@@ -247,7 +280,7 @@ describe('dropdown-menu', () => {
       // 禁用项，无法选中
       await $checkbox[2].find(`.${prefix}-checkbox__original-left`).trigger('click');
       expect(wrapper.findAll(`.${prefix}-is-checked`).length).toEqual(1);
-    })
+    });
 
     it(': optionsColumns', async () => {
       // options-columns值为[1,3]区间内，仅在 multiple = true 时，有效
@@ -255,31 +288,44 @@ describe('dropdown-menu', () => {
       const items = [
         {
           value: value1,
-          label: "菜单",
+          label: '菜单',
           options: options,
           multiple: true,
-          optionsColumns: 2
-        }
-      ]
+          optionsColumns: 2,
+        },
+      ];
       const wrapper = mount({
         setup() {
           return () => (
             <DropdownMenu>
               {{
                 default: items.map((item, index) => {
-                  return <DropdownItem value={item.value.value} label={item.label} multiple={item.multiple} options={item.options} optionsColumns={item.optionsColumns} />
-                })
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      multiple={item.multiple}
+                      options={item.options}
+                      optionsColumns={item.optionsColumns}
+                    />
+                  );
+                }),
               }}
             </DropdownMenu>
-          )
-        }
+          );
+        },
       });
       const $menuLabels = wrapper.findAll(`.${name}__item`);
       $menuLabels.map((item, index) => {
-        item.trigger('click', { item, index })
+        item.trigger('click', { item, index });
       });
       await sleep(200);
-      expect(wrapper.find(`.${prefix}-dropdown-item__content`).attributes('class').includes(`${prefix}-is-col${items[0].optionsColumns}`)).toBeTruthy();
+      expect(
+        wrapper
+          .find(`.${prefix}-dropdown-item__content`)
+          .attributes('class')
+          .includes(`${prefix}-is-col${items[0].optionsColumns}`),
+      ).toBeTruthy();
     });
 
     it(': optionsLayout', async () => {
@@ -303,24 +349,36 @@ describe('dropdown-menu', () => {
 
       const optionsT1 = ref(buildTree(radioLength, checkboxLength)); // 树形列表 - 叶子节点（单选）
       const optionsT2 = ref(buildTree(radioLength, radioLength, checkboxLength)); // 树形列表 - 叶子节点（多选）
-      const treeValue1 = ref(['options_0',  ['options_0', 'options_1']]);
+      const treeValue1 = ref(['options_0', ['options_0', 'options_1']]);
       const treeValue2 = ref(['options_0', 'options_2', ['options_0', 'options_1']]);
 
       const wrapper = mount({
         setup() {
           return () => (
             <DropdownMenu>
-              <DropdownItem v-model={treeValue1} label="树形双列" options={optionsT1.value} optionsLayout="tree" multiple={true} />
-              <DropdownItem v-model={treeValue2} label="树形三列" options={optionsT2.value} optionsLayout="tree" multiple={true} />
+              <DropdownItem
+                v-model={treeValue1}
+                label="树形双列"
+                options={optionsT1.value}
+                optionsLayout="tree"
+                multiple={true}
+              />
+              <DropdownItem
+                v-model={treeValue2}
+                label="树形三列"
+                options={optionsT2.value}
+                optionsLayout="tree"
+                multiple={true}
+              />
             </DropdownMenu>
-          )
-        }
+          );
+        },
       });
 
       expect(wrapper.element).toMatchSnapshot();
       const $menuLabels = wrapper.findAll(`.${name}__item`);
       const index0 = 0;
-      await $menuLabels[0].trigger('click', { optionsT1, index0 })
+      await $menuLabels[0].trigger('click', { optionsT1, index0 });
 
       // 初始化: Radio 有 radioLength 项, 选中 1 项; checkbox 有 checkboxLength 项, 选中 2 项
       expect(wrapper.findAllComponents(Radio).length).toEqual(3);
@@ -341,10 +399,10 @@ describe('dropdown-menu', () => {
       const items = [
         {
           value: value1,
-          label: "菜单",
+          label: '菜单',
           options: options,
-        }
-      ]
+        },
+      ];
       const onChange = vi.fn();
       const wrapper = mount({
         setup() {
@@ -352,16 +410,23 @@ describe('dropdown-menu', () => {
             <DropdownMenu>
               {{
                 default: items.map((item, index) => {
-                  return <DropdownItem value={item.value.value} label={item.label} options={item.options} onChange={onChange} />
-                })
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      options={item.options}
+                      onChange={onChange}
+                    />
+                  );
+                }),
               }}
             </DropdownMenu>
-          )
-        }
+          );
+        },
       });
       const $menuLabels = wrapper.findAll(`.${name}__item`);
       $menuLabels.map((item, index) => {
-        item.trigger('click', { item, index })
+        item.trigger('click', { item, index });
       });
       await sleep(200);
       const $radios = wrapper.findAll(`.t-radio`);
@@ -375,4 +440,4 @@ describe('dropdown-menu', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
     });
   });
-})
+});

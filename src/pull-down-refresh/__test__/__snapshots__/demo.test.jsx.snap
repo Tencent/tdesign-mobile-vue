@@ -2,37 +2,27 @@
 
 exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
 <div
-  class="tdesign-mobile-demo"
+  class="t-pull-down-refresh"
 >
   <div
-    class="tdesign-mobile-demo-block"
+    class="t-pull-down-refresh__track"
+    style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
   >
-    <!--v-if-->
-    <!--v-if-->
-    
     <div
-      class="t-pull-down-refresh"
+      class="t-pull-down-refresh__max"
+      style="height: 80px;"
     >
       <div
-        class="t-pull-down-refresh__track"
-        style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+        class="t-pull-down-refresh__loading"
+        style="height: 50px;"
       >
-        <div
-          class="t-pull-down-refresh__max"
-          style="height: 80px;"
-        >
-          <div
-            class="t-pull-down-refresh__loading"
-            style="height: 50px;"
-          >
-            <div />
-          </div>
-        </div>
-        
-        下拉刷新
-        
+        <div />
       </div>
     </div>
+    
+    
+     下拉刷新 
+    
     
   </div>
 </div>
@@ -80,10 +70,8 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
   data-v-43d0a031=""
+  style="background-color: rgb(255, 255, 255); height: 100vh;"
 >
-  <!-- &lt;h1 class="title"&gt;PullDownRefresh 下拉刷新&lt;/h1&gt;
-    &lt;p class="summary"&gt;用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。&lt;/p&gt;
-    &lt;p class="blank"&gt;&lt;/p&gt; -->
   <div
     class="tdesign-mobile-demo-block"
     data-v-43d0a031=""
@@ -92,186 +80,136 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
     <!--v-if-->
     
     <div
-      class="t-tabs t-is-top t-size-m"
+      class="t-pull-down-refresh"
       data-v-43d0a031=""
     >
       <div
-        class="t-sticky"
-        style="height: 0px;"
+        class="t-pull-down-refresh__track"
+        style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
       >
         <div
-          class="t-sticky__content"
-          style="z-index: 99;"
+          class="t-pull-down-refresh__max"
+          style="height: 80px;"
         >
-          
           <div
-            class="t-tabs__nav"
+            class="t-pull-down-refresh__loading"
+            style="height: 50px;"
           >
-            <div
-              class="t-tabs__nav-container"
-            >
-              <div
-                class="t-tabs__nav-wrap"
-              >
-                
-                <div
-                  class="t-tabs__nav-item t-is-active"
-                >
-                  基础用法
-                </div>
-                <div
-                  class="t-tabs__nav-item"
-                >
-                  自定义文案
-                </div>
-                <div
-                  class="t-tabs__nav-item"
-                >
-                  超时事件
-                </div>
-                
-                <div
-                  class="t-tabs__nav-line"
-                  style=""
-                />
-              </div>
-            </div>
+            <div />
           </div>
-          
         </div>
-      </div>
-      <div
-        class="t-tabs__content"
-      >
         
-        <div
-          class="t-tab-panel t-tabs__panel"
+        
+        <h1
+          class="title"
           data-v-43d0a031=""
-          value="first"
+        >
+          PullDownRefresh 下拉刷新
+        </h1>
+        <p
+          class="summary"
+          data-v-43d0a031=""
+        >
+          用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
+        </p>
+        <div
+          class="tdesign-mobile-block"
+          data-v-43d0a031=""
+        >
+          拖拽该区域演示 顶部下拉刷新
+        </div>
+        <div
+          class="group"
+          data-v-43d0a031=""
         >
           
           <div
-            class="refresh-content"
+            class="t-skeleton item"
             data-v-43d0a031=""
           >
+            
             <div
-              class="t-pull-down-refresh demo-pull-down-refresh"
-              data-v-43d0a031=""
+              class="t-skeleton__content"
             >
+              
               <div
-                class="t-pull-down-refresh__track"
-                style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+                class="t-skeleton__row"
               >
-                <div
-                  class="t-pull-down-refresh__max"
-                  style="height: 80px;"
-                >
-                  <div
-                    class="t-pull-down-refresh__loading"
-                    style="height: 50px;"
-                  >
-                    <div />
-                  </div>
-                </div>
                 
                 <div
-                  class="content-text"
-                  data-v-43d0a031=""
-                >
-                  已下拉0次
-                </div>
+                  class="t-skeleton__col t-skeleton--type-text"
+                />
                 
               </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 100px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                />
+                
+              </div>
+              
             </div>
+            
           </div>
-          
-        </div>
-        <div
-          class="t-tab-panel t-tabs__panel"
-          data-v-43d0a031=""
-          style="display: none;"
-          value="second"
-        >
-          
           <div
-            class="refresh-content"
+            class="t-skeleton item"
             data-v-43d0a031=""
           >
+            
             <div
-              class="t-pull-down-refresh demo-pull-down-refresh"
-              data-v-43d0a031=""
+              class="t-skeleton__content"
             >
+              
               <div
-                class="t-pull-down-refresh__track"
-                style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+                class="t-skeleton__row"
               >
-                <div
-                  class="t-pull-down-refresh__max"
-                  style="height: 80px;"
-                >
-                  <div
-                    class="t-pull-down-refresh__loading"
-                    style="height: 50px;"
-                  >
-                    <div />
-                  </div>
-                </div>
                 
                 <div
-                  class="content-text"
-                  data-v-43d0a031=""
-                >
-                  已下拉0次
-                </div>
+                  class="t-skeleton__col t-skeleton--type-text"
+                />
                 
               </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 100px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                />
+                
+              </div>
+              
             </div>
+            
           </div>
           
         </div>
-        <div
-          class="t-tab-panel t-tabs__panel"
-          data-v-43d0a031=""
-          style="display: none;"
-          value="third"
-        >
-          
-          <div
-            class="refresh-content"
-            data-v-43d0a031=""
-          >
-            <div
-              class="t-pull-down-refresh demo-pull-down-refresh"
-              data-v-43d0a031=""
-            >
-              <div
-                class="t-pull-down-refresh__track"
-                style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
-              >
-                <div
-                  class="t-pull-down-refresh__max"
-                  style="height: 80px;"
-                >
-                  <div
-                    class="t-pull-down-refresh__loading"
-                    style="height: 50px;"
-                  >
-                    <div />
-                  </div>
-                </div>
-                
-                <div
-                  class="content-text"
-                  data-v-43d0a031=""
-                >
-                  已下拉0次
-                </div>
-                
-              </div>
-            </div>
-          </div>
-          
-        </div>
+        
         
       </div>
     </div>

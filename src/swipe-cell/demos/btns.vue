@@ -1,5 +1,5 @@
 <template>
-  <div class="tdesign-mobile-demo">
+  <tdesign-demo-block summary="左右两侧都有菜单">
     <t-swipe-cell>
       <t-cell title="左右都有菜单"></t-cell>
       <template #left>
@@ -12,31 +12,22 @@
         </div>
       </template>
     </t-swipe-cell>
-  </div>
+  </tdesign-demo-block>
 </template>
 
-<script lang="ts">
-import { defineComponent, reactive, ref } from 'vue';
+<script setup lang="ts">
+import { reactive } from 'vue';
 import Toast from '../../toast/index';
 import { SwipeActionItem } from '../type';
 
-export default defineComponent({
-  setup() {
-    const initData = reactive({
-      showDialog: false,
-      disabled: false,
-    });
-    const handleClick = (value: { action: SwipeActionItem; source: String }) => {
-      Toast(JSON.stringify(value));
-    };
-    const handleClickLeft = () => {
-      Toast('click');
-    };
-    return {
-      initData,
-      handleClick,
-      handleClickLeft,
-    };
-  },
+const initData = reactive({
+  showDialog: false,
+  disabled: false,
 });
+const handleClick = (value: { action: SwipeActionItem; source: String }) => {
+  Toast(JSON.stringify(value));
+};
+const handleClickLeft = () => {
+  Toast('click');
+};
 </script>

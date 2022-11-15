@@ -5,33 +5,32 @@ import Radio from '../radio.vue';
 import RadioGroup from '../../radio-group/radio-group.vue';
 import { CheckRectangleFilledIcon, CheckRectangleIcon } from 'tdesign-icons-vue-next';
 
-const prefix = 't'
+const prefix = 't';
 const name = `${prefix}-radio`;
 const TEXT = 'tdesign-mobile-vue';
 const TiconCheckRectangleFilled = h(CheckRectangleFilledIcon);
 const TiconCheckRectangle = h(CheckRectangleIcon);
 const checkRectangle = [TiconCheckRectangleFilled, TiconCheckRectangle];
 
-
 describe('Radio', () => {
   describe('props', () => {
     it(': icon', () => {
       const wrapper = mount(Radio, {
         props: {
-          icon: checkRectangle // 自定义 icon
-        }
-      })
+          icon: checkRectangle, // 自定义 icon
+        },
+      });
       const $icon = wrapper.find(`.${name}__icon-left-wrap .${name}__icon--custom `);
       expect($icon.exists()).toBeTruthy();
-    })
+    });
 
     it(': align', async () => {
       const wrapper = mount(Radio, {
         props: {
           default: TEXT, // 单选按钮内容，同 label
           align: 'left',
-        }
-      })
+        },
+      });
       // align = 'left'
       const $left = wrapper.find(`.${name}__icon-left-wrap`);
       const $label = wrapper.find(`.${name}__content-title`);
@@ -44,14 +43,14 @@ describe('Radio', () => {
       // align = 'right'
       const $right = wrapper.find(`.${name}__icon-${align}-wrap`);
       expect($right.exists()).toBeTruthy();
-    })
+    });
 
     it(': label', async () => {
       const wrapper = mount(Radio, {
         props: {
           label: TEXT,
-        }
-      })
+        },
+      });
       // align = 'left' （默认）
       const $left = wrapper.find(`.${name}__icon-left-wrap`);
       expect($left.exists()).toBeTruthy();
@@ -68,7 +67,7 @@ describe('Radio', () => {
       const onChange = vi.fn();
       const align = 'right';
       const contentDisabled = true;
-      const label = 'label content'
+      const label = 'label content';
       const wrapper = mount(Radio, {
         props: {
           align,
@@ -77,7 +76,7 @@ describe('Radio', () => {
           content: TEXT,
           onChange,
         },
-      })
+      });
       const $content = wrapper.find(`.${name}__content-inner`);
       // contentDisabled = true,  点击 content 区域，不会触发 change
       await $content.trigger('click');
@@ -89,11 +88,10 @@ describe('Radio', () => {
       expect(onChange).toBeCalledTimes(1);
     });
 
-
     it(': disabled', async () => {
       const onChange = vi.fn();
       const disabled = true;
-      const label = 'label content'
+      const label = 'label content';
       const wrapper = mount(Radio, {
         props: {
           disabled,
@@ -101,7 +99,7 @@ describe('Radio', () => {
           content: TEXT,
           onChange,
         },
-      })
+      });
       const $radio = wrapper.findComponent(Radio);
       const $leftInput = wrapper.find(`.${name}__original-left`);
       const $label = wrapper.find(`.${name}__content-title`);
@@ -130,16 +128,16 @@ describe('Radio', () => {
     it(': checked', async () => {
       const options = [
         {
-          label: "单选",
+          label: '单选',
           value: 0,
-          content: "辅助信息文字最多两行",
+          content: '辅助信息文字最多两行',
         },
         {
-          label: "单选",
+          label: '单选',
           value: 1,
-          content: "辅助信息文字最多两行",
-        }
-      ]
+          content: '辅助信息文字最多两行',
+        },
+      ];
       const onChange = vi.fn();
 
       const radio = ref(1);
@@ -149,7 +147,7 @@ describe('Radio', () => {
           options,
           onChange,
         },
-      })
+      });
 
       const $group = wrapper.findAllComponents(Radio);
       expect($group.length).toBe(options.length);
@@ -157,7 +155,7 @@ describe('Radio', () => {
       $group.forEach((item, index) => {
         const isTrue = index === radio.value;
         expect(item.classes().includes('t-is-checked')).toBe(isTrue);
-      })
+      });
 
       // 切换按钮, 此时选中项为第一项
       const $firstRadio = $group.at(0);
@@ -190,26 +188,25 @@ describe('Radio', () => {
 
   describe('slots', () => {
     it(': label', () => {
-      const label = 'slot: label content'
+      const label = 'slot: label content';
       const wrapper = mount(Radio, {
         slots: {
-          label
-        }
-      })
+          label,
+        },
+      });
       const $label = wrapper.find(`.${name}__content-title`);
       expect($label.text()).toEqual(label);
-    })
+    });
 
     it(': content', () => {
-      const content = 'slot: content content'
+      const content = 'slot: content content';
       const wrapper = mount(Radio, {
         slots: {
-          content
-        }
-      })
+          content,
+        },
+      });
       const $content = wrapper.find(`.${name}__content-inner`);
       expect($content.text()).toEqual(content);
-    })
-  })
-
+    });
+  });
 });

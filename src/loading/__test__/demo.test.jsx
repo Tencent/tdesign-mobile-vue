@@ -10,6 +10,7 @@ import horzVue from '@/loading/demos/horz.vue';
 import mobileVue from '@/loading/demos/mobile.vue';
 import pureTextVue from '@/loading/demos/pure-text.vue';
 import sizeVue from '@/loading/demos/size.vue';
+import speedVue from '@/loading/demos/speed.vue';
 import vertVue from '@/loading/demos/vert.vue';
 
 const mapper = {
@@ -20,6 +21,7 @@ const mapper = {
   mobileVue,
   pureTextVue,
   sizeVue,
+  speedVue,
   vertVue,
 };
 
