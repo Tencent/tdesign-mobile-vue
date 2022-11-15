@@ -1,0 +1,8 @@
+name: MAIN_PUSH
+
+on:
+  push
+
+jobs:
+  call-test-build:
+    uses: Tencent/tdesign/.github/workflows/test-build.yml@main
