@@ -160,9 +160,9 @@ describe('stepper', () => {
       expect(onBlur).toHaveBeenCalled(1);
 
       // input, 触发 change
-      $input.setValue('10');
+      $input.setValue(10);
       expect(onChange).toBeCalled(1);
-      expect(value.value).toBe(10);
+      expect(onChange).toHaveBeenCalledWith(10);
     });
   });
 });

@@ -10,8 +10,10 @@
       :style="inputStyle"
       :disabled="disableInput || disabled"
       :readonly="disableInput"
+      @focus="handleFocus"
       @blur="handleBlur"
       @input="handleInput"
+      @change="handleChange"
     />
     <div :class="[`${name}__plus`, `${disabled || stepperValue >= max ? 't-is-disabled' : ''}`]" @click="plusValue">
       <add-icon :class="`${name}__icon`" />
@@ -82,18 +84,20 @@ export default defineComponent({
     };
 
     const handleInput = (e: Event) => {
-      handleChange(e);
+      const value = (e.target as HTMLTextAreaElement).value.replace(/[^\d]/g, '');
+      stepperValue.value = Number(value);
     };
 
-    const handleChange = (e: Event) => {
-      const value = (e.target as HTMLTextAreaElement).value.match(/^\d+\.\d+|^\d+/g);
-      if (isNaN(Number(value))) return;
-      const formattedValue = formatValue(Number(value));
-      updateValue(Number(formattedValue));
+    const handleChange = () => {
+      const formattedValue = formatValue(stepperValue.value);
+      updateValue(formattedValue);
     };
 
-    const handleBlur = (e: FocusEvent) => {
-      handleChange(e);
+    const handleFocus = () => {
+      emitEvent('focus', stepperValue.value);
+    };
+
+    const handleBlur = () => {
       emitEvent('blur', stepperValue.value);
     };
 
@@ -106,6 +110,7 @@ export default defineComponent({
       handleInput,
       handleChange,
       inputStyle,
+      handleFocus,
       handleBlur,
       isPureMode,
       ...toRefs(props),
