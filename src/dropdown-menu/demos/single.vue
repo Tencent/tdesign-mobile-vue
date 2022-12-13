@@ -1,9 +1,6 @@
 <template>
   <t-dropdown-menu>
-    <t-dropdown-item v-model="value1" label="菜单" :options="options" />
-    <t-dropdown-item v-model="value2" label="菜单" :options="options" />
-    <t-dropdown-item v-model="value3" label="菜单" :options="options" />
-    <t-dropdown-item v-model="value4" label="两字菜单" :options="options" />
+    <t-dropdown-item v-for="(item, index) in valueList" :key="index" :value="item" label="菜单" :options="options" />
   </t-dropdown-menu>
 </template>
 
@@ -24,8 +21,5 @@ options.push({
   disabled: true,
 });
 
-const value1 = ref('option_2');
-const value2 = ref('option_2');
-const value3 = ref('option_2');
-const value4 = ref('option_2');
+const valueList = ref(['option_2', 'option_2', 'option_2', 'option_2']);
 </script>

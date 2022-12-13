@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, ref, reactive, watch, provide } from 'vue';
+import { defineComponent, computed, toRefs, ref, reactive, watch, provide, Fragment } from 'vue';
 import { CaretDownSmallIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import { context as menuContext, DropdownMenuState, DropdownMenuControl, DropdownMenuExpandState } from './context';
@@ -41,8 +41,17 @@ export default defineComponent({
     const updateItems = () => {
       if (slots.default) {
         const itemName = `${prefix}-dropdown-item`;
-        const children = slots.default();
-        menuItems.value = children.filter((child: any) => {
+        const children: any[] = slots.default ? slots.default() : [];
+        const res: any[] = [];
+
+        children.forEach((child) => {
+          if (child.type === Fragment) {
+            res.push(...child.children);
+          } else {
+            res.push(child);
+          }
+        });
+        menuItems.value = res.filter((child: any) => {
           const childTypeName = child?.type?.name;
           return childTypeName?.includes && childTypeName.includes(itemName);
         });
