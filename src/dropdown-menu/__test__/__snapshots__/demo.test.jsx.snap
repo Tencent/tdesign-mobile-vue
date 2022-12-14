@@ -556,7 +556,7 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
           <div
             class="t-dropdown-menu__title"
           >
-            两字菜单
+            菜单
           </div>
           <svg
             class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
@@ -575,10 +575,12 @@ exports[`DropdownMenu > DropdownMenu mobileVue demo works fine 1`] = `
         
       </div>
       
+      
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
       <!--v-if-->
+      
       
     </div>
     
@@ -1319,7 +1321,7 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
       <div
         class="t-dropdown-menu__title"
       >
-        两字菜单
+        菜单
       </div>
       <svg
         class="t-icon t-icon-caret-down-small t-dropdown-menu__arrow"
@@ -1338,10 +1340,12 @@ exports[`DropdownMenu > DropdownMenu singleVue demo works fine 1`] = `
     
   </div>
   
+  
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
   <!--v-if-->
+  
   
 </div>
 `;
