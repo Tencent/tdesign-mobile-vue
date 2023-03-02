@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onUnmounted, ref, toRefs, computed, SetupContext, watch } from 'vue';
+import { defineComponent, onUnmounted, ref, toRefs, computed, watch } from 'vue';
 import { useElementSize } from '@vueuse/core';
 import PullDownRefreshProps from './props';
 import { useEmitEvent, useVModel } from '../shared';
@@ -40,7 +40,7 @@ export default defineComponent({
   components: { TLoading },
   props: PullDownRefreshProps,
   emits: ['refresh', 'timeout', 'update:value', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
 
     // 动态生成style

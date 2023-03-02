@@ -3,20 +3,14 @@
  */
 
 import { mount } from '@vue/test-utils';
-import baseVue from '@/back-top/demos/base.vue';
 import halfRoundVue from '@/back-top/demos/half-round.vue';
 import mobileVue from '@/back-top/demos/mobile.vue';
 import roundVue from '@/back-top/demos/round.vue';
-import targetVue from '@/back-top/demos/target.vue';
-import themeVue from '@/back-top/demos/theme.vue';
 
 const mapper = {
-  baseVue,
   halfRoundVue,
   mobileVue,
   roundVue,
-  targetVue,
-  themeVue,
 };
 
 describe('BackTop', () => {

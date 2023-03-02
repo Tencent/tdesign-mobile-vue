@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { defineComponent, computed, getCurrentInstance, SetupContext } from 'vue';
+import { defineComponent, computed, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
 import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
@@ -30,7 +30,7 @@ const Tag = defineComponent({
   },
   props: TagProps,
   emits: ['close', 'click'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));

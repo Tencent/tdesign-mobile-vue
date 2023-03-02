@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { defineComponent, computed, toRefs, getCurrentInstance, SetupContext } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
 import { useEmitEvent, renderContent, renderTNode, TNode, useVModel } from '../shared';
@@ -30,7 +30,7 @@ const CheckTag = defineComponent({
   },
   props: CheckTagProps,
   emits: ['change', 'click', 'update:checked', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));

@@ -108,19 +108,7 @@
 
 <script lang="ts">
 import { CheckIcon } from 'tdesign-icons-vue-next';
-import {
-  h,
-  ref,
-  watch,
-  toRefs,
-  inject,
-  computed,
-  reactive,
-  nextTick,
-  SetupContext,
-  onBeforeMount,
-  defineComponent,
-} from 'vue';
+import { h, ref, watch, toRefs, inject, computed, reactive, nextTick, onBeforeMount, defineComponent } from 'vue';
 import { TNode } from '../common';
 import TRadio from '../radio';
 import config from '../config';
@@ -157,7 +145,7 @@ export default defineComponent({
   components: { TRadio, TButton, TCheckbox, TRadioGroup, TCheckboxGroup },
   props: DropdownItemProps,
   emits: ['change', 'open', 'opened', 'close', 'closed', 'update:value', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     // 受控 value 属性
     const { value, modelValue } = toRefs(props);
@@ -186,7 +174,7 @@ export default defineComponent({
       showOverlay: computed(() => menuProps.overlay),
       isShowItems: false,
       isExpanded: false,
-      expandStyle: {},
+      expandStyle: {} as Object,
       transitionStyle: computed(() => ({
         transition: `transform ${menuProps.duration}ms ease`,
         '-webkit-transition': `transform ${menuProps.duration}ms ease`,

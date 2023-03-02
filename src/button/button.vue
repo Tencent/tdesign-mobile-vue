@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, h, SetupContext } from 'vue';
+import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
 import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
 import CLASSNAMES from '../shared/constants';
@@ -25,7 +25,7 @@ export default defineComponent({
   components: { TNode },
   props: ButtonProps,
   emits: ['click'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const buttonClass = computed(() => [

@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
+import { ref, computed, defineComponent, ExtractPropTypes, PropType, ComputedRef } from 'vue';
 import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
 import rateProps from './props';
 import config from '../config';
@@ -51,7 +51,7 @@ export default defineComponent({
   components: { StarFilledIcon, StarIcon },
   props: rateProps,
   emits: ['change', 'update:value', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const rateWrapper = ref<HTMLElement | null>(null);
     const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
     const rateText = computed(() => {

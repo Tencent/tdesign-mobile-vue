@@ -49,7 +49,7 @@ const rowCols = [
 ];
 
 window.document.addEventListener('scroll', function (e: Event) {
-  const { scrollTop } = e.currentTarget?.scrollingElement || {};
+  const { scrollTop } = (e.currentTarget as any)?.scrollingElement || {};
   if (scrollTop <= 300) {
     style.value = { display: 'none' };
   } else {

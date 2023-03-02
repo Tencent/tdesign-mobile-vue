@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { h, computed, toRefs, getCurrentInstance, SetupContext, defineComponent } from 'vue';
+import { h, computed, toRefs, getCurrentInstance, defineComponent } from 'vue';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import resultProps from './props';
 import config from '../config';

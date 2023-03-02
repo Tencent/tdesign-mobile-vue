@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { Toast } from 'tdesign-mobile-vue';
+import Toast from '../index';
 
 const showOverlayProps = () => {
   Toast({

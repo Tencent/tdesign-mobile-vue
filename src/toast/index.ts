@@ -76,7 +76,7 @@ function parseOptions(message?: Partial<TdToastProps> | string) {
 Toast.install = (app: App) => {
   // 添加插件入口
   // eslint-disable-next-line no-param-reassign
-  app.config.globalProperties.$toast = Toast;
+  app.config.globalProperties.$toast = Toast as any;
 };
 
 type ToastApi = {

@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, SetupContext, computed, toRefs, getCurrentInstance } from 'vue';
+import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import { useEmitEvent, renderTNode } from '../shared';
@@ -25,7 +25,7 @@ export default defineComponent({
   components: { CheckIcon },
   props: CascaderItemProps,
   emits: ['click'],
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const className = computed(() => [
       `${name}`,
       Boolean(props.active) && 'active',

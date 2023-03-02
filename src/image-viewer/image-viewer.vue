@@ -28,17 +28,7 @@
 </template>
 
 <script lang="ts">
-import {
-  computed,
-  toRefs,
-  ref,
-  defineComponent,
-  reactive,
-  watch,
-  getCurrentInstance,
-  CSSProperties,
-  SetupContext,
-} from 'vue';
+import { computed, toRefs, ref, defineComponent, reactive, watch, getCurrentInstance, CSSProperties } from 'vue';
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import ImageViewerProps from './props';
@@ -71,7 +61,7 @@ export default defineComponent({
   },
   props: ImageViewerProps,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const state = reactive({
       zooming: false,
       scale: 1,

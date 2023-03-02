@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { Toast } from 'tdesign-mobile-vue';
+import Toast from '../index';
 
 const showOverlay = () => {
   Toast({ message: '未知点击事件' });

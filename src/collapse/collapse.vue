@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { toRefs, provide, SetupContext, defineComponent, computed, Ref, ComputedRef } from 'vue';
+import { toRefs, provide, defineComponent, computed, Ref, ComputedRef } from 'vue';
 import props from './props';
 import config from '../config';
 import { useVModel } from '../shared';
@@ -25,7 +25,7 @@ export default defineComponent({
   name,
   props,
   emits: ['update:value', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const { value, modelValue } = toRefs(props);
     const [activeValue, setActiveValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const calcActiveValues = (activeValues: any[], panelValue: any, expandMutex: boolean) => {

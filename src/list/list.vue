@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, getCurrentInstance, SetupContext } from 'vue';
+import { defineComponent, ref, computed, getCurrentInstance } from 'vue';
 import { useElementBounding, useWindowSize, useEventListener } from '@vueuse/core';
 import TLoading from '../loading';
 import config from '../config';
@@ -37,7 +37,7 @@ export default defineComponent({
   },
   props: ListProps,
   emits: ['load-more', 'scroll'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const root = ref<HTMLElement>();
     const empty = ref<HTMLElement>();

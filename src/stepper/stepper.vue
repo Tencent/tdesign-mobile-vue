@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { toRefs, computed, defineComponent, SetupContext, nextTick } from 'vue';
+import { toRefs, computed, defineComponent, nextTick } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
@@ -39,7 +39,7 @@ export default defineComponent({
   },
   props: StepperProps,
   emits: ['update:value', 'update:modelValue', 'blur', 'change', 'overlimit'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
     const emitEvent = useEmitEvent(props, context.emit);
 

@@ -10,7 +10,7 @@ export type EmitEventName = { event: string; method: string } | string;
  * @returns {emitEvent}
  * @example useEmitEvent<IProps>(props, emit);
  */
-export function useEmitEvent<P extends Record<string, any>>(props: P, emit: (event: string, ...args: any[]) => void) {
+export function useEmitEvent<P extends Record<string, any>>(props: P, emit: (...args: any[]) => void) {
   return function emitEvent<T extends any[] = any[]>(eventName: string, ...args: T) {
     let emitEventMethodName = '';
     if (typeof eventName === 'string') {

@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, onMounted, toRefs, defineComponent, PropType, SetupContext } from 'vue';
+import { ref, computed, onMounted, toRefs, defineComponent, PropType } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
 import { PickerColumnItem, PickerValue } from './type';
@@ -34,7 +34,7 @@ export default defineComponent({
     },
   },
   emits: ['pick'],
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     let picker: Picker | null = null;
     const el = document.createElement('div');

@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, SetupContext, watch, defineComponent } from 'vue';
+import { ref, computed, watch, defineComponent } from 'vue';
 import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
@@ -35,7 +35,7 @@ export default defineComponent({
   components: { TOverlay },
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [currentVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,

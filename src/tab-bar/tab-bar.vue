@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, provide, Ref, computed, SetupContext } from 'vue';
+import { defineComponent, ref, provide, Ref, computed } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
 import { useDefault } from '../shared';
@@ -17,7 +17,7 @@ export default defineComponent({
   name,
   props: TabBarProps,
   emits: ['update:value', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const [activeValue] = useDefault(props, context.emit, 'value', 'change');
     const defaultIndex: Ref<number> = ref(-1);
 

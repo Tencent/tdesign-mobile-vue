@@ -57,17 +57,7 @@
 
 <script lang="ts">
 import { onClickOutside, useSwipe } from '@vueuse/core';
-import {
-  ref,
-  watch,
-  toRefs,
-  reactive,
-  computed,
-  onMounted,
-  SetupContext,
-  defineComponent,
-  getCurrentInstance,
-} from 'vue';
+import { ref, watch, toRefs, reactive, computed, onMounted, defineComponent, getCurrentInstance } from 'vue';
 import props from './props';
 import config from '../config';
 import TButton from '../button';
@@ -90,7 +80,7 @@ export default defineComponent({
   components: { TNode, TButton },
   props,
   emits: ['click', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const swipeContent = computed(() => renderContent(internalInstance, 'default', 'content'));

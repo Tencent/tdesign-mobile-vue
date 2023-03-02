@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, SetupContext, getCurrentInstance, h } from 'vue';
+import { computed, defineComponent, getCurrentInstance, h } from 'vue';
 import { useElementBounding } from '@vueuse/core';
 import { BacktopIcon as TIconBackTop } from 'tdesign-icons-vue-next';
 
@@ -26,7 +26,7 @@ export default defineComponent({
   name,
   components: { TNode, TIconBackTop },
   props: BackTopProps,
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const el = computed(() => {
       return props.target ? props.target() : window.document.documentElement;

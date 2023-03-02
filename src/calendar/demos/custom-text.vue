@@ -8,7 +8,7 @@ import { ref } from 'vue';
 
 const minDate = new Date(2022, 1, 1);
 const maxDate = new Date(2022, 2, 15);
-const format = (day) => {
+const format = (day: any) => {
   const { date } = day;
   const year = date.getFullYear();
   const month = date.getMonth() + 1;

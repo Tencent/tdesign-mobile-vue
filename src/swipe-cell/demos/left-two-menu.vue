@@ -1,11 +1,11 @@
 <template>
   <tdesign-demo-block summary="左滑双操作">
-    <t-swipe-cell :right="initData.btns" @click="(value) => handleClickBtns(value)">
+    <t-swipe-cell :right="initData.btns" @click="(value: any) => handleClickBtns(value)">
       <t-cell title="列表-左滑双操作" note="双操作"></t-cell>
     </t-swipe-cell>
   </tdesign-demo-block>
   <tdesign-demo-block style="margin-top: 10px">
-    <t-swipe-cell :right="initData.btns" expanded="right" @click="(value) => handleClickBtns(value)">
+    <t-swipe-cell :right="initData.btns" expanded="right" @click="(value: any) => handleClickBtns(value)">
       <t-cell title="列表-左滑双操作" note="双操作"></t-cell>
     </t-swipe-cell>
   </tdesign-demo-block>

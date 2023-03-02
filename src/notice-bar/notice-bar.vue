@@ -35,7 +35,6 @@ import {
   reactive,
   ref,
   toRefs,
-  SetupContext,
   computed,
   onMounted,
   nextTick,
@@ -65,7 +64,7 @@ export default defineComponent({
   components: { TNode },
   props: NoticeBarProps,
   emits: ['click', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     // 初始化数据
