@@ -46,15 +46,15 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
       height="1em"
       style="animation-duration: 800ms;"
       version="1.1"
-      viewBox="0 0 14 14"
+      viewBox="0 0 12 12"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <foreignobject
         height="12"
         width="12"
-        x="1"
-        y="1"
+        x="0"
+        y="0"
       >
         <div
           class="t-loading__gradient-conic"
@@ -198,15 +198,15 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
       height="1em"
       style="animation-duration: 800ms;"
       version="1.1"
-      viewBox="0 0 14 14"
+      viewBox="0 0 12 12"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <foreignobject
         height="12"
         width="12"
-        x="1"
-        y="1"
+        x="0"
+        y="0"
       >
         <div
           class="t-loading__gradient-conic"
@@ -334,15 +334,15 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           height="1em"
           style="animation-duration: 800ms;"
           version="1.1"
-          viewBox="0 0 14 14"
+          viewBox="0 0 12 12"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <foreignobject
             height="12"
             width="12"
-            x="1"
-            y="1"
+            x="0"
+            y="0"
           >
             <div
               class="t-loading__gradient-conic"
@@ -457,15 +457,15 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           height="1em"
           style="animation-duration: 800ms;"
           version="1.1"
-          viewBox="0 0 14 14"
+          viewBox="0 0 12 12"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <foreignobject
             height="12"
             width="12"
-            x="1"
-            y="1"
+            x="0"
+            y="0"
           >
             <div
               class="t-loading__gradient-conic"
@@ -573,15 +573,15 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             height="1em"
             style="animation-duration: 800ms;"
             version="1.1"
-            viewBox="0 0 14 14"
+            viewBox="0 0 12 12"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <foreignobject
               height="12"
               width="12"
-              x="1"
-              y="1"
+              x="0"
+              y="0"
             >
               <div
                 class="t-loading__gradient-conic"
@@ -807,15 +807,15 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           height="1em"
           style="animation-duration: 300ms;"
           version="1.1"
-          viewBox="0 0 14 14"
+          viewBox="0 0 12 12"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
         >
           <foreignobject
             height="12"
             width="12"
-            x="1"
-            y="1"
+            x="0"
+            y="0"
           >
             <div
               class="t-loading__gradient-conic"
@@ -924,15 +924,15 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             height="1em"
             style="animation-duration: 800ms;"
             version="1.1"
-            viewBox="0 0 14 14"
+            viewBox="0 0 12 12"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <foreignobject
               height="12"
               width="12"
-              x="1"
-              y="1"
+              x="0"
+              y="0"
             >
               <div
                 class="t-loading__gradient-conic"
@@ -960,15 +960,15 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             height="1em"
             style="animation-duration: 800ms;"
             version="1.1"
-            viewBox="0 0 14 14"
+            viewBox="0 0 12 12"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <foreignobject
               height="12"
               width="12"
-              x="1"
-              y="1"
+              x="0"
+              y="0"
             >
               <div
                 class="t-loading__gradient-conic"
@@ -996,15 +996,15 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             height="1em"
             style="animation-duration: 800ms;"
             version="1.1"
-            viewBox="0 0 14 14"
+            viewBox="0 0 12 12"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <foreignobject
               height="12"
               width="12"
-              x="1"
-              y="1"
+              x="0"
+              y="0"
             >
               <div
                 class="t-loading__gradient-conic"
@@ -1106,15 +1106,15 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       height="1em"
       style="animation-duration: 800ms;"
       version="1.1"
-      viewBox="0 0 14 14"
+      viewBox="0 0 12 12"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <foreignobject
         height="12"
         width="12"
-        x="1"
-        y="1"
+        x="0"
+        y="0"
       >
         <div
           class="t-loading__gradient-conic"
@@ -1142,15 +1142,15 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       height="1em"
       style="animation-duration: 800ms;"
       version="1.1"
-      viewBox="0 0 14 14"
+      viewBox="0 0 12 12"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <foreignobject
         height="12"
         width="12"
-        x="1"
-        y="1"
+        x="0"
+        y="0"
       >
         <div
           class="t-loading__gradient-conic"
@@ -1178,15 +1178,15 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       height="1em"
       style="animation-duration: 800ms;"
       version="1.1"
-      viewBox="0 0 14 14"
+      viewBox="0 0 12 12"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <foreignobject
         height="12"
         width="12"
-        x="1"
-        y="1"
+        x="0"
+        y="0"
       >
         <div
           class="t-loading__gradient-conic"
@@ -1222,15 +1222,15 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
       height="1em"
       style="animation-duration: 300ms;"
       version="1.1"
-      viewBox="0 0 14 14"
+      viewBox="0 0 12 12"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <foreignobject
         height="12"
         width="12"
-        x="1"
-        y="1"
+        x="0"
+        y="0"
       >
         <div
           class="t-loading__gradient-conic"
@@ -1317,15 +1317,15 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
       height="1em"
       style="animation-duration: 800ms;"
       version="1.1"
-      viewBox="0 0 14 14"
+      viewBox="0 0 12 12"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <foreignobject
         height="12"
         width="12"
-        x="1"
-        y="1"
+        x="0"
+        y="0"
       >
         <div
           class="t-loading__gradient-conic"

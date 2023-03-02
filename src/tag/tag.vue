@@ -45,10 +45,10 @@ const Tag = defineComponent({
 
     const classes = computed(() => [
       `${baseClass}`,
-      `${baseClass}--theme-${props.theme}`,
-      `${baseClass}--shape-${props.shape}`,
-      `${baseClass}--variant-${props.variant}`,
-      `${baseClass}--size-${props.size}`,
+      `${baseClass}--${props.theme}`,
+      `${baseClass}--${props.shape}`,
+      `${baseClass}--${props.variant}`,
+      `${baseClass}--${props.size}`,
       {
         [`${prefix}-is-closable ${baseClass}--closable`]: props.closable,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: props.disabled,

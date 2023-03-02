@@ -1,30 +1,43 @@
 <template>
   <tdesign-demo-block summary="左滑多操作">
-    <t-swipe-cell>
-      <t-cell title="列表-左滑多操作" note="多操作"></t-cell>
-      <template #right>
-        <t-button theme="primary" shape="square" @click="handleClick">收藏</t-button>
-        <t-button theme="warning" shape="square" @click="handleClick">编辑</t-button>
-        <t-button theme="danger" shape="square" @click="handleClick">删除</t-button>
-      </template>
+    <t-swipe-cell :right="initData.btns" @click="(value) => handleClickBtns(value)">
+      <t-cell title="列表-左滑双操作" note="多操作"></t-cell>
     </t-swipe-cell>
   </tdesign-demo-block>
   <tdesign-demo-block style="margin-top: 10px">
-    <t-swipe-cell expanded="right">
-      <t-cell title="列表-左滑多操作" note="多操作"></t-cell>
-      <template #right>
-        <t-button theme="primary" shape="square" @click="handleClick">收藏</t-button>
-        <t-button theme="warning" shape="square" @click="handleClick">编辑</t-button>
-        <t-button theme="danger" shape="square" @click="handleClick">删除</t-button>
-      </template>
+    <t-swipe-cell :right="initData.btns" expanded="right" @click="(value) => handleClickBtns(value)">
+      <t-cell title="列表-左滑双操作" note="多操作"></t-cell>
     </t-swipe-cell>
   </tdesign-demo-block>
 </template>
 
 <script setup lang="ts">
+import { reactive } from 'vue';
 import Toast from '../../toast/index';
+import { SwipeActionItem } from '../type';
 
-const handleClick = () => {
-  Toast('click');
+interface InitData {
+  btns: {}[];
+}
+const handleCollect = () => {
+  Toast.success(`收藏成功`);
 };
+const handleEdit = () => {
+  Toast.success(`编辑成功`);
+};
+
+const handleDelete = () => {
+  Toast.success(`删除成功`);
+};
+
+const handleClickBtns = (value: { action: SwipeActionItem; source: String }) => {
+  Toast(JSON.stringify(value));
+};
+const initData: InitData = reactive({
+  btns: [
+    { text: '收藏', className: 't-button--warning', onClick: handleCollect },
+    { text: '编辑', className: 't-button--primary', onClick: handleEdit },
+    { text: '删除', className: 't-button--danger', onClick: handleDelete },
+  ],
+});
 </script>
