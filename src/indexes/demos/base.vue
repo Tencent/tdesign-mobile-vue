@@ -5,7 +5,7 @@
 </template>
 <script setup lang="ts">
 import { computed, defineProps } from 'vue';
-import Toast from '../../toast/index';
+import { Toast } from 'tdesign-mobile-vue';
 
 const props = defineProps({
   type: {

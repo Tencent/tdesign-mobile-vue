@@ -15,7 +15,7 @@
 <script setup lang="ts">
 import { h } from 'vue';
 import { StarIcon } from 'tdesign-icons-vue-next';
-import Toast from '../index';
+import { Toast } from 'tdesign-mobile-vue';
 
 type Placement = 'top' | 'middle' | 'bottom';
 

@@ -19,10 +19,10 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"],
-      "tdesign-moile-vue": ["./src/*"]
+      "@/*": ["src/*"],
+      "tdesign-mobile-vue": ["src"]
     },
     "types": ["vitest/globals"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]

@@ -6,9 +6,20 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
+type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | '';
+
+interface TDate {
+  date: Date;
+  day: number;
+  type: TDateType;
+  className?: string;
+  prefix?: string;
+  suffix?: string;
+}
+
 const minDate = new Date(2022, 1, 1);
 const maxDate = new Date(2022, 2, 15);
-const format = (day: any) => {
+const format = (day: TDate) => {
   const { date } = day;
   const year = date.getFullYear();
   const month = date.getMonth() + 1;

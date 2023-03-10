@@ -13,13 +13,13 @@ const name = `tdesign-demo-${componentName}`;
 export default defineComponent({
   name,
   setup() {
-    const refContainer = ref(null);
+    const refContainer = ref<HTMLElement | null>(null);
     const extraContainerClass: Ref<Array<string>> = ref([]);
     const containerClass = computed(() => [`${name}`, ...extraContainerClass.value]);
     onMounted(() => {
-      const container: any = refContainer.value;
+      const container = refContainer.value as HTMLElement;
       const containerRect = container.getBoundingClientRect();
-      const isNeedRelativeContainer = containerRect.left > 0;
+      const isNeedRelativeContainer = containerRect?.left > 0;
       if (isNeedRelativeContainer) {
         extraContainerClass.value.push('relative-container');
       }

@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { h } from 'vue';
 import { PoweroffIcon } from 'tdesign-icons-vue-next';
-import Toast from '../index';
+import { Toast } from 'tdesign-mobile-vue';
 
 const showPreventScrollThrough = () => {
   Toast({
