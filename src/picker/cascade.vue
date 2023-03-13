@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, SetupContext, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import config from '../config';
 import PickerProps from './props';
 import { PickerColumn, PickerValue } from './type';
@@ -18,7 +18,7 @@ export default defineComponent({
   name,
   components: { Picker },
   props: PickerProps,
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const pickerProps = computed(() => ({ ...props }));
     const finalDepth = ref(1);
     const finalSubOptionsRecord = ref({});

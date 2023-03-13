@@ -19,10 +19,10 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"],
-      "tdesign-moile-vue": ["./src/*"]
+      "@/*": ["src/*"],
+      "tdesign-mobile-vue": ["src"]
     },
     "types": ["vitest/globals"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
@@ -37,5 +37,5 @@
     "src/style/index.js",
     "scripts/rollup.config.js"
   ],
-  "exclude": ["node_modules", "src/_common", "dist", "es", "lib", "site"]
+  "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "site"]
 }

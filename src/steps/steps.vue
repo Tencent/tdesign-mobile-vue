@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { toRefs, provide, computed, SetupContext, defineComponent, reactive, ComponentInternalInstance } from 'vue';
+import { toRefs, provide, computed, defineComponent, reactive, ComponentInternalInstance } from 'vue';
 import StepsProps from './props';
 import TStepItem from './step-item.vue';
 import config from '../config';
@@ -30,7 +30,7 @@ export default defineComponent({
   },
   props: StepsProps,
   emits: ['update:current', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const baseClass = computed(() => [
       name,
       `${name}--${props.layout}`,

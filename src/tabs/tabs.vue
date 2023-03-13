@@ -35,7 +35,6 @@ import {
   provide,
   ref,
   toRefs,
-  SetupContext,
   nextTick,
   onBeforeUnmount,
   readonly,
@@ -56,7 +55,7 @@ export default defineComponent({
   components: { TabNavItem, TSticky },
   props: TabsProps,
   emits: ['update:value', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const placement = computed(() => props.placement);
     const showBottomLine = computed(() => props.showBottomLine);
     const stickyProps = computed(() => ({ disabled: true, ...props.stickyProps }));

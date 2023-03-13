@@ -52,7 +52,6 @@ import {
   computed,
   watch,
   ref,
-  SetupContext,
   nextTick,
   provide,
   ComponentInternalInstance,
@@ -76,7 +75,7 @@ export default defineComponent({
   components: { ChevronLeftIcon, ChevronRightIcon, TNode },
   props: SwiperProps,
   emits: ['change', 'update:current', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     // const emitEvent = useEmitEvent(props, context.emit);
     const [swiperValue, setSwiperValue] = useDefault<Number, TdSwiperProps>(props, context.emit, 'current', 'change');
     const self = getCurrentInstance();

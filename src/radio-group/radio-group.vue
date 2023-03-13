@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { provide, defineComponent, toRefs, computed, SetupContext } from 'vue';
+import { provide, defineComponent, toRefs, computed } from 'vue';
 import { useDefault } from '../shared';
 import RadioGroupProps from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
@@ -31,7 +31,7 @@ export default defineComponent({
   components: { Radio },
   props: RadioGroupProps,
   emits: ['update:value', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const [groupValue, setGroupValue] = useDefault<RadioValue, TdRadioGroupProps>(
       props,
       context.emit,

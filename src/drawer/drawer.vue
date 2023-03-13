@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { ref, watch, toRefs, computed, SetupContext, defineComponent } from 'vue';
+import { ref, watch, toRefs, computed, defineComponent } from 'vue';
 import TPopup from '../popup';
 import config from '../config';
 import { useEmitEvent } from '../shared';
@@ -38,7 +38,7 @@ export default defineComponent({
   components: { TPopup },
   props: DrawerProps,
   emits: ['update:visible', 'itemClick', 'overlayClick'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const { visible, items, placement, showOverlay, zIndex, closeOnOverlayClick } = toRefs(props);
     const open = ref(visible.value || false);

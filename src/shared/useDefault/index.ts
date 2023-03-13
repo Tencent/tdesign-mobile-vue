@@ -1,4 +1,4 @@
-import { computed, ref, SetupContext, watchEffect, WritableComputedRef } from 'vue';
+import { computed, ref, watchEffect, WritableComputedRef } from 'vue';
 import camelCase from 'lodash/camelCase';
 
 function getDefaultName(key: string): string {
@@ -21,7 +21,7 @@ function getEventPropsName(eventName: string): string {
  * @example const [value, setValue] = useDefault();
  * @returns [value, setValue]
  */
-export function useDefault<V, T>(props: T, emit: SetupContext['emit'], key: string, eventName: string) {
+export function useDefault<V, T>(props: T, emit: (...args: any[]) => void, key: string, eventName: string) {
   const modelValue = 'modelValue';
   const defaultName = getDefaultName(String(key));
 

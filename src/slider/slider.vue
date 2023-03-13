@@ -36,7 +36,7 @@
 </template>
 
 <script lang="ts">
-import { ref, toRefs, computed, SetupContext, reactive, defineComponent, getCurrentInstance } from 'vue';
+import { ref, toRefs, computed, reactive, defineComponent, getCurrentInstance } from 'vue';
 import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
@@ -59,7 +59,7 @@ export default defineComponent({
   components: { TNode },
   props,
   emits: ['drag-start', 'drag-end', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const rootRef = ref<HTMLElement | null>(null);
     const barRef = ref<HTMLElement | null>(null);
     const defaultValue = props.defaultValue || props.min;

@@ -32,7 +32,7 @@
 
 <script lang="ts">
 import { CloseIcon } from 'tdesign-icons-vue-next';
-import { defineComponent, toRefs, getCurrentInstance, SetupContext, computed, ref, toRaw, reactive } from 'vue';
+import { defineComponent, toRefs, getCurrentInstance, computed, ref, toRaw, reactive } from 'vue';
 import { TdCascaderItems, TdCascaderItem } from './type';
 import CascaderSteps from './steps.vue';
 import config from '../config';
@@ -48,7 +48,7 @@ export default defineComponent({
   components: { CloseIcon, CascaderItem, TNode, CascaderSteps },
   props: CascaderProps,
   emits: ['change', 'cancel', 'pick', 'click-tab', 'update:modelValue', 'update:value'],
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
     const [cascaderValue, setCascaderValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);

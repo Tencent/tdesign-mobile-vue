@@ -119,14 +119,9 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, -280px, 0);"
+                    style="transform: translate3d(0, -240px, 0);"
                   >
                     
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2012
-                    </li>
                     <li
                       class="t-picker-item__item"
                     >
@@ -226,6 +221,11 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                       class="t-picker-item__item"
                     >
                       2032
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2033
                     </li>
                     
                   </ul>
@@ -1018,14 +1018,9 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, -240px, 0);"
+                    style="transform: translate3d(0, -200px, 0);"
                   >
                     
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2012
-                    </li>
                     <li
                       class="t-picker-item__item"
                     >
@@ -1125,6 +1120,11 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
                       class="t-picker-item__item"
                     >
                       2032
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2033
                     </li>
                     
                   </ul>
@@ -2282,14 +2282,9 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, -280px, 0);"
+                      style="transform: translate3d(0, -240px, 0);"
                     >
                       
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        2012
-                      </li>
                       <li
                         class="t-picker-item__item"
                       >
@@ -2389,6 +2384,11 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                         class="t-picker-item__item"
                       >
                         2032
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        2033
                       </li>
                       
                     </ul>
@@ -2762,14 +2762,9 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item__wrapper"
-                      style="transform: translate3d(0, -280px, 0);"
+                      style="transform: translate3d(0, -240px, 0);"
                     >
                       
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        2012
-                      </li>
                       <li
                         class="t-picker-item__item"
                       >
@@ -2869,6 +2864,11 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                         class="t-picker-item__item"
                       >
                         2032
+                      </li>
+                      <li
+                        class="t-picker-item__item"
+                      >
+                        2033
                       </li>
                       
                     </ul>
@@ -4651,14 +4651,9 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                 >
                   <ul
                     class="t-picker-item__wrapper"
-                    style="transform: translate3d(0, -280px, 0);"
+                    style="transform: translate3d(0, -240px, 0);"
                   >
                     
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2012
-                    </li>
                     <li
                       class="t-picker-item__item"
                     >
@@ -4758,6 +4753,11 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                       class="t-picker-item__item"
                     >
                       2032
+                    </li>
+                    <li
+                      class="t-picker-item__item"
+                    >
+                      2033
                     </li>
                     
                   </ul>

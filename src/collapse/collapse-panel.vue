@@ -18,17 +18,7 @@
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  computed,
-  nextTick,
-  watch,
-  onMounted,
-  inject,
-  SetupContext,
-  defineComponent,
-  getCurrentInstance,
-} from 'vue';
+import { ref, computed, nextTick, watch, onMounted, inject, defineComponent, getCurrentInstance } from 'vue';
 import { ChevronDownIcon, ChevronUpIcon } from 'tdesign-icons-vue-next';
 import props from './collapse-panel-props';
 import config from '../config';
@@ -42,7 +32,7 @@ export default defineComponent({
   name,
   components: { ChevronDownIcon, ChevronUpIcon, TNode },
   props,
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const internalInstance = getCurrentInstance();
     const parent = inject<CollapseProvide>('collapse');
     const isTrue = (val: any) => typeof val === 'boolean' && val;

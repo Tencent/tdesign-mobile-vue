@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 import { h, ref } from 'vue';
-import { Toast } from 'tdesign-mobile-vue';
 import { UserIcon } from 'tdesign-icons-vue-next';
+import { Toast } from 'tdesign-mobile-vue';
 
 const text1 = ref('轻提示文字内容');
 const text2 = ref('最多一行展示十个汉字宽度限制最多不超过三行文字行文字行文字');

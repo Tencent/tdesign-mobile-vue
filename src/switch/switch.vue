@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, SetupContext } from 'vue';
+import { computed, toRefs, defineComponent } from 'vue';
 import { useToggle, useDefault } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
@@ -22,7 +22,7 @@ export default defineComponent({
   name,
   props: SwitchProps,
   emits: ['change', 'update:value', 'update:modelValue'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const switchValues = props.customValue || [true, false];
     const [innerValue] = useDefault<SwitchValue, TdSwitchProps>(props, context.emit, 'value', 'change');
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);

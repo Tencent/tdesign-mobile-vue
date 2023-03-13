@@ -4463,42 +4463,6 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="t-step"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                4
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                未完成步骤
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
         
       </div>
     </div>
@@ -5095,7 +5059,7 @@ exports[`Steps > Steps verticalReadonlyVue demo works fine 1`] = `
           class="t-step-icon"
         >
           <div
-            class="t-step-icon__number t-step-icon__dot"
+            class="t-step-icon__number"
           >
             <svg
               class="t-icon t-icon-check"
@@ -5118,7 +5082,7 @@ exports[`Steps > Steps verticalReadonlyVue demo works fine 1`] = `
           <div
             class="t-step-title"
           >
-            事件描述
+            已完成步骤
           </div>
           <div
             class="t-step-description"
@@ -5144,9 +5108,9 @@ exports[`Steps > Steps verticalReadonlyVue demo works fine 1`] = `
           class="t-step-icon"
         >
           <div
-            class="t-step-icon__number t-step-icon__dot"
+            class="t-step-icon__number"
           >
-            
+            2
           </div>
         </div>
         <div
@@ -5155,7 +5119,7 @@ exports[`Steps > Steps verticalReadonlyVue demo works fine 1`] = `
           <div
             class="t-step-title"
           >
-            事件描述
+            当前步骤
           </div>
           <div
             class="t-step-description"
@@ -5181,9 +5145,9 @@ exports[`Steps > Steps verticalReadonlyVue demo works fine 1`] = `
           class="t-step-icon"
         >
           <div
-            class="t-step-icon__number t-step-icon__dot"
+            class="t-step-icon__number"
           >
-            
+            3
           </div>
         </div>
         <div
@@ -5192,7 +5156,7 @@ exports[`Steps > Steps verticalReadonlyVue demo works fine 1`] = `
           <div
             class="t-step-title"
           >
-            事件描述
+            未完成步骤
           </div>
           <div
             class="t-step-description"

@@ -27,7 +27,6 @@ import {
   watch,
   defineComponent,
   getCurrentInstance,
-  SetupContext,
   toRefs,
   reactive,
   nextTick,
@@ -55,7 +54,7 @@ export default defineComponent({
   components: { TNode },
   props: messageProps,
   emits: ['change', 'open', 'opened', 'close', 'closed'],
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
 

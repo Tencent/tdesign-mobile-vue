@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent, SetupContext, toRefs, watch, nextTick } from 'vue';
+import { ref, computed, defineComponent, toRefs, watch, nextTick } from 'vue';
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
@@ -47,7 +47,7 @@ export default defineComponent({
   components: { TPicker },
   props: DateTimePickerProps,
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const pickeInstance = ref<any>(null);
     const isChanged = ref(false);

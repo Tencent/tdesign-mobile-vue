@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { inject, computed, defineComponent, getCurrentInstance, h, SetupContext, Ref, toRefs } from 'vue';
+import { inject, computed, defineComponent, getCurrentInstance, h, Ref, toRefs } from 'vue';
 import { CheckIcon } from 'tdesign-icons-vue-next';
 import { renderContent, renderTNode, TNode, NOOP, useDefault, useVModel } from '../shared';
 import ClASSNAMES from '../shared/constants';
@@ -52,7 +52,7 @@ export default defineComponent({
     },
   },
   emits: ['update:checked', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const { checked, modelValue } = toRefs(props);
     const [innerChecked, setInnerChecked] = useVModel(
       checked,

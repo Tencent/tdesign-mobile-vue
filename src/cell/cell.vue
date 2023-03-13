@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, toRefs, h, SetupContext } from 'vue';
+import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { renderTNode, renderContent, TNode, useEmitEvent } from '../shared';
 import config from '../config';
@@ -37,7 +37,7 @@ export default defineComponent({
   components: { TNode },
   props: CellProps,
   emits: ['click'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const noteContent = computed(() => renderContent(internalInstance, 'default', 'note'));

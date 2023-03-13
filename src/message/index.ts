@@ -69,7 +69,7 @@ Message.install = (app: App, name = '') => {
 
   // 添加插件入口
   // eslint-disable-next-line no-param-reassign
-  app.config.globalProperties.$message = Message;
+  app.config.globalProperties.$message = Message as any;
 };
 
 type MessageApi = {

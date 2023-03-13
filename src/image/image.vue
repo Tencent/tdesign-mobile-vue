@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent, SetupContext, getCurrentInstance, h, watchEffect } from 'vue';
+import { ref, computed, defineComponent, getCurrentInstance, h, watchEffect } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 import { EllipsisIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { useEmitEvent, renderTNode, TNode } from '../shared';
@@ -30,7 +30,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: ImageProps,
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
 
     // 默认loading和error状态展示，slot支持Node和Function

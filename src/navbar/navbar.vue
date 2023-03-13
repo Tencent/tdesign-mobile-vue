@@ -21,7 +21,7 @@
   </div>
 </template>
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, SetupContext, toRefs } from 'vue';
+import { computed, defineComponent, getCurrentInstance, toRefs } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon, HomeIcon as THomeIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import { renderTNode, TNode, useEmitEvent } from '../shared';
@@ -35,7 +35,7 @@ export default defineComponent({
   components: { TChevronLeftIcon, TNode, THomeIcon },
   props: NavbarProps,
   emits: ['left-click', 'right-click'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const internalInstance = getCurrentInstance();
     const { title, titleMaxLength, fixed, background } = toRefs(props);
 

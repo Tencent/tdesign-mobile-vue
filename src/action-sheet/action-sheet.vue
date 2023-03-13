@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, defineComponent, PropType, ComputedRef, SetupContext } from 'vue';
+import { ref, computed, watch, defineComponent, PropType, ComputedRef } from 'vue';
 import { useEmitEvent } from '../shared';
 import MenuList from './menu-list.vue';
 import MenuGrid from './menu-grid.vue';
@@ -93,7 +93,7 @@ export default defineComponent({
     },
   },
   emits: ['selected', 'update:modelValue', 'cancel', 'close'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const actionItems = ref([]);
 

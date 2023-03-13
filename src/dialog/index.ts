@@ -104,7 +104,7 @@ Dialog.install = (app: App, name = '') => {
   app.component(name || Dialog.name, Dialog);
 
   // 添加插件入口
-  app.config.globalProperties.$dialog = Dialog;
+  app.config.globalProperties.$dialog = Dialog as any;
   app.provide('$dialog', Dialog);
 };
 

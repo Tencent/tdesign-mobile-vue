@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { SetupContext, provide, ref, computed, defineComponent, watch, toRefs, VNode, reactive, onMounted } from 'vue';
+import { provide, ref, computed, defineComponent, watch, toRefs, VNode, reactive, onMounted } from 'vue';
 import config from '../config';
 import CheckboxProps from './checkbox-group-props';
 import Checkbox from './checkbox.vue';
@@ -37,7 +37,7 @@ export default defineComponent({
   },
   props: CheckboxProps,
   emits: ['update:value', 'update:modelValue', 'change'],
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const { isArray } = Array;
     const [innerValue, setinnerValue] = useDefault<CheckboxGroupValue, TdCheckboxGroupProps>(
       props,
