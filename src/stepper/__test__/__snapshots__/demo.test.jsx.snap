@@ -2,73 +2,182 @@
 
 exports[`Stepper > Stepper baseVue demo works fine 1`] = `
 <div
-  class="stepper-demo"
+  class="stepper-example"
 >
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-stepper t-stepper--medium"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
     >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      标题文字
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__note"
-    >
-      
-      <div
-        class="t-stepper"
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
       >
-        <div
-          class="t-stepper__minus t-is-disabled"
-        >
-          <svg
-            class="t-icon t-icon-remove t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M3.5 7.35h9v1.3h-9v-1.3z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <input
-          class="t-stepper__input"
-          type="tel"
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
         />
-        <div
-          class="t-stepper__plus"
-        >
-          <svg
-            class="t-icon t-icon-add t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      
+      </svg>
     </div>
-    <!--v-if-->
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stepper > Stepper minMaxVue demo works fine 1`] = `
+<div
+  class="stepper-example"
+>
+  <div
+    class="t-stepper t-stepper--medium"
+  >
+    <div
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium t-stepper--filled-disabled"
+    >
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="t-stepper t-stepper--medium"
+  >
+    <div
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium t-stepper--filled-disabled"
+    >
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="t-stepper t-stepper--medium"
+  >
+    <div
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
@@ -85,7 +194,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用户通过调整“+”按钮、“-”按钮、数字输入框来调整具体需要的数值，可设置最大值和最小值
+    用于数量的增减。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -102,180 +211,16 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class="stepper-demo"
+      class="stepper-example"
     >
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-stepper t-stepper--medium"
       >
         <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          标题文字
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-stepper"
-          >
-            <div
-              class="t-stepper__minus t-is-disabled"
-            >
-              <svg
-                class="t-icon t-icon-remove t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-            <input
-              class="t-stepper__input"
-              type="tel"
-            />
-            <div
-              class="t-stepper__plus"
-            >
-              <svg
-                class="t-icon t-icon-add t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      带单位步进器
-    </p>
-    
-    <div
-      class="stepper-demo"
-    >
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          标题文字（单位）
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <div
-            class="t-stepper"
-          >
-            <div
-              class="t-stepper__minus t-is-disabled"
-            >
-              <svg
-                class="t-icon t-icon-remove t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-            <input
-              class="t-stepper__input"
-              type="tel"
-            />
-            <div
-              class="t-stepper__plus"
-            >
-              <svg
-                class="t-icon t-icon-add t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      纯步进器
-    </p>
-    
-    <div
-      style="margin-left: 16px;"
-    >
-      <div
-        class="t-stepper t-stepper__pure"
-      >
-        <div
-          class="t-stepper__minus"
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
         >
           <svg
-            class="t-icon t-icon-remove t-stepper__icon"
+            class="t-icon t-icon-remove t-stepper__minus-icon"
             fill="none"
             height="1em"
             viewBox="0 0 16 16"
@@ -289,14 +234,14 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </svg>
         </div>
         <input
-          class="t-stepper__input"
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
           type="tel"
         />
         <div
-          class="t-stepper__plus"
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
         >
           <svg
-            class="t-icon t-icon-add t-stepper__icon"
+            class="t-icon t-icon-add t-stepper__plus-icon"
             fill="none"
             height="1em"
             viewBox="0 0 16 16"
@@ -319,310 +264,25 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
     <h2
       class="tdesign-mobile-demo-block__title"
     >
-      02 状态
+      02 组件状态
     </h2>
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      步进器状态
+      最大最小状态
     </p>
     
-    
     <div
-      class="stepper-demo"
+      class="stepper-example"
     >
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-stepper t-stepper--medium"
       >
         <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          禁用
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-stepper t-is-disabled"
-          >
-            <div
-              class="t-stepper__minus t-is-disabled"
-            >
-              <svg
-                class="t-icon t-icon-remove t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-            <input
-              class="t-stepper__input"
-              disabled=""
-              type="tel"
-            />
-            <div
-              class="t-stepper__plus t-is-disabled"
-            >
-              <svg
-                class="t-icon t-icon-add t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="stepper-demo"
-    >
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          禁止输入
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-stepper"
-          >
-            <div
-              class="t-stepper__minus t-is-disabled"
-            >
-              <svg
-                class="t-icon t-icon-remove t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-            <input
-              class="t-stepper__input"
-              disabled=""
-              readonly=""
-              type="tel"
-            />
-            <div
-              class="t-stepper__plus"
-            >
-              <svg
-                class="t-icon t-icon-add t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="stepper-demo"
-    >
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          最大值
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-stepper"
-          >
-            <div
-              class="t-stepper__minus"
-            >
-              <svg
-                class="t-icon t-icon-remove t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-            <input
-              class="t-stepper__input"
-              type="tel"
-            />
-            <div
-              class="t-stepper__plus t-is-disabled"
-            >
-              <svg
-                class="t-icon t-icon-add t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="stepper-demo"
-    >
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          最小值
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-stepper"
-          >
-            <div
-              class="t-stepper__minus t-is-disabled"
-            >
-              <svg
-                class="t-icon t-icon-remove t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M3.5 7.35h9v1.3h-9v-1.3z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-            <input
-              class="t-stepper__input"
-              type="tel"
-            />
-            <div
-              class="t-stepper__plus"
-            >
-              <svg
-                class="t-icon t-icon-add t-stepper__icon"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          
-        </div>
-        <!--v-if-->
-      </div>
-    </div>
-    <div
-      class="stepper-inline-demo"
-      style="display: flex; margin: 21px 0px; background-color: rgb(255, 255, 255);"
-    >
-      <div
-        class="t-stepper t-is-disabled t-stepper__pure"
-      >
-        <div
-          class="t-stepper__minus t-is-disabled"
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium t-stepper--filled-disabled"
         >
           <svg
-            class="t-icon t-icon-remove t-stepper__icon"
+            class="t-icon t-icon-remove t-stepper__minus-icon"
             fill="none"
             height="1em"
             viewBox="0 0 16 16"
@@ -636,99 +296,157 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
           </svg>
         </div>
         <input
-          class="t-stepper__input"
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-stepper t-stepper--medium"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium t-stepper--filled-disabled"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-stepper t-stepper--medium"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      禁用状态
+    </p>
+    
+    <div
+      class="stepper-example"
+    >
+      <div
+        class="t-stepper t-stepper--medium"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium t-stepper--filled-disabled"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--medium t-stepper--filled-disabled"
           disabled=""
           type="tel"
         />
         <div
-          class="t-stepper__plus t-is-disabled"
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
         >
           <svg
-            class="t-icon t-icon-add t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-stepper t-stepper__pure"
-      >
-        <div
-          class="t-stepper__minus t-is-disabled"
-        >
-          <svg
-            class="t-icon t-icon-remove t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M3.5 7.35h9v1.3h-9v-1.3z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <input
-          class="t-stepper__input"
-          type="tel"
-        />
-        <div
-          class="t-stepper__plus"
-        >
-          <svg
-            class="t-icon t-icon-add t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-stepper t-stepper__pure"
-      >
-        <div
-          class="t-stepper__minus"
-        >
-          <svg
-            class="t-icon t-icon-remove t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M3.5 7.35h9v1.3h-9v-1.3z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <input
-          class="t-stepper__input"
-          type="tel"
-        />
-        <div
-          class="t-stepper__plus t-is-disabled"
-        >
-          <svg
-            class="t-icon t-icon-add t-stepper__icon"
+            class="t-icon t-icon-add t-stepper__plus-icon"
             fill="none"
             height="1em"
             viewBox="0 0 16 16"
@@ -744,548 +462,609 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
       </div>
     </div>
     
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      03 组件样式
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      步进器样式
+    </p>
+    
+    <div
+      class="stepper-example"
+    >
+      <div
+        class="t-stepper t-stepper--medium"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-stepper t-stepper--medium"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--outline t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--outline t-stepper__input--medium"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--outline t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-stepper t-stepper--medium"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--normal t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--normal t-stepper__input--medium"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--normal t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      步进器尺寸
+    </p>
+    
+    <div
+      class="stepper-example"
+    >
+      <div
+        class="t-stepper t-stepper--large"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--large"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--large"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--large"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-stepper t-stepper--medium"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-stepper t-stepper--small"
+      >
+        <div
+          class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--small"
+        >
+          <svg
+            class="t-icon t-icon-remove t-stepper__minus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M3.5 7.35h9v1.3h-9v-1.3z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <input
+          class="t-stepper__input t-stepper__input--filled t-stepper__input--small"
+          type="tel"
+        />
+        <div
+          class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--small"
+        >
+          <svg
+            class="t-icon t-icon-add t-stepper__plus-icon"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
     
   </div>
 </div>
 `;
 
-exports[`Stepper > Stepper pureStepperVue demo works fine 1`] = `
+exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
 <div
-  class="t-stepper t-stepper__pure"
+  class="stepper-example"
 >
   <div
-    class="t-stepper__minus"
+    class="t-stepper t-stepper--large"
   >
-    <svg
-      class="t-icon t-icon-remove t-stepper__icon"
-      fill="none"
-      height="1em"
-      viewBox="0 0 16 16"
-      width="1em"
+    <div
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--large"
     >
-      <path
-        d="M3.5 7.35h9v1.3h-9v-1.3z"
-        fill="currentColor"
-        fill-opacity="0.9"
-      />
-    </svg>
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--large"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--large"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
   </div>
-  <input
-    class="t-stepper__input"
-    type="tel"
-  />
   <div
-    class="t-stepper__plus"
+    class="t-stepper t-stepper--medium"
   >
-    <svg
-      class="t-icon t-icon-add t-stepper__icon"
-      fill="none"
-      height="1em"
-      viewBox="0 0 16 16"
-      width="1em"
+    <div
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
     >
-      <path
-        d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-        fill="currentColor"
-        fill-opacity="0.9"
-      />
-    </svg>
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="t-stepper t-stepper--small"
+  >
+    <div
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--small"
+    >
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--small"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--small"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Stepper > Stepper statusVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="stepper-example"
 >
-  
   <div
-    class="stepper-demo"
+    class="t-stepper t-stepper--medium"
   >
     <div
-      class="t-cell t-cell--middle t-cell--bordered"
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium t-stepper--filled-disabled"
     >
-      <div
-        class="t-cell__left-icon"
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
       >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--medium t-stepper--filled-disabled"
+      disabled=""
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium t-stepper--filled-disabled"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
       >
-        禁用
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-stepper t-is-disabled"
-        >
-          <div
-            class="t-stepper__minus t-is-disabled"
-          >
-            <svg
-              class="t-icon t-icon-remove t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-          <input
-            class="t-stepper__input"
-            disabled=""
-            type="tel"
-          />
-          <div
-            class="t-stepper__plus t-is-disabled"
-          >
-            <svg
-              class="t-icon t-icon-add t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-        </div>
-        
-      </div>
-      <!--v-if-->
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
     </div>
   </div>
-  <div
-    class="stepper-demo"
-  >
-    <div
-      class="t-cell t-cell--middle t-cell--bordered"
-    >
-      <div
-        class="t-cell__left-icon"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        禁止输入
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-stepper"
-        >
-          <div
-            class="t-stepper__minus t-is-disabled"
-          >
-            <svg
-              class="t-icon t-icon-remove t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-          <input
-            class="t-stepper__input"
-            disabled=""
-            readonly=""
-            type="tel"
-          />
-          <div
-            class="t-stepper__plus"
-          >
-            <svg
-              class="t-icon t-icon-add t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-        </div>
-        
-      </div>
-      <!--v-if-->
-    </div>
-  </div>
-  <div
-    class="stepper-demo"
-  >
-    <div
-      class="t-cell t-cell--middle t-cell--bordered"
-    >
-      <div
-        class="t-cell__left-icon"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        最大值
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-stepper"
-        >
-          <div
-            class="t-stepper__minus"
-          >
-            <svg
-              class="t-icon t-icon-remove t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-          <input
-            class="t-stepper__input"
-            type="tel"
-          />
-          <div
-            class="t-stepper__plus t-is-disabled"
-          >
-            <svg
-              class="t-icon t-icon-add t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-        </div>
-        
-      </div>
-      <!--v-if-->
-    </div>
-  </div>
-  <div
-    class="stepper-demo"
-  >
-    <div
-      class="t-cell t-cell--middle t-cell--bordered"
-    >
-      <div
-        class="t-cell__left-icon"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        最小值
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-stepper"
-        >
-          <div
-            class="t-stepper__minus t-is-disabled"
-          >
-            <svg
-              class="t-icon t-icon-remove t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M3.5 7.35h9v1.3h-9v-1.3z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-          <input
-            class="t-stepper__input"
-            type="tel"
-          />
-          <div
-            class="t-stepper__plus"
-          >
-            <svg
-              class="t-icon t-icon-add t-stepper__icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-        </div>
-        
-      </div>
-      <!--v-if-->
-    </div>
-  </div>
-  <div
-    class="stepper-inline-demo"
-    style="display: flex; margin: 21px 0px; background-color: rgb(255, 255, 255);"
-  >
-    <div
-      class="t-stepper t-is-disabled t-stepper__pure"
-    >
-      <div
-        class="t-stepper__minus t-is-disabled"
-      >
-        <svg
-          class="t-icon t-icon-remove t-stepper__icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M3.5 7.35h9v1.3h-9v-1.3z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-      <input
-        class="t-stepper__input"
-        disabled=""
-        type="tel"
-      />
-      <div
-        class="t-stepper__plus t-is-disabled"
-      >
-        <svg
-          class="t-icon t-icon-add t-stepper__icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="t-stepper t-stepper__pure"
-    >
-      <div
-        class="t-stepper__minus t-is-disabled"
-      >
-        <svg
-          class="t-icon t-icon-remove t-stepper__icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M3.5 7.35h9v1.3h-9v-1.3z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-      <input
-        class="t-stepper__input"
-        type="tel"
-      />
-      <div
-        class="t-stepper__plus"
-      >
-        <svg
-          class="t-icon t-icon-add t-stepper__icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-    </div>
-    <div
-      class="t-stepper t-stepper__pure"
-    >
-      <div
-        class="t-stepper__minus"
-      >
-        <svg
-          class="t-icon t-icon-remove t-stepper__icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M3.5 7.35h9v1.3h-9v-1.3z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-      <input
-        class="t-stepper__input"
-        type="tel"
-      />
-      <div
-        class="t-stepper__plus t-is-disabled"
-      >
-        <svg
-          class="t-icon t-icon-add t-stepper__icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  
 </div>
 `;
 
-exports[`Stepper > Stepper unitStepperVue demo works fine 1`] = `
+exports[`Stepper > Stepper themeVue demo works fine 1`] = `
 <div
-  class="stepper-demo"
+  class="stepper-example"
 >
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-stepper t-stepper--medium"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
     >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      标题文字（单位）
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__right-icon"
-    >
-      
-      <div
-        class="t-stepper"
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
       >
-        <div
-          class="t-stepper__minus t-is-disabled"
-        >
-          <svg
-            class="t-icon t-icon-remove t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M3.5 7.35h9v1.3h-9v-1.3z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-        <input
-          class="t-stepper__input"
-          type="tel"
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
         />
-        <div
-          class="t-stepper__plus"
-        >
-          <svg
-            class="t-icon t-icon-add t-stepper__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="t-stepper t-stepper--medium"
+  >
+    <div
+      class="t-stepper__minus t-stepper__minus--outline t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--outline t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--outline t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="t-stepper t-stepper--medium"
+  >
+    <div
+      class="t-stepper__minus t-stepper__minus--normal t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-remove t-stepper__minus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M3.5 7.35h9v1.3h-9v-1.3z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+    <input
+      class="t-stepper__input t-stepper__input--normal t-stepper__input--medium"
+      type="tel"
+    />
+    <div
+      class="t-stepper__plus t-stepper__plus--normal t-stepper__icon--medium"
+    >
+      <svg
+        class="t-icon t-icon-add t-stepper__plus-icon"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
     </div>
   </div>
 </div>
