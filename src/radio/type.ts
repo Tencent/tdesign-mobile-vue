@@ -4,14 +4,24 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, KeysType } from '../common';
 
 export interface TdRadioProps {
   /**
-   * 复选框和内容相对位置
+   * 已废弃。复选框和内容相对位置
    * @default left
    */
   align?: 'left' | 'right';
+  /**
+   * 是否允许取消选中
+   * @default false
+   */
+  allowUncheck?: boolean;
+  /**
+   * 是否为块级元素
+   * @default true
+   */
+  block?: boolean;
   /**
    * 是否选中
    * @default false
@@ -22,6 +32,11 @@ export interface TdRadioProps {
    * @default false
    */
   defaultChecked?: boolean;
+  /**
+   * 是否选中
+   * @default false
+   */
+  modelValue?: boolean;
   /**
    * 单选内容
    */
@@ -35,7 +50,7 @@ export interface TdRadioProps {
    */
   default?: string | TNode;
   /**
-   * 是否为禁用态
+   * 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled
    */
   disabled?: boolean;
   /**
@@ -48,26 +63,49 @@ export interface TdRadioProps {
    */
   label?: string | TNode;
   /**
+   * 内容最大行数限制
+   * @default 5
+   */
+  maxContentRow?: number;
+  /**
+   * 主文案最大行数限制
+   * @default 3
+   */
+  maxLabelRow?: number;
+  /**
    * HTML 元素原生属性
    * @default ''
    */
   name?: string;
   /**
-   * 单选按钮的值
-   * @default false
+   * 复选框和内容相对位置
+   * @default left
    */
-  value?: RadioValue;
+  placement?: 'left' | 'right';
+  /**
+   * 单选按钮的值
+   */
+  value?: string | number | boolean;
   /**
    * 选中状态变化时触发
    */
   onChange?: (checked: boolean, context: { e: Event }) => void;
 }
 
-export interface TdRadioGroupProps {
+export interface TdRadioGroupProps<T = RadioValue> {
   /**
-   * 是否禁用全部子单选框
+   * 是否允许取消选中
+   * @default false
+   */
+  allowUncheck?: boolean;
+  /**
+   * 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled
    */
   disabled?: boolean;
+  /**
+   * 用来定义 value / label 在 `options` 中对应的字段别名
+   */
+  keys?: KeysType;
   /**
    * HTML 元素原生属性
    * @default ''
@@ -78,22 +116,27 @@ export interface TdRadioGroupProps {
    */
   options?: Array<RadioOption>;
   /**
-   * 选中的值
-   * @default false
+   * 复选框和内容相对位置
+   * @default left
    */
-  value?: RadioValue;
+  placement?: 'left' | 'right';
+  /**
+   * 选中的值
+   */
+  value?: T;
   /**
    * 选中的值，非受控属性
-   * @default false
    */
-  defaultValue?: RadioValue;
+  defaultValue?: T;
+  /**
+   * 选中的值
+   */
+  modelValue?: T;
   /**
    * 选中值发生变化时触发
    */
-  onChange?: (value: RadioValue, context: { e: Event }) => void;
+  onChange?: (value: T, context: { e: Event }) => void;
 }
-
-export type RadioValue = string | number | boolean;
 
 export type RadioOption = string | number | RadioOptionObj;
 
@@ -102,3 +145,5 @@ export interface RadioOptionObj {
   value?: string | number;
   disabled?: boolean;
 }
+
+export type RadioValue = string | number | boolean;

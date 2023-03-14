@@ -8,13 +8,21 @@ import { TdRadioProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 复选框和内容相对位置 */
+  /** 已废弃。复选框和内容相对位置 */
   align: {
     type: String as PropType<TdRadioProps['align']>,
     default: 'left' as TdRadioProps['align'],
     validator(val: TdRadioProps['align']): boolean {
-      return ['left', 'right'].includes(val!);
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
     },
+  },
+  /** 是否允许取消选中 */
+  allowUncheck: Boolean,
+  /** 是否为块级元素	 */
+  block: {
+    type: Boolean,
+    default: true,
   },
   /** 是否选中 */
   checked: {
@@ -37,7 +45,7 @@ export default {
   default: {
     type: [String, Function] as PropType<TdRadioProps['default']>,
   },
-  /** 是否为禁用态 */
+  /** 是否为禁用态。如果存在父组件 RadioGroup，默认值由 RadioGroup.disabled 控制。Radio.disabled 优先级高于 RadioGroup.disabled */
   disabled: {
     type: Boolean,
     default: undefined,
@@ -51,15 +59,34 @@ export default {
   label: {
     type: [String, Function] as PropType<TdRadioProps['label']>,
   },
+  /** 内容最大行数限制 */
+  maxContentRow: {
+    type: Number,
+    default: 5,
+  },
+  /** 主文案最大行数限制 */
+  maxLabelRow: {
+    type: Number,
+    default: 3,
+  },
   /** HTML 元素原生属性 */
   name: {
     type: String,
     default: '',
   },
+  /** 复选框和内容相对位置 */
+  placement: {
+    type: String as PropType<TdRadioProps['placement']>,
+    default: 'left' as TdRadioProps['placement'],
+    validator(val: TdRadioProps['placement']): boolean {
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
+    },
+  },
   /** 单选按钮的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
-    default: false,
+    default: undefined,
   },
   /** 选中状态变化时触发 */
   onChange: Function as PropType<TdRadioProps['onChange']>,
