@@ -14,7 +14,7 @@ export default {
 
     // 统一换成 common 文档内容
     if (name && source.includes(':: BASE_DOC ::')) {
-      const docPath = path.resolve(__dirname, `../../../src/_common/docs/mobile/api/${name}.md`);
+      const docPath = path.resolve(__dirname, `../../../src/_common/docs/mobile/api_v2/${name}.md`);
       if (fs.existsSync(docPath)) {
         const baseDoc = fs.readFileSync(docPath, 'utf-8');
         source = source.replace(':: BASE_DOC ::', baseDoc);
