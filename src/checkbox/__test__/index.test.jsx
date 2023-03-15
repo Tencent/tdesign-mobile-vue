@@ -20,12 +20,12 @@ describe('Checkbox', () => {
       expect(checked.value.length).toBe(0);
 
       const target = wrapper.findComponent({ ref: '1' });
-      await target.find('.t-checkbox__original-left').trigger('click');
+      await target.find('.t-checkbox--left').trigger('click');
 
       expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(true);
       expect(checked.value).toContain('1');
 
-      await target.find('.t-checkbox__original-left').trigger('click');
+      await target.find('.t-checkbox--left').trigger('click');
 
       expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(false);
       expect(checked.value.length).toBe(0);
@@ -44,12 +44,12 @@ describe('Checkbox', () => {
         },
       });
 
-      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox__original-left').trigger('click');
+      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox--left').trigger('click');
 
       expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(true);
       expect(wrapper.findComponent({ ref: '3' }).vm.isChecked).toBe(true);
 
-      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox__original-left').trigger('click');
+      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox--left').trigger('click');
 
       expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(false);
       expect(wrapper.findComponent({ ref: '3' }).vm.isChecked).toBe(false);
@@ -69,11 +69,11 @@ describe('Checkbox', () => {
         },
       });
 
-      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox__original-left').trigger('click');
+      await wrapper.findComponent({ ref: '1' }).find('.t-checkbox--left').trigger('click');
 
       expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(true);
 
-      await wrapper.findComponent({ ref: '2' }).find('.t-checkbox__original-left').trigger('click');
+      await wrapper.findComponent({ ref: '2' }).find('.t-checkbox--left').trigger('click');
 
       expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(true);
       expect(wrapper.findComponent({ ref: '3' }).vm.isDisabled).toBe(true);

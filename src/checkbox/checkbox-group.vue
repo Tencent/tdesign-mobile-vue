@@ -5,10 +5,21 @@
       <checkbox
         v-for="(item, idx) in optionList"
         :key="idx"
-        :name="item.name"
-        :label="item.label"
+        :name="item.name || ''"
+        :label="item.label || item.text || ''"
         :value="item.value"
         :check-all="item.checkAll"
+        :block="item.block || true"
+        :checked="item.checked || false"
+        :content="item.content || ''"
+        :content-disabled="item.contentDisabled || false"
+        :icon="item.icon || 'circle'"
+        :indeterminate="item.indeterminate || false"
+        :disabled="item.disabled"
+        :max-content-row="item.maxContentRow || 5"
+        :max-label-row="item.maxLabelRow || 3"
+        :readonly="item.readonly || false"
+        :placement="item.placement || 'left'"
       />
     </span>
   </div>
@@ -20,7 +31,7 @@ import config from '../config';
 import CheckboxProps from './checkbox-group-props';
 import Checkbox from './checkbox.vue';
 import { CheckboxGroupValue, TdCheckboxGroupProps, TdCheckboxProps } from './type';
-import { useDefault } from '../shared';
+import { useDefault } from '@/shared';
 import { getOptions, setCheckAllStatus } from './hooks';
 
 const { prefix } = config;
@@ -39,7 +50,7 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'change'],
   setup(props: any, context) {
     const { isArray } = Array;
-    const [innerValue, setinnerValue] = useDefault<CheckboxGroupValue, TdCheckboxGroupProps>(
+    const [innerValue, setInnerValue] = useDefault<CheckboxGroupValue, TdCheckboxGroupProps>(
       props,
       context.emit,
       'value',
@@ -80,7 +91,7 @@ export default defineComponent({
           const i = val.indexOf(currentValue);
           val.splice(i, 1);
         }
-        setinnerValue(val, {
+        setInnerValue(val, {
           e: data.e,
           current: data.option.value,
           type: data.checked ? 'check' : 'uncheck',
@@ -102,7 +113,7 @@ export default defineComponent({
     };
     const onCheckAllChange = (checked: boolean, context: { e: Event; source?: 't-checkbox' }) => {
       const value = checked ? getAllCheckboxValue() : [];
-      setinnerValue(value, {
+      setInnerValue(value, {
         e: context.e,
         type: checked ? 'check' : 'uncheck',
         current: undefined,

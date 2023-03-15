@@ -8,7 +8,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
     class="t-checkbox-group checkbox-group-demo"
     data-v-11729813=""
   >
-    
+
     <div
       class="t-checkbox"
       data-v-11729813=""
@@ -252,7 +252,7 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
         class="t-checkbox__border t-checkbox__border--left"
       />
     </div>
-    
+
   </div>
 </div>
 `;
@@ -513,7 +513,7 @@ exports[`Checkbox > Checkbox groupVue demo works fine 1`] = `
     data-v-336087ad=""
   >
     <span>
-      
+
       <div
         class="t-checkbox t-is-indeterminate"
       >
@@ -700,7 +700,7 @@ exports[`Checkbox > Checkbox groupVue demo works fine 1`] = `
           class="t-checkbox__border t-checkbox__border--left"
         />
       </div>
-      
+
     </span>
   </div>
 </div>
@@ -714,7 +714,7 @@ exports[`Checkbox > Checkbox iconVue demo works fine 1`] = `
     class="t-checkbox-group checkbox-group-demo"
     data-v-4c12b9bb=""
   >
-    
+
     <div
       class="t-checkbox"
       data-v-4c12b9bb=""
@@ -856,7 +856,7 @@ exports[`Checkbox > Checkbox iconVue demo works fine 1`] = `
         class="t-checkbox__border t-checkbox__border--left"
       />
     </div>
-    
+
   </div>
 </div>
 `;
@@ -925,7 +925,7 @@ exports[`Checkbox > Checkbox maxVue demo works fine 1`] = `
     class="t-checkbox-group checkbox-group-demo"
     data-v-cd906cdc=""
   >
-    
+
     <div
       class="t-checkbox t-is-checked"
       data-v-cd906cdc=""
@@ -1069,7 +1069,7 @@ exports[`Checkbox > Checkbox maxVue demo works fine 1`] = `
         class="t-checkbox__border t-checkbox__border--left"
       />
     </div>
-    
+
   </div>
 </div>
 `;
@@ -1102,7 +1102,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         基础多选框
       </p>
-      
+
       <div
         data-v-11729813=""
       >
@@ -1110,7 +1110,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           class="t-checkbox-group checkbox-group-demo"
           data-v-11729813=""
         >
-          
+
           <div
             class="t-checkbox"
             data-v-11729813=""
@@ -1354,10 +1354,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__border t-checkbox__border--left"
             />
           </div>
-          
+
         </div>
       </div>
-      
+
     </div>
     <div
       class="tdesign-mobile-demo-block"
@@ -1368,7 +1368,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         右侧多选框
       </p>
-      
+
       <div
         data-v-2e3e3cca=""
       >
@@ -1376,7 +1376,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           class="t-checkbox-group checkbox-group-demo"
           data-v-2e3e3cca=""
         >
-          
+
           <div
             class="t-checkbox"
             data-v-2e3e3cca=""
@@ -1567,10 +1567,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__border t-checkbox__border--right"
             />
           </div>
-          
+
         </div>
       </div>
-      
+
     </div>
     <div
       class="tdesign-mobile-demo-block"
@@ -1581,7 +1581,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         带全选多选框
       </p>
-      
+
       <div
         data-v-336087ad=""
       >
@@ -1590,7 +1590,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           data-v-336087ad=""
         >
           <span>
-            
+
             <div
               class="t-checkbox t-is-indeterminate"
             >
@@ -1777,11 +1777,11 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 class="t-checkbox__border t-checkbox__border--left"
               />
             </div>
-            
+
           </span>
         </div>
       </div>
-      
+
     </div>
     <div
       class="tdesign-mobile-demo-block"
@@ -1792,7 +1792,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         限制最多可选数量
       </p>
-      
+
       <div
         data-v-cd906cdc=""
       >
@@ -1800,7 +1800,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           class="t-checkbox-group checkbox-group-demo"
           data-v-cd906cdc=""
         >
-          
+
           <div
             class="t-checkbox t-is-checked"
             data-v-cd906cdc=""
@@ -1944,10 +1944,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__border t-checkbox__border--left"
             />
           </div>
-          
+
         </div>
       </div>
-      
+
     </div>
     <div
       class="tdesign-mobile-demo-block"
@@ -1962,7 +1962,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         多选框禁用态
       </p>
-      
+
       <div
         class="checkbox-demo"
         data-v-3fba2a16=""
@@ -2207,7 +2207,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           />
         </div>
       </div>
-      
+
     </div>
     <div
       class="tdesign-mobile-demo-block"
@@ -2222,7 +2222,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         自定义图标多选框
       </p>
-      
+
       <div
         data-v-4c12b9bb=""
       >
@@ -2230,7 +2230,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           class="t-checkbox-group checkbox-group-demo"
           data-v-4c12b9bb=""
         >
-          
+
           <div
             class="t-checkbox"
             data-v-4c12b9bb=""
@@ -2372,10 +2372,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               class="t-checkbox__border t-checkbox__border--left"
             />
           </div>
-          
+
         </div>
       </div>
-      
+
     </div>
     <div
       class="tdesign-mobile-demo-block"
@@ -2390,7 +2390,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       >
         多选框尺寸规格
       </p>
-      
+
       <div
         data-v-aaeb4d7a=""
       >
@@ -2489,7 +2489,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           />
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>
@@ -2503,7 +2503,7 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
     class="t-checkbox-group checkbox-group-demo"
     data-v-2e3e3cca=""
   >
-    
+
     <div
       class="t-checkbox"
       data-v-2e3e3cca=""
@@ -2694,7 +2694,7 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
         class="t-checkbox__border t-checkbox__border--right"
       />
     </div>
-    
+
   </div>
 </div>
 `;
