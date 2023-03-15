@@ -5,8 +5,7 @@ import TDesign from '@/index';
 import Stackblitz from './stackblitz/index.vue';
 
 // import tdesign style
-import '@common/style/mobile/_reset.less';
-import '@common/style/mobile/index.less';
+import 'tdesign-mobile-vue/style/index.js';
 
 // import site webcomponents
 import 'tdesign-site-components';
