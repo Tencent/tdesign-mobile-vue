@@ -20,7 +20,7 @@ import { provide, defineComponent, toRefs, computed } from 'vue';
 import { useDefault } from '../shared';
 import RadioGroupProps from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
-import Radio from '../radio/radio.vue';
+import Radio from './radio.vue';
 import config from '../config';
 
 const { prefix } = config;

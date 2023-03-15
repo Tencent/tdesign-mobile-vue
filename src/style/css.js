@@ -1,1 +1,1 @@
-export default undefined;
+import './index.css';

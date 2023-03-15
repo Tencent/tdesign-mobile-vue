@@ -1,1 +1,1 @@
-export default undefined;
+import '../_common/style/web/_global.less';
