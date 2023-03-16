@@ -24,6 +24,11 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 是否开启无边框模式 */
+  borderless: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否选中 */
   checked: {
     type: Boolean,
@@ -50,10 +55,10 @@ export default {
     type: Boolean,
     default: undefined,
   },
-  /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。值为 fill-circle 表示图标为填充型图标，值为 stroke-line 表示图标为描边型图标 */
+  /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标 */
   icon: {
     type: [String, Array] as PropType<TdRadioProps['icon']>,
-    default: 'fill-circle',
+    default: 'circle',
   },
   /** 主文案 */
   label: {
@@ -77,7 +82,7 @@ export default {
   /** 复选框和内容相对位置 */
   placement: {
     type: String as PropType<TdRadioProps['placement']>,
-    default: 'left' as TdRadioProps['placement'],
+    default: undefined,
     validator(val: TdRadioProps['placement']): boolean {
       if (!val) return true;
       return ['left', 'right'].includes(val);

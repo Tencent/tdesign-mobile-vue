@@ -8,18 +8,19 @@ name | type | default | description | required
 align | String | left | options：left/right | N
 allowUncheck | Boolean | false | \- | N
 block | Boolean | true | \- | N
+borderless | Boolean | undefined | \- | N
 checked | Boolean | false | `v-model` and `v-model:checked` is supported | N
 defaultChecked | Boolean | false | uncontrolled property | N
 content | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 contentDisabled | Boolean | - | \- | N
 default | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 disabled | Boolean | undefined | \- | N
-icon | String / Array | 'fill-circle' | Typescript：`'fill-circle' \| 'stroke-line' \| Array<TNode>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | String / Array | 'circle' | Typescript：`'circle' \| 'line' \| 'dot' \| Array<TNode>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxContentRow | Number | 5 | \- | N
 maxLabelRow | Number | 3 | \- | N
 name | String | - | \- | N
-placement | String | left | options：left/right | N
+placement | String | undefined | options：left/right | N
 value | String / Number / Boolean | undefined | Typescript：`string \| number \| boolean` | N
 onChange | Function |  | Typescript：`(checked: boolean, context: { e: Event }) => void`<br/> | N
 
@@ -34,6 +35,7 @@ change | `(checked: boolean, context: { e: Event })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 allowUncheck | Boolean | false | \- | N
+borderless | Boolean | false | \- | N
 disabled | Boolean | - | \- | N
 keys | Object | - | Typescript：`KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 name | String | - | \- | N

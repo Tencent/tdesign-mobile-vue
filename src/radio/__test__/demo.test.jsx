@@ -4,24 +4,22 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/radio/demos/base.vue';
-import groupVue from '@/radio/demos/group.vue';
+import cardVue from '@/radio/demos/card.vue';
+import customVue from '@/radio/demos/custom.vue';
+import horizontalVue from '@/radio/demos/horizontal.vue';
 import iconVue from '@/radio/demos/icon.vue';
-import leftStrokeLineVue from '@/radio/demos/leftStrokeLine.vue';
 import mobileVue from '@/radio/demos/mobile.vue';
-import rightVue from '@/radio/demos/right.vue';
-import rightStrovkeLineVue from '@/radio/demos/rightStrovkeLine.vue';
-import sizeVue from '@/radio/demos/size.vue';
+import placementVue from '@/radio/demos/placement.vue';
 import statusVue from '@/radio/demos/status.vue';
 
 const mapper = {
   baseVue,
-  groupVue,
+  cardVue,
+  customVue,
+  horizontalVue,
   iconVue,
-  leftStrokeLineVue,
   mobileVue,
-  rightVue,
-  rightStrovkeLineVue,
-  sizeVue,
+  placementVue,
   statusVue,
 };
 

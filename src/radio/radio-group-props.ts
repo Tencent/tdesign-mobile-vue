@@ -10,6 +10,8 @@ import { PropType } from 'vue';
 export default {
   /** 是否允许取消选中 */
   allowUncheck: Boolean,
+  /** 是否开启无边框模式；优先级低于 Radio */
+  borderless: Boolean,
   /** 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled */
   disabled: Boolean,
   /** 用来定义 value / label 在 `options` 中对应的字段别名 */
