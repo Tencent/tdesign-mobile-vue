@@ -1,11 +1,8 @@
 <template>
-  <div>
-    <t-radio-group :default-value="radio" class="radio-group-demo" @change="groupChangeFn">
-      <t-radio name="radio" value="1" label="单选" :icon="checkRectangle"></t-radio>
-      <t-radio name="radio" value="2" label="单选" :icon="checkRectangle"></t-radio>
-    </t-radio-group>
-  </div>
+  <t-radio class="block" default-checked label="单选" icon="line"></t-radio>
+  <t-radio class="block" default-checked label="单选" icon="dot"></t-radio>
 </template>
+
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { CheckRectangleFilledIcon, CheckRectangleIcon } from 'tdesign-icons-vue-next';
@@ -19,6 +16,7 @@ const groupChangeFn = (value: any, context: { e: Event }) => {
   console.log(value, context);
 };
 </script>
+
 <style scoped>
 .radio-group-demo {
   background-color: #fff;

@@ -1,59 +1,57 @@
 <template>
-  <div :class="radioClasses">
-    <span :class="[`${name}__content-wrap`]">
-      <span v-if="align === 'left'" :class="`${name}__icon-wrap ${name}__icon-left-wrap`">
-        <input type="radio" :class="`${name}__original-left`" v-bind="inputProps" @click="radioOrgChange" />
-        <div :class="iconClass">
-          <t-node :content="iconContent"></t-node>
-        </div>
+  <div :class="radioClasses" @click="radioOrgChange">
+    <input type="radio" :class="`${name}__original`" v-bind="inputProps" />
+    <div :class="iconClass">
+      <check-circle-filled-icon v-if="checked && icon === 'circle'" :class="`${name}__icon-wrap`" />
+      <check-icon v-if="checked && icon === 'line'" :class="`${name}__icon-wrap`" />
+      <div
+        v-if="checked && icon == 'dot'"
+        :class="[`${name}__icon-${icon}`, { [`${name}__icon-${icon}--disabled`]: disabled }]"
+      />
+      <div
+        v-if="!checked && (icon == 'circle' || icon == 'dot')"
+        :class="[`${name}__icon-circle`, { [`${name}__icon-circle--disabled`]: disabled }]"
+      />
+      <div v-if="!checked && icon == 'line'" class="placeholder" />
+
+      <t-node :content="iconContent" />
+    </div>
+
+    <div :class="`${name}__content`" @click.stop="radioContentChange">
+      <span v-if="labelContent" :class="titleClasses" :style="`-webkit-line-clamp: ${maxLabelRow}`">
+        <t-node :content="labelContent" />
       </span>
-      <span v-if="labelContent || radioContent" :class="[`${name}__label-wrap`]">
-        <span v-if="labelContent" :class="titleClasses" @click="radioOrgChange">
-          <t-node :content="labelContent"></t-node>
-        </span>
-        <div v-if="radioContent" :class="`${name}__content-inner`" @click="radioContentChange">
-          <t-node :content="radioContent"></t-node>
-        </div>
-      </span>
-      <span v-if="align === 'right'" :class="`${name}__icon-wrap ${name}__icon-right-wrap`">
-        <input type="radio" :class="`${name}__original-right`" v-bind="inputProps" @click="radioOrgChange" />
-        <div :class="iconClass">
-          <t-node :content="iconContent"></t-node>
-        </div>
-      </span>
-    </span>
-    <!--下边框 -->
-    <div v-if="!borderless" :class="`${name}__border ${name}__border--${align}`"></div>
+      <div
+        v-if="radioContent"
+        :class="[`${name}__description`, { [`${name}__description`]: disabled }]"
+        :style="`-webkit-line-clamp: ${maxContentRow}`"
+      >
+        <t-node :content="radioContent" />
+      </div>
+    </div>
+
+    <div v-if="!finalBorderless" :class="`${name}__border ${name}__border--${finalPlacement}`"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { inject, computed, defineComponent, getCurrentInstance, h, Ref, toRefs } from 'vue';
-import { CheckIcon } from 'tdesign-icons-vue-next';
-import { renderContent, renderTNode, TNode, NOOP, useDefault, useVModel } from '../shared';
-import ClASSNAMES from '../shared/constants';
+import { inject, computed, defineComponent, getCurrentInstance, Ref, toRefs } from 'vue';
+import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { renderContent, renderTNode, TNode, NOOP, useVModel } from '../shared';
 import config from '../config';
 import RadioProps from './props';
-import { RadioValue, TdRadioGroupProps, TdRadioProps } from './type';
+import { RadioValue, TdRadioGroupProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-radio`;
 
-const iconDefault = [h(CheckIcon), ''];
-
 export default defineComponent({
   name,
-  components: { TNode },
-  props: {
-    ...RadioProps,
-    borderless: {
-      type: Boolean,
-      value: false,
-    },
-  },
+  components: { TNode, CheckIcon, CheckCircleFilledIcon },
+  props: RadioProps,
   emits: ['update:checked', 'update:modelValue', 'change'],
-  setup(props, context) {
-    const { checked, modelValue } = toRefs(props);
+  setup(props) {
+    const { checked, modelValue, placement, block } = toRefs(props);
     const [innerChecked, setInnerChecked] = useVModel(
       checked,
       modelValue,
@@ -65,8 +63,19 @@ export default defineComponent({
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
     const rootGroupValue = inject<Ref<RadioValue>>('rootGroupValue');
     const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue, e: Event) => void;
-    const disabled = computed(() => (rootGroupProps.disabled !== undefined ? rootGroupProps.disabled : props.disabled));
+    const disabled = computed(() => {
+      if (props.disabled == null) return rootGroupProps.disabled;
+      return props.disabled;
+    });
     const radioChecked = computed(() => (rootGroupValue ? props.value === rootGroupValue.value : innerChecked.value));
+    const finalBorderless = computed(() => {
+      if (props.borderless == null) return rootGroupProps.borderless;
+      return props.borderless;
+    });
+    const finalPlacement = computed(() => {
+      if (props.placement == null) return rootGroupProps.placement;
+      return props.placement;
+    });
 
     // input props attribute
     const inputProps = computed(() => ({
@@ -80,45 +89,39 @@ export default defineComponent({
     const labelContent = computed(() => renderContent(internalInstance, 'default', 'label'));
     const radioContent = computed(() => renderTNode(internalInstance, 'content'));
     const iconContent = computed(() => {
-      if (!props.icon) {
-        return;
+      if (props.icon?.length === 2) {
+        const iconIndex = radioChecked.value ? 0 : 1;
+        return props.icon[iconIndex];
       }
-      let curContent: any = '';
-      const iconIndex = radioChecked.value ? 0 : 1;
-      const isIconArray = Array.isArray(props.icon);
-      if (isIconArray) {
-        return (curContent = props.icon[iconIndex]);
-      }
-      return iconDefault[iconIndex];
+      return null;
     });
 
     const radioClasses = computed(() => [
       `${name}`,
+      `${name}--${finalPlacement.value}`,
       {
-        [ClASSNAMES.STATUS.checked]: radioChecked.value,
-        [ClASSNAMES.STATUS.disabled]: disabled.value,
+        [`${name}--block`]: block.value,
       },
     ]);
 
     const titleClasses = computed(() => [
-      `${name}__content-title`,
+      `${name}__title`,
       {
-        [ClASSNAMES.STATUS.disabled]: disabled.value,
-        [`${name}__content-right-title`]: props.align === 'right',
+        [`${name}__title--disabled`]: disabled.value,
       },
     ]);
 
     const iconClass = computed(() => [
       `${name}__icon`,
+      `${name}__icon--${finalPlacement.value}`,
       {
         [`${name}__icon--checked`]: radioChecked.value,
         [`${name}__icon--disabled`]: disabled.value,
-        [`${name}__icon--strock`]: props.icon === 'stroke-line',
-        [`${name}__icon--custom`]: Array.isArray(props.icon),
       },
     ]);
 
     const radioContentChange = (e: Event) => {
+      console.log('radioContentChange', props.contentDisabled);
       if (props.contentDisabled) {
         return;
       }
@@ -132,6 +135,7 @@ export default defineComponent({
       if (rootGroupChange !== NOOP && props.value !== undefined) {
         rootGroupChange(props.value, e);
       } else {
+        if (!props.allowUncheck && radioChecked.value) return;
         setInnerChecked(!radioChecked.value, { e });
       }
     };
@@ -139,6 +143,7 @@ export default defineComponent({
     return {
       name,
       iconClass,
+      checked: radioChecked,
       radioContent,
       labelContent,
       iconContent,
@@ -147,6 +152,8 @@ export default defineComponent({
       radioClasses,
       titleClasses,
       inputProps,
+      finalBorderless,
+      finalPlacement,
     };
   },
 });

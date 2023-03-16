@@ -141,118 +141,106 @@ exports[`dropdown-menu > props > : duration 1`] = `
           
           
           <div
-            class="t-radio t-dropdown-item__radio t-is-tick"
+            class="t-radio t-radio--left t-radio--block t-dropdown-item__radio t-is-tick"
           >
-            <span
-              class="t-radio__content-wrap"
+            <input
+              class="t-radio__original"
+              name=""
+              type="radio"
+              value="option_0"
+            />
+            <div
+              class="t-radio__icon t-radio__icon--left"
             >
               <!--v-if-->
-              <span
-                class="t-radio__label-wrap"
-              >
-                <span
-                  class="t-radio__content-title t-radio__content-right-title"
-                >
-                  选项一
-                </span>
-                <!--v-if-->
-              </span>
-              <span
-                class="t-radio__icon-wrap t-radio__icon-right-wrap"
-              >
-                <input
-                  class="t-radio__original-right"
-                  name=""
-                  type="radio"
-                  value="option_0"
-                />
-                <div
-                  class="t-radio__icon t-radio__icon--custom"
-                >
-                  <!---->
-                </div>
-              </span>
-            </span>
-            <!--下边框 -->
+              <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
+              <!---->
+            </div>
             <div
-              class="t-radio__border t-radio__border--right"
+              class="t-radio__content"
+            >
+              <span
+                class="t-radio__title"
+                style=""
+              >
+                选项一
+              </span>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-radio__border t-radio__border--left"
             />
           </div>
           <div
-            class="t-radio t-dropdown-item__radio t-is-tick"
+            class="t-radio t-radio--left t-radio--block t-dropdown-item__radio t-is-tick"
           >
-            <span
-              class="t-radio__content-wrap"
+            <input
+              class="t-radio__original"
+              name=""
+              type="radio"
+              value="option_1"
+            />
+            <div
+              class="t-radio__icon t-radio__icon--left"
             >
               <!--v-if-->
-              <span
-                class="t-radio__label-wrap"
-              >
-                <span
-                  class="t-radio__content-title t-radio__content-right-title"
-                >
-                  选项二
-                </span>
-                <!--v-if-->
-              </span>
-              <span
-                class="t-radio__icon-wrap t-radio__icon-right-wrap"
-              >
-                <input
-                  class="t-radio__original-right"
-                  name=""
-                  type="radio"
-                  value="option_1"
-                />
-                <div
-                  class="t-radio__icon t-radio__icon--custom"
-                >
-                  <!---->
-                </div>
-              </span>
-            </span>
-            <!--下边框 -->
+              <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
+              <!---->
+            </div>
             <div
-              class="t-radio__border t-radio__border--right"
+              class="t-radio__content"
+            >
+              <span
+                class="t-radio__title"
+                style=""
+              >
+                选项二
+              </span>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-radio__border t-radio__border--left"
             />
           </div>
           <div
-            class="t-radio t-is-disabled t-dropdown-item__radio t-is-tick"
+            class="t-radio t-radio--left t-radio--block t-dropdown-item__radio t-is-tick"
           >
-            <span
-              class="t-radio__content-wrap"
+            <input
+              class="t-radio__original"
+              disabled=""
+              name=""
+              type="radio"
+              value="disabled-item"
+            />
+            <div
+              class="t-radio__icon t-radio__icon--left t-radio__icon--disabled"
             >
               <!--v-if-->
-              <span
-                class="t-radio__label-wrap"
-              >
-                <span
-                  class="t-radio__content-title t-is-disabled t-radio__content-right-title"
-                >
-                  禁用选项
-                </span>
-                <!--v-if-->
-              </span>
-              <span
-                class="t-radio__icon-wrap t-radio__icon-right-wrap"
-              >
-                <input
-                  class="t-radio__original-right"
-                  disabled=""
-                  name=""
-                  type="radio"
-                  value="disabled-item"
-                />
-                <div
-                  class="t-radio__icon t-radio__icon--disabled t-radio__icon--custom"
-                >
-                  <!---->
-                </div>
-              </span>
-            </span>
-            <!--下边框 -->
+              <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
+              <!--v-if-->
+              <!---->
+            </div>
             <div
-              class="t-radio__border t-radio__border--right"
+              class="t-radio__content"
+            >
+              <span
+                class="t-radio__title t-radio__title--disabled"
+                style=""
+              >
+                禁用选项
+              </span>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-radio__border t-radio__border--left"
             />
           </div>
           

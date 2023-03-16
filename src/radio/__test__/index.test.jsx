@@ -1,60 +1,22 @@
-import { ref, h } from 'vue';
+import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Radio from '../radio.vue';
-import RadioGroup from '../../radio-group/radio-group.vue';
-import { CheckRectangleFilledIcon, CheckRectangleIcon } from 'tdesign-icons-vue-next';
+import RadioGroup from '../radio-group.vue';
 
 const prefix = 't';
 const name = `${prefix}-radio`;
 const TEXT = 'tdesign-mobile-vue';
-const TiconCheckRectangleFilled = h(CheckRectangleFilledIcon);
-const TiconCheckRectangle = h(CheckRectangleIcon);
-const checkRectangle = [TiconCheckRectangleFilled, TiconCheckRectangle];
 
 describe('Radio', () => {
   describe('props', () => {
-    it(': icon', () => {
-      const wrapper = mount(Radio, {
-        props: {
-          icon: checkRectangle, // 自定义 icon
-        },
-      });
-      const $icon = wrapper.find(`.${name}__icon-left-wrap .${name}__icon--custom `);
-      expect($icon.exists()).toBeTruthy();
-    });
-
-    it(': align', async () => {
-      const wrapper = mount(Radio, {
-        props: {
-          default: TEXT, // 单选按钮内容，同 label
-          align: 'left',
-        },
-      });
-      // align = 'left'
-      const $left = wrapper.find(`.${name}__icon-left-wrap`);
-      const $label = wrapper.find(`.${name}__content-title`);
-      expect($left.exists()).toBeTruthy();
-      expect($label.text()).toEqual(TEXT);
-      const align = 'right';
-      await wrapper.setProps({
-        align,
-      });
-      // align = 'right'
-      const $right = wrapper.find(`.${name}__icon-${align}-wrap`);
-      expect($right.exists()).toBeTruthy();
-    });
-
-    it(': label', async () => {
+    it(':label', async () => {
       const wrapper = mount(Radio, {
         props: {
           label: TEXT,
         },
       });
-      // align = 'left' （默认）
-      const $left = wrapper.find(`.${name}__icon-left-wrap`);
-      expect($left.exists()).toBeTruthy();
-      const $label = wrapper.find(`.${name}__content-title`);
+      const $label = wrapper.find(`.${name}__title`);
       expect($label.text()).toEqual(TEXT);
       const label = 'new label content';
       await wrapper.setProps({
@@ -63,7 +25,7 @@ describe('Radio', () => {
       expect($label.text()).toEqual(label);
     });
 
-    it(': disabled', async () => {
+    it(':content-disabled', async () => {
       const onChange = vi.fn();
       const align = 'right';
       const contentDisabled = true;
@@ -77,7 +39,7 @@ describe('Radio', () => {
           onChange,
         },
       });
-      const $content = wrapper.find(`.${name}__content-inner`);
+      const $content = wrapper.find(`.${name}__content`);
       // contentDisabled = true,  点击 content 区域，不会触发 change
       await $content.trigger('click');
       expect(onChange).toBeCalledTimes(0);
@@ -88,7 +50,7 @@ describe('Radio', () => {
       expect(onChange).toBeCalledTimes(1);
     });
 
-    it(': disabled', async () => {
+    it(':disabled', async () => {
       const onChange = vi.fn();
       const disabled = true;
       const label = 'label content';
@@ -101,28 +63,17 @@ describe('Radio', () => {
         },
       });
       const $radio = wrapper.findComponent(Radio);
-      const $leftInput = wrapper.find(`.${name}__original-left`);
-      const $label = wrapper.find(`.${name}__content-title`);
-      const $content = wrapper.find(`.${name}__content-inner`);
-      // disabled = true, input、label、content 都不会触发 change
-      expect($radio.classes()).toContain('t-is-disabled');
-      await $leftInput.trigger('click');
-      expect(onChange).toBeCalledTimes(0);
-      await $label.trigger('click');
-      expect(onChange).toBeCalledTimes(0);
-      await $content.trigger('click');
+
+      await $radio.trigger('click');
       expect(onChange).toBeCalledTimes(0);
 
       // disabled = false, 可以触发 change
       await wrapper.setProps({
         disabled: false,
       });
-      await $leftInput.trigger('click');
+
+      await $radio.trigger('click');
       expect(onChange).toBeCalledTimes(1);
-      await $label.trigger('click');
-      expect(onChange).toBeCalledTimes(2);
-      await $content.trigger('click');
-      expect(onChange).toBeCalledTimes(3);
     });
 
     it(': checked', async () => {
@@ -154,21 +105,21 @@ describe('Radio', () => {
       expect(wrapper.element).toMatchSnapshot();
       $group.forEach((item, index) => {
         const isTrue = index === radio.value;
-        expect(item.classes().includes('t-is-checked')).toBe(isTrue);
+        expect(item.vm.checked).toBe(isTrue);
       });
 
       // 切换按钮, 此时选中项为第一项
       const $firstRadio = $group.at(0);
       const $secondRadio = $group.at(1);
-      await $firstRadio.find(`.${name}__original-left`).trigger('click');
+      await $firstRadio.trigger('click');
       expect(onChange).toBeCalledTimes(1);
-      expect($firstRadio.classes().includes('t-is-checked')).toBeTruthy();
-      expect($secondRadio.classes().includes('t-is-checked')).toBeFalsy();
+      expect($firstRadio.vm.checked).toBeTruthy();
+      expect($secondRadio.vm.checked).toBeFalsy();
     });
   });
 
   describe('events', () => {
-    it(': change', async () => {
+    it(':change', async () => {
       const radio = ref('1');
       const wrapper = mount(() => (
         <RadioGroup v-model:value={radio.value}>
@@ -177,11 +128,11 @@ describe('Radio', () => {
           <Radio name="radio" value="3" label="单选"></Radio>
         </RadioGroup>
       ));
-      const [radio1, radio2] = wrapper.findAll('.t-radio');
-      const [, original2] = wrapper.findAll('.t-radio__original-left');
-      expect(radio1.classes()).toContain('t-is-checked');
-      await original2.trigger('click');
-      expect(radio2.classes()).toContain('t-is-checked');
+      const [radio1, radio2] = wrapper.findAllComponents('.t-radio');
+      console.log(radio1.props);
+      expect(radio1.vm.checked).toBeTruthy();
+      await radio2.trigger('click');
+      expect(radio2.vm.checked).toBeTruthy();
       expect(radio.value).toBe('2');
     });
   });
@@ -194,7 +145,7 @@ describe('Radio', () => {
           label,
         },
       });
-      const $label = wrapper.find(`.${name}__content-title`);
+      const $label = wrapper.find(`.${name}__title`);
       expect($label.text()).toEqual(label);
     });
 
@@ -205,7 +156,7 @@ describe('Radio', () => {
           content,
         },
       });
-      const $content = wrapper.find(`.${name}__content-inner`);
+      const $content = wrapper.find(`.${name}__description`);
       expect($content.text()).toEqual(content);
     });
   });

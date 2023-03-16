@@ -110,11 +110,10 @@
 import { CheckIcon } from 'tdesign-icons-vue-next';
 import { h, ref, watch, toRefs, inject, computed, reactive, nextTick, onBeforeMount, defineComponent } from 'vue';
 import { TNode } from '../common';
-import TRadio from '../radio';
+import TRadio, { RadioGroup as TRadioGroup } from '../radio';
 import config from '../config';
 import TButton from '../button';
 import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
-import TRadioGroup from '../radio-group';
 import TransAniControl from './trans-ani-control';
 import { useVModel, useEmitEvent } from '../shared';
 import DropdownItemProps from './dropdown-item-props';

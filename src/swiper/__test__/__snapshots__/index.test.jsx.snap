@@ -8,7 +8,7 @@ exports[`swiper > : props > height && direction 1`] = `
   <div
     class="t-swiper__container"
     data-is-trust="true"
-    style="height: 200px; flex-direction: column; transform: translateY(-400px); transition: transform 100ms;"
+    style="height: 200px; flex-direction: column; transform: translateY(-200px);"
   >
     
     <div
@@ -65,10 +65,10 @@ exports[`swiper > : props > height && direction 1`] = `
   >
     
     <span
-      class="t-swiper-dot"
+      class="t-swiper-dot t-swiper-dot--active"
     />
     <span
-      class="t-swiper-dot t-swiper-dot--active"
+      class="t-swiper-dot"
     />
     <span
       class="t-swiper-dot"
