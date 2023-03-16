@@ -1,19 +1,24 @@
 <template>
   <div class="">
     <t-cell-group>
-      <t-cell title="开关">
+      <t-cell title="加载状态">
         <template #rightIcon>
-          <t-switch v-model="value" label="描述信息"> </t-switch>
+          <t-switch v-model="value" disabled />
         </template>
       </t-cell>
-      <t-cell title="开关">
+      <t-cell title="加载状态">
         <template #rightIcon>
-          <t-switch label="描述信息"> </t-switch>
+          <t-switch disabled />
         </template>
       </t-cell>
-      <t-cell title="自定义颜色">
+      <t-cell title="禁用状态">
         <template #rightIcon>
-          <t-switch :value="true" :colors="['rgba(0,168,112,1)', 'rgba(0,0,0,0.26)']" label="描述信息" />
+          <t-switch v-model="value" disabled />
+        </template>
+      </t-cell>
+      <t-cell title="禁用状态">
+        <template #rightIcon>
+          <t-switch disabled />
         </template>
       </t-cell>
     </t-cell-group>
