@@ -1,13 +1,18 @@
 <template>
-  <div class="stepper-demo">
-    <t-cell title="标题文字">
-      <t-stepper v-model="number" />
-    </t-cell>
+  <div class="stepper-example">
+    <t-stepper v-model="number" theme="filled" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const number = ref(0);
+const number = ref(3);
 </script>
+
+<style lang="less">
+.stepper-example {
+  padding: 16px;
+  background-color: #fff;
+}
+</style>
