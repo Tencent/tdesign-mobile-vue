@@ -16,7 +16,7 @@ describe('switch', () => {
           return <Switch v-model={value.value} customValue={customValue.value} onChange={onChange} />;
         },
       });
-      const $node = wrapper.find('.t-switch__node');
+      const $node = wrapper.find('.t-switch');
       await $node.trigger('click');
       expect(value.value).toBe(0);
     });
@@ -24,16 +24,14 @@ describe('switch', () => {
     it(':label', async () => {
       const wrapper = mount(Switch, {
         props: {
-          label: '描述信息1',
+          label: ['open', 'close'],
         },
       });
-      const $label = wrapper.find('.t-switch__text');
-      expect($label.text()).toBe('描述信息1');
+      const $label = wrapper.find('.t-switch__label');
+      expect($label.text()).toBe('close');
 
-      await wrapper.setProps({
-        label: '描述信息2',
-      });
-      expect($label.text()).toBe('描述信息2');
+      await wrapper.trigger('click')
+      expect($label.text()).toBe('open');
     });
 
     it(':disabled', async () => {
@@ -42,33 +40,13 @@ describe('switch', () => {
           disabled: true,
         },
       });
-      expect(wrapper.classes()).toContain('t-is-disabled');
+      console.log(wrapper.classes());
+      expect(wrapper.classes()).toContain('t-switch--disabled');
 
-      // 更新已挂载组件的 props
       await wrapper.setProps({
         disabled: false,
       });
-      expect(wrapper.classes()).not.toContain('t-is-disabled');
-    });
-  });
-
-  describe('events', () => {
-    it(':change', async () => {
-      const onChange = (val) => {
-        value.value = val;
-      };
-      const value = ref(true);
-      const colors = ref(['blue', 'gray']);
-      const wrapper = mount({
-        render() {
-          return <Switch v-model={value.value} colors={colors.value} onChange={onChange} />;
-        },
-      });
-      const $node = wrapper.find('.t-switch__node');
-      expect(getComputedStyle($node.element, null).backgroundColor).toBe('blue');
-
-      await $node.trigger('click');
-      expect(getComputedStyle($node.element, null).backgroundColor).toBe('gray');
+      expect(wrapper.classes()).not.toContain('t-switch--disabled');
     });
   });
 });

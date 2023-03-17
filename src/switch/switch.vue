@@ -3,7 +3,7 @@
     <div :class="dotClasses">
       <div :class="labelClasses">
         <t-loading v-if="loading" inherit-color size="16.25px" />
-        <span v-else-if="label?.length == 2">{{ checked ? label[0] : label[1] }}</span>
+        <template v-else-if="label?.length == 2">{{ checked ? label[0] : label[1] }}</template>
         <t-node :content="iconContent" />
       </div>
     </div>
