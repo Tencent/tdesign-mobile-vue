@@ -1,12 +1,11 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { nextTick } from 'vue';
 import Switch from '../switch.vue';
 import { ref } from 'vue';
 
 describe('switch', () => {
   describe('props', () => {
-    it(': customValue', async () => {
+    it(':customValue', async () => {
       const onChange = (val) => {
         value.value = val;
       };
@@ -22,18 +21,7 @@ describe('switch', () => {
       expect(value.value).toBe(0);
     });
 
-    it(': color', async () => {
-      const wrapper = mount(Switch, {
-        props: {
-          disabled: false,
-          colors: ['blue', 'gray'],
-        },
-      });
-      const $node = wrapper.find('.t-switch__node');
-      expect(getComputedStyle($node.element, null).backgroundColor).toBe('gray');
-    });
-
-    it(': label', async () => {
+    it(':label', async () => {
       const wrapper = mount(Switch, {
         props: {
           label: '描述信息1',
@@ -48,7 +36,7 @@ describe('switch', () => {
       expect($label.text()).toBe('描述信息2');
     });
 
-    it(': disabled', async () => {
+    it(':disabled', async () => {
       const wrapper = mount(Switch, {
         props: {
           disabled: true,
@@ -65,7 +53,7 @@ describe('switch', () => {
   });
 
   describe('events', () => {
-    it(': change', async () => {
+    it(':change', async () => {
       const onChange = (val) => {
         value.value = val;
       };

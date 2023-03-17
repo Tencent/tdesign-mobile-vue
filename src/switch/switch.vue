@@ -2,7 +2,7 @@
   <div :class="classes" @click.prevent="handleToggle">
     <div :class="dotClasses">
       <div :class="labelClasses">
-        <t-loading v-if="loading" inherit-color />
+        <t-loading v-if="loading" inherit-color size="16.25px" />
         <span v-else-if="label?.length == 2">{{ checked ? label[0] : label[1] }}</span>
         <t-node :content="iconContent" />
       </div>
@@ -10,17 +10,10 @@
   </div>
 </template>
 
-<!-- 
-<t-loading wx:if="{{loading}}" inherit-color size="32rpx" />
-
-<t-icon
-  wx:elif="{{icon.length == 2}}"
-  name="{{checked ? icon[1] : icon[0]}}"
-  t-class="{{_.cls(classPrefix + '__icon', [['checked', checked], size])}}"
-/> -->
-
 <script lang="ts">
 import { computed, toRefs, defineComponent } from 'vue';
+
+import TLoading from '../loading';
 import { useToggle, useDefault, TNode } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
@@ -31,7 +24,7 @@ const name = `${prefix}-switch`;
 
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TLoading },
   props: SwitchProps,
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {

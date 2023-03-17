@@ -1,32 +1,40 @@
 <template>
-  <div class="">
-    <t-cell-group>
-      <t-cell title="加载状态">
-        <template #rightIcon>
-          <t-switch v-model="value" disabled />
-        </template>
-      </t-cell>
-      <t-cell title="加载状态">
-        <template #rightIcon>
-          <t-switch disabled />
-        </template>
-      </t-cell>
-      <t-cell title="禁用状态">
-        <template #rightIcon>
-          <t-switch v-model="value" disabled />
-        </template>
-      </t-cell>
-      <t-cell title="禁用状态">
-        <template #rightIcon>
-          <t-switch disabled />
-        </template>
-      </t-cell>
-    </t-cell-group>
-  </div>
+  <t-cell title="加载状态">
+    <template #rightIcon>
+      <t-switch loading />
+    </template>
+  </t-cell>
+
+  <t-cell title="加载状态">
+    <template #rightIcon>
+      <t-switch loading :default-value="true" />
+    </template>
+  </t-cell>
+
+  <div class="demo__title">禁用状态</div>
+
+  <t-cell title="禁用状态">
+    <template #rightIcon>
+      <t-switch disabled />
+    </template>
+  </t-cell>
+
+  <t-cell title="禁用状态">
+    <template #rightIcon>
+      <t-switch disabled :value="true" />
+    </template>
+  </t-cell>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue';
+<style>
+.t-cell + .t-cell {
+  margin-top: 16px;
+}
 
-const value = ref(true);
-</script>
+.demo__title {
+  margin: 24px 16px 16px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 22px;
+}
+</style>
