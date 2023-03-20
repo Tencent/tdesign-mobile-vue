@@ -55,7 +55,6 @@ import {
   computed,
   onBeforeUnmount,
   toRefs,
-  SetupContext,
 } from 'vue';
 import config from '../config';
 import { ListItem } from './type';
@@ -98,7 +97,7 @@ export default defineComponent({
   components: { indexesAnchor, TIndexesCell },
   props: IndexesProps,
   emits: ['select'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     let timeOut: number;
     const indexesRoot = ref<null | HTMLElement>(null);

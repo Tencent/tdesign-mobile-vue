@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { ref, SetupContext, defineComponent, PropType } from 'vue';
+import { ref, defineComponent, PropType } from 'vue';
 
 import config from '../config';
 import { ActionSheetItem } from './type';
@@ -32,7 +32,7 @@ export default defineComponent({
     },
   },
   emits: ['selected'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const handleSelected = (index: number) => {
       context.emit('selected', index);
     };

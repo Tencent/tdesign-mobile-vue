@@ -47,7 +47,7 @@
 
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import { ref, computed, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick, watch } from 'vue';
+import { ref, computed, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
 import { useFocus } from '@vueuse/core';
 import TCell from '../cell';
 import config from '../config';
@@ -68,7 +68,7 @@ export default defineComponent({
   },
   props: InputProps,
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const inputRef = ref();
     const { autofocus } = toRefs(props);

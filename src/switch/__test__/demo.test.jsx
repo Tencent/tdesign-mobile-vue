@@ -4,15 +4,19 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/switch/demos/base.vue';
-import descVue from '@/switch/demos/desc.vue';
-import disabledVue from '@/switch/demos/disabled.vue';
+import colorVue from '@/switch/demos/color.vue';
+import labelVue from '@/switch/demos/label.vue';
 import mobileVue from '@/switch/demos/mobile.vue';
+import sizeVue from '@/switch/demos/size.vue';
+import statusVue from '@/switch/demos/status.vue';
 
 const mapper = {
   baseVue,
-  descVue,
-  disabledVue,
+  colorVue,
+  labelVue,
   mobileVue,
+  sizeVue,
+  statusVue,
 };
 
 describe('Switch', () => {

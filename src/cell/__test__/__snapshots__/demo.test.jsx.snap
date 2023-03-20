@@ -491,15 +491,20 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-cell__note"
             >
               
-              <span
-                class="t-switch t-is-checked"
+              <div
+                class="t-switch t-switch--medium t-switch--checked"
               >
-                <!--v-if-->
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
+                <div
+                  class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+                >
+                  <div
+                    class="t-switch__label t-switch__label--medium t-switch__label--checked"
+                  >
+                    <!--v-if-->
+                    <!---->
+                  </div>
+                </div>
+              </div>
               
             </div>
             <!--v-if-->
@@ -1256,15 +1261,20 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
           class="t-cell__note"
         >
           
-          <span
-            class="t-switch t-is-checked"
+          <div
+            class="t-switch t-switch--medium t-switch--checked"
           >
-            <!--v-if-->
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
+            <div
+              class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+            >
+              <div
+                class="t-switch__label t-switch__label--medium t-switch__label--checked"
+              >
+                <!--v-if-->
+                <!---->
+              </div>
+            </div>
+          </div>
           
         </div>
         <!--v-if-->

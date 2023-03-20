@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, SetupContext, nextTick } from 'vue';
+import { computed, ref, onMounted, defineComponent, getCurrentInstance, toRefs, nextTick } from 'vue';
 import { useEmitEvent, renderTNode, TNode, getCharacterLength, useVModel } from '../shared';
 import config from '../config';
 import TextareaProps from './props';
@@ -42,7 +42,7 @@ export default defineComponent({
   },
   props: TextareaProps,
   emits: ['update:value', 'update:modelValue', 'focus', 'blur', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();

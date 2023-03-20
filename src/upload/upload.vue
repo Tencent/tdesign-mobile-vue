@@ -50,7 +50,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, SetupContext, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
+import { defineComponent, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
 import { AddIcon, CloseIcon, RefreshIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
 import isObject from 'lodash/isObject';
@@ -90,7 +90,7 @@ export default defineComponent({
     'success',
     'select-change',
   ],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,

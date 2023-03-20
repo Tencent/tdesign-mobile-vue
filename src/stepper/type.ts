@@ -4,17 +4,19 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { SizeEnum } from '../common';
+
 export interface TdStepperProps {
-  /**
-   * 禁用全部操作
-   * @default false
-   */
-  disabled?: boolean;
   /**
    * 禁用输入框
    * @default false
    */
   disableInput?: boolean;
+  /**
+   * 禁用全部操作
+   * @default false
+   */
+  disabled?: boolean;
   /**
    * 输入框宽度
    */
@@ -30,6 +32,11 @@ export interface TdStepperProps {
    */
   min?: number;
   /**
+   * 组件尺寸
+   * @default medium
+   */
+  size?: SizeEnum;
+  /**
    * 步长
    * @default 1
    */
@@ -38,7 +45,7 @@ export interface TdStepperProps {
    * 组件风格
    * @default normal
    */
-  theme?: 'normal' | 'grey';
+  theme?: 'normal' | 'filled' | 'outline';
   /**
    * 值
    * @default 0
@@ -49,6 +56,11 @@ export interface TdStepperProps {
    * @default 0
    */
   defaultValue?: string | number;
+  /**
+   * 值
+   * @default 0
+   */
+  modelValue?: string | number;
   /**
    * 输入框失去焦点时触发
    */

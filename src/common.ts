@@ -30,16 +30,35 @@ export type FormSubmitEvent = Event;
 export interface Styles {
   [css: string]: string | number;
 }
-/** 通用全局类型 */
+
+export interface UploadDisplayDragEvents {
+  onDrop?: (event: DragEvent) => void;
+  onDragenter?: (event: DragEvent) => void;
+  onDragover?: (event: DragEvent) => void;
+  onDragleave?: (event: DragEvent) => void;
+}
+
+export type ImageEvent = Event;
+
+/**
+ * 通用全局类型
+ * */
+export type PlainObject = { [key: string]: any };
 
 export type OptionData = {
   label?: string;
   value?: string | number;
-} & { [key: string]: any };
+} & PlainObject;
 
-export type TreeOptionData = {
-  children?: Array<TreeOptionData>;
-} & OptionData;
+export type TreeOptionData<T = string | number> = {
+  children?: Array<TreeOptionData<T>>;
+  /** option label content */
+  label?: string | TNode;
+  /** option search text */
+  text?: string;
+  /** option value */
+  value?: T;
+} & PlainObject;
 
 export type SizeEnum = 'small' | 'medium' | 'large';
 
@@ -85,3 +104,8 @@ export interface TScroll {
    */
   type: 'lazy' | 'virtual';
 }
+
+/**
+ * @deprecated use TScroll instead
+ */
+export type InfinityScroll = TScroll;

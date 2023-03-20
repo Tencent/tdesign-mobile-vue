@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts">
-import { inject, computed, SetupContext, defineComponent, getCurrentInstance, h, toRefs, CSSProperties } from 'vue';
+import { inject, computed, defineComponent, getCurrentInstance, h, toRefs, CSSProperties } from 'vue';
 import { MinusCircleFilledIcon, CheckCircleFilledIcon, CircleIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import CheckboxProps from './props';
@@ -73,7 +73,7 @@ export default defineComponent({
     },
   },
   emits: ['update:checked', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const flagName = name;
     const checkIcons = props.icon || [h(CheckCircleFilledIcon), h(CircleIcon)];
     const [innerChecked, setInnerChecked] = useDefault<boolean, TdCheckboxProps>(

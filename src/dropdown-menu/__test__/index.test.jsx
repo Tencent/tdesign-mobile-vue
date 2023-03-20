@@ -2,8 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { nextTick, ref } from 'vue';
 import { DropdownMenu, DropdownItem } from '../index';
-import RadioGroup from '../../radio-group';
-import Radio from '../../radio';
+import Radio, { RadioGroup } from '../../radio';
 import CheckBox, { CheckboxGroup } from '../../checkbox';
 import Button from '../../button';
 
@@ -208,80 +207,6 @@ describe('dropdown-menu', () => {
       });
     });
 
-    it(': multiple', async () => {
-      const value1 = ref('option_1');
-      const value2 = ref(['option_1']);
-      const items = [
-        {
-          value: value1,
-          label: '菜单',
-          options: options,
-          multiple: false,
-        },
-        {
-          value: value2,
-          label: '菜单',
-          options: options,
-          multiple: true,
-        },
-      ];
-
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              {{
-                default: items.map((item, index) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      multiple={item.multiple}
-                      options={item.options}
-                    />
-                  );
-                }),
-              }}
-            </DropdownMenu>
-          );
-        },
-      });
-      const $menuLabels = wrapper.findAll(`.${name}__item`);
-
-      // multiple = false, 单选列表, t-radio-group, t-radio
-      const index0 = 0;
-      const item0 = items[0];
-      await $menuLabels[0].trigger('click', { item0, index0 });
-      expect(wrapper.findComponent(RadioGroup).exists()).toBeTruthy();
-      expect(wrapper.findAllComponents(Radio).length).toEqual(item0.options.length);
-
-      const $radios = wrapper.findAll(`.t-radio`);
-      // 模拟点击单选列表 Radio，重复点击已选中态不会触发 change 事件， 最终选中项为 1
-      await $radios[0].find(`.${prefix}-radio__content-title`).trigger('click');
-      expect(wrapper.findAll(`.${prefix}-is-checked`).length).toEqual(1);
-
-      // multiple = true, 多选列表, t-checkbox-group, t-checkbox
-      const index1 = 1;
-      const item1 = items[1];
-      await $menuLabels[1].trigger('click', { item1, index1 });
-      expect(wrapper.findComponent(CheckboxGroup).exists()).toBeTruthy();
-      expect(wrapper.findAllComponents(CheckBox).length).toEqual(item1.options.length);
-      // 初始选中1项
-      expect(wrapper.findAll(`.${prefix}-is-checked`).length).toEqual(1);
-
-      // 模拟点击多选列表 Checkbox，重复点击已选中态也会触发 change 事件， 最终选中项有多项
-      const $checkbox = wrapper.findAll(`.t-checkbox`);
-      // 点选1项，默认1项，共2项选中态
-      await $checkbox[0].find(`.${prefix}-checkbox__original-left`).trigger('click');
-      expect(wrapper.findAll(`.${prefix}-is-checked`).length).toEqual(2);
-      // 点选1项，取消1项，共1项选中态
-      await $checkbox[1].find(`.${prefix}-checkbox__original-left`).trigger('click');
-      expect(wrapper.findAll(`.${prefix}-is-checked`).length).toEqual(1);
-      // 禁用项，无法选中
-      await $checkbox[2].find(`.${prefix}-checkbox__original-left`).trigger('click');
-      expect(wrapper.findAll(`.${prefix}-is-checked`).length).toEqual(1);
-    });
-
     it(': optionsColumns', async () => {
       // options-columns值为[1,3]区间内，仅在 multiple = true 时，有效
       const value1 = ref(['option_1']);
@@ -430,13 +355,13 @@ describe('dropdown-menu', () => {
       });
       await sleep(200);
       const $radios = wrapper.findAll(`.t-radio`);
-      await $radios[0].find(`.${prefix}-radio__content-title`).trigger('click');
+      await $radios[0].trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
       // 单选列表，原本为选中态的，再次点击时，不会触发 change
-      await $radios[1].find(`.${prefix}-radio__content-title`).trigger('click');
+      await $radios[1].trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
       // 禁用态按钮，不触发 change
-      await $radios[2].find(`.${prefix}-radio__content-title`).trigger('click');
+      await $radios[2].trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
     });
   });

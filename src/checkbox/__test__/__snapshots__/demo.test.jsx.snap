@@ -739,11 +739,9 @@ exports[`Checkbox > Checkbox iconVue demo works fine 1`] = `
             width="1em"
           >
             <path
-              clip-rule="evenodd"
-              d="M3 14a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3zm0-1V3h10v10H3z"
+              d="M3 14h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10a1 1 0 001 1zm0-1V3h10v10H3z"
               fill="currentColor"
               fill-opacity="0.9"
-              fill-rule="evenodd"
             />
           </svg>
         </span>
@@ -2257,11 +2255,9 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                   width="1em"
                 >
                   <path
-                    clip-rule="evenodd"
-                    d="M3 14a1 1 0 01-1-1V3a1 1 0 011-1h10a1 1 0 011 1v10a1 1 0 01-1 1H3zm0-1V3h10v10H3z"
+                    d="M3 14h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10a1 1 0 001 1zm0-1V3h10v10H3z"
                     fill="currentColor"
                     fill-opacity="0.9"
-                    fill-rule="evenodd"
                   />
                 </svg>
               </span>

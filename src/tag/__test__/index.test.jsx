@@ -23,28 +23,28 @@ describe('Tag.vue', async () => {
   it('theme render', async () => {
     themeList.forEach((t) => {
       const wrapper = mount(() => <Tag theme={t}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--theme-${t}`);
+      expect(wrapper.classes()).toContain(`t-tag--${t}`);
     });
   });
 
   it('variant render', async () => {
     variantList.forEach((v) => {
       const wrapper = mount(() => <Tag variant={v}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--variant-${v}`);
+      expect(wrapper.classes()).toContain(`t-tag--${v}`);
     });
   });
 
   it('size render', async () => {
     sizeList.forEach((s) => {
       const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--size-${s}`);
+      expect(wrapper.classes()).toContain(`t-tag--${s}`);
     });
   });
 
   it('shape render', async () => {
     shapeList.forEach((s) => {
       const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain(`t-tag--shape-${s}`);
+      expect(wrapper.classes()).toContain(`t-tag--${s}`);
     });
   });
 
@@ -106,14 +106,14 @@ describe('CheckTag render', async () => {
   it('size render', async () => {
     sizeList.forEach((s) => {
       const wrapper = mount(() => <TCheckTag size={s}>{TEXT}</TCheckTag>);
-      expect(wrapper.classes()).toContain(`t-tag--size-${s}`);
+      expect(wrapper.classes()).toContain(`t-tag--${s}`);
     });
   });
 
   it('shape render', async () => {
     shapeList.forEach((s) => {
       const wrapper = mount(() => <TCheckTag shape={s}>{TEXT}</TCheckTag>);
-      expect(wrapper.classes()).toContain(`t-tag--shape-${s}`);
+      expect(wrapper.classes()).toContain(`t-tag--${s}`);
     });
   });
 

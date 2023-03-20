@@ -4,17 +4,19 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/stepper/demos/base.vue';
+import minMaxVue from '@/stepper/demos/min-max.vue';
 import mobileVue from '@/stepper/demos/mobile.vue';
-import pureStepperVue from '@/stepper/demos/pure-stepper.vue';
+import sizeVue from '@/stepper/demos/size.vue';
 import statusVue from '@/stepper/demos/status.vue';
-import unitStepperVue from '@/stepper/demos/unit-stepper.vue';
+import themeVue from '@/stepper/demos/theme.vue';
 
 const mapper = {
   baseVue,
+  minMaxVue,
   mobileVue,
-  pureStepperVue,
+  sizeVue,
   statusVue,
-  unitStepperVue,
+  themeVue,
 };
 
 describe('Stepper', () => {

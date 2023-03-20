@@ -8,10 +8,15 @@ import { TdRadioGroupProps } from '../radio/type';
 import { PropType } from 'vue';
 
 export default {
-  /** 是否禁用全部子单选框 */
-  disabled: {
-    type: Boolean,
-    default: undefined,
+  /** 是否允许取消选中 */
+  allowUncheck: Boolean,
+  /** 是否开启无边框模式；优先级低于 Radio */
+  borderless: Boolean,
+  /** 是否禁用全部子单选框。默认为 false。RadioGroup.disabled 优先级低于 Radio.disabled */
+  disabled: Boolean,
+  /** 用来定义 value / label 在 `options` 中对应的字段别名 */
+  keys: {
+    type: Object as PropType<TdRadioGroupProps['keys']>,
   },
   /** HTML 元素原生属性 */
   name: {
@@ -21,6 +26,15 @@ export default {
   /** 单选组件按钮形式。RadioOption 数据类型为 string 或 number 时，表示 label 和 value 值相同 */
   options: {
     type: Array as PropType<TdRadioGroupProps['options']>,
+  },
+  /** 复选框和内容相对位置 */
+  placement: {
+    type: String as PropType<TdRadioGroupProps['placement']>,
+    default: 'left' as TdRadioGroupProps['placement'],
+    validator(val: TdRadioGroupProps['placement']): boolean {
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
+    },
   },
   /** 选中的值 */
   value: {
@@ -34,7 +48,6 @@ export default {
   /** 选中的值，非受控属性 */
   defaultValue: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['defaultValue']>,
-    default: false,
   },
   /** 选中值发生变化时触发 */
   onChange: Function as PropType<TdRadioGroupProps['onChange']>,

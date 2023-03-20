@@ -8,10 +8,10 @@ import { TdStepperProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 禁用全部操作 */
-  disabled: Boolean,
   /** 禁用输入框 */
   disableInput: Boolean,
+  /** 禁用全部操作 */
+  disabled: Boolean,
   /** 输入框宽度 */
   inputWidth: {
     type: Number,
@@ -26,6 +26,15 @@ export default {
     type: Number,
     default: 0,
   },
+  /** 组件尺寸 */
+  size: {
+    type: String as PropType<TdStepperProps['size']>,
+    default: 'medium' as TdStepperProps['size'],
+    validator(val: TdStepperProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
+  },
   /** 步长 */
   step: {
     type: Number,
@@ -36,7 +45,8 @@ export default {
     type: String as PropType<TdStepperProps['theme']>,
     default: 'normal' as TdStepperProps['theme'],
     validator(val: TdStepperProps['theme']): boolean {
-      return ['normal', 'grey'].includes(val!);
+      if (!val) return true;
+      return ['normal', 'filled', 'outline'].includes(val);
     },
   },
   /** 值 */

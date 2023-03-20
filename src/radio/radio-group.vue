@@ -7,8 +7,8 @@
         :name="name"
         :checked="value === opt.value"
         :disabled="'disabled' in opt ? opt.disabled : disabled"
-        :value="opt.value"
-        :label="opt.label"
+        :value="opt[keys?.value ?? 'value']"
+        :label="opt[keys?.label ?? 'label']"
       ></radio>
     </template>
     <slot v-if="!options"></slot>
@@ -16,11 +16,11 @@
 </template>
 
 <script lang="ts">
-import { provide, defineComponent, toRefs, computed, SetupContext } from 'vue';
+import { provide, defineComponent, toRefs, computed } from 'vue';
 import { useDefault } from '../shared';
 import RadioGroupProps from '../radio/radio-group-props';
 import { RadioOption, RadioOptionObj, RadioValue, TdRadioGroupProps } from '../radio/type';
-import Radio from '../radio/radio.vue';
+import Radio from './radio.vue';
 import config from '../config';
 
 const { prefix } = config;
@@ -31,7 +31,7 @@ export default defineComponent({
   components: { Radio },
   props: RadioGroupProps,
   emits: ['update:value', 'update:modelValue', 'change'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const [groupValue, setGroupValue] = useDefault<RadioValue, TdRadioGroupProps>(
       props,
       context.emit,
@@ -48,8 +48,13 @@ export default defineComponent({
       });
     });
     const handleRadioChange = (val: RadioValue, e: Event) => {
-      setGroupValue(val, { e });
+      if (props.allowUncheck && val === groupValue.value) {
+        setGroupValue('', { e });
+      } else {
+        setGroupValue(val, { e });
+      }
     };
+
     provide('rootGroupProps', props);
     provide('rootGroupValue', groupValue);
     provide('rootGroupChange', handleRadioChange);

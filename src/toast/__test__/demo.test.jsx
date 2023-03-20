@@ -3,7 +3,6 @@
  */
 
 import { mount } from '@vue/test-utils';
-import iconVue from '@/toast/demos/icon.vue';
 import iconTextVue from '@/toast/demos/iconText.vue';
 import maskVue from '@/toast/demos/mask.vue';
 import mobileVue from '@/toast/demos/mobile.vue';
@@ -13,7 +12,6 @@ import preventScrollThroughVue from '@/toast/demos/preventScrollThrough.vue';
 import textVue from '@/toast/demos/text.vue';
 
 const mapper = {
-  iconVue,
   iconTextVue,
   maskVue,
   mobileVue,

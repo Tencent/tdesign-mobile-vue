@@ -33,7 +33,7 @@
 </template>
 
 <script lang="ts">
-import { ref, SetupContext, defineComponent, computed } from 'vue';
+import { ref, defineComponent, computed } from 'vue';
 import config from '../config';
 import { Grid as TGrid, GridItem as TGridItem } from '../grid';
 
@@ -54,7 +54,7 @@ export default defineComponent({
     },
   },
   emits: ['selected'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const containerWrapper = ref<HTMLElement | null>(null);
     const moveOffset = ref(0);
     const currentIndex = ref(0);

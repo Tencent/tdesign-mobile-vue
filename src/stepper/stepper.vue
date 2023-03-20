@@ -1,36 +1,57 @@
 <template>
-  <div :class="[`${name}`, `${disabled ? disabledClass : ''}`, `${isPureMode ? `${name}__pure` : ''}`]">
-    <div :class="[`${name}__minus`, `${disabled || stepperValue <= min ? 't-is-disabled' : ''}`]" @click="minusValue">
-      <remove-icon :class="`${name}__icon`" />
+  <div :class="[`${name}`, `${name}--${size}`]">
+    <div
+      :class="[
+        `${name}__minus`,
+        `${name}__minus--${theme}`,
+        `${name}__icon--${size}`,
+        `${disabled || stepperValue <= min ? name + '--' + theme + '-disabled' : ''}`,
+      ]"
+      @click="minusValue"
+    >
+      <remove-icon :class="`${name}__minus-icon`" />
     </div>
     <input
       v-model="stepperValue"
-      :class="`${name}__input`"
+      :class="[
+        `${name}__input`,
+        `${name}__input--${theme}`,
+        `${name}__input--${size}`,
+        `${disabled ? name + '--' + theme + '-disabled' : ''}`,
+      ]"
       type="tel"
       :style="inputStyle"
       :disabled="disableInput || disabled"
       :readonly="disableInput"
+      @focus="handleFocus"
       @blur="handleBlur"
       @input="handleInput"
+      @change="handleChange"
     />
-    <div :class="[`${name}__plus`, `${disabled || stepperValue >= max ? 't-is-disabled' : ''}`]" @click="plusValue">
-      <add-icon :class="`${name}__icon`" />
+    <div
+      :class="[
+        `${name}__plus`,
+        `${name}__plus--${theme}`,
+        `${name}__icon--${size}`,
+        `${disabled || stepperValue >= max ? name + '--' + theme + '-disabled' : ''}`,
+      ]"
+      @click="plusValue"
+    >
+      <add-icon :class="`${name}__plus-icon`" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { toRefs, computed, defineComponent, SetupContext, nextTick } from 'vue';
+import { toRefs, computed, defineComponent } from 'vue';
 import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import StepperProps from './props';
-import CLASSNAMES from '../shared/constants';
 import { useDefault, useEmitEvent } from '../shared';
 import { TdStepperProps } from './type';
 
 const { prefix } = config;
 const name = `${prefix}-stepper`;
-const disabledClass = CLASSNAMES.STATUS.disabled;
 export default defineComponent({
   name,
   components: {
@@ -39,12 +60,11 @@ export default defineComponent({
   },
   props: StepperProps,
   emits: ['update:value', 'update:modelValue', 'blur', 'change', 'overlimit'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
     const emitEvent = useEmitEvent(props, context.emit);
 
-    const { min, max, step, inputWidth, theme, disabled } = toRefs(props);
-    const isPureMode = computed(() => theme.value === 'grey');
+    const { min, max, step, inputWidth, disabled } = toRefs(props);
     const inputStyle = computed(() => (inputWidth ? { width: `${inputWidth.value}px` } : ''));
 
     const isDisabled = (type: 'minus' | 'plus') => {
@@ -82,32 +102,33 @@ export default defineComponent({
     };
 
     const handleInput = (e: Event) => {
-      handleChange(e);
+      const value = (e.target as HTMLTextAreaElement).value.replace(/[^\d]/g, '');
+      stepperValue.value = Number(value);
     };
 
-    const handleChange = (e: Event) => {
-      const value = (e.target as HTMLTextAreaElement).value.match(/^\d+\.\d+|^\d+/g);
-      if (isNaN(Number(value))) return;
-      const formattedValue = formatValue(Number(value));
-      updateValue(Number(formattedValue));
+    const handleChange = () => {
+      const formattedValue = formatValue(stepperValue.value);
+      updateValue(formattedValue);
     };
 
-    const handleBlur = (e: FocusEvent) => {
-      handleChange(e);
+    const handleFocus = () => {
+      emitEvent('focus', stepperValue.value);
+    };
+
+    const handleBlur = () => {
       emitEvent('blur', stepperValue.value);
     };
 
     return {
       name,
-      disabledClass,
       minusValue,
       stepperValue,
       plusValue,
       handleInput,
       handleChange,
       inputStyle,
+      handleFocus,
       handleBlur,
-      isPureMode,
       ...toRefs(props),
     };
   },

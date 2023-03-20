@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { IconFont } from 'tdesign-icons-vue-next';
 
 const onIconClose = () => {

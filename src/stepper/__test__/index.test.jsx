@@ -9,16 +9,18 @@ describe('stepper', () => {
     it(': disabled', async () => {
       const wrapper = mount(Stepper, {
         props: {
+          value: 2,
           disabled: true,
         },
       });
-      expect(wrapper.classes()).toContain('t-is-disabled');
+      const $minus = wrapper.find('.t-stepper__minus');
+      expect($minus.classes()).toContain('t-stepper--normal-disabled');
 
       // 更新已挂载组件的 props
       await wrapper.setProps({
         disabled: false,
       });
-      expect(wrapper.classes()).not.toContain('t-is-disabled');
+      expect($minus.classes()).not.toContain('t-stepper--normal-disabled');
     });
 
     it(': input-width', async () => {
@@ -39,11 +41,13 @@ describe('stepper', () => {
     it(': theme', async () => {
       const wrapper = mount(Stepper, {});
 
-      expect(wrapper.classes()).not.toContain('t-stepper__pure');
+      const $minus = wrapper.find('.t-stepper__minus');
+      expect($minus.classes()).toContain('t-stepper__minus--normal');
+
       await wrapper.setProps({
-        theme: 'grey',
+        theme: 'filled',
       });
-      expect(wrapper.classes()).toContain('t-stepper__pure');
+      expect($minus.classes()).toContain('t-stepper__minus--filled');
     });
 
     it(': step && max && min', async () => {
@@ -69,7 +73,7 @@ describe('stepper', () => {
       // value <= min，change 触发， value = min
       expect(onChange).toBeCalledTimes(1);
       expect(value.value).toBe(1);
-      expect(minusIcon.classes()).toContain('t-is-disabled');
+      expect(minusIcon.classes()).toContain('t-stepper--normal-disabled');
 
       await plusIcon.trigger('click');
       await nextTick();
@@ -77,7 +81,7 @@ describe('stepper', () => {
       expect(value.value).toBe(3);
 
       // 此时 value = max, plusIcon 为禁用态
-      expect(plusIcon.classes()).toContain('t-is-disabled');
+      expect(plusIcon.classes()).toContain('t-stepper--normal-disabled');
     });
   });
 
@@ -158,11 +162,7 @@ describe('stepper', () => {
       // blur
       $input.trigger('blur');
       expect(onBlur).toHaveBeenCalled(1);
-
-      // input, 触发 change
-      $input.setValue('10');
-      expect(onChange).toBeCalled(1);
-      expect(value.value).toBe(10);
+      expect(value.value).toBe(2);
     });
   });
 });

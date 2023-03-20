@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { computed, nextTick, defineComponent, SetupContext, toRefs, onMounted, ref } from 'vue';
+import { computed, nextTick, defineComponent, toRefs, onMounted, ref } from 'vue';
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
@@ -48,7 +48,7 @@ export default defineComponent({
   components: { TButton, PickerItem },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
-  setup(props: any, context: SetupContext) {
+  setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
     const [pickerValue, setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);

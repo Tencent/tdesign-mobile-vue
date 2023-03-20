@@ -6,7 +6,6 @@ import router from './router';
 
 import TDesign from '@/index';
 import '../../src/_common/style/mobile/_reset.less';
-import '../../src/_common/style/mobile/index.less';
 import '../styles/mobile/index.less';
 
 createApp(app)

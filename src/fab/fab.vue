@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, SetupContext, getCurrentInstance } from 'vue';
+import { computed, defineComponent, getCurrentInstance } from 'vue';
 import { renderTNode, TNode, useEmitEvent } from '../shared';
 import props from './props';
 import config from '../config';
@@ -20,7 +20,7 @@ export default defineComponent({
   components: { TNode, TButton },
   props,
   emits: ['click'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
 
     const classes = computed(() => ({

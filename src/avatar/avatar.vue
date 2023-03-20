@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, inject, ref, SetupContext } from 'vue';
+import { computed, toRefs, defineComponent, getCurrentInstance, inject, ref } from 'vue';
 import TBadge from '../badge';
 import TImage from '../image';
 import config from '../config';
@@ -47,7 +47,7 @@ export default defineComponent({
   components: { TNode, TBadge, TImage },
   props: AvatarProps,
   emits: ['error'],
-  setup(props, context: SetupContext) {
+  setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
     const avatarGroupProps = inject('avatarGroup', {}) as TdAvatarGroupProps;
