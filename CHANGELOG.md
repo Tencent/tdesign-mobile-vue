@@ -5,6 +5,26 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.15.0 `2023-03-20` 
+### ❗ BREAKING CHANGES
+- `Stepper`: 属性 theme 的 gray 主题更名为 filled，并新增 outline 主题 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
+- `Radio`: 属性 align 更名为 placement @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
+- `Radio`: 属性 icon 的枚举值变更、DOM 变更 @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
+- `Switch`: 废弃 colors 属性，改用 CSS Variables @LeeJim ([#520](https://github.com/Tencent/tdesign-mobile-vue/pull/520))
+- `Switch`: 属性 label 的类型从 string 变为 array @LeeJim ([#520](https://github.com/Tencent/tdesign-mobile-vue/pull/520))
+- `Switch`: 优化 DOM @LeeJim ([#520](https://github.com/Tencent/tdesign-mobile-vue/pull/520))
+
+### 🚀 Features
+- `Tag`:  支持 css variable @anlyyao ([#507](https://github.com/Tencent/tdesign-mobile-vue/pull/507))
+- `Stepper`: 新增 size 属性 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
+- `Radio`: 新增支持 allowUncheck、block、maxContentRow、maxLabelRow 属性 @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
+- `RadioGroup`: 新增支持 allowUncheck、borderless、keys、placement 属性 @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
+- `Swtich`: 新增 icon、loading、size 属性 @LeeJim ([#520](https://github.com/Tencent/tdesign-mobile-vue/pull/520))
+### 🐞 Bug Fixes
+- `Loading`: 修复部分浏览器下 loading 晃动问题 @anlyyao ([#505](https://github.com/Tencent/tdesign-mobile-vue/pull/505))
+- `Stepper`: 修复 min/max 存在时，输入受限问题 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
+
+
 ## 🌈 0.14.1 `2022-11-14` 
 ### 🚧 Others
 - `Badge`: 提升测试覆盖率 @anlyyao ([#479](https://github.com/Tencent/tdesign-mobile-vue/pull/479))
