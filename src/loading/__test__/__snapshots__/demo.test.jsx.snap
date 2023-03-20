@@ -150,16 +150,21 @@ exports[`Loading > Loading delayVue demo works fine 1`] = `
     class="switch-wrap"
     data-v-559e6688=""
   >
-    <span
-      class="t-switch"
+    <div
+      class="t-switch t-switch--medium"
       data-v-559e6688=""
     >
-      <!--v-if-->
-      <span
-        class="t-switch__node"
-        style=""
-      />
-    </span>
+      <div
+        class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+      >
+        <div
+          class="t-switch__label t-switch__label--medium"
+        >
+          <!--v-if-->
+          <!---->
+        </div>
+      </div>
+    </div>
     <div
       data-v-559e6688=""
     >
@@ -744,16 +749,21 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
         class="switch-wrap"
         data-v-559e6688=""
       >
-        <span
-          class="t-switch"
+        <div
+          class="t-switch t-switch--medium"
           data-v-559e6688=""
         >
-          <!--v-if-->
-          <span
-            class="t-switch__node"
-            style=""
-          />
-        </span>
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium"
+            >
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+        </div>
         <div
           data-v-559e6688=""
         >

@@ -2,438 +2,187 @@
 
 exports[`Switch > Switch baseVue demo works fine 1`] = `
 <div
-  class=""
+  class="t-cell t-cell--middle t-cell--bordered"
 >
   <div
-    class="t-cell-group"
+    class="t-cell__left-icon"
   >
     <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell__title"
+  >
+    基础开关
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+  <div
+    class="t-cell__right-icon"
+  >
+    
     <div
-      class="t-cell-group__container"
+      class="t-switch t-switch--medium t-switch--checked"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
       >
         <div
-          class="t-cell__left-icon"
+          class="t-switch__label t-switch__label--medium t-switch__label--checked"
         >
           <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-checked"
-          >
-            <!--v-if-->
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
+          <!---->
         </div>
       </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch"
-          >
-            <!--v-if-->
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          自定义颜色
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-checked"
-          >
-            <!--v-if-->
-            <span
-              class="t-switch__node"
-              style="background-color: rgb(0, 168, 112);"
-            />
-          </span>
-          
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          异步操作
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-checked"
-          >
-            <!--v-if-->
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
-        </div>
-      </div>
-      
     </div>
+    
   </div>
 </div>
 `;
 
-exports[`Switch > Switch descVue demo works fine 1`] = `
+exports[`Switch > Switch colorVue demo works fine 1`] = `
 <div
-  class=""
+  class="t-cell t-cell--middle t-cell--bordered"
 >
   <div
-    class="t-cell-group"
+    class="t-cell__left-icon"
   >
     <!--v-if-->
+    <!--v-if-->
+  </div>
+  <div
+    class="t-cell__title"
+  >
+    自定义颜色开关
+    <!--v-if-->
+    <!--v-if-->
+  </div>
+  <!--v-if-->
+  <div
+    class="t-cell__right-icon"
+  >
+    
     <div
-      class="t-cell-group__container"
+      class="t-switch t-switch--medium t-switch--checked custom-color"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
       >
         <div
-          class="t-cell__left-icon"
+          class="t-switch__label t-switch__label--medium t-switch__label--checked"
         >
           <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-checked"
-          >
-            <span
-              class="t-switch__text"
-            >
-              描述信息
-            </span>
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
+          <!---->
         </div>
       </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch"
-          >
-            <span
-              class="t-switch__text"
-            >
-              描述信息
-            </span>
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          自定义颜色
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-checked"
-          >
-            <span
-              class="t-switch__text"
-            >
-              描述信息
-            </span>
-            <span
-              class="t-switch__node"
-              style="background-color: rgb(0, 168, 112);"
-            />
-          </span>
-          
-        </div>
-      </div>
-      
     </div>
+    
   </div>
 </div>
 `;
 
-exports[`Switch > Switch disabledVue demo works fine 1`] = `
+exports[`Switch > Switch labelVue demo works fine 1`] = `
 <div
-  class=""
+  data-v-app=""
 >
+  
   <div
-    class="t-cell-group"
+    class="t-cell t-cell--middle t-cell--bordered"
   >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      带文字开关
+      <!--v-if-->
+      <!--v-if-->
+    </div>
     <!--v-if-->
     <div
-      class="t-cell-group__container"
+      class="t-cell__right-icon"
     >
       
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-switch t-switch--medium t-switch--checked"
       >
         <div
-          class="t-cell__left-icon"
+          class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
         >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关开启禁用
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-checked t-is-disabled"
+          <div
+            class="t-switch__label t-switch__label--medium t-switch__label--checked"
           >
-            <!--v-if-->
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关关闭禁用
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-disabled"
-          >
-            <!--v-if-->
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关开启禁用
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-checked t-is-disabled"
-          >
-            <span
-              class="t-switch__text"
-            >
-              描述信息
-            </span>
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关关闭禁用
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        <div
-          class="t-cell__right-icon"
-        >
-          
-          <span
-            class="t-switch t-is-disabled"
-          >
-            <span
-              class="t-switch__text"
-            >
-              描述信息
-            </span>
-            <span
-              class="t-switch__node"
-              style=""
-            />
-          </span>
-          
+            
+            开
+            
+            <!---->
+          </div>
         </div>
       </div>
       
     </div>
   </div>
+  <div
+    class="box"
+    style="height: 16px;"
+  />
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      带图标开关
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--medium t-switch--checked"
+      >
+        <div
+          class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
+        >
+          <div
+            class="t-switch__label t-switch__label--medium t-switch__label--checked"
+          >
+            <!--v-if-->
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="font-size: 20px;"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>
 `;
 
@@ -457,7 +206,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     <h2
       class="tdesign-mobile-demo-block__title"
     >
-      01 类型
+      01 组件类型
     </h2>
     <p
       class="tdesign-mobile-demo-block__summary"
@@ -466,150 +215,41 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     </p>
     
     <div
-      class=""
+      class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell-group"
+        class="t-cell__left-icon"
       >
         <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        基础开关
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
         <div
-          class="t-cell-group__container"
+          class="t-switch t-switch--medium t-switch--checked"
         >
-          
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
           >
             <div
-              class="t-cell__left-icon"
+              class="t-switch__label t-switch__label--medium t-switch__label--checked"
             >
               <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-checked"
-              >
-                <!--v-if-->
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
+              <!---->
             </div>
           </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch"
-              >
-                <!--v-if-->
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              自定义颜色
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-checked"
-              >
-                <!--v-if-->
-                <span
-                  class="t-switch__node"
-                  style="background-color: rgb(0, 168, 112);"
-                />
-              </span>
-              
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              异步操作
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-checked"
-              >
-                <!--v-if-->
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
-            </div>
-          </div>
-          
         </div>
+        
       </div>
     </div>
     
@@ -621,133 +261,154 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      带描述信息开关
+      带描述开关
+    </p>
+    
+    
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        带文字开关
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--medium t-switch--checked"
+        >
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium t-switch__label--checked"
+            >
+              
+              开
+              
+              <!---->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="box"
+      style="height: 16px;"
+    />
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        带图标开关
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--medium t-switch--checked"
+        >
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium t-switch__label--checked"
+            >
+              <!--v-if-->
+              <svg
+                class="t-icon t-icon-check"
+                fill="none"
+                height="1em"
+                style="font-size: 20px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      自定义颜色开关
     </p>
     
     <div
-      class=""
+      class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell-group"
+        class="t-cell__left-icon"
       >
         <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        自定义颜色开关
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
         <div
-          class="t-cell-group__container"
+          class="t-switch t-switch--medium t-switch--checked custom-color"
         >
-          
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
           >
             <div
-              class="t-cell__left-icon"
+              class="t-switch__label t-switch__label--medium t-switch__label--checked"
             >
               <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-checked"
-              >
-                <span
-                  class="t-switch__text"
-                >
-                  描述信息
-                </span>
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
+              <!---->
             </div>
           </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch"
-              >
-                <span
-                  class="t-switch__text"
-                >
-                  描述信息
-                </span>
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              自定义颜色
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-checked"
-              >
-                <span
-                  class="t-switch__text"
-                >
-                  描述信息
-                </span>
-                <span
-                  class="t-switch__node"
-                  style="background-color: rgb(0, 168, 112);"
-                />
-              </span>
-              
-            </div>
-          </div>
-          
         </div>
+        
       </div>
     </div>
     
@@ -758,170 +419,727 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     <h2
       class="tdesign-mobile-demo-block__title"
     >
-      02 状态
+      02 组件状态
     </h2>
     <p
       class="tdesign-mobile-demo-block__summary"
     >
-      开关状态
+      加载状态
     </p>
     
+    
     <div
-      class=""
+      class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell-group"
+        class="t-cell__left-icon"
       >
         <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        加载状态
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
         <div
-          class="t-cell-group__container"
+          class="t-switch t-switch--medium"
         >
-          
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-switch__dot t-switch__dot--medium"
           >
             <div
-              class="t-cell__left-icon"
+              class="t-switch__label t-switch__label--medium"
             >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关开启禁用
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-checked t-is-disabled"
+              <div
+                class="t-loading"
+                style=""
               >
-                <!--v-if-->
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关关闭禁用
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-disabled"
-              >
-                <!--v-if-->
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关开启禁用
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-checked t-is-disabled"
-              >
-                <span
-                  class="t-switch__text"
+                
+                
+                <svg
+                  class="t-loading__gradient t-icon-loading"
+                  height="1em"
+                  style="animation-duration: 800ms;"
+                  version="1.1"
+                  viewBox="0 0 12 12"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  描述信息
-                </span>
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
+                  <foreignobject
+                    height="12"
+                    width="12"
+                    x="0"
+                    y="0"
+                  >
+                    <div
+                      class="t-loading__gradient-conic"
+                    />
+                  </foreignobject>
+                </svg>
+                
+                <!--v-if-->
+                <!---->
+                
+              </div>
+              <!---->
             </div>
           </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              开关关闭禁用
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__right-icon"
-            >
-              
-              <span
-                class="t-switch t-is-disabled"
-              >
-                <span
-                  class="t-switch__text"
-                >
-                  描述信息
-                </span>
-                <span
-                  class="t-switch__node"
-                  style=""
-                />
-              </span>
-              
-            </div>
-          </div>
-          
         </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        加载状态
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--medium t-switch--checked"
+        >
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium t-switch__label--checked"
+            >
+              <div
+                class="t-loading"
+                style=""
+              >
+                
+                
+                <svg
+                  class="t-loading__gradient t-icon-loading"
+                  height="1em"
+                  style="animation-duration: 800ms;"
+                  version="1.1"
+                  viewBox="0 0 12 12"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <foreignobject
+                    height="12"
+                    width="12"
+                    x="0"
+                    y="0"
+                  >
+                    <div
+                      class="t-loading__gradient-conic"
+                    />
+                  </foreignobject>
+                </svg>
+                
+                <!--v-if-->
+                <!---->
+                
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="demo__title"
+    >
+      禁用状态
+    </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        禁用状态
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--medium t-switch--disabled"
+        >
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium"
+            >
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        禁用状态
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
+        >
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium t-switch__label--checked"
+            >
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
     
+    
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <h2
+      class="tdesign-mobile-demo-block__title"
+    >
+      02 组件样式
+    </h2>
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      开关尺寸
+    </p>
+    
+    
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+      data-v-8f16ed1c=""
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        大尺寸 32
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--large t-switch--checked"
+          data-v-8f16ed1c=""
+        >
+          <div
+            class="t-switch__dot t-switch__dot--large t-switch__dot--checked t-switch__dot--plain"
+          >
+            <div
+              class="t-switch__label t-switch__label--large t-switch__label--checked"
+            >
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+      data-v-8f16ed1c=""
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        中尺寸 28
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--medium t-switch--checked"
+          data-v-8f16ed1c=""
+        >
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium t-switch__label--checked"
+            >
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+      data-v-8f16ed1c=""
+    >
+      <div
+        class="t-cell__left-icon"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        小尺寸 24
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__right-icon"
+      >
+        
+        <div
+          class="t-switch t-switch--small t-switch--checked"
+          data-v-8f16ed1c=""
+        >
+          <div
+            class="t-switch__dot t-switch__dot--small t-switch__dot--checked t-switch__dot--plain"
+          >
+            <div
+              class="t-switch__label t-switch__label--small t-switch__label--checked"
+            >
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+    
+  </div>
+</div>
+`;
+
+exports[`Switch > Switch sizeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+    data-v-8f16ed1c=""
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      大尺寸 32
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--large t-switch--checked"
+        data-v-8f16ed1c=""
+      >
+        <div
+          class="t-switch__dot t-switch__dot--large t-switch__dot--checked t-switch__dot--plain"
+        >
+          <div
+            class="t-switch__label t-switch__label--large t-switch__label--checked"
+          >
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+    data-v-8f16ed1c=""
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      中尺寸 28
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--medium t-switch--checked"
+        data-v-8f16ed1c=""
+      >
+        <div
+          class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+        >
+          <div
+            class="t-switch__label t-switch__label--medium t-switch__label--checked"
+          >
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+    data-v-8f16ed1c=""
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      小尺寸 24
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--small t-switch--checked"
+        data-v-8f16ed1c=""
+      >
+        <div
+          class="t-switch__dot t-switch__dot--small t-switch__dot--checked t-switch__dot--plain"
+        >
+          <div
+            class="t-switch__label t-switch__label--small t-switch__label--checked"
+          >
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Switch > Switch statusVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      加载状态
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--medium"
+      >
+        <div
+          class="t-switch__dot t-switch__dot--medium"
+        >
+          <div
+            class="t-switch__label t-switch__label--medium"
+          >
+            <div
+              class="t-loading"
+              style=""
+            >
+              
+              
+              <svg
+                class="t-loading__gradient t-icon-loading"
+                height="1em"
+                style="animation-duration: 800ms;"
+                version="1.1"
+                viewBox="0 0 12 12"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <foreignobject
+                  height="12"
+                  width="12"
+                  x="0"
+                  y="0"
+                >
+                  <div
+                    class="t-loading__gradient-conic"
+                  />
+                </foreignobject>
+              </svg>
+              
+              <!--v-if-->
+              <!---->
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      加载状态
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--medium t-switch--checked"
+      >
+        <div
+          class="t-switch__dot t-switch__dot--medium t-switch__dot--checked"
+        >
+          <div
+            class="t-switch__label t-switch__label--medium t-switch__label--checked"
+          >
+            <div
+              class="t-loading"
+              style=""
+            >
+              
+              
+              <svg
+                class="t-loading__gradient t-icon-loading"
+                height="1em"
+                style="animation-duration: 800ms;"
+                version="1.1"
+                viewBox="0 0 12 12"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <foreignobject
+                  height="12"
+                  width="12"
+                  x="0"
+                  y="0"
+                >
+                  <div
+                    class="t-loading__gradient-conic"
+                  />
+                </foreignobject>
+              </svg>
+              
+              <!--v-if-->
+              <!---->
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="demo__title"
+  >
+    禁用状态
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      禁用状态
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--medium t-switch--disabled"
+      >
+        <div
+          class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+        >
+          <div
+            class="t-switch__label t-switch__label--medium"
+          >
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-cell t-cell--middle t-cell--bordered"
+  >
+    <div
+      class="t-cell__left-icon"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      禁用状态
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+    <div
+      class="t-cell__right-icon"
+    >
+      
+      <div
+        class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
+      >
+        <div
+          class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+        >
+          <div
+            class="t-switch__label t-switch__label--medium t-switch__label--checked"
+          >
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>
 `;
