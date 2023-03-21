@@ -1,0 +1,306 @@
+// Vitest Snapshot v1
+
+exports[`Footer > Footer baseVue demo works fine 1`] = `
+<div
+  class="t-footer"
+>
+  <!-- logo -->
+  
+  <!-- text -->
+  <!--v-if-->
+  <div
+    class="t-footer__text"
+  >
+    Copright © 2019-2023 TDesign.All Rights Reserved.
+  </div>
+  
+</div>
+`;
+
+exports[`Footer > Footer linkVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-footer"
+  >
+    <!-- logo -->
+    
+    <!-- text -->
+    <div
+      class="t-footer__link-list"
+    >
+      
+      
+      <a
+        class="t-footer__link-item"
+        href="/pages/index"
+      >
+        底部链接
+      </a>
+      <!--v-if-->
+      
+      
+    </div>
+    <div
+      class="t-footer__text"
+    >
+      Copright © 2019-2023 TDesign.All Rights Reserved.
+    </div>
+    
+  </div>
+  <div
+    class="t-footer"
+  >
+    <!-- logo -->
+    
+    <!-- text -->
+    <div
+      class="t-footer__link-list"
+    >
+      
+      
+      <a
+        class="t-footer__link-item"
+        href="/pages/index"
+      >
+        底部链接
+      </a>
+      <div
+        class="t-footer__link-line"
+      >
+         | 
+      </div>
+      
+      
+      <a
+        class="t-footer__link-item"
+        href="/pages/index"
+      >
+        底部链接
+      </a>
+      <!--v-if-->
+      
+      
+    </div>
+    <div
+      class="t-footer__text"
+    >
+      Copright © 2019-2023 TDesign.All Rights Reserved.
+    </div>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Footer > Footer logoVue demo works fine 1`] = `
+<div
+  class="t-footer"
+>
+  <!-- logo -->
+  <div
+    class="t-footer__logo"
+  >
+    <!--v-if-->
+    <div
+      class="t-image t-image--round t-footer__title-url"
+    >
+      <div
+        class="t-image__status"
+      >
+        <svg
+          class="t-icon t-icon-ellipsis"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <img
+        alt=""
+        class="t-image__img"
+        src="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
+        style="object-fit: fill; object-position: center;"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Footer > Footer mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Footer 页脚
+  </h1>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      基础页脚
+    </p>
+    
+    <div
+      class="t-footer"
+    >
+      <!-- logo -->
+      
+      <!-- text -->
+      <!--v-if-->
+      <div
+        class="t-footer__text"
+      >
+        Copright © 2019-2023 TDesign.All Rights Reserved.
+      </div>
+      
+    </div>
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      基础加链接页脚
+    </p>
+    
+    
+    <div
+      class="t-footer"
+    >
+      <!-- logo -->
+      
+      <!-- text -->
+      <div
+        class="t-footer__link-list"
+      >
+        
+        
+        <a
+          class="t-footer__link-item"
+          href="/pages/index"
+        >
+          底部链接
+        </a>
+        <!--v-if-->
+        
+        
+      </div>
+      <div
+        class="t-footer__text"
+      >
+        Copright © 2019-2023 TDesign.All Rights Reserved.
+      </div>
+      
+    </div>
+    <div
+      class="t-footer"
+    >
+      <!-- logo -->
+      
+      <!-- text -->
+      <div
+        class="t-footer__link-list"
+      >
+        
+        
+        <a
+          class="t-footer__link-item"
+          href="/pages/index"
+        >
+          底部链接
+        </a>
+        <div
+          class="t-footer__link-line"
+        >
+           | 
+        </div>
+        
+        
+        <a
+          class="t-footer__link-item"
+          href="/pages/index"
+        >
+          底部链接
+        </a>
+        <!--v-if-->
+        
+        
+      </div>
+      <div
+        class="t-footer__text"
+      >
+        Copright © 2019-2023 TDesign.All Rights Reserved.
+      </div>
+      
+    </div>
+    
+    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <!--v-if-->
+    <p
+      class="tdesign-mobile-demo-block__summary"
+    >
+      品牌页脚
+    </p>
+    
+    <div
+      class="t-footer"
+    >
+      <!-- logo -->
+      <div
+        class="t-footer__logo"
+      >
+        <!--v-if-->
+        <div
+          class="t-image t-image--round t-footer__title-url"
+        >
+          <div
+            class="t-image__status"
+          >
+            <svg
+              class="t-icon t-icon-ellipsis"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;
