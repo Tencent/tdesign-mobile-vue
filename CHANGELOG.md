@@ -19,7 +19,7 @@ spline: explain
 - `Stepper`: 新增 size 属性 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
 - `Radio`: 新增支持 allowUncheck、block、maxContentRow、maxLabelRow 属性 @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
 - `RadioGroup`: 新增支持 allowUncheck、borderless、keys、placement 属性 @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
-- `Swtich`: 新增 icon、loading、size 属性 @LeeJim ([#520](https://github.com/Tencent/tdesign-mobile-vue/pull/520))
+- `Switch`: 新增 icon、loading、size 属性 @LeeJim ([#520](https://github.com/Tencent/tdesign-mobile-vue/pull/520))
 ### 🐞 Bug Fixes
 - `Loading`: 修复部分浏览器下 loading 晃动问题 @anlyyao ([#505](https://github.com/Tencent/tdesign-mobile-vue/pull/505))
 - `Stepper`: 修复 min/max 存在时，输入受限问题 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
