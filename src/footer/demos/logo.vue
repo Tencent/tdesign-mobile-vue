@@ -1,5 +1,5 @@
 <template>
-  <t-footer :logo="logo2" text="Copright © 2019-2023 TDesign.All Rights Reserved." />
+  <t-footer :logo="logo2" text="Copyright © 2019-2023 TDesign.All Rights Reserved." />
 </template>
 
 <script lang="ts" setup>

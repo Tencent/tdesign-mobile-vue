@@ -6,7 +6,7 @@ import Footer from '../footer.vue';
 describe('footer', () => {
     describe('props', () => {
         it(': text', () => {
-            const text = 'Copright © 2019-2023 TDesign.All Rights Reserved.';
+            const text = 'Copyright © 2019-2023 TDesign.All Rights Reserved.';
             const wrapper = mount(Footer, {
                 props: { text },
             });

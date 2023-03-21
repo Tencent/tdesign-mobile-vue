@@ -1,6 +1,6 @@
 <template>
-  <t-footer :links="link1" text="Copright © 2019-2023 TDesign.All Rights Reserved." />
-  <t-footer :links="link2" text="Copright © 2019-2023 TDesign.All Rights Reserved." />
+  <t-footer :links="link1" text="Copyright © 2019-2023 TDesign.All Rights Reserved." />
+  <t-footer :links="link2" text="Copyright © 2019-2023 TDesign.All Rights Reserved." />
 </template>
 
 <script lang="ts" setup>
