@@ -8,13 +8,13 @@ import { TdLoadingProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 子元素，同 content */
-  default: {
-    type: [String, Function] as PropType<TdLoadingProps['default']>,
-  },
   /** 子元素 */
   content: {
     type: [String, Function] as PropType<TdLoadingProps['content']>,
+  },
+  /** 子元素，同 content */
+  default: {
+    type: [String, Function] as PropType<TdLoadingProps['default']>,
   },
   /** 延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒 */
   delay: {
@@ -62,7 +62,7 @@ export default {
   },
   /** 加载提示文案 */
   text: {
-    type: String,
+    type: [String, Function] as PropType<TdLoadingProps['text']>,
   },
   /** 加载组件类型 */
   theme: {
@@ -70,7 +70,7 @@ export default {
     default: 'circular' as TdLoadingProps['theme'],
     validator(val: TdLoadingProps['theme']): boolean {
       if (!val) return true;
-      return ['circular', 'spinner', 'bar', 'error', 'dots'].includes(val);
+      return ['circular', 'spinner', 'dots'].includes(val);
     },
   },
 };

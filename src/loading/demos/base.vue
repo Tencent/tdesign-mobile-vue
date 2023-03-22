@@ -6,6 +6,6 @@
 
 <style scoped>
 .t-loading {
-  margin-right: 40px;
+  margin-right: 64px;
 }
 </style>
