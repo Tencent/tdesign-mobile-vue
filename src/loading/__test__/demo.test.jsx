@@ -3,7 +3,6 @@
  */
 
 import { mount } from '@vue/test-utils';
-import barVue from '@/loading/demos/bar.vue';
 import baseVue from '@/loading/demos/base.vue';
 import delayVue from '@/loading/demos/delay.vue';
 import horzVue from '@/loading/demos/horz.vue';
@@ -14,7 +13,6 @@ import speedVue from '@/loading/demos/speed.vue';
 import vertVue from '@/loading/demos/vert.vue';
 
 const mapper = {
-  barVue,
   baseVue,
   delayVue,
   horzVue,

@@ -1,15 +1,14 @@
 <template>
-  <t-loading :duration="loadingDuration" text="加载中..." />
+  <t-loading :duration="(1 / loadingDuration) * 3000" text="加载中..." />
   <div class="slider-wrap">
-    <span :style="{ width: '120px', 'margin-right': '10px' }"> 速度调整 </span>
-    <t-slider v-model="loadingDuration" show-extreme-value :min="0" :max="800" :label="false" />
+    <t-slider v-model="loadingDuration" :min="0" :max="10" :label="false" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const loadingDuration = ref(300);
+const loadingDuration = ref(5);
 </script>
 
 <style scoped>

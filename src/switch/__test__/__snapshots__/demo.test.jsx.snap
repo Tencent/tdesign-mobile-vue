@@ -460,9 +460,8 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
             >
               <div
                 class="t-loading"
-                style=""
+                style="font-size: 16.25px;"
               >
-                
                 
                 <svg
                   class="t-loading__gradient t-icon-loading"
@@ -487,7 +486,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 
                 <!--v-if-->
                 <!---->
-                
               </div>
               <!---->
             </div>
@@ -528,9 +526,8 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
             >
               <div
                 class="t-loading"
-                style=""
+                style="font-size: 16.25px;"
               >
-                
                 
                 <svg
                   class="t-loading__gradient t-icon-loading"
@@ -555,7 +552,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                 
                 <!--v-if-->
                 <!---->
-                
               </div>
               <!---->
             </div>
@@ -955,9 +951,8 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
           >
             <div
               class="t-loading"
-              style=""
+              style="font-size: 16.25px;"
             >
-              
               
               <svg
                 class="t-loading__gradient t-icon-loading"
@@ -982,7 +977,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
               
               <!--v-if-->
               <!---->
-              
             </div>
             <!---->
           </div>
@@ -1023,9 +1017,8 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
           >
             <div
               class="t-loading"
-              style=""
+              style="font-size: 16.25px;"
             >
-              
               
               <svg
                 class="t-loading__gradient t-icon-loading"
@@ -1050,7 +1043,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
               
               <!--v-if-->
               <!---->
-              
             </div>
             <!---->
           </div>
