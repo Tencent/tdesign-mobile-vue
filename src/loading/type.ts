@@ -59,8 +59,8 @@ export interface TdLoadingProps {
    */
   reverse?: boolean;
   /**
-   * 尺寸，示例：40rpx/20px
-   * @default '40rpx'
+   * 尺寸，示例：20px
+   * @default '20px'
    */
   size?: string;
   /**

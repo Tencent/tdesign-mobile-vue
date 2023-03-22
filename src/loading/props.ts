@@ -55,10 +55,10 @@ export default {
   },
   /** 加载动画是否反向 */
   reverse: Boolean,
-  /** 尺寸，示例：40rpx/20px */
+  /** 尺寸，示例：20px */
   size: {
     type: String,
-    default: '40rpx',
+    default: '20px',
   },
   /** 加载提示文案 */
   text: {

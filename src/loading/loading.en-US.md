@@ -16,6 +16,6 @@ loading | Boolean | true | \- | N
 pause | Boolean | false | \- | N
 progress | Number | - | \- | N
 reverse | Boolean | - | \- | N
-size | String | '40rpx' | \- | N
+size | String | '20px' | \- | N
 text | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 theme | String | circular | options：circular/spinner/dots | N
