@@ -2,13 +2,13 @@
   <div :class="name">
     <!-- logo -->
     <template v-if="logo">
-      <div :class="`${name}__logo`">
+      <a :href="logo.url" :target="logo.target" :class="`${name}__logo`">
         <t-image v-if="logo.icon" :src="logo.icon" :class="`${name}__icon`" />
-        <div v-if="logo.title" :class="`${name}__title`">
+        <span v-if="logo.title" :class="`${name}__title`">
           {{ logo.title }}
-        </div>
-        <t-image v-else-if="logo.url" :src="logo.url" :class="`${name}__title-url`" />
-      </div>
+        </span>
+        <t-image v-if="logo.url" :src="logo.url" :class="`${name}__title-url`" />
+      </a>
     </template>
     <!-- text -->
     <template v-else>
