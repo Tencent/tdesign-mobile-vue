@@ -80,7 +80,6 @@ export default defineComponent({
     const handleCheckboxChange = (data: { checked: boolean; e: Event; option: TdCheckboxProps }) => {
       const currentValue = data.option.value;
       if (isArray(innerValue.value)) {
-        // TODO: need to test more
         if (currentValue === undefined) {
           return;
         }

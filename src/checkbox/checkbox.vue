@@ -103,13 +103,14 @@ export default defineComponent({
     });
 
     const isIconArray = Array.isArray(props.icon);
+    const defaultCheckIcons = [h(CheckCircleFilledIcon), h(CircleIcon)];
     const checkIcons = computed(() => {
       if (isIconArray && props.icon.length > 1) {
         return props.icon.map((icon) =>
           typeof icon === 'string' ? h('img', { class: `${name}__icon-image`, src: icon }) : icon,
         );
       }
-      return [h(CheckCircleFilledIcon), h(CircleIcon)];
+      return defaultCheckIcons;
     });
 
     const checkedIcon = computed(() => {
