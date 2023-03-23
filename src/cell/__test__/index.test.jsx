@@ -71,7 +71,7 @@ describe('Cell.vue', async () => {
 
   it('image render', async () => {
     const wrapper = mount(() => <Cell title="单行标题" image={avatarUrl}></Cell>);
-    const img = wrapper.find('.t-cell__left-icon > img');
+    const img = wrapper.find('.t-cell__left-image');
     expect(img.exists()).toBeTruthy();
     expect(img.attributes('src')).toBe(avatarUrl);
   });

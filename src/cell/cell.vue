@@ -1,23 +1,27 @@
 <template>
   <div :class="styleCell" @click="onClick">
-    <div :class="`${name}__left-icon`">
-      <t-node v-if="leftIconContent" :content="leftIconContent"></t-node>
+    <div :class="`${name}__left`">
+      <div v-if="leftIconContent" :class="`${name}__left-icon`">
+        <t-node :content="leftIconContent" />
+      </div>
       <template v-if="image">
-        <img v-if="typeof image === 'string'" :src="image" :class="`${name}__image`" />
-        <t-node v-else :content="imageContent"></t-node>
+        <img v-if="typeof image === 'string'" :src="image" :class="`${name}__left-image`" />
+        <t-node v-else :content="imageContent" />
       </template>
     </div>
     <div v-if="titleContent" :class="`${name}__title`">
-      <t-node :content="titleContent"></t-node><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
+      <t-node :content="titleContent" /><span v-if="required" :class="`${name}--required`">&nbsp;*</span>
       <div v-if="descriptionContent" :class="`${name}__description`">
-        <t-node :content="descriptionContent"></t-node>
+        <t-node :content="descriptionContent" />
       </div>
     </div>
     <div v-if="noteContent" :class="`${name}__note`">
-      <t-node :content="noteContent"></t-node>
+      <t-node :content="noteContent" />
     </div>
-    <div v-if="rightIconContent" :class="`${name}__right-icon`">
-      <t-node :content="rightIconContent"></t-node>
+    <div v-if="rightIconContent" :class="`${name}__right`">
+      <div :class="`${name}__right-icon`">
+        <t-node :content="rightIconContent" />
+      </div>
     </div>
   </div>
 </template>
@@ -53,7 +57,7 @@ export default defineComponent({
     });
 
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
-    const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon'));
+    const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon', { params: { class: 't' } }));
 
     const styleCell = computed(() => [
       `${name}`,

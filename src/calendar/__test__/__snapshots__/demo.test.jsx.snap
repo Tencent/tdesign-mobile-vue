@@ -2349,7 +2349,7 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -2363,21 +2363,25 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     </div>
     <!--v-if-->
     <div
-      class="t-cell__right-icon"
+      class="t-cell__right"
     >
-      <svg
-        class="t-icon t-icon-chevron-right"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-cell__right-icon"
       >
-        <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </div>
@@ -4735,7 +4739,7 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -4749,21 +4753,25 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
     </div>
     <!--v-if-->
     <div
-      class="t-cell__right-icon"
+      class="t-cell__right"
     >
-      <svg
-        class="t-icon t-icon-chevron-right"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-cell__right-icon"
       >
-        <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
   </div>
   
@@ -5234,7 +5242,7 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -5248,21 +5256,25 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
     </div>
     <!--v-if-->
     <div
-      class="t-cell__right-icon"
+      class="t-cell__right"
     >
-      <svg
-        class="t-icon t-icon-chevron-right"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-cell__right-icon"
       >
-        <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
   </div>
   
@@ -6282,7 +6294,7 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -6296,21 +6308,25 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     </div>
     <!--v-if-->
     <div
-      class="t-cell__right-icon"
+      class="t-cell__right"
     >
-      <svg
-        class="t-icon t-icon-chevron-right"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-cell__right-icon"
       >
-        <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
   </div>
   
@@ -8696,7 +8712,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           class="t-cell t-cell--middle t-cell--bordered"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -8710,21 +8726,25 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           </div>
           <!--v-if-->
           <div
-            class="t-cell__right-icon"
+            class="t-cell__right"
           >
-            <svg
-              class="t-icon t-icon-chevron-right"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-cell__right-icon"
             >
-              <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -11076,7 +11096,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           class="t-cell t-cell--middle t-cell--bordered"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -11090,21 +11110,25 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           </div>
           <!--v-if-->
           <div
-            class="t-cell__right-icon"
+            class="t-cell__right"
           >
-            <svg
-              class="t-icon t-icon-chevron-right"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-cell__right-icon"
             >
-              <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -13456,7 +13480,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           class="t-cell t-cell--middle t-cell--bordered"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -13470,21 +13494,25 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
           </div>
           <!--v-if-->
           <div
-            class="t-cell__right-icon"
+            class="t-cell__right"
           >
-            <svg
-              class="t-icon t-icon-chevron-right"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-cell__right-icon"
             >
-              <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -14514,7 +14542,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -14528,21 +14556,25 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       </div>
       <!--v-if-->
       <div
-        class="t-cell__right-icon"
+        class="t-cell__right"
       >
-        <svg
-          class="t-icon t-icon-chevron-right"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
+        <div
+          class="t-cell__right-icon"
         >
-          <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
+          <svg
+            class="t-icon t-icon-chevron-right"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     
@@ -16894,7 +16926,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -16908,21 +16940,25 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       </div>
       <!--v-if-->
       <div
-        class="t-cell__right-icon"
+        class="t-cell__right"
       >
-        <svg
-          class="t-icon t-icon-chevron-right"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
+        <div
+          class="t-cell__right-icon"
         >
-          <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
+          <svg
+            class="t-icon t-icon-chevron-right"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     
@@ -17386,7 +17422,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -17400,21 +17436,25 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       </div>
       <!--v-if-->
       <div
-        class="t-cell__right-icon"
+        class="t-cell__right"
       >
-        <svg
-          class="t-icon t-icon-chevron-right"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
+        <div
+          class="t-cell__right-icon"
         >
-          <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
+          <svg
+            class="t-icon t-icon-chevron-right"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
     </div>
     
@@ -19789,7 +19829,7 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -19803,21 +19843,25 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     </div>
     <!--v-if-->
     <div
-      class="t-cell__right-icon"
+      class="t-cell__right"
     >
-      <svg
-        class="t-icon t-icon-chevron-right"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-cell__right-icon"
       >
-        <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </div>
@@ -22172,7 +22216,7 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -22186,21 +22230,25 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     </div>
     <!--v-if-->
     <div
-      class="t-cell__right-icon"
+      class="t-cell__right"
     >
-      <svg
-        class="t-icon t-icon-chevron-right"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-cell__right-icon"
       >
-        <path
-          d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-chevron-right"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </div>

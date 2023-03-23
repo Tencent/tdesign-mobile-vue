@@ -7,34 +7,34 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   
   <!-- demos -->
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
   >
     <!--v-if-->
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          城市
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          广州
-        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        城市
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        广州
+      </div>
+      <div
+        class="t-cell__right"
+      >
         <div
           class="t-cell__right-icon"
         >
@@ -53,38 +53,38 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      
     </div>
+    
   </div>
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
   >
     <!--v-if-->
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          年份和季节
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          2021,夏
-        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        年份和季节
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        2021,夏
+      </div>
+      <div
+        class="t-cell__right"
+      >
         <div
           class="t-cell__right-icon"
         >
@@ -103,38 +103,38 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      
     </div>
+    
   </div>
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
   >
     <!--v-if-->
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          日期
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          选择日期
-        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        日期
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        选择日期
+      </div>
+      <div
+        class="t-cell__right"
+      >
         <div
           class="t-cell__right-icon"
         >
@@ -153,13 +153,13 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      <span
-        style="color: rgb(136, 136, 136); padding: 5px 10px; font-size: 12px;"
-      >
-        仅做展示，年月日关联关系由自己实现
-      </span>
-      
     </div>
+    <span
+      style="color: rgb(136, 136, 136); padding: 5px 10px; font-size: 12px;"
+    >
+      仅做展示，年月日关联关系由自己实现
+    </span>
+    
   </div>
   <!-- pickers -->
   <!--teleport start-->
@@ -897,34 +897,34 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
   
   <!-- 联动选择 -->
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
   >
     <!--v-if-->
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          英雄
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          战士,狂铁
-        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        英雄
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        战士,狂铁
+      </div>
+      <div
+        class="t-cell__right"
+      >
         <div
           class="t-cell__right-icon"
         >
@@ -943,8 +943,8 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
           </svg>
         </div>
       </div>
-      
     </div>
+    
   </div>
   <!--teleport start-->
   <div
@@ -1131,34 +1131,34 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     
     <!-- demos -->
     <div
-      class="t-cell-group"
+      class="t-cell-group t-cell-group--default"
     >
       <!--v-if-->
+      
       <div
-        class="t-cell-group__container"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            城市
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            广州
-          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          城市
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          广州
+        </div>
+        <div
+          class="t-cell__right"
+        >
           <div
             class="t-cell__right-icon"
           >
@@ -1177,38 +1177,38 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        
       </div>
+      
     </div>
     <div
-      class="t-cell-group"
+      class="t-cell-group t-cell-group--default"
     >
       <!--v-if-->
+      
       <div
-        class="t-cell-group__container"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            年份和季节
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            2021,夏
-          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          年份和季节
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          2021,夏
+        </div>
+        <div
+          class="t-cell__right"
+        >
           <div
             class="t-cell__right-icon"
           >
@@ -1227,38 +1227,38 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        
       </div>
+      
     </div>
     <div
-      class="t-cell-group"
+      class="t-cell-group t-cell-group--default"
     >
       <!--v-if-->
+      
       <div
-        class="t-cell-group__container"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            日期
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            选择日期
-          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          日期
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          选择日期
+        </div>
+        <div
+          class="t-cell__right"
+        >
           <div
             class="t-cell__right-icon"
           >
@@ -1277,13 +1277,13 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        <span
-          style="color: rgb(136, 136, 136); padding: 5px 10px; font-size: 12px;"
-        >
-          仅做展示，年月日关联关系由自己实现
-        </span>
-        
       </div>
+      <span
+        style="color: rgb(136, 136, 136); padding: 5px 10px; font-size: 12px;"
+      >
+        仅做展示，年月日关联关系由自己实现
+      </span>
+      
     </div>
     <!-- pickers -->
     <!--teleport start-->
@@ -2030,34 +2030,34 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
     
     <!-- 联动选择 -->
     <div
-      class="t-cell-group"
+      class="t-cell-group t-cell-group--default"
     >
       <!--v-if-->
+      
       <div
-        class="t-cell-group__container"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell__left"
         >
-          <div
-            class="t-cell__left-icon"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            英雄
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            战士,狂铁
-          </div>
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          英雄
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          战士,狂铁
+        </div>
+        <div
+          class="t-cell__right"
+        >
           <div
             class="t-cell__right-icon"
           >
@@ -2076,8 +2076,8 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             </svg>
           </div>
         </div>
-        
       </div>
+      
     </div>
     <!--teleport start-->
     <div
