@@ -32,7 +32,7 @@ describe('footer', () => {
 
     it(': logo', () => {
             const logo = {
-                titleUrl: 'https://tdesign.gtimg.com/miniprogram/images/logo1.png',
+                url: 'https://tdesign.gtimg.com/miniprogram/images/logo1.png',
             };
             const wrapper = mount(Footer, {
                 props: { logo },

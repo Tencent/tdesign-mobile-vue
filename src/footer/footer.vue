@@ -7,7 +7,7 @@
         <div v-if="logo.title" :class="`${name}__title`">
           {{ logo.title }}
         </div>
-        <t-image v-else-if="logo.titleUrl" :src="logo.titleUrl" :class="`${name}__title-url`" />
+        <t-image v-else-if="logo.url" :src="logo.url" :class="`${name}__title-url`" />
       </div>
     </template>
     <!-- text -->

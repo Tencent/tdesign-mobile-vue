@@ -6,6 +6,6 @@
 import { ref } from 'vue';
 
 const logo2 = ref({
-  titleUrl: 'https://tdesign.gtimg.com/miniprogram/images/logo1.png',
+  url: 'https://tdesign.gtimg.com/miniprogram/images/logo1.png',
 });
 </script>
