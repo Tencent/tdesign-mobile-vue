@@ -215,7 +215,6 @@ export default defineComponent({
         zIndex: menuProps.zIndex,
         top: `${bottom}px`,
       };
-      // console.log(`dropdown-item(${itemId.value}) changing state: `, val);
       const { duration } = menuProps;
       // 动画状态控制
       menuAniControl.setTo(
@@ -263,7 +262,6 @@ export default defineComponent({
     ]);
     // 点击树形节点的时候
     const selectTreeNode = (level: number, value: TdDropdownTreeValueType, rebuildTree = true) => {
-      // console.log('level:', level, 'value:', value);
       // 当前节点
       const tempValue: TdDropdownTreeValueType[] = treeState.selectList.slice(0, level);
       tempValue[level] = value;
