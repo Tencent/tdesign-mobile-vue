@@ -48,52 +48,60 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
     当功能使用图标即可表示清楚时，可使用纯图标悬浮按钮，例如：添加、发布。
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      纯图标悬浮按钮
-    </p>
-    
     <div
-      class="toast-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          基础使用
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          进阶使用
-          
-        </span>
-      </button>
+        纯图标悬浮按钮
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="toast-demo"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            基础使用
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            进阶使用
+            
+          </span>
+        </button>
+      </div>
+      
+    </div>
   </div>
   <div>
     <button

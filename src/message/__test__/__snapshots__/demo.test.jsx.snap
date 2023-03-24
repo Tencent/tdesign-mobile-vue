@@ -155,231 +155,247 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
     用于页面消息通知提示，具有成功提示、提醒、警示等功能，通常在顶部出现，可以自动消失或点击关闭
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      弹窗内容为存文本、标题和副标题、带输入框
-    </p>
-    
-    <!-- &lt;functionDemo /&gt; -->
-    
     <div
-      class="button-demo"
-      data-v-e60c559e=""
-      style="margin: 0px 16px;"
+      class="tdesign-mobile-demo-block__header"
     >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-e60c559e=""
-        role="button"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          纯文字通知
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-e60c559e=""
-        role="button"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          带图标通知
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-e60c559e=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          带关闭通知
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-e60c559e=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          滚动通知
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        data-v-e60c559e=""
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          带按钮通知
-          
-        </span>
-      </button>
+        弹窗内容为存文本、标题和副标题、带输入框
+      </p>
     </div>
-    <!-- 纯文字通知 -->
-    <transition-stub
-      appear="false"
-      css="true"
-      data-v-e60c559e=""
-      name="message"
-      persisted="false"
+    <div
+      class="tdesign-mobile-demo-block__slot"
     >
-      <!--v-if-->
-    </transition-stub>
-    <!-- 带图标通知 -->
-    <transition-stub
-      appear="false"
-      css="true"
-      data-v-e60c559e=""
-      name="message"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
-    <!-- 带关闭通知 -->
-    <transition-stub
-      appear="false"
-      css="true"
-      data-v-e60c559e=""
-      name="message"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
-    <!-- 滚动通知 -->
-    <transition-stub
-      appear="false"
-      css="true"
-      data-v-e60c559e=""
-      name="message"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
-    <!-- 带按钮通知 -->
-    <transition-stub
-      appear="false"
-      css="true"
-      data-v-e60c559e=""
-      name="message"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
-    
-    
+      
+      <!-- &lt;functionDemo /&gt; -->
+      
+      <div
+        class="button-demo"
+        data-v-e60c559e=""
+        style="margin: 0px 16px;"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-e60c559e=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            纯文字通知
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-e60c559e=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            带图标通知
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-e60c559e=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            带关闭通知
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-e60c559e=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            滚动通知
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-e60c559e=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            带按钮通知
+            
+          </span>
+        </button>
+      </div>
+      <!-- 纯文字通知 -->
+      <transition-stub
+        appear="false"
+        css="true"
+        data-v-e60c559e=""
+        name="message"
+        persisted="false"
+      >
+        <!--v-if-->
+      </transition-stub>
+      <!-- 带图标通知 -->
+      <transition-stub
+        appear="false"
+        css="true"
+        data-v-e60c559e=""
+        name="message"
+        persisted="false"
+      >
+        <!--v-if-->
+      </transition-stub>
+      <!-- 带关闭通知 -->
+      <transition-stub
+        appear="false"
+        css="true"
+        data-v-e60c559e=""
+        name="message"
+        persisted="false"
+      >
+        <!--v-if-->
+      </transition-stub>
+      <!-- 滚动通知 -->
+      <transition-stub
+        appear="false"
+        css="true"
+        data-v-e60c559e=""
+        name="message"
+        persisted="false"
+      >
+        <!--v-if-->
+      </transition-stub>
+      <!-- 带按钮通知 -->
+      <transition-stub
+        appear="false"
+        css="true"
+        data-v-e60c559e=""
+        name="message"
+        persisted="false"
+      >
+        <!--v-if-->
+      </transition-stub>
+      
+      
+    </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      02 状态
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      弹窗内容为存文本、标题和副标题、带输入框
-    </p>
-    
     <div
-      class="button-demo"
-      style="margin: 0px 16px;"
+      class="tdesign-mobile-demo-block__header"
     >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          普通通知
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
+        02 状态
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          警示提示通知
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          成功提示通知
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          错误提示通知
-          
-        </span>
-      </button>
+        弹窗内容为存文本、标题和副标题、带输入框
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="button-demo"
+        style="margin: 0px 16px;"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            普通通知
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            警示提示通知
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            成功提示通知
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            错误提示通知
+            
+          </span>
+        </button>
+      </div>
+      
+    </div>
   </div>
 </div>
 `;

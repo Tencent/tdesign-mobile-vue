@@ -5,22 +5,24 @@
 import { mount } from '@vue/test-utils';
 import autosizeVue from '@/textarea/demos/autosize.vue';
 import baseVue from '@/textarea/demos/base.vue';
-import eventsVue from '@/textarea/demos/events.vue';
+import cardVue from '@/textarea/demos/card.vue';
+import customVue from '@/textarea/demos/custom.vue';
+import disabledVue from '@/textarea/demos/disabled.vue';
 import labelVue from '@/textarea/demos/label.vue';
 import maxcharacterVue from '@/textarea/demos/maxcharacter.vue';
 import maxlengthVue from '@/textarea/demos/maxlength.vue';
 import mobileVue from '@/textarea/demos/mobile.vue';
-import statusVue from '@/textarea/demos/status.vue';
 
 const mapper = {
   autosizeVue,
   baseVue,
-  eventsVue,
+  cardVue,
+  customVue,
+  disabledVue,
   labelVue,
   maxcharacterVue,
   maxlengthVue,
   mobileVue,
-  statusVue,
 };
 
 describe('Textarea', () => {

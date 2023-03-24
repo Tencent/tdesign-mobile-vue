@@ -53,62 +53,70 @@ exports[`List > List mobileVue demo works fine 1`] = `
          瀑布流滚动加载，用于展示同一类型信息的长列表。当列表即将滚动到底部时，会触发事件并加载更多列表项。 
       </p>
       <div
-        class="tdesign-mobile-demo-block"
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
       >
-        <h2
-          class="tdesign-mobile-demo-block__title"
+        <div
+          class="tdesign-mobile-demo-block__header"
         >
-          01 类型
-        </h2>
-        <p
-          class="tdesign-mobile-demo-block__summary"
-        >
-          基础列表
-        </p>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
+          <h2
+            class="tdesign-mobile-demo-block__title"
           >
-            
-             基础列表 
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
+            01 类型
+          </h2>
+          <p
+            class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
           >
-            
-             下拉刷新 
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
+            基础列表
+          </p>
+        </div>
+        <div
+          class="tdesign-mobile-demo-block__slot"
         >
-          <!---->
-          <span
-            class="t-button__text"
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+            role="button"
           >
-            
-             错误提示 
-            
-          </span>
-        </button>
-        
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               基础列表 
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               下拉刷新 
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               错误提示 
+              
+            </span>
+          </button>
+          
+        </div>
       </div>
     </div>
     <!--v-if-->
