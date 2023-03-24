@@ -69,6 +69,8 @@ import config from '@/config';
 import CheckboxProps from './props';
 import { renderContent, renderTNode, TNode, useDefault } from '@/shared';
 import { TdCheckboxProps } from '@/checkbox/type';
+import MinusLineFilledIcon from './assets/minus-line-filled-icon.svg';
+import CheckLineFilledIcon from './assets/check-line-filled-icon.svg';
 
 const { prefix } = config;
 const name = `${prefix}-checkbox`;
@@ -117,12 +119,16 @@ export default defineComponent({
       if (props.icon === 'circle') return indeterminate.value ? h(MinusCircleFilledIcon) : h(CheckCircleFilledIcon);
       if (props.icon === 'rectangle')
         return indeterminate.value ? h(MinusRectangleFilledIcon) : h(CheckRectangleFilledIcon);
-      if (props.icon === 'line') return indeterminate.value ? h(MinusCircleFilledIcon) : h(CheckIcon);
+      if (props.icon === 'line')
+        return indeterminate.value ? h('img', { src: MinusLineFilledIcon }) : h('img', { src: CheckLineFilledIcon });
       return null;
     });
 
     const isChecked = computed(() => {
-      if (props.checkAll) return checkboxGroup?.checkAllStatus.value === 'checked';
+      if (props.checkAll) {
+        const checkAllStatus = checkboxGroup?.checkAllStatus.value;
+        return checkAllStatus === 'checked' || checkAllStatus === 'indeterminate';
+      }
       if (checkboxGroup != null && props.value != null) {
         return !!checkboxGroup.checkedSet.value?.has(props.value);
       }

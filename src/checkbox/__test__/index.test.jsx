@@ -1,8 +1,9 @@
 import { ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import Checkbox, { CheckboxGroup } from '../index';
+import config from '../../config';
 
-const prefix = 't';
+const { prefix } = config;
 const name = `${prefix}-checkbox`;
 
 describe('Checkbox', () => {
