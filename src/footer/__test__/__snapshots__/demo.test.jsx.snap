@@ -197,206 +197,230 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      基础页脚
-    </p>
-    
     <div
-      class="t-footer"
+      class="tdesign-mobile-demo-block__header"
     >
-      <!-- logo -->
-      
-      <!-- text -->
       <!--v-if-->
-      <div
-        class="t-footer__text"
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        Copyright © 2019-2023 TDesign.All Rights Reserved.
+        基础页脚
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-footer"
+      >
+        <!-- logo -->
+        
+        <!-- text -->
+        <!--v-if-->
+        <div
+          class="t-footer__text"
+        >
+          Copyright © 2019-2023 TDesign.All Rights Reserved.
+        </div>
+        
       </div>
       
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      基础加链接页脚
-    </p>
-    
-    
     <div
-      class="t-footer"
+      class="tdesign-mobile-demo-block__header"
     >
-      <!-- logo -->
-      
-      <!-- text -->
-      <div
-        class="t-footer__link-list"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
-        
-        <a
-          class="t-footer__link-item"
-          href="/pages/index"
-        >
-          底部链接
-        </a>
-        <!--v-if-->
-        
-        
-      </div>
-      <div
-        class="t-footer__text"
-      >
-        Copyright © 2019-2023 TDesign.All Rights Reserved.
-      </div>
-      
+        基础加链接页脚
+      </p>
     </div>
     <div
-      class="t-footer"
+      class="tdesign-mobile-demo-block__slot"
     >
-      <!-- logo -->
       
-      <!-- text -->
+      
       <div
-        class="t-footer__link-list"
+        class="t-footer"
       >
+        <!-- logo -->
         
-        
-        <a
-          class="t-footer__link-item"
-          href="/pages/index"
-        >
-          底部链接
-        </a>
+        <!-- text -->
         <div
-          class="t-footer__link-line"
+          class="t-footer__link-list"
         >
-          |
+          
+          
+          <a
+            class="t-footer__link-item"
+            href="/pages/index"
+          >
+            底部链接
+          </a>
+          <!--v-if-->
+          
+          
+        </div>
+        <div
+          class="t-footer__text"
+        >
+          Copyright © 2019-2023 TDesign.All Rights Reserved.
         </div>
         
-        
-        <a
-          class="t-footer__link-item"
-          href="/pages/index"
-        >
-          底部链接
-        </a>
-        <!--v-if-->
-        
-        
       </div>
       <div
-        class="t-footer__text"
+        class="t-footer"
       >
-        Copyright © 2019-2023 TDesign.All Rights Reserved.
+        <!-- logo -->
+        
+        <!-- text -->
+        <div
+          class="t-footer__link-list"
+        >
+          
+          
+          <a
+            class="t-footer__link-item"
+            href="/pages/index"
+          >
+            底部链接
+          </a>
+          <div
+            class="t-footer__link-line"
+          >
+            |
+          </div>
+          
+          
+          <a
+            class="t-footer__link-item"
+            href="/pages/index"
+          >
+            底部链接
+          </a>
+          <!--v-if-->
+          
+          
+        </div>
+        <div
+          class="t-footer__text"
+        >
+          Copyright © 2019-2023 TDesign.All Rights Reserved.
+        </div>
+        
       </div>
       
+      
     </div>
-    
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      品牌页脚
-    </p>
-    
-    
     <div
-      class="t-footer"
+      class="tdesign-mobile-demo-block__header"
     >
-      <!-- logo -->
-      <a
-        class="t-footer__logo"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        <div
-          class="t-image t-image--round t-footer__icon"
-        >
-          <div
-            class="t-image__status"
-          >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </div>
-        <span
-          class="t-footer__title"
-        >
-          品牌页脚
-        </span>
-        <!--v-if-->
-      </a>
+        品牌页脚
+      </p>
     </div>
     <div
-      class="t-footer"
+      class="tdesign-mobile-demo-block__slot"
     >
-      <!-- logo -->
-      <a
-        class="t-footer__logo"
-        href="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
+      
+      
+      <div
+        class="t-footer"
       >
-        <!--v-if-->
-        <!--v-if-->
-        <div
-          class="t-image t-image--round t-footer__title-url"
+        <!-- logo -->
+        <a
+          class="t-footer__logo"
         >
           <div
-            class="t-image__status"
+            class="t-image t-image--round t-footer__icon"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-image__status"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-ellipsis"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
+              style="object-fit: fill; object-position: center;"
+            />
           </div>
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </div>
-      </a>
+          <span
+            class="t-footer__title"
+          >
+            品牌页脚
+          </span>
+          <!--v-if-->
+        </a>
+      </div>
+      <div
+        class="t-footer"
+      >
+        <!-- logo -->
+        <a
+          class="t-footer__logo"
+          href="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
+        >
+          <!--v-if-->
+          <!--v-if-->
+          <div
+            class="t-image t-image--round t-footer__title-url"
+          >
+            <div
+              class="t-image__status"
+            >
+              <svg
+                class="t-icon t-icon-ellipsis"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </div>
+        </a>
+      </div>
+      
+      
     </div>
-    
-    
   </div>
 </div>
 `;
