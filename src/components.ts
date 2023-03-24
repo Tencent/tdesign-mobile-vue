@@ -49,3 +49,4 @@ export { default as Upload } from './upload';
 export { default as NoticeBar } from './notice-bar';
 export { default as Result } from './result';
 export { default as Cascader } from './cascader';
+export { default as Footer } from './footer';
