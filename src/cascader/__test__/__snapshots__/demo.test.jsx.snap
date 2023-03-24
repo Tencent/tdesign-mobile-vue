@@ -9,7 +9,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -263,7 +263,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -502,7 +502,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -734,7 +734,7 @@ exports[`Cascader > Cascader statusVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->

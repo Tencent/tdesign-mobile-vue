@@ -3,7 +3,7 @@
 exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
 <div>
   <div
-    class="t-cell-group dialog-type-title"
+    class="t-cell-group t-cell-group--default dialog-type-title"
   >
     <div
       class="t-cell-group__title"
@@ -12,61 +12,57 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
       backgroundColor: 设置遮罩的背景颜色
       
     </div>
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
+      value-align="left"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
-        value-align="left"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
         <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-               显示 
-              
-            </span>
-          </button>
-          <transition-stub
-            appear="false"
-            background-color="rgba(0, 0, 0, 1)"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-          
-        </div>
         <!--v-if-->
       </div>
-      
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             显示 
+            
+          </span>
+        </button>
+        <transition-stub
+          appear="false"
+          background-color="rgba(0, 0, 0, 1)"
+          class="t-image-viewer"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+        
+      </div>
+      <!--v-if-->
     </div>
+    
   </div>
 </div>
 `;
@@ -191,7 +187,7 @@ exports[`ImageViewer > ImageViewer closeEventVue demo works fine 1`] = `
 exports[`ImageViewer > ImageViewer imageListVue demo works fine 1`] = `
 <div>
   <div
-    class="t-cell-group dialog-type-title"
+    class="t-cell-group t-cell-group--default dialog-type-title"
   >
     <div
       class="t-cell-group__title"
@@ -200,60 +196,56 @@ exports[`ImageViewer > ImageViewer imageListVue demo works fine 1`] = `
       图片数组：images
       
     </div>
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
+      value-align="left"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
-        value-align="left"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
         <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-               图片列表 
-              
-            </span>
-          </button>
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-          
-        </div>
         <!--v-if-->
       </div>
-      
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             图片列表 
+            
+          </span>
+        </button>
+        <transition-stub
+          appear="false"
+          class="t-image-viewer"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+        
+      </div>
+      <!--v-if-->
     </div>
+    
   </div>
 </div>
 `;
@@ -261,7 +253,7 @@ exports[`ImageViewer > ImageViewer imageListVue demo works fine 1`] = `
 exports[`ImageViewer > ImageViewer initialIndexVue demo works fine 1`] = `
 <div>
   <div
-    class="t-cell-group dialog-type-title"
+    class="t-cell-group t-cell-group--default dialog-type-title"
   >
     <div
       class="t-cell-group__title"
@@ -270,60 +262,56 @@ exports[`ImageViewer > ImageViewer initialIndexVue demo works fine 1`] = `
       initialIndex: 默认展示第二张图片
       
     </div>
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
+      value-align="left"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
-        value-align="left"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
         <!--v-if-->
-        <div
-          class="t-cell__note"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-               默认展示 
-              
-            </span>
-          </button>
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-          
-        </div>
         <!--v-if-->
       </div>
-      
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             默认展示 
+            
+          </span>
+        </button>
+        <transition-stub
+          appear="false"
+          class="t-image-viewer"
+          css="true"
+          name="t-overlay"
+          persisted="true"
+        >
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+        
+      </div>
+      <!--v-if-->
     </div>
+    
   </div>
 </div>
 `;

@@ -205,211 +205,219 @@ exports[`Badge > Badge buttonVue demo works fine 1`] = `
 exports[`Badge > Badge cellVue demo works fine 1`] = `
 <div>
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
     style="overflow: hidden;"
   >
     <!--v-if-->
+    
     <div
-      class="t-cell-group__container"
+      class="t-cell t-cell--middle t-cell--bordered"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell__left"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--dot"
-            >
-              
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-        <div
-          class="t-cell__right-icon"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
-            >
-              16
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-        <div
-          class="t-cell__right-icon"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--round"
-            >
-              NEW
-            </div>
-            <!---->
-          </div>
-          <div
-            class="t-badge"
-            style="margin-left: 8px;"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
-            >
-              NEW
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-        <div
-          class="t-cell__right-icon"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-badge t-badge__ribbon--outer"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--ribbon"
-            >
-              NEW
-            </div>
-            <!---->
-          </div>
-          
-        </div>
+        <!--v-if-->
         <!--v-if-->
       </div>
-      
+      <div
+        class="t-cell__title"
+      >
+        单行标题
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--dot"
+          >
+            
+          </div>
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-cell__right"
+      >
+        <div
+          class="t-cell__right-icon"
+        >
+          <svg
+            class="t-icon t-icon-chevron-right"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        单行标题
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--circle"
+          >
+            16
+          </div>
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-cell__right"
+      >
+        <div
+          class="t-cell__right-icon"
+        >
+          <svg
+            class="t-icon t-icon-chevron-right"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        单行标题
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--round"
+          >
+            NEW
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-badge"
+          style="margin-left: 8px;"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--circle"
+          >
+            NEW
+          </div>
+          <!---->
+        </div>
+        
+      </div>
+      <div
+        class="t-cell__right"
+      >
+        <div
+          class="t-cell__right-icon"
+        >
+          <svg
+            class="t-icon t-icon-chevron-right"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-cell t-cell--middle t-cell--bordered"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__title"
+      >
+        单行标题
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-cell__note"
+      >
+        
+        <div
+          class="t-badge t-badge__ribbon--outer"
+        >
+          <div
+            class="t-badge__inner t-badge--medium t-badge--ribbon"
+          >
+            NEW
+          </div>
+          <!---->
+        </div>
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
   </div>
 </div>
 `;
@@ -656,211 +664,219 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
     
     <div>
       <div
-        class="t-cell-group"
+        class="t-cell-group t-cell-group--default"
         style="overflow: hidden;"
       >
         <!--v-if-->
+        
         <div
-          class="t-cell-group__container"
+          class="t-cell t-cell--middle t-cell--bordered"
         >
-          
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-cell__left"
           >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
-            >
-              
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--dot"
-                >
-                  
-                </div>
-                <!---->
-              </div>
-              
-            </div>
-            <div
-              class="t-cell__right-icon"
-            >
-              <svg
-                class="t-icon t-icon-chevron-right"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
-            >
-              
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
-                >
-                  16
-                </div>
-                <!---->
-              </div>
-              
-            </div>
-            <div
-              class="t-cell__right-icon"
-            >
-              <svg
-                class="t-icon t-icon-chevron-right"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
-            >
-              
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--round"
-                >
-                  NEW
-                </div>
-                <!---->
-              </div>
-              <div
-                class="t-badge"
-                style="margin-left: 8px;"
-              >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
-                >
-                  NEW
-                </div>
-                <!---->
-              </div>
-              
-            </div>
-            <div
-              class="t-cell__right-icon"
-            >
-              <svg
-                class="t-icon t-icon-chevron-right"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
-            >
-              
-              <div
-                class="t-badge t-badge__ribbon--outer"
-              >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--ribbon"
-                >
-                  NEW
-                </div>
-                <!---->
-              </div>
-              
-            </div>
+            <!--v-if-->
             <!--v-if-->
           </div>
-          
+          <div
+            class="t-cell__title"
+          >
+            单行标题
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--dot"
+              >
+                
+              </div>
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-cell__right"
+          >
+            <div
+              class="t-cell__right-icon"
+            >
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
+        <div
+          class="t-cell t-cell--middle t-cell--bordered"
+        >
+          <div
+            class="t-cell__left"
+          >
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__title"
+          >
+            单行标题
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--circle"
+              >
+                16
+              </div>
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-cell__right"
+          >
+            <div
+              class="t-cell__right-icon"
+            >
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="t-cell t-cell--middle t-cell--bordered"
+        >
+          <div
+            class="t-cell__left"
+          >
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__title"
+          >
+            单行标题
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--round"
+              >
+                NEW
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-badge"
+              style="margin-left: 8px;"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--circle"
+              >
+                NEW
+              </div>
+              <!---->
+            </div>
+            
+          </div>
+          <div
+            class="t-cell__right"
+          >
+            <div
+              class="t-cell__right-icon"
+            >
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="t-cell t-cell--middle t-cell--bordered"
+        >
+          <div
+            class="t-cell__left"
+          >
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__title"
+          >
+            单行标题
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
+              class="t-badge t-badge__ribbon--outer"
+            >
+              <div
+                class="t-badge__inner t-badge--medium t-badge--ribbon"
+              >
+                NEW
+              </div>
+              <!---->
+            </div>
+            
+          </div>
+          <!--v-if-->
+        </div>
+        
       </div>
     </div>
     

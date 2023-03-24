@@ -10,7 +10,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -33,7 +33,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -56,7 +56,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -79,7 +79,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -102,7 +102,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -125,7 +125,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -148,7 +148,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -171,7 +171,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -194,7 +194,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -217,7 +217,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -240,7 +240,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -263,7 +263,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -286,7 +286,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -309,7 +309,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -332,7 +332,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -355,7 +355,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -378,7 +378,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -401,7 +401,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -424,7 +424,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -447,7 +447,7 @@ exports[`list > event > : load-more 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->

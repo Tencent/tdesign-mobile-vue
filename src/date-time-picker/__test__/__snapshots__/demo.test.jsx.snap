@@ -9,7 +9,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -496,7 +496,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -908,7 +908,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -2172,7 +2172,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -2652,7 +2652,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -2966,7 +2966,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -3551,7 +3551,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       class="t-cell t-cell--middle t-cell--bordered"
     >
       <div
-        class="t-cell__left-icon"
+        class="t-cell__left"
       >
         <!--v-if-->
         <!--v-if-->
@@ -3965,7 +3965,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -4541,7 +4541,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
     class="t-cell t-cell--middle t-cell--bordered"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
