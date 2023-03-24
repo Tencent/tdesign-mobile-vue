@@ -30,6 +30,6 @@ export interface LinkObj {
 export interface FooterLogo {
   icon: string;
   title?: string;
-  titleUrl?: string;
-  titleTarget: string;
+  url?: string;
+  target: string;
 }
