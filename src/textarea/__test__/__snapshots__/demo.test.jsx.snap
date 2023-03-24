@@ -121,7 +121,7 @@ exports[`Textarea > Textarea disabledVue demo works fine 1`] = `
     class="t-textarea__wrapper"
   >
     <textarea
-      class="t-textarea__wrapper-inner t-is-disabled"
+      class="t-textarea__wrapper-inner t-textarea--disabled"
       disabled=""
       maxlength="-1"
       name=""
@@ -453,7 +453,7 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
           class="t-textarea__wrapper"
         >
           <textarea
-            class="t-textarea__wrapper-inner t-is-disabled"
+            class="t-textarea__wrapper-inner t-textarea--disabled"
             disabled=""
             maxlength="-1"
             name=""

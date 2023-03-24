@@ -61,7 +61,7 @@ export default defineComponent({
     const textareaClassNames = computed(() => [
       `${componentName}__wrapper-inner`,
       {
-        [`${prefix}-is-disabled`]: props.disabled,
+        [`${componentName}--disabled`]: props.disabled,
       },
     ]);
     const internalInstance = getCurrentInstance();

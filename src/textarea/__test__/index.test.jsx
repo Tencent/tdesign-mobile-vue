@@ -57,7 +57,7 @@ describe('Textarea.vue', () => {
     const value = ref('文本');
     const wrapper = mount(<Textarea label="标题" v-model={value.value} disabled />);
     const label = wrapper.find('.t-textarea__wrapper-inner');
-    expect(label.classes()).toContain('t-is-disabled');
+    expect(label.classes()).toContain('t-textarea--disabled');
     const textarea = wrapper.find('textarea');
     expect(textarea.element.hasAttribute('disabled')).toBeTruthy();
   });
