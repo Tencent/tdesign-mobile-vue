@@ -331,128 +331,136 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
     图片全屏放大预览效果，包含全屏背景色、页码位置样式、增加操作等规范
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      图片预览类型
-    </p>
-    
     <div
-      class="image-viewer-demo"
-      data-v-734c791c=""
+      class="tdesign-mobile-demo-block__header"
     >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        图片预览类型
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="image-viewer-demo"
         data-v-734c791c=""
-        role="button"
       >
-        <!---->
-        <span
-          class="t-button__text"
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-734c791c=""
+          role="button"
         >
-          
-           基础用法 
-          
-        </span>
-      </button>
-      <transition-stub
-        appear="false"
-        class="t-image-viewer"
-        css="true"
-        data-v-734c791c=""
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             基础用法 
+            
+          </span>
+        </button>
+        <transition-stub
+          appear="false"
+          class="t-image-viewer"
+          css="true"
+          data-v-734c791c=""
+          name="t-overlay"
+          persisted="true"
         >
-          
-          
-        </div>
-      </transition-stub>
-    </div>
-    <div
-      class="image-viewer-demo"
-      data-v-04bcb836=""
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+      </div>
+      <div
+        class="image-viewer-demo"
         data-v-04bcb836=""
-        role="button"
       >
-        <!---->
-        <span
-          class="t-button__text"
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-04bcb836=""
+          role="button"
         >
-          
-          不展示关闭按钮
-          
-        </span>
-      </button>
-      <transition-stub
-        appear="false"
-        class="t-image-viewer"
-        css="true"
-        data-v-04bcb836=""
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            不展示关闭按钮
+            
+          </span>
+        </button>
+        <transition-stub
+          appear="false"
+          class="t-image-viewer"
+          css="true"
+          data-v-04bcb836=""
+          name="t-overlay"
+          persisted="true"
         >
-          
-          
-        </div>
-      </transition-stub>
-    </div>
-    <div
-      class="image-viewer-demo"
-      data-v-3939d0e3=""
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+      </div>
+      <div
+        class="image-viewer-demo"
         data-v-3939d0e3=""
-        role="button"
       >
-        <!---->
-        <span
-          class="t-button__text"
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-3939d0e3=""
+          role="button"
         >
-          
-          监听关闭事件
-          
-        </span>
-      </button>
-      <transition-stub
-        appear="false"
-        class="t-image-viewer"
-        css="true"
-        data-v-3939d0e3=""
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            监听关闭事件
+            
+          </span>
+        </button>
+        <transition-stub
+          appear="false"
+          class="t-image-viewer"
+          css="true"
+          data-v-3939d0e3=""
+          name="t-overlay"
+          persisted="true"
         >
-          
-          
-        </div>
-      </transition-stub>
+          <div
+            class="t-overlay"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          >
+            
+            
+          </div>
+        </transition-stub>
+      </div>
+      
     </div>
-    
   </div>
 </div>
 `;

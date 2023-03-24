@@ -48,7 +48,7 @@ describe('Textarea.vue', () => {
 
   it(': label', async () => {
     const wrapper = mount(<Textarea label="标题" />);
-    const label = wrapper.find('.t-textarea__name');
+    const label = wrapper.find('.t-textarea__label');
     expect(label.exists()).toBeTruthy();
     expect(label.text()).toBe('标题');
   });
@@ -56,17 +56,10 @@ describe('Textarea.vue', () => {
   it(': disabled', async () => {
     const value = ref('文本');
     const wrapper = mount(<Textarea label="标题" v-model={value.value} disabled />);
-    const label = wrapper.find('.t-textarea__wrapper');
-    expect(label.classes()).toContain('t-textarea-is-disabled');
+    const label = wrapper.find('.t-textarea__wrapper-inner');
+    expect(label.classes()).toContain('t-is-disabled');
     const textarea = wrapper.find('textarea');
     expect(textarea.element.hasAttribute('disabled')).toBeTruthy();
-  });
-
-  it(': maxlength', async () => {
-    const value = ref('');
-    const wrapper = mount(<Textarea label="标题" v-model={value.value} maxlength={10} />);
-    const textarea = wrapper.find('textarea');
-    expect(textarea.element.getAttribute('maxlength')).toBe('10');
   });
 
   it(': onBlur', async () => {

@@ -1,15 +1,16 @@
 <template>
-  <div :class="componentName">
-    <div v-if="labelContent" :class="`${componentName}__name`">
+  <div :class="textareaClass">
+    <div v-if="labelContent" :class="`${componentName}__label`">
       <t-node :content="labelContent"></t-node>
     </div>
-    <div :class="textareaClassNames">
+    <div :class="`${componentName}__wrapper`">
       <textarea
         ref="textareaRef"
         :value="innerValue"
+        :class="textareaClassNames"
         :style="textareaStyle"
         :name="name"
-        :maxlength="maxlength || -1"
+        :maxlength="-1"
         :disabled="disabled"
         :placeholder="placeholder"
         @focus="handleFocus"
@@ -17,7 +18,7 @@
         @input="handleInput"
         @compositionend="handleCompositionend"
       />
-      <div v-if="maxcharacter || maxlength" :class="`${componentName}__count`">
+      <div v-if="indicator && (maxcharacter || maxlength)" :class="`${componentName}__indicator`">
         {{ `${textareaLength}/${maxcharacter || maxlength}` }}
       </div>
     </div>
@@ -50,10 +51,17 @@ export default defineComponent({
     const { value, modelValue } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
-    const textareaClassNames = computed(() => [
-      `${componentName}__wrapper`,
+    const textareaClass = computed(() => [
+      `${componentName}`,
       {
-        [`${componentName}-is-disabled`]: props.disabled,
+        [`${componentName}--border`]: props.bordered,
+      },
+    ]);
+
+    const textareaClassNames = computed(() => [
+      `${componentName}__wrapper-inner`,
+      {
+        [`${prefix}-is-disabled`]: props.disabled,
       },
     ]);
     const internalInstance = getCurrentInstance();
@@ -89,7 +97,12 @@ export default defineComponent({
     const textareaValueChangeHandle = (e: InputEvent) => {
       const { target } = e;
       const { value } = target as HTMLInputElement;
-      if (props.maxcharacter && props.maxcharacter > 0 && !Number.isNaN(props.maxcharacter)) {
+      if (
+        !props.allowInputOverMax &&
+        props.maxcharacter &&
+        props.maxcharacter > 0 &&
+        !Number.isNaN(props.maxcharacter)
+      ) {
         const { length = 0, characters = '' } = getCharacterLength(value, props.maxcharacter) as {
           length: number;
           characters: string;
@@ -129,6 +142,7 @@ export default defineComponent({
       innerValue,
       textareaRef,
       textareaStyle,
+      textareaClass,
       textareaClassNames,
       textareaLength,
       handleFocus,

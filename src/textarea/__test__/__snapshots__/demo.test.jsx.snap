@@ -4,19 +4,12 @@ exports[`Textarea > Textarea autosizeVue demo works fine 1`] = `
 <div
   class="t-textarea"
 >
-  <div
-    class="t-textarea__name"
-  >
-    
-    <div>
-      标签文字
-    </div>
-    
-  </div>
+  <!--v-if-->
   <div
     class="t-textarea__wrapper"
   >
     <textarea
+      class="t-textarea__wrapper-inner"
       maxlength="-1"
       name="标签文字"
       placeholder="请输入文字"
@@ -28,13 +21,15 @@ exports[`Textarea > Textarea autosizeVue demo works fine 1`] = `
 
 exports[`Textarea > Textarea baseVue demo works fine 1`] = `
 <div
-  class="t-textarea"
+  class="t-textarea textarea-example"
+  data-v-dc028088=""
 >
   <!--v-if-->
   <div
     class="t-textarea__wrapper"
   >
     <textarea
+      class="t-textarea__wrapper-inner"
       maxlength="-1"
       name=""
       placeholder="请输入文字"
@@ -44,12 +39,81 @@ exports[`Textarea > Textarea baseVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Textarea > Textarea eventsVue demo works fine 1`] = `
+exports[`Textarea > Textarea cardVue demo works fine 1`] = `
 <div
-  class="t-textarea"
+  class="textarea-example"
+  data-v-0fc6070a=""
 >
   <div
-    class="t-textarea__name"
+    class="t-textarea textarea"
+    data-v-0fc6070a=""
+  >
+    <div
+      class="t-textarea__label"
+    >
+      标签文字
+    </div>
+    <div
+      class="t-textarea__wrapper"
+    >
+      <textarea
+        class="t-textarea__wrapper-inner"
+        maxlength="-1"
+        name=""
+        placeholder="请输入文字"
+      />
+      <div
+        class="t-textarea__indicator"
+      >
+        0/500
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Textarea > Textarea customVue demo works fine 1`] = `
+<div
+  class="textarea-example"
+  data-v-1eb98b9c=""
+>
+  <text
+    class="textarea-example__label"
+    data-v-1eb98b9c=""
+  >
+    标签文字
+  </text>
+  <div
+    class="t-textarea t-textarea--border textarea"
+    data-v-1eb98b9c=""
+  >
+    <!--v-if-->
+    <div
+      class="t-textarea__wrapper"
+    >
+      <textarea
+        class="t-textarea__wrapper-inner"
+        maxlength="-1"
+        name=""
+        placeholder="请输入文字"
+      />
+      <div
+        class="t-textarea__indicator"
+      >
+        0/100
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Textarea > Textarea disabledVue demo works fine 1`] = `
+<div
+  class="t-textarea textarea-example"
+  data-v-43d18467=""
+>
+  <div
+    class="t-textarea__label"
   >
     标签文字
   </div>
@@ -57,8 +121,10 @@ exports[`Textarea > Textarea eventsVue demo works fine 1`] = `
     class="t-textarea__wrapper"
   >
     <textarea
+      class="t-textarea__wrapper-inner t-is-disabled"
+      disabled=""
       maxlength="-1"
-      name="标签文字"
+      name=""
       placeholder="请输入文字"
     />
     <!--v-if-->
@@ -71,7 +137,7 @@ exports[`Textarea > Textarea labelVue demo works fine 1`] = `
   class="t-textarea"
 >
   <div
-    class="t-textarea__name"
+    class="t-textarea__label"
   >
     标签文字
   </div>
@@ -79,6 +145,7 @@ exports[`Textarea > Textarea labelVue demo works fine 1`] = `
     class="t-textarea__wrapper"
   >
     <textarea
+      class="t-textarea__wrapper-inner"
       maxlength="-1"
       name="标签文字"
       placeholder="请输入文字"
@@ -93,7 +160,7 @@ exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
   class="t-textarea"
 >
   <div
-    class="t-textarea__name"
+    class="t-textarea__label"
   >
     标签文字
   </div>
@@ -101,14 +168,15 @@ exports[`Textarea > Textarea maxcharacterVue demo works fine 1`] = `
     class="t-textarea__wrapper"
   >
     <textarea
+      class="t-textarea__wrapper-inner"
       maxlength="-1"
       name="标签文字"
       placeholder="请输入文字"
     />
     <div
-      class="t-textarea__count"
+      class="t-textarea__indicator"
     >
-      0/100
+      0/20
     </div>
   </div>
 </div>
@@ -119,7 +187,7 @@ exports[`Textarea > Textarea maxlengthVue demo works fine 1`] = `
   class="t-textarea"
 >
   <div
-    class="t-textarea__name"
+    class="t-textarea__label"
   >
     标签文字
   </div>
@@ -127,14 +195,15 @@ exports[`Textarea > Textarea maxlengthVue demo works fine 1`] = `
     class="t-textarea__wrapper"
   >
     <textarea
-      maxlength="100"
+      class="t-textarea__wrapper-inner"
+      maxlength="-1"
       name="标签文字"
       placeholder="请输入文字"
     />
     <div
-      class="t-textarea__count"
+      class="t-textarea__indicator"
     >
-      0/100
+      0/20
     </div>
   </div>
 </div>
@@ -155,269 +224,356 @@ exports[`Textarea > Textarea mobileVue demo works fine 1`] = `
     用于多行文本的输入
   </p>
   <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        基础多行文本框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-textarea textarea-example"
+        data-v-dc028088=""
+      >
+        <!--v-if-->
+        <div
+          class="t-textarea__wrapper"
+        >
+          <textarea
+            class="t-textarea__wrapper-inner"
+            maxlength="-1"
+            name=""
+            placeholder="请输入文字"
+          />
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
     class="tdesign-mobile-demo-block"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      基础多行文本框
-    </p>
-    
     <div
-      class="t-textarea"
+      class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
-      <div
-        class="t-textarea__wrapper"
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        <textarea
-          maxlength="-1"
-          name=""
-          placeholder="请输入文字"
-        />
-        <!--v-if-->
-      </div>
+        带标题多行文本框
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      带标题多行文本框
-    </p>
-    
     <div
-      class="t-textarea"
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="t-textarea__name"
+        class="t-textarea"
       >
-        
-        <div>
+        <div
+          class="t-textarea__label"
+        >
           标签文字
         </div>
-        
-      </div>
-      <div
-        class="t-textarea__wrapper"
-      >
-        <textarea
-          maxlength="-1"
-          name="标签文字"
-          placeholder="请输入文字"
-        />
-        <!--v-if-->
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      自动增高多行文本框
-    </p>
-    
-    <div
-      class="t-textarea"
-    >
-      <div
-        class="t-textarea__name"
-      >
-        标签文字
-      </div>
-      <div
-        class="t-textarea__wrapper"
-      >
-        <textarea
-          maxlength="-1"
-          name="标签文字"
-          placeholder="请输入文字"
-        />
-        <!--v-if-->
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      02 状态
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      禁用多行文本框
-    </p>
-    
-    <div
-      class="t-textarea"
-    >
-      <div
-        class="t-textarea__name"
-      >
-        标签文字
-      </div>
-      <div
-        class="t-textarea__wrapper"
-      >
-        <textarea
-          maxlength="-1"
-          name="标签文字"
-          placeholder="请输入文字"
-        />
-        <!--v-if-->
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      03 字符限制
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      设置最大字符个数
-    </p>
-    
-    <div
-      class="t-textarea"
-    >
-      <div
-        class="t-textarea__name"
-      >
-        标签文字
-      </div>
-      <div
-        class="t-textarea__wrapper"
-      >
-        <textarea
-          maxlength="-1"
-          name="标签文字"
-          placeholder="请输入文字"
-        />
         <div
-          class="t-textarea__count"
+          class="t-textarea__wrapper"
         >
-          0/100
+          <textarea
+            class="t-textarea__wrapper-inner"
+            maxlength="-1"
+            name="标签文字"
+            placeholder="请输入文字"
+          />
+          <!--v-if-->
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      设置最大字符个数，一个汉字表示两个字符
-    </p>
-    
     <div
-      class="t-textarea"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-textarea__name"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        标签文字
-      </div>
+        自动增高多行文本框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
       <div
-        class="t-textarea__wrapper"
+        class="t-textarea"
       >
-        <textarea
-          maxlength="100"
-          name="标签文字"
-          placeholder="请输入文字"
-        />
+        <!--v-if-->
         <div
-          class="t-textarea__count"
+          class="t-textarea__wrapper"
         >
-          0/100
+          <textarea
+            class="t-textarea__wrapper-inner"
+            maxlength="-1"
+            name="标签文字"
+            placeholder="请输入文字"
+          />
+          <!--v-if-->
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      04 事件
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      带事件文本框
-    </p>
-    
     <div
-      class="t-textarea"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-textarea__name"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        标签文字
-      </div>
-      <div
-        class="t-textarea__wrapper t-textarea-is-disabled"
-      >
-        <textarea
-          disabled=""
-          maxlength="-1"
-          name="标签文字"
-          placeholder="请输入文字"
-        />
-        <!--v-if-->
-      </div>
+        设置字符数限制
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-textarea"
+      >
+        <div
+          class="t-textarea__label"
+        >
+          标签文字
+        </div>
+        <div
+          class="t-textarea__wrapper"
+        >
+          <textarea
+            class="t-textarea__wrapper-inner"
+            maxlength="-1"
+            name="标签文字"
+            placeholder="请输入文字"
+          />
+          <div
+            class="t-textarea__indicator"
+          >
+            0/20
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
-</div>
-`;
-
-exports[`Textarea > Textarea statusVue demo works fine 1`] = `
-<div
-  class="t-textarea"
->
   <div
-    class="t-textarea__name"
+    class="tdesign-mobile-demo-block"
   >
-    标签文字
-  </div>
-  <div
-    class="t-textarea__wrapper t-textarea-is-disabled"
-  >
-    <textarea
-      disabled=""
-      maxlength="-1"
-      name="标签文字"
-      placeholder="请输入文字"
-    />
     <!--v-if-->
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-textarea"
+      >
+        <div
+          class="t-textarea__label"
+        >
+          标签文字
+        </div>
+        <div
+          class="t-textarea__wrapper"
+        >
+          <textarea
+            class="t-textarea__wrapper-inner"
+            maxlength="-1"
+            name="标签文字"
+            placeholder="请输入文字"
+          />
+          <div
+            class="t-textarea__indicator"
+          >
+            0/20
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件状态
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        禁用状态
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-textarea textarea-example"
+        data-v-43d18467=""
+      >
+        <div
+          class="t-textarea__label"
+        >
+          标签文字
+        </div>
+        <div
+          class="t-textarea__wrapper"
+        >
+          <textarea
+            class="t-textarea__wrapper-inner t-is-disabled"
+            disabled=""
+            maxlength="-1"
+            name=""
+            placeholder="请输入文字"
+          />
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        卡片样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="textarea-example"
+        data-v-0fc6070a=""
+      >
+        <div
+          class="t-textarea textarea"
+          data-v-0fc6070a=""
+        >
+          <div
+            class="t-textarea__label"
+          >
+            标签文字
+          </div>
+          <div
+            class="t-textarea__wrapper"
+          >
+            <textarea
+              class="t-textarea__wrapper-inner"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+            />
+            <div
+              class="t-textarea__indicator"
+            >
+              0/500
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 特殊样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        标签外置输入框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="textarea-example"
+        data-v-1eb98b9c=""
+      >
+        <text
+          class="textarea-example__label"
+          data-v-1eb98b9c=""
+        >
+          标签文字
+        </text>
+        <div
+          class="t-textarea t-textarea--border textarea"
+          data-v-1eb98b9c=""
+        >
+          <!--v-if-->
+          <div
+            class="t-textarea__wrapper"
+          >
+            <textarea
+              class="t-textarea__wrapper-inner"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+            />
+            <div
+              class="t-textarea__indicator"
+            >
+              0/100
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
 `;
