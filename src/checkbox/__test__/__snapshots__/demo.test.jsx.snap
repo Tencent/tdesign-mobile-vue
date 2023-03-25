@@ -1203,19 +1203,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
           
-          <svg
-            class="t-icon t-icon-check t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+          <img
+            class="t-checkbox__icon-wrapper"
+            src="/src/checkbox/assets/check-line-filled-icon.svg"
+          />
           
         </div>
         <div
@@ -2291,19 +2282,10 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
       
-      <svg
-        class="t-icon t-icon-check t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+      <img
+        class="t-checkbox__icon-wrapper"
+        src="/src/checkbox/assets/check-line-filled-icon.svg"
+      />
       
     </div>
     <div
