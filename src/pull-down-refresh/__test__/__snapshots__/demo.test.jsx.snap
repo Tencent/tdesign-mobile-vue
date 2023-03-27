@@ -36,32 +36,35 @@ exports[`PullDownRefresh > PullDownRefresh loadingTextsVue demo works fine 1`] =
     class="tdesign-mobile-demo-block"
   >
     <!--v-if-->
-    <!--v-if-->
-    
     <div
-      class="t-pull-down-refresh"
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="t-pull-down-refresh__track"
-        style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+        class="t-pull-down-refresh"
       >
         <div
-          class="t-pull-down-refresh__max"
-          style="height: 100px;"
+          class="t-pull-down-refresh__track"
+          style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
         >
           <div
-            class="t-pull-down-refresh__loading"
-            style="height: 70px;"
+            class="t-pull-down-refresh__max"
+            style="height: 100px;"
           >
-            <div />
+            <div
+              class="t-pull-down-refresh__loading"
+              style="height: 70px;"
+            >
+              <div />
+            </div>
           </div>
+          
+          下拉刷新
+          
         </div>
-        
-        下拉刷新
-        
       </div>
+      
     </div>
-    
   </div>
 </div>
 `;
@@ -77,143 +80,146 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
     data-v-43d0a031=""
   >
     <!--v-if-->
-    <!--v-if-->
-    
     <div
-      class="t-pull-down-refresh"
-      data-v-43d0a031=""
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="t-pull-down-refresh__track"
-        style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+        class="t-pull-down-refresh"
+        data-v-43d0a031=""
       >
         <div
-          class="t-pull-down-refresh__max"
-          style="height: 80px;"
+          class="t-pull-down-refresh__track"
+          style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
         >
           <div
-            class="t-pull-down-refresh__loading"
-            style="height: 50px;"
+            class="t-pull-down-refresh__max"
+            style="height: 80px;"
           >
-            <div />
+            <div
+              class="t-pull-down-refresh__loading"
+              style="height: 50px;"
+            >
+              <div />
+            </div>
           </div>
-        </div>
-        
-        
-        <h1
-          class="title"
-          data-v-43d0a031=""
-        >
-          PullDownRefresh 下拉刷新
-        </h1>
-        <p
-          class="summary"
-          data-v-43d0a031=""
-        >
-          用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
-        </p>
-        <div
-          class="tdesign-mobile-block"
-          data-v-43d0a031=""
-        >
-          拖拽该区域演示 顶部下拉刷新
-        </div>
-        <div
-          class="group"
-          data-v-43d0a031=""
-        >
           
+          
+          <h1
+            class="title"
+            data-v-43d0a031=""
+          >
+            PullDownRefresh 下拉刷新
+          </h1>
+          <p
+            class="summary"
+            data-v-43d0a031=""
+          >
+            用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
+          </p>
           <div
-            class="t-skeleton item"
+            class="tdesign-mobile-block"
+            data-v-43d0a031=""
+          >
+            拖拽该区域演示 顶部下拉刷新
+          </div>
+          <div
+            class="group"
             data-v-43d0a031=""
           >
             
             <div
-              class="t-skeleton__content"
+              class="t-skeleton item"
+              data-v-43d0a031=""
             >
               
               <div
-                class="t-skeleton__row"
+                class="t-skeleton__content"
               >
                 
                 <div
-                  class="t-skeleton__col t-skeleton--type-text"
-                />
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text"
+                  />
+                  
+                </div>
+                <div
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text"
+                    style="width: 100px;"
+                  />
+                  
+                </div>
+                <div
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text"
+                    style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                  />
+                  
+                </div>
                 
               </div>
+              
+            </div>
+            <div
+              class="t-skeleton item"
+              data-v-43d0a031=""
+            >
+              
               <div
-                class="t-skeleton__row"
+                class="t-skeleton__content"
               >
                 
                 <div
-                  class="t-skeleton__col t-skeleton--type-text"
-                  style="width: 100px;"
-                />
-                
-              </div>
-              <div
-                class="t-skeleton__row"
-              >
-                
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text"
+                  />
+                  
+                </div>
                 <div
-                  class="t-skeleton__col t-skeleton--type-text"
-                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text"
+                    style="width: 100px;"
+                  />
+                  
+                </div>
+                <div
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text"
+                    style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                  />
+                  
+                </div>
                 
               </div>
               
             </div>
             
           </div>
-          <div
-            class="t-skeleton item"
-            data-v-43d0a031=""
-          >
-            
-            <div
-              class="t-skeleton__content"
-            >
-              
-              <div
-                class="t-skeleton__row"
-              >
-                
-                <div
-                  class="t-skeleton__col t-skeleton--type-text"
-                />
-                
-              </div>
-              <div
-                class="t-skeleton__row"
-              >
-                
-                <div
-                  class="t-skeleton__col t-skeleton--type-text"
-                  style="width: 100px;"
-                />
-                
-              </div>
-              <div
-                class="t-skeleton__row"
-              >
-                
-                <div
-                  class="t-skeleton__col t-skeleton--type-text"
-                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
-                
-              </div>
-              
-            </div>
-            
-          </div>
+          
           
         </div>
-        
-        
       </div>
+      
     </div>
-    
   </div>
 </div>
 `;
@@ -226,32 +232,35 @@ exports[`PullDownRefresh > PullDownRefresh timeoutVue demo works fine 1`] = `
     class="tdesign-mobile-demo-block"
   >
     <!--v-if-->
-    <!--v-if-->
-    
     <div
-      class="t-pull-down-refresh"
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="t-pull-down-refresh__track"
-        style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+        class="t-pull-down-refresh"
       >
         <div
-          class="t-pull-down-refresh__max"
-          style="height: 80px;"
+          class="t-pull-down-refresh__track"
+          style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
         >
           <div
-            class="t-pull-down-refresh__loading"
-            style="height: 50px;"
+            class="t-pull-down-refresh__max"
+            style="height: 80px;"
           >
-            <div />
+            <div
+              class="t-pull-down-refresh__loading"
+              style="height: 50px;"
+            >
+              <div />
+            </div>
           </div>
+          
+          下拉刷新
+          
         </div>
-        
-        下拉刷新
-        
       </div>
+      
     </div>
-    
   </div>
 </div>
 `;

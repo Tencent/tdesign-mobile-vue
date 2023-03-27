@@ -1,4 +1,9 @@
 <template>
-  <t-textarea placeholder="请输入文字"></t-textarea>
+  <t-textarea class="textarea-example" placeholder="请输入文字"></t-textarea>
 </template>
-<script lang="ts" setup></script>
+
+<style lang="less" scoped>
+.textarea-example {
+  height: 128px;
+}
+</style>

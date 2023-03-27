@@ -2300,1100 +2300,1803 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
     用于任务步骤展示或任务进度展示。
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      横向可操作步骤条
-    </p>
-    
-    
     <div
-      class="step-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        
-        <div
-          class="t-step t-step--default t-step--finish"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                1
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default t-step--process"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        
-        <div
-          class="t-step t-step--default t-step--finish"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                1
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default t-step--process"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+        横向可操作步骤条
+      </p>
     </div>
     <div
-      class="step-demo"
+      class="tdesign-mobile-demo-block__slot"
     >
+      
+      
       <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
-        default-value="1"
+        class="step-demo"
       >
-        
         <div
-          class="t-step t-step--default t-step--process"
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
         >
+          
           <div
-            class="t-step__inner"
+            class="t-step t-step--default t-step--finish"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                1
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
           <div
-            class="t-step__inner"
+            class="t-step t-step--default t-step--process"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
+          
         </div>
         <div
-          class="t-step t-step--default"
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
         >
+          
           <div
-            class="t-step__inner"
+            class="t-step t-step--default t-step--finish"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                3
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
+          <div
+            class="t-step t-step--default t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-        
       </div>
       <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
-        default-value="1"
+        class="step-demo"
       >
-        
         <div
-          class="t-step t-step--default t-step--process"
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
+          default-value="1"
         >
+          
           <div
-            class="t-step__inner"
+            class="t-step t-step--default t-step--process"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                1
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
           <div
-            class="t-step__inner"
+            class="t-step t-step--default"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
           <div
-            class="t-step__inner"
+            class="t-step t-step--default"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                3
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
+          
         </div>
-        
+        <div
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
+          default-value="1"
+        >
+          
+          <div
+            class="t-step t-step--default t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
+      <div
+        class="step-demo"
+      >
+        <div
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--default t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  4
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
+        >
+          
+          
+          <div
+            class="t-step t-step--default t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  4
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+      
+      
     </div>
-    <div
-      class="step-demo"
-    >
-      <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
-      >
-        
-        <div
-          class="t-step t-step--default t-step--finish"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                1
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default t-step--process"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                3
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                4
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
-      >
-        
-        
-        <div
-          class="t-step t-step--default t-step--finish"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                1
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default t-step--process"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                3
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                4
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-      </div>
-    </div>
-    
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      横向带图标可操作步骤条
-    </p>
-    
     <div
-      class="step-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
-        <div
-          class="t-step t-step--default t-step--finish"
-        >
-          <div
-            class="t-step__inner t-step__inner__icon"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                
-                <svg
-                  class="t-icon t-icon-user"
-                >
-                  <use
-                    href="#t-icon-user"
-                  />
-                </svg>
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default t-step--process"
-        >
-          <div
-            class="t-step__inner t-step__inner__icon"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                
-                <svg
-                  class="t-icon t-icon-location"
-                >
-                  <use
-                    href="#t-icon-location"
-                  />
-                </svg>
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
-          <div
-            class="t-step__inner t-step__inner__icon"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                
-                <svg
-                  class="t-icon t-icon-time"
-                >
-                  <use
-                    href="#t-icon-time"
-                  />
-                </svg>
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      <div
-        class="t-steps t-steps--horizontal t-steps--default-anchor"
-      >
-        
-        <div
-          class="t-step t-step--default t-step--finish"
-        >
-          <div
-            class="t-step__inner t-step__inner__icon"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                
-                <svg
-                  class="t-icon t-icon-user"
-                >
-                  <use
-                    href="#t-icon-user"
-                  />
-                </svg>
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default t-step--process"
-        >
-          <div
-            class="t-step__inner t-step__inner__icon"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                
-                <svg
-                  class="t-icon t-icon-location"
-                >
-                  <use
-                    href="#t-icon-location"
-                  />
-                </svg>
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
-          <div
-            class="t-step__inner t-step__inner__icon"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                
-                <svg
-                  class="t-icon t-icon-time"
-                >
-                  <use
-                    href="#t-icon-time"
-                  />
-                </svg>
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                步骤描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                辅助信息文字最多两行
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+        横向带图标可操作步骤条
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="step-demo"
+      >
+        <div
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--default t-step--finish"
+          >
+            <div
+              class="t-step__inner t-step__inner__icon"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-user"
+                  >
+                    <use
+                      href="#t-icon-user"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default t-step--process"
+          >
+            <div
+              class="t-step__inner t-step__inner__icon"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-location"
+                  >
+                    <use
+                      href="#t-icon-location"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner t-step__inner__icon"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-time"
+                  >
+                    <use
+                      href="#t-icon-time"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-steps t-steps--horizontal t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--default t-step--finish"
+          >
+            <div
+              class="t-step__inner t-step__inner__icon"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-user"
+                  >
+                    <use
+                      href="#t-icon-user"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default t-step--process"
+          >
+            <div
+              class="t-step__inner t-step__inner__icon"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-location"
+                  >
+                    <use
+                      href="#t-icon-location"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner t-step__inner__icon"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-time"
+                  >
+                    <use
+                      href="#t-icon-time"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  步骤描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      横向只读步骤条
-    </p>
-    
-    
     <div
-      class="step-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
+        横向只读步骤条
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="step-demo"
+      >
         <div
-          class="t-step t-step--process"
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
         >
+          
           <div
-            class="t-step__inner"
+            class="t-step t-step--process"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                1
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                当前步骤
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-step"
-        >
           <div
-            class="t-step__inner"
+            class="t-step"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                2
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--process"
+          >
             <div
-              class="t-step-content"
+              class="t-step__inner"
             >
               <div
-                class="t-step-title"
+                class="t-step-icon"
               >
-                未完成步骤
+                <div
+                  class="t-step-icon__number"
+                >
+                  1
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
               </div>
               <div
-                class="t-step-extra"
+                class="t-step-content"
               >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--error"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-close"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  错误步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="step-demo"
+      >
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--error"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-close"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  错误步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="step-demo"
+      >
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+<<<<<<< HEAD
                 <!---->
               </div>
             </div>
@@ -4551,489 +5254,994 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
                 class="t-step-icon__number"
               >
                 2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                当前步骤
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+=======
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+>>>>>>> develop
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-step"
-          data-v-f771572e=""
-        >
           <div
-            class="t-step__inner"
+            class="t-step"
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                3
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                未完成步骤
+                <div
+                  class="t-step-icon__number"
+                >
+                  4
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
+          
         </div>
-        
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  4
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-steps t-steps--horizontal t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--error"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-close"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  错误步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  4
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  辅助信息文字最多两行
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        竖向只读步骤条
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
       <div
-        class="t-steps t-steps--vertical t-steps--readonly t-steps--default-anchor"
+        class="step-demo"
         data-v-f771572e=""
       >
-        
         <div
-          class="t-step t-step--finish"
+          class="t-steps t-steps--vertical t-steps--readonly t-steps--default-anchor"
           data-v-f771572e=""
         >
+          
           <div
-            class="t-step__inner"
+            class="t-step t-step--finish"
+            data-v-f771572e=""
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                <svg
-                  class="t-icon t-icon-check"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
+                <div
+                  class="t-step-icon__number"
                 >
-                  <path
-                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                已完成步骤
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
               </div>
               <div
-                class="t-step-extra"
+                class="t-step-content"
               >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--error"
-          data-v-f771572e=""
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                <svg
-                  class="t-icon t-icon-close"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
+                <div
+                  class="t-step-title"
                 >
-                  <path
-                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                错误步骤
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="t-step"
-          data-v-f771572e=""
-        >
           <div
-            class="t-step__inner"
+            class="t-step t-step--process"
+            data-v-f771572e=""
           >
             <div
-              class="t-step-icon"
+              class="t-step__inner"
             >
               <div
-                class="t-step-icon__number"
+                class="t-step-icon"
               >
-                3
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                未完成步骤
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
               </div>
               <div
-                class="t-step-description"
+                class="t-step-content"
               >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
               </div>
             </div>
           </div>
+          <div
+            class="t-step"
+            data-v-f771572e=""
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-        
+        <div
+          class="t-steps t-steps--vertical t-steps--readonly t-steps--default-anchor"
+          data-v-f771572e=""
+        >
+          
+          <div
+            class="t-step t-step--finish"
+            data-v-f771572e=""
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--error"
+            data-v-f771572e=""
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-close"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  错误步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+            data-v-f771572e=""
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      竖向简化只读步骤条
-    </p>
-    
     <div
-      class="step-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-steps t-steps--vertical t-steps--dot-anchor"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
-        <div
-          class="t-step t-step--default t-step--finish"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number t-step-icon__dot"
-              >
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                事件描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default t-step--process"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number t-step-icon__dot"
-              >
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                事件描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--default"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number t-step-icon__dot"
-              >
-                
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                事件描述
-              </div>
-              <div
-                class="t-step-description"
-              >
-                
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+        竖向简化只读步骤条
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="step-demo"
+      >
+        <div
+          class="t-steps t-steps--vertical t-steps--dot-anchor"
+        >
+          
+          <div
+            class="t-step t-step--default t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number t-step-icon__dot"
+                >
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  事件描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number t-step-icon__dot"
+                >
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  事件描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--default"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number t-step-icon__dot"
+                >
+                  
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  事件描述
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      自定义内容步骤条
-    </p>
-    
     <div
-      class="step-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-steps t-steps--vertical t-steps--readonly t-steps--default-anchor"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
-        <div
-          class="t-step t-step--finish"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                <svg
-                  class="t-icon t-icon-check"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                已完成步骤
-              </div>
-              <div
-                class="t-step-description"
-              >
-                可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                
-                <img
-                  alt=""
-                  src="https://0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png"
-                />
-                
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step t-step--process"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                2
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                当前步骤
-              </div>
-              <div
-                class="t-step-description"
-              >
-                可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="t-step"
-        >
-          <div
-            class="t-step__inner"
-          >
-            <div
-              class="t-step-icon"
-            >
-              <div
-                class="t-step-icon__number"
-              >
-                3
-              </div>
-            </div>
-            <div
-              class="t-step-content"
-            >
-              <div
-                class="t-step-title"
-              >
-                未完成步骤
-              </div>
-              <div
-                class="t-step-description"
-              >
-                可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。
-              </div>
-              <div
-                class="t-step-extra"
-              >
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
+        自定义内容步骤条
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="step-demo"
+      >
+        <div
+          class="t-steps t-steps--vertical t-steps--readonly t-steps--default-anchor"
+        >
+          
+          <div
+            class="t-step t-step--finish"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M6.43 9.92l6.23-6.22.92.92-7.15 7.14L1.97 7.3l.92-.92 3.54 3.54z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  已完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  
+                  <img
+                    alt=""
+                    src="https://0729-75822.gzc.vod.tencent-cloud.com/site_doc/tdesign-logo.png"
+                  />
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step t-step--process"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  2
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  当前步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-step"
+          >
+            <div
+              class="t-step__inner"
+            >
+              <div
+                class="t-step-icon"
+              >
+                <div
+                  class="t-step-icon__number"
+                >
+                  3
+                </div>
+              </div>
+              <div
+                class="t-step-content"
+              >
+                <div
+                  class="t-step-title"
+                >
+                  未完成步骤
+                </div>
+                <div
+                  class="t-step-description"
+                >
+                  可自定义此处内容，可自定义此处内容，可自定义此处内容可自定义此处内容可自定义此处内容。
+                </div>
+                <div
+                  class="t-step-extra"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
 `;

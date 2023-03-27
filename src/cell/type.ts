@@ -60,3 +60,20 @@ export interface TdCellProps {
    */
   onClick?: (context: { e: MouseEvent }) => void;
 }
+
+export interface TdCellGroupProps {
+  /**
+   * 是否显示组边框
+   */
+  bordered?: boolean;
+  /**
+   * 单元格组风格
+   * @default default
+   */
+  theme?: 'default' | 'card';
+  /**
+   * 单元格组标题
+   * @default ''
+   */
+  title?: string;
+}

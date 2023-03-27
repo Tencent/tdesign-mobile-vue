@@ -102,330 +102,52 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     当网络较慢时，在页面真实数据加载之前，给用户展示出页面的大致结构。
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
+    <div
+      class="tdesign-mobile-demo-block__header"
     >
-      01 类型
-    </h2>
-    <!--v-if-->
-    
-    
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 类型
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+    </div>
   </div>
   
   <div
     class="tdesign-mobile-demo-block"
     data-v-9b6b90cc=""
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      头像骨架屏
-    </p>
-    
     <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-skeleton"
-        data-v-9b6b90cc=""
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
-        <div
-          class="t-skeleton__content"
-        >
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-circle"
-              style="width: 64px; height: 64px;"
-            />
-            
-          </div>
-          
-        </div>
-        
-      </div>
+        头像骨架屏
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      图片骨架屏
-    </p>
-    
     <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="t-skeleton"
-        data-v-9b6b90cc=""
-      >
-        
-        <div
-          class="t-skeleton__content"
-        >
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-rect"
-              style="width: 64px; height: 64px;"
-            />
-            
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      文本骨架屏
-    </p>
-    
-    <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
-    >
-      <div
-        class="t-skeleton"
-        data-v-9b6b90cc=""
-      >
-        
-        <div
-          class="t-skeleton__content"
-        >
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 24%; height: 16px; margin-right: 16px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 76%; height: 16px;"
-            />
-            
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      段落骨架屏
-    </p>
-    
-    <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
-    >
-      <div
-        class="t-skeleton"
-        data-v-9b6b90cc=""
-      >
-        
-        <div
-          class="t-skeleton__content"
-        >
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 55%;"
-            />
-            
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-  
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      宫格骨架屏
-    </p>
-    
-    <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
-    >
-      <div
-        class="t-skeleton"
-        data-v-9b6b90cc=""
-      >
-        
-        <div
-          class="t-skeleton__content"
-        >
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 48px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 48px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 48px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 48px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 48px;"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 16px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 16px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 16px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 16px;"
-            />
-            <div
-              class="t-skeleton__col t-skeleton--type-text"
-              style="width: 48px; height: 16px;"
-            />
-            
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      单元格骨架屏
-    </p>
-    
-    <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
-    >
-      <div
-        class="group"
-        data-v-3ed9d44e=""
+        class="skeleton-demo"
         data-v-9b6b90cc=""
       >
         <div
-          class="t-skeleton group-avatar"
-          data-v-3ed9d44e=""
+          class="t-skeleton"
+          data-v-9b6b90cc=""
         >
           
           <div
@@ -438,40 +160,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-circle"
-                style="width: 48px; height: 48px;"
-              />
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        <div
-          class="t-skeleton group-content"
-          data-v-3ed9d44e=""
-        >
-          
-          <div
-            class="t-skeleton__content"
-          >
-            
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 50%;"
-              />
-              
-            </div>
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 100%;"
+                style="width: 64px; height: 64px;"
               />
               
             </div>
@@ -480,19 +169,34 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           
         </div>
       </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        图片骨架屏
+      </p>
     </div>
     <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="group"
-        data-v-58b278f0=""
+        class="skeleton-demo"
         data-v-9b6b90cc=""
       >
         <div
-          class="t-skeleton group-avatar"
-          data-v-58b278f0=""
+          class="t-skeleton"
+          data-v-9b6b90cc=""
         >
           
           <div
@@ -505,40 +209,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-rect"
-                style="width: 48px; height: 48px;"
-              />
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        <div
-          class="t-skeleton group-content"
-          data-v-58b278f0=""
-        >
-          
-          <div
-            class="t-skeleton__content"
-          >
-            
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 50%;"
-              />
-              
-            </div>
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 100%;"
+                style="width: 64px; height: 64px;"
               />
               
             </div>
@@ -547,32 +218,34 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
     data-v-9b6b90cc=""
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      图片组合骨架屏
-    </p>
-    
     <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
+      class="tdesign-mobile-demo-block__header"
     >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        文本骨架屏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
       <div
-        class="group"
+        class="skeleton-demo"
         data-v-9b6b90cc=""
-        data-v-ac6b2376=""
       >
         <div
-          class="t-skeleton item"
-          data-v-ac6b2376=""
+          class="t-skeleton"
+          data-v-9b6b90cc=""
         >
           
           <div
@@ -585,7 +258,6 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="height: 171px;"
               />
               
             </div>
@@ -595,86 +267,11 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
               
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-              />
-              
-            </div>
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 107px;"
-              />
-              
-            </div>
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 93px;"
+                style="width: 24%; height: 16px; margin-right: 16px;"
               />
               <div
                 class="t-skeleton__col t-skeleton--type-text"
-                style="width: 32px; margin-left: 41px;"
-              />
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        <div
-          class="t-skeleton item"
-          data-v-ac6b2376=""
-        >
-          
-          <div
-            class="t-skeleton__content"
-          >
-            
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="height: 171px;"
-              />
-              
-            </div>
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-              />
-              
-            </div>
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 107px;"
-              />
-              
-            </div>
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 93px;"
-              />
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 32px; margin-left: 41px;"
+                style="width: 76%; height: 16px;"
               />
               
             </div>
@@ -683,104 +280,34 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
     data-v-9b6b90cc=""
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      02 动画
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      渐变加载动画
-    </p>
-    
     <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-skeleton"
-        data-v-9b6b90cc=""
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
-        <div
-          class="t-skeleton__content"
-        >
-          
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-            />
-            
-          </div>
-          <div
-            class="t-skeleton__row"
-          >
-            
-            <div
-              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
-              style="width: 55%;"
-            />
-            
-          </div>
-          
-        </div>
-        
-      </div>
+        段落骨架屏
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-9b6b90cc=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      闪烁加载动画
-    </p>
-    
     <div
-      class="skeleton-demo"
-      data-v-9b6b90cc=""
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="group"
-        data-v-51a62a47=""
+        class="skeleton-demo"
         data-v-9b6b90cc=""
       >
         <div
-          class="t-skeleton group-avatar"
-          data-v-51a62a47=""
+          class="t-skeleton"
+          data-v-9b6b90cc=""
         >
           
           <div
@@ -792,30 +319,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-skeleton__col t-skeleton--type-circle"
-                style="width: 48px; height: 48px;"
-              />
-              
-            </div>
-            
-          </div>
-          
-        </div>
-        <div
-          class="t-skeleton group-content"
-          data-v-51a62a47=""
-        >
-          
-          <div
-            class="t-skeleton__content"
-          >
-            
-            <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                class="t-skeleton__col t-skeleton--type-text"
               />
               
             </div>
@@ -824,7 +328,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                class="t-skeleton__col t-skeleton--type-text"
               />
               
             </div>
@@ -833,7 +337,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                class="t-skeleton__col t-skeleton--type-text"
               />
               
             </div>
@@ -842,7 +346,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                class="t-skeleton__col t-skeleton--type-text"
                 style="width: 55%;"
               />
               
@@ -852,8 +356,584 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
           
         </div>
       </div>
+      
     </div>
-    
+  </div>
+  
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        宫格骨架屏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="skeleton-demo"
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="t-skeleton"
+          data-v-9b6b90cc=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 48px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 48px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 48px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 48px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 48px;"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 16px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 16px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 16px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 16px;"
+              />
+              <div
+                class="t-skeleton__col t-skeleton--type-text"
+                style="width: 48px; height: 16px;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        单元格骨架屏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="skeleton-demo"
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="group"
+          data-v-3ed9d44e=""
+          data-v-9b6b90cc=""
+        >
+          <div
+            class="t-skeleton group-avatar"
+            data-v-3ed9d44e=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-circle"
+                  style="width: 48px; height: 48px;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton group-content"
+            data-v-3ed9d44e=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 50%;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 100%;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div
+        class="skeleton-demo"
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="group"
+          data-v-58b278f0=""
+          data-v-9b6b90cc=""
+        >
+          <div
+            class="t-skeleton group-avatar"
+            data-v-58b278f0=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-rect"
+                  style="width: 48px; height: 48px;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton group-content"
+            data-v-58b278f0=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 50%;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 100%;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        图片组合骨架屏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="skeleton-demo"
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="group"
+          data-v-9b6b90cc=""
+          data-v-ac6b2376=""
+        >
+          <div
+            class="t-skeleton item"
+            data-v-ac6b2376=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="height: 171px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 107px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 93px;"
+                />
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 32px; margin-left: 41px;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton item"
+            data-v-ac6b2376=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="height: 171px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 107px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 93px;"
+                />
+                <div
+                  class="t-skeleton__col t-skeleton--type-text"
+                  style="width: 32px; margin-left: 41px;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-9b6b90cc=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 动画
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        渐变加载动画
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="skeleton-demo"
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="t-skeleton"
+          data-v-9b6b90cc=""
+        >
+          
+          <div
+            class="t-skeleton__content"
+          >
+            
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+              />
+              
+            </div>
+            <div
+              class="t-skeleton__row"
+            >
+              
+              <div
+                class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-gradient"
+                style="width: 55%;"
+              />
+              
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-9b6b90cc=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        闪烁加载动画
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="skeleton-demo"
+        data-v-9b6b90cc=""
+      >
+        <div
+          class="group"
+          data-v-51a62a47=""
+          data-v-9b6b90cc=""
+        >
+          <div
+            class="t-skeleton group-avatar"
+            data-v-51a62a47=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-circle"
+                  style="width: 48px; height: 48px;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          <div
+            class="t-skeleton group-content"
+            data-v-51a62a47=""
+          >
+            
+            <div
+              class="t-skeleton__content"
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-flashed"
+                  style="width: 55%;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
 `;

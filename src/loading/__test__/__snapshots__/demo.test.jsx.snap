@@ -1,34 +1,5 @@
 // Vitest Snapshot v1
 
-exports[`Loading > Loading barVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="t-loading t-loading--bar"
-    style=""
-  >
-    <!--v-if-->
-  </div>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-    role="button"
-  >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      页面进度条加载
-      
-    </span>
-  </button>
-  
-</div>
-`;
-
 exports[`Loading > Loading baseVue demo works fine 1`] = `
 <div
   data-v-app=""
@@ -37,9 +8,8 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
   <div
     class="t-loading"
     data-v-4a68c35c=""
-    style=""
+    style="font-size: 20px;"
   >
-    
     
     <svg
       class="t-loading__gradient t-icon-loading"
@@ -64,14 +34,12 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
     
     <!--v-if-->
     <!---->
-    
   </div>
   <div
     class="t-loading"
     data-v-4a68c35c=""
-    style=""
+    style="font-size: 20px;"
   >
-    
     
     <span
       class="t-loading__spinner"
@@ -119,23 +87,33 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
     
     <!--v-if-->
     <!---->
-    
   </div>
   <div
     class="t-loading"
     data-v-4a68c35c=""
-    style=""
+    style="font-size: 20px;"
   >
-    
     
     <div
       class="t-loading__dots"
       style="animation-duration: 800ms;"
-    />
+    >
+      <div
+        class="t-loading__dot"
+        style="animation-duration: 0.8s; animation-delay: 0s;"
+      />
+      <div
+        class="t-loading__dot"
+        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+      />
+      <div
+        class="t-loading__dot"
+        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+      />
+    </div>
     
     <!--v-if-->
     <!---->
-    
   </div>
   
 </div>
@@ -174,13 +152,11 @@ exports[`Loading > Loading delayVue demo works fine 1`] = `
   <div
     class="t-loading"
     data-v-559e6688=""
-    style=""
+    style="font-size: 20px;"
   >
-    
     <!--v-if-->
     <!--v-if-->
     <!---->
-    
   </div>
   
 </div>
@@ -194,9 +170,8 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
   <div
     class="t-loading"
     data-v-c48bb9cc=""
-    style=""
+    style="font-size: 20px;"
   >
-    
     
     <svg
       class="t-loading__gradient t-icon-loading"
@@ -225,14 +200,12 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
       加载中...
     </span>
     <!---->
-    
   </div>
   <div
     class="t-loading"
     data-v-c48bb9cc=""
-    style=""
+    style="font-size: 20px;"
   >
-    
     
     <span
       class="t-loading__spinner"
@@ -284,7 +257,6 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
       加载中...
     </span>
     <!---->
-    
   </div>
   
 </div>
@@ -308,270 +280,175 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     用于表示页面或操作的加载状态，给予用户反馈的同时减缓等待的焦虑感，由一个或一组反馈动效组成。
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-448d2bed=""
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      纯icon
-    </p>
-    
     <div
-      class="loading-demo first"
-      data-v-448d2bed=""
+      class="tdesign-mobile-demo-block__header"
     >
-      
-      <div
-        class="t-loading"
-        data-v-4a68c35c=""
-        style=""
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        
-        
-        <svg
-          class="t-loading__gradient t-icon-loading"
-          height="1em"
-          style="animation-duration: 800ms;"
-          version="1.1"
-          viewBox="0 0 12 12"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <foreignobject
-            height="12"
-            width="12"
-            x="0"
-            y="0"
-          >
-            <div
-              class="t-loading__gradient-conic"
-            />
-          </foreignobject>
-        </svg>
-        
-        <!--v-if-->
-        <!---->
-        
-      </div>
-      <div
-        class="t-loading"
-        data-v-4a68c35c=""
-        style=""
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        
-        
-        <span
-          class="t-loading__spinner"
-          style="animation-duration: 800ms;"
-        >
-          
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-1"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-2"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-3"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-4"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-5"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-6"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-7"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-8"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-9"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-10"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-11"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-12"
-          />
-          
-        </span>
-        
-        <!--v-if-->
-        <!---->
-        
-      </div>
-      <div
-        class="t-loading"
-        data-v-4a68c35c=""
-        style=""
-      >
-        
-        
-        <div
-          class="t-loading__dots"
-          style="animation-duration: 800ms;"
-        />
-        
-        <!--v-if-->
-        <!---->
-        
-      </div>
-      
+        纯图标
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      icon加文字横向
-    </p>
-    
     <div
-      class="loading-demo"
-      data-v-448d2bed=""
+      class="tdesign-mobile-demo-block__slot"
     >
       
       <div
-        class="t-loading"
-        data-v-c48bb9cc=""
-        style=""
-      >
-        
-        
-        <svg
-          class="t-loading__gradient t-icon-loading"
-          height="1em"
-          style="animation-duration: 800ms;"
-          version="1.1"
-          viewBox="0 0 12 12"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <foreignobject
-            height="12"
-            width="12"
-            x="0"
-            y="0"
-          >
-            <div
-              class="t-loading__gradient-conic"
-            />
-          </foreignobject>
-        </svg>
-        
-        <span
-          class="t-loading__text"
-        >
-          加载中...
-        </span>
-        <!---->
-        
-      </div>
-      <div
-        class="t-loading"
-        data-v-c48bb9cc=""
-        style=""
-      >
-        
-        
-        <span
-          class="t-loading__spinner"
-          style="animation-duration: 800ms;"
-        >
-          
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-1"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-2"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-3"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-4"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-5"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-6"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-7"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-8"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-9"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-10"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-11"
-          />
-          <i
-            class="t-loading__spinner--line t-loading__spinner--line-12"
-          />
-          
-        </span>
-        
-        <span
-          class="t-loading__text"
-        >
-          加载中...
-        </span>
-        <!---->
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      icon加文字竖向
-    </p>
-    
-    <div
-      class="loading-demo"
-      data-v-448d2bed=""
-    >
-      <div
+        class="loading-demo first"
         data-v-448d2bed=""
       >
+        
         <div
-          class="t-loading t-loading--vertical"
-          style=""
+          class="t-loading"
+          data-v-4a68c35c=""
+          style="font-size: 20px;"
         >
           
+          <svg
+            class="t-loading__gradient t-icon-loading"
+            height="1em"
+            style="animation-duration: 800ms;"
+            version="1.1"
+            viewBox="0 0 12 12"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <foreignobject
+              height="12"
+              width="12"
+              x="0"
+              y="0"
+            >
+              <div
+                class="t-loading__gradient-conic"
+              />
+            </foreignobject>
+          </svg>
+          
+          <!--v-if-->
+          <!---->
+        </div>
+        <div
+          class="t-loading"
+          data-v-4a68c35c=""
+          style="font-size: 20px;"
+        >
+          
+          <span
+            class="t-loading__spinner"
+            style="animation-duration: 800ms;"
+          >
+            
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-1"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-2"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-3"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-4"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-5"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-6"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-7"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-8"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-9"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-10"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-11"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-12"
+            />
+            
+          </span>
+          
+          <!--v-if-->
+          <!---->
+        </div>
+        <div
+          class="t-loading"
+          data-v-4a68c35c=""
+          style="font-size: 20px;"
+        >
+          
+          <div
+            class="t-loading__dots"
+            style="animation-duration: 800ms;"
+          >
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+            />
+          </div>
+          
+          <!--v-if-->
+          <!---->
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-448d2bed=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        图标加文字横向
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="loading-demo"
+        data-v-448d2bed=""
+      >
+        
+        <div
+          class="t-loading"
+          data-v-c48bb9cc=""
+          style="font-size: 20px;"
+        >
           
           <svg
             class="t-loading__gradient t-icon-loading"
@@ -597,41 +474,222 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           <span
             class="t-loading__text"
           >
-            加载中
+            加载中...
           </span>
           <!---->
-          
         </div>
+        <div
+          class="t-loading"
+          data-v-c48bb9cc=""
+          style="font-size: 20px;"
+        >
+          
+          <span
+            class="t-loading__spinner"
+            style="animation-duration: 800ms;"
+          >
+            
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-1"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-2"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-3"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-4"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-5"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-6"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-7"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-8"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-9"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-10"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-11"
+            />
+            <i
+              class="t-loading__spinner--line t-loading__spinner--line-12"
+            />
+            
+          </span>
+          
+          <span
+            class="t-loading__text"
+          >
+            加载中...
+          </span>
+          <!---->
+        </div>
+        
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
     data-v-448d2bed=""
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      纯文字
-    </p>
-    
     <div
-      class="loading-demo"
-      data-v-448d2bed=""
+      class="tdesign-mobile-demo-block__header"
     >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        图标加文字竖向
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
       <div
-        class="pure-text-demo"
+        class="loading-demo"
         data-v-448d2bed=""
-        data-v-4d8f0c32=""
+      >
+        <div
+          class="container"
+          data-v-3ab7b9bc=""
+          data-v-448d2bed=""
+        >
+          <div
+            class="t-loading t-loading--vertical"
+            data-v-3ab7b9bc=""
+            style="font-size: 20px;"
+          >
+            
+            <svg
+              class="t-loading__gradient t-icon-loading"
+              height="1em"
+              style="animation-duration: 800ms;"
+              version="1.1"
+              viewBox="0 0 12 12"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <foreignobject
+                height="12"
+                width="12"
+                x="0"
+                y="0"
+              >
+                <div
+                  class="t-loading__gradient-conic"
+                />
+              </foreignobject>
+            </svg>
+            
+            <span
+              class="t-loading__text"
+            >
+              加载中
+            </span>
+            <!---->
+          </div>
+          <div
+            class="t-loading t-loading--vertical"
+            data-v-3ab7b9bc=""
+            style="font-size: 20px;"
+          >
+            
+            <span
+              class="t-loading__spinner"
+              style="animation-duration: 800ms;"
+            >
+              
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-1"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-2"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-3"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-4"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-5"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-6"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-7"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-8"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-9"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-10"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-11"
+              />
+              <i
+                class="t-loading__spinner--line t-loading__spinner--line-12"
+              />
+              
+            </span>
+            
+            <span
+              class="t-loading__text"
+            >
+              加载中...
+            </span>
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-448d2bed=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        纯文字
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="loading-demo"
+        data-v-448d2bed=""
       >
         <div
           class="t-loading"
-          data-v-4d8f0c32=""
-          style=""
+          data-v-448d2bed=""
+          style="font-size: 20px;"
         >
-          
           <!--v-if-->
           <span
             class="t-loading__text t-loading__text--only"
@@ -639,295 +697,45 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             加载中...
           </span>
           <!---->
-          
-        </div>
-        <div
-          class="t-loading"
-          data-v-4d8f0c32=""
-          style=""
-        >
-          
-          
-          <!--v-if-->
-          
-          <span
-            class="t-loading__text t-loading__text--error t-loading__text--only"
-          >
-            加载失败
-          </span>
-          <!---->
-          
-        </div>
-        <div
-          class="t-loading"
-          data-v-4d8f0c32=""
-          style=""
-        >
-          
-          <!--v-if-->
-          <!--v-if-->
-          
-          <div
-            class="custom-error"
-            data-v-4d8f0c32=""
-          >
-             加载失败 
-            <span
-              data-v-4d8f0c32=""
-            >
-              刷新
-            </span>
-          </div>
-          
-          
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      进度条加载
-    </p>
-    
-    <div
-      class="loading-demo"
-      data-v-448d2bed=""
-    >
-      
-      <div
-        class="t-loading t-loading--bar"
-        style=""
-      >
-        <!--v-if-->
-      </div>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
-      >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-          页面进度条加载
-          
-        </span>
-      </button>
-      
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
-  >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      02 状态
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      如果加载状态在延迟内结束，则不显示
-    </p>
-    
-    <div
-      class="loading-demo loading-demo--column"
-      data-v-448d2bed=""
-    >
-      
-      <div
-        class="switch-wrap"
-        data-v-559e6688=""
-      >
-        <div
-          class="t-switch t-switch--medium"
-          data-v-559e6688=""
-        >
-          <div
-            class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
-          >
-            <div
-              class="t-switch__label t-switch__label--medium"
-            >
-              <!--v-if-->
-              <!---->
-            </div>
-          </div>
-        </div>
-        <div
-          data-v-559e6688=""
-        >
-          请求结束，隐藏loading
-        </div>
-      </div>
-      <div
-        class="t-loading"
-        data-v-559e6688=""
-        style=""
-      >
-        
-        <!--v-if-->
-        <!--v-if-->
-        <!---->
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-448d2bed=""
-  >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      03 加载速度
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      加载速度可配置，加载一周的时间单位（毫秒）
-    </p>
-    
-    <div
-      class="loading-demo loading-demo--column"
-      data-v-448d2bed=""
-    >
-      
-      <div
-        class="t-loading"
-        data-v-0fadab4c=""
-        style=""
-      >
-        
-        
-        <svg
-          class="t-loading__gradient t-icon-loading"
-          height="1em"
-          style="animation-duration: 300ms;"
-          version="1.1"
-          viewBox="0 0 12 12"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <foreignobject
-            height="12"
-            width="12"
-            x="0"
-            y="0"
-          >
-            <div
-              class="t-loading__gradient-conic"
-            />
-          </foreignobject>
-        </svg>
-        
-        <span
-          class="t-loading__text"
-        >
-          加载中...
-        </span>
-        <!---->
-        
-      </div>
-      <div
-        class="slider-wrap"
-        data-v-0fadab4c=""
-      >
-        <span
-          data-v-0fadab4c=""
-          style="width: 120px; margin-right: 10px;"
-        >
-           速度调整 
-        </span>
-        <div
-          class="t-slider-wrap t-is-value"
-          data-v-0fadab4c=""
-        >
-          <div
-            class="t-slider-wrap__value--left"
-          >
-            0
-          </div>
-          <div
-            class="t-slider"
-          >
-            <!-- 总长度 -->
-            <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="width: 37.5%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 37.5%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
-            >
-              
-              
-            </div>
-          </div>
-          <!--v-if-->
-          <div
-            class="t-slider-wrap__value"
-          >
-            800
-          </div>
         </div>
       </div>
       
     </div>
-    
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-448d2bed=""
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      04 规格
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      支持自定义加载规格
-    </p>
-    
     <div
-      class="loading-demo loading-demo--column"
-      data-v-448d2bed=""
+      class="tdesign-mobile-demo-block__header"
     >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件尺寸
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
       <div
-        data-v-38fef6e8=""
+        class="loading-demo loading-demo--column"
         data-v-448d2bed=""
       >
+        
         <div
-          class="t-loading t-size-s"
+          class="tdesign-mobile-demo-block__summary"
           data-v-38fef6e8=""
-          style=""
         >
-          
+          大尺寸
+        </div>
+        <div
+          class="t-loading"
+          data-v-38fef6e8=""
+          style="font-size: 26px;"
+        >
           
           <svg
             class="t-loading__gradient t-icon-loading"
@@ -953,17 +761,21 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           <span
             class="t-loading__text"
           >
-            加载中（小）...
+            加载中...
           </span>
           <!---->
-          
         </div>
         <div
-          class="t-loading t-size-m"
+          class="tdesign-mobile-demo-block__summary"
           data-v-38fef6e8=""
-          style=""
         >
-          
+          中尺寸
+        </div>
+        <div
+          class="t-loading"
+          data-v-38fef6e8=""
+          style="font-size: 22px;"
+        >
           
           <svg
             class="t-loading__gradient t-icon-loading"
@@ -989,17 +801,21 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           <span
             class="t-loading__text"
           >
-            加载中（中）...
+            加载中...
           </span>
           <!---->
-          
         </div>
         <div
-          class="t-loading t-size-l"
+          class="tdesign-mobile-demo-block__summary"
           data-v-38fef6e8=""
-          style=""
         >
-          
+          小尺寸
+        </div>
+        <div
+          class="t-loading"
+          data-v-38fef6e8=""
+          style="font-size: 20px;"
+        >
           
           <svg
             class="t-loading__gradient t-icon-loading"
@@ -1025,91 +841,155 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           <span
             class="t-loading__text"
           >
-            加载中（大）...
+            加载中...
           </span>
           <!---->
-          
         </div>
+        
       </div>
+      
     </div>
-    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-448d2bed=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 加载速度
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        加载速度调整
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="loading-demo loading-demo--column"
+        data-v-448d2bed=""
+      >
+        
+        <div
+          class="t-loading"
+          data-v-0fadab4c=""
+          style="font-size: 20px;"
+        >
+          
+          <svg
+            class="t-loading__gradient t-icon-loading"
+            height="1em"
+            style="animation-duration: 600ms;"
+            version="1.1"
+            viewBox="0 0 12 12"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <foreignobject
+              height="12"
+              width="12"
+              x="0"
+              y="0"
+            >
+              <div
+                class="t-loading__gradient-conic"
+              />
+            </foreignobject>
+          </svg>
+          
+          <span
+            class="t-loading__text"
+          >
+            加载中...
+          </span>
+          <!---->
+        </div>
+        <div
+          class="slider-wrap"
+          data-v-0fadab4c=""
+        >
+          <div
+            class="t-slider-wrap"
+            data-v-0fadab4c=""
+          >
+            <!--v-if-->
+            <div
+              class="t-slider"
+            >
+              <!-- 总长度 -->
+              <div
+                class="t-slider__bar"
+              />
+              <!-- 滑块长度 -->
+              <div
+                class="t-slider__track"
+                style="width: 50%;"
+              />
+              <!-- 滑块操作 -->
+              
+              <div
+                class="t-slider__handle"
+                style="left: 50%;"
+              />
+              
+              <!-- 刻度内容 -->
+              <div
+                class="t-slider__mark"
+              >
+                
+                
+              </div>
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
   </div>
 </div>
 `;
 
 exports[`Loading > Loading pureTextVue demo works fine 1`] = `
 <div
-  class="pure-text-demo"
-  data-v-4d8f0c32=""
+  class="t-loading"
+  style="font-size: 20px;"
 >
-  <div
-    class="t-loading"
-    data-v-4d8f0c32=""
-    style=""
+  <!--v-if-->
+  <span
+    class="t-loading__text t-loading__text--only"
   >
-    
-    <!--v-if-->
-    <span
-      class="t-loading__text t-loading__text--only"
-    >
-      加载中...
-    </span>
-    <!---->
-    
-  </div>
-  <div
-    class="t-loading"
-    data-v-4d8f0c32=""
-    style=""
-  >
-    
-    
-    <!--v-if-->
-    
-    <span
-      class="t-loading__text t-loading__text--error t-loading__text--only"
-    >
-      加载失败
-    </span>
-    <!---->
-    
-  </div>
-  <div
-    class="t-loading"
-    data-v-4d8f0c32=""
-    style=""
-  >
-    
-    <!--v-if-->
-    <!--v-if-->
-    
-    <div
-      class="custom-error"
-      data-v-4d8f0c32=""
-    >
-       加载失败 
-      <span
-        data-v-4d8f0c32=""
-      >
-        刷新
-      </span>
-    </div>
-    
-    
-  </div>
+    加载中...
+  </span>
+  <!---->
 </div>
 `;
 
 exports[`Loading > Loading sizeVue demo works fine 1`] = `
 <div
-  data-v-38fef6e8=""
+  data-v-app=""
 >
+  
   <div
-    class="t-loading t-size-s"
+    class="tdesign-mobile-demo-block__summary"
     data-v-38fef6e8=""
-    style=""
   >
-    
+    大尺寸
+  </div>
+  <div
+    class="t-loading"
+    data-v-38fef6e8=""
+    style="font-size: 26px;"
+  >
     
     <svg
       class="t-loading__gradient t-icon-loading"
@@ -1135,17 +1015,21 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
     <span
       class="t-loading__text"
     >
-      加载中（小）...
+      加载中...
     </span>
     <!---->
-    
   </div>
   <div
-    class="t-loading t-size-m"
+    class="tdesign-mobile-demo-block__summary"
     data-v-38fef6e8=""
-    style=""
   >
-    
+    中尺寸
+  </div>
+  <div
+    class="t-loading"
+    data-v-38fef6e8=""
+    style="font-size: 22px;"
+  >
     
     <svg
       class="t-loading__gradient t-icon-loading"
@@ -1171,17 +1055,21 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
     <span
       class="t-loading__text"
     >
-      加载中（中）...
+      加载中...
     </span>
     <!---->
-    
   </div>
   <div
-    class="t-loading t-size-l"
+    class="tdesign-mobile-demo-block__summary"
     data-v-38fef6e8=""
-    style=""
   >
-    
+    小尺寸
+  </div>
+  <div
+    class="t-loading"
+    data-v-38fef6e8=""
+    style="font-size: 20px;"
+  >
     
     <svg
       class="t-loading__gradient t-icon-loading"
@@ -1207,11 +1095,11 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
     <span
       class="t-loading__text"
     >
-      加载中（大）...
+      加载中...
     </span>
     <!---->
-    
   </div>
+  
 </div>
 `;
 
@@ -1223,14 +1111,13 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
   <div
     class="t-loading"
     data-v-0fadab4c=""
-    style=""
+    style="font-size: 20px;"
   >
-    
     
     <svg
       class="t-loading__gradient t-icon-loading"
       height="1em"
-      style="animation-duration: 300ms;"
+      style="animation-duration: 600ms;"
       version="1.1"
       viewBox="0 0 12 12"
       width="1em"
@@ -1254,27 +1141,16 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
       加载中...
     </span>
     <!---->
-    
   </div>
   <div
     class="slider-wrap"
     data-v-0fadab4c=""
   >
-    <span
-      data-v-0fadab4c=""
-      style="width: 120px; margin-right: 10px;"
-    >
-       速度调整 
-    </span>
     <div
-      class="t-slider-wrap t-is-value"
+      class="t-slider-wrap"
       data-v-0fadab4c=""
     >
-      <div
-        class="t-slider-wrap__value--left"
-      >
-        0
-      </div>
+      <!--v-if-->
       <div
         class="t-slider"
       >
@@ -1285,13 +1161,13 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
         <!-- 滑块长度 -->
         <div
           class="t-slider__track"
-          style="width: 37.5%;"
+          style="width: 50%;"
         />
         <!-- 滑块操作 -->
         
         <div
           class="t-slider__handle"
-          style="left: 37.5%;"
+          style="left: 50%;"
         />
         
         <!-- 刻度内容 -->
@@ -1303,11 +1179,7 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
         </div>
       </div>
       <!--v-if-->
-      <div
-        class="t-slider-wrap__value"
-      >
-        800
-      </div>
+      <!--v-if-->
     </div>
   </div>
   
@@ -1315,12 +1187,15 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
 `;
 
 exports[`Loading > Loading vertVue demo works fine 1`] = `
-<div>
+<div
+  class="container"
+  data-v-3ab7b9bc=""
+>
   <div
     class="t-loading t-loading--vertical"
-    style=""
+    data-v-3ab7b9bc=""
+    style="font-size: 20px;"
   >
-    
     
     <svg
       class="t-loading__gradient t-icon-loading"
@@ -1349,7 +1224,63 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
       加载中
     </span>
     <!---->
+  </div>
+  <div
+    class="t-loading t-loading--vertical"
+    data-v-3ab7b9bc=""
+    style="font-size: 20px;"
+  >
     
+    <span
+      class="t-loading__spinner"
+      style="animation-duration: 800ms;"
+    >
+      
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-1"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-2"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-3"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-4"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-5"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-6"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-7"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-8"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-9"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-10"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-11"
+      />
+      <i
+        class="t-loading__spinner--line t-loading__spinner--line-12"
+      />
+      
+    </span>
+    
+    <span
+      class="t-loading__text"
+    >
+      加载中...
+    </span>
+    <!---->
   </div>
 </div>
 `;

@@ -1,43 +1,59 @@
 .tdesign-mobile-demo {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   font-family: "PingFang SC";
+  padding-bottom: 28px;
 
   .title {
-    padding: 24px 16px 8px 16px;
-    opacity: 1;
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 32px;
+    margin: 24px 16px 0;
+    color: rgba(0, 0, 0, .9);
   }
 
   .summary {
-    opacity: 1;
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 12px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 8px 16px 0;
     line-height: 22px;
-    padding: 0 16px;
   }
 
   &-block {
-    width: 100%;
+    margin: 32px 0 0;
 
-    &__title {
-      padding: 24px 16px 0;
-      font-size: 16px;
-      font-weight: 700;
+    &__header {
+      color: #000;
+      margin: 0 16px;
     }
 
-    &__title + &__summary {
-      padding: 8px 16px 16px;
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
     }
 
     &__summary {
-      opacity: 1;
-      color: rgba(0, 0, 0, 0.4);
-      font-size: 12px;
+      margin-top: 8px;
+      font-size: 14px;
+      white-space: pre-line;
+      color: rgba(0, 0, 0, 0.6);
       line-height: 22px;
-      padding: 16px;
     }
+
+    &__slot {
+      margin-top: 16px;
+
+      &.with-padding {
+        margin: 16px 16px 0;
+      }
+    }
+  }
+}
+
+.tdesign-mobile-demo-block_notitle {
+  margin-top: 0px;
+
+  .tdesign-mobile-demo-block_subtitle {
+    margin-top: 24px;
   }
 }
