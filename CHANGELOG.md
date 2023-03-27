@@ -5,6 +5,19 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.16.0 `2023-03-27` 
+### ❗ BREAKING CHANGES
+- `Loading`: 属性 size 默认值改成 20px @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
+- `Loading`: 属性 theme 移除 bar、error 类型 @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
+- `Cell`: 优化样式，调整 DOM @LeeJim ([#529](https://github.com/Tencent/tdesign-mobile-vue/pull/529))
+- `Textarea`: 优化 DOM @anlyyao ([#523](https://github.com/Tencent/tdesign-mobile-vue/pull/523))
+
+### 🚀 Features
+- `Loading`: 新增 CSS Variables，支持主题定制 @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
+- `Textarea`: 新增 bordered 、indicator、allowInputOverMax 属性 @anlyyao ([#523](https://github.com/Tencent/tdesign-mobile-vue/pull/523))
+- `Footer`: 新增页脚组件 @mamumu123 ([#525](https://github.com/Tencent/tdesign-mobile-vue/pull/525))
+- `CellGroup`: 新增 theme 属性，新增支持 card 风格 @LeeJim ([#529](https://github.com/Tencent/tdesign-mobile-vue/pull/529))
+
 ## 🌈 0.15.0 `2023-03-20` 
 ### ❗ BREAKING CHANGES
 - `Stepper`: 属性 theme 的 gray 主题更名为 filled，并新增 outline 主题 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
