@@ -30,7 +30,7 @@ const ANIMATION_DURATION = 150;
  * @param {[Number]} defaultIndex [picker-item开始的索引值]
  */
 class Picker {
-  holder: HTMLElement | HTMLDivElement | HTMLUListElement;
+  holder: HTMLElement | HTMLUListElement;
 
   options: PickerOptions;
 
@@ -101,7 +101,7 @@ class Picker {
    * @description 初始化滚动参数
    */
   initScrollParams(): void {
-    this.list = this.holder.querySelector('ul');
+    this.list = this.holder as HTMLUListElement;
     this.elementItems = [...this.holder.querySelectorAll('li')];
     this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
