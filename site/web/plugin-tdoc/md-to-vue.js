@@ -25,8 +25,8 @@ export default function mdToVue(options) {
     <template>
       <td-doc-content ref="tdDocContent" page-status="hidden" platform="mobile">
         ${
-          mdSegment.tdDocHeader ?
-          `
+          mdSegment.tdDocHeader
+            ? `
           <td-doc-header
             slot="doc-header"
             ref="tdDocHeader"
@@ -34,13 +34,25 @@ export default function mdToVue(options) {
             spline="${mdSegment.spline}"
             component-name="${mdSegment.isComponent ? mdSegment.componentName : ''}"
           >
-          ${mdSegment.isComponent ? `
-            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: lines" message="${coverage.lines || '0%'}" />
-            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: functions" message="${coverage.functions || '0%'}" />
-            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: statements" message="${coverage.statements || '0%'}" />
-            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: branches" message="${coverage.branches || '0%'}" />`
-          : ''}
-          </td-doc-header>` : ''
+          ${
+            mdSegment.isComponent
+              ? `
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: lines" message="${
+              coverage.lines || '0%'
+            }" />
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: functions" message="${
+              coverage.functions || '0%'
+            }" />
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: statements" message="${
+              coverage.statements || '0%'
+            }" />
+            <td-doc-badge style="margin-right: 10px" slot="badge" label="coverages: branches" message="${
+              coverage.branches || '0%'
+            }" />`
+              : ''
+          }
+          </td-doc-header>`
+            : ''
         }
         ${
           mdSegment.isComponent
@@ -156,9 +168,6 @@ function customRender({ source, file, md }) {
   // split md
   let [demoMd = '', apiMd = ''] = content.split(pageData.apiFlag);
 
-  // fix table | render error
-  apiMd = apiMd.replace(/`[^`]+`/g, (str) => str.replace(/\|/g, '\\|'));
-
   const mdSegment = {
     ...pageData,
     componentName,
@@ -169,10 +178,19 @@ function customRender({ source, file, md }) {
   };
 
   if (pageData.isComponent) {
-    mdSegment.demoMd = md.render.call(md, `${pageData.toc ? '[toc]\n' : ''}${demoMd.replace(/<!--[\s\S]+?-->/g, '')}`).html;
-    mdSegment.apiMd = md.render.call(md, `${pageData.toc ? '[toc]\n' : ''}${apiMd.replace(/<!--[\s\S]+?-->/g, '')}`).html;
+    mdSegment.demoMd = md.render.call(
+      md,
+      `${pageData.toc ? '[toc]\n' : ''}${demoMd.replace(/<!--[\s\S]+?-->/g, '')}`,
+    ).html;
+    mdSegment.apiMd = md.render.call(
+      md,
+      `${pageData.toc ? '[toc]\n' : ''}${apiMd.replace(/<!--[\s\S]+?-->/g, '')}`,
+    ).html;
   } else {
-    mdSegment.docMd = md.render.call(md, `${pageData.toc ? '[toc]\n' : ''}${content.replace(/<!--[\s\S]+?-->/g, '')}`).html;
+    mdSegment.docMd = md.render.call(
+      md,
+      `${pageData.toc ? '[toc]\n' : ''}${content.replace(/<!--[\s\S]+?-->/g, '')}`,
+    ).html;
   }
 
   // 移动端路由地址
