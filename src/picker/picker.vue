@@ -1,23 +1,22 @@
 <template>
   <div :class="`${name}`">
     <div :class="`${name}__toolbar`">
-      <t-button :class="`${name}__cancel`" variant="text" @click="handleCancel">{{ cancelButtonText }}</t-button>
+      <div :class="`${name}__cancel`" @click="handleCancel">{{ cancelButtonText }}</div>
       <div :class="`${name}__title`">{{ title }}</div>
-      <t-button :class="`${name}__confirm`" variant="text" @click="handleConfirm">{{ confirmButtonText }}</t-button>
+      <div :class="`${name}__confirm`" @click="handleConfirm">{{ confirmButtonText }}</div>
     </div>
     <div :class="`${name}__main`">
-      <div :class="`${name}-item__group`">
+      <div v-for="(item, index) in realColumns" :key="index" :class="`${name}-item__group`">
         <picker-item
-          v-for="(item, index) in realColumns"
-          :key="index"
           :options="item"
           :default-value="pickerValue[index]"
           :render-label="renderLabel"
           @pick="handlePick($event, index)"
         />
       </div>
-      <div :class="`${name}__mask`"></div>
-      <div :class="`${name}__indicator`"></div>
+      <div :class="`${name}__mask ${name}__mask--top`" />
+      <div :class="`${name}__mask ${name}__mask--bottom`" />
+      <div :class="`${name}__indicator`" />
     </div>
   </div>
 </template>
@@ -27,25 +26,19 @@ import { computed, nextTick, defineComponent, toRefs, onMounted, ref } from 'vue
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import TButton from '../button';
 import { useEmitEvent, useVModel, useChildSlots, useExpose } from '../shared';
 import PickerItem from './picker-item.vue';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
 // 通过value和columns，生成对应的indexArray
-const getIndexFromColumns = (columns: PickerColumn[], value: PickerValue, column: number) => {
-  let resultIndex;
-  columns[column]?.forEach((item: PickerColumnItem, index: number) => {
-    if (item.value === value) {
-      resultIndex = index;
-    }
-  });
-  return resultIndex;
+const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
+  if (!value) return 0;
+  return column?.findIndex((item: PickerColumnItem) => item.value === value);
 };
 export default defineComponent({
   name,
-  components: { TButton, PickerItem },
+  components: { PickerItem },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any, context) {
@@ -63,8 +56,8 @@ export default defineComponent({
       return props.columns;
     });
     let lastTimeValueArray = [...curValueArray.value];
-    let curIndexArray = pickerValue.value.map((item: PickerValue, index: number) => {
-      return getIndexFromColumns(realColumns.value, item, index);
+    let curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
+      return getIndexFromColumns(item, pickerValue?.value[index]);
     });
     let lastTimeIndexArray = [...curIndexArray];
     const pickerItemInstanceArray = ref([]) as any;
@@ -77,7 +70,8 @@ export default defineComponent({
       lastTimeValueArray = [...curValueArray.value];
       lastTimeIndexArray = [...curIndexArray];
       setPickerValue(curValueArray.value);
-      emitEvent('confirm', curValueArray.value, { index: curIndexArray });
+      const label = realColumns.value.map((item: PickerColumnItem, index: number) => item[curIndexArray[index]].label);
+      emitEvent('confirm', curValueArray.value, { index: curIndexArray, label, e });
     };
     const handleCancel = (e: MouseEvent) => {
       // 点击取消后，重置最近一次的picker状态
