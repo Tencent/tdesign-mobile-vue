@@ -246,6 +246,12 @@ export default {
           component: () => import('@/count-down/count-down.md'),
         },
         {
+          title: 'Empty 空状态',
+          name: 'empty',
+          path: '/mobile-vue/components/empty',
+          component: () => import('@/empty/empty.md'),
+        },
+        {
           title: 'Tag 标签',
           name: 'tag',
           path: '/mobile-vue/components/tag',
