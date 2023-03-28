@@ -177,6 +177,9 @@ function customRender({ source, file, md }) {
     designMd: '<td-doc-empty></td-doc-empty>',
   };
 
+  // fix table | render error
+  apiMd = apiMd.replace(/`[^`]+`/g, (str) => str.replace(/\|/g, '\\|'));
+
   if (pageData.isComponent) {
     mdSegment.demoMd = md.render.call(
       md,

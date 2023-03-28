@@ -8,14 +8,10 @@ import { TdCheckboxProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 复选框和内容相对位置 */
-  align: {
-    type: String as PropType<TdCheckboxProps['align']>,
-    default: 'left' as TdCheckboxProps['align'],
-    validator(val: TdCheckboxProps['align']): boolean {
-      if (!val) return true;
-      return ['left', 'right'].includes(val);
-    },
+  /** 是否为块级元素 */
+  block: {
+    type: Boolean,
+    default: true,
   },
   /** 用于标识是否为「全选选项」。单独使用无效，需在 CheckboxGroup 中使用 */
   checkAll: Boolean,
@@ -30,24 +26,25 @@ export default {
   },
   /** 是否选中，非受控属性 */
   defaultChecked: Boolean,
-  /** 复选框内容 */
+  /** 多选框内容 */
   content: {
     type: [String, Function] as PropType<TdCheckboxProps['content']>,
   },
   /** 是否禁用组件内容（content）触发选中 */
   contentDisabled: Boolean,
-  /** 复选框内容，同 label */
+  /** 多选框内容，同 label */
   default: {
     type: [String, Function] as PropType<TdCheckboxProps['default']>,
   },
-  /** 是否禁用组件 */
+  /** 是否禁用组件。如果父组件存在 CheckboxGroup，默认值由 CheckboxGroup.disabled 控制。Checkbox.disabled 优先级高于 CheckboxGroup.disabled */
   disabled: {
     type: Boolean,
     default: undefined,
   },
-  /** 自定义选中图标和非选中图标。示例：[选中态图标，非选中态图标] */
+  /** 自定义选中图标和非选中图标。使用 Array 时表示：[选中态图标，非选中态图标]。使用 String 时，值为 circle 表示填充圆形图标、值为 line 表示描边型图标、值为 rectangle 表示填充矩形图标。 */
   icon: {
-    type: Array as PropType<TdCheckboxProps['icon']>,
+    type: [String, Array] as PropType<TdCheckboxProps['icon']>,
+    default: 'circle',
   },
   /** 是否为半选 */
   indeterminate: Boolean,
@@ -70,11 +67,20 @@ export default {
     type: String,
     default: '',
   },
-  /** 组件是否只读 */
+  /** 多选框和内容相对位置 */
+  placement: {
+    type: String as PropType<TdCheckboxProps['placement']>,
+    default: 'left' as TdCheckboxProps['placement'],
+    validator(val: TdCheckboxProps['placement']): boolean {
+      if (!val) return true;
+      return ['left', 'right'].includes(val);
+    },
+  },
+  /** 只读状态 */
   readonly: Boolean,
-  /** 复选框的值 */
+  /** 多选框的值 */
   value: {
-    type: [String, Number] as PropType<TdCheckboxProps['value']>,
+    type: [String, Number, Boolean] as PropType<TdCheckboxProps['value']>,
   },
   /** 值变化时触发 */
   onChange: Function as PropType<TdCheckboxProps['onChange']>,

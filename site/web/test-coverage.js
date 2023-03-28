@@ -8,7 +8,7 @@ module.exports = {
   calendar: { statements: '90.62%', branches: '81.66%', functions: '91.66%', lines: '90.62%' },
   cascader: { statements: '96.57%', branches: '84.61%', functions: '90.9%', lines: '96.57%' },
   cell: { statements: '100%', branches: '95.45%', functions: '100%', lines: '100%' },
-  checkbox: { statements: '97.9%', branches: '84%', functions: '86.66%', lines: '97.9%' },
+  checkbox: { statements: '99.77%', branches: '86.95%', functions: '100%', lines: '99.77%' },
   collapse: { statements: '97.41%', branches: '81.63%', functions: '88.23%', lines: '97.41%' },
   countDown: { statements: '100%', branches: '100%', functions: '100%', lines: '100%' },
   dateTimePicker: { statements: '99.24%', branches: '84.04%', functions: '100%', lines: '99.24%' },
