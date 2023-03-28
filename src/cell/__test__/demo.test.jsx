@@ -3,16 +3,12 @@
  */
 
 import { mount } from '@vue/test-utils';
-import borderVue from '@/cell/demos/border.vue';
-import clickVue from '@/cell/demos/click.vue';
 import groupVue from '@/cell/demos/group.vue';
 import mobileVue from '@/cell/demos/mobile.vue';
 import multipleVue from '@/cell/demos/multiple.vue';
 import singleVue from '@/cell/demos/single.vue';
 
 const mapper = {
-  borderVue,
-  clickVue,
   groupVue,
   mobileVue,
   multipleVue,

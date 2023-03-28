@@ -432,348 +432,356 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
     用于循环轮播一组图片或内容，也可以滑动进行切换，轮播动效时间可以设置
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      轮播图的多种样式
-    </p>
-    
     <div
-      style="padding: 0px 16px;"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-swiper"
-        style="overflow: hidden;"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <div
-          class="t-swiper__container"
-          style="flex-direction: row;"
-        >
-          
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/01.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/02.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/03.png"
-            />
-            
-          </div>
-          
-        </div>
-        
-        <!--v-if-->
-        <span
-          class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
-        >
-          
-          
-          <!--v-if-->
-        </span>
-        
-      </div>
-      <div
-        class="t-swiper"
-        style="height: 180px; overflow: hidden;"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        <div
-          class="t-swiper__container"
-          style="height: 180px; flex-direction: column;"
-        >
-          
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/01.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/02.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/03.png"
-            />
-            
-          </div>
-          
-        </div>
-        
-        <!--v-if-->
-        <span
-          class="t-swiper__pagination t-swiper__pagination-fraction t-swiper__pagination-bottom"
-        >
-          <!--v-if-->
-          <span>
-            0/0
-          </span>
-        </span>
-        
-      </div>
-      <div
-        class="t-swiper"
-        style="overflow: hidden;"
-      >
-        <div
-          class="t-swiper__container"
-          style="flex-direction: row;"
-        >
-          
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/01.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/02.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/03.png"
-            />
-            
-          </div>
-          
-        </div>
-        
-        <!--v-if-->
-        <span
-          class="t-swiper__pagination t-swiper__pagination-dots-bar t-swiper__pagination-bottom"
-        >
-          
-          
-          <!--v-if-->
-        </span>
-        
-      </div>
-      <div
-        class="t-swiper"
-        style="overflow: hidden;"
-      >
-        <div
-          class="t-swiper__container"
-          style="flex-direction: row;"
-        >
-          
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/01.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/02.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/03.png"
-            />
-            
-          </div>
-          
-        </div>
-        
-        <span>
-          <span
-            class="t-swiper__btn btn-prev"
-          >
-            <svg
-              class="t-icon t-icon-chevron-left"
-              fill="none"
-              height="1em"
-              style="font-size: 20px;"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <span
-            class="t-swiper__btn btn-next"
-          >
-            <svg
-              class="t-icon t-icon-chevron-right"
-              fill="none"
-              height="1em"
-              style="font-size: 20px;"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-        </span>
-        <!--v-if-->
-        
-      </div>
-      <!-- no loop -->
-      <div
-        class="t-swiper"
-        style="overflow: hidden;"
-      >
-        <div
-          class="t-swiper__container"
-          style="flex-direction: row;"
-        >
-          
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/01.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/02.png"
-            />
-            
-          </div>
-          <div
-            class="t-swiper-item swiper-item--demo"
-          >
-            
-            <img
-              class="img"
-              src="https://tdesign.gtimg.com/site/swiper/03.png"
-            />
-            
-          </div>
-          
-        </div>
-        
-        <span>
-          <span
-            class="t-swiper__btn btn-prev"
-          >
-            <svg
-              class="t-icon t-icon-chevron-left"
-              fill="none"
-              height="1em"
-              style="font-size: 20px;"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <span
-            class="t-swiper__btn btn-next"
-          >
-            <svg
-              class="t-icon t-icon-chevron-right"
-              fill="none"
-              height="1em"
-              style="font-size: 20px;"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-        </span>
-        <!--v-if-->
-        
-      </div>
+        轮播图的多种样式
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        style="padding: 0px 16px;"
+      >
+        <div
+          class="t-swiper"
+          style="overflow: hidden;"
+        >
+          <div
+            class="t-swiper__container"
+            style="flex-direction: row;"
+          >
+            
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/01.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/02.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/03.png"
+              />
+              
+            </div>
+            
+          </div>
+          
+          <!--v-if-->
+          <span
+            class="t-swiper__pagination t-swiper__pagination-dots t-swiper__pagination-bottom"
+          >
+            
+            
+            <!--v-if-->
+          </span>
+          
+        </div>
+        <div
+          class="t-swiper"
+          style="height: 180px; overflow: hidden;"
+        >
+          <div
+            class="t-swiper__container"
+            style="height: 180px; flex-direction: column;"
+          >
+            
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/01.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/02.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/03.png"
+              />
+              
+            </div>
+            
+          </div>
+          
+          <!--v-if-->
+          <span
+            class="t-swiper__pagination t-swiper__pagination-fraction t-swiper__pagination-bottom"
+          >
+            <!--v-if-->
+            <span>
+              0/0
+            </span>
+          </span>
+          
+        </div>
+        <div
+          class="t-swiper"
+          style="overflow: hidden;"
+        >
+          <div
+            class="t-swiper__container"
+            style="flex-direction: row;"
+          >
+            
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/01.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/02.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/03.png"
+              />
+              
+            </div>
+            
+          </div>
+          
+          <!--v-if-->
+          <span
+            class="t-swiper__pagination t-swiper__pagination-dots-bar t-swiper__pagination-bottom"
+          >
+            
+            
+            <!--v-if-->
+          </span>
+          
+        </div>
+        <div
+          class="t-swiper"
+          style="overflow: hidden;"
+        >
+          <div
+            class="t-swiper__container"
+            style="flex-direction: row;"
+          >
+            
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/01.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/02.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/03.png"
+              />
+              
+            </div>
+            
+          </div>
+          
+          <span>
+            <span
+              class="t-swiper__btn btn-prev"
+            >
+              <svg
+                class="t-icon t-icon-chevron-left"
+                fill="none"
+                height="1em"
+                style="font-size: 20px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <span
+              class="t-swiper__btn btn-next"
+            >
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                style="font-size: 20px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+          </span>
+          <!--v-if-->
+          
+        </div>
+        <!-- no loop -->
+        <div
+          class="t-swiper"
+          style="overflow: hidden;"
+        >
+          <div
+            class="t-swiper__container"
+            style="flex-direction: row;"
+          >
+            
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/01.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/02.png"
+              />
+              
+            </div>
+            <div
+              class="t-swiper-item swiper-item--demo"
+            >
+              
+              <img
+                class="img"
+                src="https://tdesign.gtimg.com/site/swiper/03.png"
+              />
+              
+            </div>
+            
+          </div>
+          
+          <span>
+            <span
+              class="t-swiper__btn btn-prev"
+            >
+              <svg
+                class="t-icon t-icon-chevron-left"
+                fill="none"
+                height="1em"
+                style="font-size: 20px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <span
+              class="t-swiper__btn btn-next"
+            >
+              <svg
+                class="t-icon t-icon-chevron-right"
+                fill="none"
+                height="1em"
+                style="font-size: 20px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+          </span>
+          <!--v-if-->
+          
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
 `;

@@ -113,306 +113,322 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
     用于相册读取或拉起拍照的图片上传功能。
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      单选上传图片
-    </p>
-    
     <div
-      class="upload-demo"
-      data-v-4dac5dd5=""
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="upload-title"
-        data-v-4dac5dd5=""
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        上传图片
-      </div>
-      <div
-        data-v-4dac5dd5=""
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        <ul
-          class="t-upload__card"
-        >
-          
-          <li
-            class="t-upload__card-item"
-            style="flex-basis: 25%;"
-          >
-            <div
-              class="t-upload__card-content t-upload__card-box"
-              style="height: 80px; width: 80px;"
-            >
-              <div
-                class="t-upload__card-delete-item"
-              >
-                <svg
-                  class="t-icon t-icon-close close-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-              <img
-                class="t-upload__card-image"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-              />
-              <!--上传失败时，reload重试-->
-              <!--v-if-->
-            </div>
-          </li>
-          
-          <li
-            class="t-upload__card-item"
-          >
-            <div
-              class="t-upload__card-container t-upload__card-box"
-            >
-              <svg
-                class="t-icon t-icon-add"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
-          </li>
-        </ul>
-        <input
-          accept="image/png"
-          hidden=""
-          type="file"
-        />
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
-          name="t-overlay"
-          persisted="true"
-        >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
-      </div>
+        单选上传图片
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      多选上传图片
-    </p>
-    
     <div
-      class="upload-demo"
-      data-v-5eaaef94=""
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="upload-title"
-        data-v-5eaaef94=""
+        class="upload-demo"
+        data-v-4dac5dd5=""
       >
-        多选上传图片
-      </div>
-      <div
-        data-v-5eaaef94=""
-      >
-        <ul
-          class="t-upload__card"
+        <div
+          class="upload-title"
+          data-v-4dac5dd5=""
         >
-          
-          <li
-            class="t-upload__card-item"
-            style="flex-basis: 25%;"
+          上传图片
+        </div>
+        <div
+          data-v-4dac5dd5=""
+        >
+          <ul
+            class="t-upload__card"
           >
-            <div
-              class="t-upload__card-content t-upload__card-box"
+            
+            <li
+              class="t-upload__card-item"
+              style="flex-basis: 25%;"
             >
               <div
-                class="t-upload__card-delete-item"
+                class="t-upload__card-content t-upload__card-box"
+                style="height: 80px; width: 80px;"
               >
-                <svg
-                  class="t-icon t-icon-close close-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-              <img
-                class="t-upload__card-image"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-              />
-              <!--上传失败时，reload重试-->
-              <!--v-if-->
-            </div>
-          </li>
-          <li
-            class="t-upload__card-item"
-            style="flex-basis: 25%;"
-          >
-            <div
-              class="t-upload__card-content t-upload__card-box"
-            >
-              <div
-                class="t-upload__card-delete-item"
-              >
-                <svg
-                  class="t-icon t-icon-close close-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-              <img
-                class="t-upload__card-image"
-                src="https://tdesign.gtimg.com/site/upload2.png"
-              />
-              <!--上传失败时，reload重试-->
-              <!--v-if-->
-            </div>
-          </li>
-          <li
-            class="t-upload__card-item"
-            style="flex-basis: 25%;"
-          >
-            <div
-              class="t-upload__card-content t-upload__card-box"
-            >
-              <div
-                class="t-upload__card-delete-item"
-              >
-                <svg
-                  class="t-icon t-icon-close close-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-              <img
-                class="t-upload__card-image"
-                src="https://tdesign.gtimg.com/site/upload1.png"
-              />
-              <!--上传失败时，reload重试-->
-              <div
-                class="t-upload__card-mask"
-              >
-                <span
-                  class="t-upload__card-mask-item"
+                <div
+                  class="t-upload__card-delete-item"
                 >
                   <svg
-                    class="t-icon t-icon-refresh"
+                    class="t-icon t-icon-close close-icon"
                     fill="none"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
                   >
                     <path
-                      d="M8 2.71c2.9 0 5.25 2.36 5.25 5.29h.96a6.2 6.2 0 00-11.5-3.28V2.64h-.96v3.1c0 .29.22.5.5.5h3.09v-.96H3.49A5.25 5.25 0 018 2.71zM1.79 8h.96a5.25 5.25 0 009.76 2.71h-1.85v-.96h3.09c.28 0 .5.22.5.5v3.1h-.96v-2.07A6.2 6.2 0 011.8 8z"
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
                       fill="currentColor"
                       fill-opacity="0.9"
                     />
                   </svg>
-                </span>
+                </div>
+                <img
+                  class="t-upload__card-image"
+                  src="https://tdesign.gtimg.com/site/upload1.png"
+                />
+                <!--上传失败时，reload重试-->
+                <!--v-if-->
               </div>
-            </div>
-          </li>
-          
-          <li
-            class="t-upload__card-item"
+            </li>
+            
+            <li
+              class="t-upload__card-item"
+            >
+              <div
+                class="t-upload__card-container t-upload__card-box"
+              >
+                <svg
+                  class="t-icon t-icon-add"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </li>
+          </ul>
+          <input
+            accept="image/png"
+            hidden=""
+            type="file"
+          />
+          <transition-stub
+            appear="false"
+            class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
           >
             <div
-              class="t-upload__card-container t-upload__card-box"
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
             >
-              <svg
-                class="t-icon t-icon-add"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+              
+              
             </div>
-          </li>
-        </ul>
-        <input
-          accept=""
-          hidden=""
-          multiple=""
-          type="file"
-        />
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
-          name="t-overlay"
-          persisted="true"
+          </transition-stub>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        多选上传图片
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="upload-demo"
+        data-v-5eaaef94=""
+      >
+        <div
+          class="upload-title"
+          data-v-5eaaef94=""
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+          多选上传图片
+        </div>
+        <div
+          data-v-5eaaef94=""
+        >
+          <ul
+            class="t-upload__card"
           >
             
+            <li
+              class="t-upload__card-item"
+              style="flex-basis: 25%;"
+            >
+              <div
+                class="t-upload__card-content t-upload__card-box"
+              >
+                <div
+                  class="t-upload__card-delete-item"
+                >
+                  <svg
+                    class="t-icon t-icon-close close-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  class="t-upload__card-image"
+                  src="https://tdesign.gtimg.com/site/upload1.png"
+                />
+                <!--上传失败时，reload重试-->
+                <!--v-if-->
+              </div>
+            </li>
+            <li
+              class="t-upload__card-item"
+              style="flex-basis: 25%;"
+            >
+              <div
+                class="t-upload__card-content t-upload__card-box"
+              >
+                <div
+                  class="t-upload__card-delete-item"
+                >
+                  <svg
+                    class="t-icon t-icon-close close-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  class="t-upload__card-image"
+                  src="https://tdesign.gtimg.com/site/upload2.png"
+                />
+                <!--上传失败时，reload重试-->
+                <!--v-if-->
+              </div>
+            </li>
+            <li
+              class="t-upload__card-item"
+              style="flex-basis: 25%;"
+            >
+              <div
+                class="t-upload__card-content t-upload__card-box"
+              >
+                <div
+                  class="t-upload__card-delete-item"
+                >
+                  <svg
+                    class="t-icon t-icon-close close-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <img
+                  class="t-upload__card-image"
+                  src="https://tdesign.gtimg.com/site/upload1.png"
+                />
+                <!--上传失败时，reload重试-->
+                <div
+                  class="t-upload__card-mask"
+                >
+                  <span
+                    class="t-upload__card-mask-item"
+                  >
+                    <svg
+                      class="t-icon t-icon-refresh"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M8 2.71c2.9 0 5.25 2.36 5.25 5.29h.96a6.2 6.2 0 00-11.5-3.28V2.64h-.96v3.1c0 .29.22.5.5.5h3.09v-.96H3.49A5.25 5.25 0 018 2.71zM1.79 8h.96a5.25 5.25 0 009.76 2.71h-1.85v-.96h3.09c.28 0 .5.22.5.5v3.1h-.96v-2.07A6.2 6.2 0 011.8 8z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </li>
             
-          </div>
-        </transition-stub>
+            <li
+              class="t-upload__card-item"
+            >
+              <div
+                class="t-upload__card-container t-upload__card-box"
+              >
+                <svg
+                  class="t-icon t-icon-add"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </li>
+          </ul>
+          <input
+            accept=""
+            hidden=""
+            multiple=""
+            type="file"
+          />
+          <transition-stub
+            appear="false"
+            class="t-image-viewer"
+            css="true"
+            name="t-overlay"
+            persisted="true"
+          >
+            <div
+              class="t-overlay"
+              style="z-index: 1000; transition-duration: 300ms; display: none;"
+            >
+              
+              
+            </div>
+          </transition-stub>
+        </div>
       </div>
+      
     </div>
-    
   </div>
 </div>
 `;

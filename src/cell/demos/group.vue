@@ -1,8 +1,16 @@
 <template>
-  <div>
-    <t-cell-group title="分组标题" summary="列表外常驻文字，常常用于辅助信息说明，列表外常驻文字，常常用于辅助信息说明">
-      <t-cell title="单行标题" />
-      <t-cell title="单行标题" arrow />
-    </t-cell-group>
-  </div>
+  <t-cell-group theme="card">
+    <t-cell :left-icon="lock" title="单行标题" arrow />
+    <t-cell :left-icon="service" title="单行标题" arrow />
+    <t-cell :left-icon="internet" title="单行标题" arrow />
+  </t-cell-group>
 </template>
+
+<script lang="ts" setup>
+import { h } from 'vue';
+import { LockOnIcon, ServiceIcon, InternetIcon } from 'tdesign-icons-vue-next';
+
+const lock = () => h(LockOnIcon);
+const service = () => h(ServiceIcon);
+const internet = () => h(InternetIcon);
+</script>

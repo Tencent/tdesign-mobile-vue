@@ -215,6 +215,13 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Footer 页脚',
+          name: 'footer',
+          meta: { docType: 'data' },
+          path: '/mobile-vue/components/footer',
+          component: () => import('@/footer/footer.md'),
+        },
+        {
           title: 'Image 图片',
           name: 'image',
           path: '/mobile-vue/components/image',

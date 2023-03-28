@@ -2,7 +2,7 @@
 
 exports[`Search > Search baseVue demo works fine 1`] = `
 <div
-  class="t-cell-group"
+  class="t-cell-group t-cell-group--default"
 >
   <div
     class="t-cell-group__title"
@@ -11,124 +11,120 @@ exports[`Search > Search baseVue demo works fine 1`] = `
     基础搜索框
     
   </div>
+  
   <div
-    class="t-cell-group__container"
+    class="t-search"
   >
-    
     <div
-      class="t-search"
+      class="t-search__form"
     >
       <div
-        class="t-search__form"
+        class="t-search__box"
       >
         <div
-          class="t-search__box"
+          class="t-search__icon-search"
         >
-          <div
-            class="t-search__icon-search"
+          
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
           >
-            
-            <svg
-              class="t-icon t-icon-search"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            
-          </div>
-          <div
-            class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
-          >
-            <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cell__note"
-            >
-              
-              <div
-                class="t-input__wrap"
-              >
-                <input
-                  autocomplete="Off"
-                  class="t-input__control"
-                  maxlength="-1"
-                  name=""
-                  placeholder="请输入关键字"
-                  type="search"
-                />
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              
-            </div>
-            <!--v-if-->
-          </div>
-          <div
-            class="t-search__icon-close"
-          >
-            <svg
-              class="t-icon t-icon-close-circle-filled"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
+            <path
+              d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          
         </div>
-        <label
-          class="t-search__label"
+        <div
+          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
         >
           <div
-            class="t-search__label-icon-search"
+            class="t-cell__left"
+          >
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+          <div
+            class="t-cell__note"
           >
             
-            <svg
-              class="t-icon t-icon-search"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-input__wrap"
             >
-              <path
-                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
+              <input
+                autocomplete="Off"
+                class="t-input__control"
+                maxlength="-1"
+                name=""
+                placeholder="请输入关键字"
+                type="search"
               />
-            </svg>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
             
           </div>
-          <span
-            class="t-search__label-text"
+          <!--v-if-->
+        </div>
+        <div
+          class="t-search__icon-close"
+        >
+          <svg
+            class="t-icon t-icon-close-circle-filled"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
           >
-            请输入关键字
-          </span>
-        </label>
+            <path
+              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
-      
-      <!--v-if-->
-      
+      <label
+        class="t-search__label"
+      >
+        <div
+          class="t-search__label-icon-search"
+        >
+          
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          
+        </div>
+        <span
+          class="t-search__label-text"
+        >
+          请输入关键字
+        </span>
+      </label>
     </div>
     
+    <!--v-if-->
+    
   </div>
+  
 </div>
 `;
 
@@ -147,28 +143,32 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
     用于用户输入搜索信息，并进行页面内容搜索
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <!--v-if-->
-    
     <div
-      class="t-cell-group"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-cell-group__title"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        
-        基础搜索框
-        
-      </div>
+        01 类型
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
       <div
-        class="t-cell-group__container"
+        class="t-cell-group t-cell-group--default"
       >
+        <div
+          class="t-cell-group__title"
+        >
+          
+          基础搜索框
+          
+        </div>
         
         <div
           class="t-search"
@@ -202,7 +202,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
               >
                 <div
-                  class="t-cell__left-icon"
+                  class="t-cell__left"
                 >
                   <!--v-if-->
                   <!--v-if-->
@@ -284,33 +284,37 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
     </div>
-    
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      02 状态
-    </h2>
-    <!--v-if-->
-    
-    
     <div
-      class="t-cell-group"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-cell-group__title"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        
-        默认状态
-        
-      </div>
+        02 状态
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
       <div
-        class="t-cell-group__container"
+        class="t-cell-group t-cell-group--default"
       >
+        <div
+          class="t-cell-group__title"
+        >
+          
+          默认状态
+          
+        </div>
         
         <div
           class="t-search"
@@ -344,7 +348,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
               >
                 <div
-                  class="t-cell__left-icon"
+                  class="t-cell__left"
                 >
                   <!--v-if-->
                   <!--v-if-->
@@ -426,20 +430,16 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-    </div>
-    <div
-      class="t-cell-group"
-    >
       <div
-        class="t-cell-group__title"
+        class="t-cell-group t-cell-group--default"
       >
-        
-        点击状态
-        
-      </div>
-      <div
-        class="t-cell-group__container"
-      >
+        <div
+          class="t-cell-group__title"
+        >
+          
+          点击状态
+          
+        </div>
         
         <div
           class="t-search"
@@ -473,7 +473,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
               >
                 <div
-                  class="t-cell__left-icon"
+                  class="t-cell__left"
                 >
                   <!--v-if-->
                   <!--v-if-->
@@ -569,20 +569,16 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-    </div>
-    <div
-      class="t-cell-group"
-    >
       <div
-        class="t-cell-group__title"
+        class="t-cell-group t-cell-group--default"
       >
-        
-        输入状态
-        
-      </div>
-      <div
-        class="t-cell-group__container"
-      >
+        <div
+          class="t-cell-group__title"
+        >
+          
+          输入状态
+          
+        </div>
         
         <div
           class="t-search t-is-focused"
@@ -616,7 +612,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
               >
                 <div
-                  class="t-cell__left-icon"
+                  class="t-cell__left"
                 >
                   <!--v-if-->
                   <!--v-if-->
@@ -712,9 +708,9 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
         </div>
         
       </div>
+      
+      
     </div>
-    
-    
   </div>
 </div>
 `;
@@ -725,7 +721,7 @@ exports[`Search > Search statusVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
   >
     <div
       class="t-cell-group__title"
@@ -734,127 +730,123 @@ exports[`Search > Search statusVue demo works fine 1`] = `
       默认状态
       
     </div>
+    
     <div
-      class="t-cell-group__container"
+      class="t-search"
     >
-      
       <div
-        class="t-search"
+        class="t-search__form"
       >
         <div
-          class="t-search__form"
+          class="t-search__box"
         >
           <div
-            class="t-search__box"
+            class="t-search__icon-search"
           >
-            <div
-              class="t-search__icon-search"
+            
+            <svg
+              class="t-icon t-icon-search"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              
-              <svg
-                class="t-icon t-icon-search"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-              
-            </div>
-            <div
-              class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
-            >
-              <div
-                class="t-cell__left-icon"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <div
-                class="t-cell__note"
-              >
-                
-                <div
-                  class="t-input__wrap"
-                >
-                  <input
-                    autocomplete="Off"
-                    class="t-input__control"
-                    maxlength="-1"
-                    name=""
-                    placeholder="搜索预设文案"
-                    type="search"
-                  />
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-                <!--v-if-->
-                
-              </div>
-              <!--v-if-->
-            </div>
-            <div
-              class="t-search__icon-close"
-            >
-              <svg
-                class="t-icon t-icon-close-circle-filled"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
+              <path
+                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
           </div>
-          <label
-            class="t-search__label"
+          <div
+            class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
           >
             <div
-              class="t-search__label-icon-search"
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <div
+              class="t-cell__note"
             >
               
-              <svg
-                class="t-icon t-icon-search"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-input__wrap"
               >
-                <path
-                  d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
+                <input
+                  autocomplete="Off"
+                  class="t-input__control"
+                  maxlength="-1"
+                  name=""
+                  placeholder="搜索预设文案"
+                  type="search"
                 />
-              </svg>
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
               
             </div>
-            <span
-              class="t-search__label-text"
+            <!--v-if-->
+          </div>
+          <div
+            class="t-search__icon-close"
+          >
+            <svg
+              class="t-icon t-icon-close-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              搜索预设文案
-            </span>
-          </label>
+              <path
+                d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
         </div>
-        
-        <!--v-if-->
-        
+        <label
+          class="t-search__label"
+        >
+          <div
+            class="t-search__label-icon-search"
+          >
+            
+            <svg
+              class="t-icon t-icon-search"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <span
+            class="t-search__label-text"
+          >
+            搜索预设文案
+          </span>
+        </label>
       </div>
       
+      <!--v-if-->
+      
     </div>
+    
   </div>
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
   >
     <div
       class="t-cell-group__title"
@@ -863,141 +855,137 @@ exports[`Search > Search statusVue demo works fine 1`] = `
       点击状态
       
     </div>
+    
     <div
-      class="t-cell-group__container"
+      class="t-search"
     >
-      
       <div
-        class="t-search"
+        class="t-search__form"
       >
         <div
-          class="t-search__form"
+          class="t-search__box"
         >
           <div
-            class="t-search__box"
+            class="t-search__icon-search"
           >
-            <div
-              class="t-search__icon-search"
+            
+            <svg
+              class="t-icon t-icon-search"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              
-              <svg
-                class="t-icon t-icon-search"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-              
-            </div>
-            <div
-              class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
-            >
-              <div
-                class="t-cell__left-icon"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <div
-                class="t-cell__note"
-              >
-                
-                <div
-                  class="t-input__wrap"
-                >
-                  <input
-                    autocomplete="Off"
-                    class="t-input__control"
-                    maxlength="-1"
-                    name=""
-                    placeholder="搜索预设文案"
-                    type="search"
-                  />
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-                <!--v-if-->
-                
-              </div>
-              <!--v-if-->
-            </div>
-            <div
-              class="t-search__icon-close"
-            >
-              <svg
-                class="t-icon t-icon-close-circle-filled"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
+              <path
+                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
           </div>
-          <label
-            class="t-search__label"
+          <div
+            class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
           >
             <div
-              class="t-search__label-icon-search"
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <div
+              class="t-cell__note"
             >
               
-              <svg
-                class="t-icon t-icon-search"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-input__wrap"
               >
-                <path
-                  d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
+                <input
+                  autocomplete="Off"
+                  class="t-input__control"
+                  maxlength="-1"
+                  name=""
+                  placeholder="搜索预设文案"
+                  type="search"
                 />
-              </svg>
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
               
             </div>
-            <span
-              class="t-search__label-text"
+            <!--v-if-->
+          </div>
+          <div
+            class="t-search__icon-close"
+          >
+            <svg
+              class="t-icon t-icon-close-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              搜索预设文案
-            </span>
-          </label>
+              <path
+                d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
         </div>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-search__cancel-button"
-          role="button"
-          style="display: none;"
+        <label
+          class="t-search__label"
         >
-          <!---->
-          <span
-            class="t-button__text"
+          <div
+            class="t-search__label-icon-search"
           >
             
-            取消
+            <svg
+              class="t-icon t-icon-search"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
             
+          </div>
+          <span
+            class="t-search__label-text"
+          >
+            搜索预设文案
           </span>
-        </button>
-        
+        </label>
       </div>
       
+      <button
+        aria-disabled="false"
+        class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-search__cancel-button"
+        role="button"
+        style="display: none;"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          取消
+          
+        </span>
+      </button>
+      
     </div>
+    
   </div>
   <div
-    class="t-cell-group"
+    class="t-cell-group t-cell-group--default"
   >
     <div
       class="t-cell-group__title"
@@ -1006,138 +994,134 @@ exports[`Search > Search statusVue demo works fine 1`] = `
       输入状态
       
     </div>
+    
     <div
-      class="t-cell-group__container"
+      class="t-search t-is-focused"
     >
-      
       <div
-        class="t-search t-is-focused"
+        class="t-search__form"
       >
         <div
-          class="t-search__form"
+          class="t-search__box"
         >
           <div
-            class="t-search__box"
+            class="t-search__icon-search"
           >
-            <div
-              class="t-search__icon-search"
+            
+            <svg
+              class="t-icon t-icon-search"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              
-              <svg
-                class="t-icon t-icon-search"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-              
-            </div>
-            <div
-              class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
-            >
-              <div
-                class="t-cell__left-icon"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <div
-                class="t-cell__note"
-              >
-                
-                <div
-                  class="t-input__wrap"
-                >
-                  <input
-                    autocomplete="Off"
-                    class="t-input__control"
-                    maxlength="-1"
-                    name=""
-                    placeholder="搜索预设文案"
-                    type="search"
-                  />
-                  <!--v-if-->
-                  <!--v-if-->
-                </div>
-                <!--v-if-->
-                
-              </div>
-              <!--v-if-->
-            </div>
-            <div
-              class="t-search__icon-close"
-            >
-              <svg
-                class="t-icon t-icon-close-circle-filled"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
-            </div>
+              <path
+                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
           </div>
-          <label
-            class="t-search__label"
-            style="display: none;"
+          <div
+            class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-search__input"
           >
             <div
-              class="t-search__label-icon-search"
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <!--v-if-->
+            <div
+              class="t-cell__note"
             >
               
-              <svg
-                class="t-icon t-icon-search"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-input__wrap"
               >
-                <path
-                  d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
+                <input
+                  autocomplete="Off"
+                  class="t-input__control"
+                  maxlength="-1"
+                  name=""
+                  placeholder="搜索预设文案"
+                  type="search"
                 />
-              </svg>
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
               
             </div>
-            <span
-              class="t-search__label-text"
+            <!--v-if-->
+          </div>
+          <div
+            class="t-search__icon-close"
+          >
+            <svg
+              class="t-icon t-icon-close-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              搜索预设文案
-            </span>
-          </label>
+              <path
+                d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
         </div>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-search__cancel-button"
-          role="button"
+        <label
+          class="t-search__label"
+          style="display: none;"
         >
-          <!---->
-          <span
-            class="t-button__text"
+          <div
+            class="t-search__label-icon-search"
           >
             
-            取消
+            <svg
+              class="t-icon t-icon-search"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
             
+          </div>
+          <span
+            class="t-search__label-text"
+          >
+            搜索预设文案
           </span>
-        </button>
-        
+        </label>
       </div>
       
+      <button
+        aria-disabled="false"
+        class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-search__cancel-button"
+        role="button"
+      >
+        <!---->
+        <span
+          class="t-button__text"
+        >
+          
+          取消
+          
+        </span>
+      </button>
+      
     </div>
+    
   </div>
   
 </div>

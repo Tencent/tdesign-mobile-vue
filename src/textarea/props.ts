@@ -8,12 +8,23 @@ import { TdTextareaProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入 */
+  allowInputOverMax: Boolean,
   /** 自动聚焦，拉起键盘 */
   autofocus: Boolean,
   /** 是否自动增高，值为 autosize 时，style.height 不生效 */
   autosize: Boolean,
   /** 是否禁用文本框 */
   disabled: Boolean,
+  /** 是否显示外边框 */
+  bordered: {
+    type: Boolean,
+    default: false,
+  },
+  /** 显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效 */
+  indicator: {
+    type: Boolean,
+  },
   /** 左侧文本 */
   label: {
     type: [String, Function] as PropType<TdTextareaProps['label']>,

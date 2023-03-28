@@ -599,7 +599,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       用于预设的一组选项中执行多项选择，并呈现选择结果。
     </p>
     <div
-      class="tdesign-mobile-demo-block"
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     >
       <h2
         class="tdesign-mobile-demo-block__title"
@@ -620,6 +620,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
           >
+            
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
@@ -766,14 +767,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           
         </span>
       </div>
-      
     </div>
     <div
       class="tdesign-mobile-demo-block"
     >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
+      <div
+        class="tdesign-mobile-demo-block__header"
       >
         横向多选框
       </p>
@@ -902,14 +901,12 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
         </div>
         
       </div>
-      
     </div>
     <div
       class="tdesign-mobile-demo-block"
     >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
+      <div
+        class="tdesign-mobile-demo-block__header"
       >
         带全选多选框
       </p>
@@ -918,7 +915,10 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
         <div
           class="t-checkbox-group"
         >
-          <span>
+          <div
+            class="t-checkbox-group checkbox-group-demo"
+            data-v-cd906cdc=""
+          >
             
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block"
@@ -1081,13 +1081,13 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               />
             </div>
             
-          </span>
+          </div>
         </div>
+        
       </div>
-      
     </div>
     <div
-      class="tdesign-mobile-demo-block"
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     >
       <h2
         class="tdesign-mobile-demo-block__title"
@@ -1486,8 +1486,212 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             </svg>
             
           </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    >
+      <div
+        class="tdesign-mobile-demo-block__header"
+      >
+        <h2
+          class="tdesign-mobile-demo-block__title"
+        >
+          03 特殊类型
+        </h2>
+        <p
+          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        >
+          自定义图标多选框
+        </p>
+      </div>
+      <div
+        class="tdesign-mobile-demo-block__slot"
+      >
+        
+        <div
+          data-v-4c12b9bb=""
+        >
           <div
             class="t-checkbox__content"
+          >
+            
+            <div
+              class="t-checkbox"
+              data-v-4c12b9bb=""
+            >
+              <div
+                class="t-checkbox__content-wrap"
+              >
+                <span
+                  class="t-checkbox__icon-left"
+                >
+                  <input
+                    class="t-checkbox__original-left"
+                    name="checkbox6"
+                    type="checkbox"
+                    value="1"
+                  />
+                  <svg
+                    class="t-icon t-icon-rectangle"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3 14h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10a1 1 0 001 1zm0-1V3h10v10H3z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="t-checkbox__label"
+                >
+                  <span
+                    style="display: -webkit-box; overflow: hidden;"
+                  >
+                    多选
+                  </span>
+                  <!--v-if-->
+                </span>
+                <!--v-if-->
+              </div>
+              <!--下边框 -->
+              <div
+                class="t-checkbox__border t-checkbox__border--left"
+              />
+            </div>
+            <div
+              class="t-checkbox t-is-checked"
+              data-v-4c12b9bb=""
+            >
+              <div
+                class="t-checkbox__content-wrap"
+              >
+                <span
+                  class="t-checkbox__icon-left"
+                >
+                  <input
+                    class="t-checkbox__original-left"
+                    name="checkbox6"
+                    type="checkbox"
+                    value="2"
+                  />
+                  <svg
+                    class="t-icon t-icon-check-rectangle-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="t-checkbox__label"
+                >
+                  <span
+                    style="display: -webkit-box; overflow: hidden;"
+                  >
+                    多选
+                  </span>
+                  <!--v-if-->
+                </span>
+                <!--v-if-->
+              </div>
+              <!--下边框 -->
+              <div
+                class="t-checkbox__border t-checkbox__border--left"
+              />
+            </div>
+            <div
+              class="t-checkbox t-is-checked"
+              data-v-4c12b9bb=""
+            >
+              <div
+                class="t-checkbox__content-wrap"
+              >
+                <span
+                  class="t-checkbox__icon-left"
+                >
+                  <input
+                    class="t-checkbox__original-left"
+                    name="checkbox6"
+                    type="checkbox"
+                    value="3"
+                  />
+                  <svg
+                    class="t-icon t-icon-check-rectangle-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M2 13a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3a1 1 0 00-1 1v10zm5-3.64l3.77-3.78.71.7L7 10.79l-2.49-2.5.71-.7L7 9.36z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="t-checkbox__label"
+                >
+                  <span
+                    style="display: -webkit-box; overflow: hidden;"
+                  >
+                    多选
+                  </span>
+                  <!--v-if-->
+                </span>
+                <!--v-if-->
+              </div>
+              <!--下边框 -->
+              <div
+                class="t-checkbox__border t-checkbox__border--left"
+              />
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    >
+      <div
+        class="tdesign-mobile-demo-block__header"
+      >
+        <h2
+          class="tdesign-mobile-demo-block__title"
+        >
+          04 规格
+        </h2>
+        <p
+          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        >
+          多选框尺寸规格
+        </p>
+      </div>
+      <div
+        class="tdesign-mobile-demo-block__slot"
+      >
+        
+        <div
+          data-v-aaeb4d7a=""
+        >
+          <div
+            class="t-checkbox t-is-checked checkbox-demo checkbox-demo--size-small space"
+            data-v-aaeb4d7a=""
           >
             <div
               class="t-checkbox__title t-checkbox__title--checked"

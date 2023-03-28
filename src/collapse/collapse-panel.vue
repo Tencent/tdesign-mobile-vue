@@ -40,8 +40,6 @@ export default defineComponent({
     const rightIcon = computed(() => {
       if (props.expandIcon === false) return;
       if (isTrue(props.expandIcon) || isTrue(parent?.expandIcon.value)) {
-        console.log(isTrue(parent?.expandIcon.value));
-
         return isActive.value ? ChevronDownIcon : ChevronUpIcon;
       }
       return renderTNode(internalInstance, 'expand-icon')[0];
@@ -73,7 +71,6 @@ export default defineComponent({
     const $head = ref();
     const updatePanelState = () => {
       if (!$wrap.value) {
-        // console.log('[collapse] 组件尚未挂载', $wrap.value);
         return;
       }
       const { height: headHeight } = $head.value.getBoundingClientRect();

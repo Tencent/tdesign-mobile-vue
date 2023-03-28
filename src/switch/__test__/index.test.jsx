@@ -40,7 +40,6 @@ describe('switch', () => {
           disabled: true,
         },
       });
-      console.log(wrapper.classes());
       expect(wrapper.classes()).toContain('t-switch--disabled');
 
       await wrapper.setProps({
