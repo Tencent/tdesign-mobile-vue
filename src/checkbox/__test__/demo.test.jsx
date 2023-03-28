@@ -3,26 +3,26 @@
  */
 
 import { mount } from '@vue/test-utils';
+import allVue from '@/checkbox/demos/all.vue';
 import baseVue from '@/checkbox/demos/base.vue';
-import disableVue from '@/checkbox/demos/disable.vue';
-import groupVue from '@/checkbox/demos/group.vue';
-import iconVue from '@/checkbox/demos/icon.vue';
-import indeterminateVue from '@/checkbox/demos/indeterminate.vue';
-import maxVue from '@/checkbox/demos/max.vue';
+import cardVue from '@/checkbox/demos/card.vue';
+import horizontalVue from '@/checkbox/demos/horizontal.vue';
 import mobileVue from '@/checkbox/demos/mobile.vue';
 import rightVue from '@/checkbox/demos/right.vue';
-import sizeVue from '@/checkbox/demos/size.vue';
+import specialVue from '@/checkbox/demos/special.vue';
+import statusVue from '@/checkbox/demos/status.vue';
+import typeVue from '@/checkbox/demos/type.vue';
 
 const mapper = {
+  allVue,
   baseVue,
-  disableVue,
-  groupVue,
-  iconVue,
-  indeterminateVue,
-  maxVue,
+  cardVue,
+  horizontalVue,
   mobileVue,
   rightVue,
-  sizeVue,
+  specialVue,
+  statusVue,
+  typeVue,
 };
 
 describe('Checkbox', () => {
