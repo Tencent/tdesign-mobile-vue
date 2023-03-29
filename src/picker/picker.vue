@@ -1,10 +1,11 @@
 <template>
   <div :class="`${name}`">
     <div :class="`${name}__toolbar`">
-      <div :class="`${name}__cancel`" @click="handleCancel">{{ cancelButtonText }}</div>
+      <div v-if="cancelButtonText" :class="`${name}__cancel`" @click="handleCancel">{{ cancelButtonText }}</div>
       <div :class="`${name}__title`">{{ title }}</div>
-      <div :class="`${name}__confirm`" @click="handleConfirm">{{ confirmButtonText }}</div>
+      <div v-if="confirmButtonText" :class="`${name}__confirm`" @click="handleConfirm">{{ confirmButtonText }}</div>
     </div>
+    <t-node :content="header" />
     <div :class="`${name}__main`">
       <div v-for="(item, index) in realColumns" :key="index" :class="`${name}-item__group`">
         <picker-item
@@ -22,11 +23,14 @@
 </template>
 
 <script lang="ts">
-import { computed, nextTick, defineComponent, toRefs, onMounted, ref } from 'vue';
+import { computed, nextTick, defineComponent, toRefs, onMounted, ref, getCurrentInstance } from 'vue';
+import isString from 'lodash/isString';
+import isBoolean from 'lodash/isBoolean';
+
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import { useEmitEvent, useVModel, useChildSlots, useExpose } from '../shared';
+import { useEmitEvent, useVModel, useChildSlots, useExpose, TNode, renderTNode } from '../shared';
 import PickerItem from './picker-item.vue';
 
 const { prefix } = config;
@@ -38,15 +42,22 @@ const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
 };
 export default defineComponent({
   name,
-  components: { PickerItem },
+  components: { PickerItem, TNode },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any, context) {
+    const internalInstance = getCurrentInstance();
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
     const [pickerValue, setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-    const confirmButtonText = computed(() => props.confirmBtn);
-    const cancelButtonText = computed(() => props.cancelBtn);
+    const getDefaultText = (prop: string | boolean, defaultText: string): string => {
+      if (isString(prop)) return prop;
+      if (isBoolean(prop) && prop) return defaultText;
+      return '';
+    };
+    const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, '确认'));
+    const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, '取消'));
+    const header = computed(() => renderTNode(internalInstance, 'header'));
     const curValueArray = ref(pickerValue.value.map((item: PickerValue) => item));
     const realColumns = computed(() => {
       if (typeof props.columns === 'function') {
@@ -124,6 +135,7 @@ export default defineComponent({
 
     return {
       name,
+      header,
       pickerValue,
       confirmButtonText,
       cancelButtonText,
