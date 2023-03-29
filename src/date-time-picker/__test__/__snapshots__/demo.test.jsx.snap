@@ -89,6 +89,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                 确定
               </div>
             </div>
+            <!---->
             <div
               class="t-picker__main"
             >
@@ -557,6 +558,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                 确定
               </div>
             </div>
+            <!---->
             <div
               class="t-picker__main"
             >
@@ -950,6 +952,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
                 确定
               </div>
             </div>
+            <!---->
             <div
               class="t-picker__main"
             >
@@ -2202,6 +2205,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     确定
                   </div>
                 </div>
+                <!---->
                 <div
                   class="t-picker__main"
                 >
@@ -2663,6 +2667,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     确定
                   </div>
                 </div>
+                <!---->
                 <div
                   class="t-picker__main"
                 >
@@ -2958,6 +2963,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     确定
                   </div>
                 </div>
+                <!---->
                 <div
                   class="t-picker__main"
                 >
@@ -3532,6 +3538,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                     确定
                   </div>
                 </div>
+                <!---->
                 <div
                   class="t-picker__main"
                 >
@@ -3928,6 +3935,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
                 确定
               </div>
             </div>
+            <!---->
             <div
               class="t-picker__main"
             >
@@ -4485,6 +4493,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                 确定
               </div>
             </div>
+            <!---->
             <div
               class="t-picker__main"
             >

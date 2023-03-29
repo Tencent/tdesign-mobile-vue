@@ -26,6 +26,7 @@ exports[`DateTimePicker > props > : onPick 1`] = `
         确定
       </div>
     </div>
+    <!---->
     <div
       class="t-picker__main"
     >
