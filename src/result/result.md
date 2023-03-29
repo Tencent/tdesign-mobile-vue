@@ -3,11 +3,10 @@
 ## API
 ### Result Props
 
-| 名称             | 类型          | 默认值 | 说明      | 必传 |
-| ---------------- | ------------- | ------ | ------ | ---- |
-| title            | String / Slot | -      | 标题     | N    |
-| description      | String / Slot | -      | 描述文字       | N    |
-| icon             | String        | -      | 图标名称      | N    |
-| image            | String / Slot | -      | 图片地址  | N    |
-| theme            | String         | default| 内置主题。可选项：default/success/warning/error | N  |
-| imageProps       | Object | - | 透传 Image 组件全部属性。TS 类型：`ImageProps`，[Image API Documents](./image?tab=api)。 | N
+名称 | 类型 | 默认值 | 说明 | 必传
+-- | -- | -- | -- | --
+description | String / Slot / Function | - | 描述文字。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | Slot / Function | - | 图标名称。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+image | String / Slot / Function | - | 图片地址。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+theme | String | default | 内置主题。。可选项：default/success/warning/error | N
+title | String / Slot / Function | '' | 标题。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
