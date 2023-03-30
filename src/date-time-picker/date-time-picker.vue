@@ -6,7 +6,7 @@
       :title="title"
       :confirm-btn="confirmButtonText"
       :cancel-btn="cancelButtonText"
-      :columns="(selected) => generateDatePickerColumns(selected, start, end, renderLabel)"
+      :columns="columns"
       @change="onChange"
       @confirm="onConfirm"
       @cancel="onCancel"
@@ -18,11 +18,16 @@
 
 <script lang="ts">
 import { ref, computed, defineComponent, toRefs, watch, nextTick } from 'vue';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs, UnitType } from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import isObject from 'lodash/isObject';
+import isString from 'lodash/isString';
+import isArray from 'lodash/isArray';
+
 import config from '../config';
 import DateTimePickerProps from './props';
+import { getMeaningColumn } from './shared';
 import { useEmitEvent, useVModel } from '../shared';
 import { Picker as TPicker } from '../picker';
 import { PickerColumn, PickerColumnItem, PickerValue, PickerContext } from '../picker/type';
@@ -50,8 +55,6 @@ export default defineComponent({
   setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const pickeInstance = ref<any>(null);
-    const isChanged = ref(false);
-    const realDateValue = ref();
     const className = computed(() => [`${name}`]);
     const { value, modelValue } = toRefs(props);
     const [dateTimePickerValue, setDateTimePickerValue] = useVModel(
@@ -60,6 +63,7 @@ export default defineComponent({
       props.defaultValue,
       props.onChange,
     );
+    const innerValue = ref(dateTimePickerValue.value);
     const title = computed(() => {
       return props.title || '选择时间';
     });
@@ -74,49 +78,22 @@ export default defineComponent({
       return props.end ? dayjs(props.end) : dayjs().add(10, 'year');
     });
 
-    const renderLabel = computed(() => {
-      return props.renderLabel;
-    });
+    const meaningColumn = computed(() => getMeaningColumn(props.mode));
 
     // 根据mode，判断是否需要渲染'year','month','date','hour','minute','second'对应的列
     const isPrecision = (type: string) => {
       if (!props.mode) {
         return false;
       }
-      switch (type) {
-        case 'year':
-          return (
-            (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 0) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[0]] >= 0)
-          );
-        case 'month':
-          return (
-            (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 1) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[0]] >= 1)
-          );
-        case 'date':
-          return (
-            (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 2) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[0]] >= 2)
-          );
-        case 'hour':
-          return (
-            (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 3) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[1]] >= 3)
-          );
-        case 'minute':
-          return (
-            (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 4) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[1]] >= 4)
-          );
-        case 'second':
-          return (
-            (typeof props.mode === 'string' && precisionRankRecord[props.mode] >= 5) ||
-            (typeof props.mode === 'object' && precisionRankRecord[props.mode[1]] >= 5)
-          );
-        default:
-          return true;
+
+      if (type in precisionRankRecord) {
+        return (
+          (isString(props.mode) && precisionRankRecord[props.mode] >= precisionRankRecord[type]) ||
+          (isObject(props.mode) && precisionRankRecord[props.mode[0]] >= precisionRankRecord[type])
+        );
       }
+
+      return true;
     };
 
     // 将dateTimeValue格式的值转为pickerValue，赋值给picker组件的value
@@ -150,58 +127,50 @@ export default defineComponent({
       return date;
     };
 
-    // 每次pick后，根据start,end生成最新的columns
-    const generateDatePickerColumns = (
-      selected: PickerValue[],
-      min: any,
-      max: any,
-      renderLabel: (type: string, value: number) => string,
-    ) => {
-      const ret: PickerColumn[] = [];
-      const minYear = min.year();
-      const minMonth = min.month() + 1;
-      const minDay = min.date();
-      const minHour = min.hour();
-      const minMinute = min.minute();
-      const minSecond = min.second();
-
-      const maxYear = max.year();
-      const maxMonth = max.month() + 1;
-      const maxDay = max.date();
-      const maxHour = max.hour();
-      const maxMinute = max.minute();
-      const maxSecond = max.second();
-
-      const selectedDate: any = {};
-      let selectedLength = 0;
-
-      Object.keys(precisionRankRecord).forEach((item) => {
-        const newKey = `selected${item.substr(0, 1).toUpperCase()}${item.substr(1, item.length)}`;
-        if (isPrecision(item)) {
-          selectedDate[newKey] = parseInt(`${selected[selectedLength]}`, 10);
-          selectedLength++;
-        } else {
-          selectedDate[newKey] = undefined;
+    const curDate = ref(
+      (() => {
+        const timeMode = ['hour', 'minute', 'second'];
+        if (timeMode.includes(props.mode) || (isArray(props.mode) && props.mode?.[0] == null)) {
+          return dayjs(`1900-1-1 ${innerValue.value}`);
         }
-      });
+        return dayjs(innerValue.value);
+      })(),
+    );
 
-      const isInMinYear = selectedDate.selectedYear === minYear;
-      const isInMaxYear = selectedDate.selectedYear === maxYear;
-      const isInMinMonth = isInMinYear && selectedDate.selectedMonth + 1 === minMonth;
-      const isInMaxMonth = isInMaxYear && selectedDate.selectedMonth + 1 === maxMonth;
-      const isInMinDay = isInMinMonth && selectedDate.selectedDay === minDay;
-      const isInMaxDay = isInMaxMonth && selectedDate.selectedDay === maxDay;
-      const isInMinHour = isInMinDay && selectedDate.selectedHour === minHour;
-      const isInMaxHour = isInMaxDay && selectedDate.selectedHour === maxHour;
-      const isInMinMinute = isInMinHour && selectedDate.selectedMinute === minMinute;
-      const isInMaxMinute = isInMaxHour && selectedDate.selectedMinute === maxMinute;
+    // 每次pick后，根据start,end生成最新的columns
+    const columns = computed(() => {
+      const ret: PickerColumn[] = [];
+      const getDate = (date: Dayjs) => [date.year(), date.month() + 1, date.date(), date.minute(), date.second()];
+      const [curYear, curMonth, curDay, curHour, curMinute] = getDate(curDate.value);
+      const [minYear, minMonth, minDay, minHour, minMinute, minSecond] = getDate(start.value);
+      const [maxYear, maxMonth, maxDay, maxHour, maxMinute, maxSecond] = getDate(end.value);
+
+      const isInMinYear = curYear === minYear;
+      const isInMaxYear = curYear === maxYear;
+      const isInMinMonth = isInMinYear && curMonth + 1 === minMonth;
+      const isInMaxMonth = isInMaxYear && curMonth + 1 === maxMonth;
+      const isInMinDay = isInMinMonth && curDay === minDay;
+      const isInMaxDay = isInMaxMonth && curDay === maxDay;
+      const isInMinHour = isInMinDay && curHour === minHour;
+      const isInMaxHour = isInMaxDay && curHour === maxHour;
+      const isInMinMinute = isInMinHour && curMinute === minMinute;
+      const isInMaxMinute = isInMaxHour && curMinute === maxMinute;
+
+      const typeUnit = {
+        year: '年',
+        month: '月',
+        date: '日',
+        hour: '时',
+        minute: '分',
+        second: '秒',
+      };
 
       const generateColumn = (start: number, end: number, type: string) => {
         const arr: PickerColumnItem[] = [];
         for (let i = start; i <= end; i++) {
           const value = i.toString();
           arr.push({
-            label: renderLabel ? renderLabel(type, i) : value,
+            label: props.renderLabel ? props.renderLabel(type, i) : `${value} ${typeUnit[type]}`,
             value: type === 'month' ? `${+value - 1}` : value,
           });
         }
@@ -220,7 +189,7 @@ export default defineComponent({
 
       if (isPrecision('date')) {
         const lower = isInMinMonth ? minDay : 1;
-        const upper = isInMaxMonth ? maxDay : dayjs(`${selected[0]}-${+selected[1] + 1}`).daysInMonth();
+        const upper = isInMaxMonth ? maxDay : dayjs(`${curYear}-${curMonth}`).daysInMonth();
         generateColumn(lower, upper, 'date');
       }
 
@@ -242,7 +211,7 @@ export default defineComponent({
         generateColumn(lower, upper, 'second');
       }
       return ret;
-    };
+    });
 
     const onConfirm = (value: Array<PickerValue>, context: { index: number[] }) => {
       lastTimePicker = [...currentPicker];
@@ -258,12 +227,14 @@ export default defineComponent({
     const onChange = (value: Array<PickerValue>, context: { columns: Array<PickerContext>; e: MouseEvent }) => {
       lastTimePicker = [...currentPicker];
       const currentDate = getDateTimePickerValueByPickerValue(value);
-      realDateValue.value = dayjs(currentDate).format(props.format);
-      isChanged.value = true;
+      setDateTimePickerValue(dayjs(currentDate).format(props.format));
     };
 
     const onPick = (value: Array<PickerValue>, context: PickerContext) => {
-      currentPicker = value;
+      const { column, index } = context;
+      const type = meaningColumn.value[column];
+      const val = curDate.value.set(type as UnitType, parseInt(columns.value[column][index]?.value, 10));
+      curDate.value = val;
       const currentDate = getDateTimePickerValueByPickerValue(value);
       emitEvent('pick', dayjs(currentDate).format(props.format));
     };
@@ -277,28 +248,10 @@ export default defineComponent({
       () => dateTimePickerValue,
       (val) => {
         nextTick(() => {
-          if (isChanged.value) {
-            isChanged.value = false;
-          } else {
-            pickeInstance.value?.setValues(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf()));
-            currentPicker = [...ref(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf())).value];
-            lastTimePicker = [...currentPicker];
-            isChanged.value = false;
-          }
+          pickeInstance.value?.setValues(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf()));
+          currentPicker = [...ref(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf())).value];
+          lastTimePicker = [...currentPicker];
         });
-      },
-      {
-        immediate: true,
-        deep: true,
-      },
-    );
-
-    watch(
-      () => isChanged,
-      (val) => {
-        if (val.value) {
-          setDateTimePickerValue(realDateValue.value);
-        }
       },
       {
         immediate: true,
@@ -314,12 +267,9 @@ export default defineComponent({
       title,
       start,
       end,
-      renderLabel,
       pickerValue,
       currentPicker,
-      realDateValue,
-      isChanged,
-      generateDatePickerColumns,
+      columns,
       onConfirm,
       onCancel,
       onPick,

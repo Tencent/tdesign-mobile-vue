@@ -65,10 +65,10 @@ export default defineComponent({
       }
     };
     const setOptions = () => {
-      picker && picker.update();
+      picker?.update();
     };
     const setUpdateItems = () => {
-      picker && picker.updateItems();
+      picker?.updateItems();
     };
     context.expose({
       setIndex,
@@ -92,7 +92,7 @@ export default defineComponent({
     watch(
       () => props.options,
       () => {
-        picker?.init();
+        picker?.update();
       },
       { flush: 'post' },
     );
