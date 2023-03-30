@@ -23,8 +23,7 @@ import { h, computed, toRefs, getCurrentInstance, defineComponent } from 'vue';
 import { InfoCircleIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import resultProps from './props';
 import config from '../config';
-import { TdResultProps } from './type';
-import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
+import { renderTNode, TNode } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-result`;
@@ -51,20 +50,19 @@ export default defineComponent({
     const classes = computed(() => [`${name}`, `${name}--theme-${props.theme}`]);
 
     let iconContent: any;
-    if (props.icon !== '') {
+    if (props?.theme) {
       if (Object.keys(iconDefault).includes(props?.theme as string)) {
         const key = props.theme as string;
         iconContent = computed(() => iconDefault?.[key]);
       }
-      iconContent = props.icon ? computed(() => renderTNode(internalInstance, 'icon')) : iconContent;
     }
+    iconContent = props.icon ? computed(() => renderTNode(internalInstance, 'icon')) : iconContent;
 
     const baseImageProps = {
       src: props.image,
     };
 
     const customImageProps = computed(() => ({
-      ...props.imageProps,
       ...baseImageProps,
     }));
 
