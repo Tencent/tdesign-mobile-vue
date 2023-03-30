@@ -10,6 +10,4 @@ const props = defineProps({
   title: String,
   description: String,
 });
-
-const { theme, title, description } = toRefs(props);
 </script>
