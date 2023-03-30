@@ -1,19 +1,21 @@
 <template>
   <div :class="classPrefix">
     <div :class="`${classPrefix}__thumb`">
-      <t-image v-if="image" :class="`${classPrefix}-class-image`" :src="image" />
-      <div v-else-if="iconContent !== undefined" :class="`${classPrefix}__icon`">
-        <t-node :content="iconContent"></t-node>
+      <template v-if="imageContent">
+        <t-image v-if="typeof image === 'string'" :src="image" />
+        <t-node v-else :content="imageContent" />
+      </template>
+
+      <div v-else-if="iconContent" :class="`${classPrefix}__icon`">
+        <t-node :content="iconContent" />
       </div>
-      <slot v-else name="image" />
     </div>
 
-    <div :class="`${classPrefix}__description`">
-      <div v-if="description">{{ description }}</div>
-      <slot name="description" />
+    <div v-if="descriptionContent" :class="`${classPrefix}__description`">
+      <t-node :content="descriptionContent" />
     </div>
-    <div :class="`${classPrefix}__actions`">
-      <slot name="action" />
+    <div v-if="actionContent" :class="`${classPrefix}__actions`">
+      <t-node :content="actionContent" />
     </div>
   </div>
 </template>
@@ -32,12 +34,18 @@ export default defineComponent({
   components: { TNode },
 
   props: EmptyProps,
-  setup(props) {
+  setup(props, context) {
     const internalInstance = getCurrentInstance();
+    const actionContent = computed(() => renderTNode(internalInstance, 'action'));
+    const descriptionContent = computed(() => renderTNode(internalInstance, 'description'));
     const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
+    const imageContent = computed(() => renderTNode(internalInstance, 'image'));
 
     return {
+      actionContent,
+      descriptionContent,
       iconContent,
+      imageContent,
       classPrefix: name,
       ...toRefs(props),
     };
