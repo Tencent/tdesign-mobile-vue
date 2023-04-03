@@ -2090,7 +2090,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     用于选择一个时间点或者一个时间段
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2101,7 +2101,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基本用法
       </p>
@@ -3413,7 +3413,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -3424,7 +3424,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
         02 自定义
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         自定义选择范围
       </p>

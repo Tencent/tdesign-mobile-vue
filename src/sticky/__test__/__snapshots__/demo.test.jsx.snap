@@ -86,7 +86,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     用于常驻页面顶部的信息、操作展示。
   </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-3246353e=""
   >
     <div
@@ -94,7 +94,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         基础吸顶
       </p>
@@ -136,7 +136,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-3246353e=""
   >
     <div
@@ -144,7 +144,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         吸顶距离
       </p>
@@ -186,7 +186,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-3246353e=""
   >
     <div
@@ -194,7 +194,7 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         指定容器
       </p>

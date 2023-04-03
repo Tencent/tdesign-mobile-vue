@@ -331,7 +331,7 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
     图片全屏放大预览效果，包含全屏背景色、页码位置样式、增加操作等规范
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -342,7 +342,7 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         图片预览类型
       </p>

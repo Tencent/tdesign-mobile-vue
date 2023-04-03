@@ -6348,7 +6348,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
     按钮用于选择日期。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -6359,7 +6359,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         01 基础
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础用法
       </p>
@@ -13528,7 +13528,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -13539,7 +13539,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         02 自定义
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
          
       </p>

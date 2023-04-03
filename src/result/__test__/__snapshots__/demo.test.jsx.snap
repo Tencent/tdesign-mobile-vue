@@ -78,7 +78,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     结果反馈
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-772b64ec=""
   >
     <div
@@ -99,7 +99,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-772b64ec=""
   >
     <div
@@ -107,7 +107,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         不同结果状态
       </p>
@@ -282,7 +282,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-772b64ec=""
   >
     <div
@@ -290,7 +290,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         自定义结果
       </p>
@@ -361,7 +361,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-772b64ec=""
   >
     <div
@@ -369,7 +369,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         页面位置展示
       </p>

@@ -3,14 +3,18 @@
  */
 
 import { mount } from '@vue/test-utils';
+import actionVue from '@/search/demos/action.vue';
 import baseVue from '@/search/demos/base.vue';
 import mobileVue from '@/search/demos/mobile.vue';
-import statusVue from '@/search/demos/status.vue';
+import otherVue from '@/search/demos/other.vue';
+import shapeVue from '@/search/demos/shape.vue';
 
 const mapper = {
+  actionVue,
   baseVue,
   mobileVue,
-  statusVue,
+  otherVue,
+  shapeVue,
 };
 
 describe('Search', () => {
