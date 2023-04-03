@@ -75,6 +75,9 @@ export default defineComponent({
     });
 
     const meaningColumn = computed(() => getMeaningColumn(props.mode));
+    const isTimeMode = computed(
+      () => ['hour', 'minute', 'second'].includes(props.mode) || (isArray(props.mode) && props.mode[0] == null),
+    );
 
     // 根据mode，判断是否需要渲染'year','month','date','hour','minute','second'对应的列
     const isPrecision = (type: string) => {
@@ -107,8 +110,7 @@ export default defineComponent({
 
     const curDate = ref(
       (() => {
-        const timeMode = ['hour', 'minute', 'second'];
-        if (timeMode.includes(props.mode) || (isArray(props.mode) && props.mode?.[0] == null)) {
+        if (isTimeMode.value) {
           return dayjs(`1900-1-1 ${innerValue.value}`);
         }
         return dayjs(innerValue.value);
@@ -116,6 +118,7 @@ export default defineComponent({
     );
 
     const rationalize = (val: Dayjs) => {
+      if (isTimeMode.value) return val;
       if (val.isBefore(start.value)) return start.value;
       if (val.isAfter(end.value)) return end.value;
       return val;
@@ -141,7 +144,6 @@ export default defineComponent({
       const isInMaxHour = isInMaxDay && curHour === maxHour;
       const isInMinMinute = isInMinHour && curMinute === minMinute;
       const isInMaxMinute = isInMaxHour && curMinute === maxMinute;
-      const isTimeMode = isArray(props.mode) && props.mode[0] == null;
 
       const typeUnit = {
         year: '年',
@@ -181,20 +183,20 @@ export default defineComponent({
       }
 
       if (isPrecision('hour')) {
-        const lower = isInMinDay && !isTimeMode ? minHour : 0;
-        const upper = isInMaxDay && !isTimeMode ? maxHour : 23;
+        const lower = isInMinDay && !isTimeMode.value ? minHour : 0;
+        const upper = isInMaxDay && !isTimeMode.value ? maxHour : 23;
         generateColumn(lower, upper, 'hour');
       }
 
       if (isPrecision('minute')) {
-        const lower = isInMinHour && !isTimeMode ? minMinute : 0;
-        const upper = isInMaxHour && !isTimeMode ? maxMinute : 59;
+        const lower = isInMinHour && !isTimeMode.value ? minMinute : 0;
+        const upper = isInMaxHour && !isTimeMode.value ? maxMinute : 59;
         generateColumn(lower, upper, 'minute');
       }
 
       if (isPrecision('second')) {
-        const lower = isInMinMinute && !isTimeMode ? minSecond : 0;
-        const upper = isInMaxMinute && !isTimeMode ? maxSecond : 59;
+        const lower = isInMinMinute && !isTimeMode.value ? minSecond : 0;
+        const upper = isInMaxMinute && !isTimeMode.value ? maxSecond : 59;
         generateColumn(lower, upper, 'second');
       }
       return ret;
@@ -218,7 +220,7 @@ export default defineComponent({
       const val = curDate.value.set(type as UnitType, parseInt(columns.value[column][index]?.value, 10));
 
       curDate.value = rationalize(val);
-      emitEvent('pick', val.format(props.format));
+      emitEvent('pick', curDate.value.format(props.format));
     };
 
     return {

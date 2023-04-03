@@ -49,7 +49,7 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
-    const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, [], props.onChange);
+    const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
     const getDefaultText = (prop: string | boolean, defaultText: string): string => {
       if (isString(prop)) return prop;
       if (isBoolean(prop) && prop) return defaultText;
