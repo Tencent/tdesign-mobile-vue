@@ -99,113 +99,103 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
               >
                 <ul
                   class="t-picker-item"
-                  style="transform: translate3d(0, -240px, 0);"
+                  style="transform: translate3d(0, -160px, 0);"
                 >
                   
                   <li
                     class="t-picker-item__item"
                   >
-                    2013
+                    2015 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2014
+                    2016 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2015
+                    2017 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2016
+                    2018 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2017
+                    2019 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2018
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    2019
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    2020
+                    2020 年
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    2021
+                    2021 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2022
+                    2022 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2023
+                    2023 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2024
+                    2024 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2025
+                    2025 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2026
+                    2026 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2027
+                    2027 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2028
+                    2028 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2029
+                    2029 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2030
+                    2030 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2031
+                    2031 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2032
+                    2032 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2033
+                    2033 年
                   </li>
                   
                 </ul>
@@ -221,62 +211,62 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    1 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    2 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    3 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    4 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    5 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    6 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    7 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    8
+                    8 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    9
+                    9 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    10
+                    10 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    11
+                    11 月
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    12
+                    12 月
                   </li>
                   
                 </ul>
@@ -292,157 +282,157 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    1 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    2 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    3 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    4 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    5 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    6 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    7 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    8
+                    8 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    9
+                    9 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    10
+                    10 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    11
+                    11 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    12
+                    12 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    13
+                    13 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    14
+                    14 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    15
+                    15 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    16
+                    16 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    17
+                    17 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    18
+                    18 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    19
+                    19 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    20
+                    20 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    21
+                    21 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    22
+                    22 日
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    23
+                    23 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    24
+                    24 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    25
+                    25 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    26
+                    26 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    27
+                    27 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    28
+                    28 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    29
+                    29 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    30
+                    30 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    31
+                    31 日
                   </li>
                   
                 </ul>
@@ -574,32 +564,32 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    2020
+                    2020 年
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    2021
+                    2021 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2022
+                    2022 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2023
+                    2023 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2024
+                    2024 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2025
+                    2025 年
                   </li>
                   
                 </ul>
@@ -615,62 +605,62 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    1 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    2 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    3 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    4 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    5 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    6 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    7 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    8
+                    8 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    9
+                    9 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    10
+                    10 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    11
+                    11 月
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    12
+                    12 月
                   </li>
                   
                 </ul>
@@ -686,157 +676,157 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    1 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    2 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    3 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    4 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    5 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    6 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    7 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    8
+                    8 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    9
+                    9 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    10
+                    10 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    11
+                    11 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    12
+                    12 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    13
+                    13 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    14
+                    14 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    15
+                    15 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    16
+                    16 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    17
+                    17 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    18
+                    18 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    19
+                    19 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    20
+                    20 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    21
+                    21 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    22
+                    22 日
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    23
+                    23 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    24
+                    24 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    25
+                    25 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    26
+                    26 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    27
+                    27 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    28
+                    28 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    29
+                    29 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    30
+                    30 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    31
+                    31 日
                   </li>
                   
                 </ul>
@@ -968,107 +958,107 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    2013
+                    2013 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2014
+                    2014 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2015
+                    2015 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2016
+                    2016 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2017
+                    2017 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2018
+                    2018 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2019
+                    2019 年
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    2020
+                    2020 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2021
+                    2021 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2022
+                    2022 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2023
+                    2023 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2024
+                    2024 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2025
+                    2025 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2026
+                    2026 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2027
+                    2027 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2028
+                    2028 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2029
+                    2029 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2030
+                    2030 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2031
+                    2031 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2032
+                    2032 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2033
+                    2033 年
                   </li>
                   
                 </ul>
@@ -1084,62 +1074,62 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    1 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    2 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    3 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    4 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    5 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    6 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    7 月
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    8
+                    8 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    9
+                    9 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    10
+                    10 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    11
+                    11 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    12
+                    12 月
                   </li>
                   
                 </ul>
@@ -1155,910 +1145,157 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    1 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    2 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    3 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    4 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    5 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    6 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    7 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    8
+                    8 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    9
-                  </li>
-                  <li
-                    class="t-picker-item__item t-picker-item__item--selected"
-                  >
-                    10
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    11
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    12
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    13
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    14
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    15
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    16
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    17
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    18
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    19
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    20
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    21
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    22
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    23
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    24
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    25
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    26
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    27
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    28
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    29
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    30
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    31
-                  </li>
-                  
-                </ul>
-              </div>
-              <div
-                class="t-picker-item__group"
-              >
-                <ul
-                  class="t-picker-item"
-                  style="transform: translate3d(0, -400px, 0);"
-                >
-                  
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    0
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    1
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    2
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    3
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    4
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    5
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    6
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    7
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    8
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    9
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    10
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    11
+                    9 日
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    12
+                    10 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    13
+                    11 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    14
+                    12 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    15
+                    13 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    16
+                    14 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    17
+                    15 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    18
+                    16 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    19
+                    17 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    20
+                    18 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    21
+                    19 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    22
+                    20 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    23
+                    21 日
                   </li>
-                  
-                </ul>
-              </div>
-              <div
-                class="t-picker-item__group"
-              >
-                <ul
-                  class="t-picker-item"
-                  style="transform: translate3d(0, -1920px, 0);"
-                >
-                  
                   <li
                     class="t-picker-item__item"
                   >
-                    0
+                    22 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    23 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    24 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    25 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    26 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    27 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    28 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    29 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    8
+                    30 日
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    9
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    10
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    11
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    12
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    13
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    14
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    15
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    16
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    17
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    18
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    19
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    20
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    21
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    22
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    23
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    24
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    25
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    26
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    27
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    28
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    29
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    30
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    31
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    32
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    33
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    34
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    35
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    36
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    37
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    38
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    39
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    40
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    41
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    42
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    43
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    44
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    45
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    46
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    47
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    48
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    49
-                  </li>
-                  <li
-                    class="t-picker-item__item t-picker-item__item--selected"
-                  >
-                    50
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    51
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    52
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    53
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    54
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    55
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    56
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    57
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    58
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    59
-                  </li>
-                  
-                </ul>
-              </div>
-              <div
-                class="t-picker-item__group"
-              >
-                <ul
-                  class="t-picker-item"
-                  style="transform: translate3d(0, 80px, 0);"
-                >
-                  
-                  <li
-                    class="t-picker-item__item t-picker-item__item--selected"
-                  >
-                    0
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    1
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    2
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    3
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    4
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    5
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    6
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    7
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    8
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    9
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    10
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    11
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    12
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    13
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    14
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    15
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    16
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    17
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    18
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    19
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    20
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    21
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    22
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    23
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    24
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    25
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    26
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    27
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    28
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    29
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    30
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    31
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    32
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    33
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    34
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    35
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    36
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    37
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    38
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    39
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    40
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    41
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    42
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    43
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    44
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    45
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    46
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    47
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    48
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    49
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    50
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    51
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    52
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    53
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    54
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    55
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    56
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    57
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    58
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    59
+                    31 日
                   </li>
                   
                 </ul>
@@ -2215,113 +1452,103 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   >
                     <ul
                       class="t-picker-item"
-                      style="transform: translate3d(0, -240px, 0);"
+                      style="transform: translate3d(0, -160px, 0);"
                     >
                       
                       <li
                         class="t-picker-item__item"
                       >
-                        2013
+                        2015 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2014
+                        2016 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2015
+                        2017 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2016
+                        2018 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2017
+                        2019 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2018
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        2019
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        2020
+                        2020 年
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        2021
+                        2021 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2022
+                        2022 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2023
+                        2023 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2024
+                        2024 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2025
+                        2025 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2026
+                        2026 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2027
+                        2027 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2028
+                        2028 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2029
+                        2029 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2030
+                        2030 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2031
+                        2031 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2032
+                        2032 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2033
+                        2033 年
                       </li>
                       
                     </ul>
@@ -2337,62 +1564,62 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       <li
                         class="t-picker-item__item"
                       >
-                        1
+                        1 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2
+                        2 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        3
+                        3 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        4
+                        4 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        5
+                        5 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        6
+                        6 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        7
+                        7 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        8
+                        8 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        9
+                        9 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        10
+                        10 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        11
+                        11 月
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        12
+                        12 月
                       </li>
                       
                     </ul>
@@ -2408,157 +1635,157 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       <li
                         class="t-picker-item__item"
                       >
-                        1
+                        1 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2
+                        2 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        3
+                        3 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        4
+                        4 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        5
+                        5 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        6
+                        6 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        7
+                        7 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        8
+                        8 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        9
+                        9 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        10
+                        10 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        11
+                        11 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        12
+                        12 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        13
+                        13 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        14
+                        14 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        15
+                        15 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        16
+                        16 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        17
+                        17 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        18
+                        18 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        19
+                        19 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        20
+                        20 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        21
+                        21 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        22
+                        22 日
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        23
+                        23 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        24
+                        24 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        25
+                        25 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        26
+                        26 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        27
+                        27 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        28
+                        28 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        29
+                        29 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        30
+                        30 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        31
+                        31 日
                       </li>
                       
                     </ul>
@@ -2683,107 +1910,107 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       <li
                         class="t-picker-item__item"
                       >
-                        2013
+                        2013 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2014
+                        2014 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2015
+                        2015 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2016
+                        2016 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2017
+                        2017 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2018
+                        2018 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2019
+                        2019 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2020
+                        2020 年
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        2021
+                        2021 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2022
+                        2022 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2023
+                        2023 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2024
+                        2024 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2025
+                        2025 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2026
+                        2026 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2027
+                        2027 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2028
+                        2028 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2029
+                        2029 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2030
+                        2030 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2031
+                        2031 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2032
+                        2032 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2033
+                        2033 年
                       </li>
                       
                     </ul>
@@ -2799,62 +2026,62 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       <li
                         class="t-picker-item__item"
                       >
-                        1
+                        1 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2
+                        2 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        3
+                        3 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        4
+                        4 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        5
+                        5 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        6
+                        6 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        7
+                        7 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        8
+                        8 月
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        9
+                        9 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        10
+                        10 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        11
+                        11 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        12
+                        12 月
                       </li>
                       
                     </ul>
@@ -2968,448 +2195,6 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                   class="t-picker__main"
                 >
                   
-                  <div
-                    class="t-picker-item__group"
-                  >
-                    <ul
-                      class="t-picker-item"
-                      style="transform: translate3d(0, -320px, 0);"
-                    >
-                      
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        0
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        1
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        2
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        3
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        4
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        5
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        6
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        7
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        8
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        9
-                      </li>
-                      <li
-                        class="t-picker-item__item t-picker-item__item--selected"
-                      >
-                        10
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        11
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        12
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        13
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        14
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        15
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        16
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        17
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        18
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        19
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        20
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        21
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        22
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        23
-                      </li>
-                      
-                    </ul>
-                  </div>
-                  <div
-                    class="t-picker-item__group"
-                  >
-                    <ul
-                      class="t-picker-item"
-                      style="transform: translate3d(0, -320px, 0);"
-                    >
-                      
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        0
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        1
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        2
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        3
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        4
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        5
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        6
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        7
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        8
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        9
-                      </li>
-                      <li
-                        class="t-picker-item__item t-picker-item__item--selected"
-                      >
-                        10
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        11
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        12
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        13
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        14
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        15
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        16
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        17
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        18
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        19
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        20
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        21
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        22
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        23
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        24
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        25
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        26
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        27
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        28
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        29
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        30
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        31
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        32
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        33
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        34
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        35
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        36
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        37
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        38
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        39
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        40
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        41
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        42
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        43
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        44
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        45
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        46
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        47
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        48
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        49
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        50
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        51
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        52
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        53
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        54
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        55
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        56
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        57
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        58
-                      </li>
-                      <li
-                        class="t-picker-item__item"
-                      >
-                        59
-                      </li>
-                      
-                    </ul>
-                  </div>
                   
                   <div
                     class="t-picker__mask t-picker__mask--top"
@@ -3554,32 +2339,32 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       <li
                         class="t-picker-item__item"
                       >
-                        2020
+                        2020 年
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        2021
+                        2021 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2022
+                        2022 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2023
+                        2023 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2024
+                        2024 年
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2025
+                        2025 年
                       </li>
                       
                     </ul>
@@ -3595,62 +2380,62 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       <li
                         class="t-picker-item__item"
                       >
-                        1
+                        1 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2
+                        2 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        3
+                        3 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        4
+                        4 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        5
+                        5 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        6
+                        6 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        7
+                        7 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        8
+                        8 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        9
+                        9 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        10
+                        10 月
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        11
+                        11 月
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        12
+                        12 月
                       </li>
                       
                     </ul>
@@ -3666,157 +2451,157 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
                       <li
                         class="t-picker-item__item"
                       >
-                        1
+                        1 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        2
+                        2 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        3
+                        3 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        4
+                        4 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        5
+                        5 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        6
+                        6 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        7
+                        7 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        8
+                        8 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        9
+                        9 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        10
+                        10 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        11
+                        11 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        12
+                        12 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        13
+                        13 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        14
+                        14 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        15
+                        15 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        16
+                        16 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        17
+                        17 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        18
+                        18 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        19
+                        19 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        20
+                        20 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        21
+                        21 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        22
+                        22 日
                       </li>
                       <li
                         class="t-picker-item__item t-picker-item__item--selected"
                       >
-                        23
+                        23 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        24
+                        24 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        25
+                        25 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        26
+                        26 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        27
+                        27 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        28
+                        28 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        29
+                        29 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        30
+                        30 日
                       </li>
                       <li
                         class="t-picker-item__item"
                       >
-                        31
+                        31 日
                       </li>
                       
                     </ul>
@@ -3940,448 +2725,6 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
               class="t-picker__main"
             >
               
-              <div
-                class="t-picker-item__group"
-              >
-                <ul
-                  class="t-picker-item"
-                  style="transform: translate3d(0, -320px, 0);"
-                >
-                  
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    0
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    1
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    2
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    3
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    4
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    5
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    6
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    7
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    8
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    9
-                  </li>
-                  <li
-                    class="t-picker-item__item t-picker-item__item--selected"
-                  >
-                    10
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    11
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    12
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    13
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    14
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    15
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    16
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    17
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    18
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    19
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    20
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    21
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    22
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    23
-                  </li>
-                  
-                </ul>
-              </div>
-              <div
-                class="t-picker-item__group"
-              >
-                <ul
-                  class="t-picker-item"
-                  style="transform: translate3d(0, -320px, 0);"
-                >
-                  
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    0
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    1
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    2
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    3
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    4
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    5
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    6
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    7
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    8
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    9
-                  </li>
-                  <li
-                    class="t-picker-item__item t-picker-item__item--selected"
-                  >
-                    10
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    11
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    12
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    13
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    14
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    15
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    16
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    17
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    18
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    19
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    20
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    21
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    22
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    23
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    24
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    25
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    26
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    27
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    28
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    29
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    30
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    31
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    32
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    33
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    34
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    35
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    36
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    37
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    38
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    39
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    40
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    41
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    42
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    43
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    44
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    45
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    46
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    47
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    48
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    49
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    50
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    51
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    52
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    53
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    54
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    55
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    56
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    57
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    58
-                  </li>
-                  <li
-                    class="t-picker-item__item"
-                  >
-                    59
-                  </li>
-                  
-                </ul>
-              </div>
               
               <div
                 class="t-picker__mask t-picker__mask--top"
@@ -4509,107 +2852,107 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    2013
+                    2013 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2014
+                    2014 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2015
+                    2015 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2016
+                    2016 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2017
+                    2017 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2018
+                    2018 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2019
+                    2019 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2020
+                    2020 年
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    2021
+                    2021 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2022
+                    2022 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2023
+                    2023 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2024
+                    2024 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2025
+                    2025 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2026
+                    2026 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2027
+                    2027 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2028
+                    2028 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2029
+                    2029 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2030
+                    2030 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2031
+                    2031 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2032
+                    2032 年
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2033
+                    2033 年
                   </li>
                   
                 </ul>
@@ -4625,62 +2968,62 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
                   <li
                     class="t-picker-item__item"
                   >
-                    1
+                    1 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    2
+                    2 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    3
+                    3 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    4
+                    4 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    5
+                    5 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    6
+                    6 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    7
+                    7 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    8
+                    8 月
                   </li>
                   <li
                     class="t-picker-item__item t-picker-item__item--selected"
                   >
-                    9
+                    9 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    10
+                    10 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    11
+                    11 月
                   </li>
                   <li
                     class="t-picker-item__item"
                   >
-                    12
+                    12 月
                   </li>
                   
                 </ul>

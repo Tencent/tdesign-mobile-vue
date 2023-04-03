@@ -19,7 +19,6 @@ import { ref, computed, defineComponent, toRefs, watch, nextTick } from 'vue';
 import dayjs, { Dayjs, UnitType } from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 import isArray from 'lodash/isArray';
 
@@ -83,10 +82,12 @@ export default defineComponent({
         return false;
       }
 
+      const arrayIndex = ['year', 'month', 'date'].includes(type) ? 0 : 1;
+
       if (type in precisionRankRecord) {
         return (
           (isString(props.mode) && precisionRankRecord[props.mode] >= precisionRankRecord[type]) ||
-          (isObject(props.mode) && precisionRankRecord[props.mode[0]] >= precisionRankRecord[type])
+          (isArray(props.mode) && precisionRankRecord[props.mode[arrayIndex]] >= precisionRankRecord[type])
         );
       }
 
