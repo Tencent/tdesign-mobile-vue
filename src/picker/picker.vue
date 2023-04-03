@@ -10,7 +10,7 @@
       <div v-for="(item, index) in realColumns" :key="index" :class="`${name}-item__group`">
         <picker-item
           :options="item"
-          :default-value="pickerValue[index]"
+          :value="pickerValue[index]"
           :render-label="renderLabel"
           @pick="handlePick($event, index)"
         />
@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { computed, nextTick, defineComponent, toRefs, onMounted, ref, getCurrentInstance } from 'vue';
+import { computed, nextTick, defineComponent, toRefs, onMounted, ref, getCurrentInstance, watch } from 'vue';
 import isString from 'lodash/isString';
 import isBoolean from 'lodash/isBoolean';
 
@@ -49,7 +49,7 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
-    const [pickerValue, setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, [], props.onChange);
     const getDefaultText = (prop: string | boolean, defaultText: string): string => {
       if (isString(prop)) return prop;
       if (isBoolean(prop) && prop) return defaultText;
@@ -61,82 +61,59 @@ export default defineComponent({
     const curValueArray = ref(pickerValue.value.map((item: PickerValue) => item));
     const realColumns = computed(() => {
       if (typeof props.columns === 'function') {
-        const data = props.columns(curValueArray.value);
-        return data;
+        return props.columns(curValueArray.value);
       }
       return props.columns;
     });
-    let lastTimeValueArray = [...curValueArray.value];
-    let curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
+    const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
       return getIndexFromColumns(item, pickerValue?.value[index]);
     });
-    let lastTimeIndexArray = [...curIndexArray];
     const pickerItemInstanceArray = ref([]) as any;
+
     onMounted(() => {
       // 获取pickerItem实例，用于更新每个item的value和index
       pickerItemInstanceArray.value = useChildSlots('t-picker-item').map((item) => item.component);
     });
+
     const handleConfirm = (e: MouseEvent) => {
-      // 点击确认后，更新最近一次的picker状态
-      lastTimeValueArray = [...curValueArray.value];
-      lastTimeIndexArray = [...curIndexArray];
-      setPickerValue(curValueArray.value);
-      const label = realColumns.value.map((item: PickerColumnItem, index: number) => item[curIndexArray[index]].label);
-      emitEvent('confirm', curValueArray.value, { index: curIndexArray, label, e });
+      const target = realColumns.value.map((item: PickerColumnItem, index: number) => item[curIndexArray[index]]);
+      const label = target.map((item: PickerColumnItem) => item.label);
+      const value = target.map((item: PickerColumnItem) => item.value);
+      setPickerValue(value);
+      emitEvent('confirm', value, { index: curIndexArray, label, e });
     };
     const handleCancel = (e: MouseEvent) => {
-      // 点击取消后，重置最近一次的picker状态
-      curValueArray.value = [...lastTimeValueArray];
-      curIndexArray = [...lastTimeIndexArray];
       pickerItemInstanceArray.value.forEach((item: any, index: number) => {
         item.exposed?.setIndex(curIndexArray[index]);
       });
       emitEvent('cancel', { e });
     };
     const handlePick = (context: any, column: number) => {
-      if (curValueArray.value[column] !== context.value) {
-        // curValueArray.value[column] = context.value;
-        curIndexArray[column] = context.index;
-        // 当使用cascade或者dateTimePicker时，需要更新子节点的value和index
-        // if (typeof props.columns === 'function') {
-        //   const result = props.columns(curValueArray.value);
-        //   result.forEach((item: PickerColumnItem[], index: number) => {
-        //     if (!item.find((ele: PickerColumnItem) => ele.value === curValueArray.value[index])) {
-        //       curValueArray.value[index] = item[0]?.value;
-        //       curIndexArray[index] = 0;
-        //       nextTick(() => {
-        //         pickerItemInstanceArray.value[index]?.exposed?.setIndex(0);
-        //       });
-        //     } else {
-        //       nextTick(() => {
-        //         pickerItemInstanceArray.value[index]?.exposed?.setUpdateItems();
-        //       });
-        //     }
-        //   });
-        // }
-        emitEvent('pick', curValueArray.value, { index: context.index, column });
-      }
+      const { index } = context;
+
+      curIndexArray[column] = index;
+      curValueArray.value[column] = realColumns.value[column][index]?.value;
+
+      emitEvent('pick', curValueArray.value, { index, column });
     };
 
-    const setValues = (values: string[]) => {
-      curValueArray.value = values;
-      setPickerValue(values);
-      // 等columns更新完后，再更新value
-      nextTick(() => {
-        pickerItemInstanceArray.value.forEach((item: any, index: number) => {
-          item.exposed?.setValue(values[index]);
-        });
+    watch(pickerValue, () => {
+      curValueArray.value = pickerValue.value.map((item: PickerValue) => item);
+    });
+
+    watch([realColumns, curValueArray], () => {
+      realColumns.value.forEach((col: PickerColumn, idx: number) => {
+        const index = col.findIndex((item: PickerColumnItem) => item.value === curValueArray.value[idx]);
+        curIndexArray[idx] = index > -1 ? index : 0;
+        pickerItemInstanceArray.value[idx].exposed?.setIndex(curIndexArray[idx]);
       });
-    };
-
-    useExpose({
-      setValues,
     });
 
     return {
       name,
       header,
       pickerValue,
+      curIndexArray,
       confirmButtonText,
       cancelButtonText,
       handleConfirm,

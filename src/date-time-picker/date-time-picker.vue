@@ -1,8 +1,7 @@
 <template>
   <div :class="className">
     <t-picker
-      ref="pickeInstance"
-      :value="currentPicker"
+      :value="pickerValue"
       :title="title"
       :confirm-btn="confirmButtonText"
       :cancel-btn="cancelButtonText"
@@ -11,8 +10,7 @@
       @confirm="onConfirm"
       @cancel="onCancel"
       @pick="onPick"
-    >
-    </t-picker>
+    />
   </div>
 </template>
 
@@ -54,7 +52,6 @@ export default defineComponent({
   emits: ['change', 'cancel', 'confirm', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
-    const pickeInstance = ref<any>(null);
     const className = computed(() => [`${name}`]);
     const { value, modelValue } = toRefs(props);
     const [dateTimePickerValue, setDateTimePickerValue] = useVModel(
@@ -97,8 +94,7 @@ export default defineComponent({
     };
 
     // 将dateTimeValue格式的值转为pickerValue，赋值给picker组件的value
-    const getPickerValueByDateTimePickerValue = (value: string | number) => {
-      const currentDate = dayjs(value);
+    const getPickerValueByDateTimePickerValue = (currentDate: Dayjs) => {
       const ret: PickerValue[] = [];
       Object.keys(precisionRankRecord).forEach((item) => {
         if (isPrecision(item)) {
@@ -106,25 +102,6 @@ export default defineComponent({
         }
       });
       return ret;
-    };
-
-    // 当默认v-model为空时，当前value取最小日期
-    const pickerValue = ref(getPickerValueByDateTimePickerValue(dateTimePickerValue.value || start.value.valueOf()));
-
-    let lastTimePicker = [...pickerValue.value];
-    let currentPicker = [...pickerValue.value];
-
-    // 将pickerValue格式的值转为dateTimeValue，用于触发事件时进行输出
-    const getDateTimePickerValueByPickerValue = (value: PickerValue[]) => {
-      let valueLength = 0;
-      let date = dayjs();
-      Object.keys(precisionRankRecord).forEach((item, index) => {
-        if (isPrecision(item)) {
-          date = date[item](value[valueLength]);
-          valueLength++;
-        }
-      });
-      return date;
     };
 
     const curDate = ref(
@@ -137,6 +114,14 @@ export default defineComponent({
       })(),
     );
 
+    const rationalize = (val: Dayjs) => {
+      if (val.isBefore(start.value)) return start.value;
+      if (val.isAfter(end.value)) return end.value;
+      return val;
+    };
+
+    const pickerValue = computed(() => getPickerValueByDateTimePickerValue(curDate.value));
+
     // 每次pick后，根据start,end生成最新的columns
     const columns = computed(() => {
       const ret: PickerColumn[] = [];
@@ -147,8 +132,8 @@ export default defineComponent({
 
       const isInMinYear = curYear === minYear;
       const isInMaxYear = curYear === maxYear;
-      const isInMinMonth = isInMinYear && curMonth + 1 === minMonth;
-      const isInMaxMonth = isInMaxYear && curMonth + 1 === maxMonth;
+      const isInMinMonth = isInMinYear && curMonth === minMonth;
+      const isInMaxMonth = isInMaxYear && curMonth === maxMonth;
       const isInMinDay = isInMinMonth && curDay === minDay;
       const isInMaxDay = isInMaxMonth && curDay === maxDay;
       const isInMinHour = isInMinDay && curHour === minHour;
@@ -214,53 +199,27 @@ export default defineComponent({
     });
 
     const onConfirm = (value: Array<PickerValue>, context: { index: number[] }) => {
-      lastTimePicker = [...currentPicker];
-      const currentDate = getDateTimePickerValueByPickerValue(value);
-      emitEvent('confirm', dayjs(currentDate).format(props.format));
+      emitEvent('confirm', dayjs(curDate.value).format(props.format));
     };
 
     const onCancel = (context: { e: MouseEvent }) => {
-      currentPicker = [...lastTimePicker];
       emitEvent('cancel', { e: context.e });
     };
 
     const onChange = (value: Array<PickerValue>, context: { columns: Array<PickerContext>; e: MouseEvent }) => {
-      lastTimePicker = [...currentPicker];
-      const currentDate = getDateTimePickerValueByPickerValue(value);
-      setDateTimePickerValue(dayjs(currentDate).format(props.format));
+      emitEvent('change', dayjs(curDate.value).format(props.format));
     };
 
     const onPick = (value: Array<PickerValue>, context: PickerContext) => {
       const { column, index } = context;
       const type = meaningColumn.value[column];
       const val = curDate.value.set(type as UnitType, parseInt(columns.value[column][index]?.value, 10));
-      curDate.value = val;
-      const currentDate = getDateTimePickerValueByPickerValue(value);
-      emitEvent('pick', dayjs(currentDate).format(props.format));
+
+      curDate.value = rationalize(val);
+      emitEvent('pick', val.format(props.format));
     };
 
-    /**
-     * 监听v-model变化，当modelValue发生变化时，更新数据和ui
-     * isChanged用来区分用户直接修改v-model，和滑动picker修改value两种方式
-     * 只有用户滑动picker时，isChanged为true，滑动结束后设为false
-     */
-    watch(
-      () => dateTimePickerValue,
-      (val) => {
-        nextTick(() => {
-          pickeInstance.value?.setValues(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf()));
-          currentPicker = [...ref(getPickerValueByDateTimePickerValue(val.value || start.value.valueOf())).value];
-          lastTimePicker = [...currentPicker];
-        });
-      },
-      {
-        immediate: true,
-        deep: true,
-      },
-    );
-
     return {
-      pickeInstance,
       className,
       confirmButtonText,
       cancelButtonText,
@@ -268,7 +227,6 @@ export default defineComponent({
       start,
       end,
       pickerValue,
-      currentPicker,
       columns,
       onConfirm,
       onCancel,
