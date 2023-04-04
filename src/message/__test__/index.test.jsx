@@ -17,30 +17,40 @@ describe('Message.vue', () => {
       ).toBeTruthy();
     });
 
+    it(': align', () => {
+      const wrapper = mount(<Message visible align="left" />);
+      expect(wrapper.find(`.${name}-align--left`).exists()).toBeTruthy();
+    });
+
+    it(': marquee', async () => {
+      const wrapper = mount(<Message visible />);
+      expect(wrapper.vm.scroll.marquee).toBe(false);
+
+      const wrapper1 = mount(<Message visible marquee />);
+      expect(wrapper1.vm.scroll.marquee).toBe(false);
+
+      const wrapper2 = mount(<Message visible marquee={true} />);
+      await nextTick();
+      expect(wrapper2.vm.scroll.marquee).toBe(true);
+
+      const wrapper3 = mount(<Message visible marquee={{ loop: 1 }} />);
+      await nextTick();
+      expect(wrapper3.vm.scroll.marquee).toBe(true);
+      wrapper3.vm.handleTransitionend();
+      expect(wrapper3.vm.scroll.loop).toBe(0);
+      wrapper3.vm.handleTransitionend();
+      expect(wrapper3.vm.scroll.marquee).toBe(false);
+
+      const wrapper4 = mount(<Message visible marquee={{ loop: -1 }} />);
+      await nextTick();
+      expect(wrapper4.vm.scroll.marquee).toBe(true);
+      wrapper4.vm.handleTransitionend();
+    });
+
     it(': closeBtn is a function', () => {
       const closeBtn = () => h(TIconApp);
       const wrapper = mount(<Message visible closeBtn={closeBtn} />);
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-    });
-
-    it(': marquee', async () => {
-      const wrapper0 = mount(<Message visible />);
-      await nextTick();
-      expect(wrapper0.vm.scroll.marquee).toBe(false);
-
-      const wrapper = mount(<Message visible marquee />);
-      await nextTick();
-      expect(wrapper.vm.scroll.marquee).toBe(true);
-
-      const params = { loop: -1 };
-      const wrapper2 = mount(<Message visible marquee={params} />);
-      await nextTick();
-      expect(wrapper2.vm.scroll.marquee).toBe(true);
-
-      params.loop = 0;
-      const wrapper3 = mount(<Message visible marquee={params} />);
-      await nextTick();
-      expect(wrapper3.vm.scroll.marquee).toBe(false);
     });
   });
 
@@ -79,7 +89,10 @@ describe('Message.vue', () => {
   });
 
   describe('slots', () => {
-    it('icon:success', () => {
+    it('icon', () => {
+      const wrapper0 = mount(() => <Message visible={true} icon={false} content="这是一条消息通知" />);
+      expect(wrapper0.find('.t-icon').exists()).toBeFalsy();
+
       const wrapper = mount(() => <Message visible={true} content="这是一条消息通知" theme={'success'} />);
       const successIcon = wrapper.find('.t-icon-check-circle-filled');
       expect(successIcon).toBeTruthy();

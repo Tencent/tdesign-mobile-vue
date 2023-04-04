@@ -1,40 +1,59 @@
 <template>
   <div class="button-demo" style="margin: 0 16px">
-    <t-button block size="large" variant="outline" @click="showInfoMessage">普通通知</t-button>
-    <t-button block size="large" variant="outline" @click="showWarnMessage">警示提示通知</t-button>
-    <t-button block size="large" variant="outline" @click="showSuccessMessage">成功提示通知</t-button>
-    <t-button block size="large" variant="outline" @click="showErrorMessage">错误提示通知</t-button>
+    <p class="summary">普通通知</p>
+    <t-button block size="large" variant="outline" theme="primary" @click="showInfoMessage">普通通知</t-button>
+    <p class="summary">成功通知</p>
+    <t-button block size="large" variant="outline" theme="primary" @click="showSuccessMessage">成功通知</t-button>
+    <p class="summary">警示通知</p>
+    <t-button block size="large" variant="outline" theme="primary" @click="showWarnMessage">警示通知</t-button>
+    <p class="summary">错误通知</p>
+    <t-button block size="large" variant="outline" theme="primary" @click="showErrorMessage">错误通知</t-button>
   </div>
 </template>
 
 <script lang="ts" setup>
 import Message from '../index';
 
-const showInfoMessage = () =>
-  Message.info({
-    offset: [20, 32],
-    duration: 5000,
-    content: '这是一条普通通知信息',
-  });
+const showMessage = (theme: string, content = '这是一条普通的通知信息', duration = 5000) => {
+  if (Message[theme]) {
+    Message[theme]({
+      offset: [20, 32],
+      content,
+      duration,
+      icon: true,
+    });
+  }
+};
 
-const showWarnMessage = () =>
-  Message.warning({
-    offset: [20, 32],
-    duration: -1,
-    content: '这是一条需要用户关注到的警示通知',
-  });
+const showInfoMessage = () => showMessage('info');
 
-const showSuccessMessage = () =>
-  Message.success({
-    offset: [20, 32],
-    duration: -1,
-    content: '这是一条需要成功的提示消息',
-  });
+const showWarnMessage = () => showMessage('warning');
 
-const showErrorMessage = () =>
-  Message.error({
-    offset: [20, 32],
-    duration: -1,
-    content: '这是一条错误提示通知',
-  });
+const showSuccessMessage = () => showMessage('success');
+
+const showErrorMessage = () => showMessage('error');
 </script>
+
+<script lang="ts">
+export default {
+  name: 'ThemeDemo',
+};
+</script>
+
+<style lang="less" scoped>
+.tdesign-mobile-demo-block__slot {
+  margin-top: 8px;
+  .t-button {
+    border-radius: 6px;
+    &.t-size-l {
+      height: 48px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+.tdesign-mobile-demo .summary {
+  margin: 8px 0 16px;
+  display: inline-block;
+}
+</style>

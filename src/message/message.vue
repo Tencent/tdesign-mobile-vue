@@ -1,19 +1,19 @@
 <template>
   <transition name="message" @after-leave="afterLeave" @after-enter="afterEnter">
     <div v-if="currentVisible" ref="root" :class="rootClasses" :style="rootStyles">
-      <t-node v-if="computedPrefixIcon" :content="computedPrefixIcon"></t-node>
+      <t-node v-if="computedPrefixIcon" :content="computedPrefixIcon" :class="`${name}__icon--left`"></t-node>
       <div ref="textWrapDOM" :class="textWrapClasses">
         <div
           ref="textDOM"
           :class="`${name}__text`"
           :style="scroll.marquee ? animateStyle : ''"
-          @transitionend="handleTransitionend()"
+          @transitionend="handleTransitionend"
         >
           <t-node v-if="computedContent" :content="computedContent"></t-node>
         </div>
       </div>
-      <div v-if="computedCloseBtn" @click="onClose">
-        <t-node :content="computedCloseBtn"></t-node>
+      <div v-if="computedCloseBtn" :class="`${name}__close-wrap`" @click="onClose">
+        <t-node :content="computedCloseBtn" :class="`${name}__icon--right`"></t-node>
       </div>
     </div>
   </transition>
@@ -34,9 +34,7 @@ import {
 } from 'vue';
 import { CheckCircleFilledIcon, ErrorCircleFilledIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { isFunction } from 'lodash';
-import { off } from 'process';
 import messageProps from './props';
-import { DrawMarquee } from './type';
 import config from '../config';
 import { renderContent, renderTNode, TNode, useEmitEvent, useVModel } from '../shared';
 
@@ -67,8 +65,8 @@ export default defineComponent({
       scroll: {
         marquee: false,
         speed: 50,
-        loop: -1, // 值为 -1 表示循环播放，值为 0 表示不循环播放
-        delay: 0,
+        loop: -1, // 值为 -1 表示循环播放，值为 0 表示播放一次
+        delay: 300,
       },
     });
 
@@ -129,8 +127,7 @@ export default defineComponent({
         return renderTNode(internalInstance, 'closeBtn');
       }
       if (closeBtn) {
-        const closeIcon = h(CloseIcon);
-        return closeIcon;
+        return h(CloseIcon);
       }
       return null;
     });
@@ -146,20 +143,22 @@ export default defineComponent({
     const textDOM = ref();
 
     const handleScrolling = () => {
-      if (!props?.marquee || (props?.marquee as DrawMarquee)?.loop === 0) {
+      if (!props?.marquee) {
         return;
       }
-      // 初始化动画参数
-      if (typeof props.marquee === 'boolean') {
-        state.scroll = { ...state.scroll, marquee: props.marquee };
-      }
-      const marquee = props.marquee as DrawMarquee;
+
+      const { loop, speed, delay } = state.scroll;
+
       state.scroll = {
         marquee: true,
-        loop: typeof marquee?.loop === 'undefined' ? state.scroll.loop : marquee.loop,
-        speed: marquee.speed ?? state.scroll.speed,
-        delay: marquee.delay ?? state.scroll.delay,
+        // 负数统一当作循环播放
+        loop: Math.max(props.marquee?.loop, -1) || loop,
+        // 速度必须为正数
+        speed: Math.max(props.marquee?.speed, 1) || speed,
+        // 延迟不可为负数
+        delay: Math.max(props.marquee?.delay, 0) || delay,
       };
+
       // 设置动画
       setTimeout(() => {
         const textWrapDOMWidth = textWrapDOM.value?.getBoundingClientRect().width;
@@ -173,16 +172,25 @@ export default defineComponent({
 
     // 动画结束后，初始化动画
     const handleTransitionend = () => {
-      state.scroll.loop = --state.scroll.loop;
-      if (state.scroll.loop === 0) {
-        state.scroll = {
-          ...state.scroll,
-          marquee: false,
-        };
+      if (state.scroll.loop === -1) {
+        resetTransition();
         return;
       }
-      state.offset = state.listWidth;
+
+      if (state.scroll.loop === 0) {
+        state.scroll.marquee = false;
+        onClose();
+        return;
+      }
+
+      state.scroll.loop = --state.scroll.loop;
+
+      resetTransition();
+    };
+
+    const resetTransition = () => {
       state.duration = 0;
+      state.offset = state.listWidth;
 
       setTimeout(() => {
         state.offset = -state.itemWidth;
@@ -196,7 +204,7 @@ export default defineComponent({
     };
 
     const handleDuration = () => {
-      if (props.duration > 0) {
+      if (props.duration > 0 && !props.marquee) {
         setTimeout(() => {
           emitEvent('durationEnd');
           onClose();
@@ -219,11 +227,7 @@ export default defineComponent({
         emitEvent('open');
         setVisible(true);
         handleDuration();
-        nextTick(() => {
-          state.offset = state.listWidth;
-          state.duration = 0;
-          handleScrolling();
-        });
+        nextTick(handleScrolling);
       },
     );
 
