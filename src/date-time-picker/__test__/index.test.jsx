@@ -211,7 +211,7 @@ describe('DateTimePicker', () => {
       const $confirmButton = wrapper.find(`.${prefix}-picker__confirm`);
       await $confirmButton.trigger('click');
       expect(onConfirm).toBeCalledTimes(1);
-      expect(onChange).toBeCalledTimes(0); // value 不变，不触发 change
+      expect(onChange).toBeCalledTimes(1);
       expect(onPick).toBeCalledTimes(0);
       const el = wrapper.findAll(`.${prefix}-picker-item`);
       const touchItemIndex = 0;
@@ -221,7 +221,7 @@ describe('DateTimePicker', () => {
       expect(onPick).toBeCalledTimes(1);
       await $confirmButton.trigger('click');
       expect(onConfirm).toBeCalledTimes(2);
-      expect(onChange).toBeCalledTimes(1);
+      expect(onChange).toBeCalledTimes(2);
       expect(initValue.value).toEqual(`${ret[touchItemIndex][10 + touchIndex].value}-${addZero(M)}-${addZero(D)}`);
     });
   });
