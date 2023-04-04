@@ -147,6 +147,7 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         
         <div
           class="t-skeleton__col t-skeleton--type-circle t-skeleton--animation-none"
+          style="width: 48px; height: 48px;"
         />
         
       </div>
@@ -195,6 +196,7 @@ exports[`Skeleton > Skeleton cellGroupVue demo works fine 1`] = `
         
         <div
           class="t-skeleton__col t-skeleton--type-rect t-skeleton--animation-none"
+          style="width: 48px; height: 48px;"
         />
         
       </div>
@@ -615,6 +617,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             
             <div
               class="t-skeleton__col t-skeleton--type-circle t-skeleton--animation-none"
+              style="width: 48px; height: 48px;"
             />
             
           </div>
@@ -663,6 +666,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
             
             <div
               class="t-skeleton__col t-skeleton--type-rect t-skeleton--animation-none"
+              style="width: 48px; height: 48px;"
             />
             
           </div>

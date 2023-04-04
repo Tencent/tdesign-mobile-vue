@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts" setup>
-const rowColsAvater = [{ size: '96rpx', type: 'circle' }];
-const rowColsImage = [{ size: '96rpx', type: 'rect' }];
+const rowColsAvater = [{ size: '48px', type: 'circle' }];
+const rowColsImage = [{ size: '48px', type: 'rect' }];
 const rowColsContent = [{ width: '50%' }, { width: '100%' }];
 </script>
 
