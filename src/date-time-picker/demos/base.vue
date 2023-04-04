@@ -5,6 +5,7 @@
       :value="pickerValue"
       :mode="['date']"
       title="选择日期"
+      start="2015-5-5"
       format="YYYY-MM-DD"
       @change="onChange"
       @pick="onPick"
@@ -13,6 +14,7 @@
     />
   </t-popup>
 </template>
+
 <script lang="ts" setup>
 import { ref } from 'vue';
 

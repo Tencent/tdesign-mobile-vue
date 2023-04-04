@@ -22,7 +22,7 @@ export default defineComponent({
       type: Array as PropType<PickerColumnItem[]>,
       default: () => [],
     },
-    defaultValue: {
+    value: {
       type: [String, Number] as PropType<PickerValue>,
       default: undefined,
     },
@@ -65,10 +65,10 @@ export default defineComponent({
       }
     };
     const setOptions = () => {
-      picker && picker.update();
+      picker?.update();
     };
     const setUpdateItems = () => {
-      picker && picker.updateItems();
+      picker?.updateItems();
     };
     context.expose({
       setIndex,
@@ -80,8 +80,10 @@ export default defineComponent({
     onMounted(() => {
       picker = new Picker({
         el: root.value,
-        defaultIndex: getIndexByValue(props.defaultValue) || 0,
+        defaultIndex: getIndexByValue(props.value) || 0,
         onChange: (index: number) => {
+          console.log('onchange');
+
           const curItem = props.options[index];
           const changeValue = { value: curItem.value, index };
           emitEvent('pick', changeValue);
@@ -92,9 +94,9 @@ export default defineComponent({
     watch(
       () => props.options,
       () => {
-        picker?.init();
+        picker?.updateItems();
       },
-      { flush: 'post' },
+      { flush: 'post', deep: true },
     );
 
     return {
