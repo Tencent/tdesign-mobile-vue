@@ -28,7 +28,7 @@ exports[`Search > Search actionVue demo works fine 1`] = `
       
       <input
         autofocus=""
-        class="t-input__keyword"
+        class="t-input__keyword t-search--center"
         placeholder="搜索预设文案"
         type="search"
       />
@@ -205,7 +205,7 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
             
             <input
               autofocus=""
-              class="t-input__keyword"
+              class="t-input__keyword t-search--center"
               placeholder="搜索预设文案"
               type="search"
             />

@@ -8,7 +8,7 @@
         ref="searchInput"
         :value="searchValue"
         type="search"
-        :class="`${prefix}-input__keyword`"
+        :class="[`${prefix}-input__keyword`, { [`${name}--center`]: center }]"
         :autofocus="focus"
         :placeholder="placeholder"
         :readonly="readonly"
@@ -60,7 +60,6 @@ export default defineComponent({
       `${name}__input-box--${props.shape}`,
       {
         [`${prefix}-is-focused`]: focused.value,
-        [`${name}__input-box--center`]: props.center,
       },
     ]);
 
