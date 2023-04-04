@@ -410,7 +410,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     移动端的主导航，用做功能模块之间的切换
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-da85bda4=""
   >
     <div
@@ -422,7 +422,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础标签栏
       </p>
@@ -605,7 +605,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-da85bda4=""
   >
     <div
@@ -613,7 +613,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         带徽章标签栏
       </p>
@@ -844,7 +844,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-da85bda4=""
   >
     <div
@@ -852,7 +852,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         纯文本标签栏
       </p>
@@ -987,7 +987,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-da85bda4=""
   >
     <div
@@ -995,7 +995,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         纯图标标签栏
       </p>
@@ -1174,7 +1174,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-da85bda4=""
   >
     <div
@@ -1182,7 +1182,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         双层级纯文本标签栏
       </p>

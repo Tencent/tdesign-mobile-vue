@@ -1894,7 +1894,7 @@ exports[`Indexes > Indexes mobileVue demo works fine 1`] = `
     用于页面中信息快速检索，可以根据目录中的页码快速找到所需的内容
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1905,7 +1905,7 @@ exports[`Indexes > Indexes mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础索引类型
       </p>

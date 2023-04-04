@@ -1249,7 +1249,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     用于展示用户头像信息，除了纯展示也可点击进入个人详情等操作。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1260,7 +1260,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         01 头像类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         头像样式可为默认头像、微信头像圆形、方形、自定义文字
       </p>
@@ -1412,7 +1412,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1423,7 +1423,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         02 特殊类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         纯展示 从上往下
       </p>
@@ -2023,14 +2023,14 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         带操作 从下往上
       </p>
@@ -2630,7 +2630,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2641,7 +2641,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         03 规格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         头像大小尺寸
       </p>

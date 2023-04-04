@@ -144,7 +144,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     用于展示任务当前的进度
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-6de369ba=""
   >
     <div
@@ -156,7 +156,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础进度条
       </p>
@@ -255,7 +255,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-6de369ba=""
   >
     <div
@@ -263,7 +263,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         隐藏数值进度条
       </p>
@@ -300,7 +300,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-6de369ba=""
   >
     <div
@@ -308,7 +308,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         自定义样式
       </p>
@@ -357,7 +357,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-6de369ba=""
   >
     <div
@@ -365,7 +365,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         自定义线宽
       </p>
@@ -407,7 +407,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-6de369ba=""
   >
     <div
@@ -426,7 +426,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
       
       
       <div
-        class="tdesign-mobile-demo-block"
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
         data-v-09d2fdec=""
       >
         <div
@@ -434,7 +434,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <p
-            class="tdesign-mobile-demo-block__summary"
+            class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
           >
             默认状态
           </p>
@@ -474,7 +474,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="tdesign-mobile-demo-block"
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
         data-v-09d2fdec=""
       >
         <div
@@ -482,7 +482,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <p
-            class="tdesign-mobile-demo-block__summary"
+            class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
           >
             错误状态
           </p>
@@ -522,7 +522,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="tdesign-mobile-demo-block"
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
         data-v-09d2fdec=""
       >
         <div
@@ -530,7 +530,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <p
-            class="tdesign-mobile-demo-block__summary"
+            class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
           >
             警告状态
           </p>
@@ -570,7 +570,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="tdesign-mobile-demo-block"
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
         data-v-09d2fdec=""
       >
         <div
@@ -578,7 +578,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <p
-            class="tdesign-mobile-demo-block__summary"
+            class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
           >
             成功状态
           </p>
@@ -618,7 +618,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="tdesign-mobile-demo-block"
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
         data-v-09d2fdec=""
       >
         <div
@@ -626,7 +626,7 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <p
-            class="tdesign-mobile-demo-block__summary"
+            class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
           >
             过渡样式
           </p>
@@ -743,7 +743,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
 >
   
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-09d2fdec=""
   >
     <div
@@ -751,7 +751,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         默认状态
       </p>
@@ -791,7 +791,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-09d2fdec=""
   >
     <div
@@ -799,7 +799,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         错误状态
       </p>
@@ -839,7 +839,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-09d2fdec=""
   >
     <div
@@ -847,7 +847,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         警告状态
       </p>
@@ -887,7 +887,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-09d2fdec=""
   >
     <div
@@ -895,7 +895,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         成功状态
       </p>
@@ -935,7 +935,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-09d2fdec=""
   >
     <div
@@ -943,7 +943,7 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         过渡样式
       </p>

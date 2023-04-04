@@ -196,8 +196,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
     用于轻量级反馈或提示，不会打断用户操作。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 32px;"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -207,7 +206,11 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       >
         01 组件类型
       </h2>
-      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        弹窗内容为存文本、标题和副标题、带输入框
+      </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
@@ -390,8 +393,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 48px;"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -401,7 +403,11 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       >
         02 组件类型
       </h2>
-      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        弹窗内容为存文本、标题和副标题、带输入框
+      </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"

@@ -10,8 +10,8 @@ import { PropType } from 'vue';
 export default {
   /** 取消按钮文字 */
   cancelBtn: {
-    type: [String, Object] as PropType<TdPickerProps['cancelBtn']>,
-    default: '取消',
+    type: [String, Boolean] as PropType<TdPickerProps['cancelBtn']>,
+    default: true,
   },
   /** 配置每一列的选项 */
   columns: {
@@ -21,12 +21,16 @@ export default {
   },
   /** 确定按钮文字 */
   confirmBtn: {
-    type: [String, Object] as PropType<TdPickerProps['confirmBtn']>,
-    default: '确认',
+    type: [String, Boolean] as PropType<TdPickerProps['confirmBtn']>,
+    default: true,
+  },
+  /** 自定义头部内容 */
+  header: {
+    type: Function as PropType<TdPickerProps['header']>,
   },
   /** 自定义label */
   renderLabel: {
-    type: [String, Function] as PropType<TdPickerProps['renderLabel']>,
+    type: Function as PropType<TdPickerProps['renderLabel']>,
   },
   /** 标题 */
   title: {
@@ -36,9 +40,11 @@ export default {
   /** 选中值 */
   value: {
     type: Array as PropType<TdPickerProps['value']>,
+    default: undefined,
   },
   modelValue: {
     type: Array as PropType<TdPickerProps['value']>,
+    default: undefined,
   },
   /** 选中值，非受控属性 */
   defaultValue: {

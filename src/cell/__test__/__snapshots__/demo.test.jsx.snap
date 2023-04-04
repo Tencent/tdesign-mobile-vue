@@ -198,7 +198,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     一行内容/功能的垂直排列方式。一行项目左侧为主要内容展示区域，右侧可增加更多操作内容
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-f4324ab6=""
   >
     <div
@@ -210,7 +210,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
         01 组件类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         单行单元格
       </p>
@@ -508,7 +508,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-f4324ab6=""
   >
     <div
@@ -516,7 +516,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         多行单元格
       </p>
@@ -998,7 +998,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-f4324ab6=""
   >
     <div
@@ -1010,7 +1010,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
         02 组件样式
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         卡片单元格
       </p>
