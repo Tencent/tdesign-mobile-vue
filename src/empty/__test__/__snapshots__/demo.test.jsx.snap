@@ -100,31 +100,47 @@ exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
     >
       
       <div
-        class="t-image t-image--round"
+        class="t-image t-image--square"
       >
         <div
-          class="t-image__status"
+          class="t-image__mask"
         >
-          <svg
-            class="t-icon t-icon-ellipsis"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
           >
-            <path
-              d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+            
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+            </div>
+            
+            <!--v-if-->
+            <!---->
+          </div>
         </div>
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
-          style="object-fit: fill; object-position: center;"
-        />
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
       </div>
       
     </div>
@@ -143,31 +159,47 @@ exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
     >
       
       <div
-        class="t-image t-image--round"
+        class="t-image t-image--square"
       >
         <div
-          class="t-image__status"
+          class="t-image__mask"
         >
-          <svg
-            class="t-icon t-icon-ellipsis"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
           >
-            <path
-              d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+            
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+            </div>
+            
+            <!--v-if-->
+            <!---->
+          </div>
         </div>
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
-          style="object-fit: fill; object-position: center;"
-        />
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
       </div>
       
     </div>
@@ -273,31 +305,47 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
         >
           
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
           
         </div>
@@ -316,31 +364,47 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
         >
           
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
           
         </div>

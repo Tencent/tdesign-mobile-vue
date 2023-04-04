@@ -3,20 +3,16 @@
  */
 
 import { mount } from '@vue/test-utils';
-import cropVue from '@/image/demos/crop.vue';
-import loadingErrorVue from '@/image/demos/loading-error.vue';
-import loadingTipVue from '@/image/demos/loading-tip.vue';
+import baseVue from '@/image/demos/base.vue';
 import mobileVue from '@/image/demos/mobile.vue';
-import roundedVue from '@/image/demos/rounded.vue';
-import sizeVue from '@/image/demos/size.vue';
+import shapeVue from '@/image/demos/shape.vue';
+import statusVue from '@/image/demos/status.vue';
 
 const mapper = {
-  cropVue,
-  loadingErrorVue,
-  loadingTipVue,
+  baseVue,
   mobileVue,
-  roundedVue,
-  sizeVue,
+  shapeVue,
+  statusVue,
 };
 
 describe('Image', () => {

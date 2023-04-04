@@ -532,7 +532,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms;"
+                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -602,7 +602,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms;"
+                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -1072,7 +1072,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms;"
+                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"
@@ -1142,7 +1142,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms;"
+                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"

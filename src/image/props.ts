@@ -13,9 +13,9 @@ export default {
     type: String,
     default: '',
   },
-  /** 自定义加载失败状态下的图片内容 */
+  /** 自定义图片加载失败状态下的显示内容 */
   error: {
-    type: Function as PropType<TdImageProps['error']>,
+    type: [String, Function] as PropType<TdImageProps['error']>,
   },
   /** 图片填充模式 */
   fit: {
@@ -28,11 +28,11 @@ export default {
   },
   /** 是否开启图片懒加载 */
   lazy: Boolean,
-  /** 自定义加载中状态下的图片内容 */
+  /** 自定义加载中状态的图片内容，如：“加载中” */
   loading: {
-    type: Function as PropType<TdImageProps['loading']>,
+    type: [String, Function] as PropType<TdImageProps['loading']>,
   },
-  /** 等同于原生的 object-position 属性，可选值为 top right bottom left 或 string，可以自定义任何px或者百分比 */
+  /** 等同于原生的 object-position 属性，可选值为 top right bottom left 或 string，可以自定义任何单位，px 或者 百分比 */
   position: {
     type: String,
     default: 'center',
@@ -40,7 +40,7 @@ export default {
   /** 图片圆角类型 */
   shape: {
     type: String as PropType<TdImageProps['shape']>,
-    default: 'round' as TdImageProps['shape'],
+    default: 'square' as TdImageProps['shape'],
     validator(val: TdImageProps['shape']): boolean {
       if (!val) return true;
       return ['circle', 'round', 'square'].includes(val);
@@ -50,6 +50,10 @@ export default {
   src: {
     type: String,
     default: '',
+  },
+  /** 图片地址，支持特殊格式的图片，如 `.avif` 和 `.webp` */
+  srcset: {
+    type: Object as PropType<TdImageProps['srcset']>,
   },
   /** 图片加载失败时触发 */
   onError: Function as PropType<TdImageProps['onError']>,

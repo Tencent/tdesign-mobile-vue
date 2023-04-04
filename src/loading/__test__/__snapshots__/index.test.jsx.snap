@@ -9,7 +9,7 @@ exports[`Loading.vue > props > :pause 1`] = `
   <svg
     class="t-loading__gradient t-icon-loading"
     height="1em"
-    style="animation-play-state: paused; animation-duration: 800ms;"
+    style="animation-play-state: paused; animation-duration: 800ms; width: 20px; height: 20px;"
     version="1.1"
     viewBox="0 0 12 12"
     width="1em"
@@ -41,7 +41,7 @@ exports[`Loading.vue > props > :reverse 1`] = `
   <svg
     class="t-loading__gradient t-icon-loading"
     height="1em"
-    style="animation-direction: reverse; animation-duration: 800ms;"
+    style="animation-direction: reverse; animation-duration: 800ms; width: 20px; height: 20px;"
     version="1.1"
     viewBox="0 0 12 12"
     width="1em"
