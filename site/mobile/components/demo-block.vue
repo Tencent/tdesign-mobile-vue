@@ -23,14 +23,14 @@ const props = defineProps<{
 const rootClassName = computed(() => [
   'tdesign-mobile-demo-block',
   {
-    ['tdesign-mobile-demo-block_notitle']: !!props.title,
+    ['tdesign-mobile-demo-block_notitle']: !props.title,
   },
 ]);
 
 const summaryClassName = computed(() => [
   `tdesign-mobile-demo-block__summary`,
   {
-    ['tdesign-mobile-demo-block_subtitle']: !!props.title,
+    ['tdesign-mobile-demo-block_subtitle']: !props.title,
   },
 ]);
 

@@ -102,7 +102,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     当网络较慢时，在页面真实数据加载之前，给用户展示出页面的大致结构。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-9b6b90cc=""
   >
     <div
@@ -124,7 +124,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -132,7 +132,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         头像骨架屏
       </p>
@@ -173,7 +173,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -181,7 +181,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         图片骨架屏
       </p>
@@ -222,7 +222,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -230,7 +230,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         文本骨架屏
       </p>
@@ -284,7 +284,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -292,7 +292,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         段落骨架屏
       </p>
@@ -361,7 +361,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -369,7 +369,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         宫格骨架屏
       </p>
@@ -452,7 +452,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -460,7 +460,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         单元格骨架屏
       </p>
@@ -607,7 +607,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -615,7 +615,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         图片组合骨架屏
       </p>
@@ -751,7 +751,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-9b6b90cc=""
   >
     <div
@@ -763,7 +763,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
         02 动画
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         渐变加载动画
       </p>
@@ -831,7 +831,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-9b6b90cc=""
   >
     <div
@@ -839,7 +839,7 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         闪烁加载动画
       </p>
