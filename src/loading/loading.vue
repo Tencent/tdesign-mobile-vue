@@ -93,7 +93,7 @@ export default defineComponent({
         style.push('color: inherit');
       }
       if (props.size) {
-        style.push(`font-size: ${props.size}`);
+        style.push(`font-size: ${props.size};`);
       }
       return style.join(';');
     });
@@ -108,6 +108,10 @@ export default defineComponent({
       }
       if (props.duration) {
         ans['animation-duration'] = `${props.duration}ms`;
+      }
+      if (props.size) {
+        ans.width = props.size;
+        ans.height = props.size;
       }
       return ans;
     });
