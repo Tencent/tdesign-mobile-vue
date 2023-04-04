@@ -10,9 +10,15 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     data-v-e60c559e=""
     style="margin: 0px 16px;"
   >
+    <p
+      class="summary"
+      data-v-e60c559e=""
+    >
+      纯文字通知
+    </p>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
       data-v-e60c559e=""
       role="button"
     >
@@ -21,13 +27,19 @@ exports[`Message > Message baseVue demo works fine 1`] = `
         class="t-button__text"
       >
         
-        纯文字通知
+        纯文字的通知
         
       </span>
     </button>
+    <p
+      class="summary"
+      data-v-e60c559e=""
+    >
+      带图标通知
+    </p>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
       data-v-e60c559e=""
       role="button"
     >
@@ -36,13 +48,19 @@ exports[`Message > Message baseVue demo works fine 1`] = `
         class="t-button__text"
       >
         
-        带图标通知
+        带图标的通知
         
       </span>
     </button>
+    <p
+      class="summary"
+      data-v-e60c559e=""
+    >
+      带关闭通知
+    </p>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
       data-v-e60c559e=""
       role="button"
     >
@@ -51,13 +69,19 @@ exports[`Message > Message baseVue demo works fine 1`] = `
         class="t-button__text"
       >
         
-        带关闭通知
+        带关闭的通知
         
       </span>
     </button>
+    <p
+      class="summary"
+      data-v-e60c559e=""
+    >
+      可滚动通知
+    </p>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
       data-v-e60c559e=""
       role="button"
     >
@@ -66,13 +90,19 @@ exports[`Message > Message baseVue demo works fine 1`] = `
         class="t-button__text"
       >
         
-        滚动通知
+        可滚动的通知
         
       </span>
     </button>
+    <p
+      class="summary"
+      data-v-e60c559e=""
+    >
+      带按钮通知
+    </p>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
       data-v-e60c559e=""
       role="button"
     >
@@ -81,7 +111,7 @@ exports[`Message > Message baseVue demo works fine 1`] = `
         class="t-button__text"
       >
         
-        带按钮通知
+        带按钮的通知
         
       </span>
     </button>
@@ -136,6 +166,16 @@ exports[`Message > Message baseVue demo works fine 1`] = `
   >
     <!--v-if-->
   </transition-stub>
+  <!-- 带按钮通知 -->
+  <transition-stub
+    appear="false"
+    css="true"
+    data-v-e60c559e=""
+    name="message"
+    persisted="false"
+  >
+    <!--v-if-->
+  </transition-stub>
   
 </div>
 `;
@@ -151,11 +191,13 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
   </h1>
   <p
     class="summary"
+    style="margin: 8px 16px 0px;"
   >
-    用于页面消息通知提示，具有成功提示、提醒、警示等功能，通常在顶部出现，可以自动消失或点击关闭
+    用于轻量级反馈或提示，不会打断用户操作。
   </p>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    style="margin-top: 32px;"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -163,28 +205,29 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        弹窗内容为存文本、标题和副标题、带输入框
-      </p>
+      <!--v-if-->
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
       
-      <!-- &lt;functionDemo /&gt; -->
       
       <div
         class="button-demo"
         data-v-e60c559e=""
         style="margin: 0px 16px;"
       >
+        <p
+          class="summary"
+          data-v-e60c559e=""
+        >
+          纯文字通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
           data-v-e60c559e=""
           role="button"
         >
@@ -193,13 +236,19 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            纯文字通知
+            纯文字的通知
             
           </span>
         </button>
+        <p
+          class="summary"
+          data-v-e60c559e=""
+        >
+          带图标通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
           data-v-e60c559e=""
           role="button"
         >
@@ -208,13 +257,19 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            带图标通知
+            带图标的通知
             
           </span>
         </button>
+        <p
+          class="summary"
+          data-v-e60c559e=""
+        >
+          带关闭通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
           data-v-e60c559e=""
           role="button"
         >
@@ -223,13 +278,19 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            带关闭通知
+            带关闭的通知
             
           </span>
         </button>
+        <p
+          class="summary"
+          data-v-e60c559e=""
+        >
+          可滚动通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
           data-v-e60c559e=""
           role="button"
         >
@@ -238,13 +299,19 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            滚动通知
+            可滚动的通知
             
           </span>
         </button>
+        <p
+          class="summary"
+          data-v-e60c559e=""
+        >
+          带按钮通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
           data-v-e60c559e=""
           role="button"
         >
@@ -253,7 +320,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            带按钮通知
+            带按钮的通知
             
           </span>
         </button>
@@ -308,12 +375,23 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       >
         <!--v-if-->
       </transition-stub>
+      <!-- 带按钮通知 -->
+      <transition-stub
+        appear="false"
+        css="true"
+        data-v-e60c559e=""
+        name="message"
+        persisted="false"
+      >
+        <!--v-if-->
+      </transition-stub>
       
       
     </div>
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    style="margin-top: 48px;"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -321,13 +399,9 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        02 状态
+        02 组件类型
       </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        弹窗内容为存文本、标题和副标题、带输入框
-      </p>
+      <!--v-if-->
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
@@ -335,11 +409,19 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       
       <div
         class="button-demo"
+        data-v-fba28ece=""
         style="margin: 0px 16px;"
       >
+        <p
+          class="summary"
+          data-v-fba28ece=""
+        >
+          普通通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          data-v-fba28ece=""
           role="button"
         >
           <!---->
@@ -351,9 +433,16 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             
           </span>
         </button>
+        <p
+          class="summary"
+          data-v-fba28ece=""
+        >
+          成功通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          data-v-fba28ece=""
           role="button"
         >
           <!---->
@@ -361,13 +450,20 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            警示提示通知
+            成功通知
             
           </span>
         </button>
+        <p
+          class="summary"
+          data-v-fba28ece=""
+        >
+          警示通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          data-v-fba28ece=""
           role="button"
         >
           <!---->
@@ -375,13 +471,20 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            成功提示通知
+            警示通知
             
           </span>
         </button>
+        <p
+          class="summary"
+          data-v-fba28ece=""
+        >
+          错误通知
+        </p>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          data-v-fba28ece=""
           role="button"
         >
           <!---->
@@ -389,7 +492,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            错误提示通知
+            错误通知
             
           </span>
         </button>
@@ -403,11 +506,19 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
 exports[`Message > Message themeVue demo works fine 1`] = `
 <div
   class="button-demo"
+  data-v-fba28ece=""
   style="margin: 0px 16px;"
 >
+  <p
+    class="summary"
+    data-v-fba28ece=""
+  >
+    普通通知
+  </p>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    data-v-fba28ece=""
     role="button"
   >
     <!---->
@@ -419,9 +530,16 @@ exports[`Message > Message themeVue demo works fine 1`] = `
       
     </span>
   </button>
+  <p
+    class="summary"
+    data-v-fba28ece=""
+  >
+    成功通知
+  </p>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    data-v-fba28ece=""
     role="button"
   >
     <!---->
@@ -429,13 +547,20 @@ exports[`Message > Message themeVue demo works fine 1`] = `
       class="t-button__text"
     >
       
-      警示提示通知
+      成功通知
       
     </span>
   </button>
+  <p
+    class="summary"
+    data-v-fba28ece=""
+  >
+    警示通知
+  </p>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    data-v-fba28ece=""
     role="button"
   >
     <!---->
@@ -443,13 +568,20 @@ exports[`Message > Message themeVue demo works fine 1`] = `
       class="t-button__text"
     >
       
-      成功提示通知
+      警示通知
       
     </span>
   </button>
+  <p
+    class="summary"
+    data-v-fba28ece=""
+  >
+    错误通知
+  </p>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    data-v-fba28ece=""
     role="button"
   >
     <!---->
@@ -457,7 +589,7 @@ exports[`Message > Message themeVue demo works fine 1`] = `
       class="t-button__text"
     >
       
-      错误提示通知
+      错误通知
       
     </span>
   </button>
