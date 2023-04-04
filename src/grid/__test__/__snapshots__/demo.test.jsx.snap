@@ -1012,7 +1012,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     用于功能入口布局，将页面或特定区域切分成若干等大的区块，形成若干功能入口。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1023,7 +1023,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         01 基础宫格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
          
       </p>
@@ -1630,7 +1630,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1641,7 +1641,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         02 带说明宫格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
          
       </p>
@@ -1840,7 +1840,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1851,7 +1851,7 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
         03 带徽标宫格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
          
       </p>

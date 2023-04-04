@@ -280,7 +280,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     用于表示页面或操作的加载状态，给予用户反馈的同时减缓等待的焦虑感，由一个或一组反馈动效组成。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-448d2bed=""
   >
     <div
@@ -292,7 +292,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
         01 组件类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         纯图标
       </p>
@@ -422,7 +422,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-448d2bed=""
   >
     <div
@@ -430,7 +430,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         图标加文字横向
       </p>
@@ -541,7 +541,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-448d2bed=""
   >
     <div
@@ -549,7 +549,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         图标加文字竖向
       </p>
@@ -664,7 +664,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-448d2bed=""
   >
     <div
@@ -672,7 +672,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         纯文字
       </p>
@@ -703,7 +703,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-448d2bed=""
   >
     <div
@@ -851,7 +851,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-448d2bed=""
   >
     <div
@@ -863,7 +863,7 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
         03 加载速度
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         加载速度调整
       </p>

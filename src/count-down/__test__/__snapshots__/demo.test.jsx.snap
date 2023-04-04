@@ -303,7 +303,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
     用于实时展示倒计时数值。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -314,7 +314,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         动态倒计时间主要有时间数字和时分秒分割组成
       </p>
@@ -612,7 +612,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -623,7 +623,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
         02 规格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         动倒计时带方底和圆底各尺寸规格
       </p>

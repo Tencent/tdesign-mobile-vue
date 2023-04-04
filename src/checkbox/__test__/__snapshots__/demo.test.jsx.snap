@@ -599,7 +599,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       用于预设的一组选项中执行多项选择，并呈现选择结果。
     </p>
     <div
-      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+      class="tdesign-mobile-demo-block"
     >
       <div
         class="tdesign-mobile-demo-block__header"
@@ -610,7 +610,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           01 组件类型
         </h2>
         <p
-          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+          class="tdesign-mobile-demo-block__summary"
         >
           纵向多选框
         </p>
@@ -777,14 +777,14 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="tdesign-mobile-demo-block"
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     >
       <div
         class="tdesign-mobile-demo-block__header"
       >
         <!--v-if-->
         <p
-          class="tdesign-mobile-demo-block__summary"
+          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
         >
           横向多选框
         </p>
@@ -921,14 +921,14 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="tdesign-mobile-demo-block"
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     >
       <div
         class="tdesign-mobile-demo-block__header"
       >
         <!--v-if-->
         <p
-          class="tdesign-mobile-demo-block__summary"
+          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
         >
           带全选多选框
         </p>
@@ -1111,7 +1111,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+      class="tdesign-mobile-demo-block"
     >
       <div
         class="tdesign-mobile-demo-block__header"
@@ -1122,7 +1122,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           02 组件状态
         </h2>
         <p
-          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+          class="tdesign-mobile-demo-block__summary"
         >
           多选框状态
         </p>
@@ -1214,7 +1214,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+      class="tdesign-mobile-demo-block"
     >
       <div
         class="tdesign-mobile-demo-block__header"
@@ -1225,7 +1225,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           03 组件样式
         </h2>
         <p
-          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+          class="tdesign-mobile-demo-block__summary"
         >
           勾选样式
         </p>
@@ -1350,14 +1350,14 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="tdesign-mobile-demo-block"
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     >
       <div
         class="tdesign-mobile-demo-block__header"
       >
         <!--v-if-->
         <p
-          class="tdesign-mobile-demo-block__summary"
+          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
         >
           勾选显示位置
         </p>
@@ -1456,14 +1456,14 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="tdesign-mobile-demo-block"
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     >
       <div
         class="tdesign-mobile-demo-block__header"
       >
         <!--v-if-->
         <p
-          class="tdesign-mobile-demo-block__summary"
+          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
         >
           非通栏多选样式
         </p>
@@ -1651,7 +1651,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
       </div>
     </div>
     <div
-      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+      class="tdesign-mobile-demo-block"
     >
       <div
         class="tdesign-mobile-demo-block__header"
@@ -1662,7 +1662,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           04 组件规格
         </h2>
         <p
-          class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+          class="tdesign-mobile-demo-block__summary"
         >
           多选框尺寸规格
         </p>

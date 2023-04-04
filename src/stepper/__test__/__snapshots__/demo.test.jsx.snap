@@ -199,6 +199,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
   </p>
   <div
     class="tdesign-mobile-demo-block"
+<<<<<<< HEAD
   >
     <h2
       class="tdesign-mobile-demo-block__title"
@@ -403,6 +404,8 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
 >>>>>>> develop
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+=======
+>>>>>>> 5090fb16 (refactor(search): new search (#540))
   >
 <<<<<<< HEAD
     <h2
@@ -553,7 +556,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础步进器
       </p>
@@ -613,7 +616,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
 <<<<<<< HEAD
     <!--v-if-->
@@ -698,7 +701,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
         02 组件状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         最大最小状态
       </p>
@@ -973,7 +976,7 @@ exports[`Stepper > Stepper mobileVue demo works fine 1`] = `
 >>>>>>> develop
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
 <<<<<<< HEAD
     <!--v-if-->
@@ -1252,7 +1255,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         禁用状态
       </p>
@@ -1312,7 +1315,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1323,7 +1326,7 @@ exports[`Stepper > Stepper sizeVue demo works fine 1`] = `
         03 组件样式
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         步进器样式
       </p>
@@ -1475,6 +1478,7 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
 >
   <div
 <<<<<<< HEAD
+<<<<<<< HEAD
     class="t-stepper t-stepper--medium"
   >
     <div
@@ -1517,13 +1521,16 @@ exports[`Stepper > Stepper statusVue demo works fine 1`] = `
       </svg>
 =======
     class="tdesign-mobile-demo-block"
+=======
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+>>>>>>> 5090fb16 (refactor(search): new search (#540))
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         步进器尺寸
       </p>

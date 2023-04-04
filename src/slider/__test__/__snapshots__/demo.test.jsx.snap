@@ -147,7 +147,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     用于选择横轴上的数值、区间、档位
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-98828574=""
   >
     <div
@@ -159,7 +159,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础滑动选择器
       </p>
@@ -212,7 +212,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-98828574=""
   >
     <div
@@ -220,7 +220,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         带数值滑动选择器
       </p>
@@ -277,7 +277,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-98828574=""
   >
     <div
@@ -285,7 +285,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         起始非零滑动选择器
       </p>
@@ -338,7 +338,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-98828574=""
   >
     <div
@@ -346,7 +346,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         带刻度滑动选择器
       </p>
@@ -417,7 +417,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-98828574=""
   >
     <div
@@ -425,7 +425,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         区间滑动选择器
       </p>
@@ -490,7 +490,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-98828574=""
   >
     <div
@@ -502,7 +502,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
         02 状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         滑动选择器禁用状态
       </p>
@@ -555,7 +555,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-98828574=""
   >
     <div
@@ -567,7 +567,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
         03 规格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         无标题滑动选择器
       </p>
@@ -620,7 +620,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-98828574=""
   >
     <div
@@ -628,7 +628,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         有标题滑动选择器
       </p>
