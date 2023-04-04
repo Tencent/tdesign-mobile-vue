@@ -1,22 +1,17 @@
 <template>
-  <div :class="rootClasses">
-    <template v-if="showContent">
-      <t-node :content="skeletonContent" />
-    </template>
-    <template v-else>
-      <div v-if="parsedRowcols.length" :class="`${baseClass}__content`">
-        <div v-for="(row, index) of parsedRowcols" :key="`row-${index}`" :class="`${baseClass}__row`">
-          <div v-for="(col, idx) of row" :key="`col-${idx}`" :class="col.class" :style="col.style"></div>
-        </div>
+  <div v-if="loading" :class="`${name}`">
+    <template v-if="parsedRowcols.length">
+      <div v-for="(row, index) of parsedRowcols" :key="`row-${index}`" :class="`${name}__row`">
+        <div v-for="(col, idx) of row" :key="`col-${idx}`" :class="col.class" :style="col.style"></div>
       </div>
     </template>
   </div>
+  <slot v-else />
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, toRefs, watchEffect, ref, getCurrentInstance } from 'vue';
+import { defineComponent, computed, toRefs, watchEffect, ref } from 'vue';
 import isNumber from 'lodash/isNumber';
-import { renderContent, TNode } from '../shared';
 import config from '../config';
 import SkeletonProps from './props';
 import { SkeletonRowColObj } from './type';
@@ -25,33 +20,23 @@ import { ClassName, Styles } from '../common';
 const { prefix } = config;
 const name = `${prefix}-skeleton`;
 const ThemeMap = {
-  avatar: [{ type: 'circle', height: '64px', width: '64px' }],
-  image: [{ type: 'rect', height: '64px', width: '64px' }],
+  avatar: [{ type: 'circle', size: '48px' }],
+  image: [{ type: 'rect', size: '72px' }],
   text: [
-    1,
     [
       { width: '24%', height: '16px', marginRight: '16px' },
       { width: '76%', height: '16px' },
     ],
+    1,
   ],
   paragraph: [1, 1, 1, { width: '55%' }],
 };
 
 export default defineComponent({
   name,
-  components: {
-    TNode,
-  },
   props: SkeletonProps,
   setup(props) {
-    const { loading, animation } = toRefs(props);
-    const showContent = computed(() => !loading.value);
-
-    const internalInstance = getCurrentInstance();
-    const skeletonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const baseClass = name;
-    const rootClasses = computed(() => [`${name}`]);
-
+    const { animation } = toRefs(props);
     const rowCols = ref<any>([]);
 
     watchEffect(() => {
@@ -65,8 +50,9 @@ export default defineComponent({
     const getColItemClass = (obj: SkeletonRowColObj): ClassName => [
       `${name}__col`,
       `${name}--type-${obj.type || 'text'}`,
-      { [`${name}--animation-${animation.value}`]: animation.value },
+      `${name}--animation-${animation.value}`,
     ];
+
     const getColItemStyle = (obj: SkeletonRowColObj): Styles => {
       const styleName = [
         'width',
@@ -125,11 +111,8 @@ export default defineComponent({
     });
 
     return {
-      baseClass,
-      rootClasses,
+      name,
       parsedRowcols,
-      showContent,
-      skeletonContent,
     };
   },
 });
