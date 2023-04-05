@@ -3,6 +3,7 @@
   <t-button block variant="outline" size="large" @click="isShowDialog2 = true"> 带说明文本对话框 </t-button>
   <t-dialog
     v-model:visible="isShowDialog1"
+    close-on-overlay-click
     title="最小高度样式，文案上下居中"
     @confirm="onConfirm"
     @cancel="onCancel"
@@ -17,6 +18,7 @@
   </t-dialog>
   <t-dialog
     v-model:visible="isShowDialog2"
+    close-on-overlay-click
     title="对话框标题"
     content="告知当前状态、信息和解决方法"
     button-layout="vertical"
