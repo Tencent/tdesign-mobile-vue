@@ -8,16 +8,19 @@
     @close="handleOverlayClick"
   >
     <div id="root" :class="dClassName" :style="rootStyles">
+      <slot name="top" />
       <div :class="dHeaderClassName">
         <slot name="header">
           <div v-if="title" :class="dTitleClassName">{{ title }}</div>
         </slot>
       </div>
+      <slot name="middle" />
       <div v-if="content" :class="dBodyClassName">
         <div :class="dTextClassName">
           <t-node :content="dialogContent"></t-node>
         </div>
       </div>
+      <slot name="bottom" />
       <div :class="dFooterClassName">
         <slot name="actions">
           <template v-if="actionsBtnProps">

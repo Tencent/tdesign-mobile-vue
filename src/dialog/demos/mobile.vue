@@ -17,6 +17,11 @@
         <inputVue />
       </div>
     </tdesign-demo-block>
+    <tdesign-demo-block summary="带图片的对话框">
+      <div class="dialog-demo" style="padding-bottom: 20px">
+        <imgVue />
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -24,6 +29,7 @@
 import feedbackVue from './feedback.vue';
 import confirmVue from './confirm.vue';
 import inputVue from './input.vue';
+import imgVue from './image-dialog.vue';
 </script>
 
 <style scoped lang="less">
