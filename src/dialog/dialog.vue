@@ -27,19 +27,19 @@
               v-for="(item, index) in actionsBtnProps"
               :key="index"
               v-bind="item"
-              :class="dDefaultBtnClassName"
+              :class="dCommonBtnClassName"
               @click="handleCancel"
             />
           </template>
         </slot>
         <slot name="cancelBtn">
           <template v-if="!actions && cancelBtn">
-            <t-button v-bind="cancelBtnProps" :class="dDefaultBtnClassName" @click="handleCancel" />
+            <t-button v-bind="cancelBtnProps" :class="dCommonBtnClassName" @click="handleCancel" />
           </template>
         </slot>
         <slot name="confirmBtn">
           <template v-if="!actions && confirmBtn">
-            <t-button v-bind="confirmBtnProps" :class="dConfirmBtnClassName" @click="handleConfirm" />
+            <t-button v-bind="confirmBtnProps" :class="dCommonBtnClassName" @click="handleConfirm" />
           </template>
         </slot>
       </div>
@@ -72,19 +72,18 @@ export default defineComponent({
     const dContentTitleClassName = computed(() => [`${name}__header`]);
     const dBodyClassName = computed(() => [`${name}__body`]);
     const dBodyTextClassName = computed(() => [`${name}__body-text`]);
-    const dFooterClassName = computed(() => [`${name}__footer`, `${name}__footer--full`]);
+    const dFooterClassName = computed(() => [
+      `${name}__footer`,
+      `${name}__footer--full`,
+      props.buttonLayout === 'vertical' ? `${name}__footer--column` : '',
+    ]);
     const footerStyles = computed(() => ({
       padding: '24px',
     }));
-    const dDefaultBtnClassName = computed(() => [
+    const dCommonBtnClassName = computed(() => [
       `${name}__button`,
       props.buttonLayout === 'vertical' ? `${name}__button--vertical` : `${name}__button--horizontal`,
     ]);
-    const dConfirmBtnClassName = computed(() => [
-      `${name}__button`,
-      props.buttonLayout === 'vertical' ? `${name}__button--vertical` : `${name}__button--horizontal`,
-    ]);
-
     const rootStyles = computed(() => ({
       zIndex: props.zIndex,
       width: typeof props.width === 'string' ? props.width : `${props.width}px`,
@@ -138,8 +137,7 @@ export default defineComponent({
       dBodyTextClassName,
       dFooterClassName,
       footerStyles,
-      dDefaultBtnClassName,
-      dConfirmBtnClassName,
+      dCommonBtnClassName,
       dialogContent,
       confirmBtnProps,
       cancelBtnProps,

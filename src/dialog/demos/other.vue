@@ -1,5 +1,5 @@
 <template>
-  <t-button block variant="outline" size="large" @click="isShowDialog5 = true"> 多按钮 </t-button>
+  <t-button block variant="outline" size="large" @click="isShowDialog5 = true"> 垂直多按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog5"
     type="confirm"
@@ -8,6 +8,7 @@
     placeholder-text="输入框提示文字"
     cancel-btn="取消"
     confirm-btn="确认"
+    button-layout="vertical"
     :actions="actions"
     @confirm="onConfirm"
     @cancel="onCancel"
