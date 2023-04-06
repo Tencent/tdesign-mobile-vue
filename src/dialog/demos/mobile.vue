@@ -22,6 +22,11 @@
         <imgVue />
       </div>
     </tdesign-demo-block>
+    <tdesign-demo-block summary="其他形式对话框">
+      <div class="dialog-demo" style="padding-bottom: 20px">
+        <otherVue />
+      </div>
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -30,6 +35,7 @@ import feedbackVue from './feedback.vue';
 import confirmVue from './confirm.vue';
 import inputVue from './input.vue';
 import imgVue from './image-dialog.vue';
+import otherVue from './other.vue';
 </script>
 
 <style scoped lang="less">

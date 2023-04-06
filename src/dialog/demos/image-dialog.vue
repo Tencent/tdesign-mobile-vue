@@ -1,6 +1,6 @@
 <template>
   <t-button block variant="outline" size="large" @click="isShowDialog5 = true"> 自定义元素插入在顶部 </t-button>
-  <t-button block variant="outline" size="large" @click="isShowDialog6 = true"> 自定义元素插入在中部 </t-button>
+  <!-- <t-button block variant="outline" size="large" @click="isShowDialog6 = true"> 自定义元素插入在中部 </t-button> -->
   <t-button block variant="outline" size="large" @click="isShowDialog7 = true"> 自定义元素插入在底部 </t-button>
   <t-dialog
     v-model:visible="isShowDialog5"
@@ -17,7 +17,7 @@
       <t-image class="image-container" fit="contain" :src="imageSrc"></t-image>
     </template>
   </t-dialog>
-  <t-dialog
+  <!-- <t-dialog
     v-model:visible="isShowDialog6"
     type="confirm"
     title="对话框标题"
@@ -31,7 +31,7 @@
     <template #middle>
       <t-image class="image-container" fit="contain" :src="imageSrc"></t-image>
     </template>
-  </t-dialog>
+  </t-dialog> -->
 
   <t-dialog
     v-model:visible="isShowDialog7"
@@ -44,7 +44,7 @@
     @confirm="onConfirm"
     @cancel="onCancel"
   >
-    <template #bottom>
+    <template #middle>
       <t-image class="image-container" fit="contain" :src="imageSrc"></t-image>
     </template>
   </t-dialog>
