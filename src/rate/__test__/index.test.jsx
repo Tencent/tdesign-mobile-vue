@@ -55,10 +55,18 @@ describe('Rate', () => {
       const leftIcons = wrapper.findAll('.t-rate--icon-left');
       const rightIcons = wrapper.findAll('.t-rate--icon-right');
       await leftIcons[0].trigger('click');
+      let popover = wrapper.find('.t-rate--popover')
+      expect(popover.exists()).toBeTruthy();
+      let popoverItem = popover.findAll('.t-rate--popover-item');
+      await popoverItem[0].trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
       expect(leftIcons[0].exists()).toBeTruthy();
       expect(value.value).toBe(0.5);
       await rightIcons[0].trigger('click');
+      popover = wrapper.find('.t-rate--popover')
+      expect(popover.exists()).toBeTruthy();
+      popoverItem = popover.findAll('.t-rate--popover-item');
+      await popoverItem[1].trigger('click');
       expect(onChange).toHaveBeenCalledTimes(2);
       expect(rightIcons[0].exists()).toBeTruthy();
       expect(value.value).toBe(1);
