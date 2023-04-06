@@ -1,10 +1,19 @@
 <template>
   <t-cell title="地址" :note="note" arrow @click="showCascader" />
-  <t-cascader v-model:visible="visible" :value="address" title="选择地址" :options="options" @change="onChange" />
+  <t-cascader
+    v-model:visible="visible"
+    :value="address"
+    title="选择地址"
+    :sub-titles="subTitles"
+    :options="options"
+    @change="onChange"
+  />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+
+const subTitles = ['请选择省份', '请选择城市', '请选择区/县'];
 
 const data = {
   areaList: [
@@ -67,6 +76,7 @@ const data = {
   ],
 };
 const options = data.areaList;
+
 const address = ref();
 const visible = ref(false);
 const note = ref('请选择地址');

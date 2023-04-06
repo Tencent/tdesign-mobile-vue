@@ -3,64 +3,67 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
-import { TNode } from '../common';
 
-export interface TdCascaderProps {
+import { TNode, TreeOptionData, KeysType } from '../common';
+
+export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**
-   * 选中值
+   * 关闭按钮
+   * @default true
    */
-  value?: TdCascaderItemValueType;
+  closeBtn?: boolean | TNode;
   /**
-   * 选中值，非受控属性
+   * 用来定义 value / label 在 `options` 中对应的字段别名
    */
-  defaultValue?: TdCascaderItemValueType;
+  keys?: KeysType;
   /**
-   * 选项数据
+   * 可选项数据源
+   * @default []
    */
-  options?: TdCascaderItems;
+  options?: Array<CascaderOption>;
   /**
-   * 关闭 icon 图标
+   * 每级展示的次标题
+   * @default []
    */
-  closeIcon?: boolean | TNode;
+  subTitles?: Array<string>;
+  /**
+   * 展示风格
+   * @default step
+   */
+  theme?: 'step' | 'tab';
   /**
    * 标题
    */
   title?: string | TNode;
   /**
-   * 是否禁用
+   * 选项值
+   */
+  value?: string | number;
+  /**
+   * 选项值，非受控属性
+   */
+  defaultValue?: string | number;
+  /**
+   * 选项值
+   */
+  modelValue?: string | number;
+  /**
+   * 是否展示
    * @default false
    */
-  disabled?: boolean;
+  visible?: boolean;
   /**
-   * 值改变时触发
+   * 值发生变更时触发
    */
-  onChange?: (value: TdCascaderItemValueType, context: { e: MouseEvent }) => void;
+  onChange?: (value: string | number, selectedOptions: string[]) => void;
   /**
-   * 选中选项时触发
+   * 关闭时触发
    */
-  onPick?: (context: { e: MouseEvent }) => void;
+  onClose?: (trigger: TriggerSource) => void;
   /**
-   * 关闭 Cascader 触发
+   * 选择后触发
    */
-  onCancel?: (context: { e: MouseEvent }) => void;
-  /**
-   * 点击进度 Tab 触发
-   */
-  onClickTab?: (context: { e: MouseEvent }) => void;
+  onPick?: (value: string | number, index: number) => void;
 }
 
-export interface TdCascaderItem {
-  label: string;
-  value: TdCascaderItemValueType;
-  active?: boolean;
-  disabled?: boolean;
-  index?: string;
-  leaf?: boolean;
-  parent?: TdCascaderItem;
-  children?: TdCascaderItems;
-  [key: string]: any;
-  selected?: boolean;
-}
-
-export type TdCascaderItems = Array<TdCascaderItem>;
-export type TdCascaderItemValueType = string | number;
+export type TriggerSource = 'overlay' | 'close-btn' | 'finish';

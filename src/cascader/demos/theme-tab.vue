@@ -1,6 +1,13 @@
 <template>
   <t-cell title="地址" :note="note" arrow @click="showCascader" />
-  <t-cascader v-model:visible="visible" :value="address" title="选择地址" :options="options" @change="onChange" />
+  <t-cascader
+    v-model:visible="visible"
+    :value="address"
+    theme="tab"
+    title="选择地址"
+    :options="options"
+    @change="onChange"
+  />
 </template>
 
 <script lang="ts" setup>
