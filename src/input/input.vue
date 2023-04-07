@@ -1,15 +1,18 @@
 <template>
-  <t-cell :required="required" :class="styleWrapper">
-    <template v-if="labelContent" #title>
+  <div :class="styleWrapper">
+    <div :class="`${componentName}__wrap--prefix`">
+      <div :class="`${componentName}__icon--prefix`">
+        <slot name="prefix-icon" />
+        <template v-if="prefixIconContent">
+          <t-node :content="prefixIconContent"></t-node>
+        </template>
+      </div>
       <div :class="styleLabel">
         <t-node :content="labelContent"></t-node>
       </div>
-    </template>
-    <template v-if="prefixIconContent" #leftIcon>
-      <t-node :content="prefixIconContent"></t-node>
-    </template>
-    <template #note>
-      <div :class="`${componentName}__wrap`">
+    </div>
+    <div :class="`${componentName}__wrap`">
+      <div :class="`${componentName}__content ${componentName}--${status || 'default'}`">
         <input
           ref="inputRef"
           :value="innerValue"
@@ -28,7 +31,7 @@
         />
         <div
           v-if="clearable && innerValue && innerValue.length > 0"
-          :class="`${componentName}__wrap--icon`"
+          :class="`${componentName}__wrap--clearable-icon`"
           @click="handleClear"
         >
           <close-circle-filled-icon />
@@ -36,20 +39,22 @@
         <div v-if="suffixContent" :class="`${componentName}__wrap--suffix`">
           <t-node :content="suffixContent" />
         </div>
+        <div v-if="suffixIconContent" :class="`${componentName}__wrap--suffix-icon`">
+          <slot name="suffix-icon" />
+          <t-node :content="suffixIconContent"></t-node>
+        </div>
       </div>
-      <div v-if="errorMessage" :class="`${componentName}__error-msg`">{{ errorMessage }}</div>
-    </template>
-    <template v-if="suffixIconContent" #rightIcon>
-      <t-node :content="suffixIconContent"></t-node>
-    </template>
-  </t-cell>
+      <div v-if="tipsContent" :class="`${componentName}__tips ${componentName}--${align}`">
+        <t-node :content="tipsContent" />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
 import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { ref, computed, defineComponent, getCurrentInstance, toRefs, nextTick, watch } from 'vue';
 import { useFocus } from '@vueuse/core';
-import TCell from '../cell';
 import config from '../config';
 import InputProps from './props';
 import ClASSNAMES from '../shared/constants';
@@ -63,7 +68,6 @@ export default defineComponent({
   name: componentName,
   components: {
     TNode,
-    TCell,
     CloseCircleFilledIcon,
   },
   props: InputProps,
@@ -75,9 +79,11 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const [innerValue] = useDefault<string, TdInputProps>(props, context.emit, 'value', 'change');
 
+    const status = props.status || 'default';
     const styleLabel = computed(() => ({
-      [`${componentName}--label`]: true,
+      [`${componentName}__label`]: true,
       [ClASSNAMES.STATUS.disabled]: props.disabled,
+      [`${componentName}-is-${status}`]: status && status !== 'default',
     }));
     const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
 
@@ -85,18 +91,20 @@ export default defineComponent({
     const suffixIconContent = computed(() => renderTNode(internalInstance, 'suffixIcon'));
     const prefixIconContent = computed(() => renderTNode(internalInstance, 'prefixIcon'));
     const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
+    const tipsContent = computed(() => renderTNode(internalInstance, 'tips'));
 
     const styleControl = computed(() => [
       `${componentName}__control`,
       {
-        [`${componentName}__control--${props.align}`]: props.align !== 'left',
+        [`${componentName}--${props.align}`]: props.align !== 'left',
+        [`${componentName}--${status}`]: status,
       },
     ]);
 
     const styleWrapper = computed(() => ({
       [componentName]: true,
+      [`${componentName}--layout-${props.layout}`]: props.layout,
       [`${componentName}--size-${props.size}`]: props.size,
-      [`${componentName}__error`]: !!props.errorMessage,
     }));
 
     const setInputValue = (v: InputValue = '') => {
@@ -119,8 +127,8 @@ export default defineComponent({
 
     const inputValueChangeHandle = (e: Event) => {
       const { value } = e.target as HTMLInputElement;
-      const { maxcharacter } = props;
-      if (maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
+      const { allowInputOverMax, maxcharacter } = props;
+      if (!allowInputOverMax && maxcharacter && maxcharacter > 0 && !Number.isNaN(maxcharacter)) {
         const { length = 0, characters = '' } = getCharacterLength(value, maxcharacter) as {
           length: number;
           characters: string;
@@ -174,6 +182,7 @@ export default defineComponent({
       styleWrapper,
       styleControl,
       suffixContent,
+      tipsContent,
       suffixIconContent,
       prefixIconContent,
       labelContent,
