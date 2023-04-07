@@ -1045,12 +1045,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         class="t-radio-group box"
         role="radiogroup"
       >
-        <input
-          class="t-radio__original"
-          name="radio"
-          type="radio"
-          value="1"
-        />
+        <!--v-if-->
+        
         <div
           class="t-radio t-radio--left"
         >
@@ -1163,7 +1159,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           </div>
           <!--v-if-->
         </div>
-        <!--v-if-->
+        
       </div>
       
     </div>
@@ -1239,10 +1235,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <!--v-if-->
           </div>
           <div
-            class="t-radio__icon-circle t-radio__icon-circle--disabled"
+            class="t-radio__border t-radio__border--left"
           />
-          <!--v-if-->
-          <!---->
         </div>
         <div
           class="t-radio t-radio--left t-radio--block"

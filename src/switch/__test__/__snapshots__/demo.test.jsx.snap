@@ -238,7 +238,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -279,8 +279,8 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
@@ -425,7 +425,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -466,8 +466,8 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
     class="tdesign-mobile-demo-block"
@@ -492,7 +492,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-switch t-switch--medium t-switch--checked"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -561,36 +561,8 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      
-    </div>
-  </div>
-  <div
-    class="box"
-    style="height: 16px;"
-  />
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      带图标开关
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__right-icon"
-    >
-      
       <div
-        class="t-switch t-switch--medium t-switch--checked"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -792,20 +764,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        基础开关
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <!--v-if-->
-      <div
-        class="t-cell__right-icon"
-      >
-        
         <div
           class="t-cell__right"
         >
@@ -919,7 +877,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
             
           </div>
         </div>
-        
       </div>
       
       
@@ -1255,7 +1212,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
               <!--v-if-->
               <!---->
             </div>
-            <!---->
           </div>
         </div>
         
@@ -1298,93 +1254,10 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
               <!--v-if-->
               <!---->
             </div>
-            <!---->
           </div>
         </div>
         
       </div>
-      
-    </div>
-  </div>
-  <div
-    class="demo__title"
-  >
-    禁用状态
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      禁用状态
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__right-icon"
-    >
-      
-      <div
-        class="t-switch t-switch--medium t-switch--disabled"
-      >
-        <div
-          class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
-        >
-          <div
-            class="t-switch__label t-switch__label--medium"
-          >
-            <!--v-if-->
-            <!---->
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      禁用状态
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__right-icon"
-    >
-      
-      <div
-        class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
-      >
-        <div
-          class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
-        >
-          <div
-            class="t-switch__label t-switch__label--medium t-switch__label--checked"
-          >
-            <!--v-if-->
-            <!---->
-          </div>
-        </div>
-      </div>
-      
     </div>
   </div>
   
