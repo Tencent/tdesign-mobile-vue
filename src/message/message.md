@@ -22,7 +22,7 @@ onClose | Function |  | TS 类型：`(context: { trigger: 'close-click' \| 'dura
 onCloseBtnClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>当关闭按钮存在时，用户点击关闭按钮触发 | N
 onClosed | Function |  | TS 类型：`() => void`<br/>已废弃。关闭消息并且动画结束后触发 | N
 onDurationEnd | Function |  | TS 类型：`() => void`<br/>计时结束后触发 | N
-onLinkClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>当link链接存在时，点击链接文本时触发 | N
+onLinkClick | Function |  | 【开发中】TS 类型：`(context: { e: MouseEvent }) => void`<br/>当link链接存在时，点击链接文本时触发 | N
 onOpen | Function |  | TS 类型：`() => void`<br/>已废弃。展示Message时触发 | N
 onOpened | Function |  | TS 类型：`() => void`<br/>已废弃。展示Message时并且动画结束后触发 | N
 
@@ -35,6 +35,6 @@ close | `(context: { trigger: 'close-click' \| 'duration-end', e?: MouseEvent })
 close-btn-click | `(context: { e: MouseEvent })` | 当关闭按钮存在时，用户点击关闭按钮触发
 closed | \- | 已废弃。关闭消息并且动画结束后触发
 duration-end | \- | 计时结束后触发
-link-click | `(context: { e: MouseEvent })` | 当link链接存在时，点击链接文本时触发
+link-click | `(context: { e: MouseEvent })` | 【开发中】当link链接存在时，点击链接文本时触发
 open | \- | 已废弃。展示Message时触发
 opened | \- | 已废弃。展示Message时并且动画结束后触发

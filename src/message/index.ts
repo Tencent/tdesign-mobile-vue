@@ -16,10 +16,10 @@ function create(props: TdMessageProps): void {
       h(Message, {
         ...props,
         visible: visible.value,
-        onClose: () => {
+        onDurationEnd: () => {
           visible.value = false;
         },
-        onClosed: () => {
+        onCloseBtnClick: () => {
           root.remove();
         },
       }),
@@ -40,11 +40,8 @@ const defaultProps: TdMessageProps = {
   theme: 'info',
   visible: false,
   zIndex: 5000,
-  onClose: () => {},
-  onClosed: () => {},
-  onOpen: () => {},
-  onOpened: () => {},
-  onChange: () => {},
+  onDurationEnd: () => {},
+  onCloseBtnClick: () => {},
 };
 
 (['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((theme: MessageThemeList): void => {

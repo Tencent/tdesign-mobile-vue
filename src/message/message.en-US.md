@@ -22,7 +22,7 @@ onClose | Function |  | Typescript：`(context: { trigger: 'close-click' \| 'dur
 onCloseBtnClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onClosed | Function |  | Typescript：`() => void`<br/>`deprecated` | N
 onDurationEnd | Function |  | Typescript：`() => void`<br/> | N
-onLinkClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
+onLinkClick | Function |  | 【developing】Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
 onOpen | Function |  | Typescript：`() => void`<br/>`deprecated` | N
 onOpened | Function |  | Typescript：`() => void`<br/>`deprecated` | N
 
@@ -35,6 +35,6 @@ close | `(context: { trigger: 'close-click' \| 'duration-end', e?: MouseEvent })
 close-btn-click | `(context: { e: MouseEvent })` | \-
 closed | \- | `deprecated`
 duration-end | \- | \-
-link-click | `(context: { e: MouseEvent })` | \-
+link-click | 【developing】`(context: { e: MouseEvent })` | \-
 open | \- | `deprecated`
 opened | \- | `deprecated`
