@@ -80,9 +80,15 @@ export default defineComponent({
     const footerStyles = computed(() => ({
       padding: '24px',
     }));
+    const isUseTextBtn = () =>
+      [props?.confirmBtn, props?.cancelBtn, ...(props?.actions || [])].some(
+        item => item?.variant && item?.variant === 'text',
+      );
+
     const dCommonBtnClassName = computed(() => [
       `${name}__button`,
       props.buttonLayout === 'vertical' ? `${name}__button--vertical` : `${name}__button--horizontal`,
+      isUseTextBtn() ? `${name}__button--text` : '',
     ]);
     const rootStyles = computed(() => ({
       zIndex: props.zIndex,
