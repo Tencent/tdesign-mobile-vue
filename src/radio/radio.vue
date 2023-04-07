@@ -121,6 +121,7 @@ export default defineComponent({
     ]);
 
     const radioContentChange = (e: Event) => {
+      console.log('radioContentChange', props.contentDisabled);
       if (props.contentDisabled) {
         return;
       }
