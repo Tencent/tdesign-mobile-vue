@@ -5,6 +5,47 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.17.0 `2023-04-07` 
+### ❗ BREAKING CHANGES
+- `CheckBox`: 属性 align 更名为 placement @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))
+- `CheckBox`: 属性 icon 的枚举值变更 @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))
+- `Picker`: 属性 confirmBtn 和 cancelBtn 取消 object 类型，不再使用 button 渲染 @LeeJim ([#539](https://github.com/Tencent/tdesign-mobile-vue/pull/539))
+- `Search`: 调整 DOM 结构 @anlyyao ([#540](https://github.com/Tencent/tdesign-mobile-vue/pull/540))
+- `Result`: 移除 imageProps 属性 @mamumu123 ([#543](https://github.com/Tencent/tdesign-mobile-vue/pull/543))
+- `Search`: 移除 label 属性相关 @anlyyao ([#540](https://github.com/Tencent/tdesign-mobile-vue/pull/540))
+- `Search`: blur、focus 事件参数类型变更 @anlyyao ([#540](https://github.com/Tencent/tdesign-mobile-vue/pull/540))
+- `Skeleton`: 移除 content 属性相关 @anlyyao ([#557](https://github.com/Tencent/tdesign-mobile-vue/pull/557))
+- `Skeleton`: 取消 rowCol 默认值 @anlyyao ([#557](https://github.com/Tencent/tdesign-mobile-vue/pull/557))
+- `Image`: 调整 DOM @LeeJim ([#561](https://github.com/Tencent/tdesign-mobile-vue/pull/561))
+- `Image`: 属性 shape 调整默认值 @LeeJim ([#561](https://github.com/Tencent/tdesign-mobile-vue/pull/561))
+- `Input`: 调整 DOM 结构 @ccccpj ([#531 ](https://github.com/Tencent/tdesign-mobile-vue/pull/531))
+
+### 🚀 Features
+- `CheckBox`: 新增 block 属性 @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))
+- `Picker`: 视觉升级 @LeeJim ([#539](https://github.com/Tencent/tdesign-mobile-vue/pull/539))
+- `Picker`: 新增 header 属性，支持传入插槽 @LeeJim ([#539](https://github.com/Tencent/tdesign-mobile-vue/pull/539))
+- `Picker`: 事件 confirm 丰富返回的参数 @LeeJim ([#539](https://github.com/Tencent/tdesign-mobile-vue/pull/539))
+- `Empty`: 新增 Empty 组件 @mamumu123 ([#538](https://github.com/Tencent/tdesign-mobile-vue/pull/538))
+- `Sticky`: 更新示例 @anlyyao ([#555](https://github.com/Tencent/tdesign-mobile-vue/pull/555))
+- `Search`: 新增 submit 事件 @anlyyao ([#540](https://github.com/Tencent/tdesign-mobile-vue/pull/540))
+- `Search`: 新增 disabled、 readonly 属性 @anlyyao ([#540](https://github.com/Tencent/tdesign-mobile-vue/pull/540))
+- `Image`: 新增支持 srcset 属性 @LeeJim ([#561](https://github.com/Tencent/tdesign-mobile-vue/pull/561))
+- `Input`: 新增支持 allowInputOverMax 属性 @ccccpj ([#531 ](https://github.com/Tencent/tdesign-mobile-vue/pull/531))
+- `Input`: 新增支持 layout 属性 @ccccpj ([#531 ](https://github.com/Tencent/tdesign-mobile-vue/pull/531))
+- `Input`: 新增支持 status 属性 @ccccpj ([#531 ](https://github.com/Tencent/tdesign-mobile-vue/pull/531))
+- `Input`: 新增支持 tips 属性 @ccccpj  ([#531 ](https://github.com/Tencent/tdesign-mobile-vue/pull/531))
+
+### 🐞 Bug Fixes
+- `DateTimePicker`: 修复设置 start、end 之后展示错误的问题 @LeeJim ([#556](https://github.com/Tencent/tdesign-mobile-vue/pull/556))
+- `Image`: 优化加载样式 @LeeJim ([#561](https://github.com/Tencent/tdesign-mobile-vue/pull/561))
+
+### 🚧 Others
+- `DateTimePicker`: 当 mode 等于 hour/minute/second 时，不需要传入完整的日期 @LeeJim ([#556](https://github.com/Tencent/tdesign-mobile-vue/pull/556))
+- `Loading`: 调整 dots 类型的实现 @LeeJim ([#561](https://github.com/Tencent/tdesign-mobile-vue/pull/561))
+
+
+
+
 ## 🌈 0.16.0 `2023-03-27` 
 ### ❗ BREAKING CHANGES
 - `Loading`: 属性 size 默认值改成 20px @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
