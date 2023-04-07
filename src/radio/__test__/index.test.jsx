@@ -129,6 +129,7 @@ describe('Radio', () => {
         </RadioGroup>
       ));
       const [radio1, radio2] = wrapper.findAllComponents('.t-radio');
+
       expect(radio1.vm.checked).toBeTruthy();
       await radio2.trigger('click');
       expect(radio2.vm.checked).toBeTruthy();
