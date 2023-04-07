@@ -155,7 +155,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
     用于页面消息通知提示，具有成功提示、提醒、警示等功能，通常在顶部出现，可以自动消失或点击关闭
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -166,7 +166,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         弹窗内容为存文本、标题和副标题、带输入框
       </p>
@@ -313,7 +313,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -324,7 +324,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         02 状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         弹窗内容为存文本、标题和副标题、带输入框
       </p>

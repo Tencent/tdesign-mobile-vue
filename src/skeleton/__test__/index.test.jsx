@@ -19,14 +19,14 @@ describe('Skeleton', () => {
       const $rows = $skeleton.findAll(`.${name}__row`);
       // 2行
       expect($rows.length).toBe(2);
-      // 第1行1列， 第2行2列
+      // 第1行2列， 第2行1列
       const firstRowCol = $rows[0].findAll(`.${name}__col`);
       const secondRowCol = $rows[1].findAll(`.${name}__col`);
-      expect(firstRowCol.length).toBe(1);
+      expect(firstRowCol.length).toBe(2);
       expect(firstRowCol[0].classes()).toContain(`${name}--type-text`);
-      expect(secondRowCol.length).toBe(2);
+      expect(firstRowCol[1].classes()).toContain(`${name}--type-text`);
+      expect(secondRowCol.length).toBe(1);
       expect(secondRowCol[0].classes()).toContain(`${name}--type-text`);
-      expect(secondRowCol[1].classes()).toContain(`${name}--type-text`);
 
       const image = 'image';
       await wrapper.setProps({
@@ -40,22 +40,13 @@ describe('Skeleton', () => {
     });
 
     it(': loading', async () => {
-      const loading = false;
       const wrapper = mount(Skeleton, {
         props: {
-          loading,
-          content: TEXT,
+          loading: true,
         },
       });
       const $skeleton = wrapper.findComponent(Skeleton);
-      // loading = false, 非加载状态, 显示加载完成的内容
-      expect($skeleton.text()).toEqual(TEXT);
-      expect($skeleton.find(`.${name}__content`).exists()).toBeFalsy();
-      await wrapper.setProps({
-        loading: true,
-      });
       // loading = true, 加载状态, 默认取 theme = 'text', 2行
-      expect($skeleton.find(`.${name}__content`).exists()).toBeTruthy();
       const $rows = $skeleton.findAll(`.${name}__row`);
       expect($rows.length).toBe(2);
     });

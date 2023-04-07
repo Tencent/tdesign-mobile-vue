@@ -1,136 +1,150 @@
 <template>
-  <div :class="classes">
-    <div :class="`${name}__form`" :style="shapeStyle">
-      <div :class="`${name}__box`">
-        <div :class="`${name}__icon-search`">
-          <slot name="leftIcon">
-            <t-icon-search />
-          </slot>
-        </div>
-        <t-input
-          ref="searchInput"
-          v-model="value"
-          type="search"
-          :class="`${name}__input`"
-          :autofocus="focus"
-          :placeholder="placeholder"
-          @blur="onBlur"
-          @focus="onFocus"
-          @change="onChange"
-        />
-        <div :class="`${name}__icon-close`">
-          <t-icon-clear @click="onClear" />
-        </div>
+  <div :class="`${name}`">
+    <div :class="boxClasses">
+      <slot name="leftIcon">
+        <t-node v-if="leftIconContent" :content="leftIconContent"></t-node>
+      </slot>
+      <input
+        ref="searchInput"
+        :value="searchValue"
+        type="search"
+        :class="[`${prefix}-input__keyword`, { [`${name}--center`]: center }]"
+        :autofocus="focus"
+        :placeholder="placeholder"
+        :readonly="readonly"
+        :disabled="disabled"
+        @keypress="handleSearch"
+        @focus="handleFocus"
+        @blur="handleBlur"
+        @input="handleInput"
+        @compositionend="handleCompositionend"
+      />
+      <div v-if="searchValue && clearable" :class="`${name}__clear`" @click="handleClear">
+        <t-icon-clear size="24" />
       </div>
-      <label v-show="state.labelActive" :class="`${name}__label`" :style="shapeStyle" @click="onClick">
-        <div :class="`${name}__label-icon-search`">
-          <slot name="leftIcon">
-            <t-icon-search />
-          </slot>
-        </div>
-        <span :class="`${name}__label-text`">{{ placeholder }}</span>
-      </label>
     </div>
     <slot name="action">
-      <t-button
-        v-if="action"
-        v-show="!state.labelActive"
-        variant="text"
-        :class="`${name}__cancel-button`"
-        @click="onCancel"
-      >
+      <div v-if="action" v-show="focused" :class="`${name}__search-action`" @click="onActionClick">
         {{ action }}
-      </t-button>
+      </div>
     </slot>
   </div>
 </template>
 
 <script lang="ts">
-import { SearchIcon as TIconSearch, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
-import { ref, reactive, computed, defineComponent, toRefs } from 'vue';
+import { SearchIcon, CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
+import { ref, computed, defineComponent, toRefs, getCurrentInstance, h, nextTick } from 'vue';
+import isFunction from 'lodash/isFunction';
+import { useFocus } from '@vueuse/core';
 import config from '../config';
-import TButton from '../button';
-import TInput, { InputValue } from '../input';
-import { extendAPI } from '../shared';
+import { renderTNode, TNode, useEmitEvent } from '../shared';
 import searchProps from './props';
 import { useDefault } from '../shared/useDefault';
 
 const { prefix } = config;
 const name = `${prefix}-search`;
 
-type InputBlurContext = { e: FocusEvent };
-type InputFocusContent = { e: FocusEvent };
-type InputChangeContext = { e?: MouseEvent | InputEvent | undefined } | undefined;
-
 export default defineComponent({
   name,
-  components: { TIconSearch, TIconClear, TButton, TInput },
+  components: { TNode, TIconClear },
   props: searchProps,
-  setup(props, { emit }) {
-    const classes = computed(() => ({
-      [`${name}`]: true,
-      [`${prefix}-is-focused`]: !state.labelActive,
-    }));
-    const [value] = useDefault(props, emit, 'value', 'change');
-    const shapeStyle = computed(() => ({
-      borderRadius: props.shape === 'square' ? undefined : '50px',
-    }));
+  emits: ['update:value', 'update:modelValue', 'action-click', 'focus', 'blur', 'change', 'clear', 'submit'],
+  setup(props, context) {
+    const emitEvent = useEmitEvent(props, context.emit);
     const searchInput = ref();
+    const { focused } = useFocus(searchInput, { initialValue: props.focus });
+    const [searchValue] = useDefault(props, context.emit, 'value', 'change');
 
-    const state = reactive({
-      labelActive: !value.value,
-      inputVal: '',
+    const boxClasses = computed(() => [
+      `${name}__input-box`,
+      `${name}__input-box--${props.shape}`,
+      {
+        [`${prefix}-is-focused`]: focused.value,
+      },
+    ]);
+
+    // left-icon
+    const internalInstance = getCurrentInstance();
+    const leftIconContent = computed(() => {
+      if (isFunction(props.leftIcon) || context.slots.prefixIcon) {
+        return renderTNode(internalInstance, 'leftIcon');
+      }
+      if (props.leftIcon) {
+        return h(SearchIcon, { size: '24px' });
+      }
+      return null;
     });
 
-    const doFocus = () => {
-      searchInput.value?.focus();
+    const setInputValue = (v: any) => {
+      const input = searchInput.value as HTMLInputElement;
+      const sV = String(v);
+      if (!input) {
+        return;
+      }
+      if (input.value !== sV) {
+        input.value = sV;
+      }
     };
 
-    const onBlur = (value: any, context: InputBlurContext) => {
-      state.labelActive = !value;
-      props.onBlur?.(value, { e: context.e });
+    const inputValueChangeHandle = (e: Event) => {
+      const { value } = e.target as HTMLInputElement;
+      searchValue.value = value;
+      nextTick(() => setInputValue(searchValue.value));
     };
 
-    const onClick = () => {
-      state.labelActive = !state.labelActive;
-      doFocus();
+    const handleInput = (e: any) => {
+      // 中文输入的时候inputType是insertCompositionText所以中文输入的时候禁止触发。
+      const checkInputType = e.inputType && e.inputType === 'insertCompositionText';
+      if (e.isComposing || checkInputType) return;
+      inputValueChangeHandle(e);
     };
 
-    const onFocus = (value: InputValue, context: InputFocusContent) => {
-      state.labelActive = false;
-      props.onFocus?.(value as string, { e: context.e });
+    const handleClear = (e: MouseEvent) => {
+      searchValue.value = '';
+      focused.value = true;
+      emitEvent('clear', { e });
     };
 
-    const onClear = (e: MouseEvent) => {
-      searchInput.value.innerValue = '';
-      props.onClear?.({ e });
+    const handleFocus = (e: FocusEvent) => {
+      emitEvent('focus', { value: searchValue.value, e });
     };
 
-    const onCancel = (e: MouseEvent) => {
-      state.labelActive = !state.labelActive;
-      props.onActionClick?.({ e });
+    const handleBlur = (e: FocusEvent) => {
+      emitEvent('blur', { value: searchValue.value, e });
     };
 
-    const onChange = (value: InputValue, context: InputChangeContext) => {
-      props.onChange?.(value as string, { e: context?.e });
+    const handleCompositionend = (e: InputEvent | CompositionEvent) => {
+      inputValueChangeHandle(e);
     };
 
-    extendAPI({ doFocus, blur });
+    const onActionClick = (e: MouseEvent) => {
+      emitEvent('action-click', { e: MouseEvent });
+    };
+
+    const handleSearch = (e: any) => {
+      // 如果按的是 enter 键, 13是 enter
+      if (e.keyCode === 13) {
+        e.preventDefault(); // 禁止默认（换行）事件
+        emitEvent('submit', { value: searchValue.value, e });
+      }
+    };
 
     return {
       ...toRefs(props),
-      name: ref(name),
-      classes,
-      shapeStyle,
-      onClick,
-      onCancel,
-      onBlur,
-      onFocus,
-      onClear,
-      onChange,
-      state,
-      value,
+      prefix,
+      name,
+      focused,
+      boxClasses,
+      leftIconContent,
+      searchValue,
+      handleSearch,
+      handleClear,
+      handleFocus,
+      handleBlur,
+      handleInput,
+      handleCompositionend,
       searchInput,
+      onActionClick,
     };
   },
 });

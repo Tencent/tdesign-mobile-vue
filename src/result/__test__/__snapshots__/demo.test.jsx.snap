@@ -10,31 +10,47 @@ exports[`Result > Result customVue demo works fine 1`] = `
     
     
     <div
-      class="t-image t-image--round external-class-image"
+      class="t-image t-image--square external-class-image"
     >
       <div
-        class="t-image__status"
+        class="t-image__mask"
       >
-        <svg
-          class="t-icon t-icon-ellipsis"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
+        <div
+          class="t-loading"
+          style="font-size: 20px;"
         >
-          <path
-            d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
+          
+          <div
+            class="t-loading__dots"
+            style="animation-duration: 800ms; width: 20px; height: 20px;"
+          >
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+            />
+            <div
+              class="t-loading__dot"
+              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+            />
+          </div>
+          
+          <!--v-if-->
+          <!---->
+        </div>
       </div>
-      <img
-        alt=""
-        class="t-image__img"
-        src="https://tdesign.gtimg.com/mobile/demos/illustration%402x.png"
-        style="object-fit: fill; object-position: center;"
-      />
+      <picture>
+        <!--v-if-->
+        <img
+          alt=""
+          class="t-image__img"
+          src="https://tdesign.gtimg.com/mobile/demos/illustration%402x.png"
+          style="object-fit: fill; object-position: center;"
+        />
+      </picture>
     </div>
     
     
@@ -78,7 +94,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     结果反馈
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-772b64ec=""
   >
     <div
@@ -98,9 +114,8 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
       
     </div>
   </div>
-  
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-772b64ec=""
   >
     <div
@@ -108,59 +123,182 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        成功状态
+        不同结果状态
       </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
       
-      <div
-        class="t-result t-result--theme-success"
-        data-v-772b64ec=""
-      >
+      
+      <div>
         <div
-          class="t-result__thumb"
+          class="t-result t-result--theme-success"
         >
-          
-          <svg
-            class="t-icon t-icon-check-circle t-result__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+          <div
+            class="t-result__thumb"
           >
-            <path
-              d="M4.5 8.2L7 10.7l4.5-4.5-.7-.7L7 9.3 5.2 7.5l-.7.7z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M4.11 2.18a7 7 0 117.78 11.64A7 7 0 014.1 2.18zm.56 10.8a6 6 0 106.66-9.97A6 6 0 004.67 13z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-          
-        </div>
-        <div
-          class="t-result__title"
-        >
-          成功状态
-        </div>
-        <div
-          class="t-result__description"
-        >
-          描述文字
+            
+            <svg
+              class="t-icon t-icon-check-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M4.5 8.2L7 10.7l4.5-4.5-.7-.7L7 9.3 5.2 7.5l-.7.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M4.11 2.18a7 7 0 117.78 11.64A7 7 0 014.1 2.18zm.56 10.8a6 6 0 106.66-9.97A6 6 0 004.67 13z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <div
+            class="t-result__title"
+          >
+            成功状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
         </div>
       </div>
+      <div>
+        <div
+          class="t-result t-result--theme-error"
+        >
+          <div
+            class="t-result__thumb"
+          >
+            
+            <svg
+              class="t-icon t-icon-close-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <div
+            class="t-result__title"
+          >
+            失败状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="t-result t-result--theme-warning"
+        >
+          <div
+            class="t-result__thumb"
+          >
+            
+            <svg
+              class="t-icon t-icon-info-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <div
+            class="t-result__title"
+          >
+            警示状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="t-result t-result--theme-default"
+        >
+          <div
+            class="t-result__thumb"
+          >
+            
+            <svg
+              class="t-icon t-icon-info-circle t-result__icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <div
+            class="t-result__title"
+          >
+            默认状态
+          </div>
+          <div
+            class="t-result__description"
+          >
+            描述文字
+          </div>
+        </div>
+      </div>
+      
       
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-772b64ec=""
   >
     <div
@@ -168,188 +306,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        失败状态
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-result t-result--theme-error"
-        data-v-772b64ec=""
-      >
-        <div
-          class="t-result__thumb"
-        >
-          
-          <svg
-            class="t-icon t-icon-close-circle t-result__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-          
-        </div>
-        <div
-          class="t-result__title"
-        >
-          失败状态
-        </div>
-        <div
-          class="t-result__description"
-        >
-          描述文字
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-772b64ec=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        警示状态
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-result t-result--theme-warning"
-        data-v-772b64ec=""
-      >
-        <div
-          class="t-result__thumb"
-        >
-          
-          <svg
-            class="t-icon t-icon-info-circle t-result__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-          
-        </div>
-        <div
-          class="t-result__title"
-        >
-          警示状态
-        </div>
-        <div
-          class="t-result__description"
-        >
-          描述文字
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-772b64ec=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        默认状态
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-result t-result--theme-default"
-        data-v-772b64ec=""
-      >
-        <div
-          class="t-result__thumb"
-        >
-          
-          <svg
-            class="t-icon t-icon-info-circle t-result__icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-          
-        </div>
-        <div
-          class="t-result__title"
-        >
-          默认状态
-        </div>
-        <div
-          class="t-result__description"
-        >
-          描述文字
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-772b64ec=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         自定义结果
       </p>
@@ -368,31 +325,47 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
           
           
           <div
-            class="t-image t-image--round external-class-image"
+            class="t-image t-image--square external-class-image"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/illustration%402x.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/illustration%402x.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
           
           
@@ -420,7 +393,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-772b64ec=""
   >
     <div
@@ -428,7 +401,7 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         页面位置展示
       </p>
@@ -465,33 +438,169 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
 
 exports[`Result > Result themeVue demo works fine 1`] = `
 <div
-  class="t-result t-result--theme-default"
+  data-v-app=""
 >
-  <div
-    class="t-result__thumb"
-  >
-    
-    <svg
-      class="t-icon t-icon-info-circle t-result__icon"
-      fill="none"
-      height="1em"
-      viewBox="0 0 16 16"
-      width="1em"
+  
+  <div>
+    <div
+      class="t-result t-result--theme-success"
     >
-      <path
-        d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
-        fill="currentColor"
-        fill-opacity="0.9"
-      />
-      <path
-        d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
-        fill="currentColor"
-        fill-opacity="0.9"
-      />
-    </svg>
-    
+      <div
+        class="t-result__thumb"
+      >
+        
+        <svg
+          class="t-icon t-icon-check-circle t-result__icon"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M4.5 8.2L7 10.7l4.5-4.5-.7-.7L7 9.3 5.2 7.5l-.7.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M4.11 2.18a7 7 0 117.78 11.64A7 7 0 014.1 2.18zm.56 10.8a6 6 0 106.66-9.97A6 6 0 004.67 13z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-result__title"
+      >
+        成功状态
+      </div>
+      <div
+        class="t-result__description"
+      >
+        描述文字
+      </div>
+    </div>
   </div>
-  <!--v-if-->
-  <!--v-if-->
+  <div>
+    <div
+      class="t-result t-result--theme-error"
+    >
+      <div
+        class="t-result__thumb"
+      >
+        
+        <svg
+          class="t-icon t-icon-close-circle t-result__icon"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-result__title"
+      >
+        失败状态
+      </div>
+      <div
+        class="t-result__description"
+      >
+        描述文字
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="t-result t-result--theme-warning"
+    >
+      <div
+        class="t-result__thumb"
+      >
+        
+        <svg
+          class="t-icon t-icon-info-circle t-result__icon"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-result__title"
+      >
+        警示状态
+      </div>
+      <div
+        class="t-result__description"
+      >
+        描述文字
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="t-result t-result--theme-default"
+    >
+      <div
+        class="t-result__thumb"
+      >
+        
+        <svg
+          class="t-icon t-icon-info-circle t-result__icon"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M7.5 12V6.5h1V12h-1zM8.6 4H7.4v1.2h1.2V4z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M1 8a7 7 0 1014 0A7 7 0 001 8zm1 0a6 6 0 1112 0A6 6 0 012 8z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-result__title"
+      >
+        默认状态
+      </div>
+      <div
+        class="t-result__description"
+      >
+        描述文字
+      </div>
+    </div>
+  </div>
+  
 </div>
 `;

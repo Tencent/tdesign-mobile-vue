@@ -217,7 +217,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     开关用于切换当个设置项的状态，开启、关闭为两个互斥的操作
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -228,7 +228,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         01 组件类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础开关
       </p>
@@ -283,14 +283,14 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         带描述开关
       </p>
@@ -408,14 +408,14 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         自定义颜色开关
       </p>
@@ -470,7 +470,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -481,7 +481,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         02 组件状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         加载状态
       </p>
@@ -532,7 +532,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms;"
+                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -602,7 +602,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms;"
+                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -725,7 +725,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -736,7 +736,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         02 组件样式
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         开关尺寸
       </p>
@@ -1072,7 +1072,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms;"
+                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"
@@ -1142,7 +1142,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms;"
+                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"

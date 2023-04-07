@@ -18,31 +18,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -54,31 +70,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -90,31 +122,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -126,31 +174,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -162,31 +226,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -210,32 +290,48 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -248,32 +344,48 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -286,32 +398,48 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -324,32 +452,48 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -362,32 +506,48 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -410,31 +570,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -446,31 +622,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -482,31 +674,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -518,31 +726,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -554,31 +778,47 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -661,31 +901,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -697,31 +953,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -733,31 +1005,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -769,31 +1057,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -805,31 +1109,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -853,32 +1173,48 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -891,32 +1227,48 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -929,32 +1281,48 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -967,32 +1335,48 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -1005,32 +1389,48 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
             style="height: 40px; width: 40px;"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -1053,31 +1453,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -1089,31 +1505,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -1125,31 +1557,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -1161,31 +1609,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -1197,31 +1661,47 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
           class="t-avatar__inner"
         >
           <div
-            class="t-image t-image--round"
+            class="t-image t-image--square"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
         </div>
         <!--v-if-->
@@ -1249,7 +1729,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     用于展示用户头像信息，除了纯展示也可点击进入个人详情等操作。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1260,7 +1740,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         01 头像类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         头像样式可为默认头像、微信头像圆形、方形、自定义文字
       </p>
@@ -1308,31 +1788,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt="示例图片"
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt="示例图片"
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <!--v-if-->
@@ -1363,31 +1859,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <!--v-if-->
@@ -1412,7 +1924,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1423,7 +1935,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         02 特殊类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         纯展示 从上往下
       </p>
@@ -1449,31 +1961,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1485,31 +2013,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1521,31 +2065,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1557,31 +2117,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1593,31 +2169,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1641,32 +2233,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1679,32 +2287,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1717,32 +2341,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1755,32 +2395,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1793,32 +2449,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1841,31 +2513,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1877,31 +2565,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1913,31 +2617,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1949,31 +2669,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -1985,31 +2721,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2023,14 +2775,14 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         带操作 从下往上
       </p>
@@ -2056,31 +2808,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2092,31 +2860,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2128,31 +2912,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2164,31 +2964,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2200,31 +3016,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2248,32 +3080,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2286,32 +3134,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2324,32 +3188,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2362,32 +3242,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2400,32 +3296,48 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                   style="height: 40px; width: 40px;"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2448,31 +3360,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2484,31 +3412,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_2.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2520,31 +3464,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_3.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2556,31 +3516,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_4.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2592,31 +3568,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-avatar__inner"
               >
                 <div
-                  class="t-image t-image--round"
+                  class="t-image t-image--square"
                 >
                   <div
-                    class="t-image__status"
+                    class="t-image__mask"
                   >
-                    <svg
-                      class="t-icon t-icon-ellipsis"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 16 16"
-                      width="1em"
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
                     >
-                      <path
-                        d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                        fill="currentColor"
-                        fill-opacity="0.9"
-                      />
-                    </svg>
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
                   </div>
-                  <img
-                    alt=""
-                    class="t-image__img"
-                    src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
-                    style="object-fit: fill; object-position: center;"
-                  />
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar_5.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
                 </div>
               </div>
               <!--v-if-->
@@ -2630,7 +3622,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2641,7 +3633,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         03 规格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         头像大小尺寸
       </p>
@@ -2745,31 +3737,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt="示例图片"
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt="示例图片"
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <div
@@ -2794,31 +3802,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt="示例图片"
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt="示例图片"
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <div
@@ -2843,31 +3867,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt="示例图片"
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt="示例图片"
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <div
@@ -2896,31 +3936,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt="示例图片"
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt="示例图片"
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <div
@@ -2945,31 +4001,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt="示例图片"
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt="示例图片"
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <div
@@ -2994,31 +4066,47 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
               class="t-avatar__inner"
             >
               <div
-                class="t-image t-image--round"
+                class="t-image t-image--square"
               >
                 <div
-                  class="t-image__status"
+                  class="t-image__mask"
                 >
-                  <svg
-                    class="t-icon t-icon-ellipsis"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
-                    <path
-                      d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
                 </div>
-                <img
-                  alt="示例图片"
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt="示例图片"
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
             </div>
             <div
@@ -3130,31 +4218,47 @@ exports[`Avatar > Avatar shapeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt="示例图片"
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt="示例图片"
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <!--v-if-->
@@ -3185,31 +4289,47 @@ exports[`Avatar > Avatar shapeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <!--v-if-->
@@ -3328,31 +4448,47 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt="示例图片"
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt="示例图片"
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <div
@@ -3377,31 +4513,47 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt="示例图片"
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt="示例图片"
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <div
@@ -3426,31 +4578,47 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt="示例图片"
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt="示例图片"
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <div
@@ -3479,31 +4647,47 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt="示例图片"
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt="示例图片"
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <div
@@ -3528,31 +4712,47 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt="示例图片"
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt="示例图片"
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <div
@@ -3577,31 +4777,47 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt="示例图片"
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt="示例图片"
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <div
@@ -3683,31 +4899,47 @@ exports[`Avatar > Avatar typeVue demo works fine 1`] = `
         class="t-avatar__inner"
       >
         <div
-          class="t-image t-image--round"
+          class="t-image t-image--square"
         >
           <div
-            class="t-image__status"
+            class="t-image__mask"
           >
-            <svg
-              class="t-icon t-icon-ellipsis"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
             >
-              <path
-                d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
           </div>
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/site/avatar.jpg"
-            style="object-fit: fill; object-position: center;"
-          />
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/site/avatar.jpg"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
       </div>
       <!--v-if-->

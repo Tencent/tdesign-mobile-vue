@@ -858,7 +858,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
     用于显示重要提示或请求用户进行重要操作，一种打断当前操作的模态视图。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-35efb3bf=""
   >
     <div
@@ -870,7 +870,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         反馈类对话框
       </p>
@@ -1291,7 +1291,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-35efb3bf=""
   >
     <div
@@ -1299,7 +1299,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         确认类对话框
       </p>
@@ -1551,7 +1551,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-35efb3bf=""
   >
     <div
@@ -1559,7 +1559,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         输入对话框
       </p>

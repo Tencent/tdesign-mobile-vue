@@ -3,24 +3,20 @@
  */
 
 import { mount } from '@vue/test-utils';
-import avatarTextVue from '@/skeleton/demos/avatar-text.vue';
-import baseVue from '@/skeleton/demos/base.vue';
-import flashedVue from '@/skeleton/demos/flashed.vue';
-import gradientVue from '@/skeleton/demos/gradient.vue';
+import animationVue from '@/skeleton/demos/animation.vue';
+import cellGroupVue from '@/skeleton/demos/cell-group.vue';
 import gridVue from '@/skeleton/demos/grid.vue';
 import imageGroupVue from '@/skeleton/demos/image-group.vue';
 import mobileVue from '@/skeleton/demos/mobile.vue';
-import picTextVue from '@/skeleton/demos/pic-text.vue';
+import themeVue from '@/skeleton/demos/theme.vue';
 
 const mapper = {
-  avatarTextVue,
-  baseVue,
-  flashedVue,
-  gradientVue,
+  animationVue,
+  cellGroupVue,
   gridVue,
   imageGroupVue,
   mobileVue,
-  picTextVue,
+  themeVue,
 };
 
 describe('Skeleton', () => {

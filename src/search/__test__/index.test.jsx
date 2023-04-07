@@ -2,8 +2,6 @@ import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Search from '../search.vue';
-import Input from '../../input/index';
-import Button from '../../button/index';
 import { CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
 
 const prefix = 't';
@@ -18,40 +16,8 @@ describe('search', () => {
           placeholder,
         },
       });
-      const $input = wrapper.findComponent(Input).find(`input`);
+      const $input = wrapper.find('.t-input__keyword');
       expect($input.attributes('placeholder')).toEqual(placeholder);
-    });
-
-    it(': action', async () => {
-      const action = '提交';
-      const wrapper = mount(Search, {
-        props: {
-          action,
-        },
-      });
-      const $actionBtn = wrapper.findComponent(Button);
-      const $input = wrapper.findComponent(Input).find(`input`);
-
-      // focus = false, value = '', defaultValue = '' (默认，action 内容隐藏)
-      expect($actionBtn.attributes('style').includes(`display: none;`)).toBeTruthy();
-
-      // 模拟触发 input 的 focus , action 内容显示
-      await $input.trigger('focus');
-      expect($actionBtn.attributes('style').includes(`display: none;`)).toBeFalsy();
-      expect($actionBtn.text()).toEqual(action);
-    });
-
-    it(': defaultValue', async () => {
-      const placeholder = 'placeholder content';
-      const wrapper = mount(Search, {
-        props: {
-          placeholder,
-        },
-      });
-      const $search = wrapper.find(`.${name}`);
-      const $iconSearch = wrapper.find(`.${name}__label`);
-      await $iconSearch.trigger('click'); // 触发 click, 组件变成聚焦态
-      expect($search.classes().includes(`${prefix}-is-focused`)).toBeTruthy();
     });
 
     it(': shape', async () => {
@@ -59,44 +25,24 @@ describe('search', () => {
       const wrapper = mount(Search, {
         props: {
           placeholder,
-          shape: '',
         },
       });
-      const $form = wrapper.find(`.${name}__form`);
-      const $label = wrapper.find(`.${name}__label`);
-      // shape = '', 则取 'round'
-      expect($form.attributes('style').includes(`border-radius: 50px;`)).toBeTruthy();
-      expect($label.attributes('style').includes(`border-radius: 50px;`)).toBeTruthy();
+      const $inputBox = wrapper.find(`.${name}__input-box`);
+      // shape 默认值取 'square'
+      expect($inputBox.classes().includes(`${name}__input-box--square`)).toBeTruthy();
 
       await wrapper.setProps({
-        shape: 'square',
+        shape: 'round',
       });
-      // shape = 'square'
-      expect($form.attributes('style')).toEqual('');
-      expect($label.attributes('style')).toEqual('');
-    });
-
-    it(': onActionClick', async () => {
-      const value = ref('测试');
-      const action = '提交';
-      const onActionClick = vi.fn();
-      const wrapper = mount(Search, {
-        props: {
-          value: value.value,
-          action,
-          onActionClick,
-        },
-      });
-      const $actionBtn = wrapper.findComponent(Button).find(`button`);
-      await $actionBtn.trigger('click');
-      expect(onActionClick).toBeCalled();
+      // shape = 'round'
+      expect($inputBox.classes().includes(`${name}__input-box--round`)).toBeTruthy();
     });
 
     it(': onFocus', async () => {
       const value = '聚焦测试';
       let focusValue = '';
       const onFocus = vi.fn((e) => {
-        focusValue = e;
+        focusValue = e.value;
       });
       const wrapper = mount(Search, {
         props: {
@@ -104,13 +50,12 @@ describe('search', () => {
           onFocus,
         },
       });
-      const $search = wrapper.find(`.${name}`);
-      const $input = wrapper.findComponent(Input).find(`input`);
+      const $search = wrapper.find(`.${name}__input-box`);
+      const $input = wrapper.find(`input`);
 
       await $input.trigger('focus');
       expect(onFocus).toBeCalled();
       expect(focusValue).toEqual(value);
-      expect($search.classes().includes(`${prefix}-is-focused`)).toBeTruthy();
     });
 
     it(': onClear && onChange', async () => {
@@ -126,7 +71,6 @@ describe('search', () => {
           onChange,
         },
       });
-      const $search = wrapper.find(`.${name}`);
       const closeIcon = wrapper.findComponent(TIconClear);
       // clearable = true, 清除图标存在
       expect(closeIcon.exists()).toBeTruthy();
@@ -146,8 +90,8 @@ describe('search', () => {
           onBlur,
         },
       });
-      const $search = wrapper.find(`.${name}`);
-      const $input = wrapper.findComponent(Input).find(`input`);
+      const $search = wrapper.find(`.${name}__input-box`);
+      const $input = wrapper.find(`input`);
       await $input.trigger('focus'); // 聚焦
       expect(onFocus).toBeCalled();
       await $input.trigger('blur'); // 失焦
@@ -169,8 +113,4 @@ describe('search', () => {
       expect($search.text()).toEqual(action);
     });
   });
-
-  // describe('event', () => {
-  //   it(': event name', () => {});
-  // });
 });

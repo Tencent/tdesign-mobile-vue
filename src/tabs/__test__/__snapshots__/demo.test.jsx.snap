@@ -533,7 +533,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
     用作一组平行关系页面/内容的切换器
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -544,7 +544,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         横向选项卡
       </p>
@@ -859,14 +859,14 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         超过屏幕滑动
       </p>
@@ -1061,14 +1061,14 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         无下划线
       </p>
@@ -1185,14 +1185,14 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         运动时间可调整
       </p>
@@ -1310,7 +1310,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1321,7 +1321,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         02 状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         选项卡状态
       </p>
@@ -1436,7 +1436,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1447,7 +1447,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         03 特殊类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         竖向选项卡
       </p>
@@ -1600,7 +1600,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1611,7 +1611,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         03 规格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         选中态文字尺寸规格
       </p>

@@ -1,24 +1,31 @@
 <template>
   <div :class="classes">
-    <div v-if="loadingValue || errorValue" :class="`${name}__status`">
+    <div v-if="isLoading || isError" :class="`${name}__mask`">
       <t-node :content="statusContent" />
     </div>
-    <img
-      ref="imageDOM"
-      :class="`${name}__img`"
-      :style="imageStyles"
-      :src="realSrc"
-      :alt="alt"
-      @load="handleImgLoadCompleted"
-      @error="handleImgLoadError"
-    />
+    <picture>
+      <template v-if="srcset">
+        <source v-for="(item, index) in Object.entries(srcset)" :key="index" :type="item[0]" :srcset="item[1]" />
+      </template>
+      <img
+        ref="imageDOM"
+        :class="`${name}__img`"
+        :style="imageStyles"
+        :src="realSrc"
+        :alt="alt"
+        @load="handleImgLoadCompleted"
+        @error="handleImgLoadError"
+      />
+    </picture>
   </div>
 </template>
 
 <script lang="ts">
 import { ref, computed, defineComponent, getCurrentInstance, h, watchEffect } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
-import { EllipsisIcon, CloseIcon } from 'tdesign-icons-vue-next';
+import { CloseIcon } from 'tdesign-icons-vue-next';
+
+import Loading from '../loading';
 import { useEmitEvent, renderTNode, TNode } from '../shared';
 import ImageProps from './props';
 import config from '../config';
@@ -37,26 +44,26 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
 
     const closeIcon = h(CloseIcon);
-    const ellipsisIcon = h(EllipsisIcon);
+    const LoadingIcon = h(Loading, { theme: 'dots', inheritColor: true });
     const statusContent = computed(() => {
-      if (context.slots?.loading && loadingValue.value) {
+      if (context.slots?.loading && isLoading.value) {
         return renderTNode(internalInstance, 'loading');
       }
-      if (!context.slots?.loading && loadingValue.value) {
-        return ellipsisIcon;
+      if (!context.slots?.loading && isLoading.value) {
+        return LoadingIcon;
       }
-      if (context.slots?.error && errorValue.value) {
+      if (context.slots?.error && isError.value) {
         return renderTNode(internalInstance, 'error');
       }
-      if (!context.slots?.error && errorValue.value) {
+      if (!context.slots?.error && isError.value) {
         return closeIcon;
       }
       return '';
     });
 
     // 记录图片的loading、error状态
-    const loadingValue = ref(true);
-    const errorValue = ref(false);
+    const isLoading = ref(true);
+    const isError = ref(false);
 
     // 图片自定义样式
     const imageStyles = computed(() => {
@@ -87,7 +94,7 @@ export default defineComponent({
     // 图片加载完成回调
     const handleImgLoadCompleted = (e: Event) => {
       emitEvent('load', e);
-      loadingValue.value = false;
+      isLoading.value = false;
     };
 
     // 图片加载失败回调
@@ -96,8 +103,8 @@ export default defineComponent({
         return;
       }
       emitEvent('error', e);
-      loadingValue.value = false;
-      errorValue.value = true;
+      isLoading.value = false;
+      isError.value = true;
     };
     return {
       imageDOM,
@@ -105,9 +112,9 @@ export default defineComponent({
       name,
       classes,
       imageStyles,
-      loadingValue,
+      isLoading,
       realSrc,
-      errorValue,
+      isError,
       handleImgLoadCompleted,
       handleImgLoadError,
     };
