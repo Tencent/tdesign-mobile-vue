@@ -1,33 +1,65 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Input 输入框</h1>
-    <p class="summary">空状态时的占位提示。</p>
-    <tdesign-demo-block title="01 类型">
-      <typeDemo />
+    <p class="summary">用于单行文本信息输入。</p>
+    <tdesign-demo-block title="01 组件类型" summary="基础输入框">
+      <baseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 状态" summary="文本框状态">
-      <statusDemo />
+    <tdesign-demo-block summary="带字数限制输入框">
+      <maxlength />
     </tdesign-demo-block>
-    <tdesign-demo-block title="03 特殊类型" summary="特殊文本框类型">
-      <specialDemo />
+    <tdesign-demo-block summary="带操作输入框">
+      <suffix />
     </tdesign-demo-block>
-    <tdesign-demo-block title="04 规格" summary="文本框尺寸规格">
-      <sizeDemo />
+    <tdesign-demo-block summary="带图标输入框">
+      <prefix />
     </tdesign-demo-block>
-    <tdesign-demo-block title="05 内容位置" summary="文本框内容位置">
-      <alignDemo />
+    <tdesign-demo-block summary="特定类型输入框">
+      <special />
     </tdesign-demo-block>
-    <tdesign-demo-block title="06 字数限制" summary="文本框字数限制">
-      <limitDemo />
+
+    <tdesign-demo-block title="02 组件状态" summary="输入框状态">
+      <status />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="信息超长状态">
+      <labelDemo />
+    </tdesign-demo-block>
+
+    <tdesign-demo-block title="03 组件样式" summary="内容位置">
+      <align />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="竖排样式">
+      <layout />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="非通栏样式">
+      <banner />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="标签外置样式">
+      <bordered />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="自定义样式输入框">
+      <custom />
     </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts" setup>
-import typeDemo from './type.vue';
-import statusDemo from './status.vue';
-import specialDemo from './special.vue';
-import sizeDemo from './size.vue';
-import alignDemo from './align.vue';
-import limitDemo from './limit.vue';
+import baseDemo from './base.vue';
+import maxlength from './maxLength.vue';
+import suffix from './suffix.vue';
+import prefix from './prefix.vue';
+import special from './special.vue';
+import status from './status.vue';
+import labelDemo from './label.vue';
+import align from './align.vue';
+import layout from './layout.vue';
+import banner from './banner.vue';
+import bordered from './bordered.vue';
+import custom from './custom.vue';
 </script>
+
+<style lang="less">
+.t-input + .t-input {
+  margin-top: 16px;
+}
+</style>

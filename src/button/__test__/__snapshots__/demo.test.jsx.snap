@@ -380,7 +380,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
     按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -391,7 +391,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础按钮
       </p>
@@ -762,7 +762,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -773,7 +773,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         02 状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         按钮禁用态
       </p>
@@ -1161,7 +1161,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1172,7 +1172,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
         03 规格
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         按钮尺寸
       </p>

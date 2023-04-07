@@ -6,37 +6,33 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
     <div
-      class="t-cell__left"
+      class="t-input__wrap--prefix"
     >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      
       <div
-        class="t-input--label"
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
       >
         地址
       </div>
-      
-      <!--v-if-->
-      <!--v-if-->
     </div>
     <div
-      class="t-cell__note"
+      class="t-input__wrap"
     >
-      
       <div
-        class="t-input__wrap"
+        class="t-input__content t-input--default"
       >
         <input
           autocomplete="Off"
-          class="t-input__control"
+          class="t-input__control t-input--default"
           maxlength="-1"
           name=""
           placeholder="选择地址"
@@ -45,11 +41,10 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
         />
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
-      
     </div>
-    <!--v-if-->
   </div>
   <!--teleport start-->
   <div
@@ -245,7 +240,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
     用于多层级数据选择，主要为树形结构，可展示更多的数据
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -256,7 +251,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         01 基础
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基本用法
       </p>
@@ -267,37 +262,33 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small"
       >
         <div
-          class="t-cell__left"
+          class="t-input__wrap--prefix"
         >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          
           <div
-            class="t-input--label"
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
           >
             地址
           </div>
-          
-          <!--v-if-->
-          <!--v-if-->
         </div>
         <div
-          class="t-cell__note"
+          class="t-input__wrap"
         >
-          
           <div
-            class="t-input__wrap"
+            class="t-input__content t-input--default"
           >
             <input
               autocomplete="Off"
-              class="t-input__control"
+              class="t-input__control t-input--default"
               maxlength="-1"
               name=""
               placeholder="选择地址"
@@ -306,11 +297,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             />
             <!--v-if-->
             <!--v-if-->
+            <!--v-if-->
           </div>
           <!--v-if-->
-          
         </div>
-        <!--v-if-->
       </div>
       <!--teleport start-->
       <div
@@ -492,7 +482,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -503,7 +493,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
         02 状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         禁用可选项
       </p>
@@ -514,37 +504,33 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+        class="t-input t-input--layout-horizontal t-input--size-small"
       >
         <div
-          class="t-cell__left"
+          class="t-input__wrap--prefix"
         >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          
           <div
-            class="t-input--label"
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
           >
             地址
           </div>
-          
-          <!--v-if-->
-          <!--v-if-->
         </div>
         <div
-          class="t-cell__note"
+          class="t-input__wrap"
         >
-          
           <div
-            class="t-input__wrap"
+            class="t-input__content t-input--default"
           >
             <input
               autocomplete="Off"
-              class="t-input__control"
+              class="t-input__control t-input--default"
               maxlength="-1"
               name=""
               placeholder="选择地址"
@@ -553,11 +539,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             />
             <!--v-if-->
             <!--v-if-->
+            <!--v-if-->
           </div>
           <!--v-if-->
-          
         </div>
-        <!--v-if-->
       </div>
       <!--teleport start-->
       <div
@@ -747,37 +732,33 @@ exports[`Cascader > Cascader statusVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
     <div
-      class="t-cell__left"
+      class="t-input__wrap--prefix"
     >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      
       <div
-        class="t-input--label"
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
       >
         地址
       </div>
-      
-      <!--v-if-->
-      <!--v-if-->
     </div>
     <div
-      class="t-cell__note"
+      class="t-input__wrap"
     >
-      
       <div
-        class="t-input__wrap"
+        class="t-input__content t-input--default"
       >
         <input
           autocomplete="Off"
-          class="t-input__control"
+          class="t-input__control t-input--default"
           maxlength="-1"
           name=""
           placeholder="选择地址"
@@ -786,11 +767,10 @@ exports[`Cascader > Cascader statusVue demo works fine 1`] = `
         />
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
-      
     </div>
-    <!--v-if-->
   </div>
   <!--teleport start-->
   <div

@@ -84,7 +84,7 @@
                         :value="option.value"
                         :label="option.title"
                         :disabled="option.disabled"
-                        align="right"
+                        placement="right"
                         borderless
                       ></t-checkbox>
                     </template>

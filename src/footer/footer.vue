@@ -7,7 +7,6 @@
         <span v-if="logo.title" :class="`${name}__title`">
           {{ logo.title }}
         </span>
-        <t-image v-if="logo.url" :src="logo.url" :class="`${name}__title-url`" />
       </a>
     </template>
     <!-- text -->

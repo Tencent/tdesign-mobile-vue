@@ -832,7 +832,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     用于在预设的一组选项中执行单项选择，并呈现选择结果。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -843,7 +843,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         01 组件类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         纵向单选框
       </p>
@@ -1025,14 +1025,14 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         横向单选框
       </p>
@@ -1045,12 +1045,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         class="t-radio-group box"
         role="radiogroup"
       >
-        <input
-          class="t-radio__original"
-          name="radio"
-          type="radio"
-          value="1"
-        />
+        <!--v-if-->
+        
         <div
           class="t-radio t-radio--left"
         >
@@ -1163,13 +1159,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           </div>
           <!--v-if-->
         </div>
-        <!--v-if-->
+        
       </div>
       
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1180,7 +1176,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         02 组件状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         单选框禁用态
       </p>
@@ -1239,10 +1235,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <!--v-if-->
           </div>
           <div
-            class="t-radio__icon-circle t-radio__icon-circle--disabled"
+            class="t-radio__border t-radio__border--left"
           />
-          <!--v-if-->
-          <!---->
         </div>
         <div
           class="t-radio t-radio--left t-radio--block"
@@ -1288,7 +1282,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1299,7 +1293,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         03 组件样式
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         勾选样式
       </p>
@@ -1396,14 +1390,14 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         勾选显示位置
       </p>
@@ -1510,14 +1504,14 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         非通栏单选样式
       </p>
@@ -1658,7 +1652,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1669,7 +1663,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         04 特殊样式
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         单选框尺寸规格
       </p>

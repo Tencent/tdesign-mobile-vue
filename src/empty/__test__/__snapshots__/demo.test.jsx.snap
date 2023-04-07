@@ -1,0 +1,493 @@
+// Vitest Snapshot v1
+
+exports[`Empty > Empty baseVue demo works fine 1`] = `
+<div
+  class="t-empty"
+>
+  <div
+    class="t-empty__thumb"
+  >
+    <div
+      class="t-empty__icon"
+    >
+      <svg
+        class="t-icon t-icon-info-circle-filled"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="t-empty__description"
+  >
+    描述文字
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Empty > Empty buttonEmptyVue demo works fine 1`] = `
+<div
+  class="t-empty"
+>
+  <div
+    class="t-empty__thumb"
+  >
+    <div
+      class="t-empty__icon"
+    >
+      <svg
+        class="t-icon t-icon-info-circle-filled"
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="t-empty__description"
+  >
+    描述文字
+  </div>
+  <div
+    class="t-empty__actions"
+  >
+    
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+      role="button"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        操作按钮
+        
+      </span>
+    </button>
+    
+  </div>
+</div>
+`;
+
+exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-empty"
+  >
+    <div
+      class="t-empty__thumb"
+    >
+      
+      <div
+        class="t-image t-image--square"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+            </div>
+            
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+      
+    </div>
+    <div
+      class="t-empty__description"
+    >
+      描述文字
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-empty"
+  >
+    <div
+      class="t-empty__thumb"
+    >
+      
+      <div
+        class="t-image t-image--square"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+            </div>
+            
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+      
+    </div>
+    <div
+      class="t-empty__description"
+    >
+      描述文字
+    </div>
+    <!--v-if-->
+  </div>
+  
+</div>
+`;
+
+exports[`Empty > Empty mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Empty 空状态
+  </h1>
+  <p
+    class="summary"
+  >
+    用于空状态时的占位提示。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        图标空状态
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-empty"
+      >
+        <div
+          class="t-empty__thumb"
+        >
+          <div
+            class="t-empty__icon"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-empty__description"
+        >
+          描述文字
+        </div>
+        <!--v-if-->
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        自定义图片空状态
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-empty"
+      >
+        <div
+          class="t-empty__thumb"
+        >
+          
+          <div
+            class="t-image t-image--square"
+          >
+            <div
+              class="t-image__mask"
+            >
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
+            </div>
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
+          </div>
+          
+        </div>
+        <div
+          class="t-empty__description"
+        >
+          描述文字
+        </div>
+        <!--v-if-->
+      </div>
+      <div
+        class="t-empty"
+      >
+        <div
+          class="t-empty__thumb"
+        >
+          
+          <div
+            class="t-image t-image--square"
+          >
+            <div
+              class="t-image__mask"
+            >
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
+            </div>
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/miniprogram/images/empty1.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
+          </div>
+          
+        </div>
+        <div
+          class="t-empty__description"
+        >
+          描述文字
+        </div>
+        <!--v-if-->
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带操作空状态
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-empty"
+      >
+        <div
+          class="t-empty__thumb"
+        >
+          <div
+            class="t-empty__icon"
+          >
+            <svg
+              class="t-icon t-icon-info-circle-filled"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="t-empty__description"
+        >
+          描述文字
+        </div>
+        <div
+          class="t-empty__actions"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              操作按钮
+              
+            </span>
+          </button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;

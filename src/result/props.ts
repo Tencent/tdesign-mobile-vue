@@ -1,5 +1,11 @@
-import { PropType } from 'vue';
+/* eslint-disable */
+
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
 import { TdResultProps } from './type';
+import { PropType } from 'vue';
 
 export default {
   /** 描述文字 */
@@ -8,17 +14,13 @@ export default {
   },
   /** 图标名称 */
   icon: {
-    type: [String, Function] as PropType<TdResultProps['icon']>,
+    type: Function as PropType<TdResultProps['icon']>,
   },
   /** 图片地址 */
   image: {
     type: [String, Function] as PropType<TdResultProps['image']>,
   },
-  /** 标题 */
-  title: {
-    type: [String, Function] as PropType<TdResultProps['title']>,
-  },
-  /** 内置主题 */
+  /** 内置主题。 */
   theme: {
     type: String as PropType<TdResultProps['theme']>,
     default: 'default' as TdResultProps['theme'],
@@ -27,8 +29,9 @@ export default {
       return ['default', 'success', 'warning', 'error'].includes(val);
     },
   },
-  /** 透传 Image 组件全部属性 */
-  imageProps: {
-    type: Object as PropType<TdResultProps['imageProps']>,
+  /** 标题 */
+  title: {
+    type: [String, Function] as PropType<TdResultProps['title']>,
+    default: '',
   },
 };

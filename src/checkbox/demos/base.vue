@@ -1,44 +1,35 @@
 <template>
-  <div>
-    <t-checkbox-group v-model:value="checkBox" class="checkbox-group-demo" @change="checkgroupChange">
-      <t-checkbox name="checkbox1" value="1" label="多选"></t-checkbox>
-      <t-checkbox name="checkbox1" value="2" label="多选"></t-checkbox>
-      <t-checkbox name="checkbox1" value="3" label="多选"></t-checkbox>
-      <t-checkbox
-        name="checkbox1"
-        value="4"
-        :max-label-row="2"
-        label="多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多"
-      ></t-checkbox>
-      <t-checkbox
-        name="checkbox1"
-        value="5"
-        label="多选"
-        :max-content-row="2"
-        content="多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多选多"
-      ></t-checkbox>
-    </t-checkbox-group>
-  </div>
+  <t-checkbox-group v-model:value="current" :options="options" @change="checkboxGroupChange" />
 </template>
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
 
-const checkBox = ref(['2', '3']);
+const current = ref(['checkbox1', 'checkbox2']);
+const options = ref([
+  { label: '多选', value: 'checkbox1' },
+  { label: '多选', value: 'checkbox2' },
+  {
+    label: '多选标题多行多选标题多行多选标题多行多选标题多行多选标题多行多选标题多行',
+    value: 'checkbox3',
+    maxLabelRow: 2,
+  },
+  {
+    label: '多选',
+    value: 'checkbox4',
+    content: '描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息描述信息',
+    maxContentRow: 2,
+  },
+]);
 
 watch(
-  () => checkBox.value,
+  () => current.value,
   (val) => {
-    console.log('checkBox:', val);
+    console.log('current:', val);
   },
 );
 
-const checkgroupChange = (value: any, context: { e: Event }) => {
+const checkboxGroupChange = (value: any, context: { e: Event }) => {
   console.log('value:', value);
   console.log('Event:', context);
 };
 </script>
-<style lang="less" scoped>
-.checkbox-group-demo {
-  background: #fff;
-}
-</style>

@@ -217,7 +217,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     开关用于切换当个设置项的状态，开启、关闭为两个互斥的操作
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -228,7 +228,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         01 组件类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础开关
       </p>
@@ -238,7 +238,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -279,18 +279,18 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         带描述开关
       </p>
@@ -408,14 +408,14 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         自定义颜色开关
       </p>
@@ -425,7 +425,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -466,11 +466,11 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      
     </div>
-    
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -481,7 +481,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         02 组件状态
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         加载状态
       </p>
@@ -492,7 +492,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-switch t-switch--medium t-switch--checked"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -532,7 +532,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms;"
+                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -561,36 +561,8 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      
-    </div>
-  </div>
-  <div
-    class="box"
-    style="height: 16px;"
-  />
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      带图标开关
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__right-icon"
-    >
-      
       <div
-        class="t-switch t-switch--medium t-switch--checked"
+        class="t-cell t-cell--middle t-cell--bordered"
       >
         <div
           class="t-cell__left"
@@ -630,7 +602,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
                     <svg
                       class="t-loading__gradient t-icon-loading"
                       height="1em"
-                      style="animation-duration: 800ms;"
+                      style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                       version="1.1"
                       viewBox="0 0 12 12"
                       width="1em"
@@ -753,7 +725,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -764,7 +736,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
         02 组件样式
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         开关尺寸
       </p>
@@ -792,20 +764,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        基础开关
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <!--v-if-->
-      <div
-        class="t-cell__right-icon"
-      >
-        
         <div
           class="t-cell__right"
         >
@@ -919,7 +877,6 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
             
           </div>
         </div>
-        
       </div>
       
       
@@ -1115,7 +1072,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms;"
+                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"
@@ -1185,7 +1142,7 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
                 <svg
                   class="t-loading__gradient t-icon-loading"
                   height="1em"
-                  style="animation-duration: 800ms;"
+                  style="animation-duration: 800ms; width: 16.25px; height: 16.25px;"
                   version="1.1"
                   viewBox="0 0 12 12"
                   width="1em"
@@ -1255,7 +1212,6 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
               <!--v-if-->
               <!---->
             </div>
-            <!---->
           </div>
         </div>
         
@@ -1298,93 +1254,10 @@ exports[`Switch > Switch statusVue demo works fine 1`] = `
               <!--v-if-->
               <!---->
             </div>
-            <!---->
           </div>
         </div>
         
       </div>
-      
-    </div>
-  </div>
-  <div
-    class="demo__title"
-  >
-    禁用状态
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      禁用状态
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__right-icon"
-    >
-      
-      <div
-        class="t-switch t-switch--medium t-switch--disabled"
-      >
-        <div
-          class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
-        >
-          <div
-            class="t-switch__label t-switch__label--medium"
-          >
-            <!--v-if-->
-            <!---->
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered"
-  >
-    <div
-      class="t-cell__left-icon"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      禁用状态
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <!--v-if-->
-    <div
-      class="t-cell__right-icon"
-    >
-      
-      <div
-        class="t-switch t-switch--medium t-switch--checked t-switch--disabled"
-      >
-        <div
-          class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
-        >
-          <div
-            class="t-switch__label t-switch__label--medium t-switch__label--checked"
-          >
-            <!--v-if-->
-            <!---->
-          </div>
-        </div>
-      </div>
-      
     </div>
   </div>
   
