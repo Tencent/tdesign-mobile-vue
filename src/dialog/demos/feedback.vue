@@ -3,7 +3,7 @@
   <t-dialog
     v-model:visible="isShowDialog1"
     title="对话框标题"
-    content="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+    content="告知当前状态、信息等内容。描述文案尽可能控制在三行内"
     confirm-btn="知道了"
     :close-on-overlay-click="false"
     :show-overlay="showOverlay"
@@ -23,12 +23,16 @@
   <t-button block variant="outline" size="large" @click="isShowDialog3 = true"> 反馈类-内容超长 </t-button>
   <t-dialog
     v-model:visible="isShowDialog3"
-    :content="content"
     title="对话框标题"
     confirm-btn="知道了"
     @confirm="onConfirm"
     @overlay-click="onClickOverlay"
   >
+    <template #middle>
+      <div class="middle-container">
+        {{ content }}
+      </div>
+    </template>
   </t-dialog>
 </template>
 
@@ -52,9 +56,11 @@ const onClickOverlay = () => {
 </script>
 
 <style lang="less">
-.dialog-base {
-  .t-button:not(:last-child) {
-    margin-right: 24px;
+.dialog-demo {
+  .middle-container {
+    padding: 20px;
+    overflow: auto;
+    max-height: 100px;
   }
 }
 </style>

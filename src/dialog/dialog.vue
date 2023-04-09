@@ -19,7 +19,7 @@
         </div>
       </div>
       <slot name="middle" />
-      <div :class="dFooterClassName" :style="footerStyles">
+      <div :class="dFooterClassName">
         <slot name="actions">
           <template v-if="actionsBtnProps">
             <t-button
@@ -65,7 +65,8 @@ export default defineComponent({
   setup(props, context) {
     const internalInstance = getCurrentInstance();
     const dialogContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-
+    const isUseTextBtn = () =>
+      [props?.confirmBtn, props?.cancelBtn, ...(props?.actions || [])].some((item) => get(item, 'variant') === 'text');
     const innerValue = ref('');
     const dClassName = computed(() => [`${name}`, `${'t'}-class`]);
     const dContentClassName = computed(() => [`${name}__content`]);
@@ -74,18 +75,13 @@ export default defineComponent({
     const dBodyTextClassName = computed(() => [`${name}__body-text`]);
     const dFooterClassName = computed(() => [
       `${name}__footer`,
-      `${name}__footer--full`,
       props.buttonLayout === 'vertical' ? `${name}__footer--column` : '',
+      isUseTextBtn() && get(props.actions, 'length', 0) === 0 ? `${name}__footer--full` : '',
     ]);
-    const footerStyles = computed(() => ({
-      padding: '24px',
-    }));
-    const isUseTextBtn = () =>
-      [props?.confirmBtn, props?.cancelBtn, ...(props?.actions || [])].some((item) => get(item, 'variant') === 'text');
-
     const dCommonBtnClassName = computed(() => [
       `${name}__button`,
-      props.buttonLayout === 'vertical' ? `${name}__button--vertical` : `${name}__button--horizontal`,
+      props.buttonLayout === 'vertical' ? `${name}__button--vertical` : '',
+      !isUseTextBtn() && props.buttonLayout !== 'vertical' ? `${name}__button--horizontal` : ``,
       isUseTextBtn() ? `${name}__button--text` : '',
     ]);
     const rootStyles = computed(() => ({
@@ -122,14 +118,10 @@ export default defineComponent({
 
     const calcBtn = (btn: any) => (typeof btn === 'string' ? { content: btn } : btn);
     const confirmBtnProps = computed(() => ({
-      ...calcBtn(props.confirmBtn),
-      type: 'primary',
       theme: 'primary',
+      ...calcBtn(props.confirmBtn),
     }));
-    const cancelBtnProps = computed(() => ({
-      ...calcBtn(props.cancelBtn),
-      type: 'cancel',
-    }));
+    const cancelBtnProps = computed(() => calcBtn(props.cancelBtn));
     const actionsBtnProps = computed(() => props.actions?.map((item) => calcBtn(item)));
 
     return {
@@ -140,7 +132,6 @@ export default defineComponent({
       dBodyClassName,
       dBodyTextClassName,
       dFooterClassName,
-      footerStyles,
       dCommonBtnClassName,
       dialogContent,
       confirmBtnProps,
