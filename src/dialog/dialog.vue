@@ -17,7 +17,6 @@
             <t-node :content="dialogContent"></t-node>
           </div>
         </div>
-        <slot name="content" />
       </div>
       <slot name="middle" />
       <div :class="dFooterClassName" :style="footerStyles">
@@ -47,6 +46,7 @@
   </t-popup>
 </template>
 <script lang="ts">
+import get from 'lodash/get';
 import { computed, ref, toRefs, watch, defineComponent, getCurrentInstance } from 'vue';
 import TButton from '../button';
 import TPopup from '../popup';
@@ -81,9 +81,7 @@ export default defineComponent({
       padding: '24px',
     }));
     const isUseTextBtn = () =>
-      [props?.confirmBtn, props?.cancelBtn, ...(props?.actions || [])].some(
-        item => item?.variant && item?.variant === 'text',
-      );
+      [props?.confirmBtn, props?.cancelBtn, ...(props?.actions || [])].some((item) => get(item, 'variant') === 'text');
 
     const dCommonBtnClassName = computed(() => [
       `${name}__button`,
