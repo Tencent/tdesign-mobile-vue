@@ -67,7 +67,8 @@ const data = {
   ],
 };
 const options = data.areaList;
-const address = ref();
+
+const address = ref('120119');
 const visible = ref(false);
 const note = ref('请选择地址');
 
