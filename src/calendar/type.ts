@@ -9,10 +9,15 @@ import { TNode } from '../common';
 
 export interface TdCalendarProps {
   /**
+   * 自动关闭；在点击关闭按钮、确认按钮、遮罩层时自动关闭，不需要手动设置 visible
+   * @default true
+   */
+  autoClose?: boolean;
+  /**
    * 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。
    * @default ''
    */
-  confirmBtn?: string | TNode | ButtonProps | null;
+  confirmBtn?: string | ButtonProps | TNode | null;
   /**
    * 第一天从星期几开始，默认 0 = 周日
    * @default 0
@@ -21,7 +26,7 @@ export interface TdCalendarProps {
   /**
    * 用于格式化日期的函数
    */
-  format?: (day: TDate) => TDate;
+  format?: CalendarFormatType;
   /**
    * 最大可选的日期，不传则默认半年后
    */
@@ -40,23 +45,46 @@ export interface TdCalendarProps {
    */
   type?: 'single' | 'multiple' | 'range';
   /**
+   * 是否使用弹出层包裹日历
+   * @default true
+   */
+  usePopup?: boolean;
+  /**
    * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
    */
   value?: number | Date | TCalendarValue[];
   /**
-   * 是否显示日历
+   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
+   */
+  defaultValue?: number | Date | TCalendarValue[];
+  /**
+   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
+   */
+  modelValue?: number | Date | TCalendarValue[];
+  /**
+   * 是否显示日历；`usePopup` 为 true 时有效
    * @default false
    */
   visible?: boolean;
+  /**
+   * 不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple）
+   */
+  onChange?: (value: Date) => void;
+  /**
+   * 关闭按钮时触发
+   */
+  onClose?: (trigger: CalendarTrigger) => void;
   /**
    * 点击确认按钮时触发
    */
   onConfirm?: (value: Date) => void;
   /**
-   * 选择日期时触发
+   * 点击日期时触发
    */
   onSelect?: (value: Date) => void;
 }
+
+export type CalendarFormatType = (day: TDate) => TDate;
 
 export type TDateType = 'selected' | 'disabled' | 'start' | 'centre' | 'end' | '';
 
@@ -70,3 +98,5 @@ export interface TDate {
 }
 
 export type TCalendarValue = number | Date;
+
+export type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay';

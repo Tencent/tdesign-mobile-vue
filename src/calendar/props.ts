@@ -8,6 +8,11 @@ import { TdCalendarProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 自动关闭；在点击关闭按钮、确认按钮、遮罩层时自动关闭，不需要手动设置 visible */
+  autoClose: {
+    type: Boolean,
+    default: true,
+  },
   /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdCalendarProps['confirmBtn']>,
@@ -43,14 +48,32 @@ export default {
       return ['single', 'multiple', 'range'].includes(val);
     },
   },
+  /** 是否使用弹出层包裹日历 */
+  usePopup: {
+    type: Boolean,
+    default: true,
+  },
   /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组 */
   value: {
     type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
+    default: undefined,
   },
-  /** 是否显示日历 */
+  modelValue: {
+    type: [Number, Array, Date] as PropType<TdCalendarProps['value']>,
+    default: undefined,
+  },
+  /** 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性 */
+  defaultValue: {
+    type: [Number, Array, Date] as PropType<TdCalendarProps['defaultValue']>,
+  },
+  /** 是否显示日历；`usePopup` 为 true 时有效 */
   visible: Boolean,
+  /** 不显示 confirm-btn 时，完成选择时触发（暂不支持 type = multiple） */
+  onChange: Function as PropType<TdCalendarProps['onChange']>,
+  /** 关闭按钮时触发 */
+  onClose: Function as PropType<TdCalendarProps['onClose']>,
   /** 点击确认按钮时触发 */
   onConfirm: Function as PropType<TdCalendarProps['onConfirm']>,
-  /** 选择日期时触发 */
+  /** 点击日期时触发 */
   onSelect: Function as PropType<TdCalendarProps['onSelect']>,
 };
