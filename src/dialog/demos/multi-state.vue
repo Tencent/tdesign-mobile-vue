@@ -57,19 +57,20 @@
   </t-dialog>
 
   <br />
-  <!-- <t-button block variant="outline" size="large" @click="isShowDialog8 = true"> 带关闭按钮 </t-button>
+  <t-button block variant="outline" size="large" @click="isShowDialog8 = true"> 带关闭按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog8"
     title="对话框标题"
     content="告知当前状态、信息和解决方法"
     placeholder-text="输入框提示文字"
+    close-btn
     cancel-btn="取消"
     confirm-btn="确认"
     button-layout="vertical"
     @confirm="onConfirm"
     @cancel="onCancel"
   >
-  </t-dialog> -->
+  </t-dialog>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
@@ -90,12 +91,12 @@ const isShowDialog6 = ref(false);
 
 const isShowDialog7 = ref(false);
 const actions = [
-  { content: '次要按钮1', theme: 'light' },
-  { content: '次要按钮2', theme: 'light' },
+  { content: '次要按钮1', theme: 'danger' },
+  { content: '次要按钮2', theme: 'danger' },
   { content: '主要按钮', theme: 'primary' },
 ];
 
-// const isShowDialog8 = ref(false);
+const isShowDialog8 = ref(false);
 const onConfirm = () => {
   console.log('dialog:confirm');
 };

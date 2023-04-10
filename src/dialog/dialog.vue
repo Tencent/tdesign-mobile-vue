@@ -9,6 +9,9 @@
   >
     <div id="root" :class="dClassName" :style="rootStyles">
       <slot name="top" />
+      <div v-if="closeBtn" :class="dCloseIconClassName">
+        <close-icon @click="handleCancel" />
+      </div>
       <div :class="dContentClassName">
         <div :if="title" :class="dContentTitleClassName">{{ title }}</div>
         <slot name="title" />
@@ -47,6 +50,7 @@
 </template>
 <script lang="ts">
 import get from 'lodash/get';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 import { computed, ref, toRefs, watch, defineComponent, getCurrentInstance } from 'vue';
 import TButton from '../button';
 import TPopup from '../popup';
@@ -59,7 +63,7 @@ const name = `${prefix}-dialog`;
 
 export default defineComponent({
   name,
-  components: { TPopup, TNode, TButton },
+  components: { TPopup, TNode, TButton, CloseIcon },
   props: DialogProps,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
   setup(props, context) {
@@ -88,6 +92,8 @@ export default defineComponent({
       zIndex: props.zIndex,
       width: typeof props.width === 'string' ? props.width : `${props.width}px`,
     }));
+
+    const dCloseIconClassName = computed(() => [`${name}__close--btn`]);
 
     const handleConfirm = () => {
       context.emit('update:visible', false);
@@ -133,6 +139,7 @@ export default defineComponent({
       dBodyTextClassName,
       dFooterClassName,
       dCommonBtnClassName,
+      dCloseIconClassName,
       dialogContent,
       confirmBtnProps,
       cancelBtnProps,
