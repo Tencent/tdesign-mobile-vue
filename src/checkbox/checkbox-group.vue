@@ -31,7 +31,7 @@ import config from '../config';
 import CheckboxProps from './checkbox-group-props';
 import Checkbox from './checkbox.vue';
 import { CheckboxGroupValue, TdCheckboxGroupProps, TdCheckboxProps } from './type';
-import { useDefault } from '@/shared';
+import { useDefault } from '../shared';
 import { getOptions, setCheckAllStatus } from './hooks';
 
 const { prefix } = config;
