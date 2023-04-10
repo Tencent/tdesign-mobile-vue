@@ -16,6 +16,7 @@ export const STATUS_CLASSNAMES = {
   loading: `${prefix}-is-loading`,
   disabled: `${prefix}-is-disabled`,
   focused: `${prefix}-is-focused`,
+  default: `${prefix}-is-default`,
   success: `${prefix}-is-success`,
   error: `${prefix}-is-error`,
   warning: `${prefix}-is-warning`,

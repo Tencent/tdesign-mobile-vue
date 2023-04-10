@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import { TNode, ImageEvent } from '../common';
 
 export interface TdImageProps {
   /**
@@ -13,9 +13,9 @@ export interface TdImageProps {
    */
   alt?: string;
   /**
-   * 自定义加载失败状态下的图片内容
+   * 自定义图片加载失败状态下的显示内容
    */
-  error?: TNode;
+  error?: string | TNode;
   /**
    * 图片填充模式
    * @default fill
@@ -27,17 +27,17 @@ export interface TdImageProps {
    */
   lazy?: boolean;
   /**
-   * 自定义加载中状态下的图片内容
+   * 自定义加载中状态的图片内容，如：“加载中”
    */
-  loading?: TNode;
+  loading?: string | TNode;
   /**
-   * 等同于原生的 object-position 属性，可选值为 top right bottom left 或 string，可以自定义任何px或者百分比
+   * 等同于原生的 object-position 属性，可选值为 top right bottom left 或 string，可以自定义任何单位，px 或者 百分比
    * @default center
    */
   position?: string;
   /**
    * 图片圆角类型
-   * @default round
+   * @default square
    */
   shape?: 'circle' | 'round' | 'square';
   /**
@@ -46,11 +46,20 @@ export interface TdImageProps {
    */
   src?: string;
   /**
+   * 图片地址，支持特殊格式的图片，如 `.avif` 和 `.webp`
+   */
+  srcset?: ImageSrcset;
+  /**
    * 图片加载失败时触发
    */
-  onError?: () => void;
+  onError?: (context: { e: ImageEvent }) => void;
   /**
    * 图片加载完成时触发
    */
-  onLoad?: () => void;
+  onLoad?: (context: { e: ImageEvent }) => void;
+}
+
+export interface ImageSrcset {
+  'image/avif': string;
+  'image/webp': string;
 }

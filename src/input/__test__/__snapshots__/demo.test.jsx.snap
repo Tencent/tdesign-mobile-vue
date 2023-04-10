@@ -6,259 +6,664 @@ exports[`Input > Input alignVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-09f18958=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-09f18958=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
       <div
-        class="t-cell__title"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input--label"
-        >
-          左对齐
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
+        左对齐
       </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
       <div
-        class="t-cell__note"
+        class="t-input__content t-input--default"
       >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
         <!--v-if-->
-        
+        <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-09f18958=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-09f18958=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
       <div
-        class="t-cell__title"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input--label"
-        >
-          居中
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
+        居中
       </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
       <div
-        class="t-cell__note"
+        class="t-input__content t-input--default"
       >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control t-input__control--center"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--center t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
         <!--v-if-->
-        
+        <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-09f18958=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-09f18958=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
       <div
-        class="t-cell__title"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input--label"
-        >
-          右对齐
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
+        右对齐
       </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
       <div
-        class="t-cell__note"
+        class="t-input__content t-input--default"
       >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control t-input__control--right"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--right t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
         <!--v-if-->
-        
+        <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   
 </div>
 `;
 
-exports[`Input > Input limitVue demo works fine 1`] = `
+exports[`Input > Input bannerVue demo works fine 1`] = `
+<div
+  class="t-input t-input--layout-horizontal t-input--size-small"
+  style="border-radius: 6px; margin: 0px 16px;"
+>
+  <div
+    class="t-input__wrap--prefix"
+  >
+    <div
+      class="t-input__icon--prefix"
+    >
+      
+      
+      <!--v-if-->
+    </div>
+    <div
+      class="t-input__label"
+    >
+      标签文字
+    </div>
+  </div>
+  <div
+    class="t-input__wrap"
+  >
+    <div
+      class="t-input__content t-input--default"
+    >
+      <input
+        autocomplete="Off"
+        class="t-input__control t-input--default"
+        maxlength="-1"
+        name=""
+        placeholder="请输入文字"
+        type="text"
+      />
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Input > Input baseVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-0895f30e=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-0895f30e=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
-      <!--v-if-->
       <div
-        class="t-cell__note"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="10"
-            name=""
-            placeholder="最大输入10个字符"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
         <!--v-if-->
-        
+        <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-0895f30e=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-0895f30e=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
-      <!--v-if-->
       <div
-        class="t-cell__note"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="最大输入10个字符，汉字算两个"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字(选填)"
+          type="text"
+        />
         <!--v-if-->
-        
+        <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
+  </div>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        <!---->
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__tips t-input--left"
+      >
+        辅助说明
+      </div>
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Input > Input borderedVue demo works fine 1`] = `
+<div
+  style="--td-input-vertical-padding: 12px; background-color: rgb(255, 255, 255); padding: 16px 16px 8px;"
+>
+  <div
+    class="input-example__label"
+  >
+    标签文字
+  </div>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+    style="border: 1px solid rgba(220,220,220,1); border-radius: 6px;"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        <!---->
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <div
+          class="t-input__wrap--suffix-icon"
+        >
+          
+          
+          
+          <svg
+            class="t-icon t-icon-error-circle-filled"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Input > Input customVue demo works fine 1`] = `
+<div
+  style="--td-input-bg-color: rgba(44, 44, 44, 1); --td-input-border-color: rgba(75, 75, 75, 1); --td-input-default-text-color: rgba(255, 255, 255, 1); --td-input-placeholder-text-color: rgba(255, 255, 255, 0.35); --td-input-label-text-color: rgba(255, 255, 255, 1);"
+>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Input > Input labelVue demo works fine 1`] = `
+<div
+  class="t-input t-input--layout-horizontal t-input--size-small"
+>
+  <div
+    class="t-input__wrap--prefix"
+  >
+    <div
+      class="t-input__icon--prefix"
+    >
+      
+      
+      <!--v-if-->
+    </div>
+    <div
+      class="t-input__label"
+    >
+      标签超长时最多十个字
+    </div>
+  </div>
+  <div
+    class="t-input__wrap"
+  >
+    <div
+      class="t-input__content t-input--default"
+    >
+      <input
+        autocomplete="Off"
+        class="t-input__control t-input--default"
+        maxlength="-1"
+        name=""
+        placeholder="请输入文字"
+        type="text"
+      />
+      <!--v-if-->
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Input > Input layoutVue demo works fine 1`] = `
+<div
+  class="t-input t-input--layout-vertical t-input--size-small"
+>
+  <div
+    class="t-input__wrap--prefix"
+  >
+    <div
+      class="t-input__icon--prefix"
+    >
+      
+      
+      <!--v-if-->
+    </div>
+    <div
+      class="t-input__label"
+    >
+      标签文字
+    </div>
+  </div>
+  <div
+    class="t-input__wrap"
+  >
+    <div
+      class="t-input__content t-input--default"
+    >
+      <input
+        autocomplete="Off"
+        class="t-input__control t-input--default"
+        maxlength="-1"
+        name=""
+        placeholder="请输入文字"
+        type="text"
+      />
+      <!--v-if-->
+      <!--v-if-->
+      <div
+        class="t-input__wrap--suffix-icon"
+      >
+        
+        
+        
+        <svg
+          class="t-icon t-icon-error-circle-filled"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Input > Input maxLengthVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="10"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__tips t-input--left"
+      >
+        最大输入10个字符
+      </div>
+    </div>
+  </div>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__tips t-input--left"
+      >
+        最大输入10个字符，汉字算两个
+      </div>
+    </div>
   </div>
   
 </div>
@@ -276,7 +681,7 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    空状态时的占位提示。
+    用于单行文本信息输入。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -287,9 +692,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
-      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础输入框
+      </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
@@ -297,276 +706,340 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell-group t-cell-group--default"
+        class="t-input t-input--layout-horizontal t-input--size-small"
       >
         <div
-          class="t-cell-group__title"
+          class="t-input__wrap--prefix"
         >
-          
-          基础文本框
-          
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
         </div>
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+          class="t-input__wrap"
         >
           <div
-            class="t-cell__left"
+            class="t-input__content t-input--default"
           >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
             <!--v-if-->
             <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              标签文字
-            </div>
-            
             <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
           </div>
           <!--v-if-->
         </div>
-        
       </div>
       <div
-        class="t-cell-group t-cell-group--default"
+        class="t-input t-input--layout-horizontal t-input--size-small"
       >
         <div
-          class="t-cell-group__title"
+          class="t-input__wrap--prefix"
         >
-          
-          必填、选填文本框
-          
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
         </div>
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+          class="t-input__wrap"
         >
           <div
-            class="t-cell__left"
+            class="t-input__content t-input--default"
           >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字(选填)"
+              type="text"
+            />
             <!--v-if-->
             <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              标签文字
-            </div>
-            
-            <span
-              class="t-cell--required"
-            >
-               *
-            </span>
             <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
           </div>
           <!--v-if-->
         </div>
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              标签文字
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字 (选填)"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
       </div>
       <div
-        class="t-cell-group t-cell-group--default"
+        class="t-input t-input--layout-horizontal t-input--size-small"
       >
         <div
-          class="t-cell-group__title"
+          class="t-input__wrap--prefix"
         >
-          
-          无标题文本框
-          
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            <!---->
+          </div>
         </div>
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+          class="t-input__wrap"
         >
           <div
-            class="t-cell__left"
+            class="t-input__content t-input--default"
           >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
             <!--v-if-->
             <!--v-if-->
-          </div>
-          <!--v-if-->
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
             <!--v-if-->
-            
           </div>
           <!--v-if-->
         </div>
-        
       </div>
       <div
-        class="t-cell-group t-cell-group--default"
+        class="t-input t-input--layout-horizontal t-input--size-small"
       >
         <div
-          class="t-cell-group__title"
+          class="t-input__wrap--prefix"
         >
-          
-          带提示信息文本框
-          
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
         </div>
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+          class="t-input__wrap"
         >
           <div
-            class="t-cell__left"
+            class="t-input__content t-input--default"
           >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
             <!--v-if-->
             <!--v-if-->
           </div>
           <div
-            class="t-cell__title"
+            class="t-input__tips t-input--left"
+          >
+            辅助说明
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带字数限制输入框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
           >
             
-            <div
-              class="t-input--label"
-            >
-              标签文字
-            </div>
             
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="10"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
             <!--v-if-->
             <!--v-if-->
           </div>
           <div
-            class="t-cell__note"
+            class="t-input__tips t-input--left"
+          >
+            最大输入10个字符
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
           >
             
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
             
+            <!--v-if-->
           </div>
           <div
-            class="t-cell__right"
+            class="t-input__label"
           >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__tips t-input--left"
+          >
+            最大输入10个字符，汉字算两个
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带操作输入框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
             <div
-              class="t-cell__right-icon"
+              class="t-input__wrap--suffix-icon"
             >
+              
               
               
               <svg
@@ -583,257 +1056,148 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 />
               </svg>
               
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入手机号码"
+              type="text"
+            />
+            <!--v-if-->
+            <div
+              class="t-input__wrap--suffix"
+            >
+              
+              <button
+                aria-disabled="false"
+                class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+                role="button"
+              >
+                <!---->
+                <span
+                  class="t-button__text"
+                >
+                  
+                   操作按钮 
+                  
+                </span>
+              </button>
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <div
+              class="t-input__wrap--suffix-icon"
+            >
+              
+              
+              
+              <svg
+                class="t-icon t-icon-user-avatar"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M8 10.5c1.24 0 2.42.31 3.5.88v1.12h1v-1.14a.94.94 0 00-.49-.84 8.48 8.48 0 00-8.02 0 .94.94 0 00-.49.84v1.14h1v-1.12A7.47 7.47 0 018 10.5zM10.5 6a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-1 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M2.5 1.5a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1v-11a1 1 0 00-1-1h-11zm11 1v11h-11v-11h11z"
+                  fill="currentColor"
+                />
+              </svg>
               
             </div>
           </div>
-        </div>
-        
-      </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-      >
-        <div
-          class="t-cell-group__title"
-        >
-          
-          长标题文本框
-          
-        </div>
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              超长需换行的标签
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="预设文本"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
           <!--v-if-->
         </div>
-        
       </div>
       
       
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        02 状态
-      </h2>
+      <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        文本框状态
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-cell-group t-cell-group--default"
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              标签文字
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-input__error"
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              填写错误
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-input__error-msg"
-            >
-              提示信息
-            </div>
-            
-          </div>
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              不可编辑
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                readonly=""
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        03 特殊类型
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        特殊文本框类型
+        带图标输入框
       </p>
     </div>
     <div
@@ -842,383 +1206,994 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell-group t-cell-group--default"
-        data-v-0b98d368=""
+        class="t-input t-input--layout-horizontal t-input--size-small"
       >
-        <!--v-if-->
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-0b98d368=""
+          class="t-input__wrap--prefix"
         >
           <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
+            class="t-input__icon--prefix"
           >
             
-            <div
-              class="t-input--label"
+            
+            
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
             >
-              输入密码
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                type="password"
+              <path
+                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                fill="currentColor"
+                fill-opacity="0.9"
               />
-              <div
-                class="t-input__wrap--icon"
+            </svg>
+            
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            
+            <svg
+              class="t-icon t-icon-app"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+          <div
+            class="t-input__label"
+          >
+            <!---->
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        特定类型输入框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            输入密码
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              type="password"
+            />
+            <div
+              class="t-input__wrap--clearable-icon"
+            >
+              <svg
+                class="t-icon t-icon-close-circle-filled"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
               >
+                <path
+                  d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            验证码
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="输入验证码"
+              type="text"
+            />
+            <!--v-if-->
+            <div
+              class="t-input__wrap--suffix"
+            >
+              
+              <div
+                class="suffix"
+              >
+                <div
+                  class="suffix--line"
+                />
+                <image
+                  aria-label="验证码"
+                  aria-role="img"
+                  class="image"
+                  mode="heightFix"
+                  src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
+                />
+              </div>
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            手机号
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="输入手机号码"
+              type="text"
+            />
+            <!--v-if-->
+            <div
+              class="t-input__wrap--suffix"
+            >
+              
+              <div
+                style="display: flex; align-items: center;"
+              >
+                <div
+                  class="suffix--line"
+                />
+                <div
+                  aria-role="button"
+                  class="verify"
+                >
+                  发送验证码
+                </div>
+              </div>
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            价格
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--right t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="0.00"
+              type="text"
+            />
+            <!--v-if-->
+            <div
+              class="t-input__wrap--suffix"
+            >
+              元
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            数量
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--right t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="填写个数"
+              type="text"
+            />
+            <!--v-if-->
+            <div
+              class="t-input__wrap--suffix"
+            >
+              个
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件状态
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        输入框状态
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label t-input-is-error"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--error"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--error"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__tips t-input--left"
+          >
+            辅助说明
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label t-is-disabled"
+          >
+            不可编辑
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              disabled=""
+              maxlength="-1"
+              name=""
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        信息超长状态
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签超长时最多十个字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        内容位置
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            左对齐
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            居中
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--center t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            右对齐
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--right t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        竖排样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-input t-input--layout-vertical t-input--size-small"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <div
+              class="t-input__wrap--suffix-icon"
+            >
+              
+              
+              
+              <svg
+                class="t-icon t-icon-error-circle-filled"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        非通栏样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-input t-input--layout-horizontal t-input--size-small"
+        style="border-radius: 6px; margin: 0px 16px;"
+      >
+        <div
+          class="t-input__wrap--prefix"
+        >
+          <div
+            class="t-input__icon--prefix"
+          >
+            
+            
+            <!--v-if-->
+          </div>
+          <div
+            class="t-input__label"
+          >
+            标签文字
+          </div>
+        </div>
+        <div
+          class="t-input__wrap"
+        >
+          <div
+            class="t-input__content t-input--default"
+          >
+            <input
+              autocomplete="Off"
+              class="t-input__control t-input--default"
+              maxlength="-1"
+              name=""
+              placeholder="请输入文字"
+              type="text"
+            />
+            <!--v-if-->
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        标签外置样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        style="--td-input-vertical-padding: 12px; background-color: rgb(255, 255, 255); padding: 16px 16px 8px;"
+      >
+        <div
+          class="input-example__label"
+        >
+          标签文字
+        </div>
+        <div
+          class="t-input t-input--layout-horizontal t-input--size-small"
+          style="border: 1px solid rgba(220,220,220,1); border-radius: 6px;"
+        >
+          <div
+            class="t-input__wrap--prefix"
+          >
+            <div
+              class="t-input__icon--prefix"
+            >
+              
+              
+              <!--v-if-->
+            </div>
+            <div
+              class="t-input__label"
+            >
+              <!---->
+            </div>
+          </div>
+          <div
+            class="t-input__wrap"
+          >
+            <div
+              class="t-input__content t-input--default"
+            >
+              <input
+                autocomplete="Off"
+                class="t-input__control t-input--default"
+                maxlength="-1"
+                name=""
+                placeholder="请输入文字"
+                type="text"
+              />
+              <!--v-if-->
+              <!--v-if-->
+              <div
+                class="t-input__wrap--suffix-icon"
+              >
+                
+                
+                
                 <svg
-                  class="t-icon t-icon-close-circle-filled"
+                  class="t-icon t-icon-error-circle-filled"
                   fill="none"
                   height="1em"
                   viewBox="0 0 16 16"
                   width="1em"
                 >
                   <path
-                    d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+                    d="M15 8A7 7 0 101 8a7 7 0 0014 0zM8.5 4v5.5h-1V4h1zm-1.1 7h1.2v1.2H7.4V11z"
                     fill="currentColor"
                     fill-opacity="0.9"
                   />
                 </svg>
-              </div>
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-0b98d368=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-0b98d368=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              验证码
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="输入验证码"
-                type="text"
-              />
-              <!--v-if-->
-              <div
-                class="t-input__wrap--suffix"
-              >
-                
-                <div
-                  data-v-0b98d368=""
-                  style="font-size: 16px;"
-                >
-                  XYDZ
-                </div>
                 
               </div>
             </div>
             <!--v-if-->
-            
           </div>
-          <!--v-if-->
         </div>
-        
       </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-0b98d368=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-0b98d368=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入手机号码"
-                type="text"
-              />
-              <!--v-if-->
-              <div
-                class="t-input__wrap--suffix"
-              >
-                
-                <button
-                  aria-disabled="false"
-                  class="t-button t-size-s t-button--text t-button--primary t-button--shape-rectangle"
-                  data-v-0b98d368=""
-                  role="button"
-                  style="height: 24px; padding: 0px;"
-                >
-                  <!---->
-                  <span
-                    class="t-button__text"
-                  >
-                    
-                    发送验证码
-                    
-                  </span>
-                </button>
-                
-              </div>
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-0b98d368=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-0b98d368=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              价格
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control t-input__control--right"
-                maxlength="-1"
-                name=""
-                placeholder="0.00"
-                type="text"
-              />
-              <!--v-if-->
-              <div
-                class="t-input__wrap--suffix"
-              >
-                元
-              </div>
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-0b98d368=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-0b98d368=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              数量
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control t-input__control--right"
-                maxlength="-1"
-                name=""
-                placeholder="填写个数"
-                type="text"
-              />
-              <!--v-if-->
-              <div
-                class="t-input__wrap--suffix"
-              >
-                个
-              </div>
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      
       
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        04 规格
-      </h2>
+      <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        文本框尺寸规格
+        自定义样式输入框
       </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
       
-      
       <div
-        class="t-cell-group t-cell-group--default"
-        data-v-7806a704=""
+        style="--td-input-bg-color: rgba(44, 44, 44, 1); --td-input-border-color: rgba(75, 75, 75, 1); --td-input-default-text-color: rgba(255, 255, 255, 1); --td-input-placeholder-text-color: rgba(255, 255, 255, 0.35); --td-input-label-text-color: rgba(255, 255, 255, 1);"
       >
-        <!--v-if-->
-        
         <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-7806a704=""
+          class="t-input t-input--layout-horizontal t-input--size-small"
         >
           <div
-            class="t-cell__left"
+            class="t-input__wrap--prefix"
           >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
             <div
-              class="t-input--label"
+              class="t-input__icon--prefix"
             >
-              小规格H48
+              
+              
+              <!--v-if-->
             </div>
-            
-            <!--v-if-->
-            <!--v-if-->
+            <div
+              class="t-input__label"
+            >
+              标签文字
+            </div>
           </div>
           <div
-            class="t-cell__note"
+            class="t-input__wrap"
           >
-            
             <div
-              class="t-input__wrap"
+              class="t-input__content t-input--default"
             >
               <input
                 autocomplete="Off"
-                class="t-input__control"
+                class="t-input__control t-input--default"
                 maxlength="-1"
                 name=""
                 placeholder="请输入文字"
@@ -1226,485 +2201,130 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               />
               <!--v-if-->
               <!--v-if-->
+              <!--v-if-->
             </div>
             <!--v-if-->
-            
           </div>
-          <!--v-if-->
         </div>
-        
       </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-7806a704=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-medium"
-          data-v-7806a704=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              中规格H56
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        05 内容位置
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        文本框内容位置
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-09f18958=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-09f18958=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              左对齐
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-09f18958=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-09f18958=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              居中
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control t-input__control--center"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-09f18958=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-09f18958=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__title"
-          >
-            
-            <div
-              class="t-input--label"
-            >
-              右对齐
-            </div>
-            
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control t-input__control--right"
-                maxlength="-1"
-                name=""
-                placeholder="请输入文字"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        06 字数限制
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        文本框字数限制
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-0895f30e=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-0895f30e=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="10"
-                name=""
-                placeholder="最大输入10个字符"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      <div
-        class="t-cell-group t-cell-group--default"
-        data-v-0895f30e=""
-      >
-        <!--v-if-->
-        
-        <div
-          class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-          data-v-0895f30e=""
-        >
-          <div
-            class="t-cell__left"
-          >
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          <!--v-if-->
-          <div
-            class="t-cell__note"
-          >
-            
-            <div
-              class="t-input__wrap"
-            >
-              <input
-                autocomplete="Off"
-                class="t-input__control"
-                maxlength="-1"
-                name=""
-                placeholder="最大输入10个字符，汉字算两个"
-                type="text"
-              />
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            
-          </div>
-          <!--v-if-->
-        </div>
-        
-      </div>
-      
       
     </div>
   </div>
 </div>
 `;
 
-exports[`Input > Input sizeVue demo works fine 1`] = `
+exports[`Input > Input prefixVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-7806a704=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-7806a704=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
+        class="t-input__icon--prefix"
       >
         
-        <div
-          class="t-input--label"
+        
+        
+        <svg
+          class="t-icon t-icon-app"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
         >
-          小规格H48
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
+          <path
+            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+            fill="currentColor"
+            fill-opacity="0.9"
           />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
+        </svg>
         
+      </div>
+      <div
+        class="t-input__label"
+      >
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-7806a704=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-medium"
-      data-v-7806a704=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
+        class="t-input__icon--prefix"
       >
         
-        <div
-          class="t-input--label"
+        
+        
+        <svg
+          class="t-icon t-icon-app"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
         >
-          中规格H56
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
+          <path
+            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+            fill="currentColor"
+            fill-opacity="0.9"
           />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
+        </svg>
         
+      </div>
+      <div
+        class="t-input__label"
+      >
+        <!---->
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   
 </div>
@@ -1716,317 +2336,264 @@ exports[`Input > Input specialVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-0b98d368=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-0b98d368=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
       <div
-        class="t-cell__title"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input--label"
-        >
-          输入密码
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
+        输入密码
       </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
       <div
-        class="t-cell__note"
+        class="t-input__content t-input--default"
       >
-        
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          type="password"
+        />
         <div
-          class="t-input__wrap"
+          class="t-input__wrap--clearable-icon"
         >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            type="password"
-          />
-          <div
-            class="t-input__wrap--icon"
+          <svg
+            class="t-icon t-icon-close-circle-filled"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
           >
-            <svg
-              class="t-icon t-icon-close-circle-filled"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-          <!--v-if-->
+            <path
+              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
         </div>
         <!--v-if-->
-        
+        <!--v-if-->
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-0b98d368=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-0b98d368=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
       <div
-        class="t-cell__title"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input--label"
-        >
-          验证码
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
+        验证码
       </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
       <div
-        class="t-cell__note"
+        class="t-input__content t-input--default"
       >
-        
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="输入验证码"
+          type="text"
+        />
+        <!--v-if-->
         <div
-          class="t-input__wrap"
+          class="t-input__wrap--suffix"
         >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="输入验证码"
-            type="text"
-          />
-          <!--v-if-->
+          
           <div
-            class="t-input__wrap--suffix"
+            class="suffix"
           >
-            
             <div
-              data-v-0b98d368=""
-              style="font-size: 16px;"
+              class="suffix--line"
+            />
+            <image
+              aria-label="验证码"
+              aria-role="img"
+              class="image"
+              mode="heightFix"
+              src="https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png"
+            />
+          </div>
+          
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        手机号
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="输入手机号码"
+          type="text"
+        />
+        <!--v-if-->
+        <div
+          class="t-input__wrap--suffix"
+        >
+          
+          <div
+            style="display: flex; align-items: center;"
+          >
+            <div
+              class="suffix--line"
+            />
+            <div
+              aria-role="button"
+              class="verify"
             >
-              XYDZ
+              发送验证码
             </div>
-            
           </div>
+          
         </div>
         <!--v-if-->
-        
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-0b98d368=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-0b98d368=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
-      <!--v-if-->
       <div
-        class="t-cell__note"
+        class="t-input__label"
       >
-        
+        价格
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--right t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="0.00"
+          type="text"
+        />
+        <!--v-if-->
         <div
-          class="t-input__wrap"
+          class="t-input__wrap--suffix"
         >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入手机号码"
-            type="text"
-          />
-          <!--v-if-->
-          <div
-            class="t-input__wrap--suffix"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-size-s t-button--text t-button--primary t-button--shape-rectangle"
-              data-v-0b98d368=""
-              role="button"
-              style="height: 24px; padding: 0px;"
-            >
-              <!---->
-              <span
-                class="t-button__text"
-              >
-                
-                发送验证码
-                
-              </span>
-            </button>
-            
-          </div>
+          元
         </div>
         <!--v-if-->
-        
       </div>
       <!--v-if-->
     </div>
-    
   </div>
   <div
-    class="t-cell-group t-cell-group--default"
-    data-v-0b98d368=""
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
-    <!--v-if-->
-    
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-0b98d368=""
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
       <div
-        class="t-cell__title"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input--label"
-        >
-          价格
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
+        数量
       </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
       <div
-        class="t-cell__note"
+        class="t-input__content t-input--default"
       >
-        
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--right t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="填写个数"
+          type="text"
+        />
+        <!--v-if-->
         <div
-          class="t-input__wrap"
+          class="t-input__wrap--suffix"
         >
-          <input
-            autocomplete="Off"
-            class="t-input__control t-input__control--right"
-            maxlength="-1"
-            name=""
-            placeholder="0.00"
-            type="text"
-          />
-          <!--v-if-->
-          <div
-            class="t-input__wrap--suffix"
-          >
-            元
-          </div>
+          个
         </div>
         <!--v-if-->
-        
       </div>
       <!--v-if-->
     </div>
-    
-  </div>
-  <div
-    class="t-cell-group t-cell-group--default"
-    data-v-0b98d368=""
-  >
-    <!--v-if-->
-    
-    <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-      data-v-0b98d368=""
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        
-        <div
-          class="t-input--label"
-        >
-          数量
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control t-input__control--right"
-            maxlength="-1"
-            name=""
-            placeholder="填写个数"
-            type="text"
-          />
-          <!--v-if-->
-          <div
-            class="t-input__wrap--suffix"
-          >
-            个
-          </div>
-        </div>
-        <!--v-if-->
-        
-      </div>
-      <!--v-if-->
-    </div>
-    
   </div>
   
 </div>
@@ -2034,427 +2601,141 @@ exports[`Input > Input specialVue demo works fine 1`] = `
 
 exports[`Input > Input statusVue demo works fine 1`] = `
 <div
-  class="t-cell-group t-cell-group--default"
+  data-v-app=""
 >
-  <!--v-if-->
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
     <div
-      class="t-cell__left"
+      class="t-input__wrap--prefix"
     >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      
       <div
-        class="t-input--label"
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label t-input-is-error"
       >
         标签文字
       </div>
-      
-      <!--v-if-->
-      <!--v-if-->
     </div>
     <div
-      class="t-cell__note"
+      class="t-input__wrap"
     >
-      
       <div
-        class="t-input__wrap"
+        class="t-input__content t-input--error"
       >
         <input
           autocomplete="Off"
-          class="t-input__control"
+          class="t-input__control t-input--error"
           maxlength="-1"
           name=""
+          placeholder="请输入文字"
           type="text"
         />
         <!--v-if-->
         <!--v-if-->
-      </div>
-      <!--v-if-->
-      
-    </div>
-    <!--v-if-->
-  </div>
-  <div
-    class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small t-input__error"
-  >
-    <div
-      class="t-cell__left"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      
-      <div
-        class="t-input--label"
-      >
-        填写错误
-      </div>
-      
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__note"
-    >
-      
-      <div
-        class="t-input__wrap"
-      >
-        <input
-          autocomplete="Off"
-          class="t-input__control"
-          maxlength="-1"
-          name=""
-          type="text"
-        />
-        <!--v-if-->
         <!--v-if-->
       </div>
       <div
-        class="t-input__error-msg"
+        class="t-input__tips t-input--left"
       >
-        提示信息
+        辅助说明
       </div>
-      
     </div>
-    <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
     <div
-      class="t-cell__left"
+      class="t-input__wrap--prefix"
     >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      
       <div
-        class="t-input--label"
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label t-is-disabled"
       >
         不可编辑
       </div>
-      
-      <!--v-if-->
-      <!--v-if-->
     </div>
     <div
-      class="t-cell__note"
+      class="t-input__wrap"
     >
-      
       <div
-        class="t-input__wrap"
+        class="t-input__content t-input--default"
       >
         <input
           autocomplete="Off"
-          class="t-input__control"
+          class="t-input__control t-input--default"
+          disabled=""
           maxlength="-1"
           name=""
-          readonly=""
           type="text"
         />
         <!--v-if-->
         <!--v-if-->
+        <!--v-if-->
       </div>
       <!--v-if-->
-      
     </div>
-    <!--v-if-->
   </div>
   
 </div>
 `;
 
-exports[`Input > Input typeVue demo works fine 1`] = `
+exports[`Input > Input suffixVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
   <div
-    class="t-cell-group t-cell-group--default"
+    class="t-input t-input--layout-horizontal t-input--size-small"
   >
     <div
-      class="t-cell-group__title"
-    >
-      
-      基础文本框
-      
-    </div>
-    
-    <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+      class="t-input__wrap--prefix"
     >
       <div
-        class="t-cell__left"
+        class="t-input__icon--prefix"
       >
-        <!--v-if-->
+        
+        
         <!--v-if-->
       </div>
       <div
-        class="t-cell__title"
+        class="t-input__label"
       >
-        
-        <div
-          class="t-input--label"
-        >
-          标签文字
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
+        标签文字
       </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        
-      </div>
-      <!--v-if-->
-    </div>
-    
-  </div>
-  <div
-    class="t-cell-group t-cell-group--default"
-  >
-    <div
-      class="t-cell-group__title"
-    >
-      
-      必填、选填文本框
-      
-    </div>
-    
-    <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        
-        <div
-          class="t-input--label"
-        >
-          标签文字
-        </div>
-        
-        <span
-          class="t-cell--required"
-        >
-           *
-        </span>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        
-      </div>
-      <!--v-if-->
     </div>
     <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
+      class="t-input__wrap"
     >
       <div
-        class="t-cell__left"
+        class="t-input__content t-input--default"
       >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
         <!--v-if-->
         <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        
         <div
-          class="t-input--label"
+          class="t-input__wrap--suffix-icon"
         >
-          标签文字
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字 (选填)"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        
-      </div>
-      <!--v-if-->
-    </div>
-    
-  </div>
-  <div
-    class="t-cell-group t-cell-group--default"
-  >
-    <div
-      class="t-cell-group__title"
-    >
-      
-      无标题文本框
-      
-    </div>
-    
-    <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <!--v-if-->
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        
-      </div>
-      <!--v-if-->
-    </div>
-    
-  </div>
-  <div
-    class="t-cell-group t-cell-group--default"
-  >
-    <div
-      class="t-cell-group__title"
-    >
-      
-      带提示信息文本框
-      
-    </div>
-    
-    <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        
-        <div
-          class="t-input--label"
-        >
-          标签文字
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="请输入文字"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        
-      </div>
-      <div
-        class="t-cell__right"
-      >
-        <div
-          class="t-cell__right-icon"
-        >
+          
           
           
           <svg
@@ -2471,69 +2752,132 @@ exports[`Input > Input typeVue demo works fine 1`] = `
             />
           </svg>
           
-          
         </div>
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="t-cell-group t-cell-group--default"
-  >
-    <div
-      class="t-cell-group__title"
-    >
-      
-      长标题文本框
-      
-    </div>
-    
-    <div
-      class="t-cell t-cell--middle t-cell--bordered t-input t-input--size-small"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        
-        <div
-          class="t-input--label"
-        >
-          超长需换行的标签
-        </div>
-        
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-input__wrap"
-        >
-          <input
-            autocomplete="Off"
-            class="t-input__control"
-            maxlength="-1"
-            name=""
-            placeholder="预设文本"
-            type="text"
-          />
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <!--v-if-->
-        
       </div>
       <!--v-if-->
     </div>
-    
+  </div>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入手机号码"
+          type="text"
+        />
+        <!--v-if-->
+        <div
+          class="t-input__wrap--suffix"
+        >
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               操作按钮 
+              
+            </span>
+          </button>
+          
+        </div>
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="t-input t-input--layout-horizontal t-input--size-small"
+  >
+    <div
+      class="t-input__wrap--prefix"
+    >
+      <div
+        class="t-input__icon--prefix"
+      >
+        
+        
+        <!--v-if-->
+      </div>
+      <div
+        class="t-input__label"
+      >
+        标签文字
+      </div>
+    </div>
+    <div
+      class="t-input__wrap"
+    >
+      <div
+        class="t-input__content t-input--default"
+      >
+        <input
+          autocomplete="Off"
+          class="t-input__control t-input--default"
+          maxlength="-1"
+          name=""
+          placeholder="请输入文字"
+          type="text"
+        />
+        <!--v-if-->
+        <!--v-if-->
+        <div
+          class="t-input__wrap--suffix-icon"
+        >
+          
+          
+          
+          <svg
+            class="t-icon t-icon-user-avatar"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 10.5c1.24 0 2.42.31 3.5.88v1.12h1v-1.14a.94.94 0 00-.49-.84 8.48 8.48 0 00-8.02 0 .94.94 0 00-.49.84v1.14h1v-1.12A7.47 7.47 0 018 10.5zM10.5 6a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm-1 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z"
+              fill="currentColor"
+            />
+            <path
+              d="M2.5 1.5a1 1 0 00-1 1v11a1 1 0 001 1h11a1 1 0 001-1v-11a1 1 0 00-1-1h-11zm11 1v11h-11v-11h11z"
+              fill="currentColor"
+            />
+          </svg>
+          
+        </div>
+      </div>
+      <!--v-if-->
+    </div>
   </div>
   
 </div>
