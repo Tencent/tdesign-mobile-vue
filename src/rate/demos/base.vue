@@ -1,6 +1,6 @@
 <template>
-  <CustomCell title="仅展示">
-    <t-rate v-model="value" disabled :gap="defaultGap" />
+  <CustomCell title="实心评分">
+    <t-rate v-model="value" @change="changeValue" />
   </CustomCell>
 </template>
 
@@ -8,6 +8,8 @@
 import { ref } from 'vue';
 import CustomCell from './components/custom-cell.vue';
 
-const defaultGap = 8;
+const changeValue = (val: Number) => {
+  console.log('current value is', val);
+};
 const value = ref(3);
 </script>

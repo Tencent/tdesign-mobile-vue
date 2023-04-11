@@ -1,9 +1,9 @@
 <template>
-  <CustomCell title="空心评分" class="space">
-    <t-rate v-model="value1" variant="outline" clearable :color="['#FFC51C', '#E8E8E8']" :gap="defaultGap" />
+  <CustomCell title="填充评分" class="space">
+    <t-rate v-model="value1" allow-half :color="['#FFC51C', '#E8E8E8']" />
   </CustomCell>
-  <CustomCell title="实心评分" class="space">
-    <t-rate v-model="value" clearable allow-half :color="['#FFC51C', '#E8E8E8']" :gap="defaultGap" />
+  <CustomCell title="线描评分" class="space">
+    <t-rate v-model="value" allow-half color="#00A870" :icon="['star-filled', 'star']" />
   </CustomCell>
 </template>
 
@@ -11,8 +11,7 @@
 import { ref } from 'vue';
 import CustomCell from './components/custom-cell.vue';
 
-const defaultGap = 8;
-const value = ref(2.5);
+const value = ref(2);
 const value1 = ref(3);
 </script>
 <style lang="less" scoped>

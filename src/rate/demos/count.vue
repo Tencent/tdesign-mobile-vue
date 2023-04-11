@@ -1,6 +1,6 @@
 <template>
-  <CustomCell title="自定义数量">
-    <t-rate v-model="value" :count="4" clearable :gap="defaultGap" />
+  <CustomCell title="自定义评分数量">
+    <t-rate v-model="value" :count="3" />
   </CustomCell>
 </template>
 
@@ -8,6 +8,5 @@
 import { ref } from 'vue';
 import CustomCell from './components/custom-cell.vue';
 
-const defaultGap = 8;
-const value = ref(3);
+const value = ref(2);
 </script>
