@@ -5,17 +5,17 @@
     <tdesign-demo-block title="01 组件类型">
       <BaseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block>
-      <ButtonDemo />
+    <tdesign-demo-block title="02 组件样式">
+      <ThemeDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block>
-      <CellDemo />
+    <tdesign-demo-block title="03 组件尺寸">
+      <SizeDemo />
     </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts" setup>
 import BaseDemo from './base.vue';
-import ButtonDemo from './button.vue';
-import CellDemo from './cell.vue';
+import ThemeDemo from './theme.vue';
+import SizeDemo from './size.vue';
 </script>

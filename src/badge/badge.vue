@@ -83,7 +83,7 @@ export default defineComponent({
       if (!props.offset) {
         return { background: props.color };
       }
-      let [xOffset, yOffset]: Array<string | number> = props.offset;
+      let [xOffset = 0, yOffset = 0]: Array<string | number> = props.offset;
       xOffset = hasUnit(xOffset.toString()) ? xOffset : `${xOffset}px`;
       yOffset = hasUnit(yOffset.toString()) ? yOffset : `${yOffset}px`;
       return {
