@@ -990,7 +990,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             
             <img
               class="t-cell__left-image"
-              src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+              src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
             />
             
           </div>
@@ -1684,7 +1684,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       
       <img
         class="t-cell__left-image"
-        src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+        src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
       />
       
     </div>
