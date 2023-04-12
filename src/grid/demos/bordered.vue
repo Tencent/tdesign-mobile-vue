@@ -1,12 +1,15 @@
 <template>
   <t-grid :column="3" border class="grid-demo">
-    <t-grid-item text="标题文字" :image="imgUrl" description="说明文字" />
-    <t-grid-item text="标题文字" :image="imgUrl" description="说明文字" />
-    <t-grid-item text="标题最多六字" :image="imgUrl" description="说明最多六字" />
+    <t-grid-item text="标题文字" :image="imgUrl" description="描述文字" />
+    <t-grid-item text="标题文字" :image="imgUrl" description="描述文字" />
+    <t-grid-item text="标题最多六字" :image="imgUrl" description="描述最多六字" />
+    <t-grid-item text="标题文字" :image="imgUrl" description="描述文字" />
+    <t-grid-item text="标题文字" :image="imgUrl" description="描述文字" />
+    <t-grid-item text="标题最多六字" :image="imgUrl" description="描述最多六字" />
   </t-grid>
   <t-grid :column="2" border class="grid-demo">
-    <t-grid-item text="标题文字" layout="horizontal" :image="imgUrl" description="说明文字" />
-    <t-grid-item text="标题文字" layout="horizontal" :image="imgUrl" description="说明文字" />
+    <t-grid-item text="标题文字" layout="horizontal" :image="imgUrl" description="描述文字" />
+    <t-grid-item text="标题文字" layout="horizontal" :image="imgUrl" description="描述文字" />
   </t-grid>
 </template>
 <script lang="ts" setup>

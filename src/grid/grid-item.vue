@@ -1,38 +1,38 @@
 <template>
-  <div :class="rootClass" :style="rootStyle">
-    <div :class="`${name}__image-box`">
-      <t-badge
-        v-if="badgeProps"
-        :count="badgeProps.count"
-        :max-count="badgeProps.maxCount"
-        :dot="badgeProps.dot"
-        :content="badgeProps.content"
-        :size="badgeProps.size"
-        :offset="badgeProps.offset"
-      >
-        <t-image
-          v-if="image && typeof image === 'string'"
-          :src="image"
-          shape="round"
-          :class="`${name}__image`"
-          :style="imgStyle"
-        />
-        <t-node v-else :content="imageContent" />
-      </t-badge>
+  <div
+    :class="[`${name}`, `${name}--${layout}`, { [`${name}--bordered`]: border }]"
+    :style="rootStyle"
+    @click="onClick"
+  >
+    <t-badge
+      v-if="badgeProps"
+      :count="badgeProps.count"
+      :max-count="badgeProps.maxCount"
+      :dot="badgeProps.dot"
+      :content="badgeProps.content"
+      :size="badgeProps.size"
+      :offset="badgeProps.offset"
+    >
       <t-image
-        v-else-if="image && typeof image === 'string'"
+        v-if="image && typeof image === 'string'"
         :src="image"
         shape="round"
-        :class="`${name}__image`"
-        :style="imgStyle"
+        :class="[`${name}__image`, `${name}__image--${size}`]"
       />
       <t-node v-else :content="imageContent" />
-    </div>
-    <div :class="`${name}__text`" :style="textStyle">
-      <div :class="`${name}__title`" :style="titleStyle">
+    </t-badge>
+    <t-image
+      v-else-if="image && typeof image === 'string'"
+      :src="image"
+      shape="round"
+      :class="[`${name}__image`, `${name}__image--${size}`]"
+    />
+    <t-node v-else :content="imageContent" />
+    <div :class="[`${name}__content`, `${name}__content--${layout}`]">
+      <div :class="[`${name}__title`, `${name}__title--${size}`]">
         <t-node :content="textContent" />
       </div>
-      <div :class="`${name}__description`">
+      <div :class="[`${name}__description`, [`${name}__description--${layout}`]]">
         <t-node :content="descContent" />
       </div>
     </div>
@@ -55,80 +55,47 @@ export default defineComponent({
   name,
   components: { TNode, TBadge, TImage },
   props: gridItemProps,
-  setup(props) {
+  emits: ['click'],
+  setup(props, context) {
     const internalInstance = getCurrentInstance();
-    const isHorz = props.layout === 'horizontal';
-    const { column, gutter, border, align } = inject<any>('grid');
+    const { column, border, align } = inject<any>('grid');
 
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
     const textContent = computed(() => renderTNode(internalInstance, 'text'));
     const descContent = computed(() => renderTNode(internalInstance, 'description'));
 
-    const rootClass = computed(() => [`${name}`, { [`${name}--bordered`]: border.value }]);
+    const rootClass = computed(() => [`${name}`, `${name}--${props.layout}`]);
 
     const rootStyle = computed(() => {
-      const percent = `${100 / +column.value}%`;
-      const borderStyle = {};
-      if (border.value) {
-        if (typeof border.value !== 'boolean') {
-          const { color, width, style } = border.value;
-          return {
-            borderColor: color,
-            borderWidth: width,
-            borderStyle: style,
-          };
-        }
-      }
-
-      const style = {
-        flexBasis: percent,
-        flexDirection: isHorz ? ('row' as const) : ('column' as const),
-        paddingLeft: gutter.value ? `${gutter.value}px` : 0,
-        paddingRight: gutter.value ? `${gutter.value}px` : 0,
-        alignItems: 'center',
-        justifyContent: 'center',
+      const percent = column.value > 0 ? `${100 / +column.value}%` : 0;
+      const style: Record<string, any> = {
         textAlign: ['center', 'left'].includes(align.value) ? align.value : 'center',
-        ...borderStyle,
       };
+      if (percent !== 0) {
+        style.flexBasis = percent;
+      }
       return style;
     });
 
-    const imgStyle = computed(() => {
-      let imgSize = 40;
-      if (column.value >= 5) {
-        imgSize = 32;
-      } else if (column.value <= 3) {
-        imgSize = 48;
-      }
-      return {
-        width: `${imgSize}px`,
-        height: `${imgSize}px`,
-      };
+    const size = computed(() => {
+      if (column.value > 4) return 'small';
+      return column.value < 4 ? 'large' : 'middle';
     });
 
-    const textStyle = computed(() => {
-      return {
-        paddingLeft: isHorz ? '12px' : 0,
-      };
-    });
-
-    const titleStyle = computed(() => {
-      return {
-        paddingTop: isHorz ? 0 : '8px',
-        marginBottom: '4px',
-      };
-    });
+    const onClick = () => {
+      context.emit('click');
+    };
 
     return {
       name,
+      size,
+      border,
       rootStyle,
       rootClass,
-      imgStyle,
-      textStyle,
-      titleStyle,
       imageContent,
       textContent,
       descContent,
+      onClick,
     };
   },
 });
