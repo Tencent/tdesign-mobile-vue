@@ -10,18 +10,30 @@
         :size="badgeProps.size"
         :offset="badgeProps.offset"
       >
-        <img v-if="image && typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
-        <t-node v-else :content="imageContent"></t-node>
+        <t-image
+          v-if="image && typeof image === 'string'"
+          :src="image"
+          shape="round"
+          :class="`${name}__image`"
+          :style="imgStyle"
+        />
+        <t-node v-else :content="imageContent" />
       </t-badge>
-      <img v-if="image && typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
-      <t-node v-else :content="imageContent"></t-node>
+      <t-image
+        v-else-if="image && typeof image === 'string'"
+        :src="image"
+        shape="round"
+        :class="`${name}__image`"
+        :style="imgStyle"
+      />
+      <t-node v-else :content="imageContent" />
     </div>
     <div :class="`${name}__text`" :style="textStyle">
       <div :class="`${name}__title`" :style="titleStyle">
-        <t-node :content="textContent"></t-node>
+        <t-node :content="textContent" />
       </div>
       <div :class="`${name}__description`">
-        <t-node :content="descContent"></t-node>
+        <t-node :content="descContent" />
       </div>
     </div>
   </div>
@@ -29,6 +41,8 @@
 
 <script lang="ts">
 import { defineComponent, getCurrentInstance, computed, inject } from 'vue';
+
+import TImage from '../image';
 import TBadge from '../badge';
 import config from '../config';
 import gridItemProps from './grid-item-props';
@@ -39,7 +53,7 @@ const name = `${prefix}-grid-item`;
 
 export default defineComponent({
   name,
-  components: { TNode, TBadge },
+  components: { TNode, TBadge, TImage },
   props: gridItemProps,
   setup(props) {
     const internalInstance = getCurrentInstance();
@@ -80,9 +94,9 @@ export default defineComponent({
     });
 
     const imgStyle = computed(() => {
-      let imgSize = 32;
+      let imgSize = 40;
       if (column.value >= 5) {
-        imgSize = 28;
+        imgSize = 32;
       } else if (column.value <= 3) {
         imgSize = 48;
       }
