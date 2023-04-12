@@ -17,7 +17,7 @@
     <div class="summary">气泡徽标</div>
     <div class="badge-demo">
       <t-badge count="领积分" shape="bubble" aria-role="button">
-        <t-button icon="shop" aria-label="商店" shape="square" size="large" />
+        <t-button :icon="IconShop" aria-label="商店" shape="square" size="large" />
       </t-badge>
     </div>
 
@@ -31,5 +31,8 @@
 </template>
 
 <script setup lang="ts">
-import { Icon as TIcon } from 'tdesign-icons-vue-next';
+import { Icon as TIcon, ShopIcon } from 'tdesign-icons-vue-next';
+import { h } from 'vue';
+
+const IconShop = () => h(ShopIcon);
 </script>

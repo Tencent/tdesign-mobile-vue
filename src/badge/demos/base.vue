@@ -25,12 +25,15 @@
     <div class="summary">自定义徽标</div>
     <div class="badge-demo">
       <t-badge count="NEW" :offset="[0, 2]" aria-role="button">
-        <t-button icon="notification" aria-label="通知" shape="square" size="large" />
+        <t-button :icon="IconNotification" aria-label="通知" shape="square" size="large" />
       </t-badge>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { Icon as TIcon } from 'tdesign-icons-vue-next';
+import { Icon as TIcon, NotificationIcon } from 'tdesign-icons-vue-next';
+import { h } from 'vue';
+
+const IconNotification = () => h(NotificationIcon);
 </script>
