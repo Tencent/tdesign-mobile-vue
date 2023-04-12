@@ -25,7 +25,7 @@ describe('Badge', () => {
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find(`.${name}__inner`);
+    const inner = wrapper.find(`.${name}--count`);
     expect(inner.text()).toEqual('5');
   });
 
@@ -37,7 +37,7 @@ describe('Badge', () => {
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find(`.${name}__inner`);
+    const inner = wrapper.find(`.${name}--count`);
     expect(inner.exists()).toBeTruthy();
     expect(inner.text()).toEqual(`${maxCount}+`);
   });
@@ -53,11 +53,11 @@ describe('Badge', () => {
     });
     // shape = ''
     const $badge = wrapper.findComponent(Badge);
-    const inner = $badge.find(`.${name}__inner`);
+    const inner = $badge.find(`.${name}--basic`);
     ['circle', 'ribbon', 'round'].forEach((s) => {
       expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
     });
-    expect($badge.text()).toEqual(`${count + TEXT}`);
+    expect($badge.text()).toEqual(`${TEXT} ${count}`);
 
     const shape = 'ribbon';
     await wrapper.setProps({
@@ -76,7 +76,7 @@ describe('Badge', () => {
     });
     // size = ''
     const $badge = wrapper.findComponent(Badge);
-    const inner = $badge.find(`.${name}__inner`);
+    const inner = $badge.find(`.${name}--basic`);
     ['medium', 'small'].forEach((s) => {
       expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
     });
@@ -95,7 +95,7 @@ describe('Badge', () => {
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find(`.${name}__inner`);
+    const inner = wrapper.find(`.${name}--basic`);
     expect(inner.exists()).toBeTruthy();
     expect(inner.text()).toEqual('0');
   });
@@ -108,7 +108,7 @@ describe('Badge', () => {
         <Button>按钮</Button>
       </Badge>
     ));
-    const inner = wrapper.find(`.${name}__inner`);
+    const inner = wrapper.find(`.${name}--basic`);
     expect(inner.attributes('style').includes(`right: ${offset[0]}px; top: ${offset[1]}px`)).toBeTruthy();
   });
 });

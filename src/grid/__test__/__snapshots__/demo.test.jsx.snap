@@ -22,17 +22,24 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
+            class="t-badge__content"
           >
             
+            <img
+              class="t-grid-item__image"
+              src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+              style="width: 32px; height: 32px;"
+            />
+            
           </div>
-          
-          <img
-            class="t-grid-item__image"
-            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-            style="width: 32px; height: 32px;"
-          />
-          
+          <div
+            class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+          >
+            <!--v-if-->
+              
+            <!--v-if-->
+          </div>
+          <!---->
         </div>
         <img
           class="t-grid-item__image"
@@ -69,17 +76,24 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            class="t-badge__content"
           >
-            3
+            
+            <img
+              class="t-grid-item__image"
+              src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+              style="width: 32px; height: 32px;"
+            />
+            
           </div>
-          
-          <img
-            class="t-grid-item__image"
-            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-            style="width: 32px; height: 32px;"
-          />
-          
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+          >
+            <!--v-if-->
+             3 
+            <!--v-if-->
+          </div>
+          <!---->
         </div>
         <img
           class="t-grid-item__image"
@@ -116,17 +130,24 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            class="t-badge__content"
           >
-            NEW
+            
+            <img
+              class="t-grid-item__image"
+              src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+              style="width: 32px; height: 32px;"
+            />
+            
           </div>
-          
-          <img
-            class="t-grid-item__image"
-            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-            style="width: 32px; height: 32px;"
-          />
-          
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+          >
+            <!--v-if-->
+             NEW 
+            <!--v-if-->
+          </div>
+          <!---->
         </div>
         <img
           class="t-grid-item__image"
@@ -163,17 +184,24 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            class="t-badge__content"
           >
-            ···
+            
+            <img
+              class="t-grid-item__image"
+              src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+              style="width: 32px; height: 32px;"
+            />
+            
           </div>
-          
-          <img
-            class="t-grid-item__image"
-            src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-            style="width: 32px; height: 32px;"
-          />
-          
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+          >
+            <!--v-if-->
+             ··· 
+            <!--v-if-->
+          </div>
+          <!---->
         </div>
         <img
           class="t-grid-item__image"
@@ -1881,17 +1909,24 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
+                  class="t-badge__content"
                 >
                   
+                  <img
+                    class="t-grid-item__image"
+                    src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+                    style="width: 32px; height: 32px;"
+                  />
+                  
                 </div>
-                
-                <img
-                  class="t-grid-item__image"
-                  src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-                  style="width: 32px; height: 32px;"
-                />
-                
+                <div
+                  class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                >
+                  <!--v-if-->
+                    
+                  <!--v-if-->
+                </div>
+                <!---->
               </div>
               <img
                 class="t-grid-item__image"
@@ -1928,17 +1963,24 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+                  class="t-badge__content"
                 >
-                  3
+                  
+                  <img
+                    class="t-grid-item__image"
+                    src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+                    style="width: 32px; height: 32px;"
+                  />
+                  
                 </div>
-                
-                <img
-                  class="t-grid-item__image"
-                  src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-                  style="width: 32px; height: 32px;"
-                />
-                
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                >
+                  <!--v-if-->
+                   3 
+                  <!--v-if-->
+                </div>
+                <!---->
               </div>
               <img
                 class="t-grid-item__image"
@@ -1975,17 +2017,24 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+                  class="t-badge__content"
                 >
-                  NEW
+                  
+                  <img
+                    class="t-grid-item__image"
+                    src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+                    style="width: 32px; height: 32px;"
+                  />
+                  
                 </div>
-                
-                <img
-                  class="t-grid-item__image"
-                  src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-                  style="width: 32px; height: 32px;"
-                />
-                
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                >
+                  <!--v-if-->
+                   NEW 
+                  <!--v-if-->
+                </div>
+                <!---->
               </div>
               <img
                 class="t-grid-item__image"
@@ -2022,17 +2071,24 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+                  class="t-badge__content"
                 >
-                  ···
+                  
+                  <img
+                    class="t-grid-item__image"
+                    src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+                    style="width: 32px; height: 32px;"
+                  />
+                  
                 </div>
-                
-                <img
-                  class="t-grid-item__image"
-                  src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
-                  style="width: 32px; height: 32px;"
-                />
-                
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                >
+                  <!--v-if-->
+                   ··· 
+                  <!--v-if-->
+                </div>
+                <!---->
               </div>
               <img
                 class="t-grid-item__image"

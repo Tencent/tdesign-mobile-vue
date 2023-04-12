@@ -7,8 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from '@vue/reactivity';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 
 const visible = ref(false);
 const area = ref([]);
