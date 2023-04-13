@@ -1,0 +1,13 @@
+// Vitest Snapshot v1
+
+exports[`Link > <slot> > <icon> 1`] = `
+<a
+  aria-disabled="false"
+  class="t-link t-link--default t-link--medium"
+  target=""
+>
+  <!--v-if-->
+    
+  <!--v-if-->
+</a>
+`;
