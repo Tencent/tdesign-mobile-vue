@@ -14,55 +14,62 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
       class="t-badge"
     >
       <div
-        class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
+        class="t-badge__content"
       >
         
-      </div>
-      
-      <div
-        class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-      >
         <div
-          class="t-image__mask"
+          class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
         >
           <div
-            class="t-loading"
-            style="font-size: 20px;"
+            class="t-image__mask"
           >
-            
             <div
-              class="t-loading__dots"
-              style="animation-duration: 800ms; width: 20px; height: 20px;"
+              class="t-loading"
+              style="font-size: 20px;"
             >
+              
               <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-              />
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
             </div>
-            
-            <!--v-if-->
-            <!---->
           </div>
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
-        <picture>
-          <!--v-if-->
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </picture>
+        
       </div>
-      
+      <div
+        class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+      >
+        <!--v-if-->
+          
+        <!--v-if-->
+      </div>
+      <!---->
     </div>
     <div
       class="t-grid-item__content t-grid-item__content--vertical"
@@ -87,55 +94,62 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
       class="t-badge"
     >
       <div
-        class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+        class="t-badge__content"
       >
-        8
-      </div>
-      
-      <div
-        class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-      >
+        
         <div
-          class="t-image__mask"
+          class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
         >
           <div
-            class="t-loading"
-            style="font-size: 20px;"
+            class="t-image__mask"
           >
-            
             <div
-              class="t-loading__dots"
-              style="animation-duration: 800ms; width: 20px; height: 20px;"
+              class="t-loading"
+              style="font-size: 20px;"
             >
+              
               <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-              />
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
             </div>
-            
-            <!--v-if-->
-            <!---->
           </div>
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
-        <picture>
-          <!--v-if-->
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </picture>
+        
       </div>
-      
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+      >
+        <!--v-if-->
+         8 
+        <!--v-if-->
+      </div>
+      <!---->
     </div>
     <div
       class="t-grid-item__content t-grid-item__content--vertical"
@@ -160,55 +174,62 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
       class="t-badge"
     >
       <div
-        class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+        class="t-badge__content"
       >
-        13
-      </div>
-      
-      <div
-        class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-      >
+        
         <div
-          class="t-image__mask"
+          class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
         >
           <div
-            class="t-loading"
-            style="font-size: 20px;"
+            class="t-image__mask"
           >
-            
             <div
-              class="t-loading__dots"
-              style="animation-duration: 800ms; width: 20px; height: 20px;"
+              class="t-loading"
+              style="font-size: 20px;"
             >
+              
               <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-              />
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
             </div>
-            
-            <!--v-if-->
-            <!---->
           </div>
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
-        <picture>
-          <!--v-if-->
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </picture>
+        
       </div>
-      
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+      >
+        <!--v-if-->
+         13 
+        <!--v-if-->
+      </div>
+      <!---->
     </div>
     <div
       class="t-grid-item__content t-grid-item__content--vertical"
@@ -233,55 +254,62 @@ exports[`Grid > Grid badgeVue demo works fine 1`] = `
       class="t-badge"
     >
       <div
-        class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+        class="t-badge__content"
       >
-        NEW
-      </div>
-      
-      <div
-        class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-      >
+        
         <div
-          class="t-image__mask"
+          class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
         >
           <div
-            class="t-loading"
-            style="font-size: 20px;"
+            class="t-image__mask"
           >
-            
             <div
-              class="t-loading__dots"
-              style="animation-duration: 800ms; width: 20px; height: 20px;"
+              class="t-loading"
+              style="font-size: 20px;"
             >
+              
               <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-              />
-              <div
-                class="t-loading__dot"
-                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-              />
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
             </div>
-            
-            <!--v-if-->
-            <!---->
           </div>
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
         </div>
-        <picture>
-          <!--v-if-->
-          <img
-            alt=""
-            class="t-image__img"
-            src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-            style="object-fit: fill; object-position: center;"
-          />
-        </picture>
+        
       </div>
-      
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+      >
+        <!--v-if-->
+         NEW 
+        <!--v-if-->
+      </div>
+      <!---->
     </div>
     <div
       class="t-grid-item__content t-grid-item__content--vertical"
@@ -3176,55 +3204,62 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-badge"
           >
             <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
+              class="t-badge__content"
             >
               
-            </div>
-            
-            <div
-              class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-            >
               <div
-                class="t-image__mask"
+                class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
               >
                 <div
-                  class="t-loading"
-                  style="font-size: 20px;"
+                  class="t-image__mask"
                 >
-                  
                   <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
+                    
                     <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
                   </div>
-                  
-                  <!--v-if-->
-                  <!---->
                 </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
-              <picture>
-                <!--v-if-->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
-              </picture>
+              
             </div>
-            
+            <div
+              class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+            >
+              <!--v-if-->
+                
+              <!--v-if-->
+            </div>
+            <!---->
           </div>
           <div
             class="t-grid-item__content t-grid-item__content--vertical"
@@ -3249,55 +3284,62 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-badge"
           >
             <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+              class="t-badge__content"
             >
-              8
-            </div>
-            
-            <div
-              class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-            >
+              
               <div
-                class="t-image__mask"
+                class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
               >
                 <div
-                  class="t-loading"
-                  style="font-size: 20px;"
+                  class="t-image__mask"
                 >
-                  
                   <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
+                    
                     <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
                   </div>
-                  
-                  <!--v-if-->
-                  <!---->
                 </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
-              <picture>
-                <!--v-if-->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
-              </picture>
+              
             </div>
-            
+            <div
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+            >
+              <!--v-if-->
+               8 
+              <!--v-if-->
+            </div>
+            <!---->
           </div>
           <div
             class="t-grid-item__content t-grid-item__content--vertical"
@@ -3322,55 +3364,62 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-badge"
           >
             <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+              class="t-badge__content"
             >
-              13
-            </div>
-            
-            <div
-              class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-            >
+              
               <div
-                class="t-image__mask"
+                class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
               >
                 <div
-                  class="t-loading"
-                  style="font-size: 20px;"
+                  class="t-image__mask"
                 >
-                  
                   <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
+                    
                     <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
                   </div>
-                  
-                  <!--v-if-->
-                  <!---->
                 </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
-              <picture>
-                <!--v-if-->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
-              </picture>
+              
             </div>
-            
+            <div
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+            >
+              <!--v-if-->
+               13 
+              <!--v-if-->
+            </div>
+            <!---->
           </div>
           <div
             class="t-grid-item__content t-grid-item__content--vertical"
@@ -3395,55 +3444,62 @@ exports[`Grid > Grid mobileVue demo works fine 1`] = `
             class="t-badge"
           >
             <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+              class="t-badge__content"
             >
-              NEW
-            </div>
-            
-            <div
-              class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
-            >
+              
               <div
-                class="t-image__mask"
+                class="t-image t-image--round t-grid-item__image t-grid-item__image--middle"
               >
                 <div
-                  class="t-loading"
-                  style="font-size: 20px;"
+                  class="t-image__mask"
                 >
-                  
                   <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    class="t-loading"
+                    style="font-size: 20px;"
                   >
+                    
                     <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
                   </div>
-                  
-                  <!--v-if-->
-                  <!---->
                 </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
               </div>
-              <picture>
-                <!--v-if-->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
-              </picture>
+              
             </div>
-            
+            <div
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+            >
+              <!--v-if-->
+               NEW 
+              <!--v-if-->
+            </div>
+            <!---->
           </div>
           <div
             class="t-grid-item__content t-grid-item__content--vertical"
