@@ -39,7 +39,7 @@ export interface TdGridItemProps {
    * 透传至 Badge 属性
    * @default null
    */
-  badgeProps?: BadgeProps;
+  badge?: BadgeProps;
   /**
    * 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点
    */

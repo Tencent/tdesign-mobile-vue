@@ -138,10 +138,10 @@ describe('grid-item', () => {
     });
   });
 
-  it(':badgeProps', async () => {
+  it(':badge', async () => {
     const wrapper = mount(() => (
       <Grid>
-        <GridItem badgeProps={{ count: 1 }}></GridItem>
+        <GridItem badge={{ count: 1 }}></GridItem>
       </Grid>
     ));
     const badge = wrapper.find('.t-badge--basic ');
