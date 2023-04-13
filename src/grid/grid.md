@@ -20,10 +20,3 @@ description | String / Slot / Function | - | 文本以外的更多描述，辅�
 image | String / Object / Slot / Function | - | 图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件。TS 类型：`string \| object \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | vertical | 内容布局方式。可选项：vertical/horizontal | N
 text | String / Slot / Function | - | 文本，可以通过 Props 传入文本，也可以自定义标题节点。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-onClick | Function |  | TS 类型：`() => void`<br/>点击事件 | N
-
-### GridItem Events
-
-名称 | 参数 | 描述
--- | -- | --
-click | \- | 点击事件

@@ -34,6 +34,4 @@ export default {
   text: {
     type: [String, Function] as PropType<TdGridItemProps['text']>,
   },
-  /** 点击事件 */
-  onClick: Function as PropType<TdGridItemProps['onClick']>,
 };

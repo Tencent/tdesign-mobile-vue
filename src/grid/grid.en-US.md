@@ -20,10 +20,3 @@ description | String / Slot / Function | - | Typescript：`string \| TNode`。[s
 image | String / Object / Slot / Function | - | Typescript：`string \| object \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | vertical | options：vertical/horizontal | N
 text | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-onClick | Function |  | Typescript：`() => void`<br/> | N
-
-### GridItem Events
-
-name | params | description
--- | -- | --
-click | \- | \-

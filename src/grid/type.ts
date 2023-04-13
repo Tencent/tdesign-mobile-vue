@@ -57,8 +57,4 @@ export interface TdGridItemProps {
    * 文本，可以通过 Props 传入文本，也可以自定义标题节点
    */
   text?: string | TNode;
-  /**
-   * 点击事件
-   */
-  onClick?: () => void;
 }

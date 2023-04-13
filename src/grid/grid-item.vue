@@ -1,9 +1,5 @@
 <template>
-  <div
-    :class="[`${name}`, `${name}--${layout}`, { [`${name}--bordered`]: border }]"
-    :style="rootStyle"
-    @click="onClick"
-  >
+  <div :class="[`${name}`, `${name}--${layout}`, { [`${name}--bordered`]: border }]" :style="rootStyle">
     <t-badge
       v-if="badgeProps"
       :count="badgeProps.count"
@@ -55,7 +51,6 @@ export default defineComponent({
   name,
   components: { TNode, TBadge, TImage },
   props: gridItemProps,
-  emits: ['click'],
   setup(props, context) {
     const internalInstance = getCurrentInstance();
     const { column, border, align } = inject<any>('grid');
@@ -82,10 +77,6 @@ export default defineComponent({
       return column.value < 4 ? 'large' : 'middle';
     });
 
-    const onClick = () => {
-      context.emit('click');
-    };
-
     return {
       name,
       size,
@@ -95,7 +86,6 @@ export default defineComponent({
       imageContent,
       textContent,
       descContent,
-      onClick,
     };
   },
 });
