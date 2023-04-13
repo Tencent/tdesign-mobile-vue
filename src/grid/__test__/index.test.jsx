@@ -144,7 +144,7 @@ describe('grid-item', () => {
         <GridItem badgeProps={{ count: 1 }}></GridItem>
       </Grid>
     ));
-    const badge = wrapper.find('.t-badge__inner ');
+    const badge = wrapper.find('.t-badge--basic ');
     expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
     expect(badge.exists()).toBeTruthy();
     expect(badge.text()).toBe('1');
