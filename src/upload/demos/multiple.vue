@@ -1,10 +1,10 @@
 <template>
   <div class="upload-demo">
-    <div class="upload-title">多选上传图片</div>
+    <div class="upload-title">多选上传</div>
     <t-upload
-      v-model="files"
-      :multiple="true"
-      :max="max"
+      :default-files="files"
+      multiple
+      :max="10"
       :grid-config="gridConfig"
       :action="action"
       :on-fail="onFail"
@@ -47,24 +47,22 @@ const onRemove = ({ index, file, e }: UploadRemoveContext) => {
 const onSelectChange = (files: Array<UploadFile>) => {
   console.log('====onSelectChange', files);
 };
-const max = 10;
 const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
 const files = ref([
   {
-    url: 'https://tdesign.gtimg.com/site/upload1.png',
+    url: 'https://tdesign.gtimg.com/miniprogram/images/example4.png',
     name: 'uploaded1.png',
     type: 'image',
   },
   {
-    url: 'https://tdesign.gtimg.com/site/upload2.png',
+    url: 'https://tdesign.gtimg.com/miniprogram/images/example6.png',
     name: 'uploaded2.png',
     type: 'image',
   },
   {
-    url: 'https://tdesign.gtimg.com/site/upload1.png',
+    url: 'https://tdesign.gtimg.com/miniprogram/images/example5.png',
     name: 'uploaded3.png',
     type: 'image',
-    status: 'fail',
   },
 ]);
 </script>
@@ -72,10 +70,9 @@ const files = ref([
 .upload-demo {
   background: #fff;
   .upload-title {
-    font-family: PingFangSC-Regular;
-    font-size: 14px;
-    color: #999999;
-    padding: 12px 0 12px 16px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.9);
+    padding: 12px 16px 0;
   }
 }
 </style>
