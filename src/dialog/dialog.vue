@@ -93,7 +93,7 @@ export default defineComponent({
       width: typeof props.width === 'string' ? props.width : `${props.width}px`,
     }));
 
-    const dCloseIconClassName = computed(() => [`${name}__close--btn`]);
+    const dCloseIconClassName = computed(() => [`${name}__close-btn`]);
 
     const handleConfirm = () => {
       context.emit('update:visible', false);
