@@ -2,7 +2,7 @@
   <div :class="`${name}`">
     <div v-for="(file, index) in uploadedFiles" :key="index" :class="`${name}__item`">
       <t-image
-        :class="`${name}__card-image`"
+        :class="`${name}__image`"
         shape="round"
         v-bind="imageProps"
         :src="file.url"
@@ -47,7 +47,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
-import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon, RefreshIcon } from 'tdesign-icons-vue-next';
+import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
 import isFunction from 'lodash/isFunction';
 
@@ -59,7 +59,7 @@ import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from '
 import { SuccessContext, InnerProgressContext } from './interface';
 import UploadProps from './props';
 import config from '../config';
-import { isOverSizeLimit } from './util';
+import { isOverSizeLimit } from '../_common/js/upload/utils';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
@@ -87,6 +87,7 @@ export default defineComponent({
     'remove',
     'success',
     'select-change',
+    'validate',
   ],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
@@ -112,7 +113,6 @@ export default defineComponent({
       }
       return [];
     });
-    const errorMsg = ref('');
     const inputRef = ref<null | HTMLInputElement>(null);
 
     const triggerUpload = () => {
@@ -135,7 +135,9 @@ export default defineComponent({
 
     const handleChange = () => {
       const input = inputRef.value;
+
       if (props.disabled || !input || !input.files) return;
+
       const formatFiles = formatFileToUploadFile(input.files);
       emitEvent('select-change', [...formatFiles]);
       uploadFiles(formatFiles);
@@ -167,7 +169,11 @@ export default defineComponent({
       }
       return new Promise((resolve) => {
         if (props.sizeLimit) {
-          resolve(handleSizeLimit(file.size || 0));
+          const isOverSizeLimit = handleSizeLimit(file.size || 0);
+          if (isOverSizeLimit) {
+            emitEvent('validate', { type: 'FILE_OVER_SIZE_LIMIT', files: [file] });
+          }
+          resolve(!handleSizeLimit(file.size || 0));
         }
         resolve(true);
       });
@@ -182,13 +188,7 @@ export default defineComponent({
       } else {
         sizeLimit = { size: 0, unit: 'KB' };
       }
-      const isOverSize = isOverSizeLimit(fileSize, sizeLimit.size, sizeLimit.unit);
-      if (isOverSize) {
-        errorMsg.value = sizeLimit.message
-          ? sizeLimit.message
-          : `TDesign Upoad Error: uploaded picture exceeds ${props.sizeLimit}${sizeLimit.unit} restrictions`;
-      }
-      return isOverSize;
+      return isOverSizeLimit(fileSize, sizeLimit.size, sizeLimit.unit);
     };
 
     const uploadFiles = (files: File[]) => {
@@ -221,8 +221,18 @@ export default defineComponent({
           const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
 
           // 判断是否为重复文件条件，已选是否存在检验
-          if (props.allowUploadDuplicateFile || !toUploadFiles.value.find((file) => file.name === uploadFile.name)) {
+          if (props.allowUploadDuplicateFile) {
             newFiles.push(uploadFile);
+          } else {
+            const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
+            if (isDuplicated) {
+              emitEvent('validate', {
+                type: 'FILTER_FILE_SAME_NAME',
+                files: [uploadFile],
+              });
+            } else {
+              newFiles.push(uploadFile);
+            }
           }
           toUploadFiles.value = newFiles;
           if (props.autoUpload) {
@@ -262,7 +272,6 @@ export default defineComponent({
     };
 
     const handleRemove = (e: MouseEvent, file: UploadFile, index: number) => {
-      errorMsg.value = '';
       const files = uploadedFiles.value.concat();
       files.splice(index, 1);
       setInnerFiles(files, { e, trigger: 'remove', index, file });
@@ -275,7 +284,6 @@ export default defineComponent({
         console.error('TDesign Upload Error: one of action and requestMethod must be exist.');
         return;
       }
-      errorMsg.value = '';
       file.status = 'progress';
       // requestMethod 为父组件定义的自定义上传方法
       if (props.requestMethod) {
@@ -286,12 +294,13 @@ export default defineComponent({
           handleMockProgress(file);
         }
         const request = xhr;
+        const data = {
+          file: file.fileRaw,
+          ...props.data,
+        };
         xhrReq.value = request({
           action: props.action,
-          data: {
-            file: file.fileRaw,
-            ...props.data,
-          },
+          data: props.formatRequest ? props.formatRequest(data) : data,
           file,
           method: props.method,
           headers: props.headers || {},
@@ -388,7 +397,7 @@ export default defineComponent({
       if (!resFormatted && props.formatResponse && isFunction(props.formatResponse)) {
         res = props.formatResponse(response, { file });
       }
-      errorMsg.value = res?.error;
+      // errorMsg.value = res?.error;
       if (
         !uploadedFiles.value.find((item) => {
           return item.name === file.name;
@@ -410,7 +419,6 @@ export default defineComponent({
       innerFiles,
       xhrReq,
       toUploadFiles,
-      errorMsg,
       inputRef,
       uploadedFiles,
       defaultContent,

@@ -33,6 +33,8 @@ export default {
   data: {
     type: Object as PropType<TdUploadProps['data']>,
   },
+  /** 是否禁用 */
+  disabled: Boolean,
   /** 用于完全自定义文件列表内容 */
   fileListDisplay: {
     type: Function as PropType<TdUploadProps['fileListDisplay']>,
@@ -91,6 +93,11 @@ export default {
   sizeLimit: {
     type: [Number, Object] as PropType<TdUploadProps['sizeLimit']>,
   },
+  /** 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传。 */
+  useMockProgress: {
+    type: Boolean,
+    default: true,
+  },
   /** 上传请求时是否携带 cookie */
   withCredentials: Boolean,
   /** 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源 */
@@ -107,4 +114,6 @@ export default {
   onSelectChange: Function as PropType<TdUploadProps['onSelectChange']>,
   /** 上传成功后触发。<br/>`context.currentFiles` 表示当次请求上传的文件（无论成功或失败），`context.fileList` 表示上传成功后的文件，`context.response` 表示上传请求的返回数据。<br/>`context.results` 表示单次选择全部文件上传成功后的响应结果，可以在这个字段存在时提醒用户上传成功或失败。<br /> */
   onSuccess: Function as PropType<TdUploadProps['onSuccess']>,
+  /** 文件上传校验结束事件，文件数量超出、文件大小超出限制、文件同名、`beforeAllFilesUpload` 返回值为假、`beforeUpload` 返回值为假等场景会触发。<br/>注意：如果设置允许上传同名文件，即 `allowUploadDuplicateFile=true`，则不会因为文件重名触发该事件。<br/>结合 `status` 和 `tips` 可以在组件中呈现不同类型的错误（或告警）提示 */
+  onValidate: Function as PropType<TdUploadProps['onValidate']>,
 };

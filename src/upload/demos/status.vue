@@ -10,19 +10,6 @@
     </t-upload>
   </div>
 
-  <div class="upload-demo__title">重新上传</div>
-
-  <div class="upload-demo">
-    <div class="upload-title">上传图片</div>
-    <t-upload
-      :default-files="files"
-      :multiple="false"
-      accept="image/png"
-      action="//service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo"
-    >
-    </t-upload>
-  </div>
-
   <div class="upload-demo__title">上传失败</div>
 
   <div class="upload-demo">
