@@ -7,7 +7,7 @@
 import { ImageProps } from '../image';
 import { PlainObject, TNode, UploadDisplayDragEvents } from '../common';
 
-export interface TdUploadProps {
+export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
    * 接受上传的文件类型，[查看 W3C示例](https://www.w3schools.com/tags/att_input_accept.asp)，[查看 MDN 示例](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/file)
    * @default ''
