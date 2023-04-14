@@ -6,11 +6,13 @@
     :aria-disabled="disabled"
     :click="handleClick"
   >
-    <span v-if="prefixContent" :class="baseClass + '__prefix-icon ' + prefix + '-class-prefix-icon'">
+    <span v-if="prefixContent" :class="`${baseClass}__prefix-icon ${prefix}-class-prefix-icon`">
       <t-node :content="prefixContent"></t-node>
     </span>
-    {{ linkContent }}
-    <span v-if="suffixContent" :class="baseClass + '__prefix-icon ' + prefix + '-class-suffix-icon'">
+    <span :class="`${baseClass}__content`">
+      <t-node :content="linkContent"></t-node>
+    </span>
+    <span v-if="suffixContent" :class="`${baseClass}__prefix-icon ${prefix}-class-prefix-icon`">
       <t-node :content="suffixContent"></t-node>
     </span>
   </a>

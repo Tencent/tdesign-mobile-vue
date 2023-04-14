@@ -3,35 +3,35 @@
     <h1 class="title">Link 链接</h1>
     <p class="summary">当功能使用图标即可表意清楚时，可使用纯图标悬浮按钮，例如：添加、发布。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础文字链接">
-      <baseDemo />
+      <base-demo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="下划线文字链接">
-      <underline />
+      <underline-vue />
     </tdesign-demo-block>
     <tdesign-demo-block summary="前置图标文字链接">
-      <suffix />
+      <suffix-vue />
     </tdesign-demo-block>
     <tdesign-demo-block summary="后置图标文字链接">
-      <prefix />
+      <prefix-vue />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 组件状态" summary="不同主题">
-      <theme />
+      <theme-vue />
     </tdesign-demo-block>
     <tdesign-demo-block summary="禁用状态">
-      <disabled />
+      <status-vue />
     </tdesign-demo-block>
     <tdesign-demo-block title="03 组件样式" summary="链接尺寸">
-      <linkSize />
+      <link-size-vue />
     </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts" setup>
 import baseDemo from './base.vue';
-import disabled from './disabled.vue';
-import linkSize from './linkSize.vue';
-import prefix from './prefix.vue';
-import suffix from './suffix.vue';
-import theme from './theme.vue';
-import underline from './underline.vue';
+import statusVue from './status.vue';
+import linkSizeVue from './linkSize.vue';
+import prefixVue from './prefix.vue';
+import suffixVue from './suffix.vue';
+import themeVue from './theme.vue';
+import underlineVue from './underline.vue';
 </script>

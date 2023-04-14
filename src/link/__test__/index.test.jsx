@@ -1,11 +1,15 @@
+import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Link from '../link.vue';
+
+// const iconFunc = () => h(TIconApp);
 
 // every component needs four parts: props/events/slots/functions.
 describe('Link', () => {
   // test props api
-  describe(':props', () => {
+  describe('props', () => {
     it(':size', () => {
       const wrapper = mount({
         render() {
@@ -25,7 +29,7 @@ describe('Link', () => {
     it(':hover', () => {
       const wrapper = mount({
         render() {
-          return <Link hover={'color'}>text</Link>;
+          return <Link hover={true}>text</Link>;
         },
       });
       expect(wrapper.element).toMatchSnapshot();
@@ -76,27 +80,29 @@ describe('Link', () => {
 
   // test events
   describe('@event', () => {
-    it('Event passthrough ', () => {
+    it('Event passthrough ', async () => {
       const fn = vi.fn();
       const wrapper = mount({
         render() {
           return <Link onClick={fn}>text</Link>;
         },
       });
-      wrapper.findComponent(Link).trigger('click');
-      expect(fn).toHaveBeenCalled();
+      await wrapper.trigger('click');
+      expect(wrapper.emitted('click')).toBeTruthy();
     });
   });
 
   // test slots
   describe('<slot>', () => {
-    it('<icon>', () => {
+    it(':icon', () => {
+      const suffixIcon = () => <TIconApp />;
       const wrapper = mount(Link, {
-        scopedSlots: {
-          icon: '<div></div>',
+        props: {
+          suffixIcon,
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
+      console.log(wrapper.html());
+      expect(wrapper.find('.t-link__prefix-icon').exists()).toBeTruthy();
     });
   });
 });

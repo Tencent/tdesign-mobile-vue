@@ -4,20 +4,20 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/link/demos/base.vue';
-import disabledVue from '@/link/demos/disabled.vue';
 import linkSizeVue from '@/link/demos/linkSize.vue';
 import mobileVue from '@/link/demos/mobile.vue';
 import prefixVue from '@/link/demos/prefix.vue';
+import statusVue from '@/link/demos/status.vue';
 import suffixVue from '@/link/demos/suffix.vue';
 import themeVue from '@/link/demos/theme.vue';
 import underlineVue from '@/link/demos/underline.vue';
 
 const mapper = {
   baseVue,
-  disabledVue,
   linkSizeVue,
   mobileVue,
   prefixVue,
+  statusVue,
   suffixVue,
   themeVue,
   underlineVue,

@@ -1,13 +1,131 @@
 // Vitest Snapshot v1
 
-exports[`Link > <slot> > <icon> 1`] = `
+exports[`Link > props > :content 1`] = `
+<div>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium"
+    target=""
+  >
+    <!--v-if-->
+    
+    bar
+    
+    <!--v-if-->
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium"
+    target=""
+  >
+    <!--v-if-->
+    
+    bar
+    
+    <!--v-if-->
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium"
+    target=""
+  >
+    <!--v-if-->
+    
+    bar
+    
+    <!--v-if-->
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium"
+    target=""
+  >
+    <!--v-if-->
+    
+    bar
+    
+    <!--v-if-->
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium"
+    target=""
+  >
+    <!--v-if-->
+    
+    bar
+    
+    <!--v-if-->
+  </a>
+</div>
+`;
+
+exports[`Link > props > :disabled 1`] = `
 <a
-  aria-disabled="false"
-  class="t-link t-link--default t-link--medium"
+  aria-disabled="true"
+  class="t-link t-link--default t-link--medium t-link--disabled"
   target=""
 >
   <!--v-if-->
-    
+  
+  text
+  
+  <!--v-if-->
+</a>
+`;
+
+exports[`Link > props > :hover 1`] = `
+<a
+  aria-disabled="false"
+  class="t-link t-link--default t-link--medium t-link--hover"
+  target=""
+>
+  <!--v-if-->
+  
+  text
+  
+  <!--v-if-->
+</a>
+`;
+
+exports[`Link > props > :size 1`] = `
+<a
+  aria-disabled="false"
+  class="t-link t-link--default t-link--large"
+  target=""
+>
+  <!--v-if-->
+  
+  text
+  
+  <!--v-if-->
+</a>
+`;
+
+exports[`Link > props > :theme 1`] = `
+<a
+  aria-disabled="false"
+  class="t-link t-link--primary t-link--medium"
+  target=""
+>
+  <!--v-if-->
+  
+  text
+  
+  <!--v-if-->
+</a>
+`;
+
+exports[`Link > props > :underline 1`] = `
+<a
+  aria-disabled="false"
+  class="t-link t-link--default t-link--medium t-link--underline"
+  target=""
+>
+  <!--v-if-->
+  
+  text
+  
   <!--v-if-->
 </a>
 `;

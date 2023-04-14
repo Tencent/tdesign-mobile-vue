@@ -1,5 +1,5 @@
-import { withInstall, WithInstallType } from '../shared';
 import Link from './link.vue';
+import { withInstall, WithInstallType } from '../shared';
 
 import './style';
 import { TdLinkProps } from './type';
