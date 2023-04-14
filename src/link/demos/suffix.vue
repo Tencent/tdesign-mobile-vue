@@ -24,5 +24,6 @@ import { JumpIcon } from 'tdesign-icons-vue-next';
   display: flex;
   justify-content: space-around;
   margin-bottom: 6.4vw;
+  align-items: center;
 }
 </style>

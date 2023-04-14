@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-link-demo">
-    <t-link theme="primary">
+    <t-link theme="primary" underline hover>
       <template #prefixIcon>
         <link-icon />
       </template>
@@ -25,5 +25,6 @@ import { LinkIcon } from 'tdesign-icons-vue-next';
   display: flex;
   justify-content: space-around;
   margin-bottom: 6.4vw;
+  align-items: center;
 }
 </style>
