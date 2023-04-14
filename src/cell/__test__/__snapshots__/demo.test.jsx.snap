@@ -331,9 +331,16 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-badge"
             >
               <div
-                class="t-badge__inner t-badge--medium t-badge--circle"
+                class="t-badge__content"
               >
-                16
+                <!---->
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <!--v-if-->
+                 16 
+                <!--v-if-->
               </div>
               <!---->
             </div>
@@ -649,9 +656,16 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
               class="t-badge"
             >
               <div
-                class="t-badge__inner t-badge--medium t-badge--circle"
+                class="t-badge__content"
               >
-                16
+                <!---->
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <!--v-if-->
+                 16 
+                <!--v-if-->
               </div>
               <!---->
             </div>
@@ -990,7 +1004,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             
             <img
               class="t-cell__left-image"
-              src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+              src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
             />
             
           </div>
@@ -1343,9 +1357,16 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
         class="t-badge"
       >
         <div
-          class="t-badge__inner t-badge--medium t-badge--circle"
+          class="t-badge__content"
         >
-          16
+          <!---->
+        </div>
+        <div
+          class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+        >
+          <!--v-if-->
+           16 
+          <!--v-if-->
         </div>
         <!---->
       </div>
@@ -1684,7 +1705,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       
       <img
         class="t-cell__left-image"
-        src="https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png"
+        src="https://tdesign.gtimg.com/miniprogram/images/example1.png"
       />
       
     </div>
@@ -1818,9 +1839,16 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
         class="t-badge"
       >
         <div
-          class="t-badge__inner t-badge--medium t-badge--circle"
+          class="t-badge__content"
         >
-          16
+          <!---->
+        </div>
+        <div
+          class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+        >
+          <!--v-if-->
+           16 
+          <!--v-if-->
         </div>
         <!---->
       </div>

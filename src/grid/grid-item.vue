@@ -1,27 +1,27 @@
 <template>
-  <div :class="rootClass" :style="rootStyle">
-    <div :class="`${name}__image-box`">
-      <t-badge
-        v-if="badgeProps"
-        :count="badgeProps.count"
-        :max-count="badgeProps.maxCount"
-        :dot="badgeProps.dot"
-        :content="badgeProps.content"
-        :size="badgeProps.size"
-        :offset="badgeProps.offset"
-      >
-        <img v-if="image && typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
-        <t-node v-else :content="imageContent"></t-node>
-      </t-badge>
-      <img v-if="image && typeof image === 'string'" :src="image" :class="`${name}__image`" :style="imgStyle" />
-      <t-node v-else :content="imageContent"></t-node>
-    </div>
-    <div :class="`${name}__text`" :style="textStyle">
-      <div :class="`${name}__title`" :style="titleStyle">
-        <t-node :content="textContent"></t-node>
+  <div :class="[`${name}`, `${name}--${layout}`, { [`${name}--bordered`]: border }]" :style="rootStyle">
+    <t-badge v-if="badge" v-bind="badge">
+      <t-image
+        v-if="realImage"
+        shape="round"
+        v-bind="realImage"
+        :class="[`${name}__image`, `${name}__image--${size}`]"
+      />
+      <t-node v-else :content="imageContent" />
+    </t-badge>
+    <t-image
+      v-else-if="realImage"
+      shape="round"
+      v-bind="realImage"
+      :class="[`${name}__image`, `${name}__image--${size}`]"
+    />
+    <t-node v-else :content="imageContent" />
+    <div :class="[`${name}__content`, `${name}__content--${layout}`]">
+      <div :class="[`${name}__title`, `${name}__title--${size}`]">
+        <t-node :content="textContent" />
       </div>
-      <div :class="`${name}__description`">
-        <t-node :content="descContent"></t-node>
+      <div :class="[`${name}__description`, [`${name}__description--${layout}`]]">
+        <t-node :content="descContent" />
       </div>
     </div>
   </div>
@@ -29,6 +29,10 @@
 
 <script lang="ts">
 import { defineComponent, getCurrentInstance, computed, inject } from 'vue';
+import isObject from 'lodash/isObject';
+import isString from 'lodash/isString';
+
+import TImage from '../image';
 import TBadge from '../badge';
 import config from '../config';
 import gridItemProps from './grid-item-props';
@@ -39,79 +43,47 @@ const name = `${prefix}-grid-item`;
 
 export default defineComponent({
   name,
-  components: { TNode, TBadge },
+  components: { TNode, TBadge, TImage },
   props: gridItemProps,
   setup(props) {
     const internalInstance = getCurrentInstance();
-    const isHorz = props.layout === 'horizontal';
-    const { column, gutter, border, align } = inject<any>('grid');
+    const { column, border, align } = inject<any>('grid');
 
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
     const textContent = computed(() => renderTNode(internalInstance, 'text'));
     const descContent = computed(() => renderTNode(internalInstance, 'description'));
 
-    const rootClass = computed(() => [`${name}`, { [`${name}--bordered`]: border.value }]);
+    const rootClass = computed(() => [`${name}`, `${name}--${props.layout}`]);
 
     const rootStyle = computed(() => {
-      const percent = `${100 / +column.value}%`;
-      const borderStyle = {};
-      if (border.value) {
-        if (typeof border.value !== 'boolean') {
-          const { color, width, style } = border.value;
-          return {
-            borderColor: color,
-            borderWidth: width,
-            borderStyle: style,
-          };
-        }
-      }
-
-      const style = {
-        flexBasis: percent,
-        flexDirection: isHorz ? ('row' as const) : ('column' as const),
-        paddingLeft: gutter.value ? `${gutter.value}px` : 0,
-        paddingRight: gutter.value ? `${gutter.value}px` : 0,
-        alignItems: 'center',
-        justifyContent: 'center',
+      const percent = column.value > 0 ? `${100 / +column.value}%` : 0;
+      const style: Record<string, any> = {
         textAlign: ['center', 'left'].includes(align.value) ? align.value : 'center',
-        ...borderStyle,
       };
+      if (percent !== 0) {
+        style.flexBasis = percent;
+      }
       return style;
     });
 
-    const imgStyle = computed(() => {
-      let imgSize = 32;
-      if (column.value >= 5) {
-        imgSize = 28;
-      } else if (column.value <= 3) {
-        imgSize = 48;
-      }
-      return {
-        width: `${imgSize}px`,
-        height: `${imgSize}px`,
-      };
+    const size = computed(() => {
+      if (column.value > 4) return 'small';
+      return column.value < 4 ? 'large' : 'middle';
     });
 
-    const textStyle = computed(() => {
-      return {
-        paddingLeft: isHorz ? '12px' : 0,
-      };
-    });
-
-    const titleStyle = computed(() => {
-      return {
-        paddingTop: isHorz ? 0 : '8px',
-        marginBottom: '4px',
-      };
+    const realImage = computed(() => {
+      if (isString(props.image)) return { src: props.image };
+      if (isObject(props.image)) return props.image;
+      return null;
     });
 
     return {
       name,
+      size,
+      border,
       rootStyle,
       rootClass,
-      imgStyle,
-      textStyle,
-      titleStyle,
+      realImage,
       imageContent,
       textContent,
       descContent,
