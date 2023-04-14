@@ -9,6 +9,7 @@ exports[`Link > Link baseVue demo works fine 1`] = `
     aria-disabled="false"
     class="t-link t-link--primary t-link--medium"
     data-v-8b54d308=""
+    href="http://www.qq.com"
     target=""
   >
     <!--v-if-->
@@ -23,7 +24,7 @@ exports[`Link > Link baseVue demo works fine 1`] = `
   </a>
   <a
     aria-disabled="false"
-    class="t-link t-link--default t-link--medium"
+    class="t-link t-link--default t-link--medium t-link--hover"
     data-v-8b54d308=""
     target=""
   >
@@ -211,6 +212,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium"
           data-v-8b54d308=""
+          href="http://www.qq.com"
           target=""
         >
           <!--v-if-->
@@ -225,7 +227,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         </a>
         <a
           aria-disabled="false"
-          class="t-link t-link--default t-link--medium"
+          class="t-link t-link--default t-link--medium t-link--hover"
           data-v-8b54d308=""
           target=""
         >
@@ -282,7 +284,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         </a>
         <a
           aria-disabled="false"
-          class="t-link t-link--default t-link--medium t-link--underline"
+          class="t-link t-link--default t-link--medium t-link--underline t-link--hover"
           data-v-ed7bec9e=""
           target=""
         >
@@ -1767,7 +1769,7 @@ exports[`Link > Link underlineVue demo works fine 1`] = `
   </a>
   <a
     aria-disabled="false"
-    class="t-link t-link--default t-link--medium t-link--underline"
+    class="t-link t-link--default t-link--medium t-link--underline t-link--hover"
     data-v-ed7bec9e=""
     target=""
   >

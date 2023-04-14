@@ -4,7 +4,7 @@
     :target="target"
     :class="linkClass"
     :aria-disabled="disabled"
-    :click="handleClick"
+    @click="handleClick"
   >
     <span v-if="prefixContent" :class="`${baseClass}__prefix-icon ${prefix}-class-prefix-icon`">
       <t-node :content="prefixContent"></t-node>
@@ -33,7 +33,6 @@ export default defineComponent({
     TNode,
   },
   props: LinkProps,
-  emits: ['click'],
   setup(props, context) {
     const baseClass = name;
     const emitEvent = useEmitEvent(props, context.emit);
@@ -45,7 +44,6 @@ export default defineComponent({
     const handleClick = (e: MouseEvent) => {
       if (props.disabled) return;
       emitEvent('click', e);
-      props.onClick?.(e);
     };
 
     const linkClass = [

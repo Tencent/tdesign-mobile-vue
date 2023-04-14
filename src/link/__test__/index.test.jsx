@@ -101,7 +101,6 @@ describe('Link', () => {
           suffixIcon,
         },
       });
-      console.log(wrapper.html());
       expect(wrapper.find('.t-link__prefix-icon').exists()).toBeTruthy();
     });
   });

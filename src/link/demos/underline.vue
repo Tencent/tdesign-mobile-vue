@@ -1,10 +1,14 @@
 <template>
   <div class="tdesign-mobile-link-demo">
-    <t-link theme="primary" underline>跳转链接</t-link>
-    <t-link underline>跳转链接</t-link>
+    <t-link theme="primary" underline @click="clickHandle">跳转链接</t-link>
+    <t-link underline hover>跳转链接</t-link>
   </div>
 </template>
-
+<script lang="ts" setup>
+const clickHandle = () => {
+  console.log('click');
+};
+</script>
 <style scoped>
 .tdesign-mobile-link-demo {
   height: 12.8vw;
