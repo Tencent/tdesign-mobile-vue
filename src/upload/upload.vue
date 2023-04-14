@@ -1,42 +1,38 @@
 <template>
-  <div>
-    <ul :class="`${UPLOAD_NAME}__card`">
-      <li v-for="(file, index) in uploadedFiles" :key="index" :class="`${UPLOAD_NAME}__card-item`" :style="itemStyle">
-        <div :class="`${UPLOAD_NAME}__card-content ${UPLOAD_NAME}__card-box`" :style="itemContentStyle">
-          <div
-            key="delete-icon"
-            :class="`${UPLOAD_NAME}__card-delete-item`"
-            @click="(e) => handleRemove(e, file, index)"
-          >
-            <template v-if="deleteBtnContent">
-              <t-node :content="deleteBtnContent"></t-node>
-            </template>
-            <template v-else>
-              <close-icon class="close-icon" />
-            </template>
-          </div>
-          <img :class="`${UPLOAD_NAME}__card-image`" :src="file.url" @click="(e) => handlePreview(e, file)" />
-          <!--上传失败时，reload重试-->
-          <div v-if="file.status === 'fail'" :class="`${UPLOAD_NAME}__card-mask`">
-            <span key="refresh-icon" :class="`${UPLOAD_NAME}__card-mask-item`">
-              <refresh-icon @click="handleReload(file)" />
-            </span>
-          </div>
-        </div>
-      </li>
-      <template v-if="defaultContent">
-        <div @click="triggerUpload">
-          <t-node :content="defaultContent"></t-node>
-        </div>
-      </template>
-      <template v-else>
-        <li :class="`${UPLOAD_NAME}__card-item`" @click="triggerUpload">
-          <div :class="`${UPLOAD_NAME}__card-container ${UPLOAD_NAME}__card-box`">
-            <add-icon></add-icon>
-          </div>
-        </li>
-      </template>
-    </ul>
+  <div :class="`${name}`">
+    <div v-for="(file, index) in uploadedFiles" :key="index" :class="`${name}__item`">
+      <t-image
+        :class="`${name}__image`"
+        shape="round"
+        v-bind="imageProps"
+        :src="file.url"
+        @click="(e) => handlePreview(e, file)"
+      />
+      <div
+        v-if="file.status === 'fail' || file.status === 'progress'"
+        data-index="{{index}}"
+        :class="`${name}__progress-mask`"
+        data-file="{{file}}"
+        bind:tap="onFileClick"
+      >
+        <template v-if="file.status === 'progress'">
+          <loading-icon :class="`${name}__progress-loading`" size="24" aria-hidden />
+          <div :class="`${name}__progress-text`">{{ file.percent ? file.percent + '%' : '上传中...' }}</div>
+        </template>
+        <close-circle-icon v-else size="24" aria-hidden />
+        <div v-if="file.status === 'fail'" :class="`${name}__progress-text`">上传失败</div>
+      </div>
+      <close-icon :class="`${name}__delete-btn`" @click="({ e }) => handleRemove(e, file, index)" />
+    </div>
+    <template v-if="max === 0 || (max > 0 && uploadedFiles?.length < max)">
+      <div v-if="defaultContent" @click="triggerUpload">
+        <t-node :content="defaultContent" />
+      </div>
+      <div v-else :class="`${name}__item ${name}__item--add`" @click="triggerUpload">
+        <add-icon size="28" :class="`${name}__add-icon`" />
+      </div>
+    </template>
+
     <input
       ref="inputRef"
       :value="files"
@@ -46,24 +42,24 @@
       :accept="accept"
       @change="handleChange"
     />
-    <t-image-viewer v-model:images="images" v-model="showViewer" :initial-index="initialIndex"></t-image-viewer>
+    <t-image-viewer v-model:images="images" v-model="showViewer" :initial-index="initialIndex" />
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, getCurrentInstance, ref, Ref, toRefs, computed, ComputedRef } from 'vue';
-import { AddIcon, CloseIcon, RefreshIcon } from 'tdesign-icons-vue-next';
+import { AddIcon, LoadingIcon, CloseIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import findIndex from 'lodash/findIndex';
-import isObject from 'lodash/isObject';
 import isFunction from 'lodash/isFunction';
 
+import TImage from '../image';
+import TImageViewer from '../image-viewer';
 import xhr from '../_common/js/upload/xhr';
 import { useDefault, useEmitEvent, renderTNode, TNode } from '../shared';
 import { TdUploadProps, UploadFile, RequestMethodResponse, SizeLimitObj } from './type';
 import { SuccessContext, InnerProgressContext } from './interface';
 import UploadProps from './props';
 import config from '../config';
-import { isOverSizeLimit } from './util';
-import TImageViewer from '../image-viewer';
+import { isOverSizeLimit } from '../_common/js/upload/utils';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
@@ -73,9 +69,11 @@ export default defineComponent({
   name,
   components: {
     AddIcon,
+    LoadingIcon,
+    CloseCircleIcon,
     TNode,
     CloseIcon,
-    RefreshIcon,
+    TImage,
     TImageViewer,
   },
   props: UploadProps,
@@ -89,6 +87,7 @@ export default defineComponent({
     'remove',
     'success',
     'select-change',
+    'validate',
   ],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
@@ -100,11 +99,9 @@ export default defineComponent({
     );
     const internalInstance = getCurrentInstance();
     const defaultContent = computed(() => renderTNode(internalInstance, 'default'));
-    const deleteBtnContent = computed(() => renderTNode(internalInstance, 'deleteBtn'));
     const images: Ref<Array<string>> = ref([]);
     const showViewer = ref(false);
     const initialIndex = ref(0);
-    const UPLOAD_NAME = name;
     const xhrReq = ref<XMLHttpRequest | null>(null);
     // 等待上传的文件
     const toUploadFiles: Ref<Array<UploadFile>> = ref([]);
@@ -116,32 +113,7 @@ export default defineComponent({
       }
       return [];
     });
-    const errorMsg = ref('');
     const inputRef = ref<null | HTMLInputElement>(null);
-
-    const itemStyle = computed(() => {
-      const { gridConfig } = toRefs(props);
-      let column = 4;
-      if (isObject(gridConfig.value)) {
-        ({ column } = gridConfig.value as any);
-      }
-      return {
-        flexBasis: `${100 / +column}%`,
-      };
-    });
-
-    const itemContentStyle = computed(() => {
-      let width = 80;
-      let height = 80;
-      const { gridConfig } = toRefs(props);
-      if (isObject(gridConfig.value)) {
-        ({ width, height } = gridConfig.value as any);
-      }
-      return {
-        height: `${height}px`,
-        width: `${width}px`,
-      };
-    });
 
     const triggerUpload = () => {
       const input = inputRef.value as HTMLInputElement;
@@ -163,7 +135,9 @@ export default defineComponent({
 
     const handleChange = () => {
       const input = inputRef.value;
+
       if (props.disabled || !input || !input.files) return;
+
       const formatFiles = formatFileToUploadFile(input.files);
       emitEvent('select-change', [...formatFiles]);
       uploadFiles(formatFiles);
@@ -195,7 +169,11 @@ export default defineComponent({
       }
       return new Promise((resolve) => {
         if (props.sizeLimit) {
-          resolve(handleSizeLimit(file.size));
+          const isOverSizeLimit = handleSizeLimit(file.size || 0);
+          if (isOverSizeLimit) {
+            emitEvent('validate', { type: 'FILE_OVER_SIZE_LIMIT', files: [file] });
+          }
+          resolve(!handleSizeLimit(file.size || 0));
         }
         resolve(true);
       });
@@ -210,13 +188,7 @@ export default defineComponent({
       } else {
         sizeLimit = { size: 0, unit: 'KB' };
       }
-      const isOverSize = isOverSizeLimit(fileSize, sizeLimit.size, sizeLimit.unit);
-      if (isOverSize) {
-        errorMsg.value = sizeLimit.message
-          ? sizeLimit.message
-          : `TDesign Upoad Error: uploaded picture exceeds ${props.sizeLimit}${sizeLimit.unit} restrictions`;
-      }
-      return isOverSize;
+      return isOverSizeLimit(fileSize, sizeLimit.size, sizeLimit.unit);
     };
 
     const uploadFiles = (files: File[]) => {
@@ -249,8 +221,18 @@ export default defineComponent({
           const newFiles: Array<UploadFile> = toUploadFiles.value.concat();
 
           // 判断是否为重复文件条件，已选是否存在检验
-          if (props.allowUploadDuplicateFile || !toUploadFiles.value.find((file) => file.name === uploadFile.name)) {
+          if (props.allowUploadDuplicateFile) {
             newFiles.push(uploadFile);
+          } else {
+            const isDuplicated = toUploadFiles.value.some((file) => file.name === uploadFile.name);
+            if (isDuplicated) {
+              emitEvent('validate', {
+                type: 'FILTER_FILE_SAME_NAME',
+                files: [uploadFile],
+              });
+            } else {
+              newFiles.push(uploadFile);
+            }
           }
           toUploadFiles.value = newFiles;
           if (props.autoUpload) {
@@ -263,6 +245,7 @@ export default defineComponent({
     /** 模拟进度条 Mock Progress */
     const handleMockProgress = (file: UploadFile) => {
       const timer = setInterval(() => {
+        file.percent = file.percent ?? 0;
         if (file.status === 'success' || file.percent >= 99) {
           clearInterval(timer);
           return;
@@ -289,7 +272,6 @@ export default defineComponent({
     };
 
     const handleRemove = (e: MouseEvent, file: UploadFile, index: number) => {
-      errorMsg.value = '';
       const files = uploadedFiles.value.concat();
       files.splice(index, 1);
       setInnerFiles(files, { e, trigger: 'remove', index, file });
@@ -302,7 +284,6 @@ export default defineComponent({
         console.error('TDesign Upload Error: one of action and requestMethod must be exist.');
         return;
       }
-      errorMsg.value = '';
       file.status = 'progress';
       // requestMethod 为父组件定义的自定义上传方法
       if (props.requestMethod) {
@@ -313,12 +294,13 @@ export default defineComponent({
           handleMockProgress(file);
         }
         const request = xhr;
+        const data = {
+          file: file.fileRaw,
+          ...props.data,
+        };
         xhrReq.value = request({
           action: props.action,
-          data: {
-            file: file.fileRaw,
-            ...props.data,
-          },
+          data: props.formatRequest ? props.formatRequest(data) : data,
           file,
           method: props.method,
           headers: props.headers || {},
@@ -415,7 +397,7 @@ export default defineComponent({
       if (!resFormatted && props.formatResponse && isFunction(props.formatResponse)) {
         res = props.formatResponse(response, { file });
       }
-      errorMsg.value = res?.error;
+      // errorMsg.value = res?.error;
       if (
         !uploadedFiles.value.find((item) => {
           return item.name === file.name;
@@ -429,7 +411,7 @@ export default defineComponent({
 
     return {
       ...toRefs(props),
-      UPLOAD_NAME,
+      name,
       images,
       showViewer,
       initialIndex,
@@ -437,13 +419,9 @@ export default defineComponent({
       innerFiles,
       xhrReq,
       toUploadFiles,
-      errorMsg,
       inputRef,
       uploadedFiles,
-      deleteBtnContent,
       defaultContent,
-      itemStyle,
-      itemContentStyle,
       emitEvent,
       setInnerFiles,
       triggerUpload,
