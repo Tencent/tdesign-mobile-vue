@@ -1079,3 +1079,401 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
   </div>
 </div>
 `;
+
+exports[`Upload > Upload statusVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="upload-demo"
+    data-v-12872376=""
+  >
+    <div
+      class="upload-title"
+      data-v-12872376=""
+    >
+      上传图片
+    </div>
+    <div
+      class="t-upload"
+      data-v-12872376=""
+    >
+      
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/site/upload1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <div
+          bind:tap="onFileClick"
+          class="t-upload__progress-mask"
+          data-file="{{file}}"
+          data-index="{{index}}"
+        >
+          
+          <svg
+            aria-hidden=""
+            class="t-icon t-icon-loading t-upload__progress-loading"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传中...
+          </div>
+          
+          <!--v-if-->
+        </div>
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/site/upload1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <div
+          bind:tap="onFileClick"
+          class="t-upload__progress-mask"
+          data-file="{{file}}"
+          data-index="{{index}}"
+        >
+          
+          <svg
+            aria-hidden=""
+            class="t-icon t-icon-loading t-upload__progress-loading"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            68%
+          </div>
+          
+          <!--v-if-->
+        </div>
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      
+      
+      <div
+        class="t-upload__item t-upload__item--add"
+      >
+        <svg
+          class="t-icon t-icon-add t-upload__add-icon"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      
+      <input
+        accept="image/png"
+        hidden=""
+        type="file"
+      />
+      <transition-stub
+        appear="false"
+        class="t-image-viewer"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+    </div>
+  </div>
+  <div
+    class="upload-demo__title"
+    data-v-12872376=""
+  >
+    上传失败
+  </div>
+  <div
+    class="upload-demo"
+    data-v-12872376=""
+  >
+    <div
+      class="upload-title"
+      data-v-12872376=""
+    >
+      上传图片
+    </div>
+    <div
+      class="t-upload"
+      data-v-12872376=""
+    >
+      
+      <div
+        class="t-upload__item"
+      >
+        <div
+          class="t-image t-image--round t-upload__image"
+        >
+          <div
+            class="t-image__mask"
+          >
+            <div
+              class="t-loading"
+              style="font-size: 20px;"
+            >
+              
+              <div
+                class="t-loading__dots"
+                style="animation-duration: 800ms; width: 20px; height: 20px;"
+              >
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                />
+                <div
+                  class="t-loading__dot"
+                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                />
+              </div>
+              
+              <!--v-if-->
+              <!---->
+            </div>
+          </div>
+          <picture>
+            <!--v-if-->
+            <img
+              alt=""
+              class="t-image__img"
+              src="https://tdesign.gtimg.com/site/upload1.png"
+              style="object-fit: fill; object-position: center;"
+            />
+          </picture>
+        </div>
+        <div
+          bind:tap="onFileClick"
+          class="t-upload__progress-mask"
+          data-file="{{file}}"
+          data-index="{{index}}"
+        >
+          <svg
+            aria-hidden=""
+            class="t-icon t-icon-close-circle"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M4.98 10.31L7.3 8 5 5.69l.7-.7L8 7.28 10.31 5l.7.7L8.72 8l2.3 2.31-.7.7L8 8.72 5.69 11l-.7-.7z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+            <path
+              d="M8 1a7 7 0 110 14A7 7 0 018 1zm0 1a6 6 0 100 12A6 6 0 008 2z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <div
+            class="t-upload__progress-text"
+          >
+            上传失败
+          </div>
+        </div>
+        <svg
+          class="t-icon t-icon-close t-upload__delete-btn"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      
+      
+      <div
+        class="t-upload__item t-upload__item--add"
+      >
+        <svg
+          class="t-icon t-icon-add t-upload__add-icon"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
+      
+      <input
+        accept="image/png"
+        hidden=""
+        type="file"
+      />
+      <transition-stub
+        appear="false"
+        class="t-image-viewer"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+    </div>
+  </div>
+  
+</div>
+`;
