@@ -90,11 +90,7 @@ const isShowDialog5 = ref(false);
 const isShowDialog6 = ref(false);
 
 const isShowDialog7 = ref(false);
-const actions = [
-  { content: '次要按钮1', theme: 'danger' },
-  { content: '次要按钮2', theme: 'danger' },
-  { content: '主要按钮', theme: 'primary' },
-];
+const actions = [{ content: '次要按钮' }, { content: '次要按钮' }, { content: '主要按钮', theme: 'primary' }];
 
 const isShowDialog8 = ref(false);
 const onConfirm = () => {
