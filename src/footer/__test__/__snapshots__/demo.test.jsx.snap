@@ -182,6 +182,11 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
   >
     Footer 页脚
   </h1>
+  <p
+    class="summary"
+  >
+    用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+  </p>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >

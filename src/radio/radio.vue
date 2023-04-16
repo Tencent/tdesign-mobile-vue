@@ -41,6 +41,7 @@ import { renderContent, renderTNode, TNode, NOOP, useVModel } from '../shared';
 import config from '../config';
 import RadioProps from './props';
 import { RadioValue, TdRadioGroupProps } from './type';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-radio`;
@@ -63,9 +64,12 @@ export default defineComponent({
     const rootGroupProps = inject('rootGroupProps', {}) as TdRadioGroupProps;
     const rootGroupValue = inject<Ref<RadioValue>>('rootGroupValue');
     const rootGroupChange = inject('rootGroupChange', NOOP) as (val: RadioValue, e: Event) => void;
+
+    const formDisabled = useFormDisabled();
+
     const disabled = computed(() => {
-      if (props.disabled == null) return rootGroupProps.disabled;
-      return props.disabled;
+      if (formDisabled.value == null) return rootGroupProps.disabled;
+      return formDisabled.value;
     });
     const radioChecked = computed(() => innerChecked.value || props.value === rootGroupValue?.value);
     const finalBorderless = computed(() => {

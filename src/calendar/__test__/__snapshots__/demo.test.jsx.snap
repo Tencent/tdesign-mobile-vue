@@ -2346,7 +2346,7 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -4736,7 +4736,7 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -5239,7 +5239,7 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -6291,7 +6291,7 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -8716,7 +8716,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--teleport end-->
           </div>
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-cell t-cell--middle t-cell--borderless"
           >
             <div
               class="t-cell__left"
@@ -11100,7 +11100,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--teleport end-->
           </div>
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-cell t-cell--middle t-cell--borderless"
           >
             <div
               class="t-cell__left"
@@ -13484,7 +13484,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--teleport end-->
           </div>
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-cell t-cell--middle t-cell--borderless"
           >
             <div
               class="t-cell__left"
@@ -14554,7 +14554,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <!--teleport end-->
       </div>
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -16938,7 +16938,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <!--teleport end-->
       </div>
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -17434,7 +17434,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         <!--teleport end-->
       </div>
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -19842,7 +19842,7 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -22229,7 +22229,7 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     <!--teleport end-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"

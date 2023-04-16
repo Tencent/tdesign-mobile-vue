@@ -6,7 +6,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -175,7 +175,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
     data-v-049f57a8=""
   >
     <div
@@ -215,7 +215,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
     data-v-049f57a8=""
   >
     <div
@@ -566,7 +566,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
     <!--v-if-->
     
     <div
-      class="t-cell t-cell--middle t-cell--bordered"
+      class="t-cell t-cell--middle t-cell--borderless"
     >
       <div
         class="t-cell__left"
@@ -783,7 +783,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
         data-v-049f57a8=""
       >
         <div
@@ -823,7 +823,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
         data-v-049f57a8=""
       >
         <div
@@ -1161,7 +1161,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
       >
         <div
           class="t-cell__left"
@@ -1344,7 +1344,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       <!-- &lt;CasCadeDemo /&gt; -->
       
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
         data-v-7ee35211=""
       >
         <div
@@ -1384,7 +1384,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
         </div>
       </div>
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-cell t-cell--middle t-cell--borderless"
         data-v-7ee35211=""
       >
         <div
@@ -1546,7 +1546,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
     data-v-7ee35211=""
   >
     <div
@@ -1586,7 +1586,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
     data-v-7ee35211=""
   >
     <div

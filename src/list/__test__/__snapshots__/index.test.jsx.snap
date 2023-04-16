@@ -7,7 +7,7 @@ exports[`list > event > : load-more 1`] = `
   <!---->
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -30,7 +30,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -53,7 +53,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -76,7 +76,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -99,7 +99,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -122,7 +122,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -145,7 +145,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -168,7 +168,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -191,7 +191,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -214,7 +214,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -237,7 +237,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -260,7 +260,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -283,7 +283,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -306,7 +306,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -329,7 +329,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -352,7 +352,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -375,7 +375,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -398,7 +398,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -421,7 +421,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"
@@ -444,7 +444,7 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle t-cell--borderless"
   >
     <div
       class="t-cell__left"

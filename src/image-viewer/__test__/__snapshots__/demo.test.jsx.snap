@@ -14,7 +14,7 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
     </div>
     
     <div
-      class="t-cell t-cell--middle t-cell--bordered"
+      class="t-cell t-cell--middle t-cell--borderless"
       value-align="left"
     >
       <div
@@ -198,7 +198,7 @@ exports[`ImageViewer > ImageViewer imageListVue demo works fine 1`] = `
     </div>
     
     <div
-      class="t-cell t-cell--middle t-cell--bordered"
+      class="t-cell t-cell--middle t-cell--borderless"
       value-align="left"
     >
       <div
@@ -264,7 +264,7 @@ exports[`ImageViewer > ImageViewer initialIndexVue demo works fine 1`] = `
     </div>
     
     <div
-      class="t-cell t-cell--middle t-cell--bordered"
+      class="t-cell t-cell--middle t-cell--borderless"
       value-align="left"
     >
       <div

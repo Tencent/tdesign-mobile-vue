@@ -1,0 +1,4804 @@
+// Vitest Snapshot v1
+
+exports[`Form > Form horizontalVue demo works fine 1`] = `
+<form
+  class="t-form"
+  data-v-799be585=""
+>
+  
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__name t-form__item-with-help"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          用户名
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-799be585=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="text"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-form__item__help t-form__controls--left"
+        >
+          输入用户名
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__password"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          密码
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-799be585=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="password"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__gender"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          性别
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-radio-group box"
+            data-v-799be585=""
+            role="radiogroup"
+          >
+            <!--v-if-->
+            
+            <div
+              class="t-radio t-radio--left"
+              data-v-799be585=""
+            >
+              <input
+                class="t-radio__original"
+                name="radio"
+                type="radio"
+                value="man"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--left"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <div
+                  class="t-radio__icon-circle"
+                />
+                <!--v-if-->
+                <!---->
+              </div>
+              <div
+                class="t-radio__content"
+              >
+                <span
+                  class="t-radio__title"
+                  style=""
+                >
+                  男
+                </span>
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-radio t-radio--left"
+              data-v-799be585=""
+            >
+              <input
+                class="t-radio__original"
+                name="radio"
+                type="radio"
+                value="women"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--left"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <div
+                  class="t-radio__icon-circle"
+                />
+                <!--v-if-->
+                <!---->
+              </div>
+              <div
+                class="t-radio__content"
+              >
+                <span
+                  class="t-radio__title"
+                  style=""
+                >
+                  女
+                </span>
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-radio t-radio--left"
+              data-v-799be585=""
+            >
+              <input
+                class="t-radio__original"
+                name="radio"
+                type="radio"
+                value="secret"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--left"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <div
+                  class="t-radio__icon-circle"
+                />
+                <!--v-if-->
+                <!---->
+              </div>
+              <div
+                class="t-radio__content"
+              >
+                <span
+                  class="t-radio__title"
+                  style=""
+                >
+                  保密
+                </span>
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+            
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__birth"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          生日
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--right"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-799be585=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--right t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="text"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          <!--teleport start-->
+          <div
+            class="t-popup"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade"
+              persisted="false"
+            >
+              <transition-stub
+                appear="false"
+                css="true"
+                name="t-overlay"
+                persisted="true"
+              >
+                <div
+                  class="t-overlay"
+                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                >
+                  
+                  
+                </div>
+              </transition-stub>
+            </transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="slide-bottom"
+              persisted="true"
+            >
+              <div
+                class="t-popup--content t-popup--content-bottom"
+                style="display: none;"
+              >
+                
+                <div
+                  class="t-date-time-picker"
+                  data-v-799be585=""
+                >
+                  <div
+                    class="t-picker"
+                  >
+                    <div
+                      class="t-picker__toolbar"
+                    >
+                      <div
+                        class="t-picker__cancel"
+                      >
+                        取消
+                      </div>
+                      <div
+                        class="t-picker__title"
+                      >
+                        选择日期
+                      </div>
+                      <div
+                        class="t-picker__confirm"
+                      >
+                        确定
+                      </div>
+                    </div>
+                    <!---->
+                    <div
+                      class="t-picker__main"
+                    >
+                      
+                      <div
+                        class="t-picker-item__group"
+                      >
+                        <ul
+                          class="t-picker-item"
+                          style="transform: translate3d(0, 80px, 0);"
+                        >
+                          
+                          <li
+                            class="t-picker-item__item t-picker-item__item--selected"
+                          >
+                            2015 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2016 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2017 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2018 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2019 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2020 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2021 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2022 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2023 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2024 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2025 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2026 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2027 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2028 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2029 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2030 年
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      <div
+                        class="t-picker-item__group"
+                      >
+                        <ul
+                          class="t-picker-item"
+                          style="transform: translate3d(0, 80px, 0);"
+                        >
+                          
+                          <li
+                            class="t-picker-item__item t-picker-item__item--selected"
+                          >
+                            1 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            3 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            4 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            5 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            6 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            7 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            8 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            9 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            10 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            11 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            12 月
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      <div
+                        class="t-picker-item__group"
+                      >
+                        <ul
+                          class="t-picker-item"
+                          style="transform: translate3d(0, 80px, 0);"
+                        >
+                          
+                          
+                        </ul>
+                      </div>
+                      
+                      <div
+                        class="t-picker__mask t-picker__mask--top"
+                      />
+                      <div
+                        class="t-picker__mask t-picker__mask--bottom"
+                      />
+                      <div
+                        class="t-picker__indicator"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </transition-stub>
+          </div>
+          <!--teleport end-->
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <svg
+      class="t-icon t-icon-chevron-right"
+      color="rgba(0, 0, 0, .4)"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__place"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          籍贯
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--right"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-799be585=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--right t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="text"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          <!--teleport start-->
+          <div
+            class="t-popup"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade"
+              persisted="false"
+            >
+              <transition-stub
+                appear="false"
+                css="true"
+                name="t-overlay"
+                persisted="true"
+              >
+                <div
+                  class="t-overlay"
+                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                >
+                  
+                  
+                </div>
+              </transition-stub>
+            </transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="slide-bottom"
+              persisted="true"
+            >
+              <div
+                class="t-popup--content t-popup--content-bottom"
+                style="display: none;"
+              >
+                
+                <div
+                  class="t-cascader"
+                >
+                  <div
+                    class="t-cascader__title"
+                  >
+                    
+                    选择地址
+                    
+                  </div>
+                  <div
+                    class="t-cascader__close-btn"
+                  >
+                    <svg
+                      class="t-icon t-icon-close"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="t-cascader__content"
+                  >
+                    <div>
+                      <div
+                        class="t-cascader__steps"
+                      >
+                        
+                        <div
+                          class="t-cascader__step"
+                        >
+                          <div
+                            class="t-cascader__step-dot t-cascader__step-dot--last"
+                          />
+                          <div
+                            class="t-cascader__step-label t-cascader__step-label--active"
+                          >
+                            选择选项
+                          </div>
+                          <svg
+                            class="t-icon t-icon-chevron-right t-cascader__step-arrow"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            width="1em"
+                          >
+                            <path
+                              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                              fill="currentColor"
+                              fill-opacity="0.9"
+                            />
+                          </svg>
+                        </div>
+                        
+                      </div>
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                    <div
+                      class="t-cascader__options-container"
+                      style="width: 200vw; transform: translateX(-000vw);"
+                    >
+                      
+                      <div
+                        class="t-cascader__options"
+                      >
+                        <transition-stub
+                          appear="true"
+                          css="true"
+                          name="slide"
+                          persisted="false"
+                        >
+                          <div
+                            class="cascader-radio-group-0"
+                          >
+                            <div
+                              class="t-radio-group"
+                              role="radiogroup"
+                            >
+                              
+                              <div
+                                class="t-radio t-radio--right t-radio--block"
+                              >
+                                <input
+                                  class="t-radio__original"
+                                  name=""
+                                  type="radio"
+                                  value="110000"
+                                />
+                                <div
+                                  class="t-radio__icon t-radio__icon--right"
+                                >
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <div
+                                    class="placeholder"
+                                  />
+                                  <!---->
+                                </div>
+                                <div
+                                  class="t-radio__content"
+                                >
+                                  <span
+                                    class="t-radio__title"
+                                    style=""
+                                  >
+                                    北京市
+                                  </span>
+                                  <!--v-if-->
+                                </div>
+                                <!--v-if-->
+                              </div>
+                              <div
+                                class="t-radio t-radio--right t-radio--block"
+                              >
+                                <input
+                                  class="t-radio__original"
+                                  name=""
+                                  type="radio"
+                                  value="120000"
+                                />
+                                <div
+                                  class="t-radio__icon t-radio__icon--right"
+                                >
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <div
+                                    class="placeholder"
+                                  />
+                                  <!---->
+                                </div>
+                                <div
+                                  class="t-radio__content"
+                                >
+                                  <span
+                                    class="t-radio__title"
+                                    style=""
+                                  >
+                                    天津市
+                                  </span>
+                                  <!--v-if-->
+                                </div>
+                                <!--v-if-->
+                              </div>
+                              
+                              <!--v-if-->
+                            </div>
+                          </div>
+                        </transition-stub>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </transition-stub>
+          </div>
+          <!--teleport end-->
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <svg
+      class="t-icon t-icon-chevron-right"
+      color="rgba(0, 0, 0, .4)"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__age"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          年限
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--right"
+        >
+          
+          <div
+            class="t-stepper t-stepper--medium"
+            data-v-799be585=""
+          >
+            <div
+              class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__minus-icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            <input
+              class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              type="tel"
+            />
+            <div
+              class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__plus-icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__description"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          自我评价
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--right"
+        >
+          
+          <div
+            class="t-rate"
+            data-v-799be585=""
+          >
+            <ul
+              class="t-rate--list"
+            >
+              
+              <li
+                class="t-rate--item t-rate-full"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item t-rate-full"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item"
+                style="margin-right: 0px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              
+            </ul>
+            <!--v-if-->
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__resume"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          个人简介
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-textarea textarea"
+            data-v-799be585=""
+          >
+            <!--v-if-->
+            <div
+              class="t-textarea__wrapper"
+            >
+              <textarea
+                class="t-textarea__wrapper-inner"
+                maxlength="-1"
+                name=""
+                placeholder="请输入个人简介"
+              />
+              <div
+                class="t-textarea__indicator"
+              >
+                0/50
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__photo"
+    data-v-799be585=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--left"
+    >
+      <div
+        class="t-form__label t-form__label--left"
+        style="width: 81px;"
+      >
+        <label
+          for=""
+        >
+          上传照片
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-upload"
+            data-v-799be585=""
+            grid-config="[object Object]"
+            modelvalue="[object Object]"
+          >
+            
+            
+            
+            <div
+              class="t-upload__item t-upload__item--add"
+            >
+              <svg
+                class="t-icon t-icon-add t-upload__add-icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            
+            <input
+              accept=""
+              hidden=""
+              multiple=""
+              type="file"
+            />
+            <transition-stub
+              appear="false"
+              class="t-image-viewer"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="button-group"
+    data-v-799be585=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+      data-v-799be585=""
+      role="button"
+      type="submit"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        提交
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
+      data-v-799be585=""
+      role="button"
+      type="reset"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        重置
+        
+      </span>
+    </button>
+  </div>
+  
+</form>
+`;
+
+exports[`Form > Form mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-4e944783=""
+>
+  <h1
+    class="title"
+    data-v-4e944783=""
+  >
+    Form 表单
+  </h1>
+  <p
+    class="summary"
+    data-v-4e944783=""
+  >
+    用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-4e944783=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        01 基础类型
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="option"
+        data-v-4e944783=""
+      >
+        <div
+          class="button-group"
+          data-v-4e944783=""
+        >
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
+            data-v-4e944783=""
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               水平排布 
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-m t-button--base t-button--default t-button--shape-round"
+            data-v-4e944783=""
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               竖直排布 
+              
+            </span>
+          </button>
+        </div>
+        <div
+          class="t-cell t-cell--middle t-cell--borderless"
+          data-v-4e944783=""
+        >
+          <div
+            class="t-cell__left"
+          >
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__title"
+          >
+            禁用态
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
+              class="t-switch t-switch--medium"
+              data-v-4e944783=""
+            >
+              <div
+                class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+              >
+                <div
+                  class="t-switch__label t-switch__label--medium"
+                >
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-4e944783=""
+  >
+    <!--v-if-->
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <form
+        class="t-form"
+        data-v-4e944783=""
+        data-v-799be585=""
+      >
+        
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__name t-form__item-with-help"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                用户名
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--left"
+              >
+                
+                <div
+                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  data-v-799be585=""
+                >
+                  <div
+                    class="t-input__wrap--prefix"
+                  >
+                    <div
+                      class="t-input__icon--prefix"
+                    >
+                      
+                      
+                      <!--v-if-->
+                    </div>
+                    <div
+                      class="t-input__label"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                  <div
+                    class="t-input__wrap"
+                  >
+                    <div
+                      class="t-input__content t-input--default"
+                    >
+                      <input
+                        autocomplete="Off"
+                        class="t-input__control t-input--default"
+                        maxlength="-1"
+                        name=""
+                        placeholder="请输入内容"
+                        type="text"
+                      />
+                      <!--v-if-->
+                      <!--v-if-->
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                  </div>
+                </div>
+                
+              </div>
+              <div
+                class="t-form__item__help t-form__controls--left"
+              >
+                输入用户名
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__password"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                密码
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--left"
+              >
+                
+                <div
+                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  data-v-799be585=""
+                >
+                  <div
+                    class="t-input__wrap--prefix"
+                  >
+                    <div
+                      class="t-input__icon--prefix"
+                    >
+                      
+                      
+                      <!--v-if-->
+                    </div>
+                    <div
+                      class="t-input__label"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                  <div
+                    class="t-input__wrap"
+                  >
+                    <div
+                      class="t-input__content t-input--default"
+                    >
+                      <input
+                        autocomplete="Off"
+                        class="t-input__control t-input--default"
+                        maxlength="-1"
+                        name=""
+                        placeholder="请输入内容"
+                        type="password"
+                      />
+                      <!--v-if-->
+                      <!--v-if-->
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                  </div>
+                </div>
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__gender"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                性别
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--left"
+              >
+                
+                <div
+                  class="t-radio-group box"
+                  data-v-799be585=""
+                  role="radiogroup"
+                >
+                  <!--v-if-->
+                  
+                  <div
+                    class="t-radio t-radio--left"
+                    data-v-799be585=""
+                  >
+                    <input
+                      class="t-radio__original"
+                      name="radio"
+                      type="radio"
+                      value="man"
+                    />
+                    <div
+                      class="t-radio__icon t-radio__icon--left"
+                    >
+                      <!--v-if-->
+                      <!--v-if-->
+                      <!--v-if-->
+                      <div
+                        class="t-radio__icon-circle"
+                      />
+                      <!--v-if-->
+                      <!---->
+                    </div>
+                    <div
+                      class="t-radio__content"
+                    >
+                      <span
+                        class="t-radio__title"
+                        style=""
+                      >
+                        男
+                      </span>
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                  </div>
+                  <div
+                    class="t-radio t-radio--left"
+                    data-v-799be585=""
+                  >
+                    <input
+                      class="t-radio__original"
+                      name="radio"
+                      type="radio"
+                      value="women"
+                    />
+                    <div
+                      class="t-radio__icon t-radio__icon--left"
+                    >
+                      <!--v-if-->
+                      <!--v-if-->
+                      <!--v-if-->
+                      <div
+                        class="t-radio__icon-circle"
+                      />
+                      <!--v-if-->
+                      <!---->
+                    </div>
+                    <div
+                      class="t-radio__content"
+                    >
+                      <span
+                        class="t-radio__title"
+                        style=""
+                      >
+                        女
+                      </span>
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                  </div>
+                  <div
+                    class="t-radio t-radio--left"
+                    data-v-799be585=""
+                  >
+                    <input
+                      class="t-radio__original"
+                      name="radio"
+                      type="radio"
+                      value="secret"
+                    />
+                    <div
+                      class="t-radio__icon t-radio__icon--left"
+                    >
+                      <!--v-if-->
+                      <!--v-if-->
+                      <!--v-if-->
+                      <div
+                        class="t-radio__icon-circle"
+                      />
+                      <!--v-if-->
+                      <!---->
+                    </div>
+                    <div
+                      class="t-radio__content"
+                    >
+                      <span
+                        class="t-radio__title"
+                        style=""
+                      >
+                        保密
+                      </span>
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__birth"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                生日
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--right"
+              >
+                
+                <div
+                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  data-v-799be585=""
+                >
+                  <div
+                    class="t-input__wrap--prefix"
+                  >
+                    <div
+                      class="t-input__icon--prefix"
+                    >
+                      
+                      
+                      <!--v-if-->
+                    </div>
+                    <div
+                      class="t-input__label"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                  <div
+                    class="t-input__wrap"
+                  >
+                    <div
+                      class="t-input__content t-input--default"
+                    >
+                      <input
+                        autocomplete="Off"
+                        class="t-input__control t-input--right t-input--default"
+                        maxlength="-1"
+                        name=""
+                        placeholder="请输入内容"
+                        type="text"
+                      />
+                      <!--v-if-->
+                      <!--v-if-->
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                  </div>
+                </div>
+                <!--teleport start-->
+                <div
+                  class="t-popup"
+                >
+                  <transition-stub
+                    appear="false"
+                    css="true"
+                    name="fade"
+                    persisted="false"
+                  >
+                    <transition-stub
+                      appear="false"
+                      css="true"
+                      name="t-overlay"
+                      persisted="true"
+                    >
+                      <div
+                        class="t-overlay"
+                        style="z-index: 1000; transition-duration: 300ms; display: none;"
+                      >
+                        
+                        
+                      </div>
+                    </transition-stub>
+                  </transition-stub>
+                  <transition-stub
+                    appear="false"
+                    css="true"
+                    name="slide-bottom"
+                    persisted="true"
+                  >
+                    <div
+                      class="t-popup--content t-popup--content-bottom"
+                      style="display: none;"
+                    >
+                      
+                      <div
+                        class="t-date-time-picker"
+                        data-v-799be585=""
+                      >
+                        <div
+                          class="t-picker"
+                        >
+                          <div
+                            class="t-picker__toolbar"
+                          >
+                            <div
+                              class="t-picker__cancel"
+                            >
+                              取消
+                            </div>
+                            <div
+                              class="t-picker__title"
+                            >
+                              选择日期
+                            </div>
+                            <div
+                              class="t-picker__confirm"
+                            >
+                              确定
+                            </div>
+                          </div>
+                          <!---->
+                          <div
+                            class="t-picker__main"
+                          >
+                            
+                            <div
+                              class="t-picker-item__group"
+                            >
+                              <ul
+                                class="t-picker-item"
+                                style="transform: translate3d(0, 80px, 0);"
+                              >
+                                
+                                <li
+                                  class="t-picker-item__item t-picker-item__item--selected"
+                                >
+                                  2015 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2016 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2017 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2018 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2019 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2020 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2021 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2022 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2023 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2024 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2025 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2026 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2027 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2028 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2029 年
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2030 年
+                                </li>
+                                
+                              </ul>
+                            </div>
+                            <div
+                              class="t-picker-item__group"
+                            >
+                              <ul
+                                class="t-picker-item"
+                                style="transform: translate3d(0, 80px, 0);"
+                              >
+                                
+                                <li
+                                  class="t-picker-item__item t-picker-item__item--selected"
+                                >
+                                  1 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  2 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  3 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  4 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  5 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  6 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  7 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  8 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  9 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  10 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  11 月
+                                </li>
+                                <li
+                                  class="t-picker-item__item"
+                                >
+                                  12 月
+                                </li>
+                                
+                              </ul>
+                            </div>
+                            <div
+                              class="t-picker-item__group"
+                            >
+                              <ul
+                                class="t-picker-item"
+                                style="transform: translate3d(0, 80px, 0);"
+                              >
+                                
+                                
+                              </ul>
+                            </div>
+                            
+                            <div
+                              class="t-picker__mask t-picker__mask--top"
+                            />
+                            <div
+                              class="t-picker__mask t-picker__mask--bottom"
+                            />
+                            <div
+                              class="t-picker__indicator"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </transition-stub>
+                </div>
+                <!--teleport end-->
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <svg
+            class="t-icon t-icon-chevron-right"
+            color="rgba(0, 0, 0, .4)"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__place"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                籍贯
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--right"
+              >
+                
+                <div
+                  class="t-input t-input--layout-horizontal t-input--size-small"
+                  data-v-799be585=""
+                >
+                  <div
+                    class="t-input__wrap--prefix"
+                  >
+                    <div
+                      class="t-input__icon--prefix"
+                    >
+                      
+                      
+                      <!--v-if-->
+                    </div>
+                    <div
+                      class="t-input__label"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                  <div
+                    class="t-input__wrap"
+                  >
+                    <div
+                      class="t-input__content t-input--default"
+                    >
+                      <input
+                        autocomplete="Off"
+                        class="t-input__control t-input--right t-input--default"
+                        maxlength="-1"
+                        name=""
+                        placeholder="请输入内容"
+                        type="text"
+                      />
+                      <!--v-if-->
+                      <!--v-if-->
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                  </div>
+                </div>
+                <!--teleport start-->
+                <div
+                  class="t-popup"
+                >
+                  <transition-stub
+                    appear="false"
+                    css="true"
+                    name="fade"
+                    persisted="false"
+                  >
+                    <transition-stub
+                      appear="false"
+                      css="true"
+                      name="t-overlay"
+                      persisted="true"
+                    >
+                      <div
+                        class="t-overlay"
+                        style="z-index: 1000; transition-duration: 300ms; display: none;"
+                      >
+                        
+                        
+                      </div>
+                    </transition-stub>
+                  </transition-stub>
+                  <transition-stub
+                    appear="false"
+                    css="true"
+                    name="slide-bottom"
+                    persisted="true"
+                  >
+                    <div
+                      class="t-popup--content t-popup--content-bottom"
+                      style="display: none;"
+                    >
+                      
+                      <div
+                        class="t-cascader"
+                      >
+                        <div
+                          class="t-cascader__title"
+                        >
+                          
+                          选择地址
+                          
+                        </div>
+                        <div
+                          class="t-cascader__close-btn"
+                        >
+                          <svg
+                            class="t-icon t-icon-close"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            width="1em"
+                          >
+                            <path
+                              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                              fill="currentColor"
+                              fill-opacity="0.9"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="t-cascader__content"
+                        >
+                          <div>
+                            <div
+                              class="t-cascader__steps"
+                            >
+                              
+                              <div
+                                class="t-cascader__step"
+                              >
+                                <div
+                                  class="t-cascader__step-dot t-cascader__step-dot--last"
+                                />
+                                <div
+                                  class="t-cascader__step-label t-cascader__step-label--active"
+                                >
+                                  选择选项
+                                </div>
+                                <svg
+                                  class="t-icon t-icon-chevron-right t-cascader__step-arrow"
+                                  fill="none"
+                                  height="1em"
+                                  viewBox="0 0 16 16"
+                                  width="1em"
+                                >
+                                  <path
+                                    d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                                    fill="currentColor"
+                                    fill-opacity="0.9"
+                                  />
+                                </svg>
+                              </div>
+                              
+                            </div>
+                            <!--v-if-->
+                          </div>
+                          <!--v-if-->
+                          <div
+                            class="t-cascader__options-container"
+                            style="width: 200vw; transform: translateX(-000vw);"
+                          >
+                            
+                            <div
+                              class="t-cascader__options"
+                            >
+                              <transition-stub
+                                appear="true"
+                                css="true"
+                                name="slide"
+                                persisted="false"
+                              >
+                                <div
+                                  class="cascader-radio-group-0"
+                                >
+                                  <div
+                                    class="t-radio-group"
+                                    role="radiogroup"
+                                  >
+                                    
+                                    <div
+                                      class="t-radio t-radio--right t-radio--block"
+                                    >
+                                      <input
+                                        class="t-radio__original"
+                                        name=""
+                                        type="radio"
+                                        value="110000"
+                                      />
+                                      <div
+                                        class="t-radio__icon t-radio__icon--right"
+                                      >
+                                        <!--v-if-->
+                                        <!--v-if-->
+                                        <!--v-if-->
+                                        <!--v-if-->
+                                        <div
+                                          class="placeholder"
+                                        />
+                                        <!---->
+                                      </div>
+                                      <div
+                                        class="t-radio__content"
+                                      >
+                                        <span
+                                          class="t-radio__title"
+                                          style=""
+                                        >
+                                          北京市
+                                        </span>
+                                        <!--v-if-->
+                                      </div>
+                                      <!--v-if-->
+                                    </div>
+                                    <div
+                                      class="t-radio t-radio--right t-radio--block"
+                                    >
+                                      <input
+                                        class="t-radio__original"
+                                        name=""
+                                        type="radio"
+                                        value="120000"
+                                      />
+                                      <div
+                                        class="t-radio__icon t-radio__icon--right"
+                                      >
+                                        <!--v-if-->
+                                        <!--v-if-->
+                                        <!--v-if-->
+                                        <!--v-if-->
+                                        <div
+                                          class="placeholder"
+                                        />
+                                        <!---->
+                                      </div>
+                                      <div
+                                        class="t-radio__content"
+                                      >
+                                        <span
+                                          class="t-radio__title"
+                                          style=""
+                                        >
+                                          天津市
+                                        </span>
+                                        <!--v-if-->
+                                      </div>
+                                      <!--v-if-->
+                                    </div>
+                                    
+                                    <!--v-if-->
+                                  </div>
+                                </div>
+                              </transition-stub>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </transition-stub>
+                </div>
+                <!--teleport end-->
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <svg
+            class="t-icon t-icon-chevron-right"
+            color="rgba(0, 0, 0, .4)"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__age"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                年限
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--right"
+              >
+                
+                <div
+                  class="t-stepper t-stepper--medium"
+                  data-v-799be585=""
+                >
+                  <div
+                    class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
+                  >
+                    <svg
+                      class="t-icon t-icon-remove t-stepper__minus-icon"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M3.5 7.35h9v1.3h-9v-1.3z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+                    type="tel"
+                  />
+                  <div
+                    class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+                  >
+                    <svg
+                      class="t-icon t-icon-add t-stepper__plus-icon"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__description"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                自我评价
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--right"
+              >
+                
+                <div
+                  class="t-rate"
+                  data-v-799be585=""
+                >
+                  <ul
+                    class="t-rate--list"
+                  >
+                    
+                    <li
+                      class="t-rate--item t-rate-full"
+                      style="margin-right: 8px;"
+                    >
+                      <span
+                        class="t-rate--placeholder"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                      <span
+                        class="t-rate--icon-left"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      <span
+                        class="t-rate--icon-right"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                    </li>
+                    <li
+                      class="t-rate--item t-rate-full"
+                      style="margin-right: 8px;"
+                    >
+                      <span
+                        class="t-rate--placeholder"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                      <span
+                        class="t-rate--icon-left"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      <span
+                        class="t-rate--icon-right"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                    </li>
+                    <li
+                      class="t-rate--item"
+                      style="margin-right: 8px;"
+                    >
+                      <span
+                        class="t-rate--placeholder"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                      <span
+                        class="t-rate--icon-left"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          style="color: transparent;"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      <span
+                        class="t-rate--icon-right"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          style="color: transparent;"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                    </li>
+                    <li
+                      class="t-rate--item"
+                      style="margin-right: 8px;"
+                    >
+                      <span
+                        class="t-rate--placeholder"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                      <span
+                        class="t-rate--icon-left"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          style="color: transparent;"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      <span
+                        class="t-rate--icon-right"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          style="color: transparent;"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                    </li>
+                    <li
+                      class="t-rate--item"
+                      style="margin-right: 0px;"
+                    >
+                      <span
+                        class="t-rate--placeholder"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                      <span
+                        class="t-rate--icon-left"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          style="color: transparent;"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      <span
+                        class="t-rate--icon-right"
+                      >
+                        
+                        <svg
+                          class="t-icon t-icon-star-filled"
+                          fill="none"
+                          height="1em"
+                          style="color: transparent;"
+                          viewBox="0 0 16 16"
+                          width="1em"
+                        >
+                          <path
+                            d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                            fill="currentColor"
+                            fill-opacity="0.9"
+                          />
+                        </svg>
+                        
+                      </span>
+                      
+                    </li>
+                    
+                  </ul>
+                  <!--v-if-->
+                </div>
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__resume"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                个人简介
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--left"
+              >
+                
+                <div
+                  class="t-textarea textarea"
+                  data-v-799be585=""
+                >
+                  <!--v-if-->
+                  <div
+                    class="t-textarea__wrapper"
+                  >
+                    <textarea
+                      class="t-textarea__wrapper-inner"
+                      maxlength="-1"
+                      name=""
+                      placeholder="请输入个人简介"
+                    />
+                    <div
+                      class="t-textarea__indicator"
+                    >
+                      0/50
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__photo"
+          data-v-799be585=""
+        >
+          <div
+            class="t-form__item--wrap t-form__item--left"
+          >
+            <div
+              class="t-form__label t-form__label--left"
+              style="width: 81px;"
+            >
+              <label
+                for=""
+              >
+                上传照片
+              </label>
+            </div>
+            <div
+              class="t-form__controls"
+            >
+              <div
+                class="t-form__controls-content t-form__controls--left"
+              >
+                
+                <div
+                  class="t-upload"
+                  data-v-799be585=""
+                  grid-config="[object Object]"
+                  modelvalue="[object Object]"
+                >
+                  
+                  
+                  
+                  <div
+                    class="t-upload__item t-upload__item--add"
+                  >
+                    <svg
+                      class="t-icon t-icon-add t-upload__add-icon"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </div>
+                  
+                  <input
+                    accept=""
+                    hidden=""
+                    multiple=""
+                    type="file"
+                  />
+                  <transition-stub
+                    appear="false"
+                    class="t-image-viewer"
+                    css="true"
+                    name="t-overlay"
+                    persisted="true"
+                  >
+                    <div
+                      class="t-overlay"
+                      style="z-index: 1000; transition-duration: 300ms; display: none;"
+                    >
+                      
+                      
+                    </div>
+                  </transition-stub>
+                </div>
+                
+              </div>
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="button-group"
+          data-v-799be585=""
+        >
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+            data-v-799be585=""
+            role="button"
+            type="submit"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              提交
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
+            data-v-799be585=""
+            role="button"
+            type="reset"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+              重置
+              
+            </span>
+          </button>
+        </div>
+        
+      </form>
+      
+    </div>
+  </div>
+  <!--v-if-->
+</div>
+`;
+
+exports[`Form > Form verticalVue demo works fine 1`] = `
+<form
+  class="t-form"
+  data-v-713b33d2=""
+>
+  
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__name t-form__item-with-help"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          用户名
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-713b33d2=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="text"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-form__item__help t-form__controls--left"
+        >
+          输入用户名
+        </div>
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__password"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          密码
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-713b33d2=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="password"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__gender"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          性别
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-radio-group box"
+            data-v-713b33d2=""
+            role="radiogroup"
+          >
+            <!--v-if-->
+            
+            <div
+              class="t-radio t-radio--left"
+              data-v-713b33d2=""
+            >
+              <input
+                class="t-radio__original"
+                name="radio"
+                type="radio"
+                value="man"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--left"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <div
+                  class="t-radio__icon-circle"
+                />
+                <!--v-if-->
+                <!---->
+              </div>
+              <div
+                class="t-radio__content"
+              >
+                <span
+                  class="t-radio__title"
+                  style=""
+                >
+                  男
+                </span>
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-radio t-radio--left"
+              data-v-713b33d2=""
+            >
+              <input
+                class="t-radio__original"
+                name="radio"
+                type="radio"
+                value="women"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--left"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <div
+                  class="t-radio__icon-circle"
+                />
+                <!--v-if-->
+                <!---->
+              </div>
+              <div
+                class="t-radio__content"
+              >
+                <span
+                  class="t-radio__title"
+                  style=""
+                >
+                  女
+                </span>
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-radio t-radio--left"
+              data-v-713b33d2=""
+            >
+              <input
+                class="t-radio__original"
+                name="radio"
+                type="radio"
+                value="secret"
+              />
+              <div
+                class="t-radio__icon t-radio__icon--left"
+              >
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+                <div
+                  class="t-radio__icon-circle"
+                />
+                <!--v-if-->
+                <!---->
+              </div>
+              <div
+                class="t-radio__content"
+              >
+                <span
+                  class="t-radio__title"
+                  style=""
+                >
+                  保密
+                </span>
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+            
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__birth"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          生日
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-713b33d2=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="text"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          <!--teleport start-->
+          <div
+            class="t-popup"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade"
+              persisted="false"
+            >
+              <transition-stub
+                appear="false"
+                css="true"
+                name="t-overlay"
+                persisted="true"
+              >
+                <div
+                  class="t-overlay"
+                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                >
+                  
+                  
+                </div>
+              </transition-stub>
+            </transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="slide-bottom"
+              persisted="true"
+            >
+              <div
+                class="t-popup--content t-popup--content-bottom"
+                style="display: none;"
+              >
+                
+                <div
+                  class="t-date-time-picker"
+                  data-v-713b33d2=""
+                >
+                  <div
+                    class="t-picker"
+                  >
+                    <div
+                      class="t-picker__toolbar"
+                    >
+                      <div
+                        class="t-picker__cancel"
+                      >
+                        取消
+                      </div>
+                      <div
+                        class="t-picker__title"
+                      >
+                        选择日期
+                      </div>
+                      <div
+                        class="t-picker__confirm"
+                      >
+                        确定
+                      </div>
+                    </div>
+                    <!---->
+                    <div
+                      class="t-picker__main"
+                    >
+                      
+                      <div
+                        class="t-picker-item__group"
+                      >
+                        <ul
+                          class="t-picker-item"
+                          style="transform: translate3d(0, 80px, 0);"
+                        >
+                          
+                          <li
+                            class="t-picker-item__item t-picker-item__item--selected"
+                          >
+                            2015 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2016 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2017 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2018 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2019 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2020 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2021 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2022 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2023 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2024 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2025 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2026 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2027 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2028 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2029 年
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2030 年
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      <div
+                        class="t-picker-item__group"
+                      >
+                        <ul
+                          class="t-picker-item"
+                          style="transform: translate3d(0, 80px, 0);"
+                        >
+                          
+                          <li
+                            class="t-picker-item__item t-picker-item__item--selected"
+                          >
+                            1 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            2 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            3 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            4 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            5 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            6 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            7 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            8 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            9 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            10 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            11 月
+                          </li>
+                          <li
+                            class="t-picker-item__item"
+                          >
+                            12 月
+                          </li>
+                          
+                        </ul>
+                      </div>
+                      <div
+                        class="t-picker-item__group"
+                      >
+                        <ul
+                          class="t-picker-item"
+                          style="transform: translate3d(0, 80px, 0);"
+                        >
+                          
+                          
+                        </ul>
+                      </div>
+                      
+                      <div
+                        class="t-picker__mask t-picker__mask--top"
+                      />
+                      <div
+                        class="t-picker__mask t-picker__mask--bottom"
+                      />
+                      <div
+                        class="t-picker__indicator"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </transition-stub>
+          </div>
+          <!--teleport end-->
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <svg
+      class="t-icon t-icon-chevron-right"
+      color="rgba(0, 0, 0, .4)"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__place"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          籍贯
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-input t-input--layout-horizontal t-input--size-small"
+            data-v-713b33d2=""
+          >
+            <div
+              class="t-input__wrap--prefix"
+            >
+              <div
+                class="t-input__icon--prefix"
+              >
+                
+                
+                <!--v-if-->
+              </div>
+              <div
+                class="t-input__label"
+              >
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-input__wrap"
+            >
+              <div
+                class="t-input__content t-input--default"
+              >
+                <input
+                  autocomplete="Off"
+                  class="t-input__control t-input--default"
+                  maxlength="-1"
+                  name=""
+                  placeholder="请输入内容"
+                  type="text"
+                />
+                <!--v-if-->
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <!--v-if-->
+            </div>
+          </div>
+          <!--teleport start-->
+          <div
+            class="t-popup"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="fade"
+              persisted="false"
+            >
+              <transition-stub
+                appear="false"
+                css="true"
+                name="t-overlay"
+                persisted="true"
+              >
+                <div
+                  class="t-overlay"
+                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                >
+                  
+                  
+                </div>
+              </transition-stub>
+            </transition-stub>
+            <transition-stub
+              appear="false"
+              css="true"
+              name="slide-bottom"
+              persisted="true"
+            >
+              <div
+                class="t-popup--content t-popup--content-bottom"
+                style="display: none;"
+              >
+                
+                <div
+                  class="t-cascader"
+                >
+                  <div
+                    class="t-cascader__title"
+                  >
+                    
+                    选择地址
+                    
+                  </div>
+                  <div
+                    class="t-cascader__close-btn"
+                  >
+                    <svg
+                      class="t-icon t-icon-close"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="t-cascader__content"
+                  >
+                    <div>
+                      <div
+                        class="t-cascader__steps"
+                      >
+                        
+                        <div
+                          class="t-cascader__step"
+                        >
+                          <div
+                            class="t-cascader__step-dot t-cascader__step-dot--last"
+                          />
+                          <div
+                            class="t-cascader__step-label t-cascader__step-label--active"
+                          >
+                            选择选项
+                          </div>
+                          <svg
+                            class="t-icon t-icon-chevron-right t-cascader__step-arrow"
+                            fill="none"
+                            height="1em"
+                            viewBox="0 0 16 16"
+                            width="1em"
+                          >
+                            <path
+                              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+                              fill="currentColor"
+                              fill-opacity="0.9"
+                            />
+                          </svg>
+                        </div>
+                        
+                      </div>
+                      <!--v-if-->
+                    </div>
+                    <!--v-if-->
+                    <div
+                      class="t-cascader__options-container"
+                      style="width: 200vw; transform: translateX(-000vw);"
+                    >
+                      
+                      <div
+                        class="t-cascader__options"
+                      >
+                        <transition-stub
+                          appear="true"
+                          css="true"
+                          name="slide"
+                          persisted="false"
+                        >
+                          <div
+                            class="cascader-radio-group-0"
+                          >
+                            <div
+                              class="t-radio-group"
+                              role="radiogroup"
+                            >
+                              
+                              <div
+                                class="t-radio t-radio--right t-radio--block"
+                              >
+                                <input
+                                  class="t-radio__original"
+                                  name=""
+                                  type="radio"
+                                  value="110000"
+                                />
+                                <div
+                                  class="t-radio__icon t-radio__icon--right"
+                                >
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <div
+                                    class="placeholder"
+                                  />
+                                  <!---->
+                                </div>
+                                <div
+                                  class="t-radio__content"
+                                >
+                                  <span
+                                    class="t-radio__title"
+                                    style=""
+                                  >
+                                    北京市
+                                  </span>
+                                  <!--v-if-->
+                                </div>
+                                <!--v-if-->
+                              </div>
+                              <div
+                                class="t-radio t-radio--right t-radio--block"
+                              >
+                                <input
+                                  class="t-radio__original"
+                                  name=""
+                                  type="radio"
+                                  value="120000"
+                                />
+                                <div
+                                  class="t-radio__icon t-radio__icon--right"
+                                >
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <!--v-if-->
+                                  <div
+                                    class="placeholder"
+                                  />
+                                  <!---->
+                                </div>
+                                <div
+                                  class="t-radio__content"
+                                >
+                                  <span
+                                    class="t-radio__title"
+                                    style=""
+                                  >
+                                    天津市
+                                  </span>
+                                  <!--v-if-->
+                                </div>
+                                <!--v-if-->
+                              </div>
+                              
+                              <!--v-if-->
+                            </div>
+                          </div>
+                        </transition-stub>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </transition-stub>
+          </div>
+          <!--teleport end-->
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <svg
+      class="t-icon t-icon-chevron-right"
+      color="rgba(0, 0, 0, .4)"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__age"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          年限
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-stepper t-stepper--medium"
+            data-v-713b33d2=""
+          >
+            <div
+              class="t-stepper__minus t-stepper__minus--filled t-stepper__icon--medium"
+            >
+              <svg
+                class="t-icon t-icon-remove t-stepper__minus-icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M3.5 7.35h9v1.3h-9v-1.3z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            <input
+              class="t-stepper__input t-stepper__input--filled t-stepper__input--medium"
+              type="tel"
+            />
+            <div
+              class="t-stepper__plus t-stepper__plus--filled t-stepper__icon--medium"
+            >
+              <svg
+                class="t-icon t-icon-add t-stepper__plus-icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__description"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          自我评价
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-rate"
+            data-v-713b33d2=""
+          >
+            <ul
+              class="t-rate--list"
+            >
+              
+              <li
+                class="t-rate--item t-rate-full"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item t-rate-full"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item"
+                style="margin-right: 8px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              <li
+                class="t-rate--item"
+                style="margin-right: 0px;"
+              >
+                <span
+                  class="t-rate--placeholder"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+                <span
+                  class="t-rate--icon-left"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                <span
+                  class="t-rate--icon-right"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-star-filled"
+                    fill="none"
+                    height="1em"
+                    style="color: transparent;"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M7.6 1.82a.45.45 0 01.8 0l1.8 3.65 4.03.58c.37.05.52.5.25.77l-2.91 2.84.69 4a.45.45 0 01-.66.48L8 12.25l-3.6 1.9a.45.45 0 01-.65-.48l.68-4.01-2.9-2.84a.45.45 0 01.24-.77l4.03-.58 1.8-3.65z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </span>
+                
+              </li>
+              
+            </ul>
+            <!--v-if-->
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__resume"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          个人简介
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-textarea textarea"
+            data-v-713b33d2=""
+          >
+            <!--v-if-->
+            <div
+              class="t-textarea__wrapper"
+            >
+              <textarea
+                class="t-textarea__wrapper-inner"
+                maxlength="-1"
+                name=""
+                placeholder="请输入个人简介"
+              />
+              <div
+                class="t-textarea__indicator"
+              >
+                0/50
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__photo"
+    data-v-713b33d2=""
+  >
+    <div
+      class="t-form__item--wrap t-form__item--top"
+    >
+      <div
+        class="t-form__label t-form__label--top"
+      >
+        <label
+          for=""
+        >
+          上传照片
+        </label>
+      </div>
+      <div
+        class="t-form__controls"
+      >
+        <div
+          class="t-form__controls-content t-form__controls--left"
+        >
+          
+          <div
+            class="t-upload"
+            data-v-713b33d2=""
+            grid-config="[object Object]"
+            modelvalue="[object Object]"
+          >
+            
+            
+            
+            <div
+              class="t-upload__item t-upload__item--add"
+            >
+              <svg
+                class="t-icon t-icon-add t-upload__add-icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            
+            <input
+              accept=""
+              hidden=""
+              multiple=""
+              type="file"
+            />
+            <transition-stub
+              appear="false"
+              class="t-image-viewer"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </div>
+          
+        </div>
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+    </div>
+    <!--v-if-->
+  </div>
+  <div
+    class="button-group"
+    data-v-713b33d2=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+      data-v-713b33d2=""
+      role="button"
+      type="submit"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        提交
+        
+      </span>
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
+      data-v-713b33d2=""
+      role="button"
+      type="reset"
+    >
+      <!---->
+      <span
+        class="t-button__text"
+      >
+        
+        重置
+        
+      </span>
+    </button>
+  </div>
+  
+</form>
+`;
