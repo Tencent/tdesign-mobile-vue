@@ -9,10 +9,10 @@
       <underline-vue />
     </tdesign-demo-block>
     <tdesign-demo-block summary="前置图标文字链接">
-      <suffix-vue />
+      <prefix-vue />
     </tdesign-demo-block>
     <tdesign-demo-block summary="后置图标文字链接">
-      <prefix-vue />
+      <suffix-vue />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 组件状态" summary="不同主题">
       <theme-vue />

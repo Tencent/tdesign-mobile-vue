@@ -12,7 +12,7 @@
     <span :class="`${baseClass}__content`">
       <t-node :content="linkContent"></t-node>
     </span>
-    <span v-if="suffixContent" :class="`${baseClass}__prefix-icon ${prefix}-class-prefix-icon`">
+    <span v-if="suffixContent" :class="`${baseClass}__suffix-icon ${prefix}-class-suffix-icon`">
       <t-node :content="suffixContent"></t-node>
     </span>
   </a>

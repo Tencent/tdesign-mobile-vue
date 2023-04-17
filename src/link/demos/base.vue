@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-link-demo">
-    <t-link theme="primary" href="http://www.qq.com">跳转链接</t-link>
+    <t-link theme="primary" href="/mobile-vue/overview">跳转链接</t-link>
     <t-link hover>跳转链接</t-link>
   </div>
 </template>

@@ -101,7 +101,7 @@ describe('Link', () => {
           suffixIcon,
         },
       });
-      expect(wrapper.find('.t-link__prefix-icon').exists()).toBeTruthy();
+      expect(wrapper.find('.t-link__suffix-icon').exists()).toBeTruthy();
     });
   });
 });
