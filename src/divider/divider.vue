@@ -1,10 +1,14 @@
 <template>
-  <div role="separator" :class="dividerClass" :style="`border-color:${lineColor}`">
-    <t-node :content="dividerContent" />
+  <div role="separator" :class="{ [`${name}--vertical-center`]: layout === 'vertical' }">
+    <div :class="dividerClass" :style="`border-color:${lineColor}`">
+      <div :class="`${name}__content`">
+        <t-node :content="dividerContent" />
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
+import { computed, toRefs, defineComponent, getCurrentInstance } from 'vue';
 import { renderContent, TNode } from '../shared';
 import DividerProps from './props';
 import config from '../config';
@@ -21,15 +25,15 @@ export default defineComponent({
     const dividerContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const dividerClass = computed(() => [
       `${name}`,
-      `${name}--hairline`,
+      `${name}--${props.layout}`,
+      `${name}--${props.align}`,
       {
-        [`${name}--content-${props.align}`]: dividerContent.value,
         [`${name}--dashed`]: props.dashed,
-        [`${name}-vertical`]: props.layout === 'vertical',
       },
     ]);
 
     return {
+      name,
       ...toRefs(props),
       dividerContent,
       dividerClass,
