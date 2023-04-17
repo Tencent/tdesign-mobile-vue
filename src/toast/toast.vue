@@ -2,8 +2,10 @@
   <div>
     <t-overlay v-bind="customOverlayProps" />
     <div :class="classes">
-      <t-node :content="iconContent"></t-node>
-      <div v-if="messageContent" :class="`${name}__text`">
+      <div :class="iconClasses">
+        <t-node :content="iconContent"></t-node>
+      </div>
+      <div v-if="messageContent" :class="textClasses">
         <t-node :content="messageContent"></t-node>
       </div>
     </div>
@@ -11,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { LoadingIcon, CheckCircleIcon, ErrorCircleIcon } from 'tdesign-icons-vue-next';
+import { LoadingIcon, CheckCircleIcon, CloseCircleIcon } from 'tdesign-icons-vue-next';
 import { computed, toRefs, ref, defineComponent, getCurrentInstance, h } from 'vue';
 import { renderTNode, TNode } from '../shared';
 import TOverlay from '../overlay';
@@ -29,10 +31,13 @@ export default defineComponent({
     const toastTypeIcon = {
       loading: LoadingIcon,
       success: CheckCircleIcon,
-      fail: ErrorCircleIcon,
+      error: CloseCircleIcon,
     };
+    // 获取当前实例-单例
     const internalInstance = getCurrentInstance();
+    // 内容渲染
     const messageContent = computed(() => renderTNode(internalInstance, 'message'));
+    // 图标渲染
     const iconContent = computed(() => {
       let iconNode = renderTNode(internalInstance, 'icon');
       if (iconNode === undefined && props.theme) {
@@ -43,13 +48,25 @@ export default defineComponent({
 
     const classes = computed(() => [
       `${name}`,
+      `${name}__content`,
+      `${name}__icon`,
       {
         [`${name}--${props.direction}`]: props.direction,
-        [`${name}--text`]: !iconContent.value,
-        [`${name}--icononly`]: !messageContent.value && iconContent.value,
-        [`${name}--top`]: props.placement === 'top',
-        [`${name}--middle`]: props.placement === 'middle',
-        [`${name}--bottom`]: props.placement === 'bottom',
+        [`${name}__content--${props.direction}`]: props.direction,
+        [`${name}--loading`]: props.theme === 'loading',
+      },
+    ]);
+
+    const textClasses = computed(() => [
+      {
+        [`${name}__text`]: !iconContent.value,
+        [`${name}__text--${props.direction}`]: props.direction,
+      },
+    ]);
+
+    const iconClasses = computed(() => [
+      {
+        [`${name}__icon--${props.direction}`]: props.direction,
       },
     ]);
 
@@ -68,6 +85,8 @@ export default defineComponent({
     return {
       name: ref(name),
       classes,
+      textClasses,
+      iconClasses,
       iconContent,
       messageContent,
       customOverlayProps,

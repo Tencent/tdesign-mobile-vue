@@ -1,7 +1,9 @@
 <template>
   <div class="toast-demo">
     <div class="toast-demo">
-      <t-button block size="large" variant="outline" @click="showOverlayProps">可滑动和点击透明遮罩</t-button>
+      <t-button block theme="primary" size="large" variant="outline" @click="showOverlayProps"
+        >可滑动和点击透明遮罩</t-button
+      >
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="toast-demo">
-    <t-button block size="large" theme="primary" variant="outline" @click="showText(text)">纯文本</t-button>
+    <t-button block size="large" theme="primary" variant="outline" @click="showText(text)">多行文本</t-button>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import { h, ref } from 'vue';
 import { Toast } from 'tdesign-mobile-vue';
 
-const text = ref('轻提示文字内容');
+const text = ref('最多一行展示十个汉字宽度限制最多不超过三行文字行文字行文字');
 const showText = (message: string) => {
   Toast(message);
 };

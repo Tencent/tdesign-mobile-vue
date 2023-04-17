@@ -59,5 +59,5 @@ export default {
   /** 轻提示隐藏的时候触发 */
   onClose: Function as PropType<TdToastProps['onClose']>,
   /** 轻提示销毁的时候触发 */
-  onDestory: Function as PropType<TdToastProps['onDestory']>,
+  onDestroy: Function as PropType<TdToastProps['onDestroy']>,
 };

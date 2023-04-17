@@ -57,5 +57,5 @@ export interface TdToastProps {
   /**
    * 轻提示销毁的时候触发
    */
-  onDestory?: () => void;
+  onDestroy?: () => void;
 }
