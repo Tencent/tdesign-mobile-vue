@@ -72,7 +72,7 @@ export default defineComponent({
     const isUseTextBtn = () =>
       [props?.confirmBtn, props?.cancelBtn, ...(props?.actions || [])].some((item) => get(item, 'variant') === 'text');
     const innerValue = ref('');
-    const dClassName = computed(() => [`${name}`, `${'t'}-class`]);
+    const dClassName = computed(() => [`${name}`]);
     const dContentClassName = computed(() => [`${name}__content`]);
     const dContentTitleClassName = computed(() => [`${name}__header`]);
     const dBodyClassName = computed(() => [`${name}__body`]);

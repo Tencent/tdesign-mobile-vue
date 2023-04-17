@@ -11,7 +11,7 @@
   >
   </t-dialog>
 
-  <br />
+  <div class="btn-gap"></div>
 
   <t-button block variant="outline" size="large" @click="isShowDialog6 = true"> 确认类-无标题 </t-button>
 
@@ -48,6 +48,10 @@ const onClose = () => {
 
 <style lang="less" scoped>
 .tdesign-demo--dialog {
+  .btn-gap {
+    width: 100%;
+    height: 16px;
+  }
   .t-button:not(:last-child) {
     margin-right: 20px;
   }

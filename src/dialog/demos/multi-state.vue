@@ -12,7 +12,7 @@
     @cancel="onCancel"
   >
   </t-dialog>
-  <br />
+  <div class="btn-gap"></div>
 
   <t-button block variant="outline" size="large" @click="isShowDialog5 = true"> 水平基础按钮 </t-button>
   <t-dialog
@@ -25,7 +25,7 @@
     @cancel="onCancel"
   >
   </t-dialog>
-  <br />
+  <div class="btn-gap"></div>
   <t-button block variant="outline" size="large" @click="isShowDialog6 = true"> 垂直基础按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog6"
@@ -40,7 +40,7 @@
   >
   </t-dialog>
 
-  <br />
+  <div class="btn-gap"></div>
   <t-button block variant="outline" size="large" @click="isShowDialog7 = true"> 垂直多按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog7"
@@ -56,7 +56,7 @@
   >
   </t-dialog>
 
-  <br />
+  <div class="btn-gap"></div>
   <t-button block variant="outline" size="large" @click="isShowDialog8 = true"> 带关闭按钮 </t-button>
   <t-dialog
     v-model:visible="isShowDialog8"
@@ -108,6 +108,10 @@ const onClose = () => {
 
 <style lang="less" scoped>
 .tdesign-demo--dialog {
+  .btn-gap {
+    width: 100%;
+    height: 16px;
+  }
   .t-button:not(:last-child) {
     margin-right: 20px;
   }

@@ -9,7 +9,7 @@
     :show-overlay="showOverlay"
   >
   </t-dialog>
-  <br />
+  <div class="btn-gap"></div>
   <t-button block variant="outline" size="large" @click="isShowDialog2 = true"> 反馈类-无标题 </t-button>
   <t-dialog
     v-model:visible="isShowDialog2"
@@ -19,7 +19,7 @@
     :show-overlay="showOverlay"
   >
   </t-dialog>
-  <br />
+  <div class="btn-gap"></div>
   <t-button block variant="outline" size="large" @click="isShowDialog3 = true"> 反馈类-内容超长 </t-button>
   <t-dialog
     v-model:visible="isShowDialog3"
@@ -57,6 +57,10 @@ const onClickOverlay = () => {
 
 <style lang="less">
 .dialog-demo {
+  .btn-gap {
+    width: 100%;
+    height: 16px;
+  }
   .middle-container {
     padding: 20px;
     overflow: auto;

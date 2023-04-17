@@ -17,7 +17,7 @@
     </template>
   </t-dialog>
 
-  <br />
+  <div class="btn-gap"></div>
   <t-button block variant="outline" size="large" @click="isShowDialog2 = true"> 输入类-带描述 </t-button>
   <t-dialog
     v-model:visible="isShowDialog2"
@@ -56,6 +56,10 @@ const onChange = () => {
 
 <style lang="less" scoped>
 .dialog-demo {
+  .btn-gap {
+    width: 100%;
+    height: 16px;
+  }
   .input-container {
     display: flex;
     align-items: center;

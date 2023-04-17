@@ -15,7 +15,7 @@
       <t-image class="image-container" fit="contain" :src="imageSrc"></t-image>
     </template>
   </t-dialog>
-  <br />
+  <div class="btn-gap"></div>
   <t-button block variant="outline" size="large" @click="isShowDialog7 = true">图片居中</t-button>
   <t-dialog
     v-model:visible="isShowDialog7"
@@ -57,6 +57,10 @@ const onClose = () => {
 
 <style lang="less" scoped>
 .tdesign-demo--dialog {
+  .btn-gap {
+    width: 100%;
+    height: 16px;
+  }
   .t-button:not(:last-child) {
     margin-right: 20px;
   }
