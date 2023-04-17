@@ -6,8 +6,13 @@
 
 export interface TdActionSheetProps {
   /**
+   * 水平对齐方式
+   * @default center
+   */
+  align?: 'center' | 'left';
+  /**
    * 设置取消按钮的文本
-   * @default 取消
+   * @default ''
    */
   cancelText?: string;
   /**
@@ -15,6 +20,11 @@ export interface TdActionSheetProps {
    * @default 8
    */
   count?: number;
+  /**
+   * 动作面板描述文字
+   * @default ''
+   */
+  description?: string;
   /**
    * 菜单项
    */
@@ -51,11 +61,11 @@ export interface TdActionSheetProps {
   /**
    * 关闭时触发
    */
-  onClose?: (context: { e: MouseEvent }) => void;
+  onClose?: (trigger: TriggerSource) => void;
   /**
    * 选择菜单项时触发
    */
-  onSelected?: (selected: ActionSheetItem | String, index: number) => void;
+  onSelected?: (selected: ActionSheetItem | string, index: number) => void;
 }
 
 export interface ActionSheetItem {
@@ -63,3 +73,5 @@ export interface ActionSheetItem {
   color?: string;
   disabled?: boolean;
 }
+
+export type TriggerSource = 'overlay' | 'command' | 'select';

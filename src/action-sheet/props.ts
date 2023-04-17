@@ -8,15 +8,29 @@ import { TdActionSheetProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 水平对齐方式 */
+  align: {
+    type: String as PropType<TdActionSheetProps['align']>,
+    default: 'center' as TdActionSheetProps['align'],
+    validator(val: TdActionSheetProps['align']): boolean {
+      if (!val) return true;
+      return ['center', 'left'].includes(val);
+    },
+  },
   /** 设置取消按钮的文本 */
   cancelText: {
     type: String,
-    default: '取消',
+    default: '',
   },
   /** 设置每页展示菜单的数量，仅当 type=grid 时有效 */
   count: {
     type: Number,
     default: 8,
+  },
+  /** 动作面板描述文字 */
+  description: {
+    type: String,
+    default: '',
   },
   /** 菜单项 */
   items: {
