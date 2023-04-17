@@ -66,7 +66,7 @@ export default defineComponent({
       `${name}--${props.align}`,
       {
         [`${name}--hover`]: props.hover && disabled.value,
-        [`${name}--borderless`]: props.bordered,
+        [`${name}--borderless`]: !props.bordered,
       },
     ]);
 

@@ -19,7 +19,7 @@ exports[`SwipeCell > SwipeCell bindVue demo works fine 1`] = `
   >
     
     <div
-      class="t-cell t-cell--middle t-cell--borderless"
+      class="t-cell t-cell--middle"
     >
       <div
         class="t-cell__left"
@@ -76,7 +76,7 @@ exports[`SwipeCell > SwipeCell bindVue demo works fine 1`] = `
         >
           
           <div
-            class="t-cell t-cell--middle t-cell--borderless"
+            class="t-cell t-cell--middle"
           >
             <div
               class="t-cell__left"
@@ -179,7 +179,7 @@ exports[`SwipeCell > SwipeCell btnsVue demo works fine 1`] = `
         >
           
           <div
-            class="t-cell t-cell--middle t-cell--borderless"
+            class="t-cell t-cell--middle"
           >
             <div
               class="t-cell__left"
@@ -340,7 +340,7 @@ exports[`SwipeCell > SwipeCell disabledVue demo works fine 1`] = `
   >
     
     <div
-      class="t-cell t-cell--middle t-cell--borderless"
+      class="t-cell t-cell--middle"
     >
       <div
         class="t-cell__left"
@@ -397,7 +397,7 @@ exports[`SwipeCell > SwipeCell disabledVue demo works fine 1`] = `
         >
           
           <div
-            class="t-cell t-cell--middle t-cell--borderless"
+            class="t-cell t-cell--middle"
           >
             <div
               class="t-cell__left"
@@ -516,7 +516,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
         >
           
           <div
-            class="t-cell t-cell--middle t-cell--borderless"
+            class="t-cell t-cell--middle"
           >
             <div
               class="t-cell__left"
@@ -628,7 +628,7 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -718,7 +718,7 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -825,7 +825,7 @@ exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -937,7 +937,7 @@ exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1066,7 +1066,7 @@ exports[`SwipeCell > SwipeCell leftOneMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1147,7 +1147,7 @@ exports[`SwipeCell > SwipeCell leftOneMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1245,7 +1245,7 @@ exports[`SwipeCell > SwipeCell leftTwoMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1342,7 +1342,7 @@ exports[`SwipeCell > SwipeCell leftTwoMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1466,7 +1466,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1547,7 +1547,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1638,7 +1638,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1735,7 +1735,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1842,7 +1842,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -1954,7 +1954,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2076,7 +2076,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2166,7 +2166,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2281,7 +2281,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2362,7 +2362,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2418,7 +2418,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-cell t-cell--middle t-cell--borderless"
+        class="t-cell t-cell--middle"
       >
         <div
           class="t-cell__left"
@@ -2475,7 +2475,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2616,7 +2616,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-cell t-cell--middle t-cell--borderless"
+        class="t-cell t-cell--middle"
       >
         <div
           class="t-cell__left"
@@ -2673,7 +2673,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2789,7 +2789,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -2903,7 +2903,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -3031,7 +3031,7 @@ exports[`SwipeCell > SwipeCell rightMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"
@@ -3112,7 +3112,7 @@ exports[`SwipeCell > SwipeCell rightMenuVue demo works fine 1`] = `
           >
             
             <div
-              class="t-cell t-cell--middle t-cell--borderless"
+              class="t-cell t-cell--middle"
             >
               <div
                 class="t-cell__left"

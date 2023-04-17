@@ -46,7 +46,7 @@ export const requestSubmit = (target: HTMLFormElement) => {
 
 export default defineComponent({
   name,
-  props: { ...props },
+  props,
   setup(props, { expose }) {
     const {
       disabled,

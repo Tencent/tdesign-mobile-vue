@@ -6,7 +6,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--borderless"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -264,7 +264,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--borderless"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -553,7 +553,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--borderless"
+        class="t-cell t-cell--middle"
       >
         <div
           class="t-cell__left"
@@ -824,7 +824,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--borderless"
+        class="t-cell t-cell--middle"
       >
         <div
           class="t-cell__left"
@@ -1069,7 +1069,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--borderless"
+        class="t-cell t-cell--middle"
       >
         <div
           class="t-cell__left"
@@ -1340,7 +1340,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--borderless"
+        class="t-cell t-cell--middle"
       >
         <div
           class="t-cell__left"
@@ -1611,7 +1611,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-cell t-cell--middle t-cell--borderless"
+        class="t-cell t-cell--middle"
       >
         <div
           class="t-cell__left"
@@ -1876,7 +1876,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--borderless"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -2104,7 +2104,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--borderless"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -2366,7 +2366,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
 >
   
   <div
-    class="t-cell t-cell--middle t-cell--borderless"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"

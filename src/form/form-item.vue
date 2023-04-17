@@ -1,6 +1,6 @@
 <template>
   <div :class="formItemClass">
-    <div :class="[`${classPrefix}--wrap`, `${classPrefix}--${labelAlign}`]">
+    <div :class="[`${classPrefix}-wrap`, `${classPrefix}--${labelAlign}`]">
       <div :class="labelClasses" :style="labelStyle">
         <label :for="props.for">
           <t-node :content="labelContent"></t-node>
@@ -10,10 +10,10 @@
         <div :class="contentSlotClasses">
           <slot></slot>
         </div>
-        <div v-if="helpNode" :class="[`${classPrefix}__help`, `${prefix}-form__controls--${contentAlign}`]">
+        <div v-if="helpNode" :class="[`${classPrefix}-help`, `${prefix}-form__controls--${contentAlign}`]">
           <t-node :content="helpNode"></t-node>
         </div>
-        <div v-if="extraNode" :class="[`${classPrefix}__extra`, `${prefix}-form__controls--${contentAlign}`]">
+        <div v-if="extraNode" :class="[`${classPrefix}-extra`, `${prefix}-form__controls--${contentAlign}`]">
           {{ extraNode }}
         </div>
       </div>
@@ -72,15 +72,15 @@ import {
 import config from '../config';
 
 const { prefix } = config;
-const componentName = `${prefix}-form-item`;
+const name = `${prefix}-form-item`;
 const classPrefix = `${prefix}-form__item`;
 
 export type FormItemValidateResult<T extends Data = Data> = { [key in keyof T]: boolean | AllValidateResult[] };
 
 export default defineComponent({
-  name: componentName,
+  name,
   components: { TNode },
-  props: { ...props },
+  props,
   setup(props, { slots }) {
     const { name } = toRefs(props);
 

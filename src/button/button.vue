@@ -39,14 +39,14 @@ export default defineComponent({
         [`${name}--shape-${props.shape}`]: props.shape,
         [`${name}--ghost`]: props.ghost,
         [`${prefix}-is-block`]: props.block,
-        [CLASSNAMES.STATUS.disabled]: props.disabled || disabled.value,
+        [CLASSNAMES.STATUS.disabled]: disabled.value,
         [CLASSNAMES.STATUS.loading]: props.loading,
       },
     ]);
     const buttonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => (props.loading ? loadingContent : renderTNode(internalInstance, 'icon')));
     const onClick = (e: Event) => {
-      if (!props.loading && !props.disabled) {
+      if (!props.loading && !disabled.value) {
         emitEvent('click', e);
       } else {
         e.stopPropagation();

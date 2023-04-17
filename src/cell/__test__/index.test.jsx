@@ -49,9 +49,9 @@ describe('Cell.vue', async () => {
   });
 
   it('border render', async () => {
-    const wrapper1 = mount(() => <Cell title="单行标题"></Cell>);
+    const wrapper1 = mount(() => <Cell title="单行标题" bordered={false}></Cell>);
     expect(wrapper1.classes()).toContain('t-cell--borderless');
-    const wrapper2 = mount(() => <Cell title="单行标题" bordered={false}></Cell>);
+    const wrapper2 = mount(() => <Cell title="单行标题"></Cell>);
     expect(wrapper2.classes('t-cell--bordered')).toBeFalsy();
   });
 

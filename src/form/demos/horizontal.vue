@@ -271,38 +271,13 @@ const onSubmit = (e: any) => {
 };
 
 const rules = {
-  name: [{ len: 8, message: '只能输入8个字符英文' }],
-  password: [{ min: 6, message: '长度大于6个字符' }],
-  gender: [
-    {
-      validator: (val: any) => val !== '',
-      message: '不能为空',
-    },
-  ],
-  birth: [
-    {
-      validator: (val: any) => val !== '',
-      message: '不能为空',
-    },
-  ],
-  place: [
-    {
-      validator: (val: any) => val !== '',
-      message: '不能为空',
-    },
-  ],
-  description: [
-    {
-      validator: (val: any) => val > 3,
-      message: '分数过低会影响整体评价',
-    },
-  ],
-  resume: [
-    {
-      validator: (val: any) => val !== '',
-      message: '不能为空',
-    },
-  ],
+  name: [{ validator: (val: any) => val === 8, message: '只能输入8个字符英文' }],
+  password: [{ validator: (val: any) => val > 6, message: '长度大于6个字符' }],
+  gender: [{ validator: (val: any) => val !== '', message: '不能为空' }],
+  birth: [{ validator: (val: any) => val !== '', message: '不能为空' }],
+  place: [{ validator: (val: any) => val !== '', message: '不能为空' }],
+  description: [{ validator: (val: any) => val > 3, message: '分数过低会影响整体评价' }],
+  resume: [{ validator: (val: any) => val !== '', message: '不能为空' }],
 };
 
 onMounted(() => {

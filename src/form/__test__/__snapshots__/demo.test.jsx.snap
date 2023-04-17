@@ -11,7 +11,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -74,7 +74,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-form__item__help t-form__controls--left"
+          class="t-form__item-help t-form__controls--left"
         >
           输入用户名
         </div>
@@ -88,7 +88,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -161,7 +161,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -307,7 +307,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -652,7 +652,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -945,7 +945,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -1020,7 +1020,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -1390,7 +1390,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -1443,7 +1443,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-799be585=""
   >
     <div
-      class="t-form__item--wrap t-form__item--left"
+      class="t-form__item-wrap t-form__item--left"
     >
       <div
         class="t-form__label t-form__label--left"
@@ -1755,7 +1755,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           </button>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--borderless"
+          class="t-cell t-cell--middle"
           data-v-4e944783=""
         >
           <div
@@ -1818,7 +1818,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -1881,7 +1881,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 
               </div>
               <div
-                class="t-form__item__help t-form__controls--left"
+                class="t-form__item-help t-form__controls--left"
               >
                 输入用户名
               </div>
@@ -1895,7 +1895,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -1968,7 +1968,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -2114,7 +2114,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -2459,7 +2459,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -2752,7 +2752,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -2827,7 +2827,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -3197,7 +3197,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -3250,7 +3250,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-799be585=""
         >
           <div
-            class="t-form__item--wrap t-form__item--left"
+            class="t-form__item-wrap t-form__item--left"
           >
             <div
               class="t-form__label t-form__label--left"
@@ -3503,7 +3503,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -3565,7 +3565,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           
         </div>
         <div
-          class="t-form__item__help t-form__controls--left"
+          class="t-form__item-help t-form__controls--left"
         >
           输入用户名
         </div>
@@ -3579,7 +3579,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -3651,7 +3651,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -3796,7 +3796,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -4140,7 +4140,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -4432,7 +4432,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -4506,7 +4506,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -4875,7 +4875,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
@@ -4927,7 +4927,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-713b33d2=""
   >
     <div
-      class="t-form__item--wrap t-form__item--top"
+      class="t-form__item-wrap t-form__item--top"
     >
       <div
         class="t-form__label t-form__label--top"
