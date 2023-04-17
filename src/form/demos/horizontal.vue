@@ -65,7 +65,21 @@
       ></t-textarea>
     </t-form-item>
     <t-form-item label="上传照片" name="photo">
-      <t-upload v-model="formData.photo" :multiple="true" :max="max" :grid-config="gridConfig" :action="action" />
+      <t-upload
+        class="upload"
+        :default-files="formData.photo"
+        multiple
+        :max="6"
+        :action="action"
+        :on-fail="onFail"
+        :on-progress="onProgress"
+        :on-change="onChangeUpload"
+        :on-preview="onPreview"
+        :on-success="onSuccess"
+        :on-remove="onRemove"
+        :on-select-change="onSelectChange"
+      >
+      </t-upload>
     </t-form-item>
     <div class="button-group">
       <t-button theme="primary" type="submit" size="large">提交</t-button>
@@ -76,17 +90,53 @@
 <script lang="ts" setup>
 import { ref, reactive, defineProps, toRefs, onMounted } from 'vue';
 
+import {
+  UploadChangeContext,
+  UploadFile,
+  UploadRemoveContext,
+  SuccessContext,
+  ProgressContext,
+} from '../../upload/type';
+
 const props = defineProps({
   disabled: Boolean,
 });
 const { disabled } = toRefs(props);
 
-const max = 10;
+// upload
+const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }) => {
+  console.log('---onFail', file, e);
+  return null;
+};
+
+const onProgress = ({ file, percent, type, e }: ProgressContext) => {
+  console.log('---onProgress:', file, percent, type, e);
+};
+const onChangeUpload = (files: Array<UploadFile>, { e, response, trigger, index, file }: UploadChangeContext) => {
+  console.log('====onChange', files, e, response, trigger, index, file);
+};
+const onPreview = ({ file, e }: { file: UploadFile; e: MouseEvent }) => {
+  console.log('====onPreview', file, e);
+};
+const onSuccess = ({ file, fileList, response, e }: SuccessContext) => {
+  console.log('====onSuccess', file, fileList, e, response);
+};
+const onRemove = ({ index, file, e }: UploadRemoveContext) => {
+  console.log('====onRemove', index, file, e);
+};
+const onSelectChange = (files: Array<UploadFile>) => {
+  console.log('====onSelectChange', files);
+};
 const action = 'https://service-bv448zsw-1257786608.gz.apigw.tencentcs.com/api/upload-demo';
 const files = ref([
   {
-    url: 'https://tdesign.gtimg.com/site/upload1.png',
+    url: 'https://tdesign.gtimg.com/miniprogram/images/example4.png',
     name: 'uploaded1.png',
+    type: 'image',
+  },
+  {
+    url: 'https://tdesign.gtimg.com/miniprogram/images/example6.png',
+    name: 'uploaded2.png',
     type: 'image',
   },
 ]);
@@ -211,11 +261,6 @@ const onChangeStepper = ($event: number) => {
 // rate
 const rateGap = 8;
 
-// upload
-const gridConfig = {
-  column: 4,
-};
-
 // form
 const onReset = () => {
   console.log('===onReset');
@@ -271,6 +316,9 @@ onMounted(() => {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.upload {
+  --td-upload-grid-columns: 3;
 }
 .textarea {
   height: 100px;

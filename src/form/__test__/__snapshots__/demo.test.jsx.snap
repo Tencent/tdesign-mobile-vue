@@ -1463,12 +1463,132 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-upload"
+            class="t-upload upload"
             data-v-799be585=""
-            grid-config="[object Object]"
-            modelvalue="[object Object]"
           >
             
+            <div
+              class="t-upload__item"
+            >
+              <div
+                class="t-image t-image--round t-upload__image"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example4.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
+              </div>
+              <!--v-if-->
+              <svg
+                class="t-icon t-icon-close t-upload__delete-btn"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            <div
+              class="t-upload__item"
+            >
+              <div
+                class="t-image t-image--round t-upload__image"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example6.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
+              </div>
+              <!--v-if-->
+              <svg
+                class="t-icon t-icon-close t-upload__delete-btn"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             
             
             <div
@@ -3150,12 +3270,132 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-upload"
+                  class="t-upload upload"
                   data-v-799be585=""
-                  grid-config="[object Object]"
-                  modelvalue="[object Object]"
                 >
                   
+                  <div
+                    class="t-upload__item"
+                  >
+                    <div
+                      class="t-image t-image--round t-upload__image"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                          </div>
+                          
+                          <!--v-if-->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!--v-if-->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/miniprogram/images/example4.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                    <!--v-if-->
+                    <svg
+                      class="t-icon t-icon-close t-upload__delete-btn"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="t-upload__item"
+                  >
+                    <div
+                      class="t-image t-image--round t-upload__image"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                          </div>
+                          
+                          <!--v-if-->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!--v-if-->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/miniprogram/images/example6.png"
+                          style="object-fit: fill; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                    <!--v-if-->
+                    <svg
+                      class="t-icon t-icon-close t-upload__delete-btn"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 16 16"
+                      width="1em"
+                    >
+                      <path
+                        d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </div>
                   
                   
                   <div
@@ -4708,10 +4948,130 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           <div
             class="t-upload"
             data-v-713b33d2=""
-            grid-config="[object Object]"
-            modelvalue="[object Object]"
           >
             
+            <div
+              class="t-upload__item"
+            >
+              <div
+                class="t-image t-image--round t-upload__image"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example4.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
+              </div>
+              <!--v-if-->
+              <svg
+                class="t-icon t-icon-close t-upload__delete-btn"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
+            <div
+              class="t-upload__item"
+            >
+              <div
+                class="t-image t-image--round t-upload__image"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                    </div>
+                    
+                    <!--v-if-->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!--v-if-->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/miniprogram/images/example6.png"
+                    style="object-fit: fill; object-position: center;"
+                  />
+                </picture>
+              </div>
+              <!--v-if-->
+              <svg
+                class="t-icon t-icon-close t-upload__delete-btn"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
             
             
             <div
