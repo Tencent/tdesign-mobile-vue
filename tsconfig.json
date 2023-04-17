@@ -35,7 +35,6 @@
     "src/**/*.js",
     "babel.config.js",
     "src/style/index.js",
-    "scripts/rollup.config.js"
-, "src/link/__test__/index.test.jsx", "src/link/__test__/index.test.jsx"  ],
+    "scripts/rollup.config.js"],
   "exclude": ["node_modules", "src/_common", "dist", "es", "esm", "lib", "site"]
 }

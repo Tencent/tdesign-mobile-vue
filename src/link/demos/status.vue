@@ -39,7 +39,7 @@ import { JumpIcon } from 'tdesign-icons-vue-next';
 </script>
 <style scoped>
 .tdesign-mobile-link-demo {
-  height: 12.8vw;
+  height: 48px;
   background: #ffffffff;
   display: flex;
   justify-content: space-around;
