@@ -22,4 +22,3 @@ onDestroy | Function |  | TS 类型：`() => void`<br/>轻提示销毁的时候�
 -- | -- | --
 close | \- | 轻提示隐藏的时候触发
 destroy | \- | 轻提示销毁的时候触发
-s
