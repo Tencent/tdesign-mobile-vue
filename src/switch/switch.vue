@@ -18,6 +18,7 @@ import { useToggle, useDefault, TNode } from '../shared';
 import config from '../config';
 import SwitchProps from './props';
 import { SwitchValue, TdSwitchProps } from './type';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-switch`;
@@ -28,6 +29,7 @@ export default defineComponent({
   props: SwitchProps,
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {
+    const disabled = useFormDisabled();
     const switchValues = props.customValue || [true, false];
     const [innerValue] = useDefault<SwitchValue, TdSwitchProps>(props, context.emit, 'value', 'change');
     const { state, toggle } = useToggle<SwitchValue>(switchValues, innerValue.value);
@@ -37,7 +39,7 @@ export default defineComponent({
       `${name}--${props.size}`,
       {
         [`${name}--checked`]: checked.value,
-        [`${name}--disabled`]: props.disabled,
+        [`${name}--disabled`]: disabled.value,
       },
     ]);
     const dotClasses = computed(() => [
@@ -58,7 +60,7 @@ export default defineComponent({
     const iconContent = computed(() => props?.icon?.[checked.value ? 0 : 1]);
 
     function handleToggle(event: Event) {
-      if (props.disabled) {
+      if (disabled.value) {
         return;
       }
       toggle();

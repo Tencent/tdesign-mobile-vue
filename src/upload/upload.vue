@@ -60,6 +60,7 @@ import { SuccessContext, InnerProgressContext } from './interface';
 import UploadProps from './props';
 import config from '../config';
 import { isOverSizeLimit } from '../_common/js/upload/utils';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-upload`;
@@ -90,6 +91,7 @@ export default defineComponent({
     'validate',
   ],
   setup(props, context) {
+    const disabled = useFormDisabled();
     const emitEvent = useEmitEvent(props, context.emit);
     const [innerFiles, setInnerFiles] = useDefault<TdUploadProps['files'], TdUploadProps>(
       props,
@@ -117,7 +119,7 @@ export default defineComponent({
 
     const triggerUpload = () => {
       const input = inputRef.value as HTMLInputElement;
-      if (props.disabled) return;
+      if (disabled.value) return;
       input.click();
     };
 
@@ -135,8 +137,7 @@ export default defineComponent({
 
     const handleChange = () => {
       const input = inputRef.value;
-
-      if (props.disabled || !input || !input.files) return;
+      if (disabled.value || !input || !input.files) return;
 
       const formatFiles = formatFileToUploadFile(input.files);
       emitEvent('select-change', [...formatFiles]);

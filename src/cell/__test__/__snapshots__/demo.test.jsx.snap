@@ -7,7 +7,7 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
   <!--v-if-->
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -67,7 +67,7 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -122,7 +122,7 @@ exports[`Cell > Cell groupVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -226,7 +226,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -265,7 +265,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -308,7 +308,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -369,7 +369,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -407,7 +407,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -450,7 +450,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -539,7 +539,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -582,7 +582,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -629,7 +629,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -694,7 +694,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -736,7 +736,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -783,7 +783,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -849,7 +849,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -872,7 +872,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -895,7 +895,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -995,7 +995,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -1056,7 +1056,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
         <!--v-if-->
         
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -1116,7 +1116,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -1171,7 +1171,7 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
           </div>
         </div>
         <div
-          class="t-cell t-cell--middle t-cell--bordered"
+          class="t-cell t-cell--middle"
         >
           <div
             class="t-cell__left"
@@ -1240,7 +1240,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
   <!--v-if-->
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1283,7 +1283,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1330,7 +1330,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1395,7 +1395,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1437,7 +1437,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1484,7 +1484,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1550,7 +1550,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1573,7 +1573,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1596,7 +1596,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1696,7 +1696,7 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1734,7 +1734,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
   <!--v-if-->
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1773,7 +1773,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1816,7 +1816,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1877,7 +1877,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1915,7 +1915,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
@@ -1958,7 +1958,7 @@ exports[`Cell > Cell singleVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
       class="t-cell__left"
