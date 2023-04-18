@@ -96,7 +96,7 @@ type ToastApi = {
   /** 展示成功提示 */
   success: (options?: Partial<TdToastProps> | string) => void;
   /** 展示失败提示 */
-  fail: (options?: Partial<TdToastProps> | string) => void;
+  error: (options?: Partial<TdToastProps> | string) => void;
   /** 关闭提示 */
   clear: () => void;
 };
