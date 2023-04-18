@@ -32,6 +32,7 @@ import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const componentName = `${prefix}-textarea`;
@@ -45,6 +46,7 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'focus', 'blur', 'change'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
+    const disabled = useFormDisabled();
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();
     const textareaLength = ref(0);
@@ -61,7 +63,7 @@ export default defineComponent({
     const textareaClassNames = computed(() => [
       `${componentName}__wrapper-inner`,
       {
-        [`${componentName}--disabled`]: props.disabled,
+        [`${componentName}--disabled`]: disabled.value,
       },
     ]);
     const internalInstance = getCurrentInstance();
@@ -138,6 +140,7 @@ export default defineComponent({
     return {
       componentName,
       ...toRefs(props),
+      disabled,
       labelContent,
       innerValue,
       textareaRef,

@@ -8,17 +8,18 @@ import { TdGridItemProps } from '../grid/type';
 import { PropType } from 'vue';
 
 export default {
-  /** 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字 */
-  badgeProps: {
-    type: Object as PropType<TdGridItemProps['badgeProps']>,
+  /** 透传至 Badge 属性 */
+  badge: {
+    type: Object as PropType<TdGridItemProps['badge']>,
+    default: () => null,
   },
   /** 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点 */
   description: {
     type: [String, Function] as PropType<TdGridItemProps['description']>,
   },
-  /** 图片，可以是图片地址，也可以自定义图片节点 */
+  /** 图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件 */
   image: {
-    type: [String, Function] as PropType<TdGridItemProps['image']>,
+    type: [String, Object, Function] as PropType<TdGridItemProps['image']>,
   },
   /** 内容布局方式 */
   layout: {

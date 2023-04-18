@@ -5,7 +5,34 @@ toc: false
 spline: explain
 ---
 
-## 🌈 0.17.0 `2023-04-07`
+## 🌈 0.18.0 `2023-04-17` 
+### ❗ Breaking Changes
+- `Cascader`: 移除cancel、click-tab 事件 @anlyyao ([#533](https://github.com/Tencent/tdesign-mobile-vue/pull/533))
+- `Badge`: 调整 DOM 结构 @jarmywang ([#576](https://github.com/Tencent/tdesign-mobile-vue/pull/576))
+- `Grid`: 调整 DOM，优化视觉 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Grid`: 属性 border 移除 object 类型，改用 CSS Variables 调整边框样式 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `GridItem`: 属性 badgeProps 更名为 badge @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Upload`: 移除 deleteBtn、gridConfig 属性 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Message`: 调整滚动类型通知的动画初始值，优化动画循环方法 @yusuf-yz ([#586](https://github.com/Tencent/tdesign-mobile-vue/pull/586))
+- `Message`: 移除 change、close、closed、open、opened 事件 @yusuf-yz ([#586](https://github.com/Tencent/tdesign-mobile-vue/pull/586))
+
+### 🚀 Features
+- `Form`: 新增 Form 表单 @anlyyao ([#591](https://github.com/Tencent/tdesign-mobile-vue/pull/591))
+- `Link`: 新增 Link 组件 @brianzhang ([#589](https://github.com/Tencent/tdesign-mobile-vue/pull/589))
+- `Grid`: 属性 column 支持值为 0，则为固定宽度单元格，可以横向滚动 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Grid`: 新增 theme 属性，支持 card 风格 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `GridItem`: 属性 image 支持 object 类型，透传至 image 组件 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Upload`: 新增 formatRequest 属性、validate 事件 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Message`: 新增 close-btn-click 事件 @yusuf-yz ([#586](https://github.com/Tencent/tdesign-mobile-vue/pull/586))
+
+### 🐞 Bug Fixes
+- `Grid`: 修复调整 gutter 视觉错误的问题 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Grid`: 修复出现多行时，边框视觉错误的问题 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Upload`: 修复 size-limit 无法限制的问题 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Upload`: 修复超出 max 仍可以上传的问题 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Cell`: 修复 bordered 无效 @anlyyao ([#591](https://github.com/Tencent/tdesign-mobile-vue/pull/591))
+
+## 🌈 0.17.0 `2023-04-07` 
 ### ❗ BREAKING CHANGES
 - `CheckBox`: 属性 align 更名为 placement @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))
 - `CheckBox`: 属性 icon 的枚举值变更 @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))
@@ -46,7 +73,7 @@ spline: explain
 
 
 
-## 🌈 0.16.0 `2023-03-27`
+## 🌈 0.16.0 `2023-03-27` 
 ### ❗ BREAKING CHANGES
 - `Loading`: 属性 size 默认值改成 20px @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
 - `Loading`: 属性 theme 移除 bar、error 类型 @LeeJim ([#528](https://github.com/Tencent/tdesign-mobile-vue/pull/528))
@@ -59,7 +86,7 @@ spline: explain
 - `Footer`: 新增页脚组件 @mamumu123 ([#525](https://github.com/Tencent/tdesign-mobile-vue/pull/525))
 - `CellGroup`: 新增 theme 属性，新增支持 card 风格 @LeeJim ([#529](https://github.com/Tencent/tdesign-mobile-vue/pull/529))
 
-## 🌈 0.15.0 `2023-03-20`
+## 🌈 0.15.0 `2023-03-20` 
 ### ❗ BREAKING CHANGES
 - `Stepper`: 属性 theme 的 gray 主题更名为 filled，并新增 outline 主题 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
 - `Radio`: 属性 align 更名为 placement @LeeJim ([#517](https://github.com/Tencent/tdesign-mobile-vue/pull/517))
@@ -79,7 +106,7 @@ spline: explain
 - `Stepper`: 修复 min/max 存在时，输入受限问题 @anlyyao ([#518](https://github.com/Tencent/tdesign-mobile-vue/pull/518))
 
 
-## 🌈 0.14.1 `2022-11-14`
+## 🌈 0.14.1 `2022-11-14` 
 ### 🚧 Others
 - `Badge`: 提升测试覆盖率 @anlyyao ([#479](https://github.com/Tencent/tdesign-mobile-vue/pull/479))
 - `Progress`: 更新示例代码 @xxxlj ([#472](https://github.com/Tencent/tdesign-mobile-vue/pull/472))
@@ -92,7 +119,7 @@ spline: explain
 - `Progress`: 更新示例代码 @xxxlj ([#472](https://github.com/Tencent/tdesign-mobile-vue/pull/472))
 - `Loading`: 更新示例代码 @lockiechen ([#481](https://github.com/Tencent/tdesign-mobile-vue/pull/481))
 
-## 🌈 0.14.0 `2022-11-07`
+## 🌈 0.14.0 `2022-11-07` 
 ### ❗ Breaking Changes
 - `NavBar`: 重构组件，支持更完整的 props 和 event @TingShine ([#391](https://github.com/Tencent/tdesign-mobile-vue/pull/391))
 ### 🐞 Bug Fixes
@@ -118,7 +145,7 @@ spline: explain
 - `List`: 更新示例代码 @yuanmeda ([#466](https://github.com/Tencent/tdesign-mobile-vue/pull/466))
 - `ImageViewer`: 更新示例代码 @yuanmeda ([#463](https://github.com/Tencent/tdesign-mobile-vue/pull/463))
 
-## 🌈 0.13.0 `2022-10-31`
+## 🌈 0.13.0 `2022-10-31` 
 ### ❗️BREAKING CHANGES
 - `Message`:  `closeBtn` 属性不再支持 `string` 类型 @anlyyao ([#429](https://github.com/Tencent/tdesign-mobile-vue/pull/429))
 
@@ -143,7 +170,7 @@ spline: explain
 - `CheckBox`: 更新示例代码 @yuanmeda ([#434](https://github.com/Tencent/tdesign-mobile-vue/pull/434))
 - `Divider`: 更新示例代码 @yuanmeda ([#436](https://github.com/Tencent/tdesign-mobile-vue/pull/436))
 
-## 🌈 0.12.2 `2022-10-24`
+## 🌈 0.12.2 `2022-10-24` 
 ### 🚀 Features
 - `Avatar`: 新增 `imageProps` 属性透传至 `Image` 组件 @anlyyao ([#417](https://github.com/Tencent/tdesign-mobile-vue/pull/417))
 - `List`: `scroll` 事件新增 `scrollTop` 参数 @LeeJim ([#427](https://github.com/Tencent/tdesign-mobile-vue/pull/427))
@@ -162,7 +189,7 @@ spline: explain
 - `List`: 更新示例代码 @LeeJim ([#427](https://github.com/Tencent/tdesign-mobile-vue/pull/427))
 - 移除部分工具函数使用 loadsh 代替 @LeeJim ([#419](https://github.com/Tencent/tdesign-mobile-vue/pull/419))
 
-## 🌈 0.12.1 `2022-10-17`
+## 🌈 0.12.1 `2022-10-17` 
 ### 🚀 Features
 - `Overlay`: 新增 `customStyle`属性，支持自定义遮罩样式 @anlyyao ([#403](https://github.com/Tencent/tdesign-mobile-vue/pull/403))
 
@@ -179,7 +206,7 @@ spline: explain
 - `List`:  提升单元测试覆盖率 @byq1213 ([#376](https://github.com/Tencent/tdesign-mobile-vue/pull/376))
 - `DateTimePicker`: 优化示例代码 @LeeJim ([#411](https://github.com/Tencent/tdesign-mobile-vue/pull/411))
 
-## 🌈 0.12.0 `2022-10-10`
+## 🌈 0.12.0 `2022-10-10` 
 ### 🚀 Features
 
 - `Cascader`: 新增级联选择器 @oceanlvr ([#368](https://github.com/Tencent/tdesign-mobile-vue/pull/368))
@@ -222,7 +249,7 @@ spline: explain
 - `Steps`: 新增单元测试 @anlyyao ([#375](https://github.com/Tencent/tdesign-mobile-vue/pull/375))
 - `DropdownMenu`: 新增单元测试 @anlyyao ([#374](https://github.com/Tencent/tdesign-mobile-vue/pull/374))
 
-## 🌈 0.11.0 `2022-09-26`
+## 🌈 0.11.0 `2022-09-26` 
 ### 🚀 Features
 
 - `Calendar`: 新增日历组件 @LadyChatterleyLover ([#325](https://github.com/Tencent/tdesign-mobile-vue/pull/325))
@@ -240,7 +267,7 @@ spline: explain
 - `Message`: 新增单元测试 @zhangpaopao0609 ([#321](https://github.com/Tencent/tdesign-mobile-vue/pull/321))
 - `Upload`: 新增单元测试 @palmcivet ([#318](https://github.com/Tencent/tdesign-mobile-vue/pull/318))
 
-## 🌈 0.10.6 `2022-09-20`
+## 🌈 0.10.6 `2022-09-20` 
 ### 🚀 Features
 - `Drawer`: 新增单元测试 @anlyyao ([#311](https://github.com/Tencent/tdesign-mobile-vue/pull/311))
 - `Popup`: 新增单元测试 @anlyyao ([#310](https://github.com/Tencent/tdesign-mobile-vue/pull/310))
@@ -261,7 +288,7 @@ spline: explain
 ### 🚧 Others
 - `官网`: 更新浏览器兼容性说明文档 @anlyyao ([#349](https://github.com/Tencent/tdesign-mobile-vue/pull/349))
 
-## 🌈 0.10.5 `2022-09-06`
+## 🌈 0.10.5 `2022-09-06` 
 ### 🚀 Features
 - `Popup`: 新增 `customStyle` 和 `overlayProps` 属性 @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))
 - `Popup`: 更新示例代码 @anlyyao ([#296](https://github.com/Tencent/tdesign-mobile-vue/pull/296))
@@ -280,7 +307,7 @@ spline: explain
 - style: update _common @anlyyao ([#308](https://github.com/Tencent/tdesign-mobile-vue/pull/308))
 - fix: enrich coverage badge type @anlyyao ([#315](https://github.com/Tencent/tdesign-mobile-vue/pull/315))
 
-## 🌈 0.10.4 `2022-08-22`
+## 🌈 0.10.4 `2022-08-22` 
 ### 🚀 Features
 - `Search`: 内嵌 input 组件 type 调整为 search @VeryHandSomeBoy ([#293](https://github.com/Tencent/tdesign-mobile-vue/pull/293))
 - `Drawer`: 新增 closeOnOverlayClick 属性 @deadlyAce ([#287](https://github.com/Tencent/tdesign-mobile-vue/pull/287))
@@ -291,14 +318,14 @@ spline: explain
 - `Search`: 修复传入默认值后需要点击才显示的问题 @VeryHandSomeBoy ([#292](https://github.com/Tencent/tdesign-mobile-vue/pull/292))
 - `Search`: 修复不触发 focus 事件的问题 @VeryHandSomeBoy ([#292](https://github.com/Tencent/tdesign-mobile-vue/pull/292))
 
-## 🌈 0.10.3 `2022-08-17`
+## 🌈 0.10.3 `2022-08-17` 
 ### 🐞 Bug Fixes
 - `PulldownRefresh`: 修复下拉时偶尔失效的问题 @LeeJim ([#278](https://github.com/Tencent/tdesign-mobile-vue/pull/278))
 - `List`: 修复list组件滚动无法触发scroll的问题 @Dengzygx ([#283](https://github.com/Tencent/tdesign-mobile-vue/pull/283))
 ### 🚧 Others
 - test: update vitest config @anlyyao ([#272](https://github.com/Tencent/tdesign-mobile-vue/pull/272))
 
-## 🌈 0.10.2 `2022-08-15`
+## 🌈 0.10.2 `2022-08-15` 
 ### 🚀 Features
 - `ImageViewer`: 新增 maxZoom、closeBtn、onClose 属性 @ruige24601 ([#259](https://github.com/Tencent/tdesign-mobile-vue/pull/259))
 - `ImageViewer`: 新增 close 事件 @ruige24601 ([#259](https://github.com/Tencent/tdesign-mobile-vue/pull/259))
@@ -307,14 +334,14 @@ spline: explain
 - `Textarea`: 修复onchange事件会执行两次的问题 @Dengzygx ([#270](https://github.com/Tencent/tdesign-mobile-vue/pull/270))
 - `Image`: 修复 src 变更没有重新渲染的问题 @VeryHandSomeBoy ([#264](https://github.com/Tencent/tdesign-mobile-vue/pull/264))
 
-## 🌈 0.10.1 `2022-08-01`
+## 🌈 0.10.1 `2022-08-01` 
 ### 🐞 Bug Fixes
 - `search`: 修复失去焦点后输入内容被隐藏和清除按钮无法使用的问题 @VeryHandSomeBoy ([#257](https://github.com/Tencent/tdesign-mobile-vue/pull/257))
 - `Tabs`: 修复传入相同的值时仍触发 onChange 的问题 @VeryHandSomeBoy ([#254](https://github.com/Tencent/tdesign-mobile-vue/pull/254))
 - `Popup`: 修复使用 overlay 组件没传入 visible 导致告警的问题 @LeeJim ([#251](https://github.com/Tencent/tdesign-mobile-vue/pull/251))
 - `Dialog`: 修复 slot 渲染逻辑 @LeeJim ([#258](https://github.com/Tencent/tdesign-mobile-vue/pull/258))
 
-## 🌈 0.10.0 `2022-07-25`
+## 🌈 0.10.0 `2022-07-25` 
 ### 🚀 Features
 - `Skeleton`: 属性 theme 移除 avatar-text；新增 avatar、image、paragraph @anlyyao ([#239](https://github.com/Tencent/tdesign-mobile-vue/pull/239))
 - `Result`: 新增结果组件 @anlyyao ([#243](https://github.com/Tencent/tdesign-mobile-vue/pull/243))
@@ -326,13 +353,13 @@ spline: explain
 - 官网更新组件分类 @LeeJim ([#248](https://github.com/Tencent/tdesign-mobile-vue/pull/248))
 - `Skeleton`: 更新示例代码 @anlyyao ([#239](https://github.com/Tencent/tdesign-mobile-vue/pull/239))
 
-## 🌈 0.9.2 `2022-07-18`
+## 🌈 0.9.2 `2022-07-18` 
 ### 🐞 Bug Fixes
 - `DropdownMenu`: 修复树形状态下溢出时无法滚动的问题 @LeeJim ([#236](https://github.com/Tencent/tdesign-mobile-vue/pull/236))
 - `Sticky`: 修复 fixed 状态下丢失宽度的问题 @LeeJim ([#237](https://github.com/Tencent/tdesign-mobile-vue/pull/237))
 - `Skeleton`: 修复 props 变化不重新渲染的问题 @VeryHandSomeBoy ([#238](https://github.com/Tencent/tdesign-mobile-vue/pull/238))
 
-## 🌈 0.9.1 `2022-07-12`
+## 🌈 0.9.1 `2022-07-12` 
 ### 🚀 Features
 - `Toast`: 新增 overlayProps 属性透传至 overlay 组件，新增 showOverlay 属性控制遮罩层显示 @oceanlvr ([#204](https://github.com/Tencent/tdesign-mobile-vue/pull/204))
 - `Button`: 支持 4 种类型 @anlyyao ([#218](https://github.com/Tencent/tdesign-mobile-vue/pull/218))
@@ -346,7 +373,7 @@ spline: explain
 - `DropdownMenu`: 修复 dropdownmenu-item 的 label 不支持动态更新等问题 @krimeshu ([#220](https://github.com/Tencent/tdesign-mobile-vue/pull/220))
 - `DropdownMenu`: 修复 radio、checkbox 样式问题 @LeeJim ([#219](https://github.com/Tencent/tdesign-mobile-vue/pull/219))
 
-## 🌈 0.9.0 `2022-06-30`
+## 🌈 0.9.0 `2022-06-30` 
 
 ### ❗️ BREAKING CHANGES
 
@@ -391,7 +418,7 @@ spline: explain
 - `Rate`: 新增支持 gap 属性 @anlyyao ([#185](https://github.com/Tencent/tdesign-mobile-vue/pull/185))
 - `Loading`: 新增支持 duration、inheritColor、pause、reverse 属性 @LeeJim ([#191](https://github.com/Tencent/tdesign-mobile-vue/pull/191))
 - `Dialog`: @LeeJim ([#193](https://github.com/Tencent/tdesign-mobile-vue/pull/193))
-  - 新增支持 actions 和 preventScrollThrough 属性
+  - 新增支持 actions 和 preventScrollThrough 属性 
   - 新增支持 支持 confirmBtn 和 cancelBtn 的插槽
 - `Checkbox`: 新增支持 maxContentRow 和 maxLabelRow 属性 @anlyyao ([#195](https://github.com/Tencent/tdesign-mobile-vue/pull/195))
 - `CheckboxGroup`: 新增支持 max 属性 @anlyyao ([#195](https://github.com/Tencent/tdesign-mobile-vue/pull/195))
@@ -406,7 +433,7 @@ spline: explain
 - `Radio`: 修复非受控用法错误的问题 @anlyyao ([#192](https://github.com/Tencent/tdesign-mobile-vue/pull/192))
 
 
-## 🌈 0.8.6 `2022-05-30`
+## 🌈 0.8.6 `2022-05-30` 
 ### 🚀 Features
 - `Indexes`: 新增 Indexes 组件 @ruige24601 ([#117](https://github.com/Tencent/tdesign-mobile-vue/pull/117))
 - `ActionSheet`: 新增 ActionSheet 组件 @Dengzygx ([#121](https://github.com/Tencent/tdesign-mobile-vue/pull/121))
@@ -454,7 +481,7 @@ spline: explain
 
 
 ### Bug Fixes
-* **tabs:** label支持动态修改，以及新增支持slot的方式
+* **tabs:** label支持动态修改，以及新增支持slot的方式 
 * **popup:** 修复teleport失效问题
 
 

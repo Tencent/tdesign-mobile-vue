@@ -14,18 +14,12 @@ export interface TdGridProps {
    */
   align?: 'left' | 'center';
   /**
-   * 边框，默认不显示。值为 true 则显示默认边框，值类型为 object 则表示自定义边框样式
+   * 是否显示边框
    * @default false
    */
-  border?:
-    | boolean
-    | {
-        color?: string;
-        width?: string;
-        style?: 'solid' | 'dashed' | 'dotted' | 'double' | 'groove' | 'inset' | 'outset';
-      };
+  border?: boolean;
   /**
-   * 每一行的列数量
+   * 每一行的列数量；为 0 时等于固定大小
    * @default 4
    */
   column?: number;
@@ -33,21 +27,27 @@ export interface TdGridProps {
    * 间隔大小
    */
   gutter?: number;
+  /**
+   * 宫格的风格
+   * @default default
+   */
+  theme?: 'default' | 'card';
 }
 
 export interface TdGridItemProps {
   /**
-   * 头像右上角提示信息，继承 Badge 组件的全部特性。如：小红点，或者数字
+   * 透传至 Badge 属性
+   * @default null
    */
-  badgeProps?: BadgeProps;
+  badge?: BadgeProps;
   /**
    * 文本以外的更多描述，辅助信息。可以通过 Props 传入文本，也可以自定义标题节点
    */
   description?: string | TNode;
   /**
-   * 图片，可以是图片地址，也可以自定义图片节点
+   * 图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件
    */
-  image?: string | TNode;
+  image?: string | object | TNode;
   /**
    * 内容布局方式
    * @default vertical

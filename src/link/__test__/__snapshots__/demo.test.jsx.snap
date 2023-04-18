@@ -1,0 +1,1787 @@
+// Vitest Snapshot v1
+
+exports[`Link > Link baseVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-link-demo"
+  data-v-8b54d308=""
+>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--primary t-link--medium"
+    data-v-8b54d308=""
+    href="/mobile-vue/overview"
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+      跳转链接
+      
+    </span>
+    <!--v-if-->
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium t-link--hover"
+    data-v-8b54d308=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+      跳转链接
+      
+    </span>
+    <!--v-if-->
+  </a>
+</div>
+`;
+
+exports[`Link > Link linkSizeVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-link-demo"
+  data-v-55ae5f74=""
+>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--primary t-link--small"
+    data-v-55ae5f74=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+       S跳转链接 
+      
+    </span>
+    <span
+      class="t-link__suffix-icon t-class-suffix-icon"
+    >
+      
+      <svg
+        class="t-icon t-icon-jump"
+        data-v-55ae5f74=""
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
+    </span>
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--primary t-link--medium"
+    data-v-55ae5f74=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+       M跳转链接 
+      
+    </span>
+    <span
+      class="t-link__suffix-icon t-class-suffix-icon"
+    >
+      
+      <svg
+        class="t-icon t-icon-jump"
+        data-v-55ae5f74=""
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
+    </span>
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--primary t-link--large"
+    data-v-55ae5f74=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+       L跳转链接 
+      
+    </span>
+    <span
+      class="t-link__suffix-icon t-class-suffix-icon"
+    >
+      
+      <svg
+        class="t-icon t-icon-jump"
+        data-v-55ae5f74=""
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Link > Link mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Link 链接
+  </h1>
+  <p
+    class="summary"
+  >
+    当功能使用图标即可表意清楚时，可使用纯图标悬浮按钮，例如：添加、发布。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础文字链接
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-8b54d308=""
+      >
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--medium"
+          data-v-8b54d308=""
+          href="/mobile-vue/overview"
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+            跳转链接
+            
+          </span>
+          <!--v-if-->
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--default t-link--medium t-link--hover"
+          data-v-8b54d308=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+            跳转链接
+            
+          </span>
+          <!--v-if-->
+        </a>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        下划线文字链接
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-ed7bec9e=""
+      >
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--medium t-link--underline"
+          data-v-ed7bec9e=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+            跳转链接
+            
+          </span>
+          <!--v-if-->
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--default t-link--medium t-link--underline t-link--hover"
+          data-v-ed7bec9e=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+            跳转链接
+            
+          </span>
+          <!--v-if-->
+        </a>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        前置图标文字链接
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-c9cd3e06=""
+      >
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+          data-v-c9cd3e06=""
+          target=""
+        >
+          <span
+            class="t-link__prefix-icon t-class-prefix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-link"
+              data-v-c9cd3e06=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <!--v-if-->
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--default t-link--medium"
+          data-v-c9cd3e06=""
+          target=""
+        >
+          <span
+            class="t-link__prefix-icon t-class-prefix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-link"
+              data-v-c9cd3e06=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <!--v-if-->
+        </a>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        后置图标文字链接
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-c6b7a388=""
+      >
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--medium"
+          data-v-c6b7a388=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-c6b7a388=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--default t-link--medium"
+          data-v-c6b7a388=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-c6b7a388=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件状态
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        不同主题
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-004b20ae=""
+      >
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--medium"
+          data-v-004b20ae=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-004b20ae=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--default t-link--medium"
+          data-v-004b20ae=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-004b20ae=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--danger t-link--medium"
+          data-v-004b20ae=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-004b20ae=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+      </div>
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-004b20ae=""
+      >
+        <a
+          aria-disabled="false"
+          class="t-link t-link--success t-link--medium"
+          data-v-004b20ae=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-004b20ae=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--warning t-link--medium"
+          data-v-004b20ae=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-004b20ae=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        禁用状态
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-0c766346=""
+      >
+        <a
+          aria-disabled="true"
+          class="t-link t-link--primary t-link--medium t-link--disabled"
+          data-v-0c766346=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-0c766346=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="true"
+          class="t-link t-link--default t-link--medium t-link--disabled"
+          data-v-0c766346=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-0c766346=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="true"
+          class="t-link t-link--danger t-link--medium t-link--disabled"
+          data-v-0c766346=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-0c766346=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+      </div>
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-0c766346=""
+      >
+        <a
+          aria-disabled="true"
+          class="t-link t-link--success t-link--medium t-link--disabled"
+          data-v-0c766346=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-0c766346=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="true"
+          class="t-link t-link--warning t-link--medium t-link--disabled"
+          data-v-0c766346=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-0c766346=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        链接尺寸
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tdesign-mobile-link-demo"
+        data-v-55ae5f74=""
+      >
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--small"
+          data-v-55ae5f74=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             S跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-55ae5f74=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--medium"
+          data-v-55ae5f74=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             M跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-55ae5f74=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+        <a
+          aria-disabled="false"
+          class="t-link t-link--primary t-link--large"
+          data-v-55ae5f74=""
+          target=""
+        >
+          <!--v-if-->
+          <span
+            class="t-link__content"
+          >
+            
+             L跳转链接 
+            
+          </span>
+          <span
+            class="t-link__suffix-icon t-class-suffix-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-jump"
+              data-v-55ae5f74=""
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+              <path
+                d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </span>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Link > Link prefixVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-link-demo"
+  data-v-c9cd3e06=""
+>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--primary t-link--medium t-link--underline t-link--hover"
+    data-v-c9cd3e06=""
+    target=""
+  >
+    <span
+      class="t-link__prefix-icon t-class-prefix-icon"
+    >
+      
+      <svg
+        class="t-icon t-icon-link"
+        data-v-c9cd3e06=""
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
+    </span>
+    <span
+      class="t-link__content"
+    >
+      
+       跳转链接 
+      
+    </span>
+    <!--v-if-->
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium"
+    data-v-c9cd3e06=""
+    target=""
+  >
+    <span
+      class="t-link__prefix-icon t-class-prefix-icon"
+    >
+      
+      <svg
+        class="t-icon t-icon-link"
+        data-v-c9cd3e06=""
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M6.23 11.89l2.12-2.12.71.7-2.12 2.13A2.5 2.5 0 013.4 9.06l2.13-2.12.7.7-2.12 2.13a1.5 1.5 0 002.12 2.12zM10.47 9.06l-.7-.7 2.12-2.13a1.5 1.5 0 10-2.12-2.12L7.65 6.23l-.71-.7L9.06 3.4a2.5 2.5 0 013.54 3.54l-2.13 2.12z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M9.06 6.23L6.23 9.06l.71.7 2.83-2.82-.7-.7z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
+    </span>
+    <span
+      class="t-link__content"
+    >
+      
+       跳转链接 
+      
+    </span>
+    <!--v-if-->
+  </a>
+</div>
+`;
+
+exports[`Link > Link statusVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-mobile-link-demo"
+    data-v-0c766346=""
+  >
+    <a
+      aria-disabled="true"
+      class="t-link t-link--primary t-link--medium t-link--disabled"
+      data-v-0c766346=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-0c766346=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+    <a
+      aria-disabled="true"
+      class="t-link t-link--default t-link--medium t-link--disabled"
+      data-v-0c766346=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-0c766346=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+    <a
+      aria-disabled="true"
+      class="t-link t-link--danger t-link--medium t-link--disabled"
+      data-v-0c766346=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-0c766346=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+  </div>
+  <div
+    class="tdesign-mobile-link-demo"
+    data-v-0c766346=""
+  >
+    <a
+      aria-disabled="true"
+      class="t-link t-link--success t-link--medium t-link--disabled"
+      data-v-0c766346=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-0c766346=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+    <a
+      aria-disabled="true"
+      class="t-link t-link--warning t-link--medium t-link--disabled"
+      data-v-0c766346=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-0c766346=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+  </div>
+  
+</div>
+`;
+
+exports[`Link > Link suffixVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-link-demo"
+  data-v-c6b7a388=""
+>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--primary t-link--medium"
+    data-v-c6b7a388=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+       跳转链接 
+      
+    </span>
+    <span
+      class="t-link__suffix-icon t-class-suffix-icon"
+    >
+      
+      <svg
+        class="t-icon t-icon-jump"
+        data-v-c6b7a388=""
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
+    </span>
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium"
+    data-v-c6b7a388=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+       跳转链接 
+      
+    </span>
+    <span
+      class="t-link__suffix-icon t-class-suffix-icon"
+    >
+      
+      <svg
+        class="t-icon t-icon-jump"
+        data-v-c6b7a388=""
+        fill="none"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+        <path
+          d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      
+    </span>
+  </a>
+</div>
+`;
+
+exports[`Link > Link themeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-mobile-link-demo"
+    data-v-004b20ae=""
+  >
+    <a
+      aria-disabled="false"
+      class="t-link t-link--primary t-link--medium"
+      data-v-004b20ae=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-004b20ae=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+    <a
+      aria-disabled="false"
+      class="t-link t-link--default t-link--medium"
+      data-v-004b20ae=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-004b20ae=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+    <a
+      aria-disabled="false"
+      class="t-link t-link--danger t-link--medium"
+      data-v-004b20ae=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-004b20ae=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+  </div>
+  <div
+    class="tdesign-mobile-link-demo"
+    data-v-004b20ae=""
+  >
+    <a
+      aria-disabled="false"
+      class="t-link t-link--success t-link--medium"
+      data-v-004b20ae=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-004b20ae=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+    <a
+      aria-disabled="false"
+      class="t-link t-link--warning t-link--medium"
+      data-v-004b20ae=""
+      target=""
+    >
+      <!--v-if-->
+      <span
+        class="t-link__content"
+      >
+        
+         跳转链接 
+        
+      </span>
+      <span
+        class="t-link__suffix-icon t-class-suffix-icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-jump"
+          data-v-004b20ae=""
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M2.3 13.7a1 1 0 00.7.3h10a1 1 0 001-1V8.5h-1V13H3V3h4.5V2H3a1 1 0 00-1 1v10c0 .27.1.52.3.7z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+          <path
+            d="M9 3V2h4.5c.28 0 .5.22.5.5V7h-1V3.7L8.7 8 8 7.3 12.3 3H9z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+        
+      </span>
+    </a>
+  </div>
+  
+</div>
+`;
+
+exports[`Link > Link underlineVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-link-demo"
+  data-v-ed7bec9e=""
+>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--primary t-link--medium t-link--underline"
+    data-v-ed7bec9e=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+      跳转链接
+      
+    </span>
+    <!--v-if-->
+  </a>
+  <a
+    aria-disabled="false"
+    class="t-link t-link--default t-link--medium t-link--underline t-link--hover"
+    data-v-ed7bec9e=""
+    target=""
+  >
+    <!--v-if-->
+    <span
+      class="t-link__content"
+    >
+      
+      跳转链接
+      
+    </span>
+    <!--v-if-->
+  </a>
+</div>
+`;

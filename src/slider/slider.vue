@@ -41,6 +41,7 @@ import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
 import { renderTNode, TNode } from '../shared';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-slider`;
@@ -60,6 +61,7 @@ export default defineComponent({
   props,
   emits: ['drag-start', 'drag-end', 'update:modelValue', 'change'],
   setup(props, context) {
+    const disabled = useFormDisabled();
     const rootRef = ref<HTMLElement | null>(null);
     const barRef = ref<HTMLElement | null>(null);
     const defaultValue = props.defaultValue || props.min;
@@ -88,7 +90,7 @@ export default defineComponent({
     const classes = computed(() => [
       `${name}-wrap`,
       {
-        [`${prefix}-is-disabled`]: props.disabled,
+        [`${prefix}-is-disabled`]: disabled.value,
         [`${prefix}-is-mark`]: props.marks,
         [`${prefix}-is-value`]: props.showExtremeValue,
       },
@@ -117,7 +119,7 @@ export default defineComponent({
     });
 
     function onTouchStart(event: TouchEvent, value: number) {
-      if (props.disabled) {
+      if (disabled.value) {
         return;
       }
       event.stopPropagation();
@@ -130,7 +132,7 @@ export default defineComponent({
     }
 
     function onTouchMove(event: TouchEvent, index: number) {
-      if (props.disabled) return;
+      if (disabled.value) return;
       if (!barRef.value) return;
 
       event.stopPropagation();
@@ -153,7 +155,7 @@ export default defineComponent({
     }
 
     function onTouchEnd(event: TouchEvent, index: number) {
-      if (props.disabled) {
+      if (disabled.value) {
         return;
       }
       event.stopPropagation();
@@ -170,7 +172,7 @@ export default defineComponent({
     function onClick(event: MouseEvent) {
       event.stopPropagation();
 
-      if (props.disabled) return;
+      if (disabled.value) return;
       if (!barRef.value) return;
 
       const rect = barRef.value.getBoundingClientRect();

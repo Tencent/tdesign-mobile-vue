@@ -1,13 +1,12 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Message 消息通知</h1>
-    <p class="summary">用于页面消息通知提示，具有成功提示、提醒、警示等功能，通常在顶部出现，可以自动消失或点击关闭</p>
-    <tdesign-demo-block title="01 类型" summary="弹窗内容为存文本、标题和副标题、带输入框">
-      <!-- <functionDemo /> -->
+    <p class="summary" style="margin: 8px 16px 0">用于轻量级反馈或提示，不会打断用户操作。</p>
+    <tdesign-demo-block title="01 组件类型" summary="消息通知内容为文本、带操作按钮">
       <baseDemo />
     </tdesign-demo-block>
 
-    <tdesign-demo-block title="02 状态" summary="弹窗内容为存文本、标题和副标题、带输入框">
+    <tdesign-demo-block title="02 组件风格" summary="消息组件风格">
       <themeDemo />
     </tdesign-demo-block>
   </div>
@@ -17,3 +16,19 @@
 import themeDemo from './theme.vue';
 import baseDemo from './base.vue';
 </script>
+
+<style lang="less">
+.tdesign-demo-main {
+  position: fixed;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tdesign-mobile-demo {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 78px);
+  overflow: scroll;
+}
+</style>
