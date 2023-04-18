@@ -8,16 +8,20 @@
     @close="handleOverlayClick"
   >
     <div id="root" :class="dClassName" :style="rootStyles">
-      <div :class="dHeaderClassName">
-        <slot name="header">
-          <div v-if="title" :class="dTitleClassName">{{ title }}</div>
-        </slot>
+      <slot name="top" />
+      <div v-if="closeBtn" :class="dCloseIconClassName">
+        <close-icon @click="handleCancel" />
       </div>
-      <div v-if="content" :class="dBodyClassName">
-        <div :class="dTextClassName">
-          <t-node :content="dialogContent"></t-node>
+      <div :class="dContentClassName">
+        <div :if="title" :class="dContentTitleClassName">{{ title }}</div>
+        <slot name="title" />
+        <div :if="dialogContent" :class="dBodyClassName">
+          <div :class="dBodyTextClassName">
+            <t-node :content="dialogContent"></t-node>
+          </div>
         </div>
       </div>
+      <slot name="middle" />
       <div :class="dFooterClassName">
         <slot name="actions">
           <template v-if="actionsBtnProps">
@@ -25,20 +29,19 @@
               v-for="(item, index) in actionsBtnProps"
               :key="index"
               v-bind="item"
-              variant="text"
-              :class="dDefaultBtnClassName"
+              :class="dCommonBtnClassName"
               @click="handleCancel"
             />
           </template>
         </slot>
         <slot name="cancelBtn">
-          <template v-if="cancelBtn">
-            <t-button v-bind="cancelBtnProps" variant="text" :class="dDefaultBtnClassName" @click="handleCancel" />
+          <template v-if="!actions && cancelBtn">
+            <t-button v-bind="cancelBtnProps" :class="dCommonBtnClassName" @click="handleCancel" />
           </template>
         </slot>
         <slot name="confirmBtn">
-          <template v-if="confirmBtn">
-            <t-button v-bind="confirmBtnProps" variant="text" :class="dConfirmBtnClassName" @click="handleConfirm" />
+          <template v-if="!actions && confirmBtn">
+            <t-button v-bind="confirmBtnProps" :class="dCommonBtnClassName" @click="handleConfirm" />
           </template>
         </slot>
       </div>
@@ -46,6 +49,8 @@
   </t-popup>
 </template>
 <script lang="ts">
+import get from 'lodash/get';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 import { computed, ref, toRefs, watch, defineComponent, getCurrentInstance } from 'vue';
 import TButton from '../button';
 import TPopup from '../popup';
@@ -58,47 +63,37 @@ const name = `${prefix}-dialog`;
 
 export default defineComponent({
   name,
-  components: { TPopup, TNode, TButton },
+  components: { TPopup, TNode, TButton, CloseIcon },
   props: DialogProps,
   emits: ['update:visible', 'confirm', 'overlay-click', 'cancel', 'change', 'close'],
   setup(props, context) {
     const internalInstance = getCurrentInstance();
     const dialogContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-
+    const isUseTextBtn = () =>
+      [props?.confirmBtn, props?.cancelBtn, ...(props?.actions || [])].some((item) => get(item, 'variant') === 'text');
     const innerValue = ref('');
-    const dClassName = computed(() => `${name}`);
-    const dBoxClassName = computed(() => `${name}__box`);
-    const dHeaderClassName = computed(() => [
-      `${name}__header`,
-      {
-        [`${name}__header--has-content`]: dialogContent,
-      },
-    ]);
-    const dTitleClassName = computed(() => `${name}__title`);
-    const dBodyClassName = computed(() => `${name}__body`);
-    const dTextClassName = computed(() => `${name}__text`);
-    const dInputClassName = computed(() => `${name}__input`);
+    const dClassName = computed(() => [`${name}`]);
+    const dContentClassName = computed(() => [`${name}__content`]);
+    const dContentTitleClassName = computed(() => [`${name}__header`]);
+    const dBodyClassName = computed(() => [`${name}__body`]);
+    const dBodyTextClassName = computed(() => [`${name}__body-text`]);
     const dFooterClassName = computed(() => [
-      {
-        [`${name}__vertical-footer`]: props.buttonLayout === 'vertical',
-      },
       `${name}__footer`,
+      props.buttonLayout === 'vertical' ? `${name}__footer--column` : '',
+      isUseTextBtn() && get(props.actions, 'length', 0) === 0 ? `${name}__footer--full` : '',
     ]);
-    const dDefaultBtnClassName = computed(() => [
-      `${name}__btn`,
-      `${name}__btn--default`,
-      `${name}__${props.buttonLayout}-btn`,
+    const dCommonBtnClassName = computed(() => [
+      `${name}__button`,
+      props.buttonLayout === 'vertical' ? `${name}__button--vertical` : '',
+      !isUseTextBtn() && props.buttonLayout !== 'vertical' ? `${name}__button--horizontal` : ``,
+      isUseTextBtn() ? `${name}__button--text` : '',
     ]);
-    const dConfirmBtnClassName = computed(() => [
-      `${name}__btn`,
-      `${name}__btn--primary`,
-      `${name}__${props.buttonLayout}-btn`,
-    ]);
-
     const rootStyles = computed(() => ({
       zIndex: props.zIndex,
       width: typeof props.width === 'string' ? props.width : `${props.width}px`,
     }));
+
+    const dCloseIconClassName = computed(() => [`${name}__close-btn`]);
 
     const handleConfirm = () => {
       context.emit('update:visible', false);
@@ -128,22 +123,23 @@ export default defineComponent({
     );
 
     const calcBtn = (btn: any) => (typeof btn === 'string' ? { content: btn } : btn);
-    const confirmBtnProps = computed(() => calcBtn(props.confirmBtn));
+    const confirmBtnProps = computed(() => ({
+      theme: 'primary',
+      ...calcBtn(props.confirmBtn),
+    }));
     const cancelBtnProps = computed(() => calcBtn(props.cancelBtn));
     const actionsBtnProps = computed(() => props.actions?.map((item) => calcBtn(item)));
 
     return {
       innerValue,
       dClassName,
-      dBoxClassName,
-      dHeaderClassName,
-      dTitleClassName,
+      dContentClassName,
+      dContentTitleClassName,
       dBodyClassName,
-      dTextClassName,
-      dInputClassName,
+      dBodyTextClassName,
       dFooterClassName,
-      dDefaultBtnClassName,
-      dConfirmBtnClassName,
+      dCommonBtnClassName,
+      dCloseIconClassName,
       dialogContent,
       confirmBtnProps,
       cancelBtnProps,

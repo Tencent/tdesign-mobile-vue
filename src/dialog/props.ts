@@ -25,6 +25,11 @@ export default {
   cancelBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['cancelBtn']>,
   },
+  /** 是否显示关闭按钮 */
+  closeBtn: {
+    type: Boolean,
+    default: false,
+  },
   /** 点击蒙层时是否触发关闭事件 */
   closeOnOverlayClick: {
     type: Boolean,
