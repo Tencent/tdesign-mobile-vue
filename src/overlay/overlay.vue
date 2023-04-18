@@ -21,16 +21,25 @@ export default defineComponent({
     const classes = computed(() => ({
       [`${name}`]: true,
       [`${name}--active`]: props.visible,
-      [`${name}--transparent`]: props.transparent,
     }));
 
-    const rootStyles = computed(() =>
-      props.customStyle || props.zIndex || props.duration
-        ? (props.customStyle && `${props.customStyle};`) +
-          (props.zIndex && `z-index:${props.zIndex};`) +
-          (props.duration && `transition-duration:${props.duration}ms;`)
-        : undefined,
-    );
+    const rootStyles = computed(() => {
+      const arr = [];
+
+      if (props.customStyle) {
+        arr.push(props.customStyle);
+      }
+      if (props.zIndex) {
+        arr.push(`z-index: ${props.zIndex}`);
+      }
+      if (props.duration) {
+        arr.push(`transition-duration: ${props.duration}ms`);
+      }
+      if (props.backgroundColor) {
+        arr.push(`background-color: ${props.backgroundColor}`);
+      }
+      return arr.join('; ');
+    });
 
     const handleTouchMove = (e: TouchEvent) => {
       if (props.preventScrollThrough) {

@@ -43,6 +43,7 @@ exports[`DateTimePicker > DateTimePicker baseVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -502,6 +503,7 @@ exports[`DateTimePicker > DateTimePicker customRangeVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -896,6 +898,7 @@ exports[`DateTimePicker > DateTimePicker fullVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -2149,6 +2152,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -2601,6 +2605,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -2897,6 +2902,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -3472,6 +3478,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -3869,6 +3876,7 @@ exports[`DateTimePicker > DateTimePicker timeVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -4427,6 +4435,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"

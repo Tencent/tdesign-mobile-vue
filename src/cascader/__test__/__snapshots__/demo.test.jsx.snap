@@ -63,6 +63,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -321,6 +322,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -610,6 +612,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -881,6 +884,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1126,6 +1130,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1397,6 +1402,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1668,6 +1674,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1933,6 +1940,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -2161,6 +2169,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -2423,6 +2432,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"

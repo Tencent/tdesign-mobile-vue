@@ -14,7 +14,7 @@ const showOverlayProps = () => {
     theme: 'loading',
     message: '加载中...',
     showOverlay: true,
-    overlayProps: { transparent: true, visible: true },
+    overlayProps: { backgroundColor: 'transparent', visible: true },
     preventScrollThrough: false,
   });
 };

@@ -50,6 +50,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -151,6 +152,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -318,6 +320,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -400,6 +403,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -482,6 +486,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -572,6 +577,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -701,6 +707,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -772,6 +779,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -956,6 +964,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -1038,6 +1047,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -1120,6 +1130,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -1210,6 +1221,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -1358,6 +1370,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -1459,6 +1472,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -1619,6 +1633,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -1690,6 +1705,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"

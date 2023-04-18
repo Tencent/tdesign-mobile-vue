@@ -59,6 +59,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -269,6 +270,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -394,6 +396,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -625,6 +628,7 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -877,6 +881,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1002,6 +1007,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1214,6 +1220,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1438,6 +1445,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -1640,6 +1648,7 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
