@@ -37,6 +37,7 @@ exports[`Popup > Popup customAnimationVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -140,6 +141,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -206,6 +208,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -272,6 +275,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -338,6 +342,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -404,6 +409,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -470,6 +476,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -543,6 +550,7 @@ exports[`Popup > Popup placementBottomVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -612,6 +620,7 @@ exports[`Popup > Popup placementCenterVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -681,6 +690,7 @@ exports[`Popup > Popup placementLeftVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -750,6 +760,7 @@ exports[`Popup > Popup placementRightVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -819,6 +830,7 @@ exports[`Popup > Popup placementTopVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"

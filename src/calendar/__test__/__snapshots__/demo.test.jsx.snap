@@ -18,6 +18,7 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
           css="true"
           name="t-overlay"
           persisted="true"
+          transparent="false"
         >
           <div
             class="t-overlay"
@@ -2408,6 +2409,7 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
           css="true"
           name="t-overlay"
           persisted="true"
+          transparent="false"
         >
           <div
             class="t-overlay"
@@ -4799,6 +4801,7 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
           css="true"
           name="t-overlay"
           persisted="true"
+          transparent="false"
         >
           <div
             class="t-overlay"
@@ -5302,6 +5305,7 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
           css="true"
           name="t-overlay"
           persisted="true"
+          transparent="false"
         >
           <div
             class="t-overlay"
@@ -6388,6 +6392,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   css="true"
                   name="t-overlay"
                   persisted="true"
+                  transparent="false"
                 >
                   <div
                     class="t-overlay"
@@ -8772,6 +8777,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   css="true"
                   name="t-overlay"
                   persisted="true"
+                  transparent="false"
                 >
                   <div
                     class="t-overlay"
@@ -11156,6 +11162,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   css="true"
                   name="t-overlay"
                   persisted="true"
+                  transparent="false"
                 >
                   <div
                     class="t-overlay"
@@ -13565,6 +13572,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -14610,6 +14618,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -16994,6 +17003,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               css="true"
               name="t-overlay"
               persisted="true"
+              transparent="false"
             >
               <div
                 class="t-overlay"
@@ -17514,6 +17524,7 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
           css="true"
           name="t-overlay"
           persisted="true"
+          transparent="false"
         >
           <div
             class="t-overlay"
@@ -19901,6 +19912,7 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
           css="true"
           name="t-overlay"
           persisted="true"
+          transparent="false"
         >
           <div
             class="t-overlay"

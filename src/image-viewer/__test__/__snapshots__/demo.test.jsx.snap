@@ -44,7 +44,6 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
         </button>
         <transition-stub
           appear="false"
-          background-color="rgba(0, 0, 0, 1)"
           class="t-image-viewer"
           css="true"
           name="t-overlay"
@@ -52,7 +51,7 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
         >
           <div
             class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+            style="z-index: 1000; transition-duration: 300ms; background-color: rgb(0, 0, 0); display: none;"
           >
             
             

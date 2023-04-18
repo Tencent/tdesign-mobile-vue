@@ -40,6 +40,7 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -1164,6 +1165,7 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -1768,6 +1770,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
         css="true"
         name="t-overlay"
         persisted="true"
+        transparent="false"
       >
         <div
           class="t-overlay"
@@ -1938,6 +1941,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -2069,6 +2073,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"
@@ -2666,6 +2671,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
             css="true"
             name="t-overlay"
             persisted="true"
+            transparent="false"
           >
             <div
               class="t-overlay"

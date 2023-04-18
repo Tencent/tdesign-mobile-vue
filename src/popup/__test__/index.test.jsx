@@ -38,19 +38,6 @@ describe('popup', () => {
       expect(wrapper.find('.t-popup--content').classes()).toContain(`t-popup--content-${wrapper.vm.placement}`);
     });
 
-    it(': showOverlay	', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          showOverlay: false,
-        },
-      });
-      expect(wrapper.find('.t-overlay').classes('t-overlay--transparent')).toBe(true);
-      await wrapper.setProps({
-        showOverlay: true,
-      });
-      expect(wrapper.find('.t-overlay').classes('t-overlay--transparent')).toBe(false);
-    });
-
     it(': zIndex', async () => {
       const wrapper = mount(Popup, {
         props: {

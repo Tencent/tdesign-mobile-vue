@@ -382,6 +382,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 css="true"
                 name="t-overlay"
                 persisted="true"
+                transparent="false"
               >
                 <div
                   class="t-overlay"
@@ -727,6 +728,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 css="true"
                 name="t-overlay"
                 persisted="true"
+                transparent="false"
               >
                 <div
                   class="t-overlay"
@@ -2189,6 +2191,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       css="true"
                       name="t-overlay"
                       persisted="true"
+                      transparent="false"
                     >
                       <div
                         class="t-overlay"
@@ -2534,6 +2537,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       css="true"
                       name="t-overlay"
                       persisted="true"
+                      transparent="false"
                     >
                       <div
                         class="t-overlay"
@@ -3870,6 +3874,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 css="true"
                 name="t-overlay"
                 persisted="true"
+                transparent="false"
               >
                 <div
                   class="t-overlay"
@@ -4214,6 +4219,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 css="true"
                 name="t-overlay"
                 persisted="true"
+                transparent="false"
               >
                 <div
                   class="t-overlay"
