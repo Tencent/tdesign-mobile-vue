@@ -45,15 +45,3 @@ const onClose = () => {
   console.log('dialog: close');
 };
 </script>
-
-<style lang="less" scoped>
-.tdesign-demo--dialog {
-  .btn-gap {
-    width: 100%;
-    height: 16px;
-  }
-  .t-button:not(:last-child) {
-    margin-right: 20px;
-  }
-}
-</style>

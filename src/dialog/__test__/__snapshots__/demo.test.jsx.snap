@@ -7,8 +7,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   
   <button
     aria-disabled="false"
-    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-    data-v-25064f1a=""
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
     role="button"
     type="button"
   >
@@ -17,24 +16,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       双按钮 
-      
-    </span>
-    <!---->
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-    data-v-25064f1a=""
-    role="button"
-    type="button"
-  >
-    <!---->
-    <span
-      class="t-button__content"
-    >
-      
-       带警示按钮 
+       确认类-带标题 
       
     </span>
     <!---->
@@ -78,10 +60,67 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
         <div
           class="t-dialog__body"
         >
+          
+          
+          <!--v-if-->
           <div
-            class="t-dialog__text"
+            class="t-dialog__content"
           >
-            告知当前状态、信息和解决方法
+            <div
+              class="t-dialog__header"
+              if="对话框标题"
+            >
+              对话框标题
+            </div>
+            
+            
+            <div
+              class="t-dialog__body"
+              if="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+              </div>
+            </div>
+          </div>
+          
+          
+          <div
+            class="t-dialog__footer"
+          >
+            
+            <!--v-if-->
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                取消
+              </span>
+            </button>
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                确认
+              </span>
+            </button>
+            
           </div>
         </div>
         <div
@@ -124,15 +163,29 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           
         </div>
       </div>
+    </transition-stub>
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
       
-    </div>
-  </teleport-stub>
-  <teleport-stub
-    data-v-25064f1a=""
-    disabled="false"
-    teleport-disabled="true"
-    to="[object HTMLBodyElement]"
-    type="confirm"
+       确认类-无标题 
+      
+    </span>
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-popup"
   >
     <div
       class="t-overlay"
@@ -165,10 +218,64 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
         <div
           class="t-dialog__body"
         >
+          
+          
+          <!--v-if-->
           <div
-            class="t-dialog__text"
+            class="t-dialog__content"
           >
-            告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很
+            <div
+              class="t-dialog__header"
+            />
+            
+            
+            <div
+              class="t-dialog__body"
+              if="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+              </div>
+            </div>
+          </div>
+          
+          
+          <div
+            class="t-dialog__footer"
+          >
+            
+            <!--v-if-->
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                取消
+              </span>
+            </button>
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                警示操作
+              </span>
+            </button>
+            
           </div>
         </div>
         <div
@@ -234,64 +341,14 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       单行标题 
+       反馈类-基础 
       
     </span>
     <!---->
   </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-    role="button"
-    type="button"
-  >
-    <!---->
-    <span
-      class="t-button__content"
-    >
-      
-       多行标题最大高度 
-      
-    </span>
-    <!---->
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-    role="button"
-    type="button"
-  >
-    <!---->
-    <span
-      class="t-button__content"
-    >
-      
-       带说明文本 
-      
-    </span>
-    <!---->
-  </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-    role="button"
-    type="button"
-  >
-    <!---->
-    <span
-      class="t-button__content"
-    >
-      
-       带说明文本最大高度 
-      
-    </span>
-    <!---->
-  </button>
-  <!-- &lt;t-button block variant="outline" size="large" @click="eventDialog()"&gt; 函数调用长文本对话框 &lt;/t-button&gt; -->
-  <teleport-stub
-    disabled="false"
-    teleport-disabled="true"
-    to="[object HTMLBodyElement]"
+  <!--teleport start-->
+  <div
+    class="t-popup"
   >
     <div
       class="t-overlay"
@@ -326,62 +383,55 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
           class="t-dialog__footer"
         >
           
-          <!--v-if-->
-          
           
           <!--v-if-->
-          
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
-            role="button"
-            type="button"
+          <div
+            class="t-dialog__content"
           >
-            <!---->
-            <span
-              class="t-button__content"
+            <div
+              class="t-dialog__header"
+              if="对话框标题"
             >
-              知道了
-            </span>
-            <!---->
-          </button>
+              对话框标题
+            </div>
+            
+            
+            <div
+              class="t-dialog__body"
+              if="告知当前状态、信息等内容。描述文案尽可能控制在三行内"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                告知当前状态、信息等内容。描述文案尽可能控制在三行内
+              </div>
+            </div>
+          </div>
           
-        </div>
-      </div>
-      
-    </div>
-  </teleport-stub>
-  <teleport-stub
-    disabled="false"
-    teleport-disabled="true"
-    to="[object HTMLBodyElement]"
-  >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-    <div
-      class="t-popup t-popup--center"
-      style="display: none;"
-    >
-      <!--v-if-->
-      
-      <div
-        class="t-dialog"
-        id="root"
-      >
-        <div
-          class="t-dialog__header t-dialog__header--has-content"
-        >
           
           <div
-            class="t-dialog__title"
+            class="t-dialog__footer"
           >
-            告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+            
+            <!--v-if-->
+            
+            
+            <!--v-if-->
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                知道了
+              </span>
+            </button>
+            
           </div>
           
         </div>
@@ -413,13 +463,29 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
           
         </div>
       </div>
+    </transition-stub>
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
       
-    </div>
-  </teleport-stub>
-  <teleport-stub
-    disabled="false"
-    teleport-disabled="true"
-    to="[object HTMLBodyElement]"
+       反馈类-无标题 
+      
+    </span>
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-popup"
   >
     <div
       class="t-overlay"
@@ -452,10 +518,171 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         <div
           class="t-dialog__body"
         >
+          
+          
+          <!--v-if-->
           <div
-            class="t-dialog__text"
+            class="t-dialog__content"
           >
-            告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+            <div
+              class="t-dialog__header"
+            />
+            
+            
+            <div
+              class="t-dialog__body"
+              if="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+              </div>
+            </div>
+          </div>
+          
+          
+          <div
+            class="t-dialog__footer"
+          >
+            
+            <!--v-if-->
+            
+            
+            <!--v-if-->
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                知道了
+              </span>
+            </button>
+            
+          </div>
+        </div>
+        
+      </div>
+    </transition-stub>
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+  />
+  <button
+    aria-disabled="false"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    role="button"
+  >
+    <!---->
+    <span
+      class="t-button__text"
+    >
+      
+       反馈类-内容超长 
+      
+    </span>
+  </button>
+  <!--teleport start-->
+  <div
+    class="t-popup"
+  >
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+    </transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade-zoom"
+      persisted="true"
+    >
+      <div
+        class="t-popup--content t-popup--content-center"
+        style="display: none;"
+      >
+        
+        <div
+          class="t-dialog"
+          id="root"
+        >
+          
+          
+          <!--v-if-->
+          <div
+            class="t-dialog__content"
+          >
+            <div
+              class="t-dialog__header"
+              if="对话框标题"
+            >
+              对话框标题
+            </div>
+            
+            
+            <div
+              class="t-dialog__body"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                <!---->
+              </div>
+            </div>
+          </div>
+          
+          <div
+            class="middle-container"
+          >
+            这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.
+          </div>
+          
+          <div
+            class="t-dialog__footer"
+          >
+            
+            <!--v-if-->
+            
+            
+            <!--v-if-->
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                知道了
+              </span>
+            </button>
+            
           </div>
         </div>
         <div
@@ -581,27 +808,182 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       class="t-button__content"
     >
       
-       单行标题对话框 
+       输入类-无描述 
       
     </span>
     <!---->
   </button>
+  <!--teleport start-->
+  <div
+    class="t-popup"
+  >
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade"
+      persisted="false"
+    >
+      <transition-stub
+        appear="false"
+        css="true"
+        name="t-overlay"
+        persisted="true"
+      >
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+      </transition-stub>
+    </transition-stub>
+    <transition-stub
+      appear="false"
+      css="true"
+      name="fade-zoom"
+      persisted="true"
+    >
+      <div
+        class="t-popup--content t-popup--content-center"
+        style="display: none;"
+      >
+        
+        <div
+          class="t-dialog"
+          id="root"
+        >
+          
+          
+          <!--v-if-->
+          <div
+            class="t-dialog__content"
+          >
+            <div
+              class="t-dialog__header"
+              if="对话框标题"
+            >
+              对话框标题
+            </div>
+            
+            
+            <div
+              class="t-dialog__body"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                <!---->
+              </div>
+            </div>
+          </div>
+          
+          <div
+            class="input"
+            data-v-4a76bf3d=""
+          >
+            <div
+              class="t-input t-input--layout-horizontal t-input--size-small"
+              data-v-4a76bf3d=""
+            >
+              <div
+                class="t-input__wrap--prefix"
+              >
+                <div
+                  class="t-input__icon--prefix"
+                >
+                  
+                  
+                  <!--v-if-->
+                </div>
+                <div
+                  class="t-input__label"
+                >
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-input__wrap"
+              >
+                <div
+                  class="t-input__content t-input--default"
+                >
+                  <input
+                    autocomplete="Off"
+                    class="t-input__control t-input--default"
+                    maxlength="-1"
+                    name=""
+                    placeholder="请输入文字"
+                    type="text"
+                  />
+                  <!--v-if-->
+                  <!--v-if-->
+                  <!--v-if-->
+                </div>
+                <!--v-if-->
+              </div>
+            </div>
+          </div>
+          
+          <div
+            class="t-dialog__footer t-dialog__footer--full"
+          >
+            
+            <!--v-if-->
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-l t-button--text t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                取消
+              </span>
+            </button>
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                确认
+              </span>
+            </button>
+            
+          </div>
+        </div>
+        
+      </div>
+    </transition-stub>
+  </div>
+  <!--teleport end-->
+  <div
+    class="btn-gap"
+    data-v-4a76bf3d=""
+  />
   <button
     aria-disabled="false"
-    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
     data-v-4a76bf3d=""
     role="button"
-    type="button"
   >
     <!---->
     <span
-      class="t-button__content"
+      class="t-button__text"
     >
       
-       带说明文本对话框 
+       输入类-带描述 
       
     </span>
-    <!---->
   </button>
   <teleport-stub
     data-v-4a76bf3d=""
@@ -642,60 +1024,112 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
           class="t-dialog__footer"
         >
           
-          <!--v-if-->
-          
           
           <!--v-if-->
-          
-          
-          <!--v-if-->
-          
-        </div>
-      </div>
-      
-    </div>
-  </teleport-stub>
-  <teleport-stub
-    data-v-4a76bf3d=""
-    disabled="false"
-    teleport-disabled="true"
-    to="[object HTMLBodyElement]"
-  >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-    <div
-      class="t-popup t-popup--center"
-      style="display: none;"
-    >
-      <!--v-if-->
-      
-      <div
-        class="t-dialog"
-        id="root"
-      >
-        <div
-          class="t-dialog__header t-dialog__header--has-content"
-        >
-          
           <div
-            class="t-dialog__title"
+            class="t-dialog__content"
           >
-            对话框标题
+            <div
+              class="t-dialog__header"
+              if="对话框标题"
+            >
+              对话框标题
+            </div>
+            
+            
+            <div
+              class="t-dialog__body"
+              if="告知当前状态、信息和解决方法"
+            >
+              <div
+                class="t-dialog__body-text"
+              >
+                告知当前状态、信息和解决方法
+              </div>
+            </div>
           </div>
           
-        </div>
-        <div
-          class="t-dialog__body"
-        >
           <div
-            class="t-dialog__text"
+            class="input input__slot"
+            data-v-4a76bf3d=""
           >
-            告知当前状态、信息和解决方法
+            <div
+              class="t-input t-input--layout-horizontal t-input--size-small"
+              data-v-4a76bf3d=""
+            >
+              <div
+                class="t-input__wrap--prefix"
+              >
+                <div
+                  class="t-input__icon--prefix"
+                >
+                  
+                  
+                  <!--v-if-->
+                </div>
+                <div
+                  class="t-input__label"
+                >
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-input__wrap"
+              >
+                <div
+                  class="t-input__content t-input--default"
+                >
+                  <input
+                    autocomplete="Off"
+                    class="t-input__control t-input--default"
+                    maxlength="-1"
+                    name=""
+                    placeholder="请输入文字"
+                    type="text"
+                  />
+                  <!--v-if-->
+                  <!--v-if-->
+                  <!--v-if-->
+                </div>
+                <!--v-if-->
+              </div>
+            </div>
+          </div>
+          
+          <div
+            class="t-dialog__footer t-dialog__footer--full"
+          >
+            
+            <!--v-if-->
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-l t-button--text t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                取消
+              </span>
+            </button>
+            
+            
+            <button
+              aria-disabled="false"
+              class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-button__text"
+              >
+                确认
+              </span>
+            </button>
+            
           </div>
         </div>
         <div
@@ -722,23 +1156,19 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
 exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-35efb3bf=""
 >
   <h1
     class="title"
-    data-v-35efb3bf=""
   >
     Dialog 对话框
   </h1>
   <p
     class="summary"
-    data-v-35efb3bf=""
   >
     用于显示重要提示或请求用户进行重要操作，一种打断当前操作的模态视图。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-35efb3bf=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -746,7 +1176,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -760,7 +1190,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="dialog-demo"
-        data-v-35efb3bf=""
       >
         
         <button
@@ -774,64 +1203,14 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             class="t-button__content"
           >
             
-             单行标题 
+             反馈类-基础 
             
           </span>
           <!---->
         </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-             多行标题最大高度 
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-             带说明文本 
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-             带说明文本最大高度 
-            
-          </span>
-          <!---->
-        </button>
-        <!-- &lt;t-button block variant="outline" size="large" @click="eventDialog()"&gt; 函数调用长文本对话框 &lt;/t-button&gt; -->
-        <teleport-stub
-          disabled="false"
-          teleport-disabled="true"
-          to="[object HTMLBodyElement]"
+        <!--teleport start-->
+        <div
+          class="t-popup"
         >
           <div
             class="t-overlay"
@@ -866,62 +1245,55 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 class="t-dialog__footer"
               >
                 
-                <!--v-if-->
-                
                 
                 <!--v-if-->
-                
-                
-                <button
-                  aria-disabled="false"
-                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
-                  role="button"
-                  type="button"
+                <div
+                  class="t-dialog__content"
                 >
-                  <!---->
-                  <span
-                    class="t-button__content"
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
                   >
-                    知道了
-                  </span>
-                  <!---->
-                </button>
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息等内容。描述文案尽可能控制在三行内"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息等内容。描述文案尽可能控制在三行内
+                    </div>
+                  </div>
+                </div>
                 
-              </div>
-            </div>
-            
-          </div>
-        </teleport-stub>
-        <teleport-stub
-          disabled="false"
-          teleport-disabled="true"
-          to="[object HTMLBodyElement]"
-        >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-          <div
-            class="t-popup t-popup--center"
-            style="display: none;"
-          >
-            <!--v-if-->
-            
-            <div
-              class="t-dialog"
-              id="root"
-            >
-              <div
-                class="t-dialog__header t-dialog__header--has-content"
-              >
                 
                 <div
-                  class="t-dialog__title"
+                  class="t-dialog__footer"
                 >
-                  告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+                  
+                  <!--v-if-->
+                  
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      知道了
+                    </span>
+                  </button>
+                  
                 </div>
                 
               </div>
@@ -953,13 +1325,29 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
               </div>
             </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
             
-          </div>
-        </teleport-stub>
-        <teleport-stub
-          disabled="false"
-          teleport-disabled="true"
-          to="[object HTMLBodyElement]"
+             反馈类-无标题 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
         >
           <div
             class="t-overlay"
@@ -992,10 +1380,171 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <div
                 class="t-dialog__body"
               >
+                
+                
+                <!--v-if-->
                 <div
-                  class="t-dialog__text"
+                  class="t-dialog__content"
                 >
-                  告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+                  <div
+                    class="t-dialog__header"
+                  />
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      知道了
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             反馈类-内容超长 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+                
+                <div
+                  class="middle-container"
+                >
+                  这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案.
+                </div>
+                
+                <div
+                  class="t-dialog__footer"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      知道了
+                    </span>
+                  </button>
+                  
                 </div>
               </div>
               <div
@@ -1107,7 +1656,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-35efb3bf=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1125,13 +1673,11 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="dialog-demo"
-        data-v-35efb3bf=""
       >
         
         <button
           aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-          data-v-25064f1a=""
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
           role="button"
           type="button"
         >
@@ -1140,24 +1686,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             class="t-button__content"
           >
             
-             双按钮 
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-          data-v-25064f1a=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-             带警示按钮 
+             确认类-带标题 
             
           </span>
           <!---->
@@ -1201,10 +1730,67 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <div
                 class="t-dialog__body"
               >
+                
+                
+                <!--v-if-->
                 <div
-                  class="t-dialog__text"
+                  class="t-dialog__content"
                 >
-                  告知当前状态、信息和解决方法
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
                 </div>
               </div>
               <div
@@ -1247,15 +1833,29 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
               </div>
             </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
             
-          </div>
-        </teleport-stub>
-        <teleport-stub
-          data-v-25064f1a=""
-          disabled="false"
-          teleport-disabled="true"
-          to="[object HTMLBodyElement]"
-          type="confirm"
+             确认类-无标题 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
         >
           <div
             class="t-overlay"
@@ -1288,10 +1888,64 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <div
                 class="t-dialog__body"
               >
+                
+                
+                <!--v-if-->
                 <div
-                  class="t-dialog__text"
+                  class="t-dialog__content"
                 >
-                  告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很告知当前状态、信息和解决方法，等内容。描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很多描述文案很
+                  <div
+                    class="t-dialog__header"
+                  />
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      警示操作
+                    </span>
+                  </button>
+                  
                 </div>
               </div>
               <div
@@ -1344,7 +1998,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-35efb3bf=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1362,8 +2015,6 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       <div
         class="dialog-demo"
-        data-v-35efb3bf=""
-        style="padding-bottom: 20px;"
       >
         
         <button
@@ -1378,24 +2029,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             class="t-button__content"
           >
             
-             单行标题对话框 
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-          data-v-4a76bf3d=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-             带说明文本对话框 
+             输入类-无描述 
             
           </span>
           <!---->
@@ -1439,24 +2073,1216 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 class="t-dialog__footer"
               >
                 
-                <!--v-if-->
-                
                 
                 <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                </div>
                 
+                <div
+                  class="input"
+                  data-v-4a76bf3d=""
+                >
+                  <div
+                    class="t-input t-input--layout-horizontal t-input--size-small"
+                    data-v-4a76bf3d=""
+                  >
+                    <div
+                      class="t-input__wrap--prefix"
+                    >
+                      <div
+                        class="t-input__icon--prefix"
+                      >
+                        
+                        
+                        <!--v-if-->
+                      </div>
+                      <div
+                        class="t-input__label"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-input__wrap"
+                    >
+                      <div
+                        class="t-input__content t-input--default"
+                      >
+                        <input
+                          autocomplete="Off"
+                          class="t-input__control t-input--default"
+                          maxlength="-1"
+                          name=""
+                          placeholder="请输入文字"
+                          type="text"
+                        />
+                        <!--v-if-->
+                        <!--v-if-->
+                        <!--v-if-->
+                      </div>
+                      <!--v-if-->
+                    </div>
+                  </div>
+                </div>
                 
-                <!--v-if-->
+                <div
+                  class="t-dialog__footer t-dialog__footer--full"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-l t-button--text t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+          data-v-4a76bf3d=""
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-4a76bf3d=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             输入类-带描述 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
                 
               </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法
+                    </div>
+                  </div>
+                </div>
+                
+                <div
+                  class="input input__slot"
+                  data-v-4a76bf3d=""
+                >
+                  <div
+                    class="t-input t-input--layout-horizontal t-input--size-small"
+                    data-v-4a76bf3d=""
+                  >
+                    <div
+                      class="t-input__wrap--prefix"
+                    >
+                      <div
+                        class="t-input__icon--prefix"
+                      >
+                        
+                        
+                        <!--v-if-->
+                      </div>
+                      <div
+                        class="t-input__label"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-input__wrap"
+                    >
+                      <div
+                        class="t-input__content t-input--default"
+                      >
+                        <input
+                          autocomplete="Off"
+                          class="t-input__control t-input--default"
+                          maxlength="-1"
+                          name=""
+                          placeholder="请输入文字"
+                          type="text"
+                        />
+                        <!--v-if-->
+                        <!--v-if-->
+                        <!--v-if-->
+                      </div>
+                      <!--v-if-->
+                    </div>
+                  </div>
+                </div>
+                
+                <div
+                  class="t-dialog__footer t-dialog__footer--full"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-l t-button--text t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
             </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带图片的对话框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="dialog-demo"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-ddf95d52=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
             
-          </div>
-        </teleport-stub>
-        <teleport-stub
-          data-v-4a76bf3d=""
-          disabled="false"
-          teleport-disabled="true"
-          to="[object HTMLBodyElement]"
+            图片置顶
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                <div
+                  class="t-image t-image--square"
+                  data-v-ddf95d52=""
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/miniprogram/images/dialog1.png"
+                      style="object-fit: contain; object-position: center;"
+                    />
+                  </picture>
+                </div>
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+          data-v-ddf95d52=""
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          data-v-ddf95d52=""
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            图片居中
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法
+                    </div>
+                  </div>
+                </div>
+                
+                <div
+                  class="t-image t-image--square image"
+                  data-v-ddf95d52=""
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                      </div>
+                      
+                      <!--v-if-->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!--v-if-->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/miniprogram/images/dialog1.png"
+                      style="object-fit: contain; object-position: center;"
+                    />
+                  </picture>
+                </div>
+                
+                <div
+                  class="t-dialog__footer"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件状态
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        其它形态对话框
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="dialog-demo"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             文字按钮 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer t-dialog__footer--full"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-l t-button--text t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--text"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             水平基础按钮 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法，等内容。描述文案尽可能控制在三行内
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--horizontal"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             垂直基础按钮 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer t-dialog__footer--column"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--vertical"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--vertical"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             垂直多按钮 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
+        >
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade"
+            persisted="false"
+          >
+            <transition-stub
+              appear="false"
+              css="true"
+              name="t-overlay"
+              persisted="true"
+            >
+              <div
+                class="t-overlay"
+                style="z-index: 1000; transition-duration: 300ms; display: none;"
+              >
+                
+                
+              </div>
+            </transition-stub>
+          </transition-stub>
+          <transition-stub
+            appear="false"
+            css="true"
+            name="fade-zoom"
+            persisted="true"
+          >
+            <div
+              class="t-popup--content t-popup--content-center"
+              style="display: none;"
+            >
+              
+              <div
+                class="t-dialog"
+                id="root"
+              >
+                
+                
+                <!--v-if-->
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer t-dialog__footer--column"
+                >
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--vertical"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      次要按钮
+                    </span>
+                  </button>
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--vertical"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      次要按钮
+                    </span>
+                  </button>
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--vertical"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      主要按钮
+                    </span>
+                  </button>
+                  
+                  
+                  
+                  <!--v-if-->
+                  
+                  
+                  <!--v-if-->
+                  
+                </div>
+              </div>
+            </div>
+          </transition-stub>
+        </div>
+        <!--teleport end-->
+        <div
+          class="btn-gap"
+        />
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             带关闭按钮 
+            
+          </span>
+        </button>
+        <!--teleport start-->
+        <div
+          class="t-popup"
         >
           <div
             class="t-overlay"
@@ -1489,10 +3315,83 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <div
                 class="t-dialog__body"
               >
+                
+                
                 <div
-                  class="t-dialog__text"
+                  class="t-dialog__close-btn"
                 >
-                  告知当前状态、信息和解决方法
+                  <svg
+                    class="t-icon t-icon-close"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="t-dialog__content"
+                >
+                  <div
+                    class="t-dialog__header"
+                    if="对话框标题"
+                  >
+                    对话框标题
+                  </div>
+                  
+                  
+                  <div
+                    class="t-dialog__body"
+                    if="告知当前状态、信息和解决方法"
+                  >
+                    <div
+                      class="t-dialog__body-text"
+                    >
+                      告知当前状态、信息和解决方法
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div
+                  class="t-dialog__footer t-dialog__footer--column"
+                >
+                  
+                  <!--v-if-->
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-dialog__button t-dialog__button--vertical"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      取消
+                    </span>
+                  </button>
+                  
+                  
+                  <button
+                    aria-disabled="false"
+                    class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-dialog__button t-dialog__button--vertical"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-button__text"
+                    >
+                      确认
+                    </span>
+                  </button>
+                  
                 </div>
               </div>
               <div

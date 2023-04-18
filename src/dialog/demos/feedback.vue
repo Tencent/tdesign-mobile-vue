@@ -54,17 +54,3 @@ const onClickOverlay = () => {
   console.log('dialog:clickOverlay');
 };
 </script>
-
-<style lang="less">
-.dialog-demo {
-  .btn-gap {
-    width: 100%;
-    height: 16px;
-  }
-  .middle-container {
-    padding: 20px;
-    overflow: auto;
-    max-height: 100px;
-  }
-}
-</style>
