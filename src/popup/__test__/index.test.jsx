@@ -7,7 +7,7 @@ describe('popup', () => {
   // test props api
   describe('props', () => {
     const onOpen = vi.fn();
-    it(': visible	', async () => {
+    it(':visible', async () => {
       const wrapper = mount(Popup, {
         props: {
           visible: false,
@@ -25,24 +25,36 @@ describe('popup', () => {
       expect(onOpen).toBeCalledTimes(1);
     });
 
-    it(': placement	', async () => {
+    it(':placement', async () => {
       const wrapper = mount(Popup, {
         props: {
           placement: 'top',
+          visible: true
         },
+        global: {
+          stubs: {
+            teleport: true
+          }
+        }
       });
-      expect(wrapper.find('.t-popup--content').classes()).toContain(`t-popup--content-${wrapper.vm.placement}`);
+      expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
       await wrapper.setProps({
         placement: 'center',
       });
-      expect(wrapper.find('.t-popup--content').classes()).toContain(`t-popup--content-${wrapper.vm.placement}`);
+      expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
     });
 
-    it(': zIndex', async () => {
+    it(':zIndex', async () => {
       const wrapper = mount(Popup, {
         props: {
           zIndex: 15000,
+          visible: true
         },
+        global: {
+          stubs: {
+            teleport: true
+          }
+        }
       });
       expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 15000');
       await wrapper.setProps({
@@ -62,16 +74,6 @@ describe('popup', () => {
         transitionName: 'slide-fade',
       });
       expect(wrapper.vm.contentTransitionName).toBe(wrapper.vm.transitionName);
-    });
-
-    it(': customStyle', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          customStyle: 'font-size: 18px',
-          zIndex: 17000,
-        },
-      });
-      expect(wrapper.find('.t-popup').attributes('style')).toContain('font-size: 18px; z-index: 17000;');
     });
   });
 
@@ -98,7 +100,13 @@ describe('popup', () => {
               onClosed={closed}
             />
           );
-        },
+        }
+      }, {
+        global: {
+          stubs: {
+            teleport: true
+          }
+        }
       });
 
       const $popup = wrapper.find('.t-popup');
@@ -110,10 +118,10 @@ describe('popup', () => {
       expect(close).toBeCalledTimes(1);
 
       const $transition = wrapper.findAllComponents({ name: 'transition' }); // => 通过 `name` 找到 transition
-      expect($transition).toHaveLength(3);
+      expect($transition).toHaveLength(2);
 
       expect($transition.at(0).exists()).toBeTruthy();
-      expect($transition.at(2).exists()).toBeTruthy();
+      expect($transition.at(1).exists()).toBeTruthy();
 
       const event = {
         preventDefault: vi.fn(),

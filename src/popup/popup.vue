@@ -57,7 +57,6 @@ export default defineComponent({
     });
 
     const contentClasses = computed(() => ({
-      [`${name}--content`]: true,
       [`${name}--${props.placement}`]: true,
     }));
 
@@ -97,6 +96,16 @@ export default defineComponent({
     const afterLeave = () => emitEvent('closed');
     const afterEnter = () => emitEvent('opened');
     const to = computed(() => getAttach(props.attach ?? 'body'));
+
+    watch(
+      () => currentVisible.value,
+      (val) => {
+        if (val) {
+          emitEvent('open');
+          setVisible(true);
+        }
+      },
+    );
 
     return {
       name,
