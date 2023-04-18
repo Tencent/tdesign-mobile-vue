@@ -131,6 +131,12 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Form 表单',
+          name: 'form',
+          path: '/mobile-vue/components/form',
+          component: () => import('@/form/form.md'),
+        },
+        {
           title: 'Calendar 日历',
           name: 'calendar',
           path: '/mobile-vue/components/calendar',
