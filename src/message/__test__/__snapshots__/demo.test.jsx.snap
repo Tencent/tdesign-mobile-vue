@@ -87,55 +87,15 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     </button>
   </div>
   <!-- 纯文字通知 -->
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-e60c559e=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
+  <!--v-if-->
   <!-- 带图标通知 -->
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-e60c559e=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
+  <!--v-if-->
   <!-- 带关闭通知 -->
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-e60c559e=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
+  <!--v-if-->
   <!-- 滚动通知 -->
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-e60c559e=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
+  <!--v-if-->
   <!-- 带按钮通知 -->
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-e60c559e=""
-    name="message"
-    persisted="false"
-  >
-    <!--v-if-->
-  </transition-stub>
+  <!--v-if-->
   
 </div>
 `;
@@ -259,55 +219,15 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         </button>
       </div>
       <!-- 纯文字通知 -->
-      <transition-stub
-        appear="false"
-        css="true"
-        data-v-e60c559e=""
-        name="message"
-        persisted="false"
-      >
-        <!--v-if-->
-      </transition-stub>
+      <!--v-if-->
       <!-- 带图标通知 -->
-      <transition-stub
-        appear="false"
-        css="true"
-        data-v-e60c559e=""
-        name="message"
-        persisted="false"
-      >
-        <!--v-if-->
-      </transition-stub>
+      <!--v-if-->
       <!-- 带关闭通知 -->
-      <transition-stub
-        appear="false"
-        css="true"
-        data-v-e60c559e=""
-        name="message"
-        persisted="false"
-      >
-        <!--v-if-->
-      </transition-stub>
+      <!--v-if-->
       <!-- 滚动通知 -->
-      <transition-stub
-        appear="false"
-        css="true"
-        data-v-e60c559e=""
-        name="message"
-        persisted="false"
-      >
-        <!--v-if-->
-      </transition-stub>
+      <!--v-if-->
       <!-- 带按钮通知 -->
-      <transition-stub
-        appear="false"
-        css="true"
-        data-v-e60c559e=""
-        name="message"
-        persisted="false"
-      >
-        <!--v-if-->
-      </transition-stub>
+      <!--v-if-->
       
       
     </div>

@@ -9,6 +9,10 @@ config.global.components = {
   'tdesign-demo-block': DemoBlock,
 };
 
+config.global.stubs = {
+  teleport: true,
+};
+
 config.global.createSSRApp = (comp) => {
   const app = createApp(comp);
   app.config.globalProperties.$route = {};

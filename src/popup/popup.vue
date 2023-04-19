@@ -1,6 +1,6 @@
 <template>
-  <t-overlay v-bind="overlayProps" :visible="currentVisible && showOverlay" @click="handleOverlayClick" />
   <teleport :to="to" :disabled="!to">
+    <t-overlay v-bind="overlayProps" :visible="currentVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
       <div
         v-show="currentVisible"

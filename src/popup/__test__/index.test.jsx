@@ -1,7 +1,11 @@
-import { mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Popup from '../popup.vue';
 import { ref } from 'vue';
+
+config.global.stubs = {
+  teleport: true
+}
 
 describe('popup', () => {
   // test props api
@@ -15,13 +19,13 @@ describe('popup', () => {
         },
       });
 
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(false);
+      expect(wrapper.find('.t-popup').isVisible()).toBe(false);
       expect(wrapper.find('.t-overlay').attributes('style')).toContain('display: none');
       await wrapper.setProps({
         visible: true,
       });
       expect(wrapper.vm.currentVisible).toBe(true);
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(true);
+      expect(wrapper.find('.t-popup').isVisible()).toBe(true);
       expect(onOpen).toBeCalledTimes(1);
     });
 
@@ -31,11 +35,6 @@ describe('popup', () => {
           placement: 'top',
           visible: true
         },
-        global: {
-          stubs: {
-            teleport: true
-          }
-        }
       });
       expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
       await wrapper.setProps({
@@ -50,11 +49,6 @@ describe('popup', () => {
           zIndex: 15000,
           visible: true
         },
-        global: {
-          stubs: {
-            teleport: true
-          }
-        }
       });
       expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 15000');
       await wrapper.setProps({
@@ -100,12 +94,6 @@ describe('popup', () => {
               onClosed={closed}
             />
           );
-        }
-      }, {
-        global: {
-          stubs: {
-            teleport: true
-          }
         }
       });
 

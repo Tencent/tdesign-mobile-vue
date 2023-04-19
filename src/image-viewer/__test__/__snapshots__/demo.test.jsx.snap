@@ -42,21 +42,13 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
             
           </span>
         </button>
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
-          name="t-overlay"
-          persisted="true"
+        <div
+          class="t-overlay t-image-viewer"
+          style="z-index: 1000; transition-duration: 300ms; background-color: rgb(0, 0, 0); display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; background-color: rgb(0, 0, 0); display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
         
       </div>
       <!--v-if-->
@@ -86,22 +78,14 @@ exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
       
     </span>
   </button>
-  <transition-stub
-    appear="false"
-    class="t-image-viewer"
-    css="true"
+  <div
+    class="t-overlay t-image-viewer"
     data-v-734c791c=""
-    name="t-overlay"
-    persisted="true"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
+    
+    
+  </div>
 </div>
 `;
 
@@ -125,22 +109,14 @@ exports[`ImageViewer > ImageViewer closeBtnVue demo works fine 1`] = `
       
     </span>
   </button>
-  <transition-stub
-    appear="false"
-    class="t-image-viewer"
-    css="true"
+  <div
+    class="t-overlay t-image-viewer"
     data-v-04bcb836=""
-    name="t-overlay"
-    persisted="true"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
+    
+    
+  </div>
 </div>
 `;
 
@@ -164,22 +140,14 @@ exports[`ImageViewer > ImageViewer closeEventVue demo works fine 1`] = `
       
     </span>
   </button>
-  <transition-stub
-    appear="false"
-    class="t-image-viewer"
-    css="true"
+  <div
+    class="t-overlay t-image-viewer"
     data-v-3939d0e3=""
-    name="t-overlay"
-    persisted="true"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
+    
+    
+  </div>
 </div>
 `;
 
@@ -225,21 +193,13 @@ exports[`ImageViewer > ImageViewer imageListVue demo works fine 1`] = `
             
           </span>
         </button>
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
-          name="t-overlay"
-          persisted="true"
+        <div
+          class="t-overlay t-image-viewer"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
         
       </div>
       <!--v-if-->
@@ -291,21 +251,13 @@ exports[`ImageViewer > ImageViewer initialIndexVue demo works fine 1`] = `
             
           </span>
         </button>
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
-          name="t-overlay"
-          persisted="true"
+        <div
+          class="t-overlay t-image-viewer"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
         
       </div>
       <!--v-if-->
@@ -369,22 +321,14 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
             
           </span>
         </button>
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
+        <div
+          class="t-overlay t-image-viewer"
           data-v-734c791c=""
-          name="t-overlay"
-          persisted="true"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
       </div>
       <div
         class="image-viewer-demo"
@@ -405,22 +349,14 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
             
           </span>
         </button>
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
+        <div
+          class="t-overlay t-image-viewer"
           data-v-04bcb836=""
-          name="t-overlay"
-          persisted="true"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
       </div>
       <div
         class="image-viewer-demo"
@@ -441,22 +377,14 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
             
           </span>
         </button>
-        <transition-stub
-          appear="false"
-          class="t-image-viewer"
-          css="true"
+        <div
+          class="t-overlay t-image-viewer"
           data-v-3939d0e3=""
-          name="t-overlay"
-          persisted="true"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
       </div>
       
     </div>

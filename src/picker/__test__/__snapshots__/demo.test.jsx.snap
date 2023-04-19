@@ -44,128 +44,106 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
-  <div
-    class="t-popup"
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
   >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-        transparent="false"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
+      
+      
+    </div>
+    <div
+      class="t-popup t-popup--bottom"
+      style="display: none;"
     >
+      <!--v-if-->
+      
       <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
+        class="t-picker"
       >
-        
         <div
-          class="t-picker"
+          class="t-picker__toolbar"
         >
           <div
-            class="t-picker__toolbar"
+            class="t-picker__cancel"
           >
-            <div
-              class="t-picker__cancel"
-            >
-              取消
-            </div>
-            <div
-              class="t-picker__title"
-            />
-            <div
-              class="t-picker__confirm"
-            >
-              确认
-            </div>
+            取消
           </div>
-          <!---->
           <div
-            class="t-picker__main"
+            class="t-picker__title"
+          />
+          <div
+            class="t-picker__confirm"
           >
-            
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item t-picker-item__item--selected"
-                >
-                  北京市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  广东省
-                </li>
-                
-              </ul>
-            </div>
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                
-              </ul>
-            </div>
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                
-              </ul>
-            </div>
-            
-            <div
-              class="t-picker__mask t-picker__mask--top"
-            />
-            <div
-              class="t-picker__mask t-picker__mask--bottom"
-            />
-            <div
-              class="t-picker__indicator"
-            />
+            确认
           </div>
         </div>
-        
+        <!---->
+        <div
+          class="t-picker__main"
+        >
+          
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              <li
+                class="t-picker-item__item t-picker-item__item--selected"
+              >
+                北京市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                广东省
+              </li>
+              
+            </ul>
+          </div>
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              
+            </ul>
+          </div>
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              
+            </ul>
+          </div>
+          
+          <div
+            class="t-picker__mask t-picker__mask--top"
+          />
+          <div
+            class="t-picker__mask t-picker__mask--bottom"
+          />
+          <div
+            class="t-picker__indicator"
+          />
+        </div>
       </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
+      
+    </div>
+  </teleport-stub>
   
 </div>
 `;
@@ -255,304 +233,262 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
-  <div
-    class="t-popup"
+  <teleport-stub
+    data-v-049f57a8=""
+    disabled="false"
+    to="[object HTMLBodyElement]"
   >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-        transparent="false"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
+      
+      
+    </div>
+    <div
+      class="t-popup t-popup--bottom"
+      style="display: none;"
     >
+      <!--v-if-->
+      
       <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
+        class="t-picker"
+        data-v-049f57a8=""
       >
-        
         <div
-          class="t-picker"
-          data-v-049f57a8=""
+          class="t-picker__toolbar"
         >
           <div
-            class="t-picker__toolbar"
+            class="t-picker__cancel"
           >
-            <div
-              class="t-picker__cancel"
-            >
-              取消
-            </div>
-            <div
-              class="t-picker__title"
-            />
-            <div
-              class="t-picker__confirm"
-            >
-              确认
-            </div>
+            取消
           </div>
-          <!---->
           <div
-            class="t-picker__main"
+            class="t-picker__title"
+          />
+          <div
+            class="t-picker__confirm"
           >
-            
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item t-picker-item__item--selected"
-                >
-                  北京市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  上海市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  广州市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  深圳市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  杭州市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  成都市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  长沙市
-                </li>
-                
-              </ul>
-            </div>
-            
-            <div
-              class="t-picker__mask t-picker__mask--top"
-            />
-            <div
-              class="t-picker__mask t-picker__mask--bottom"
-            />
-            <div
-              class="t-picker__indicator"
-            />
+            确认
           </div>
         </div>
-        
+        <!---->
+        <div
+          class="t-picker__main"
+        >
+          
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              <li
+                class="t-picker-item__item t-picker-item__item--selected"
+              >
+                北京市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                上海市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                广州市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                深圳市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                杭州市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                成都市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                长沙市
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div
+            class="t-picker__mask t-picker__mask--top"
+          />
+          <div
+            class="t-picker__mask t-picker__mask--bottom"
+          />
+          <div
+            class="t-picker__indicator"
+          />
+        </div>
       </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  <!--teleport start-->
-  <div
-    class="t-popup"
+      
+    </div>
+  </teleport-stub>
+  <teleport-stub
+    data-v-049f57a8=""
+    disabled="false"
+    to="[object HTMLBodyElement]"
   >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-        transparent="false"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
+      
+      
+    </div>
+    <div
+      class="t-popup t-popup--bottom"
+      style="display: none;"
     >
+      <!--v-if-->
+      
       <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
+        class="t-picker"
+        data-v-049f57a8=""
       >
-        
         <div
-          class="t-picker"
-          data-v-049f57a8=""
+          class="t-picker__toolbar"
         >
           <div
-            class="t-picker__toolbar"
+            class="t-picker__cancel"
           >
-            <div
-              class="t-picker__cancel"
-            >
-              取消
-            </div>
-            <div
-              class="t-picker__title"
-            />
-            <div
-              class="t-picker__confirm"
-            >
-              确认
-            </div>
+            取消
           </div>
-          <!---->
           <div
-            class="t-picker__main"
+            class="t-picker__title"
+          />
+          <div
+            class="t-picker__confirm"
           >
-            
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item t-picker-item__item--selected"
-                >
-                  2023
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2022
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2021
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2020
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2019
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2018
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2017
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2016
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2015
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  2014
-                </li>
-                
-              </ul>
-            </div>
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item t-picker-item__item--selected"
-                >
-                  春
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  夏
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  秋
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  冬
-                </li>
-                
-              </ul>
-            </div>
-            
-            <div
-              class="t-picker__mask t-picker__mask--top"
-            />
-            <div
-              class="t-picker__mask t-picker__mask--bottom"
-            />
-            <div
-              class="t-picker__indicator"
-            />
+            确认
           </div>
         </div>
-        
+        <!---->
+        <div
+          class="t-picker__main"
+        >
+          
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              <li
+                class="t-picker-item__item t-picker-item__item--selected"
+              >
+                2023
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2022
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2021
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2020
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2019
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2018
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2017
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2016
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2015
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                2014
+              </li>
+              
+            </ul>
+          </div>
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              <li
+                class="t-picker-item__item t-picker-item__item--selected"
+              >
+                春
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                夏
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                秋
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                冬
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div
+            class="t-picker__mask t-picker__mask--top"
+          />
+          <div
+            class="t-picker__mask t-picker__mask--bottom"
+          />
+          <div
+            class="t-picker__indicator"
+          />
+        </div>
       </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
+      
+    </div>
+  </teleport-stub>
   
 </div>
 `;
@@ -613,139 +549,117 @@ exports[`Picker > Picker cascadeVue demo works fine 1`] = `
     </div>
     
   </div>
-  <!--teleport start-->
-  <div
-    class="t-popup"
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
   >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-        transparent="false"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
+      
+      
+    </div>
+    <div
+      class="t-popup t-popup--bottom"
+      style="display: none;"
     >
+      <!--v-if-->
+      
       <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
+        class="t-picker"
       >
-        
         <div
-          class="t-picker"
+          class="t-picker__toolbar"
         >
           <div
-            class="t-picker__toolbar"
+            class="t-picker__cancel"
           >
-            <div
-              class="t-picker__cancel"
-            >
-              取消
-            </div>
-            <div
-              class="t-picker__title"
-            >
-              王者荣耀
-            </div>
-            <div
-              class="t-picker__confirm"
-            >
-              确认
-            </div>
+            取消
           </div>
-          <!---->
           <div
-            class="t-picker__main"
+            class="t-picker__title"
           >
-            
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item t-picker-item__item--selected"
-                >
-                  战士
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  法师
-                </li>
-                
-              </ul>
-            </div>
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, -40px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item"
-                >
-                  夏侯惇
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  吕布
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  铠
-                </li>
-                <li
-                  class="t-picker-item__item t-picker-item__item--selected"
-                >
-                  狂铁
-                </li>
-                
-              </ul>
-            </div>
-            
-            <div
-              class="t-picker__mask t-picker__mask--top"
-            />
-            <div
-              class="t-picker__mask t-picker__mask--bottom"
-            />
-            <div
-              class="t-picker__indicator"
-            />
+            王者荣耀
+          </div>
+          <div
+            class="t-picker__confirm"
+          >
+            确认
           </div>
         </div>
-        
+        <!---->
+        <div
+          class="t-picker__main"
+        >
+          
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              <li
+                class="t-picker-item__item t-picker-item__item--selected"
+              >
+                战士
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                法师
+              </li>
+              
+            </ul>
+          </div>
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, -40px, 0);"
+            >
+              
+              <li
+                class="t-picker-item__item"
+              >
+                夏侯惇
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                吕布
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                铠
+              </li>
+              <li
+                class="t-picker-item__item t-picker-item__item--selected"
+              >
+                狂铁
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div
+            class="t-picker__mask t-picker__mask--top"
+          />
+          <div
+            class="t-picker__mask t-picker__mask--bottom"
+          />
+          <div
+            class="t-picker__indicator"
+          />
+        </div>
       </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
+      
+    </div>
+  </teleport-stub>
   
 </div>
 `;
@@ -866,304 +780,262 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
-      <div
-        class="t-popup"
+      <teleport-stub
+        data-v-049f57a8=""
+        disabled="false"
+        to="[object HTMLBodyElement]"
       >
-        <transition-stub
-          appear="false"
-          css="true"
-          name="fade"
-          persisted="false"
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <transition-stub
-            appear="false"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-            transparent="false"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-        </transition-stub>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="slide-bottom"
-          persisted="true"
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--bottom"
+          style="display: none;"
         >
+          <!--v-if-->
+          
           <div
-            class="t-popup--content t-popup--content-bottom"
-            style="display: none;"
+            class="t-picker"
+            data-v-049f57a8=""
           >
-            
             <div
-              class="t-picker"
-              data-v-049f57a8=""
+              class="t-picker__toolbar"
             >
               <div
-                class="t-picker__toolbar"
+                class="t-picker__cancel"
               >
-                <div
-                  class="t-picker__cancel"
-                >
-                  取消
-                </div>
-                <div
-                  class="t-picker__title"
-                />
-                <div
-                  class="t-picker__confirm"
-                >
-                  确认
-                </div>
+                取消
               </div>
-              <!---->
               <div
-                class="t-picker__main"
+                class="t-picker__title"
+              />
+              <div
+                class="t-picker__confirm"
               >
-                
-                <div
-                  class="t-picker-item__group"
-                >
-                  <ul
-                    class="t-picker-item"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
-                    <li
-                      class="t-picker-item__item t-picker-item__item--selected"
-                    >
-                      北京市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      上海市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      广州市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      深圳市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      杭州市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      成都市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      长沙市
-                    </li>
-                    
-                  </ul>
-                </div>
-                
-                <div
-                  class="t-picker__mask t-picker__mask--top"
-                />
-                <div
-                  class="t-picker__mask t-picker__mask--bottom"
-                />
-                <div
-                  class="t-picker__indicator"
-                />
+                确认
               </div>
             </div>
-            
+            <!---->
+            <div
+              class="t-picker__main"
+            >
+              
+              <div
+                class="t-picker-item__group"
+              >
+                <ul
+                  class="t-picker-item"
+                  style="transform: translate3d(0, 80px, 0);"
+                >
+                  
+                  <li
+                    class="t-picker-item__item t-picker-item__item--selected"
+                  >
+                    北京市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    上海市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    广州市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    深圳市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    杭州市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    成都市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    长沙市
+                  </li>
+                  
+                </ul>
+              </div>
+              
+              <div
+                class="t-picker__mask t-picker__mask--top"
+              />
+              <div
+                class="t-picker__mask t-picker__mask--bottom"
+              />
+              <div
+                class="t-picker__indicator"
+              />
+            </div>
           </div>
-        </transition-stub>
-      </div>
-      <!--teleport end-->
-      <!--teleport start-->
-      <div
-        class="t-popup"
+          
+        </div>
+      </teleport-stub>
+      <teleport-stub
+        data-v-049f57a8=""
+        disabled="false"
+        to="[object HTMLBodyElement]"
       >
-        <transition-stub
-          appear="false"
-          css="true"
-          name="fade"
-          persisted="false"
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <transition-stub
-            appear="false"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-            transparent="false"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-        </transition-stub>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="slide-bottom"
-          persisted="true"
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--bottom"
+          style="display: none;"
         >
+          <!--v-if-->
+          
           <div
-            class="t-popup--content t-popup--content-bottom"
-            style="display: none;"
+            class="t-picker"
+            data-v-049f57a8=""
           >
-            
             <div
-              class="t-picker"
-              data-v-049f57a8=""
+              class="t-picker__toolbar"
             >
               <div
-                class="t-picker__toolbar"
+                class="t-picker__cancel"
               >
-                <div
-                  class="t-picker__cancel"
-                >
-                  取消
-                </div>
-                <div
-                  class="t-picker__title"
-                />
-                <div
-                  class="t-picker__confirm"
-                >
-                  确认
-                </div>
+                取消
               </div>
-              <!---->
               <div
-                class="t-picker__main"
+                class="t-picker__title"
+              />
+              <div
+                class="t-picker__confirm"
               >
-                
-                <div
-                  class="t-picker-item__group"
-                >
-                  <ul
-                    class="t-picker-item"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
-                    <li
-                      class="t-picker-item__item t-picker-item__item--selected"
-                    >
-                      2023
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2022
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2021
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2020
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2019
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2018
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2017
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2016
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2015
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      2014
-                    </li>
-                    
-                  </ul>
-                </div>
-                <div
-                  class="t-picker-item__group"
-                >
-                  <ul
-                    class="t-picker-item"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
-                    <li
-                      class="t-picker-item__item t-picker-item__item--selected"
-                    >
-                      春
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      夏
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      秋
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      冬
-                    </li>
-                    
-                  </ul>
-                </div>
-                
-                <div
-                  class="t-picker__mask t-picker__mask--top"
-                />
-                <div
-                  class="t-picker__mask t-picker__mask--bottom"
-                />
-                <div
-                  class="t-picker__indicator"
-                />
+                确认
               </div>
             </div>
-            
+            <!---->
+            <div
+              class="t-picker__main"
+            >
+              
+              <div
+                class="t-picker-item__group"
+              >
+                <ul
+                  class="t-picker-item"
+                  style="transform: translate3d(0, 80px, 0);"
+                >
+                  
+                  <li
+                    class="t-picker-item__item t-picker-item__item--selected"
+                  >
+                    2023
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2022
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2021
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2020
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2019
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2018
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2017
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2016
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2015
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    2014
+                  </li>
+                  
+                </ul>
+              </div>
+              <div
+                class="t-picker-item__group"
+              >
+                <ul
+                  class="t-picker-item"
+                  style="transform: translate3d(0, 80px, 0);"
+                >
+                  
+                  <li
+                    class="t-picker-item__item t-picker-item__item--selected"
+                  >
+                    春
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    夏
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    秋
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    冬
+                  </li>
+                  
+                </ul>
+              </div>
+              
+              <div
+                class="t-picker__mask t-picker__mask--top"
+              />
+              <div
+                class="t-picker__mask t-picker__mask--bottom"
+              />
+              <div
+                class="t-picker__indicator"
+              />
+            </div>
           </div>
-        </transition-stub>
-      </div>
-      <!--teleport end-->
+          
+        </div>
+      </teleport-stub>
       
       
       <div
@@ -1205,128 +1077,106 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
-      <div
-        class="t-popup"
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
       >
-        <transition-stub
-          appear="false"
-          css="true"
-          name="fade"
-          persisted="false"
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <transition-stub
-            appear="false"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-            transparent="false"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-        </transition-stub>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="slide-bottom"
-          persisted="true"
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--bottom"
+          style="display: none;"
         >
+          <!--v-if-->
+          
           <div
-            class="t-popup--content t-popup--content-bottom"
-            style="display: none;"
+            class="t-picker"
           >
-            
             <div
-              class="t-picker"
+              class="t-picker__toolbar"
             >
               <div
-                class="t-picker__toolbar"
+                class="t-picker__cancel"
               >
-                <div
-                  class="t-picker__cancel"
-                >
-                  取消
-                </div>
-                <div
-                  class="t-picker__title"
-                />
-                <div
-                  class="t-picker__confirm"
-                >
-                  确认
-                </div>
+                取消
               </div>
-              <!---->
               <div
-                class="t-picker__main"
+                class="t-picker__title"
+              />
+              <div
+                class="t-picker__confirm"
               >
-                
-                <div
-                  class="t-picker-item__group"
-                >
-                  <ul
-                    class="t-picker-item"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
-                    <li
-                      class="t-picker-item__item t-picker-item__item--selected"
-                    >
-                      北京市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      广东省
-                    </li>
-                    
-                  </ul>
-                </div>
-                <div
-                  class="t-picker-item__group"
-                >
-                  <ul
-                    class="t-picker-item"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
-                    
-                  </ul>
-                </div>
-                <div
-                  class="t-picker-item__group"
-                >
-                  <ul
-                    class="t-picker-item"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
-                    
-                  </ul>
-                </div>
-                
-                <div
-                  class="t-picker__mask t-picker__mask--top"
-                />
-                <div
-                  class="t-picker__mask t-picker__mask--bottom"
-                />
-                <div
-                  class="t-picker__indicator"
-                />
+                确认
               </div>
             </div>
-            
+            <!---->
+            <div
+              class="t-picker__main"
+            >
+              
+              <div
+                class="t-picker-item__group"
+              >
+                <ul
+                  class="t-picker-item"
+                  style="transform: translate3d(0, 80px, 0);"
+                >
+                  
+                  <li
+                    class="t-picker-item__item t-picker-item__item--selected"
+                  >
+                    北京市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    广东省
+                  </li>
+                  
+                </ul>
+              </div>
+              <div
+                class="t-picker-item__group"
+              >
+                <ul
+                  class="t-picker-item"
+                  style="transform: translate3d(0, 80px, 0);"
+                >
+                  
+                  
+                </ul>
+              </div>
+              <div
+                class="t-picker-item__group"
+              >
+                <ul
+                  class="t-picker-item"
+                  style="transform: translate3d(0, 80px, 0);"
+                >
+                  
+                  
+                </ul>
+              </div>
+              
+              <div
+                class="t-picker__mask t-picker__mask--top"
+              />
+              <div
+                class="t-picker__mask t-picker__mask--bottom"
+              />
+              <div
+                class="t-picker__indicator"
+              />
+            </div>
           </div>
-        </transition-stub>
-      </div>
-      <!--teleport end-->
+          
+        </div>
+      </teleport-stub>
       
       
     </div>
@@ -1430,117 +1280,96 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <!--teleport start-->
-      <div
-        class="t-popup"
+      <teleport-stub
+        data-v-7ee35211=""
+        disabled="false"
+        to="[object HTMLBodyElement]"
       >
-        <transition-stub
-          appear="false"
-          css="true"
-          name="fade"
-          persisted="false"
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <transition-stub
-            appear="false"
-            css="true"
-            name="t-overlay"
-            persisted="true"
-            transparent="false"
-          >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
-        </transition-stub>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="slide-bottom"
-          persisted="true"
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--bottom"
+          style="display: none;"
         >
+          <!--v-if-->
+          
           <div
-            class="t-popup--content t-popup--content-bottom"
-            style="display: none;"
+            class="t-picker"
+            data-v-7ee35211=""
           >
-            
             <div
-              class="t-picker"
-              data-v-7ee35211=""
+              class="t-picker__toolbar"
             >
               <div
-                class="t-picker__toolbar"
+                class="t-picker__cancel"
               >
-                <div
-                  class="t-picker__cancel"
-                >
-                  取消
-                </div>
-                <div
-                  class="t-picker__title"
-                />
-                <div
-                  class="t-picker__confirm"
-                >
-                  确认
-                </div>
+                取消
               </div>
-              <!---->
               <div
-                class="t-picker__main"
+                class="t-picker__title"
+              />
+              <div
+                class="t-picker__confirm"
               >
-                
-                <div
-                  class="t-picker-item__group"
-                >
-                  <ul
-                    class="t-picker-item"
-                    style="transform: translate3d(0, 80px, 0);"
-                  >
-                    
-                    <li
-                      class="t-picker-item__item t-picker-item__item--selected"
-                    >
-                      北京市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      上海市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      广州市
-                    </li>
-                    <li
-                      class="t-picker-item__item"
-                    >
-                      深圳市
-                    </li>
-                    
-                  </ul>
-                </div>
-                
-                <div
-                  class="t-picker__mask t-picker__mask--top"
-                />
-                <div
-                  class="t-picker__mask t-picker__mask--bottom"
-                />
-                <div
-                  class="t-picker__indicator"
-                />
+                确认
               </div>
             </div>
-            
+            <!---->
+            <div
+              class="t-picker__main"
+            >
+              
+              <div
+                class="t-picker-item__group"
+              >
+                <ul
+                  class="t-picker-item"
+                  style="transform: translate3d(0, 80px, 0);"
+                >
+                  
+                  <li
+                    class="t-picker-item__item t-picker-item__item--selected"
+                  >
+                    北京市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    上海市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    广州市
+                  </li>
+                  <li
+                    class="t-picker-item__item"
+                  >
+                    深圳市
+                  </li>
+                  
+                </ul>
+              </div>
+              
+              <div
+                class="t-picker__mask t-picker__mask--top"
+              />
+              <div
+                class="t-picker__mask t-picker__mask--bottom"
+              />
+              <div
+                class="t-picker__indicator"
+              />
+            </div>
           </div>
-        </transition-stub>
-      </div>
-      <!--teleport end-->
+          
+        </div>
+      </teleport-stub>
       
       
     </div>
@@ -1633,117 +1462,96 @@ exports[`Picker > Picker titleVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <!--teleport start-->
-  <div
-    class="t-popup"
+  <teleport-stub
+    data-v-7ee35211=""
+    disabled="false"
+    to="[object HTMLBodyElement]"
   >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-        transparent="false"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
+      
+      
+    </div>
+    <div
+      class="t-popup t-popup--bottom"
+      style="display: none;"
     >
+      <!--v-if-->
+      
       <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
+        class="t-picker"
+        data-v-7ee35211=""
       >
-        
         <div
-          class="t-picker"
-          data-v-7ee35211=""
+          class="t-picker__toolbar"
         >
           <div
-            class="t-picker__toolbar"
+            class="t-picker__cancel"
           >
-            <div
-              class="t-picker__cancel"
-            >
-              取消
-            </div>
-            <div
-              class="t-picker__title"
-            />
-            <div
-              class="t-picker__confirm"
-            >
-              确认
-            </div>
+            取消
           </div>
-          <!---->
           <div
-            class="t-picker__main"
+            class="t-picker__title"
+          />
+          <div
+            class="t-picker__confirm"
           >
-            
-            <div
-              class="t-picker-item__group"
-            >
-              <ul
-                class="t-picker-item"
-                style="transform: translate3d(0, 80px, 0);"
-              >
-                
-                <li
-                  class="t-picker-item__item t-picker-item__item--selected"
-                >
-                  北京市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  上海市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  广州市
-                </li>
-                <li
-                  class="t-picker-item__item"
-                >
-                  深圳市
-                </li>
-                
-              </ul>
-            </div>
-            
-            <div
-              class="t-picker__mask t-picker__mask--top"
-            />
-            <div
-              class="t-picker__mask t-picker__mask--bottom"
-            />
-            <div
-              class="t-picker__indicator"
-            />
+            确认
           </div>
         </div>
-        
+        <!---->
+        <div
+          class="t-picker__main"
+        >
+          
+          <div
+            class="t-picker-item__group"
+          >
+            <ul
+              class="t-picker-item"
+              style="transform: translate3d(0, 80px, 0);"
+            >
+              
+              <li
+                class="t-picker-item__item t-picker-item__item--selected"
+              >
+                北京市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                上海市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                广州市
+              </li>
+              <li
+                class="t-picker-item__item"
+              >
+                深圳市
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div
+            class="t-picker__mask t-picker__mask--top"
+          />
+          <div
+            class="t-picker__mask t-picker__mask--bottom"
+          />
+          <div
+            class="t-picker__indicator"
+          />
+        </div>
       </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
+      
+    </div>
+  </teleport-stub>
   
 </div>
 `;
