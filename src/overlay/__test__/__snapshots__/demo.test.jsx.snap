@@ -19,20 +19,13 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
       
     </span>
   </button>
-  <transition-stub
-    appear="false"
-    css="true"
-    name="t-overlay"
-    persisted="true"
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
+    
+    
+  </div>
   
 </div>
 `;
@@ -90,20 +83,13 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
             
           </span>
         </button>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="t-overlay"
-          persisted="true"
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
         
       </div>
       

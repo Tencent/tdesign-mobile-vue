@@ -56,14 +56,7 @@ exports[`TabBar > props > snapshot 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -114,14 +107,7 @@ exports[`TabBar > props > snapshot 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-haspopup="true"
@@ -173,14 +159,7 @@ exports[`TabBar > props > snapshot 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
