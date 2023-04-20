@@ -1,13 +1,17 @@
-import { mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Popup from '../popup.vue';
 import { ref } from 'vue';
+
+config.global.stubs = {
+  teleport: true
+}
 
 describe('popup', () => {
   // test props api
   describe('props', () => {
     const onOpen = vi.fn();
-    it(': visible	', async () => {
+    it(':visible', async () => {
       const wrapper = mount(Popup, {
         props: {
           visible: false,
@@ -15,46 +19,35 @@ describe('popup', () => {
         },
       });
 
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(false);
+      expect(wrapper.find('.t-popup').isVisible()).toBe(false);
       expect(wrapper.find('.t-overlay').attributes('style')).toContain('display: none');
       await wrapper.setProps({
         visible: true,
       });
       expect(wrapper.vm.currentVisible).toBe(true);
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(true);
+      expect(wrapper.find('.t-popup').isVisible()).toBe(true);
       expect(onOpen).toBeCalledTimes(1);
     });
 
-    it(': placement	', async () => {
+    it(':placement', async () => {
       const wrapper = mount(Popup, {
         props: {
           placement: 'top',
+          visible: true
         },
       });
-      expect(wrapper.find('.t-popup--content').classes()).toContain(`t-popup--content-${wrapper.vm.placement}`);
+      expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
       await wrapper.setProps({
         placement: 'center',
       });
-      expect(wrapper.find('.t-popup--content').classes()).toContain(`t-popup--content-${wrapper.vm.placement}`);
+      expect(wrapper.find('.t-popup').classes()).toContain(`t-popup--${wrapper.vm.placement}`);
     });
 
-    it(': showOverlay	', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          showOverlay: false,
-        },
-      });
-      expect(wrapper.find('.t-overlay').classes('t-overlay--transparent')).toBe(true);
-      await wrapper.setProps({
-        showOverlay: true,
-      });
-      expect(wrapper.find('.t-overlay').classes('t-overlay--transparent')).toBe(false);
-    });
-
-    it(': zIndex', async () => {
+    it(':zIndex', async () => {
       const wrapper = mount(Popup, {
         props: {
           zIndex: 15000,
+          visible: true
         },
       });
       expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 15000');
@@ -75,16 +68,6 @@ describe('popup', () => {
         transitionName: 'slide-fade',
       });
       expect(wrapper.vm.contentTransitionName).toBe(wrapper.vm.transitionName);
-    });
-
-    it(': customStyle', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          customStyle: 'font-size: 18px',
-          zIndex: 17000,
-        },
-      });
-      expect(wrapper.find('.t-popup').attributes('style')).toContain('font-size: 18px; z-index: 17000;');
     });
   });
 
@@ -111,7 +94,7 @@ describe('popup', () => {
               onClosed={closed}
             />
           );
-        },
+        }
       });
 
       const $popup = wrapper.find('.t-popup');
@@ -123,10 +106,10 @@ describe('popup', () => {
       expect(close).toBeCalledTimes(1);
 
       const $transition = wrapper.findAllComponents({ name: 'transition' }); // => 通过 `name` 找到 transition
-      expect($transition).toHaveLength(3);
+      expect($transition).toHaveLength(2);
 
       expect($transition.at(0).exists()).toBeTruthy();
-      expect($transition.at(2).exists()).toBeTruthy();
+      expect($transition.at(1).exists()).toBeTruthy();
 
       const event = {
         preventDefault: vi.fn(),

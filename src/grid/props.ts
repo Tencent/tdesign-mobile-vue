@@ -17,12 +17,9 @@ export default {
       return ['left', 'center'].includes(val);
     },
   },
-  /** 边框，默认不显示。值为 true 则显示默认边框，值类型为 object 则表示自定义边框样式 */
-  border: {
-    type: [Boolean, Object] as PropType<TdGridProps['border']>,
-    default: false,
-  },
-  /** 每一行的列数量 */
+  /** 是否显示边框 */
+  border: Boolean,
+  /** 每一行的列数量；为 0 时等于固定大小 */
   column: {
     type: Number,
     default: 4,
@@ -30,5 +27,14 @@ export default {
   /** 间隔大小 */
   gutter: {
     type: Number,
+  },
+  /** 宫格的风格 */
+  theme: {
+    type: String as PropType<TdGridProps['theme']>,
+    default: 'default' as TdGridProps['theme'],
+    validator(val: TdGridProps['theme']): boolean {
+      if (!val) return true;
+      return ['default', 'card'].includes(val);
+    },
   },
 };

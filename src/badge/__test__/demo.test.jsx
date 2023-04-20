@@ -4,15 +4,15 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/badge/demos/base.vue';
-import buttonVue from '@/badge/demos/button.vue';
-import cellVue from '@/badge/demos/cell.vue';
 import mobileVue from '@/badge/demos/mobile.vue';
+import sizeVue from '@/badge/demos/size.vue';
+import themeVue from '@/badge/demos/theme.vue';
 
 const mapper = {
   baseVue,
-  buttonVue,
-  cellVue,
   mobileVue,
+  sizeVue,
+  themeVue,
 };
 
 describe('Badge', () => {

@@ -2,9 +2,9 @@
   <t-popup
     :visible="visible"
     placement="center"
-    :mask-transparent="!showOverlay"
+    :show-overlay="showOverlay"
     :teleport-disabled="true"
-    :lock-scroll="preventScrollThrough"
+    :prevent-scroll-through="preventScrollThrough"
     @close="handleOverlayClick"
   >
     <div id="root" :class="dClassName" :style="rootStyles">

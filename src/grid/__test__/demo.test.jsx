@@ -5,14 +5,22 @@
 import { mount } from '@vue/test-utils';
 import badgeVue from '@/grid/demos/badge.vue';
 import baseVue from '@/grid/demos/base.vue';
+import borderedVue from '@/grid/demos/bordered.vue';
+import cardVue from '@/grid/demos/card.vue';
 import descVue from '@/grid/demos/desc.vue';
+import iconVue from '@/grid/demos/icon.vue';
 import mobileVue from '@/grid/demos/mobile.vue';
+import scrollVue from '@/grid/demos/scroll.vue';
 
 const mapper = {
   badgeVue,
   baseVue,
+  borderedVue,
+  cardVue,
   descVue,
+  iconVue,
   mobileVue,
+  scrollVue,
 };
 
 describe('Grid', () => {

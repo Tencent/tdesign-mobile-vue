@@ -6,35 +6,35 @@
 
 export interface TdOverlayProps {
   /**
-   * 动画时长，单位毫秒
+   * 遮罩层的背景色
+   * @default ''
+   */
+  backgroundColor?: string;
+  /**
+   * 遮罩层自定义样式。优先级低于其他属性
+   * @default ''
+   */
+  customStyle?: string;
+  /**
+   * 背景色过渡时间，单位毫秒
    * @default 300
    */
   duration?: number;
   /**
-   * 防止滚动穿透
+   * 防止滚动穿透，即不允许点击和滚动
    * @default true
    */
   preventScrollThrough?: boolean;
   /**
-   * 遮罩层是否透明
+   * 是否展示
    * @default false
    */
-  transparent?: boolean;
-  /**
-   * 是否展示
-   * @default true
-   */
-  visible: boolean;
+  visible?: boolean;
   /**
    * 遮罩的层级
    * @default 1000
    */
   zIndex?: number;
-  /**
-   * 遮罩的自定义样式
-   * @default ''
-   */
-  customStyle?: string;
   /**
    * 遮罩层的点击事件
    */

@@ -44,7 +44,7 @@ describe('avatar', () => {
     it(': badge', async () => {
       const wrapper = mount(() => <Avatar image={IMAGE} badgeProps={{ count: 10 }}></Avatar>);
       expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
-      const badge = wrapper.find('.t-badge > .t-badge__inner');
+      const badge = wrapper.find('.t-badge > .t-badge--basic');
       expect(badge.exists()).toBeTruthy();
       expect(badge.text()).toBe('10');
     });

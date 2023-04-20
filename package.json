@@ -1,7 +1,7 @@
 {
   "name": "tdesign-mobile-vue",
   "purename": "tdesign",
-  "version": "0.17.0",
+  "version": "0.18.0-beta",
   "description": "tdesign-mobile-vue",
   "author": "TDesign Group",
   "homepage": "https://tdesign.tencent.com/mobile-vue/",
@@ -82,10 +82,12 @@
   "dependencies": {
     "@babel/runtime": "^7.16.5",
     "@types/lodash": "^4.14.178",
+    "@types/validator": "^13.6.3",
     "@vueuse/core": "^8.2.5",
     "dayjs": "^1.10.7",
     "lodash": "^4.17.21",
-    "tdesign-icons-vue-next": "^0.1.8"
+    "tdesign-icons-vue-next": "^0.1.8",
+    "validator": "^13.5.1"
   },
   "peerDependencies": {
     "vue": "^3.2.6"
@@ -117,8 +119,8 @@
     "@vitejs/plugin-vue-jsx": "^1.3.3",
     "@vitest/ui": "^0.16.0",
     "@vue/eslint-config-typescript": "^9.1.0",
-    "@vue/server-renderer": "^3.2.4",
     "@vue/runtime-core": "^3.2.41",
+    "@vue/server-renderer": "^3.2.4",
     "@vue/test-utils": "^2.0.0-rc.17",
     "autoprefixer": "^10.2.4",
     "axios": "^0.21.0",

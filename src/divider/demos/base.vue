@@ -1,40 +1,36 @@
 <template>
   <div>
-    <h3>直线拉通</h3>
-    <t-divider></t-divider>
+    <div class="divider-demo__title">水平分割线</div>
+    <t-divider />
 
-    <h3>虚线拉通</h3>
-    <t-divider dashed></t-divider>
+    <div class="divider-demo__title">带文字水平分割线</div>
+    <t-divider content="文字信息" align="left" />
+    <t-divider content="文字信息" />
+    <t-divider content="文字信息" align="right" />
 
-    <h3>左右间距</h3>
-    <t-divider class="demo-2"></t-divider>
-
-    <h3>右侧拉通</h3>
-    <t-divider class="demo-3"></t-divider>
-
-    <h3>自定义左侧间距</h3>
-    <t-divider class="demo-4"></t-divider>
+    <div class="divider-demo__title" style="margin-bottom: 10px">垂直分割线</div>
+    <view class="divider-wrapper">
+      <span>文字信息</span>
+      <t-divider layout="vertical" />
+      <span>文字信息</span>
+      <t-divider layout="vertical" />
+      <span>文字信息</span>
+    </view>
   </div>
 </template>
 
 <style lang="less" scoped>
-h3 {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: 'PingFang SC';
-  color: #a9a9a9;
-  padding: 16px;
+.divider-demo__title {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  line-height: 20px;
 }
-
-.demo-2 {
-  margin: 10px 16px;
-}
-
-.demo-3 {
-  margin-left: 16px;
-}
-
-.demo-4 {
-  margin-left: 76px;
+.divider-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.9);
+  padding-left: 16px;
 }
 </style>

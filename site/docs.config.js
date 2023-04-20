@@ -46,6 +46,12 @@ export default {
           path: '/mobile-vue/components/icon',
           component: () => import('@/icon/icon.md'),
         },
+        {
+          title: 'Link 链接',
+          name: 'link',
+          path: '/mobile-vue/components/link',
+          component: () => import('@/link/link.md'),
+        },
       ],
     },
     {
@@ -124,6 +130,12 @@ export default {
       title: '输入',
       type: 'component',
       children: [
+        {
+          title: 'Form 表单',
+          name: 'form',
+          path: '/mobile-vue/components/form',
+          component: () => import('@/form/form.md'),
+        },
         {
           title: 'Calendar 日历',
           name: 'calendar',

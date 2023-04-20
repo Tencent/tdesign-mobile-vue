@@ -6,11 +6,13 @@ import { mount } from '@vue/test-utils';
 import baseVue from '@/upload/demos/base.vue';
 import mobileVue from '@/upload/demos/mobile.vue';
 import multipleVue from '@/upload/demos/multiple.vue';
+import statusVue from '@/upload/demos/status.vue';
 
 const mapper = {
   baseVue,
   mobileVue,
   multipleVue,
+  statusVue,
 };
 
 describe('Upload', () => {

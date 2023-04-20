@@ -8,18 +8,17 @@ import { TdPopupProps } from './type';
 import { PropType } from 'vue';
 
 export default {
+  /** 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
+  attach: {
+    type: [String, Function] as PropType<TdPopupProps['attach']>,
+    default: 'body',
+  },
+  /** 关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮 */
+  closeBtn: {
+    type: [Boolean, Function] as PropType<TdPopupProps['closeBtn']>,
+  },
   /** 点击遮罩层是否关闭 */
   closeOnOverlayClick: {
-    type: Boolean,
-    default: true,
-  },
-  /** 弹出层的自定义样式 */
-  customStyle: {
-    type: String,
-    default: '',
-  },
-  /** 是否锁定内容滚动 */
-  lockScroll: {
     type: Boolean,
     default: true,
   },
@@ -37,13 +36,16 @@ export default {
       return ['top', 'left', 'right', 'bottom', 'center'].includes(val);
     },
   },
+  /** 防止滚动穿透 */
+  preventScrollThrough: {
+    type: Boolean,
+    default: true,
+  },
   /** 是否显示遮罩层 */
   showOverlay: {
     type: Boolean,
     default: true,
   },
-  /** 透传给teleport组件的to属性 */
-  to: String,
   /** 弹出层内容区的动画名，等价于transition组件的name属性 */
   transitionName: {
     type: String,

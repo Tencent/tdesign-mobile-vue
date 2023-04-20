@@ -8,7 +8,6 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
   <button
     aria-disabled="false"
     class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-    data-v-255855c8=""
     role="button"
   >
     <!---->
@@ -16,59 +15,17 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
       class="t-button__text"
     >
       
-      基础遮罩
+      基础用法
       
     </span>
   </button>
-  <button
-    aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-    data-v-255855c8=""
-    role="button"
+  <div
+    class="t-overlay"
+    style="z-index: 1000; transition-duration: 300ms; display: none;"
   >
-    <!---->
-    <span
-      class="t-button__text"
-    >
-      
-      内嵌内容的遮罩
-      
-    </span>
-  </button>
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-255855c8=""
-    name="t-overlay"
-    persisted="true"
-  >
-    <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
-  </transition-stub>
-  <transition-stub
-    appear="false"
-    css="true"
-    data-v-255855c8=""
-    name="t-overlay"
-    persisted="true"
-  >
-    <div
-      class="t-overlay t-overlay--transparent"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      <div
-        class="box"
-        data-v-255855c8=""
-      />
-      
-    </div>
-  </transition-stub>
+    
+    
+  </div>
   
 </div>
 `;
@@ -96,7 +53,7 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -115,7 +72,6 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-          data-v-255855c8=""
           role="button"
         >
           <!---->
@@ -123,59 +79,17 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
             class="t-button__text"
           >
             
-            基础遮罩
+            基础用法
             
           </span>
         </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-          data-v-255855c8=""
-          role="button"
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            内嵌内容的遮罩
-            
-          </span>
-        </button>
-        <transition-stub
-          appear="false"
-          css="true"
-          data-v-255855c8=""
-          name="t-overlay"
-          persisted="true"
-        >
-          <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-        </transition-stub>
-        <transition-stub
-          appear="false"
-          css="true"
-          data-v-255855c8=""
-          name="t-overlay"
-          persisted="true"
-        >
-          <div
-            class="t-overlay t-overlay--transparent"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            <div
-              class="box"
-              data-v-255855c8=""
-            />
-            
-          </div>
-        </transition-stub>
+          
+          
+        </div>
         
       </div>
       
