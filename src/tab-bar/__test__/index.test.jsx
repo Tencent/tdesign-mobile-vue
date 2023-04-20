@@ -131,7 +131,7 @@ describe('TabBar', () => {
       expect(onChange).toHaveBeenCalledTimes(3);
       expect(onChange).toHaveBeenLastCalledWith(['3', '3-1']);
       await nextTick();
-      expect(wrapper.find('[name="label_3"]').find('.t-tab-bar-item__spread-item').exists()).toBe(false);
+      expect(wrapper.find('[name="label_3"]').find('.t-tab-bar-item__spread-item').isVisible()).toBe(false);
     });
   });
 });
