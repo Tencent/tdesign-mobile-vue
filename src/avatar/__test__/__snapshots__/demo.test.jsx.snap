@@ -3787,9 +3787,16 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
+                  class="t-badge__content"
                 >
-                  10
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                >
+                  <!--v-if-->
+                   10 
+                  <!--v-if-->
                 </div>
                 <!---->
               </div>
@@ -3852,9 +3859,16 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
+                  class="t-badge__content"
                 >
-                  10
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                >
+                  <!--v-if-->
+                   10 
+                  <!--v-if-->
                 </div>
                 <!---->
               </div>
@@ -3917,9 +3931,16 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--medium t-badge--dot"
+                  class="t-badge__content"
                 >
-                  
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                >
+                  <!--v-if-->
+                    
+                  <!--v-if-->
                 </div>
                 <!---->
               </div>
@@ -3986,9 +4007,16 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
+                  class="t-badge__content"
                 >
-                  10
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                >
+                  <!--v-if-->
+                   10 
+                  <!--v-if-->
                 </div>
                 <!---->
               </div>
@@ -4051,9 +4079,16 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
+                  class="t-badge__content"
                 >
-                  10
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                >
+                  <!--v-if-->
+                   10 
+                  <!--v-if-->
                 </div>
                 <!---->
               </div>
@@ -4116,9 +4151,16 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
                 class="t-badge"
               >
                 <div
-                  class="t-badge__inner t-badge--medium t-badge--dot"
+                  class="t-badge__content"
                 >
-                  
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                >
+                  <!--v-if-->
+                    
+                  <!--v-if-->
                 </div>
                 <!---->
               </div>
@@ -4498,9 +4540,16 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--medium t-badge--circle"
+            class="t-badge__content"
           >
-            10
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+          >
+            <!--v-if-->
+             10 
+            <!--v-if-->
           </div>
           <!---->
         </div>
@@ -4563,9 +4612,16 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--medium t-badge--circle"
+            class="t-badge__content"
           >
-            10
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+          >
+            <!--v-if-->
+             10 
+            <!--v-if-->
           </div>
           <!---->
         </div>
@@ -4628,9 +4684,16 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--medium t-badge--dot"
+            class="t-badge__content"
           >
-            
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+          >
+            <!--v-if-->
+              
+            <!--v-if-->
           </div>
           <!---->
         </div>
@@ -4697,9 +4760,16 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--medium t-badge--circle"
+            class="t-badge__content"
           >
-            10
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+          >
+            <!--v-if-->
+             10 
+            <!--v-if-->
           </div>
           <!---->
         </div>
@@ -4762,9 +4832,16 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--medium t-badge--circle"
+            class="t-badge__content"
           >
-            10
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+          >
+            <!--v-if-->
+             10 
+            <!--v-if-->
           </div>
           <!---->
         </div>
@@ -4827,9 +4904,16 @@ exports[`Avatar > Avatar sizeVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--medium t-badge--dot"
+            class="t-badge__content"
           >
-            
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+          >
+            <!--v-if-->
+              
+            <!--v-if-->
           </div>
           <!---->
         </div>

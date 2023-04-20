@@ -33,19 +33,6 @@ describe('Overlay', () => {
       expect(event.stopPropagation).toHaveBeenCalledTimes(1);
     });
 
-    it(': transparent', async () => {
-      const wrapper = mount(Overlay, {
-        props: {
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-overlay--transparent').exists()).toEqual(false);
-      await wrapper.setProps({
-        transparent: true,
-      });
-      expect(wrapper.find('.t-overlay--transparent').exists()).toEqual(true);
-    });
-
     it(': duration', async () => {
       const wrapper = mount(Overlay, {
         props: {

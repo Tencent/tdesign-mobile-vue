@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-import { Toast } from '@/components';
+import { Toast } from 'tdesign-mobile-vue';
 
 export default defineComponent({
   setup(props, context) {

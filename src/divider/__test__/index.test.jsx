@@ -1,8 +1,9 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Divider from '../divider.vue';
+import config from '../../config';
 
-const prefix = 't';
+const { prefix } = config;
 const name = `${prefix}-divider`;
 const TEXT = 'tdesign-mobile-vue';
 
@@ -15,7 +16,7 @@ describe('divider.vue', async () => {
 
     it(': dashed', async () => {
       const wrapper = mount(() => <Divider dashed />);
-      expect(wrapper.classes()).toContain(`${name}--dashed`);
+      expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--dashed`);
     });
 
     it(': align', async () => {
@@ -30,7 +31,7 @@ describe('divider.vue', async () => {
 
       // align = ''
       ['left', 'right', 'center'].map((item) => {
-        expect($divider.classes().includes(`${name}--content-${item}`)).toBeFalsy();
+        expect($divider.find(`.${name}`).classes().includes(`${name}--${item}`)).toBeFalsy();
       });
 
       const align = 'left';
@@ -38,7 +39,7 @@ describe('divider.vue', async () => {
         align,
       });
       // align = 'left'
-      expect($divider.classes()).toContain(`${name}--content-${align}`);
+      expect($divider.find(`.${name}`).classes()).toContain(`${name}--${align}`);
     });
 
     it(': layout', async () => {
@@ -53,7 +54,7 @@ describe('divider.vue', async () => {
 
       // layout = ''
       ['horizontal', 'vertical'].map((item) => {
-        expect($divider.classes().includes(`${name}-${item}`)).toBeFalsy();
+        expect($divider.find(`.${name}`).classes().includes(`${name}--${item}`)).toBeFalsy();
       });
 
       const layout = 'vertical';
@@ -61,12 +62,12 @@ describe('divider.vue', async () => {
         layout,
       });
       // layout = 'vertical'
-      expect($divider.classes()).toContain(`${name}-${layout}`);
+      expect($divider.find(`.${name}`).classes()).toContain(`${name}--${layout}`);
     });
 
     it(': lineColor', async () => {
       const wrapper = mount(() => <Divider lineColor="red" />);
-      expect(getComputedStyle(wrapper.element, null).borderColor).toBe('red');
+      expect(getComputedStyle(wrapper.element.firstChild, null).borderColor).toBe('red');
     });
   });
   describe('slot', async () => {

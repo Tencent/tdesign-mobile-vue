@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { ref, computed, reactive } from 'vue';
-import ToastPlugin from '@/toast';
+import { ToastPlugin } from 'tdesign-mobile-vue';
 import { PickerValue } from '../type';
 
 const roles = [

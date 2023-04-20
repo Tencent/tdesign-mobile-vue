@@ -3,22 +3,16 @@
  */
 
 import { mount } from '@vue/test-utils';
-import customAnimationVue from '@/popup/demos/custom-animation.vue';
+import baseVue from '@/popup/demos/base.vue';
+import customCloseVue from '@/popup/demos/custom-close.vue';
 import mobileVue from '@/popup/demos/mobile.vue';
-import placementBottomVue from '@/popup/demos/placement-bottom.vue';
-import placementCenterVue from '@/popup/demos/placement-center.vue';
-import placementLeftVue from '@/popup/demos/placement-left.vue';
-import placementRightVue from '@/popup/demos/placement-right.vue';
-import placementTopVue from '@/popup/demos/placement-top.vue';
+import withTitleVue from '@/popup/demos/with-title.vue';
 
 const mapper = {
-  customAnimationVue,
+  baseVue,
+  customCloseVue,
   mobileVue,
-  placementBottomVue,
-  placementCenterVue,
-  placementLeftVue,
-  placementRightVue,
-  placementTopVue,
+  withTitleVue,
 };
 
 describe('Popup', () => {

@@ -10,4 +10,3 @@ content | String / Slot / Function | - | 子元素。TS 类型：`string | TNode
 dashed | Boolean | false | 是否虚线（仅在水平分割线有效） | N
 default | String / Slot / Function | - | 子元素，同 content。TS 类型：`string | TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 layout | String | horizontal | 分隔线类型有两种：水平和垂直。可选项：horizontal/vertical | N
-lineColor | String | - | 分隔线颜色 | N

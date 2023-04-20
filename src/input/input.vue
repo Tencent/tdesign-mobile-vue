@@ -60,6 +60,7 @@ import InputProps from './props';
 import ClASSNAMES from '../shared/constants';
 import { InputValue, TdInputProps } from './type';
 import { useEmitEvent, getCharacterLength, renderTNode, TNode, useDefault, extendAPI } from '../shared';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const componentName = `${prefix}-input`;
@@ -74,6 +75,8 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'click-icon', 'focus', 'blur', 'change', 'clear'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
+    const disabled = useFormDisabled();
+
     const inputRef = ref();
     const { autofocus } = toRefs(props);
     const internalInstance = getCurrentInstance();
@@ -82,7 +85,7 @@ export default defineComponent({
     const status = props.status || 'default';
     const styleLabel = computed(() => ({
       [`${componentName}__label`]: true,
-      [ClASSNAMES.STATUS.disabled]: props.disabled,
+      [ClASSNAMES.STATUS.disabled]: disabled.value,
       [`${componentName}-is-${status}`]: status && status !== 'default',
     }));
     const { focused } = useFocus(inputRef, { initialValue: props.autofocus });
@@ -178,6 +181,7 @@ export default defineComponent({
     return {
       componentName,
       ...toRefs(props),
+      disabled,
       styleLabel,
       styleWrapper,
       styleControl,
