@@ -1,5 +1,5 @@
 <template>
-  <t-slider v-model="rangeValue" show-extreme-value range @change="onChange" />
+  <t-slider :default-value="rangeValue" range @change="onChange" />
 </template>
 
 <script lang="ts" setup>
