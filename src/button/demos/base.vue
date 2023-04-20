@@ -1,14 +1,15 @@
 <template>
-  <div class="button-demo">
-    <t-button size="large" theme="primary" block>强按钮</t-button>
-    <t-button size="large" theme="primary" block variant="outline"> 弱按钮 </t-button>
-    <t-button size="large" variant="outline" block>次按钮</t-button>
-    <t-button size="large" theme="primary" variant="outline" :icon="iconFunc" block> 带图标按钮 </t-button>
-    <t-button size="large" theme="danger" block>强警告按钮</t-button>
-    <t-button size="large" theme="danger" variant="outline" block> 弱警告按钮 </t-button>
+  <div class="row">
+    <t-button size="large" theme="primary">填充按钮</t-button>
+    <t-button size="large" theme="light">填充按钮</t-button>
+    <t-button size="large">填充按钮</t-button>
+  </div>
+  <div class="row">
+    <t-button size="large" theme="primary" variant="outline">描边按钮</t-button>
+    <t-button size="large" theme="primary" variant="text">文字按钮</t-button>
   </div>
 
-  <div style="background: #a6a6a6; padding: 8px 16px; margin-bottom: 16px">
+  <!-- <div style="background: #a6a6a6; padding: 8px 16px; margin-bottom: 16px">
     <t-button size="large" variant="outline" ghost block> 幽灵按钮 </t-button>
   </div>
   <div class="margin-button">
@@ -38,7 +39,7 @@
       <t-button size="large" shape="square" theme="primary" loading></t-button>
       <t-button size="large" theme="primary" loading>加载中...</t-button>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script lang="ts" setup>
@@ -47,3 +48,18 @@ import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 
 const iconFunc = () => h(TIconApp);
 </script>
+
+<style scoped lang="less">
+.row {
+  display: flex;
+  padding: 0 16px;
+}
+
+.row + .row {
+  margin-top: 16px;
+}
+
+.t-button + .t-button {
+  margin-left: 16px;
+}
+</style>

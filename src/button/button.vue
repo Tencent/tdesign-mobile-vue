@@ -1,7 +1,7 @@
 <template>
   <button :class="buttonClass" :disabled="disabled" role="button" :aria-disabled="disabled" @click="onClick">
-    <t-node :content="iconContent"></t-node>
-    <span :class="`${name}__text`">
+    <t-node :content="iconContent" />
+    <span :class="`${name}__content`">
       <t-node :content="buttonContent"></t-node>
     </span>
   </button>
@@ -19,7 +19,7 @@ import { useFormDisabled } from '../form/hooks';
 const { prefix } = config;
 const name = `${prefix}-button`;
 
-const loadingContent = h(LoadingIcon);
+const loadingContent = h(LoadingIcon, { size: '24px' });
 
 export default defineComponent({
   name,
@@ -32,13 +32,13 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const buttonClass = computed(() => [
       `${name}`,
-      props.size ? CLASSNAMES.SIZE[props.size] : '',
+      `${name}--size-${props.size}`,
       `${name}--${props.variant}`,
       {
         [`${name}--${props.theme}`]: props.theme,
-        [`${name}--shape-${props.shape}`]: props.shape,
+        [`${name}--${props.shape}`]: props.shape,
         [`${name}--ghost`]: props.ghost,
-        [`${prefix}-is-block`]: props.block,
+        [`${name}--block`]: props.block,
         [CLASSNAMES.STATUS.disabled]: disabled.value,
         [CLASSNAMES.STATUS.loading]: props.loading,
       },
