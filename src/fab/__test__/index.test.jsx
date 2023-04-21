@@ -43,8 +43,8 @@ describe('fab', () => {
         props: { icon, buttonProps },
       });
       expect(wrapper.classes()).toContain(`t-button--danger`);
-      expect(wrapper.classes()).toContain(`t-button--shape-circle`);
-      expect(wrapper.classes()).toContain(`t-size-l`);
+      expect(wrapper.classes()).toContain(`t-button--circle`);
+      expect(wrapper.classes()).toContain(`t-button--size-large`);
     });
   });
 

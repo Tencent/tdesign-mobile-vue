@@ -541,15 +541,17 @@ exports[`calendar > props > : format 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+            class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               确认
             </span>
+            <!---->
           </button>
           
         </div>

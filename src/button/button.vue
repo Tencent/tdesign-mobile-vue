@@ -7,7 +7,8 @@
     :aria-disabled="disabled"
     @click="onClick"
   >
-    <t-node :content="iconContent" />
+    <t-loading v-if="loading" inherit-color v-bind="loadingProps" />
+    <t-node v-else :content="iconContent" />
     <span :class="`${name}__content`">
       <t-node :content="buttonContent" />
     </span>
@@ -20,7 +21,6 @@ import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
 
 import Loading from '../loading';
 import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
-import CLASSNAMES from '../shared/constants';
 import ButtonProps from './props';
 import config from '../config';
 import { useFormDisabled } from '../form/hooks';
@@ -30,7 +30,7 @@ const name = `${prefix}-button`;
 
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TLoading: Loading },
   props: ButtonProps,
   emits: ['click'],
   setup(props, context) {
@@ -47,12 +47,11 @@ export default defineComponent({
         [`${name}--ghost`]: props.ghost,
         [`${name}--block`]: props.block,
         [`${name}--disabled`]: disabled.value,
-        [CLASSNAMES.STATUS.loading]: props.loading,
+        [`${name}--loading`]: props.loading,
       },
     ]);
     const buttonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const loadingContent = computed(() => h(Loading, { inheritColor: true, ...props.loadingProps }));
-    const iconContent = computed(() => (props.loading ? loadingContent.value : renderTNode(internalInstance, 'icon')));
+    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
     const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
 
     const onClick = (e: Event) => {
