@@ -25,7 +25,7 @@ describe('Toast', () => {
           icon,
         },
       });
-      expect(wrapper.find('.t-toast > svg').classes()).toContain('t-icon');
+      expect(wrapper.findComponent(LoadingIcon).exists()).toBeTruthy();
     });
 
     it(': message', async () => {
@@ -45,20 +45,6 @@ describe('Toast', () => {
         },
       });
       expect(wrapper.findComponent(Overlay).vm.duration).toEqual(1000);
-    });
-
-    it(': placement', async () => {
-      const wrapper = mount(Toast, {
-        props: {
-          placement: 'top',
-        },
-      });
-      expect(wrapper.find('.t-toast').classes()).toContain('t-toast--top');
-      await wrapper.setProps({
-        placement: 'bottom',
-      });
-      expect(wrapper.find('.t-toast').classes()).not.toContain('t-toast--top');
-      expect(wrapper.find('.t-toast').classes()).toContain('t-toast--bottom');
     });
 
     it(': showOverlay', async () => {

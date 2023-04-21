@@ -53,7 +53,11 @@ export default {
     type: String as PropType<TdToastProps['theme']>,
     validator(val: TdToastProps['theme']): boolean {
       if (!val) return true;
-      return ['loading', 'success', 'fail'].includes(val);
+      return ['loading', 'success', 'error'].includes(val);
     },
   },
+  /** 轻提示隐藏的时候触发 */
+  onClose: Function as PropType<TdToastProps['onClose']>,
+  /** 轻提示销毁的时候触发 */
+  onDestroy: Function as PropType<TdToastProps['onDestroy']>,
 };
