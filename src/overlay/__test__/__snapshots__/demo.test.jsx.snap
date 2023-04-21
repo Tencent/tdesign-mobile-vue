@@ -7,17 +7,19 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
   
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       基础用法
       
     </span>
+    <!---->
   </button>
   <div
     class="t-overlay"
@@ -71,17 +73,19 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             基础用法
             
           </span>
+          <!---->
         </button>
         <div
           class="t-overlay"

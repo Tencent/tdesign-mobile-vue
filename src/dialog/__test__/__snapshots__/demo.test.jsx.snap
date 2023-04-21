@@ -7,33 +7,37 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     data-v-25064f1a=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        双按钮 
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     data-v-25064f1a=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        带警示按钮 
       
     </span>
+    <!---->
   </button>
   <teleport-stub
     data-v-25064f1a=""
@@ -89,29 +93,33 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               取消
             </span>
+            <!---->
           </button>
           
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               确认
             </span>
+            <!---->
           </button>
           
         </div>
@@ -172,29 +180,33 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               取消
             </span>
+            <!---->
           </button>
           
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--danger t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--danger t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               警示操作
             </span>
+            <!---->
           </button>
           
         </div>
@@ -213,59 +225,67 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        单行标题 
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        多行标题最大高度 
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        带说明文本 
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        带说明文本最大高度 
       
     </span>
+    <!---->
   </button>
   <!-- &lt;t-button block variant="outline" size="large" @click="eventDialog()"&gt; 函数调用长文本对话框 &lt;/t-button&gt; -->
   <teleport-stub
@@ -314,15 +334,17 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               知道了
             </span>
+            <!---->
           </button>
           
         </div>
@@ -376,15 +398,17 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               知道了
             </span>
+            <!---->
           </button>
           
         </div>
@@ -446,15 +470,17 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               知道了
             </span>
+            <!---->
           </button>
           
         </div>
@@ -516,15 +542,17 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               知道了
             </span>
+            <!---->
           </button>
           
         </div>
@@ -543,33 +571,37 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     data-v-4a76bf3d=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        单行标题对话框 
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     data-v-4a76bf3d=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        带说明文本对话框 
       
     </span>
+    <!---->
   </button>
   <teleport-stub
     data-v-4a76bf3d=""
@@ -733,59 +765,67 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              单行标题 
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              多行标题最大高度 
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              带说明文本 
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              带说明文本最大高度 
             
           </span>
+          <!---->
         </button>
         <!-- &lt;t-button block variant="outline" size="large" @click="eventDialog()"&gt; 函数调用长文本对话框 &lt;/t-button&gt; -->
         <teleport-stub
@@ -834,15 +874,17 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     知道了
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -896,15 +938,17 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     知道了
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -966,15 +1010,17 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     知道了
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -1036,15 +1082,17 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     知道了
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -1082,33 +1130,37 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-25064f1a=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              双按钮 
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-25064f1a=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              带警示按钮 
             
           </span>
+          <!---->
         </button>
         <teleport-stub
           data-v-25064f1a=""
@@ -1164,29 +1216,33 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     取消
                   </span>
+                  <!---->
                 </button>
                 
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     确认
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -1247,29 +1303,33 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--default t-button--shape-rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-dialog__btn t-dialog__btn--default t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     取消
                   </span>
+                  <!---->
                 </button>
                 
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--text t-button--danger t-button--shape-rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
+                  class="t-button t-button--size-medium t-button--text t-button--danger t-button--rectangle t-dialog__btn t-dialog__btn--primary t-dialog__horizontal-btn"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     警示操作
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -1308,33 +1368,37 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-4a76bf3d=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              单行标题对话框 
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-4a76bf3d=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              带说明文本对话框 
             
           </span>
+          <!---->
         </button>
         <teleport-stub
           data-v-4a76bf3d=""

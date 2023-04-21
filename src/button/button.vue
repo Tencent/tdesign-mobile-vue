@@ -1,17 +1,26 @@
 <template>
-  <button :class="buttonClass" :disabled="disabled" role="button" :aria-disabled="disabled" @click="onClick">
-    <t-node :content="iconContent"></t-node>
-    <span :class="`${name}__text`">
-      <t-node :content="buttonContent"></t-node>
+  <button
+    :class="buttonClass"
+    :disabled="disabled"
+    :type="type"
+    role="button"
+    :aria-disabled="disabled"
+    @click="onClick"
+  >
+    <t-loading v-if="loading" inherit-color v-bind="loadingProps" />
+    <t-node v-else :content="iconContent" />
+    <span :class="`${name}__content`">
+      <t-node :content="buttonContent" />
     </span>
+    <t-node :content="suffixContent" />
   </button>
 </template>
 
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
-import { LoadingIcon } from 'tdesign-icons-vue-next';
+
+import Loading from '../loading';
 import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
-import CLASSNAMES from '../shared/constants';
 import ButtonProps from './props';
 import config from '../config';
 import { useFormDisabled } from '../form/hooks';
@@ -19,11 +28,9 @@ import { useFormDisabled } from '../form/hooks';
 const { prefix } = config;
 const name = `${prefix}-button`;
 
-const loadingContent = h(LoadingIcon);
-
 export default defineComponent({
   name,
-  components: { TNode },
+  components: { TNode, TLoading: Loading },
   props: ButtonProps,
   emits: ['click'],
   setup(props, context) {
@@ -32,19 +39,21 @@ export default defineComponent({
     const internalInstance = getCurrentInstance();
     const buttonClass = computed(() => [
       `${name}`,
-      props.size ? CLASSNAMES.SIZE[props.size] : '',
+      `${name}--size-${props.size}`,
       `${name}--${props.variant}`,
       {
         [`${name}--${props.theme}`]: props.theme,
-        [`${name}--shape-${props.shape}`]: props.shape,
+        [`${name}--${props.shape}`]: props.shape,
         [`${name}--ghost`]: props.ghost,
-        [`${prefix}-is-block`]: props.block,
-        [CLASSNAMES.STATUS.disabled]: disabled.value,
-        [CLASSNAMES.STATUS.loading]: props.loading,
+        [`${name}--block`]: props.block,
+        [`${name}--disabled`]: disabled.value,
+        [`${name}--loading`]: props.loading,
       },
     ]);
     const buttonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const iconContent = computed(() => (props.loading ? loadingContent : renderTNode(internalInstance, 'icon')));
+    const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
+    const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
+
     const onClick = (e: Event) => {
       if (!props.loading && !disabled.value) {
         emitEvent('click', e);
@@ -58,6 +67,7 @@ export default defineComponent({
       disabled,
       buttonContent,
       iconContent,
+      suffixContent,
       buttonClass,
       onClick,
     };
