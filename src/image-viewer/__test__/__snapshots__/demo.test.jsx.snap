@@ -30,17 +30,19 @@ exports[`ImageViewer > ImageViewer backgroundVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              显示 
             
           </span>
+          <!---->
         </button>
         <div
           class="t-overlay t-image-viewer"
@@ -65,18 +67,20 @@ exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     data-v-734c791c=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
        基础用法 
       
     </span>
+    <!---->
   </button>
   <div
     class="t-overlay t-image-viewer"
@@ -96,18 +100,20 @@ exports[`ImageViewer > ImageViewer closeBtnVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     data-v-04bcb836=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       不展示关闭按钮
       
     </span>
+    <!---->
   </button>
   <div
     class="t-overlay t-image-viewer"
@@ -127,18 +133,20 @@ exports[`ImageViewer > ImageViewer closeEventVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
     data-v-3939d0e3=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       监听关闭事件
       
     </span>
+    <!---->
   </button>
   <div
     class="t-overlay t-image-viewer"
@@ -181,17 +189,19 @@ exports[`ImageViewer > ImageViewer imageListVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              图片列表 
             
           </span>
+          <!---->
         </button>
         <div
           class="t-overlay t-image-viewer"
@@ -239,17 +249,19 @@ exports[`ImageViewer > ImageViewer initialIndexVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              默认展示 
             
           </span>
+          <!---->
         </button>
         <div
           class="t-overlay t-image-viewer"
@@ -308,18 +320,20 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-734c791c=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
              基础用法 
             
           </span>
+          <!---->
         </button>
         <div
           class="t-overlay t-image-viewer"
@@ -336,18 +350,20 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-04bcb836=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             不展示关闭按钮
             
           </span>
+          <!---->
         </button>
         <div
           class="t-overlay t-image-viewer"
@@ -364,18 +380,20 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-3939d0e3=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             监听关闭事件
             
           </span>
+          <!---->
         </button>
         <div
           class="t-overlay t-image-viewer"

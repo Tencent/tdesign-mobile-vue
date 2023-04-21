@@ -12,78 +12,88 @@ exports[`Message > Message baseVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-e60c559e=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         纯文字的通知
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-e60c559e=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         带图标的通知
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-e60c559e=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         带关闭的通知
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-e60c559e=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         可滚动的通知
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-e60c559e=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         带按钮的通知
         
       </span>
+      <!---->
     </button>
   </div>
   <!-- 纯文字通知 -->
@@ -144,78 +154,88 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-e60c559e=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             纯文字的通知
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-e60c559e=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             带图标的通知
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-e60c559e=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             带关闭的通知
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-e60c559e=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             可滚动的通知
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-e60c559e=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             带按钮的通知
             
           </span>
+          <!---->
         </button>
       </div>
       <!-- 纯文字通知 -->
@@ -260,63 +280,71 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-fba28ece=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             普通通知
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-fba28ece=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             成功通知
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-fba28ece=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             警示通知
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-fba28ece=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             错误通知
             
           </span>
+          <!---->
         </button>
       </div>
       
@@ -333,63 +361,71 @@ exports[`Message > Message themeVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-fba28ece=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       普通通知
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-fba28ece=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       成功通知
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-fba28ece=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       警示通知
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-fba28ece=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       错误通知
       
     </span>
+    <!---->
   </button>
 </div>
 `;

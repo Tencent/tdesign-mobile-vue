@@ -103,17 +103,19 @@ exports[`SwipeCell > SwipeCell bindVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+            class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               删除
               
             </span>
+            <!---->
           </button>
           
           
@@ -158,17 +160,19 @@ exports[`SwipeCell > SwipeCell btnsVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+            class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               选择
               
             </span>
+            <!---->
           </button>
           
           
@@ -206,31 +210,35 @@ exports[`SwipeCell > SwipeCell btnsVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               收藏
               
             </span>
+            <!---->
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle"
+            class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               删除
               
             </span>
+            <!---->
           </button>
           
           
@@ -295,19 +303,20 @@ exports[`SwipeCell > SwipeCell contentVue demo works fine 1`] = `
           <div>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
               role="button"
               style="height: 100%;"
               type="submit"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
           </div>
           
@@ -424,33 +433,37 @@ exports[`SwipeCell > SwipeCell disabledVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+            class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
             role="button"
             style="height: 100%;"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               收藏
               
             </span>
+            <!---->
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--base t-button--danger t-button--shape-rectangle"
+            class="t-button t-button--size-small t-button--base t-button--danger t-button--rectangle"
             role="button"
             style="height: 100%;"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               删除
               
             </span>
+            <!---->
           </button>
           
           
@@ -495,17 +508,19 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               选择
               
             </span>
+            <!---->
           </button>
           
           
@@ -549,33 +564,37 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
             role="button"
             style="height: 100%;"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               删除
               
             </span>
+            <!---->
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
             role="button"
             style="height: 100%;"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               收藏
               
             </span>
+            <!---->
           </button>
           
         </div>
@@ -668,17 +687,19 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -758,17 +779,19 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -858,48 +881,54 @@ exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--warning"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -970,48 +999,54 @@ exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--warning"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -1097,17 +1132,19 @@ exports[`SwipeCell > SwipeCell leftOneMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -1178,17 +1215,19 @@ exports[`SwipeCell > SwipeCell leftOneMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -1278,33 +1317,37 @@ exports[`SwipeCell > SwipeCell leftTwoMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -1375,33 +1418,37 @@ exports[`SwipeCell > SwipeCell leftTwoMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -1497,17 +1544,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -1578,17 +1627,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -1671,33 +1722,37 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -1768,33 +1823,37 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -1875,48 +1934,54 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--warning"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -1987,48 +2052,54 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--warning"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--primary"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 编辑
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle t-button--danger"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -2116,17 +2187,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2206,17 +2279,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2260,17 +2335,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 选择
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2341,17 +2418,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 选择
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2502,17 +2581,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2574,19 +2655,20 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             <div>
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+                class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
                 role="button"
                 style="height: 100%;"
                 type="submit"
               >
                 <!---->
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   
                   收藏
                   
                 </span>
+                <!---->
               </button>
             </div>
             
@@ -2700,33 +2782,37 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+              class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-s t-button--base t-button--danger t-button--shape-rectangle"
+              class="t-button t-button--size-small t-button--base t-button--danger t-button--rectangle"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2768,17 +2854,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 选择
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2816,31 +2904,35 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-rectangle"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2882,17 +2974,19 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 选择
                 
               </span>
+              <!---->
             </button>
             
             
@@ -2936,33 +3030,37 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 删除
                 
               </span>
+              <!---->
             </button>
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
               role="button"
               style="height: 100%;"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 收藏
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -3010,17 +3108,19 @@ exports[`SwipeCell > SwipeCell rightMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 选择
                 
               </span>
+              <!---->
             </button>
             
             
@@ -3091,17 +3191,19 @@ exports[`SwipeCell > SwipeCell rightMenuVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 选择
                 
               </span>
+              <!---->
             </button>
             
             

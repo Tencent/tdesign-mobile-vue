@@ -68,17 +68,19 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+          class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             按钮
             
           </span>
+          <!---->
         </button>
         
       </div>
@@ -159,17 +161,19 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+          class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             按钮
             
           </span>
+          <!---->
         </button>
         
       </div>
@@ -203,8 +207,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           aria-label="通知"
-          class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+          class="t-button t-button--size-large t-button--base t-button--default t-button--square"
           role="button"
+          type="button"
         >
           <svg
             class="t-icon t-icon-notification"
@@ -220,10 +225,11 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
             />
           </svg>
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             <!---->
           </span>
+          <!---->
         </button>
         
       </div>
@@ -339,17 +345,19 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+                class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
                 role="button"
+                type="button"
               >
                 <!---->
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   
                   按钮
                   
                 </span>
+                <!---->
               </button>
               
             </div>
@@ -430,17 +438,19 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+                class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
                 role="button"
+                type="button"
               >
                 <!---->
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   
                   按钮
                   
                 </span>
+                <!---->
               </button>
               
             </div>
@@ -474,8 +484,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               <button
                 aria-disabled="false"
                 aria-label="通知"
-                class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+                class="t-button t-button--size-large t-button--base t-button--default t-button--square"
                 role="button"
+                type="button"
               >
                 <svg
                   class="t-icon t-icon-notification"
@@ -491,10 +502,11 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   />
                 </svg>
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   <!---->
                 </span>
+                <!---->
               </button>
               
             </div>
@@ -622,8 +634,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
               <button
                 aria-disabled="false"
                 aria-label="商店"
-                class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+                class="t-button t-button--size-large t-button--base t-button--default t-button--square"
                 role="button"
+                type="button"
               >
                 <svg
                   class="t-icon t-icon-shop"
@@ -639,10 +652,11 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   />
                 </svg>
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   <!---->
                 </span>
+                <!---->
               </button>
               
             </div>
@@ -1061,8 +1075,9 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
         <button
           aria-disabled="false"
           aria-label="商店"
-          class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+          class="t-button t-button--size-large t-button--base t-button--default t-button--square"
           role="button"
+          type="button"
         >
           <svg
             class="t-icon t-icon-shop"
@@ -1078,10 +1093,11 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
             />
           </svg>
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             <!---->
           </span>
+          <!---->
         </button>
         
       </div>

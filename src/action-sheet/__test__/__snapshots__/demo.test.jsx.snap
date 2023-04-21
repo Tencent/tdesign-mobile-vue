@@ -11,18 +11,20 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-1719f7aa=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         宫格型-多页
         
       </span>
+      <!---->
     </button>
   </div>
   <teleport-stub
@@ -1116,18 +1118,20 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-06f7cca3=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         宫格型
         
       </span>
+      <!---->
     </button>
   </div>
   <teleport-stub
@@ -1701,18 +1705,20 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-443785fb=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         列表型
         
       </span>
+      <!---->
     </button>
   </div>
   <teleport-stub
@@ -1852,18 +1858,20 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-443785fb=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             列表型
             
           </span>
+          <!---->
         </button>
       </div>
       <teleport-stub
@@ -1964,18 +1972,20 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-06f7cca3=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             宫格型
             
           </span>
+          <!---->
         </button>
       </div>
       <teleport-stub
@@ -2542,18 +2552,20 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-1719f7aa=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             宫格型-多页
             
           </span>
+          <!---->
         </button>
       </div>
       <teleport-stub

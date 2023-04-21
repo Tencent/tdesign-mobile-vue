@@ -2307,15 +2307,17 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 确认
               </span>
+              <!---->
             </button>
             
           </div>
@@ -4676,15 +4678,17 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--danger t-button--shape-round t-is-block"
+              class="t-button t-button--size-medium t-button--base t-button--danger t-button--round t-button--block"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 ok
               </span>
+              <!---->
             </button>
             
           </div>
@@ -5158,15 +5162,17 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 确认
               </span>
+              <!---->
             </button>
             
           </div>
@@ -6189,15 +6195,17 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 确认
               </span>
+              <!---->
             </button>
             
           </div>
@@ -8593,15 +8601,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     
                     <button
                       aria-disabled="false"
-                      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+                      class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
                       role="button"
+                      type="button"
                     >
                       <!---->
                       <span
-                        class="t-button__text"
+                        class="t-button__content"
                       >
                         确认
                       </span>
+                      <!---->
                     </button>
                     
                   </div>
@@ -10956,15 +10966,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     
                     <button
                       aria-disabled="false"
-                      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+                      class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
                       role="button"
+                      type="button"
                     >
                       <!---->
                       <span
-                        class="t-button__text"
+                        class="t-button__content"
                       >
                         确认
                       </span>
+                      <!---->
                     </button>
                     
                   </div>
@@ -13319,15 +13331,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     
                     <button
                       aria-disabled="false"
-                      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+                      class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
                       role="button"
+                      type="button"
                     >
                       <!---->
                       <span
-                        class="t-button__text"
+                        class="t-button__content"
                       >
                         确认
                       </span>
+                      <!---->
                     </button>
                     
                   </div>
@@ -14368,15 +14382,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+                  class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     确认
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -16731,15 +16747,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--base t-button--danger t-button--shape-round t-is-block"
+                  class="t-button t-button--size-medium t-button--base t-button--danger t-button--round t-button--block"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     ok
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -17206,15 +17224,17 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 
                 <button
                   aria-disabled="false"
-                  class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+                  class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
                   role="button"
+                  type="button"
                 >
                   <!---->
                   <span
-                    class="t-button__text"
+                    class="t-button__content"
                   >
                     确认
                   </span>
+                  <!---->
                 </button>
                 
               </div>
@@ -19593,15 +19613,17 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 确认
               </span>
+              <!---->
             </button>
             
           </div>
@@ -21959,15 +21981,17 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 确认
               </span>
+              <!---->
             </button>
             
           </div>
