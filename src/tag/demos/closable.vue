@@ -1,34 +1,19 @@
 <template>
-  <t-tag
-    v-for="(tag, index) in closableTags"
-    :key="tag"
-    closable
-    theme="primary"
-    :icon="tag.icon"
-    :size="tag.size"
-    @close="onClickClose(index)"
-    >{{ tag.name }}</t-tag
-  >
+  <t-tag v-if="show1" closable variant="light" @click="onClickClose(1)">文字标签</t-tag>
+  <t-tag v-if="show2" closable variant="outline" @click="onClickClose(2)">文字标签</t-tag>
 </template>
 
 <script lang="ts" setup>
-import { ref, h } from 'vue';
-import { AppIcon } from 'tdesign-icons-vue-next';
+import { ref } from 'vue';
 
-const closableTags = ref([
-  {
-    name: '标签',
-    size: 'medium',
-  },
-  {
-    name: '标签',
-    size: 'medium',
-    icon: () => h(AppIcon),
-  },
-]);
-
+const show1 = ref(true);
+const show2 = ref(true);
 function onClickClose(index: number) {
-  console.log(index);
-  closableTags.value.splice(index, 1);
+  if (index === 1) {
+    show1.value = false;
+  }
+  if (index === 2) {
+    show2.value = false;
+  }
 }
 </script>

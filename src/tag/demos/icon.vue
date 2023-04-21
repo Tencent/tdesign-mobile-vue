@@ -1,13 +1,4 @@
 <template>
-  <t-tag theme="primary" :icon="iconTags.icon">{{ iconTags.name }}</t-tag>
+  <t-tag variant="light" icon="discount"> 标签文字 </t-tag>
+  <t-tag variant="outline" icon="discount"> 标签文字 </t-tag>
 </template>
-
-<script lang="ts" setup>
-import { ref, h } from 'vue';
-import { AppIcon } from 'tdesign-icons-vue-next';
-
-const iconTags = ref({
-  name: '标签',
-  icon: () => h(AppIcon),
-});
-</script>

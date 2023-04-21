@@ -1,7 +1,8 @@
 <template>
   <span :class="classes" :style="tagStyle" :aria-disabled="disabled" role="button" @click="handleClick">
     <span :class="`${baseClass}__icon`">
-      <t-node :content="iconContent"></t-node>
+      <icon v-if="iconIsString" :name="icon" />
+      <t-node v-else :content="iconContent"></t-node>
     </span>
     <span :class="`${baseClass}__text`">
       <t-node :content="tagContent"></t-node>
@@ -13,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { CloseIcon } from 'tdesign-icons-vue-next';
+import { CloseIcon, Icon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, getCurrentInstance } from 'vue';
 import config from '../config';
 import TagProps from './props';
@@ -27,6 +28,7 @@ const Tag = defineComponent({
   components: {
     CloseIcon,
     TNode,
+    Icon,
   },
   props: TagProps,
   emits: ['close', 'click'],
@@ -36,7 +38,9 @@ const Tag = defineComponent({
     const tagContent = computed(() => renderContent(internalInstance, 'default', 'content'));
     const iconContent = computed(() => renderTNode(internalInstance, 'icon'));
     const baseClass = name;
-
+    const iconIsString = computed(() => {
+      return typeof props.icon === 'string';
+    });
     const tagStyle = computed(() => {
       return props.maxWidth
         ? { maxWidth: typeof props.maxWidth === 'number' ? `${props.maxWidth}px` : props.maxWidth }
@@ -68,6 +72,7 @@ const Tag = defineComponent({
     };
 
     return {
+      iconIsString,
       baseClass,
       classes,
       tagStyle,

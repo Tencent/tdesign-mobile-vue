@@ -1,4 +1,5 @@
 <template>
-  <t-tag theme="primary" shape="round">圆角</t-tag>
-  <t-tag theme="primary" shape="mark">半圆</t-tag>
+  <t-tag variant="light" shape="round">标签文字</t-tag>
+  <t-tag variant="outline" shape="round">标签文字</t-tag>
+  <t-tag variant="outline" shape="mark">标签文字</t-tag>
 </template>

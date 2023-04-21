@@ -1,4 +1,17 @@
 <template>
-  <t-tag size="large" theme="primary">展示标签30</t-tag>
-  <t-tag size="medium" theme="primary">展示标签24</t-tag>
+  <div>
+    <div class="tag-block">
+      <t-tag class="margin-16" size="extra-large" variant="light">加大尺寸</t-tag>
+      <t-tag class="margin-16" size="large" variant="light">大尺寸</t-tag>
+      <t-tag class="margin-16" size="medium" variant="light">中尺寸</t-tag>
+      <t-tag class="margin-16" size="small" variant="light">小尺寸</t-tag>
+    </div>
+
+    <div class="tag-block">
+      <t-tag class="margin-8" size="extra-large" variant="light" closable>加大尺寸</t-tag>
+      <t-tag class="margin-8" size="large" variant="light" closable>大尺寸</t-tag>
+      <t-tag class="margin-8" size="medium" variant="light" closable>中尺寸</t-tag>
+      <t-tag class="margin-8" size="small" variant="light" closable>小尺寸</t-tag>
+    </div>
+  </div>
 </template>
