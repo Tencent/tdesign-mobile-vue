@@ -3,6 +3,7 @@
  */
 
 import { mount } from '@vue/test-utils';
+import baseVue from '@/tag/demos/base.vue';
 import checkableVue from '@/tag/demos/checkable.vue';
 import closableVue from '@/tag/demos/closable.vue';
 import ellipsisVue from '@/tag/demos/ellipsis.vue';
@@ -11,9 +12,9 @@ import mobileVue from '@/tag/demos/mobile.vue';
 import shapeVue from '@/tag/demos/shape.vue';
 import sizeVue from '@/tag/demos/size.vue';
 import themeVue from '@/tag/demos/theme.vue';
-import variantVue from '@/tag/demos/variant.vue';
 
 const mapper = {
+  baseVue,
   checkableVue,
   closableVue,
   ellipsisVue,
@@ -22,7 +23,6 @@ const mapper = {
   shapeVue,
   sizeVue,
   themeVue,
-  variantVue,
 };
 
 describe('Tag', () => {

@@ -64,6 +64,7 @@ const CheckTag = defineComponent({
 
     const classes = computed(() => [
       `${baseClass}`,
+      `${baseClass}--checkable`,
       `${baseClass}--${props.shape}`,
       `${baseClass}--${innerChecked.value ? 'primary' : 'default'}`,
       `${baseClass}--${props.size}`,

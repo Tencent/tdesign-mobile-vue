@@ -39,7 +39,7 @@
     </tdesign-demo-block>
     <tdesign-demo-block title="03 组件尺寸">
       <div class="group padding-bottom d-flex">
-        <SizeDemo />
+        <Size />
       </div>
     </tdesign-demo-block>
   </div>
@@ -53,7 +53,7 @@ import Ellipsis from './ellipsis.vue';
 import Closable from './closable.vue';
 import Checkable from './checkable.vue';
 import Theme from './theme.vue';
-import SizeDemo from './size.vue';
+import Size from './size.vue';
 </script>
 
 <style lang="less">
