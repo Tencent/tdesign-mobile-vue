@@ -1,15 +1,16 @@
 <template>
-  <div :class="componentName">
-    <div v-if="labelContent" :class="`${componentName}__name`">
+  <div :class="textareaClass">
+    <div v-if="labelContent" :class="`${componentName}__label`">
       <t-node :content="labelContent"></t-node>
     </div>
-    <div :class="textareaClassNames">
+    <div :class="`${componentName}__wrapper`">
       <textarea
         ref="textareaRef"
         :value="innerValue"
+        :class="textareaClassNames"
         :style="textareaStyle"
         :name="name"
-        :maxlength="maxlength || -1"
+        :maxlength="-1"
         :disabled="disabled"
         :placeholder="placeholder"
         @focus="handleFocus"
@@ -17,7 +18,7 @@
         @input="handleInput"
         @compositionend="handleCompositionend"
       />
-      <div v-if="maxcharacter || maxlength" :class="`${componentName}__count`">
+      <div v-if="indicator && (maxcharacter || maxlength)" :class="`${componentName}__indicator`">
         {{ `${textareaLength}/${maxcharacter || maxlength}` }}
       </div>
     </div>
@@ -31,6 +32,7 @@ import config from '../config';
 import TextareaProps from './props';
 import { TdTextareaProps, TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const componentName = `${prefix}-textarea`;
@@ -44,16 +46,24 @@ export default defineComponent({
   emits: ['update:value', 'update:modelValue', 'focus', 'blur', 'change'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
+    const disabled = useFormDisabled();
     const textareaRef = ref<null | HTMLElement>(null);
     const textareaStyle = ref();
     const textareaLength = ref(0);
     const { value, modelValue } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
-    const textareaClassNames = computed(() => [
-      `${componentName}__wrapper`,
+    const textareaClass = computed(() => [
+      `${componentName}`,
       {
-        [`${componentName}-is-disabled`]: props.disabled,
+        [`${componentName}--border`]: props.bordered,
+      },
+    ]);
+
+    const textareaClassNames = computed(() => [
+      `${componentName}__wrapper-inner`,
+      {
+        [`${componentName}--disabled`]: disabled.value,
       },
     ]);
     const internalInstance = getCurrentInstance();
@@ -89,7 +99,12 @@ export default defineComponent({
     const textareaValueChangeHandle = (e: InputEvent) => {
       const { target } = e;
       const { value } = target as HTMLInputElement;
-      if (props.maxcharacter && props.maxcharacter > 0 && !Number.isNaN(props.maxcharacter)) {
+      if (
+        !props.allowInputOverMax &&
+        props.maxcharacter &&
+        props.maxcharacter > 0 &&
+        !Number.isNaN(props.maxcharacter)
+      ) {
         const { length = 0, characters = '' } = getCharacterLength(value, props.maxcharacter) as {
           length: number;
           characters: string;
@@ -125,10 +140,12 @@ export default defineComponent({
     return {
       componentName,
       ...toRefs(props),
+      disabled,
       labelContent,
       innerValue,
       textareaRef,
       textareaStyle,
+      textareaClass,
       textareaClassNames,
       textareaLength,
       handleFocus,

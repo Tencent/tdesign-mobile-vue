@@ -4,8 +4,8 @@
     <p class="summary">结果反馈</p>
     <tdesign-demo-block title="01 类型" />
 
-    <tdesign-demo-block v-for="(item, index) in resultList" :key="index" :summary="item.title">
-      <ThemeDemo :theme="item.theme" :title="item.title" :description="item.description" />
+    <tdesign-demo-block summary="不同结果状态">
+      <ThemeDemo />
     </tdesign-demo-block>
     <tdesign-demo-block title="" summary="自定义结果">
       <CustomDemo />
@@ -36,28 +36,6 @@ import { ref } from 'vue';
 import ThemeDemo from './theme.vue';
 import CustomDemo from './custom.vue';
 
-const resultList = [
-  {
-    title: '成功状态',
-    theme: 'success',
-    description: '描述文字',
-  },
-  {
-    title: '失败状态',
-    theme: 'error',
-    description: '描述文字',
-  },
-  {
-    title: '警示状态',
-    theme: 'warning',
-    description: '描述文字',
-  },
-  {
-    title: '默认状态',
-    theme: 'default',
-    description: '描述文字',
-  },
-];
 const showResult = ref(false);
 
 const handleClick = () => {

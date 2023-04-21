@@ -1,414 +1,241 @@
 // Vitest Snapshot v1
 
 exports[`Badge > Badge baseVue demo works fine 1`] = `
-<div
-  class="tdesign-mobile-demo"
->
-  <div
-    class="badge-demo"
-  >
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
-        >
-          
-        </div>
-        
-        消息
-        
-      </div>
-    </div>
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-        >
-          16
-        </div>
-        
-        消息
-        
-      </div>
-    </div>
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-        >
-          NEW
-        </div>
-        
-        消息
-        
-      </div>
-    </div>
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-        >
-          ···
-        </div>
-        
-        消息
-        
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Badge > Badge buttonVue demo works fine 1`] = `
-<div
-  class="tdesign-mobile-demo"
->
-  <div
-    class="badge-demo"
-  >
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
-        >
-          
-        </div>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            小按钮
-            
-          </span>
-        </button>
-        
-      </div>
-    </div>
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-        >
-          16
-        </div>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            小按钮
-            
-          </span>
-        </button>
-        
-      </div>
-    </div>
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-        >
-          NEW
-        </div>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            小按钮
-            
-          </span>
-        </button>
-        
-      </div>
-    </div>
-    <div
-      class="badge-item"
-    >
-      <div
-        class="t-badge"
-      >
-        <div
-          class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-        >
-          ···
-        </div>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            小按钮
-            
-          </span>
-        </button>
-        
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Badge > Badge cellVue demo works fine 1`] = `
 <div>
   <div
-    class="t-cell-group"
-    style="overflow: hidden;"
+    class="summary"
   >
-    <!--v-if-->
+    红点徽标
+  </div>
+  <div
+    class="badge-demo"
+  >
     <div
-      class="t-cell-group__container"
+      class="t-badge badge-item"
     >
-      
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-badge__content"
       >
-        <div
-          class="t-cell__left-icon"
+        <span
+          class="t-badge__content-text"
         >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--dot"
-            >
-              
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-        <div
-          class="t-cell__right-icon"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
+          消息
+        </span>
       </div>
       <div
-        class="t-cell t-cell--middle t-cell--bordered"
+        class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+        style="right: -4px; top: 4px;"
       >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
+        <!--v-if-->
           
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
-            >
-              16
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-        <div
-          class="t-cell__right-icon"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--round"
-            >
-              NEW
-            </div>
-            <!---->
-          </div>
-          <div
-            class="t-badge"
-            style="margin-left: 8px;"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--circle"
-            >
-              NEW
-            </div>
-            <!---->
-          </div>
-          
-        </div>
-        <div
-          class="t-cell__right-icon"
-        >
-          <svg
-            class="t-icon t-icon-chevron-right"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-cell t-cell--middle t-cell--bordered"
-      >
-        <div
-          class="t-cell__left-icon"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          单行标题
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-badge t-badge__ribbon--outer"
-          >
-            <div
-              class="t-badge__inner t-badge--medium t-badge--ribbon"
-            >
-              NEW
-            </div>
-            <!---->
-          </div>
-          
-        </div>
         <!--v-if-->
       </div>
-      
+      <!---->
+    </div>
+    <div
+      class="t-badge badge-item"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <svg
+          aria-label="通知"
+          class="t-icon t-icon-notification"
+        >
+          <use
+            href="#t-icon-notification"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+        style="right: 1px; top: -1px;"
+      >
+        <!--v-if-->
+          
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-badge badge-item"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            按钮
+            
+          </span>
+        </button>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+        style="right: 1px; top: 1px;"
+      >
+        <!--v-if-->
+          
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="summary"
+  >
+    数字徽标
+  </div>
+  <div
+    class="badge-demo"
+  >
+    <div
+      class="t-badge badge-item"
+    >
+      <div
+        class="t-badge__content"
+      >
+        <span
+          class="t-badge__content-text"
+        >
+          消息
+        </span>
+      </div>
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+        style="right: -8px; top: 0px;"
+      >
+        <!--v-if-->
+         8 
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-badge badge-item"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <svg
+          aria-label="通知"
+          class="t-icon t-icon-notification"
+        >
+          <use
+            href="#t-icon-notification"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+        style="right: -2px; top: -2px;"
+      >
+        <!--v-if-->
+         2 
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+    <div
+      class="t-badge badge-item"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <button
+          aria-disabled="false"
+          class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+            按钮
+            
+          </span>
+        </button>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+        style="right: 2px; top: 2px;"
+      >
+        <!--v-if-->
+         8 
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="summary"
+  >
+    自定义徽标
+  </div>
+  <div
+    class="badge-demo"
+  >
+    <div
+      aria-role="button"
+      class="t-badge"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <button
+          aria-disabled="false"
+          aria-label="通知"
+          class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-notification"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8.5 2.03V1h-1v1.03a4.5 4.5 0 00-4 4.47V11l-.9 1.2a.5.5 0 00.4.8h2.55a2.5 2.5 0 004.9 0H13a.5.5 0 00.4-.8l-.9-1.2V6.5a4.5 4.5 0 00-4-4.47zm-4 9.3V6.5a3.5 3.5 0 117 0v4.83l.5.67H4l.5-.67zM8 14a1.5 1.5 0 01-1.41-1H9.4c-.2.58-.76 1-1.41 1z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+        style="right: 0px; top: 2px;"
+      >
+        <!--v-if-->
+         NEW 
+        <!--v-if-->
+      </div>
+      <!---->
     </div>
   </div>
 </div>
@@ -431,439 +258,896 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
   <div
     class="tdesign-mobile-demo-block"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      徽标主要分红点、数字、文字和角标提醒
-    </p>
-    
     <div
-      class="tdesign-mobile-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="badge-demo"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <div
-          class="badge-item"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
-            >
-              
-            </div>
-            
-            消息
-            
-          </div>
-        </div>
-        <div
-          class="badge-item"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-            >
-              16
-            </div>
-            
-            消息
-            
-          </div>
-        </div>
-        <div
-          class="badge-item"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-            >
-              NEW
-            </div>
-            
-            消息
-            
-          </div>
-        </div>
-        <div
-          class="badge-item"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-            >
-              ···
-            </div>
-            
-            消息
-            
-          </div>
-        </div>
-      </div>
+        01 组件类型
+      </h2>
+      <!--v-if-->
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <!--v-if-->
-    
     <div
-      class="tdesign-mobile-demo"
+      class="tdesign-mobile-demo-block__slot"
     >
-      <div
-        class="badge-demo"
-      >
+      
+      <div>
         <div
-          class="badge-item"
+          class="summary"
+        >
+          红点徽标
+        </div>
+        <div
+          class="badge-demo"
         >
           <div
-            class="t-badge"
+            class="t-badge badge-item"
           >
             <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
+              class="t-badge__content"
+            >
+              <span
+                class="t-badge__content-text"
+              >
+                消息
+              </span>
+            </div>
+            <div
+              class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+              style="right: -4px; top: 4px;"
+            >
+              <!--v-if-->
+                
+              <!--v-if-->
+            </div>
+            <!---->
+          </div>
+          <div
+            class="t-badge badge-item"
+          >
+            <div
+              class="t-badge__content"
             >
               
-            </div>
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-              role="button"
-            >
-              <!---->
-              <span
-                class="t-button__text"
+              <svg
+                aria-label="通知"
+                class="t-icon t-icon-notification"
               >
-                
-                小按钮
-                
-              </span>
-            </button>
-            
-          </div>
-        </div>
-        <div
-          class="badge-item"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-            >
-              16
+                <use
+                  href="#t-icon-notification"
+                />
+              </svg>
+              
             </div>
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-              role="button"
-            >
-              <!---->
-              <span
-                class="t-button__text"
-              >
-                
-                小按钮
-                
-              </span>
-            </button>
-            
-          </div>
-        </div>
-        <div
-          class="badge-item"
-        >
-          <div
-            class="t-badge"
-          >
             <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-            >
-              NEW
-            </div>
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-              role="button"
-            >
-              <!---->
-              <span
-                class="t-button__text"
-              >
-                
-                小按钮
-                
-              </span>
-            </button>
-            
-          </div>
-        </div>
-        <div
-          class="badge-item"
-        >
-          <div
-            class="t-badge"
-          >
-            <div
-              class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-            >
-              ···
-            </div>
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-size-s t-button--outline t-button--default t-button--shape-rectangle"
-              role="button"
-            >
-              <!---->
-              <span
-                class="t-button__text"
-              >
-                
-                小按钮
-                
-              </span>
-            </button>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <!--v-if-->
-    <!--v-if-->
-    
-    <div>
-      <div
-        class="t-cell-group"
-        style="overflow: hidden;"
-      >
-        <!--v-if-->
-        <div
-          class="t-cell-group__container"
-        >
-          
-          <div
-            class="t-cell t-cell--middle t-cell--bordered"
-          >
-            <div
-              class="t-cell__left-icon"
+              class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+              style="right: 1px; top: -1px;"
             >
               <!--v-if-->
+                
               <!--v-if-->
             </div>
+            <!---->
+          </div>
+          <div
+            class="t-badge badge-item"
+          >
             <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
+              class="t-badge__content"
             >
               
-              <div
-                class="t-badge"
+              <button
+                aria-disabled="false"
+                class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+                role="button"
               >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--dot"
+                <!---->
+                <span
+                  class="t-button__text"
                 >
                   
-                </div>
-                <!---->
-              </div>
+                  按钮
+                  
+                </span>
+              </button>
               
             </div>
             <div
-              class="t-cell__right-icon"
+              class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+              style="right: 1px; top: 1px;"
             >
-              <svg
-                class="t-icon t-icon-chevron-right"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+              <!--v-if-->
+                
+              <!--v-if-->
             </div>
+            <!---->
           </div>
+        </div>
+        <div
+          class="summary"
+        >
+          数字徽标
+        </div>
+        <div
+          class="badge-demo"
+        >
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-badge badge-item"
           >
             <div
-              class="t-cell__left-icon"
+              class="t-badge__content"
             >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
-            >
-              
-              <div
-                class="t-badge"
+              <span
+                class="t-badge__content-text"
               >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
-                >
-                  16
-                </div>
-                <!---->
-              </div>
-              
+                消息
+              </span>
             </div>
             <div
-              class="t-cell__right-icon"
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              style="right: -8px; top: 0px;"
             >
-              <svg
-                class="t-icon t-icon-chevron-right"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
-              >
-                <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+              <!--v-if-->
+               8 
+              <!--v-if-->
             </div>
+            <!---->
           </div>
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-badge badge-item"
           >
             <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
+              class="t-badge__content"
             >
               
-              <div
-                class="t-badge"
-              >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--round"
-                >
-                  NEW
-                </div>
-                <!---->
-              </div>
-              <div
-                class="t-badge"
-                style="margin-left: 8px;"
-              >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--circle"
-                >
-                  NEW
-                </div>
-                <!---->
-              </div>
-              
-            </div>
-            <div
-              class="t-cell__right-icon"
-            >
               <svg
-                class="t-icon t-icon-chevron-right"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+                aria-label="通知"
+                class="t-icon t-icon-notification"
               >
-                <path
-                  d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
+                <use
+                  href="#t-icon-notification"
                 />
               </svg>
+              
             </div>
+            <div
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              style="right: -2px; top: -2px;"
+            >
+              <!--v-if-->
+               2 
+              <!--v-if-->
+            </div>
+            <!---->
           </div>
           <div
-            class="t-cell t-cell--middle t-cell--bordered"
+            class="t-badge badge-item"
           >
             <div
-              class="t-cell__left-icon"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              单行标题
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__note"
+              class="t-badge__content"
             >
               
-              <div
-                class="t-badge t-badge__ribbon--outer"
+              <button
+                aria-disabled="false"
+                class="t-button t-size-m t-button--base t-button--default t-button--shape-rectangle"
+                role="button"
               >
-                <div
-                  class="t-badge__inner t-badge--medium t-badge--ribbon"
-                >
-                  NEW
-                </div>
                 <!---->
-              </div>
+                <span
+                  class="t-button__text"
+                >
+                  
+                  按钮
+                  
+                </span>
+              </button>
               
             </div>
+            <div
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              style="right: 2px; top: 2px;"
+            >
+              <!--v-if-->
+               8 
+              <!--v-if-->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div
+          class="summary"
+        >
+          自定义徽标
+        </div>
+        <div
+          class="badge-demo"
+        >
+          <div
+            aria-role="button"
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <button
+                aria-disabled="false"
+                aria-label="通知"
+                class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+                role="button"
+              >
+                <svg
+                  class="t-icon t-icon-notification"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M8.5 2.03V1h-1v1.03a4.5 4.5 0 00-4 4.47V11l-.9 1.2a.5.5 0 00.4.8h2.55a2.5 2.5 0 004.9 0H13a.5.5 0 00.4-.8l-.9-1.2V6.5a4.5 4.5 0 00-4-4.47zm-4 9.3V6.5a3.5 3.5 0 117 0v4.83l.5.67H4l.5-.67zM8 14a1.5 1.5 0 01-1.41-1H9.4c-.2.58-.76 1-1.41 1z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+                <span
+                  class="t-button__text"
+                >
+                  <!---->
+                </span>
+              </button>
+              
+            </div>
+            <div
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              style="right: 0px; top: 2px;"
+            >
+              <!--v-if-->
+               NEW 
+              <!--v-if-->
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div>
+        <div
+          class="summary"
+        >
+          圆形徽标
+        </div>
+        <div
+          class="badge-demo"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <svg
+                aria-label="通知"
+                class="t-icon t-icon-notification"
+              >
+                <use
+                  href="#t-icon-notification"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              style="right: -2px; top: -2px;"
+            >
+              <!--v-if-->
+               2 
+              <!--v-if-->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div
+          class="summary"
+        >
+          方形徽标
+        </div>
+        <div
+          class="badge-demo"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <svg
+                aria-label="通知"
+                class="t-icon t-icon-notification"
+              >
+                <use
+                  href="#t-icon-notification"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-badge--basic t-badge--medium t-badge--square t-badge--count t-has-count"
+              style="right: -2px; top: -2px;"
+            >
+              <!--v-if-->
+               2 
+              <!--v-if-->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div
+          class="summary"
+        >
+          气泡徽标
+        </div>
+        <div
+          class="badge-demo"
+        >
+          <div
+            aria-role="button"
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <button
+                aria-disabled="false"
+                aria-label="商店"
+                class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+                role="button"
+              >
+                <svg
+                  class="t-icon t-icon-shop"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M8 1a2.5 2.5 0 00-2.5 2.5V5h-2a.5.5 0 00-.5.5v9c0 .28.22.5.5.5h9a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5h-2V3.5A2.5 2.5 0 008 1zm1.5 5v2h1V6H12v8H4V6h1.5v2h1V6h3zm0-1h-3V3.5a1.5 1.5 0 113 0V5z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+                <span
+                  class="t-button__text"
+                >
+                  <!---->
+                </span>
+              </button>
+              
+            </div>
+            <div
+              class="t-badge--basic t-badge--medium t-badge--bubble t-badge--count t-has-count"
+            >
+              <!--v-if-->
+               领积分 
+              <!--v-if-->
+            </div>
+            <!---->
+          </div>
+        </div>
+        <div
+          class="summary"
+          style="margin-bottom: 16px;"
+        >
+          角标
+        </div>
+        <div
+          class="t-cell t-cell--middle"
+        >
+          <div
+            class="t-cell__left"
+          >
+            <!--v-if-->
             <!--v-if-->
           </div>
-          
+          <div
+            class="t-cell__title"
+          >
+            单行标题
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            
+            <div
+              class="t-badge t-badge__ribbon-outer"
+            >
+              <div
+                class="t-badge__content"
+              >
+                <!---->
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--ribbon t-badge--count t-has-count"
+                style="right: 0px; top: 0px;"
+              >
+                <div
+                  class="t-badge__ribbon--before"
+                  style=""
+                />
+                 New 
+                <div
+                  class="t-badge__ribbon--after"
+                  style=""
+                />
+              </div>
+              <!---->
+            </div>
+            
+          </div>
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 组件尺寸
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div>
+        <div
+          class="summary"
+        >
+          Large
+        </div>
+        <div
+          class="block"
+        >
+          <div
+            class="t-avatar t-size-l t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-avatar__icon"
+              >
+                <svg
+                  class="t-icon t-icon-user"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--large t-badge--circle t-badge--count t-has-count"
+                  style="right: 7px; top: 7px;"
+                >
+                  <!--v-if-->
+                   8 
+                  <!--v-if-->
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="summary"
+        >
+          Middle
+        </div>
+        <div
+          class="block"
+        >
+          <div
+            class="t-avatar t-avatar--circle"
+          >
+            <div
+              class="t-avatar__inner"
+            >
+              <div
+                class="t-avatar__icon"
+              >
+                <svg
+                  class="t-icon t-icon-user"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="t-avatar__badge"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  <!---->
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  style="right: 5px; top: 5px;"
+                >
+                  <!--v-if-->
+                   8 
+                  <!--v-if-->
+                </div>
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Badge > Badge sizeVue demo works fine 1`] = `
+<div>
+  <div
+    class="summary"
+  >
+    Large
+  </div>
+  <div
+    class="block"
+  >
+    <div
+      class="t-avatar t-size-l t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-avatar__icon"
+        >
+          <svg
+            class="t-icon t-icon-user"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__content"
+          >
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--large t-badge--circle t-badge--count t-has-count"
+            style="right: 7px; top: 7px;"
+          >
+            <!--v-if-->
+             8 
+            <!--v-if-->
+          </div>
+          <!---->
         </div>
       </div>
     </div>
-    
+  </div>
+  <div
+    class="summary"
+  >
+    Middle
+  </div>
+  <div
+    class="block"
+  >
+    <div
+      class="t-avatar t-avatar--circle"
+    >
+      <div
+        class="t-avatar__inner"
+      >
+        <div
+          class="t-avatar__icon"
+        >
+          <svg
+            class="t-icon t-icon-user"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M11.5 5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm-1 0a2.5 2.5 0 10-5 0 2.5 2.5 0 005 0zM13.96 10.85c.34.16.54.5.54.87V14a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-2.28c0-.37.2-.7.54-.87a13.79 13.79 0 0111.92 0zM8 10.5c-1.97 0-3.83.45-5.5 1.24v1.76h11v-1.76A12.78 12.78 0 008 10.5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="t-avatar__badge"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__content"
+          >
+            <!---->
+          </div>
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+            style="right: 5px; top: 5px;"
+          >
+            <!--v-if-->
+             8 
+            <!--v-if-->
+          </div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Badge > Badge themeVue demo works fine 1`] = `
+<div>
+  <div
+    class="summary"
+  >
+    圆形徽标
+  </div>
+  <div
+    class="badge-demo"
+  >
+    <div
+      class="t-badge"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <svg
+          aria-label="通知"
+          class="t-icon t-icon-notification"
+        >
+          <use
+            href="#t-icon-notification"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+        style="right: -2px; top: -2px;"
+      >
+        <!--v-if-->
+         2 
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="summary"
+  >
+    方形徽标
+  </div>
+  <div
+    class="badge-demo"
+  >
+    <div
+      class="t-badge"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <svg
+          aria-label="通知"
+          class="t-icon t-icon-notification"
+        >
+          <use
+            href="#t-icon-notification"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--medium t-badge--square t-badge--count t-has-count"
+        style="right: -2px; top: -2px;"
+      >
+        <!--v-if-->
+         2 
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="summary"
+  >
+    气泡徽标
+  </div>
+  <div
+    class="badge-demo"
+  >
+    <div
+      aria-role="button"
+      class="t-badge"
+    >
+      <div
+        class="t-badge__content"
+      >
+        
+        <button
+          aria-disabled="false"
+          aria-label="商店"
+          class="t-button t-size-l t-button--base t-button--default t-button--shape-square"
+          role="button"
+        >
+          <svg
+            class="t-icon t-icon-shop"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M8 1a2.5 2.5 0 00-2.5 2.5V5h-2a.5.5 0 00-.5.5v9c0 .28.22.5.5.5h9a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5h-2V3.5A2.5 2.5 0 008 1zm1.5 5v2h1V6H12v8H4V6h1.5v2h1V6h3zm0-1h-3V3.5a1.5 1.5 0 113 0V5z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__text"
+          >
+            <!---->
+          </span>
+        </button>
+        
+      </div>
+      <div
+        class="t-badge--basic t-badge--medium t-badge--bubble t-badge--count t-has-count"
+      >
+        <!--v-if-->
+         领积分 
+        <!--v-if-->
+      </div>
+      <!---->
+    </div>
+  </div>
+  <div
+    class="summary"
+    style="margin-bottom: 16px;"
+  >
+    角标
+  </div>
+  <div
+    class="t-cell t-cell--middle"
+  >
+    <div
+      class="t-cell__left"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__title"
+    >
+      单行标题
+      <!--v-if-->
+      <!--v-if-->
+    </div>
+    <div
+      class="t-cell__note"
+    >
+      
+      <div
+        class="t-badge t-badge__ribbon-outer"
+      >
+        <div
+          class="t-badge__content"
+        >
+          <!---->
+        </div>
+        <div
+          class="t-badge--basic t-badge--medium t-badge--ribbon t-badge--count t-has-count"
+          style="right: 0px; top: 0px;"
+        >
+          <div
+            class="t-badge__ribbon--before"
+            style=""
+          />
+           New 
+          <div
+            class="t-badge__ribbon--after"
+            style=""
+          />
+        </div>
+        <!---->
+      </div>
+      
+    </div>
+    <!--v-if-->
   </div>
 </div>
 `;

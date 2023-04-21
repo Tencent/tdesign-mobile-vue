@@ -8,6 +8,11 @@ import { TNode } from '../common';
 
 export interface TdTextareaProps {
   /**
+   * 超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入
+   * @default false
+   */
+  allowInputOverMax?: boolean;
+  /**
    * 自动聚焦，拉起键盘
    * @default false
    */
@@ -22,6 +27,16 @@ export interface TdTextareaProps {
    * @default false
    */
   disabled?: boolean;
+  /**
+   * 是否显示外边框
+   * @default true
+   */
+  bordered?: boolean;
+  /**
+   * 显示文本计数器，如 0/140。当 `maxlength < 0 && maxcharacter < 0` 成立时， indicator无效
+   * @default false
+   */
+  indicator?: boolean;
   /**
    * 左侧文本
    */

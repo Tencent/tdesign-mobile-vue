@@ -1,4 +1,4 @@
-import { watch, ref, reactive } from 'vue';
+import { ref, reactive } from 'vue';
 import { useRafFn } from '@vueuse/core';
 import { TdUseCountDownProps, TdUseCountDown } from './type';
 import { getRemainTimes, getShowTimes, getScreenFps } from './utils';
@@ -22,7 +22,6 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
         pause?.();
         count.value = 0;
       }
-      // console.log('count:', count.value);
       const times = getRemainTimes(count.value);
       onChange?.(times);
       count.value === 0 && onFinish?.();

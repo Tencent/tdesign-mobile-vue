@@ -84,13 +84,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       >
         
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="阿坝"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -106,13 +106,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="阿拉善"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -128,13 +128,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="阿里"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -150,13 +150,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="安康"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -172,13 +172,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="安庆"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -194,13 +194,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="鞍山"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -216,13 +216,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="安顺"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -238,13 +238,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="安阳"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -260,13 +260,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="澳门"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -305,13 +305,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       >
         
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="北京"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -327,13 +327,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="白银"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -349,13 +349,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="保定"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -371,13 +371,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="宝鸡"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -393,13 +393,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="保山"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -415,13 +415,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="包头"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -437,13 +437,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="巴中"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -459,13 +459,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="北海"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -481,13 +481,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="蚌埠"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -503,13 +503,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="本溪"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -525,13 +525,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="毕节"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -547,13 +547,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="滨州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -569,13 +569,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="百色"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -591,13 +591,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="亳州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -636,13 +636,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       >
         
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="重庆"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -658,13 +658,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="成都"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -680,13 +680,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="长沙"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -702,13 +702,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="长春"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -724,13 +724,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="沧州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -746,13 +746,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="常德"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -768,13 +768,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="昌都"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -790,13 +790,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="长治"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -812,13 +812,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="常州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -834,13 +834,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="巢湖"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -856,13 +856,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="潮州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -878,13 +878,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="承德"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -900,13 +900,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="郴州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -922,13 +922,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="赤峰"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -944,13 +944,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="池州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -966,13 +966,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="崇左"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -988,13 +988,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="楚雄"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1010,13 +1010,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="滁州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1032,13 +1032,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="朝阳"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1077,13 +1077,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       >
         
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="大连"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1099,13 +1099,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="东莞"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1121,13 +1121,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="大理"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1143,13 +1143,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="丹东"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1165,13 +1165,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="大庆"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1187,13 +1187,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="大同"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1209,13 +1209,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="大兴安岭"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1231,13 +1231,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="德宏"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1253,13 +1253,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="德阳"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1275,13 +1275,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="德州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1297,13 +1297,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="定西"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1319,13 +1319,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="迪庆"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1341,13 +1341,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="东营"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1386,13 +1386,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       >
         
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="鄂尔多斯"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1408,13 +1408,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="恩施"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1430,13 +1430,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="鄂州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1475,13 +1475,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       >
         
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="福州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1497,13 +1497,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="防城港"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1519,13 +1519,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="佛山"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1541,13 +1541,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="抚顺"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1563,13 +1563,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="抚州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1585,13 +1585,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="阜新"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1607,13 +1607,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="阜阳"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1652,13 +1652,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
       >
         
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="广州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1674,13 +1674,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="桂林"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1696,13 +1696,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="贵阳"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1718,13 +1718,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="甘南"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1740,13 +1740,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="赣州"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1762,13 +1762,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="甘孜"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1784,13 +1784,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="广安"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1806,13 +1806,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="广元"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1828,13 +1828,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="贵港"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1850,13 +1850,13 @@ exports[`Indexes > Indexes baseVue demo works fine 1`] = `
           <!--v-if-->
         </div>
         <div
-          class="t-cell t-cell--middle t-indexes-cell"
+          class="t-cell t-cell--middle t-cell--borderless t-indexes-cell"
           data-key=""
           link="true"
           value="果洛"
         >
           <div
-            class="t-cell__left-icon"
+            class="t-cell__left"
           >
             <!--v-if-->
             <!--v-if-->
@@ -1896,50 +1896,58 @@ exports[`Indexes > Indexes mobileVue demo works fine 1`] = `
   <div
     class="tdesign-mobile-demo-block"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      基础索引类型
-    </p>
-    
     <div
-      class="indexes-demo"
+      class="tdesign-mobile-demo-block__header"
     >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-           字母索引 
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-        role="button"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        <!---->
-        <span
-          class="t-button__text"
-        >
-          
-           数字索引 
-          
-        </span>
-      </button>
+        基础索引类型
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="indexes-demo"
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             字母索引 
+            
+          </span>
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          role="button"
+        >
+          <!---->
+          <span
+            class="t-button__text"
+          >
+            
+             数字索引 
+            
+          </span>
+        </button>
+      </div>
+      
+    </div>
   </div>
 </div>
 `;

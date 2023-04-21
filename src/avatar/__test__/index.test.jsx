@@ -44,7 +44,7 @@ describe('avatar', () => {
     it(': badge', async () => {
       const wrapper = mount(() => <Avatar image={IMAGE} badgeProps={{ count: 10 }}></Avatar>);
       expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
-      const badge = wrapper.find('.t-badge > .t-badge__inner');
+      const badge = wrapper.find('.t-badge > .t-badge--basic');
       expect(badge.exists()).toBeTruthy();
       expect(badge.text()).toBe('10');
     });
@@ -64,7 +64,7 @@ describe('avatar', () => {
       const onError = vi.fn();
       const wrapper = mount(() => <Avatar image={IMAGE_FAIL} alt="加载错误" onError={onError} />);
       const img = wrapper.find('img');
-      const status = wrapper.find(`.t-image__status`);
+      const status = wrapper.find(`.t-image__mask`);
       expect(status.exists()).toBeTruthy();
       expect(img.exists()).toBeTruthy();
       await img.trigger('error');

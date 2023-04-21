@@ -49,9 +49,9 @@ describe('Cell.vue', async () => {
   });
 
   it('border render', async () => {
-    const wrapper1 = mount(() => <Cell title="单行标题"></Cell>);
-    expect(wrapper1.classes()).toContain('t-cell--bordered');
-    const wrapper2 = mount(() => <Cell title="单行标题" bordered={false}></Cell>);
+    const wrapper1 = mount(() => <Cell title="单行标题" bordered={false}></Cell>);
+    expect(wrapper1.classes()).toContain('t-cell--borderless');
+    const wrapper2 = mount(() => <Cell title="单行标题"></Cell>);
     expect(wrapper2.classes('t-cell--bordered')).toBeFalsy();
   });
 
@@ -71,7 +71,7 @@ describe('Cell.vue', async () => {
 
   it('image render', async () => {
     const wrapper = mount(() => <Cell title="单行标题" image={avatarUrl}></Cell>);
-    const img = wrapper.find('.t-cell__left-icon > img');
+    const img = wrapper.find('.t-cell__left-image');
     expect(img.exists()).toBeTruthy();
     expect(img.attributes('src')).toBe(avatarUrl);
   });

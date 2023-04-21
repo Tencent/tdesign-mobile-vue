@@ -1,8 +1,12 @@
 import { ref } from 'vue';
-import { mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Button from '../../button/index';
 import Calendar from '../calendar.vue';
+
+config.global.stubs = {
+  teleport: true
+}
 
 const prefix = 't';
 const name = `${prefix}-calendar`;

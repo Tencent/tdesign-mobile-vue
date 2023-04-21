@@ -305,601 +305,617 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
   <div
     class="tdesign-mobile-demo-block"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
+    <div
+      class="tdesign-mobile-demo-block__header"
     >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      动态倒计时间主要有时间数字和时分秒分割组成
-    </p>
-    
-    <div>
-      <!-- 时分秒 -->
-      <div
-        class="demo__box"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--default t-countdown--small"
-        >
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <!--v-if-->
-          
-          
-        </span>
-        
-        <p
-          class="format"
-        >
-          时分秒
-        </p>
-      </div>
-      <!-- 带毫秒 -->
-      <div
-        class="demo__box"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--default t-countdown--small"
-        >
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            123
-          </span>
-          <!--v-if-->
-          
-          
-        </span>
-        
-        <p
-          class="format"
-        >
-          带毫秒
-        </p>
-      </div>
-      <!-- 带圆底 -->
-      <div
-        class="demo__box t-countdown__circular-bottom"
-      >
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--round t-countdown--small"
-        >
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            32
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <!--v-if-->
-          
-          
-        </span>
-        
-        <p
-          class="format"
-        >
-          带圆底
-        </p>
-      </div>
-      <!-- 带方形底 -->
-      <div
-        class="demo__box t-countdown__square-bottom"
-      >
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--square t-countdown--small"
-        >
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <!--v-if-->
-          
-          
-        </span>
-        
-        <p
-          class="format"
-        >
-          带方形底
-        </p>
-      </div>
-      <!-- 带单位 -->
-      <div
-        class="demo__box t-countdown__has-unit"
-      >
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--square t-countdown--small t-countdown--split-with-unit"
-        >
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            01
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            天
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            06
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            时
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            52
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            分
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            秒
-          </span>
-          
-          
-        </span>
-        
-        <p
-          class="format"
-        >
-          带单位
-        </p>
-      </div>
+        动态倒计时间主要有时间数字和时分秒分割组成
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div>
+        <!-- 时分秒 -->
+        <div
+          class="demo__box"
+        >
+          
+          <!--v-if-->
+          <span
+            class="t-countdown t-countdown--default t-countdown--small"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
+          </span>
+          
+          <p
+            class="format"
+          >
+            时分秒
+          </p>
+        </div>
+        <!-- 带毫秒 -->
+        <div
+          class="demo__box"
+        >
+          
+          <!--v-if-->
+          <span
+            class="t-countdown t-countdown--default t-countdown--small"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              123
+            </span>
+            <!--v-if-->
+            
+            
+          </span>
+          
+          <p
+            class="format"
+          >
+            带毫秒
+          </p>
+        </div>
+        <!-- 带圆底 -->
+        <div
+          class="demo__box t-countdown__circular-bottom"
+        >
+          
+          <!--v-if-->
+          <span
+            class="t-countdown t-countdown--round t-countdown--small"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              32
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
+          </span>
+          
+          <p
+            class="format"
+          >
+            带圆底
+          </p>
+        </div>
+        <!-- 带方形底 -->
+        <div
+          class="demo__box t-countdown__square-bottom"
+        >
+          
+          <!--v-if-->
+          <span
+            class="t-countdown t-countdown--square t-countdown--small"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
+          </span>
+          
+          <p
+            class="format"
+          >
+            带方形底
+          </p>
+        </div>
+        <!-- 带单位 -->
+        <div
+          class="demo__box t-countdown__has-unit"
+        >
+          
+          <!--v-if-->
+          <span
+            class="t-countdown t-countdown--square t-countdown--small t-countdown--split-with-unit"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              01
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              天
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              06
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              时
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              52
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              分
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              秒
+            </span>
+            
+            
+          </span>
+          
+          <p
+            class="format"
+          >
+            带单位
+          </p>
+        </div>
+      </div>
+      
+    </div>
   </div>
   <div
     class="tdesign-mobile-demo-block"
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      02 规格
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      动倒计时带方底和圆底各尺寸规格
-    </p>
-    
     <div
-      class="demo-count-down"
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 规格
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        动倒计时带方底和圆底各尺寸规格
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
     >
       
-      <!-- S -->
       <div
-        class="demo-size__box"
+        class="demo-count-down"
       >
         
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--round t-countdown--small"
+        <!-- S -->
+        <div
+          class="demo-size__box"
         >
           
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
           <!--v-if-->
-          
-          
-        </span>
-        
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--square t-countdown--small"
-        >
-          
-          
           <span
-            class="t-countdown__digit"
+            class="t-countdown t-countdown--round t-countdown--small"
           >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
           </span>
           
           
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
           <!--v-if-->
+          <span
+            class="t-countdown t-countdown--square t-countdown--small"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
+          </span>
           
-          
-        </span>
-        
-        <p
-          class="format"
+          <p
+            class="format"
+          >
+            S
+          </p>
+        </div>
+        <!-- M -->
+        <div
+          class="demo-size__box"
         >
-          S
-        </p>
-      </div>
-      <!-- M -->
-      <div
-        class="demo-size__box"
-      >
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--round t-countdown--medium"
-        >
           
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
           <!--v-if-->
-          
-          
-        </span>
-        
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--square t-countdown--medium"
-        >
-          
-          
           <span
-            class="t-countdown__digit"
+            class="t-countdown t-countdown--round t-countdown--medium"
           >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
           </span>
           
           
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
           <!--v-if-->
+          <span
+            class="t-countdown t-countdown--square t-countdown--medium"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
+          </span>
           
-          
-        </span>
-        
-        <p
-          class="format"
+          <p
+            class="format"
+          >
+            M
+          </p>
+        </div>
+        <!-- L -->
+        <div
+          class="demo-size__box"
         >
-          M
-        </p>
-      </div>
-      <!-- L -->
-      <div
-        class="demo-size__box"
-      >
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--round t-countdown--large"
-        >
           
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
           <!--v-if-->
-          
-          
-        </span>
-        
-        
-        <!--v-if-->
-        <span
-          class="t-countdown t-countdown--square t-countdown--large"
-        >
-          
-          
           <span
-            class="t-countdown__digit"
+            class="t-countdown t-countdown--round t-countdown--large"
           >
-            00
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
           </span>
           
           
-          <span
-            class="t-countdown__digit"
-          >
-            15
-          </span>
-          <span
-            class="t-countdown__unit"
-          >
-            :
-          </span>
-          
-          
-          <span
-            class="t-countdown__digit"
-          >
-            00
-          </span>
           <!--v-if-->
+          <span
+            class="t-countdown t-countdown--square t-countdown--large"
+          >
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              15
+            </span>
+            <span
+              class="t-countdown__unit"
+            >
+              :
+            </span>
+            
+            
+            <span
+              class="t-countdown__digit"
+            >
+              00
+            </span>
+            <!--v-if-->
+            
+            
+          </span>
           
-          
-        </span>
+          <p
+            class="format"
+          >
+            L
+          </p>
+        </div>
         
-        <p
-          class="format"
-        >
-          L
-        </p>
       </div>
       
     </div>
-    
   </div>
 </div>
 `;

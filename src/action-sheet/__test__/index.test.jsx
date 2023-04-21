@@ -1,8 +1,11 @@
 import { describe, it, expect, vi } from 'vitest';
-import { DOMWrapper, mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import ActionSheet from '../action-sheet.vue';
 import MenuGrid from '../menu-grid.vue';
-import { ref } from 'vue';
+
+config.global.stubs = {
+  teleport: true
+}
 
 describe('ActionSheet', () => {
   describe('props', () => {
@@ -70,15 +73,15 @@ describe('ActionSheet', () => {
     it('visible', async () => {
       const wrapper = mount(ActionSheet, {
         props: {
-          visible: true,
+          visible: false,
           items: [],
         },
       });
-      expect(wrapper.find('.t-popup--content').isVisible()).toEqual(true);
+      expect(wrapper.find('.t-popup').isVisible()).toEqual(false);
       await wrapper.setProps({
-        visible: false,
+        visible: true,
       });
-      expect(wrapper.find('.t-popup--content').isVisible()).toEqual(false);
+      expect(wrapper.find('.t-popup').isVisible()).toEqual(true);
     });
   });
 

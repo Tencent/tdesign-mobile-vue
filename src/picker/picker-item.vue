@@ -1,15 +1,13 @@
 <template>
-  <div ref="root" :class="className">
-    <ul :class="wrapperClassName">
-      <li v-for="(option, index) in options" :key="index" :class="itemClassName">
-        {{ renderLabel ? renderLabel(option) : option.label }}
-      </li>
-    </ul>
-  </div>
+  <ul ref="root" :class="className">
+    <li v-for="(option, index) in options" :key="index" :class="itemClassName">
+      {{ renderLabel ? renderLabel(option) : option.label }}
+    </li>
+  </ul>
 </template>
 
 <script lang="ts">
-import { ref, computed, onMounted, toRefs, defineComponent, PropType } from 'vue';
+import { ref, computed, onMounted, toRefs, defineComponent, PropType, watch } from 'vue';
 import config from '../config';
 import Picker from './picker.class';
 import { PickerColumnItem, PickerValue } from './type';
@@ -24,7 +22,7 @@ export default defineComponent({
       type: Array as PropType<PickerColumnItem[]>,
       default: () => [],
     },
-    defaultValue: {
+    value: {
       type: [String, Number] as PropType<PickerValue>,
       default: undefined,
     },
@@ -37,7 +35,7 @@ export default defineComponent({
   setup(props: any, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     let picker: Picker | null = null;
-    const el = document.createElement('div');
+    const el = document.createElement('ul');
     const root = ref(el);
     const getIndexByValue = (val: number | string | undefined) => {
       let defaultIndex = 0;
@@ -67,10 +65,10 @@ export default defineComponent({
       }
     };
     const setOptions = () => {
-      picker && picker.update();
+      picker?.update();
     };
     const setUpdateItems = () => {
-      picker && picker.updateItems();
+      picker?.updateItems();
     };
     context.expose({
       setIndex,
@@ -82,14 +80,24 @@ export default defineComponent({
     onMounted(() => {
       picker = new Picker({
         el: root.value,
-        defaultIndex: getIndexByValue(props.defaultValue) || 0,
+        defaultIndex: getIndexByValue(props.value) || 0,
         onChange: (index: number) => {
+          console.log('onchange');
+
           const curItem = props.options[index];
           const changeValue = { value: curItem.value, index };
           emitEvent('pick', changeValue);
         },
       });
     });
+
+    watch(
+      () => props.options,
+      () => {
+        picker?.updateItems();
+      },
+      { flush: 'post', deep: true },
+    );
 
     return {
       root,

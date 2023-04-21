@@ -2,7 +2,7 @@
   <t-cell title="选择日期(时分)" :note="pickerValue || '时 分'" @click="visible = true" />
   <t-popup v-model="visible" placement="bottom">
     <t-date-time-picker
-      default-value="2022-10-10 10:10"
+      default-value="10:10"
       :mode="[null, 'minute']"
       title="选择日期"
       format="HH:mm"

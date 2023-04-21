@@ -113,188 +113,212 @@ exports[`Navbar > Navbar mobileVue demo works fine 1`] = `
     class="tdesign-mobile-demo-block"
     data-v-16defdf7=""
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      基础导航栏
-    </p>
-    
     <div
-      class="t-navbar"
-      data-v-16defdf7=""
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-navbar__back"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <span
-          class="t-navbar__back--arrow"
-        >
-          <svg
-            class="t-icon t-icon-chevron-left"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </span>
-        <!--v-if-->
-        <!---->
-        <!---->
-      </div>
-      <div
-        class="t-navbar__text"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        标题
-      </div>
-      <div
-        class="t-navbar__right"
-      >
-        <!---->
-      </div>
+        基础导航栏
+      </p>
     </div>
-    
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-navbar"
+        data-v-16defdf7=""
+      >
+        <div
+          class="t-navbar__back"
+        >
+          <span
+            class="t-navbar__back--arrow"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </span>
+          <!--v-if-->
+          <!---->
+          <!---->
+        </div>
+        <div
+          class="t-navbar__text"
+        >
+          标题
+        </div>
+        <div
+          class="t-navbar__right"
+        >
+          <!---->
+        </div>
+      </div>
+      
+    </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-16defdf7=""
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      左侧双操作导航栏
-    </p>
-    
     <div
-      class="t-navbar"
-      data-v-16defdf7=""
+      class="tdesign-mobile-demo-block__header"
     >
-      <div
-        class="t-navbar__back"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        <!--v-if-->
-        <!--v-if-->
-        <!---->
-        
-        <svg
-          class="t-icon t-icon-chevron-left btn-left"
-          style="font-size: 24px;"
-        >
-          <use
-            href="#t-icon-chevron-left"
-          />
-        </svg>
-        <svg
-          class="t-icon t-icon-close"
-          style="font-size: 24px;"
-        >
-          <use
-            href="#t-icon-close"
-          />
-        </svg>
-        
-      </div>
-      <div
-        class="t-navbar__text"
-      >
-        标题
-      </div>
-      <div
-        class="t-navbar__right"
-      >
-        
-        <svg
-          class="t-icon t-icon-ellipsis"
-          style="font-size: 24px;"
-        >
-          <use
-            href="#t-icon-ellipsis"
-          />
-        </svg>
-        
-      </div>
+        左侧双操作导航栏
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-16defdf7=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      右侧双操作导航栏
-    </p>
-    
     <div
-      class="t-navbar"
-      data-v-16defdf7=""
+      class="tdesign-mobile-demo-block__slot"
     >
+      
       <div
-        class="t-navbar__back"
+        class="t-navbar"
+        data-v-16defdf7=""
       >
-        <span
-          class="t-navbar__back--arrow"
+        <div
+          class="t-navbar__back"
         >
+          <!--v-if-->
+          <!--v-if-->
+          <!---->
+          
           <svg
-            class="t-icon t-icon-chevron-left"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+            class="t-icon t-icon-chevron-left btn-left"
+            style="font-size: 24px;"
           >
-            <path
-              d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
+            <use
+              href="#t-icon-chevron-left"
             />
           </svg>
-        </span>
-        <!--v-if-->
-        <!---->
-        <!---->
-      </div>
-      <div
-        class="t-navbar__text"
-      >
-        标题
-      </div>
-      <div
-        class="t-navbar__right"
-      >
-        
-        <svg
-          class="t-icon t-icon-notification btn-left"
-          style="font-size: 24px;"
+          <svg
+            class="t-icon t-icon-close"
+            style="font-size: 24px;"
+          >
+            <use
+              href="#t-icon-close"
+            />
+          </svg>
+          
+        </div>
+        <div
+          class="t-navbar__text"
         >
-          <use
-            href="#t-icon-notification"
-          />
-        </svg>
-        <svg
-          class="t-icon t-icon-ellipsis"
-          style="font-size: 24px;"
+          标题
+        </div>
+        <div
+          class="t-navbar__right"
         >
-          <use
-            href="#t-icon-ellipsis"
-          />
-        </svg>
-        
+          
+          <svg
+            class="t-icon t-icon-ellipsis"
+            style="font-size: 24px;"
+          >
+            <use
+              href="#t-icon-ellipsis"
+            />
+          </svg>
+          
+        </div>
       </div>
+      
     </div>
-    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-16defdf7=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        右侧双操作导航栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-navbar"
+        data-v-16defdf7=""
+      >
+        <div
+          class="t-navbar__back"
+        >
+          <span
+            class="t-navbar__back--arrow"
+          >
+            <svg
+              class="t-icon t-icon-chevron-left"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M9.54 3.54l.92.92L6.92 8l3.54 3.54-.92.92L5.08 8l4.46-4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+          </span>
+          <!--v-if-->
+          <!---->
+          <!---->
+        </div>
+        <div
+          class="t-navbar__text"
+        >
+          标题
+        </div>
+        <div
+          class="t-navbar__right"
+        >
+          
+          <svg
+            class="t-icon t-icon-notification btn-left"
+            style="font-size: 24px;"
+          >
+            <use
+              href="#t-icon-notification"
+            />
+          </svg>
+          <svg
+            class="t-icon t-icon-ellipsis"
+            style="font-size: 24px;"
+          >
+            <use
+              href="#t-icon-ellipsis"
+            />
+          </svg>
+          
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>
 `;

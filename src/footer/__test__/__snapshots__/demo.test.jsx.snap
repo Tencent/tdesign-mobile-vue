@@ -1,0 +1,407 @@
+// Vitest Snapshot v1
+
+exports[`Footer > Footer baseVue demo works fine 1`] = `
+<div
+  class="t-footer"
+>
+  <!-- logo -->
+  
+  <!-- text -->
+  <!--v-if-->
+  <div
+    class="t-footer__text"
+  >
+    Copyright © 2019-2023 TDesign.All Rights Reserved.
+  </div>
+  
+</div>
+`;
+
+exports[`Footer > Footer linkVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-footer"
+  >
+    <!-- logo -->
+    
+    <!-- text -->
+    <div
+      class="t-footer__link-list"
+    >
+      
+      
+      <a
+        class="t-footer__link-item"
+        href="/pages/index"
+      >
+        底部链接
+      </a>
+      <!--v-if-->
+      
+      
+    </div>
+    <div
+      class="t-footer__text"
+    >
+      Copyright © 2019-2023 TDesign.All Rights Reserved.
+    </div>
+    
+  </div>
+  <div
+    class="t-footer"
+  >
+    <!-- logo -->
+    
+    <!-- text -->
+    <div
+      class="t-footer__link-list"
+    >
+      
+      
+      <a
+        class="t-footer__link-item"
+        href="/pages/index"
+      >
+        底部链接
+      </a>
+      <div
+        class="t-footer__link-line"
+      >
+        |
+      </div>
+      
+      
+      <a
+        class="t-footer__link-item"
+        href="/pages/index"
+      >
+        底部链接
+      </a>
+      <!--v-if-->
+      
+      
+    </div>
+    <div
+      class="t-footer__text"
+    >
+      Copyright © 2019-2023 TDesign.All Rights Reserved.
+    </div>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Footer > Footer logoVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="t-footer"
+  >
+    <!-- logo -->
+    <a
+      class="t-footer__logo"
+    >
+      <div
+        class="t-image t-image--square t-footer__icon"
+      >
+        <div
+          class="t-image__mask"
+        >
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
+          >
+            
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+            </div>
+            
+            <!--v-if-->
+            <!---->
+          </div>
+        </div>
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
+      </div>
+      <span
+        class="t-footer__title"
+      >
+        品牌页脚
+      </span>
+    </a>
+  </div>
+  <div
+    class="t-footer"
+  >
+    <!-- logo -->
+    <a
+      class="t-footer__logo"
+      href="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
+    >
+      <!--v-if-->
+      <!--v-if-->
+    </a>
+  </div>
+  
+</div>
+`;
+
+exports[`Footer > Footer mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Footer 页脚
+  </h1>
+  <p
+    class="summary"
+  >
+    用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        基础页脚
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-footer"
+      >
+        <!-- logo -->
+        
+        <!-- text -->
+        <!--v-if-->
+        <div
+          class="t-footer__text"
+        >
+          Copyright © 2019-2023 TDesign.All Rights Reserved.
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        基础加链接页脚
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-footer"
+      >
+        <!-- logo -->
+        
+        <!-- text -->
+        <div
+          class="t-footer__link-list"
+        >
+          
+          
+          <a
+            class="t-footer__link-item"
+            href="/pages/index"
+          >
+            底部链接
+          </a>
+          <!--v-if-->
+          
+          
+        </div>
+        <div
+          class="t-footer__text"
+        >
+          Copyright © 2019-2023 TDesign.All Rights Reserved.
+        </div>
+        
+      </div>
+      <div
+        class="t-footer"
+      >
+        <!-- logo -->
+        
+        <!-- text -->
+        <div
+          class="t-footer__link-list"
+        >
+          
+          
+          <a
+            class="t-footer__link-item"
+            href="/pages/index"
+          >
+            底部链接
+          </a>
+          <div
+            class="t-footer__link-line"
+          >
+            |
+          </div>
+          
+          
+          <a
+            class="t-footer__link-item"
+            href="/pages/index"
+          >
+            底部链接
+          </a>
+          <!--v-if-->
+          
+          
+        </div>
+        <div
+          class="t-footer__text"
+        >
+          Copyright © 2019-2023 TDesign.All Rights Reserved.
+        </div>
+        
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        品牌页脚
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-footer"
+      >
+        <!-- logo -->
+        <a
+          class="t-footer__logo"
+        >
+          <div
+            class="t-image t-image--square t-footer__icon"
+          >
+            <div
+              class="t-image__mask"
+            >
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
+              >
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
+            </div>
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
+          </div>
+          <span
+            class="t-footer__title"
+          >
+            品牌页脚
+          </span>
+        </a>
+      </div>
+      <div
+        class="t-footer"
+      >
+        <!-- logo -->
+        <a
+          class="t-footer__logo"
+          href="https://tdesign.gtimg.com/miniprogram/images/logo1.png"
+        >
+          <!--v-if-->
+          <!--v-if-->
+        </a>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;

@@ -1,136 +1,119 @@
 <template>
   <div :class="`${name}`">
     <div :class="`${name}__toolbar`">
-      <t-button :class="`${name}__cancel`" variant="text" @click="handleCancel">{{ cancelButtonText }}</t-button>
+      <div v-if="cancelButtonText" :class="`${name}__cancel`" @click="handleCancel">{{ cancelButtonText }}</div>
       <div :class="`${name}__title`">{{ title }}</div>
-      <t-button :class="`${name}__confirm`" variant="text" @click="handleConfirm">{{ confirmButtonText }}</t-button>
+      <div v-if="confirmButtonText" :class="`${name}__confirm`" @click="handleConfirm">{{ confirmButtonText }}</div>
     </div>
+    <t-node :content="header" />
     <div :class="`${name}__main`">
-      <div :class="`${name}-item__group`">
+      <div v-for="(item, index) in realColumns" :key="index" :class="`${name}-item__group`">
         <picker-item
-          v-for="(item, index) in realColumns"
-          :key="index"
           :options="item"
-          :default-value="pickerValue[index]"
+          :value="pickerValue[index]"
           :render-label="renderLabel"
           @pick="handlePick($event, index)"
         />
       </div>
-      <div :class="`${name}__mask`"></div>
-      <div :class="`${name}__indicator`"></div>
+      <div :class="`${name}__mask ${name}__mask--top`" />
+      <div :class="`${name}__mask ${name}__mask--bottom`" />
+      <div :class="`${name}__indicator`" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, nextTick, defineComponent, toRefs, onMounted, ref } from 'vue';
+import { computed, nextTick, defineComponent, toRefs, onMounted, ref, getCurrentInstance, watch } from 'vue';
+import isString from 'lodash/isString';
+import isBoolean from 'lodash/isBoolean';
+
 import config from '../config';
 import PickerProps from './props';
 import { PickerValue, PickerColumn, PickerColumnItem } from './type';
-import TButton from '../button';
-import { useEmitEvent, useVModel, useChildSlots, useExpose } from '../shared';
+import { useEmitEvent, useVModel, useChildSlots, useExpose, TNode, renderTNode } from '../shared';
 import PickerItem from './picker-item.vue';
 
 const { prefix } = config;
 const name = `${prefix}-picker`;
 // 通过value和columns，生成对应的indexArray
-const getIndexFromColumns = (columns: PickerColumn[], value: PickerValue, column: number) => {
-  let resultIndex;
-  columns[column]?.forEach((item: PickerColumnItem, index: number) => {
-    if (item.value === value) {
-      resultIndex = index;
-    }
-  });
-  return resultIndex;
+const getIndexFromColumns = (column: PickerColumn, value: PickerValue) => {
+  if (!value) return 0;
+  return column?.findIndex((item: PickerColumnItem) => item.value === value);
 };
 export default defineComponent({
   name,
-  components: { TButton, PickerItem },
+  components: { PickerItem, TNode },
   props: PickerProps,
   emits: ['change', 'cancel', 'pick', 'update:modelValue', 'update:value'],
   setup(props: any, context) {
+    const internalInstance = getCurrentInstance();
     const emitEvent = useEmitEvent(props, context.emit);
     const { value, modelValue } = toRefs(props);
-    const [pickerValue, setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
-    const confirmButtonText = computed(() => props.confirmBtn);
-    const cancelButtonText = computed(() => props.cancelBtn);
+    const [pickerValue = ref([]), setPickerValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const getDefaultText = (prop: string | boolean, defaultText: string): string => {
+      if (isString(prop)) return prop;
+      if (isBoolean(prop) && prop) return defaultText;
+      return '';
+    };
+    const confirmButtonText = computed(() => getDefaultText(props.confirmBtn, '确认'));
+    const cancelButtonText = computed(() => getDefaultText(props.cancelBtn, '取消'));
+    const header = computed(() => renderTNode(internalInstance, 'header'));
     const curValueArray = ref(pickerValue.value.map((item: PickerValue) => item));
     const realColumns = computed(() => {
       if (typeof props.columns === 'function') {
-        const data = props.columns(curValueArray.value);
-        return data;
+        return props.columns(curValueArray.value);
       }
       return props.columns;
     });
-    let lastTimeValueArray = [...curValueArray.value];
-    let curIndexArray = pickerValue.value.map((item: PickerValue, index: number) => {
-      return getIndexFromColumns(realColumns.value, item, index);
+    const curIndexArray = realColumns.value.map((item: PickerColumn, index: number) => {
+      return getIndexFromColumns(item, pickerValue?.value[index]);
     });
-    let lastTimeIndexArray = [...curIndexArray];
     const pickerItemInstanceArray = ref([]) as any;
+
     onMounted(() => {
       // 获取pickerItem实例，用于更新每个item的value和index
       pickerItemInstanceArray.value = useChildSlots('t-picker-item').map((item) => item.component);
     });
+
     const handleConfirm = (e: MouseEvent) => {
-      // 点击确认后，更新最近一次的picker状态
-      lastTimeValueArray = [...curValueArray.value];
-      lastTimeIndexArray = [...curIndexArray];
-      setPickerValue(curValueArray.value);
-      emitEvent('confirm', curValueArray.value, { index: curIndexArray });
+      const target = realColumns.value.map((item: PickerColumnItem, index: number) => item[curIndexArray[index]]);
+      const label = target.map((item: PickerColumnItem) => item.label);
+      const value = target.map((item: PickerColumnItem) => item.value);
+      setPickerValue(value);
+      emitEvent('confirm', value, { index: curIndexArray, label, e });
     };
     const handleCancel = (e: MouseEvent) => {
-      // 点击取消后，重置最近一次的picker状态
-      curValueArray.value = [...lastTimeValueArray];
-      curIndexArray = [...lastTimeIndexArray];
       pickerItemInstanceArray.value.forEach((item: any, index: number) => {
         item.exposed?.setIndex(curIndexArray[index]);
       });
       emitEvent('cancel', { e });
     };
     const handlePick = (context: any, column: number) => {
-      if (curValueArray.value[column] !== context.value) {
-        curValueArray.value[column] = context.value;
-        curIndexArray[column] = context.index;
-        // 当使用cascade或者dateTimePicker时，需要更新子节点的value和index
-        if (typeof props.columns === 'function') {
-          const result = props.columns(curValueArray.value);
-          result.forEach((item: PickerColumnItem[], index: number) => {
-            if (!item.filter((ele: PickerColumnItem) => ele.value === curValueArray.value[index]).length) {
-              curValueArray.value[index] = item[0]?.value;
-              curIndexArray[index] = 0;
-              nextTick(() => {
-                pickerItemInstanceArray.value[index]?.exposed?.setIndex(0);
-              });
-            } else {
-              nextTick(() => {
-                pickerItemInstanceArray.value[index]?.exposed?.setUpdateItems();
-              });
-            }
-          });
-        }
-        emitEvent('pick', curValueArray.value, { index: context.index, column });
-      }
+      const { index } = context;
+
+      curIndexArray[column] = index;
+      curValueArray.value[column] = realColumns.value[column][index]?.value;
+
+      emitEvent('pick', curValueArray.value, { index, column });
     };
 
-    const setValues = (values: string[]) => {
-      curValueArray.value = values;
-      setPickerValue(values);
-      // 等columns更新完后，再更新value
-      nextTick(() => {
-        pickerItemInstanceArray.value.forEach((item: any, index: number) => {
-          item.exposed?.setValue(values[index]);
-        });
+    watch(pickerValue, () => {
+      curValueArray.value = pickerValue.value.map((item: PickerValue) => item);
+    });
+
+    watch([realColumns, curValueArray], () => {
+      realColumns.value.forEach((col: PickerColumn, idx: number) => {
+        const index = col.findIndex((item: PickerColumnItem) => item.value === curValueArray.value[idx]);
+        curIndexArray[idx] = index > -1 ? index : 0;
+        pickerItemInstanceArray.value[idx].exposed?.setIndex(curIndexArray[idx]);
       });
-    };
-
-    useExpose({
-      setValues,
     });
 
     return {
       name,
+      header,
       pickerValue,
+      curIndexArray,
       confirmButtonText,
       cancelButtonText,
       handleConfirm,

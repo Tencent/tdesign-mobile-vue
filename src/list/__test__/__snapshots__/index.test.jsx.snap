@@ -7,10 +7,10 @@ exports[`list > event > : load-more 1`] = `
   <!---->
   
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -30,10 +30,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -53,10 +53,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -76,10 +76,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -99,10 +99,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -122,10 +122,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -145,10 +145,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -168,10 +168,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -191,10 +191,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -214,10 +214,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -237,10 +237,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -260,10 +260,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -283,10 +283,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -306,10 +306,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -329,10 +329,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -352,10 +352,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -375,10 +375,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -398,10 +398,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -421,10 +421,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->
@@ -444,10 +444,10 @@ exports[`list > event > : load-more 1`] = `
     <!--v-if-->
   </div>
   <div
-    class="t-cell t-cell--middle t-cell--bordered"
+    class="t-cell t-cell--middle"
   >
     <div
-      class="t-cell__left-icon"
+      class="t-cell__left"
     >
       <!--v-if-->
       <!--v-if-->

@@ -55,60 +55,68 @@ exports[`List > List mobileVue demo works fine 1`] = `
       <div
         class="tdesign-mobile-demo-block"
       >
-        <h2
-          class="tdesign-mobile-demo-block__title"
+        <div
+          class="tdesign-mobile-demo-block__header"
         >
-          01 类型
-        </h2>
-        <p
-          class="tdesign-mobile-demo-block__summary"
-        >
-          基础列表
-        </p>
-        
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
+          <h2
+            class="tdesign-mobile-demo-block__title"
           >
-            
-             基础列表 
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
+            01 类型
+          </h2>
+          <p
+            class="tdesign-mobile-demo-block__summary"
           >
-            
-             下拉刷新 
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
-          role="button"
+            基础列表
+          </p>
+        </div>
+        <div
+          class="tdesign-mobile-demo-block__slot"
         >
-          <!---->
-          <span
-            class="t-button__text"
+          
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+            role="button"
           >
-            
-             错误提示 
-            
-          </span>
-        </button>
-        
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               基础列表 
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               下拉刷新 
+              
+            </span>
+          </button>
+          <button
+            aria-disabled="false"
+            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle"
+            role="button"
+          >
+            <!---->
+            <span
+              class="t-button__text"
+            >
+              
+               错误提示 
+              
+            </span>
+          </button>
+          
+        </div>
       </div>
     </div>
     <!--v-if-->

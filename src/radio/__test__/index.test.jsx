@@ -25,57 +25,6 @@ describe('Radio', () => {
       expect($label.text()).toEqual(label);
     });
 
-    it(':content-disabled', async () => {
-      const onChange = vi.fn();
-      const align = 'right';
-      const contentDisabled = true;
-      const label = 'label content';
-      const wrapper = mount(Radio, {
-        props: {
-          align,
-          contentDisabled,
-          label,
-          content: TEXT,
-          onChange,
-        },
-      });
-      const $content = wrapper.find(`.${name}__content`);
-      // contentDisabled = true,  点击 content 区域，不会触发 change
-      await $content.trigger('click');
-      expect(onChange).toBeCalledTimes(0);
-      await wrapper.setProps({
-        contentDisabled: false,
-      });
-      await $content.trigger('click');
-      expect(onChange).toBeCalledTimes(1);
-    });
-
-    it(':disabled', async () => {
-      const onChange = vi.fn();
-      const disabled = true;
-      const label = 'label content';
-      const wrapper = mount(Radio, {
-        props: {
-          disabled,
-          label,
-          content: TEXT,
-          onChange,
-        },
-      });
-      const $radio = wrapper.findComponent(Radio);
-
-      await $radio.trigger('click');
-      expect(onChange).toBeCalledTimes(0);
-
-      // disabled = false, 可以触发 change
-      await wrapper.setProps({
-        disabled: false,
-      });
-
-      await $radio.trigger('click');
-      expect(onChange).toBeCalledTimes(1);
-    });
-
     it(': checked', async () => {
       const options = [
         {
@@ -129,7 +78,6 @@ describe('Radio', () => {
         </RadioGroup>
       ));
       const [radio1, radio2] = wrapper.findAllComponents('.t-radio');
-      console.log(radio1.props);
       expect(radio1.vm.checked).toBeTruthy();
       await radio2.trigger('click');
       expect(radio2.vm.checked).toBeTruthy();

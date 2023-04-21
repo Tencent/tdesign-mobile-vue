@@ -30,7 +30,7 @@ const ANIMATION_DURATION = 150;
  * @param {[Number]} defaultIndex [picker-item开始的索引值]
  */
 class Picker {
-  holder: HTMLElement | HTMLDivElement | HTMLUListElement;
+  holder: HTMLElement | HTMLUListElement;
 
   options: PickerOptions;
 
@@ -68,6 +68,8 @@ class Picker {
 
   offsetYOfEnd = 0;
 
+  curValue: string | null = '';
+
   onChange: (index: number) => void;
 
   constructor(options: PickerOptions) {
@@ -101,11 +103,11 @@ class Picker {
    * @description 初始化滚动参数
    */
   initScrollParams(): void {
-    this.list = this.holder.querySelector('ul');
+    this.list = this.holder as HTMLUListElement;
     this.elementItems = [...this.holder.querySelectorAll('li')];
     this.itemHeight = this.holder.querySelector('li')?.offsetHeight || DEFAULT_ITEM_HEIGHT;
     this.height = this.holder.offsetHeight || DEFAULT_HOLDER_HEIGHT;
-    this.curIndex = this.options.defaultIndex || 0;
+    let curIndex = this.options.defaultIndex || 0;
     this.itemClassName = `${prefix}-picker-item__item`;
     this.itemSelectedClassName = `${prefix}-picker-item__item--selected`;
     this.itemHeight = DEFAULT_ITEM_HEIGHT;
@@ -114,6 +116,16 @@ class Picker {
     this.lastMoveTime = 0;
     this.lastMoveStart = 0;
     this.stopInertiaMove = false;
+    this.curValue = this.elementItems[curIndex]?.textContent;
+    Object.defineProperty(this, 'curIndex', {
+      set: (value: number) => {
+        curIndex = value;
+        this.curValue = this.elementItems[value]?.textContent;
+      },
+      get() {
+        return curIndex;
+      },
+    });
     const startOffsetY = (-this.curIndex + 2) * this.itemHeight;
     const itemLen = this.elementItems.length;
     this.setOffsetY(startOffsetY);
@@ -230,10 +242,11 @@ class Picker {
   /**
    * @description 更新picker，一般当数据变化需要ui更新的时候调用
    */
-  update(): void {
+  update(options?: any): void {
     this.updateItems();
-    const updateIndex = this.curIndex > this.elementItems.length - 1 ? 0 : this.curIndex;
-    this.updateIndex(updateIndex);
+    const targetIndex = this.elementItems.findIndex((el: HTMLLIElement) => el.textContent === this.curValue);
+    const updateIndex = targetIndex === -1 ? 0 : targetIndex;
+    this.updateIndex(updateIndex, options);
   }
 
   /**

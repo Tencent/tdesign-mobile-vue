@@ -23,74 +23,29 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-            style="right: 0px; top: 5px;"
-          >
-            16
-          </div>
-          
-          
-          <svg
-            class="t-icon t-icon-app"
-          >
-            <use
-              href="#t-icon-app"
-            />
-          </svg>
-          
-          
-        </div>
-      </div>
-      <div
-        class="t-tab-bar-item__text"
-      >
-        <!--v-if-->
-        
-        文字 
-        
-      </div>
-    </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
-  </div>
-  <div
-    aria-label="TabBar"
-    aria-selected="false"
-    class="t-tab-bar-item t-no-border"
-    role="tab"
-  >
-    <div
-      class="t-tab-bar-item__content"
-    >
-      <div
-        class="t-tab-bar-item__icon"
-      >
-        <div
-          class="t-badge"
-        >
-          <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
-            style="right: 0px; top: 5px;"
+            class="t-badge__content"
           >
             
+            
+            <svg
+              class="t-icon t-icon-app"
+            >
+              <use
+                href="#t-icon-app"
+              />
+            </svg>
+            
+            
           </div>
-          
-          
-          <svg
-            class="t-icon t-icon-app"
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+            style="right: 0px; top: 5px;"
           >
-            <use
-              href="#t-icon-app"
-            />
-          </svg>
-          
-          
+            <!--v-if-->
+             16 
+            <!--v-if-->
+          </div>
+          <!---->
         </div>
       </div>
       <div
@@ -102,14 +57,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -127,22 +75,29 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            class="t-badge__content"
+          >
+            
+            
+            <svg
+              class="t-icon t-icon-app"
+            >
+              <use
+                href="#t-icon-app"
+              />
+            </svg>
+            
+            
+          </div>
+          <div
+            class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
             style="right: 0px; top: 5px;"
           >
-            New
+            <!--v-if-->
+              
+            <!--v-if-->
           </div>
-          
-          
-          <svg
-            class="t-icon t-icon-app"
-          >
-            <use
-              href="#t-icon-app"
-            />
-          </svg>
-          
-          
+          <!---->
         </div>
       </div>
       <div
@@ -154,14 +109,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -179,22 +127,29 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           class="t-badge"
         >
           <div
-            class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
+            class="t-badge__content"
+          >
+            
+            
+            <svg
+              class="t-icon t-icon-app"
+            >
+              <use
+                href="#t-icon-app"
+              />
+            </svg>
+            
+            
+          </div>
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
             style="right: 0px; top: 5px;"
           >
-            ···
+            <!--v-if-->
+             New 
+            <!--v-if-->
           </div>
-          
-          
-          <svg
-            class="t-icon t-icon-app"
-          >
-            <use
-              href="#t-icon-app"
-            />
-          </svg>
-          
-          
+          <!---->
         </div>
       </div>
       <div
@@ -206,14 +161,59 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
+    <!--v-if-->
+  </div>
+  <div
+    aria-label="TabBar"
+    aria-selected="false"
+    class="t-tab-bar-item t-no-border"
+    role="tab"
+  >
+    <div
+      class="t-tab-bar-item__content"
     >
-      <!--v-if-->
-    </transition-stub>
+      <div
+        class="t-tab-bar-item__icon"
+      >
+        <div
+          class="t-badge"
+        >
+          <div
+            class="t-badge__content"
+          >
+            
+            
+            <svg
+              class="t-icon t-icon-app"
+            >
+              <use
+                href="#t-icon-app"
+              />
+            </svg>
+            
+            
+          </div>
+          <div
+            class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+            style="right: 0px; top: 5px;"
+          >
+            <!--v-if-->
+             ··· 
+            <!--v-if-->
+          </div>
+          <!---->
+        </div>
+      </div>
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <!--v-if-->
+        
+        文字 
+        
+      </div>
+    </div>
+    <!--v-if-->
   </div>
   
   
@@ -258,14 +258,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -298,14 +291,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -338,14 +324,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -378,14 +357,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
@@ -413,229 +385,43 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
     class="tdesign-mobile-demo-block"
     data-v-da85bda4=""
   >
-    <h2
-      class="tdesign-mobile-demo-block__title"
-    >
-      01 类型
-    </h2>
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      基础标签栏
-    </p>
-    
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
-      data-v-da85bda4=""
-      role="tablist"
+      class="tdesign-mobile-demo-block__header"
     >
-      
-      
-      <div
-        aria-label="TabBar"
-        aria-selected="true"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        <div
-          class="t-tab-bar-item__content t-is-checked"
-        >
-          <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-            >
-              <use
-                href="#t-icon-app"
-              />
-            </svg>
-            
-          </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
+        01 类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
       >
-        <div
-          class="t-tab-bar-item__content"
-        >
-          <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-            >
-              <use
-                href="#t-icon-app"
-              />
-            </svg>
-            
-          </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content"
-        >
-          <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-            >
-              <use
-                href="#t-icon-app"
-              />
-            </svg>
-            
-          </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content"
-        >
-          <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-            >
-              <use
-                href="#t-icon-app"
-              />
-            </svg>
-            
-          </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      
-      
+        基础标签栏
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-da85bda4=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      带徽章标签栏
-    </p>
-    
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
-      data-v-da85bda4=""
-      role="tablist"
+      class="tdesign-mobile-demo-block__slot"
     >
-      
       
       <div
-        aria-label="TabBar"
-        aria-selected="true"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
+        data-v-da85bda4=""
+        role="tablist"
       >
+        
+        
         <div
-          class="t-tab-bar-item__content t-is-checked"
+          aria-label="TabBar"
+          aria-selected="true"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
         >
           <div
-            class="t-tab-bar-item__icon"
+            class="t-tab-bar-item__content t-is-checked"
           >
             <div
-              class="t-badge"
+              class="t-tab-bar-item__icon"
             >
-              <div
-                class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-                style="right: 0px; top: 5px;"
-              >
-                16
-              </div>
-              
               
               <svg
                 class="t-icon t-icon-app"
@@ -645,49 +431,30 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 />
               </svg>
               
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
               
             </div>
           </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
           <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
+        </div>
         <div
-          class="t-tab-bar-item__content"
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
         >
           <div
-            class="t-tab-bar-item__icon"
+            class="t-tab-bar-item__content"
           >
             <div
-              class="t-badge"
+              class="t-tab-bar-item__icon"
             >
-              <div
-                class="t-badge__inner t-badge--has-children t-badge--medium t-badge--dot"
-                style="right: 0px; top: 5px;"
-              >
-                
-              </div>
-              
               
               <svg
                 class="t-icon t-icon-app"
@@ -697,49 +464,30 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 />
               </svg>
               
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
               
             </div>
           </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
           <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
+        </div>
         <div
-          class="t-tab-bar-item__content"
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
         >
           <div
-            class="t-tab-bar-item__icon"
+            class="t-tab-bar-item__content"
           >
             <div
-              class="t-badge"
+              class="t-tab-bar-item__icon"
             >
-              <div
-                class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-                style="right: 0px; top: 5px;"
-              >
-                New
-              </div>
-              
               
               <svg
                 class="t-icon t-icon-app"
@@ -749,49 +497,30 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 />
               </svg>
               
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
               
             </div>
           </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
           <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
+        </div>
         <div
-          class="t-tab-bar-item__content"
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
         >
           <div
-            class="t-tab-bar-item__icon"
+            class="t-tab-bar-item__content"
           >
             <div
-              class="t-badge"
+              class="t-tab-bar-item__icon"
             >
-              <div
-                class="t-badge__inner t-badge--has-children t-badge--medium t-badge--circle"
-                style="right: 0px; top: 5px;"
-              >
-                ···
-              </div>
-              
               
               <svg
                 class="t-icon t-icon-app"
@@ -801,455 +530,633 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 />
               </svg>
               
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
               
             </div>
           </div>
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            文字 
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
           <!--v-if-->
-        </transition-stub>
+        </div>
+        
+        
       </div>
-      
       
     </div>
-    
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-da85bda4=""
   >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      纯文本标签栏
-    </p>
-    
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
-      data-v-da85bda4=""
-      role="tablist"
+      class="tdesign-mobile-demo-block__header"
     >
-      
-      
-      <div
-        aria-label="TabBar"
-        aria-selected="true"
-        class="t-tab-bar-item"
-        role="tab"
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        <div
-          class="t-tab-bar-item__content t-is-checked t-tab-bar-item--onlytext"
-        >
-          <!--v-if-->
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            标签栏一
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content t-tab-bar-item--onlytext"
-        >
-          <!--v-if-->
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            标签栏二
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content t-tab-bar-item--onlytext"
-        >
-          <!--v-if-->
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            标签栏三
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content t-tab-bar-item--onlytext"
-        >
-          <!--v-if-->
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            标签栏四
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      
-      
+        带徽章标签栏
+      </p>
     </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-da85bda4=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      纯图标标签栏
-    </p>
-    
     <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
-      data-v-da85bda4=""
-      role="tablist"
+      class="tdesign-mobile-demo-block__slot"
     >
       
-      
       <div
-        aria-label="TabBar"
-        aria-selected="true"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
+        data-v-da85bda4=""
+        role="tablist"
       >
+        
+        
         <div
-          class="t-tab-bar-item__content t-is-checked"
+          aria-label="TabBar"
+          aria-selected="true"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
         >
           <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            
-          </div>
-          <!--v-if-->
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content"
-        >
-          <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            
-          </div>
-          <!--v-if-->
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content"
-        >
-          <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            
-          </div>
-          <!--v-if-->
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item t-no-border"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content"
-        >
-          <div
-            class="t-tab-bar-item__icon"
-          >
-            
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            
-          </div>
-          <!--v-if-->
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      
-      
-    </div>
-    
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-da85bda4=""
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary"
-    >
-      双层级纯文本标签栏
-    </p>
-    
-    <div
-      class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
-      data-v-da85bda4=""
-      role="tablist"
-    >
-      
-      
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content t-tab-bar-item--onlytext"
-        >
-          <!--v-if-->
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            标签栏一
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-label="TabBar"
-        aria-selected="false"
-        class="t-tab-bar-item"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content t-tab-bar-item--onlytext"
-        >
-          <!--v-if-->
-          <div
-            class="t-tab-bar-item__text"
-          >
-            <!--v-if-->
-            
-            标签栏二
-            
-          </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
-          <!--v-if-->
-        </transition-stub>
-      </div>
-      <div
-        aria-haspopup="true"
-        aria-label="TabBar"
-        aria-selected="true"
-        class="t-tab-bar-item"
-        role="tab"
-      >
-        <div
-          class="t-tab-bar-item__content t-is-checked t-tab-bar-item--onlytext"
-        >
-          <!--v-if-->
-          <div
-            class="t-tab-bar-item__text"
+            class="t-tab-bar-item__content t-is-checked"
           >
             <div
-              class="t-tab-bar-item__icon-menu"
-            />
-            
-            此处展开
-            
+              class="t-tab-bar-item__icon"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  
+                  <svg
+                    class="t-icon t-icon-app"
+                  >
+                    <use
+                      href="#t-icon-app"
+                    />
+                  </svg>
+                  
+                  
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  style="right: 0px; top: 5px;"
+                >
+                  <!--v-if-->
+                   16 
+                  <!--v-if-->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
+              
+            </div>
           </div>
-        </div>
-        <transition-stub
-          appear="false"
-          css="true"
-          name="spread"
-          persisted="false"
-        >
           <!--v-if-->
-        </transition-stub>
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  
+                  <svg
+                    class="t-icon t-icon-app"
+                  >
+                    <use
+                      href="#t-icon-app"
+                    />
+                  </svg>
+                  
+                  
+                </div>
+                <div
+                  class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                  style="right: 0px; top: 5px;"
+                >
+                  <!--v-if-->
+                    
+                  <!--v-if-->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  
+                  <svg
+                    class="t-icon t-icon-app"
+                  >
+                    <use
+                      href="#t-icon-app"
+                    />
+                  </svg>
+                  
+                  
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  style="right: 0px; top: 5px;"
+                >
+                  <!--v-if-->
+                   New 
+                  <!--v-if-->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+            >
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  
+                  <svg
+                    class="t-icon t-icon-app"
+                  >
+                    <use
+                      href="#t-icon-app"
+                    />
+                  </svg>
+                  
+                  
+                </div>
+                <div
+                  class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  style="right: 0px; top: 5px;"
+                >
+                  <!--v-if-->
+                   ··· 
+                  <!--v-if-->
+                </div>
+                <!---->
+              </div>
+            </div>
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              文字 
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        
+        
       </div>
       
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-da85bda4=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        纯文本标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
+        data-v-da85bda4=""
+        role="tablist"
+      >
+        
+        
+        <div
+          aria-label="TabBar"
+          aria-selected="true"
+          class="t-tab-bar-item"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-is-checked t-tab-bar-item--onlytext"
+          >
+            <!--v-if-->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              标签栏一
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-tab-bar-item--onlytext"
+          >
+            <!--v-if-->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              标签栏二
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-tab-bar-item--onlytext"
+          >
+            <!--v-if-->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              标签栏三
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-tab-bar-item--onlytext"
+          >
+            <!--v-if-->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              标签栏四
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        
+        
+      </div>
       
     </div>
-    
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-da85bda4=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        纯图标标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
+        data-v-da85bda4=""
+        role="tablist"
+      >
+        
+        
+        <div
+          aria-label="TabBar"
+          aria-selected="true"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-is-checked"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item t-no-border"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              
+            </div>
+            <!--v-if-->
+          </div>
+          <!--v-if-->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-da85bda4=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        双层级纯文本标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--fixed"
+        data-v-da85bda4=""
+        role="tablist"
+      >
+        
+        
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-tab-bar-item--onlytext"
+          >
+            <!--v-if-->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              标签栏一
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-label="TabBar"
+          aria-selected="false"
+          class="t-tab-bar-item"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-tab-bar-item--onlytext"
+          >
+            <!--v-if-->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!--v-if-->
+              
+              标签栏二
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          aria-haspopup="true"
+          aria-label="TabBar"
+          aria-selected="true"
+          class="t-tab-bar-item"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__content t-is-checked t-tab-bar-item--onlytext"
+          >
+            <!--v-if-->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <div
+                class="t-tab-bar-item__icon-menu"
+              />
+              
+              此处展开
+              
+            </div>
+          </div>
+          <!--v-if-->
+        </div>
+        
+        
+      </div>
+      
+    </div>
   </div>
 </div>
 `;
@@ -1291,14 +1198,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1330,14 +1230,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1369,14 +1262,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1408,14 +1294,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
@@ -1448,14 +1327,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1476,14 +1348,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-haspopup="true"
@@ -1507,14 +1372,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
@@ -1547,14 +1405,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1575,14 +1426,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1603,14 +1447,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1631,14 +1468,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   

@@ -8,13 +8,13 @@ import { TNode } from '../common';
 
 export interface TdLoadingProps {
   /**
-   * 子元素，同 content
-   */
-  default?: string | TNode;
-  /**
    * 子元素
    */
   content?: string | TNode;
+  /**
+   * 子元素，同 content
+   */
+  default?: string | TNode;
   /**
    * 延迟显示加载效果的时间，用于防止请求速度过快引起的加载闪烁，单位：毫秒
    * @default 0
@@ -59,17 +59,17 @@ export interface TdLoadingProps {
    */
   reverse?: boolean;
   /**
-   * 尺寸，示例：40rpx/20px
-   * @default '40rpx'
+   * 尺寸，示例：20px
+   * @default '20px'
    */
   size?: string;
   /**
    * 加载提示文案
    */
-  text?: string;
+  text?: string | TNode;
   /**
    * 加载组件类型
    * @default circular
    */
-  theme?: 'circular' | 'spinner' | 'bar' | 'error' | 'dots';
+  theme?: 'circular' | 'spinner' | 'dots';
 }

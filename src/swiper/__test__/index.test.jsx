@@ -80,7 +80,6 @@ describe('swiper', () => {
 
     //   // 导航器
     //   const $pagination = wrapper.find(`.${classPrefix}__pagination`);
-    //   console.log($pagination.attributes('class'));
     //   expect(
     //     $pagination
     //       .attributes('class')
