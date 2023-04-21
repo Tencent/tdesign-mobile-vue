@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <div v-for="(item, index) in variant" :key="index" class="tag-block check-tag-blcok">
+      <div v-for="(item, index) in variants" :key="index" class="tag-block check-tag-blcok">
         <div class="check-tag-blcok__title">{{ item }}</div>
         <t-check-tag :variant="item" size="large" :content="['已选中态', '未选中态']" />
         <t-check-tag :variant="item" default-checked size="large" :content="['已选中态', '未选中态']" />
@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-const variant = ['light', 'dark', 'outline', 'light-outline'];
+const variants = ['light', 'dark', 'outline', 'light-outline'];
 </script>
 
 <style lang="less">
