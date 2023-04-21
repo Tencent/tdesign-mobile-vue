@@ -3,22 +3,18 @@
  */
 
 import { mount } from '@vue/test-utils';
-import iconTextVue from '@/toast/demos/iconText.vue';
-import maskVue from '@/toast/demos/mask.vue';
+import baseVue from '@/toast/demos/base.vue';
+import closeVue from '@/toast/demos/close.vue';
+import coverVue from '@/toast/demos/cover.vue';
 import mobileVue from '@/toast/demos/mobile.vue';
-import overlayVue from '@/toast/demos/overlay.vue';
-import positionVue from '@/toast/demos/position.vue';
-import preventScrollThroughVue from '@/toast/demos/preventScrollThrough.vue';
-import textVue from '@/toast/demos/text.vue';
+import themeVue from '@/toast/demos/theme.vue';
 
 const mapper = {
-  iconTextVue,
-  maskVue,
+  baseVue,
+  closeVue,
+  coverVue,
   mobileVue,
-  overlayVue,
-  positionVue,
-  preventScrollThroughVue,
-  textVue,
+  themeVue,
 };
 
 describe('Toast', () => {
