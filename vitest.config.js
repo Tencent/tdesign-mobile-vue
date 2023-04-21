@@ -11,7 +11,7 @@ export default mergeConfig(
   defineConfig({
     test: {
       include:
-        /**A
+        /**
          * 快照涵盖 `__test__/*.test.jsx`
          * 生成demo测试文件： npm run test:demo
          * 生成快照：npm run test:snap || npm run test:snap-update
