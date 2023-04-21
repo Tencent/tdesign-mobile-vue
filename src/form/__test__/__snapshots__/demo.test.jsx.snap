@@ -1590,35 +1590,37 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
       data-v-799be585=""
       role="button"
       type="submit"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         提交
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
       data-v-799be585=""
       role="button"
       type="reset"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         重置
         
       </span>
+      <!---->
     </button>
   </div>
   
@@ -1670,33 +1672,37 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
         >
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
+            class="t-button t-button--size-medium t-button--base t-button--primary t-button--round"
             data-v-4e944783=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
                水平排布 
               
             </span>
+            <!---->
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--default t-button--shape-round"
+            class="t-button t-button--size-medium t-button--base t-button--default t-button--round"
             data-v-4e944783=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
                竖直排布 
               
             </span>
+            <!---->
           </button>
         </div>
         <div
@@ -3342,35 +3348,37 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
         >
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+            class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
             data-v-799be585=""
             role="button"
             type="submit"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               提交
               
             </span>
+            <!---->
           </button>
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
+            class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
             data-v-799be585=""
             role="button"
             type="reset"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               重置
               
             </span>
+            <!---->
           </button>
         </div>
         
@@ -4963,35 +4971,37 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
       data-v-713b33d2=""
       role="button"
       type="submit"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         提交
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
       data-v-713b33d2=""
       role="button"
       type="reset"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         重置
         
       </span>
+      <!---->
     </button>
   </div>
   

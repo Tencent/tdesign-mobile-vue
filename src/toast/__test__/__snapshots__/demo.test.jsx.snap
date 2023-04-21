@@ -6,73 +6,83 @@ exports[`Toast > Toast baseVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       纯文本
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       多行文字
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       带横向图标
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       带竖向图标
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       加载状态
       
     </span>
+    <!---->
   </button>
 </div>
 `;
@@ -83,31 +93,35 @@ exports[`Toast > Toast closeVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       显示提示
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       关闭提示
       
     </span>
+    <!---->
   </button>
 </div>
 `;
@@ -118,17 +132,19 @@ exports[`Toast > Toast coverVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       禁止滑动和点击
       
     </span>
+    <!---->
   </button>
 </div>
 `;
@@ -173,73 +189,83 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             纯文本
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             多行文字
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             带横向图标
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             带竖向图标
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             加载状态
             
           </span>
+          <!---->
         </button>
       </div>
       
@@ -271,45 +297,51 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             成功提示
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             警告提示
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             错误提示
             
           </span>
+          <!---->
         </button>
       </div>
       
@@ -341,17 +373,19 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             禁止滑动和点击
             
           </span>
+          <!---->
         </button>
       </div>
       
@@ -383,31 +417,35 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             显示提示
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             关闭提示
             
           </span>
+          <!---->
         </button>
       </div>
       
@@ -422,45 +460,51 @@ exports[`Toast > Toast themeVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       成功提示
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       警告提示
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       错误提示
       
     </span>
+    <!---->
   </button>
 </div>
 `;

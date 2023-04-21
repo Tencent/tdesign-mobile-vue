@@ -1101,17 +1101,19 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               
               <button
                 aria-disabled="false"
-                class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+                class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
                 role="button"
+                type="button"
               >
                 <!---->
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   
                    操作按钮 
                   
                 </span>
+                <!---->
               </button>
               
             </div>
@@ -2797,17 +2799,19 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+            class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
                操作按钮 
               
             </span>
+            <!---->
           </button>
           
         </div>

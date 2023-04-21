@@ -11,33 +11,37 @@ exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-924378ec=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         半圆白底
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-924378ec=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         半圆黑底
         
       </span>
+      <!---->
     </button>
   </div>
   <div
@@ -120,63 +124,71 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆角白底
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆角黑底
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆白底纯图标
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆黑底纯图标
             
           </span>
+          <!---->
         </button>
       </div>
       <div
@@ -237,33 +249,37 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-924378ec=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             半圆白底
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-924378ec=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             半圆黑底
             
           </span>
+          <!---->
         </button>
       </div>
       <div
@@ -480,63 +496,71 @@ exports[`BackTop > BackTop roundVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆角白底
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆角黑底
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆白底纯图标
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆黑底纯图标
         
       </span>
+      <!---->
     </button>
   </div>
   <div

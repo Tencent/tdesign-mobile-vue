@@ -1,5 +1,4 @@
 export { default as Button } from './button';
-export { default as ButtonGroup } from './button-group';
 export { default as Divider } from './divider';
 export { default as Calendar } from './calendar';
 export { default as Cell, CellGroup } from './cell';

@@ -8,78 +8,88 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
   
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-70969ba8=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       顶部弹出
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-70969ba8=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       左侧弹出
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-70969ba8=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       中间弹出
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-70969ba8=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       底部弹出
       
     </span>
+    <!---->
   </button>
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-70969ba8=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       右侧弹出
       
     </span>
+    <!---->
   </button>
   
   <teleport-stub
@@ -113,17 +123,19 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       居中弹出层-带自定义关闭按钮
       
     </span>
+    <!---->
   </button>
   <teleport-stub
     disabled="false"
@@ -204,78 +216,88 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-70969ba8=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             顶部弹出
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-70969ba8=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             左侧弹出
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-70969ba8=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             中间弹出
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-70969ba8=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             底部弹出
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-70969ba8=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             右侧弹出
             
           </span>
+          <!---->
         </button>
         
         <teleport-stub
@@ -333,18 +355,20 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-099d70a8=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             底部弹出层-带标题及操作
             
           </span>
+          <!---->
         </button>
         <teleport-stub
           data-v-099d70a8=""
@@ -400,17 +424,19 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             居中弹出层-带自定义关闭按钮
             
           </span>
+          <!---->
         </button>
         <teleport-stub
           disabled="false"
@@ -455,18 +481,20 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
 >
   <button
     aria-disabled="false"
-    class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-099d70a8=""
     role="button"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       底部弹出层-带标题及操作
       
     </span>
+    <!---->
   </button>
   <teleport-stub
     data-v-099d70a8=""

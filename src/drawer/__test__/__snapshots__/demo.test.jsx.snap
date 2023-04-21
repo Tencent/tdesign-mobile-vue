@@ -98,18 +98,20 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-2da634e5=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         基础抽屉
         
       </span>
+      <!---->
     </button>
   </div>
 </div>
@@ -309,18 +311,20 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-6846568d=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         带图标抽屉
         
       </span>
+      <!---->
     </button>
   </div>
 </div>
@@ -458,18 +462,20 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         >
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
             data-v-2da634e5=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               基础抽屉
               
             </span>
+            <!---->
           </button>
         </div>
       </div>
@@ -686,18 +692,20 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         >
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
             data-v-6846568d=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               带图标抽屉
               
             </span>
+            <!---->
           </button>
         </div>
       </div>
