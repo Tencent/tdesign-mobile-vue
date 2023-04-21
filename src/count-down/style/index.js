@@ -1,1 +1,1 @@
-import '../../_common/style/mobile/components/count-down/_index.less';
+import '../../_common/style/mobile/components/count-down/v2/_index.less';

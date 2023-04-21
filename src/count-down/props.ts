@@ -25,20 +25,30 @@ export default {
   },
   /** 是否开启毫秒级渲染 */
   millisecond: Boolean,
+  /** 倒计时尺寸 */
+  size: {
+    type: String as PropType<TdCountDownProps['size']>,
+    default: 'small' as TdCountDownProps['size'],
+    validator(val: TdCountDownProps['size']): boolean {
+      if (!val) return true;
+      return ['small', 'medium', 'large'].includes(val);
+    },
+  },
+  /** 使用时间单位分割 */
+  splitWithUnit: Boolean,
+  /** 倒计时风格 */
+  theme: {
+    type: String as PropType<TdCountDownProps['theme']>,
+    default: 'default' as TdCountDownProps['theme'],
+    validator(val: TdCountDownProps['theme']): boolean {
+      if (!val) return true;
+      return ['default', 'round', 'square'].includes(val);
+    },
+  },
   /** 倒计时时长，单位毫秒 */
   time: {
     type: Number,
     required: true,
-  },
-  /** 倒计时尺寸 */
-  size: {
-    type: String,
-    default: 'small',
-  },
-  /** 倒计时风格 */
-  theme: {
-    type: String,
-    default: 'default',
   },
   /** 时间变化时触发 */
   onChange: Function as PropType<TdCountDownProps['onChange']>,
