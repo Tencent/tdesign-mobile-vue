@@ -13,18 +13,20 @@ exports[`Sticky > Sticky baseVue demo works fine 1`] = `
     
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle common-button"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle common-button"
       data-v-4a742626=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         基础吸顶
         
       </span>
+      <!---->
     </button>
     
   </div>
@@ -49,18 +51,20 @@ exports[`Sticky > Sticky containerVue demo works fine 1`] = `
       
       <button
         aria-disabled="false"
-        class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle common-button green-button"
+        class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle common-button green-button"
         data-v-046295d6=""
         role="button"
+        type="button"
       >
         <!---->
         <span
-          class="t-button__text"
+          class="t-button__content"
         >
           
           指定容器
           
         </span>
+        <!---->
       </button>
       
     </div>
@@ -116,18 +120,20 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle common-button"
+            class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle common-button"
             data-v-4a742626=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               基础吸顶
               
             </span>
+            <!---->
           </button>
           
         </div>
@@ -166,18 +172,20 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle common-button"
+            class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle common-button"
             data-v-ec54aea2=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               吸顶距离
               
             </span>
+            <!---->
           </button>
           
         </div>
@@ -221,18 +229,20 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
             
             <button
               aria-disabled="false"
-              class="t-button t-size-l t-button--base t-button--default t-button--shape-rectangle common-button green-button"
+              class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle common-button green-button"
               data-v-046295d6=""
               role="button"
+              type="button"
             >
               <!---->
               <span
-                class="t-button__text"
+                class="t-button__content"
               >
                 
                 指定容器
                 
               </span>
+              <!---->
             </button>
             
           </div>
@@ -257,18 +267,20 @@ exports[`Sticky > Sticky offsetVue demo works fine 1`] = `
     
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle common-button"
+      class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle common-button"
       data-v-ec54aea2=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         吸顶距离
         
       </span>
+      <!---->
     </button>
     
   </div>

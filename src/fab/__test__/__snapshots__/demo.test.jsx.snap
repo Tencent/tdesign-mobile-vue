@@ -4,13 +4,14 @@ exports[`Fab > Fab displayVue demo works fine 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="t-button t-button--base t-button--primary t-button--shape-round t-fab t-fab--icononly"
+    class="t-button t-button--size-middle t-button--base t-button--primary t-button--round t-fab t-fab--icononly"
     role="button"
     style="right: 16px; bottom: 32px;"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       <svg
@@ -29,6 +30,7 @@ exports[`Fab > Fab displayVue demo works fine 1`] = `
       <!--v-if-->
       
     </span>
+    <!---->
   </button>
 </div>
 `;
@@ -73,31 +75,35 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             基础使用
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             进阶使用
             
           </span>
+          <!---->
         </button>
       </div>
       
@@ -106,13 +112,14 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
   <div>
     <button
       aria-disabled="false"
-      class="t-button t-button--base t-button--primary t-button--shape-round t-fab t-fab--icononly"
+      class="t-button t-button--size-middle t-button--base t-button--primary t-button--round t-fab t-fab--icononly"
       role="button"
       style="right: 16px; bottom: 32px;"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         <svg
@@ -131,6 +138,7 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
         <!--v-if-->
         
       </span>
+      <!---->
     </button>
   </div>
   <!--v-if-->
@@ -141,13 +149,14 @@ exports[`Fab > Fab textVue demo works fine 1`] = `
 <div>
   <button
     aria-disabled="false"
-    class="t-button t-button--outline t-button--primary t-button--shape-round t-fab"
+    class="t-button t-button--size-middle t-button--outline t-button--primary t-button--round t-fab"
     role="button"
     style="right: 16px; bottom: 32px;"
+    type="button"
   >
     <!---->
     <span
-      class="t-button__text"
+      class="t-button__content"
     >
       
       <svg
@@ -170,6 +179,7 @@ exports[`Fab > Fab textVue demo works fine 1`] = `
       </span>
       
     </span>
+    <!---->
   </button>
 </div>
 `;

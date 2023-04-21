@@ -5,6 +5,33 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.18.0 `2023-04-17` 
+### ❗ Breaking Changes
+- `Cascader`: 移除cancel、click-tab 事件 @anlyyao ([#533](https://github.com/Tencent/tdesign-mobile-vue/pull/533))
+- `Badge`: 调整 DOM 结构 @jarmywang ([#576](https://github.com/Tencent/tdesign-mobile-vue/pull/576))
+- `Grid`: 调整 DOM，优化视觉 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Grid`: 属性 border 移除 object 类型，改用 CSS Variables 调整边框样式 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `GridItem`: 属性 badgeProps 更名为 badge @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Upload`: 移除 deleteBtn、gridConfig 属性 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Message`: 调整滚动类型通知的动画初始值，优化动画循环方法 @yusuf-yz ([#586](https://github.com/Tencent/tdesign-mobile-vue/pull/586))
+- `Message`: 移除 change、close、closed、open、opened 事件 @yusuf-yz ([#586](https://github.com/Tencent/tdesign-mobile-vue/pull/586))
+
+### 🚀 Features
+- `Form`: 新增 Form 表单 @anlyyao ([#591](https://github.com/Tencent/tdesign-mobile-vue/pull/591))
+- `Link`: 新增 Link 组件 @brianzhang ([#589](https://github.com/Tencent/tdesign-mobile-vue/pull/589))
+- `Grid`: 属性 column 支持值为 0，则为固定宽度单元格，可以横向滚动 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Grid`: 新增 theme 属性，支持 card 风格 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `GridItem`: 属性 image 支持 object 类型，透传至 image 组件 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Upload`: 新增 formatRequest 属性、validate 事件 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Message`: 新增 close-btn-click 事件 @yusuf-yz ([#586](https://github.com/Tencent/tdesign-mobile-vue/pull/586))
+
+### 🐞 Bug Fixes
+- `Grid`: 修复调整 gutter 视觉错误的问题 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Grid`: 修复出现多行时，边框视觉错误的问题 @LeeJim ([#584](https://github.com/Tencent/tdesign-mobile-vue/pull/584))
+- `Upload`: 修复 size-limit 无法限制的问题 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Upload`: 修复超出 max 仍可以上传的问题 @LeeJim ([#587](https://github.com/Tencent/tdesign-mobile-vue/pull/587))
+- `Cell`: 修复 bordered 无效 @anlyyao ([#591](https://github.com/Tencent/tdesign-mobile-vue/pull/591))
+
 ## 🌈 0.17.0 `2023-04-07` 
 ### ❗ BREAKING CHANGES
 - `CheckBox`: 属性 align 更名为 placement @jarmywang ([#519](https://github.com/Tencent/tdesign-mobile-vue/pull/519))

@@ -667,18 +667,20 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
             >
               <button
                 aria-disabled="false"
-                class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
+                class="t-button t-button--size-small t-button--outline t-button--primary t-button--rectangle"
                 data-v-09d2fdec=""
                 role="button"
+                type="button"
               >
                 <!---->
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   
                   减少
                   
                 </span>
+                <!---->
               </button>
               <div
                 class="space"
@@ -686,18 +688,20 @@ exports[`Progress > Progress mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+                class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
                 data-v-09d2fdec=""
                 role="button"
+                type="button"
               >
                 <!---->
                 <span
-                  class="t-button__text"
+                  class="t-button__content"
                 >
                   
                   增加
                   
                 </span>
+                <!---->
               </button>
             </div>
           </div>
@@ -984,18 +988,20 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
         >
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--outline t-button--primary t-button--shape-rectangle"
+            class="t-button t-button--size-small t-button--outline t-button--primary t-button--rectangle"
             data-v-09d2fdec=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               减少
               
             </span>
+            <!---->
           </button>
           <div
             class="space"
@@ -1003,18 +1009,20 @@ exports[`Progress > Progress statusVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+            class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
             data-v-09d2fdec=""
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               增加
               
             </span>
+            <!---->
           </button>
         </div>
       </div>

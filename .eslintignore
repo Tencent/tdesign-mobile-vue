@@ -13,5 +13,6 @@ typings
 node_modules
 yarn-error.log
 vite.config.ts
+vitest.config.js
 
 test

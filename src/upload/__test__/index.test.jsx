@@ -58,7 +58,7 @@ const triggerUploadFile = (node, fileList) => {
 
 describe('Upload', () => {
   describe('props', () => {
-    it(': action', async () => {
+    it(':action', async () => {
       const onProgress = vi.fn();
 
       const wrapper = mount(Upload, {
@@ -74,7 +74,7 @@ describe('Upload', () => {
       expect(onProgress).toHaveBeenCalled();
     });
 
-    it(': allowUploadDuplicateFile', async () => {
+    it(':allowUploadDuplicateFile', async () => {
       const props = {
         autoUpload: false,
         allowUploadDuplicateFile: true,
@@ -100,7 +100,7 @@ describe('Upload', () => {
       expect(wrapper.vm.toUploadFiles.length).toBe(2);
     });
 
-    it(': disabled', async () => {
+    it(':disabled', async () => {
       const onSelectChange = vi.fn();
 
       const props = {
@@ -117,7 +117,7 @@ describe('Upload', () => {
       expect(onSelectChange).not.toHaveBeenCalled();
     });
 
-    it(': files', async () => {
+    it(':files', async () => {
       const files = ref([]);
 
       const wrapper = mount(<Upload requestMethod={requestMethod} v-model={files.value} />);
@@ -126,7 +126,7 @@ describe('Upload', () => {
       expect(files.value.length).toBe(1);
     });
 
-    it(': defaultFiles', async () => {
+    it(':defaultFiles', async () => {
       const defaultFiles = ref([]);
 
       const wrapper = mount({
@@ -139,31 +139,7 @@ describe('Upload', () => {
       expect(defaultFiles.value.length).toBe(0);
     });
 
-    it(': gridConfig', async () => {
-      const gridConfig = ref({
-        column: 2,
-      });
-
-      const props = {
-        requestMethod,
-        gridConfig: gridConfig.value,
-        multiple: true,
-        allowUploadDuplicateFile: true,
-      };
-
-      const wrapper = mount(Upload, {
-        props,
-      });
-
-      await wrapper.findComponent(Upload).setValue([mockFileFoo, mockFileBar, mockFileFoo, mockFileBar]);
-
-      expect(wrapper.vm.itemStyle).toStrictEqual({ flexBasis: `${100 / 2}%` });
-
-      gridConfig.value.column = 4;
-      expect(wrapper.vm.itemStyle).toStrictEqual({ flexBasis: `${100 / 4}%` });
-    });
-
-    it(': max', async () => {
+    it(':max', async () => {
       const props = {
         requestMethod,
         allowUploadDuplicateFile: true,
@@ -179,7 +155,7 @@ describe('Upload', () => {
       expect(wrapper.vm.toUploadFiles.length).toBe(3);
     });
 
-    it(': multiple', async () => {
+    it(':multiple', async () => {
       const props = {
         autoUpload: false,
         multiple: true,
@@ -194,7 +170,7 @@ describe('Upload', () => {
       expect(wrapper.vm.toUploadFiles.length).toBe(2);
     });
 
-    it(': requestMethod', async () => {
+    it(':requestMethod', async () => {
       const onSuccess = vi.fn();
       const onFail = vi.fn();
       const response = ref({
@@ -256,7 +232,7 @@ describe('Upload', () => {
       expect(onFail).toHaveBeenCalledTimes(2);
     });
 
-    it(': sizeLimit', () => {
+    it(':sizeLimit', () => {
       const props = {
         requestMethod,
         sizeLimit: {
@@ -289,7 +265,7 @@ describe('Upload', () => {
   });
 
   describe('slots', () => {
-    it(': deleteBtn', async () => {
+    it(':deleteBtn', async () => {
       const props = {
         requestMethod,
         deleteBtn: () => <AddIcon />,
@@ -323,7 +299,7 @@ describe('Upload', () => {
   });
 
   describe('event', () => {
-    it(': events', async () => {
+    it(':events', async () => {
       const props = {
         requestMethod,
       };
@@ -338,7 +314,7 @@ describe('Upload', () => {
       expect(wrapper.emitted()).toHaveProperty('select-change');
       expect(wrapper.emitted()).toHaveProperty('success');
 
-      await wrapper.find('.t-upload__card-image').trigger('click');
+      await wrapper.find('.t-upload__image').trigger('click');
       expect(wrapper.emitted()).toHaveProperty('preview');
 
       await wrapper.findComponent(CloseIcon).trigger('click');
@@ -347,7 +323,7 @@ describe('Upload', () => {
   });
 
   describe('function', () => {
-    it(': beforeUpload', async () => {
+    it(':beforeUpload', async () => {
       const canUpload = ref(false);
       const beforeUpload = vi.fn(() => canUpload.value);
 
@@ -371,7 +347,7 @@ describe('Upload', () => {
       expect(beforeUpload).toHaveReturnedWith(true);
     });
 
-    it(': format', async () => {
+    it(':format', async () => {
       const format = vi.fn((file) => ({ ...file, name: 'bar.png', raw: file }));
 
       const props = {
@@ -389,7 +365,7 @@ describe('Upload', () => {
       expect(wrapper.vm.toUploadFiles[0].name).toBe('bar.png');
     });
 
-    it(': onFail', async () => {
+    it(':onFail', async () => {
       const onFail = vi.fn();
 
       const props = {
@@ -411,41 +387,6 @@ describe('Upload', () => {
 
       await sleep(0);
       expect(onFail).toHaveBeenCalled();
-
-      const spy = vi.spyOn(wrapper.vm, 'handleReload');
-      await wrapper.findComponent(RefreshIcon).trigger('click');
-      expect(spy).toHaveBeenCalled();
-    });
-
-    it(': on-functions', async () => {
-      const onSelectChange = vi.fn();
-      const onSuccess = vi.fn();
-      const onPreview = vi.fn();
-      const onRemove = vi.fn();
-
-      const props = {
-        requestMethod,
-        onSelectChange,
-        onSuccess,
-        onPreview,
-        onRemove,
-      };
-
-      const wrapper = mount(Upload, {
-        props,
-      });
-
-      triggerUploadFile(wrapper, [mockFileFoo]);
-
-      await sleep(0);
-      expect(onSelectChange).toHaveBeenCalled();
-      expect(onSuccess).toHaveBeenCalled();
-
-      await wrapper.find('.t-upload__card-image').trigger('click');
-      expect(onPreview).toHaveBeenCalled();
-
-      await wrapper.findComponent(CloseIcon).trigger('click');
-      expect(onRemove).toHaveBeenCalled();
     });
   });
 });

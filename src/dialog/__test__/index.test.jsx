@@ -1,30 +1,33 @@
-import { mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { nextTick } from 'vue';
 import Dialog from '../dialog.vue';
 import Button from '../../button/button.vue';
 
+config.global.stubs = {
+  teleport: true
+}
+
 describe('dialog', () => {
   describe('props', () => {
-    it(': visible	', async () => {
-      const visible = true;
+    it(':visible	', async () => {
       const title = 'this is a title';
       const wrapper = mount(Dialog, {
         props: {
-          visible,
+          visible: false,
           title,
         },
       });
 
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(true);
-      expect(wrapper.find('.t-dialog__header').text()).toBe(title);
+      expect(wrapper.find('.t-dialog').isVisible()).toBe(false);
       await wrapper.setProps({
-        visible: false,
+        visible: true,
       });
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(false);
+      expect(wrapper.find('.t-dialog__header').text()).toBe(title);
+      expect(wrapper.find('.t-dialog').isVisible()).toBe(true);
     });
 
-    it(': title', async () => {
+    it(':title', async () => {
       const visible = true;
       const title = 'old title';
       const wrapper = mount(Dialog, {
@@ -41,7 +44,7 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog__header').text()).toBe(newTitle);
     });
 
-    it(': content', async () => {
+    it(':content', async () => {
       const visible = true;
       const title = 'this is title';
       const content = 'content is string';
@@ -62,7 +65,7 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog__body').text()).toBe(newContent);
     });
 
-    it(': buttonLayout', async () => {
+    it(':buttonLayout', async () => {
       const visible = true;
       const selector = 't-dialog__vertical-footer';
       const wrapper = mount(Dialog, {
@@ -77,7 +80,7 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeTruthy();
     });
 
-    it(': width', async () => {
+    it(':width', async () => {
       const visible = true;
       // width 为 string 类型
       const width = '80%';
@@ -96,7 +99,7 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog').attributes('style').includes(`width: ${newWidth}px`)).toBeTruthy();
     });
 
-    it(': zIndex', async () => {
+    it(':zIndex', async () => {
       const visible = true;
       const zIndex = 11500;
       const wrapper = mount(Dialog, {
@@ -114,7 +117,7 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog').attributes('style').includes(`z-index: ${newZIndex}`)).toBeTruthy();
     });
 
-    it(': closeOnOverlayClick', async () => {
+    it(':closeOnOverlayClick', async () => {
       let triggerOrigin = {};
       const onClose = vi.fn((trigger) => {
         triggerOrigin = trigger;
@@ -142,7 +145,7 @@ describe('dialog', () => {
   });
 
   describe('event', () => {
-    it(': cancel && confirm', async () => {
+    it(':cancel && confirm', async () => {
       let triggerOrigin = {};
       const visible = true;
       const cancelBtn = 'cancel';

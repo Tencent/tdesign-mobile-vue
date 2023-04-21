@@ -37,6 +37,7 @@ import rateProps from './props';
 import config from '../config';
 import { TdRateProps } from './type';
 import { useDefault } from '../shared';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-rate`;
@@ -52,6 +53,7 @@ export default defineComponent({
   props: rateProps,
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {
+    const disabled = useFormDisabled();
     const rateWrapper = ref<HTMLElement | null>(null);
     const [actualVal] = useDefault<number, TdRateProps>(props, context.emit, 'value', 'change');
     const rateText = computed(() => {
@@ -83,7 +85,7 @@ export default defineComponent({
     });
 
     function onClick(current: number) {
-      if (props.disabled) return;
+      if (disabled.value) return;
       actualVal.value = props.clearable && actualVal.value === current ? 0 : current;
     }
 
@@ -105,7 +107,7 @@ export default defineComponent({
     }
 
     function onTouchmove(e: TouchEvent) {
-      if (props.disabled) return;
+      if (disabled.value) return;
 
       const { clientX } = e.touches[0];
 

@@ -39,6 +39,7 @@ import {
   onBeforeUnmount,
   readonly,
   Fragment,
+  watch,
 } from 'vue';
 import config from '../config';
 import TabsProps from './props';
@@ -128,6 +129,12 @@ export default defineComponent({
     });
     onBeforeUnmount(() => {
       window.removeEventListener('resize', moveToActiveTab);
+    });
+
+    watch(value, () => {
+      nextTick(() => {
+        moveToActiveTab();
+      });
     });
 
     const tabClick = (event: Event, item: Record<string, unknown>) => {

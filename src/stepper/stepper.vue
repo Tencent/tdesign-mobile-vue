@@ -49,6 +49,7 @@ import config from '../config';
 import StepperProps from './props';
 import { useDefault, useEmitEvent } from '../shared';
 import { TdStepperProps } from './type';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-stepper`;
@@ -63,8 +64,8 @@ export default defineComponent({
   setup(props, context) {
     const [stepperValue] = useDefault<number, TdStepperProps>(props, context.emit, 'value', 'change');
     const emitEvent = useEmitEvent(props, context.emit);
-
-    const { min, max, step, inputWidth, disabled } = toRefs(props);
+    const disabled = useFormDisabled();
+    const { min, max, step, inputWidth } = toRefs(props);
     const inputStyle = computed(() => (inputWidth ? { width: `${inputWidth.value}px` } : ''));
 
     const isDisabled = (type: 'minus' | 'plus') => {
@@ -130,6 +131,7 @@ export default defineComponent({
       handleFocus,
       handleBlur,
       ...toRefs(props),
+      disabled,
     };
   },
 });

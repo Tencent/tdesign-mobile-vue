@@ -3,13 +3,14 @@
 exports[`fab > slots > : icon 1`] = `
 <button
   aria-disabled="false"
-  class="t-button t-button--base t-button--primary t-button--shape-round t-fab"
+  class="t-button t-button--size-middle t-button--base t-button--primary t-button--round t-fab"
   role="button"
   style="right: 16px; bottom: 32px;"
+  type="button"
 >
   <!---->
   <span
-    class="t-button__text"
+    class="t-button__content"
   >
     
     
@@ -30,5 +31,6 @@ exports[`fab > slots > : icon 1`] = `
     <!--v-if-->
     
   </span>
+  <!---->
 </button>
 `;

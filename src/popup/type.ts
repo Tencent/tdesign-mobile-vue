@@ -4,22 +4,23 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
+import { TNode, AttachNode } from '../common';
+
 export interface TdPopupProps {
+  /**
+   * 制定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body
+   * @default 'body'
+   */
+  attach?: AttachNode;
+  /**
+   * 关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮
+   */
+  closeBtn?: boolean | TNode;
   /**
    * 点击遮罩层是否关闭
    * @default true
    */
   closeOnOverlayClick?: boolean;
-  /**
-   * 弹出层的自定义样式
-   * @default ''
-   */
-  customStyle?: string;
-  /**
-   * 是否锁定内容滚动
-   * @default true
-   */
-  lockScroll?: boolean;
   /**
    * 遮罩层的属性，透传至 overlay
    * @default {}
@@ -31,15 +32,15 @@ export interface TdPopupProps {
    */
   placement?: 'top' | 'left' | 'right' | 'bottom' | 'center';
   /**
+   * 防止滚动穿透
+   * @default true
+   */
+  preventScrollThrough?: boolean;
+  /**
    * 是否显示遮罩层
    * @default true
    */
   showOverlay?: boolean;
-  /**
-   * 透传给teleport组件的to属性
-   * @default ''
-   */
-  to?: string;
   /**
    * 弹出层内容区的动画名，等价于transition组件的name属性
    * @default ''
@@ -47,17 +48,14 @@ export interface TdPopupProps {
   transitionName?: string;
   /**
    * 是否显示浮层
-   * @default false
    */
   visible?: boolean;
   /**
    * 是否显示浮层，非受控属性
-   * @default false
    */
   defaultVisible?: boolean;
   /**
    * 是否显示浮层
-   * @default false
    */
   modelValue?: boolean;
   /**

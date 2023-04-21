@@ -1,9 +1,12 @@
-import { mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import drawer from '../drawer.vue';
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import { async } from 'regenerator-runtime';
+
+config.global.stubs = {
+  teleport: true
+}
 
 describe('drawer', () => {
   // test props
@@ -11,16 +14,15 @@ describe('drawer', () => {
     it(': visible	', async () => {
       const wrapper = mount(drawer, {
         props: {
-          visible: true,
+          visible: false,
         },
       });
 
-      expect(wrapper.find('.t-overlay').classes('t-overlay--active')).toBe(true);
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(true);
+      expect(wrapper.find('.t-drawer__sidebar').isVisible()).toBe(false);
       await wrapper.setProps({
-        visible: false,
+        visible: true,
       });
-      expect(wrapper.find('.t-overlay').isVisible()).toBe(false);
+      expect(wrapper.find('.t-drawer__sidebar').isVisible()).toBe(true);
     });
 
     it(': closeOnOverlayClick', async () => {
