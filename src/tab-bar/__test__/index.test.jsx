@@ -4,12 +4,6 @@ import TabBar from '../tab-bar.vue';
 import TabBarItem from '../tab-bar-item.vue';
 import { nextTick, ref } from 'vue';
 
-const transitionStub = () => ({
-  render() {
-    return this.$options._renderChildren;
-  },
-});
-
 const list = [
   {
     name: 'label_1',
@@ -115,12 +109,6 @@ describe('TabBar', () => {
             })}
           </TabBar>
         ),
-      }, {
-        global: {
-          stubs: {
-            transition: transitionStub
-          }
-        }
       });
 
       // 从 bar1 切到 bar2
