@@ -1,15 +1,24 @@
 <template>
-  <button :class="buttonClass" :disabled="disabled" role="button" :aria-disabled="disabled" @click="onClick">
+  <button
+    :class="buttonClass"
+    :disabled="disabled"
+    :type="type"
+    role="button"
+    :aria-disabled="disabled"
+    @click="onClick"
+  >
     <t-node :content="iconContent" />
     <span :class="`${name}__content`">
-      <t-node :content="buttonContent"></t-node>
+      <t-node :content="buttonContent" />
     </span>
+    <t-node :content="suffixContent" />
   </button>
 </template>
 
 <script lang="ts">
 import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
-import { LoadingIcon } from 'tdesign-icons-vue-next';
+
+import Loading from '../loading';
 import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import ButtonProps from './props';
@@ -18,8 +27,6 @@ import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-button`;
-
-const loadingContent = h(LoadingIcon, { size: '24px' });
 
 export default defineComponent({
   name,
@@ -39,12 +46,15 @@ export default defineComponent({
         [`${name}--${props.shape}`]: props.shape,
         [`${name}--ghost`]: props.ghost,
         [`${name}--block`]: props.block,
-        [CLASSNAMES.STATUS.disabled]: disabled.value,
+        [`${name}--disabled`]: disabled.value,
         [CLASSNAMES.STATUS.loading]: props.loading,
       },
     ]);
     const buttonContent = computed(() => renderContent(internalInstance, 'default', 'content'));
-    const iconContent = computed(() => (props.loading ? loadingContent : renderTNode(internalInstance, 'icon')));
+    const loadingContent = computed(() => h(Loading, { inheritColor: true, ...props.loadingProps }));
+    const iconContent = computed(() => (props.loading ? loadingContent.value : renderTNode(internalInstance, 'icon')));
+    const suffixContent = computed(() => renderTNode(internalInstance, 'suffix'));
+
     const onClick = (e: Event) => {
       if (!props.loading && !disabled.value) {
         emitEvent('click', e);
@@ -58,6 +68,7 @@ export default defineComponent({
       disabled,
       buttonContent,
       iconContent,
+      suffixContent,
       buttonClass,
       onClick,
     };
