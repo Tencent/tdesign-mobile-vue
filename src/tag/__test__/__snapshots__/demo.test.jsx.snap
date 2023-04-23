@@ -7,7 +7,7 @@ exports[`Tag > Tag baseVue demo works fine 1`] = `
   
   <span
     aria-disabled="false"
-    class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium margin-16"
+    class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
     role="button"
   >
     <span
@@ -26,7 +26,7 @@ exports[`Tag > Tag baseVue demo works fine 1`] = `
   </span>
   <span
     aria-disabled="false"
-    class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium margin-16"
+    class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
     role="button"
   >
     <span
@@ -454,7 +454,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
         
         <span
           aria-disabled="false"
-          class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium margin-16"
+          class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
           role="button"
         >
           <span
@@ -473,7 +473,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
         </span>
         <span
           aria-disabled="false"
-          class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium margin-16"
+          class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
           role="button"
         >
           <span
@@ -1472,7 +1472,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           >
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large margin-16"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large"
               role="button"
             >
               <span
@@ -1491,7 +1491,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large margin-16"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large"
               role="button"
             >
               <span
@@ -1510,7 +1510,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium margin-16"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
               role="button"
             >
               <span
@@ -1529,7 +1529,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small margin-16"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small"
               role="button"
             >
               <span
@@ -1552,7 +1552,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           >
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable margin-8"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
               role="button"
             >
               <span
@@ -1587,7 +1587,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable margin-8"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
               role="button"
             >
               <span
@@ -1622,7 +1622,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable margin-8"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
               role="button"
             >
               <span
@@ -1657,7 +1657,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             </span>
             <span
               aria-disabled="false"
-              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable margin-8"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
               role="button"
             >
               <span
@@ -1772,7 +1772,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
   >
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large margin-16"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large"
       role="button"
     >
       <span
@@ -1791,7 +1791,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large margin-16"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large"
       role="button"
     >
       <span
@@ -1810,7 +1810,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium margin-16"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
       role="button"
     >
       <span
@@ -1829,7 +1829,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small margin-16"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small"
       role="button"
     >
       <span
@@ -1852,7 +1852,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
   >
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable margin-8"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
       role="button"
     >
       <span
@@ -1887,7 +1887,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable margin-8"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
       role="button"
     >
       <span
@@ -1922,7 +1922,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable margin-8"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
       role="button"
     >
       <span
@@ -1957,7 +1957,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     </span>
     <span
       aria-disabled="false"
-      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable margin-8"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
       role="button"
     >
       <span
