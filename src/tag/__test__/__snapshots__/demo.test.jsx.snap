@@ -1,61 +1,14 @@
 // Vitest Snapshot v1
 
-exports[`Tag > Tag baseVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签文字 
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签文字
-      
-    </span>
-    <!--v-if-->
-  </span>
-  
-</div>
-`;
-
 exports[`Tag > Tag checkableVue demo works fine 1`] = `
 <div>
   <div>
     
     <div
-      class="tag-block check-tag-blcok"
+      class="tag-block check-tag-block"
     >
       <div
-        class="check-tag-blcok__title"
+        class="check-tag-block__title"
       >
         light
       </div>
@@ -101,10 +54,10 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
       </span>
     </div>
     <div
-      class="tag-block check-tag-blcok"
+      class="tag-block check-tag-block"
     >
       <div
-        class="check-tag-blcok__title"
+        class="check-tag-block__title"
       >
         dark
       </div>
@@ -150,10 +103,10 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
       </span>
     </div>
     <div
-      class="tag-block check-tag-blcok"
+      class="tag-block check-tag-block"
     >
       <div
-        class="check-tag-blcok__title"
+        class="check-tag-block__title"
       >
         outline
       </div>
@@ -199,10 +152,10 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
       </span>
     </div>
     <div
-      class="tag-block check-tag-blcok"
+      class="tag-block check-tag-block"
     >
       <div
-        class="check-tag-blcok__title"
+        class="check-tag-block__title"
       >
         light-outline
       </div>
@@ -331,88 +284,6 @@ exports[`Tag > Tag closableVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Tag > Tag ellipsisVue demo works fine 1`] = `
-<span
-  aria-disabled="false"
-  class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
-  role="button"
-  style="max-width: 130px;"
->
-  <span
-    class="t-tag__icon"
-  >
-    <!---->
-  </span>
-  <span
-    class="t-tag__text"
-  >
-    
-    听说超长可以省略听说超长
-    
-  </span>
-  <!--v-if-->
-</span>
-`;
-
-exports[`Tag > Tag iconVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <svg
-        class="t-icon t-icon-discount"
-      >
-        <use
-          href="#t-icon-discount"
-        />
-      </svg>
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-       标签文字 
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <svg
-        class="t-icon t-icon-discount"
-      >
-        <use
-          href="#t-icon-discount"
-        />
-      </svg>
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-       标签文字 
-      
-    </span>
-    <!--v-if-->
-  </span>
-  
-</div>
-`;
-
 exports[`Tag > Tag mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
@@ -427,6 +298,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
   >
     用于表明主体的类目，属性或状态。
   </p>
+  
   <div
     class="tdesign-mobile-demo-block"
   >
@@ -451,7 +323,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
       <div
         class="tag-demo"
       >
-        
         <span
           aria-disabled="false"
           class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
@@ -490,7 +361,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           </span>
           <!--v-if-->
         </span>
-        
       </div>
       
     </div>
@@ -515,7 +385,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
       <div
         class="tag-demo"
       >
-        
         <span
           aria-disabled="false"
           class="t-tag t-tag--default t-tag--round t-tag--light t-tag--medium"
@@ -573,7 +442,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           </span>
           <!--v-if-->
         </span>
-        
       </div>
       
     </div>
@@ -598,7 +466,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
       <div
         class="tag-demo"
       >
-        
         <span
           aria-disabled="false"
           class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
@@ -649,7 +516,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           </span>
           <!--v-if-->
         </span>
-        
       </div>
       
     </div>
@@ -698,6 +564,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
@@ -818,10 +685,10 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           <div>
             
             <div
-              class="tag-block check-tag-blcok"
+              class="tag-block check-tag-block"
             >
               <div
-                class="check-tag-blcok__title"
+                class="check-tag-block__title"
               >
                 light
               </div>
@@ -867,10 +734,10 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               </span>
             </div>
             <div
-              class="tag-block check-tag-blcok"
+              class="tag-block check-tag-block"
             >
               <div
-                class="check-tag-blcok__title"
+                class="check-tag-block__title"
               >
                 dark
               </div>
@@ -916,10 +783,10 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               </span>
             </div>
             <div
-              class="tag-block check-tag-blcok"
+              class="tag-block check-tag-block"
             >
               <div
-                class="check-tag-blcok__title"
+                class="check-tag-block__title"
               >
                 outline
               </div>
@@ -965,10 +832,10 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
               </span>
             </div>
             <div
-              class="tag-block check-tag-blcok"
+              class="tag-block check-tag-block"
             >
               <div
-                class="check-tag-blcok__title"
+                class="check-tag-block__title"
               >
                 light-outline
               </div>
@@ -1466,13 +1333,18 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
       <div
         class="group padding-bottom d-flex"
       >
-        <div>
+        <div
+          class="tag-container"
+          data-v-aac3f224=""
+        >
           <div
             class="tag-block"
+            data-v-aac3f224=""
           >
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1492,6 +1364,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1511,6 +1384,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1530,6 +1404,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1549,10 +1424,12 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           </div>
           <div
             class="tag-block"
+            data-v-aac3f224=""
           >
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1588,6 +1465,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1623,6 +1501,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1658,6 +1537,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             <span
               aria-disabled="false"
               class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
+              data-v-aac3f224=""
               role="button"
             >
               <span
@@ -1699,80 +1579,19 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
 </div>
 `;
 
-exports[`Tag > Tag shapeVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--round t-tag--light t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签文字
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--round t-tag--outline t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签文字
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--mark t-tag--outline t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签文字
-      
-    </span>
-    <!--v-if-->
-  </span>
-  
-</div>
-`;
-
 exports[`Tag > Tag sizeVue demo works fine 1`] = `
-<div>
+<div
+  class="tag-container"
+  data-v-aac3f224=""
+>
   <div
     class="tag-block"
+    data-v-aac3f224=""
   >
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -1792,6 +1611,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -1811,6 +1631,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -1830,6 +1651,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -1849,10 +1671,12 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
   </div>
   <div
     class="tag-block"
+    data-v-aac3f224=""
   >
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -1888,6 +1712,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -1923,6 +1748,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -1958,6 +1784,7 @@ exports[`Tag > Tag sizeVue demo works fine 1`] = `
     <span
       aria-disabled="false"
       class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
+      data-v-aac3f224=""
       role="button"
     >
       <span
@@ -2392,5 +2219,279 @@ exports[`Tag > Tag themeVue demo works fine 1`] = `
       <!--v-if-->
     </span>
   </div>
+</div>
+`;
+
+exports[`Tag > Tag typeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础标签
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tag-demo"
+      >
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            标签文字 
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            标签文字
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        圆弧标签
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tag-demo"
+      >
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--round t-tag--light t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            标签文字
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--round t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            标签文字
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--mark t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            标签文字
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带图标的标签
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tag-demo"
+      >
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <svg
+              class="t-icon t-icon-discount"
+            >
+              <use
+                href="#t-icon-discount"
+              />
+            </svg>
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+             标签文字 
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <svg
+              class="t-icon t-icon-discount"
+            >
+              <use
+                href="#t-icon-discount"
+              />
+            </svg>
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+             标签文字 
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        超长文本省略标签
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="tag-demo"
+      >
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+          role="button"
+          style="max-width: 130px;"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            听说超长可以省略听说超长
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>
 `;
