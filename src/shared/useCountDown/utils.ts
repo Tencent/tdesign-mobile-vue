@@ -1,5 +1,13 @@
 import { TimeData, TdUseCountDownShowTimes } from './type';
 
+export const TimeDataUnit = {
+  DD: '天',
+  HH: '时',
+  mm: '分',
+  ss: '秒',
+  SSS: '毫秒',
+};
+
 /**
  * getRemainTimes
  * @param time
@@ -55,9 +63,14 @@ export const getMark = (format: string, type: string): string => format?.split?.
  * @param time
  * @returns
  */
-export const getShowTimes = (times: TimeData, format: string, milliseconds = false): TdUseCountDownShowTimes => {
+export const getShowTimes = (
+  times: TimeData,
+  format: string,
+  millisecond = false,
+  splitWithUnit = false,
+): TdUseCountDownShowTimes => {
   format = (format || 'DD:HH:mm:ss')?.toUpperCase?.();
-  milliseconds && !format.includes(':SSS') && (format = format.concat(':SSS'));
+  millisecond && !format.includes(':SSS') && (format = format.concat(':SSS'));
   const showTimes: TdUseCountDownShowTimes = [];
   if (format?.indexOf('DD') > -1) {
     showTimes?.push({
@@ -67,25 +80,25 @@ export const getShowTimes = (times: TimeData, format: string, milliseconds = fal
   }
   if (format?.indexOf('HH') > -1) {
     showTimes?.push({
-      mark: getMark(format, 'HH'),
+      mark: splitWithUnit ? TimeDataUnit.HH : getMark(format, 'HH'),
       value: fillZero(times?.hours),
     });
   }
   if (format?.indexOf('MM') > -1) {
     showTimes?.push({
-      mark: getMark(format, 'MM'),
+      mark: splitWithUnit ? TimeDataUnit.mm : getMark(format, 'MM'),
       value: fillZero(times?.minutes),
     });
   }
   if (format?.indexOf('SS') > -1) {
     showTimes?.push({
-      mark: getMark(format, 'SS'),
+      mark: splitWithUnit ? TimeDataUnit.ss : getMark(format, 'SS'),
       value: fillZero(times?.seconds),
     });
   }
-  if (format?.indexOf('SSS') > -1) {
+  if (format?.indexOf('SSS') > -1 || millisecond) {
     showTimes?.push({
-      mark: getMark(format, 'SSS'),
+      mark: splitWithUnit ? TimeDataUnit.SSS : getMark(format, 'SSS'),
       value: fillZero(times?.milliseconds, true),
     });
   }

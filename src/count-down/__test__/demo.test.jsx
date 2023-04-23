@@ -5,12 +5,12 @@
 import { mount } from '@vue/test-utils';
 import baseVue from '@/count-down/demos/base.vue';
 import mobileVue from '@/count-down/demos/mobile.vue';
-import specsVue from '@/count-down/demos/specs.vue';
+import sizeVue from '@/count-down/demos/size.vue';
 
 const mapper = {
   baseVue,
   mobileVue,
-  specsVue,
+  sizeVue,
 };
 
 describe('CountDown', () => {

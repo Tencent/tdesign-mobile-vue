@@ -24,6 +24,21 @@ export interface TdUseCountDownProps {
    */
   millisecond?: boolean;
   /**
+   * 倒计时尺寸
+   * @default 'small'
+   */
+  size?: 'small' | 'medium' | 'large';
+  /**
+   * 使用时间单位分割
+   * @default false
+   */
+  splitWithUnit?: boolean;
+  /**
+   * 倒计时风格
+   * @default 'default'
+   */
+  theme?: 'default' | 'round' | 'square';
+  /**
    * 倒计时时长，单位毫秒
    */
   time?: number;

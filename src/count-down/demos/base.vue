@@ -1,72 +1,43 @@
 <template>
-  <div>
-    <!-- 时分秒 -->
-    <div class="demo__box">
-      <t-countdown
-        content="ok"
-        :time="900000"
-        :auto-start="true"
-        :millisecond="false"
-        format="HH:mm:ss"
-        @change="onChange"
-        @finish="onFinish"
-      />
-      <p class="format">时分秒</p>
+  <div class="demo-count-down">
+    <text class="demo-count-down-desc"> 时分秒 </text>
+    <div class="demo-count-down-content">
+      <t-count-down :time="time" />
     </div>
-    <!-- 带毫秒 -->
-    <div class="demo__box">
-      <t-countdown
-        content="ok"
-        :time="900123"
-        :auto-start="true"
-        :millisecond="true"
-        format="HH:mm:ss:sss"
-        @change="onChange"
-        @finish="onFinish"
-      />
-      <p class="format">带毫秒</p>
+  </div>
+
+  <div class="demo-count-down">
+    <text class="demo-count-down-desc"> 带毫秒 </text>
+    <div class="demo-count-down-content">
+      <t-count-down :time="time" millisecond />
     </div>
-    <!-- 带圆底 -->
-    <div class="demo__box t-countdown__circular-bottom">
-      <t-countdown
-        content="ok"
-        :time="1211211120000"
-        :auto-start="true"
-        :millisecond="false"
-        format="HH:mm:ss"
-        theme="round"
-        @change="onChange"
-        @finish="onFinish"
-      />
-      <p class="format">带圆底</p>
+  </div>
+
+  <div class="demo-count-down">
+    <text class="demo-count-down-desc"> 带方形底 </text>
+    <div class="demo-count-down-content">
+      <t-count-down content="default" :time="time" theme="square"> </t-count-down>
     </div>
-    <!-- 带方形底 -->
-    <div class="demo__box t-countdown__square-bottom">
-      <t-countdown
-        content="ok"
-        :time="900000"
-        :auto-start="true"
-        :millisecond="false"
-        format="HH:mm:ss"
-        theme="square"
-        @change="onChange"
-        @finish="onFinish"
-      />
-      <p class="format">带方形底</p>
+  </div>
+
+  <div class="demo-count-down">
+    <text class="demo-count-down-desc"> 带圆形底 </text>
+    <div class="demo-count-down-content">
+      <t-count-down :time="time" theme="round"> </t-count-down>
     </div>
-    <!-- 带单位 -->
-    <div class="demo__box t-countdown__has-unit">
-      <t-countdown
-        content="ok"
-        :time="111120000"
-        :auto-start="true"
-        :millisecond="false"
-        format="DD天HH时mm分ss秒"
-        theme="square"
-        @change="onChange"
-        @finish="onFinish"
-      />
-      <p class="format">带单位</p>
+  </div>
+
+  <div class="demo-count-down">
+    <text class="demo-count-down-desc"> 带单位 </text>
+    <div class="demo-count-down-content">
+      <t-count-down :time="time" split-with-unit theme="round" />
+    </div>
+  </div>
+
+  <div class="demo-count-down">
+    <text class="demo-count-down-desc"> 无底色带单位 </text>
+    <div class="demo-count-down-content">
+      <t-count-down class="custom" :time="time" split-with-unit />
     </div>
   </div>
 </template>
@@ -80,27 +51,29 @@ interface TimeData {
   milliseconds: number;
 }
 
-const onChange = (val: TimeData) => {
-  console.log('onChange', val);
-};
-const onFinish = () => {
-  console.log('onFinish');
-};
+const time = 96 * 60 * 1000;
 </script>
 
 <style lang="less">
-.demo__box {
-  display: flex;
+.demo-count-down-desc {
+  color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
-  align-items: center;
-  margin: 0 0 8px 16px;
-  justify-content: space-between;
-  font-family: PingFang SC, Microsoft YaHei, Arial Regular;
-  .format {
-    opacity: 1;
-    font-size: 12px;
-    margin-right: 30%;
-    color: rgba(0, 0, 0, 0.4);
-  }
+}
+
+.demo-count-down-content {
+  margin: 16px 0 24px;
+}
+
+// 覆盖组件内部样式
+.custom .t-count-down__item {
+  color: #e34d59;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: middle;
+}
+
+.custom .t-count-down__split {
+  font-size: 10px;
+  margin: 0 5px;
 }
 </style>
