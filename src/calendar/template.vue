@@ -84,7 +84,7 @@ const title = ref(props.title);
 const usePopup = ref(props.usePopup);
 const valueRef = ref(props.value);
 const selectedDate = ref();
-const firstDayOfWeek = computed(() => props.firstDayOfWeek);
+const firstDayOfWeek = computed(() => props.firstDayOfWeek || 0);
 const type = ref(props.type);
 const days = computed(() => {
   const raw = '日一二三四五六';
