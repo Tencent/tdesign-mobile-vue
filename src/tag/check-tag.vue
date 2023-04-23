@@ -1,7 +1,6 @@
 <template>
   <span :class="classes" :aria-disabled="disabled" role="button" @click="handleClick">
     <span :class="`${baseClass}__icon`">
-      <icon v-if="iconIsString" :name="icon" />
       <t-node :content="iconContent"></t-node>
     </span>
     <span :class="`${baseClass}__text`">
@@ -17,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { CloseIcon, Icon } from 'tdesign-icons-vue-next';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 import { defineComponent, computed, toRefs, getCurrentInstance } from 'vue';
 import config from '../config';
 import CheckTagProps from './check-tag-props';
@@ -31,7 +30,6 @@ const CheckTag = defineComponent({
   components: {
     CloseIcon,
     TNode,
-    Icon,
   },
   props: CheckTagProps,
   emits: ['change', 'click', 'update:checked', 'update:modelValue'],
@@ -50,10 +48,6 @@ const CheckTag = defineComponent({
       props.onChange,
       'checked',
     );
-
-    const iconIsString = computed(() => {
-      return typeof props.icon === 'string';
-    });
 
     const contentIsArray = computed(() => {
       if (Array.isArray(props.content) && props.content.length === 2) {
@@ -90,7 +84,6 @@ const CheckTag = defineComponent({
     };
 
     return {
-      iconIsString,
       contentIsArray,
       baseClass,
       classes,

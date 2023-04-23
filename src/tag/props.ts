@@ -22,7 +22,7 @@ export default {
   disabled: Boolean,
   /** 标签中的图标，可自定义图标呈现 */
   icon: {
-    type: [String, Function] as PropType<TdTagProps['icon']>,
+    type: [Function] as PropType<TdTagProps['icon']>,
     default: undefined,
   },
   /** 标签最大宽度，宽度超出后会出现省略号。示例：'50px' / 80 */

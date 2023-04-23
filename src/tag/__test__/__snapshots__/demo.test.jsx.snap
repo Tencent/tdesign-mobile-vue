@@ -20,7 +20,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -40,7 +39,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -69,7 +67,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -89,7 +86,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -118,7 +114,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -138,7 +133,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -167,7 +161,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -187,7 +180,6 @@ exports[`Tag > Tag checkableVue demo works fine 1`] = `
         <span
           class="t-tag__icon"
         >
-          <!--v-if-->
           <!---->
         </span>
         <span
@@ -474,6 +466,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
+            
             <svg
               class="t-icon t-icon-discount"
             >
@@ -481,6 +474,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 href="#t-icon-discount"
               />
             </svg>
+            
           </span>
           <span
             class="t-tag__text"
@@ -499,6 +493,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
+            
             <svg
               class="t-icon t-icon-discount"
             >
@@ -506,6 +501,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 href="#t-icon-discount"
               />
             </svg>
+            
           </span>
           <span
             class="t-tag__text"
@@ -700,7 +696,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -720,7 +715,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -749,7 +743,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -769,7 +762,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -798,7 +790,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -818,7 +809,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -847,7 +837,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -867,7 +856,6 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
                 <span
                   class="t-tag__icon"
                 >
-                  <!--v-if-->
                   <!---->
                 </span>
                 <span
@@ -2402,6 +2390,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
+            
             <svg
               class="t-icon t-icon-discount"
             >
@@ -2409,6 +2398,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
                 href="#t-icon-discount"
               />
             </svg>
+            
           </span>
           <span
             class="t-tag__text"
@@ -2427,6 +2417,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
           <span
             class="t-tag__icon"
           >
+            
             <svg
               class="t-icon t-icon-discount"
             >
@@ -2434,6 +2425,7 @@ exports[`Tag > Tag typeVue demo works fine 1`] = `
                 href="#t-icon-discount"
               />
             </svg>
+            
           </span>
           <span
             class="t-tag__text"

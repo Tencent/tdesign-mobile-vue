@@ -33,7 +33,7 @@ export default {
   disabled: Boolean,
   /** 标签中的图标，可自定义图标呈现 */
   icon: {
-    type: [String, Function] as PropType<TdCheckTagProps['icon']>,
+    type: [Function] as PropType<TdCheckTagProps['icon']>,
   },
   /** 已废弃。标签类型，有三种：方形、圆角方形、标记型 */
   shape: {

@@ -14,8 +14,18 @@
   </tdesign-demo-block>
   <tdesign-demo-block summary="带图标的标签">
     <div class="tag-demo">
-      <t-tag variant="light" icon="discount"> 标签文字 </t-tag>
-      <t-tag variant="outline" icon="discount"> 标签文字 </t-tag>
+      <t-tag variant="light">
+        <template #icon>
+          <Icon name="discount" />
+        </template>
+        标签文字
+      </t-tag>
+      <t-tag variant="outline">
+        <template #icon>
+          <Icon name="discount" />
+        </template>
+        标签文字
+      </t-tag>
     </div>
   </tdesign-demo-block>
   <tdesign-demo-block summary="超长文本省略标签">
@@ -24,3 +34,7 @@
     </div>
   </tdesign-demo-block>
 </template>
+
+<script lang="ts" setup>
+import { Icon } from 'tdesign-icons-vue-next';
+</script>
