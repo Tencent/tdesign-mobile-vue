@@ -60,7 +60,7 @@ describe('countdown.vue', async () => {
 
     it('size', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
-      expect(wrapper.find('.t-count-down--small').exists()).toBe(true);
+      expect(wrapper.find('.t-count-down--medium').exists()).toBe(true);
     });
 
     it('theme', async () => {

@@ -28,7 +28,7 @@ export default {
   /** 倒计时尺寸 */
   size: {
     type: String as PropType<TdCountDownProps['size']>,
-    default: 'small' as TdCountDownProps['size'],
+    default: 'medium' as TdCountDownProps['size'],
     validator(val: TdCountDownProps['size']): boolean {
       if (!val) return true;
       return ['small', 'medium', 'large'].includes(val);

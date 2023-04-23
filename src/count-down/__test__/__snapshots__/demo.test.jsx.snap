@@ -17,7 +17,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--default t-count-down--small"
+        class="t-count-down t-count-down--default t-count-down--medium"
       >
         
         
@@ -68,7 +68,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--default t-count-down--small"
+        class="t-count-down t-count-down--default t-count-down--medium"
       >
         
         
@@ -131,7 +131,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--square t-count-down--small"
+        class="t-count-down t-count-down--square t-count-down--medium"
       >
         
         
@@ -182,7 +182,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--round t-count-down--small"
+        class="t-count-down t-count-down--round t-count-down--medium"
       >
         
         
@@ -233,7 +233,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--round t-count-down--small"
+        class="t-count-down t-count-down--round t-count-down--medium"
       >
         
         
@@ -288,7 +288,7 @@ exports[`CountDown > CountDown baseVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--default t-count-down--small custom"
+        class="t-count-down t-count-down--default t-count-down--medium custom"
       >
         
         
@@ -383,7 +383,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--default t-count-down--small"
+            class="t-count-down t-count-down--default t-count-down--medium"
           >
             
             
@@ -434,7 +434,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--default t-count-down--small"
+            class="t-count-down t-count-down--default t-count-down--medium"
           >
             
             
@@ -497,7 +497,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--square t-count-down--small"
+            class="t-count-down t-count-down--square t-count-down--medium"
           >
             
             
@@ -548,7 +548,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--round t-count-down--small"
+            class="t-count-down t-count-down--round t-count-down--medium"
           >
             
             
@@ -599,7 +599,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--round t-count-down--small"
+            class="t-count-down t-count-down--round t-count-down--medium"
           >
             
             
@@ -654,7 +654,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--default t-count-down--small custom"
+            class="t-count-down t-count-down--default t-count-down--medium custom"
           >
             
             
@@ -778,7 +778,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--default t-count-down--small"
+            class="t-count-down t-count-down--default t-count-down--medium"
           >
             
             
@@ -925,7 +925,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--default t-count-down--small"
+            class="t-count-down t-count-down--default t-count-down--medium"
           >
             
             
@@ -1084,7 +1084,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--square t-count-down--small"
+            class="t-count-down t-count-down--square t-count-down--medium"
           >
             
             
@@ -1219,7 +1219,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--round t-count-down--small"
+            class="t-count-down t-count-down--round t-count-down--medium"
           >
             
             
@@ -1358,7 +1358,7 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
           class="demo-count-down-content"
         >
           <div
-            class="t-count-down t-count-down--round t-count-down--small"
+            class="t-count-down t-count-down--round t-count-down--medium"
           >
             
             
@@ -1513,7 +1513,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--default t-count-down--small"
+        class="t-count-down t-count-down--default t-count-down--medium"
       >
         
         
@@ -1660,7 +1660,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--default t-count-down--small"
+        class="t-count-down t-count-down--default t-count-down--medium"
       >
         
         
@@ -1819,7 +1819,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--square t-count-down--small"
+        class="t-count-down t-count-down--square t-count-down--medium"
       >
         
         
@@ -1954,7 +1954,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--round t-count-down--small"
+        class="t-count-down t-count-down--round t-count-down--medium"
       >
         
         
@@ -2093,7 +2093,7 @@ exports[`CountDown > CountDown sizeVue demo works fine 1`] = `
       class="demo-count-down-content"
     >
       <div
-        class="t-count-down t-count-down--round t-count-down--small"
+        class="t-count-down t-count-down--round t-count-down--medium"
       >
         
         
