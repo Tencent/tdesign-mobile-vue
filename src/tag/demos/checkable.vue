@@ -1,10 +1,13 @@
 <template>
   <div>
-    <div>
-      <div v-for="(item, index) in variants" :key="index" class="tag-block check-tag-block">
-        <div class="check-tag-block__title">{{ item }}</div>
-        <t-check-tag :variant="item" size="large" :content="['已选中态', '未选中态']" />
-        <t-check-tag :variant="item" default-checked size="large" :content="['已选中态', '未选中态']" />
+    <div class="summary">可选中的标签</div>
+    <div class="tag-demo">
+      <div>
+        <div v-for="(item, index) in variants" :key="index" class="tag-block check-tag-block">
+          <div class="check-tag-block__title">{{ item }}</div>
+          <t-check-tag :variant="item" size="large" :content="['已选中态', '未选中态']" />
+          <t-check-tag :variant="item" default-checked size="large" :content="['已选中态', '未选中态']" />
+        </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,11 @@
 <template>
-  <t-tag v-if="show1" closable variant="light" @click="onClickClose(1)">文字标签</t-tag>
-  <t-tag v-if="show2" closable variant="outline" @click="onClickClose(2)">文字标签</t-tag>
+  <div>
+    <div class="summary">可关闭标签</div>
+    <div class="tag-demo">
+      <t-tag v-if="show1" closable variant="light" @close="onClickClose(1)">文字标签</t-tag>
+      <t-tag v-if="show2" closable variant="outline" @close="onClickClose(2)">文字标签</t-tag>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
