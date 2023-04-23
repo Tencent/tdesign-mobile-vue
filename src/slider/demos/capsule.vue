@@ -1,13 +1,23 @@
 <template>
-  <t-slider :default-value="30" theme="capsule" />
+  <div class="wrapper">
+    <t-slider :default-value="30" theme="capsule" />
+  </div>
 
-  <t-slider :default-value="[40, 60]" range theme="capsule" />
+  <div class="wrapper">
+    <t-slider :default-value="[40, 60]" range theme="capsule" />
+  </div>
 
-  <t-slider :default-value="[40, 60]" range label="${value}" theme="capsule" />
+  <div class="wrapper">
+    <t-slider :default-value="[40, 60]" range label="${value}" theme="capsule" />
+  </div>
 
-  <t-slider :default-value="60" :marks="marks" :step="20" theme="capsule" />
+  <div class="wrapper">
+    <t-slider :default-value="60" :marks="marks" :step="20" theme="capsule" />
+  </div>
 
-  <t-slider :default-value="[20, 80]" range :marks="marks" :step="20" theme="capsule" />
+  <div class="wrapper">
+    <t-slider :default-value="[20, 80]" range :marks="marks" :step="20" theme="capsule" />
+  </div>
 </template>
 <script lang="ts" setup>
 const marks = {
@@ -19,3 +29,11 @@ const marks = {
   100: '100',
 };
 </script>
+
+<style lang="less" scoped>
+.wrapper {
+  background: #fff;
+  margin-top: 16px;
+  padding: 16px 0;
+}
+</style>

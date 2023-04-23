@@ -4,7 +4,7 @@
       <text v-if="showExtremeValue" :class="[`${name}__value`, `${name}__value--min`]">{{
         label ? getValue(label, min) : min
       }}</text>
-      <div ref="sliderLine" :class="sliderLineClasses">
+      <div ref="sliderLine" :class="sliderLineClasses" @click="onClick">
         <template v-if="state.isScale">
           <div
             v-for="(item, index) in state.scaleArray"
@@ -55,7 +55,7 @@
     </template>
     <template v-if="range">
       <text v-if="showExtremeValue" :class="[`${name}__range-extreme`, `${name}__range-extreme--min`]">{{ min }}</text>
-      <div ref="sliderLine" :class="sliderLineClasses">
+      <div ref="sliderLine" :class="sliderLineClasses" @click="onLineClick">
         <template v-if="state.isScale">
           <div
             v-for="(item, index) in state.scaleArray"
@@ -113,11 +113,11 @@
 </template>
 
 <script lang="ts">
-import { ref, toRefs, computed, reactive, defineComponent, getCurrentInstance, provide, watch, onMounted } from 'vue';
+import { ref, toRefs, computed, reactive, defineComponent, getCurrentInstance, watch, onMounted } from 'vue';
 import config from '../config';
 import props from './props';
 import { useVModel } from '../shared/useVModel';
-import { renderTNode, TNode, useEmitEvent } from '../shared';
+import { renderTNode, useEmitEvent } from '../shared';
 import { trimSingleValue, trimValue } from './tool';
 import type { SliderValue } from './type';
 import { useFormDisabled } from '../form/hooks';
@@ -126,12 +126,8 @@ const { prefix } = config;
 const name = `${prefix}-slider`;
 
 type dataType = {
-  sliderStyles: string;
-  classPrefix: string;
   initialLeft: number;
   initialRight: number;
-  activeLeft: number;
-  activeRight: number;
   maxRange: number;
   lineLeft: number;
   lineRight: number;
@@ -140,9 +136,6 @@ type dataType = {
   isScale: boolean;
   scaleArray: any[];
   scaleTextArray: any[];
-  _value: SliderValue;
-  prefix: string;
-  isVisibleToScreenReader: boolean;
 };
 
 export interface TouchData {
@@ -156,30 +149,23 @@ export interface TouchData {
 export default defineComponent({
   name,
   props,
-  emits: ['change'],
+  emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {
     const disabled = useFormDisabled();
     const sliderLine = ref<HTMLElement>();
-    const rootRef = ref<HTMLElement>();
+    const leftDot = ref<HTMLElement>();
+    const rightDot = ref<HTMLElement>();
     const state: dataType = reactive({
-      // 按钮样式列表
-      sliderStyles: '',
-      classPrefix: name,
       initialLeft: 0,
       initialRight: 0,
-      activeLeft: 0,
-      activeRight: 0,
       maxRange: 0,
       lineLeft: 0,
       lineRight: 0,
       dotTopValue: [0, 0],
-      _value: 0,
       blockSize: 20,
       isScale: false,
       scaleArray: [],
       scaleTextArray: [],
-      prefix,
-      isVisibleToScreenReader: false,
     });
     const emitEvent = useEmitEvent(props, context.emit);
 
@@ -297,6 +283,10 @@ export default defineComponent({
       const [touch] = e.changedTouches;
       const { pageX } = touch;
       const currentLeft = pageX - state.initialLeft;
+      return getChangeValue(currentLeft);
+    };
+
+    const getChangeValue = (currentLeft: number) => {
       let value = 0;
       if (currentLeft <= 0) {
         value = Number(min.value);
@@ -392,11 +382,51 @@ export default defineComponent({
       triggerValue(newData);
     };
 
+    const onClick = (e: MouseEvent) => {
+      e.stopPropagation();
+      if (disabled.value) return;
+      if (!sliderLine.value) return;
+      const currentLeft = e.clientX - state.initialLeft;
+      const value = getChangeValue(currentLeft);
+      setInnerValue(value);
+      triggerValue(value);
+    };
+
+    const onLineClick = (e: MouseEvent) => {
+      e.stopPropagation();
+      if (disabled.value) return;
+      const halfBlock = theme.value === 'capsule' ? Number(state.blockSize) / 2 : 0;
+      const currentLeft = e.clientX - state.initialLeft;
+      if (currentLeft < 0 || currentLeft > state.maxRange + Number(state.blockSize)) return;
+
+      const leftDotValue = leftDot.value?.getBoundingClientRect() as DOMRect;
+      const rightDotValue = rightDot.value?.getBoundingClientRect() as DOMRect;
+      // 点击处-halfblock 与 leftDot左侧的距离（绝对值）
+      const distanceLeft = Math.abs(e.clientX - leftDotValue.left - halfBlock);
+      // 点击处-halfblock 与 rightDot左侧的距离（绝对值）
+      const distanceRight = Math.abs(rightDotValue.left - e.clientX + halfBlock);
+      // 哪个绝对值小就移动哪个Dot
+      const isMoveLeft = distanceLeft < distanceRight;
+
+      if (isMoveLeft) {
+        // 当前leftdot中心 + 左侧偏移量 = 目标左侧中心距离
+        const left = e.clientX - state.initialLeft;
+        const leftValue = convertPosToValue(left, 0);
+        setInnerValue([stepValue(leftValue), innerValue.value?.[1]]);
+        triggerValue([stepValue(leftValue), innerValue.value?.[1]]);
+      } else {
+        const right = -(e.clientX - state.initialRight);
+        const rightValue = convertPosToValue(right, 1);
+        setInnerValue([innerValue.value?.[0], stepValue(rightValue)]);
+        triggerValue([stepValue(rightValue), innerValue.value?.[1]]);
+      }
+    };
     return {
       state,
       name: ref(name),
-      rootRef,
       sliderLine,
+      leftDot,
+      rightDot,
       lineBarWidth,
       value: innerValue,
       labelContent,
@@ -408,6 +438,8 @@ export default defineComponent({
       onTouchMoveLeft,
       onTouchMoveRight,
       getValue,
+      onClick,
+      onLineClick,
     };
   },
 });

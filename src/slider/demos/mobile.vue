@@ -8,10 +8,10 @@
     <tdesign-demo-block summary="双游标滑块">
       <rangeDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="带数值滑动选择器">
+    <tdesign-demo-block summary="带数值单游标/双游标滑块">
       <labelDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="带刻度滑动选择器">
+    <tdesign-demo-block summary="带刻度单游标/双游标滑块">
       <stepDemo />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 组件状态" summary="滑块禁用状态">
@@ -34,6 +34,6 @@ import capsuleDemo from './capsule.vue';
 
 <style scoped>
 .tdesign-mobile-demo {
-  background: #fff;
+  background: #f6f6f6;
 }
 </style>

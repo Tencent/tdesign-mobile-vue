@@ -1,5 +1,7 @@
 <template>
-  <t-slider :value="35" disabled />
+  <div class="wrapper">
+    <t-slider :value="35" disabled />
+  </div>
 
   <div class="wrapper">
     <t-slider show-extreme-value label="${value}" :value="[40, 60]" range disabled />
@@ -21,8 +23,8 @@ const marks = {
 </script>
 <style lang="less" scoped>
 .wrapper {
-  margin-top: 16px;
   background: #fff;
-  padding-top: 20px;
+  margin-top: 16px;
+  padding: 18px 0;
 }
 </style>
