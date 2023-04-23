@@ -5,7 +5,7 @@
     </span>
     <span :class="`${baseClass}__text`">
       <template v-if="contentIsArray">
-        {{ innerChecked ? content[0] : content[1] }}
+        {{ innerChecked && Array.isArray(content) ? content[0] : content[1] }}
       </template>
       <t-node v-else :content="tagContent"></t-node>
     </span>
