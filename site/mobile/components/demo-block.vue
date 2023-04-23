@@ -40,4 +40,6 @@ const slotClassName = computed(() => [
     ['with-padding']: props.padding,
   },
 ]);
+
+console.log(props.padding);
 </script>
