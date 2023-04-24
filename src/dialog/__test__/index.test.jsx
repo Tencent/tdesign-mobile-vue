@@ -151,7 +151,7 @@ describe('dialog', () => {
       const cancelBtn = 'cancel';
       const confirmBtn = 'confirm';
       const title = 'this is a title';
-      const onClose = vi.fn((trigger) => {
+      const onClose = vi.fn(({trigger}) => {
         triggerOrigin = trigger;
       });
       const onCancel = vi.fn();
