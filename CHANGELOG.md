@@ -5,6 +5,52 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.19.0 `2023-04-24` 
+### ❗ BREKAING CHANGES
+- `Divider`: 调整 DOM 结构 @jarmywang ([#600](https://github.com/Tencent/tdesign-mobile-vue/pull/600))
+- `Divider`: 调整 Demo @jarmywang ([#600](https://github.com/Tencent/tdesign-mobile-vue/pull/600))
+- `Overlay`: 移除 transparent 属性，新增 backgroundColor 属性 @LeeJim ([#604](https://github.com/Tencent/tdesign-mobile-vue/pull/604))
+- `Popup`: 调整 DOM @LeeJim ([#605](https://github.com/Tencent/tdesign-mobile-vue/pull/605))
+- `Popup`: 属性 to 更名为 attach @LeeJim ([#605](https://github.com/Tencent/tdesign-mobile-vue/pull/605))
+- `Popup`: 移除 customStyle 属性，可以直接使用 style @LeeJim ([#605](https://github.com/Tencent/tdesign-mobile-vue/pull/605))
+- `Popup`: 属性 lockScroll 更名为 preventScrollThrough @LeeJim ([#605](https://github.com/Tencent/tdesign-mobile-vue/pull/605))
+- `Toast`: 调整DOM结构 @mistakers ([#611](https://github.com/Tencent/tdesign-mobile-vue/pull/611))
+- `Toast`: destory 事件名称更正为 destroy @mistakers ([#611](https://github.com/Tencent/tdesign-mobile-vue/pull/611))
+- `Button`: 移除 button-group 组件 @LeeJim ([#612](https://github.com/Tencent/tdesign-mobile-vue/pull/612))
+- `Button`: 更新 DOM @LeeJim ([#612](https://github.com/Tencent/tdesign-mobile-vue/pull/612))
+- `CountDown`: 调整 DOM 结构 @anlyyao ([#614](https://github.com/Tencent/tdesign-mobile-vue/pull/614))
+- `Slider`: 调整 DOM 结构 @anlyyao ([#610](https://github.com/Tencent/tdesign-mobile-vue/pull/610))
+- `Slider`: label 默认值变更为 false @anlyyao ([#610](https://github.com/Tencent/tdesign-mobile-vue/pull/610))
+- `Slider`: 移除 dragend、dragstart 事件 @anlyyao ([#610](https://github.com/Tencent/tdesign-mobile-vue/pull/610))
+- `Fab`: 调整 DOM @LeeJim ([#618](https://github.com/Tencent/tdesign-mobile-vue/pull/618))
+- `CheckTag`: 移除 `shape` 属性 @yaogengzhu ([#615](https://github.com/Tencent/tdesign-mobile-vue/pull/615))
+- `Calendar`: 调整 DOM @ccccpj ([#579](https://github.com/Tencent/tdesign-mobile-vue/pull/579))
+- `Dialog`: 调整 DOM @anlyyao ([#603](https://github.com/Tencent/tdesign-mobile-vue/pull/603))
+- `CheckTag`: 移除 `shape` 属性 @yaogengzhu ([#615](https://github.com/Tencent/tdesign-mobile-vue/pull/615))
+
+### 🚀 Features
+- `Overlay`: 支持 CSS Variables 实现主题定制 @LeeJim ([#604](https://github.com/Tencent/tdesign-mobile-vue/pull/604))
+- `Popup`: 新增 closeBtn 属性 @LeeJim ([#605](https://github.com/Tencent/tdesign-mobile-vue/pull/605))
+- `Button`: 新增 loadingProps 透传至 loading 组件 @LeeJim ([#612](https://github.com/Tencent/tdesign-mobile-vue/pull/612))
+- `Button`: 新增 type 属性透传至原生 Button @LeeJim ([#612](https://github.com/Tencent/tdesign-mobile-vue/pull/612))
+- `Button`: 新增 suffix 属性 @LeeJim ([#612](https://github.com/Tencent/tdesign-mobile-vue/pull/612))
+- `Button`: 属性 size 新增 extra-small 类型 @LeeJim ([#612](https://github.com/Tencent/tdesign-mobile-vue/pull/612))
+- `Button`: 属性 theme 新增 light 类型 @LeeJim ([#612](https://github.com/Tencent/tdesign-mobile-vue/pull/612))
+- `CountDown`: 新增 size、theme、splitWithUnit 属性 @anlyyao ([#614](https://github.com/Tencent/tdesign-mobile-vue/pull/614))
+- `Slider`: 新增 theme 属性 @anlyyao ([#610](https://github.com/Tencent/tdesign-mobile-vue/pull/610))
+- `CheckTag`: 新增 `variant` 属性 @yaogengzhu ([#615](https://github.com/Tencent/tdesign-mobile-vue/pull/615))
+- `Calendar`: 新增 usePopup 属性 @ccccpj ([#579](https://github.com/Tencent/tdesign-mobile-vue/pull/579))
+- `Calendar`: 新增 close、change 事件 @ccccpj ([#579](https://github.com/Tencent/tdesign-mobile-vue/pull/579))
+- `Dialog`: 新增 closeBtn、overlayProps 属性 @anlyyao ([#603](https://github.com/Tencent/tdesign-mobile-vue/pull/603))
+- `Popup`: 事件 close 完善参数 @anlyyao ([#603](https://github.com/Tencent/tdesign-mobile-vue/pull/603))
+- `CheckTag`: 新增 `variant` 属性 @yaogengzhu ([#615](https://github.com/Tencent/tdesign-mobile-vue/pull/615))
+### 🐞 Bug Fixes
+- `build`: 组件内部不在使用别名 @anlyyao ([#606](https://github.com/Tencent/tdesign-mobile-vue/pull/606))
+- `Cell`: 修复 hover 不生效的问题 @LeeJim ([#620](https://github.com/Tencent/tdesign-mobile-vue/pull/620))
+- `Fab`: 修复纯图标时样式错误的问题 @LeeJim ([#618](https://github.com/Tencent/tdesign-mobile-vue/pull/618))
+- `Tag`: 解决 `close` 事件冒泡问题 @anlyyao ([#621](https://github.com/Tencent/tdesign-mobile-vue/pull/621))
+
+
 ## 🌈 0.18.0 `2023-04-17` 
 ### ❗ Breaking Changes
 - `Cascader`: 移除cancel、click-tab 事件 @anlyyao ([#533](https://github.com/Tencent/tdesign-mobile-vue/pull/533))
