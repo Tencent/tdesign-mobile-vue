@@ -5,7 +5,7 @@
         <slot name="confirmBtn"></slot>
       </template>
     </calendarTemplate>
-    <t-popup v-else v-model="popup" placement="bottom">
+    <t-popup v-else :visible="props.visible" placement="bottom" @visible-change="onPopupVisibleChange">
       <calendarTemplate @visible-change="onVisibleChange">
         <template #confirmBtn>
           <slot name="confirmBtn"></slot>
@@ -16,7 +16,8 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, defineProps, provide, watch, ref } from 'vue';
+import { defineEmits, defineProps, provide } from 'vue';
+
 import TPopup from '../popup';
 import config from '../config';
 import calendarProps from './props';
@@ -37,31 +38,13 @@ export default {
 const props = defineProps(calendarProps);
 provide('templateProps', { ...props });
 
-const usePopup = ref<boolean>(props.usePopup);
-const popup = ref<boolean>(props.visible);
 const emit = defineEmits(['update:visible']);
-let isNotAutoClose = false;
 
-const onVisibleChange = () => {
-  popup.value = false;
+const onVisibleChange = (v: boolean) => {
+  emit('update:visible', v);
 };
-
-watch(
-  () => props.visible,
-  (val) => {
-    isNotAutoClose = true;
-    popup.value = val;
-  },
-);
-watch(
-  () => popup.value,
-  (val) => {
-    if (props.autoClose || isNotAutoClose) {
-      isNotAutoClose = false;
-      emit('update:visible', val);
-    } else {
-      popup.value = true;
-    }
-  },
-);
+const onPopupVisibleChange = (v: boolean) => {
+  if (!v) props.onClose?.('overlay');
+  emit('update:visible', v);
+};
 </script>

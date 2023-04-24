@@ -3,7 +3,7 @@
     <div :class="`${name}__title`">
       <slot name="title">{{ title || '请选择日期' }}</slot>
     </div>
-    <CloseIcon v-if="usePopup" :class="`${name}__close-btn`" size="24" @click="emit('visibleChange')" />
+    <CloseIcon v-if="usePopup" :class="`${name}__close-btn`" size="24" @click="handleClose" />
     <div :class="`${name}__days`">
       <div v-for="(item, index) in days" :key="index" :class="`${name}__days-item`">{{ item }}</div>
     </div>
@@ -50,7 +50,7 @@
 </template>
 
 <script lang="ts">
-import { defineEmits, defineProps, computed, watch, inject, ref, toRaw } from 'vue';
+import { defineEmits, computed, watch, inject, ref, toRaw } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import TButton from '../button';
 import config from '../config';
@@ -68,7 +68,7 @@ export default {
 </script>
 
 <script setup lang="ts">
-const emit = defineEmits(['visibleChange']);
+const emit = defineEmits(['visible-change']);
 
 const props = inject('templateProps') as TdCalendarProps;
 // 获取时间年月日起
@@ -107,6 +107,11 @@ const maxDate = props.maxDate
 // 获取日期
 const getDate = (year: number, month: number, day: number) => new Date(year, month, day);
 
+const confirmBtn = computed(() => {
+  if (typeof props.confirmBtn === 'string') return { content: props.confirmBtn || '确认' };
+  return props.confirmBtn;
+});
+
 // 选择日期
 const handleSelect = (year: number, month: number, date: number, dateItem: TDate) => {
   if (dateItem.type === 'disabled') return;
@@ -121,6 +126,9 @@ const handleSelect = (year: number, month: number, date: number, dateItem: TDate
       }
     } else {
       selectedDate.value = [selected];
+      if (!confirmBtn.value && selectedDate.value.length === 2) {
+        props.onChange?.(selectedDate.value);
+      }
     }
   } else if (props.type === 'multiple') {
     const newVal = [...selectedDate.value];
@@ -133,14 +141,23 @@ const handleSelect = (year: number, month: number, date: number, dateItem: TDate
     selectedDate.value = newVal;
   } else {
     selectedDate.value = selected;
+    if (!confirmBtn.value) {
+      props.onChange?.(selectedDate.value);
+    }
   }
   props.onSelect?.(toRaw(selectedDate.value));
 };
 // 确认
 const handleConfirm = () => {
-  emit('visibleChange');
+  emit('visible-change');
+  props.onClose?.('confirm-btn');
   props.onConfirm?.(toRaw(selectedDate.value));
 };
+const handleClose = () => {
+  emit('visible-change');
+  props.onClose?.('close-btn');
+};
+
 const getMonthDates = (date: Date) => {
   const { year, month } = getYearMonthDay(date);
   const firstDay = getDate(year, month, 1);
@@ -220,11 +237,6 @@ const months = computed(() => {
   }
 
   return ans;
-});
-
-const confirmBtn = computed(() => {
-  if (typeof props.confirmBtn === 'string') return { content: props.confirmBtn || '确认' };
-  return props.confirmBtn;
 });
 
 watch(
