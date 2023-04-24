@@ -1,11 +1,9 @@
 <template>
-  <t-button block variant="outline" size="large" @click="isShowDialog5 = true">图片置顶</t-button>
+  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog5 = true">图片置顶</t-button>
   <t-dialog
     v-model:visible="isShowDialog5"
-    type="confirm"
     title="对话框标题"
     content="告知当前状态、信息和解决方法"
-    placeholder-text="输入框提示文字"
     cancel-btn="取消"
     confirm-btn="确认"
     @confirm="onConfirm"
@@ -16,13 +14,11 @@
     </template>
   </t-dialog>
   <div class="btn-gap"></div>
-  <t-button block variant="outline" size="large" @click="isShowDialog7 = true">图片居中</t-button>
+  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog7 = true">图片居中</t-button>
   <t-dialog
     v-model:visible="isShowDialog7"
-    type="confirm"
     title="对话框标题"
     content="告知当前状态、信息和解决方法"
-    placeholder-text="输入框提示文字"
     cancel-btn="取消"
     confirm-btn="确认"
     @confirm="onConfirm"

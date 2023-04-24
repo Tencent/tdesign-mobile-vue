@@ -1,5 +1,5 @@
 <template>
-  <t-button block variant="outline" size="large" @click="isShowDialog5 = true"> 确认类-带标题 </t-button>
+  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog5 = true">确认类-带标题</t-button>
   <t-dialog
     v-model:visible="isShowDialog5"
     title="对话框标题"
@@ -13,7 +13,7 @@
 
   <div class="btn-gap"></div>
 
-  <t-button block variant="outline" size="large" @click="isShowDialog6 = true"> 确认类-无标题 </t-button>
+  <t-button block variant="outline" theme="primary" size="large" @click="isShowDialog6 = true">确认类-无标题</t-button>
 
   <t-dialog
     v-model:visible="isShowDialog6"
