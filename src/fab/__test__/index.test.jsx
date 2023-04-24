@@ -18,7 +18,7 @@ describe('fab', () => {
       const wrapper = mount(Fab, {
         props: { text },
       });
-      const textContainer = wrapper.find('.t-fab__text');
+      const textContainer = wrapper.find('.t-button__content');
       expect(textContainer.text()).toBe(text);
     });
 
