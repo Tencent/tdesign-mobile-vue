@@ -65,7 +65,7 @@ export interface TdPopupProps {
   /**
    * 组件准备关闭时触发
    */
-  onClose?: () => void;
+  onClose?: (context: { e: MouseEvent }) => void;
   /**
    * 组件关闭且动画结束后执行
    */
