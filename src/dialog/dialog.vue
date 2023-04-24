@@ -10,7 +10,7 @@
     <div id="root" :class="`${name}`" :style="rootStyles">
       <slot name="top" />
       <div v-if="closeBtn" :class="`${name}__close-btn`">
-        <close-icon @click="handleCancel" />
+        <close-icon @click="handleClose" />
       </div>
       <div :class="`${name}__content`">
         <div v-if="titleNode" :class="`${name}__header`">
@@ -94,24 +94,31 @@ export default defineComponent({
       width: isString(props.width) ? props.width : `${props.width}px`,
     }));
 
-    const handleConfirm = (e: TouchEvent) => {
+    const handleClose = (args: { e: MouseEvent }) => {
+      const { e } = args;
+      context.emit('update:visible', false);
+      context.emit('close', { e, trigger: 'close-btn' });
+    };
+
+    const handleConfirm = (e: MouseEvent) => {
       context.emit('update:visible', false);
       context.emit?.('confirm', { e });
     };
 
-    const handleCancel = () => {
+    const handleCancel = (e: MouseEvent) => {
       context.emit('update:visible', false);
-      context.emit('close', 'cancel');
-      context.emit('cancel');
+      context.emit('close', { e, trigger: 'cancel' });
+      context.emit('cancel', { e });
     };
 
-    const handleOverlayClick = () => {
+    const handleOverlayClick = (args: { e: MouseEvent }) => {
+      const { e } = args;
       if (!props.closeOnOverlayClick) {
         return;
       }
       context.emit('update:visible', false);
-      context.emit('close', 'overlay');
-      context.emit('overlay-click');
+      context.emit('close', { e, trigger: 'overlay' });
+      context.emit('overlay-click', { e });
     };
 
     const calcBtn = (btn: any) => (isString(btn) ? { content: btn } : btn);
@@ -134,6 +141,7 @@ export default defineComponent({
       confirmBtnProps,
       cancelBtnProps,
       actionsBtnProps,
+      handleClose,
       handleConfirm,
       handleCancel,
       handleOverlayClick,

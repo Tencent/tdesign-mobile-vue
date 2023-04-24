@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, defineComponent, h, getCurrentInstance } from 'vue';
+import { computed, watch, defineComponent, h, getCurrentInstance } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
@@ -79,11 +79,12 @@ export default defineComponent({
       }),
     );
 
-    const handleOverlayClick = () => {
+    const handleOverlayClick = (args: { e: MouseEvent }) => {
+      const { e } = args;
       if (!props.closeOnOverlayClick) {
         return;
       }
-      emitEvent('close');
+      emitEvent('close', { e });
       setVisible(false);
     };
 

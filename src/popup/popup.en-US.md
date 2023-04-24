@@ -26,7 +26,7 @@ onVisibleChange | Function |  | Typescript：`(visible: boolean, trigger: PopupS
 
 name | params | description
 -- | -- | --
-close | \- | \-
+close | `(context: { e: MouseEvent })` | \-
 closed | \- | \-
 open | \- | \-
 opened | \- | \-
