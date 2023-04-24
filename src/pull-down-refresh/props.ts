@@ -47,6 +47,8 @@ export default {
   onChange: Function as PropType<TdPullDownRefreshProps['onChange']>,
   /** 结束下拉时触发 */
   onRefresh: Function as PropType<TdPullDownRefreshProps['onRefresh']>,
+  /** 滚动到页面底部时触发 */
+  onScrolltolower: Function as PropType<TdPullDownRefreshProps['onScrolltolower']>,
   /** 刷新超时触发 */
   onTimeout: Function as PropType<TdPullDownRefreshProps['onTimeout']>,
 };

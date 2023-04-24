@@ -14,6 +14,7 @@ value | Boolean | false | 组件状态，值为 `true` 表示下拉状态，值�
 defaultValue | Boolean | false | 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态。非受控属性 | N
 onChange | Function |  | TS 类型：`(value: boolean) => void`<br/>下拉或收起时触发，用户手势往下滑动触发下拉状态，手势松开触发收起状态 | N
 onRefresh | Function |  | TS 类型：`() => void`<br/>结束下拉时触发 | N
+onScrolltolower | Function |  | TS 类型：`() => void`<br/>滚动到页面底部时触发 | N
 onTimeout | Function |  | TS 类型：`() => void`<br/>刷新超时触发 | N
 
 ### PullDownRefresh Events
@@ -21,5 +22,6 @@ onTimeout | Function |  | TS 类型：`() => void`<br/>刷新超时触发 | N
 名称 | 参数 | 描述
 -- | -- | --
 change | `(value: boolean)` | 下拉或收起时触发，用户手势往下滑动触发下拉状态，手势松开触发收起状态
-refresh | - | 结束下拉时触发
-timeout | - | 刷新超时触发
+refresh | \- | 结束下拉时触发
+scrolltolower | \- | 滚动到页面底部时触发
+timeout | \- | 刷新超时触发
