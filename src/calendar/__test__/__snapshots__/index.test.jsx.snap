@@ -84,6 +84,7 @@ exports[`calendar > props > : format 1`] = `
         </div>
         <div
           class="t-calendar__months"
+          style="overflow: auto;"
         >
           
           
@@ -96,9 +97,16 @@ exports[`calendar > props > : format 1`] = `
             class="t-calendar__dates"
           >
             
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            
+            
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 294px;"
             >
               
               <!--v-if-->
@@ -112,7 +120,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -126,7 +133,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -140,7 +146,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -154,7 +159,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -168,7 +172,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -182,7 +185,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -196,7 +198,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -210,7 +211,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -224,7 +224,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -238,7 +237,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -252,7 +250,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -266,7 +263,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -280,7 +276,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -294,7 +289,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item t-calendar__dates-item--selected"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -308,7 +302,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -322,7 +315,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -336,7 +328,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -350,7 +341,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -364,7 +354,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -378,7 +367,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -392,7 +380,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -406,7 +393,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -420,7 +406,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -434,7 +419,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -448,7 +432,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -462,7 +445,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -476,7 +458,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -490,7 +471,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -504,7 +484,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
@@ -518,7 +497,6 @@ exports[`calendar > props > : format 1`] = `
             </div>
             <div
               class="t-calendar__dates-item"
-              style="margin-left: 0px;"
             >
               
               <!--v-if-->
