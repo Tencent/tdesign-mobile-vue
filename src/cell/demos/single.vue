@@ -1,19 +1,19 @@
 <template>
   <t-cell-group bordered>
-    <t-cell title="单行标题" arrow />
-    <t-cell title="单行标题" arrow required />
-    <t-cell title="单行标题" arrow>
+    <t-cell title="单行标题" arrow hover />
+    <t-cell title="单行标题" arrow hover required />
+    <t-cell title="单行标题" arrow hover>
       <template #note>
         <t-badge :count="16" />
       </template>
     </t-cell>
-    <t-cell title="单行标题">
+    <t-cell title="单行标题" hover>
       <template #note>
         <t-switch :default-value="true" />
       </template>
     </t-cell>
-    <t-cell title="单行标题" note="辅助信息" arrow />
-    <t-cell title="单行标题" :left-icon="lockIcon" arrow />
+    <t-cell title="单行标题" note="辅助信息" arrow hover />
+    <t-cell title="单行标题" :left-icon="lockIcon" arrow hover />
   </t-cell-group>
 </template>
 
