@@ -60,7 +60,7 @@ export default defineComponent({
     });
 
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
-    const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon', { params: { class: 't' } }));
+    const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon'));
 
     const styleCell = computed(() => [
       `${name}`,
