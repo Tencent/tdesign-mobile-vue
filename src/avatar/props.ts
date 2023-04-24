@@ -44,7 +44,7 @@ export default {
   /** 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large */
   size: {
     type: String,
-    default: '',
+    default: 'medium',
   },
   /** 图片加载失败时触发 */
   onError: Function as PropType<TdAvatarProps['onError']>,

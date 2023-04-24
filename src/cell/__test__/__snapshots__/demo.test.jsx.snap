@@ -905,56 +905,71 @@ exports[`Cell > Cell mobileVue demo works fine 1`] = `
             >
               
               <div
-                class="t-avatar t-avatar--circle"
+                class="t-avatar__wrapper"
               >
                 <div
-                  class="t-avatar__inner"
+                  class="t-avatar__badge"
                 >
                   <div
-                    class="t-image t-image--square"
+                    class="t-badge"
                   >
                     <div
-                      class="t-image__mask"
+                      class="t-badge__content"
                     >
+                      
                       <div
-                        class="t-loading"
-                        style="font-size: 20px;"
+                        class="t-avatar t-avatar--medium t-avatar--circle"
                       >
-                        
                         <div
-                          class="t-loading__dots"
-                          style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          class="t-image t-image--square"
                         >
                           <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                          />
-                          <div
-                            class="t-loading__dot"
-                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                          />
+                            class="t-image__mask"
+                          >
+                            <div
+                              class="t-loading"
+                              style="font-size: 20px;"
+                            >
+                              
+                              <div
+                                class="t-loading__dots"
+                                style="animation-duration: 800ms; width: 20px; height: 20px;"
+                              >
+                                <div
+                                  class="t-loading__dot"
+                                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                                />
+                                <div
+                                  class="t-loading__dot"
+                                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                                />
+                                <div
+                                  class="t-loading__dot"
+                                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                                />
+                              </div>
+                              
+                              <!--v-if-->
+                              <!---->
+                            </div>
+                          </div>
+                          <picture>
+                            <!--v-if-->
+                            <img
+                              alt=""
+                              class="t-image__img"
+                              src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                              style="object-fit: fill; object-position: center;"
+                            />
+                          </picture>
                         </div>
-                        
-                        <!--v-if-->
-                        <!---->
                       </div>
+                      
                     </div>
-                    <picture>
-                      <!--v-if-->
-                      <img
-                        alt=""
-                        class="t-image__img"
-                        src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                        style="object-fit: fill; object-position: center;"
-                      />
-                    </picture>
+                    <!--v-if-->
+                    <!---->
                   </div>
                 </div>
-                <!--v-if-->
               </div>
               
             </div>
@@ -1606,56 +1621,71 @@ exports[`Cell > Cell multipleVue demo works fine 1`] = `
       >
         
         <div
-          class="t-avatar t-avatar--circle"
+          class="t-avatar__wrapper"
         >
           <div
-            class="t-avatar__inner"
+            class="t-avatar__badge"
           >
             <div
-              class="t-image t-image--square"
+              class="t-badge"
             >
               <div
-                class="t-image__mask"
+                class="t-badge__content"
               >
+                
                 <div
-                  class="t-loading"
-                  style="font-size: 20px;"
+                  class="t-avatar t-avatar--medium t-avatar--circle"
                 >
-                  
                   <div
-                    class="t-loading__dots"
-                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    class="t-image t-image--square"
                   >
                     <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
-                    />
-                    <div
-                      class="t-loading__dot"
-                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
-                    />
+                      class="t-image__mask"
+                    >
+                      <div
+                        class="t-loading"
+                        style="font-size: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dots"
+                          style="animation-duration: 800ms; width: 20px; height: 20px;"
+                        >
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                          />
+                        </div>
+                        
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <picture>
+                      <!--v-if-->
+                      <img
+                        alt=""
+                        class="t-image__img"
+                        src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
+                        style="object-fit: fill; object-position: center;"
+                      />
+                    </picture>
                   </div>
-                  
-                  <!--v-if-->
-                  <!---->
                 </div>
+                
               </div>
-              <picture>
-                <!--v-if-->
-                <img
-                  alt=""
-                  class="t-image__img"
-                  src="https://tdesign.gtimg.com/mobile/demos/avatar_1.png"
-                  style="object-fit: fill; object-position: center;"
-                />
-              </picture>
+              <!--v-if-->
+              <!---->
             </div>
           </div>
-          <!--v-if-->
         </div>
         
       </div>

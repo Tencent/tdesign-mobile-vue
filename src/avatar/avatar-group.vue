@@ -29,12 +29,10 @@ export default defineComponent({
     provide('avatarGroup', { ...props });
 
     const internalInstance = getCurrentInstance();
+    const direction = props.cascading ? props.cascading.split('-')[0] : 'right';
     const classes = computed(() => [
       `${name}`,
-      {
-        [`${prefix}-avatar--offset-right`]: props.cascading === 'right-up',
-        [`${prefix}-avatar--offset-left`]: props.cascading === 'left-up',
-      },
+      `${name}-offset-${direction}-${props.size.indexOf('px') > -1 ? 'medium' : props.size}`,
     ]);
 
     const isShowEllipsisContent = ref(false);
@@ -63,6 +61,12 @@ export default defineComponent({
         childrenShow = children;
       }
       size.value = childrenShow[0].size || props.size;
+      if (props.cascading === 'left-up') {
+        childrenShow.forEach((item, index) => {
+          const defaultZIndex = 100;
+          childrenShow[index].props.style = `z-index: ${defaultZIndex - index * 10}`;
+        });
+      }
       return childrenShow;
     };
     return {
