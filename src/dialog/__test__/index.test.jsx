@@ -65,22 +65,6 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog__body').text()).toBe(newContent);
     });
 
-<<<<<<< HEAD
-    it(':buttonLayout', async () => {
-      const visible = true;
-      const selector = 't-dialog__vertical-footer';
-      const wrapper = mount(Dialog, {
-        props: {
-          visible,
-        },
-      });
-      expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeFalsy();
-      await wrapper.setProps({
-        buttonLayout: 'vertical',
-      });
-      expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeTruthy();
-    });
-=======
     // it(': buttonLayout', async () => {
     //   const visible = true;
     //   const selector = 't-dialog__vertical-footer';
@@ -95,7 +79,6 @@ describe('dialog', () => {
     //   });
     //   expect(wrapper.find('.t-dialog__footer').classes().includes(selector)).toBeTruthy();
     // });
->>>>>>> e5f32c06 (fix: remove useless css)
 
     it(':width', async () => {
       const visible = true;
@@ -134,24 +117,6 @@ describe('dialog', () => {
       expect(wrapper.find('.t-dialog').attributes('style').includes(`z-index: ${newZIndex}`)).toBeTruthy();
     });
 
-<<<<<<< HEAD
-    it(':closeOnOverlayClick', async () => {
-      let triggerOrigin = {};
-      const onClose = vi.fn((trigger) => {
-        triggerOrigin = trigger;
-      });
-      const onOverlayClick = vi.fn();
-      const closeOverlayClick = true;
-      const visible = true;
-      const wrapper = mount(Dialog, {
-        props: {
-          visible,
-          closeOverlayClick,
-          onClose,
-          onOverlayClick,
-        },
-      });
-=======
     // it(': closeOnOverlayClick', async () => {
     //   let triggerOrigin = {};
     //   const onClose = vi.fn((trigger) => {
@@ -168,7 +133,6 @@ describe('dialog', () => {
     //       onOverlayClick,
     //     },
     //   });
->>>>>>> e5f32c06 (fix: remove useless css)
 
     //   const $overlay = wrapper.findComponent({ name: 't-overlay' });
     //   expect($overlay.exists()).toBeTruthy();
