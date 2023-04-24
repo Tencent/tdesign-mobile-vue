@@ -10,9 +10,14 @@ export interface TdNoticeBarProps {
   /**
    * 文本内容
    */
-  content?: string | TNode;
+  content?: string | string[] | TNode;
   /**
-   * 右侧额外信息
+   * 滚动方向
+   * @default horizontal
+   */
+  direction?: 'horizontal' | 'vertical';
+  /**
+   * 已废弃。右侧额外信息
    */
   extra?: string | TNode;
   /**
@@ -21,10 +26,13 @@ export interface TdNoticeBarProps {
    */
   marquee?: boolean | DrawMarquee;
   /**
-   * 前缀图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标
-   * @default true
+   * 右侧额外信息
    */
-  prefixIcon?: boolean | TNode;
+  operation?: string | TNode;
+  /**
+   * 前缀图标
+   */
+  prefixIcon?: TNode;
   /**
    * 后缀图标
    */
@@ -51,6 +59,7 @@ export interface TdNoticeBarProps {
   modelValue?: boolean;
   /**
    * 展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏
+   * @deprecated
    */
   onChange?: (value: boolean) => void;
   /**
@@ -65,4 +74,4 @@ export interface DrawMarquee {
   delay?: number;
 }
 
-export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'extra' | 'suffix-icon';
+export type NoticeBarTrigger = 'prefix-icon' | 'content' | 'operation' | 'suffix-icon';
