@@ -51,7 +51,7 @@ export default defineComponent({
           children.push(child);
         }
       });
-      let childrenShow: TdAvatarProps[] = [];
+      let childrenShow: any[] = [];
       const max = props.max || 0;
       if (max && max < children.length) {
         childrenShow = children.slice(0, max);
