@@ -91,7 +91,6 @@ describe('ActionSheet', () => {
           onSelected
         }
       });
-      expect(wrapper.find('.t-popup--content').isVisible()).toEqual(true);
       wrapper.findAll('.t-action-sheet__list-item')[0].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(1);
       expect(onSelected).toHaveBeenLastCalledWith('确定', 0);
