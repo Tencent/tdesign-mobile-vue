@@ -15,6 +15,7 @@
             :key="index"
             :text="item.label"
             :image="item.icon"
+            :badge="item.badge"
             @click="handleSelected(i * count + index)"
           />
         </t-grid>
@@ -26,6 +27,7 @@
         :key="index"
         :text="item.label"
         :image="item.icon"
+        :badge="item.badge"
         @click="handleSelected(count + index)"
       />
     </t-grid>

@@ -3,7 +3,7 @@
     <t-button block variant="outline" theme="primary" @click="visible = true">常规宫格型</t-button>
     <t-button block variant="outline" theme="primary" @click="visible2 = true">带描述宫格型</t-button>
     <!-- <t-button block variant="outline" theme="primary" @click="visible = true">带翻页宫格型</t-button> -->
-    <t-button block variant="outline" theme="primary" @click="visible = true">带徽标宫格型</t-button>
+    <t-button block variant="outline" theme="primary" @click="visible3 = true">带徽标宫格型</t-button>
   </div>
   <t-action-sheet
     v-model="visible"
@@ -20,6 +20,16 @@
     :items="items"
     :count="count"
     description="动作面板描述文字"
+    @selected="handleSelected"
+    @cancel="handleCancel"
+  >
+  </t-action-sheet>
+  <t-action-sheet
+    v-model="visible3"
+    theme="grid"
+    :items="items2"
+    :count="count"
+    description="带徽标宫格型"
     @selected="handleSelected"
     @cancel="handleCancel"
   >
@@ -65,8 +75,47 @@ const items = ref([
     icon: () => h(Edit1Icon, { size: '24px' }),
   },
 ]);
+const items2 = ref([
+  {
+    label: '微信',
+    icon: 'https://tdesign.gtimg.com/miniprogram/logo/wechat.png',
+    badge: { dot: true },
+  },
+  {
+    label: '朋友圈',
+    icon: 'https://tdesign.gtimg.com/miniprogram/logo/times.png',
+    badge: { dot: true },
+  },
+  {
+    label: 'QQ',
+    icon: 'https://tdesign.gtimg.com/miniprogram/logo/qq.png',
+    badge: { dot: true },
+  },
+  {
+    label: '企业微信',
+    icon: 'https://tdesign.gtimg.com/miniprogram/logo/wecom.png',
+    badge: { count: 99 },
+  },
+  {
+    label: '收藏',
+    icon: () => h(ShareIcon, { size: '24px' }),
+  },
+  {
+    label: '刷新',
+    icon: () => h(StarIcon, { size: '24px' }),
+  },
+  {
+    label: '下载',
+    icon: () => h(DownloadIcon, { size: '24px' }),
+  },
+  {
+    label: '复制',
+    icon: () => h(Edit1Icon, { size: '24px' }),
+  },
+]);
 const visible = ref(false);
 const visible2 = ref(false);
+const visible3 = ref(false);
 const count = ref(8);
 
 const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
