@@ -18,13 +18,19 @@ export default {
     type: [Boolean, Function] as PropType<TdStepItemProps['icon']>,
     default: true,
   },
-  /** 当前步骤的状态 */
+  /** 当前步骤的状态：默认状态（未开始）、进行中状态、完成状态、错误状态 */
   status: {
     type: String as PropType<TdStepItemProps['status']>,
     default: 'default' as TdStepItemProps['status'],
     validator(val: TdStepItemProps['status']): boolean {
-      return ['default', 'process', 'finish', 'error'].includes(val!);
+      if (!val) return true;
+      return ['default', 'process', 'finish', 'error'].includes(val);
     },
+  },
+  /** 子步骤条，仅支持 layout  = 'vertical' 时 */
+  subStepItems: {
+    type: Array as PropType<TdStepItemProps['subStepItems']>,
+    default: (): TdStepItemProps['subStepItems'] => [],
   },
   /** 标题 */
   title: {

@@ -20,28 +20,47 @@ export default {
   /** 当前步骤，即整个步骤条进度。默认根据步骤下标判断步骤的完成状态，当前步骤为进行中，当前步骤之前的步骤为已完成，当前步骤之后的步骤为未开始。如果每个步骤没有设置 value，current 值为步骤长度则表示所有步骤已完成。如果每个步骤设置了自定义 value，则 current = 'FINISH' 表示所有状态完成，非受控属性 */
   defaultCurrent: {
     type: [String, Number] as PropType<TdStepsProps['defaultCurrent']>,
-    default: 0,
+  },
+  /** 用于控制 current 指向的步骤条的状态 */
+  currentStatus: {
+    type: String as PropType<TdStepsProps['currentStatus']>,
+    default: 'process' as TdStepsProps['currentStatus'],
+    validator(val: TdStepsProps['currentStatus']): boolean {
+      if (!val) return true;
+      return ['default', 'process', 'finish', 'error'].includes(val);
+    },
   },
   /** 步骤条方向，有两种：横向和纵向 */
   layout: {
     type: String as PropType<TdStepsProps['layout']>,
     default: 'horizontal' as TdStepsProps['layout'],
     validator(val: TdStepsProps['layout']): boolean {
-      return ['horizontal', 'vertical'].includes(val!);
+      if (!val) return true;
+      return ['horizontal', 'vertical'].includes(val);
     },
   },
   /** 步骤条数据列表（作用和 StepItem 效果一样） */
   options: {
     type: Array as PropType<TdStepsProps['options']>,
   },
-  /** 是否只读 */
+  /** 只读状态 */
   readonly: Boolean,
+  /** 步骤条分割符 */
+  separator: {
+    type: String as PropType<TdStepsProps['separator']>,
+    default: 'line' as TdStepsProps['separator'],
+    validator(val: TdStepsProps['separator']): boolean {
+      if (!val) return true;
+      return ['line', 'dashed', 'arrow'].includes(val);
+    },
+  },
   /** 步骤条风格 */
   theme: {
     type: String as PropType<TdStepsProps['theme']>,
     default: 'default' as TdStepsProps['theme'],
     validator(val: TdStepsProps['theme']): boolean {
-      return ['default', 'dot'].includes(val!);
+      if (!val) return true;
+      return ['default', 'dot'].includes(val);
     },
   },
   /** 当前步骤发生变化时触发 */
