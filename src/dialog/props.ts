@@ -24,17 +24,20 @@ export default {
   /** 取消按钮，可自定义。值为 null 则不显示取消按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制取消事件 */
   cancelBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['cancelBtn']>,
-    default: '',
+  },
+  /** 是否显示关闭按钮 */
+  closeBtn: {
+    type: Boolean,
+    default: false,
   },
   /** 点击蒙层时是否触发关闭事件 */
   closeOnOverlayClick: {
     type: Boolean,
-    default: true,
+    default: undefined,
   },
   /** 确认按钮。值为 null 则不显示确认按钮。值类型为字符串，则表示自定义按钮文本，值类型为 Object 则表示透传 Button 组件属性。使用 TNode 自定义按钮时，需自行控制确认事件 */
   confirmBtn: {
     type: [String, Object, Function] as PropType<TdDialogProps['confirmBtn']>,
-    default: '',
   },
   /** 内容 */
   content: {
@@ -42,13 +45,16 @@ export default {
   },
   /** 是否在关闭弹框的时候销毁子元素 */
   destroyOnClose: Boolean,
+  /** 透传至 Overlay 组件 */
+  overlayProps: {
+    type: Object as PropType<TdDialogProps['overlayProps']>,
+    default: () => ({}),
+  },
   /** 防止滚动穿透 */
   preventScrollThrough: {
     type: Boolean,
     default: true,
   },
-  /** 【开发中】仅在挂载元素中显示抽屉，默认在浏览器可视区域显示。父元素需要有定位属性，如：position: relative */
-  showInAttachedElement: Boolean,
   /** 是否显示遮罩层 */
   showOverlay: {
     type: Boolean,

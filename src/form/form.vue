@@ -21,7 +21,7 @@ import props from './props';
 import { FormInjectionKey, FormItemContext } from './const';
 import { FormDisabledProvider } from './hooks';
 import config from '../config';
-import { renderContent } from '@/shared';
+import { renderContent } from '../shared';
 import { FormItemValidateResult } from './form-item.vue';
 
 const { prefix } = config;

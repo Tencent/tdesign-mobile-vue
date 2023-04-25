@@ -1,1 +1,1 @@
-import '../../_common/style/mobile/components/calendar/_index.less';
+import '../../_common/style/mobile/components/calendar/v2/_index.less';

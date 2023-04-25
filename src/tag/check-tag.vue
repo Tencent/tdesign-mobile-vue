@@ -4,7 +4,10 @@
       <t-node :content="iconContent"></t-node>
     </span>
     <span :class="`${baseClass}__text`">
-      <t-node :content="tagContent"></t-node>
+      <template v-if="contentIsArray && content">
+        {{ innerChecked ? content[0] : content[1] }}
+      </template>
+      <t-node v-else :content="tagContent"></t-node>
     </span>
     <span v-if="closable && !disabled" :class="`${baseClass}__icon-close`" @click="onClickClose">
       <close-icon />
@@ -46,11 +49,20 @@ const CheckTag = defineComponent({
       'checked',
     );
 
+    const contentIsArray = computed(() => {
+      if (Array.isArray(props.content) && props.content.length === 2) {
+        return true;
+      }
+      return false;
+    });
+
     const classes = computed(() => [
       `${baseClass}`,
       `${baseClass}--checkable`,
       `${baseClass}--${props.shape}`,
+      `${baseClass}--${innerChecked.value ? 'primary' : 'default'}`,
       `${baseClass}--${props.size}`,
+      `${baseClass}--${props.variant}`,
       {
         [`${prefix}-is-closable ${baseClass}--closable`]: props.closable,
         [`${prefix}-is-disabled ${baseClass}--disabled`]: props.disabled,
@@ -72,6 +84,7 @@ const CheckTag = defineComponent({
     };
 
     return {
+      contentIsArray,
       baseClass,
       classes,
       onClickClose,

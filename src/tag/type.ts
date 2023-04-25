@@ -15,7 +15,11 @@ export interface TdTagProps {
   /**
    * 组件子元素
    */
-  content?: string | number | TNode;
+  content?: string | TNode;
+  /**
+   * 组件子元素，同 `content`
+   */
+  default?: string | TNode;
   /**
    * 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态
    * @default false
@@ -69,14 +73,23 @@ export interface TdCheckTagProps {
    */
   defaultChecked?: boolean;
   /**
+   * 标签选中的状态，默认风格（theme=default）才有选中态
+   */
+  modelValue?: boolean;
+  /**
    * 标签是否可关闭
    * @default false
+   * @deprecated
    */
   closable?: boolean;
   /**
-   * 组件子元素
+   * 组件子元素；传入数组时：[选中内容，非选中内容]
    */
-  content?: string | number | TNode;
+  content?: string | number | string[] | TNode;
+  /**
+   * 组件子元素，默认插槽
+   */
+  default?: string | TNode;
   /**
    * 标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态
    * @default false
@@ -89,6 +102,7 @@ export interface TdCheckTagProps {
   /**
    * 标签类型，有三种：方形、圆角方形、标记型
    * @default square
+   * @deprecated
    */
   shape?: 'square' | 'round' | 'mark';
   /**
@@ -97,7 +111,12 @@ export interface TdCheckTagProps {
    */
   size?: SizeEnum;
   /**
-   * 组件子元素
+   * 标签风格变体
+   * @default dark
+   */
+  variant?: 'dark' | 'light' | 'outline' | 'light-outline';
+  /**
+   * 状态切换时触发
    */
   onChange?: (checked: boolean) => void;
   /**

@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { h } from 'vue';
 import { CloseIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { Toast } from '@/components';
+import { Toast } from 'tdesign-mobile-vue';
 
 const iconFunc = () => h(CloseIcon);
 const arrowRight = () => h(ChevronRightIcon);

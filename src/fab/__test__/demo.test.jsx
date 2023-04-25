@@ -3,14 +3,14 @@
  */
 
 import { mount } from '@vue/test-utils';
-import displayVue from '@/fab/demos/display.vue';
+import advanceVue from '@/fab/demos/advance.vue';
+import baseVue from '@/fab/demos/base.vue';
 import mobileVue from '@/fab/demos/mobile.vue';
-import textVue from '@/fab/demos/text.vue';
 
 const mapper = {
-  displayVue,
+  advanceVue,
+  baseVue,
   mobileVue,
-  textVue,
 };
 
 describe('Fab', () => {

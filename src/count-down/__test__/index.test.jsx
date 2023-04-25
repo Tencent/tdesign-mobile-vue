@@ -19,9 +19,6 @@ describe('countdown.vue', async () => {
       expect(wrapper.text()).toContain('00:00:01');
       await sleep(500);
       expect(wrapper.text()).toContain('00:00:00');
-      await sleep(500);
-      await nextTick();
-      expect(wrapper.text()).toContain('default');
     });
 
     it('content', async () => {
@@ -63,12 +60,12 @@ describe('countdown.vue', async () => {
 
     it('size', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
-      expect(wrapper.find('.t-countdown--small').exists()).toBe(true);
+      expect(wrapper.find('.t-count-down--medium').exists()).toBe(true);
     });
 
     it('theme', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
-      expect(wrapper.find('.t-countdown--default').exists()).toBe(true);
+      expect(wrapper.find('.t-count-down--default').exists()).toBe(true);
     });
   });
 
@@ -91,7 +88,7 @@ describe('countdown.vue', async () => {
   describe('slots', async () => {
     it('content', async () => {
       const temp = <div>测试</div>;
-      const wrapper = mount(<CountDown time={1000}></CountDown>, {
+      const wrapper = mount(<CountDown time={1000} content="slot"></CountDown>, {
         slots: {
           content: temp,
         },

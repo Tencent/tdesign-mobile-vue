@@ -69,15 +69,15 @@ describe('ActionSheet', () => {
     it('visible', async () => {
       const wrapper = mount(ActionSheet, {
         props: {
-          visible: true,
+          visible: false,
           items: [],
         },
       });
-      expect(wrapper.find('.t-popup--content').isVisible()).toEqual(true);
+      expect(wrapper.find('.t-popup').isVisible()).toEqual(false);
       await wrapper.setProps({
-        visible: false,
+        visible: true,
       });
-      expect(wrapper.find('.t-popup--content').isVisible()).toEqual(false);
+      expect(wrapper.find('.t-popup').isVisible()).toEqual(true);
     });
   });
 

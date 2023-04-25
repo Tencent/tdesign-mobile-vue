@@ -6,7 +6,7 @@
     <span :class="`${baseClass}__text`">
       <t-node :content="tagContent"></t-node>
     </span>
-    <span v-if="closable && !disabled" :class="`${baseClass}__icon-close`" @click="onClickClose">
+    <span v-if="closable && !disabled" :class="`${baseClass}__icon-close`" @click.stop="onClickClose">
       <close-icon />
     </span>
   </span>

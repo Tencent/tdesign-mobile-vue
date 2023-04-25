@@ -4,17 +4,27 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/button/demos/base.vue';
+import blockVue from '@/button/demos/block.vue';
+import ghostVue from '@/button/demos/ghost.vue';
+import groupVue from '@/button/demos/group.vue';
+import iconVue from '@/button/demos/icon.vue';
 import mobileVue from '@/button/demos/mobile.vue';
+import shapeVue from '@/button/demos/shape.vue';
 import sizeVue from '@/button/demos/size.vue';
 import statusVue from '@/button/demos/status.vue';
-import testVue from '@/button/demos/test.vue';
+import themeVue from '@/button/demos/theme.vue';
 
 const mapper = {
   baseVue,
+  blockVue,
+  ghostVue,
+  groupVue,
+  iconVue,
   mobileVue,
+  shapeVue,
   sizeVue,
   statusVue,
-  testVue,
+  themeVue,
 };
 
 describe('Button', () => {

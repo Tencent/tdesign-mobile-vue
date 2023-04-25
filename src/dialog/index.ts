@@ -9,11 +9,10 @@ import './style';
 export type DialogType = 'alert' | 'confirm' | 'show';
 
 export const DialogPropsDefault = {
-  title: '温馨提醒',
+  title: '',
   content: '',
-  type: '',
-  confirmBtn: '确认',
-  cancelBtn: '取消',
+  confirmBtn: '',
+  cancelBtn: '',
   visible: false,
   zIndex: 2500,
   showOverlay: true,
@@ -88,12 +87,16 @@ function create(props: Partial<TdDialogProps> | string): DefineComponent {
 
 (['show', 'alert', 'confirm'] as DialogType[]).forEach((type: DialogType): void => {
   Dialog[type] = (options: Partial<TdDialogProps> | string) => {
-    let props: any = { content: '', type };
+    let props: any = { content: '' };
 
     if (typeof options === 'string') {
       props.content = options;
     } else {
       props = { ...props, ...options };
+    }
+
+    if (type === 'alert') {
+      props.cancelBtn = null;
     }
 
     return create(props);

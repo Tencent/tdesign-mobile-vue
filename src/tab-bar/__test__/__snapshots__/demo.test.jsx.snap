@@ -57,14 +57,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -116,14 +109,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -175,14 +161,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -234,14 +213,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
@@ -286,14 +258,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -326,14 +291,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -366,14 +324,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -406,14 +357,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
@@ -497,14 +441,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -537,14 +474,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -577,14 +507,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -617,14 +540,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         
         
@@ -707,14 +623,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -766,14 +675,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -825,14 +727,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -884,14 +779,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         
         
@@ -943,14 +831,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -971,14 +852,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -999,14 +873,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -1027,14 +894,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         
         
@@ -1097,14 +957,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             </div>
             <!--v-if-->
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -1136,14 +989,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             </div>
             <!--v-if-->
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -1175,14 +1021,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             </div>
             <!--v-if-->
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -1214,14 +1053,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             </div>
             <!--v-if-->
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         
         
@@ -1273,14 +1105,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-label="TabBar"
@@ -1301,14 +1126,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         <div
           aria-haspopup="true"
@@ -1332,14 +1150,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               
             </div>
           </div>
-          <transition-stub
-            appear="false"
-            css="true"
-            name="spread"
-            persisted="false"
-          >
-            <!--v-if-->
-          </transition-stub>
+          <!--v-if-->
         </div>
         
         
@@ -1387,14 +1198,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1426,14 +1230,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1465,14 +1262,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1504,14 +1294,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       </div>
       <!--v-if-->
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
@@ -1544,14 +1327,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1572,14 +1348,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-haspopup="true"
@@ -1603,14 +1372,7 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   
@@ -1643,14 +1405,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1671,14 +1426,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1699,14 +1447,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   <div
     aria-label="TabBar"
@@ -1727,14 +1468,7 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
         
       </div>
     </div>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="spread"
-      persisted="false"
-    >
-      <!--v-if-->
-    </transition-stub>
+    <!--v-if-->
   </div>
   
   

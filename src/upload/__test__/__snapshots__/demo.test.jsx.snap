@@ -41,21 +41,13 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
       hidden=""
       type="file"
     />
-    <transition-stub
-      appear="false"
-      class="t-image-viewer"
-      css="true"
-      name="t-overlay"
-      persisted="true"
+    <div
+      class="t-overlay t-image-viewer"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
-      >
-        
-        
-      </div>
-    </transition-stub>
+      
+      
+    </div>
   </div>
 </div>
 `;
@@ -135,21 +127,13 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
+          <div
+            class="t-overlay t-image-viewer"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
+            
+            
+          </div>
         </div>
       </div>
       
@@ -397,21 +381,13 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
+          <div
+            class="t-overlay t-image-viewer"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
+            
+            
+          </div>
         </div>
       </div>
       
@@ -657,21 +633,13 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
+          <div
+            class="t-overlay t-image-viewer"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
+            
+            
+          </div>
         </div>
       </div>
       <div
@@ -811,21 +779,13 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
-          <transition-stub
-            appear="false"
-            class="t-image-viewer"
-            css="true"
-            name="t-overlay"
-            persisted="true"
+          <div
+            class="t-overlay t-image-viewer"
+            style="z-index: 1000; transition-duration: 300ms; display: none;"
           >
-            <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
-            >
-              
-              
-            </div>
-          </transition-stub>
+            
+            
+          </div>
         </div>
       </div>
       
@@ -1061,21 +1021,13 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       multiple=""
       type="file"
     />
-    <transition-stub
-      appear="false"
-      class="t-image-viewer"
-      css="true"
-      name="t-overlay"
-      persisted="true"
+    <div
+      class="t-overlay t-image-viewer"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
     >
-      <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
-      >
-        
-        
-      </div>
-    </transition-stub>
+      
+      
+    </div>
   </div>
 </div>
 `;
@@ -1303,21 +1255,13 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         hidden=""
         type="file"
       />
-      <transition-stub
-        appear="false"
-        class="t-image-viewer"
-        css="true"
-        name="t-overlay"
-        persisted="true"
+      <div
+        class="t-overlay t-image-viewer"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
+        
+        
+      </div>
     </div>
   </div>
   <div
@@ -1457,21 +1401,13 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         hidden=""
         type="file"
       />
-      <transition-stub
-        appear="false"
-        class="t-image-viewer"
-        css="true"
-        name="t-overlay"
-        persisted="true"
+      <div
+        class="t-overlay t-image-viewer"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
       >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
+        
+        
+      </div>
     </div>
   </div>
   
