@@ -18,7 +18,7 @@ describe('fab', () => {
       const wrapper = mount(Fab, {
         props: { text },
       });
-      const textContainer = wrapper.find('.t-fab__text');
+      const textContainer = wrapper.find('.t-button__content');
       expect(textContainer.text()).toBe(text);
     });
 
@@ -43,8 +43,8 @@ describe('fab', () => {
         props: { icon, buttonProps },
       });
       expect(wrapper.classes()).toContain(`t-button--danger`);
-      expect(wrapper.classes()).toContain(`t-button--shape-circle`);
-      expect(wrapper.classes()).toContain(`t-size-l`);
+      expect(wrapper.classes()).toContain(`t-button--circle`);
+      expect(wrapper.classes()).toContain(`t-button--size-large`);
     });
   });
 

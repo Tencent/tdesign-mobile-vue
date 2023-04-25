@@ -1,5 +1,4 @@
 export { default as Button } from './button';
-export { default as ButtonGroup } from './button-group';
 export { default as Divider } from './divider';
 export { default as Calendar } from './calendar';
 export { default as Cell, CellGroup } from './cell';
@@ -34,7 +33,7 @@ export { DropdownMenu, DropdownItem } from './dropdown-menu';
 export { Collapse, CollapsePanel } from './collapse';
 export { Tabs, TabPanel } from './tabs';
 export { Swiper, SwiperItem } from './swiper';
-export { Countdown } from './count-down';
+export { CountDown } from './count-down';
 export { default as Avatar, AvatarGroup } from './avatar';
 export { default as Image } from './image';
 export { default as SwipeCell } from './swipe-cell';

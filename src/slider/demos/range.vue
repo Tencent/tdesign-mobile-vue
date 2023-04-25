@@ -1,5 +1,7 @@
 <template>
-  <t-slider v-model="rangeValue" show-extreme-value range @change="onChange" />
+  <div class="wrapper">
+    <t-slider :default-value="rangeValue" range @change="onChange" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -11,3 +13,10 @@ function onChange($event: number | number[]) {
   console.log(`change to ${$event}`);
 }
 </script>
+
+<style lang="less" scoped>
+.wrapper {
+  background: #fff;
+  padding: 18px 0;
+}
+</style>

@@ -31,10 +31,19 @@ function Toast(props: string | Partial<TdToastProps>): DefineComponent<TdToastPr
     clearTimeout(instance.timer);
     app.unmount();
     root.remove();
+    if (propsObject.onClose) {
+      propsObject.onClose();
+    }
+    instance = null;
   };
 
   if (propsObject.duration && propsObject.duration > 0) {
-    instance.timer = setTimeout(instance.clear, propsObject.duration);
+    instance.timer = setTimeout(() => {
+      instance.clear();
+      if (propsObject.onDestroy) {
+        propsObject.onDestroy();
+      }
+    }, propsObject.duration);
   }
 
   app = createApp(instance, { ...propsObject });
@@ -49,7 +58,7 @@ Toast.clear = () => {
   }
 };
 
-(['loading', 'success', 'fail'] as TdToastProps['theme'][]).forEach((type): void => {
+(['loading', 'success', 'error'] as TdToastProps['theme'][]).forEach((type): void => {
   if (!type) {
     return;
   }
@@ -87,7 +96,7 @@ type ToastApi = {
   /** 展示成功提示 */
   success: (options?: Partial<TdToastProps> | string) => void;
   /** 展示失败提示 */
-  fail: (options?: Partial<TdToastProps> | string) => void;
+  error: (options?: Partial<TdToastProps> | string) => void;
   /** 关闭提示 */
   clear: () => void;
 };

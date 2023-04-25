@@ -16,3 +16,6 @@ export * from './useTouch';
 export * from './useScrollParent';
 export * from './useExpose';
 export * from './useTest';
+
+/* directives */
+export { default as Hover } from './hover';

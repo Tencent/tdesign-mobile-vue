@@ -1,10 +1,13 @@
 import { h } from 'vue';
-import { mount } from '@vue/test-utils';
+import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Cascader from '../cascader.vue';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Radio from '../../radio/index';
-import { on } from 'events';
+
+config.global.stubs = {
+  teleport: true
+}
 
 const prefix = 't';
 const name = `${prefix}-cascader`;

@@ -6,381 +6,361 @@ exports[`Button > Button baseVue demo works fine 1`] = `
 >
   
   <div
-    class="button-demo"
+    class="row"
+    data-v-61a49c84=""
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+      data-v-61a49c84=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        强按钮
+        填充按钮
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+      data-v-61a49c84=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-         弱按钮 
+        填充按钮
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
+      data-v-61a49c84=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        次按钮
+        填充按钮
         
       </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        
-         带图标按钮 
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle t-is-block"
-      role="button"
-    >
       <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        强警告按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--danger t-button--shape-rectangle t-is-block"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-         弱警告按钮 
-        
-      </span>
     </button>
   </div>
   <div
-    style="background: rgb(166, 166, 166); padding: 8px 16px; margin-bottom: 16px;"
+    class="row"
+    data-v-61a49c84=""
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-button--ghost t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
+      data-v-61a49c84=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-         幽灵按钮 
+        描边按钮
         
       </span>
-    </button>
-  </div>
-  <div
-    class="margin-button"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-is-block"
-      role="button"
-    >
       <!---->
-      <span
-        class="t-button__text"
-      >
-        
-         文字按钮 
-        
-      </span>
-    </button>
-  </div>
-  <div
-    class="no-border-radius margin-button"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-         通栏按钮 
-        
-      </span>
-    </button>
-  </div>
-  <div
-    class="no-border-radius no-border flex margin-button"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        次按钮
-        
-      </span>
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
+      data-v-61a49c84=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        主按钮
+        文字按钮
         
       </span>
+      <!---->
     </button>
-  </div>
-  <div
-    class="button-demo align-center margin-right"
-  >
-    <div
-      class="flex align-center margin-right"
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          带图标按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          带图标按钮
-          
-        </span>
-      </button>
-    </div>
-    <div
-      class="flex align-center margin-right"
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          <!---->
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          <!---->
-        </span>
-      </button>
-    </div>
-  </div>
-  <div
-    class="flex align-center margin-right button-demo-loading"
-  >
-    <div
-      class="button-demo flex"
-    >
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--base t-button--primary t-button--shape-square t-is-loading"
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-loading"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          <!---->
-        </span>
-      </button>
-      <button
-        aria-disabled="false"
-        class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-loading"
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-loading"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          加载中...
-          
-        </span>
-      </button>
-    </div>
   </div>
   
+</div>
+`;
+
+exports[`Button > Button blockVue demo works fine 1`] = `
+<div
+  class="row"
+  data-v-75d4286a=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
+    data-v-75d4286a=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      填充按钮
+      
+    </span>
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`Button > Button ghostVue demo works fine 1`] = `
+<div
+  class="row"
+  data-v-511c0528=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--ghost"
+    data-v-511c0528=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      幽灵按钮
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle t-button--ghost"
+    data-v-511c0528=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      幽灵按钮
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--ghost"
+    data-v-511c0528=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      幽灵按钮
+      
+    </span>
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`Button > Button groupVue demo works fine 1`] = `
+<div
+  class="row"
+  data-v-2d21dd48=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+    data-v-2d21dd48=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      填充按钮
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+    data-v-2d21dd48=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      填充按钮
+      
+    </span>
+    <!---->
+  </button>
+</div>
+`;
+
+exports[`Button > Button iconVue demo works fine 1`] = `
+<div
+  class="row"
+  data-v-c77683a8=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+    data-v-c77683a8=""
+    role="button"
+    type="button"
+  >
+    <svg
+      class="t-icon t-icon-app"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+    <span
+      class="t-button__content"
+    >
+      
+      填充按钮
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--loading"
+    data-v-c77683a8=""
+    role="button"
+    type="button"
+  >
+    <div
+      class="t-loading"
+      style="font-size: 20px;"
+    >
+      
+      <svg
+        class="t-loading__gradient t-icon-loading"
+        height="1em"
+        style="animation-duration: 800ms; width: 20px; height: 20px;"
+        version="1.1"
+        viewBox="0 0 12 12"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <foreignobject
+          height="12"
+          width="12"
+          x="0"
+          y="0"
+        >
+          <div
+            class="t-loading__gradient-conic"
+          />
+        </foreignobject>
+      </svg>
+      
+      <!--v-if-->
+      <!---->
+    </div>
+    <span
+      class="t-button__content"
+    >
+      
+      加载中
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
+    data-v-c77683a8=""
+    role="button"
+    type="button"
+  >
+    <svg
+      class="t-icon t-icon-search"
+      fill="none"
+      height="1em"
+      style="font-size: 24px;"
+      viewBox="0 0 16 16"
+      width="1em"
+    >
+      <path
+        d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+        fill="currentColor"
+        fill-opacity="0.9"
+      />
+    </svg>
+    <span
+      class="t-button__content"
+    >
+      <!---->
+    </span>
+    <!---->
+  </button>
 </div>
 `;
 
 exports[`Button > Button mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
+  data-v-7c375b15=""
 >
   <h1
     class="title"
+    data-v-7c375b15=""
   >
     Button 按钮
   </h1>
   <p
     class="summary"
+    data-v-7c375b15=""
   >
     按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
   </p>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-7c375b15=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -388,7 +368,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -402,59 +382,139 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       
       <div
-        class="button-demo"
+        class="row"
+        data-v-61a49c84=""
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+          data-v-61a49c84=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-            强按钮
+            填充按钮
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+          data-v-61a49c84=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-             弱按钮 
+            填充按钮
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
+          data-v-61a49c84=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-            次按钮
+            填充按钮
             
           </span>
+          <!---->
+        </button>
+      </div>
+      <div
+        class="row"
+        data-v-61a49c84=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
+          data-v-61a49c84=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            描边按钮
+            
+          </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
+          data-v-61a49c84=""
           role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            文字按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-7c375b15=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        图标按钮
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="row"
+        data-v-7c375b15=""
+        data-v-c77683a8=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+          data-v-c77683a8=""
+          role="button"
+          type="button"
         >
           <svg
             class="t-icon t-icon-app"
             fill="none"
             height="1em"
+            style="font-size: 24px;"
             viewBox="0 0 16 16"
             width="1em"
           >
@@ -465,304 +525,277 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
             />
           </svg>
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-             带图标按钮 
+            填充按钮
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--loading"
+          data-v-c77683a8=""
           role="button"
+          type="button"
         >
-          <!---->
-          <span
-            class="t-button__text"
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
           >
             
-            强警告按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--danger t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-             弱警告按钮 
-            
-          </span>
-        </button>
-      </div>
-      <div
-        style="background: rgb(166, 166, 166); padding: 8px 16px; margin-bottom: 16px;"
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-button--ghost t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-             幽灵按钮 
-            
-          </span>
-        </button>
-      </div>
-      <div
-        class="margin-button"
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-             文字按钮 
-            
-          </span>
-        </button>
-      </div>
-      <div
-        class="no-border-radius margin-button"
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-             通栏按钮 
-            
-          </span>
-        </button>
-      </div>
-      <div
-        class="no-border-radius no-border flex margin-button"
-      >
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            次按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block"
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            主按钮
-            
-          </span>
-        </button>
-      </div>
-      <div
-        class="button-demo align-center margin-right"
-      >
-        <div
-          class="flex align-center margin-right"
-        >
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-            role="button"
-          >
             <svg
-              class="t-icon t-icon-app"
-              fill="none"
+              class="t-loading__gradient t-icon-loading"
               height="1em"
-              viewBox="0 0 16 16"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+              version="1.1"
+              viewBox="0 0 12 12"
               width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
+              <foreignobject
+                height="12"
+                width="12"
+                x="0"
+                y="0"
+              >
+                <div
+                  class="t-loading__gradient-conic"
+                />
+              </foreignobject>
             </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              带图标按钮
-              
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
-            role="button"
+            
+            <!--v-if-->
+            <!---->
+          </div>
+          <span
+            class="t-button__content"
           >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              带图标按钮
-              
-            </span>
-          </button>
-        </div>
-        <div
-          class="flex align-center margin-right"
+            
+            加载中
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
+          data-v-c77683a8=""
+          role="button"
+          type="button"
         >
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
-            role="button"
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 16 16"
+            width="1em"
           >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
-            role="button"
+            <path
+              d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__content"
           >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-        </div>
-      </div>
-      <div
-        class="flex align-center margin-right button-demo-loading"
-      >
-        <div
-          class="button-demo flex"
-        >
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-square t-is-loading"
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-loading"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-loading"
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-loading"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              加载中...
-              
-            </span>
-          </button>
-        </div>
+            <!---->
+          </span>
+          <!---->
+        </button>
       </div>
       
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-7c375b15=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        幽灵按钮
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="row"
+        data-v-511c0528=""
+        data-v-7c375b15=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--ghost"
+          data-v-511c0528=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            幽灵按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle t-button--ghost"
+          data-v-511c0528=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            幽灵按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--ghost"
+          data-v-511c0528=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            幽灵按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-7c375b15=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        组合按钮
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="row"
+        data-v-2d21dd48=""
+        data-v-7c375b15=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+          data-v-2d21dd48=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+          data-v-2d21dd48=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-7c375b15=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        通栏按钮
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="row"
+        data-v-75d4286a=""
+        data-v-7c375b15=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
+          data-v-75d4286a=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
       
     </div>
   </div>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-7c375b15=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -770,7 +803,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        02 状态
+        02 组件状态
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -784,377 +817,104 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       
       
       <div
-        class="button-demo"
+        class="row"
+        data-v-096a7265=""
       >
         <button
           aria-disabled="true"
-          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--disabled"
+          data-v-096a7265=""
           disabled=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-            强按钮
+            填充按钮
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="true"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+          class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle t-button--disabled"
+          data-v-096a7265=""
           disabled=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-             弱按钮 
+            填充按钮
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="true"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block t-is-disabled"
+          class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--disabled"
+          data-v-096a7265=""
           disabled=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-            次按钮
+            填充按钮
             
           </span>
-        </button>
-        <button
-          aria-disabled="true"
-          class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <svg
-            class="t-icon t-icon-app"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-          <span
-            class="t-button__text"
-          >
-            
-             带图标按钮 
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="true"
-          class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle t-is-block t-is-disabled"
-          disabled=""
-          role="button"
-        >
           <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            强警告按钮
-            
-          </span>
-        </button>
-        <button
-          aria-disabled="true"
-          class="t-button t-size-l t-button--outline t-button--danger t-button--shape-rectangle t-is-block t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-             弱警告按钮 
-            
-          </span>
         </button>
       </div>
       <div
-        style="background: rgb(166, 166, 166); padding: 8px 16px; margin-bottom: 16px;"
+        class="row"
+        data-v-096a7265=""
       >
         <button
           aria-disabled="true"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-button--ghost t-is-block t-is-disabled"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--disabled"
+          data-v-096a7265=""
           disabled=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-             幽灵按钮 
+            描边按钮
             
           </span>
-        </button>
-      </div>
-      <div
-        class="margin-button"
-      >
-        <button
-          aria-disabled="true"
-          class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
-          disabled=""
-          role="button"
-        >
           <!---->
-          <span
-            class="t-button__text"
-          >
-            
-             文字按钮 
-            
-          </span>
-        </button>
-      </div>
-      <div
-        class="no-border-radius margin-button"
-      >
-        <button
-          aria-disabled="true"
-          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-             通栏按钮 
-            
-          </span>
-        </button>
-      </div>
-      <div
-        class="no-border-radius no-border flex margin-button"
-      >
-        <button
-          aria-disabled="true"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block t-is-disabled"
-          disabled=""
-          role="button"
-        >
-          <!---->
-          <span
-            class="t-button__text"
-          >
-            
-            次按钮
-            
-          </span>
         </button>
         <button
           aria-disabled="true"
-          class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+          class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
+          data-v-096a7265=""
           disabled=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
-            主按钮
+            文字按钮
             
           </span>
+          <!---->
         </button>
-      </div>
-      <div
-        class="button-demo align-center margin-right"
-      >
-        <div
-          class="flex align-center margin-right"
-        >
-          <button
-            aria-disabled="true"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-disabled"
-            disabled=""
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              带图标按钮
-              
-            </span>
-          </button>
-          <button
-            aria-disabled="true"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-round t-is-disabled"
-            disabled=""
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              带图标按钮
-              
-            </span>
-          </button>
-        </div>
-        <div
-          class="flex align-center margin-right"
-        >
-          <button
-            aria-disabled="true"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square t-is-disabled"
-            disabled=""
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="true"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle t-is-disabled"
-            disabled=""
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-        </div>
-      </div>
-      <div
-        class="flex align-center margin-right button-demo-loading"
-      >
-        <div
-          class="button-demo flex"
-        >
-          <button
-            aria-disabled="true"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-square t-is-disabled t-is-loading"
-            disabled=""
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-loading"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="true"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-disabled t-is-loading"
-            disabled=""
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-loading"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              加载中...
-              
-            </span>
-          </button>
-        </div>
       </div>
       
       
@@ -1162,6 +922,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-7c375b15=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1169,7 +930,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        03 规格
+        03 组件样式
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -1182,587 +943,665 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="button-demo"
+        class="row"
+        data-v-0a874498=""
+        data-v-7c375b15=""
       >
-        
-        <div
-          class="flex align-center margin-right"
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+          data-v-0a874498=""
+          role="button"
+          type="button"
         >
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-              按钮 44
-              
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-              按钮 40
-              
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
-            role="button"
-          >
-            <!---->
-            <span
-              class="t-button__text"
-            >
-              
-              按钮 36
-              
-            </span>
-          </button>
-        </div>
-        <div
-          class="flex align-center margin-right"
-        >
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-round"
-            role="button"
+          <!---->
+          <span
+            class="t-button__content"
           >
             
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+            按钮 48
             
-            <span
-              class="t-button__text"
-            >
-              
-               按钮 
-              
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              按钮
-              
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-s t-button--base t-button--primary t-button--shape-round"
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              
-              按钮
-              
-            </span>
-          </button>
-        </div>
-        <div
-          class="flex align-center margin-right"
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+          data-v-0a874498=""
+          role="button"
+          type="button"
         >
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-square"
-            role="button"
+          <!---->
+          <span
+            class="t-button__content"
           >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-s t-button--base t-button--primary t-button--shape-square"
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-        </div>
-        <div
-          class="flex align-center margin-right"
+            
+            按钮 40
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
+          data-v-0a874498=""
+          role="button"
+          type="button"
         >
-          <button
-            aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-circle"
-            role="button"
+          <!---->
+          <span
+            class="t-button__content"
           >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
-            role="button"
+            
+            按钮 32
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
+          data-v-0a874498=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
           >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-size-s t-button--base t-button--primary t-button--shape-circle"
-            role="button"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-            <span
-              class="t-button__text"
-            >
-              <!---->
-            </span>
-          </button>
-        </div>
-        
+            
+            按钮 28
+            
+          </span>
+          <!---->
+        </button>
       </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-7c375b15=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        按钮形状
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="row"
+        data-v-3fc3ed04=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+          data-v-3fc3ed04=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="搜索"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
+          data-v-3fc3ed04=""
+          role="button"
+          type="button"
+        >
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__content"
+          >
+            <!---->
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--round"
+          data-v-3fc3ed04=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          aria-label="搜索"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--circle"
+          data-v-3fc3ed04=""
+          role="button"
+          type="button"
+        >
+          <svg
+            class="t-icon t-icon-search"
+            fill="none"
+            height="1em"
+            style="font-size: 24px;"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+          <span
+            class="t-button__content"
+          >
+            <!---->
+          </span>
+          <!---->
+        </button>
+      </div>
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block rectangle-button"
+        data-v-3fc3ed04=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          填充按钮
+          
+        </span>
+        <!---->
+      </button>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-7c375b15=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        按钮主题
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="row"
+        data-v-42dcdba6=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            描边按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            文字按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      <div
+        class="row"
+        data-v-42dcdba6=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            描边按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            文字按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      <div
+        class="row"
+        data-v-42dcdba6=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            描边按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            文字按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      <div
+        class="row"
+        data-v-42dcdba6=""
+      >
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            填充按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            描边按钮
+            
+          </span>
+          <!---->
+        </button>
+        <button
+          aria-disabled="false"
+          class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
+          data-v-42dcdba6=""
+          role="button"
+          type="button"
+        >
+          <!---->
+          <span
+            class="t-button__content"
+          >
+            
+            文字按钮
+            
+          </span>
+          <!---->
+        </button>
+      </div>
+      
       
     </div>
   </div>
 </div>
 `;
 
-exports[`Button > Button sizeVue demo works fine 1`] = `
+exports[`Button > Button shapeVue demo works fine 1`] = `
 <div
   data-v-app=""
 >
   
   <div
-    class="flex align-center margin-right"
+    class="row"
+    data-v-3fc3ed04=""
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+      data-v-3fc3ed04=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        按钮 44
+        填充按钮
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+      aria-label="搜索"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--square"
+      data-v-3fc3ed04=""
       role="button"
+      type="button"
     >
-      <!---->
-      <span
-        class="t-button__text"
+      <svg
+        class="t-icon t-icon-search"
+        fill="none"
+        height="1em"
+        style="font-size: 24px;"
+        viewBox="0 0 16 16"
+        width="1em"
       >
-        
-        按钮 40
-        
+        <path
+          d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__content"
+      >
+        <!---->
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--round"
+      data-v-3fc3ed04=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        按钮 36
+        填充按钮
         
       </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      aria-label="搜索"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--circle"
+      data-v-3fc3ed04=""
+      role="button"
+      type="button"
+    >
+      <svg
+        class="t-icon t-icon-search"
+        fill="none"
+        height="1em"
+        style="font-size: 24px;"
+        viewBox="0 0 16 16"
+        width="1em"
+      >
+        <path
+          d="M9.51 10.22a4.76 4.76 0 11.7-.7l3.54 3.52-.7.71-3.54-3.53zm.77-3.7a3.76 3.76 0 10-7.53 0 3.76 3.76 0 007.53 0z"
+          fill="currentColor"
+          fill-opacity="0.9"
+        />
+      </svg>
+      <span
+        class="t-button__content"
+      >
+        <!---->
+      </span>
+      <!---->
     </button>
   </div>
-  <div
-    class="flex align-center margin-right"
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block rectangle-button"
+    data-v-3fc3ed04=""
+    role="button"
+    type="button"
   >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-round"
-      role="button"
+    <!---->
+    <span
+      class="t-button__content"
     >
       
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+      填充按钮
       
-      <span
-        class="t-button__text"
-      >
-        
-         按钮 
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--shape-round"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        
-        按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--shape-round"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        
-        按钮
-        
-      </span>
-    </button>
-  </div>
-  <div
-    class="flex align-center margin-right"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-square"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        <!---->
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--shape-square"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        <!---->
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--shape-square"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        <!---->
-      </span>
-    </button>
-  </div>
-  <div
-    class="flex align-center margin-right"
-  >
-    <button
-      aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-circle"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        <!---->
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        <!---->
-      </span>
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--shape-circle"
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        <!---->
-      </span>
-    </button>
-  </div>
+    </span>
+    <!---->
+  </button>
   
+</div>
+`;
+
+exports[`Button > Button sizeVue demo works fine 1`] = `
+<div
+  class="row"
+  data-v-0a874498=""
+>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+    data-v-0a874498=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      按钮 48
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
+    data-v-0a874498=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      按钮 40
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
+    data-v-0a874498=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      按钮 32
+      
+    </span>
+    <!---->
+  </button>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
+    data-v-0a874498=""
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      按钮 28
+      
+    </span>
+    <!---->
+  </button>
 </div>
 `;
 
@@ -1772,454 +1611,338 @@ exports[`Button > Button statusVue demo works fine 1`] = `
 >
   
   <div
-    class="button-demo"
+    class="row"
+    data-v-096a7265=""
   >
     <button
       aria-disabled="true"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--disabled"
+      data-v-096a7265=""
       disabled=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        强按钮
+        填充按钮
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="true"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+      class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle t-button--disabled"
+      data-v-096a7265=""
       disabled=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-         弱按钮 
+        填充按钮
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="true"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block t-is-disabled"
+      class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle t-button--disabled"
+      data-v-096a7265=""
       disabled=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        次按钮
+        填充按钮
         
       </span>
-    </button>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-l t-button--outline t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
-      disabled=""
-      role="button"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
-      >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-      <span
-        class="t-button__text"
-      >
-        
-         带图标按钮 
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-l t-button--base t-button--danger t-button--shape-rectangle t-is-block t-is-disabled"
-      disabled=""
-      role="button"
-    >
       <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        强警告按钮
-        
-      </span>
-    </button>
-    <button
-      aria-disabled="true"
-      class="t-button t-size-l t-button--outline t-button--danger t-button--shape-rectangle t-is-block t-is-disabled"
-      disabled=""
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-         弱警告按钮 
-        
-      </span>
     </button>
   </div>
   <div
-    style="background: rgb(166, 166, 166); padding: 8px 16px; margin-bottom: 16px;"
+    class="row"
+    data-v-096a7265=""
   >
     <button
       aria-disabled="true"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-button--ghost t-is-block t-is-disabled"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--disabled"
+      data-v-096a7265=""
       disabled=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-         幽灵按钮 
+        描边按钮
         
       </span>
-    </button>
-  </div>
-  <div
-    class="margin-button"
-  >
-    <button
-      aria-disabled="true"
-      class="t-button t-size-l t-button--text t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
-      disabled=""
-      role="button"
-    >
       <!---->
-      <span
-        class="t-button__text"
-      >
-        
-         文字按钮 
-        
-      </span>
-    </button>
-  </div>
-  <div
-    class="no-border-radius margin-button"
-  >
-    <button
-      aria-disabled="true"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
-      disabled=""
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-         通栏按钮 
-        
-      </span>
-    </button>
-  </div>
-  <div
-    class="no-border-radius no-border flex margin-button"
-  >
-    <button
-      aria-disabled="true"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block t-is-disabled"
-      disabled=""
-      role="button"
-    >
-      <!---->
-      <span
-        class="t-button__text"
-      >
-        
-        次按钮
-        
-      </span>
     </button>
     <button
       aria-disabled="true"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-block t-is-disabled"
+      class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-button--disabled"
+      data-v-096a7265=""
       disabled=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        主按钮
+        文字按钮
         
       </span>
+      <!---->
     </button>
-  </div>
-  <div
-    class="button-demo align-center margin-right"
-  >
-    <div
-      class="flex align-center margin-right"
-    >
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle t-is-disabled"
-        disabled=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          带图标按钮
-          
-        </span>
-      </button>
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-round t-is-disabled"
-        disabled=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          带图标按钮
-          
-        </span>
-      </button>
-    </div>
-    <div
-      class="flex align-center margin-right"
-    >
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-square t-is-disabled"
-        disabled=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          <!---->
-        </span>
-      </button>
-      <button
-        aria-disabled="true"
-        class="t-button t-size-m t-button--base t-button--primary t-button--shape-circle t-is-disabled"
-        disabled=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-app"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          <!---->
-        </span>
-      </button>
-    </div>
-  </div>
-  <div
-    class="flex align-center margin-right button-demo-loading"
-  >
-    <div
-      class="button-demo flex"
-    >
-      <button
-        aria-disabled="true"
-        class="t-button t-size-l t-button--base t-button--primary t-button--shape-square t-is-disabled t-is-loading"
-        disabled=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-loading"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          <!---->
-        </span>
-      </button>
-      <button
-        aria-disabled="true"
-        class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle t-is-disabled t-is-loading"
-        disabled=""
-        role="button"
-      >
-        <svg
-          class="t-icon t-icon-loading"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M8 1.5a6.5 6.5 0 000 13v-1.63A4.87 4.87 0 1112.88 8h1.62A6.5 6.5 0 008 1.5z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-        <span
-          class="t-button__text"
-        >
-          
-          加载中...
-          
-        </span>
-      </button>
-    </div>
   </div>
   
 </div>
 `;
 
-exports[`Button > Button testVue demo works fine 1`] = `
-<div>
-  <p>
-    正确
-  </p>
+exports[`Button > Button themeVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
   <div
-    class="tdesign-demo-block"
+    class="row"
+    data-v-42dcdba6=""
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
+      data-v-42dcdba6=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        主要按钮
+        填充按钮
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--outline t-button--default t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle"
+      data-v-42dcdba6=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        次要按钮
+        描边按钮
         
       </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        文字按钮
+        
+      </span>
+      <!---->
     </button>
   </div>
-  <br />
-  <p>
-    错误
-  </p>
   <div
-    class="tdesign-demo-block"
+    class="row"
+    data-v-42dcdba6=""
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
+      data-v-42dcdba6=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        主要按钮
+        填充按钮
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-m t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
+      data-v-42dcdba6=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
-        次要按钮
+        描边按钮
         
       </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        文字按钮
+        
+      </span>
+      <!---->
     </button>
   </div>
+  <div
+    class="row"
+    data-v-42dcdba6=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        填充按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--outline t-button--danger t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        描边按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--text t-button--danger t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        文字按钮
+        
+      </span>
+      <!---->
+    </button>
+  </div>
+  <div
+    class="row"
+    data-v-42dcdba6=""
+  >
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        填充按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--outline t-button--light t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        描边按钮
+        
+      </span>
+      <!---->
+    </button>
+    <button
+      aria-disabled="false"
+      class="t-button t-button--size-large t-button--text t-button--light t-button--rectangle"
+      data-v-42dcdba6=""
+      role="button"
+      type="button"
+    >
+      <!---->
+      <span
+        class="t-button__content"
+      >
+        
+        文字按钮
+        
+      </span>
+      <!---->
+    </button>
+  </div>
+  
 </div>
 `;

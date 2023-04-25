@@ -4,11 +4,19 @@ import { TdUseCountDownProps, TdUseCountDown } from './type';
 import { getRemainTimes, getShowTimes, getScreenFps } from './utils';
 
 export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
-  const { time = 0, autoStart, millisecond, format = 'HH:mm:ss', onFinish, onChange } = props || {};
+  const {
+    time = 0,
+    autoStart,
+    millisecond = false,
+    format = 'HH:mm:ss',
+    splitWithUnit = false,
+    onFinish,
+    onChange,
+  } = props || {};
   // state
   const fps = ref();
   const count = ref(Number(time));
-  const showTimes = reactive(getShowTimes(getRemainTimes(time), format, !!millisecond));
+  const showTimes = reactive(getShowTimes(getRemainTimes(time), format, millisecond, splitWithUnit));
 
   // raf
   const { pause, resume } = useRafFn(
@@ -25,7 +33,7 @@ export function useCountDown(props: TdUseCountDownProps): TdUseCountDown {
       const times = getRemainTimes(count.value);
       onChange?.(times);
       count.value === 0 && onFinish?.();
-      getShowTimes(times, format)?.forEach?.((i, idx) => (showTimes[idx].value = i?.value));
+      getShowTimes(times, format, millisecond, splitWithUnit)?.forEach?.((i, idx) => (showTimes[idx].value = i?.value));
     },
     { immediate: autoStart },
   );

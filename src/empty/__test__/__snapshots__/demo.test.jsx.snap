@@ -70,17 +70,19 @@ exports[`Empty > Empty buttonEmptyVue demo works fine 1`] = `
     
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         操作按钮
         
       </span>
+      <!---->
     </button>
     
   </div>
@@ -471,17 +473,19 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
           
           <button
             aria-disabled="false"
-            class="t-button t-size-l t-button--base t-button--primary t-button--shape-rectangle"
+            class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
             role="button"
+            type="button"
           >
             <!---->
             <span
-              class="t-button__text"
+              class="t-button__content"
             >
               
               操作按钮
               
             </span>
+            <!---->
           </button>
           
         </div>

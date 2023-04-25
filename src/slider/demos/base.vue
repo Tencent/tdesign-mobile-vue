@@ -1,12 +1,12 @@
 <template>
-  <t-slider v-model="value" :label="false" :on-change="onChange" />
+  <div class="wrapper">
+    <t-slider :default-value="23" />
+  </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue';
-
-const value = ref(0);
-const onChange = ($event: number | number[]) => {
-  console.log(`change to ${$event}`);
-};
-</script>
+<style lang="less" scoped>
+.wrapper {
+  background: #fff;
+  padding: 18px 0;
+}
+</style>

@@ -2,8 +2,9 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Badge from '../badge.vue';
 import Button from '../../button/button.vue';
+import config from '../../config';
 
-const prefix = 't';
+const { prefix } = config;
 const name = `${prefix}-badge`;
 const TEXT = 'Badge 徽标';
 

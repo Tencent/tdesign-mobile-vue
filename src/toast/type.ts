@@ -49,5 +49,13 @@ export interface TdToastProps {
   /**
    * 提示类型
    */
-  theme?: 'loading' | 'success' | 'fail';
+  theme?: 'loading' | 'success' | 'error';
+  /**
+   * 轻提示隐藏的时候触发
+   */
+  onClose?: () => void;
+  /**
+   * 轻提示销毁的时候触发
+   */
+  onDestroy?: () => void;
 }
