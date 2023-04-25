@@ -24,9 +24,21 @@ exports[`Tabs > slots > : panel 1`] = `
           >
             
             <div
-              class="t-tabs__nav-item t-is-active"
+              class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
             >
-              标签一
+              <div
+                class="t-badge"
+              >
+                <div
+                  class="t-badge__content"
+                >
+                  
+                  标签一
+                  
+                </div>
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
             
             <div

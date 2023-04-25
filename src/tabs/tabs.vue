@@ -1,28 +1,41 @@
 <template>
   <div :class="classes">
-    <t-sticky v-bind="stickyProps">
+    <t-sticky v-bind="stickyProps" @scroll="handlerScroll">
       <div :class="navClasses">
         <div ref="navScroll" :class="`${name}__nav-container`">
-          <div ref="navWrap" :class="`${name}__nav-wrap`">
+          <div
+            ref="navWrap"
+            :class="{
+              [`${name}__nav-wrap`]: true,
+              [`${name}__nav-wrap-card`]: theme === 'card',
+            }"
+          >
             <tab-nav-item
               v-for="item in itemProps"
               :key="item.value"
               :label="item.label"
+              :badge-props="item.badgeProps"
               :class="{
-                [`${name}__nav-item`]: true,
+                [`${name}__nav-item-${theme}`]: true,
+                [`${name}__nav-item-evenly`]: spaceEvenly,
                 [activeClass]: item.value === currentValue,
                 [disabledClass]: item.disabled,
               }"
               @click="(e) => tabClick(e, item)"
             >
             </tab-nav-item>
-            <div v-if="showBottomLine" ref="navLine" :class="`${name}__nav-line`" :style="lineStyle"></div>
+            <div
+              v-if="theme === 'line' && showBottomLine"
+              ref="navLine"
+              :class="`${name}__nav-line`"
+              :style="lineStyle"
+            ></div>
           </div>
         </div>
       </div>
     </t-sticky>
-    <div :class="`${name}__content`">
-      <slot> </slot>
+    <div :class="`${name}__content`" @touchstart="moveStart" @touchmove="onMove" @touchend="moveEnd">
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -44,7 +57,7 @@ import {
 import config from '../config';
 import TabsProps from './props';
 import TabNavItem from './tab-nav-item.vue';
-import { useVModel } from '../shared';
+import { useVModel, useEmitEvent } from '../shared';
 import CLASSNAMES from '../shared/constants';
 import TSticky from '../sticky';
 
@@ -57,9 +70,13 @@ export default defineComponent({
   props: TabsProps,
   emits: ['update:value', 'update:modelValue'],
   setup(props, context) {
-    const placement = computed(() => props.placement);
+    const emitEvent = useEmitEvent(props, context.emit);
+    const placement = ref('top');
+    const theme = computed(() => props.theme);
+    const spaceEvenly = computed(() => props.spaceEvenly);
     const showBottomLine = computed(() => props.showBottomLine);
-    const stickyProps = computed(() => ({ disabled: true, ...props.stickyProps }));
+    const swipeable = computed(() => props.swipeable);
+    const stickyProps = computed(() => ({ ...props.stickyProps, disabled: !props.sticky }));
     const activeClass = CLASSNAMES.STATUS.active;
     const disabledClass = CLASSNAMES.STATUS.disabled;
     const classes = computed(() => [
@@ -69,6 +86,21 @@ export default defineComponent({
     ]);
     const navClasses = ref([`${name}__nav`]);
     const isScroll = ref(false);
+    const startX = ref(0);
+    const startY = ref(0);
+    const endX = ref(0);
+    const endY = ref(0);
+    const canMove = ref(true);
+    const tabIndex = computed(() => {
+      let index = 0;
+      for (let i = 0; i < itemProps.value.length; i++) {
+        if (itemProps.value[i].value === currentValue.value) {
+          index = i;
+          break;
+        }
+      }
+      return index;
+    });
 
     const { value, modelValue } = toRefs(props);
     const [currentValue, setCurrentValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
@@ -138,15 +170,68 @@ export default defineComponent({
     });
 
     const tabClick = (event: Event, item: Record<string, unknown>) => {
-      const { value, disabled } = item as any;
+      const { value, disabled, label } = item as any;
       if (disabled || currentValue.value === value) {
         return false;
       }
-      setCurrentValue(value);
+      setCurrentValue(value, typeof label === 'function' ? label() : label);
+      emitEvent('click', value, typeof label === 'function' ? label() : label);
       nextTick(() => {
         moveToActiveTab();
       });
     };
+
+    const handlerScroll = (context: { scrollTop: number; isFixed: boolean }) => {
+      const { scrollTop, isFixed } = context;
+      if (props.stickyProps) {
+        emitEvent('scroll', scrollTop, isFixed);
+      }
+    };
+
+    // 手势滑动开始
+    const moveStart = (e: any) => {
+      if (!swipeable.value) return;
+      startX.value = e.targetTouches[0].pageX;
+      startY.value = e.targetTouches[0].pageY;
+    };
+
+    const onMove = (e: any) => {
+      if (!swipeable.value) return;
+      if (!canMove.value) return;
+      endX.value = e.targetTouches[0].pageX;
+      endY.value = e.targetTouches[0].pageY;
+      const dValueX = Math.abs(startX.value - endX.value);
+      const dValueY = Math.abs(startY.value - endY.value);
+      if (tabIndex.value >= 0 && tabIndex.value < itemProps.value.length) {
+        if (dValueX > dValueY) {
+          // 水平滑动长度大于纵向滑动长度，那么选择水平滑动，阻止浏览器默认左右滑动事件
+          e.preventDefault();
+          if (dValueX <= 40) return;
+          if (startX.value > endX.value) {
+            // 向左划
+            if (tabIndex.value >= itemProps.value.length - 1) return;
+            canMove.value = false;
+            tabClick(e, itemProps.value[tabIndex.value + 1]);
+          } else if (startX.value < endX.value) {
+            // 向右划
+            if (tabIndex.value <= 0) return;
+            canMove.value = false;
+            tabClick(e, itemProps.value[tabIndex.value - 1]);
+          }
+        }
+      }
+    };
+
+    // 手势滑动结束
+    const moveEnd = () => {
+      if (!swipeable.value) return;
+      canMove.value = true;
+      startX.value = 0;
+      endX.value = 0;
+      startY.value = 0;
+      endY.value = 0;
+    };
+
     provide('currentValue', readonly(currentValue));
 
     return {
@@ -166,6 +251,12 @@ export default defineComponent({
       lineStyle,
       moveToActiveTab,
       stickyProps,
+      theme,
+      spaceEvenly,
+      moveStart,
+      onMove,
+      moveEnd,
+      handlerScroll,
     };
   },
 });

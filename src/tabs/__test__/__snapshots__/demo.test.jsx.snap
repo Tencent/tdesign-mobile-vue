@@ -29,24 +29,72 @@ exports[`Tabs > Tabs animationVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                标签页一
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页一
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页二
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页三
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页四
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页四
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
@@ -108,6 +156,149 @@ exports[`Tabs > Tabs animationVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-c93875e8=""
+>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-c93875e8=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                    style="right: -4px; top: 14px;"
+                  >
+                    <!--v-if-->
+                      
+                    <!--v-if-->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                    style="right: -8px; top: 16px;"
+                  >
+                    <!--v-if-->
+                     8 
+                    <!--v-if-->
+                  </div>
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-c93875e8=""
+        value="first"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-c93875e8=""
+        style="display: none;"
+        value="second"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-c93875e8=""
+        style="display: none;"
+        value="third"
+      >
+        
+        <!---->
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tabs > Tabs baseVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
@@ -137,18 +328,42 @@ exports[`Tabs > Tabs baseVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
                 <div
-                  data-v-47b21a78=""
+                  class="t-badge"
                 >
-                  标签页一
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      data-v-47b21a78=""
+                    >
+                      标签页一
+                    </div>
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
                 </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                 标签页二 
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                     标签页二 
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
@@ -219,19 +434,55 @@ exports[`Tabs > Tabs baseVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                标签页一
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页一
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页二
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页三
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
@@ -302,7 +553,7 @@ exports[`Tabs > Tabs baseVue demo works fine 1`] = `
     >
       <div
         class="t-sticky__content"
-        style="z-index: 99; position: fixed; top: 0px;"
+        style="z-index: 99;"
       >
         
         <div
@@ -316,24 +567,72 @@ exports[`Tabs > Tabs baseVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                标签页一
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页一
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页二
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页三
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页四
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页四
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
@@ -413,6 +712,149 @@ exports[`Tabs > Tabs baseVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Tabs > Tabs contentVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-7ef59abc=""
+>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-7ef59abc=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    上限六个文字
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ef59abc=""
+        value="1"
+      >
+        
+        <p
+          data-v-7ef59abc=""
+        >
+          内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ef59abc=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <p
+          data-v-7ef59abc=""
+        >
+          内容区
+        </p>
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ef59abc=""
+        style="display: none;"
+        value="3"
+      >
+        
+        <p
+          data-v-7ef59abc=""
+        >
+          内容区
+        </p>
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tabs > Tabs disabledVue demo works fine 1`] = `
 <div
   class="demo-tab-bar"
@@ -442,19 +884,55 @@ exports[`Tabs > Tabs disabledVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                标签页一
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页一
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页二
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item t-is-disabled"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-disabled"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页三
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
@@ -518,6 +996,1021 @@ exports[`Tabs > Tabs disabledVue demo works fine 1`] = `
 </div>
 `;
 
+exports[`Tabs > Tabs evenlyVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-7ca59de4=""
+>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-7ca59de4=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      data-v-7ca59de4=""
+                    >
+                      选项
+                    </div>
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        value="first"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="second"
+      >
+        
+        <!---->
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-7ca59de4=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        value="0"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="1"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <!---->
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-7ca59de4=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 999; position: fixed; top: 0px;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        value="first"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="second"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="third"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="four"
+      >
+        
+        <!---->
+        
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-7ca59de4=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        value="1"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="3"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="4"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-7ca59de4=""
+        style="display: none;"
+        value="5"
+      >
+        
+        <!---->
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > Tabs iconVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-fb5b87c0=""
+>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-fb5b87c0=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="label-content"
+                      data-v-fb5b87c0=""
+                    >
+                      <i
+                        class="t-icon t-icon-app t-size-l"
+                        data-v-fb5b87c0=""
+                      />
+                      <span
+                        data-v-fb5b87c0=""
+                      >
+                        选项
+                      </span>
+                    </div>
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="label-content"
+                      data-v-fb5b87c0=""
+                    >
+                      <i
+                        class="t-icon t-icon-app t-size-l"
+                        data-v-fb5b87c0=""
+                      />
+                      <span
+                        data-v-fb5b87c0=""
+                      >
+                        选项
+                      </span>
+                    </div>
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="label-content"
+                      data-v-fb5b87c0=""
+                    >
+                      <i
+                        class="t-icon t-icon-app t-size-l"
+                        data-v-fb5b87c0=""
+                      />
+                      <span
+                        data-v-fb5b87c0=""
+                      >
+                        选项
+                      </span>
+                    </div>
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-fb5b87c0=""
+        value="first"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-fb5b87c0=""
+        style="display: none;"
+        value="second"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-fb5b87c0=""
+        style="display: none;"
+        value="third"
+      >
+        
+        <!---->
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-8c899344=""
+>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-8c899344=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        value="1"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="3"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="4"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="5"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="6"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="7"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="8"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-8c899344=""
+        style="display: none;"
+        value="9"
+      >
+        
+        <!---->
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
@@ -530,7 +2023,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用作一组平行关系页面/内容的切换器
+    用于内容分类后的展示切换。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -541,12 +2034,12 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        横向选项卡
+        均分选项卡
       </p>
     </div>
     <div
@@ -555,11 +2048,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-47b21a78=""
+        data-v-7ca59de4=""
       >
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-47b21a78=""
+          data-v-7ca59de4=""
         >
           <div
             class="t-sticky"
@@ -581,18 +2074,42 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
                     >
                       <div
-                        data-v-47b21a78=""
+                        class="t-badge"
                       >
-                        标签页一
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          <div
+                            data-v-7ca59de4=""
+                          >
+                            选项
+                          </div>
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
                       </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                       标签页二 
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
                     <div
@@ -611,29 +2128,21 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               value="first"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签一内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="second"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签二内容区
-              </p>
+              <!---->
               
             </div>
             
@@ -641,7 +2150,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-47b21a78=""
+          data-v-7ca59de4=""
         >
           <div
             class="t-sticky"
@@ -663,19 +2172,55 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
                     >
-                      标签页一
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页三
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
                     <div
@@ -694,43 +2239,31 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               value="0"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签一内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="1"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签二内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="2"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签三内容区
-              </p>
+              <!---->
               
             </div>
             
@@ -738,7 +2271,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-47b21a78=""
+          data-v-7ca59de4=""
         >
           <div
             class="t-sticky"
@@ -746,7 +2279,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
           >
             <div
               class="t-sticky__content"
-              style="z-index: 99; position: fixed; top: 0px;"
+              style="z-index: 999; position: fixed; top: 0px;"
             >
               
               <div
@@ -760,24 +2293,72 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
                     >
-                      标签页一
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页三
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页四
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
                     <div
@@ -797,91 +2378,50 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               value="first"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签一内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="second"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签二内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="third"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签三内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-47b21a78=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="four"
             >
               
-              <p
-                data-v-47b21a78=""
-              >
-                标签四内容区
-              </p>
+              <!---->
               
             </div>
             
             
           </div>
         </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        超过屏幕滑动
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="demo-tab-bar"
-        data-v-d1891698=""
-      >
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-d1891698=""
+          data-v-7ca59de4=""
         >
           <div
             class="t-sticky"
@@ -903,49 +2443,89 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
                     >
-                      标签页一
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页三
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页四
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页五
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页六
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页七
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页八
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页九
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
                     <div
@@ -965,91 +2545,51 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
+              data-v-7ca59de4=""
               value="1"
             >
               
-              标签一内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="2"
             >
               
-              标签二内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="3"
             >
               
-              标签三内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="4"
             >
               
-              标签四内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
+              data-v-7ca59de4=""
               style="display: none;"
               value="5"
             >
               
-              标签五内容区
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
-              style="display: none;"
-              value="6"
-            >
-              
-              标签六内容区
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
-              style="display: none;"
-              value="7"
-            >
-              
-              标签七内容区
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
-              style="display: none;"
-              value="8"
-            >
-              
-              标签八内容区
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-d1891698=""
-              style="display: none;"
-              value="9"
-            >
-              
-              标签九内容区
+              <!---->
               
             </div>
             
@@ -1070,7 +2610,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        无下划线
+        等距选项卡
       </p>
     </div>
     <div
@@ -1079,11 +2619,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-f2395abe=""
+        data-v-8c899344=""
       >
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-f2395abe=""
+          data-v-8c899344=""
         >
           <div
             class="t-sticky"
@@ -1105,27 +2645,163 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-is-active"
                     >
-                      标签页一
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line"
                     >
-                      标签页三
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line"
                     >
-                      标签页四
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
-                    <!--v-if-->
+                    <div
+                      class="t-tabs__nav-line"
+                      style=""
+                    />
                   </div>
                 </div>
               </div>
@@ -1139,41 +2815,91 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-f2395abe=""
+              data-v-8c899344=""
               value="1"
             >
               
-              标签一内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-f2395abe=""
+              data-v-8c899344=""
               style="display: none;"
               value="2"
             >
               
-              标签二内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-f2395abe=""
+              data-v-8c899344=""
               style="display: none;"
               value="3"
             >
               
-              标签三内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-f2395abe=""
+              data-v-8c899344=""
               style="display: none;"
               value="4"
             >
               
-              标签四内容区
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-8c899344=""
+              style="display: none;"
+              value="5"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-8c899344=""
+              style="display: none;"
+              value="6"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-8c899344=""
+              style="display: none;"
+              value="7"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-8c899344=""
+              style="display: none;"
+              value="8"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-8c899344=""
+              style="display: none;"
+              value="9"
+            >
+              
+              <!---->
               
             </div>
             
@@ -1194,7 +2920,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        运动时间可调整
+        带图标选项卡
       </p>
     </div>
     <div
@@ -1203,11 +2929,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-7f7cdbed=""
+        data-v-fb5b87c0=""
       >
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-7f7cdbed=""
+          data-v-fb5b87c0=""
         >
           <div
             class="t-sticky"
@@ -1229,24 +2955,94 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
                     >
-                      标签页一
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          <div
+                            class="label-content"
+                            data-v-fb5b87c0=""
+                          >
+                            <i
+                              class="t-icon t-icon-app t-size-l"
+                              data-v-fb5b87c0=""
+                            />
+                            <span
+                              data-v-fb5b87c0=""
+                            >
+                              选项
+                            </span>
+                          </div>
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          <div
+                            class="label-content"
+                            data-v-fb5b87c0=""
+                          >
+                            <i
+                              class="t-icon t-icon-app t-size-l"
+                              data-v-fb5b87c0=""
+                            />
+                            <span
+                              data-v-fb5b87c0=""
+                            >
+                              选项
+                            </span>
+                          </div>
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页三
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页四
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          <div
+                            class="label-content"
+                            data-v-fb5b87c0=""
+                          >
+                            <i
+                              class="t-icon t-icon-app t-size-l"
+                              data-v-fb5b87c0=""
+                            />
+                            <span
+                              data-v-fb5b87c0=""
+                            >
+                              选项
+                            </span>
+                          </div>
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
                     <div
@@ -1265,43 +3061,353 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7f7cdbed=""
-              value="1"
+              data-v-fb5b87c0=""
+              value="first"
             >
               
-              标签一内容区
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7f7cdbed=""
+              data-v-fb5b87c0=""
+              style="display: none;"
+              value="second"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-fb5b87c0=""
+              style="display: none;"
+              value="third"
+            >
+              
+              <!---->
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带徽标选项卡
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="demo-tab-bar"
+        data-v-c93875e8=""
+      >
+        <div
+          class="t-tabs t-is-top t-size-m"
+          data-v-c93875e8=""
+        >
+          <div
+            class="t-sticky"
+            style="height: 0px;"
+          >
+            <div
+              class="t-sticky__content"
+              style="z-index: 99;"
+            >
+              
+              <div
+                class="t-tabs__nav"
+              >
+                <div
+                  class="t-tabs__nav-container"
+                >
+                  <div
+                    class="t-tabs__nav-wrap"
+                  >
+                    
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <div
+                          class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                          style="right: -4px; top: 14px;"
+                        >
+                          <!--v-if-->
+                            
+                          <!--v-if-->
+                        </div>
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <div
+                          class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                          style="right: -8px; top: 16px;"
+                        >
+                          <!--v-if-->
+                           8 
+                          <!--v-if-->
+                        </div>
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    
+                    <div
+                      class="t-tabs__nav-line"
+                      style=""
+                    />
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div
+            class="t-tabs__content"
+          >
+            
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-c93875e8=""
+              value="first"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-c93875e8=""
+              style="display: none;"
+              value="second"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-c93875e8=""
+              style="display: none;"
+              value="third"
+            >
+              
+              <!---->
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带内容区选项卡
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="demo-tab-bar"
+        data-v-7ef59abc=""
+      >
+        <div
+          class="t-tabs t-is-top t-size-m"
+          data-v-7ef59abc=""
+        >
+          <div
+            class="t-sticky"
+            style="height: 0px;"
+          >
+            <div
+              class="t-sticky__content"
+              style="z-index: 99;"
+            >
+              
+              <div
+                class="t-tabs__nav"
+              >
+                <div
+                  class="t-tabs__nav-container"
+                >
+                  <div
+                    class="t-tabs__nav-wrap"
+                  >
+                    
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          上限六个文字
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    
+                    <div
+                      class="t-tabs__nav-line"
+                      style=""
+                    />
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div
+            class="t-tabs__content"
+          >
+            
+            
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-7ef59abc=""
+              value="1"
+            >
+              
+              <p
+                data-v-7ef59abc=""
+              >
+                内容区
+              </p>
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-7ef59abc=""
               style="display: none;"
               value="2"
             >
               
-              标签二内容区
+              <p
+                data-v-7ef59abc=""
+              >
+                内容区
+              </p>
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-7f7cdbed=""
+              data-v-7ef59abc=""
               style="display: none;"
               value="3"
             >
               
-              标签三内容区
+              <p
+                data-v-7ef59abc=""
+              >
+                内容区
+              </p>
               
             </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-7f7cdbed=""
-              style="display: none;"
-              value="4"
-            >
-              
-              标签四内容区
-              
-            </div>
+            
             
           </div>
         </div>
@@ -1318,7 +3424,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        02 状态
+        02 组件状态
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -1332,11 +3438,11 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       
       <div
         class="demo-tab-bar"
-        data-v-32bdbdba=""
+        data-v-bbdf794e=""
       >
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-32bdbdba=""
+          data-v-bbdf794e=""
         >
           <div
             class="t-sticky"
@@ -1358,155 +3464,55 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
                     >
-                      标签页一
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选中
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          默认
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item t-is-disabled"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-disabled"
                     >
-                      标签页三
-                    </div>
-                    
-                    <div
-                      class="t-tabs__nav-line"
-                      style=""
-                    />
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-          <div
-            class="t-tabs__content"
-          >
-            
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-32bdbdba=""
-              value="first"
-            >
-              
-              <p
-                data-v-32bdbdba=""
-              >
-                标签一内容区
-              </p>
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-32bdbdba=""
-              style="display: none;"
-              value="second"
-            >
-              
-              <p
-                data-v-32bdbdba=""
-              >
-                标签二内容区
-              </p>
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-32bdbdba=""
-              style="display: none;"
-              value="third"
-            >
-              
-              <p
-                data-v-32bdbdba=""
-              >
-                标签三内容区
-              </p>
-              
-            </div>
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        03 特殊类型
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        竖向选项卡
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="demo-tab-bar"
-        data-v-1f04411d=""
-      >
-        <div
-          class="t-tabs t-is-left t-size-m"
-          data-v-1f04411d=""
-        >
-          <div
-            class="t-sticky"
-            style="height: 0px;"
-          >
-            <div
-              class="t-sticky__content"
-              style="z-index: 99;"
-            >
-              
-              <div
-                class="t-tabs__nav"
-              >
-                <div
-                  class="t-tabs__nav-container"
-                >
-                  <div
-                    class="t-tabs__nav-wrap"
-                  >
-                    
-                    <div
-                      class="t-tabs__nav-item t-is-active"
-                    >
-                      标签页一
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页二
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页三
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页四
-                    </div>
-                    <div
-                      class="t-tabs__nav-item"
-                    >
-                      标签页五
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          禁用
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
                     <div
@@ -1525,71 +3531,31 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-1f04411d=""
+              data-v-bbdf794e=""
+              value="0"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-bbdf794e=""
+              style="display: none;"
               value="1"
             >
               
-              <p
-                data-v-1f04411d=""
-              >
-                标签一内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-1f04411d=""
+              data-v-bbdf794e=""
               style="display: none;"
               value="2"
             >
               
-              <p
-                data-v-1f04411d=""
-              >
-                标签二内容区
-              </p>
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1f04411d=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <p
-                data-v-1f04411d=""
-              >
-                标签三内容区
-              </p>
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1f04411d=""
-              style="display: none;"
-              value="4"
-            >
-              
-              <p
-                data-v-1f04411d=""
-              >
-                标签四内容区
-              </p>
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-1f04411d=""
-              style="display: none;"
-              value="5"
-            >
-              
-              <p
-                data-v-1f04411d=""
-              >
-                标签五内容区
-              </p>
+              <!---->
               
             </div>
             
@@ -1608,12 +3574,12 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        03 规格
+        03 组件样式
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        选中态文字尺寸规格
+        选项卡尺寸
       </p>
     </div>
     <div
@@ -1624,6 +3590,156 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
         class="demo-tab-bar"
         data-v-3e6c48b0=""
       >
+        <div
+          class="t-tabs t-is-top t-size-m"
+          data-v-3e6c48b0=""
+        >
+          <div
+            class="t-sticky"
+            style="height: 0px;"
+          >
+            <div
+              class="t-sticky__content"
+              style="z-index: 99;"
+            >
+              
+              <div
+                class="t-tabs__nav"
+              >
+                <div
+                  class="t-tabs__nav-container"
+                >
+                  <div
+                    class="t-tabs__nav-wrap"
+                  >
+                    
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          小尺寸
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    
+                    <div
+                      class="t-tabs__nav-line"
+                      style=""
+                    />
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div
+            class="t-tabs__content"
+          >
+            
+            
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-3e6c48b0=""
+              value="1"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-3e6c48b0=""
+              style="display: none;"
+              value="2"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-3e6c48b0=""
+              style="display: none;"
+              value="3"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-3e6c48b0=""
+              style="display: none;"
+              value="4"
+            >
+              
+              <!---->
+              
+            </div>
+            
+            
+          </div>
+        </div>
         <div
           class="t-tabs t-is-top t-size-l"
           data-v-3e6c48b0=""
@@ -1648,19 +3764,72 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
                     >
-                      大尺寸
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          大尺寸
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
                     >
-                      标签页三
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
                     <div
@@ -1677,17 +3846,14 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             class="t-tabs__content"
           >
             
+            
             <div
               class="t-tab-panel t-tabs__panel"
               data-v-3e6c48b0=""
               value="1"
             >
               
-              <p
-                data-v-3e6c48b0=""
-              >
-                标签一内容区
-              </p>
+              <!---->
               
             </div>
             <div
@@ -1697,11 +3863,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
               value="2"
             >
               
-              <p
-                data-v-3e6c48b0=""
-              >
-                标签二内容区
-              </p>
+              <!---->
               
             </div>
             <div
@@ -1711,19 +3873,51 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
               value="3"
             >
               
-              <p
-                data-v-3e6c48b0=""
-              >
-                标签三内容区
-              </p>
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-3e6c48b0=""
+              style="display: none;"
+              value="4"
+            >
+              
+              <!---->
               
             </div>
             
+            
           </div>
         </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        选项卡样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="demo-tab-bar"
+        data-v-1e7f1c32=""
+      >
         <div
           class="t-tabs t-is-top t-size-m"
-          data-v-3e6c48b0=""
+          data-v-1e7f1c32=""
         >
           <div
             class="t-sticky"
@@ -1745,25 +3939,75 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                   >
                     
                     <div
-                      class="t-tabs__nav-item t-is-active"
+                      class="t-tabs__nav-item-tag t-tabs__nav-item-evenly t-is-active"
                     >
-                      小尺寸
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-tag t-tabs__nav-item-evenly"
                     >
-                      标签页二
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     <div
-                      class="t-tabs__nav-item"
+                      class="t-tabs__nav-item-tag t-tabs__nav-item-evenly"
                     >
-                      标签页三
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-tag t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
                     </div>
                     
-                    <div
-                      class="t-tabs__nav-line"
-                      style=""
-                    />
+                    <!--v-if-->
                   </div>
                 </div>
               </div>
@@ -1774,47 +4018,194 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
             class="t-tabs__content"
           >
             
+            
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
+              data-v-1e7f1c32=""
               value="1"
             >
               
-              <p
-                data-v-3e6c48b0=""
-              >
-                标签一内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
+              data-v-1e7f1c32=""
               style="display: none;"
               value="2"
             >
               
-              <p
-                data-v-3e6c48b0=""
-              >
-                标签二内容区
-              </p>
+              <!---->
               
             </div>
             <div
               class="t-tab-panel t-tabs__panel"
-              data-v-3e6c48b0=""
+              data-v-1e7f1c32=""
               style="display: none;"
               value="3"
             >
               
-              <p
-                data-v-3e6c48b0=""
-              >
-                标签三内容区
-              </p>
+              <!---->
               
             </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-1e7f1c32=""
+              style="display: none;"
+              value="4"
+            >
+              
+              <!---->
+              
+            </div>
+            
+            
+          </div>
+        </div>
+        <div
+          class="t-tabs t-is-top t-size-m"
+          data-v-1e7f1c32=""
+        >
+          <div
+            class="t-sticky"
+            style="height: 0px;"
+          >
+            <div
+              class="t-sticky__content"
+              style="z-index: 99;"
+            >
+              
+              <div
+                class="t-tabs__nav"
+              >
+                <div
+                  class="t-tabs__nav-container"
+                >
+                  <div
+                    class="t-tabs__nav-wrap t-tabs__nav-wrap-card"
+                  >
+                    
+                    <div
+                      class="t-tabs__nav-item-card t-tabs__nav-item-evenly t-is-active"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-card t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-card t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <div
+                      class="t-tabs__nav-item-card t-tabs__nav-item-evenly"
+                    >
+                      <div
+                        class="t-badge"
+                      >
+                        <div
+                          class="t-badge__content"
+                        >
+                          
+                          选项
+                          
+                        </div>
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    
+                    <!--v-if-->
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div
+            class="t-tabs__content"
+          >
+            
+            
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-1e7f1c32=""
+              value="1"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-1e7f1c32=""
+              style="display: none;"
+              value="2"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-1e7f1c32=""
+              style="display: none;"
+              value="3"
+            >
+              
+              <!---->
+              
+            </div>
+            <div
+              class="t-tab-panel t-tabs__panel"
+              data-v-1e7f1c32=""
+              style="display: none;"
+              value="4"
+            >
+              
+              <!---->
+              
+            </div>
+            
             
           </div>
         </div>
@@ -1854,49 +4245,157 @@ exports[`Tabs > Tabs scrollVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                标签页一
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页一
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页二
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页三
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页四
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页四
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页五
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页五
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页六
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页六
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页七
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页七
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页八
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页八
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页九
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页九
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
@@ -2016,103 +4515,6 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
   data-v-3e6c48b0=""
 >
   <div
-    class="t-tabs t-is-top t-size-l"
-    data-v-3e6c48b0=""
-  >
-    <div
-      class="t-sticky"
-      style="height: 0px;"
-    >
-      <div
-        class="t-sticky__content"
-        style="z-index: 99;"
-      >
-        
-        <div
-          class="t-tabs__nav"
-        >
-          <div
-            class="t-tabs__nav-container"
-          >
-            <div
-              class="t-tabs__nav-wrap"
-            >
-              
-              <div
-                class="t-tabs__nav-item t-is-active"
-              >
-                大尺寸
-              </div>
-              <div
-                class="t-tabs__nav-item"
-              >
-                标签页二
-              </div>
-              <div
-                class="t-tabs__nav-item"
-              >
-                标签页三
-              </div>
-              
-              <div
-                class="t-tabs__nav-line"
-                style=""
-              />
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    <div
-      class="t-tabs__content"
-    >
-      
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        value="1"
-      >
-        
-        <p
-          data-v-3e6c48b0=""
-        >
-          标签一内容区
-        </p>
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <p
-          data-v-3e6c48b0=""
-        >
-          标签二内容区
-        </p>
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <p
-          data-v-3e6c48b0=""
-        >
-          标签三内容区
-        </p>
-        
-      </div>
-      
-    </div>
-  </div>
-  <div
     class="t-tabs t-is-top t-size-m"
     data-v-3e6c48b0=""
   >
@@ -2136,19 +4538,363 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                小尺寸
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    小尺寸
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        value="1"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        style="display: none;"
+        value="3"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        style="display: none;"
+        value="4"
+      >
+        
+        <!---->
+        
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="t-tabs t-is-top t-size-l"
+    data-v-3e6c48b0=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    大尺寸
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <div
+                class="t-tabs__nav-line"
+                style=""
+              />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        value="1"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        style="display: none;"
+        value="3"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-3e6c48b0=""
+        style="display: none;"
+        value="4"
+      >
+        
+        <!---->
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > Tabs statusVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-bbdf794e=""
+>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-bbdf794e=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选中
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    默认
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-disabled"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    禁用
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
@@ -2167,45 +4913,335 @@ exports[`Tabs > Tabs sizeVue demo works fine 1`] = `
       
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
-        value="1"
+        data-v-bbdf794e=""
+        value="0"
       >
         
-        <p
-          data-v-3e6c48b0=""
-        >
-          标签一内容区
-        </p>
+        <!---->
         
       </div>
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
+        data-v-bbdf794e=""
+        style="display: none;"
+        value="1"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-bbdf794e=""
         style="display: none;"
         value="2"
       >
         
-        <p
-          data-v-3e6c48b0=""
+        <!---->
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > Tabs themeVue demo works fine 1`] = `
+<div
+  class="demo-tab-bar"
+  data-v-1e7f1c32=""
+>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-1e7f1c32=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
         >
-          标签二内容区
-        </p>
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap"
+            >
+              
+              <div
+                class="t-tabs__nav-item-tag t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-tag t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-tag t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-tag t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <!--v-if-->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-1e7f1c32=""
+        value="1"
+      >
+        
+        <!---->
         
       </div>
       <div
         class="t-tab-panel t-tabs__panel"
-        data-v-3e6c48b0=""
+        data-v-1e7f1c32=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-1e7f1c32=""
         style="display: none;"
         value="3"
       >
         
-        <p
-          data-v-3e6c48b0=""
-        >
-          标签三内容区
-        </p>
+        <!---->
         
       </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-1e7f1c32=""
+        style="display: none;"
+        value="4"
+      >
+        
+        <!---->
+        
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="t-tabs t-is-top t-size-m"
+    data-v-1e7f1c32=""
+  >
+    <div
+      class="t-sticky"
+      style="height: 0px;"
+    >
+      <div
+        class="t-sticky__content"
+        style="z-index: 99;"
+      >
+        
+        <div
+          class="t-tabs__nav"
+        >
+          <div
+            class="t-tabs__nav-container"
+          >
+            <div
+              class="t-tabs__nav-wrap t-tabs__nav-wrap-card"
+            >
+              
+              <div
+                class="t-tabs__nav-item-card t-tabs__nav-item-evenly t-is-active"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-card t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-card t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <div
+                class="t-tabs__nav-item-card t-tabs__nav-item-evenly"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    选项
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              
+              <!--v-if-->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="t-tabs__content"
+    >
+      
+      
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-1e7f1c32=""
+        value="1"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-1e7f1c32=""
+        style="display: none;"
+        value="2"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-1e7f1c32=""
+        style="display: none;"
+        value="3"
+      >
+        
+        <!---->
+        
+      </div>
+      <div
+        class="t-tab-panel t-tabs__panel"
+        data-v-1e7f1c32=""
+        style="display: none;"
+        value="4"
+      >
+        
+        <!---->
+        
+      </div>
+      
       
     </div>
   </div>
@@ -2241,24 +5277,72 @@ exports[`Tabs > Tabs underscoreVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                标签页一
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页一
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页二
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页三
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页四
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页四
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <!--v-if-->
@@ -2325,7 +5409,7 @@ exports[`Tabs > Tabs verticalVue demo works fine 1`] = `
   data-v-1f04411d=""
 >
   <div
-    class="t-tabs t-is-left t-size-m"
+    class="t-tabs t-is-top t-size-m"
     data-v-1f04411d=""
   >
     <div
@@ -2348,29 +5432,89 @@ exports[`Tabs > Tabs verticalVue demo works fine 1`] = `
             >
               
               <div
-                class="t-tabs__nav-item t-is-active"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly t-is-active"
               >
-                标签页一
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页一
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页二
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页二
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页三
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页三
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页四
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页四
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               <div
-                class="t-tabs__nav-item"
+                class="t-tabs__nav-item-line t-tabs__nav-item-evenly"
               >
-                标签页五
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    标签页五
+                    
+                  </div>
+                  <!--v-if-->
+                  <!---->
+                </div>
               </div>
               
               <div
