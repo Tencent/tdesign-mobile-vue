@@ -1,0 +1,72 @@
+<template>
+  <div :class="`${name}__list`">
+    <t-button
+      v-for="(item, index) in items"
+      :key="index"
+      variant="text"
+      block
+      :class="itemClasses"
+      :disabled="item.disabled"
+      :icon="item.icon"
+      :style="{ color: item.color }"
+      @click="handleSelected(index)"
+    >
+      <t-node v-if="item.badge" :content="item.badge">
+        <t-node :content="item.label"></t-node>
+      </t-node>
+      <t-badge
+        v-if="item.badge && (item.badge.dot || item.badge.count)"
+        :count="item.badge.count"
+        :max-count="item.badge.maxCount || 99"
+        :dot="item.badge.dot"
+        :content="item.badge.content"
+        :size="item.badge.size"
+        :offset="item.badge.offset || [-14, 10]"
+      >
+        <t-node :content="item.label"></t-node>
+      </t-badge>
+      <t-node v-else :content="item.label"></t-node>
+    </t-button>
+  </div>
+</template>
+
+<script lang="ts">
+import { ref, defineComponent, PropType, computed } from 'vue';
+import config from '../config';
+import { ActionSheetItem } from './type';
+import { TNode } from '../shared';
+
+const { prefix } = config;
+
+const name = `${prefix}-action-sheet`;
+
+export default defineComponent({
+  components: { TNode },
+  props: {
+    items: {
+      type: Array as PropType<ActionSheetItem[]>,
+      required: true,
+    },
+    align: {
+      type: String as PropType<'left' | 'center'>,
+      default: 'center',
+    },
+  },
+  emits: ['selected'],
+  setup(props, context) {
+    console.log(props.items);
+    const handleSelected = (index: number) => {
+      context.emit('selected', index);
+    };
+    const itemClasses = computed(() => ({
+      [`${name}__list-item`]: true,
+      [`${name}__list-item--left`]: props.align === 'left',
+    }));
+    return {
+      name: ref(name),
+      itemClasses,
+      handleSelected,
+    };
+  },
+});
+</script>

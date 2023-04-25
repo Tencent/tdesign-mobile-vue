@@ -3,7 +3,8 @@
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
-
+import { TNode } from '../common';
+import { TdBadgeProps } from '../badge/type';
 export interface TdActionSheetProps {
   /**
    * 水平对齐方式
@@ -28,7 +29,7 @@ export interface TdActionSheetProps {
   /**
    * 菜单项
    */
-  items: Array<string | ActionSheetItem>;
+  items?: Array<string | ActionSheetItem>;
   /**
    * 是否显示取消按钮
    * @default true
@@ -72,6 +73,8 @@ export interface ActionSheetItem {
   label: string;
   color?: string;
   disabled?: boolean;
+  icon?: TNode;
+  badge?: TdBadgeProps;
 }
 
 export type TriggerSource = 'overlay' | 'command' | 'select';

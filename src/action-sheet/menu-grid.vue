@@ -1,5 +1,5 @@
 <template>
-  <div ref="containerWrapper" :class="`${name}__menu-wrapper`">
+  <div ref="containerWrapper" :class="`${name}__swiper-wrap`">
     <div
       :class="`${name}__menu-slider`"
       :style="wrapperStyle"
@@ -19,7 +19,7 @@
         </t-grid>
       </div>
     </div>
-    <div v-if="pageNum > 1" :class="`${name}__indicator`">
+    <div v-if="pageNum > 1" :class="`${name}__grid--swiper`">
       <div
         v-for="index in pageNum"
         :key="index"
