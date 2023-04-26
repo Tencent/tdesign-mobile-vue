@@ -99,7 +99,7 @@ export default defineComponent({
         return props.texts[actualVal.value - 1];
       }
 
-      return actualVal.value > 0 ? `${actualVal.value} 分` : '';
+      return actualVal.value > 0 ? `${actualVal.value} 分` : '未评分';
     });
     const colors = computed(() => {
       const { color } = props;
