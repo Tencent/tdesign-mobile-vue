@@ -15,15 +15,18 @@
     <tdesign-demo-block summary="带描述评分">
       <ShowTextDemo />
     </tdesign-demo-block>
+    <br />
     <tdesign-demo-block title="02 组件状态">
       <ActionDemo />
     </tdesign-demo-block>
+    <br />
     <tdesign-demo-block title="03 组件样式" summary="评分大小">
       <SizeDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="设置评分颜色">
       <ColorDemo />
     </tdesign-demo-block>
+    <br />
     <tdesign-demo-block title="04 特殊样式" summary="竖向带描述评分">
       <SpecialDemo />
     </tdesign-demo-block>
@@ -40,22 +43,3 @@ import SizeDemo from './size.vue';
 import ColorDemo from './color.vue';
 import SpecialDemo from './special.vue';
 </script>
-
-<style lang="less">
-.rate-demo-cell {
-  background-color: #fff;
-  padding: 12px 16px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  &__label {
-    font-size: 16px;
-    margin-right: 16px;
-    min-width: 80px;
-  }
-
-  &--space {
-    margin-bottom: 16px;
-  }
-}
-</style>

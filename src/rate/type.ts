@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+import { TNode } from '@/common';
+
 /**
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
@@ -38,7 +40,7 @@ export interface TdRateProps {
   /**
    * 自定义评分图标，[选中图标，未选中图标]
    */
-  icon?: string | string[];
+  icon?: Array<TNode | Function>;
   /**
    * 是否显示对应的辅助文字
    * @default false

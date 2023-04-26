@@ -31,7 +31,7 @@ export default {
   },
   /** 自定义评分图标，[选中图标，未选中图标] */
   icon: {
-    type: [Array, Function] as PropType<TdRateProps['icon']>,
+    type: [Function, Array] as PropType<TdRateProps['icon']>,
   },
   /** 是否显示对应的辅助文字 */
   showText: Boolean,

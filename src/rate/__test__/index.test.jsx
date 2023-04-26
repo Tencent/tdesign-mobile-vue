@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { IconFont, StarIcon } from 'tdesign-icons-vue-next';
+import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
 import Rate from '../rate.vue';
 import { trigger } from '../../image-viewer/__test__/touch';
 
@@ -21,7 +21,7 @@ describe('Rate', () => {
       expect(wrapper.classes()).toContain(`${name}`);
       const items = wrapper.findAll(`.${name}__icon`);
       expect(items.length).toBe(5);
-      const icon = wrapper.findComponent(IconFont);
+      const icon = wrapper.findComponent(StarIcon);
       expect(icon.exists()).toBeTruthy();
     });
 
@@ -65,7 +65,7 @@ describe('Rate', () => {
       expect(value.value).toBe(1);
       const $target = wrapper.find(`.${name}__wrapper`);
       await move($target);
-      expect(onChange).toHaveBeenCalledTimes(3);
+      expect(onChange).toHaveBeenCalledTimes(2);
     });
 
     it(': showText && texts', async () => {
@@ -117,7 +117,7 @@ describe('Rate', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
       expect(onChange).toHaveBeenLastCalledWith(index + 1);
       await move($target);
-      expect(onChange).toHaveBeenCalledTimes(2);
+      expect(onChange).toHaveBeenCalledTimes(1);
     });
   });
 });

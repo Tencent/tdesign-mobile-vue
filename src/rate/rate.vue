@@ -3,18 +3,17 @@
     <div
       ref="rateWrapper"
       :class="`${name}__wrapper`"
-      :style="{ fontSize: regSize(size) }"
       @touchstart="onTouchstart"
       @touchmove="onTouchmove"
       @touchend="onTouchEnd"
       @touchcancel="onTouchEnd"
     >
-      <icon-font
+      <component
+        :is="iconComponent(n, actualVal)"
         v-for="n in count"
         :key="n"
         :class="classes(n)"
         :size="size"
-        :name="getIconName(Math.ceil(actualVal), n)"
         :style="{ marginRight: `${count > n ? gap : 0}px`, ...colors }"
         @click="() => onClick(n)"
       />
@@ -34,11 +33,11 @@
           }"
           @click="() => onSelect(Math.ceil(popoverValue) - 0.5)"
         >
-          <icon-font
-            :name="getIconName(0, 0)"
+          <component
+            :is="iconComponent(Math.ceil(popoverValue), Math.ceil(popoverValue) - 0.5)"
             :style="{ ...colors }"
             :size="size"
-            :class="`${name}__icon ${name}__icon--selected-half`"
+            :class="`${name}__icon ${name}__icon--unselected`"
           />
           <span :class="`${name}__tips-text`">{{ Math.ceil(popoverValue) - 0.5 }}</span>
         </div>
@@ -49,8 +48,8 @@
           }"
           @click="() => onSelect(Math.ceil(popoverValue))"
         >
-          <icon-font
-            :name="getIconName(0, 0)"
+          <component
+            :is="iconComponent(Math.ceil(popoverValue), Math.ceil(popoverValue))"
             :style="{ ...colors }"
             :size="size"
             :class="`${name}__icon ${name}__icon--selected`"
@@ -60,14 +59,14 @@
       </div>
 
       <div v-else :class="`${name}__tips-item`" @click="() => onSelect(popoverValue)">
-        <icon-font
-          :name="getIconName(0, 0)"
+        <component
+          :is="iconComponent(Math.ceil(popoverValue), popoverValue)"
           :style="{ ...colors }"
           :size="size"
           :class="{
             [`${name}__icon`]: true,
             [`${name}__icon--selected`]: Math.ceil(popoverValue) === popoverValue,
-            [`${name}__icon--selected-half`]: Math.ceil(popoverValue) !== popoverValue,
+            [`${name}__icon--unselected`]: Math.ceil(popoverValue) !== popoverValue,
           }"
         />
         <span :class="`${name}__tips-text`">{{ popoverValue }}</span>
@@ -77,8 +76,8 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent } from 'vue';
-import { IconFont } from 'tdesign-icons-vue-next';
+import { ref, computed, defineComponent, h } from 'vue';
+import { StarFilledIcon, StarIcon } from 'tdesign-icons-vue-next';
 import { onClickOutside } from '@vueuse/core';
 import rateProps from './props';
 import config from '../config';
@@ -90,7 +89,6 @@ const name = `${prefix}-rate`;
 
 export default defineComponent({
   name,
-  components: { IconFont },
   props: rateProps,
   emits: ['change', 'update:value', 'update:modelValue'],
   setup(props, context) {
@@ -129,9 +127,54 @@ export default defineComponent({
       return value;
     };
 
+    const icon = (isSelect: boolean) => {
+      const { variant, icon } = props;
+      const startComponent = variant === 'filled' ? StarFilledIcon : StarIcon;
+      let select = startComponent;
+      let unSelect = startComponent;
+      if (Array.isArray(icon)) {
+        const [_select, _unSelect] = icon;
+        if (typeof _select === 'function') {
+          select = _select(h);
+        } else {
+          select = _select;
+        }
+        if (typeof _unSelect === 'function') {
+          unSelect = _unSelect(h);
+        } else {
+          unSelect = _unSelect;
+        }
+      }
+      if (isSelect) {
+        return select || startComponent;
+      }
+      return unSelect || startComponent;
+    };
+
+    const iconComponent = (n: number, value: number) => {
+      const { allowHalf, size } = props;
+      const classPrefix = `${name}__icon-left`;
+      const select = value >= n;
+      const selectHalf = Math.ceil(value) >= n;
+      return h(
+        'div',
+        { style: { fontSize: regSize(size) } },
+        allowHalf
+          ? [
+              h(
+                'div',
+                { class: `${classPrefix} ${selectHalf ? `${classPrefix}--selected` : `${classPrefix}--unselected`}` },
+                h(icon(selectHalf)),
+              ),
+              h(icon(select)),
+            ]
+          : h(icon(select)),
+      );
+    };
+
     const classes = (n: number) => {
       const classPrefix = `${name}__icon`;
-      const { disabled, allowHalf } = props;
+      const { disabled } = props;
       const className = {
         [classPrefix]: true,
       };
@@ -143,27 +186,10 @@ export default defineComponent({
         if (disabled) {
           className[`${classPrefix}--disabled`] = true;
         }
-      } else if (allowHalf && Math.ceil(actualVal.value) >= n) {
-        className[`${classPrefix}--selected-half`] = true;
-        if (disabled) {
-          className[`${classPrefix}--disabled-half`] = true;
-        }
       } else {
         className[`${classPrefix}--unselected`] = true;
       }
       return className;
-    };
-
-    const getIconName = (value: number, index: number) => {
-      const { defaultValue, icon } = props;
-      const curVal = value || defaultValue;
-      let name = ['star-filled', 'star-filled'];
-
-      if (icon) {
-        name = Array.isArray(icon) ? icon : [icon, icon];
-      }
-
-      return name[curVal >= index ? 0 : 1];
     };
 
     const ratePopoverRef = ref<HTMLElement>();
@@ -174,6 +200,7 @@ export default defineComponent({
     const tipsVisible = ref(false);
     const tipsLeft = ref(0);
     const actionType = ref<'move' | 'tap'>('tap');
+    const touchStartTime = ref(0);
 
     onClickOutside(ratePopoverRef, (event) => {
       hideTips();
@@ -183,7 +210,7 @@ export default defineComponent({
       if (delay) {
         timer.value = setTimeout(() => {
           handleCloseTips();
-        }, 300000);
+        }, 3000);
       } else {
         handleCloseTips();
       }
@@ -199,6 +226,7 @@ export default defineComponent({
 
     const onClick = (value: number) => {
       if (props.disabled) return;
+      // if (Date.now() - touchStartTime.value > 200) return;
       getRect(value, 'tap');
     };
 
@@ -227,17 +255,20 @@ export default defineComponent({
 
     const onTouchstart = (e: TouchEvent) => {
       if (props.disabled) return;
+      touchStartTime.value = Date.now();
       touchEnd.value = false;
     };
 
     const onTouchmove = (e: TouchEvent) => {
       if (props.disabled) return;
+      if (Date.now() - touchStartTime.value <= 200) return;
       onTouch(e, 'move');
     };
 
     const onTouchEnd = (e: TouchEvent) => {
       if (props.disabled) return;
       touchEnd.value = true;
+      hideTips();
     };
 
     const getRect = (value: number, eventType: 'move' | 'tap') => {
@@ -284,8 +315,8 @@ export default defineComponent({
       actionType,
       onSelect,
       popoverValue,
-      getIconName,
       ratePopoverRef,
+      iconComponent,
     };
   },
 });
