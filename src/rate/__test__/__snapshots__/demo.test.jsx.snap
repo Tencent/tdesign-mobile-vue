@@ -4315,7 +4315,9 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
       </div>
       <span
         class="t-rate__text"
-      />
+      >
+        未评分
+      </span>
       <!--v-if-->
     </div>
   </div>

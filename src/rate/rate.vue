@@ -15,7 +15,7 @@
         :class="classes(n)"
         :size="size"
         :style="{ marginRight: `${count > n ? gap : 0}px`, ...colors }"
-        @click="() => onClick(n)"
+        @click="onClick"
       />
     </div>
 
@@ -224,33 +224,15 @@ export default defineComponent({
       }
     };
 
-    const onClick = (value: number) => {
+    const onClick = (event: MouseEvent) => {
       if (props.disabled) return;
       // if (Date.now() - touchStartTime.value > 200) return;
-      getRect(value, 'tap');
+      getRect(event, 'tap');
     };
 
     const onTouch = (e: TouchEvent, eventType: 'move') => {
       const [touch] = e.touches;
-      if (rateWrapper.value) {
-        const { count, allowHalf, gap, value: currentValue, size } = props;
-        const margin = unitConvert(gap);
-        const { width, left } = rateWrapper.value.getBoundingClientRect();
-        const starWidth = (width - (count - 1) * margin) / count;
-        const offsetX = touch.pageX - left;
-        const num = (offsetX + margin) / (starWidth + margin);
-        const remainder = num % 1;
-        const integral = num - remainder;
-        let value = remainder <= 0.5 && allowHalf ? integral + 0.5 : integral + 1;
-
-        if (value > count) {
-          value = count;
-        } else if (value < 0) {
-          value = 0;
-        }
-
-        getRect(value, eventType);
-      }
+      getRect(touch, eventType);
     };
 
     const onTouchstart = (e: TouchEvent) => {
@@ -271,9 +253,24 @@ export default defineComponent({
       hideTips();
     };
 
-    const getRect = (value: number, eventType: 'move' | 'tap') => {
+    const getRect = (event: Touch | MouseEvent, eventType: 'move' | 'tap') => {
       if (rateWrapper.value) {
         const { count, allowHalf, gap, value: currentValue, size } = props;
+        const margin = unitConvert(gap);
+        const { width, left } = rateWrapper.value.getBoundingClientRect();
+        const starWidth = (width - (count - 1) * margin) / count;
+        const offsetX = event.pageX - left;
+        const num = (offsetX + margin) / (starWidth + margin);
+        const remainder = num % 1;
+        const integral = num - remainder;
+        let value = remainder <= 0.5 && allowHalf ? integral + 0.5 : integral + 1;
+
+        if (value > count) {
+          value = count;
+        } else if (value < 0) {
+          value = 0;
+        }
+
         popoverValue.value = value;
         const fontSize = size || getComputedStyle(rateWrapper.value).getPropertyValue('font-size');
         const leftDis = Math.ceil(value - 1) * (unitConvert(gap) + unitConvert(fontSize)) + unitConvert(fontSize) * 0.5;
@@ -282,7 +279,7 @@ export default defineComponent({
         scaleIndex.value = Math.ceil(value);
         actionType.value = eventType;
 
-        if (value !== currentValue && (eventType === 'move' || !allowHalf)) {
+        if (value !== currentValue) {
           actualVal.value = value;
         }
 
