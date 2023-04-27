@@ -49,7 +49,7 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
       </svg>
       <span
         class="t-back-top__text--round"
-        style="min-width: 12px; max-width: 20px; width: auto; display: inline-block;"
+        style="min-width: 12px; max-width: 24px; width: auto; display: inline-block;"
       >
         顶部
       </span>
@@ -108,7 +108,7 @@ exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
       </svg>
       <span
         class="t-back-top__text--half-round"
-        style="min-width: 12px; max-width: 20px; width: auto; display: inline-block;"
+        style="min-width: 12px; max-width: 24px; width: auto; display: inline-block;"
       >
         返回顶部
       </span>
@@ -203,7 +203,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
           </svg>
           <span
             class="t-back-top__text--round"
-            style="min-width: 12px; max-width: 20px; width: auto; display: inline-block;"
+            style="min-width: 12px; max-width: 24px; width: auto; display: inline-block;"
           >
             顶部
           </span>
@@ -276,7 +276,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
           </svg>
           <span
             class="t-back-top__text--half-round"
-            style="min-width: 12px; max-width: 20px; width: auto; display: inline-block;"
+            style="min-width: 12px; max-width: 24px; width: auto; display: inline-block;"
           >
             返回顶部
           </span>

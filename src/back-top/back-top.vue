@@ -1,3 +1,16 @@
+<template>
+  <div :class="classes" @click="clickBackBtn">
+    <t-node v-if="iconTNode" :content="iconTNode" />
+    <t-icon-back-top v-else size="22px" />
+    <span
+      v-if="text"
+      :class="`${name}__text--${theme}`"
+      :style="{ 'min-width': '12px', 'max-width': '24px', width: 'auto', display: 'inline-block' }"
+      >{{ text }}</span
+    >
+  </div>
+</template>
+
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, h } from 'vue';
 import { useElementBounding } from '@vueuse/core';
@@ -32,36 +45,20 @@ export default defineComponent({
       if (context.slots?.icon || typeof props.icon === 'function') {
         return renderTNode(internalInstance, 'icon');
       }
-      return h(TIconBackTop, { size: '22px' });
+      return false;
     });
 
     const clickBackBtn = () => {
       window.document.documentElement.scrollTop += top.value;
       emitEvent('to-top');
     };
-    return () => {
-      return h(
-        'div',
-        {
-          class: classes.value,
-          onClick: clickBackBtn,
-        },
-        [
-          h(TNode, { content: iconTNode.value }),
-          ...(props.text
-            ? [
-                h(
-                  'span',
-                  {
-                    class: `${name}__text--${props.theme}`,
-                    style: { 'min-width': '12px', 'max-width': '20px', width: 'auto', display: 'inline-block' },
-                  },
-                  props.text,
-                ),
-              ]
-            : []),
-        ],
-      );
+    return {
+      name,
+      classes,
+      iconTNode,
+      el,
+      top,
+      clickBackBtn,
     };
   },
 });
