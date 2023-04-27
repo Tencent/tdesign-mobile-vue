@@ -1,5 +1,5 @@
 <template>
-  <div :class="styleCell" @click="onClick">
+  <div v-hover="{ className: `${name}--hover`, active: hover }" :class="styleCell" @click="onClick">
     <div :class="`${name}__left`">
       <div v-if="leftIconContent" :class="`${name}__left-icon`">
         <t-node :content="leftIconContent" />
@@ -29,9 +29,10 @@
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, toRefs, h } from 'vue';
 import { ChevronRightIcon } from 'tdesign-icons-vue-next';
-import { renderTNode, renderContent, TNode, useEmitEvent } from '../shared';
+import { renderTNode, renderContent, TNode, useEmitEvent, Hover } from '../shared';
 import config from '../config';
 import CellProps from './props';
+import { useFormDisabled } from '../form/hooks';
 
 const { prefix } = config;
 const name = `${prefix}-cell`;
@@ -39,10 +40,12 @@ const name = `${prefix}-cell`;
 export default defineComponent({
   name,
   components: { TNode },
+  directives: { Hover },
   props: CellProps,
   emits: ['click'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
+    const disabled = useFormDisabled();
     const internalInstance = getCurrentInstance();
     const noteContent = computed(() => renderContent(internalInstance, 'default', 'note'));
     const titleContent = computed(() => renderTNode(internalInstance, 'title'));
@@ -57,18 +60,22 @@ export default defineComponent({
     });
 
     const imageContent = computed(() => renderTNode(internalInstance, 'image'));
-    const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon', { params: { class: 't' } }));
+    const leftIconContent = computed(() => renderTNode(internalInstance, 'leftIcon'));
 
     const styleCell = computed(() => [
       `${name}`,
       `${name}--${props.align}`,
       {
-        [`${name}--hover`]: props.hover,
-        [`${name}--bordered`]: props.bordered,
+        [`${name}--hover`]: props.hover && disabled.value,
+        [`${name}--borderless`]: !props.bordered,
       },
     ]);
 
-    const onClick = (e: Event) => emitEvent('click', e);
+    const onClick = (e: Event) => {
+      if (!disabled.value) {
+        emitEvent('click', e);
+      }
+    };
 
     return {
       ...toRefs(props),

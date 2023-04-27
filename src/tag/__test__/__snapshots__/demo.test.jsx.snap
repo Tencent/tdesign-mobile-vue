@@ -1,215 +1,293 @@
 // Vitest Snapshot v1
 
 exports[`Tag > Tag checkableVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    class="t-tag t-tag--checkable t-tag--square t-tag--medium t-is-checked t-tag--checked"
-    role="button"
+<div>
+  <div
+    class="summary"
   >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      选中
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    class="t-tag t-tag--checkable t-tag--square t-tag--medium"
-    role="button"
+    可选中的标签
+  </div>
+  <div
+    class="tag-demo"
   >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
+    <div>
       
-      未选中
+      <div
+        class="tag-block check-tag-block"
+      >
+        <div
+          class="check-tag-block__title"
+        >
+          light
+        </div>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            未选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light t-is-checked t-tag--checked"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            已选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      <div
+        class="tag-block check-tag-block"
+      >
+        <div
+          class="check-tag-block__title"
+        >
+          dark
+        </div>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--dark"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            未选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--dark t-is-checked t-tag--checked"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            已选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      <div
+        class="tag-block check-tag-block"
+      >
+        <div
+          class="check-tag-block__title"
+        >
+          outline
+        </div>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--outline"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            未选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--outline t-is-checked t-tag--checked"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            已选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      <div
+        class="tag-block check-tag-block"
+      >
+        <div
+          class="check-tag-block__title"
+        >
+          light-outline
+        </div>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light-outline"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            未选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light-outline t-is-checked t-tag--checked"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            已选中态
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
       
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="true"
-    class="t-tag t-tag--checkable t-tag--square t-tag--medium t-is-disabled t-tag--disabled"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      不可选
-      
-    </span>
-    <!--v-if-->
-  </span>
-  
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Tag > Tag closableVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium t-is-closable t-tag--closable"
-    role="button"
+<div>
+  <div
+    class="summary"
+  >
+    可关闭标签
+  </div>
+  <div
+    class="tag-demo"
   >
     <span
-      class="t-tag__icon"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+      role="button"
     >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签
-      
-    </span>
-    <span
-      class="t-tag__icon-close"
-    >
-      <svg
-        class="t-icon t-icon-close"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <span
+        class="t-tag__icon"
       >
-        <path
-          d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-    </span>
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium t-is-closable t-tag--closable"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <svg
-        class="t-icon t-icon-app"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
       >
-        <path
-          d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签
-      
-    </span>
-    <span
-      class="t-tag__icon-close"
-    >
-      <svg
-        class="t-icon t-icon-close"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+        
+        文字标签
+        
+      </span>
+      <span
+        class="t-tag__icon-close"
       >
-        <path
-          d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </span>
     </span>
-  </span>
-  
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium t-is-closable t-tag--closable"
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        文字标签
+        
+      </span>
+      <span
+        class="t-tag__icon-close"
+      >
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </span>
+    </span>
+  </div>
 </div>
-`;
-
-exports[`Tag > Tag ellipsisVue demo works fine 1`] = `
-<span
-  aria-disabled="false"
-  class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
-  role="button"
-  style="max-width: 130px;"
->
-  <span
-    class="t-tag__icon"
-  >
-    <!---->
-  </span>
-  <span
-    class="t-tag__text"
-  >
-    
-    听说超长可以省略听说超长
-    
-  </span>
-  <!--v-if-->
-</span>
-`;
-
-exports[`Tag > Tag iconVue demo works fine 1`] = `
-<span
-  aria-disabled="false"
-  class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
-  role="button"
->
-  <span
-    class="t-tag__icon"
-  >
-    <svg
-      class="t-icon t-icon-app"
-      fill="none"
-      height="1em"
-      viewBox="0 0 16 16"
-      width="1em"
-    >
-      <path
-        d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-        fill="currentColor"
-        fill-opacity="0.9"
-      />
-    </svg>
-  </span>
-  <span
-    class="t-tag__text"
-  >
-    
-    标签
-    
-  </span>
-  <!--v-if-->
-</span>
 `;
 
 exports[`Tag > Tag mobileVue demo works fine 1`] = `
@@ -224,10 +302,10 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用于标记表示主体属性、类型、状态等，由底部图形和标签文字组成
+    用于表明主体的类目，属性或状态。
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -235,126 +313,1462 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div>
+        <div
+          class="summary"
+        >
+          基础标签
+        </div>
+        <div
+          class="tag-demo"
+        >
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              标签文字 
+              
+            </span>
+            <!--v-if-->
+          </span>
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              标签文字
+              
+            </span>
+            <!--v-if-->
+          </span>
+        </div>
+        <div
+          class="summary"
+        >
+          圆弧标签
+        </div>
+        <div
+          class="tag-demo"
+        >
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--round t-tag--light t-tag--medium"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              标签文字
+              
+            </span>
+            <!--v-if-->
+          </span>
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--round t-tag--outline t-tag--medium"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              标签文字
+              
+            </span>
+            <!--v-if-->
+          </span>
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--mark t-tag--outline t-tag--medium"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              标签文字
+              
+            </span>
+            <!--v-if-->
+          </span>
+        </div>
+        <div
+          class="summary"
+        >
+          带图标的标签
+        </div>
+        <div
+          class="tag-demo"
+        >
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              
+              <svg
+                class="t-icon t-icon-discount"
+              >
+                <use
+                  href="#t-icon-discount"
+                />
+              </svg>
+              
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+               标签文字 
+              
+            </span>
+            <!--v-if-->
+          </span>
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              
+              <svg
+                class="t-icon t-icon-discount"
+              >
+                <use
+                  href="#t-icon-discount"
+                />
+              </svg>
+              
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+               标签文字 
+              
+            </span>
+            <!--v-if-->
+          </span>
+        </div>
+        <div
+          class="summary"
+        >
+          超长文本省略标签
+        </div>
+        <div
+          class="tag-demo"
+        >
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+            role="button"
+            style="max-width: 130px;"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              听说超长可以省略听说超长
+              
+            </span>
+            <!--v-if-->
+          </span>
+        </div>
+      </div>
+      <div>
+        <div
+          class="summary"
+        >
+          可关闭标签
+        </div>
+        <div
+          class="tag-demo"
+        >
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              文字标签
+              
+            </span>
+            <span
+              class="t-tag__icon-close"
+            >
+              <svg
+                class="t-icon t-icon-close"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+          </span>
+          <span
+            aria-disabled="false"
+            class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium t-is-closable t-tag--closable"
+            role="button"
+          >
+            <span
+              class="t-tag__icon"
+            >
+              <!---->
+            </span>
+            <span
+              class="t-tag__text"
+            >
+              
+              文字标签
+              
+            </span>
+            <span
+              class="t-tag__icon-close"
+            >
+              <svg
+                class="t-icon t-icon-close"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div>
+        <div
+          class="summary"
+        >
+          可选中的标签
+        </div>
+        <div
+          class="tag-demo"
+        >
+          <div>
+            
+            <div
+              class="tag-block check-tag-block"
+            >
+              <div
+                class="check-tag-block__title"
+              >
+                light
+              </div>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  未选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light t-is-checked t-tag--checked"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  已选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+            <div
+              class="tag-block check-tag-block"
+            >
+              <div
+                class="check-tag-block__title"
+              >
+                dark
+              </div>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--dark"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  未选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--dark t-is-checked t-tag--checked"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  已选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+            <div
+              class="tag-block check-tag-block"
+            >
+              <div
+                class="check-tag-block__title"
+              >
+                outline
+              </div>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--outline"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  未选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--outline t-is-checked t-tag--checked"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  已选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+            <div
+              class="tag-block check-tag-block"
+            >
+              <div
+                class="check-tag-block__title"
+              >
+                light-outline
+              </div>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--default t-tag--large t-tag--light-outline"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  未选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--checkable t-tag--square t-tag--primary t-tag--large t-tag--light-outline t-is-checked t-tag--checked"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  已选中态
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        基础标签
-      </p>
+        02 组件状态
+      </h2>
+      <!--v-if-->
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div>
+        <div
+          class="summary"
+        >
+          可关闭标签
+        </div>
+        <div
+          class="tag-demo"
+        >
+          <div>
+            <div
+              class="tag-block"
+            >
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  默认
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--primary t-tag--square t-tag--light t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  主要
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--warning t-tag--square t-tag--light t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  警告
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--danger t-tag--square t-tag--light t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  危险
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--success t-tag--square t-tag--light t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  成功
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+            <div
+              class="tag-block"
+            >
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  默认
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  主要
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--warning t-tag--square t-tag--dark t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  警告
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--danger t-tag--square t-tag--dark t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  危险
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--success t-tag--square t-tag--dark t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  成功
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+            <div
+              class="tag-block"
+            >
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  默认
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--primary t-tag--square t-tag--outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  主要
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--warning t-tag--square t-tag--outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  警告
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--danger t-tag--square t-tag--outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  危险
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--success t-tag--square t-tag--outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  成功
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+            <div
+              class="tag-block"
+            >
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--default t-tag--square t-tag--light-outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  默认
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--primary t-tag--square t-tag--light-outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  主要
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--warning t-tag--square t-tag--light-outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  警告
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--danger t-tag--square t-tag--light-outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  危险
+                  
+                </span>
+                <!--v-if-->
+              </span>
+              <span
+                aria-disabled="false"
+                class="t-tag t-tag--success t-tag--square t-tag--light-outline t-tag--medium"
+                role="button"
+              >
+                <span
+                  class="t-tag__icon"
+                >
+                  <!---->
+                </span>
+                <span
+                  class="t-tag__text"
+                >
+                  
+                  成功
+                  
+                </span>
+                <!--v-if-->
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 组件尺寸
+      </h2>
+      <!--v-if-->
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
       
       <div
-        class="tag-demo"
+        class="group padding-bottom d-flex"
       >
-        
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
-          role="button"
+        <div
+          class="tag-container"
+          data-v-aac3f224=""
         >
-          <span
-            class="t-tag__icon"
+          <div
+            class="tag-block"
+            data-v-aac3f224=""
           >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                加大尺寸
+                
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                大尺寸
+                
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                中尺寸
+                
+              </span>
+              <!--v-if-->
+            </span>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                小尺寸
+                
+              </span>
+              <!--v-if-->
+            </span>
+          </div>
+          <div
+            class="tag-block tag-block1"
+            data-v-aac3f224=""
           >
-            
-            标签
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--danger t-tag--square t-tag--dark t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            标签
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--warning t-tag--square t-tag--dark t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            标签
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--success t-tag--square t-tag--dark t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            标签
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            标签
-            
-          </span>
-          <!--v-if-->
-        </span>
-        
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                加大尺寸
+                
+              </span>
+              <span
+                class="t-tag__icon-close"
+              >
+                <svg
+                  class="t-icon t-icon-close"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                大尺寸
+                
+              </span>
+              <span
+                class="t-tag__icon-close"
+              >
+                <svg
+                  class="t-icon t-icon-close"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                中尺寸
+                
+              </span>
+              <span
+                class="t-tag__icon-close"
+              >
+                <svg
+                  class="t-icon t-icon-close"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
+              data-v-aac3f224=""
+              role="button"
+            >
+              <span
+                class="t-tag__icon"
+              >
+                <!---->
+              </span>
+              <span
+                class="t-tag__text"
+              >
+                
+                小尺寸
+                
+              </span>
+              <span
+                class="t-tag__icon-close"
+              >
+                <svg
+                  class="t-icon t-icon-close"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                >
+                  <path
+                    d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+        </div>
       </div>
-      <div
-        class="tag-demo"
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag > Tag sizeVue demo works fine 1`] = `
+<div
+  class="tag-container"
+  data-v-aac3f224=""
+>
+  <div
+    class="tag-block"
+    data-v-aac3f224=""
+  >
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
       >
         
+        加大尺寸
+        
+      </span>
+      <!--v-if-->
+    </span>
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        大尺寸
+        
+      </span>
+      <!--v-if-->
+    </span>
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        中尺寸
+        
+      </span>
+      <!--v-if-->
+    </span>
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        小尺寸
+        
+      </span>
+      <!--v-if-->
+    </span>
+  </div>
+  <div
+    class="tag-block tag-block1"
+    data-v-aac3f224=""
+  >
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--extra-large t-is-closable t-tag--closable"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        加大尺寸
+        
+      </span>
+      <span
+        class="t-tag__icon-close"
+      >
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--large t-is-closable t-tag--closable"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        大尺寸
+        
+      </span>
+      <span
+        class="t-tag__icon-close"
+      >
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium t-is-closable t-tag--closable"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        中尺寸
+        
+      </span>
+      <span
+        class="t-tag__icon-close"
+      >
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--small t-is-closable t-tag--closable"
+      data-v-aac3f224=""
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        小尺寸
+        
+      </span>
+      <span
+        class="t-tag__icon-close"
+      >
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag > Tag themeVue demo works fine 1`] = `
+<div>
+  <div
+    class="summary"
+  >
+    可关闭标签
+  </div>
+  <div
+    class="tag-demo"
+  >
+    <div>
+      <div
+        class="tag-block"
+      >
         <span
           aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
+          class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
           role="button"
         >
           <span
@@ -366,7 +1780,7 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag__text"
           >
             
-            深色
+            默认
             
           </span>
           <!--v-if-->
@@ -385,7 +1799,186 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag__text"
           >
             
-            浅色
+            主要
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--warning t-tag--square t-tag--light t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            警告
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--danger t-tag--square t-tag--light t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            危险
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--success t-tag--square t-tag--light t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            成功
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      <div
+        class="tag-block"
+      >
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            默认
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            主要
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--warning t-tag--square t-tag--dark t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            警告
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--danger t-tag--square t-tag--dark t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            危险
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--success t-tag--square t-tag--dark t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            成功
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      <div
+        class="tag-block"
+      >
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            默认
             
           </span>
           <!--v-if-->
@@ -404,7 +1997,87 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag__text"
           >
             
-            描边
+            主要
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--warning t-tag--square t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            警告
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--danger t-tag--square t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            危险
+            
+          </span>
+          <!--v-if-->
+        </span>
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--success t-tag--square t-tag--outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            成功
+            
+          </span>
+          <!--v-if-->
+        </span>
+      </div>
+      <div
+        class="tag-block"
+      >
+        <span
+          aria-disabled="false"
+          class="t-tag t-tag--default t-tag--square t-tag--light-outline t-tag--medium"
+          role="button"
+        >
+          <span
+            class="t-tag__icon"
+          >
+            <!---->
+          </span>
+          <span
+            class="t-tag__text"
+          >
+            
+            默认
             
           </span>
           <!--v-if-->
@@ -423,95 +2096,14 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag__text"
           >
             
-            浅色描边
+            主要
             
           </span>
           <!--v-if-->
         </span>
-        
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        带图标标签
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="tag-demo"
-      >
         <span
           aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            标签
-            
-          </span>
-          <!--v-if-->
-        </span>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        圆角标签
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="tag-demo"
-      >
-        
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--round t-tag--dark t-tag--medium"
+          class="t-tag t-tag--warning t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
           <span
@@ -523,14 +2115,14 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag__text"
           >
             
-            圆角
+            警告
             
           </span>
           <!--v-if-->
         </span>
         <span
           aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--mark t-tag--dark t-tag--medium"
+          class="t-tag t-tag--danger t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
           <span
@@ -542,40 +2134,14 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag__text"
           >
             
-            半圆
+            危险
             
           </span>
           <!--v-if-->
         </span>
-        
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        可关闭标签
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="tag-demo"
-      >
-        
         <span
           aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium t-is-closable t-tag--closable"
+          class="t-tag t-tag--success t-tag--square t-tag--light-outline t-tag--medium"
           role="button"
         >
           <span
@@ -587,600 +2153,223 @@ exports[`Tag > Tag mobileVue demo works fine 1`] = `
             class="t-tag__text"
           >
             
-            标签
-            
-          </span>
-          <span
-            class="t-tag__icon-close"
-          >
-            <svg
-              class="t-icon t-icon-close"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-        </span>
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium t-is-closable t-tag--closable"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            标签
-            
-          </span>
-          <span
-            class="t-tag__icon-close"
-          >
-            <svg
-              class="t-icon t-icon-close"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-        </span>
-        
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        超长省略标签
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="tag-demo"
-      >
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
-          role="button"
-          style="max-width: 130px;"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            听说超长可以省略听说超长
+            成功
             
           </span>
           <!--v-if-->
         </span>
       </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        02 状态
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        标签状态
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="tag-demo"
-      >
-        
-        <span
-          class="t-tag t-tag--checkable t-tag--square t-tag--medium t-is-checked t-tag--checked"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            选中
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          class="t-tag t-tag--checkable t-tag--square t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            未选中
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          aria-disabled="true"
-          class="t-tag t-tag--checkable t-tag--square t-tag--medium t-is-disabled t-tag--disabled"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            不可选
-            
-          </span>
-          <!--v-if-->
-        </span>
-        
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        03 规格
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        标签规格
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="group padding-bottom d-flex"
-      >
-        
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--large"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            展示标签30
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            展示标签24
-            
-          </span>
-          <!--v-if-->
-        </span>
-        
-      </div>
-      <div
-        class="group d-flex"
-      >
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--large"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            点击标签30
-            
-          </span>
-          <!--v-if-->
-        </span>
-        <span
-          aria-disabled="false"
-          class="t-tag t-tag--checkable t-tag--square t-tag--medium"
-          role="button"
-        >
-          <span
-            class="t-tag__icon"
-          >
-            <!---->
-          </span>
-          <span
-            class="t-tag__text"
-          >
-            
-            点击标签24
-            
-          </span>
-          <!--v-if-->
-        </span>
-      </div>
-      
     </div>
   </div>
 </div>
 `;
 
-exports[`Tag > Tag shapeVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--round t-tag--dark t-tag--medium"
-    role="button"
+exports[`Tag > Tag typeVue demo works fine 1`] = `
+<div>
+  <div
+    class="summary"
+  >
+    基础标签
+  </div>
+  <div
+    class="tag-demo"
   >
     <span
-      class="t-tag__icon"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+      role="button"
     >
-      <!---->
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        标签文字 
+        
+      </span>
+      <!--v-if-->
     </span>
     <span
-      class="t-tag__text"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+      role="button"
     >
-      
-      圆角
-      
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        标签文字
+        
+      </span>
+      <!--v-if-->
     </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--mark t-tag--dark t-tag--medium"
-    role="button"
+  </div>
+  <div
+    class="summary"
+  >
+    圆弧标签
+  </div>
+  <div
+    class="tag-demo"
   >
     <span
-      class="t-tag__icon"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--round t-tag--light t-tag--medium"
+      role="button"
     >
-      <!---->
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        标签文字
+        
+      </span>
+      <!--v-if-->
     </span>
     <span
-      class="t-tag__text"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--round t-tag--outline t-tag--medium"
+      role="button"
     >
-      
-      半圆
-      
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        标签文字
+        
+      </span>
+      <!--v-if-->
     </span>
-    <!--v-if-->
-  </span>
-  
-</div>
-`;
-
-exports[`Tag > Tag sizeVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--large"
-    role="button"
+    <span
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--mark t-tag--outline t-tag--medium"
+      role="button"
+    >
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        标签文字
+        
+      </span>
+      <!--v-if-->
+    </span>
+  </div>
+  <div
+    class="summary"
+  >
+    带图标的标签
+  </div>
+  <div
+    class="tag-demo"
   >
     <span
-      class="t-tag__icon"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+      role="button"
     >
-      <!---->
+      <span
+        class="t-tag__icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-discount"
+        >
+          <use
+            href="#t-icon-discount"
+          />
+        </svg>
+        
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+         标签文字 
+        
+      </span>
+      <!--v-if-->
     </span>
     <span
-      class="t-tag__text"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--outline t-tag--medium"
+      role="button"
     >
-      
-      展示标签30
-      
+      <span
+        class="t-tag__icon"
+      >
+        
+        <svg
+          class="t-icon t-icon-discount"
+        >
+          <use
+            href="#t-icon-discount"
+          />
+        </svg>
+        
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+         标签文字 
+        
+      </span>
+      <!--v-if-->
     </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
-    role="button"
+  </div>
+  <div
+    class="summary"
+  >
+    超长文本省略标签
+  </div>
+  <div
+    class="tag-demo"
   >
     <span
-      class="t-tag__icon"
+      aria-disabled="false"
+      class="t-tag t-tag--default t-tag--square t-tag--light t-tag--medium"
+      role="button"
+      style="max-width: 130px;"
     >
-      <!---->
+      <span
+        class="t-tag__icon"
+      >
+        <!---->
+      </span>
+      <span
+        class="t-tag__text"
+      >
+        
+        听说超长可以省略听说超长
+        
+      </span>
+      <!--v-if-->
     </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      展示标签24
-      
-    </span>
-    <!--v-if-->
-  </span>
-  
-</div>
-`;
-
-exports[`Tag > Tag themeVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--danger t-tag--square t-tag--dark t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--warning t-tag--square t-tag--dark t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--success t-tag--square t-tag--dark t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--default t-tag--square t-tag--dark t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      标签
-      
-    </span>
-    <!--v-if-->
-  </span>
-  
-</div>
-`;
-
-exports[`Tag > Tag variantVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--dark t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      深色
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--light t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      浅色
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--outline t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      描边
-      
-    </span>
-    <!--v-if-->
-  </span>
-  <span
-    aria-disabled="false"
-    class="t-tag t-tag--primary t-tag--square t-tag--light-outline t-tag--medium"
-    role="button"
-  >
-    <span
-      class="t-tag__icon"
-    >
-      <!---->
-    </span>
-    <span
-      class="t-tag__text"
-    >
-      
-      浅色描边
-      
-    </span>
-    <!--v-if-->
-  </span>
-  
+  </div>
 </div>
 `;

@@ -4,13 +4,19 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/cascader/demos/base.vue';
+import keysVue from '@/cascader/demos/keys.vue';
 import mobileVue from '@/cascader/demos/mobile.vue';
-import statusVue from '@/cascader/demos/status.vue';
+import themeTabVue from '@/cascader/demos/theme-tab.vue';
+import withTitleVue from '@/cascader/demos/with-title.vue';
+import withValueVue from '@/cascader/demos/with-value.vue';
 
 const mapper = {
   baseVue,
+  keysVue,
   mobileVue,
-  statusVue,
+  themeTabVue,
+  withTitleVue,
+  withValueVue,
 };
 
 describe('Cascader', () => {

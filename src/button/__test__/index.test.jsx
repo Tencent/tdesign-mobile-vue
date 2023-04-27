@@ -1,23 +1,19 @@
-import { h, ref } from 'vue';
+import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { AppIcon as TIconApp, LoadingIcon } from 'tdesign-icons-vue-next';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Button from '../button.vue';
-import ButtonGroup from '../../button-group/button-group.vue';
+import Loading from '../../loading';
 
 const prefix = 't';
 const name = `${prefix}-button`;
-const SIZE_CLASSNAMES = {
-  small: `${prefix}-size-s`,
-  medium: `${prefix}-size-m`,
-  large: `${prefix}-size-l`,
-};
+
 const TEXT = 'tdesign-mobile-vue';
 const iconFunc = () => h(TIconApp);
 
 describe('button', () => {
   describe('props', () => {
-    it(': theme', async () => {
+    it(':theme', async () => {
       const wrapper = mount(Button, {
         props: {
           theme: '',
@@ -38,7 +34,7 @@ describe('button', () => {
       expect($button.classes()).toContain(`${name}--${theme}`);
     });
 
-    it(': content', async () => {
+    it(':content', async () => {
       const wrapper = mount(Button, {
         props: {
           content: TEXT,
@@ -54,7 +50,7 @@ describe('button', () => {
       expect($button.text()).toBe(newContent);
     });
 
-    it(': shape', async () => {
+    it(':shape', async () => {
       const wrapper = mount(Button, {
         props: {
           shape: '',
@@ -64,7 +60,7 @@ describe('button', () => {
       // shape = ''
       const $button = wrapper.findComponent(Button);
       ['rectangle', 'square', 'round', 'circle'].map((item) => {
-        expect($button.classes().includes(`${name}--shape-${item}`)).toBeFalsy();
+        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
       });
       expect(wrapper.text()).toBe(TEXT);
       const shape = 'square';
@@ -72,10 +68,10 @@ describe('button', () => {
         shape,
       });
       // shape = 'square'
-      expect($button.classes()).toContain(`${name}--shape-${shape}`);
+      expect($button.classes()).toContain(`${name}--${shape}`);
     });
 
-    it(': size', async () => {
+    it(':size', async () => {
       const wrapper = mount(Button, {
         props: {
           size: '',
@@ -85,7 +81,7 @@ describe('button', () => {
       // size = ''
       const $button = wrapper.findComponent(Button);
       ['small', 'medium', 'large'].map((item) => {
-        expect($button.classes().includes(`${SIZE_CLASSNAMES[item]}`)).toBeFalsy();
+        expect($button.classes().includes(`${name}--size-${item}`)).toBeFalsy();
       });
       expect(wrapper.text()).toBe(TEXT);
       const size = 'small';
@@ -93,10 +89,10 @@ describe('button', () => {
         size,
       });
       // size = 'small'
-      expect($button.classes()).toContain(`${SIZE_CLASSNAMES[size]}`);
+      expect($button.classes()).toContain(`${name}--size-small`);
     });
 
-    it(': variant', async () => {
+    it(':variant', async () => {
       const wrapper = mount(Button, {
         props: {
           variant: '',
@@ -117,7 +113,7 @@ describe('button', () => {
       expect($button.classes()).toContain(`${name}--${variant}`);
     });
 
-    it(': disabled', async () => {
+    it(':disabled', async () => {
       const onClick = vi.fn();
       const disabled = true;
       const wrapper = mount(Button, {
@@ -129,7 +125,7 @@ describe('button', () => {
       });
       const $button = wrapper.findComponent(Button);
       // disabled = true, 不会触发 click
-      expect($button.classes()).toContain('t-is-disabled');
+      expect($button.classes()).toContain(`${name}--disabled`);
       await $button.trigger('click');
       expect(onClick).not.toBeCalled();
 
@@ -141,7 +137,7 @@ describe('button', () => {
       expect(onClick).toBeCalled();
     });
 
-    it(': loading', async () => {
+    it(':loading', async () => {
       const loading = true;
       const onClick = vi.fn();
       const wrapper = mount(Button, {
@@ -154,20 +150,17 @@ describe('button', () => {
       const $button = wrapper.findComponent(Button);
 
       // loading = true，不触发 click
-      expect($button.classes()).toContain('t-is-loading');
-      expect($button.findComponent(LoadingIcon).exists()).toBeTruthy();
       await $button.trigger('click');
       expect(onClick).not.toBeCalled();
       // loading = false
       await wrapper.setProps({
         loading: false,
       });
-      expect($button.findComponent(LoadingIcon).exists()).toBeFalsy();
       await $button.trigger('click');
       expect(onClick).toBeCalled();
     });
 
-    it(': icon', async () => {
+    it(':icon', async () => {
       const wrapper = mount(Button, {
         props: {
           loading: true,
@@ -176,12 +169,12 @@ describe('button', () => {
         },
       });
       const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain('t-is-loading');
-      expect($button.findComponent(LoadingIcon).exists()).toBeTruthy();
+      expect($button.classes()).toContain(`${name}--loading`);
+      expect($button.findComponent(Loading).exists()).toBeTruthy();
       expect($button.findComponent(TIconApp).exists()).toBeFalsy();
     });
 
-    it(': ghost', async () => {
+    it(':ghost', async () => {
       const ghost = true;
       const wrapper = mount(Button, {
         props: {
@@ -200,7 +193,7 @@ describe('button', () => {
       expect($button.classes().includes(`${name}--ghost`)).toBeFalsy();
     });
 
-    it(': block', async () => {
+    it(':block', async () => {
       const block = true;
       const wrapper = mount(Button, {
         props: {
@@ -211,42 +204,12 @@ describe('button', () => {
       const $button = wrapper.findComponent(Button);
 
       // block = true
-      expect($button.classes().includes(`${prefix}-is-block`)).toBeTruthy();
+      expect($button.classes().includes(`${name}--block`)).toBeTruthy();
       // block = false
       await wrapper.setProps({
         block: false,
       });
-      expect($button.classes().includes(`${prefix}-is-block`)).toBeFalsy();
-    });
-  });
-
-  describe('button-group', () => {
-    it('button group render', async () => {
-      const items = [
-        {
-          content: TEXT,
-        },
-        {
-          content: TEXT,
-        },
-      ];
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <ButtonGroup>
-              {{
-                default: items.map((item, index) => {
-                  return <Button content={item.content} />;
-                }),
-              }}
-            </ButtonGroup>
-          );
-        },
-      });
-      expect(wrapper.element).toMatchSnapshot();
-      const $buttonGroup = wrapper.findComponent(ButtonGroup);
-      expect($buttonGroup.exists()).toBeTruthy();
-      expect(wrapper.findAllComponents(Button).length).toEqual(items.length);
+      expect($button.classes().includes(`${name}--block`)).toBeFalsy();
     });
   });
 });

@@ -65,10 +65,10 @@ import {
   CheckRectangleFilledIcon,
   CheckIcon,
 } from 'tdesign-icons-vue-next';
-import config from '@/config';
+import config from '../config';
 import CheckboxProps from './props';
-import { renderContent, renderTNode, TNode, useDefault } from '@/shared';
-import { TdCheckboxProps } from '@/checkbox/type';
+import { renderContent, renderTNode, TNode, useDefault } from '../shared';
+import { TdCheckboxProps } from '../checkbox/type';
 import MinusLineFilledIcon from './assets/minus-line-filled-icon.svg';
 import CheckLineFilledIcon from './assets/check-line-filled-icon.svg';
 

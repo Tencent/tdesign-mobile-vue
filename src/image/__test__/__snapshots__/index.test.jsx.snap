@@ -2,14 +2,17 @@
 
 exports[`Image > props > : lazy 1`] = `
 <div
-  class="t-image t-image--round"
+  class="t-image t-image--square"
 >
   <!--v-if-->
-  <img
-    alt=""
-    class="t-image__img"
-    src="https://tdesign.gtimg.com/site/upload1.png"
-    style="object-fit: fill; object-position: center;"
-  />
+  <picture>
+    <!--v-if-->
+    <img
+      alt=""
+      class="t-image__img"
+      src="https://tdesign.gtimg.com/site/upload1.png"
+      style="object-fit: fill; object-position: center;"
+    />
+  </picture>
 </div>
 `;

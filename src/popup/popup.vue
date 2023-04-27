@@ -1,30 +1,32 @@
 <template>
   <teleport :to="to" :disabled="!to">
-    <div :class="[rootClasses, $attrs.class]" :style="rootStyles" @touchmove="handleMove">
-      <transition name="fade">
-        <t-overlay
-          v-bind="overlayProps"
-          :visible="currentVisible"
-          :transparent="!showOverlay"
-          @click="handleOverlayClick"
-        />
-      </transition>
-      <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
-        <div v-show="currentVisible" :class="contentClasses">
-          <slot></slot>
+    <t-overlay v-bind="overlayProps" :visible="currentVisible && showOverlay" @click="handleOverlayClick" />
+    <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
+      <div
+        v-show="currentVisible"
+        :class="[name, $attrs.class, contentClasses]"
+        :style="rootStyles"
+        @touchmove="handleMove"
+      >
+        <div v-if="closeBtnNode" :class="`${name}__close`">
+          <t-node :content="closeBtnNode" />
         </div>
-      </transition>
-    </div>
+        <slot />
+      </div>
+    </transition>
   </teleport>
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, defineComponent } from 'vue';
+import { computed, watch, defineComponent, h, getCurrentInstance } from 'vue';
+import { CloseIcon } from 'tdesign-icons-vue-next';
+
 import popupProps from './props';
 import TOverlay from '../overlay';
 import config from '../config';
 import { TdPopupProps } from './type';
-import { useDefault, useEmitEvent } from '../shared';
+import { useDefault, useEmitEvent, TNode, renderTNode } from '../shared';
+import { getAttach } from '../shared/dom';
 
 const { prefix } = config;
 
@@ -32,75 +34,88 @@ const name = `${prefix}-popup`;
 
 export default defineComponent({
   name,
-  components: { TOverlay },
+  components: { TNode, TOverlay },
   props: popupProps,
   emits: ['open', 'close', 'opened', 'closed', 'visible-change', 'update:visible', 'update:modelValue'],
   setup(props, context) {
+    const currentInstance = getCurrentInstance();
     const emitEvent = useEmitEvent(props, context.emit);
-    const [currentVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
+    const [currentVisible, setVisible] = useDefault<TdPopupProps['visible'], TdPopupProps>(
       props,
       context.emit,
       'visible',
       'visible-change',
     );
 
-    const rootClasses = computed(() => name);
-    const rootStyles = computed(() =>
-      props.customStyle || props.zIndex
-        ? (props.customStyle && `${props.customStyle};`) + (props.zIndex && `z-index:${props.zIndex};`)
-        : undefined,
-    );
+    const rootStyles = computed(() => {
+      const styles: Record<string, any> = {};
+
+      if (props.zIndex) {
+        styles.zIndex = `${props.zIndex}`;
+      }
+      return { ...(context.attrs.style as Object), ...styles };
+    });
 
     const contentClasses = computed(() => ({
-      [`${name}--content`]: true,
-      [`${name}--content-${props.placement}`]: true,
+      [`${name}--${props.placement}`]: true,
     }));
 
     const contentTransitionName = computed(() => {
       const { transitionName, placement } = props;
+
       if (transitionName) return transitionName;
       if (placement === 'center') return 'fade-zoom';
       return `slide-${placement}`;
     });
 
-    watch(
-      () => currentVisible.value,
-      (val) => {
-        const cls = `${prefix}-overflow-hidden`;
-        if (val) {
-          document.body.classList.add(cls);
-          emitEvent('open');
-          currentVisible.value = true;
-        } else {
-          document.body.classList.remove(cls);
-        }
-      },
+    const closeBtnNode = computed(() =>
+      renderTNode(currentInstance, 'closeBtn', {
+        defaultNode: h(CloseIcon, {
+          size: '24px',
+          onClick() {
+            setVisible(false);
+          },
+        }),
+      }),
     );
 
-    const handleOverlayClick = () => {
+    const handleOverlayClick = (args: { e: MouseEvent }) => {
+      const { e } = args;
       if (!props.closeOnOverlayClick) {
         return;
       }
-      emitEvent('close');
-      currentVisible.value = false;
+      emitEvent('close', { e });
+      setVisible(false);
     };
 
     const handleMove = (e: TouchEvent) => {
-      if (props.lockScroll) {
+      if (props.preventScrollThrough) {
         e.preventDefault();
       }
     };
 
     const afterLeave = () => emitEvent('closed');
     const afterEnter = () => emitEvent('opened');
+    const to = computed(() => getAttach(props.attach ?? 'body'));
+
+    watch(
+      () => currentVisible.value,
+      (val) => {
+        if (val) {
+          emitEvent('open');
+          setVisible(true);
+        }
+      },
+    );
 
     return {
-      name: ref(name),
+      name,
+      to,
       currentVisible,
-      rootClasses,
       rootStyles,
       contentClasses,
       contentTransitionName,
+      closeBtnNode,
       afterEnter,
       afterLeave,
       handleOverlayClick,

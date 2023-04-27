@@ -2,130 +2,486 @@
 
 exports[`Slider > Slider baseVue demo works fine 1`] = `
 <div
-  class="t-slider-wrap"
+  class="wrapper"
+  data-v-5350d6f5=""
 >
-  <!--v-if-->
   <div
     class="t-slider"
+    data-v-5350d6f5=""
   >
-    <!-- 总长度 -->
-    <div
-      class="t-slider__bar"
-    />
-    <!-- 滑块长度 -->
-    <div
-      class="t-slider__track"
-      style="width: 0%;"
-    />
-    <!-- 滑块操作 -->
     
+    <!--v-if-->
     <div
-      class="t-slider__handle"
-      style="left: 0%;"
-    />
-    
-    <!-- 刻度内容 -->
-    <div
-      class="t-slider__mark"
+      class="t-slider__bar t-slider__bar--default"
     >
-      
-      
+      <!--v-if-->
+      <div
+        class="t-slider__line t-slider__line--default t-slider__line--single"
+        style=""
+      >
+        <div
+          class="t-slider__dot"
+        >
+          <!--v-if-->
+          <div
+            class="t-slider__dot-slider"
+          />
+        </div>
+      </div>
     </div>
+    <!--v-if-->
+    
+    <!--v-if-->
   </div>
-  <!--v-if-->
-  <!--v-if-->
 </div>
 `;
 
-exports[`Slider > Slider disableVue demo works fine 1`] = `
+exports[`Slider > Slider capsuleVue demo works fine 1`] = `
 <div
-  class="t-slider-wrap t-is-disabled"
+  data-v-app=""
 >
-  <!--v-if-->
+  
   <div
-    class="t-slider"
+    class="wrapper"
+    data-v-a6c0268e=""
   >
-    <!-- 总长度 -->
     <div
-      class="t-slider__bar"
-    />
-    <!-- 滑块长度 -->
-    <div
-      class="t-slider__track"
-      style="width: 0%;"
-    />
-    <!-- 滑块操作 -->
-    
-    <div
-      class="t-slider__handle"
-      style="left: 0%;"
-    />
-    
-    <!-- 刻度内容 -->
-    <div
-      class="t-slider__mark"
+      class="t-slider"
+      data-v-a6c0268e=""
     >
       
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--capsule"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--capsule t-slider__line--single"
+          style=""
+        >
+          <div
+            class="t-slider__dot"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-a6c0268e=""
+  >
+    <div
+      class="t-slider t-slider--range"
+      data-v-a6c0268e=""
+    >
+      <!--v-if-->
+      
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--capsule"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--capsule"
+          style="left: 0px; right: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
       
     </div>
   </div>
-  <!--v-if-->
-  <!--v-if-->
+  <div
+    class="wrapper"
+    data-v-a6c0268e=""
+  >
+    <div
+      class="t-slider t-slider--top t-slider--range"
+      data-v-a6c0268e=""
+    >
+      <!--v-if-->
+      
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--capsule"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--capsule"
+          style="left: 0px; right: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              0
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              0
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-a6c0268e=""
+  >
+    <div
+      class="t-slider"
+      data-v-a6c0268e=""
+    >
+      
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--capsule"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--capsule t-slider__line--single"
+          style=""
+        >
+          <div
+            class="t-slider__dot"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-a6c0268e=""
+  >
+    <div
+      class="t-slider t-slider--range"
+      data-v-a6c0268e=""
+    >
+      <!--v-if-->
+      
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--capsule"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--capsule"
+          style="left: 0px; right: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+    </div>
+  </div>
+  
 </div>
 `;
 
-exports[`Slider > Slider markVue demo works fine 1`] = `
+exports[`Slider > Slider disabledVue demo works fine 1`] = `
 <div
-  class="t-slider-wrap t-is-mark"
+  data-v-app=""
 >
-  <!--v-if-->
+  
   <div
-    class="t-slider"
+    class="wrapper"
+    data-v-53635720=""
   >
-    <!-- 总长度 -->
     <div
-      class="t-slider__bar"
-    />
-    <!-- 滑块长度 -->
-    <div
-      class="t-slider__track"
-      style="width: 50%;"
-    />
-    <!-- 滑块操作 -->
-    
-    <div
-      class="t-slider__handle"
-      style="left: 50%;"
-    />
-    
-    <!-- 刻度内容 -->
-    <div
-      class="t-slider__mark"
+      class="t-slider t-slider--disabled"
+      data-v-53635720=""
     >
       
+      <!--v-if-->
       <div
-        class="t-slider__mark-text t-is-active"
-        style="left: 0%;"
+        class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
       >
-        小
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--default t-slider__line--single t-slider__line--disabled"
+          style=""
+        >
+          <div
+            class="t-slider__dot"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
       </div>
+      <!--v-if-->
+      
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-53635720=""
+  >
+    <div
+      class="t-slider t-slider--top t-slider--disabled t-slider--range"
+      data-v-53635720=""
+    >
+      <!--v-if-->
+      
+      <text
+        class="t-slider__range-extreme t-slider__range-extreme--min"
+      >
+        0
+      </text>
       <div
-        class="t-slider__mark-text t-is-"
-        style="left: 50%;"
+        class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
       >
-        中
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--default t-slider__line--disabled"
+          style="left: 0px; right: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              0
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              0
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
       </div>
-      <div
-        class="t-slider__mark-text t-is-"
-        style="left: 100%;"
+      <text
+        class="t-slider__value t-slider__value--max"
       >
-        大
-      </div>
+        100
+      </text>
       
     </div>
   </div>
-  <!--v-if-->
-  <!--v-if-->
+  <div
+    class="wrapper"
+    data-v-53635720=""
+  >
+    <div
+      class="t-slider t-slider--disabled t-slider--range"
+      data-v-53635720=""
+    >
+      <!--v-if-->
+      
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--default t-slider__line--disabled"
+          style="left: 0px; right: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`Slider > Slider labelVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="wrapper"
+    data-v-61756b00=""
+  >
+    <div
+      class="t-slider t-slider--top"
+      data-v-61756b00=""
+    >
+      
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--default"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--default t-slider__line--single"
+          style=""
+        >
+          <div
+            class="t-slider__dot"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              10
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="wrapper"
+    data-v-61756b00=""
+  >
+    <div
+      class="t-slider t-slider--top t-slider--range"
+      data-v-61756b00=""
+    >
+      <!--v-if-->
+      
+      <text
+        class="t-slider__range-extreme t-slider__range-extreme--min"
+      >
+        0
+      </text>
+      <div
+        class="t-slider__bar t-slider__bar--default"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--default"
+          style="left: 0px; right: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              0
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <div
+              class="t-slider__dot-value"
+            >
+              0
+            </div>
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <text
+        class="t-slider__value t-slider__value--max"
+      >
+        100
+      </text>
+      
+    </div>
+  </div>
+  
 </div>
 `;
 
@@ -147,7 +503,7 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     用于选择横轴上的数值、区间、档位
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-98828574=""
   >
     <div
@@ -159,9 +515,64 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        单游标滑块
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="wrapper"
+        data-v-5350d6f5=""
+        data-v-98828574=""
+      >
+        <div
+          class="t-slider"
+          data-v-5350d6f5=""
+        >
+          
+          <!--v-if-->
+          <div
+            class="t-slider__bar t-slider__bar--default"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--default t-slider__line--single"
+              style=""
+            >
+              <div
+                class="t-slider__dot"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+          <!--v-if-->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-98828574=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        基础滑动选择器
+        双游标滑块
       </p>
     </div>
     <div
@@ -169,255 +580,52 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="slider-demo"
+        class="wrapper"
+        data-v-58e1d8c9=""
         data-v-98828574=""
       >
         <div
-          class="t-slider-wrap"
-          data-v-98828574=""
+          class="t-slider t-slider--range"
+          data-v-58e1d8c9=""
         >
           <!--v-if-->
+          
+          <!--v-if-->
           <div
-            class="t-slider"
+            class="t-slider__bar t-slider__bar--default"
           >
-            <!-- 总长度 -->
+            <!--v-if-->
             <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="width: 0%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 0%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
+              class="t-slider__line t-slider__line--default"
+              style="left: 0px; right: 0px;"
             >
-              
-              
-            </div>
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-98828574=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        带数值滑动选择器
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="slider-demo"
-        data-v-98828574=""
-      >
-        <div
-          class="t-slider-wrap"
-          data-v-98828574=""
-        >
-          <!--v-if-->
-          <div
-            class="t-slider"
-          >
-            <!-- 总长度 -->
-            <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="width: 50%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 50%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
-            >
-              
-              
-            </div>
-          </div>
-          <div
-            class="t-slider-wrap__value"
-          >
-            50
-          </div>
-          <!--v-if-->
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-98828574=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        起始非零滑动选择器
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="slider-demo"
-        data-v-98828574=""
-      >
-        <div
-          class="t-slider-wrap"
-          data-v-98828574=""
-        >
-          <!--v-if-->
-          <div
-            class="t-slider"
-          >
-            <!-- 总长度 -->
-            <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="width: 0%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 0%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
-            >
-              
-              
-            </div>
-          </div>
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block"
-    data-v-98828574=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary"
-      >
-        带刻度滑动选择器
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="slider-demo"
-        data-v-98828574=""
-      >
-        <div
-          class="t-slider-wrap t-is-mark"
-          data-v-98828574=""
-        >
-          <!--v-if-->
-          <div
-            class="t-slider"
-          >
-            <!-- 总长度 -->
-            <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="width: 50%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 50%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
-            >
-              
               <div
-                class="t-slider__mark-text t-is-active"
-                style="left: 0%;"
+                class="t-slider__dot t-slider__dot--left"
               >
-                小
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
               </div>
               <div
-                class="t-slider__mark-text t-is-"
-                style="left: 50%;"
+                class="t-slider__dot t-slider__dot--right"
               >
-                中
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
               </div>
-              <div
-                class="t-slider__mark-text t-is-"
-                style="left: 100%;"
-              >
-                大
-              </div>
-              
             </div>
           </div>
           <!--v-if-->
-          <!--v-if-->
+          
         </div>
       </div>
       
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-98828574=""
   >
     <div
@@ -425,67 +633,111 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        区间滑动选择器
+        带数值单游标/双游标滑块
       </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
       
+      
       <div
-        class="slider-demo"
-        data-v-98828574=""
+        class="wrapper"
+        data-v-61756b00=""
       >
         <div
-          class="t-slider-wrap t-is-value"
-          data-v-98828574=""
+          class="t-slider t-slider--top"
+          data-v-61756b00=""
         >
+          
+          <!--v-if-->
           <div
-            class="t-slider-wrap__value--left"
+            class="t-slider__bar t-slider__bar--default"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--default t-slider__line--single"
+              style=""
+            >
+              <div
+                class="t-slider__dot"
+              >
+                <div
+                  class="t-slider__dot-value"
+                >
+                  10
+                </div>
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="wrapper"
+        data-v-61756b00=""
+      >
+        <div
+          class="t-slider t-slider--top t-slider--range"
+          data-v-61756b00=""
+        >
+          <!--v-if-->
+          
+          <text
+            class="t-slider__range-extreme t-slider__range-extreme--min"
           >
             0
-          </div>
+          </text>
           <div
-            class="t-slider"
+            class="t-slider__bar t-slider__bar--default"
           >
-            <!-- 总长度 -->
+            <!--v-if-->
             <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="left: 30%; width: 40%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 30%;"
-            />
-            <div
-              class="t-slider__handle"
-              style="left: 70%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
+              class="t-slider__line t-slider__line--default"
+              style="left: 0px; right: 0px;"
             >
-              
-              
+              <div
+                class="t-slider__dot t-slider__dot--left"
+              >
+                <div
+                  class="t-slider__dot-value"
+                >
+                  0
+                </div>
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+              <div
+                class="t-slider__dot t-slider__dot--right"
+              >
+                <div
+                  class="t-slider__dot-value"
+                >
+                  0
+                </div>
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
             </div>
           </div>
-          <!--v-if-->
-          <div
-            class="t-slider-wrap__value"
+          <text
+            class="t-slider__value t-slider__value--max"
           >
             100
-          </div>
+          </text>
+          
         </div>
       </div>
+      
       
     </div>
   </div>
@@ -496,126 +748,93 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        02 状态
-      </h2>
+      <!--v-if-->
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        滑动选择器禁用状态
+        带刻度单游标/双游标滑块
       </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
       
+      
       <div
-        class="slider-demo"
-        data-v-98828574=""
+        class="wrapper"
+        data-v-0f126170=""
       >
         <div
-          class="t-slider-wrap t-is-disabled"
-          data-v-98828574=""
+          class="t-slider"
+          data-v-0f126170=""
         >
+          
           <!--v-if-->
           <div
-            class="t-slider"
+            class="t-slider__bar t-slider__bar--default"
           >
-            <!-- 总长度 -->
+            <!--v-if-->
             <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="width: 0%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 0%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
+              class="t-slider__line t-slider__line--default t-slider__line--single"
+              style=""
             >
-              
-              
+              <div
+                class="t-slider__dot"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
             </div>
           </div>
           <!--v-if-->
+          
           <!--v-if-->
         </div>
       </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-98828574=""
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <h2
-        class="tdesign-mobile-demo-block__title"
-      >
-        03 规格
-      </h2>
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        无标题滑动选择器
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
       <div
-        class="slider-demo"
-        data-v-98828574=""
+        class="wrapper"
+        data-v-0f126170=""
       >
         <div
-          class="t-slider-wrap"
-          data-v-98828574=""
+          class="t-slider t-slider--range"
+          data-v-0f126170=""
         >
           <!--v-if-->
+          
+          <!--v-if-->
           <div
-            class="t-slider"
+            class="t-slider__bar t-slider__bar--default"
           >
-            <!-- 总长度 -->
+            <!--v-if-->
             <div
-              class="t-slider__bar"
-            />
-            <!-- 滑块长度 -->
-            <div
-              class="t-slider__track"
-              style="width: 0%;"
-            />
-            <!-- 滑块操作 -->
-            
-            <div
-              class="t-slider__handle"
-              style="left: 0%;"
-            />
-            
-            <!-- 刻度内容 -->
-            <div
-              class="t-slider__mark"
+              class="t-slider__line t-slider__line--default"
+              style="left: 0px; right: 0px;"
             >
-              
-              
+              <div
+                class="t-slider__dot t-slider__dot--left"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+              <div
+                class="t-slider__dot t-slider__dot--right"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
             </div>
           </div>
           <!--v-if-->
-          <!--v-if-->
+          
         </div>
       </div>
+      
       
     </div>
   </div>
@@ -626,66 +845,378 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <!--v-if-->
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件状态
+      </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        有标题滑动选择器
+        滑块禁用状态
       </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot"
     >
       
+      
       <div
-        class="slider-demo"
-        data-v-98828574=""
+        class="wrapper"
+        data-v-53635720=""
       >
         <div
-          class="flex"
-          data-v-98828574=""
+          class="t-slider t-slider--disabled"
+          data-v-53635720=""
         >
-          <span
-            style="width: 120px; margin-right: 10px;"
-          >
-             选择器标题 
-          </span>
+          
+          <!--v-if-->
           <div
-            class="t-slider-wrap"
+            class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
           >
             <!--v-if-->
             <div
-              class="t-slider"
+              class="t-slider__line t-slider__line--default t-slider__line--single t-slider__line--disabled"
+              style=""
             >
-              <!-- 总长度 -->
               <div
-                class="t-slider__bar"
-              />
-              <!-- 滑块长度 -->
-              <div
-                class="t-slider__track"
-                style="width: 0%;"
-              />
-              <!-- 滑块操作 -->
-              
-              <div
-                class="t-slider__handle"
-                style="left: 0%;"
-              />
-              
-              <!-- 刻度内容 -->
-              <div
-                class="t-slider__mark"
+                class="t-slider__dot"
               >
-                
-                
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
               </div>
             </div>
-            <!--v-if-->
-            <!--v-if-->
           </div>
+          <!--v-if-->
+          
+          <!--v-if-->
         </div>
       </div>
+      <div
+        class="wrapper"
+        data-v-53635720=""
+      >
+        <div
+          class="t-slider t-slider--top t-slider--disabled t-slider--range"
+          data-v-53635720=""
+        >
+          <!--v-if-->
+          
+          <text
+            class="t-slider__range-extreme t-slider__range-extreme--min"
+          >
+            0
+          </text>
+          <div
+            class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--default t-slider__line--disabled"
+              style="left: 0px; right: 0px;"
+            >
+              <div
+                class="t-slider__dot t-slider__dot--left"
+              >
+                <div
+                  class="t-slider__dot-value"
+                >
+                  0
+                </div>
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+              <div
+                class="t-slider__dot t-slider__dot--right"
+              >
+                <div
+                  class="t-slider__dot-value"
+                >
+                  0
+                </div>
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <text
+            class="t-slider__value t-slider__value--max"
+          >
+            100
+          </text>
+          
+        </div>
+      </div>
+      <div
+        class="wrapper"
+        data-v-53635720=""
+      >
+        <div
+          class="t-slider t-slider--disabled t-slider--range"
+          data-v-53635720=""
+        >
+          <!--v-if-->
+          
+          <!--v-if-->
+          <div
+            class="t-slider__bar t-slider__bar--default t-slider__bar--disabled"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--default t-slider__line--disabled"
+              style="left: 0px; right: 0px;"
+            >
+              <div
+                class="t-slider__dot t-slider__dot--left"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+              <div
+                class="t-slider__dot t-slider__dot--right"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-98828574=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 特殊样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        胶囊型滑块
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="wrapper"
+        data-v-a6c0268e=""
+      >
+        <div
+          class="t-slider"
+          data-v-a6c0268e=""
+        >
+          
+          <!--v-if-->
+          <div
+            class="t-slider__bar t-slider__bar--capsule"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--capsule t-slider__line--single"
+              style=""
+            >
+              <div
+                class="t-slider__dot"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="wrapper"
+        data-v-a6c0268e=""
+      >
+        <div
+          class="t-slider t-slider--range"
+          data-v-a6c0268e=""
+        >
+          <!--v-if-->
+          
+          <!--v-if-->
+          <div
+            class="t-slider__bar t-slider__bar--capsule"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--capsule"
+              style="left: 0px; right: 0px;"
+            >
+              <div
+                class="t-slider__dot t-slider__dot--left"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+              <div
+                class="t-slider__dot t-slider__dot--right"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+        </div>
+      </div>
+      <div
+        class="wrapper"
+        data-v-a6c0268e=""
+      >
+        <div
+          class="t-slider t-slider--top t-slider--range"
+          data-v-a6c0268e=""
+        >
+          <!--v-if-->
+          
+          <!--v-if-->
+          <div
+            class="t-slider__bar t-slider__bar--capsule"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--capsule"
+              style="left: 0px; right: 0px;"
+            >
+              <div
+                class="t-slider__dot t-slider__dot--left"
+              >
+                <div
+                  class="t-slider__dot-value"
+                >
+                  0
+                </div>
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+              <div
+                class="t-slider__dot t-slider__dot--right"
+              >
+                <div
+                  class="t-slider__dot-value"
+                >
+                  0
+                </div>
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+        </div>
+      </div>
+      <div
+        class="wrapper"
+        data-v-a6c0268e=""
+      >
+        <div
+          class="t-slider"
+          data-v-a6c0268e=""
+        >
+          
+          <!--v-if-->
+          <div
+            class="t-slider__bar t-slider__bar--capsule"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--capsule t-slider__line--single"
+              style=""
+            >
+              <div
+                class="t-slider__dot"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+          <!--v-if-->
+        </div>
+      </div>
+      <div
+        class="wrapper"
+        data-v-a6c0268e=""
+      >
+        <div
+          class="t-slider t-slider--range"
+          data-v-a6c0268e=""
+        >
+          <!--v-if-->
+          
+          <!--v-if-->
+          <div
+            class="t-slider__bar t-slider__bar--capsule"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__line t-slider__line--capsule"
+              style="left: 0px; right: 0px;"
+            >
+              <div
+                class="t-slider__dot t-slider__dot--left"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+              <div
+                class="t-slider__dot t-slider__dot--right"
+              >
+                <!--v-if-->
+                <div
+                  class="t-slider__dot-slider"
+                />
+              </div>
+            </div>
+          </div>
+          <!--v-if-->
+          
+        </div>
+      </div>
+      
       
     </div>
   </div>
@@ -694,173 +1225,127 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
 
 exports[`Slider > Slider rangeVue demo works fine 1`] = `
 <div
-  class="t-slider-wrap t-is-value"
+  class="wrapper"
+  data-v-58e1d8c9=""
 >
   <div
-    class="t-slider-wrap__value--left"
-  >
-    0
-  </div>
-  <div
-    class="t-slider"
-  >
-    <!-- 总长度 -->
-    <div
-      class="t-slider__bar"
-    />
-    <!-- 滑块长度 -->
-    <div
-      class="t-slider__track"
-      style="left: 30%; width: 40%;"
-    />
-    <!-- 滑块操作 -->
-    
-    <div
-      class="t-slider__handle"
-      style="left: 30%;"
-    />
-    <div
-      class="t-slider__handle"
-      style="left: 70%;"
-    />
-    
-    <!-- 刻度内容 -->
-    <div
-      class="t-slider__mark"
-    >
-      
-      
-    </div>
-  </div>
-  <!--v-if-->
-  <div
-    class="t-slider-wrap__value"
-  >
-    100
-  </div>
-</div>
-`;
-
-exports[`Slider > Slider titleVue demo works fine 1`] = `
-<div
-  class="flex"
->
-  <span
-    style="width: 120px; margin-right: 10px;"
-  >
-     选择器标题 
-  </span>
-  <div
-    class="t-slider-wrap"
+    class="t-slider t-slider--range"
+    data-v-58e1d8c9=""
   >
     <!--v-if-->
+    
+    <!--v-if-->
     <div
-      class="t-slider"
+      class="t-slider__bar t-slider__bar--default"
     >
-      <!-- 总长度 -->
+      <!--v-if-->
       <div
-        class="t-slider__bar"
-      />
-      <!-- 滑块长度 -->
-      <div
-        class="t-slider__track"
-        style="width: 0%;"
-      />
-      <!-- 滑块操作 -->
-      
-      <div
-        class="t-slider__handle"
-        style="left: 0%;"
-      />
-      
-      <!-- 刻度内容 -->
-      <div
-        class="t-slider__mark"
+        class="t-slider__line t-slider__line--default"
+        style="left: 0px; right: 0px;"
       >
-        
-        
+        <div
+          class="t-slider__dot t-slider__dot--left"
+        >
+          <!--v-if-->
+          <div
+            class="t-slider__dot-slider"
+          />
+        </div>
+        <div
+          class="t-slider__dot t-slider__dot--right"
+        >
+          <!--v-if-->
+          <div
+            class="t-slider__dot-slider"
+          />
+        </div>
       </div>
     </div>
     <!--v-if-->
-    <!--v-if-->
+    
   </div>
 </div>
 `;
 
-exports[`Slider > Slider unZeroVue demo works fine 1`] = `
+exports[`Slider > Slider stepVue demo works fine 1`] = `
 <div
-  class="t-slider-wrap"
+  data-v-app=""
 >
-  <!--v-if-->
+  
   <div
-    class="t-slider"
+    class="wrapper"
+    data-v-0f126170=""
   >
-    <!-- 总长度 -->
     <div
-      class="t-slider__bar"
-    />
-    <!-- 滑块长度 -->
-    <div
-      class="t-slider__track"
-      style="width: 0%;"
-    />
-    <!-- 滑块操作 -->
-    
-    <div
-      class="t-slider__handle"
-      style="left: 0%;"
-    />
-    
-    <!-- 刻度内容 -->
-    <div
-      class="t-slider__mark"
+      class="t-slider"
+      data-v-0f126170=""
     >
       
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--default"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--default t-slider__line--single"
+          style=""
+        >
+          <div
+            class="t-slider__dot"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
       
-    </div>
-  </div>
-  <!--v-if-->
-  <!--v-if-->
-</div>
-`;
-
-exports[`Slider > Slider valueVue demo works fine 1`] = `
-<div
-  class="t-slider-wrap"
->
-  <!--v-if-->
-  <div
-    class="t-slider"
-  >
-    <!-- 总长度 -->
-    <div
-      class="t-slider__bar"
-    />
-    <!-- 滑块长度 -->
-    <div
-      class="t-slider__track"
-      style="width: 50%;"
-    />
-    <!-- 滑块操作 -->
-    
-    <div
-      class="t-slider__handle"
-      style="left: 50%;"
-    />
-    
-    <!-- 刻度内容 -->
-    <div
-      class="t-slider__mark"
-    >
-      
-      
+      <!--v-if-->
     </div>
   </div>
   <div
-    class="t-slider-wrap__value"
+    class="wrapper"
+    data-v-0f126170=""
   >
-    50
+    <div
+      class="t-slider t-slider--range"
+      data-v-0f126170=""
+    >
+      <!--v-if-->
+      
+      <!--v-if-->
+      <div
+        class="t-slider__bar t-slider__bar--default"
+      >
+        <!--v-if-->
+        <div
+          class="t-slider__line t-slider__line--default"
+          style="left: 0px; right: 0px;"
+        >
+          <div
+            class="t-slider__dot t-slider__dot--left"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+          <div
+            class="t-slider__dot t-slider__dot--right"
+          >
+            <!--v-if-->
+            <div
+              class="t-slider__dot-slider"
+            />
+          </div>
+        </div>
+      </div>
+      <!--v-if-->
+      
+    </div>
   </div>
-  <!--v-if-->
+  
 </div>
 `;

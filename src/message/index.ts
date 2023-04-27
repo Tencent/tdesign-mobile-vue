@@ -5,22 +5,32 @@ import { TdMessageProps, MessageThemeList } from './type';
 
 import './style';
 
-function create(props: TdMessageProps): void {
-  const visible = ref(false);
+interface MessageActionOptionsType extends TdMessageProps {
+  context?: HTMLElement;
+}
+
+function create(props: MessageActionOptionsType): void {
+  const { context, ...otherOptions } = props;
+
+  if (!context) {
+    console.error('未找到组件, 请确认 context 是否正确');
+    return;
+  }
+
   const root = document.createElement('div');
-  document.body.appendChild(root);
+  context.appendChild(root);
+  const visible = ref(false);
 
   const component = defineComponent({
     render: (): VNode =>
-      // @ts-ignore
       h(Message, {
-        ...props,
+        ...otherOptions,
         visible: visible.value,
-        onClose: () => {
+        onDurationEnd: () => {
           visible.value = false;
         },
-        onClosed: () => {
-          root.remove();
+        onCloseBtnClick: () => {
+          visible.value = false;
         },
       }),
   });
@@ -40,11 +50,8 @@ const defaultProps: TdMessageProps = {
   theme: 'info',
   visible: false,
   zIndex: 5000,
-  onClose: () => {},
-  onClosed: () => {},
-  onOpen: () => {},
-  onOpened: () => {},
-  onChange: () => {},
+  onDurationEnd: () => {},
+  onCloseBtnClick: () => {},
 };
 
 (['info', 'success', 'warning', 'error'] as MessageThemeList[]).forEach((theme: MessageThemeList): void => {

@@ -1,7 +1,7 @@
 <template>
   <t-loading />
   <t-loading theme="spinner" />
-  <t-loading theme="dots" />
+  <t-loading theme="dots" size="40px" />
 </template>
 
 <style scoped>

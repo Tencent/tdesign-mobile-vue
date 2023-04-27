@@ -35,6 +35,12 @@ export default {
           component: () => import('@/button/button.md'),
         },
         {
+          title: 'Divider 分割符',
+          name: 'divider',
+          path: '/mobile-vue/components/divider',
+          component: () => import('@/divider/divider.md'),
+        },
+        {
           title: 'Fab 悬浮按钮',
           name: 'fab',
           path: '/mobile-vue/components/fab',
@@ -46,29 +52,11 @@ export default {
           path: '/mobile-vue/components/icon',
           component: () => import('@/icon/icon.md'),
         },
-      ],
-    },
-    {
-      title: '布局',
-      type: 'component', // 组件文档
-      children: [
         {
-          title: 'Divider 分割符',
-          name: 'divider',
-          path: '/mobile-vue/components/divider',
-          component: () => import('@/divider/divider.md'),
-        },
-        {
-          title: 'Cell 单元格',
-          name: 'cell',
-          path: '/mobile-vue/components/cell',
-          component: () => import('@/cell/cell.md'),
-        },
-        {
-          title: 'Grid 宫格',
-          name: 'grid',
-          path: '/mobile-vue/components/grid',
-          component: () => import('@/grid/grid.md'),
+          title: 'Link 链接',
+          name: 'link',
+          path: '/mobile-vue/components/link',
+          component: () => import('@/link/link.md'),
         },
       ],
     },
@@ -76,6 +64,19 @@ export default {
       title: '导航',
       type: 'component',
       children: [
+        {
+          title: 'BackTop 返回顶部',
+          name: 'back-top',
+          meta: { docType: 'base' },
+          path: '/mobile-vue/components/back-top',
+          component: () => import('@/back-top/back-top.md'),
+        },
+        {
+          title: 'Drawer 抽屉',
+          name: 'drawer',
+          path: '/mobile-vue/components/drawer',
+          component: () => import('@/drawer/drawer.md'),
+        },
         {
           title: 'Indexes 索引',
           name: 'indexes',
@@ -106,24 +107,18 @@ export default {
           path: '/mobile-vue/components/tabs',
           component: () => import('@/tabs/tabs.md'),
         },
-        {
-          title: 'DropdownMenu 下拉菜单',
-          name: 'dropdown-menu',
-          path: '/mobile-vue/components/dropdown-menu',
-          component: () => import('@/dropdown-menu/dropdown-menu.md'),
-        },
-        {
-          title: 'Sticky 吸顶容器',
-          name: 'sticky',
-          path: '/mobile-vue/components/sticky',
-          component: () => import('@/sticky/sticky.md'),
-        },
       ],
     },
     {
       title: '输入',
       type: 'component',
       children: [
+        {
+          title: 'Form 表单',
+          name: 'form',
+          path: '/mobile-vue/components/form',
+          component: () => import('@/form/form.md'),
+        },
         {
           title: 'Calendar 日历',
           name: 'calendar',
@@ -215,6 +210,18 @@ export default {
       type: 'component',
       children: [
         {
+          title: 'Cell 单元格',
+          name: 'cell',
+          path: '/mobile-vue/components/cell',
+          component: () => import('@/cell/cell.md'),
+        },
+        {
+          title: 'Grid 宫格',
+          name: 'grid',
+          path: '/mobile-vue/components/grid',
+          component: () => import('@/grid/grid.md'),
+        },
+        {
           title: 'Footer 页脚',
           name: 'footer',
           meta: { docType: 'data' },
@@ -246,6 +253,12 @@ export default {
           component: () => import('@/count-down/count-down.md'),
         },
         {
+          title: 'Empty 空状态',
+          name: 'empty',
+          path: '/mobile-vue/components/empty',
+          component: () => import('@/empty/empty.md'),
+        },
+        {
           title: 'Tag 标签',
           name: 'tag',
           path: '/mobile-vue/components/tag',
@@ -256,6 +269,12 @@ export default {
           name: 'collapse',
           path: '/mobile-vue/components/collapse',
           component: () => import('@/collapse/collapse.md'),
+        },
+        {
+          title: 'Sticky 吸顶容器',
+          name: 'sticky',
+          path: '/mobile-vue/components/sticky',
+          component: () => import('@/sticky/sticky.md'),
         },
         {
           title: 'Swiper 轮播',
@@ -287,30 +306,23 @@ export default {
           path: '/mobile-vue/components/result',
           component: () => import('@/result/result.md'),
         },
-      ],
-    },
-    {
-      title: '消息提醒',
-      type: 'component', // 组件文档
-      children: [
-        {
-          title: 'Drawer 抽屉',
-          name: 'drawer',
-          path: '/mobile-vue/components/drawer',
-          component: () => import('@/drawer/drawer.md'),
-        },
         {
           title: 'Progress 进度条',
           name: 'progress',
           path: '/mobile-vue/components/progress',
           component: () => import('@/progress/progress.md'),
         },
+      ],
+    },
+    {
+      title: '反馈',
+      type: 'component', // 组件文档
+      children: [
         {
-          title: 'BackTop 返回顶部',
-          name: 'back-top',
-          meta: { docType: 'base' },
-          path: '/mobile-vue/components/back-top',
-          component: () => import('@/back-top/back-top.md'),
+          title: 'DropdownMenu 下拉菜单',
+          name: 'dropdown-menu',
+          path: '/mobile-vue/components/dropdown-menu',
+          component: () => import('@/dropdown-menu/dropdown-menu.md'),
         },
         {
           title: 'PullDownRefresh 下拉刷新',

@@ -14,7 +14,7 @@ export interface TdSliderProps {
   disabled?: boolean;
   /**
    * 滑块当前值文本。<br />值为 true 显示默认文案；值为 false 不显示滑块当前值文本；<br />值为 `${value}%` 则表示组件会根据占位符渲染文案；<br />值类型为函数时，参数 `value` 标识滑块值，参数 `position=start` 表示范围滑块的起始值，参数 `position=end` 表示范围滑块的终点值
-   * @default true
+   * @default false
    */
   label?: string | boolean | TNode<{ value: SliderValue; position?: 'start' | 'end' }>;
   /**
@@ -47,29 +47,29 @@ export interface TdSliderProps {
    */
   step?: number;
   /**
+   * 滑块风格
+   * @default default
+   */
+  theme?: 'default' | 'capsule';
+  /**
    * 滑块值
+   * @default 0
    */
   value?: SliderValue;
   /**
    * 滑块值，非受控属性
+   * @default 0
    */
   defaultValue?: SliderValue;
   /**
    * 滑块值
+   * @default 0
    */
   modelValue?: SliderValue;
   /**
    * 滑块值变化时触发
    */
   onChange?: (value: SliderValue) => void;
-  /**
-   * 结束拖动时触发
-   */
-  onDragend?: () => void;
-  /**
-   * 开始拖动时触发
-   */
-  onDragstart?: () => void;
 }
 
 export interface SliderMarks {

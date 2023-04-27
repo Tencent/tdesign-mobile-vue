@@ -40,7 +40,7 @@ describe('Result.vue', () => {
       image: () => <Image src={imageUrl} />,
     };
     const wrapper = mount(() => <Result v-slots={slots}></Result>);
-    const img = wrapper.find('.t-image > img');
+    const img = wrapper.find('.t-image img');
     expect(img.exists()).toBeTruthy();
     expect(img.attributes('src')).toBe(imageUrl);
   });

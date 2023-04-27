@@ -108,31 +108,47 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
       class="t-footer__logo"
     >
       <div
-        class="t-image t-image--round t-footer__icon"
+        class="t-image t-image--square t-footer__icon"
       >
         <div
-          class="t-image__status"
+          class="t-image__mask"
         >
-          <svg
-            class="t-icon t-icon-ellipsis"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
+          <div
+            class="t-loading"
+            style="font-size: 20px;"
           >
-            <path
-              d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+            
+            <div
+              class="t-loading__dots"
+              style="animation-duration: 800ms; width: 20px; height: 20px;"
+            >
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+              />
+              <div
+                class="t-loading__dot"
+                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+              />
+            </div>
+            
+            <!--v-if-->
+            <!---->
+          </div>
         </div>
-        <img
-          alt=""
-          class="t-image__img"
-          src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
-          style="object-fit: fill; object-position: center;"
-        />
+        <picture>
+          <!--v-if-->
+          <img
+            alt=""
+            class="t-image__img"
+            src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
+            style="object-fit: fill; object-position: center;"
+          />
+        </picture>
       </div>
       <span
         class="t-footer__title"
@@ -166,15 +182,20 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
   >
     Footer 页脚
   </h1>
+  <p
+    class="summary"
+  >
+    用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+  </p>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         基础页脚
       </p>
@@ -201,14 +222,14 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         基础加链接页脚
       </p>
@@ -292,14 +313,14 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         品牌页脚
       </p>
@@ -317,31 +338,47 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
           class="t-footer__logo"
         >
           <div
-            class="t-image t-image--round t-footer__icon"
+            class="t-image t-image--square t-footer__icon"
           >
             <div
-              class="t-image__status"
+              class="t-image__mask"
             >
-              <svg
-                class="t-icon t-icon-ellipsis"
-                fill="none"
-                height="1em"
-                viewBox="0 0 16 16"
-                width="1em"
+              <div
+                class="t-loading"
+                style="font-size: 20px;"
               >
-                <path
-                  d="M3 9a1 1 0 110-2 1 1 0 010 2zM7 8a1 1 0 102 0 1 1 0 00-2 0zM12 8a1 1 0 102 0 1 1 0 00-2 0z"
-                  fill="currentColor"
-                  fill-opacity="0.9"
-                />
-              </svg>
+                
+                <div
+                  class="t-loading__dots"
+                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                >
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                  />
+                  <div
+                    class="t-loading__dot"
+                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                  />
+                </div>
+                
+                <!--v-if-->
+                <!---->
+              </div>
             </div>
-            <img
-              alt=""
-              class="t-image__img"
-              src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
-              style="object-fit: fill; object-position: center;"
-            />
+            <picture>
+              <!--v-if-->
+              <img
+                alt=""
+                class="t-image__img"
+                src="https://tdesign.gtimg.com/miniprogram/images/logo2.png"
+                style="object-fit: fill; object-position: center;"
+              />
+            </picture>
           </div>
           <span
             class="t-footer__title"

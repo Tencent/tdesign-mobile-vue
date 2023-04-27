@@ -222,48 +222,54 @@ exports[`Swiper > Swiper controlVue demo works fine 1`] = `
      手动指定页数： 
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
       data-v-7617ffc0=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         第一页
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--default t-button--shape-rectangle"
+      class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle"
       data-v-7617ffc0=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         第二页
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-s t-button--base t-button--primary t-button--shape-rectangle"
+      class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
       data-v-7617ffc0=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         第三页
         
       </span>
+      <!---->
     </button>
   </p>
   <p
@@ -432,7 +438,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
     用于循环轮播一组图片或内容，也可以滑动进行切换，轮播动效时间可以设置
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -443,7 +449,7 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         轮播图的多种样式
       </p>

@@ -1,4 +1,9 @@
-import { ImageProps } from '../image';
+/* eslint-disable */
+
+/**
+ * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
+ * */
+
 import { TNode } from '../common';
 
 export interface TdResultProps {
@@ -6,28 +11,22 @@ export interface TdResultProps {
    * 描述文字
    */
   description?: string | TNode;
-
   /**
    * 图标名称
-   * @default ''
    */
-  icon?: string | TNode;
+  icon?: TNode;
   /**
    * 图片地址
    */
   image?: string | TNode;
   /**
-   * 标题
-   * @default ''
-   */
-  title?: string | TNode;
-  /**
-   * 内置主题
+   * 内置主题。
    * @default default
    */
   theme?: 'default' | 'success' | 'warning' | 'error';
   /**
-   * 透传 Image 组件全部属性
+   * 标题
+   * @default ''
    */
-  imageProps?: ImageProps;
+  title?: string | TNode;
 }

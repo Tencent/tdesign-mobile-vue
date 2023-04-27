@@ -11,33 +11,37 @@ exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-924378ec=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         半圆白底
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-924378ec=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         半圆黑底
         
       </span>
+      <!---->
     </button>
   </div>
   <div
@@ -92,7 +96,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
     当页面过长往下滑动是会出现返回顶部的便捷操作，帮助用户快速回到页面顶部
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
     data-v-806aae90=""
   >
     <div
@@ -104,7 +108,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         01 类型
       </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         圆型返回顶部
       </p>
@@ -120,63 +124,71 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆角白底
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆角黑底
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆白底纯图标
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-915cc230=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             圆黑底纯图标
             
           </span>
+          <!---->
         </button>
       </div>
       <div
@@ -213,7 +225,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-806aae90=""
   >
     <div
@@ -221,7 +233,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
     >
       <!--v-if-->
       <p
-        class="tdesign-mobile-demo-block__summary"
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
         半圆型返回顶部
       </p>
@@ -237,33 +249,37 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       >
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-924378ec=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             半圆白底
             
           </span>
+          <!---->
         </button>
         <button
           aria-disabled="false"
-          class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+          class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
           data-v-924378ec=""
           role="button"
+          type="button"
         >
           <!---->
           <span
-            class="t-button__text"
+            class="t-button__content"
           >
             
             半圆黑底
             
           </span>
+          <!---->
         </button>
       </div>
       <div
@@ -300,7 +316,7 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
     </div>
   </div>
   <div
-    class="tdesign-mobile-demo-block"
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
     data-v-806aae90=""
   >
     <!--v-if-->
@@ -319,38 +335,32 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         >
           
           <div
-            class="t-skeleton__content"
+            class="t-skeleton__row"
           >
             
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 100px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            />
             
           </div>
           
@@ -361,38 +371,32 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         >
           
           <div
-            class="t-skeleton__content"
+            class="t-skeleton__row"
           >
             
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 100px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            />
             
           </div>
           
@@ -403,38 +407,32 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         >
           
           <div
-            class="t-skeleton__content"
+            class="t-skeleton__row"
           >
             
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 100px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            />
             
           </div>
           
@@ -445,38 +443,32 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         >
           
           <div
-            class="t-skeleton__content"
+            class="t-skeleton__row"
           >
             
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+            />
+            
+          </div>
+          <div
+            class="t-skeleton__row"
+          >
+            
             <div
-              class="t-skeleton__row"
-            >
-              
-              <div
-                class="t-skeleton__col t-skeleton--type-text"
-                style="width: 100px;"
-              />
-              
-            </div>
+              class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+              style="width: 100px;"
+            />
             
           </div>
           
@@ -504,63 +496,71 @@ exports[`BackTop > BackTop roundVue demo works fine 1`] = `
   >
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆角白底
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆角黑底
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆白底纯图标
         
       </span>
+      <!---->
     </button>
     <button
       aria-disabled="false"
-      class="t-button t-size-l t-button--outline t-button--default t-button--shape-rectangle t-is-block"
+      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
       data-v-915cc230=""
       role="button"
+      type="button"
     >
       <!---->
       <span
-        class="t-button__text"
+        class="t-button__content"
       >
         
         圆黑底纯图标
         
       </span>
+      <!---->
     </button>
   </div>
   <div
