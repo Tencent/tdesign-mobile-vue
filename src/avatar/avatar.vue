@@ -1,14 +1,7 @@
 <template>
   <div :class="`${name}__wrapper`" :style="customSize">
     <div :class="`${name}__badge`">
-      <t-badge
-        :count="badgeProps?.count"
-        :max-count="badgeProps?.maxCount"
-        :dot="badgeProps?.dot"
-        :content="badgeProps?.content"
-        :size="badgeProps?.size"
-        :offset="badgeProps?.offset"
-      >
+      <t-badge v-bind="customBadgeProps">
         <div :class="avatarClass">
           <t-image
             v-if="image && !hideOnLoadFailed"
@@ -82,6 +75,10 @@ export default defineComponent({
       emitEvent('error', e);
     };
 
+    const customBadgeProps = computed(() => ({
+      ...props.badgeProps,
+    }));
+
     const baseImageProps = {
       src: props.image,
       alt: props.alt,
@@ -101,6 +98,7 @@ export default defineComponent({
       handleImgLoadCompleted,
       handleImgLoadError,
       customImageProps,
+      customBadgeProps,
     };
   },
 });

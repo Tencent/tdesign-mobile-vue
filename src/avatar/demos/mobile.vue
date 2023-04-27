@@ -12,16 +12,16 @@
       <iconAvatar />
     </tdesign-demo-block>
     <tdesign-demo-block title="02 组件样式" summary="纯展示">
-      <exhibitionDemo />
+      <exhibition />
     </tdesign-demo-block>
     <tdesign-demo-block summary="带操作">
-      <actionDemo />
+      <action />
     </tdesign-demo-block>
     <tdesign-demo-block summary="徽标头像">
       <badgeAvatar />
     </tdesign-demo-block>
     <tdesign-demo-block title="03 组件尺寸" summary=" large/medium/small 尺寸">
-      <sizeDemo />
+      <size />
     </tdesign-demo-block>
   </div>
 </template>
@@ -30,8 +30,8 @@
 import imageAvatar from './image-avatar.vue';
 import characterAvatar from './character-avatar.vue';
 import iconAvatar from './icon-avatar.vue';
+import exhibition from './exhibition.vue';
+import action from './action.vue';
 import badgeAvatar from './badge-avatar.vue';
-import sizeDemo from './size.vue';
-import exhibitionDemo from './exhibition.vue';
-import actionDemo from './action.vue';
+import size from './size.vue';
 </script>

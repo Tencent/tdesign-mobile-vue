@@ -5,7 +5,7 @@ exports[`Avatar > Avatar actionVue demo works fine 1`] = `
   class="avatar-group-demo"
 >
   <div
-    class="t-avatar-group t-avatar-group-offset-right-medium"
+    class="t-avatar-group t-avatar-group-offset-right-"
   >
     
     <div
@@ -585,7 +585,7 @@ exports[`Avatar > Avatar exhibitionVue demo works fine 1`] = `
   class="avatar-group-demo"
 >
   <div
-    class="t-avatar-group t-avatar-group-offset-left-medium"
+    class="t-avatar-group t-avatar-group-offset-left-"
   >
     
     <div
@@ -1555,7 +1555,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         class="avatar-group-demo"
       >
         <div
-          class="t-avatar-group t-avatar-group-offset-left-medium"
+          class="t-avatar-group t-avatar-group-offset-left-"
         >
           
           <div
@@ -1926,7 +1926,7 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
         class="avatar-group-demo"
       >
         <div
-          class="t-avatar-group t-avatar-group-offset-right-medium"
+          class="t-avatar-group t-avatar-group-offset-right-"
         >
           
           <div

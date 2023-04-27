@@ -5,13 +5,10 @@
  * */
 
 import { BadgeProps } from '../badge';
-import { TNode } from '../common';
+import { ImageProps } from '../image';
+import { TNode, ImageEvent } from '../common';
 
 export interface TdAvatarProps {
-  /**
-   * 透传至 Image 组件
-   */
-  imageProps?: object;
   /**
    * 头像替换文本，仅当图片加载失败时有效
    * @default ''
@@ -36,19 +33,23 @@ export interface TdAvatarProps {
    */
   image?: string;
   /**
+   * 透传至 Image 组件
+   */
+  imageProps?: ImageProps;
+  /**
    * 形状
    * @default circle
    */
   shape?: ShapeEnum;
   /**
-   * 尺寸，示例值：small/medium/large/24px/38px 等，默认为 large
-   * @default ''
+   * 尺寸，示例值：small/medium/large/24px/38px 等。优先级高于 AvatarGroup.size 。Avatar 单独存在时，默认值为 medium。如果父组件存在 AvatarGroup，默认值便由 AvatarGroup.size 决定
+   * @default medium
    */
   size?: string;
   /**
    * 图片加载失败时触发
    */
-  onError?: () => void;
+  onError?: (context: { e: ImageEvent }) => void;
 }
 
 export interface TdAvatarGroupProps {
@@ -67,7 +68,7 @@ export interface TdAvatarGroupProps {
   max?: number;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
-   * @default medium
+   * @default ''
    */
   size?: string;
 }
