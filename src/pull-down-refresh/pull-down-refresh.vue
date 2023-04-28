@@ -20,8 +20,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onUnmounted, ref, toRefs, computed, watch } from 'vue';
+import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted } from 'vue';
 import { useElementSize } from '@vueuse/core';
+import { debounce } from 'lodash';
 import PullDownRefreshProps from './props';
 import { useEmitEvent, useVModel } from '../shared';
 import config from '../config';
@@ -37,7 +38,7 @@ export default defineComponent({
   name,
   components: { TLoading },
   props: PullDownRefreshProps,
-  emits: ['refresh', 'timeout', 'update:value', 'update:modelValue'],
+  emits: ['refresh', 'timeout', 'scrolltolower', 'update:value', 'update:modelValue'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
 
@@ -149,8 +150,27 @@ export default defineComponent({
       }
     };
 
+    const onReachBottom = () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 滚动高度
+      const { clientHeight, scrollHeight } = document.documentElement; // 可视区域/屏幕高度， 页面高度
+      const distance = 20; // 距离视窗 20 时，开始触发
+      if (scrollTop + clientHeight >= scrollHeight - distance) {
+        emitEvent('scrolltolower');
+      }
+    };
+
+    const _onReachBottom = debounce(onReachBottom, 300, {
+      leading: true,
+      trailing: false,
+    });
+
+    onMounted(() => {
+      window.addEventListener('scroll', _onReachBottom);
+    });
+
     onUnmounted(() => {
       clearTimeout(timer);
+      window.removeEventListener('scroll', _onReachBottom);
     });
 
     return {

@@ -4,6 +4,7 @@
     :loading-bar-height="66"
     :loading-texts="['下拉刷新', '松开刷新', '正在刷新', '刷新完成']"
     @refresh="handleRefresh"
+    @scrolltolower="handleScrolltolower"
   >
     <!-- 包裹页面全部内容 -->
     <div class="tdesign-mobile-demo">
@@ -12,7 +13,7 @@
         <p class="summary">用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。</p>
         <div class="tdesign-mobile-block">拖拽该区域演示 顶部下拉刷新</div>
         <div class="group">
-          <t-skeleton v-for="i in 2" :key="i" :row-col="rowCols" class="item" />
+          <t-skeleton v-for="i in 6" :key="i" :row-col="rowCols" class="item" />
         </div>
       </tdesign-demo-block>
     </div>
@@ -40,6 +41,9 @@ const handleRefresh = (value: any) => {
   setTimeout(() => {
     refreshing.value = false;
   }, 1000);
+};
+const handleScrolltolower = () => {
+  console.log('触底');
 };
 </script>
 
