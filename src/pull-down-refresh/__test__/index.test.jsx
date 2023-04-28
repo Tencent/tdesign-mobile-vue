@@ -47,7 +47,7 @@ describe('PullDownRefresh', () => {
         />,
       );
       const track = wrapper.find('.t-pull-down-refresh__track');
-      const maxBar = wrapper.find('.t-pull-down-refresh__max');
+      const maxBar = wrapper.find('.t-pull-down-refresh__tips');
 
       await nextTick();
       maxBar.trigger('resize', {
@@ -98,7 +98,7 @@ describe('PullDownRefresh', () => {
       );
 
       const target = wrapper.find('.t-pull-down-refresh__track');
-      const maxBar = wrapper.find('.t-pull-down-refresh__max');
+      const maxBar = wrapper.find('.t-pull-down-refresh__tips');
 
       await nextTick();
       maxBar.trigger('resize', {

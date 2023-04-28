@@ -1,19 +1,17 @@
 <template>
   <div :class="name">
     <div
-      :class="`${name}__track`"
+      :class="[`${name}__track`, { [`${name}__track--loosing`]: status === 'loosing' }]"
       :style="trackStyle"
       @touchstart.stop="onTouchStart"
       @touchmove.stop="onTouchMove"
       @touchend.stop="onTouchEnd"
       @touchcancel.stop="onTouchEnd"
     >
-      <div ref="maxBar" :class="`${name}__max`" :style="maxBarStyles">
+      <div ref="maxBar" :class="`${name}__tips`" :style="maxBarStyles">
         <div ref="loadingBar" :class="`${name}__loading`" :style="loadingBarStyles">
-          <div v-if="status === 'loading'">
-            <t-loading :text="loadingText" :class="`${name}__loading-icon`" v-bind="loadingIconProps" />
-          </div>
-          <div v-else>{{ loadingText }}</div>
+          <t-loading v-if="status === 'loading'" size="24px" :text="loadingText" v-bind="loadingIconProps" />
+          <div v-else :class="`${name}__text`">{{ loadingText }}</div>
         </div>
       </div>
       <slot />

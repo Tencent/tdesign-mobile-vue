@@ -3,26 +3,141 @@
 exports[`PullDownRefresh > PullDownRefresh baseVue demo works fine 1`] = `
 <div
   class="t-pull-down-refresh"
+  data-v-9c770ec0=""
 >
   <div
     class="t-pull-down-refresh__track"
     style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
   >
     <div
-      class="t-pull-down-refresh__max"
+      class="t-pull-down-refresh__tips"
       style="height: 80px;"
     >
       <div
         class="t-pull-down-refresh__loading"
-        style="height: 50px;"
+        style="height: 66px;"
       >
-        <div />
+        <div
+          class="t-pull-down-refresh__text"
+        />
       </div>
     </div>
     
-    
-     下拉刷新 
-    
+    <!-- 包裹页面全部内容 -->
+    <div
+      class="tdesign-mobile-demo"
+      data-v-9c770ec0=""
+    >
+      <div
+        class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+        data-v-9c770ec0=""
+      >
+        <!--v-if-->
+        <div
+          class="tdesign-mobile-demo-block__slot"
+        >
+          
+          <h1
+            class="title"
+            data-v-9c770ec0=""
+          >
+            PullDownRefresh 下拉刷新
+          </h1>
+          <p
+            class="summary"
+            data-v-9c770ec0=""
+          >
+            用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
+          </p>
+          <div
+            class="tdesign-mobile-block"
+            data-v-9c770ec0=""
+          >
+            拖拽该区域演示 顶部下拉刷新
+          </div>
+          <div
+            class="group"
+            data-v-9c770ec0=""
+          >
+            
+            <div
+              class="t-skeleton item"
+              data-v-9c770ec0=""
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                  style="width: 100px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                />
+                
+              </div>
+              
+            </div>
+            <div
+              class="t-skeleton item"
+              data-v-9c770ec0=""
+            >
+              
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                  style="width: 100px;"
+                />
+                
+              </div>
+              <div
+                class="t-skeleton__row"
+              >
+                
+                <div
+                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                />
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
     
   </div>
 </div>
@@ -48,14 +163,16 @@ exports[`PullDownRefresh > PullDownRefresh loadingTextsVue demo works fine 1`] =
           style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
         >
           <div
-            class="t-pull-down-refresh__max"
+            class="t-pull-down-refresh__tips"
             style="height: 100px;"
           >
             <div
               class="t-pull-down-refresh__loading"
               style="height: 70px;"
             >
-              <div />
+              <div
+                class="t-pull-down-refresh__text"
+              />
             </div>
           </div>
           
@@ -70,140 +187,142 @@ exports[`PullDownRefresh > PullDownRefresh loadingTextsVue demo works fine 1`] =
 `;
 
 exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
-<div
-  class="tdesign-mobile-demo"
-  data-v-43d0a031=""
-  style="background-color: rgb(255, 255, 255); height: 100vh;"
->
+<div>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-43d0a031=""
+    class="t-pull-down-refresh"
+    data-v-9c770ec0=""
   >
-    <!--v-if-->
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="t-pull-down-refresh__track"
+      style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
     >
-      
       <div
-        class="t-pull-down-refresh"
-        data-v-43d0a031=""
+        class="t-pull-down-refresh__tips"
+        style="height: 80px;"
       >
         <div
-          class="t-pull-down-refresh__track"
-          style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
+          class="t-pull-down-refresh__loading"
+          style="height: 66px;"
         >
           <div
-            class="t-pull-down-refresh__max"
-            style="height: 80px;"
-          >
-            <div
-              class="t-pull-down-refresh__loading"
-              style="height: 50px;"
-            >
-              <div />
-            </div>
-          </div>
-          
-          
-          <h1
-            class="title"
-            data-v-43d0a031=""
-          >
-            PullDownRefresh 下拉刷新
-          </h1>
-          <p
-            class="summary"
-            data-v-43d0a031=""
-          >
-            用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
-          </p>
+            class="t-pull-down-refresh__text"
+          />
+        </div>
+      </div>
+      
+      <!-- 包裹页面全部内容 -->
+      <div
+        class="tdesign-mobile-demo"
+        data-v-9c770ec0=""
+      >
+        <div
+          class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+          data-v-9c770ec0=""
+        >
+          <!--v-if-->
           <div
-            class="tdesign-mobile-block"
-            data-v-43d0a031=""
-          >
-            拖拽该区域演示 顶部下拉刷新
-          </div>
-          <div
-            class="group"
-            data-v-43d0a031=""
+            class="tdesign-mobile-demo-block__slot"
           >
             
-            <div
-              class="t-skeleton item"
-              data-v-43d0a031=""
+            <h1
+              class="title"
+              data-v-9c770ec0=""
             >
-              
-              <div
-                class="t-skeleton__row"
-              >
-                
-                <div
-                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
-                
-              </div>
-              <div
-                class="t-skeleton__row"
-              >
-                
-                <div
-                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  style="width: 100px;"
-                />
-                
-              </div>
-              <div
-                class="t-skeleton__row"
-              >
-                
-                <div
-                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
-                
-              </div>
-              
+              PullDownRefresh 下拉刷新
+            </h1>
+            <p
+              class="summary"
+              data-v-9c770ec0=""
+            >
+              用于快速刷新页面信息，刷新可以是整页刷新也可以是页面的局部刷新。
+            </p>
+            <div
+              class="tdesign-mobile-block"
+              data-v-9c770ec0=""
+            >
+              拖拽该区域演示 顶部下拉刷新
             </div>
             <div
-              class="t-skeleton item"
-              data-v-43d0a031=""
+              class="group"
+              data-v-9c770ec0=""
             >
               
               <div
-                class="t-skeleton__row"
+                class="t-skeleton item"
+                data-v-9c770ec0=""
               >
                 
                 <div
-                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                />
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                  />
+                  
+                </div>
+                <div
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                    style="width: 100px;"
+                  />
+                  
+                </div>
+                <div
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                    style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                  />
+                  
+                </div>
                 
               </div>
               <div
-                class="t-skeleton__row"
+                class="t-skeleton item"
+                data-v-9c770ec0=""
               >
                 
                 <div
-                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  style="width: 100px;"
-                />
-                
-              </div>
-              <div
-                class="t-skeleton__row"
-              >
-                
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                  />
+                  
+                </div>
                 <div
-                  class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
-                  style="width: 165.5px; height: 165.5px; border-radius: 12px;"
-                />
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                    style="width: 100px;"
+                  />
+                  
+                </div>
+                <div
+                  class="t-skeleton__row"
+                >
+                  
+                  <div
+                    class="t-skeleton__col t-skeleton--type-text t-skeleton--animation-none"
+                    style="width: 165.5px; height: 165.5px; border-radius: 12px;"
+                  />
+                  
+                </div>
                 
               </div>
               
             </div>
             
           </div>
-          
-          
         </div>
       </div>
       
@@ -232,14 +351,16 @@ exports[`PullDownRefresh > PullDownRefresh timeoutVue demo works fine 1`] = `
           style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
         >
           <div
-            class="t-pull-down-refresh__max"
+            class="t-pull-down-refresh__tips"
             style="height: 80px;"
           >
             <div
               class="t-pull-down-refresh__loading"
               style="height: 50px;"
             >
-              <div />
+              <div
+                class="t-pull-down-refresh__text"
+              />
             </div>
           </div>
           

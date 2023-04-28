@@ -141,14 +141,16 @@ exports[`List > List pullRefreshVue demo works fine 1`] = `
     style="transition-duration: 300ms; transform: translate3d(0, 0px, 0);"
   >
     <div
-      class="t-pull-down-refresh__max"
+      class="t-pull-down-refresh__tips"
       style="height: 80px;"
     >
       <div
         class="t-pull-down-refresh__loading"
         style="height: 50px;"
       >
-        <div />
+        <div
+          class="t-pull-down-refresh__text"
+        />
       </div>
     </div>
     
