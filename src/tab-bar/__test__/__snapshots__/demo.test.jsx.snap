@@ -19,7 +19,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tab"
     >
       <div
-        aria-hidden="16"
+        aria-hidden="true"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -137,7 +137,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tab"
     >
       <div
-        aria-hidden="New"
+        aria-hidden="true"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -196,7 +196,7 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
       role="tab"
     >
       <div
-        aria-hidden="···"
+        aria-hidden="true"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -266,6 +266,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -304,6 +305,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -342,6 +344,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -380,6 +383,7 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -432,6 +436,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -470,6 +475,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -508,6 +514,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -546,6 +553,7 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -761,6 +769,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -799,6 +808,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -837,6 +847,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -875,6 +886,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -944,6 +956,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -980,6 +993,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1016,6 +1030,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1052,6 +1067,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1239,7 +1255,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
-              aria-hidden="16"
+              aria-hidden="true"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1357,7 +1373,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
-              aria-hidden="New"
+              aria-hidden="true"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1416,7 +1432,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
-              aria-hidden="···"
+              aria-hidden="true"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1505,6 +1521,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1541,6 +1558,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1577,6 +1595,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1613,6 +1632,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1686,6 +1706,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1724,6 +1745,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1762,6 +1784,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1800,6 +1823,7 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <div
+              aria-hidden="false"
               class="t-tab-bar-item__icon"
               style="height: 20px;"
             >
@@ -1853,6 +1877,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1889,6 +1914,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1925,6 +1951,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -1961,6 +1988,7 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -2009,6 +2037,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -2045,6 +2074,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -2081,6 +2111,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
@@ -2117,6 +2148,7 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
       role="tab"
     >
       <div
+        aria-hidden="false"
         class="t-tab-bar-item__icon"
         style="height: 20px;"
       >
