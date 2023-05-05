@@ -4,21 +4,23 @@
 
 import { mount } from '@vue/test-utils';
 import actionVue from '@/avatar/demos/action.vue';
-import adjustVue from '@/avatar/demos/adjust.vue';
+import badgeAvatarVue from '@/avatar/demos/badge-avatar.vue';
+import characterAvatarVue from '@/avatar/demos/character-avatar.vue';
 import exhibitionVue from '@/avatar/demos/exhibition.vue';
+import iconAvatarVue from '@/avatar/demos/icon-avatar.vue';
+import imageAvatarVue from '@/avatar/demos/image-avatar.vue';
 import mobileVue from '@/avatar/demos/mobile.vue';
-import shapeVue from '@/avatar/demos/shape.vue';
 import sizeVue from '@/avatar/demos/size.vue';
-import typeVue from '@/avatar/demos/type.vue';
 
 const mapper = {
   actionVue,
-  adjustVue,
+  badgeAvatarVue,
+  characterAvatarVue,
   exhibitionVue,
+  iconAvatarVue,
+  imageAvatarVue,
   mobileVue,
-  shapeVue,
   sizeVue,
-  typeVue,
 };
 
 describe('Avatar', () => {
