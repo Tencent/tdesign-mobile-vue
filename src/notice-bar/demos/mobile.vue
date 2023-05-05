@@ -26,7 +26,7 @@
     >
       <themeDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 可 滚动的公告栏" summary="可滚动公告栏有水平 (horizontal) 和垂直 (vertical)">
+    <tdesign-demo-block title="03 可滚动的公告栏" summary="可滚动公告栏有水平 (horizontal) 和垂直 (vertical)">
       <scrollDemo />
     </tdesign-demo-block>
   </div>
