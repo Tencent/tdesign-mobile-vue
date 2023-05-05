@@ -24,7 +24,7 @@
         v-if="!!iconContent"
         :class="`${name}__icon`"
         :style="{ height: `${iconOnly ? 24 : 20}px` }"
-        :aria-hidden="badgeProps?.dot || badgeProps?.count"
+        :aria-hidden="!!badgeProps?.dot || !!badgeProps?.count"
       >
         <t-badge
           v-if="badgeProps?.dot || badgeProps?.count"
@@ -111,11 +111,11 @@ export default defineComponent({
         }
         const count = Number(options.count);
         if (isNaN(count)) {
-          return options.count;
+          return `${options.count}`;
         }
         const str1 = `有${maxCount}+条消息`;
         const str2 = `有${options.count}条消息`;
-        return Number(options.count) > maxCount ? str1 : str2;
+        return `${Number(options.count) > maxCount ? str1 : str2}`;
       }
       return 'TabBar';
     };
