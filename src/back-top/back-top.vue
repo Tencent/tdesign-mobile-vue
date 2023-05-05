@@ -1,6 +1,6 @@
 <template>
   <div :class="classes" @click="clickBackBtn">
-    <t-node :content="iconTNode" />
+    <t-node v-if="iconTNode" :content="iconTNode" />
     <span v-if="text" :class="`${name}__text--${theme}`">{{ text }}</span>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default defineComponent({
       if (context.slots?.icon || typeof props.icon === 'function') {
         return renderTNode(internalInstance, 'icon');
       }
-      return backTopIcon;
+      return props.icon ? backTopIcon : false;
     });
 
     const clickBackBtn = () => {
