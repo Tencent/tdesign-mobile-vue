@@ -21,10 +21,6 @@ export default {
       return ['horizontal', 'vertical'].includes(val);
     },
   },
-  /** 已废弃。右侧额外信息 */
-  extra: {
-    type: [String, Function] as PropType<TdNoticeBarProps['extra']>,
-  },
   /** 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放 */
   marquee: {
     type: [Boolean, Object] as PropType<TdNoticeBarProps['marquee']>,
@@ -36,7 +32,8 @@ export default {
   },
   /** 前缀图标 */
   prefixIcon: {
-    type: Function as PropType<TdNoticeBarProps['prefixIcon']>,
+    type: [Boolean, Function] as PropType<TdNoticeBarProps['prefixIcon']>,
+    default: null,
   },
   /** 后缀图标 */
   suffixIcon: {
@@ -62,8 +59,6 @@ export default {
   },
   /** 显示/隐藏，非受控属性 */
   defaultVisible: Boolean,
-  /** 已废弃。展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏 */
-  onChange: Function as PropType<TdNoticeBarProps['onChange']>,
   /** 点击事件 */
   onClick: Function as PropType<TdNoticeBarProps['onClick']>,
 };

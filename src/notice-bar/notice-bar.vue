@@ -1,31 +1,47 @@
 <template>
   <div v-if="isShow" :class="rootClasses">
-    <div :class="`${name}__inner`">
-      <div v-if="prefixIconContent" :class="`${name}__hd`" @click="() => handleClick('prefix-icon')">
-        <t-node :content="prefixIconContent"></t-node>
+    <!-- prefixIcon -->
+    <div :class="`${name}__prefix-icon`" @click="() => handleClick('prefix-icon')">
+      <t-node :content="prefixIconContent"></t-node>
+    </div>
+    <!-- content -->
+    <div ref="listDOM" :class="`${name}__content-wrap`">
+      <div v-if="direction === 'vertical' && isArray(content)">
+        <t-swiper
+          autoplay
+          loop
+          direction="vertical"
+          :duration="2000"
+          :height="22"
+          :class="`${name}__content--vertical`"
+        >
+          <template v-for="(item, index) in content" :key="index">
+            <t-swiper-item>
+              <div :class="`${name}__content--vertical-item`">{{ item }}</div>
+            </t-swiper-item>
+          </template>
+        </t-swiper>
       </div>
-
-      <div :class="`${name}__bd`">
-        <div ref="listDOM" :class="`${name}__list ${scroll.marquee ? `${name}__list--scrolling` : ''}`">
-          <div
-            ref="itemDOM"
-            :class="`${name}__item ${showExtraText ? `${name}__item-detail` : ''}`"
-            :style="scroll.marquee ? animateStyle : ''"
-            @transitionend="handleTransitionend()"
-          >
-            <span :class="`${name}__text`" @click="() => handleClick('content')">
-              <t-node v-if="showContent" :content="showContent"></t-node>
-              <span :class="`${name}__text-detail`" @click.stop="() => handleClick('extra')">
-                <t-node v-if="showExtraText" :content="showExtraText"></t-node>
-              </span>
-            </span>
-          </div>
-        </div>
+      <div
+        v-else
+        ref="itemDOM"
+        :class="[`${name}__content`, !scroll.marquee ? `${name}__content-wrapable` : '']"
+        :style="scroll.marquee ? animateStyle : ''"
+        @transitionend="handleTransitionend()"
+      >
+        <t-node v-if="showContent" :content="showContent"></t-node>
+        <span :class="`${name}__operation`" @click.stop="() => handleClick('operation')">
+          <t-node :content="operationContent"></t-node>
+        </span>
       </div>
-
-      <div v-if="suffixIconContent !== undefined" :class="`${name}__ft`" @click="() => handleClick('suffix-icon')">
-        <t-node :content="suffixIconContent"></t-node>
-      </div>
+    </div>
+    <!-- suffixIcon -->
+    <div
+      v-if="suffixIconContent !== undefined"
+      :class="`${name}__suffix-icon`"
+      @click="() => handleClick('suffix-icon')"
+    >
+      <t-node :content="suffixIconContent"></t-node>
     </div>
   </div>
 </template>
@@ -42,10 +58,9 @@ import {
   h,
   getCurrentInstance,
   watch,
-  watchEffect,
 } from 'vue';
 import { InfoCircleFilledIcon, CheckCircleFilledIcon, CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
-import isFunction from 'lodash/isFunction';
+import { isArray } from 'lodash';
 import NoticeBarProps from './props';
 import { NoticeBarTrigger, DrawMarquee } from './type';
 import config from '../config';
@@ -63,7 +78,7 @@ export default defineComponent({
   name,
   components: { TNode },
   props: NoticeBarProps,
-  emits: ['click', 'change'],
+  emits: ['click'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     const internalInstance = getCurrentInstance();
@@ -88,19 +103,21 @@ export default defineComponent({
     // prefix-icon
     const prefixIconContent = computed(() => {
       let iconContent = null;
-      if (isFunction(props.prefixIcon) || context.slots.prefixIcon) {
+      if (typeof props.prefixIcon === 'boolean' && props.prefixIcon === false) {
+        return;
+      }
+      if (props.prefixIcon || context.slots.prefixIcon) {
         iconContent = renderTNode(internalInstance, 'prefixIcon');
-      } else if (props.prefixIcon) {
+      } else {
         const key = props.theme as string;
         iconContent = iconDefault?.[key] || null;
       }
       return iconContent;
     });
-
     // suffix-icon
     const suffixIconContent = computed(() => renderTNode(internalInstance, 'suffixIcon'));
-    // extra
-    const showExtraText = computed(() => renderTNode(internalInstance, 'extra'));
+    // operation
+    const operationContent = computed(() => renderTNode(internalInstance, 'operation'));
     // content
     const showContent = computed(() => renderTNode(internalInstance, 'content'));
     // click
@@ -118,12 +135,7 @@ export default defineComponent({
     const itemDOM = ref();
 
     const { visible, modelValue } = toRefs(props);
-    const [isShow, setStatusValue] = useVModel(
-      visible,
-      modelValue,
-      props.defaultVisible,
-      props.onChange as (value: boolean | undefined) => void,
-    );
+    const [isShow, setStatusValue] = useVModel(visible, modelValue, props.defaultVisible);
     function handleScrolling() {
       if (!props?.marquee || (props?.marquee as DrawMarquee)?.loop === 0) {
         return;
@@ -143,7 +155,7 @@ export default defineComponent({
       setTimeout(() => {
         const listDOMWidth = listDOM.value?.getBoundingClientRect().width;
         const itemDOMWidth = itemDOM.value?.getBoundingClientRect().width;
-        if (itemDOMWidth > listDOMWidth) {
+        if (itemDOMWidth >= listDOMWidth) {
           state.offset = -itemDOMWidth;
           state.duration = itemDOMWidth / state.scroll.speed;
           state.listWidth = listDOMWidth;
@@ -180,7 +192,6 @@ export default defineComponent({
     watch(
       () => isShow.value,
       () => {
-        emitEvent('change', isShow.value);
         nextTick(() => {
           if (isShow.value) {
             state.offset = state.listWidth;
@@ -192,13 +203,14 @@ export default defineComponent({
     );
 
     return {
+      isArray,
       name,
       ...toRefs(props),
       ...toRefs(state),
       rootClasses,
       prefixIconContent,
       suffixIconContent,
-      showExtraText,
+      operationContent,
       showContent,
       isShow,
       handleClick,

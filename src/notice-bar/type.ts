@@ -17,10 +17,6 @@ export interface TdNoticeBarProps {
    */
   direction?: 'horizontal' | 'vertical';
   /**
-   * 已废弃。右侧额外信息
-   */
-  extra?: string | TNode;
-  /**
    * 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放
    * @default false
    */
@@ -32,7 +28,7 @@ export interface TdNoticeBarProps {
   /**
    * 前缀图标
    */
-  prefixIcon?: TNode;
+  prefixIcon?: TNode | Boolean;
   /**
    * 后缀图标
    */
@@ -57,11 +53,6 @@ export interface TdNoticeBarProps {
    * @default false
    */
   modelValue?: boolean;
-  /**
-   * 展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏
-   * @deprecated
-   */
-  onChange?: (value: boolean) => void;
   /**
    * 点击事件
    */
