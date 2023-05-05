@@ -34,7 +34,7 @@
 
 <script lang="ts" setup>
 import baseDemo from './base.vue';
-import iconDemo from './icon.vue';
+import iconDemo from './iconDemo.vue';
 import suffixIcon from './suffixIcon.vue';
 import event from './event.vue';
 import customDemo from './custom.vue';
