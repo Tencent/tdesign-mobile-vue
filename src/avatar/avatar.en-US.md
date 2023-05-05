@@ -28,4 +28,4 @@ name | type | default | description | required
 cascading | String | 'right-up' | multiple images cascading。options：left-up/right-up。Typescript：`CascadingValue` `type CascadingValue = 'left-up' \| 'right-up'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/avatar/type.ts) | N
 collapseAvatar | String / Slot / Function | - | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 max | Number | - | \- | N
-size | String | - | size | N
+size | String | medium | size | N

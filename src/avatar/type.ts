@@ -68,7 +68,7 @@ export interface TdAvatarGroupProps {
   max?: number;
   /**
    * 尺寸，示例值：small/medium/large/24px/38px 等。优先级低于 Avatar.size
-   * @default ''
+   * @default medium
    */
   size?: string;
 }
