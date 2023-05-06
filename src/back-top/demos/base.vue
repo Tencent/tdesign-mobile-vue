@@ -6,18 +6,19 @@
         size: 'large',
         theme: 'primary',
         variant: 'outline',
-        content: '半圆形返回顶部',
+        content: '圆形返回顶部',
       }"
-      @click="onBtnClick1('half-round')"
+      @click="onClick('round', '顶部')"
     />
   </div>
   <div :style="{ ...style }">
-    <t-back-top v-show="visible" :theme="theme" text="返回顶部" />
+    <t-back-top v-show="visible" :theme="theme" :text="text" :on-to-top="handleToTop" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, defineProps, defineEmits } from 'vue';
+import { ref, defineProps, defineEmits, h } from 'vue';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 
 defineProps({
   visible: {
@@ -29,14 +30,21 @@ defineProps({
     default: () => {},
   },
 });
-const theme = ref('half-round');
 const emit = defineEmits(['close']);
+const theme = ref('round');
+const text = ref('顶部');
 
-const onBtnClick1 = (tem: string) => {
+const icon = () => h(CloseIcon);
+
+const onClick = (tem: string, txt: string) => {
+  text.value = txt;
   theme.value = tem;
   emit('close');
   window.scrollTo(0, 1200);
 };
+function handleToTop() {
+  console.log('handleToTop');
+}
 </script>
 
 <style lang="less" scoped>
