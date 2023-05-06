@@ -5,7 +5,7 @@
       <t-node :content="prefixIconContent"></t-node>
     </div>
     <!-- content -->
-    <div ref="listDOM" :class="`${name}__content-wrap`">
+    <div ref="listDOM" :class="`${name}__content-wrap`" @click="() => handleClick('content')">
       <div v-if="direction === 'vertical' && isArray(content)">
         <t-swiper
           autoplay
@@ -59,7 +59,7 @@ import {
   getCurrentInstance,
   watch,
 } from 'vue';
-import { InfoCircleFilledIcon, CheckCircleFilledIcon, CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { InfoCircleFilledIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { isArray } from 'lodash';
 import NoticeBarProps from './props';
 import { NoticeBarTrigger, DrawMarquee } from './type';
@@ -72,7 +72,7 @@ const iconDefault = {
   info: h(InfoCircleFilledIcon),
   success: h(CheckCircleFilledIcon),
   warning: h(InfoCircleFilledIcon),
-  error: h(CloseCircleFilledIcon),
+  error: h(InfoCircleFilledIcon),
 };
 export default defineComponent({
   name,
