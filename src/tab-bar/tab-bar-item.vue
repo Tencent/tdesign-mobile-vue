@@ -39,14 +39,12 @@
         </t-badge>
         <t-node v-else :content="iconContent" />
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         ref="textNode"
         :class="{
           [`${name}__text`]: true,
           [`${name}__text--small`]: !!iconContent,
         }"
-        :style="!!iconContent ? 'transform: scale(0.83)' : ''"
       >
         <t-view-list-icon v-if="hasChildren" size="16" :class="`${name}__icon-menu`" />
         <t-node :content="itemContent" />

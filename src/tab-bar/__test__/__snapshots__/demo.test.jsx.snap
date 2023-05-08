@@ -53,10 +53,8 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           <!---->
         </div>
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -112,10 +110,8 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           <!---->
         </div>
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -171,10 +167,8 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           <!---->
         </div>
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -230,10 +224,8 @@ exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
           <!---->
         </div>
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -281,10 +273,8 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -320,10 +310,8 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -359,10 +347,8 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -398,10 +384,8 @@ exports[`TabBar > TabBar baseVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         
@@ -452,10 +436,8 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -491,10 +473,8 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -530,10 +510,8 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -569,10 +547,8 @@ exports[`TabBar > TabBar customVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -642,10 +618,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!--v-if-->
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text"
-              style=""
             >
               <!--v-if-->
               
@@ -666,10 +640,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!--v-if-->
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text"
-              style=""
             >
               <!--v-if-->
               
@@ -690,10 +662,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!--v-if-->
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text"
-              style=""
             >
               <!--v-if-->
               
@@ -714,10 +684,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!--v-if-->
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text"
-              style=""
             >
               <!--v-if-->
               
@@ -784,10 +752,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -823,10 +789,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -862,10 +826,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -901,10 +863,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -971,10 +931,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1008,10 +966,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1045,10 +1001,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1082,10 +1036,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1135,10 +1087,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!--v-if-->
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text"
-              style=""
             >
               <!--v-if-->
               
@@ -1159,10 +1109,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="tab"
           >
             <!--v-if-->
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text"
-              style=""
             >
               <!--v-if-->
               
@@ -1183,10 +1131,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
             role="button"
           >
             <!--v-if-->
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text"
-              style=""
             >
               <svg
                 class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
@@ -1289,10 +1235,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 <!---->
               </div>
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -1348,10 +1292,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 <!---->
               </div>
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -1407,10 +1349,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 <!---->
               </div>
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -1466,10 +1406,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
                 <!---->
               </div>
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               
@@ -1536,10 +1474,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1573,10 +1509,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1610,10 +1544,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1647,10 +1579,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1722,10 +1652,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1761,10 +1689,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1800,10 +1726,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1839,10 +1763,8 @@ exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
               </svg>
               
             </div>
-            <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
             <div
               class="t-tab-bar-item__text t-tab-bar-item__text--small"
-              style="transform: scale(0.83);"
             >
               <!--v-if-->
               <!---->
@@ -1892,10 +1814,8 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -1929,10 +1849,8 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -1966,10 +1884,8 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -2003,10 +1919,8 @@ exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -2052,10 +1966,8 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -2089,10 +2001,8 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -2126,10 +2036,8 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -2163,10 +2071,8 @@ exports[`TabBar > TabBar roundVue demo works fine 1`] = `
         </svg>
         
       </div>
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text t-tab-bar-item__text--small"
-        style="transform: scale(0.83);"
       >
         <!--v-if-->
         <!---->
@@ -2197,10 +2103,8 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       role="tab"
     >
       <!--v-if-->
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text"
-        style=""
       >
         <!--v-if-->
         
@@ -2221,10 +2125,8 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       role="tab"
     >
       <!--v-if-->
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text"
-        style=""
       >
         <!--v-if-->
         
@@ -2245,10 +2147,8 @@ exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
       role="button"
     >
       <!--v-if-->
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text"
-        style=""
       >
         <svg
           class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
@@ -2293,10 +2193,8 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!--v-if-->
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text"
-        style=""
       >
         <!--v-if-->
         
@@ -2317,10 +2215,8 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!--v-if-->
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text"
-        style=""
       >
         <!--v-if-->
         
@@ -2341,10 +2237,8 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!--v-if-->
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text"
-        style=""
       >
         <!--v-if-->
         
@@ -2365,10 +2259,8 @@ exports[`TabBar > TabBar textVue demo works fine 1`] = `
       role="tab"
     >
       <!--v-if-->
-      <!-- 缩放0.83是因为设计稿字体10px，而chrome最小12px，为了和20px的图标保持协调 -->
       <div
         class="t-tab-bar-item__text"
-        style=""
       >
         <!--v-if-->
         
