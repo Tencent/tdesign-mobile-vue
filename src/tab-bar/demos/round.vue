@@ -1,7 +1,6 @@
 <template>
-  <t-tab-bar v-model="value" theme="tag" :split="false">
+  <t-tab-bar v-model="value" shape="round" theme="tag" :split="false">
     <t-tab-bar-item v-for="item in list" :key="item.value" :value="item.value">
-      {{ item.label }}
       <template #icon>
         <t-icon :name="item.icon" />
       </template>

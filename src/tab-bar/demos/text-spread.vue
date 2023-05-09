@@ -1,12 +1,7 @@
 <template>
-  <t-tab-bar default-value="label_3">
-    <t-tab-bar-item
-      v-for="(item, index) in list"
-      :key="item.name || index"
-      :value="item.name"
-      :sub-tab-bar="item.children"
-    >
-      {{ item.text }}
+  <t-tab-bar default-value="home" theme="tag" :split="false" @change="change">
+    <t-tab-bar-item v-for="item in list" :key="item.value" :value="item.value" :sub-tab-bar="item.children">
+      {{ item.label }}
     </t-tab-bar-item>
   </t-tab-bar>
 </template>
@@ -14,30 +9,38 @@
 <script setup lang="ts">
 const list = [
   {
-    name: 'label_1',
-    text: '标签栏一',
+    value: 'home',
+    label: '首页',
+    icon: 'home',
+    children: [],
   },
   {
-    name: 'label_2',
-    text: '标签栏二',
+    value: 'app',
+    label: '应用',
+    icon: 'app',
+    children: [],
   },
   {
-    name: 'label_3',
-    text: '此处展开',
+    value: 'user',
+    label: '我的',
     children: [
       {
-        value: 'spread_3',
-        label: '展开项三',
+        value: 'info',
+        label: '基本信息',
       },
       {
-        value: 'spread_2',
-        label: '展开项二',
+        value: 'home-page',
+        label: '个人主页',
       },
       {
-        value: 'spread_1',
-        label: '展开项一',
+        value: 'setting',
+        label: '设置',
       },
     ],
   },
 ];
+
+const change = (changeValue: number | string) => {
+  console.log('TabBar 值改变为：', changeValue);
+};
 </script>

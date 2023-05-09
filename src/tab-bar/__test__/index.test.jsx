@@ -79,7 +79,12 @@ describe('TabBar', () => {
       });
 
       expect(wrapper.findAll('.t-tab-bar-item')).toHaveLength(list.length);
-      expect(wrapper.find('[aria-selected="true"]').attributes('text')).toEqual('标签二');
+      expect(
+        wrapper
+          .findAllComponents(TabBarItem)
+          .find((item) => item.vm.isChecked)
+          .text(),
+      ).toEqual('标签二');
     });
 
     // it('snapshot', () => {

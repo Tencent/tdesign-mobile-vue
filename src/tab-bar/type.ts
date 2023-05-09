@@ -19,6 +19,26 @@ export interface TdTabBarProps {
    */
   fixed?: boolean;
   /**
+   * 是否为 iPhoneX 留出底部安全距离
+   * @default true
+   */
+  safeAreaInsetBottom?: boolean;
+  /**
+   * 标签栏的形状
+   * @default 'normal'
+   */
+  shape?: 'normal' | 'round';
+  /**
+   * 是否需要分割线
+   * @default true
+   */
+  split?: boolean;
+  /**
+   * 选项风格
+   * @default 'normal'
+   */
+  theme?: 'normal' | 'tag';
+  /**
    * 当前选中标签的索引
    */
   value?: string | number | Array<string | number>;
@@ -33,7 +53,7 @@ export interface TdTabBarProps {
   /**
    * 选中标签切换时触发
    */
-  onChange?: () => void;
+  onChange?: (value: string | number) => void;
 }
 
 export interface TdTabBarItemProps {
