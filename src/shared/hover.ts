@@ -9,7 +9,7 @@ const Hover = {
   created(el: HTMLElement, binding: DirectiveBinding<BindingObj>) {
     const startTime = 50;
     const stayTime = 70;
-    const { className, active } = binding.value;
+    const { className, active = true } = binding.value;
 
     if (!active) return;
 
