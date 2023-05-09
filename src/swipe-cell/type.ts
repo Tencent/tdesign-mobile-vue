@@ -20,9 +20,10 @@ export interface TdSwipeCellProps {
    */
   disabled?: boolean;
   /**
-   * 操作项是否呈现为打开态
+   * 操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态
+   * @default false
    */
-  expanded?: 'left' | 'right';
+  opened?: boolean | Array<boolean>;
   /**
    * 左侧滑动操作项。所有行为同 `right`
    */

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`SwipeCell > SwipeCell bindVue demo works fine 1`] = `
+exports[`SwipeCell > SwipeCell doubleVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
 >
@@ -11,135 +11,7 @@ exports[`SwipeCell > SwipeCell bindVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
     >
-      通过expanded实现父子组件联动
-    </p>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block__slot"
-  >
-    
-    <div
-      class="t-cell t-cell--middle"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        开关
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
-        
-        <div
-          class="t-switch t-switch--medium t-switch--checked"
-        >
-          <div
-            class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
-          >
-            <div
-              class="t-switch__label t-switch__label--medium t-switch__label--checked"
-            >
-              <!--v-if-->
-              <!---->
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      <!--v-if-->
-    </div>
-    <div
-      class="t-swipe-cell"
-    >
-      <div
-        class="t-swipe-cell__wrapper"
-        style="transform: translate3d(0px,0,0);"
-      >
-        <div
-          class="t-swipe-cell__left"
-          style="width: auto;"
-        >
-          <!---->
-          
-          
-        </div>
-        <div
-          class="t-swipe-cell__content"
-        >
-          
-          <div
-            class="t-cell t-cell--middle"
-          >
-            <div
-              class="t-cell__left"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              父子组件联动
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          
-        </div>
-        <div
-          class="t-swipe-cell__right"
-          style="width: auto;"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              删除
-              
-            </span>
-            <!---->
-          </button>
-          
-          
-          
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-`;
-
-exports[`SwipeCell > SwipeCell btnsVue demo works fine 1`] = `
-<div
-  class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
->
-  <div
-    class="tdesign-mobile-demo-block__header"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-    >
-      左右两侧都有菜单
+      左右滑操作
     </p>
   </div>
   <div
@@ -150,323 +22,60 @@ exports[`SwipeCell > SwipeCell btnsVue demo works fine 1`] = `
       class="t-swipe-cell"
     >
       <div
-        class="t-swipe-cell__wrapper"
-        style="transform: translate3d(0px,0,0);"
+        style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
       >
         <div
           class="t-swipe-cell__left"
           style="width: auto;"
         >
           
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              选择
-              
-            </span>
-            <!---->
-          </button>
-          
-          
-          
-        </div>
-        <div
-          class="t-swipe-cell__content"
-        >
-          
           <div
-            class="t-cell t-cell--middle"
+            class="btn favor-btn"
           >
-            <div
-              class="t-cell__left"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              左右都有菜单
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <!--v-if-->
+            选择
           </div>
           
         </div>
-        <div
-          class="t-swipe-cell__right"
-          style="width: auto;"
-        >
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              收藏
-              
-            </span>
-            <!---->
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle"
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              删除
-              
-            </span>
-            <!---->
-          </button>
-          
-          
-          
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-`;
-
-exports[`SwipeCell > SwipeCell contentVue demo works fine 1`] = `
-<div
-  class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
->
-  <div
-    class="tdesign-mobile-demo-block__header"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-    >
-      通过直接传入内容或者使用 slot#content 来渲染
-    </p>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block__slot"
-  >
-    
-    <div
-      class="t-swipe-cell"
-    >
-      <div
-        class="t-swipe-cell__wrapper"
-        style="transform: translate3d(0px,0,0);"
-      >
-        <div
-          class="t-swipe-cell__left"
-          style="width: auto;"
-        >
-          <!---->
-          
-          
-        </div>
-        <div
-          class="t-swipe-cell__content"
-        >
-          
-          <div
-            style="padding: 10px;"
-          >
-            直接写组件
-          </div>
-          
-        </div>
-        <div
-          class="t-swipe-cell__right"
-          style="width: auto;"
-        >
-          
-          <div>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-              role="button"
-              style="height: 100%;"
-              type="submit"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                收藏
-                
-              </span>
-              <!---->
-            </button>
-          </div>
-          
-          
-          
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-`;
-
-exports[`SwipeCell > SwipeCell disabledVue demo works fine 1`] = `
-<div
-  class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
->
-  <div
-    class="tdesign-mobile-demo-block__header"
-  >
-    <!--v-if-->
-    <p
-      class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-    >
-      是否启用滑动功能
-    </p>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block__slot"
-  >
-    
-    <div
-      class="t-cell t-cell--middle"
-    >
-      <div
-        class="t-cell__left"
-      >
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__title"
-      >
-        开关
-        <!--v-if-->
-        <!--v-if-->
-      </div>
-      <div
-        class="t-cell__note"
-      >
         
         <div
-          class="t-switch t-switch--medium"
+          class="t-cell t-cell--middle"
         >
           <div
-            class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+            class="t-cell__left"
           >
-            <div
-              class="t-switch__label t-switch__label--medium"
-            >
-              <!--v-if-->
-              <!---->
-            </div>
+            <!--v-if-->
+            <!--v-if-->
           </div>
+          <div
+            class="t-cell__title"
+          >
+            左右滑操作
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            辅助信息
+          </div>
+          <!--v-if-->
         </div>
         
-      </div>
-      <!--v-if-->
-    </div>
-    <div
-      class="t-swipe-cell"
-    >
-      <div
-        class="t-swipe-cell__wrapper"
-        style="transform: translate3d(0px,0,0);"
-      >
-        <div
-          class="t-swipe-cell__left"
-          style="width: auto;"
-        >
-          <!---->
-          
-          
-        </div>
-        <div
-          class="t-swipe-cell__content"
-        >
-          
-          <div
-            class="t-cell t-cell--middle"
-          >
-            <div
-              class="t-cell__left"
-            >
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <div
-              class="t-cell__title"
-            >
-              可以滑动
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <!--v-if-->
-          </div>
-          
-        </div>
         <div
           class="t-swipe-cell__right"
           style="width: auto;"
         >
           
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-            role="button"
-            style="height: 100%;"
-            type="button"
+          <div
+            class="btn favor-btn"
           >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              收藏
-              
-            </span>
-            <!---->
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-small t-button--base t-button--danger t-button--rectangle"
-            role="button"
-            style="height: 100%;"
-            type="button"
+            收藏
+          </div>
+          <div
+            class="btn delete-btn"
           >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              删除
-              
-            </span>
-            <!---->
-          </button>
-          
-          
+            删除
+          </div>
           
         </div>
       </div>
@@ -487,7 +96,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
     <p
       class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
     >
-      点击事件
+      带二次确认的操作
     </p>
   </div>
   <div
@@ -498,37 +107,109 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
       class="t-swipe-cell"
     >
       <div
-        class="t-swipe-cell__wrapper"
-        style="transform: translate3d(0px,0,0);"
+        style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
       >
         <div
           class="t-swipe-cell__left"
           style="width: auto;"
         >
           
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-            role="button"
-            type="button"
+          <div
+            class="btn edit-btn"
           >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              选择
-              
-            </span>
-            <!---->
-          </button>
-          
-          
+            编辑
+          </div>
+          <div
+            class="btn delete-btn"
+          >
+            删除
+          </div>
           
         </div>
+        
         <div
-          class="t-swipe-cell__content"
+          class="t-cell t-cell--middle"
         >
+          <div
+            class="t-cell__left"
+          >
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__title"
+          >
+            带二次确认的操作
+            <!--v-if-->
+            <!--v-if-->
+          </div>
+          <div
+            class="t-cell__note"
+          >
+            辅助信息
+          </div>
+          <!--v-if-->
+        </div>
+        
+        <div
+          class="t-swipe-cell__right"
+          style="width: auto;"
+        >
+          
+          <div
+            class="btn edit-btn"
+          >
+            编辑
+          </div>
+          <div
+            class="btn delete-btn"
+          >
+            删除
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带图标的滑动操作
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto;"
+          >
+            
+            
+          </div>
           
           <div
             class="t-cell t-cell--middle"
@@ -542,7 +223,7 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
             <div
               class="t-cell__title"
             >
-              左右都有内容
+              图标加文字横排
               <!--v-if-->
               <!--v-if-->
             </div>
@@ -554,155 +235,445 @@ exports[`SwipeCell > SwipeCell eventVue demo works fine 1`] = `
             <!--v-if-->
           </div>
           
-        </div>
-        <div
-          class="t-swipe-cell__right"
-          style="width: auto;"
-        >
-          
-          
-          
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-            role="button"
-            style="height: 100%;"
-            type="button"
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
           >
-            <!---->
-            <span
-              class="t-button__content"
+            
+            <div
+              class="t-swipe-cell__content btn edit-btn"
+              style="height: 100%;"
             >
-              
+              <svg
+                class="t-icon t-icon-edit-1 t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <g
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                  opacity="0.9"
+                >
+                  <path
+                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="t-swipe-cell__text"
+              >
+                编辑
+              </span>
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-delete t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+                <path
+                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <!--v-if-->
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto;"
+          >
+            
+            
+          </div>
+          
+          <div
+            class="t-cell t-cell--middle"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              纯图标
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
+          >
+            
+            <div
+              class="t-swipe-cell__content btn edit-btn"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-edit-1 t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <g
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                  opacity="0.9"
+                >
+                  <path
+                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
+                  />
+                </g>
+              </svg>
+              <!--v-if-->
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-delete t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+                <path
+                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              <!--v-if-->
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <!--v-if-->
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto;"
+          >
+            
+            
+          </div>
+          
+          <div
+            class="t-cell t-cell--middle"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              图标加文字竖排
+              <!--v-if-->
+              <div
+                class="t-cell__description"
+              >
+                一段很长很长的内容文字
+              </div>
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
+          >
+            
+            <div
+              class="t-swipe-cell__content btn edit-btn vertical"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-edit-1 t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <g
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                  opacity="0.9"
+                >
+                  <path
+                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="t-swipe-cell__text"
+              >
+                编辑
+              </span>
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn vertical"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-delete t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+                <path
+                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`SwipeCell > SwipeCell leftVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        左滑动操作
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto;"
+          >
+            
+            
+          </div>
+          
+          <div
+            class="t-cell t-cell--middle"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              左滑单操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
+          >
+            
+            <div
+              class="btn delete-btn"
+            >
               删除
-              
-            </span>
-            <!---->
-          </button>
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-            role="button"
-            style="height: 100%;"
-            type="button"
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    style="margin-top: 10px;"
+  >
+    <!--v-if-->
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto;"
           >
-            <!---->
-            <span
-              class="t-button__content"
-            >
-              
-              收藏
-              
-            </span>
-            <!---->
-          </button>
+            
+            
+          </div>
           
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-`;
-
-exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        左滑大列表
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
           <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
+            class="t-cell t-cell--middle"
           >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <img
-                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
-                    style="width: 50px; height: 50px; margin-right: 8px; float: left;"
-                  />
-                  
-                </div>
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                左滑大列表
-                <!--v-if-->
-                <div
-                  class="t-cell__description"
-                >
-                  一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-                </div>
-              </div>
               <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              左滑单操作
+              <!--v-if-->
+              <div
+                class="t-cell__description"
+              >
+                一段很长很长的内容文字
+              </div>
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
             
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
+            <div
+              class="btn delete-btn"
             >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
+              删除
+            </div>
             
           </div>
         </div>
@@ -723,78 +694,67 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
             
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
           >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <div
-                  class="t-cell__left-icon"
-                >
-                  
-                  <img
-                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
-                    style="width: 50px; height: 50px; margin-right: 8px; float: left;"
-                  />
-                  
-                </div>
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                左滑大列表
-                <!--v-if-->
-                <div
-                  class="t-cell__description"
-                >
-                  一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-                </div>
-              </div>
               <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              左滑双操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
             
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
+            <div
+              class="t-swipe-cell__content btn edit-btn"
+              style="height: 100%;"
             >
-              <!---->
+              <!--v-if-->
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
-                删除
-                
+                编辑
               </span>
-              <!---->
-            </button>
-            
-            
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <!--v-if-->
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
             
           </div>
         </div>
@@ -802,28 +762,11 @@ exports[`SwipeCell > SwipeCell leftCardVue demo works fine 1`] = `
       
     </div>
   </div>
-  
-</div>
-`;
-
-exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    style="margin-top: 10px;"
   >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        左滑多操作
-      </p>
-    </div>
+    <!--v-if-->
     <div
       class="tdesign-mobile-demo-block__slot"
     >
@@ -832,624 +775,78 @@ exports[`SwipeCell > SwipeCell leftMoreMenuVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
             
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
           >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                多操作
-              </div>
+              <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              左滑三操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
             
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
-              role="button"
+            <div
+              class="t-swipe-cell__content btn favor-btn"
               style="height: 100%;"
-              type="button"
             >
-              <!---->
+              <!--v-if-->
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
                 收藏
-                
               </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
+            </div>
+            <div
+              class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
-              type="button"
             >
-              <!---->
+              <!--v-if-->
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
                 编辑
-                
               </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 10px;"
-  >
-    <!--v-if-->
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                多操作
-              </div>
-              <!--v-if-->
             </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                收藏
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                编辑
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-`;
-
-exports[`SwipeCell > SwipeCell leftOneMenuVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        左滑单操作
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
             <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 10px;"
-  >
-    <!--v-if-->
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
-`;
-
-exports[`SwipeCell > SwipeCell leftTwoMenuVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        左滑双操作
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                双操作
-              </div>
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
+              class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
-              type="button"
             >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                编辑
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 10px;"
-  >
-    <!--v-if-->
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                双操作
-              </div>
               <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
-                编辑
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
                 删除
-                
               </span>
-              <!---->
-            </button>
+            </div>
             
           </div>
         </div>
@@ -1468,25 +865,29 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    SwipeCell 滑动单元格
+    Swipecell 滑动操作
   </h1>
   <p
     class="summary"
   >
-    用来承载列表中的更多操作，通过左右滑动来展示，按钮的宽度固定高度根据列表高度而变化。
+    用于承载列表中的更多操作，通过左右滑动来展示，按钮的宽度固定高度根据列表高度而变化。
   </p>
   
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      <h2
+        class="tdesign-mobile-demo-block__title"
       >
-        左滑单操作
+        组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        左滑动操作
       </p>
     </div>
     <div
@@ -1497,69 +898,50 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
             
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
           >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
+              <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              左滑单操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
             
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
+            <div
+              class="btn delete-btn"
             >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
+              删除
+            </div>
             
           </div>
         </div>
@@ -1580,180 +962,54 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
             
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
           >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
+              <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              左滑单操作
+              <!--v-if-->
+              <div
+                class="t-cell__description"
+              >
+                一段很长很长的内容文字
+              </div>
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
             
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        左滑双操作
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="btn delete-btn"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                双操作
-              </div>
-              <!--v-if-->
+              删除
             </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                编辑
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
             
           </div>
         </div>
@@ -1774,87 +1030,67 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
             
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
           >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                双操作
-              </div>
+              <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              左滑双操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
             
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
+            <div
+              class="t-swipe-cell__content btn edit-btn"
               style="height: 100%;"
-              type="button"
             >
-              <!---->
+              <!--v-if-->
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
                 编辑
-                
               </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
               style="height: 100%;"
-              type="button"
             >
-              <!---->
+              <!--v-if-->
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
                 删除
-                
               </span>
-              <!---->
-            </button>
+            </div>
             
           </div>
         </div>
@@ -1862,21 +1098,11 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
       
     </div>
   </div>
-  
-  
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    style="margin-top: 10px;"
   >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        左滑多操作
-      </p>
-    </div>
+    <!--v-if-->
     <div
       class="tdesign-mobile-demo-block__slot"
     >
@@ -1885,230 +1111,85 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
             
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
           >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                多操作
-              </div>
+              <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              左滑三操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
             
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
-              role="button"
+            <div
+              class="t-swipe-cell__content btn favor-btn"
               style="height: 100%;"
-              type="button"
             >
-              <!---->
+              <!--v-if-->
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
                 收藏
-                
               </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                编辑
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 10px;"
-  >
-    <!--v-if-->
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
+            </div>
             <div
-              class="t-cell t-cell--middle"
+              class="t-swipe-cell__content btn edit-btn"
+              style="height: 100%;"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-左滑双操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                多操作
-              </div>
               <!--v-if-->
+              <span
+                class="t-swipe-cell__text"
+              >
+                编辑
+              </span>
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <!--v-if-->
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
             </div>
             
           </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--warning"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                收藏
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--primary"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                编辑
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle t-button--danger"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-          </div>
         </div>
       </div>
       
     </div>
   </div>
-  
   
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
@@ -2120,7 +1201,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
-        左滑大列表
+        右滑动操作
       </p>
     </div>
     <div
@@ -2131,78 +1212,257 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
+            
+            <div
+              class="btn favor-btn"
+            >
+              选择
+            </div>
+            
+          </div>
+          
+          <div
+            class="t-cell t-cell--middle"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              右滑单操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
+          >
             
             
           </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        左右滑操作
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+        >
           <div
-            class="t-swipe-cell__content"
+            class="t-swipe-cell__left"
+            style="width: auto;"
           >
             
             <div
-              class="t-cell t-cell--middle"
+              class="btn favor-btn"
             >
-              <div
-                class="t-cell__left"
+              选择
+            </div>
+            
+          </div>
+          
+          <div
+            class="t-cell t-cell--middle"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              左右滑操作
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
+          >
+            
+            <div
+              class="btn favor-btn"
+            >
+              收藏
+            </div>
+            <div
+              class="btn delete-btn"
+            >
+              删除
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带图标的滑动操作
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto;"
+          >
+            
+            
+          </div>
+          
+          <div
+            class="t-cell t-cell--middle"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              图标加文字横排
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
+          >
+            
+            <div
+              class="t-swipe-cell__content btn edit-btn"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-edit-1 t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
               >
-                <div
-                  class="t-cell__left-icon"
+                <g
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                  opacity="0.9"
                 >
-                  
-                  <img
-                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
-                    style="width: 50px; height: 50px; margin-right: 8px; float: left;"
+                  <path
+                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
                   />
-                  
-                </div>
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                左滑大列表
-                <!--v-if-->
-                <div
-                  class="t-cell__description"
-                >
-                  一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-                </div>
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
+                </g>
+              </svg>
               <span
-                class="t-button__content"
+                class="t-swipe-cell__text"
               >
-                
-                删除
-                
+                编辑
               </span>
-              <!---->
-            </button>
-            
-            
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-delete t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+                <path
+                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
             
           </div>
         </div>
@@ -2212,7 +1472,6 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 10px;"
   >
     <!--v-if-->
     <div
@@ -2223,171 +1482,92 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
-            <!---->
             
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              纯图标
+              <!--v-if-->
+              <!--v-if-->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto;"
           >
             
             <div
-              class="t-cell t-cell--middle"
+              class="t-swipe-cell__content btn edit-btn"
+              style="height: 100%;"
             >
-              <div
-                class="t-cell__left"
+              <svg
+                class="t-icon t-icon-edit-1 t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
               >
-                <div
-                  class="t-cell__left-icon"
+                <g
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                  opacity="0.9"
                 >
-                  
-                  <img
-                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
-                    style="width: 50px; height: 50px; margin-right: 8px; float: left;"
+                  <path
+                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
                   />
-                  
-                </div>
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                左滑大列表
-                <!--v-if-->
-                <div
-                  class="t-cell__description"
-                >
-                  一段很长很长的内容文字一段很长很长的内容文字一段很长很长的内容文字
-                </div>
-              </div>
-              <!--v-if-->
+                </g>
+              </svg>
               <!--v-if-->
             </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        右滑单操作
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                选择
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
             >
-              <div
-                class="t-cell__left"
+              <svg
+                class="t-icon t-icon-delete t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
               >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-右滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
+                <path
+                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+                <path
+                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
               <!--v-if-->
             </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            <!---->
-            
             
           </div>
         </div>
@@ -2397,7 +1577,6 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 10px;"
   >
     <!--v-if-->
     <div
@@ -2408,69 +1587,106 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
         class="t-swipe-cell"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
         >
           <div
             class="t-swipe-cell__left"
             style="width: auto;"
           >
             
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                选择
-                
-              </span>
-              <!---->
-            </button>
-            
-            
             
           </div>
+          
           <div
-            class="t-swipe-cell__content"
+            class="t-cell t-cell--middle"
           >
-            
             <div
-              class="t-cell t-cell--middle"
+              class="t-cell__left"
             >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-右滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
+              <!--v-if-->
               <!--v-if-->
             </div>
-            
+            <div
+              class="t-cell__title"
+            >
+              图标加文字竖排
+              <!--v-if-->
+              <div
+                class="t-cell__description"
+              >
+                一段很长很长的内容文字
+              </div>
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              辅助信息
+            </div>
+            <!--v-if-->
           </div>
+          
           <div
             class="t-swipe-cell__right"
             style="width: auto;"
           >
-            <!---->
             
+            <div
+              class="t-swipe-cell__content btn edit-btn vertical"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-edit-1 t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <g
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                  opacity="0.9"
+                >
+                  <path
+                    d="M14.13 4.95L10.9 1.71l.7-.71 3.25 3.24-.7.71zM5.97 13.11l-3.61.72a.3.3 0 01-.35-.35l.72-3.61 7.3-7.3 3.24 3.24-7.3 7.3zm5.89-7.3l-1.83-1.83-6.38 6.38-.46 2.29 2.29-.46 6.38-6.38zM15 11h-4v1h4v-1zM15 13H8.5v1H15v-1z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="t-swipe-cell__text"
+              >
+                编辑
+              </span>
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn vertical"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-delete t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="font-size: 16px;"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M6 12V6h1v6H6zM9 6v6h1V6H9z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+                <path
+                  d="M10.5 3H14v1h-1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V4H2V3h3.5V1.8c0-.44.36-.8.8-.8h3.4c.44 0 .8.36.8.8V3zm-4 0h3V2h-3v1zM4 4v10h8V4H4z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
             
           </div>
         </div>
@@ -2479,778 +1695,81 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
     </div>
   </div>
   
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        通过expanded实现父子组件联动
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-cell t-cell--middle"
-      >
-        <div
-          class="t-cell__left"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-switch t-switch--medium t-switch--checked"
-          >
-            <div
-              class="t-switch__dot t-switch__dot--medium t-switch__dot--checked t-switch__dot--plain"
-            >
-              <div
-                class="t-switch__label t-switch__label--medium t-switch__label--checked"
-              >
-                <!--v-if-->
-                <!---->
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                父子组件联动
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        通过直接传入内容或者使用 slot#content 来渲染
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              style="padding: 10px;"
-            >
-              直接写组件
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <div>
-              <button
-                aria-disabled="false"
-                class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-                role="button"
-                style="height: 100%;"
-                type="submit"
-              >
-                <!---->
-                <span
-                  class="t-button__content"
-                >
-                  
-                  收藏
-                  
-                </span>
-                <!---->
-              </button>
-            </div>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        是否启用滑动功能
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-cell t-cell--middle"
-      >
-        <div
-          class="t-cell__left"
-        >
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__title"
-        >
-          开关
-          <!--v-if-->
-          <!--v-if-->
-        </div>
-        <div
-          class="t-cell__note"
-        >
-          
-          <div
-            class="t-switch t-switch--medium"
-          >
-            <div
-              class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
-            >
-              <div
-                class="t-switch__label t-switch__label--medium"
-              >
-                <!--v-if-->
-                <!---->
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <!--v-if-->
-      </div>
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                可以滑动
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                收藏
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-small t-button--base t-button--danger t-button--rectangle"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        左右两侧都有菜单
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                选择
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                左右都有菜单
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <!--v-if-->
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                收藏
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        点击事件
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                选择
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                左右都有内容
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            
-            
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                删除
-                
-              </span>
-              <!---->
-            </button>
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-              role="button"
-              style="height: 100%;"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                收藏
-                
-              </span>
-              <!---->
-            </button>
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+  <!-- &lt;event /&gt; -->
 </div>
 `;
 
-exports[`SwipeCell > SwipeCell rightMenuVue demo works fine 1`] = `
+exports[`SwipeCell > SwipeCell rightVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
 >
-  
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-  >
-    <div
-      class="tdesign-mobile-demo-block__header"
-    >
-      <!--v-if-->
-      <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
-      >
-        右滑单操作
-      </p>
-    </div>
-    <div
-      class="tdesign-mobile-demo-block__slot"
-    >
-      
-      <div
-        class="t-swipe-cell"
-      >
-        <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
-        >
-          <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
-          >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                选择
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
-          </div>
-          <div
-            class="t-swipe-cell__content"
-          >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-右滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
-              <!--v-if-->
-            </div>
-            
-          </div>
-          <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
-          >
-            <!---->
-            
-            
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    style="margin-top: 10px;"
+    class="tdesign-mobile-demo-block__header"
   >
     <!--v-if-->
-    <div
-      class="tdesign-mobile-demo-block__slot"
+    <p
+      class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
     >
-      
+      右滑动操作
+    </p>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block__slot"
+  >
+    
+    <div
+      class="t-swipe-cell"
+    >
       <div
-        class="t-swipe-cell"
+        style="position: relative; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
       >
         <div
-          class="t-swipe-cell__wrapper"
-          style="transform: translate3d(0px,0,0);"
+          class="t-swipe-cell__left"
+          style="width: auto;"
+        >
+          
+          <div
+            class="btn favor-btn"
+          >
+            选择
+          </div>
+          
+        </div>
+        
+        <div
+          class="t-cell t-cell--middle"
         >
           <div
-            class="t-swipe-cell__left"
-            style="width: auto;"
+            class="t-cell__left"
           >
-            
-            <button
-              aria-disabled="false"
-              class="t-button t-button--size-medium t-button--base t-button--primary t-button--square"
-              role="button"
-              type="button"
-            >
-              <!---->
-              <span
-                class="t-button__content"
-              >
-                
-                选择
-                
-              </span>
-              <!---->
-            </button>
-            
-            
-            
+            <!--v-if-->
+            <!--v-if-->
           </div>
           <div
-            class="t-swipe-cell__content"
+            class="t-cell__title"
           >
-            
-            <div
-              class="t-cell t-cell--middle"
-            >
-              <div
-                class="t-cell__left"
-              >
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__title"
-              >
-                列表-右滑单操作
-                <!--v-if-->
-                <!--v-if-->
-              </div>
-              <div
-                class="t-cell__note"
-              >
-                辅助信息
-              </div>
-              <!--v-if-->
-            </div>
-            
+            右滑单操作
+            <!--v-if-->
+            <!--v-if-->
           </div>
           <div
-            class="t-swipe-cell__right"
-            style="width: auto;"
+            class="t-cell__note"
           >
-            <!---->
-            
-            
+            辅助信息
           </div>
+          <!--v-if-->
+        </div>
+        
+        <div
+          class="t-swipe-cell__right"
+          style="width: auto;"
+        >
+          
+          
         </div>
       </div>
-      
     </div>
+    
   </div>
-  
 </div>
 `;
