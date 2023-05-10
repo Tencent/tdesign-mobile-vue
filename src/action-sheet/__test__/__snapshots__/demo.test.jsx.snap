@@ -30,8 +30,6 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
   <teleport-stub
     class="t-action-sheet"
     data-v-1719f7aa=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -1137,8 +1135,6 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
   <teleport-stub
     class="t-action-sheet"
     data-v-06f7cca3=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -1724,8 +1720,6 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
   <teleport-stub
     class="t-action-sheet"
     data-v-443785fb=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -1877,8 +1871,6 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       <teleport-stub
         class="t-action-sheet"
         data-v-443785fb=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -1991,8 +1983,6 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       <teleport-stub
         class="t-action-sheet"
         data-v-06f7cca3=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -2571,8 +2561,6 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
       <teleport-stub
         class="t-action-sheet"
         data-v-1719f7aa=""
-        disabled="false"
-        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"

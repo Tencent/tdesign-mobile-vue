@@ -1,10 +1,7 @@
 // Vitest Snapshot v1
 
 exports[`cascader > events > : pick 1`] = `
-<teleport-stub
-  disabled="false"
-  to="[object HTMLBodyElement]"
->
+<teleport-stub>
   <div
     class="t-overlay"
     style="z-index: 1000; transition-duration: 300ms; display: none;"

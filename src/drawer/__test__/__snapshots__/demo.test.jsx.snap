@@ -7,8 +7,6 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
 >
   <teleport-stub
     data-v-2da634e5=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -124,8 +122,6 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
 >
   <teleport-stub
     data-v-6846568d=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -371,8 +367,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       >
         <teleport-stub
           data-v-2da634e5=""
-          disabled="false"
-          to="[object HTMLBodyElement]"
         >
           <div
             class="t-overlay"
@@ -505,8 +499,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       >
         <teleport-stub
           data-v-6846568d=""
-          disabled="false"
-          to="[object HTMLBodyElement]"
         >
           <div
             class="t-overlay"

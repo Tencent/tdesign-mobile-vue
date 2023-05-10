@@ -48,10 +48,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -101,36 +98,15 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
             >
               
               <div
-                class="t-cascader__steps"
+                class="t-cascader__step"
               >
-                
                 <div
                   class="t-cascader__step-dot t-cascader__step-dot--last"
                 />
                 <div
                   class="t-cascader__step-label t-cascader__step-label--active"
                 >
-                  <div
-                    class="t-cascader__step-dot t-cascader__step-dot--last"
-                  />
-                  <div
-                    class="t-cascader__step-label t-cascader__step-label--active"
-                  >
-                    选择选项
-                  </div>
-                  <svg
-                    class="t-icon t-icon-chevron-right t-cascader__step-arrow"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                  >
-                    <path
-                      d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
+                  选择选项
                 </div>
                 <svg
                   class="t-icon t-icon-chevron-right t-cascader__step-arrow"
@@ -188,188 +164,6 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                       />
                       <!---->
                     </div>
-                  </div>
-                </transition-stub>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </transition-stub>
-  </div>
-  <!--teleport end-->
-  
-</div>
-`;
-
-exports[`Cascader > Cascader keysVue demo works fine 1`] = `
-<div
-  data-v-app=""
->
-  
-  <div
-    class="t-cell t-cell--middle"
-  >
-    <div
-      class="t-cell__left"
-    >
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__title"
-    >
-      地址
-      <!--v-if-->
-      <!--v-if-->
-    </div>
-    <div
-      class="t-cell__note"
-    >
-      请选择地址
-    </div>
-    <div
-      class="t-cell__right"
-    >
-      <div
-        class="t-cell__right-icon"
-      >
-        <svg
-          class="t-icon t-icon-chevron-right"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
-        >
-          <path
-            d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <!--teleport start-->
-  <div
-    class="t-popup"
-  >
-    <transition-stub
-      appear="false"
-      css="true"
-      name="fade"
-      persisted="false"
-    >
-      <transition-stub
-        appear="false"
-        css="true"
-        name="t-overlay"
-        persisted="true"
-      >
-        <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
-        >
-          
-          
-        </div>
-      </transition-stub>
-    </transition-stub>
-    <transition-stub
-      appear="false"
-      css="true"
-      name="slide-bottom"
-      persisted="true"
-    >
-      <div
-        class="t-popup--content t-popup--content-bottom"
-        style="display: none;"
-      >
-        
-        <div
-          class="t-cascader"
-        >
-          <div
-            class="t-cascader__title"
-          >
-            
-            选择地址
-            
-          </div>
-          <div
-            class="t-cascader__close-btn"
-          >
-            <svg
-              class="t-icon t-icon-close"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </div>
-          <div
-            class="t-cascader__content"
-          >
-            <div>
-              <div
-                class="t-cascader__steps"
-              >
-                
-                <div
-                  class="t-cascader__step"
-                >
-                  <div
-                    class="t-cascader__step-dot t-cascader__step-dot--last"
-                  />
-                  <div
-                    class="t-cascader__step-label t-cascader__step-label--active"
-                  >
-                    选择选项
-                  </div>
-                  <svg
-                    class="t-icon t-icon-chevron-right t-cascader__step-arrow"
-                    fill="none"
-                    height="1em"
-                    viewBox="0 0 16 16"
-                    width="1em"
-                  >
-                    <path
-                      d="M6.46 12.46l-.92-.92L9.08 8 5.54 4.46l.92-.92L10.92 8l-4.46 4.46z"
-                      fill="currentColor"
-                      fill-opacity="0.9"
-                    />
-                  </svg>
-                </div>
-                
-              </div>
-              <!--v-if-->
-            </div>
-            <!--v-if-->
-            <div
-              class="t-cascader__options-container"
-              style="width: 200vw; transform: translateX(-000vw);"
-            >
-              
-              <div
-                class="t-cascader__options"
-              >
-                <transition-stub
-                  appear="true"
-                  css="true"
-                  name="slide"
-                  persisted="false"
-                >
-                  <div
-                    class="cascader-radio-group-0"
-                  >
                     <div
                       class="t-radio__content"
                     >
@@ -481,10 +275,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -742,10 +533,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -985,10 +773,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1202,10 +987,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1445,10 +1227,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1688,10 +1467,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
-      <teleport-stub
-        disabled="false"
-        to="[object HTMLBodyElement]"
-      >
+      <teleport-stub>
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1925,10 +1701,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2125,10 +1898,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2340,8 +2110,6 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
     <div
       class="t-cell__right"
     >
-      
-      
       <div
         class="t-cell__right-icon"
       >
@@ -2361,10 +2129,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
       </div>
     </div>
   </div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2410,8 +2175,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
         >
           <div>
             <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
+              class="t-cascader__steps"
             >
               
               <div

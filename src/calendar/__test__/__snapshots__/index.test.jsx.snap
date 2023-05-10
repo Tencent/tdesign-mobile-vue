@@ -2,10 +2,7 @@
 
 exports[`calendar > props > : format 1`] = `
 <div>
-  <teleport-stub
-    disabled="false"
-    to="[object HTMLBodyElement]"
-  >
+  <teleport-stub>
     <div
       class="t-overlay t-overlay--active"
       style="z-index: 1000; transition-duration: 300ms;"

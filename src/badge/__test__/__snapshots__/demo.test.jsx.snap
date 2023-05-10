@@ -402,15 +402,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-        </div>
-        <div
-          class="summary"
-        >
-          数字徽标
-        </div>
-        <div
-          class="badge-demo"
-        >
           <div
             class="t-badge badge-item"
           >
@@ -985,21 +976,6 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
           </div>
           <!---->
         </div>
-        <div
-          class="t-badge--basic t-badge--medium t-badge--ribbon t-badge--count t-has-count"
-          style="right: 0px; top: 0px;"
-        >
-          <div
-            class="t-badge__ribbon--before"
-            style=""
-          />
-           New 
-          <div
-            class="t-badge__ribbon--after"
-            style=""
-          />
-        </div>
-        <!---->
       </div>
     </div>
   </div>
