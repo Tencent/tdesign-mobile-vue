@@ -2,7 +2,6 @@
   <div class="action-sheet-demo">
     <t-button block variant="outline" theme="primary" @click="visible = true">常规宫格型</t-button>
     <t-button block variant="outline" theme="primary" @click="visible2 = true">带描述宫格型</t-button>
-    <!-- <t-button block variant="outline" theme="primary" @click="visible = true">带翻页宫格型</t-button> -->
     <t-button block variant="outline" theme="primary" @click="visible3 = true">带徽标宫格型</t-button>
   </div>
   <t-action-sheet
