@@ -48,7 +48,7 @@ describe('steps', () => {
       const $stepItems = wrapper.findAllComponents(StepItem);
       expect($stepItems.length).toEqual(items.length);
       $stepItems.map(async (item, index) => {
-        expect(item.find(`.t-step-item__icon`).text()).toEqual('');
+        expect(item.find(`.t-step-item__dot`).text()).toEqual('');
         expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
         expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
       });
@@ -74,7 +74,7 @@ describe('steps', () => {
       const $stepItems = wrapper.findAllComponents(StepItem);
       expect($stepItems.length).toEqual(items.length);
       $stepItems.map(async (item, index) => {
-        expect(item.find(`.t-step-item__icon`).text()).toEqual(String(index + 1));
+        expect(item.find(`.t-step-item__circle`).text()).toEqual(String(index + 1));
         expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
         expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
         await item.find(`.t-step-item`).trigger('click', event);
@@ -163,9 +163,9 @@ describe('steps', () => {
       $stepItems.map(async (item, index) => {
         //  current = 2, 则 2 状态为 process,  2 之前的子项状态为 finish,  2 之后的子项状态为 default
         const classes = item.find(`.t-step-item`).attributes('class');
-        if (index < 2) {
+        if (index < 1) {
           expect(classes.includes(`t-step-item--finish`)).toBeTruthy();
-        } else if (index === 2) {
+        } else if (index === 1) {
           expect(classes.includes(`t-step-item--process`)).toBeTruthy();
         } else {
           expect(classes.includes(`t-step-item--default`)).toBeTruthy();
