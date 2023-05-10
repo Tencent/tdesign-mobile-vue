@@ -15,8 +15,7 @@ export default {
   },
   /** 图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标 */
   icon: {
-    type: [Boolean, Function] as PropType<TdStepItemProps['icon']>,
-    default: true,
+    type: [Function] as PropType<TdStepItemProps['icon']>,
   },
   /** 当前步骤的状态：默认状态（未开始）、进行中状态、完成状态、错误状态 */
   status: {
@@ -35,6 +34,10 @@ export default {
   /** 标题 */
   title: {
     type: [String, Function] as PropType<TdStepItemProps['title']>,
+    default: '',
+  },
+  titleRight: {
+    type: [String, Function] as PropType<TdStepItemProps['titleRight']>,
     default: '',
   },
 };

@@ -16,10 +16,6 @@ export interface TdStepsProps {
    */
   defaultCurrent?: string | number;
   /**
-   * 当前步骤，即整个步骤条进度。默认根据步骤下标判断步骤的完成状态，当前步骤为进行中，当前步骤之前的步骤为已完成，当前步骤之后的步骤为未开始。如果每个步骤没有设置 value，current 值为步骤长度则表示所有步骤已完成。如果每个步骤设置了自定义 value，则 current = 'FINISH' 表示所有状态完成
-   */
-  modelValue?: string | number;
-  /**
    * 用于控制 current 指向的步骤条的状态
    * @default process
    */
@@ -29,10 +25,6 @@ export interface TdStepsProps {
    * @default horizontal
    */
   layout?: 'horizontal' | 'vertical';
-  /**
-   * 步骤条数据列表（作用和 StepItem 效果一样）
-   */
-  options?: Array<TdStepItemProps>;
   /**
    * 只读状态
    * @default false
@@ -64,7 +56,7 @@ export interface TdStepItemProps {
    * 图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标
    * @default true
    */
-  icon?: boolean | TNode;
+  icon?: TNode;
   /**
    * 当前步骤的状态：默认状态（未开始）、进行中状态、完成状态、错误状态
    * @default default
@@ -80,6 +72,12 @@ export interface TdStepItemProps {
    * @default ''
    */
   title?: string | TNode;
+
+  /**
+   * 垂直方向 标题右侧信息
+   * @default ''
+   */
+  titleRight?: string | TNode;
 }
 
 export type StepStatus = 'default' | 'process' | 'finish' | 'error';
