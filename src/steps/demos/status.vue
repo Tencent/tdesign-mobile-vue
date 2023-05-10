@@ -16,7 +16,7 @@
       </t-steps>
     </div>
     <div class="steps-horizontal-demo-block">
-      <t-steps :current="options.third" theme="dot" current-status="error" @change="onThridChange">
+      <t-steps :current="options.third" theme="dot" current-status="error" @change="onThirdChange">
         <t-step-item v-for="(_, index) in count" :key="index" :title="getTitle('third', index)" content="辅助信息" />
       </t-steps>
     </div>
@@ -38,7 +38,7 @@ const onFirstChange = (current: number) => {
 const onSecondChange = (current: number) => {
   options.second = current;
 };
-const onThridChange = (current: number) => {
+const onThirdChange = (current: number) => {
   options.third = current;
 };
 

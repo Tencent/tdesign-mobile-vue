@@ -28,7 +28,7 @@
     </div>
     <div class="summary">垂直简略步骤条</div>
     <div class="steps-vertical-demo-block">
-      <t-steps layout="vertical" :current="options.third" theme="dot" @change="onThridChange">
+      <t-steps layout="vertical" :current="options.third" theme="dot" @change="onThirdChange">
         <t-step-item
           v-for="(_, index) in count"
           :key="index"
@@ -77,7 +77,7 @@ const onFirstChange = (current: number) => {
 const onSecondChange = (current: number) => {
   options.second = current;
 };
-const onThridChange = (current: number) => {
+const onThirdChange = (current: number) => {
   options.third = current;
 };
 const onFourChange = (current: number) => {
