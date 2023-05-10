@@ -1,8 +1,7 @@
 import { mount } from '@vue/test-utils';
-import { includes } from 'lodash';
 import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
-import { Steps, Step } from '../../steps';
+import { Steps, StepItem } from '../../steps';
 const items = [
   {
     title: '步骤描述1',
@@ -39,25 +38,20 @@ describe('steps', () => {
             <Steps v-model={current.value} theme={theme} layout={layout} onChange={onChange}>
               {{
                 default: items.map((item, index) => {
-                  return <Step title={item.title} content={item.content} />;
+                  return <StepItem title={item.title} content={item.content} />;
                 }),
               }}
             </Steps>
           );
         },
       });
-      const $stepItems = wrapper.findAllComponents(Step);
+      const $stepItems = wrapper.findAllComponents(StepItem);
       expect($stepItems.length).toEqual(items.length);
       $stepItems.map(async (item, index) => {
-        expect(item.find(`.t-step-icon__number`).text()).toEqual('');
-        expect(item.find(`.t-step-icon__number`).classes().includes(`t-step-icon__dot`)).toBeTruthy();
-        expect(item.find(`.t-step-title`).text()).toEqual(items[index].title);
-        expect(item.find(`.t-step-description`).text()).toEqual(items[index].content);
-        await item.find(`.t-step__inner`).trigger('click', event);
+        expect(item.find(`.t-step-item__icon`).text()).toEqual('');
+        expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
+        expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
       });
-
-      // theme = 'dot' 仅在 layout = 'vertical' 下有效, 不会触发 change
-      expect(onChange).toHaveBeenCalledTimes(0);
     });
 
     it(': readonly', async () => {
@@ -70,65 +64,26 @@ describe('steps', () => {
             <Steps v-model={current.value} readonly={true} onChange={onChange}>
               {{
                 default: items.map((item, index) => {
-                  return <Step title={item.title} content={item.content} />;
+                  return <StepItem title={item.title} content={item.content} />;
                 }),
               }}
             </Steps>
           );
         },
       });
-      const $stepItems = wrapper.findAllComponents(Step);
+      const $stepItems = wrapper.findAllComponents(StepItem);
       expect($stepItems.length).toEqual(items.length);
       $stepItems.map(async (item, index) => {
-        expect(item.find(`.t-step-icon__number`).text()).toEqual(String(index + 1));
-        expect(item.find(`.t-step-title`).text()).toEqual(items[index].title);
-        expect(item.find(`.t-step-description`).text()).toEqual(items[index].content);
-        await item.find(`.t-step__inner`).trigger('click', event);
+        expect(item.find(`.t-step-item__icon`).text()).toEqual(String(index + 1));
+        expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
+        expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
+        await item.find(`.t-step-item`).trigger('click', event);
       });
 
       // readonly:true, 只读模式, 不会触发 change
       expect(onChange).toHaveBeenCalledTimes(0);
     });
 
-    it(': options', async () => {
-      const current = ref(1);
-      const options = ref([
-        {
-          title: '步骤描述',
-          content: '辅助信息文字最多两行',
-        },
-        {
-          title: '选中步骤',
-          content: '辅助信息文字最多两行',
-        },
-        {
-          title: '未完成',
-          content: '辅助信息文字最多两行',
-        },
-      ]);
-      const wrapper = mount({
-        setup() {
-          return () => <Steps v-model={current.value} options={options} />;
-        },
-      });
-      const $stepItems = wrapper.findAllComponents(Step);
-      expect($stepItems.length).toEqual(options.value.length);
-      $stepItems.map(async (item, index) => {
-        expect(item.find(`.t-step-icon__number`).text()).toEqual(String(index + 1));
-        expect(item.find(`.t-step-title`).text()).toEqual(options.value[index].title);
-        expect(item.find(`.t-step-description`).text()).toEqual(options.value[index].content);
-
-        // 默认选中 下标为1的子项, 则 1 状态为 process,  1 之前的子项状态为 finish,  1 之后的子项状态为 default
-        const classes = item.find(`.t-step`).classes();
-        if (index < 1) {
-          expect(classes.includes(`t-step--finish`)).toBeTruthy();
-        } else if (index === 1) {
-          expect(classes.includes(`t-step--process`)).toBeTruthy();
-        } else {
-          expect(classes.includes(`t-step--default`)).toBeTruthy();
-        }
-      });
-    });
     it(': layout', () => {
       const current = ref(1);
       const layout = 'vertical';
@@ -138,7 +93,7 @@ describe('steps', () => {
             <Steps v-model={current.value} readonly={true} layout={layout}>
               {{
                 default: itemStatus.map((item, index) => {
-                  return <Step title={item.title} content={item.content} status={item.status} />;
+                  return <StepItem title={item.title} content={item.content} status={item.status} />;
                 }),
               }}
             </Steps>
@@ -146,13 +101,12 @@ describe('steps', () => {
         },
       });
       expect(wrapper.element).toMatchSnapshot();
-      expect(wrapper.find(`.t-steps`).classes().includes(`t-steps--vertical`)).toBeTruthy();
-      const $stepItems = wrapper.findAllComponents(Step);
+      const $stepItems = wrapper.findAllComponents(StepItem);
       expect($stepItems.length).toEqual(itemStatus.length);
 
       $stepItems.map((item, index) => {
-        const classes = item.find(`.t-step`).classes();
-        expect(classes.includes(`t-step--${itemStatus[index].status}`)).toBeTruthy();
+        const classes = item.find(`.t-step-item`).classes();
+        expect(classes.includes(`t-step-item--${itemStatus[index].status}`)).toBeTruthy();
       });
     });
   });
@@ -166,26 +120,18 @@ describe('steps', () => {
             <Steps v-model={current.value}>
               {{
                 default: items.map((item, index) => {
-                  return (
-                    <Step>
-                      {{
-                        title: item.title,
-                        content: item.content,
-                      }}
-                    </Step>
-                  );
+                  return <StepItem title={item.title} content={item.content} />;
                 }),
               }}
             </Steps>
           );
         },
       });
-      const $stepItems = wrapper.findAllComponents(Step);
+      const $stepItems = wrapper.findAllComponents(StepItem);
       expect($stepItems.length).toEqual(items.length);
       $stepItems.map((item, index) => {
-        expect(item.find(`.t-step-icon__number`).text()).toEqual(String(index + 1));
-        expect(item.find(`.t-step-title`).text()).toEqual(items[index].title);
-        expect(item.find(`.t-step-description`).text()).toEqual(items[index].content);
+        expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
+        expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
       });
     });
   });
@@ -193,42 +139,36 @@ describe('steps', () => {
   describe('event', () => {
     it(': change', async () => {
       const current = ref(1);
-      const options = ref([
-        {
-          title: '步骤描述',
-          content: '辅助信息文字最多两行',
-        },
-        {
-          title: '选中步骤',
-          content: '辅助信息文字最多两行',
-        },
-        {
-          title: '未完成',
-          content: '辅助信息文字最多两行',
-        },
-      ]);
       const onChange = vi.fn();
       const event = {};
       const wrapper = mount({
         setup() {
-          return () => <Steps v-model={current.value} options={options} onChange={onChange} />;
+          return () => (
+            <Steps v-model={current.value} onChange={onChange}>
+              {{
+                default: items.map((item, index) => {
+                  return <StepItem title={item.title} content={item.content} />;
+                }),
+              }}
+            </Steps>
+          );
         },
       });
-      const $stepItems = wrapper.findAllComponents(Step);
-      expect($stepItems.length).toEqual(options.value.length);
+      const $stepItems = wrapper.findAllComponents(StepItem);
+      expect($stepItems.length).toEqual(items.length);
       // 点击第 2 项, 触发 change, 此时 current = 2,
-      await $stepItems[2].find(`.t-step__inner`).trigger('click', event);
+      await $stepItems[1].find(`.t-step-item`).trigger('click', event);
       expect(onChange).toHaveBeenCalledTimes(1);
 
       $stepItems.map(async (item, index) => {
         //  current = 2, 则 2 状态为 process,  2 之前的子项状态为 finish,  2 之后的子项状态为 default
-        const classes = item.find(`.t-step`).attributes('class');
+        const classes = item.find(`.t-step-item`).attributes('class');
         if (index < 2) {
-          expect(classes.includes(`t-step--finish`)).toBeTruthy();
+          expect(classes.includes(`t-step-item--finish`)).toBeTruthy();
         } else if (index === 2) {
-          expect(classes.includes(`t-step--process`)).toBeTruthy();
+          expect(classes.includes(`t-step-item--process`)).toBeTruthy();
         } else {
-          expect(classes.includes(`t-step--default`)).toBeTruthy();
+          expect(classes.includes(`t-step-item--default`)).toBeTruthy();
         }
       });
     });

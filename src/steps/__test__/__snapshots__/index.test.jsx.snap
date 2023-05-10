@@ -2,92 +2,95 @@
 
 exports[`steps > props > : layout 1`] = `
 <div
-  class="t-steps t-steps--vertical t-steps--readonly t-steps--default-anchor"
+  class="t-steps t-steps--vertical t-steps--readonly"
+  modelvalue="1"
 >
   
   <div
-    class="t-step t-step--error"
+    class="t-step-item t-step-item--vertical t-step-item--default t-step-item--error"
   >
+    <!-- icon -->
     <div
-      class="t-step__inner"
+      class="t-step-item__anchor t-step-item__anchor--vertical"
     >
       <div
-        class="t-step-icon"
+        class="t-step-item__circle t-step-item__circle--error"
       >
-        <div
-          class="t-step-icon__number"
+        <svg
+          class="t-icon t-icon-close"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
         >
-          <svg
-            class="t-icon t-icon-close"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-step-content"
-      >
-        <div
-          class="t-step-title"
-        >
-          步骤描述1
-        </div>
-        <div
-          class="t-step-description"
-        >
-          辅助信息文字最多两行
-        </div>
-        <div
-          class="t-step-extra"
-        >
-          <!---->
-        </div>
+          <path
+            d="M8 8.92L11.08 12l.92-.92L8.92 8 12 4.92 11.08 4 8 7.08 4.92 4 4 4.92 7.08 8 4 11.08l.92.92L8 8.92z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
       </div>
     </div>
+    <!-- content -->
+    <div
+      class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
+    >
+      <div
+        class="t-step-item__title t-step-item__title--error t-step-item__title--vertical"
+      >
+        步骤描述1
+        
+      </div>
+      <div
+        class="t-step-item__description t-step-item__description--error t-step-item__description--vertical"
+      >
+        辅助信息文字最多两行
+      </div>
+      <div
+        class="t-step-item__extra t-step-item__extra--error t-step-item__extra--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+    <!-- line -->
+    <!--v-if-->
   </div>
   <div
-    class="t-step t-step--process"
+    class="t-step-item t-step-item--vertical t-step-item--default t-step-item--process"
   >
+    <!-- icon -->
     <div
-      class="t-step__inner"
+      class="t-step-item__anchor t-step-item__anchor--vertical"
     >
       <div
-        class="t-step-icon"
+        class="t-step-item__circle t-step-item__circle--process"
       >
-        <div
-          class="t-step-icon__number"
-        >
-          2
-        </div>
-      </div>
-      <div
-        class="t-step-content"
-      >
-        <div
-          class="t-step-title"
-        >
-          步骤描述1
-        </div>
-        <div
-          class="t-step-description"
-        >
-          辅助信息文字最多两行
-        </div>
-        <div
-          class="t-step-extra"
-        >
-          <!---->
-        </div>
+        2
       </div>
     </div>
+    <!-- content -->
+    <div
+      class="t-step-item__content t-step-item__content--vertical t-step-item__content--vertical t-step-item__content--last"
+    >
+      <div
+        class="t-step-item__title t-step-item__title--process t-step-item__title--vertical"
+      >
+        步骤描述1
+        
+      </div>
+      <div
+        class="t-step-item__description t-step-item__description--process t-step-item__description--vertical"
+      >
+        辅助信息文字最多两行
+      </div>
+      <div
+        class="t-step-item__extra t-step-item__extra--process t-step-item__extra--vertical"
+      >
+        <!---->
+      </div>
+    </div>
+    <!-- line -->
+    <!--v-if-->
   </div>
   
 </div>

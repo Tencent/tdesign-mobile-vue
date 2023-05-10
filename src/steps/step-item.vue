@@ -115,7 +115,6 @@ export default defineComponent({
       },
     ]);
     const tilteClass = computed(() => [
-      `${name}-title`,
       `${name}__title`,
       `${name}__title--${currentStatus.value}`,
       `${name}__title--${stepsProvide.layout}`,
