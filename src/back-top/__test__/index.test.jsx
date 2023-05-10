@@ -7,11 +7,11 @@ describe('BackTop', () => {
   describe('props', () => {
     it(': fixed', async () => {
       const wrapper = mount(BackTop);
-      expect(wrapper.find('.t-is-fixed').exists()).toEqual(true);
+      expect(wrapper.find('.t-back-top--fixed').exists()).toEqual(true);
       await wrapper.setProps({
         fixed: false,
       });
-      expect(wrapper.find('.t-is-fixed').exists()).toEqual(false);
+      expect(wrapper.find('.t-back-top--fixed').exists()).toEqual(false);
     });
 
     it(': onToTop', () => {
@@ -25,11 +25,11 @@ describe('BackTop', () => {
 
     it(': text', async () => {
       const wrapper = mount(BackTop);
-      expect(wrapper.find('.t-back-top__text').exists()).toEqual(false);
+      expect(wrapper.find('.t-back-top__text--round').exists()).toEqual(false);
       await wrapper.setProps({
         text: '返回',
       });
-      expect(wrapper.find('.t-back-top__text').text()).toEqual('返回');
+      expect(wrapper.find('.t-back-top__text--round').text()).toEqual('返回');
     });
 
     it(': theme', async () => {

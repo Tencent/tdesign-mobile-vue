@@ -22,7 +22,7 @@ describe('avatar', () => {
 
     it(': text', async () => {
       const wrapper = mount(() => <Avatar>A</Avatar>);
-      const span = wrapper.find('.t-avatar__inner > span');
+      const span = wrapper.find('.t-avatar > span');
       expect(span.exists()).toBeTruthy();
       expect(span.text()).toBe('A');
     });
@@ -30,14 +30,16 @@ describe('avatar', () => {
     it(': shape', async () => {
       shapeList.forEach((s) => {
         const wrapper = mount(() => <Avatar image={IMAGE} shape={s}></Avatar>);
-        expect(wrapper.classes()).toContain(`t-avatar--${s}`);
+        const shape = wrapper.find(`.t-avatar--${s}`);
+        expect(shape.exists()).toBeTruthy();
       });
     });
 
     it(': size', async () => {
       sizeList.forEach((s) => {
         const wrapper = mount(() => <Avatar image={IMAGE} size={s}></Avatar>);
-        expect(wrapper.classes()).toContain(`t-size-${s?.slice(0, 1)}`);
+        const size = wrapper.find(`.t-avatar--${s}`);
+        expect(size.exists()).toBeTruthy();
       });
     });
 
@@ -52,7 +54,7 @@ describe('avatar', () => {
     it(': onLoad', async () => {
       const onLoad = vi.fn();
       const wrapper = mount(() => <Avatar image={IMAGE} onLoad={onLoad} />);
-      expect(wrapper.classes()).toContain('t-avatar');
+      expect(wrapper.classes()).toContain('t-avatar__wrapper');
       const img = wrapper.find('img');
       expect(img.exists()).toBeTruthy();
       expect(img.attributes('src')).toBe(IMAGE);
@@ -79,7 +81,7 @@ describe('avatar', () => {
           icon: userIconFunc,
         },
       });
-      const icon = wrapper.find('.t-avatar__inner > .t-avatar__icon');
+      const icon = wrapper.find('.t-avatar > .t-avatar__icon');
       expect(icon.exists()).toBeTruthy();
       expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
     });
@@ -88,28 +90,32 @@ describe('avatar', () => {
 
 describe('avatar-group', async () => {
   it(': create', async () => {
-    const wrapper = mount(() => (
-      <AvatarGroup>
-        <Avatar image={IMAGE}></Avatar>
-        <Avatar image={IMAGE}></Avatar>
-      </AvatarGroup>
-    ));
-    expect(wrapper.classes()).toContain('t-avatar-group');
-    expect(wrapper.classes()).toContain('t-avatar--offset-right');
-    const avatarList = wrapper.findAll('.t-avatar');
-    expect(avatarList.length).toBe(2);
-    expect(avatarList[0].classes()).toContain('t-avatar');
-    expect(avatarList[1].classes()).toContain('t-avatar');
+    sizeList.forEach((s) => {
+      const wrapper = mount(() => (
+        <AvatarGroup size={s}>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+        </AvatarGroup>
+      ));
+      expect(wrapper.classes()).toContain('t-avatar-group');
+      expect(wrapper.classes()).toContain(`t-avatar-group-offset-right-${s}`);
+      const avatarList = wrapper.findAll('.t-avatar');
+      expect(avatarList.length).toBe(2);
+      expect(avatarList[0].classes()).toContain('t-avatar');
+      expect(avatarList[1].classes()).toContain('t-avatar');
+    });
   });
 
   it(': cascading', async () => {
-    const wrapper = mount(() => (
-      <AvatarGroup cascading="left-up">
-        <Avatar image={IMAGE}></Avatar>
-        <Avatar image={IMAGE}></Avatar>
-      </AvatarGroup>
-    ));
-    expect(wrapper.classes()).toContain('t-avatar--offset-left');
+    sizeList.forEach((s) => {
+      const wrapper = mount(() => (
+        <AvatarGroup cascading="left-up" size={s}>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+        </AvatarGroup>
+      ));
+      expect(wrapper.classes()).toContain(`t-avatar-group-offset-left-${s}`);
+    });
   });
 
   it(': max', async () => {
