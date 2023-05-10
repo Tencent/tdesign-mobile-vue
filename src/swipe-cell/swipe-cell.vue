@@ -4,7 +4,11 @@
       <div
         ref="leftRef"
         :class="classes + '__left'"
-        :style="{ width: initData.leftWidth ? `${initData.leftWidth}px` : 'auto' }"
+        :style="{
+          width: initData.leftWidth ? `${initData.leftWidth}px` : 'auto',
+          display: 'flex',
+          'flex-flow': 'row-reverse',
+        }"
       >
         <t-node v-if="swipeLeftMenu" :content="swipeLeftMenu"></t-node>
         <template v-else>
@@ -26,6 +30,10 @@
             </div>
           </template>
         </template>
+        <div :style="sureLeftBgStyle"></div>
+        <div ref="sureLeftRef" :style="sureLeftStyle" @click="handleSureClick">
+          <t-node v-if="sureLeftContent" :content="sureLeftContent"></t-node>
+        </div>
       </div>
       <t-node v-if="swipeContent" :content="swipeContent"></t-node>
       <div
@@ -55,6 +63,10 @@
             </div>
           </template>
         </template>
+        <div :style="sureRightBgStyle"></div>
+        <div ref="sureRightRef" :style="sureRightStyle" @click="handleSureClick">
+          <t-node v-if="sureRightContent" :content="sureRightContent"></t-node>
+        </div>
       </div>
     </div>
   </div>
@@ -76,13 +88,13 @@ import {
   onUnmounted,
 } from 'vue';
 import isFunction from 'lodash/isFunction';
-// import { useSwipe } from './useSwipe';
 import { isArray, isBoolean } from 'lodash';
 import { useClickAway } from '@/shared/useClickAway';
 import props from './props';
 import config from '../config';
 import { SwipeActionItem } from './type';
 import { renderContent, renderTNode, TNode, useEmitEvent } from '../shared';
+import { useSureConfirm } from './useSureConfirm';
 
 const { prefix } = config;
 const name = `${prefix}-swipe-cell`;
@@ -118,13 +130,48 @@ export default defineComponent({
     const swipeCell = ref<HTMLElement>();
     const wrapperStyle = computed(() => {
       const transform = `translate3d(${initData.pos}px, 0, 0)`;
-      const transition = initData.moving ? 'none' : 'transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)';
+      let transition = 'margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1)';
+      transition += ',margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1)';
+      transition += initData.moving ? '' : ',transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)';
       return {
         position: 'relative',
         transition,
         transform,
+        marginLeft: `${sureMarginLeft.value}px`,
+        marginRight: `${sureMarginRight.value}px`,
       } as StyleValue;
     });
+
+    const distance = 10; // distance 滑动多少距离后开始显示菜
+    const autoBack = true; // autoBack 点击菜单后是否收回菜
+    const threshold = 0.3; // threshold 滑动宽度的百分之多少自动打开菜单，否则收回
+    const initData: SwipeInitData = reactive({
+      moving: false, // 是否正在划动
+      moved: false, // 标记是否有过划动，划动过则不触发点击事件
+      leftWidth: 0, // 左边菜单的宽度
+      rightWidth: 0, // 右边菜单的宽度
+      offset: 0, // 起点时的偏移
+      pos: 0, // 移动的距离
+      status: 'close', // 菜单的状态，默认close
+    });
+
+    const {
+      sureRightRef,
+      sureLeftRef,
+      showSureRight,
+      showSureLeft,
+      sureMarginRight,
+      sureMarginLeft,
+      closedSure,
+      sureRightContent,
+      sureLeftContent,
+      sureLeftBgStyle,
+      sureRightBgStyle,
+      sureRightStyle,
+      sureLeftStyle,
+      showSure,
+      handleSureClick,
+    } = useSureConfirm(internalInstance, initData);
 
     const range = (num: number, min: number, max: number) => {
       return Math.min(Math.max(num, min), max);
@@ -142,6 +189,14 @@ export default defineComponent({
         if (props.disabled || Math.abs(lengthX.value) < distance) {
           return;
         }
+
+        if (showSureRight.value) {
+          closedSure.value = lengthX.value > 0 && initData.pos === 0;
+          showSureRight.value = false;
+        } else if (showSureLeft.value) {
+          closedSure.value = lengthX.value < 0 && initData.pos === 0;
+          showSureLeft.value = false;
+        }
         initData.moving = true;
         initData.moved = true;
         const offset = range(initData.offset - lengthX.value, -initData.rightWidth, initData.leftWidth);
@@ -153,24 +208,13 @@ export default defineComponent({
         }
         initData.moving = false;
         setTimeout(() => {
+          closedSure.value = false;
           initData.moved = false;
         }, 0);
         end();
       },
     });
 
-    const distance = 10; // distance 滑动多少距离后开始显示菜
-    const autoBack = true; // autoBack 点击菜单后是否收回菜
-    const threshold = 0.3; // threshold 滑动宽度的百分之多少自动打开菜单，否则收回
-    const initData: SwipeInitData = reactive({
-      moving: false, // 是否正在划动
-      moved: false, // 标记是否有过划动，划动过则不触发点击事件
-      leftWidth: 0, // 左边菜单的宽度
-      rightWidth: 0, // 右边菜单的宽度
-      offset: 0, // 起点时的偏移
-      pos: 0, // 移动的距离
-      status: 'close', // 菜单的状态，默认close
-    });
     const classes = computed(() => [`${name}`]);
     onMounted(() => {
       const leftWidth = leftRef.value?.clientWidth as number;
@@ -203,11 +247,11 @@ export default defineComponent({
       const pos = value || initData.pos;
       const children = rightRef.value.children || [];
       const wArr: number[] = [];
-      for (let i = 0, len = children.length; i < len; ++i) {
+      for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;
         wArr.push((wArr[i - 1] || 0) + el.clientWidth);
       }
-      for (let i = 0, len = children.length; i < len; ++i) {
+      for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;
         const w = (1 + pos / initData.rightWidth) * (wArr[i - 1] || 0);
         if (el) {
@@ -221,18 +265,16 @@ export default defineComponent({
       const pos = value || initData.pos;
       const children = leftRef.value.children || [];
       const wArr: number[] = [];
-      for (let i = children.length - 1; i >= 0; --i) {
+      for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;
-        wArr[i] = (wArr[i + 1] || 0) + el.clientWidth;
+        wArr.push((wArr[i - 1] || 0) + el.clientWidth);
       }
-      for (let i = 0, len = children.length; i < len; ++i) {
+      for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;
-        const w = (1 - pos / initData.leftWidth) * (wArr[i + 1] || 0);
+        const w = (1 - pos / initData.leftWidth) * (wArr[i - 1] || 0);
         if (el) {
           el.style.transform = `translate3d(${w}px, 0, 0)`;
           el.style.transition = initData.moving ? 'none' : `transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)`;
-          el.style.position = 'relative';
-          el.style.zIndex = `${len - i}`;
         }
       }
     };
@@ -310,19 +352,28 @@ export default defineComponent({
       if (initData.status === 'close' && type !== 'force') {
         return;
       }
+      sureMarginLeft.value = 0;
+      sureMarginRight.value = 0;
       initData.status = 'close';
       initData.pos = 0;
       emitEvent('change', undefined);
     };
     const handleClickBtn = ({ action, source }: { action: SwipeActionItem; source: String }) => {
-      if (autoBack) {
-        close();
-      }
-      if (action.onClick) {
-        action.onClick();
+      const clickFn = () => {
+        if (autoBack) {
+          close();
+        }
+        if (action.onClick) {
+          action.onClick();
+          return;
+        }
+        emitEvent('click', { action, source });
+      };
+      if (action.sure) {
+        showSure(action.sure, clickFn);
         return;
       }
-      emitEvent('click', { action, source });
+      clickFn();
     };
     // 点击事件拦截，判定是否透传事件
     const handleCellClick = (e: Event) => {
@@ -331,6 +382,10 @@ export default defineComponent({
         e.stopPropagation();
       }
     };
+
+    context.expose({
+      showSure,
+    });
     return {
       ...toRefs(props),
       swipeContent,
@@ -346,6 +401,18 @@ export default defineComponent({
       handleClickBtn,
       end,
       handleCellClick,
+      showSureRight,
+      showSureLeft,
+      sureLeftBgStyle,
+      sureRightBgStyle,
+      sureRightStyle,
+      sureLeftStyle,
+      sureRightRef,
+      sureLeftRef,
+      sureRightContent,
+      sureLeftContent,
+      showSure,
+      handleSureClick,
     };
   },
 });

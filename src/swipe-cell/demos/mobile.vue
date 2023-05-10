@@ -6,7 +6,7 @@
     <right />
     <double />
     <icon />
-    <!-- <event /> -->
+    <event />
   </div>
 </template>
 
