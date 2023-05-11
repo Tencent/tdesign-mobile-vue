@@ -1,11 +1,6 @@
 <template>
-  <div ref="indexesRoot" :style="indexesRootStyle" :class="componentName" @scroll="handleRootScroll">
-    <div
-      v-if="list.length > 0"
-      :class="`${componentName}__sidebar`"
-      @touchstart="handleSidebarTouchstart"
-      @touchmove="handleSidebarTouchmove"
-    >
+  <div ref="indexesRoot" :class="componentName" @scroll="handleRootScroll">
+    <div :class="`${componentName}__sidebar`" @touchstart="handleSidebarTouchstart" @touchmove="handleSidebarTouchmove">
       <div
         v-for="item in list"
         :key="item.index"
@@ -17,51 +12,21 @@
         @click.prevent="handleSidebarItemClick(item.index)"
       >
         {{ item.index }}
-        <div v-if="showSidebarTip && activeSidebar === item.index" :class="`${componentName}__sidebar-tip`">
-          <span :class="`${componentName}__sidebar-tip-text`">
-            {{ activeSidebar }}
-          </span>
+        <div v-if="showSidebarTip && activeSidebar === item.index" :class="`${componentName}__sidebar-tips`">
+          {{ activeSidebar }}
         </div>
       </div>
     </div>
-
-    <div v-for="(item, index) in list" :ref="setAnchorGroupRefs(index)" :key="item.index" :data-index="item.index">
-      <indexes-anchor :ref="setAnchorRefs(index)" :anchor-style="anchorStyle[index]">
-        {{ item.title ?? item.index }}
-      </indexes-anchor>
-      <div :class="[`${componentName}__group`]">
-        <t-indexes-cell
-          v-for="(child, childrenIndex) in item.children"
-          :key="child.title"
-          :value="String(child.title)"
-          :title="child.title"
-          :link="true"
-          :bordered="false"
-          @click="handleCellClick({ groupIndex: item.index, childrenIndex: childrenIndex })"
-        />
-      </div>
-    </div>
+    <slot />
   </div>
 </template>
 
 <script lang="ts">
-import {
-  ref,
-  reactive,
-  defineComponent,
-  PropType,
-  onMounted,
-  watchEffect,
-  computed,
-  onBeforeUnmount,
-  toRefs,
-} from 'vue';
+import { ref, reactive, defineComponent, onMounted, watchEffect, toRefs, onBeforeUnmount, provide } from 'vue';
 import config from '../config';
 import { ListItem } from './type';
 import IndexesProps from './props';
 import { useEmitEvent } from '../shared';
-import indexesAnchor from './indexes-anchor.vue';
-import TIndexesCell from './indexes-cell.vue';
 
 const { prefix } = config;
 
@@ -94,14 +59,13 @@ const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
   name: componentName,
-  components: { indexesAnchor, TIndexesCell },
   props: IndexesProps,
   emits: ['select'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     let timeOut: number;
     const indexesRoot = ref<null | HTMLElement>(null);
-    const state: State = reactive({
+    const state = reactive({
       componentName,
       list: props.list,
       showSidebarTip: false,
@@ -123,14 +87,6 @@ export default defineComponent({
         anchor.value[index] = el as HTMLElement;
       };
     };
-
-    const indexesRootStyle = computed(() => {
-      if (typeof props.height !== 'number') {
-        return {};
-      }
-      const height = Number(props.height);
-      return { height: height === 0 ? 0 : `${height}px` };
-    });
 
     const scrollToView = (): void => {
       const children = anchorGroup.value;
@@ -245,14 +201,18 @@ export default defineComponent({
         }
       }
     });
+
     onBeforeUnmount(() => {
       timeOut && clearTimeout(timeOut);
+    });
+
+    provide('indexesProvide', {
+      ...props,
     });
 
     return {
       ...toRefs(state),
       indexesRoot,
-      indexesRootStyle,
       anchorGroup,
       anchorStyle,
       setAnchorGroupRefs,
