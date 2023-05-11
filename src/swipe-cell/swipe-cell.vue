@@ -300,7 +300,7 @@ export default defineComponent({
     );
     const renderMenuStatus = () => {
       if (isBoolean(props.opened)) {
-        // opened为boolen类型，判断默认打开
+        // opened为boolean类型，判断默认打开
         if (props.opened && initData.rightWidth > 0) {
           open('toLeft');
         } else if (props.opened && initData.leftWidth > 0) {

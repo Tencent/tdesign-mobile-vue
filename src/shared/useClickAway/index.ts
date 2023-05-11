@@ -24,7 +24,7 @@ export interface UseClickAwayOptions {
   detectIframe?: boolean;
 }
 
-export type UseClickAwayHanlder<
+export type UseClickAwayHandler<
   T extends { detectIframe: UseClickAwayOptions['detectIframe'] } = { detectIframe: false },
 > = (evt: T['detectIframe'] extends true ? PointerEvent | FocusEvent : PointerEvent) => void;
 
@@ -36,7 +36,7 @@ export type UseClickAwayHanlder<
  */
 export function useClickAway<T extends UseClickAwayOptions>(
   target: MaybeElementRef | Array<MaybeElementRef>,
-  fn: UseClickAwayHanlder<{ detectIframe: T['detectIframe'] }>,
+  fn: UseClickAwayHandler<{ detectIframe: T['detectIframe'] }>,
   options: T = {} as T,
 ) {
   if (!inBrowser) return;
