@@ -8,7 +8,7 @@
 import { defineComponent, ref, provide, Ref, computed, toRefs, onMounted } from 'vue';
 import TabBarProps from './props';
 import config from '../config';
-import { useDefault, useChildSlots } from '@/shared';
+import { useDefault, useChildSlots } from '../shared';
 
 const { prefix } = config;
 const name = `${prefix}-tab-bar`;
