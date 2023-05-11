@@ -1,16 +1,17 @@
 <template>
   <div :class="name">
     <div
-      :class="[`${name}__track`, { [`${name}__track--loosing`]: status === 'loosing' }]"
+      :class="[`${name}__track`, { [`${name}__track--loosing`]: status !== 'pulling' }]"
       :style="trackStyle"
       @touchstart.stop="onTouchStart"
       @touchmove.stop="onTouchMove"
       @touchend.stop="onTouchEnd"
       @touchcancel.stop="onTouchEnd"
+      @transitionend="onTransitionEnd"
     >
       <div ref="maxBar" :class="`${name}__tips`" :style="maxBarStyles">
         <div ref="loadingBar" :class="`${name}__loading`" :style="loadingBarStyles">
-          <t-loading v-if="status === 'loading'" size="24px" :text="loadingText" v-bind="loadingIconProps" />
+          <t-loading v-if="status === 'loading'" size="24px" :text="loadingText" v-bind="loadingProps" />
           <div v-else :class="`${name}__text`">{{ loadingText }}</div>
         </div>
       </div>
@@ -22,16 +23,17 @@
 <script lang="ts">
 import { defineComponent, onUnmounted, ref, toRefs, computed, watch, onMounted } from 'vue';
 import { useElementSize } from '@vueuse/core';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
+import isArray from 'lodash/isArray';
+
 import PullDownRefreshProps from './props';
-import { useEmitEvent, useVModel } from '../shared';
+import { useEmitEvent, useVModel, convertUnit } from '../shared';
 import config from '../config';
 import TLoading from '../loading';
 import { useTouch, isReachTop, easeDistance } from './useTouch';
 
 const { prefix } = config;
 const name = `${prefix}-pull-down-refresh`;
-const ANIMATION_DURATION = 300;
 const statusName = ['pulling', 'loosing', 'loading', 'success', 'initial'];
 
 export default defineComponent({
@@ -41,65 +43,20 @@ export default defineComponent({
   emits: ['refresh', 'timeout', 'scrolltolower', 'update:value', 'update:modelValue'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
-
-    // 动态生成style
-    const trackStyle = computed(() => ({
-      transitionDuration: `${ANIMATION_DURATION}ms`,
-      transform: `translate3d(0, ${distance.value}px, 0)`,
-    }));
-    const loadingBarStyles = computed(() => ({
-      height: typeof props.loadingBarHeight === 'number' ? `${props.loadingBarHeight}px` : props.loadingBarHeight,
-    }));
-    const maxBarStyles = computed(() => ({
-      height: typeof props.maxBarHeight === 'number' ? `${props.maxBarHeight}px` : props.maxBarHeight,
-    }));
-
-    // 动态生成loadingIcon的props
-    const loadingIconProps = computed(() => ({ ...props.loadingProps }));
-
-    // 是否处于加载状态
-    const isLoading = ref(false);
+    let timer: any = null;
 
     // 滑动距离
     const distance = ref(0);
+    const afterLoading = ref(false);
     const { value, modelValue } = toRefs(props);
-    const [statusValue, setStatusValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
+    const [loading, setLoading] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
-    // 组件当前状态
-    const status = computed(() => {
-      if (!statusValue.value && isLoading.value) {
-        return 'success';
-      }
-      if (!statusValue.value || distance.value === 0) {
-        return 'initial';
-      }
-      if (distance.value < loadingBarHeight.value) {
-        return 'pulling';
-      }
-      if (isLoading.value) {
-        return 'loading';
-      }
-      return 'loosing';
-    });
-
-    watch(status, (newVal) => {
-      // 下拉刷新结束后，收起下拉页面
-      if (newVal === 'success' || newVal === 'initial') {
-        // 延时300ms收起下拉框，加强刷新成功提示
-        setTimeout(() => {
-          distance.value = 0;
-          isLoading.value = false;
-        }, 300);
-      }
-    });
-
-    // 根据状态修改loadingText值
-    const loadingTexts = ref(
-      props.loadingTexts?.length ? props.loadingTexts : ['下拉刷新', '松手刷新', '正在刷新', '刷新完成'],
-    );
     const loadingText = computed(() => {
       const index = statusName.indexOf(status.value);
-      return index >= 0 ? loadingTexts.value[index] : '';
+      const loadingTexts = isArray(props.loadingTexts)
+        ? props.loadingTexts
+        : ['下拉刷新', '松手刷新', '正在刷新', '刷新完成'];
+      return index >= 0 ? loadingTexts[index] : '';
     });
 
     const touch = useTouch();
@@ -108,16 +65,57 @@ export default defineComponent({
     const { height: loadingBarHeight } = useElementSize(loadingBar);
     const { height: maxBarHeight } = useElementSize(maxBar);
 
-    const onTouchStart = (e: TouchEvent) => {
-      if (!isReachTop(e) || isLoading.value) return;
+    watch(
+      [loading, loadingBarHeight],
+      ([val], [prevVal]) => {
+        if (val) {
+          distance.value = loadingBarHeight.value;
+        }
+        if (!val && prevVal) {
+          afterLoading.value = true;
+        }
+      },
+      {
+        immediate: true,
+      },
+    );
 
-      setStatusValue(true);
+    const status = computed(() => {
+      if (afterLoading.value) {
+        return 'success';
+      }
+      if (!loading.value && distance.value === 0) {
+        return 'initial';
+      }
+      if (distance.value < loadingBarHeight.value) {
+        return 'pulling';
+      }
+      if (loading.value) {
+        return 'loading';
+      }
+      return 'loosing';
+    });
+
+    watch(status, (newVal) => {
+      if (newVal === 'success') {
+        // 延时300ms收起下拉框，加强刷新成功提示
+        setTimeout(() => {
+          distance.value = 0;
+        }, 300);
+      }
+    });
+
+    const onTouchStart = (e: TouchEvent) => {
+      if (!isReachTop(e) || loading.value) return;
+
+      clearTimeout(timer);
+      timer = null;
       distance.value = 0;
       touch.start(e);
     };
 
     const onTouchMove = (e: TouchEvent) => {
-      if (!isReachTop(e) || isLoading.value) return;
+      if (!isReachTop(e) || loading.value) return;
 
       const { deltaY } = touch;
       const nextDistance = easeDistance(deltaY.value, loadingBarHeight.value);
@@ -131,46 +129,65 @@ export default defineComponent({
       touch.move(e);
     };
 
-    let timer: any = null;
     const onTouchEnd = (e: TouchEvent) => {
-      if (!isReachTop(e) || isLoading.value) return;
+      if (!isReachTop(e) || loading.value) return;
 
       if (status.value === 'loosing') {
         distance.value = loadingBarHeight.value;
-        isLoading.value = true;
+        setLoading(true);
         emitEvent('refresh');
         timer = setTimeout(() => {
-          if (isLoading.value) {
+          if (loading.value) {
             emitEvent('timeout');
-            setStatusValue(false);
+            setLoading(false);
           }
         }, props.refreshTimeout);
       } else {
-        setStatusValue(false);
+        distance.value = 0;
       }
     };
 
-    const onReachBottom = () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 滚动高度
-      const { clientHeight, scrollHeight } = document.documentElement; // 可视区域/屏幕高度， 页面高度
-      const distance = 20; // 距离视窗 20 时，开始触发
-      if (scrollTop + clientHeight >= scrollHeight - distance) {
-        emitEvent('scrolltolower');
+    const onReachBottom = debounce(
+      () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop; // 滚动高度
+        const { clientHeight, scrollHeight } = document.documentElement; // 可视区域/屏幕高度， 页面高度
+        const distance = 20; // 距离视窗 20 时，开始触发
+        if (scrollTop + clientHeight >= scrollHeight - distance) {
+          emitEvent('scrolltolower');
+        }
+      },
+      300,
+      {
+        leading: true,
+        trailing: false,
+      },
+    );
+
+    const onTransitionEnd = () => {
+      if (afterLoading.value) {
+        afterLoading.value = false;
       }
     };
 
-    const _onReachBottom = debounce(onReachBottom, 300, {
-      leading: true,
-      trailing: false,
+    const trackStyle = computed(() => {
+      return {
+        transform: `translate3d(0, ${distance.value}px, 0)`,
+      };
     });
+    const loadingBarStyles = computed(() => ({
+      height: convertUnit(props.loadingBarHeight),
+    }));
+    const maxBarStyles = computed(() => ({
+      height: convertUnit(props.maxBarHeight),
+    }));
 
     onMounted(() => {
-      window.addEventListener('scroll', _onReachBottom);
+      window.addEventListener('scroll', onReachBottom);
     });
 
     onUnmounted(() => {
       clearTimeout(timer);
-      window.removeEventListener('scroll', _onReachBottom);
+      window.removeEventListener('scroll', onReachBottom);
     });
 
     return {
@@ -180,12 +197,14 @@ export default defineComponent({
       loadingText,
       maxBarStyles,
       loadingBarStyles,
-      loadingIconProps,
       loadingBar,
       maxBar,
+      loading,
+      distance,
       onTouchStart,
       onTouchMove,
       onTouchEnd,
+      onTransitionEnd,
     };
   },
 });
