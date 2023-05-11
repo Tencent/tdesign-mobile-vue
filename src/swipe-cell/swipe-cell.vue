@@ -73,8 +73,6 @@
 </template>
 
 <script lang="ts">
-import { onClickOutside, useSwipe } from '@vueuse/core';
-
 import {
   ref,
   watch,
@@ -89,6 +87,7 @@ import {
 } from 'vue';
 import isFunction from 'lodash/isFunction';
 import { isArray, isBoolean } from 'lodash';
+import { useSwipe } from './useSwipe';
 import { useClickAway } from '@/shared/useClickAway';
 import props from './props';
 import config from '../config';
@@ -176,16 +175,29 @@ export default defineComponent({
     const range = (num: number, min: number, max: number) => {
       return Math.min(Math.max(num, min), max);
     };
-    const { lengthX, stop } = useSwipe(swipeCell, {
+    // 首次touchmove的方向，用于分开左右和上下滑动，左右滑动时禁止上下滑动，上下滑动时禁止左右滑动
+    let swipeDir: -1 | 0 | 1 = 0;
+    const { lengthX, direction, stop } = useSwipe(swipeCell, {
       threshold: 0,
       onSwipeStart: (e: TouchEvent) => {
         if (props.disabled) {
           return;
         }
+        swipeDir = 0;
         initData.moved = false;
         initData.offset = initData.pos;
       },
       onSwipe: (e: TouchEvent) => {
+        if (!swipeDir && ['up', 'down'].includes(direction.value || '')) {
+          swipeDir = -1;
+        } else if (!swipeDir && ['left', 'right'].includes(direction.value || '')) {
+          swipeDir = 1;
+        }
+        if (swipeDir < 0) {
+          return;
+        }
+        e.preventDefault();
+
         if (props.disabled || Math.abs(lengthX.value) < distance) {
           return;
         }
@@ -209,7 +221,6 @@ export default defineComponent({
         initData.moving = false;
         setTimeout(() => {
           closedSure.value = false;
-          initData.moved = false;
         }, 0);
         end();
       },

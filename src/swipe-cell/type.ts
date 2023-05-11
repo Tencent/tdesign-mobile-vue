@@ -47,10 +47,19 @@ export interface SwipeActionItem {
   className?: string;
   style?: string;
   onClick?: () => void;
+  sure?: string | TNode;
   [key: string]: any;
 }
 
 export interface SwipeActionClickContext {
   action: SwipeActionItem;
   source: 'left' | 'right';
+}
+
+/** 组件实例方法 */
+export interface SwipeCellInstanceFunctions {
+  /**
+   * 显示二次确认内容
+   */
+  showSure: (sure: string | TNode, onClick?: SwipeActionItem['onClick']) => void;
 }

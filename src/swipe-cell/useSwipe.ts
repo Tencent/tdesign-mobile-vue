@@ -1,18 +1,23 @@
-// import type { MaybeRefOrGetter } from '@vueuse/shared';
-// import { noop } from '@vueuse/shared';
 import type { ComputedRef, Ref } from 'vue';
 import { computed, reactive, ref } from 'vue';
 import { useEventListener } from '@vueuse/core';
-// import type { ConfigurableWindow } from '../_configurable';
-// import { defaultWindow } from '../_configurable';
-// import type { Position } from '../types';
+import { isObject } from 'lodash';
 
 const noop = () => {};
+
 type Position = {
   x: number;
   y: number;
 };
-type MaybeRefOrGetter<T> = any;
+
+/**
+ * Maybe it's a ref, or a plain value
+ *
+ * ```ts
+ * type MaybeRef<T> = T | Ref<T>
+ * ```
+ */
+type MaybeRef<T> = T | Ref<T>;
 
 export type UseSwipeDirection = 'up' | 'down' | 'left' | 'right' | 'none';
 
@@ -28,6 +33,11 @@ export interface UseSwipeOptions {
    * @default 50
    */
   threshold?: number;
+
+  /**
+   * Listener options
+   */
+  listenerOptions?: boolean | { passive?: boolean; capture?: boolean };
 
   /**
    * Callback on swipe start
@@ -59,15 +69,14 @@ export interface UseSwipeReturn {
 /**
  * Reactive swipe detection.
  *
- * @see https://vueuse.org/useSwipe
  * @param target
  * @param options
  */
 export function useSwipe(
-  target: MaybeRefOrGetter<EventTarget | null | undefined>,
-  options: UseSwipeOptions = {},
+  target: MaybeRef<EventTarget | null | undefined>,
+  options = {} as UseSwipeOptions,
 ): UseSwipeReturn {
-  const { threshold = 50, onSwipe, onSwipeEnd, onSwipeStart, passive = true } = options;
+  const { threshold = 50, onSwipe, onSwipeEnd, onSwipeStart, listenerOptions = false } = options;
 
   const coordsStart = reactive<Position>({ x: 0, y: 0 });
   const coordsEnd = reactive<Position>({ x: 0, y: 0 });
@@ -102,30 +111,25 @@ export function useSwipe(
     coordsEnd.y = y;
   };
 
-  let listenerOptions: { passive?: boolean; capture?: boolean };
-
   const isPassiveEventSupported = checkPassiveEventSupport(window?.document);
 
-  if (!passive) listenerOptions = isPassiveEventSupported ? { passive: false, capture: true } : { capture: true };
-  else listenerOptions = isPassiveEventSupported ? { passive: true } : { capture: false };
-
   const onTouchEnd = (e: TouchEvent) => {
-    console.log('onTouchEnd', e);
-    // e.preventDefault();
     if (isSwiping.value) onSwipeEnd?.(e, direction.value);
 
     isSwiping.value = false;
   };
 
-  console.log('listenerOptions', listenerOptions);
   const stops = [
     useEventListener(
       target,
       'touchstart',
       (e: TouchEvent) => {
-        console.log('touchstart');
         if (e.touches.length !== 1) return;
-        if (listenerOptions.capture && !listenerOptions.passive) e.preventDefault();
+        if (
+          listenerOptions === true ||
+          (isObject(listenerOptions) && listenerOptions.capture && !listenerOptions.passive)
+        )
+          e.preventDefault();
         const [x, y] = getTouchEventCoords(e);
         updateCoordsStart(x, y);
         updateCoordsEnd(x, y);
@@ -138,7 +142,6 @@ export function useSwipe(
       target,
       'touchmove',
       (e: TouchEvent) => {
-        console.log('touchmove');
         if (e.touches.length !== 1) return;
         const [x, y] = getTouchEventCoords(e);
         updateCoordsEnd(x, y);

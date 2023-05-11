@@ -1,8 +1,19 @@
-import { ref, computed, CSSProperties, nextTick, watch, ComponentInternalInstance, setBlockTracking, Ref } from 'vue';
+import {
+  ref,
+  computed,
+  CSSProperties,
+  h,
+  nextTick,
+  watch,
+  ComponentInternalInstance,
+  setBlockTracking,
+  Ref,
+} from 'vue';
 import { isFunction, isString } from 'lodash';
 import { SwipeInitData } from './swipe-cell.vue';
 import { renderTNode } from '@/shared';
 import { SwipeActionItem } from './type';
+import { TNode } from '@/common';
 
 // 二次确认
 export function useSureConfirm(instance: ComponentInternalInstance | null, initData: SwipeInitData) {
@@ -28,15 +39,14 @@ export function useSureConfirm(instance: ComponentInternalInstance | null, initD
       width: '100%',
       height: '100%',
       backgroundColor: 'rgba(0,0,0,0)',
-      transition: 'background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1)',
-      transform: `translate3d(0, 0, 0)`,
+      transition: closedSure.value ? 'none' : 'background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1)',
+      transform: `translate3d(${-initData.rightWidth}px, 0, 0)`,
+      pointerEvents: 'none',
     } as CSSProperties;
 
     if (showSureRight.value) {
-      style.transform = `translate3d(${-initData.rightWidth}px, 0, 0)`;
       style.backgroundColor = 'rgba(0,0,0,.5)';
     } else {
-      style.transform = `translate3d(0, 0, 0)`;
       style.backgroundColor = 'rgba(0,0,0,0)';
     }
     return style;
@@ -49,15 +59,14 @@ export function useSureConfirm(instance: ComponentInternalInstance | null, initD
       width: '100%',
       height: '100%',
       backgroundColor: 'rgba(0,0,0,0)',
-      transition: 'background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1)',
+      transition: closedSure.value ? 'none' : 'background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1)',
       transform: `translate3d(0, 0, 0)`,
+      pointerEvents: 'none',
     } as CSSProperties;
 
     if (showSureLeft.value) {
-      style.transform = `translate3d(0, 0, 0)`;
       style.backgroundColor = 'rgba(0,0,0,.5)';
     } else {
-      style.transform = `translate3d(${-initData.leftWidth}px, 0, 0)`;
       style.backgroundColor = 'rgba(0,0,0,0)';
     }
     return style;
@@ -122,24 +131,24 @@ export function useSureConfirm(instance: ComponentInternalInstance | null, initD
     }
   });
 
-  const showSure = (content: any, onClick?: SwipeActionItem['onClick']) => {
+  const showSure = (sure: string | TNode, onClick?: SwipeActionItem['onClick']) => {
     handleSureClick.value = onClick;
 
-    let sureContent: Ref<HTMLElement> = sureRightContent;
+    let sureContent: Ref<any> = sureRightContent;
     let sureVisible: Ref<boolean> = showSureRight;
     if (initData.pos > 0) {
       sureContent = sureLeftContent;
       sureVisible = showSureLeft;
     }
 
-    if (isString(content) && instance?.slots[content]) {
-      sureContent.value = renderTNode(instance, content);
-    } else if (isFunction(content)) {
+    if (isString(sure) && instance?.slots[sure]) {
+      sureContent.value = renderTNode(instance, sure);
+    } else if (isFunction(sure)) {
       setBlockTracking(-1);
-      sureContent.value = content();
+      sureContent.value = sure(h);
       setBlockTracking(1);
     } else {
-      sureContent.value = content;
+      sureContent.value = sure;
     }
 
     nextTick(() => {
