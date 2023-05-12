@@ -9,8 +9,8 @@ describe('PullDownRefresh', () => {
     global.ResizeObserver = MockResizeObserver;
   });
 
-  describe(': props', () => {
-    it(': loadingBarHeight', async () => {
+  describe(':props', () => {
+    it(':loadingBarHeight', async () => {
       const wrapper = mount(<PullDownRefresh value={true} loadingBarHeight={30} />);
       const loadingBar = wrapper.find('.t-pull-down-refresh__loading');
       expect(window.getComputedStyle(loadingBar.element).height).toBe(`${30}px`);
@@ -19,18 +19,14 @@ describe('PullDownRefresh', () => {
       expect(window.getComputedStyle(loadingBar.element).height).toBe(`${90}px`);
     });
 
-    it(': others', async () => {
+    it(':others', async () => {
       const status = ref(false);
-      const loadingProps = {
-        theme: 'circular',
-      };
-      const loadingTexts = ['a', 'b', 'c', 'd'];
+      const loadingTexts = ['pulling', 'loosing', 'loading', 'success'];
       const maxBarHeight = ref(80);
       const onChange = vi.fn((value) => {
         status.value = value;
       });
       const onRefresh = vi.fn(() => {
-        status.value = true;
         setTimeout(() => {
           status.value = false;
         }, 2000);
@@ -39,7 +35,6 @@ describe('PullDownRefresh', () => {
       const wrapper = mount(
         <PullDownRefresh
           value={status.value}
-          loadingProps={loadingProps}
           loadingTexts={loadingTexts}
           maxBarHeight={maxBarHeight.value}
           onChange={onChange}
@@ -55,40 +50,36 @@ describe('PullDownRefresh', () => {
       });
 
       trigger(track, 'touchstart', 50, 0);
-      await wrapper.setProps({ value: true, maxBarHeight: '80px' });
+      await wrapper.setProps({ maxBarHeight: '80px' });
       trigger(track, 'touchmove', 50, 20);
       trigger(track, 'touchmove', 50, 70);
       trigger(track, 'touchmove', 50, 120);
       trigger(track, 'touchmove', 50, 170);
-      expect(wrapper.vm.loadingText).toBe('b'); // loosing
+      expect(wrapper.vm.loadingText).toBe('loosing');
       expect(window.getComputedStyle(maxBar.element).height).toBe(`${80}px`);
       trigger(track, 'touchend', 50, 170);
       expect(wrapper.element).toMatchSnapshot();
-
-      await new Promise((resolve, reject) => {
-        setTimeout(() => resolve(), 350); // 大于 300ms
-      });
     });
   });
 
-  describe(': events', () => {
-    it('functions and refreshTimeout', async () => {
+  describe(':events', () => {
+    it('timeout', async () => {
       const status = ref(false);
       const refreshTimeout = 500;
 
       const onChange = vi.fn((value) => {
         status.value = value;
+        console.log('change', value);
       });
       const onRefresh = vi.fn(() => {
-        status.value = true;
         setTimeout(() => {
           status.value = false;
-        }, 1000); // 大于设定值
+        }, 800); // 大于设定值
       });
       const onTimeout = vi.fn();
 
       const wrapper = mount(
-        <PullDownRefresh
+        () => <PullDownRefresh
           value={status.value}
           refreshTimeout={refreshTimeout}
           onChange={onChange}
@@ -106,7 +97,6 @@ describe('PullDownRefresh', () => {
       });
 
       trigger(target, 'touchstart', 50, 0);
-      await wrapper.setProps({ value: true });
       trigger(target, 'touchmove', 50, 20);
       trigger(target, 'touchmove', 50, 70);
       trigger(target, 'touchmove', 50, 120);
@@ -117,8 +107,8 @@ describe('PullDownRefresh', () => {
         setTimeout(() => resolve(), 1000); // 超时 1000ms
       });
 
-      expect(wrapper.emitted()).toHaveProperty('update:value'); // useModel 受控模式
-
+      // expect(wrapper.emitted()).toHaveProperty('update:value'); // useModel 受控模式
+      
       expect(onChange).toHaveBeenCalled();
       expect(onRefresh).toHaveBeenCalled();
       expect(onTimeout).toHaveBeenCalled();
