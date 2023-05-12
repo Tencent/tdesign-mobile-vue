@@ -1,19 +1,16 @@
 <template>
-  <div class="noticebar-demo">
-    <t-notice-bar
-      visible
-      content="提示文字描述提示文字描述提示文字描述"
-      :suffix-icon="arrowRight"
-      @click="handleClick"
-    />
-    <t-notice-bar
-      visible
-      content="提示文字描述提示文字描述"
-      extra="详情"
-      :suffix-icon="iconFunc"
-      @click="handleClick"
-    />
-  </div>
+  <t-notice-bar
+    visible
+    content="这是一条普通的消息通知"
+    :suffix-icon="arrowRight"
+    class="notice-bar-demo-block"
+    @click="handleClick"
+  >
+    <template #operation>
+      <t-link style="margin-left: 5px" theme="primary">详情</t-link>
+    </template>
+  </t-notice-bar>
+  <t-notice-bar visible content="这是一条普通的通知信息" :suffix-icon="arrowRight" @click="handleClick" />
 </template>
 
 <script lang="ts" setup>

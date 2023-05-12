@@ -1,11 +1,3 @@
 <template>
-  <div class="noticebar-demo">
-    <t-notice-bar :visible="visible" :content="content" :prefix-icon="false" />
-  </div>
+  <t-notice-bar visible content="这是一条普通的通知信息" :prefix-icon="false" />
 </template>
-<script lang="ts" setup>
-import { ref } from 'vue';
-
-const content = ref<string>('提示文字描述提示文字描述提示文字描述');
-const visible = ref<boolean>(true);
-</script>
