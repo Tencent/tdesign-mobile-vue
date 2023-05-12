@@ -27,7 +27,7 @@ describe('Progress', () => {
       const wrapper = mount(Progress, {
         props: { color: 'orange' },
       });
-      const percentBar = wrapper.find('.t-progress__bar-percent');
+      const percentBar = wrapper.find('.t-progress__inner');
       expect(getComputedStyle(percentBar.element).backgroundColor).toBe('orange');
 
       await wrapper.setProps({
@@ -38,18 +38,18 @@ describe('Progress', () => {
 
     it(': label', async () => {
       const wrapper = mount(Progress);
-      expect(wrapper.find('.t-progress__label').exists()).toEqual(true);
+      expect(wrapper.find('.t-progress__info').exists()).toEqual(true);
       await wrapper.setProps({
         label: false,
       });
-      expect(wrapper.find('.t-progress__label').exists()).toEqual(false);
+      expect(wrapper.find('.t-progress__info').exists()).toEqual(false);
     });
 
     it(': percentage', async () => {
       const wrapper = mount(Progress, {
         props: { percentage: 50 },
       });
-      const percentBar = wrapper.find('.t-progress__bar-percent');
+      const percentBar = wrapper.find('.t-progress__inner');
       expect(getComputedStyle(percentBar.element).width).toBe('50%');
       await wrapper.setProps({
         percentage: 80,
@@ -61,13 +61,8 @@ describe('Progress', () => {
       const wrapper = mount(Progress, {
         props: { status: 'success' },
       });
-
-      expect(wrapper.classes()).toContain('t-progress--status--success');
-      await wrapper.setProps({
-        status: 'error',
-      });
-      expect(wrapper.classes()).not.toContain('t-progress--status--success');
-      expect(wrapper.classes()).toContain('t-progress--status--error');
+      const container = wrapper.find('.t-progress--thin');
+      expect(container.classes()).toContain('t-progress--status--success');
     });
 
     it(': strokeWidth', async () => {
@@ -98,7 +93,7 @@ describe('Progress', () => {
       const wrapper = mount(Progress, {
         slots: { label: '25%' },
       });
-      expect(wrapper.find('.t-progress__label').text()).toEqual('25%');
+      expect(wrapper.find('.t-progress__info').text()).toEqual('25%');
     });
   });
 });

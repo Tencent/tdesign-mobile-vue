@@ -7,9 +7,10 @@ import baseVue from '@/notice-bar/demos/base.vue';
 import customVue from '@/notice-bar/demos/custom.vue';
 import customizationVue from '@/notice-bar/demos/customization.vue';
 import eventVue from '@/notice-bar/demos/event.vue';
-import iconVue from '@/notice-bar/demos/icon.vue';
+import iconDemoVue from '@/notice-bar/demos/iconDemo.vue';
 import mobileVue from '@/notice-bar/demos/mobile.vue';
 import scrollingVue from '@/notice-bar/demos/scrolling.vue';
+import suffixIconVue from '@/notice-bar/demos/suffixIcon.vue';
 import themeVue from '@/notice-bar/demos/theme.vue';
 
 const mapper = {
@@ -17,9 +18,10 @@ const mapper = {
   customVue,
   customizationVue,
   eventVue,
-  iconVue,
+  iconDemoVue,
   mobileVue,
   scrollingVue,
+  suffixIconVue,
   themeVue,
 };
 

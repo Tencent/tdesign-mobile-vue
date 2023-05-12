@@ -18,6 +18,34 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 是否为 iPhoneX 留出底部安全距离 */
+  safeAreaInsetBottom: {
+    type: Boolean,
+    default: true,
+  },
+  /** 标签栏的形状 */
+  shape: {
+    type: String as PropType<TdTabBarProps['shape']>,
+    default: 'normal' as TdTabBarProps['shape'],
+    validator(val: TdTabBarProps['shape']): boolean {
+      if (!val) return true;
+      return ['normal', 'round'].includes(val);
+    },
+  },
+  /** 是否需要分割线 */
+  split: {
+    type: Boolean,
+    default: true,
+  },
+  /** 选项风格 */
+  theme: {
+    type: String as PropType<TdTabBarProps['theme']>,
+    default: 'normal' as TdTabBarProps['theme'],
+    validator(val: TdTabBarProps['theme']): boolean {
+      if (!val) return true;
+      return ['normal', 'tag'].includes(val);
+    },
+  },
   /** 当前选中标签的索引 */
   value: {
     type: [String, Number, Array] as PropType<TdTabBarProps['value']>,

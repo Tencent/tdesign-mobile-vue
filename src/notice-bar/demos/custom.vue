@@ -1,25 +1,26 @@
 <template>
-  <div class="noticebar-demo">
-    <t-notice-bar class="cover-class" visible content="提示文字描述提示文字描述提示文字描述">
-      <template #prefixIcon>
-        <sound-icon />
-      </template>
-    </t-notice-bar>
-  </div>
+  <t-notice-bar class="cover-class" visible content="提示文字描述提示文字描述提示文字描述">
+    <template #prefixIcon>
+      <SoundIcon />
+    </template>
+    <template #suffixIcon>
+      <ChevronRightIcon />
+    </template>
+  </t-notice-bar>
 </template>
 
 <script lang="ts" setup>
-import { SoundIcon } from 'tdesign-icons-vue-next';
+import { SoundIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 </script>
+
 <style lang="less">
-// 覆盖组件内部样式
 .cover-class {
   .t-icon {
-    color: #ffffff !important;
+    color: rgba(0, 0, 0, 0.9) !important;
   }
   .t-notice-bar__text {
     color: #ffffff !important;
   }
-  background-color: #a6a6a6;
+  background-color: rgba(243, 243, 243, 1);
 }
 </style>

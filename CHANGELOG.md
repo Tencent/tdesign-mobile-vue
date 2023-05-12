@@ -5,6 +5,22 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.20.0 `2023-05-09` 
+### ❗ BREAKING CHANGES
+- `Avatar`: 调整 DOM @ccccpj ([#631](https://github.com/Tencent/tdesign-mobile-vue/pull/631))
+- `Avatar`: `size` 属性默认值变更为 `medium` @ccccpj ([#631](https://github.com/Tencent/tdesign-mobile-vue/pull/631))
+- `TabBar`: 调整 DOM @jarmywang ([#633](https://github.com/Tencent/tdesign-mobile-vue/pull/633))
+- `BackTop`: 调整 DOM @nined9 ([#641](https://github.com/Tencent/tdesign-mobile-vue/pull/641))
+
+### 🚀 Features
+- `TabBar`: 新增 safeAreaInsetBottom、shape、split、theme 属性 @jarmywang ([#633](https://github.com/Tencent/tdesign-mobile-vue/pull/633))
+- `BackTop`: 属性 icon 增加 boolean 类型 @nined9 ([#641](https://github.com/Tencent/tdesign-mobile-vue/pull/641))
+
+### 🐞 Bug Fixes
+- `Button`: 增加点击态样式 @LeeJim ([#656](https://github.com/Tencent/tdesign-mobile-vue/pull/656))
+
+
+
 ## 🌈 0.19.0 `2023-04-24` 
 ### ❗ BREKAING CHANGES
 - `Divider`: 调整 DOM 结构 @jarmywang ([#600](https://github.com/Tencent/tdesign-mobile-vue/pull/600))

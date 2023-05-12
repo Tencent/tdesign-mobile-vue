@@ -1,5 +1,6 @@
 <template>
   <button
+    v-hover="{ className: `${name}--hover` }"
     :class="buttonClass"
     :disabled="disabled"
     :type="type"
@@ -17,10 +18,10 @@
 </template>
 
 <script lang="ts">
-import { computed, toRefs, defineComponent, getCurrentInstance, h } from 'vue';
+import { computed, toRefs, defineComponent, getCurrentInstance } from 'vue';
 
 import Loading from '../loading';
-import { useEmitEvent, renderContent, renderTNode, TNode } from '../shared';
+import { useEmitEvent, renderContent, renderTNode, TNode, Hover } from '../shared';
 import ButtonProps from './props';
 import config from '../config';
 import { useFormDisabled } from '../form/hooks';
@@ -31,6 +32,7 @@ const name = `${prefix}-button`;
 export default defineComponent({
   name,
   components: { TNode, TLoading: Loading },
+  directives: { Hover },
   props: ButtonProps,
   emits: ['click'],
   setup(props, context) {

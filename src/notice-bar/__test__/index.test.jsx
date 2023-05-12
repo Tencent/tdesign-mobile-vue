@@ -13,11 +13,11 @@ describe('NoticeBar', async () => {
       expect(wrapper.text()).toContain('测试');
     });
 
-    it('extra', async () => {
+    it('operation', async () => {
       const wrapper = mount(<NoticeBar visible />);
-      await wrapper.setProps({ extra: '测试' });
+      await wrapper.setProps({ operation: '测试' });
       expect(wrapper.text()).toContain('测试');
-      expect(wrapper.find('.t-notice-bar__text-detail').exists()).toBe(true);
+      expect(wrapper.find('.t-notice-bar__operation').exists()).toBe(true);
     });
 
     it('marquee', async () => {
@@ -70,15 +70,15 @@ describe('NoticeBar', async () => {
 
     it('visible', async () => {
       const wrapper = mount(<NoticeBar visible={false} />);
-      expect(wrapper.find('.t-notice-bar__inner').exists()).toBe(false);
+      expect(wrapper.find('.t-notice-bar').exists()).toBe(false);
 
       await wrapper.setProps({ visible: true });
-      expect(wrapper.find('.t-notice-bar__inner').exists()).toBe(true);
+      expect(wrapper.find('.t-notice-bar').exists()).toBe(true);
     });
 
     it('defaultVisible', async () => {
       const wrapper = mount(<NoticeBar defaultVisible />);
-      expect(wrapper.find('.t-notice-bar__inner').exists()).toBe(true);
+      expect(wrapper.find('.t-notice-bar').exists()).toBe(true);
     });
   });
 
@@ -94,11 +94,11 @@ describe('NoticeBar', async () => {
       expect(wrapper.text()).toContain('测试');
     });
 
-    it('extra', async () => {
-      const extra = <div>测试</div>;
+    it('operation', async () => {
+      const operation = <div>测试</div>;
       const wrapper = mount(<NoticeBar visible />, {
         slots: {
-          extra,
+          operation,
         },
       });
       await nextTick();
@@ -129,13 +129,6 @@ describe('NoticeBar', async () => {
   });
 
   describe('events', async () => {
-    it('change', async () => {
-      const fn = vi.fn();
-      const wrapper = mount(<NoticeBar visible onChange={fn} />);
-      await wrapper.setProps({ visible: false });
-      expect(fn).toHaveBeenCalled();
-    });
-
     it('click', async () => {
       let triggerName = '';
       const fn = vi.fn((name) => {
@@ -144,13 +137,13 @@ describe('NoticeBar', async () => {
       const wrapper = mount(
         <NoticeBar visible prefix-icon="pre" content="test" extra="extra" suffix-icon="suffix" onClick={fn} />,
       );
-      await wrapper.find('.t-notice-bar__hd').trigger('click');
+      await wrapper.find('.t-notice-bar__prefix-icon').trigger('click');
       expect(triggerName).toBe('prefix-icon');
-      await wrapper.find('.t-notice-bar__text').trigger('click');
+      await wrapper.find('.t-notice-bar__content').trigger('click');
       expect(triggerName).toBe('content');
-      await wrapper.find('.t-notice-bar__text-detail').trigger('click');
-      expect(triggerName).toBe('extra');
-      await wrapper.find('.t-notice-bar__ft').trigger('click');
+      await wrapper.find('.t-notice-bar__operation').trigger('click');
+      expect(triggerName).toBe('operation');
+      await wrapper.find('.t-notice-bar__suffix-icon').trigger('click');
       expect(triggerName).toBe('suffix-icon');
       expect(fn).toHaveBeenCalledTimes(4);
     });
@@ -163,17 +156,10 @@ describe('NoticeBar', async () => {
       expect(wrapper.text()).toContain('测试');
     });
 
-    it('extra', async () => {
+    it('operation', async () => {
       const temp = () => '测试';
-      const wrapper = mount(<NoticeBar visible extra={temp} />);
+      const wrapper = mount(<NoticeBar visible operation={temp} />);
       expect(wrapper.text()).toContain('测试');
-    });
-
-    it('transitionend', async () => {
-      const wrapper = mount(<NoticeBar visible />);
-      const $bar = wrapper.find('.t-notice-bar__item');
-      expect($bar.exists()).toBe(true);
-      $bar.trigger('transitionend');
     });
   });
 });

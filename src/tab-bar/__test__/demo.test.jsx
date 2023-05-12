@@ -5,16 +5,20 @@
 import { mount } from '@vue/test-utils';
 import badgePropsVue from '@/tab-bar/demos/badge-props.vue';
 import baseVue from '@/tab-bar/demos/base.vue';
+import customVue from '@/tab-bar/demos/custom.vue';
 import mobileVue from '@/tab-bar/demos/mobile.vue';
 import pureIconVue from '@/tab-bar/demos/pure-icon.vue';
+import roundVue from '@/tab-bar/demos/round.vue';
 import textSpreadVue from '@/tab-bar/demos/text-spread.vue';
 import textVue from '@/tab-bar/demos/text.vue';
 
 const mapper = {
   badgePropsVue,
   baseVue,
+  customVue,
   mobileVue,
   pureIconVue,
+  roundVue,
   textSpreadVue,
   textVue,
 };
