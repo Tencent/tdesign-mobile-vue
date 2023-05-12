@@ -1043,14 +1043,14 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
           class="t-notice-bar__prefix-icon"
         >
           <svg
-            class="t-icon t-icon-close-circle-filled"
+            class="t-icon t-icon-info-circle-filled"
             fill="none"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
           >
             <path
-              d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+              d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
               fill="currentColor"
               fill-opacity="0.9"
             />
@@ -1088,7 +1088,7 @@ exports[`NoticeBar > NoticeBar mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        02 可 滚动的公告栏
+        03 可滚动的公告栏
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -1663,14 +1663,14 @@ exports[`NoticeBar > NoticeBar themeVue demo works fine 1`] = `
       class="t-notice-bar__prefix-icon"
     >
       <svg
-        class="t-icon t-icon-close-circle-filled"
+        class="t-icon t-icon-info-circle-filled"
         fill="none"
         height="1em"
         viewBox="0 0 16 16"
         width="1em"
       >
         <path
-          d="M15 8A7 7 0 101 8a7 7 0 0014 0zM5.67 4.95L8 7.29l2.33-2.34.7.7L8.7 8l2.34 2.35-.71.7L8 8.71l-2.33 2.34-.7-.7L7.3 8 4.96 5.65l.71-.7z"
+          d="M8 15A7 7 0 108 1a7 7 0 000 14zM7.4 4h1.2v1.2H7.4V4zm.1 2.5h1V12h-1V6.5z"
           fill="currentColor"
           fill-opacity="0.9"
         />
