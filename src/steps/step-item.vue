@@ -21,7 +21,7 @@
       </div>
     </div>
     <!-- line -->
-    <div v-if="!isLastChild" :class="isLastChildClass"></div>
+    <div v-if="!isLastChild" :class="separatorClass"></div>
   </div>
 </template>
 
@@ -53,7 +53,7 @@ export default defineComponent({
 
     const index = computed(() => stepsProvide.state.children.indexOf(proxy));
     const isLastChild = computed(() => {
-      return stepsProvide.state.children.length - 1 === index.value;
+      return index.value === (stepsProvide.sequence === 'positive' ? stepsProvide.state.children.length - 1 : 0);
     });
 
     const theme = computed(() => stepsProvide.theme);
@@ -129,10 +129,11 @@ export default defineComponent({
       `${name}__extra--${currentStatus.value}`,
       `${name}__extra--${stepsProvide.layout}`,
     ]);
-    const isLastChildClass = computed(() => [
+    const separatorClass = computed(() => [
       name,
       `${name}__line`,
       `${name}__line--${currentStatus.value}`,
+      `${name}__line--${stepsProvide.sequence}`,
       `${name}__line--${stepsProvide.layout}`,
       `${name}__line--${stepsProvide.theme}`,
     ]);
@@ -168,7 +169,7 @@ export default defineComponent({
       dotClass,
       iconWrapperClassName,
       iconClassName,
-      isLastChildClass,
+      separatorClass,
       contentClass,
       tilteClass,
       descriptionClass,

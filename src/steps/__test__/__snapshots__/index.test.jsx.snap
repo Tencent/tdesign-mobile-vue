@@ -2,7 +2,7 @@
 
 exports[`steps > props > : layout 1`] = `
 <div
-  class="t-steps t-steps--vertical t-steps--readonly"
+  class="t-steps t-steps--vertical t-steps--positive t-steps--readonly"
   modelvalue="1"
 >
   

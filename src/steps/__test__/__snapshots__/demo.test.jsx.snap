@@ -11,7 +11,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
     class="steps-horizontal-demo-block"
   >
     <div
-      class="t-steps t-steps--horizontal"
+      class="t-steps t-steps--horizontal t-steps--positive"
     >
       
       
@@ -188,7 +188,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
     class="steps-horizontal-demo-block"
   >
     <div
-      class="t-steps t-steps--horizontal"
+      class="t-steps t-steps--horizontal t-steps--positive"
     >
       
       
@@ -413,7 +413,7 @@ exports[`Steps > Steps horizontalVue demo works fine 1`] = `
     class="steps-horizontal-demo-block"
   >
     <div
-      class="t-steps t-steps--horizontal"
+      class="t-steps t-steps--horizontal t-steps--positive"
     >
       
       
@@ -605,7 +605,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-horizontal-demo-block"
         >
           <div
-            class="t-steps t-steps--horizontal"
+            class="t-steps t-steps--horizontal t-steps--positive"
           >
             
             
@@ -782,7 +782,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-horizontal-demo-block"
         >
           <div
-            class="t-steps t-steps--horizontal"
+            class="t-steps t-steps--horizontal t-steps--positive"
           >
             
             
@@ -1007,7 +1007,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-horizontal-demo-block"
         >
           <div
-            class="t-steps t-steps--horizontal"
+            class="t-steps t-steps--horizontal t-steps--positive"
           >
             
             
@@ -1166,7 +1166,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-vertical-demo-block"
         >
           <div
-            class="t-steps t-steps--vertical"
+            class="t-steps t-steps--vertical t-steps--positive"
           >
             
             
@@ -1343,7 +1343,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-vertical-demo-block"
         >
           <div
-            class="t-steps t-steps--vertical"
+            class="t-steps t-steps--vertical t-steps--positive"
           >
             
             
@@ -1568,7 +1568,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-vertical-demo-block"
         >
           <div
-            class="t-steps t-steps--vertical"
+            class="t-steps t-steps--vertical t-steps--positive"
           >
             
             
@@ -1725,7 +1725,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-vertical-demo-block"
         >
           <div
-            class="t-steps t-steps--vertical"
+            class="t-steps t-steps--vertical t-steps--positive"
           >
             
             
@@ -1950,7 +1950,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-horizontal-demo-block"
         >
           <div
-            class="t-steps t-steps--horizontal"
+            class="t-steps t-steps--horizontal t-steps--positive"
           >
             
             
@@ -2134,7 +2134,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-horizontal-demo-block"
         >
           <div
-            class="t-steps t-steps--horizontal"
+            class="t-steps t-steps--horizontal t-steps--positive"
           >
             
             
@@ -2354,7 +2354,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-horizontal-demo-block"
         >
           <div
-            class="t-steps t-steps--horizontal"
+            class="t-steps t-steps--horizontal t-steps--positive"
           >
             
             
@@ -2533,7 +2533,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-vertical-demo-block"
         >
           <div
-            class="t-steps t-steps--vertical"
+            class="t-steps t-steps--vertical t-steps--positive"
           >
             
             
@@ -2771,7 +2771,7 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
           class="steps-vertical-demo-block"
         >
           <div
-            class="t-steps t-steps--vertical t-steps--readonly"
+            class="t-steps t-steps--vertical t-steps--positive t-steps--readonly"
           >
             
             
@@ -2937,7 +2937,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
     class="steps-vertical-demo-block"
   >
     <div
-      class="t-steps t-steps--vertical"
+      class="t-steps t-steps--vertical t-steps--positive"
     >
       
       
@@ -3175,7 +3175,7 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
     class="steps-vertical-demo-block"
   >
     <div
-      class="t-steps t-steps--vertical t-steps--readonly"
+      class="t-steps t-steps--vertical t-steps--positive t-steps--readonly"
     >
       
       
@@ -3337,7 +3337,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
     class="steps-horizontal-demo-block"
   >
     <div
-      class="t-steps t-steps--horizontal"
+      class="t-steps t-steps--horizontal t-steps--positive"
     >
       
       
@@ -3521,7 +3521,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
     class="steps-horizontal-demo-block"
   >
     <div
-      class="t-steps t-steps--horizontal"
+      class="t-steps t-steps--horizontal t-steps--positive"
     >
       
       
@@ -3741,7 +3741,7 @@ exports[`Steps > Steps statusVue demo works fine 1`] = `
     class="steps-horizontal-demo-block"
   >
     <div
-      class="t-steps t-steps--horizontal"
+      class="t-steps t-steps--horizontal t-steps--positive"
     >
       
       
@@ -3903,7 +3903,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
     class="steps-vertical-demo-block"
   >
     <div
-      class="t-steps t-steps--vertical"
+      class="t-steps t-steps--vertical t-steps--positive"
     >
       
       
@@ -4080,7 +4080,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
     class="steps-vertical-demo-block"
   >
     <div
-      class="t-steps t-steps--vertical"
+      class="t-steps t-steps--vertical t-steps--positive"
     >
       
       
@@ -4305,7 +4305,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
     class="steps-vertical-demo-block"
   >
     <div
-      class="t-steps t-steps--vertical"
+      class="t-steps t-steps--vertical t-steps--positive"
     >
       
       
@@ -4462,7 +4462,7 @@ exports[`Steps > Steps verticalVue demo works fine 1`] = `
     class="steps-vertical-demo-block"
   >
     <div
-      class="t-steps t-steps--vertical"
+      class="t-steps t-steps--vertical t-steps--positive"
     >
       
       

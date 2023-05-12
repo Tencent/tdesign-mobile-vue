@@ -31,10 +31,10 @@ export interface TdStepsProps {
    */
   readonly?: boolean;
   /**
-   * 步骤条分割符
-   * @default line
+   * 步骤条顺序
+   * @default positive
    */
-  separator?: 'line' | 'dashed' | 'arrow';
+  sequence?: 'positive' | 'reverse';
   /**
    * 步骤条风格
    * @default default
@@ -62,11 +62,6 @@ export interface TdStepItemProps {
    * @default default
    */
   status?: StepStatus;
-  /**
-   * 子步骤条，仅支持 layout  = 'vertical' 时
-   * @default []
-   */
-  subStepItems?: SubStepItem[];
   /**
    * 标题
    * @default ''

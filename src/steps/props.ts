@@ -37,15 +37,6 @@ export default {
   },
   /** 只读状态 */
   readonly: Boolean,
-  /** 步骤条分割符 */
-  separator: {
-    type: String as PropType<TdStepsProps['separator']>,
-    default: 'line' as TdStepsProps['separator'],
-    validator(val: TdStepsProps['separator']): boolean {
-      if (!val) return true;
-      return ['line', 'dashed', 'arrow'].includes(val);
-    },
-  },
   /** 步骤条风格 */
   theme: {
     type: String as PropType<TdStepsProps['theme']>,
@@ -53,6 +44,15 @@ export default {
     validator(val: TdStepsProps['theme']): boolean {
       if (!val) return true;
       return ['default', 'dot'].includes(val);
+    },
+  },
+  /** 步骤条顺序 */
+  sequence: {
+    type: String as PropType<TdStepsProps['sequence']>,
+    default: 'positive' as TdStepsProps['sequence'],
+    validator(val: TdStepsProps['sequence']): boolean {
+      if (!val) return true;
+      return ['positive', 'reverse'].includes(val);
     },
   },
   /** 当前步骤发生变化时触发 */

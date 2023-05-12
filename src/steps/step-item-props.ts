@@ -26,11 +26,6 @@ export default {
       return ['default', 'process', 'finish', 'error'].includes(val);
     },
   },
-  /** 子步骤条，仅支持 layout  = 'vertical' 时 */
-  subStepItems: {
-    type: Array as PropType<TdStepItemProps['subStepItems']>,
-    default: (): TdStepItemProps['subStepItems'] => [],
-  },
   /** 标题 */
   title: {
     type: [String, Function] as PropType<TdStepItemProps['title']>,
