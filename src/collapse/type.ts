@@ -27,21 +27,29 @@ export interface TdCollapseProps {
    */
   expandMutex?: boolean;
   /**
+   * 折叠面板风格
+   * @default default
+   */
+  theme?: 'default' | 'card';
+  /**
    * 展开的面板集合
+   * @default []
    */
   value?: CollapseValue;
   /**
    * 展开的面板集合，非受控属性
+   * @default []
    */
   defaultValue?: CollapseValue;
   /**
    * 展开的面板集合
+   * @default []
    */
   modelValue?: CollapseValue;
   /**
    * 切换面板时触发，返回变化的值
    */
-  onChange?: (value: CollapseValue) => void;
+  onChange?: (value: CollapseValue, context: { e: MouseEvent }) => void;
 }
 
 export interface TdCollapsePanelProps {
@@ -75,9 +83,14 @@ export interface TdCollapsePanelProps {
    */
   headerRightContent?: string | TNode;
   /**
+   * 选项卡内容的位置
+   * @default bottom
+   */
+  placement?: 'bottom' | 'top';
+  /**
    * 当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识
    */
-  value: string | number;
+  value?: string | number;
 }
 
 export type CollapseValue = Array<string | number>;

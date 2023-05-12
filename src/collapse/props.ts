@@ -19,17 +19,28 @@ export default {
   },
   /** 每个面板互斥展开，每次只展开一个面板 */
   expandMutex: Boolean,
+  /** 折叠面板风格 */
+  theme: {
+    type: String as PropType<TdCollapseProps['theme']>,
+    default: 'default' as TdCollapseProps['theme'],
+    validator(val: TdCollapseProps['theme']): boolean {
+      if (!val) return true;
+      return ['default', 'card'].includes(val);
+    },
+  },
   /** 展开的面板集合 */
   value: {
     type: Array as PropType<TdCollapseProps['value']>,
+    default: undefined,
   },
   modelValue: {
     type: Array as PropType<TdCollapseProps['value']>,
+    default: undefined,
   },
   /** 展开的面板集合，非受控属性 */
   defaultValue: {
     type: Array as PropType<TdCollapseProps['defaultValue']>,
-    default: [],
+    default: (): TdCollapseProps['defaultValue'] => [],
   },
   /** 切换面板时触发，返回变化的值 */
   onChange: Function as PropType<TdCollapseProps['onChange']>,

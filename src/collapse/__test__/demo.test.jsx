@@ -6,13 +6,17 @@ import { mount } from '@vue/test-utils';
 import accordionVue from '@/collapse/demos/accordion.vue';
 import actionVue from '@/collapse/demos/action.vue';
 import baseVue from '@/collapse/demos/base.vue';
+import cardVue from '@/collapse/demos/card.vue';
 import mobileVue from '@/collapse/demos/mobile.vue';
+import placementVue from '@/collapse/demos/placement.vue';
 
 const mapper = {
   accordionVue,
   actionVue,
   baseVue,
+  cardVue,
   mobileVue,
+  placementVue,
 };
 
 describe('Collapse', () => {
