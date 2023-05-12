@@ -69,7 +69,6 @@ describe('PullDownRefresh', () => {
 
       const onChange = vi.fn((value) => {
         status.value = value;
-        console.log('change', value);
       });
       const onRefresh = vi.fn(() => {
         setTimeout(() => {
