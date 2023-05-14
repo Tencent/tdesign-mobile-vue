@@ -1,44 +1,46 @@
 <template>
-  <div ref="boxRef" :class="boxClasses">
-    <div ref="contentRef" class="t-indexes__anchor" :style="anchorStyle">
-      <t-node :content="stickyContent"></t-node>
+  <div :class="`${name}`">
+    <div :class="contentClass">
+      <div :class="`${name}__slot`">
+        <slot />
+      </div>
+      <div :class="indexClass">{{ index }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, getCurrentInstance, defineComponent, inject, InjectionKey } from 'vue';
-import { templateRef } from '@vueuse/core';
+import { computed, defineComponent, inject, ref } from 'vue';
 import config from '../config';
 import IndexesProps from './props';
-
-import { renderContent, TNode } from '../shared';
+import indexesAnchorProps from './indexes-anchor-props';
 
 const name = `${config.prefix}-indexes-anchor`;
 
 export default defineComponent({
   name,
-  components: { TNode },
-  props: {
-    anchorStyle: {
-      type: String,
-      default: '',
-    },
-  },
+  props: indexesAnchorProps,
   setup(props, context) {
-    const boxClasses = name;
     const indexesProvide = inject('indexesProvide') as typeof IndexesProps;
-    const contentClass = computed(() => [`${name}____wrapper`]);
-    const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', ''));
-
-    // box 用于占位和记录边界
-    // content 用于实际定位
-    const boxRef = templateRef('boxRef');
-    const contentRef = templateRef('contentRef');
+    const boxClasses = computed(() => []);
+    const contentClass = computed(() => [
+      `${name}__wrapper`,
+      { [`${name}__wrapper--sticky`]: false },
+      { [`${name}__wrapper--active`]: false },
+    ]);
+    const active = ref(false);
+    const indexClass = computed(() => [
+      `${name}__header`,
+      {
+        [`${name}__header--active`]: false,
+      },
+    ]);
 
     return {
+      name,
       boxClasses,
-      stickyContent,
+      contentClass,
+      indexClass,
     };
   },
 });

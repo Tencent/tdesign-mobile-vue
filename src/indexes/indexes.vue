@@ -2,17 +2,17 @@
   <div ref="indexesRoot" :class="componentName" @scroll="handleRootScroll">
     <div :class="`${componentName}__sidebar`" @touchstart="handleSidebarTouchstart" @touchmove="handleSidebarTouchmove">
       <div
-        v-for="item in list"
-        :key="item.index"
+        v-for="item in indexList"
+        :key="item"
         :class="[
           `${componentName}__sidebar-item`,
-          activeSidebar === item.index ? `${componentName}__sidebar-item--active` : '',
+          activeSidebar === item ? `${componentName}__sidebar-item--active` : '',
         ]"
-        :data-index="item.index"
-        @click.prevent="handleSidebarItemClick(item.index)"
+        :data-index="item"
+        @click.prevent="handleSidebarItemClick(item)"
       >
-        {{ item.index }}
-        <div v-if="showSidebarTip && activeSidebar === item.index" :class="`${componentName}__sidebar-tips`">
+        {{ item }}
+        <div v-if="showSidebarTip && activeSidebar === item" :class="`${componentName}__sidebar-tips`">
           {{ activeSidebar }}
         </div>
       </div>
@@ -24,7 +24,6 @@
 <script lang="ts">
 import { ref, reactive, defineComponent, onMounted, watchEffect, toRefs, onBeforeUnmount, provide } from 'vue';
 import config from '../config';
-import { ListItem } from './type';
 import IndexesProps from './props';
 import { useEmitEvent } from '../shared';
 
@@ -40,9 +39,8 @@ interface Touch {
 }
 interface State {
   componentName: string;
-  list: ListItem[];
   showSidebarTip: boolean;
-  activeSidebar: string;
+  activeSidebar: string | number;
   activeIndex: number;
 }
 
@@ -64,10 +62,9 @@ export default defineComponent({
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     let timeOut: number;
-    const indexesRoot = ref<null | HTMLElement>(null);
-    const state = reactive({
+    const indexesRoot = ref<HTMLElement>();
+    const state: State = reactive({
       componentName,
-      list: props.list,
       showSidebarTip: false,
       activeSidebar: '',
       activeIndex: -1,
@@ -131,7 +128,7 @@ export default defineComponent({
       state.activeSidebar = children[currentIndex].dataset.index ?? '';
     };
 
-    const setActiveSidebarAndTip = (index: string) => {
+    const setActiveSidebarAndTip = (index: string | number) => {
       state.activeSidebar = index;
       state.showSidebarTip = true;
     };
@@ -142,7 +139,7 @@ export default defineComponent({
       }
     });
 
-    const handleSidebarItemClick = (index: string) => {
+    const handleSidebarItemClick = (index: string | number) => {
       setActiveSidebarAndTip(index);
       scrollToView();
     };
@@ -169,7 +166,7 @@ export default defineComponent({
       }
     };
 
-    const handleRootScroll = (event: UIEvent) => {
+    const handleRootScroll = (e: UIEvent) => {
       if (indexesRoot.value) {
         calcChildPosition(indexesRoot.value.scrollTop);
         if (props.sticky) {
