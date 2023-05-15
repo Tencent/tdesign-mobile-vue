@@ -1,14 +1,13 @@
 <template>
   <div>
-    <div class="summary">水平带序号步骤条</div>
+    <div class="summary">选项卡状态</div>
     <div class="steps-horizontal-demo-block">
-      <t-steps :current="options.first" @change="onFirstChange">
+      <t-steps :current="options.first" current-status="error" @change="onFirstChange">
         <t-step-item v-for="(_, index) in count" :key="index" :title="getTitle('first', index)" content="辅助信息" />
       </t-steps>
     </div>
-    <div class="summary">水平带图标步骤条</div>
     <div class="steps-horizontal-demo-block">
-      <t-steps :current="options.second" @change="onSecondChange">
+      <t-steps :current="options.second" current-status="error" @change="onSecondChange">
         <t-step-item v-for="(_, index) in count" :key="index" :title="getTitle('second', index)" content="辅助信息">
           <template #icon>
             <CartIcon size="20px" />
@@ -16,9 +15,8 @@
         </t-step-item>
       </t-steps>
     </div>
-    <div class="summary">水平简略步骤条</div>
     <div class="steps-horizontal-demo-block">
-      <t-steps :current="options.third" theme="dot" @change="onThirdChange">
+      <t-steps :current="options.third" theme="dot" current-status="error" @change="onThirdChange">
         <t-step-item v-for="(_, index) in count" :key="index" :title="getTitle('third', index)" content="辅助信息" />
       </t-steps>
     </div>
