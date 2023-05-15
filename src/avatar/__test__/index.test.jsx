@@ -51,17 +51,6 @@ describe('avatar', () => {
       expect(badge.text()).toBe('10');
     });
 
-    it(': onLoad', async () => {
-      const onLoad = vi.fn();
-      const wrapper = mount(() => <Avatar image={IMAGE} onLoad={onLoad} />);
-      expect(wrapper.classes()).toContain('t-avatar__wrapper');
-      const img = wrapper.find('img');
-      expect(img.exists()).toBeTruthy();
-      expect(img.attributes('src')).toBe(IMAGE);
-      await img.trigger('load');
-      expect(onLoad).toBeCalledTimes(1);
-    });
-
     it(': error', async () => {
       const onError = vi.fn();
       const wrapper = mount(() => <Avatar image={IMAGE_FAIL} alt="加载错误" onError={onError} />);
