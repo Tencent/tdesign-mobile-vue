@@ -160,7 +160,7 @@ describe('Collapse', () => {
       const panel = wrapper.findComponent({ ref: '1' });
 
       expect(panel.find('.t-collapse-panel__title').text()).toBe('标题');
-      expect(panel.find('.t-collapse-panel__body').text()).toBe('内容');
+      expect(panel.find('.t-collapse-panel__content').text()).toBe('内容');
     });
 
     test('disabled', async () => {
@@ -195,7 +195,7 @@ describe('Collapse', () => {
 
       const panel = wrapper.findComponent({ ref: '1' });
 
-      expect(panel.find('.t-collapse-panel__header-right').text()).toBe('操作');
+      expect(panel.find('.t-collapse-panel__header .t-cell__note').text()).toBe('操作');
     });
 
     test('slot', async () => {
@@ -217,9 +217,9 @@ describe('Collapse', () => {
 
       const panel = wrapper.findComponent({ ref: '1' });
 
-      expect(panel.find('.t-collapse-panel__title > h4').html()).toBe('<h4>标题</h4>');
-      expect(panel.find('.t-collapse-panel__header-extra > span').html()).toBe('<span>操作</span>');
-      expect(panel.find('.t-collapse-panel__body > div').html()).toBe('<div>内容</div>');
+      expect(panel.find('.t-collapse-panel__title .t-cell__title h4').html()).toBe('<h4>标题</h4>');
+      expect(panel.find('.t-collapse-panel__title .t-cell__note > span').html()).toBe('<span>操作</span>');
+      expect(panel.find('.t-collapse-panel__content > div').html()).toBe('<div>内容</div>');
     });
   });
 });

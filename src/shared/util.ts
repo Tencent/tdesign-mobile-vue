@@ -1,3 +1,5 @@
+import { isNumber } from '@vueuse/core';
+
 export function toCamel(str: string): string {
   return str.replace(/^\S/, (m) => m.toUpperCase());
 }
@@ -47,3 +49,8 @@ export function getCharacterLength(str: string, maxCharacter?: number) {
 }
 
 export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms)); // eslint-disable-line
+
+export const convertUnit = (val: string | number | undefined) => {
+  if (val == null) return 0;
+  return isNumber(val) ? `${val}px` : val;
+};

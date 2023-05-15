@@ -2,42 +2,37 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Progress 进度条</h1>
     <p class="summary">用于展示任务当前的进度</p>
-    <tdesign-demo-block title="01 类型" summary="基础进度条">
+    <tdesign-demo-block title="01 类型" summary="基础进度条" :padding="true">
       <BaseDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="隐藏数值进度条">
-      <NoTextDemo />
+    <tdesign-demo-block summary="过渡样式" :padding="true">
+      <TransitionDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="自定义样式">
+    <tdesign-demo-block summary="自定义颜色/圆角" :padding="true">
       <CustomDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="自定义线宽">
-      <StrokeWidthDemo />
+    <tdesign-demo-block title="02 组件状态" summary="线性进度条" :padding="true">
+      <LineDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 状态">
-      <StatusDemo />
+    <tdesign-demo-block summary="百分比内显进度条" :padding="true">
+      <PlumpDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="环形进度条" :padding="true">
+      <CircleDemo />
     </tdesign-demo-block>
   </div>
 </template>
 
 <script lang="ts" setup>
 import BaseDemo from './base.vue';
-import NoTextDemo from './noText.vue';
 import CustomDemo from './custom.vue';
-import StrokeWidthDemo from './strokeWidth.vue';
-import StatusDemo from './status.vue';
+import TransitionDemo from './transition.vue';
+import LineDemo from './line.vue';
+import PlumpDemo from './plump.vue';
+import CircleDemo from './circle.vue';
 </script>
 <style lang="less" scoped>
-.progress-demo {
-  padding: 8px 16px;
+.tdesign-mobile-demo {
   background-color: #fff;
-  .button-group {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 8px;
-    .space {
-      width: 16px;
-    }
-  }
 }
 </style>

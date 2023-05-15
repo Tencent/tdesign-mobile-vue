@@ -102,7 +102,7 @@ describe('ActionSheet', () => {
     it('onCancel', () => {
       const onCancel = vi.fn();
       const wrapper = mount(() => <ActionSheet visible items={['确定', '删除']} onCancel={onCancel} />);
-      wrapper.find('.t-class-cancel').trigger('click');
+      wrapper.find('.t-action-sheet__cancel').trigger('click');
       expect(onCancel).toHaveBeenCalledTimes(1);
     });
 
