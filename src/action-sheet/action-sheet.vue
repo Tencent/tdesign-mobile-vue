@@ -7,7 +7,7 @@
       <template v-if="showCancel">
         <div :class="`${name}__footer`">
           <div :class="`${name}__gap-${theme}`"></div>
-          <t-button :class="`${name}__cancel ${prefix}-class-cancel`" variant="text" block @click="handleCancel">
+          <t-button :class="`${name}__cancel`" variant="text" block @click="handleCancel">
             {{ cancelText }}
           </t-button>
         </div>

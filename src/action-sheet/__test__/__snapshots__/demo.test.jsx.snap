@@ -154,7 +154,7 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -283,7 +283,7 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -1044,7 +1044,7 @@ exports[`ActionSheet > ActionSheet gridMultipleVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -2204,7 +2204,7 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -3303,7 +3303,7 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -4546,7 +4546,7 @@ exports[`ActionSheet > ActionSheet gridVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -4753,7 +4753,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -4882,7 +4882,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -5059,7 +5059,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -5260,7 +5260,7 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
@@ -5499,7 +5499,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -5628,7 +5628,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -5805,7 +5805,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -6006,7 +6006,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -7179,7 +7179,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -8278,7 +8278,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -9521,7 +9521,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -10275,7 +10275,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -10503,7 +10503,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -10697,7 +10697,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -10826,7 +10826,7 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
               />
               <button
                 aria-disabled="false"
-                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+                class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
                 role="button"
                 type="button"
               >
@@ -11040,7 +11040,7 @@ exports[`ActionSheet > ActionSheet statusVue demo works fine 1`] = `
           />
           <button
             aria-disabled="false"
-            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel t-class-cancel"
+            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle t-button--block t-action-sheet__cancel"
             role="button"
             type="button"
           >
