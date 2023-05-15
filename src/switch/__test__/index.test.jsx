@@ -30,7 +30,7 @@ describe('switch', () => {
       const $label = wrapper.find('.t-switch__label');
       expect($label.text()).toBe('close');
 
-      await wrapper.trigger('click')
+      await wrapper.trigger('click');
       expect($label.text()).toBe('open');
     });
 

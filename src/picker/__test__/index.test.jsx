@@ -157,7 +157,11 @@ describe('picker', () => {
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       await wrapper.find('.t-picker__confirm').trigger('click');
       expect(onConfirm).toBeCalledTimes(1);
-      expect(onConfirm).toBeCalledWith([seasonOptions[2].value], { e: expect.any(MouseEvent), index: [2], label: ['秋'] });
+      expect(onConfirm).toBeCalledWith([seasonOptions[2].value], {
+        e: expect.any(MouseEvent),
+        index: [2],
+        label: ['秋'],
+      });
     });
 
     it(': pick', async () => {

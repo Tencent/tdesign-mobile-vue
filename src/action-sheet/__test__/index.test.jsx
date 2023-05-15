@@ -88,8 +88,8 @@ describe('ActionSheet', () => {
         props: {
           visible: true,
           items: ['确定', '删除'],
-          onSelected
-        }
+          onSelected,
+        },
       });
       wrapper.findAll('.t-action-sheet__list-item')[0].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(1);
