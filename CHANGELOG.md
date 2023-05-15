@@ -5,6 +5,53 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.21.0 `2023-05-15` 
+### 🚀 Features
+- `Progress`: 新增 `theme` 属性 @anlyyao ([#640](https://github.com/Tencent/tdesign-mobile-vue/pull/640))
+- `NoticeBar`: 新增 `direction` 属性 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `NoticeBar`: 新增 `operation` 属性 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `NoticeBar`: `prefixIcon` 属性补充支持 Boolean 类型 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `NoticeBar`: `content` 属性补充支持数组类型 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `StepItem`: 新增 `currentStatus` 属性 @yaogengzhu ([#660](https://github.com/Tencent/tdesign-mobile-vue/pull/660))
+- `StepItem`: 新增 `titleRight` 属性 @yaogengzhu ([#660](https://github.com/Tencent/tdesign-mobile-vue/pull/660))
+- `StepItem`:  新增 `sequence` 属性 @yaogengzhu ([#660](https://github.com/Tencent/tdesign-mobile-vue/pull/660))
+- `Collapse`: 新增 `theme` 属性 @LeeJim ([#666](https://github.com/Tencent/tdesign-mobile-vue/pull/666))
+- `CollapsePanel`: 新增 `placement`属性 @LeeJim ([#666](https://github.com/Tencent/tdesign-mobile-vue/pull/666))
+- `NavBar`: 新增 capsule 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 新增 leftArrow 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 新增 left 属性，支持 string/TNode @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 新增 right 属性，支持 string/TNode @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 新增 capsule 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 新增 leftArrow 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 新增 left 属性，支持 string/TNode @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 新增 right 属性，支持 string/TNode @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+### 🐞 Bug Fixes
+- `NoticeBar`: 修复水平滚动失效问题 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `PullDownRefresh`: 修复 `value = true` 不触发加载态的问题 @anlyyao ([#644](https://github.com/Tencent/tdesign-mobile-vue/pull/644))
+- `Avatar`: 移除冗余 load 事件 @anlyyao ([#668](https://github.com/Tencent/tdesign-mobile-vue/pull/668))
+### 🚧 Others
+- `Badge`: 修复 `API` 文档中 `shape`、`size` 属性可选值错误 @LeeJim ([#661](https://github.com/Tencent/tdesign-mobile-vue/pull/661))
+- `Progress`: 调整 DOM结构 @anlyyao ([#640](https://github.com/Tencent/tdesign-mobile-vue/pull/640))
+- `NoticeBar`: 调整 DOM 结构 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `NoticeBar`: 移除 extra 属性 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `NoticeBar`: 移除 change 事件 @yaogengzhu ([#654](https://github.com/Tencent/tdesign-mobile-vue/pull/654))
+- `PullDownRefresh`: 调整 DOM 结构，使用新样式 @anlyyao ([#644](https://github.com/Tencent/tdesign-mobile-vue/pull/644))
+- `Steps`: 调整 DOM 结构 @yaogengzhu ([#660](https://github.com/Tencent/tdesign-mobile-vue/pull/660))
+- `Steps`: 移除 `options` 属性 @yaogengzhu ([#660](https://github.com/Tencent/tdesign-mobile-vue/pull/660))
+- `StepItem`: 调整 DOM 结构 @yaogengzhu ([#660](https://github.com/Tencent/tdesign-mobile-vue/pull/660))
+- `StepItem`: 组件名称 从 Step 变更为 StepItem @yaogengzhu ([#660](https://github.com/Tencent/tdesign-mobile-vue/pull/660))
+- `Collapse`: 调整 DOM @LeeJim ([#666](https://github.com/Tencent/tdesign-mobile-vue/pull/666))
+- `NavBar`: 事件 leftClick 的参数变更 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 background 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 homeIcon 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 leftIcon 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 rightIcon 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 事件 leftClick 的参数变更 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 background 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 homeIcon 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 leftIcon 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+- `NavBar`: 移除 rightIcon 属性 @Charles-1999 ([#669](https://github.com/Tencent/tdesign-mobile-vue/pull/669))
+
 ## 🌈 0.20.0 `2023-05-09` 
 ### ❗ BREAKING CHANGES
 - `Avatar`: 调整 DOM @ccccpj ([#631](https://github.com/Tencent/tdesign-mobile-vue/pull/631))
