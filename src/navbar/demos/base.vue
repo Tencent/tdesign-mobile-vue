@@ -1,7 +1,7 @@
 <template>
   <t-navbar title="标题文字" :fixed="false" left-arrow @left-click="handleClick" />
 
-  <t-navbar title="这是一个超长的标题文字" :fixed="false" left-arrow @left-click="handleClick">
+  <t-navbar title="这是一个超长的标题文字也会自动省略" :fixed="false" left-arrow @left-click="handleClick">
     <template #left>
       <t-icon name="close" size="24px" />
     </template>
@@ -38,7 +38,7 @@ const handleClick = () => {
 }
 
 .t-icon-close {
-  margin-left: 8px;
+  margin: 0 8px;
 }
 
 .t-icon-home {

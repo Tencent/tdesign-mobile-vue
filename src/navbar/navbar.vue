@@ -2,7 +2,7 @@
   <div :class="navClass" :style="`${navStyle}`">
     <div v-if="fixed" :class="`${name}____placeholder`"></div>
     <div :class="`${name}__content`">
-      <div :class="`${name}__left`" @click="handleLeftClick">
+      <div ref="navLeft" :class="`${name}__left`" @click="handleLeftClick">
         <t-chevron-left-icon v-if="leftArrow" :class="`${name}__left-arrow`" />
         <t-node :content="leftContent"></t-node>
         <div v-if="capsuleContent" :class="`${name}__capsule`">
@@ -13,7 +13,7 @@
         <span v-if="isStringTitle" :class="`${name}__center-title`">{{ titleContent }}</span>
         <t-node v-else :content="titleContent"></t-node>
       </div>
-      <div :class="`${name}__right`" @click="handleRightClick">
+      <div ref="navRight" :class="`${name}__right`" @click="handleRightClick">
         <t-node :content="rightContent"></t-node>
       </div>
     </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, getCurrentInstance, toRefs } from 'vue';
+import { computed, defineComponent, getCurrentInstance, ref, toRefs } from 'vue';
 import { ChevronLeftIcon as TChevronLeftIcon } from 'tdesign-icons-vue-next';
 import config from '../config';
 import { renderTNode, TNode, useEmitEvent } from '../shared';
@@ -38,6 +38,8 @@ export default defineComponent({
   setup(props, context) {
     const internalInstance = getCurrentInstance();
     const { title, titleMaxLength, fixed } = toRefs(props);
+    const navLeft = ref<HTMLDivElement>();
+    const navRight = ref<HTMLDivElement>();
 
     const animationSuffix = props.animation ? '-animation' : '';
     const navClass = computed(() => [
@@ -48,9 +50,16 @@ export default defineComponent({
       props.visible ? `${name}--visible${animationSuffix}` : `${name}--hide${animationSuffix}`,
     ]);
 
+    // 计算左右区域的最大宽度
+    const navbarRight = computed(
+      () =>
+        Math.max(navLeft.value?.clientWidth ?? 0, navRight.value?.clientWidth ?? 0) + (navLeft.value?.offsetLeft ?? 0),
+    );
+
     const navStyle = computed(
       () => `position: ${fixed.value ? 'fixed' : 'relative'};
-            --td-navbar-padding-top: 0px;`,
+            --td-navbar-padding-top: 0px;
+            --td-navbar-right: ${navbarRight.value}px;`,
     );
 
     const isStringTitle = typeof props.title === 'string' && !internalInstance?.slots.title;
@@ -85,6 +94,8 @@ export default defineComponent({
 
     return {
       name,
+      navLeft,
+      navRight,
       isStringTitle,
       titleContent,
       leftContent,
