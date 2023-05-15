@@ -7,7 +7,6 @@
             v-if="image && !hideOnLoadFailed"
             :style="customSize"
             v-bind="customImageProps"
-            @load="handleImgLoadCompleted"
             @error="handleImgLoadError"
           />
           <div v-else-if="iconContent !== undefined" :class="`${name}__icon`">
@@ -68,9 +67,7 @@ export default defineComponent({
           }
         : {};
     });
-    const handleImgLoadCompleted = (e: any) => {
-      emitEvent('load', e);
-    };
+
     const handleImgLoadError = (e: any) => {
       emitEvent('error', e);
     };
@@ -95,7 +92,6 @@ export default defineComponent({
       avatarContent,
       avatarClass,
       customSize,
-      handleImgLoadCompleted,
       handleImgLoadError,
       customImageProps,
       customBadgeProps,
