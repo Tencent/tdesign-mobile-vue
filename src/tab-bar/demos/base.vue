@@ -1,33 +1,23 @@
 <template>
-  <t-tab-bar v-model="value" @change="change">
-    <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :value="item.name">
-      {{ item.text }}
+  <t-tab-bar v-model="value" theme="tag" :split="false">
+    <t-tab-bar-item v-for="item in list" :key="item.value" :value="item.value">
+      {{ item.label }}
       <template #icon>
-        <icon :name="item.icon" />
+        <t-icon :name="item.icon" />
       </template>
     </t-tab-bar-item>
   </t-tab-bar>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
-import { Icon } from 'tdesign-icons-vue-next';
+import { ref } from 'vue';
+import { Icon as TIcon } from 'tdesign-icons-vue-next';
 
 const value = ref('label_1');
 const list = ref([
-  { name: 'label_1', text: '文字', icon: 'app' },
-  { name: 'label_2', text: '文字', icon: 'app' },
-  { name: 'label_3', text: '文字', icon: 'app' },
-  { name: 'label_4', text: '文字', icon: 'app' },
+  { value: 'label_1', label: '首页', icon: 'home' },
+  { value: 'label_2', label: '应用', icon: 'app' },
+  { value: 'label_3', label: '聊天', icon: 'chat' },
+  { value: 'label_4', label: '我的', icon: 'user' },
 ]);
-
-watch(
-  () => value.value,
-  (newValue) => {
-    console.log('当前值改变为：', newValue);
-  },
-);
-const change = (changeValue: number | string) => {
-  console.log('TabBar 值改变为：', changeValue);
-};
 </script>

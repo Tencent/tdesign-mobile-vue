@@ -27,9 +27,14 @@ export interface TdProgressProps {
    */
   status?: StatusEnum;
   /**
-   * 进度条线宽。宽度数值不能超过 size 的一半，否则不能输出环形进度
+   * 进度条线宽。
    */
   strokeWidth?: string | number;
+  /**
+   * 进度条风格。值为 line，标签（label）显示在进度条右侧；值为 plump，标签（label）显示在进度条里面；值为 circle，标签（label）显示在进度条正中间
+   * @default line
+   */
+  theme?: ThemeEnum;
   /**
    * 进度条未完成部分颜色
    * @default ''
@@ -38,3 +43,5 @@ export interface TdProgressProps {
 }
 
 export type StatusEnum = 'success' | 'error' | 'warning' | 'active';
+
+export type ThemeEnum = 'line' | 'plump' | 'circle';

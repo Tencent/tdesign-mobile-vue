@@ -13,28 +13,27 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 背景 */
-  background: {
-    type: String,
-    default: '',
+  /** 左侧胶囊区域 */
+  capsule: {
+    type: Function as PropType<TdNavbarProps['capsule']>,
   },
   /** 是否固定在顶部 */
   fixed: {
     type: Boolean,
     default: true,
   },
-  /** 首页图标。值为 true 表示显示默认返回图标，值为 false 表示不显示首页图标，值为其他表示自定义图标 */
-  homeIcon: {
-    type: [Boolean, Function] as PropType<TdNavbarProps['homeIcon']>,
+  /** 左侧区域 */
+  left: {
+    type: Function as PropType<TdNavbarProps['left']>,
   },
-  /** 左侧图标。值为 true 表示显示默认返回图标，值为 false 表示不显示左侧图标，值为其他表示自定义图标 */
-  leftIcon: {
-    type: [Boolean, Function] as PropType<TdNavbarProps['leftIcon']>,
+  /** 是否展示左侧箭头 */
+  leftArrow: {
+    type: Boolean,
     default: false,
   },
-  /** 右侧图标，可自定义 */
-  rightIcon: {
-    type: Function as PropType<TdNavbarProps['rightIcon']>,
+  /** 右侧区域 */
+  right: {
+    type: Function as PropType<TdNavbarProps['right']>,
   },
   /** 页面标题 */
   title: {
@@ -49,8 +48,8 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 点击左侧按钮时触发 */
+  /** 点击左侧区域时触发 */
   onLeftClick: Function as PropType<TdNavbarProps['onLeftClick']>,
-  /** 点击右侧图标时触发 */
+  /** 点击右侧区域时触发 */
   onRightClick: Function as PropType<TdNavbarProps['onRightClick']>,
 };

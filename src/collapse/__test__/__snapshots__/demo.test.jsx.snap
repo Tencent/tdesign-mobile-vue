@@ -2,337 +2,791 @@
 
 exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
 <div
-  class="accordion-demo"
-  data-v-3a4dbde0=""
+  class="t-collapse t-collapse--default"
 >
+  
+  
   <div
-    class="t-collapse"
-    data-v-3a4dbde0=""
-    title="手风琴模式"
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+    style="height: 0px;"
   >
-    
-    
     <div
-      class="t-collapse-panel t-collapse-panel--active"
-      data-v-3a4dbde0=""
-      style="height: 0px;"
+      class="t-collapse-panel__title"
     >
       <div
-        class="t-collapse-panel__header"
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
       >
         <div
-          class="t-collapse-panel__title"
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
         >
           
           折叠面板标题
           
-        </div>
-        <div
-          class="t-collapse-panel__header-right"
-        >
           <!--v-if-->
-          <svg
-            class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+          <!--v-if-->
         </div>
-      </div>
-      <div
-        class="t-collapse-panel__body"
-      >
-        
         <div
-          class="content"
-          data-v-3a4dbde0=""
+          class="t-cell__note"
         >
-           此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          
+          单元测试
+          
         </div>
-        
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
       </div>
     </div>
     <div
-      class="t-collapse-panel"
-      data-v-3a4dbde0=""
-      style="height: 0px;"
+      class="t-collapse-panel__content"
     >
+      
       <div
-        class="t-collapse-panel__header"
+        class="content"
       >
-        <div
-          class="t-collapse-panel__title"
-        >
-          
-          折叠面板标题
-          
-        </div>
-        <div
-          class="t-collapse-panel__header-right"
-        >
-          <!--v-if-->
-          <svg
-            class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
       </div>
-      <div
-        class="t-collapse-panel__body"
-      >
-        
-        <div
-          class="content"
-          data-v-3a4dbde0=""
-        >
-           此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-        </div>
-        
-      </div>
+      
     </div>
-    <div
-      class="t-collapse-panel"
-      data-v-3a4dbde0=""
-      style="height: 0px;"
-    >
-      <div
-        class="t-collapse-panel__header"
-      >
-        <div
-          class="t-collapse-panel__title"
-        >
-          
-          折叠面板标题
-          
-        </div>
-        <div
-          class="t-collapse-panel__header-right"
-        >
-          <!--v-if-->
-          <svg
-            class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-collapse-panel__body"
-      >
-        
-        <div
-          class="content"
-          data-v-3a4dbde0=""
-        >
-           此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-        </div>
-        
-      </div>
-    </div>
-    <div
-      class="t-collapse-panel t-collapse-panel--disabled"
-      data-v-3a4dbde0=""
-      style="height: 0px;"
-    >
-      <div
-        class="t-collapse-panel__header"
-      >
-        <div
-          class="t-collapse-panel__title"
-        >
-          
-          折叠面板标题
-          
-        </div>
-        <div
-          class="t-collapse-panel__header-right"
-        >
-          <!--v-if-->
-          <svg
-            class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
-        </div>
-      </div>
-      <div
-        class="t-collapse-panel__body"
-      >
-        
-        <div
-          class="content"
-          data-v-3a4dbde0=""
-        >
-           此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-        </div>
-        
-      </div>
-    </div>
-    
-    
   </div>
+  <div
+    class="t-collapse-panel t-collapse-panel--bottom"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          单元测试
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-collapse-panel t-collapse-panel--bottom"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          单元测试
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          单元测试
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
+  </div>
+  
+  
 </div>
 `;
 
 exports[`Collapse > Collapse actionVue demo works fine 1`] = `
 <div
-  class="accordion-demo"
-  data-v-5fdf8864=""
+  class="t-collapse t-collapse--default"
 >
+  
   <div
-    class="t-collapse"
-    data-v-5fdf8864=""
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+    style="height: 0px;"
   >
-    
     <div
-      class="t-collapse-panel t-collapse-panel--active"
-      data-v-5fdf8864=""
-      style="height: 0px;"
+      class="t-collapse-panel__title"
     >
       <div
-        class="t-collapse-panel__header"
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
       >
         <div
-          class="t-collapse-panel__title"
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
         >
           
           折叠面板标题
           
+          <!--v-if-->
+          <!--v-if-->
         </div>
         <div
-          class="t-collapse-panel__header-right"
+          class="t-cell__note"
+        >
+          
+          收起
+          
+        </div>
+        <div
+          class="t-cell__right"
         >
           <div
-            class="t-collapse-panel__header-extra"
+            class="t-cell__right-icon"
           >
             
-            收起
+            <svg
+              class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
             
           </div>
-          <svg
-            class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
         </div>
-      </div>
-      <div
-        class="t-collapse-panel__body"
-      >
-        
-        <div
-          class="content"
-          data-v-5fdf8864=""
-        >
-           此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-        </div>
-        
       </div>
     </div>
-    
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
   </div>
+  
 </div>
 `;
 
 exports[`Collapse > Collapse baseVue demo works fine 1`] = `
 <div
-  class="accordion-demo"
-  data-v-78207ee9=""
+  class="t-collapse t-collapse--default"
 >
+  
   <div
-    class="t-collapse"
-    data-v-78207ee9=""
+    class="t-collapse-panel t-collapse-panel--bottom"
+    style="height: 0px;"
   >
-    
     <div
-      class="t-collapse-panel"
-      data-v-78207ee9=""
-      style="height: 0px;"
+      class="t-collapse-panel__title"
     >
       <div
-        class="t-collapse-panel__header"
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
       >
         <div
-          class="t-collapse-panel__title"
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
         >
           
           折叠面板标题
           
-        </div>
-        <div
-          class="t-collapse-panel__header-right"
-        >
           <!--v-if-->
-          <svg
-            class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-            fill="none"
-            height="1em"
-            viewBox="0 0 16 16"
-            width="1em"
-          >
-            <path
-              d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-              fill="currentColor"
-              fill-opacity="0.9"
-            />
-          </svg>
+          <!--v-if-->
         </div>
-      </div>
-      <div
-        class="t-collapse-panel__body"
-      >
-        
         <div
-          class="content"
-          data-v-78207ee9=""
+          class="t-cell__note"
         >
-           此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+          
+          <!---->
+          
         </div>
-        
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
       </div>
     </div>
-    
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
   </div>
+  
+</div>
+`;
+
+exports[`Collapse > Collapse cardVue demo works fine 1`] = `
+<div
+  class="t-collapse t-collapse--card"
+>
+  
+  
+  <div
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          <!---->
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-collapse-panel t-collapse-panel--bottom"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          <!---->
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-collapse-panel t-collapse-panel--bottom"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          <!---->
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          <!---->
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+      <div
+        class="content"
+      >
+         此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+      </div>
+      
+    </div>
+  </div>
+  
+  
 </div>
 `;
 
@@ -351,15 +805,18 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
     用于对复杂区域进行分组和隐藏 常用于订单信息展示等
   </p>
   <div
-    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    header="01 类型"
+    class="tdesign-mobile-demo-block"
   >
     <div
       class="tdesign-mobile-demo-block__header"
     >
-      <!--v-if-->
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
       <p
-        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+        class="tdesign-mobile-demo-block__summary"
       >
         基础折叠面板
       </p>
@@ -369,63 +826,182 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="accordion-demo"
-        data-v-78207ee9=""
+        class="t-collapse t-collapse--default"
       >
+        
         <div
-          class="t-collapse"
-          data-v-78207ee9=""
+          class="t-collapse-panel t-collapse-panel--bottom"
+          style="height: 0px;"
         >
-          
           <div
-            class="t-collapse-panel"
-            data-v-78207ee9=""
-            style="height: 0px;"
+            class="t-collapse-panel__title"
           >
             <div
-              class="t-collapse-panel__header"
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
             >
               <div
-                class="t-collapse-panel__title"
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
               >
                 
                 折叠面板标题
                 
-              </div>
-              <div
-                class="t-collapse-panel__header-right"
-              >
                 <!--v-if-->
-                <svg
-                  class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
+                <!--v-if-->
               </div>
-            </div>
-            <div
-              class="t-collapse-panel__body"
-            >
-              
               <div
-                class="content"
-                data-v-78207ee9=""
+                class="t-cell__note"
               >
-                 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                
+                <!---->
+                
               </div>
-              
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
             </div>
           </div>
-          
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
         </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        向上展开
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-collapse t-collapse--default"
+      >
+        
+        <div
+          class="t-collapse-panel t-collapse-panel--top"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--top"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                <!---->
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+             此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容 
+            
+          </div>
+        </div>
+        
       </div>
       
     </div>
@@ -448,69 +1024,85 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="accordion-demo"
-        data-v-5fdf8864=""
+        class="t-collapse t-collapse--default"
       >
+        
         <div
-          class="t-collapse"
-          data-v-5fdf8864=""
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+          style="height: 0px;"
         >
-          
           <div
-            class="t-collapse-panel t-collapse-panel--active"
-            data-v-5fdf8864=""
-            style="height: 0px;"
+            class="t-collapse-panel__title"
           >
             <div
-              class="t-collapse-panel__header"
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
             >
               <div
-                class="t-collapse-panel__title"
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
               >
                 
                 折叠面板标题
                 
+                <!--v-if-->
+                <!--v-if-->
               </div>
               <div
-                class="t-collapse-panel__header-right"
+                class="t-cell__note"
+              >
+                
+                收起
+                
+              </div>
+              <div
+                class="t-cell__right"
               >
                 <div
-                  class="t-collapse-panel__header-extra"
+                  class="t-cell__right-icon"
                 >
                   
-                  收起
+                  <svg
+                    class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
                   
                 </div>
-                <svg
-                  class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
               </div>
-            </div>
-            <div
-              class="t-collapse-panel__body"
-            >
-              
-              <div
-                class="content"
-                data-v-5fdf8864=""
-              >
-                 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-              </div>
-              
             </div>
           </div>
-          
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
         </div>
+        
       </div>
       
     </div>
@@ -533,210 +1125,727 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="accordion-demo"
-        data-v-3a4dbde0=""
+        class="t-collapse t-collapse--default"
       >
+        
+        
         <div
-          class="t-collapse"
-          data-v-3a4dbde0=""
-          title="手风琴模式"
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+          style="height: 0px;"
         >
-          
-          
           <div
-            class="t-collapse-panel t-collapse-panel--active"
-            data-v-3a4dbde0=""
-            style="height: 0px;"
+            class="t-collapse-panel__title"
           >
             <div
-              class="t-collapse-panel__header"
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
             >
               <div
-                class="t-collapse-panel__title"
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
               >
                 
                 折叠面板标题
                 
-              </div>
-              <div
-                class="t-collapse-panel__header-right"
-              >
                 <!--v-if-->
-                <svg
-                  class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
+                <!--v-if-->
               </div>
-            </div>
-            <div
-              class="t-collapse-panel__body"
-            >
-              
               <div
-                class="content"
-                data-v-3a4dbde0=""
+                class="t-cell__note"
               >
-                 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+                
+                单元测试
+                
               </div>
-              
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
             </div>
           </div>
           <div
-            class="t-collapse-panel"
-            data-v-3a4dbde0=""
-            style="height: 0px;"
+            class="t-collapse-panel__content"
           >
+            
             <div
-              class="t-collapse-panel__header"
+              class="content"
             >
-              <div
-                class="t-collapse-panel__title"
-              >
-                
-                折叠面板标题
-                
-              </div>
-              <div
-                class="t-collapse-panel__header-right"
-              >
-                <!--v-if-->
-                <svg
-                  class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
             </div>
-            <div
-              class="t-collapse-panel__body"
-            >
-              
-              <div
-                class="content"
-                data-v-3a4dbde0=""
-              >
-                 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-              </div>
-              
-            </div>
+            
           </div>
-          <div
-            class="t-collapse-panel"
-            data-v-3a4dbde0=""
-            style="height: 0px;"
-          >
-            <div
-              class="t-collapse-panel__header"
-            >
-              <div
-                class="t-collapse-panel__title"
-              >
-                
-                折叠面板标题
-                
-              </div>
-              <div
-                class="t-collapse-panel__header-right"
-              >
-                <!--v-if-->
-                <svg
-                  class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="t-collapse-panel__body"
-            >
-              
-              <div
-                class="content"
-                data-v-3a4dbde0=""
-              >
-                 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-              </div>
-              
-            </div>
-          </div>
-          <div
-            class="t-collapse-panel t-collapse-panel--disabled"
-            data-v-3a4dbde0=""
-            style="height: 0px;"
-          >
-            <div
-              class="t-collapse-panel__header"
-            >
-              <div
-                class="t-collapse-panel__title"
-              >
-                
-                折叠面板标题
-                
-              </div>
-              <div
-                class="t-collapse-panel__header-right"
-              >
-                <!--v-if-->
-                <svg
-                  class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
-                  fill="none"
-                  height="1em"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                >
-                  <path
-                    d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
-                    fill="currentColor"
-                    fill-opacity="0.9"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              class="t-collapse-panel__body"
-            >
-              
-              <div
-                class="content"
-                data-v-3a4dbde0=""
-              >
-                 此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
-              </div>
-              
-            </div>
-          </div>
-          
-          
         </div>
+        <div
+          class="t-collapse-panel t-collapse-panel--bottom"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                单元测试
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-collapse-panel t-collapse-panel--bottom"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                单元测试
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                单元测试
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
+        </div>
+        
+        
       </div>
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        卡片折叠面板
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-collapse t-collapse--card"
+      >
+        
+        
+        <div
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                <!---->
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-collapse-panel t-collapse-panel--bottom"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                <!---->
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-collapse-panel t-collapse-panel--bottom"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                <!---->
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
+        </div>
+        <div
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--disabled"
+          style="height: 0px;"
+        >
+          <div
+            class="t-collapse-panel__title"
+          >
+            <div
+              class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--bottom"
+            >
+              <div
+                class="t-cell__left"
+              >
+                <div
+                  class="t-cell__left-icon"
+                >
+                  
+                  <!---->
+                  
+                </div>
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__title"
+              >
+                
+                折叠面板标题
+                
+                <!--v-if-->
+                <!--v-if-->
+              </div>
+              <div
+                class="t-cell__note"
+              >
+                
+                <!---->
+                
+              </div>
+              <div
+                class="t-cell__right"
+              >
+                <div
+                  class="t-cell__right-icon"
+                >
+                  
+                  <svg
+                    class="t-icon t-icon-chevron-down t-collapse-panel__header-icon"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                  >
+                    <path
+                      d="M3.54 6.46l.92-.92L8 9.08l3.54-3.54.92.92L8 10.92 3.54 6.46z"
+                      fill="currentColor"
+                      fill-opacity="0.9"
+                    />
+                  </svg>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-collapse-panel__content"
+          >
+            
+            <div
+              class="content"
+            >
+               此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容可自定义内容 
+            </div>
+            
+          </div>
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Collapse > Collapse placementVue demo works fine 1`] = `
+<div
+  class="t-collapse t-collapse--default"
+>
+  
+  <div
+    class="t-collapse-panel t-collapse-panel--top"
+    style="height: 0px;"
+  >
+    <div
+      class="t-collapse-panel__title"
+    >
+      <div
+        class="t-cell t-cell--middle t-collapse-panel__header t-collapse-panel__header--top"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <div
+            class="t-cell__left-icon"
+          >
+            
+            <!---->
+            
+          </div>
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          
+          折叠面板标题
+          
+          <!--v-if-->
+          <!--v-if-->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          
+          <!---->
+          
+        </div>
+        <div
+          class="t-cell__right"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            
+            <svg
+              class="t-icon t-icon-chevron-up t-collapse-panel__header-icon"
+              fill="none"
+              height="1em"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M12.46 9.54l-.92.92L8 6.92l-3.54 3.54-.92-.92L8 5.08l4.46 4.46z"
+                fill="currentColor"
+                fill-opacity="0.9"
+              />
+            </svg>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-collapse-panel__content"
+    >
+      
+       此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容此处可自定义内容 
+      
+    </div>
+  </div>
+  
 </div>
 `;

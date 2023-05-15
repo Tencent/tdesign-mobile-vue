@@ -4,15 +4,21 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/navbar/demos/base.vue';
-import leftIconVue from '@/navbar/demos/left-icon.vue';
+import customColorVue from '@/navbar/demos/custom-color.vue';
+import imgVue from '@/navbar/demos/img.vue';
+import leftTitleVue from '@/navbar/demos/left-title.vue';
 import mobileVue from '@/navbar/demos/mobile.vue';
-import rightIconVue from '@/navbar/demos/right-icon.vue';
+import searchVue from '@/navbar/demos/search.vue';
+import sizeVue from '@/navbar/demos/size.vue';
 
 const mapper = {
   baseVue,
-  leftIconVue,
+  customColorVue,
+  imgVue,
+  leftTitleVue,
   mobileVue,
-  rightIconVue,
+  searchVue,
+  sizeVue,
 };
 
 describe('Navbar', () => {

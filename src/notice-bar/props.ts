@@ -10,21 +10,30 @@ import { PropType } from 'vue';
 export default {
   /** 文本内容 */
   content: {
-    type: [String, Function] as PropType<TdNoticeBarProps['content']>,
+    type: [String, Array, Function] as PropType<TdNoticeBarProps['content']>,
   },
-  /** 右侧额外信息 */
-  extra: {
-    type: [String, Function] as PropType<TdNoticeBarProps['extra']>,
+  /** 滚动方向 */
+  direction: {
+    type: String as PropType<TdNoticeBarProps['direction']>,
+    default: 'horizontal' as TdNoticeBarProps['direction'],
+    validator(val: TdNoticeBarProps['direction']): boolean {
+      if (!val) return true;
+      return ['horizontal', 'vertical'].includes(val);
+    },
   },
   /** 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放 */
   marquee: {
     type: [Boolean, Object] as PropType<TdNoticeBarProps['marquee']>,
     default: false,
   },
-  /** 前缀图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标 */
+  /** 右侧额外信息 */
+  operation: {
+    type: [String, Function] as PropType<TdNoticeBarProps['operation']>,
+  },
+  /** 前缀图标 */
   prefixIcon: {
     type: [Boolean, Function] as PropType<TdNoticeBarProps['prefixIcon']>,
-    default: true,
+    default: null,
   },
   /** 后缀图标 */
   suffixIcon: {
@@ -50,8 +59,6 @@ export default {
   },
   /** 显示/隐藏，非受控属性 */
   defaultVisible: Boolean,
-  /** 展示或关闭公告栏时触发。参数为true时，代表展示公告栏。参数为false时，代表关闭公告栏 */
-  onChange: Function as PropType<TdNoticeBarProps['onChange']>,
   /** 点击事件 */
   onClick: Function as PropType<TdNoticeBarProps['onClick']>,
 };

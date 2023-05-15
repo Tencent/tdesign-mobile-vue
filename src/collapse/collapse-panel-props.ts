@@ -36,9 +36,17 @@ export default {
   headerRightContent: {
     type: [String, Function] as PropType<TdCollapsePanelProps['headerRightContent']>,
   },
+  /** 选项卡内容的位置 */
+  placement: {
+    type: String as PropType<TdCollapsePanelProps['placement']>,
+    default: 'bottom' as TdCollapsePanelProps['placement'],
+    validator(val: TdCollapsePanelProps['placement']): boolean {
+      if (!val) return true;
+      return ['bottom', 'top'].includes(val);
+    },
+  },
   /** 当前面板唯一标识，如果值为空则取当前面下标兜底作为唯一标识 */
   value: {
     type: [String, Number] as PropType<TdCollapsePanelProps['value']>,
-    required: true,
   },
 };

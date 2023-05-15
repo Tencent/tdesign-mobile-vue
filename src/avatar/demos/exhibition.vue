@@ -1,20 +1,8 @@
 <template>
-  <div class="tdesign-demo-block">
-    <div class="avatar-group-demo">
-      <t-avatar-group cascading="right-up" :max="5" size="small">
-        <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
-      </t-avatar-group>
-    </div>
-    <div class="avatar-group-demo">
-      <t-avatar-group cascading="right-up" :max="5" size="40px">
-        <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
-      </t-avatar-group>
-    </div>
-    <div class="avatar-group-demo">
-      <t-avatar-group cascading="right-up" :max="5">
-        <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
-      </t-avatar-group>
-    </div>
+  <div class="avatar-group-demo">
+    <t-avatar-group cascading="left-up" :max="5">
+      <t-avatar v-for="(url, index) in imageList" :key="index" shape="circle" :image="url"></t-avatar>
+    </t-avatar-group>
   </div>
 </template>
 
