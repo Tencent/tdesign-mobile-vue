@@ -87,7 +87,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项1
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项1
+              </span>
               
             </span>
             <!---->
@@ -104,7 +108,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项2
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项2
+              </span>
               
             </span>
             <!---->
@@ -121,7 +129,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项3
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项3
+              </span>
               
             </span>
             <!---->
@@ -138,7 +150,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项4
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项4
+              </span>
               
             </span>
             <!---->
@@ -216,7 +232,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项1
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项1
+              </span>
               
             </span>
             <!---->
@@ -233,7 +253,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项2
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项2
+              </span>
               
             </span>
             <!---->
@@ -250,7 +274,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项3
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项3
+              </span>
               
             </span>
             <!---->
@@ -267,7 +295,11 @@ exports[`ActionSheet > ActionSheet alignVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项4
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项4
+              </span>
               
             </span>
             <!---->
@@ -4686,7 +4718,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项一
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项一
+              </span>
               
             </span>
             <!---->
@@ -4703,7 +4739,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项二
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项二
+              </span>
               
             </span>
             <!---->
@@ -4720,7 +4760,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项三
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项三
+              </span>
               
             </span>
             <!---->
@@ -4737,7 +4781,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项四
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项四
+              </span>
               
             </span>
             <!---->
@@ -4815,7 +4863,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项一
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项一
+              </span>
               
             </span>
             <!---->
@@ -4832,7 +4884,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项二
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项二
+              </span>
               
             </span>
             <!---->
@@ -4849,7 +4905,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项三
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项三
+              </span>
               
             </span>
             <!---->
@@ -4866,7 +4926,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项四
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项四
+              </span>
               
             </span>
             <!---->
@@ -4953,7 +5017,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项一
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项一
+              </span>
               
             </span>
             <!---->
@@ -4983,7 +5051,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项二
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项二
+              </span>
               
             </span>
             <!---->
@@ -5013,7 +5085,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项三
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项三
+              </span>
               
             </span>
             <!---->
@@ -5043,7 +5119,11 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项四
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项四
+              </span>
               
             </span>
             <!---->
@@ -5127,12 +5207,16 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
                   class="t-badge__content"
                 >
                   
-                  选项一
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项一
+                  </span>
                   
                 </div>
                 <div
                   class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                  style="right: -14px; top: 10px;"
+                  style="right: -16px; top: 20px;"
                 >
                   <!--v-if-->
                    1 
@@ -5162,12 +5246,16 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
                   class="t-badge__content"
                 >
                   
-                  选项二
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项二
+                  </span>
                   
                 </div>
                 <div
                   class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                  style="right: -14px; top: 10px;"
+                  style="right: -16px; top: 20px;"
                 >
                   <!--v-if-->
                     
@@ -5197,12 +5285,16 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
                   class="t-badge__content"
                 >
                   
-                  选项三
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项三
+                  </span>
                   
                 </div>
                 <div
                   class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                  style="right: -14px; top: 10px;"
+                  style="right: -16px; top: 20px;"
                 >
                   <!--v-if-->
                     
@@ -5232,12 +5324,16 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
                   class="t-badge__content"
                 >
                   
-                  选项四
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项四
+                  </span>
                   
                 </div>
                 <div
                   class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                  style="right: -14px; top: 10px;"
+                  style="right: -16px; top: 20px;"
                 >
                   <!--v-if-->
                     
@@ -5432,7 +5528,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项一
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项一
+                  </span>
                   
                 </span>
                 <!---->
@@ -5449,7 +5549,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项二
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项二
+                  </span>
                   
                 </span>
                 <!---->
@@ -5466,7 +5570,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项三
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项三
+                  </span>
                   
                 </span>
                 <!---->
@@ -5483,7 +5591,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项四
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项四
+                  </span>
                   
                 </span>
                 <!---->
@@ -5561,7 +5673,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项一
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项一
+                  </span>
                   
                 </span>
                 <!---->
@@ -5578,7 +5694,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项二
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项二
+                  </span>
                   
                 </span>
                 <!---->
@@ -5595,7 +5715,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项三
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项三
+                  </span>
                   
                 </span>
                 <!---->
@@ -5612,7 +5736,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项四
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项四
+                  </span>
                   
                 </span>
                 <!---->
@@ -5699,7 +5827,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项一
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项一
+                  </span>
                   
                 </span>
                 <!---->
@@ -5729,7 +5861,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项二
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项二
+                  </span>
                   
                 </span>
                 <!---->
@@ -5759,7 +5895,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项三
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项三
+                  </span>
                   
                 </span>
                 <!---->
@@ -5789,7 +5929,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项四
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项四
+                  </span>
                   
                 </span>
                 <!---->
@@ -5873,12 +6017,16 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                       class="t-badge__content"
                     >
                       
-                      选项一
+                      <span
+                        class="t-action-sheet__list-item-text"
+                      >
+                        选项一
+                      </span>
                       
                     </div>
                     <div
                       class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                      style="right: -14px; top: 10px;"
+                      style="right: -16px; top: 20px;"
                     >
                       <!--v-if-->
                        1 
@@ -5908,12 +6056,16 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                       class="t-badge__content"
                     >
                       
-                      选项二
+                      <span
+                        class="t-action-sheet__list-item-text"
+                      >
+                        选项二
+                      </span>
                       
                     </div>
                     <div
                       class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                      style="right: -14px; top: 10px;"
+                      style="right: -16px; top: 20px;"
                     >
                       <!--v-if-->
                         
@@ -5943,12 +6095,16 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                       class="t-badge__content"
                     >
                       
-                      选项三
+                      <span
+                        class="t-action-sheet__list-item-text"
+                      >
+                        选项三
+                      </span>
                       
                     </div>
                     <div
                       class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                      style="right: -14px; top: 10px;"
+                      style="right: -16px; top: 20px;"
                     >
                       <!--v-if-->
                         
@@ -5978,12 +6134,16 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                       class="t-badge__content"
                     >
                       
-                      选项四
+                      <span
+                        class="t-action-sheet__list-item-text"
+                      >
+                        选项四
+                      </span>
                       
                     </div>
                     <div
                       class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                      style="right: -14px; top: 10px;"
+                      style="right: -16px; top: 20px;"
                     >
                       <!--v-if-->
                         
@@ -10394,7 +10554,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项一
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项一
+                  </span>
                   
                 </span>
                 <!---->
@@ -10425,7 +10589,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项二
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项二
+                  </span>
                   
                 </span>
                 <!---->
@@ -10456,7 +10624,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项三
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项三
+                  </span>
                   
                 </span>
                 <!---->
@@ -10487,7 +10659,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项四
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项四
+                  </span>
                   
                 </span>
                 <!---->
@@ -10630,7 +10806,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项1
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项1
+                  </span>
                   
                 </span>
                 <!---->
@@ -10647,7 +10827,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项2
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项2
+                  </span>
                   
                 </span>
                 <!---->
@@ -10664,7 +10848,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项3
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项3
+                  </span>
                   
                 </span>
                 <!---->
@@ -10681,7 +10869,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项4
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项4
+                  </span>
                   
                 </span>
                 <!---->
@@ -10759,7 +10951,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项1
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项1
+                  </span>
                   
                 </span>
                 <!---->
@@ -10776,7 +10972,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项2
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项2
+                  </span>
                   
                 </span>
                 <!---->
@@ -10793,7 +10993,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项3
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项3
+                  </span>
                   
                 </span>
                 <!---->
@@ -10810,7 +11014,11 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
                 >
                   
                   <!--v-if-->
-                  选项4
+                  <span
+                    class="t-action-sheet__list-item-text"
+                  >
+                    选项4
+                  </span>
                   
                 </span>
                 <!---->
@@ -10931,7 +11139,11 @@ exports[`ActionSheet > ActionSheet statusVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项一
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项一
+              </span>
               
             </span>
             <!---->
@@ -10962,7 +11174,11 @@ exports[`ActionSheet > ActionSheet statusVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项二
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项二
+              </span>
               
             </span>
             <!---->
@@ -10993,7 +11209,11 @@ exports[`ActionSheet > ActionSheet statusVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项三
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项三
+              </span>
               
             </span>
             <!---->
@@ -11024,7 +11244,11 @@ exports[`ActionSheet > ActionSheet statusVue demo works fine 1`] = `
             >
               
               <!--v-if-->
-              选项四
+              <span
+                class="t-action-sheet__list-item-text"
+              >
+                选项四
+              </span>
               
             </span>
             <!---->

@@ -12,7 +12,7 @@
       @click="handleSelected(index)"
     >
       <t-node v-if="item.badge" :content="item.badge">
-        <t-node :content="item.label"></t-node>
+        <span :class="`${name}__list-item-text`"> {{ item.label }}</span>
       </t-node>
       <t-badge
         v-if="item.badge && (item.badge.dot || item.badge.count)"
@@ -21,11 +21,11 @@
         :dot="item.badge.dot"
         :content="item.badge.content"
         :size="item.badge.size"
-        :offset="item.badge.offset || [-14, 10]"
+        :offset="item.badge.offset || [-16, 20]"
       >
-        <t-node :content="item.label"></t-node>
+        <span :class="`${name}__list-item-text`"> {{ item.label }}</span>
       </t-badge>
-      <t-node v-else :content="item.label"></t-node>
+      <span v-else :class="`${name}__list-item-text`"> {{ item.label }}</span>
     </t-button>
   </div>
 </template>
