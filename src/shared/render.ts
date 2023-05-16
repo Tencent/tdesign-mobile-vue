@@ -1,4 +1,4 @@
-import { h, ComponentInternalInstance, Slots, VNode } from 'vue';
+import { h, ComponentInternalInstance, Slots, VNode, setBlockTracking } from 'vue';
 import camelCase from 'lodash/camelCase';
 
 interface JSXRenderContext {
@@ -40,7 +40,12 @@ export const renderTNode = (
     return instance.slots[name] ? instance.slots[name]?.call(params) : defaultNode;
   }
 
-  if (typeof propsNode === 'function') return propsNode(h, params);
+  if (typeof propsNode === 'function') {
+    setBlockTracking(-1);
+    const vnode = propsNode(h, params);
+    setBlockTracking(1);
+    return vnode;
+  }
 
   const isPropsEmpty = [undefined, params, ''].includes(propsNode);
   if (isPropsEmpty && instance.slots[name]) return instance.slots[name]?.call(params);

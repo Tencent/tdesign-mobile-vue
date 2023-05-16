@@ -1,5 +1,5 @@
 <template>
-  <div :class="classPrefix">
+  <div :class="rootClass">
     <slot></slot>
   </div>
 </template>
@@ -15,7 +15,7 @@ export interface CollapseProvide {
   activeValue: Ref<CollapseValue | undefined>;
   disabled: ComputedRef<boolean>;
   expandIcon: ComputedRef<TdCollapseProps['expandIcon']>;
-  onPanelChange: (name: string | number) => void;
+  onPanelChange: (name: string | number, args: any) => void;
   defaultExpandAll: boolean;
 }
 
@@ -38,16 +38,17 @@ export default defineComponent({
       return expandMutex ? [panelValue] : activeValues.concat(panelValue);
     };
 
-    const onPanelChange = (value: string | number) => {
+    const onPanelChange = (value: string | number, args: any) => {
       if (Array.isArray(activeValue.value)) {
         const val = calcActiveValues(activeValue.value, value, props.expandMutex);
 
-        setActiveValue(val);
+        setActiveValue(val, args);
       }
     };
 
     const disabled = computed(() => props.disabled);
     const expandIcon = computed(() => props.expandIcon);
+    const rootClass = computed(() => [name, `${name}--${props.theme}`]);
 
     provide<CollapseProvide>('collapse', {
       activeValue,
@@ -59,8 +60,8 @@ export default defineComponent({
 
     return {
       prefix,
-      classPrefix: name,
       activeValue,
+      rootClass,
     };
   },
 });

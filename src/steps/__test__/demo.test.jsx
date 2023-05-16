@@ -3,21 +3,17 @@
  */
 
 import { mount } from '@vue/test-utils';
-import clickVue from '@/steps/demos/click.vue';
-import contentVue from '@/steps/demos/content.vue';
 import horizontalVue from '@/steps/demos/horizontal.vue';
-import iconVue from '@/steps/demos/icon.vue';
 import mobileVue from '@/steps/demos/mobile.vue';
-import verticalReadonlyVue from '@/steps/demos/vertical-readonly.vue';
+import specialVue from '@/steps/demos/special.vue';
+import statusVue from '@/steps/demos/status.vue';
 import verticalVue from '@/steps/demos/vertical.vue';
 
 const mapper = {
-  clickVue,
-  contentVue,
   horizontalVue,
-  iconVue,
   mobileVue,
-  verticalReadonlyVue,
+  specialVue,
+  statusVue,
   verticalVue,
 };
 

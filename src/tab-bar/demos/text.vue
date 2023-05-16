@@ -1,7 +1,7 @@
 <template>
-  <t-tab-bar v-model="value" @change="change">
-    <t-tab-bar-item v-for="(item, i) in list" :key="item.name || i" :value="item.name">
-      {{ item.text }}
+  <t-tab-bar v-model="value" theme="tag" :split="false" @change="change">
+    <t-tab-bar-item v-for="item in list" :key="item.value" :value="item.value">
+      {{ item.label }}
     </t-tab-bar-item>
   </t-tab-bar>
 </template>
@@ -9,12 +9,12 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 
-const value = ref('label_1');
+const value = ref('home');
 const list = ref([
-  { name: 'label_1', text: '标签栏一' },
-  { name: 'label_2', text: '标签栏二' },
-  { name: 'label_3', text: '标签栏三' },
-  { name: 'label_4', text: '标签栏四' },
+  { value: 'home', label: '首页' },
+  { value: 'app', label: '应用' },
+  { value: 'chat', label: '聊天' },
+  { value: 'user', label: '我的' },
 ]);
 
 watch(

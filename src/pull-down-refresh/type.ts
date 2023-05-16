@@ -55,6 +55,10 @@ export interface TdPullDownRefreshProps {
    */
   onRefresh?: () => void;
   /**
+   * 滚动到页面底部时触发
+   */
+  onScrolltolower?: () => void;
+  /**
    * 刷新超时触发
    */
   onTimeout?: () => void;

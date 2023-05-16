@@ -39,7 +39,7 @@ export default {
     default: 'circle' as TdBadgeProps['shape'],
     validator(val: TdBadgeProps['shape']): boolean {
       if (!val) return true;
-      return ['circle', 'round', 'ribbon'].includes(val);
+      return ['circle', 'square', 'bubble', 'ribbon'].includes(val);
     },
   },
   /** 当数值为 0 时，是否展示徽标 */
@@ -50,7 +50,7 @@ export default {
     default: 'medium' as TdBadgeProps['size'],
     validator(val: TdBadgeProps['size']): boolean {
       if (!val) return true;
-      return ['small', 'medium'].includes(val);
+      return ['medium', 'large'].includes(val);
     },
   },
 };

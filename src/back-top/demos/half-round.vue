@@ -1,7 +1,15 @@
 <template>
   <div class="button-group">
-    <t-button block size="large" variant="outline" @click="onBtnClick1('half-round')">半圆白底</t-button>
-    <t-button block size="large" variant="outline" @click="onBtnClick1('half-round-dark')">半圆黑底</t-button>
+    <t-button
+      v-bind="{
+        block: true,
+        size: 'large',
+        theme: 'primary',
+        variant: 'outline',
+        content: '半圆形返回顶部',
+      }"
+      @click="onBtnClick1('half-round')"
+    />
   </div>
   <div :style="{ ...style }">
     <t-back-top v-show="visible" :theme="theme" text="返回顶部" />
