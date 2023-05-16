@@ -15,19 +15,9 @@ describe('navbar', () => {
       expect(navbar.vm.navStyle).toContain('position: relative');
     });
 
-    it('background', () => {
-      const navbar = mount(<NavBar background="red" />);
-      expect(navbar.vm.navStyle).toContain('background: red');
-    });
-
-    it('homeIcon', () => {
-      const navbar = mount(<NavBar title="标题" homeIcon />);
-      expect(navbar.find('.t-icon-home').exists()).toBeTruthy();
-    });
-
-    it('leftIcon', () => {
-      const navbar = mount(<NavBar title="标题" leftIcon />);
-      expect(navbar.find('.t-icon-chevron-left').exists()).toBeTruthy();
+    it('leftArrow', () => {
+      const navbar = mount(<NavBar title="标题" leftArrow />);
+      expect(navbar.find('.t-navbar__left-arrow').exists()).toBeTruthy();
     });
 
     it('title', () => {
@@ -45,103 +35,114 @@ describe('navbar', () => {
       expect(navbar.text()).toContain('测试标题');
     });
 
-    it('visible', () => {
+    it('visible-animation', () => {
       const navbar = mount(<NavBar title="标题" visible={false} />);
-      expect(navbar.isVisible()).toBe(false);
+      const el = navbar.element;
+      expect(el.className).toContain('t-navbar--hide-animation');
+    });
+
+    it('visible', () => {
+      const navbar = mount(<NavBar title="标题" visible={false} animation={false} />);
+      const el = navbar.element;
+      expect(el.className).toContain('t-navbar--hide');
     });
   });
 
   describe('events', () => {
     it('left-click', async () => {
       const fn = vi.fn();
-      const navbar = mount(<NavBar title="标题" leftIcon onLeftClick={fn} />);
-      await navbar.find('.t-icon-chevron-left').trigger('click');
-      expect(fn).toHaveBeenCalled();
-    });
-
-    it(': right-click', async () => {
-      const fn = vi.fn();
-      const wrapper = mount(<NavBar title="标题" onRightClick={fn} />, {
-        // 插槽名称必须要和组件内部保持一致'right-icon'
+      const wrapper = mount(<NavBar title="标题" onLeftClick={fn} />, {
+        // 插槽名称必须要和组件内部保持一致'left'
         slots: {
-          'right-icon': iconFunc,
+          'left': iconFunc,
         },
       });
       expect(wrapper.element).toMatchSnapshot();
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-      const rightIcon = wrapper.find('.t-navbar__right');
-      await rightIcon.trigger('click');
+      const left = wrapper.find('.t-navbar__left');
+      await left.trigger('click');
+      expect(fn).toHaveBeenCalled();
+    });
+
+    it('right-click', async () => {
+      const fn = vi.fn();
+      const wrapper = mount(<NavBar title="标题" onRightClick={fn} />, {
+        // 插槽名称必须要和组件内部保持一致'right'
+        slots: {
+          'right': iconFunc,
+        },
+      });
+      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+      const right = wrapper.find('.t-navbar__right');
+      await right.trigger('click');
       expect(fn).toHaveBeenCalled();
     });
   });
 
   describe('functions', () => {
-    it('homeIcon', () => {
-      const test = () => '测试';
-      const navbar = mount(<NavBar title="标题" homeIcon={test} />);
-      expect(navbar.text()).toContain('测试');
-      expect(navbar.find('.t-icon-home').exists()).toBeFalsy();
+    it('left', () => {
+      const test = () => '左侧内容';
+      const navbar = mount(<NavBar title="标题" left={test} />);
+      expect(navbar.text()).toContain('左侧内容');
     });
 
-    it('leftIcon', () => {
-      const test = () => '测试';
-      const navbar = mount(<NavBar title="标题" leftIcon={test} />);
-      expect(navbar.text()).toContain('测试');
-      expect(navbar.find('.t-icon-chevron-left').exists()).toBeFalsy();
+    it('capsule', () => {
+      const navbar = mount(<NavBar title="标题" capsule={iconFunc} />);
+      expect(navbar.find('.t-icon-app').exists()).toBeTruthy();
     });
 
-    it('rightIcon', () => {
-      const test = () => '测试';
-      const navbar = mount(<NavBar title="标题" rightIcon={test} />);
-      expect(navbar.text()).toContain('测试');
+    it('right', () => {
+      const test = () => '右侧内容';
+      const navbar = mount(<NavBar title="标题" right={test} />);
+      expect(navbar.text()).toContain('右侧内容');
     });
 
     it('title', () => {
-      const test = () => '测试';
+      const test = () => '标题';
       const navbar = mount(<NavBar title={test} />);
-      expect(navbar.text()).toContain('测试');
+      expect(navbar.text()).toContain('标题');
     });
   });
 
   describe('slots', () => {
-    it('homeIcon', () => {
-      const slot = <div>测试</div>;
+    it('left', () => {
+      const slot = <div className='left-content'>左侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
-          'home-icon': slot,
+          'left': slot,
         },
       });
-      expect(navbar.text()).toContain('测试');
+      expect(navbar.find('.t-navbar__left').find('.left-content').exists()).toBeTruthy();
     });
 
-    it('leftIcon', () => {
-      const slot = <div>测试</div>;
+    it('capsule', () => {
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
-          'left-icon': slot,
+          'capsule': iconFunc,
         },
       });
-      expect(navbar.text()).toContain('测试');
+      expect(navbar.find('.t-navbar__capsule').exists()).toBeTruthy();
     });
 
-    it('rightIcon', () => {
-      const slot = <div>测试</div>;
+    it('right', () => {
+      const slot = <div className='right-content'>右侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
-          'right-icon': slot,
+          'right': slot,
         },
       });
-      expect(navbar.text()).toContain('测试');
+      expect(navbar.find('.t-navbar__right').find('.right-content').exists()).toBeTruthy();
     });
 
     it('title', () => {
-      const slot = <div>测试</div>;
+      const slot = <div>标题</div>;
       const navbar = mount(<NavBar />, {
         slots: {
           title: slot,
         },
       });
-      expect(navbar.text()).toContain('测试');
+      expect(navbar.text()).toContain('标题');
     });
   });
 });
