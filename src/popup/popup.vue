@@ -1,9 +1,9 @@
 <template>
-  <teleport :to="to" :disabled="!to">
-    <t-overlay v-bind="overlayProps" :visible="currentVisible && showOverlay" @click="handleOverlayClick" />
+  <teleport v-if="!destroyOnClose || wrapperVisbile" :to="to" :disabled="!to">
+    <t-overlay v-bind="overlayProps" :visible="innerVisible && showOverlay" @click="handleOverlayClick" />
     <transition :name="contentTransitionName" @after-enter="afterEnter" @after-leave="afterLeave">
       <div
-        v-show="currentVisible"
+        v-show="innerVisible"
         :class="[name, $attrs.class, contentClasses]"
         :style="rootStyles"
         @touchmove="handleMove"
@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { computed, watch, defineComponent, h, getCurrentInstance } from 'vue';
+import { computed, watch, defineComponent, h, getCurrentInstance, ref, nextTick } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 
 import popupProps from './props';
@@ -46,6 +46,24 @@ export default defineComponent({
       'visible',
       'visible-change',
     );
+    const wrapperVisbile = ref(currentVisible.value);
+    const innerVisible = ref(currentVisible.value);
+
+    // 因为开启 destroyOnClose，会影响 transition 的动画，因此需要前后设置 visible
+    watch(currentVisible, (v) => {
+      if (v) {
+        wrapperVisbile.value = v;
+        if (props.destroyOnClose) {
+          nextTick(() => {
+            innerVisible.value = v;
+          });
+        } else {
+          innerVisible.value = v;
+        }
+      } else {
+        innerVisible.value = v;
+      }
+    });
 
     const rootStyles = computed(() => {
       const styles: Record<string, any> = {};
@@ -94,7 +112,10 @@ export default defineComponent({
       }
     };
 
-    const afterLeave = () => emitEvent('closed');
+    const afterLeave = () => {
+      wrapperVisbile.value = false;
+      emitEvent('closed');
+    };
     const afterEnter = () => emitEvent('opened');
     const to = computed(() => getAttach(props.attach ?? 'body'));
 
@@ -111,6 +132,8 @@ export default defineComponent({
     return {
       name,
       to,
+      wrapperVisbile,
+      innerVisible,
       currentVisible,
       rootStyles,
       contentClasses,
