@@ -197,14 +197,7 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     选项
                     
                   </div>
-                  <div
-                    class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                    style="right: -4px; top: 14px;"
-                  >
-                    <!--v-if-->
-                      
-                    <!--v-if-->
-                  </div>
+                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -221,14 +214,7 @@ exports[`Tabs > Tabs badgeVue demo works fine 1`] = `
                     选项
                     
                   </div>
-                  <div
-                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                    style="right: -8px; top: 16px;"
-                  >
-                    <!--v-if-->
-                     8 
-                    <!--v-if-->
-                  </div>
+                  <!--v-if-->
                   <!---->
                 </div>
               </div>
@@ -1915,97 +1901,6 @@ exports[`Tabs > Tabs isometricVue demo works fine 1`] = `
     >
       
       
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        value="1"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="2"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="3"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="4"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="5"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="6"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="7"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="8"
-      >
-        
-        <!---->
-        
-      </div>
-      <div
-        class="t-tab-panel t-tabs__panel"
-        data-v-8c899344=""
-        style="display: none;"
-        value="9"
-      >
-        
-        <!---->
-        
-      </div>
-      
-      
     </div>
   </div>
 </div>
@@ -2813,97 +2708,6 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
           >
             
             
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              value="1"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="2"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="3"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="4"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="5"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="6"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="7"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="8"
-            >
-              
-              <!---->
-              
-            </div>
-            <div
-              class="t-tab-panel t-tabs__panel"
-              data-v-8c899344=""
-              style="display: none;"
-              value="9"
-            >
-              
-              <!---->
-              
-            </div>
-            
-            
           </div>
         </div>
       </div>
@@ -3152,14 +2956,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           选项
                           
                         </div>
-                        <div
-                          class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
-                          style="right: -4px; top: 14px;"
-                        >
-                          <!--v-if-->
-                            
-                          <!--v-if-->
-                        </div>
+                        <!--v-if-->
                         <!---->
                       </div>
                     </div>
@@ -3176,14 +2973,7 @@ exports[`Tabs > Tabs mobileVue demo works fine 1`] = `
                           选项
                           
                         </div>
-                        <div
-                          class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
-                          style="right: -8px; top: 16px;"
-                        >
-                          <!--v-if-->
-                           8 
-                          <!--v-if-->
-                        </div>
+                        <!--v-if-->
                         <!---->
                       </div>
                     </div>
