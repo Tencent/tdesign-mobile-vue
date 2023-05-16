@@ -17,7 +17,7 @@
             :text="item.label"
             :image="item.icon"
             :badge="item.badge"
-            @click="handleSelected(i * count + index)"
+            @click.prevent="handleSelected(i * count + index)"
           />
         </t-grid>
       </t-swiper-item>
