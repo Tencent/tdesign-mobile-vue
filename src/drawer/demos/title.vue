@@ -1,6 +1,6 @@
 <template>
-  <t-drawer v-model:visible="visible" :items="baseSidebar" @item-click="itemClick"></t-drawer>
-  <t-button block variant="outline" size="large" theme="primary" @click="visible = true">基础抽屉</t-button>
+  <t-drawer v-model:visible="visible" placement="left" title="标题" :items="baseSidebar" @item-click="itemClick" />
+  <t-button block variant="outline" size="large" theme="primary" @click="visible = true">带标题抽屉</t-button>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
