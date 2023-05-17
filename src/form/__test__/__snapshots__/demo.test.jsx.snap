@@ -369,8 +369,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           <teleport-stub
             data-v-799be585=""
-            disabled="false"
-            to="[object HTMLBodyElement]"
           >
             <div
               class="t-overlay"
@@ -694,8 +692,6 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           </div>
           <teleport-stub
             data-v-799be585=""
-            disabled="false"
-            to="[object HTMLBodyElement]"
           >
             <div
               class="t-overlay"
@@ -1982,8 +1978,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 <teleport-stub
                   data-v-799be585=""
-                  disabled="false"
-                  to="[object HTMLBodyElement]"
                 >
                   <div
                     class="t-overlay"
@@ -2307,8 +2301,6 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 </div>
                 <teleport-stub
                   data-v-799be585=""
-                  disabled="false"
-                  to="[object HTMLBodyElement]"
                 >
                   <div
                     class="t-overlay"
@@ -3465,8 +3457,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           <teleport-stub
             data-v-713b33d2=""
-            disabled="false"
-            to="[object HTMLBodyElement]"
           >
             <div
               class="t-overlay"
@@ -3789,8 +3779,6 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           </div>
           <teleport-stub
             data-v-713b33d2=""
-            disabled="false"
-            to="[object HTMLBodyElement]"
           >
             <div
               class="t-overlay"
