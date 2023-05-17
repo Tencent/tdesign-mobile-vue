@@ -4,13 +4,19 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/drawer/demos/base.vue';
+import footerVue from '@/drawer/demos/footer.vue';
 import iconVue from '@/drawer/demos/icon.vue';
 import mobileVue from '@/drawer/demos/mobile.vue';
+import pluginVue from '@/drawer/demos/plugin.vue';
+import titleVue from '@/drawer/demos/title.vue';
 
 const mapper = {
   baseVue,
+  footerVue,
   iconVue,
   mobileVue,
+  pluginVue,
+  titleVue,
 };
 
 describe('Drawer', () => {
