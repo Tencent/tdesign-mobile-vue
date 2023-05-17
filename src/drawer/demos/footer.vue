@@ -1,6 +1,12 @@
 <template>
-  <t-drawer v-model:visible="visible" :items="baseSidebar" @item-click="itemClick"></t-drawer>
-  <t-button block variant="outline" size="large" theme="primary" @click="visible = true">基础抽屉</t-button>
+  <t-drawer v-model:visible="visible" placement="left" :items="baseSidebar" @item-click="itemClick">
+    <template #footer>
+      <div class="button-host">
+        <t-button variant="outline" size="large" block>操作</t-button>
+      </div>
+    </template>
+  </t-drawer>
+  <t-button block variant="outline" size="large" theme="primary" @click="visible = true">带底部插槽抽屉</t-button>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
@@ -31,3 +37,10 @@ const itemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) 
   console.log('itemclick: ', index, item, context);
 };
 </script>
+
+<style scopde>
+.button-host {
+  margin: 0 16px;
+  margin-top: auto;
+}
+</style>
