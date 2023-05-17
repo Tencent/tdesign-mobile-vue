@@ -34,7 +34,7 @@ export interface TdRateProps {
   disabled?: boolean;
   /**
    * 评分图标的间距
-   * @default 4
+   * @default 8
    */
   gap?: number;
   /**

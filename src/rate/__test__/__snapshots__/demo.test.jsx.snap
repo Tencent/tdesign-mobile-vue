@@ -32,7 +32,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -51,7 +51,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -70,7 +70,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -89,7 +89,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -157,7 +157,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -193,7 +193,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -229,7 +229,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -265,7 +265,7 @@ exports[`Rate > Rate actionVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -366,7 +366,7 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -385,7 +385,7 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -404,7 +404,7 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -423,7 +423,7 @@ exports[`Rate > Rate baseVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--unselected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -492,7 +492,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -528,7 +528,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -564,7 +564,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -600,7 +600,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -696,7 +696,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -732,7 +732,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--selected"
@@ -768,7 +768,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -804,7 +804,7 @@ exports[`Rate > Rate colorVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
         >
           <div
             class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -905,7 +905,7 @@ exports[`Rate > Rate countVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -924,7 +924,7 @@ exports[`Rate > Rate countVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -989,7 +989,7 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-thumb-up"
@@ -1008,7 +1008,7 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-thumb-up"
@@ -1027,7 +1027,7 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-thumb-up"
@@ -1046,7 +1046,7 @@ exports[`Rate > Rate customVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--unselected"
         size="24px"
-        style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-thumb-up"
@@ -1146,7 +1146,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1165,7 +1165,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1184,7 +1184,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1203,7 +1203,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1285,7 +1285,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-thumb-up"
@@ -1304,7 +1304,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-thumb-up"
@@ -1323,7 +1323,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-thumb-up"
@@ -1342,7 +1342,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-thumb-up"
@@ -1424,7 +1424,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1443,7 +1443,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1526,7 +1526,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1545,7 +1545,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1564,7 +1564,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1583,7 +1583,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1649,7 +1649,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1668,7 +1668,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1687,7 +1687,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1706,7 +1706,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1772,7 +1772,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1791,7 +1791,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1810,7 +1810,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1829,7 +1829,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1924,7 +1924,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1943,7 +1943,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1962,7 +1962,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -1981,7 +1981,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2049,7 +2049,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2085,7 +2085,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2121,7 +2121,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2157,7 +2157,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -2280,7 +2280,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2299,7 +2299,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2318,7 +2318,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2337,7 +2337,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2399,7 +2399,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="20"
-              style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2418,7 +2418,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="20"
-              style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2437,7 +2437,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="20"
-              style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2456,7 +2456,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="20"
-              style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2540,7 +2540,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2576,7 +2576,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2612,7 +2612,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2648,7 +2648,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #FFC51C; --td-rate-unselected-color: #E8E8E8;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -2744,7 +2744,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2780,7 +2780,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--selected"
@@ -2816,7 +2816,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -2852,7 +2852,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--unselected"
               size="24px"
-              style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #00A870;"
+              style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #00A870;"
             >
               <div
                 class="t-rate__icon-left t-rate__icon-left--unselected"
@@ -2968,7 +2968,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="30"
-              style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -2987,7 +2987,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="30"
-              style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -3006,7 +3006,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="30"
-              style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -3025,7 +3025,7 @@ exports[`Rate > Rate mobileVue demo works fine 1`] = `
             <div
               class="t-rate__icon t-rate__icon--selected"
               size="30"
-              style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+              style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
             >
               <svg
                 class="t-icon t-icon-star-filled"
@@ -3104,7 +3104,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3123,7 +3123,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3142,7 +3142,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3161,7 +3161,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3227,7 +3227,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3246,7 +3246,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3265,7 +3265,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3284,7 +3284,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3350,7 +3350,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3369,7 +3369,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3388,7 +3388,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3407,7 +3407,7 @@ exports[`Rate > Rate showTextVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3482,7 +3482,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3501,7 +3501,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3520,7 +3520,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3539,7 +3539,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="24px"
-          style="font-size: 24px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 24px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3601,7 +3601,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="20"
-          style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3620,7 +3620,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="20"
-          style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3639,7 +3639,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--selected"
           size="20"
-          style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3658,7 +3658,7 @@ exports[`Rate > Rate sizeVue demo works fine 1`] = `
         <div
           class="t-rate__icon t-rate__icon--unselected"
           size="20"
-          style="font-size: 20px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+          style="font-size: 20px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
         >
           <svg
             class="t-icon t-icon-star-filled"
@@ -3719,7 +3719,7 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="30"
-        style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -3738,7 +3738,7 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="30"
-        style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -3757,7 +3757,7 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="30"
-        style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"
@@ -3776,7 +3776,7 @@ exports[`Rate > Rate specialVue demo works fine 1`] = `
       <div
         class="t-rate__icon t-rate__icon--selected"
         size="30"
-        style="font-size: 30px; margin-right: 4px; --td-rate-selected-color: #ED7B2F;"
+        style="font-size: 30px; margin-right: 8px; --td-rate-selected-color: #ED7B2F;"
       >
         <svg
           class="t-icon t-icon-star-filled"

@@ -27,7 +27,7 @@ export default {
   /** 评分图标的间距 */
   gap: {
     type: Number,
-    default: 4,
+    default: 8,
   },
   /** 自定义评分图标，[选中图标，未选中图标] */
   icon: {
