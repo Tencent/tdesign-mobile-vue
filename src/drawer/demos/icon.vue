@@ -11,7 +11,11 @@
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import { DrawerCloseContext, DrawerItem } from '../type';
+import { TriggerSource, DrawerItem } from '../type';
+
+interface DrawerCloseContext {
+  trigger: TriggerSource;
+}
 
 const iconSidebar = ref([
   {
