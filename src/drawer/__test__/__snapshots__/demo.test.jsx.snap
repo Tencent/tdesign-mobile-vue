@@ -2,14 +2,130 @@
 
 exports[`Drawer > Drawer baseVue demo works fine 1`] = `
 <div
-  class="demo-drawer"
-  data-v-2da634e5=""
+  data-v-app=""
 >
-  <teleport-stub
-    data-v-2da634e5=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
+  
+  <teleport-stub>
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
+    >
+      
+      
+    </div>
+    <div
+      class="t-popup t-popup--right"
+      style="display: none;"
+    >
+      <!--v-if-->
+      
+      <div
+        class="t-drawer"
+      >
+        <!--v-if-->
+        
+        
+        <div
+          class="t-drawer__sidebar"
+        >
+          
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单一
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单二
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单三
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单四
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单五
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单六
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-drawer__footer"
+        >
+          <!---->
+        </div>
+      </div>
+      
+    </div>
+  </teleport-stub>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    role="button"
+    type="button"
   >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      基础抽屉
+      
+    </span>
+    <!---->
+  </button>
+  
+</div>
+`;
+
+exports[`Drawer > Drawer footerVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <teleport-stub>
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -24,108 +140,134 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
       <!--v-if-->
       
       <div
-        class="t-drawer__sidebar"
+        class="t-drawer"
       >
+        <!--v-if-->
+        
         
         <div
-          class="t-drawer__sidebar-item"
+          class="t-drawer__sidebar"
         >
-          <!--v-if-->
+          
           <div
-            class="t-drawer__sidebar-item-title"
+            class="t-drawer__sidebar-item"
           >
-            菜单一
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单一
+            </div>
           </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单二
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单三
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单四
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单五
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单六
+            </div>
+          </div>
+          
         </div>
         <div
-          class="t-drawer__sidebar-item"
+          class="t-drawer__footer"
         >
-          <!--v-if-->
+          
           <div
-            class="t-drawer__sidebar-item-title"
+            class="button-host"
           >
-            菜单二
+            <button
+              aria-disabled="false"
+              class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+              role="button"
+              type="button"
+            >
+              <!---->
+              <span
+                class="t-button__content"
+              >
+                
+                操作
+                
+              </span>
+              <!---->
+            </button>
           </div>
+          
         </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <!--v-if-->
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单三
-          </div>
-        </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <!--v-if-->
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单四
-          </div>
-        </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <!--v-if-->
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单五
-          </div>
-        </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <!--v-if-->
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单六
-          </div>
-        </div>
-        
       </div>
       
     </div>
   </teleport-stub>
-  <div
-    class="button-group"
-    data-v-2da634e5=""
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    role="button"
+    type="button"
   >
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-      data-v-2da634e5=""
-      role="button"
-      type="button"
+    <!---->
+    <span
+      class="t-button__content"
     >
-      <!---->
-      <span
-        class="t-button__content"
-      >
-        
-        基础抽屉
-        
-      </span>
-      <!---->
-    </button>
-  </div>
+      
+      带底部插槽抽屉
+      
+    </span>
+    <!---->
+  </button>
+  
 </div>
 `;
 
 exports[`Drawer > Drawer iconVue demo works fine 1`] = `
 <div
-  class="demo-drawer"
-  data-v-6846568d=""
+  data-v-app=""
 >
+  
   <teleport-stub
     data-v-6846568d=""
-    disabled="false"
-    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -135,217 +277,229 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
       
     </div>
     <div
-      class="t-popup t-popup--left"
+      class="t-popup t-popup--right"
       style="display: none;"
     >
       <!--v-if-->
       
       <div
-        class="t-drawer__sidebar"
+        class="t-drawer"
       >
+        <!--v-if-->
+        
         
         <div
-          class="t-drawer__sidebar-item"
+          class="t-drawer__sidebar"
         >
-          <span
-            class="t-drawer__sidebar-item-icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
+          
           <div
-            class="t-drawer__sidebar-item-title"
+            class="t-drawer__sidebar-item"
           >
-            菜单一
+            <span
+              class="t-drawer__sidebar-item-icon"
+            >
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单一
+            </div>
           </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <span
+              class="t-drawer__sidebar-item-icon"
+            >
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单二
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <span
+              class="t-drawer__sidebar-item-icon"
+            >
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单三
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <span
+              class="t-drawer__sidebar-item-icon"
+            >
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单四
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <span
+              class="t-drawer__sidebar-item-icon"
+            >
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单五
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <span
+              class="t-drawer__sidebar-item-icon"
+            >
+              <svg
+                class="t-icon t-icon-app"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </span>
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单六
+            </div>
+          </div>
+          
         </div>
         <div
-          class="t-drawer__sidebar-item"
+          class="t-drawer__footer"
         >
-          <span
-            class="t-drawer__sidebar-item-icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单二
-          </div>
+          <!---->
         </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <span
-            class="t-drawer__sidebar-item-icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单三
-          </div>
-        </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <span
-            class="t-drawer__sidebar-item-icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单四
-          </div>
-        </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <span
-            class="t-drawer__sidebar-item-icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单五
-          </div>
-        </div>
-        <div
-          class="t-drawer__sidebar-item"
-        >
-          <span
-            class="t-drawer__sidebar-item-icon"
-          >
-            <svg
-              class="t-icon t-icon-app"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
-            >
-              <path
-                d="M11.25 1.75a3 3 0 100 6 3 3 0 000-6zm-2 3a2 2 0 114 0 2 2 0 01-4 0zM2 3a1 1 0 011-1h3.5a1 1 0 011 1v3.5a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1 0v3.5h3.5V3H3zM2 9.5a1 1 0 011-1h3.5a1 1 0 011 1V13a1 1 0 01-1 1H3a1 1 0 01-1-1V9.5zm1 0V13h3.5V9.5H3zM8.5 9.5a1 1 0 011-1H13a1 1 0 011 1V13a1 1 0 01-1 1H9.5a1 1 0 01-1-1V9.5zm1 3.5H13V9.5H9.5V13z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
-          </span>
-          <div
-            class="t-drawer__sidebar-item-title"
-          >
-            菜单六
-          </div>
-        </div>
-        
       </div>
       
     </div>
   </teleport-stub>
-  <div
-    class="button-group"
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-6846568d=""
+    role="button"
+    type="button"
   >
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-      data-v-6846568d=""
-      role="button"
-      type="button"
+    <!---->
+    <span
+      class="t-button__content"
     >
-      <!---->
-      <span
-        class="t-button__content"
-      >
-        
-        带图标抽屉
-        
-      </span>
-      <!---->
-    </button>
-  </div>
+      
+      带图标抽屉
+      
+    </span>
+    <!---->
+  </button>
+  
 </div>
 `;
 
 exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
+  data-v-4e345f36=""
 >
   <h1
     class="title"
+    data-v-4e345f36=""
   >
     Drawer 抽屉
   </h1>
   <p
     class="summary"
+    data-v-4e345f36=""
   >
     用作一组平行关系页面/内容的切换器，相较于Tab，同屏可展示更多的选项数量。
   </p>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-4e345f36=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -353,7 +507,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 类型
+        01 组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"
@@ -362,30 +516,29 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
-      <div
-        class="demo-drawer"
-        data-v-2da634e5=""
-      >
-        <teleport-stub
-          data-v-2da634e5=""
-          disabled="false"
-          to="[object HTMLBodyElement]"
+      
+      <teleport-stub>
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--right"
+          style="display: none;"
+        >
+          <!--v-if-->
+          
           <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-          <div
-            class="t-popup t-popup--left"
-            style="display: none;"
+            class="t-drawer"
           >
             <!--v-if-->
+            
             
             <div
               class="t-drawer__sidebar"
@@ -453,37 +606,38 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               </div>
               
             </div>
-            
-          </div>
-        </teleport-stub>
-        <div
-          class="button-group"
-          data-v-2da634e5=""
-        >
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-            data-v-2da634e5=""
-            role="button"
-            type="button"
-          >
-            <!---->
-            <span
-              class="t-button__content"
+            <div
+              class="t-drawer__footer"
             >
-              
-              基础抽屉
-              
-            </span>
-            <!---->
-          </button>
+              <!---->
+            </div>
+          </div>
+          
         </div>
-      </div>
+      </teleport-stub>
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          基础抽屉
+          
+        </span>
+        <!---->
+      </button>
+      
       
     </div>
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-4e345f36=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -496,30 +650,31 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       </p>
     </div>
     <div
-      class="tdesign-mobile-demo-block__slot"
+      class="tdesign-mobile-demo-block__slot with-padding"
     >
       
-      <div
-        class="demo-drawer"
+      
+      <teleport-stub
         data-v-6846568d=""
       >
-        <teleport-stub
-          data-v-6846568d=""
-          disabled="false"
-          to="[object HTMLBodyElement]"
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
         >
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--right"
+          style="display: none;"
+        >
+          <!--v-if-->
+          
           <div
-            class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
-          <div
-            class="t-popup t-popup--left"
-            style="display: none;"
+            class="t-drawer"
           >
             <!--v-if-->
+            
             
             <div
               class="t-drawer__sidebar"
@@ -683,34 +838,517 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               </div>
               
             </div>
-            
+            <div
+              class="t-drawer__footer"
+            >
+              <!---->
+            </div>
           </div>
-        </teleport-stub>
-        <div
-          class="button-group"
-          data-v-6846568d=""
+          
+        </div>
+      </teleport-stub>
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-6846568d=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
         >
-          <button
-            aria-disabled="false"
-            class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-            data-v-6846568d=""
-            role="button"
-            type="button"
+          
+          带图标抽屉
+          
+        </span>
+        <!---->
+      </button>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-4e345f36=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        带标题抽屉
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      
+      <teleport-stub>
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--left"
+          style="display: none;"
+        >
+          <!--v-if-->
+          
+          <div
+            class="t-drawer"
           >
-            <!---->
-            <span
-              class="t-button__content"
+            <div
+              class="t-drawer__title"
+            >
+              标题
+            </div>
+            
+            
+            <div
+              class="t-drawer__sidebar"
             >
               
-              带图标抽屉
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单一
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单二
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单三
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单四
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单五
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单六
+                </div>
+              </div>
               
-            </span>
-            <!---->
-          </button>
+            </div>
+            <div
+              class="t-drawer__footer"
+            >
+              <!---->
+            </div>
+          </div>
+          
+        </div>
+      </teleport-stub>
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          带标题抽屉
+          
+        </span>
+        <!---->
+      </button>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-4e345f36=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        带底部插槽样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      
+      <teleport-stub>
+        <div
+          class="t-overlay"
+          style="z-index: 1000; transition-duration: 300ms; display: none;"
+        >
+          
+          
+        </div>
+        <div
+          class="t-popup t-popup--left"
+          style="display: none;"
+        >
+          <!--v-if-->
+          
+          <div
+            class="t-drawer"
+          >
+            <!--v-if-->
+            
+            
+            <div
+              class="t-drawer__sidebar"
+            >
+              
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单一
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单二
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单三
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单四
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单五
+                </div>
+              </div>
+              <div
+                class="t-drawer__sidebar-item"
+              >
+                <!--v-if-->
+                <div
+                  class="t-drawer__sidebar-item-title"
+                >
+                  菜单六
+                </div>
+              </div>
+              
+            </div>
+            <div
+              class="t-drawer__footer"
+            >
+              
+              <div
+                class="button-host"
+              >
+                <button
+                  aria-disabled="false"
+                  class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
+                  role="button"
+                  type="button"
+                >
+                  <!---->
+                  <span
+                    class="t-button__content"
+                  >
+                    
+                    操作
+                    
+                  </span>
+                  <!---->
+                </button>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </teleport-stub>
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          带底部插槽抽屉
+          
+        </span>
+        <!---->
+      </button>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-4e345f36=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 使用方式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        使用命令行
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      <button
+        aria-disabled="false"
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        data-v-4e345f36=""
+        role="button"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          命令行调用
+          
+        </span>
+        <!---->
+      </button>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Drawer > Drawer pluginVue demo works fine 1`] = `
+<button
+  aria-disabled="false"
+  class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+  role="button"
+  type="button"
+>
+  <!---->
+  <span
+    class="t-button__content"
+  >
+    
+    命令行调用
+    
+  </span>
+  <!---->
+</button>
+`;
+
+exports[`Drawer > Drawer titleVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <teleport-stub>
+    <div
+      class="t-overlay"
+      style="z-index: 1000; transition-duration: 300ms; display: none;"
+    >
+      
+      
+    </div>
+    <div
+      class="t-popup t-popup--left"
+      style="display: none;"
+    >
+      <!--v-if-->
+      
+      <div
+        class="t-drawer"
+      >
+        <div
+          class="t-drawer__title"
+        >
+          标题
+        </div>
+        
+        
+        <div
+          class="t-drawer__sidebar"
+        >
+          
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单一
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单二
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单三
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单四
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单五
+            </div>
+          </div>
+          <div
+            class="t-drawer__sidebar-item"
+          >
+            <!--v-if-->
+            <div
+              class="t-drawer__sidebar-item-title"
+            >
+              菜单六
+            </div>
+          </div>
+          
+        </div>
+        <div
+          class="t-drawer__footer"
+        >
+          <!---->
         </div>
       </div>
       
     </div>
-  </div>
+  </teleport-stub>
+  <button
+    aria-disabled="false"
+    class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+    role="button"
+    type="button"
+  >
+    <!---->
+    <span
+      class="t-button__content"
+    >
+      
+      带标题抽屉
+      
+    </span>
+    <!---->
+  </button>
+  
 </div>
 `;
