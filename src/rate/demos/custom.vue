@@ -1,14 +1,18 @@
 <template>
   <div class="rate-demo-cell">
-    <div class="rate-demo-cell__label">自定义评分数量</div>
-    <t-rate v-model="value" :count="3" variant="filled" />
+    <div class="rate-demo-cell__label">自定义评分</div>
+    <t-rate v-model="value" :icon="[ThumbUpIcon, ThumbUpIcon]" @change="changeValue" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { ThumbUpIcon } from 'tdesign-icons-vue-next';
 
-const value = ref(2);
+const changeValue = (val: Number) => {
+  console.log('current value is', val);
+};
+const value = ref(3);
 </script>
 
 <style lang="less" scoped>

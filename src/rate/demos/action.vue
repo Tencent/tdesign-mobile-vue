@@ -1,22 +1,31 @@
 <template>
-  <div class="rate-demo-cell rate-demo-cell--space">
-    <div class="rate-demo-cell__label">大尺寸 24</div>
+  <p class="summary">只可选全星时</p>
+  <div class="rate-demo-cell">
+    <div class="rate-demo-cell__label">点击或滑动</div>
     <t-rate v-model="value1" variant="filled" />
   </div>
-  <div class="rate-demo-cell rate-demo-cell--space">
-    <div class="rate-demo-cell__label">小尺寸 20</div>
-    <t-rate v-model="value" variant="filled" size="20" />
+  <p class="summary">可选半星时</p>
+  <div class="rate-demo-cell">
+    <div class="rate-demo-cell__label">点击或滑动</div>
+    <t-rate v-model="value2" variant="filled" allow-half />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-const value = ref(3);
 const value1 = ref(3);
+const value2 = ref(3);
 </script>
 
 <style lang="less" scoped>
+.summary {
+  margin-top: 8px;
+  font-size: 14px;
+  white-space: pre-line;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 22px;
+}
 .rate-demo-cell {
   background-color: #fff;
   padding: 12px 16px;
@@ -24,6 +33,7 @@ const value1 = ref(3);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 16px;
   &__label {
     font-size: 16px;
     margin-right: 16px;

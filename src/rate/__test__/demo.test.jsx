@@ -3,28 +3,26 @@
  */
 
 import { mount } from '@vue/test-utils';
-import allowHalfVue from '@/rate/demos/allow-half.vue';
+import actionVue from '@/rate/demos/action.vue';
+import baseVue from '@/rate/demos/base.vue';
 import colorVue from '@/rate/demos/color.vue';
 import countVue from '@/rate/demos/count.vue';
-import disabledVue from '@/rate/demos/disabled.vue';
-import filledVue from '@/rate/demos/filled.vue';
-import iconVue from '@/rate/demos/icon.vue';
+import customVue from '@/rate/demos/custom.vue';
 import mobileVue from '@/rate/demos/mobile.vue';
-import outlineVue from '@/rate/demos/outline.vue';
+import showTextVue from '@/rate/demos/show-text.vue';
 import sizeVue from '@/rate/demos/size.vue';
-import textVue from '@/rate/demos/text.vue';
+import specialVue from '@/rate/demos/special.vue';
 
 const mapper = {
-  allowHalfVue,
+  actionVue,
+  baseVue,
   colorVue,
   countVue,
-  disabledVue,
-  filledVue,
-  iconVue,
+  customVue,
   mobileVue,
-  outlineVue,
+  showTextVue,
   sizeVue,
-  textVue,
+  specialVue,
 };
 
 describe('Rate', () => {
