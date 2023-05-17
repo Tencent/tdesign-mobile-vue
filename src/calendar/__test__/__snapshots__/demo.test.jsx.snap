@@ -3,7 +3,10 @@
 exports[`Calendar > Calendar baseVue demo works fine 1`] = `
 <div>
   <div>
-    <teleport-stub>
+    <teleport-stub
+      disabled="false"
+      to="[object HTMLBodyElement]"
+    >
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -2195,7 +2198,10 @@ exports[`Calendar > Calendar customButtonVue demo works fine 1`] = `
 >
   
   <div>
-    <teleport-stub>
+    <teleport-stub
+      disabled="false"
+      to="[object HTMLBodyElement]"
+    >
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4388,7 +4394,10 @@ exports[`Calendar > Calendar customRangeVue demo works fine 1`] = `
 >
   
   <div>
-    <teleport-stub>
+    <teleport-stub
+      disabled="false"
+      to="[object HTMLBodyElement]"
+    >
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -4847,7 +4856,10 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
 >
   
   <div>
-    <teleport-stub>
+    <teleport-stub
+      disabled="false"
+      to="[object HTMLBodyElement]"
+    >
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -5857,7 +5869,10 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       >
         <div>
           <div>
-            <teleport-stub>
+            <teleport-stub
+              disabled="false"
+              to="[object HTMLBodyElement]"
+            >
               <div
                 class="t-overlay"
                 style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -8043,7 +8058,10 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         </div>
         <div>
           <div>
-            <teleport-stub>
+            <teleport-stub
+              disabled="false"
+              to="[object HTMLBodyElement]"
+            >
               <div
                 class="t-overlay"
                 style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -10229,7 +10247,10 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
         </div>
         <div>
           <div>
-            <teleport-stub>
+            <teleport-stub
+              disabled="false"
+              to="[object HTMLBodyElement]"
+            >
               <div
                 class="t-overlay"
                 style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -12440,7 +12461,10 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       
       
       <div>
-        <teleport-stub>
+        <teleport-stub
+          disabled="false"
+          to="[object HTMLBodyElement]"
+        >
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -13413,7 +13437,10 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       
       
       <div>
-        <teleport-stub>
+        <teleport-stub
+          disabled="false"
+          to="[object HTMLBodyElement]"
+        >
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -15599,7 +15626,10 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
       
       
       <div>
-        <teleport-stub>
+        <teleport-stub
+          disabled="false"
+          to="[object HTMLBodyElement]"
+        >
           <div
             class="t-overlay"
             style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -18175,7 +18205,10 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
 exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
 <div>
   <div>
-    <teleport-stub>
+    <teleport-stub
+      disabled="false"
+      to="[object HTMLBodyElement]"
+    >
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -20364,7 +20397,10 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
 exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
 <div>
   <div>
-    <teleport-stub>
+    <teleport-stub
+      disabled="false"
+      to="[object HTMLBodyElement]"
+    >
       <div
         class="t-overlay"
         style="z-index: 1000; transition-duration: 300ms; display: none;"

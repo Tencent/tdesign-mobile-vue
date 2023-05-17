@@ -5,7 +5,10 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -125,7 +128,10 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -268,6 +274,8 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   
   <teleport-stub
     data-v-6846568d=""
+    disabled="false"
+    to="[object HTMLBodyElement]"
   >
     <div
       class="t-overlay"
@@ -520,7 +528,10 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -656,6 +667,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       
       <teleport-stub
         data-v-6846568d=""
+        disabled="false"
+        to="[object HTMLBodyElement]"
       >
         <div
           class="t-overlay"
@@ -891,7 +904,10 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1029,7 +1045,10 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       
-      <teleport-stub>
+      <teleport-stub
+        disabled="false"
+        to="[object HTMLBodyElement]"
+      >
         <div
           class="t-overlay"
           style="z-index: 1000; transition-duration: 300ms; display: none;"
@@ -1234,7 +1253,10 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   data-v-app=""
 >
   
-  <teleport-stub>
+  <teleport-stub
+    disabled="false"
+    to="[object HTMLBodyElement]"
+  >
     <div
       class="t-overlay"
       style="z-index: 1000; transition-duration: 300ms; display: none;"
