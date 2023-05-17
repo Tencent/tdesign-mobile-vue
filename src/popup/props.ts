@@ -13,7 +13,7 @@ export default {
     type: [String, Function] as PropType<TdPopupProps['attach']>,
     default: 'body',
   },
-  /** 关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮 */
+  /** 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮 */
   closeBtn: {
     type: [Boolean, Function] as PropType<TdPopupProps['closeBtn']>,
   },
@@ -22,6 +22,8 @@ export default {
     type: Boolean,
     default: true,
   },
+  /** 是否在关闭浮层时销毁浮层 */
+  destroyOnClose: Boolean,
   /** 遮罩层的属性，透传至 overlay */
   overlayProps: {
     type: Object as PropType<TdPopupProps['overlayProps']>,

@@ -13,7 +13,7 @@ export interface TdPopupProps {
    */
   attach?: AttachNode;
   /**
-   * 关闭按钮，值类型为 Boolean 时表示是否显示关闭按钮。也可以自定义关闭按钮
+   * 是否展示关闭按钮，值为 `true` 显示默认关闭按钮；值为 `false` 则不显示关闭按钮；也可以自定义关闭按钮
    */
   closeBtn?: boolean | TNode;
   /**
@@ -21,6 +21,11 @@ export interface TdPopupProps {
    * @default true
    */
   closeOnOverlayClick?: boolean;
+  /**
+   * 是否在关闭浮层时销毁浮层
+   * @default false
+   */
+  destroyOnClose?: boolean;
   /**
    * 遮罩层的属性，透传至 overlay
    * @default {}
