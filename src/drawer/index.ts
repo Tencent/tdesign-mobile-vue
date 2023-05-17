@@ -1,4 +1,4 @@
-import { createApp, App, h, ref } from 'vue';
+import { createApp, App, h, ref, nextTick } from 'vue';
 import vueDrawer from './drawer.vue';
 import { WithInstallType } from '../shared';
 import { TdDrawerProps } from './type';
@@ -11,18 +11,30 @@ const Drawer = (options: DrawerOptions) => {
   const root = document.createElement('div');
   document.body.appendChild(root);
   const visible = ref(false);
+  const props = ref({});
+  const destroyOnClose = ref(false);
 
-  createApp(() => h(vueDrawer, { ...options, visible: visible.value })).mount(root);
+  createApp(() =>
+    h(vueDrawer, { ...options, visible: visible.value, destroyOnClose: destroyOnClose.value, ...props.value }),
+  ).mount(root);
 
   const handler = {
-    destroy() {},
+    destroy() {
+      destroyOnClose.value = true;
+      nextTick(() => {
+        visible.value = false;
+        document.body.removeChild(root);
+      });
+    },
     hide() {
       visible.value = false;
     },
     show() {
       visible.value = true;
     },
-    update(options: DrawerOptions) {},
+    update(options: DrawerOptions) {
+      props.value = options;
+    },
   };
 
   return handler;

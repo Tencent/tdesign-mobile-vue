@@ -6,6 +6,7 @@
     :show-overlay="showOverlay"
     :z-index="zIndex"
     :close-on-overlay-click="closeOnOverlayClick"
+    :destroy-on-close="destroyOnClose"
     @visible-change="onVisibleChange"
     @close="onClose"
   >

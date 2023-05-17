@@ -11,7 +11,7 @@ const showDrawer = () => {
     items: new Array(20).fill({ title: '菜单' }).map((item, index: number) => ({ title: `标题 ${index + 1}` })),
     onItemClick(index: number) {
       console.log(index);
-      instance.hide();
+      instance.destroy();
     },
   });
   instance.show();
