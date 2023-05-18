@@ -13,7 +13,6 @@
                 [activeClass]: item.value === currentValue,
                 [disabledClass]: item.disabled,
                 [`${name}__item--${theme}`]: true,
-                [`t-is-active`]: theme === 'card' && item.value !== currentValue,
               }"
               @click="(e) => tabClick(e, item)"
             >
