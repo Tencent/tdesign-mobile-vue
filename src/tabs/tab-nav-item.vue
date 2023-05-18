@@ -1,8 +1,6 @@
 <template>
   <div>
-    <t-badge v-bind="badgeProps">
-      <t-node :content="labelContent"></t-node>
-    </t-badge>
+    <t-node :content="labelContent"></t-node>
   </div>
 </template>
 
@@ -19,7 +17,6 @@ export default defineComponent({
   components: { TNode },
   props: {
     label: TabPanelProps.label,
-    badgeProps: TabPanelProps.badgeProps,
   },
   setup(props) {
     const internalInstance = getCurrentInstance();

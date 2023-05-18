@@ -2,32 +2,38 @@
   <div :class="classes">
     <t-sticky v-bind="stickyProps" @scroll="handlerScroll">
       <div :class="navClasses">
-        <div ref="navScroll" :class="`${name}__nav-container`">
-          <div
-            ref="navWrap"
-            :class="{
-              [`${name}__nav-wrap`]: true,
-              [`${name}__nav-wrap-card`]: theme === 'card',
-            }"
-          >
-            <tab-nav-item
-              v-for="item in itemProps"
+        <div ref="navScroll" :class="`${name}__scroll ${name}__scroll--top ${name}__scroll--${theme}`">
+          <div ref="navWrap" :class="`${name}__wrapper ${name}__wrapper--${theme}`">
+            <div
+              v-for="(item, index) in itemProps"
               :key="item.value"
-              :label="item.label"
-              :badge-props="item.badgeProps"
               :class="{
-                [`${name}__nav-item-${theme}`]: true,
-                [`${name}__nav-item-evenly`]: spaceEvenly,
+                [`${name}__item ${name}__item--top`]: true,
+                [`${name}__item--evenly`]: spaceEvenly,
                 [activeClass]: item.value === currentValue,
                 [disabledClass]: item.disabled,
+                [`${name}__item--${theme}`]: true,
+                [`t-is-active`]: theme === 'card' && item.value !== currentValue,
               }"
               @click="(e) => tabClick(e, item)"
             >
-            </tab-nav-item>
+              <t-badge v-bind="item.badgeProps">
+                <div
+                  :class="{
+                    [`${name}__item-inner ${name}__item-inner--${theme}`]: true,
+                    [`${name}__item-inner--active`]: theme === 'tag' && item.value === currentValue,
+                  }"
+                >
+                  <tab-nav-item :label="item.label"></tab-nav-item>
+                </div>
+              </t-badge>
+              <div v-if="theme === 'card' && index === currentIndex - 1" :class="`${name}__item-prefix`"></div>
+              <div v-if="theme === 'card' && index === currentIndex + 1" :class="`${name}__item-suffix`"></div>
+            </div>
             <div
               v-if="theme === 'line' && showBottomLine"
               ref="navLine"
-              :class="`${name}__nav-line`"
+              :class="`${name}__track ${name}__track--top`"
               :style="lineStyle"
             ></div>
           </div>
@@ -77,13 +83,9 @@ export default defineComponent({
     const showBottomLine = computed(() => props.showBottomLine);
     const swipeable = computed(() => props.swipeable);
     const stickyProps = computed(() => ({ ...props.stickyProps, disabled: !props.sticky }));
-    const activeClass = CLASSNAMES.STATUS.active;
-    const disabledClass = CLASSNAMES.STATUS.disabled;
-    const classes = computed(() => [
-      `${name}`,
-      `${prefix}-is-${placement.value}`,
-      props.size ? CLASSNAMES.SIZE[props.size] : '',
-    ]);
+    const activeClass = `${name}__item--active`;
+    const disabledClass = `${name}__item--disabled`;
+    const classes = computed(() => [`${name}`, props.size ? CLASSNAMES.SIZE[props.size] : '']);
     const navClasses = ref([`${name}__nav`]);
     const isScroll = ref(false);
     const startX = ref(0);
@@ -130,6 +132,10 @@ export default defineComponent({
         label: () => label[index] || item.props.label,
       }));
     });
+
+    const valueList = computed(() => itemProps.value.map((v) => v.value));
+    const currentIndex = computed(() => valueList.value.indexOf(currentValue.value));
+
     const navScroll = ref<HTMLElement | null>(null);
     const navWrap = ref<HTMLElement | null>(null);
     const navLine = ref<HTMLElement | null>(null);
@@ -242,6 +248,7 @@ export default defineComponent({
       activeClass,
       disabledClass,
       currentValue,
+      currentIndex,
       tabClick,
       showBottomLine,
       itemProps,
