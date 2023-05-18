@@ -60,7 +60,7 @@ describe('Tabs', () => {
 
     it(': spaceEvenly', async () => {
       const wrapper = mount(Tabs);
-      const navWrap = wrapper.find(`.${name}__nav-wrap`);
+      const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
 
       $tabNavItems.forEach((item, index) => {
@@ -78,7 +78,7 @@ describe('Tabs', () => {
     });
     it(': theme', async () => {
       const wrapper = mount(Tabs);
-      const navWrap = wrapper.find(`.${name}__nav-wrap`);
+      const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
 
       let theme = 'line';
@@ -127,9 +127,9 @@ describe('Tabs', () => {
         },
       });
 
-      const navWrap = wrapper.find(`.${name}__nav-wrap`);
+      const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
-      const $navLine = wrapper.find(`.${name}__nav-line`);
+      const $navLine = wrapper.find(`.${name}__track`);
       const linWidth = 56;
       const navWidth = 88;
       $tabNavItems.map(async (item, index) => {
@@ -155,7 +155,7 @@ describe('Tabs', () => {
         },
       });
 
-      const navWrap = wrapper.find(`.${name}__nav-wrap`);
+      const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
       $tabNavItems.map(async (item, index) => {
         await item.trigger('click');
@@ -227,7 +227,7 @@ describe('Tabs', () => {
         },
       });
 
-      const navWrap = wrapper.find(`.${name}__nav-wrap`);
+      const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
 
       $tabNavItems.map(async (item, index) => {
@@ -254,7 +254,7 @@ describe('Tabs', () => {
         },
       });
 
-      const navWrap = wrapper.find(`.${name}__nav-wrap`);
+      const navWrap = wrapper.find(`.${name}__wrapper`);
       const $tabNavItems = navWrap.findAllComponents(TTabNav);
 
       $tabNavItems.map(async (item, index) => {
