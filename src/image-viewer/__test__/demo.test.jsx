@@ -3,22 +3,14 @@
  */
 
 import { mount } from '@vue/test-utils';
-import backgroundVue from '@/image-viewer/demos/background.vue';
 import baseVue from '@/image-viewer/demos/base.vue';
-import closeBtnVue from '@/image-viewer/demos/closeBtn.vue';
-import closeEventVue from '@/image-viewer/demos/closeEvent.vue';
-import imageListVue from '@/image-viewer/demos/imageList.vue';
-import initialIndexVue from '@/image-viewer/demos/initialIndex.vue';
 import mobileVue from '@/image-viewer/demos/mobile.vue';
+import operationVue from '@/image-viewer/demos/operation.vue';
 
 const mapper = {
-  backgroundVue,
   baseVue,
-  closeBtnVue,
-  closeEventVue,
-  imageListVue,
-  initialIndexVue,
   mobileVue,
+  operationVue,
 };
 
 describe('ImageViewer', () => {
