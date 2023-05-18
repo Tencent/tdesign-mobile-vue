@@ -41,13 +41,7 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
       hidden=""
       type="file"
     />
-    <div
-      class="t-overlay t-image-viewer"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
+    <!--v-if-->
   </div>
 </div>
 `;
@@ -127,13 +121,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
-          <div
-            class="t-overlay t-image-viewer"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
+          <!--v-if-->
         </div>
       </div>
       
@@ -381,13 +369,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             multiple=""
             type="file"
           />
-          <div
-            class="t-overlay t-image-viewer"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
+          <!--v-if-->
         </div>
       </div>
       
@@ -633,13 +615,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
-          <div
-            class="t-overlay t-image-viewer"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
+          <!--v-if-->
         </div>
       </div>
       <div
@@ -779,13 +755,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             hidden=""
             type="file"
           />
-          <div
-            class="t-overlay t-image-viewer"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
-          >
-            
-            
-          </div>
+          <!--v-if-->
         </div>
       </div>
       
@@ -1021,13 +991,7 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
       multiple=""
       type="file"
     />
-    <div
-      class="t-overlay t-image-viewer"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
-    >
-      
-      
-    </div>
+    <!--v-if-->
   </div>
 </div>
 `;
@@ -1255,13 +1219,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         hidden=""
         type="file"
       />
-      <div
-        class="t-overlay t-image-viewer"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
-      >
-        
-        
-      </div>
+      <!--v-if-->
     </div>
   </div>
   <div
@@ -1401,13 +1359,7 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
         hidden=""
         type="file"
       />
-      <div
-        class="t-overlay t-image-viewer"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
-      >
-        
-        
-      </div>
+      <!--v-if-->
     </div>
   </div>
   
