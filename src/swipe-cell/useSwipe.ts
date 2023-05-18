@@ -23,13 +23,6 @@ export type UseSwipeDirection = 'up' | 'down' | 'left' | 'right' | 'none';
 
 export interface UseSwipeOptions {
   /**
-   * Register events as passive
-   *
-   * @default true
-   */
-  passive?: boolean;
-
-  /**
    * @default 50
    */
   threshold?: number;

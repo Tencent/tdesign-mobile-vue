@@ -12,7 +12,7 @@ export interface TdSwipeCellProps {
    */
   content?: string | TNode;
   /**
-   * 子内容，同 content
+   * 操作项以外的内容，同 content
    */
   default?: string | TNode;
   /**
@@ -20,14 +20,14 @@ export interface TdSwipeCellProps {
    */
   disabled?: boolean;
   /**
+   * 左侧滑动操作项。所有行为同 `right`
+   */
+  left?: Array<SwipeActionItem>;
+  /**
    * 操作项是否呈现为打开态，值为数组时表示分别控制左右滑动的展开和收起状态
    * @default false
    */
   opened?: boolean | Array<boolean>;
-  /**
-   * 左侧滑动操作项。所有行为同 `right`
-   */
-  left?: Array<SwipeActionItem>;
   /**
    * 右侧滑动操作项。有两种定义方式，一种是使用数组，二种是使用插槽。`right.text` 表示操作文本，`right.className` 表示操作项类名，`right.style` 表示操作项样式，`right.onClick` 表示点击操作项后执行的回调函数。示例：`[{ text: '删除', style: 'background-color: red', onClick: () => {} }]`
    */
@@ -39,7 +39,7 @@ export interface TdSwipeCellProps {
   /**
    * 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）
    */
-  onClick?: (context: SwipeActionClickContext) => void;
+  onClick?: (action: SwipeActionItem, source: SwipeSource) => void;
 }
 
 export interface SwipeActionItem {
@@ -51,10 +51,7 @@ export interface SwipeActionItem {
   [key: string]: any;
 }
 
-export interface SwipeActionClickContext {
-  action: SwipeActionItem;
-  source: 'left' | 'right';
-}
+export type SwipeSource = 'left' | 'right';
 
 /** 组件实例方法 */
 export interface SwipeCellInstanceFunctions {

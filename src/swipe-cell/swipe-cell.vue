@@ -177,7 +177,7 @@ export default defineComponent({
     };
     // 首次touchmove的方向，用于分开左右和上下滑动，左右滑动时禁止上下滑动，上下滑动时禁止左右滑动
     let swipeDir: -1 | 0 | 1 = 0;
-    const { lengthX, direction, stop } = useSwipe(swipeCell, {
+    const { lengthX, lengthY, stop } = useSwipe(swipeCell, {
       threshold: 0,
       onSwipeStart: (e: TouchEvent) => {
         if (props.disabled) {
@@ -188,12 +188,19 @@ export default defineComponent({
         initData.offset = initData.pos;
       },
       onSwipe: (e: TouchEvent) => {
-        if (!swipeDir && ['up', 'down'].includes(direction.value || '')) {
+        const absLenX = Math.abs(lengthX.value);
+        const absLenY = Math.abs(lengthY.value);
+        // distance / 2 是为了避免触发上下滑动时 又走左右滑动的逻辑 导致preventDefault终止无效
+        if (!swipeDir && absLenX < distance / 2 && absLenY < distance / 2) {
+          return;
+        }
+        if (!swipeDir && absLenX < absLenY) {
           swipeDir = -1;
-        } else if (!swipeDir && ['left', 'right'].includes(direction.value || '')) {
+        } else if (!swipeDir && absLenX >= absLenY) {
           swipeDir = 1;
         }
         if (swipeDir < 0) {
+          swipeDir = -1;
           return;
         }
         e.preventDefault();
