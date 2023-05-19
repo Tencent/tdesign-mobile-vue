@@ -3,30 +3,20 @@
  */
 
 import { mount } from '@vue/test-utils';
-import bindVue from '@/swipe-cell/demos/bind.vue';
-import btnsVue from '@/swipe-cell/demos/btns.vue';
-import contentVue from '@/swipe-cell/demos/content.vue';
-import disabledVue from '@/swipe-cell/demos/disabled.vue';
+import doubleVue from '@/swipe-cell/demos/double.vue';
 import eventVue from '@/swipe-cell/demos/event.vue';
-import leftCardVue from '@/swipe-cell/demos/left-card.vue';
-import leftMoreMenuVue from '@/swipe-cell/demos/left-more-menu.vue';
-import leftOneMenuVue from '@/swipe-cell/demos/left-one-menu.vue';
-import leftTwoMenuVue from '@/swipe-cell/demos/left-two-menu.vue';
+import iconVue from '@/swipe-cell/demos/icon.vue';
+import leftVue from '@/swipe-cell/demos/left.vue';
 import mobileVue from '@/swipe-cell/demos/mobile.vue';
-import rightMenuVue from '@/swipe-cell/demos/right-menu.vue';
+import rightVue from '@/swipe-cell/demos/right.vue';
 
 const mapper = {
-  bindVue,
-  btnsVue,
-  contentVue,
-  disabledVue,
+  doubleVue,
   eventVue,
-  leftCardVue,
-  leftMoreMenuVue,
-  leftOneMenuVue,
-  leftTwoMenuVue,
+  iconVue,
+  leftVue,
   mobileVue,
-  rightMenuVue,
+  rightVue,
 };
 
 describe('SwipeCell', () => {

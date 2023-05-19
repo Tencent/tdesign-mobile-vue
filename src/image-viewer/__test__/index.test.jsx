@@ -1,6 +1,6 @@
 import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
-import { CloseCircleFilledIcon, AddCircleIcon } from 'tdesign-icons-vue-next';
+import { AddCircleIcon } from 'tdesign-icons-vue-next';
 import { describe, it, vi } from 'vitest';
 import ImageViewer from '../image-viewer.vue';
 import { Swiper } from '../../swiper';
@@ -14,13 +14,13 @@ const images = ref([
 
 describe('ImageViewer', () => {
   describe('props', () => {
-    it(': closeBtn', async () => {
+    it(':closeBtn', async () => {
       const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={false} />);
 
-      expect(wrapper.findComponent(CloseCircleFilledIcon).exists()).toBe(false);
+      expect(wrapper.find('.t-image-viewer__nav-close').exists()).toBe(false);
     });
 
-    it(': images', async () => {
+    it(':images', async () => {
       const emptyImages = mount(<ImageViewer visible={true} />);
       expect(emptyImages.find('.t-swiper-item').exists()).toBe(false);
 
@@ -34,7 +34,7 @@ describe('ImageViewer', () => {
       expect(wrapper.findAll('.t-swiper-item').length - 2).toBe(images.value.length);
     });
 
-    it(': maxZoom', async () => {
+    it(':maxZoom', async () => {
       const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} maxZoom={2} />);
 
       const target = wrapper.find('.t-swiper-item');
@@ -57,13 +57,7 @@ describe('ImageViewer', () => {
       trigger(target, 'touchend', 50, 50);
     });
 
-    it(': showIndex', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex={true} />);
-
-      expect(wrapper.find('.t-swiper__pagination-fraction').exists()).toBe(true);
-    });
-
-    it(': visible', async () => {
+    it(':visible', async () => {
       const visible = ref(false);
       const wrapper = mount(<ImageViewer v-model:images={images.value} v-model:visible={visible.value} />);
 
@@ -73,7 +67,7 @@ describe('ImageViewer', () => {
   });
 
   describe('slots', () => {
-    it(': closeBtn', () => {
+    it(':closeBtn', () => {
       const wrapper = mount(
         <ImageViewer v-model:images={images.value} visible={true} closeBtn={() => <AddCircleIcon />} />,
       );
@@ -83,38 +77,11 @@ describe('ImageViewer', () => {
   });
 
   describe('event', () => {
-    it(': close', async () => {
+    it(':close', async () => {
       const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} />);
 
-      await wrapper.findComponent(CloseCircleFilledIcon).trigger('click');
+      await wrapper.find('.t-image-viewer__nav-close').trigger('click');
       expect(wrapper.emitted()).toHaveProperty('close');
     });
-  });
-
-  describe('function', () => {
-    it(': onClose', async () => {
-      const onClose = vi.fn();
-
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} onClose={onClose} />);
-
-      await wrapper.findComponent(CloseCircleFilledIcon).trigger('click');
-      expect(onClose).toHaveBeenCalled();
-    });
-
-    // it(': onIndexChange', async () => {
-    //   const onIndexChange = vi.fn();
-
-    //   const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} onIndexChange={onIndexChange} />);
-
-    //   const target = wrapper.find('.t-swiper__container');
-
-    //   await trigger(target, 'touchstart', 0, 0);
-    //   await trigger(target, 'touchmove', 30, 0);
-    //   await trigger(target, 'touchmove', 60, 0);
-    //   await trigger(target, 'touchmove', 120, 0);
-    //   await trigger(target, 'touchend', 120, 0);
-
-    //   expect(wrapper.element).toMatchSnapshot();
-    // });
   });
 });

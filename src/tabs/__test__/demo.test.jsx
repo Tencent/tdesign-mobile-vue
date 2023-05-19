@@ -3,24 +3,26 @@
  */
 
 import { mount } from '@vue/test-utils';
-import animationVue from '@/tabs/demos/animation.vue';
-import baseVue from '@/tabs/demos/base.vue';
-import disabledVue from '@/tabs/demos/disabled.vue';
+import badgeVue from '@/tabs/demos/badge.vue';
+import contentVue from '@/tabs/demos/content.vue';
+import evenlyVue from '@/tabs/demos/evenly.vue';
+import iconVue from '@/tabs/demos/icon.vue';
+import isometricVue from '@/tabs/demos/isometric.vue';
 import mobileVue from '@/tabs/demos/mobile.vue';
-import scrollVue from '@/tabs/demos/scroll.vue';
 import sizeVue from '@/tabs/demos/size.vue';
-import underscoreVue from '@/tabs/demos/underscore.vue';
-import verticalVue from '@/tabs/demos/vertical.vue';
+import statusVue from '@/tabs/demos/status.vue';
+import themeVue from '@/tabs/demos/theme.vue';
 
 const mapper = {
-  animationVue,
-  baseVue,
-  disabledVue,
+  badgeVue,
+  contentVue,
+  evenlyVue,
+  iconVue,
+  isometricVue,
   mobileVue,
-  scrollVue,
   sizeVue,
-  underscoreVue,
-  verticalVue,
+  statusVue,
+  themeVue,
 };
 
 describe('Tabs', () => {

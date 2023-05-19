@@ -1,91 +1,91 @@
 <template>
-  <t-overlay :class="`${prefix}-image-viewer`" :visible="visible">
-    <template v-if="lazyVisible">
-      <div :class="`${name}__close-icon`" @click="handleClose($event, 'close-btn')">
-        <t-node v-if="!(typeof closeBtnTNode === 'boolean')" :content="closeBtnTNode"></t-node>
-        <close-circle-filled-icon v-else-if="typeof closeBtn === 'boolean' && closeBtn" />
+  <transition name="fade">
+    <div v-if="visible" :class="`${prefix}-image-viewer`">
+      <div :class="`${name}__mask`" @click="handleClose($event, 'overlay')" />
+      <div :class="`${name}__nav`">
+        <div v-if="closeNode" :class="`${name}__nav-close`" @click="handleClose($event, 'close-btn')">
+          <t-node :content="closeNode" />
+        </div>
+
+        <div v-if="showIndex" :class="`${name}__nav-index`">{{ (currentIndex ?? 0) + 1 }}/{{ images?.length }}</div>
+
+        <div v-if="deleteNode" :class="`${name}__nav-delete`" @click="handleDelete">
+          <t-node :content="deleteNode" />
+        </div>
       </div>
-      <t-swiper
-        :autoplay="false"
-        :class="`${name}__swipe`"
-        :default-current="initialIndex"
-        :navigation="navigation"
-        :on-change="onSwiperChange"
-      >
+      <t-swiper :autoplay="false" :class="`${name}__content`" :current="currentIndex" @change="onSwiperChange">
         <t-swiper-item
           v-for="(image, index) in images"
-          :key="image + index"
-          :class="`${name}__swipe-item`"
+          :key="index"
+          :class="`${name}__swiper-item`"
           @touchstart="onTouchStart"
           @touchmove="onTouchMove"
           @touchend="onTouchEnd"
         >
-          <img :src="image" :style="imageStyle" :class="`${name}__image`" />
+          <t-image :src="image" :style="imageStyle" />
         </t-swiper-item>
       </t-swiper>
-    </template>
-  </t-overlay>
+    </div>
+  </transition>
 </template>
 
 <script lang="ts">
-import { computed, toRefs, ref, defineComponent, reactive, watch, getCurrentInstance, CSSProperties } from 'vue';
-import { CloseCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { computed, defineComponent, reactive, getCurrentInstance, CSSProperties, h, Transition } from 'vue';
+import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
+
 import config from '../config';
-import ImageViewerProps from './props';
+import ImagediverProps from './props';
 import { renderTNode, TNode, useEmitEvent, useDefault, useTouch } from '../shared';
 import { TdImageViewerProps } from './type';
-import { Swiper as TSwiper, SwiperItem as TSwiperItem, SwiperNavigation } from '../swiper';
-import TOverlay from '../overlay';
 
-export type TriggerType = 'close-btn' | 'overlay' | 'esc';
+// inner components
+import { Swiper as TSwiper, SwiperItem as TSwiperItem } from '../swiper';
+import TImage from '../image';
+
 const { prefix } = config;
 const name = `${prefix}-image-viewer`;
 
-/*
-initialIndex, 因 swiper 不支持 defaultCurrent
-
-
-onIndexChange, 因 swiper 未提供 'prev' | 'next'， 所以没有 context
-*/
 const getDistance = (touches: TouchList) =>
   Math.sqrt((touches[0].clientX - touches[1].clientX) ** 2 + (touches[0].clientY - touches[1].clientY) ** 2);
 
 export default defineComponent({
   name,
   components: {
-    CloseCircleFilledIcon,
+    Transition,
     TSwiper,
     TSwiperItem,
-    TOverlay,
     TNode,
+    TImage,
   },
-  props: ImageViewerProps,
+  props: ImagediverProps,
   emits: ['close', 'index-change', 'update:visible', 'update:modelValue', 'change'],
   setup(props, context) {
+    const internalInstance = getCurrentInstance();
     const state = reactive({
       zooming: false,
       scale: 1,
     });
     const emitEvent = useEmitEvent(props, context.emit);
-    const [visible, setVisible] = useDefault<TdImageViewerProps['visible'], TdImageViewerProps>(
+    const [visible, setVisible] = useDefault(props, context.emit, 'visible', 'change');
+    const [currentIndex, setIndex] = useDefault<TdImageViewerProps['index'], TdImageViewerProps>(
       props,
       context.emit,
-      'visible',
-      'change',
+      'index',
+      'index-change',
     );
-    // 因 Overlay 未提供lazy属性，先暂时自行实现
-    const lazyVisible = ref(visible.value);
     const touch = useTouch();
-    const internalInstance = getCurrentInstance();
-    const closeBtnTNode = computed(() => {
-      return renderTNode(internalInstance, 'closeBtn');
-    });
-    const navigation = computed<SwiperNavigation>(() => {
-      if (props.showIndex) {
-        return { type: 'fraction' };
-      }
-      return { type: 'dots', showSlideBtn: false };
-    });
+
+    // node
+    const closeNode = computed(() =>
+      renderTNode(internalInstance, 'close-btn', {
+        defaultNode: h(CloseIcon),
+      }),
+    );
+    const deleteNode = computed(() =>
+      renderTNode(internalInstance, 'delete-btn', {
+        defaultNode: h(DeleteIcon),
+      }),
+    );
 
     const imageStyle = computed(() => {
       const { scale, zooming } = state;
@@ -100,13 +100,17 @@ export default defineComponent({
       return style;
     });
 
-    const handleClose = (e: Event, trigger: TriggerType) => {
+    const handleClose = (e: Event, trigger: string) => {
       setVisible(false);
       emitEvent('close', { trigger, e });
     };
 
+    const handleDelete = () => {
+      emitEvent('delete', currentIndex);
+    };
+
     const onSwiperChange = (index: number, context: any) => {
-      emitEvent('index-change', index);
+      setIndex(index, { context });
     };
 
     let fingerNum: number;
@@ -213,27 +217,16 @@ export default defineComponent({
       touch.reset();
     };
 
-    watch(
-      () => visible.value,
-      (value) => {
-        if (!value) {
-          resetScale();
-        }
-        setTimeout(() => {
-          lazyVisible.value = value;
-        }, 300);
-      },
-    );
     return {
       name,
       prefix,
-      closeBtnTNode,
-      navigation,
+      closeNode,
+      deleteNode,
+      currentIndex,
       imageStyle,
-      lazyVisible,
-      ...toRefs(props),
       visible,
       handleClose,
+      handleDelete,
       onSwiperChange,
       onTouchStart,
       onTouchMove,
