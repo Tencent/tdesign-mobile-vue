@@ -76,6 +76,11 @@ export default defineComponent({
       },
     );
 
+    const hide = (trigger: string) => {
+      context.emit('update:modelValue', false);
+      emitEvent('close', { trigger });
+    };
+
     const handleCancel = () => {
       emitEvent('cancel');
       context.emit('update:modelValue', false);
@@ -83,12 +88,11 @@ export default defineComponent({
 
     const handleSelected = (index: number) => {
       emitEvent('selected', props?.items[index], index);
-      context.emit('update:modelValue', false);
+      hide('selected');
     };
 
     const handleClose = () => {
-      emitEvent('close');
-      context.emit('update:modelValue', false);
+      hide('overlay');
     };
 
     return {

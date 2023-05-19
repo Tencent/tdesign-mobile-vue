@@ -1,6 +1,8 @@
 <template>
   <div class="action-sheet-demo">
     <t-button block variant="outline" theme="primary" @click="visible = true">常规列表型</t-button>
+    <t-button block variant="outline" theme="primary" @click="showOverlay">函数调用</t-button>
+    <t-button block variant="outline" theme="primary" @click="showOverlayCallAPI">函数API调用</t-button>
     <t-button block variant="outline" theme="primary" @click="descVisible = true">带描述列表型</t-button>
     <t-button block variant="outline" theme="primary" @click="iconVisible = true">带图标列表型</t-button>
     <t-button block variant="outline" theme="primary" @click="badgeVisible = true">带微标列表型</t-button>
@@ -26,11 +28,10 @@
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
+import { ActionSheet } from 'tdesign-mobile-vue';
 import { ActionSheetItem } from '../type';
-import { Badge } from '../../index';
 
 const apIcon = () => h(AppIcon, { size: '24px' });
-const badgeItem1 = () => h(Badge, { content: '1' });
 const visible = ref(false);
 const descVisible = ref(false);
 const iconVisible = ref(false);
@@ -87,10 +88,30 @@ const badgeData = {
 
 const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
   console.log(selected, selectedIndex);
+  ActionSheet.close();
 };
-const handleCancel = (): void => {
-  console.log('cancel');
+const handleCancel = (e: any): void => {
+  ActionSheet.close(e);
 };
+const showOverlay = () => {
+  ActionSheet({
+    items: baseData.items,
+    onSelected: handleSelected,
+    onCancel: handleCancel,
+    onClose: handleCancel,
+  });
+};
+const showOverlayCallAPI = () => {
+  ActionSheet.show({
+    items: baseData.items,
+    onSelected: handleSelected,
+    onCancel: handleCancel,
+    onClose: handleCancel,
+  });
+};
+// const hideActionSheet = () => {
+//   ActionSheet.clear();
+// };
 </script>
 <style lang="less" scoped>
 .action-sheet-demo {
