@@ -10,12 +10,6 @@ export interface TdIndexesProps {
    */
   indexList?: string[] | number[];
   /**
-   * 索引列表的列表数据。每个元素包含三个子元素，index(string)：索引值，例如1，2，3，...或A，B，C等；title(string): 索引标题，可不填将默认设为索引值；children(Array<{title: string}>): 子元素列表，title为子元素的展示文案。
-   * @default []
-   * @deprecated
-   */
-  list?: ListItem[];
-  /**
    * 索引是否吸顶，默认为true
    * @default true
    */
@@ -40,10 +34,4 @@ export interface TdIndexesAnchorProps {
    * 索引字符
    */
   index?: string | number;
-}
-
-export interface ListItem {
-  title: string;
-  index: string;
-  children: { title: string; [key: string]: any }[];
 }
