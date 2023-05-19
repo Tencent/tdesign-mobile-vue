@@ -1,6 +1,6 @@
 <template>
   <div ref="indexesRoot" :class="componentName" @scroll="handleRootScroll">
-    <div :class="`${componentName}__sidebar`" @touchstart="handleSidebarTouchstart" @touchmove="handleSidebarTouchmove">
+    <div :class="`${componentName}__sidebar`">
       <div
         v-for="item in indexList"
         :key="item"
@@ -10,6 +10,7 @@
         ]"
         :data-index="item"
         @click.prevent="handleSidebarItemClick(item)"
+        @touchmove="handleSidebarTouchmove"
       >
         {{ item }}
         <div v-if="showSidebarTip && activeSidebar === item" :class="`${componentName}__sidebar-tips`">
@@ -22,110 +23,123 @@
 </template>
 
 <script lang="ts">
-import { ref, reactive, defineComponent, onMounted, watchEffect, toRefs, onBeforeUnmount, provide } from 'vue';
+import {
+  ref,
+  reactive,
+  defineComponent,
+  onMounted,
+  watchEffect,
+  toRefs,
+  onBeforeUnmount,
+  provide,
+  computed,
+  ComponentInternalInstance,
+  watch,
+} from 'vue';
+import _ from 'lodash';
 import config from '../config';
 import IndexesProps from './props';
 import { useEmitEvent } from '../shared';
 
 const { prefix } = config;
 
-interface Touch {
-  startX: number;
-  startY: number;
-  deltaX: number;
-  deltaY: number;
-  offsetX: number;
-  offsetY: number;
-}
-interface State {
-  componentName: string;
-  showSidebarTip: boolean;
-  activeSidebar: string | number;
-  activeIndex: number;
+interface Child extends ComponentInternalInstance {
+  [key: string]: any;
 }
 
-const touch: Touch = {
-  startX: 0,
-  startY: 0,
-  deltaX: 0,
-  deltaY: 0,
-  offsetX: 0,
-  offsetY: 0,
-};
+interface State {
+  showSidebarTip: boolean;
+  activeSidebar: string | number;
+  children: Child[];
+}
+
+interface GroupTop {
+  height: number;
+  top: number;
+  anchor: string;
+  totalHeight: number;
+}
 
 const componentName = `${prefix}-indexes`;
 
 export default defineComponent({
   name: componentName,
   props: IndexesProps,
-  emits: ['select'],
+  emits: ['select', 'change'],
   setup(props, context) {
     const emitEvent = useEmitEvent(props, context.emit);
     let timeOut: number;
     const indexesRoot = ref<HTMLElement>();
+    const parentRect = ref();
     const state: State = reactive({
-      componentName,
       showSidebarTip: false,
       activeSidebar: '',
-      activeIndex: -1,
+      children: [],
     });
 
-    const anchorGroup = ref<HTMLElement[]>([]);
-    const setAnchorGroupRefs = (index: number) => {
-      return (el: any) => {
-        anchorGroup.value[index] = el as HTMLElement;
-      };
-    };
-
-    const anchor = ref<any[]>([]);
-    const anchorStyle = reactive<string[]>([]);
-    const setAnchorRefs = (index: number) => {
-      return (el: any) => {
-        anchor.value[index] = el as HTMLElement;
-      };
-    };
-
-    const scrollToView = (): void => {
-      const children = anchorGroup.value;
-      const targets = children.filter((ele) => {
-        const { dataset } = ele;
-        return dataset && dataset.index === state.activeSidebar;
-      });
-      targets[0]?.scrollIntoView?.();
-    };
-
-    const calcSticky = (indexesRootTop: number) => {
-      const children = anchorGroup.value;
-      for (let i = 0; i < children.length; i++) {
-        const { top: childTop, width } = children[i].getBoundingClientRect();
-        anchorStyle[i] = `z-index: ${i + 1};`;
-        if (childTop < indexesRootTop && i === state.activeIndex) {
-          anchorStyle[i] += `position:fixed;top:${indexesRootTop}px;width: ${width}px;`;
-        } else {
-          anchorStyle[i] += '';
+    const groupTop: Array<GroupTop> = [];
+    const indexList = computed(() => {
+      if (!props.indexList) {
+        const start = 'A'.charCodeAt(0);
+        const alphabet = [];
+        for (let i = start, end = start + 26; i < end; i += 1) {
+          alphabet.push(String.fromCharCode(i));
         }
-        const anchorHeight = anchor.value[i - 1]?.$el.getBoundingClientRect()?.height;
-        const diff = childTop - indexesRootTop - anchorHeight;
-        if (i - 1 === state.activeIndex && diff < 0) {
-          anchorStyle[i - 1] += `transform: translateY(${diff}px)`;
-        }
+        return alphabet;
+      }
+      return props.indexList;
+    });
+
+    const setAnchorOnScroll = (scrollTop: number) => {
+      if (!groupTop.length) return;
+      const { sticky, stickyOffset } = props;
+      const stickyTop = stickyOffset + parentRect.value.top;
+      scrollTop += stickyTop;
+      const curIndex = groupTop.findIndex(
+        (group) => scrollTop >= group.top - group.height && scrollTop <= group.top + group.totalHeight - group.height,
+      );
+      state.activeSidebar = groupTop[0].anchor;
+      if (curIndex === -1) return;
+      state.activeSidebar = groupTop[curIndex].anchor;
+      const curGroup = groupTop[curIndex];
+      if (sticky) {
+        const offset = curGroup.top - scrollTop;
+        const betwixt = offset < curGroup.height && offset > 0 && scrollTop > stickyTop;
+        state.children.forEach((child, index) => {
+          const { $el } = child;
+          const wrapperClass = `${componentName}-anchor__wrapper`;
+          const headerClass = `${componentName}-anchor__header`;
+          const wrapper = $el.querySelector(`.${wrapperClass}`);
+          const header = $el.querySelector(`.${headerClass}`);
+          if (index === curIndex) {
+            if (scrollTop - parentRect.value.top > stickyOffset) {
+              wrapper.classList.add(`${wrapperClass}--sticky`);
+            } else {
+              wrapper.classList.remove(`${wrapperClass}--sticky`);
+            }
+            wrapper.classList.add(`${wrapperClass}--active`);
+            header.classList.add(`${headerClass}--active`);
+            wrapper.style = `transform: translate3d(0, ${betwixt ? offset : 0}px, 0); top: ${stickyTop}px`;
+          } else if (index + 1 === curIndex) {
+            wrapper.classList.add(`${wrapperClass}--sticky`);
+            wrapper.classList.add(`${wrapperClass}--active`);
+            header.classList.add(`${headerClass}--active`);
+            wrapper.style = `transform: translate3d(0, ${betwixt ? offset : 0}px, 0); top: ${stickyTop}px;`;
+          } else {
+            wrapper.classList.remove(`${wrapperClass}--sticky`);
+            wrapper.classList.remove(`${wrapperClass}--active`);
+            header.classList.remove(`${headerClass}--active`);
+            wrapper.style = '';
+          }
+        });
       }
     };
 
-    const calcChildPosition = (scrollTop: number) => {
-      const children = anchorGroup.value;
-      let currentIndex = -1;
-      for (let i = 0; i < children.length - 1; i++) {
-        if (scrollTop < children[i + 1].offsetTop) {
-          currentIndex = i;
-          break;
-        }
+    const scrollToByIndex = (index: number | string) => {
+      const curGroup = groupTop.find((item) => item.anchor === index);
+      if (indexesRoot.value) {
+        indexesRoot.value?.scrollTo(0, curGroup?.top ?? 0);
       }
-      if (scrollTop >= children[children.length - 1].offsetTop) {
-        currentIndex = children.length - 1;
-      }
-      state.activeIndex = currentIndex;
-      state.activeSidebar = children[currentIndex].dataset.index ?? '';
     };
 
     const setActiveSidebarAndTip = (index: string | number) => {
@@ -133,48 +147,17 @@ export default defineComponent({
       state.showSidebarTip = true;
     };
 
-    watchEffect(() => {
-      if (state.showSidebarTip) {
-        clearSidebarTip();
-      }
-    });
-
     const handleSidebarItemClick = (index: string | number) => {
+      emitEvent('select', index);
+      props.onSelect?.(index);
       setActiveSidebarAndTip(index);
-      scrollToView();
+      scrollToByIndex(index);
     };
 
-    const handleSidebarTouchstart = (event: TouchEvent): void => {
-      event.stopPropagation();
-      const { touches } = event;
-      touch.startX = touches[0].clientX;
-      touch.startY = touches[0].clientX;
-    };
-
-    const handleSidebarTouchmove = (event: TouchEvent): void => {
-      event.preventDefault();
-      const { touches } = event;
-      const { clientX, clientY } = touches[0];
-
-      const target = document.elementFromPoint(clientX, clientY);
-      if (target && target.className === `${componentName}__sidebar-item` && target instanceof HTMLElement) {
-        const { index } = target.dataset;
-        if (index !== undefined && state.activeSidebar !== index) {
-          setActiveSidebarAndTip(index);
-          scrollToView();
-        }
-      }
-    };
-
-    const handleRootScroll = (e: UIEvent) => {
-      if (indexesRoot.value) {
-        calcChildPosition(indexesRoot.value.scrollTop);
-        if (props.sticky) {
-          const indexesRootTop = indexesRoot.value?.getBoundingClientRect()?.top ?? 0;
-          calcSticky(indexesRootTop);
-        }
-      }
-    };
+    const handleRootScroll = _.throttle((e: UIEvent) => {
+      const scrollTop = indexesRoot.value?.scrollTop ?? 0;
+      setAnchorOnScroll(scrollTop);
+    }, 1000 / 30);
 
     const clearSidebarTip = (): void => {
       if (state.showSidebarTip && state.activeSidebar) {
@@ -185,18 +168,68 @@ export default defineComponent({
       }
     };
 
-    const handleCellClick = (indexes: { groupIndex: string; childrenIndex: number }) => {
-      emitEvent('select', indexes);
+    const getAnchorsRect = () => {
+      return Promise.all(
+        state.children.map((child) => {
+          const { $el } = child;
+          const { dataset } = $el;
+          const { index } = dataset;
+          const rect = $el.getBoundingClientRect();
+          groupTop.push({
+            height: rect.height,
+            top: rect.top - parentRect.value.top,
+            anchor: /^\d+$/.test(index) ? Number(index) : index,
+            totalHeight: 0,
+          });
+          return child;
+        }),
+      );
     };
 
-    onMounted(() => {
-      const children = anchorGroup.value;
-      if (children.length > 0) {
-        const { index } = children[0].dataset;
-        if (index !== undefined) {
-          state.activeSidebar = index;
+    const handleSidebarTouchmove = (event: TouchEvent) => {
+      event.preventDefault();
+      const { touches } = event;
+      const { clientX, clientY } = touches[0];
+      const target = document.elementFromPoint(clientX, clientY);
+      if (target && target.className === `${componentName}__sidebar-item` && target instanceof HTMLElement) {
+        const { index } = target.dataset;
+        const curIndex = /^\d+$/.test(index ?? '') ? Number(index) : index;
+        if (curIndex !== undefined && state.activeSidebar !== curIndex) {
+          setActiveSidebarAndTip(curIndex);
+          scrollToByIndex(curIndex);
         }
       }
+    };
+
+    const relation = (child: ComponentInternalInstance) => {
+      child && state.children.push(child);
+    };
+
+    watchEffect(() => {
+      if (state.showSidebarTip) {
+        clearSidebarTip();
+      }
+    });
+
+    watch(
+      () => state.activeSidebar,
+      (val, oldVal) => {
+        if (val !== oldVal) {
+          emitEvent('change', state.activeSidebar);
+          props.onChange?.(state.activeSidebar);
+        }
+      },
+    );
+
+    onMounted(() => {
+      parentRect.value = indexesRoot.value?.getBoundingClientRect() || { top: 0 };
+      getAnchorsRect().then(() => {
+        groupTop.forEach((item, index) => {
+          const next = groupTop[index + 1];
+          item.totalHeight = (next?.top || Infinity) - item.top;
+        });
+        setAnchorOnScroll(0);
+      });
     });
 
     onBeforeUnmount(() => {
@@ -204,21 +237,17 @@ export default defineComponent({
     });
 
     provide('indexesProvide', {
-      ...props,
+      relation,
     });
 
     return {
       ...toRefs(state),
+      componentName,
+      indexList,
       indexesRoot,
-      anchorGroup,
-      anchorStyle,
-      setAnchorGroupRefs,
-      setAnchorRefs,
       handleSidebarItemClick,
-      handleSidebarTouchmove,
-      handleSidebarTouchstart,
       handleRootScroll,
-      handleCellClick,
+      handleSidebarTouchmove,
     };
   },
 });

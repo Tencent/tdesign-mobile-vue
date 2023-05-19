@@ -1,18 +1,17 @@
 <template>
-  <div :class="`${name}`">
-    <div :class="contentClass">
+  <div :class="`${name}`" :data-index="index">
+    <div :class="`${name}__wrapper`">
       <div :class="`${name}__slot`">
         <slot />
       </div>
-      <div :class="indexClass">{{ index }}</div>
+      <div :class="`${name}__header`">{{ index }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, inject, ref } from 'vue';
+import { ComponentInternalInstance, defineComponent, getCurrentInstance, inject } from 'vue';
 import config from '../config';
-import IndexesProps from './props';
 import indexesAnchorProps from './indexes-anchor-props';
 
 const name = `${config.prefix}-indexes-anchor`;
@@ -20,27 +19,13 @@ const name = `${config.prefix}-indexes-anchor`;
 export default defineComponent({
   name,
   props: indexesAnchorProps,
-  setup(props, context) {
-    const indexesProvide = inject('indexesProvide') as typeof IndexesProps;
-    const boxClasses = computed(() => []);
-    const contentClass = computed(() => [
-      `${name}__wrapper`,
-      { [`${name}__wrapper--sticky`]: false },
-      { [`${name}__wrapper--active`]: false },
-    ]);
-    const active = ref(false);
-    const indexClass = computed(() => [
-      `${name}__header`,
-      {
-        [`${name}__header--active`]: false,
-      },
-    ]);
-
+  setup() {
+    const instance = getCurrentInstance();
+    const indexesProvide: any = inject('indexesProvide', undefined);
+    const { proxy } = instance as ComponentInternalInstance;
+    indexesProvide.relation(proxy);
     return {
       name,
-      boxClasses,
-      contentClass,
-      indexClass,
     };
   },
 });
