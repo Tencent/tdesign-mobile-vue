@@ -16,7 +16,7 @@ export default {
   list: {
     type: Array as PropType<TdTabsProps['list']>,
   },
-  /** 选项卡位置 */
+  /** 已废弃。选项卡位置 */
   placement: {
     type: String as PropType<TdTabsProps['placement']>,
     default: 'top' as TdTabsProps['placement'],
@@ -39,9 +39,30 @@ export default {
       return ['medium', 'large'].includes(val);
     },
   },
-  /** 是否支持吸顶 */
+  /** 选项卡头部空间是否均分 */
+  spaceEvenly: {
+    type: Boolean,
+    default: true,
+  },
+  /** 是否开启粘性布局 */
+  sticky: Boolean,
+  /** 透传至 Sticky 组件 */
   stickyProps: {
     type: Object as PropType<TdTabsProps['stickyProps']>,
+  },
+  /** 是否可以滑动切换 */
+  swipeable: {
+    type: Boolean,
+    default: true,
+  },
+  /** 标签的样式 */
+  theme: {
+    type: String as PropType<TdTabsProps['theme']>,
+    default: 'line' as TdTabsProps['theme'],
+    validator(val: TdTabsProps['theme']): boolean {
+      if (!val) return true;
+      return ['line', 'tag', 'card'].includes(val);
+    },
   },
   /** 激活的选项卡值 */
   value: {
@@ -58,4 +79,8 @@ export default {
   },
   /** 激活的选项卡发生变化时触发 */
   onChange: Function as PropType<TdTabsProps['onChange']>,
+  /** 点击选项卡时触发 */
+  onClick: Function as PropType<TdTabsProps['onClick']>,
+  /** 页面滚动时触发 */
+  onScroll: Function as PropType<TdTabsProps['onScroll']>,
 };

@@ -1,22 +1,21 @@
 <template>
-  <div class="demo-drawer">
-    <t-drawer
-      v-model:visible="openIcon"
-      placement="left"
-      :items="iconSidebar"
-      @item-click="itemClick"
-      @overlay-click="onOverlayClick"
-      @close="onClose"
-    ></t-drawer>
-    <div class="button-group">
-      <t-button block variant="outline" size="large" @click="openDrawer(true)">带图标抽屉</t-button>
-    </div>
-  </div>
+  <t-drawer
+    v-model:visible="visible"
+    :items="iconSidebar"
+    @item-click="itemClick"
+    @overlay-click="onOverlayClick"
+    @close="onClose"
+  />
+  <t-button block variant="outline" size="large" theme="primary" @click="visible = true">带图标抽屉</t-button>
 </template>
 <script lang="ts" setup>
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import { DrawerCloseContext, DrawerItem } from '../type';
+import { TriggerSource, DrawerItem } from '../type';
+
+interface DrawerCloseContext {
+  trigger: TriggerSource;
+}
 
 const iconSidebar = ref([
   {
@@ -44,10 +43,8 @@ const iconSidebar = ref([
     icon: () => h(AppIcon),
   },
 ]);
-const openIcon = ref(false);
-const openDrawer = (type: boolean) => {
-  openIcon.value = true;
-};
+
+const visible = ref(false);
 
 const itemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) => {
   console.log('itemclick: ', index, item, context);
