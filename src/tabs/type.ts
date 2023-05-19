@@ -17,7 +17,7 @@ export interface TdTabsProps {
    */
   list?: Array<TdTabPanelProps>;
   /**
-   * 选项卡位置
+   * 已废弃。选项卡位置
    * @default top
    */
   placement?: 'left' | 'top';
@@ -32,9 +32,29 @@ export interface TdTabsProps {
    */
   size?: 'medium' | 'large';
   /**
-   * 是否支持吸顶
+   * 选项卡头部空间是否均分
+   * @default true
+   */
+  spaceEvenly?: boolean;
+  /**
+   * 是否开启粘性布局
+   * @default false
+   */
+  sticky?: boolean;
+  /**
+   * 透传至 Sticky 组件
    */
   stickyProps?: StickyProps;
+  /**
+   * 是否可以滑动切换
+   * @default true
+   */
+  swipeable?: boolean;
+  /**
+   * 标签的样式
+   * @default line
+   */
+  theme?: 'line' | 'tag' | 'card';
   /**
    * 激活的选项卡值
    */
@@ -50,10 +70,23 @@ export interface TdTabsProps {
   /**
    * 激活的选项卡发生变化时触发
    */
-  onChange?: (value: TabValue) => void;
+  onChange?: (value: TabValue, label: string) => void;
+  /**
+   * 点击选项卡时触发
+   */
+  onClick?: (value: TabValue, label: string) => void;
+  /**
+   * 页面滚动时触发
+   */
+  onScroll?: (scrollTop: number, isFixed: boolean) => void;
 }
 
 export interface TdTabPanelProps {
+  /**
+   * 透传至 Badge 组件
+   * @default null
+   */
+  badgeProps?: object;
   /**
    * 选项卡内容隐藏时是否销毁
    * @default true
