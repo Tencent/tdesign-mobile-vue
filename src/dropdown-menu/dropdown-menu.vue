@@ -1,12 +1,10 @@
 <template>
-  <div :class="classes">
-    <div ref="refBar" :class="styleBar">
-      <div v-for="(item, idx) in menuTitles" :key="idx" :class="styleBarItem(item, idx)" @click="expandMenu(item, idx)">
-        <div :class="`${name}__title`">
-          {{ item.label }}
-        </div>
-        <caret-down-small-icon :class="`${name}__arrow`" size="24" />
+  <div ref="refBar" :class="classes">
+    <div v-for="(item, idx) in menuTitles" :key="idx" :class="styleBarItem(item, idx)" @click="expandMenu(item, idx)">
+      <div :class="`${name}__title`">
+        {{ item.label }}
       </div>
+      <caret-down-small-icon :class="`${name}__arrow`" size="24" />
     </div>
     <slot />
   </div>
@@ -34,6 +32,7 @@ export default defineComponent({
       activeId: null,
       barRect: {},
       childCount: 0,
+      itemsLabel: [],
     });
 
     // 子成员处理
@@ -56,9 +55,14 @@ export default defineComponent({
     // 通过 slots.default 子成员，计算标题栏选项
     const menuTitles = computed(() =>
       menuItems.value.map((item: any) => {
-        const { label, disabled } = item.props;
+        const { label, disabled, value, options } = item.props;
+        const target = options?.find((item: any) => item.value === value);
+        if (!label) {
+          state.itemsLabel.push(target?.label || '');
+        }
+        const computedLabel = target?.label || '';
         return {
-          label,
+          label: label || computedLabel,
           disabled: disabled !== undefined && disabled !== false,
         };
       }),
@@ -73,18 +77,11 @@ export default defineComponent({
     const classes = computed(() => [`${name}`]);
     // 标题栏结点引用
     const refBar = ref(null);
-    // 标题栏样式
-    const styleBar = computed(() => [
-      `${name}__bar`,
-      {
-        [`${name}__bar ${name}__bar--open`]: state.activeId,
-      },
-    ]);
     const styleBarItem = computed(() => (item: any, idx: number) => [
       `${name}__item`,
       {
-        [`${prefix}-is-disabled`]: item.disabled,
-        [`${prefix}-is-active`]: idx === state.activeId,
+        [`${name}__item--disabled`]: item.disabled,
+        [`${name}__item--active`]: idx === state.activeId,
       },
     ]);
     // 展开对应项目的菜单
@@ -111,6 +108,11 @@ export default defineComponent({
       menuContext.recordMenuExpanded(container, control, DropdownMenuExpandState.expanded);
     };
     const collapseMenu = () => {
+      if (state.itemsLabel.length > 0) {
+        menuTitles.value.forEach((item: any, index: number) => {
+          item.label = state.itemsLabel[index];
+        });
+      }
       state.activeId = null;
 
       // 清除已展开状态记录
@@ -137,7 +139,6 @@ export default defineComponent({
       ...toRefs(props),
       refBar,
       state,
-      styleBar,
       styleBarItem,
       menuItems,
       menuTitles,

@@ -5,14 +5,20 @@
 import { mount } from '@vue/test-utils';
 import confirmVue from '@/dialog/demos/confirm.vue';
 import feedbackVue from '@/dialog/demos/feedback.vue';
+import imageDialogVue from '@/dialog/demos/image-dialog.vue';
 import inputVue from '@/dialog/demos/input.vue';
 import mobileVue from '@/dialog/demos/mobile.vue';
+import multiStateVue from '@/dialog/demos/multi-state.vue';
+import pluginVue from '@/dialog/demos/plugin.vue';
 
 const mapper = {
   confirmVue,
   feedbackVue,
+  imageDialogVue,
   inputVue,
   mobileVue,
+  multiStateVue,
+  pluginVue,
 };
 
 describe('Dialog', () => {
