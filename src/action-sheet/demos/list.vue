@@ -1,8 +1,7 @@
 <template>
   <div class="action-sheet-demo">
     <t-button block variant="outline" theme="primary" @click="visible = true">常规列表型</t-button>
-    <t-button block variant="outline" theme="primary" @click="showOverlay">函数调用</t-button>
-    <t-button block variant="outline" theme="primary" @click="showOverlayCallAPI">函数API调用</t-button>
+    <t-button block variant="outline" theme="primary" @click="showOverlayCallAPI">函数调用</t-button>
     <t-button block variant="outline" theme="primary" @click="descVisible = true">带描述列表型</t-button>
     <t-button block variant="outline" theme="primary" @click="iconVisible = true">带图标列表型</t-button>
     <t-button block variant="outline" theme="primary" @click="badgeVisible = true">带微标列表型</t-button>
@@ -85,21 +84,12 @@ const badgeData = {
     },
   ],
 };
-
 const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
   console.log(selected, selectedIndex);
   ActionSheet.close();
 };
 const handleCancel = (e: any): void => {
-  ActionSheet.close(e);
-};
-const showOverlay = () => {
-  ActionSheet({
-    items: baseData.items,
-    onSelected: handleSelected,
-    onCancel: handleCancel,
-    onClose: handleCancel,
-  });
+  ActionSheet.close();
 };
 const showOverlayCallAPI = () => {
   ActionSheet.show({
@@ -109,9 +99,6 @@ const showOverlayCallAPI = () => {
     onClose: handleCancel,
   });
 };
-// const hideActionSheet = () => {
-//   ActionSheet.clear();
-// };
 </script>
 <style lang="less" scoped>
 .action-sheet-demo {

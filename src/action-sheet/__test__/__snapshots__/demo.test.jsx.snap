@@ -4656,23 +4656,6 @@ exports[`ActionSheet > ActionSheet listVue demo works fine 1`] = `
         class="t-button__content"
       >
         
-        函数API调用
-        
-      </span>
-      <!---->
-    </button>
-    <button
-      aria-disabled="false"
-      class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-      data-v-443785fb=""
-      role="button"
-      type="button"
-    >
-      <!---->
-      <span
-        class="t-button__content"
-      >
-        
         带描述列表型
         
       </span>
@@ -5484,23 +5467,6 @@ exports[`ActionSheet > ActionSheet mobileVue demo works fine 1`] = `
           >
             
             函数调用
-            
-          </span>
-          <!---->
-        </button>
-        <button
-          aria-disabled="false"
-          class="t-button t-button--size-medium t-button--outline t-button--primary t-button--rectangle t-button--block"
-          data-v-443785fb=""
-          role="button"
-          type="button"
-        >
-          <!---->
-          <span
-            class="t-button__content"
-          >
-            
-            函数API调用
             
           </span>
           <!---->
