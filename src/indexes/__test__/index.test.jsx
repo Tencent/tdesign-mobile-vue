@@ -1,136 +1,253 @@
 import { mount } from '@vue/test-utils';
 import { vi } from 'vitest';
-import { Indexes as TIndexes, IndexesCell as TIndexesCell } from '../index';
-import { number } from '../demos/data';
+import { default as TCell } from '../../cell/index';
+import { Indexes, IndexesAnchor } from '../index';
 import config from '@/config';
 import { trigger } from '@/image-viewer/__test__/touch';
 
 const { prefix } = config;
 
+const indexesClass = `${prefix}-indexes`;
+const indexesAnchorClass = `${prefix}-indexes-anchor`;
+
+const children = new Array(5).fill('列表内容');
+const list = [
+  {
+    index: 1,
+    children,
+  },
+  {
+    index: 3,
+    children,
+  },
+  {
+    index: 5,
+    children,
+  },
+  {
+    index: 7,
+    children,
+  },
+  {
+    index: 8,
+    children,
+  },
+  {
+    index: 10,
+    children,
+  },
+  {
+    index: '#',
+    children,
+  },
+];
+const indexList = list.map((item) => item.index);
+
 const componentName = `${prefix}-indexes`;
 describe('Indexes', () => {
   describe('props', () => {
-    it(': height', async () => {
-      const wrapper = mount(TIndexes, {
-        props: {
-          height: 100,
-          list: number,
+    it(':indexList', () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Indexes indexList={indexList}>
+              {{
+                default: list.map((item, index) => (
+                  <template>
+                    <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                    {item.children.map((val) => (
+                      <TCell className="indexes-cell">{val}</TCell>
+                    ))}
+                  </template>
+                )),
+              }}
+            </Indexes>
+          );
         },
       });
-      expect(wrapper.vm.height).toBe(100); // 测试 props
-      expect(wrapper.find(`.${componentName}`).attributes('style')).toEqual(expect.stringContaining('height: 100px')); // 测试渲染出来的
+      expect(wrapper.findAll(`.${componentName}__sidebar-item`).length).toBe(indexList.length);
+      wrapper.find(`.${componentName}__sidebar-item`).trigger('click');
+      expect(wrapper.findAllComponents(TCell).length).toBe(
+        list.reduce((count, item) => count + item.children.length, 0),
+      );
     });
 
-    it(': list', () => {
-      const wrapper = mount(TIndexes, {
-        props: {
-          list: number,
+    it(':sticky be true', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Indexes indexList={indexList}>
+              {{
+                default: list.map((item, index) => (
+                  <template>
+                    <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                    {item.children.map((val) => (
+                      <TCell className="indexes-cell">{val}</TCell>
+                    ))}
+                  </template>
+                )),
+              }}
+            </Indexes>
+          );
         },
       });
-      expect(wrapper.findAll(`.${componentName}__sidebar-item`).length).toBe(number.length); // 侧边栏数量
-      wrapper.find(`.${componentName}__sidebar-item`).trigger('click'); // 覆盖侧边栏点击
-      expect(wrapper.findAllComponents(TIndexesCell).length).toBe(
-        number.reduce((count, item) => count + item.children.length, 0),
-      ); // 渲染出来的单元格数量
-    });
-    it(': sticky be true', async () => {
-      const containerDiv = document.createElement('div');
-      containerDiv.setAttribute('style', 'width: 200px; height:200px; border:1px solid red; overflow: auto');
-      document.body.appendChild(containerDiv);
-      const wrapper = mount(TIndexes, {
-        props: {
-          list: number,
-          sticky: true,
-        },
-        // attachTo: containerDiv,
+
+      await wrapper.vm.$nextTick();
+      const container = wrapper.find(`.${indexesClass}`).element;
+      wrapper.find(`.${indexesClass}`).element.scrollTop = 100;
+      console.log(wrapper.vm.$el.scrollTop, 'scrollTop');
+      await wrapper.vm.$nextTick();
+      const indexes = wrapper.findAll(`.${indexesAnchorClass}__wrapper`);
+      indexes.forEach((child) => {
+        console.log(child.classes(), 'indexes-class');
       });
-      const getBoundingClientRect = vi.fn();
-      getBoundingClientRect.mockImplementation(() => ({
-        x: 0,
-        y: 0,
-        bottom: 0,
-        height: 0,
-        left: 0,
-        right: 0,
-        top: 1000,
-        width: 200,
-      }));
-      wrapper.element.getBoundingClientRect = getBoundingClientRect;
-      expect(wrapper.element).toEqual(wrapper.vm.indexesRoot);
-      await wrapper.findComponent(TIndexes).element.dispatchEvent(new CustomEvent('scroll', { detail: 20 }));
-      expect(wrapper.html().includes('position: fixed;')).toEqual(true);
-    });
-    it(': sticky be false', async () => {
-      const containerDiv = document.createElement('div');
-      containerDiv.setAttribute('style', 'width: 200px; height:200px; border:1px solid red; overflow: auto');
-      document.body.appendChild(containerDiv);
-      const wrapper = mount(TIndexes, {
-        props: {
-          list: number,
-          sticky: false,
-        },
-        attachTo: containerDiv,
-      });
-      const getBoundingClientRect = vi.fn();
-      getBoundingClientRect.mockImplementation(() => ({
-        x: 0,
-        y: 0,
-        bottom: 0,
-        height: 0,
-        left: 0,
-        right: 0,
-        top: 1000,
-        width: 200,
-      }));
-      wrapper.element.getBoundingClientRect = getBoundingClientRect;
-      expect(wrapper.element).toEqual(wrapper.vm.indexesRoot);
-      await wrapper.findComponent(TIndexes).element.dispatchEvent(new CustomEvent('scroll', { detail: 20 }));
-      expect(wrapper.html().includes('position: fixed;')).toEqual(false);
     });
   });
   describe('event', () => {
     it(': select', async () => {
-      const log = vi.fn((info) => {
-        return info.childrenIndex;
-      });
       const selectFn = vi.fn();
-      const wrapper = mount(TIndexes, {
-        props: {
-          list: number,
-          onSelect: selectFn,
+      const wrapper = mount({
+        components: { Indexes },
+        template: `
+          <Indexes :indexList="indexList" @select="select">
+            <template v-for="(item, index) in list" :slot="item.index" :key="index">
+              <IndexesAnchor :index="item.index"></IndexesAnchor>
+              <TCell v-for="val in item.children" class="indexes-cell">{{val}}</TCell>
+            </template>
+          </Indexes>
+        `,
+        data() {
+          return {
+            indexList,
+            list,
+          };
         },
-      });
-      wrapper.findComponent(TIndexesCell).trigger('click'); // 模拟点击第一个单元格
-      expect(selectFn).toBeCalledWith({
-        groupIndex: '1',
-        childrenIndex: 0,
-      }); // 检查onSelect 是否被按指定参数调用
-    });
-    it(': touch sidebar show tips', async () => {
-      const wrapper = mount(TIndexes, {
-        props: {
-          list: number,
+        methods: {
+          select(index) {
+            selectFn(index);
+          },
         },
       });
       await wrapper.find('.t-indexes__sidebar-item').trigger('click');
-      expect(wrapper.find('.t-indexes__sidebar-tip')).toBeDefined();
-      wrapper.unmount(); // 销毁触发 onBeforeUnmount
+      expect(selectFn).toBeCalledWith(list[0].index);
     });
+
+    it(': change', async () => {
+      const selectFn = vi.fn();
+      const changeFn = vi.fn();
+      const wrapper = mount({
+        components: { Indexes },
+        template: `
+          <Indexes :indexList="indexList" @select="select" @change="change">
+            <template v-for="(item, index) in list" :slot="item.index" :key="index">
+              <IndexesAnchor :index="item.index"></IndexesAnchor>
+              <TCell v-for="val in item.children" class="indexes-cell">{{val}}</TCell>
+            </template>
+          </Indexes>
+        `,
+        data() {
+          return {
+            indexList,
+            list,
+          };
+        },
+        methods: {
+          select(index) {
+            selectFn(index);
+          },
+          change(index) {
+            changeFn(index);
+          },
+        },
+      });
+      await wrapper.find(`.${indexesClass}__sidebar-item`).trigger('click');
+      expect(selectFn).toBeCalledWith(list[0].index);
+
+      const items = wrapper.findAll(`.${indexesClass}__sidebar-item`);
+      await items[1].trigger('click');
+      expect(selectFn).toBeCalledWith(list[1].index);
+      expect(changeFn).toBeCalledWith(list[1].index);
+    });
+
+    it(': touch sidebar show tips', async () => {
+      const selectFn = vi.fn();
+      const wrapper = mount({
+        components: { Indexes },
+        template: `
+          <Indexes :indexList="indexList" @select="select">
+            <template v-for="(item, index) in list" :slot="item.index" :key="index">
+              <IndexesAnchor :index="item.index"></IndexesAnchor>
+              <TCell v-for="val in item.children" class="indexes-cell">{{val}}</TCell>
+            </template>
+          </Indexes>
+        `,
+        data() {
+          return {
+            indexList,
+            list,
+          };
+        },
+        methods: {
+          select(index) {
+            selectFn(index);
+          },
+        },
+      });
+      await wrapper.find('.t-indexes__sidebar-item').trigger('click');
+      expect(selectFn).toBeCalledWith(list[0].index);
+      expect(wrapper.find('.t-indexes__sidebar-tip')).toBeDefined();
+      wrapper.unmount();
+    });
+
     it(': sidebar touchmove', async () => {
-      const wrapper = mount(TIndexes, {
-        props: {
-          list: number,
-          sticky: false,
+      const wrapper = mount({
+        components: { Indexes },
+        template: `
+          <Indexes :indexList="indexList">
+            <template v-for="(item, index) in list" :slot="item.index" :key="index">
+              <IndexesAnchor :index="item.index"></IndexesAnchor>
+              <TCell v-for="val in item.children" class="indexes-cell">{{val}}</TCell>
+            </template>
+          </Indexes>
+        `,
+        data() {
+          return {
+            indexList,
+            list,
+          };
         },
       });
       const sidebar = wrapper.find(`.${componentName}__sidebar`);
       document.elementFromPoint = function () {
-        // document.elementFromPoint is not defined
         return sidebar.findAll(`.${componentName}__sidebar-item`)[0].element;
       };
       await trigger(sidebar, 'touchstart', 20, 20);
       await trigger(sidebar, 'touchmove', 20, 60);
       await trigger(sidebar, 'touchend', 20, 310);
     });
+  });
+});
+
+describe('Indexes & IndexesAnchor', () => {
+  it('render', () => {
+    const wrapper = mount({
+      setup() {
+        return () => (
+          <Indexes indexList={indexList}>
+            {{
+              default: list.map((item, index) => (
+                <template>
+                  <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                  {item.children.map((val) => (
+                    <TCell className="indexes-cell">{val}</TCell>
+                  ))}
+                </template>
+              )),
+            }}
+          </Indexes>
+        );
+      },
+    });
+    expect(wrapper.element).toMatchSnapshot();
   });
 });

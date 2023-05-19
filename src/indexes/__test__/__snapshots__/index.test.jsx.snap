@@ -1,0 +1,898 @@
+// Vitest Snapshot v1
+
+exports[`Indexes & IndexesAnchor > render 1`] = `
+<div
+  class="t-indexes"
+>
+  <div
+    class="t-indexes__sidebar"
+  >
+    
+    <div
+      class="t-indexes__sidebar-item"
+      data-index="1"
+    >
+      1 
+      <!--v-if-->
+    </div>
+    <div
+      class="t-indexes__sidebar-item"
+      data-index="3"
+    >
+      3 
+      <!--v-if-->
+    </div>
+    <div
+      class="t-indexes__sidebar-item"
+      data-index="5"
+    >
+      5 
+      <!--v-if-->
+    </div>
+    <div
+      class="t-indexes__sidebar-item"
+      data-index="7"
+    >
+      7 
+      <!--v-if-->
+    </div>
+    <div
+      class="t-indexes__sidebar-item"
+      data-index="8"
+    >
+      8 
+      <!--v-if-->
+    </div>
+    <div
+      class="t-indexes__sidebar-item"
+      data-index="10"
+    >
+      10 
+      <!--v-if-->
+    </div>
+    <div
+      class="t-indexes__sidebar-item"
+      data-index="#"
+    >
+      # 
+      <!--v-if-->
+    </div>
+    
+  </div>
+  
+  <template>
+    <div
+      class="t-indexes-anchor"
+      data-index="1"
+    >
+      <div
+        class="t-indexes-anchor__wrapper"
+      >
+        <div
+          class="t-indexes-anchor__slot"
+        >
+          
+          
+        </div>
+        <div
+          class="t-indexes-anchor__header"
+        >
+          1
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
+  </template>
+  <template>
+    <div
+      class="t-indexes-anchor"
+      data-index="3"
+    >
+      <div
+        class="t-indexes-anchor__wrapper"
+      >
+        <div
+          class="t-indexes-anchor__slot"
+        >
+          
+          
+        </div>
+        <div
+          class="t-indexes-anchor__header"
+        >
+          3
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
+  </template>
+  <template>
+    <div
+      class="t-indexes-anchor"
+      data-index="5"
+    >
+      <div
+        class="t-indexes-anchor__wrapper"
+      >
+        <div
+          class="t-indexes-anchor__slot"
+        >
+          
+          
+        </div>
+        <div
+          class="t-indexes-anchor__header"
+        >
+          5
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
+  </template>
+  <template>
+    <div
+      class="t-indexes-anchor"
+      data-index="7"
+    >
+      <div
+        class="t-indexes-anchor__wrapper"
+      >
+        <div
+          class="t-indexes-anchor__slot"
+        >
+          
+          
+        </div>
+        <div
+          class="t-indexes-anchor__header"
+        >
+          7
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
+  </template>
+  <template>
+    <div
+      class="t-indexes-anchor"
+      data-index="8"
+    >
+      <div
+        class="t-indexes-anchor__wrapper"
+      >
+        <div
+          class="t-indexes-anchor__slot"
+        >
+          
+          
+        </div>
+        <div
+          class="t-indexes-anchor__header"
+        >
+          8
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
+  </template>
+  <template>
+    <div
+      class="t-indexes-anchor"
+      data-index="10"
+    >
+      <div
+        class="t-indexes-anchor__wrapper"
+      >
+        <div
+          class="t-indexes-anchor__slot"
+        >
+          
+          
+        </div>
+        <div
+          class="t-indexes-anchor__header"
+        >
+          10
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
+  </template>
+  <template>
+    <div
+      class="t-indexes-anchor"
+      data-index="#"
+    >
+      <div
+        class="t-indexes-anchor__wrapper"
+      >
+        <div
+          class="t-indexes-anchor__slot"
+        >
+          
+          
+        </div>
+        <div
+          class="t-indexes-anchor__header"
+        >
+          #
+        </div>
+      </div>
+    </div>
+    
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    <div
+      class="indexes-cell"
+    >
+      <div
+        class="t-cell__left"
+      >
+        <!--v-if-->
+        <!--v-if-->
+      </div>
+      <!--v-if-->
+      <div
+        class="t-cell__note"
+      >
+        
+        列表内容
+        
+      </div>
+      <!--v-if-->
+    </div>
+    
+  </template>
+  
+</div>
+`;
