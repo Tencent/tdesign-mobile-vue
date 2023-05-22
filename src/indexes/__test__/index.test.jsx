@@ -92,11 +92,10 @@ describe('Indexes', () => {
         },
       });
 
-      await wrapper.vm.$nextTick();
       const container = wrapper.find(`.${indexesClass}`).element;
-      wrapper.find(`.${indexesClass}`).element.scrollTop = 100;
-      console.log(wrapper.vm.$el.scrollTop, 'scrollTop');
+      vi.spyOn(container, 'scrollTop', 'get').mockReturnValue(100);
       await wrapper.vm.$nextTick();
+      console.log(wrapper.vm.$el.scrollTop, 'scrollTop');
       const indexes = wrapper.findAll(`.${indexesAnchorClass}__wrapper`);
       indexes.forEach((child) => {
         console.log(child.classes(), 'indexes-class');
@@ -107,7 +106,7 @@ describe('Indexes', () => {
     it(': select', async () => {
       const selectFn = vi.fn();
       const wrapper = mount({
-        components: { Indexes },
+        components: { Indexes, IndexesAnchor, TCell },
         template: `
           <Indexes :indexList="indexList" @select="select">
             <template v-for="(item, index) in list" :slot="item.index" :key="index">
@@ -136,7 +135,7 @@ describe('Indexes', () => {
       const selectFn = vi.fn();
       const changeFn = vi.fn();
       const wrapper = mount({
-        components: { Indexes },
+        components: { Indexes, IndexesAnchor, TCell },
         template: `
           <Indexes :indexList="indexList" @select="select" @change="change">
             <template v-for="(item, index) in list" :slot="item.index" :key="index">
@@ -172,7 +171,7 @@ describe('Indexes', () => {
     it(': touch sidebar show tips', async () => {
       const selectFn = vi.fn();
       const wrapper = mount({
-        components: { Indexes },
+        components: { Indexes, IndexesAnchor, TCell },
         template: `
           <Indexes :indexList="indexList" @select="select">
             <template v-for="(item, index) in list" :slot="item.index" :key="index">
@@ -201,7 +200,7 @@ describe('Indexes', () => {
 
     it(': sidebar touchmove', async () => {
       const wrapper = mount({
-        components: { Indexes },
+        components: { Indexes, IndexesAnchor, TCell },
         template: `
           <Indexes :indexList="indexList">
             <template v-for="(item, index) in list" :slot="item.index" :key="index">
