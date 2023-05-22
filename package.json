@@ -83,7 +83,7 @@
     "@babel/runtime": "^7.16.5",
     "@types/lodash": "^4.14.178",
     "@types/validator": "^13.6.3",
-    "@vueuse/core": "^8.2.5",
+    "@vueuse/core": "^10.1.2",
     "dayjs": "^1.10.7",
     "lodash": "^4.17.21",
     "tdesign-icons-vue-next": "^0.1.11",
