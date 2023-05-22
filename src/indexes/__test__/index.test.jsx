@@ -71,36 +71,6 @@ describe('Indexes', () => {
         list.reduce((count, item) => count + item.children.length, 0),
       );
     });
-
-    it(':sticky be true', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Indexes indexList={indexList}>
-              {{
-                default: list.map((item, index) => (
-                  <template>
-                    <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
-                    {item.children.map((val) => (
-                      <TCell className="indexes-cell">{val}</TCell>
-                    ))}
-                  </template>
-                )),
-              }}
-            </Indexes>
-          );
-        },
-      });
-
-      const container = wrapper.find(`.${indexesClass}`).element;
-      vi.spyOn(container, 'scrollTop', 'get').mockReturnValue(100);
-      await wrapper.vm.$nextTick();
-      console.log(wrapper.vm.$el.scrollTop, 'scrollTop');
-      const indexes = wrapper.findAll(`.${indexesAnchorClass}__wrapper`);
-      indexes.forEach((child) => {
-        console.log(child.classes(), 'indexes-class');
-      });
-    });
   });
   describe('event', () => {
     it(': select', async () => {
