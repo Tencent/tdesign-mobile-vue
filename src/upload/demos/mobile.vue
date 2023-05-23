@@ -11,10 +11,14 @@
     <tdesign-demo-block title="02 组件状态" summary="加载状态">
       <StatusDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block title="02 样式自定义" summary="单选上传">
+      <CustomDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 <script setup lang="ts">
 import BaseDemo from './base.vue';
+import CustomDemo from './custom.vue';
 import MultipleDemo from './multiple.vue';
 import StatusDemo from './status.vue';
 </script>

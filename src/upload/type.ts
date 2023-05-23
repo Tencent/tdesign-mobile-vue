@@ -19,6 +19,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   action?: string;
   /**
+   * 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。
+   */
+  addContent?: string | TNode;
+  /**
    * 是否允许重复上传相同文件名的文件
    * @default false
    */
