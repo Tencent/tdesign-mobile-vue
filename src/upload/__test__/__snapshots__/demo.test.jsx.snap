@@ -971,7 +971,7 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        02 样式自定义
+        03 样式自定义
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"

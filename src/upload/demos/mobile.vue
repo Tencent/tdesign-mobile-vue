@@ -11,7 +11,7 @@
     <tdesign-demo-block title="02 组件状态" summary="加载状态">
       <StatusDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 样式自定义" summary="单选上传">
+    <tdesign-demo-block title="03 样式自定义" summary="单选上传">
       <CustomDemo />
     </tdesign-demo-block>
   </div>
