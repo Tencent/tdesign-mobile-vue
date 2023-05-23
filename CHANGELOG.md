@@ -5,6 +5,44 @@ toc: false
 spline: explain
 ---
 
+## 🌈 0.22.0 `2023-05-23` 
+### ❗ BREAKING CHANGES
+- `Rate`: 调整 DOM 结构 @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
+- `Rate`: 移除 `clearable`、`variant` 属性 @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
+- `Rate`: `size` 属性默认值变更为 `24px` @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
+- `Rate`: `gap` 属性默认值变更为 `8` @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
+- `Drawer`: 调整 DOM @LeeJim ([#673](https://github.com/Tencent/tdesign-mobile-vue/pull/673))
+- `ImageViewer`: 调整 DOM @LeeJim ([#677](https://github.com/Tencent/tdesign-mobile-vue/pull/677))
+- `ImageViewer`: 属性 `initialIndex` 更名为 `index` @LeeJim ([#677](https://github.com/Tencent/tdesign-mobile-vue/pull/677))
+- `SwipeCell`: 调整 `DOM` 结构 @nined9 ([#663](https://github.com/Tencent/tdesign-mobile-vue/pull/663))
+- `SwipeCell`: 移除 `expanded` 属性 @nined9 ([#663](https://github.com/Tencent/tdesign-mobile-vue/pull/663))
+- `Tabs`: 调整 `DOM` 结构 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+- `Tabs`: 移除 `placement` 属性 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+- `Tabs`: 调整 `DOM` 结构 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+- `Tabs`: 移除 `placement` 属性 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+
+### 🚀 Features
+- `Rate`: 新增 `icon` 属性 @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
+- `Popup`: 新增 `destroyOnClose` 属性 @LeeJim ([#672](https://github.com/Tencent/tdesign-mobile-vue/pull/672))
+- `Drawer`: 新增 `attach`、`destroyOnClose`、`footer`、`title` 属性 @LeeJim ([#673](https://github.com/Tencent/tdesign-mobile-vue/pull/673))
+- `Drawer`: 支持通过 plugin 的方式调用 @LeeJim ([#673](https://github.com/Tencent/tdesign-mobile-vue/pull/673))
+- `ImageViewer`: 新增 `deleteBtn` 属性以及 `delete` 事件 @LeeJim ([#677](https://github.com/Tencent/tdesign-mobile-vue/pull/677))
+- `SwipeCell`: 新增 `opened` 等属性 @nined9 ([#663](https://github.com/Tencent/tdesign-mobile-vue/pull/663))
+- `SwipeCell`: 新增组件实力方法 `showSure`，用于实现二次确认 @nined9 ([#663](https://github.com/Tencent/tdesign-mobile-vue/pull/663))
+- `Tabs`:  新增 `spaceEvenly`、 `sticky`、`swipeable`、 `theme` 等属性 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+- `TabPanel`: 新增 `badgeProps` 属性 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+- `Icon`: 支持直接通过 `t-icon` 来使用 @anlyyao ([#681](https://github.com/Tencent/tdesign-mobile-vue/pull/681))
+- `Upload`: 新增 `addContent` 属性 @anlyyao ([#685](https://github.com/Tencent/tdesign-mobile-vue/pull/685))
+- `Upload`: 支持 `--td-upload-width` 、 `--td-upload-height`、`--td-upload-background` 变量 @anlyyao ([#685](https://github.com/Tencent/tdesign-mobile-vue/pull/685))
+- `Rate`: 新增 `icon` 属性 @fengchunqi ([#642](https://github.com/Tencent/tdesign-mobile-vue/pull/642))
+- `Tabs`:  新增 `spaceEvenly`、 `sticky`、`swipeable`、 `theme` 等属性 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+- `TabPanel`: 新增 `badgeProps` 属性 @TeacherDingTing ([#678](https://github.com/Tencent/tdesign-mobile-vue/pull/678))
+
+### 🐞 Bug Fixes
+- `Dialog`: 修复示例失效的问题 @anlyyao ([#682](https://github.com/Tencent/tdesign-mobile-vue/pull/682))
+- `Button`: 修复 `border` 样式问题 @anlyyao ([#1350](https://github.com/Tencent/tdesign-common/pull/1350))
+
+
 ## 🌈 0.21.0 `2023-05-15` 
 ### 🚀 Features
 - `Progress`: 调整 DOM结构 @anlyyao ([#640](https://github.com/Tencent/tdesign-mobile-vue/pull/640))
