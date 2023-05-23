@@ -5,8 +5,9 @@
 <script lang="ts" setup>
 import { inject } from 'vue';
 
+const $dialog: any = inject('$dialog');
+
 const onClick = () => {
-  const $dialog: any = inject('$dialog');
   $dialog.confirm({
     title: '对话框标题',
     content: '告知当前状态、信息和解决方法，等内容。描述尽可能控制在三行内。',
