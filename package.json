@@ -86,7 +86,7 @@
     "@vueuse/core": "^8.2.5",
     "dayjs": "^1.10.7",
     "lodash": "^4.17.21",
-    "tdesign-icons-vue-next": "^0.1.8",
+    "tdesign-icons-vue-next": "^0.1.11",
     "validator": "^13.5.1"
   },
   "peerDependencies": {
