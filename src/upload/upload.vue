@@ -29,7 +29,10 @@
         <t-node :content="defaultContent" />
       </div>
       <div v-else :class="`${name}__item ${name}__item--add`" @click="triggerUpload">
-        <add-icon size="28" :class="`${name}__add-icon`" />
+        <div :class="`${name}__add-icon`">
+          <t-node v-if="addContent" :content="addContent" />
+          <add-icon v-else size="28" />
+        </div>
       </div>
     </template>
 
@@ -101,6 +104,7 @@ export default defineComponent({
     );
     const internalInstance = getCurrentInstance();
     const defaultContent = computed(() => renderTNode(internalInstance, 'default'));
+    const addContent = computed(() => renderTNode(internalInstance, 'addContent'));
     const images: Ref<Array<string>> = ref([]);
     const showViewer = ref(false);
     const initialIndex = ref(0);
@@ -423,6 +427,7 @@ export default defineComponent({
       inputRef,
       uploadedFiles,
       defaultContent,
+      addContent,
       emitEvent,
       setInnerFiles,
       triggerUpload,

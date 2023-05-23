@@ -18,6 +18,10 @@ export default {
     type: String,
     default: '',
   },
+  /** 添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效。 */
+  addContent: {
+    type: [String, Function] as PropType<TdUploadProps['addContent']>,
+  },
   /** 是否允许重复上传相同文件名的文件 */
   allowUploadDuplicateFile: Boolean,
   /** 是否在选择文件后自动发起请求上传文件 */

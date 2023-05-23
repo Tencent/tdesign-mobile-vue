@@ -21,19 +21,23 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
     <div
       class="t-upload__item t-upload__item--add"
     >
-      <svg
-        class="t-icon t-icon-add t-upload__add-icon"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-upload__add-icon"
       >
-        <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-add"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
     
     <input
@@ -42,6 +46,186 @@ exports[`Upload > Upload baseVue demo works fine 1`] = `
       type="file"
     />
     <!--v-if-->
+  </div>
+</div>
+`;
+
+exports[`Upload > Upload customVue demo works fine 1`] = `
+<div
+  class="upload-demo"
+  data-v-b50ff116=""
+>
+  <div
+    class="upload-title"
+    data-v-b50ff116=""
+  >
+    请上传身份证人像面
+  </div>
+  <div
+    class="upload-content"
+    data-v-b50ff116=""
+  >
+    <div
+      class="t-upload front"
+      data-v-b50ff116=""
+    >
+      
+      
+      
+      <div
+        class="t-upload__item t-upload__item--add"
+      >
+        <div
+          class="t-upload__add-icon"
+        >
+          
+          <div
+            class="add-content"
+            data-v-b50ff116=""
+          >
+            <div
+              class="t-image t-image--square"
+              data-v-b50ff116=""
+              style="width: 32px; height: 32px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                  </div>
+                  
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://oteam-tdesign-1258344706.cos-internal.ap-guangzhou.tencentcos.cn/mobile/demos/upload3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <input
+        accept="image/png"
+        hidden=""
+        type="file"
+      />
+      <!--v-if-->
+    </div>
+  </div>
+  <div
+    class="upload-title"
+    data-v-b50ff116=""
+  >
+    请上传身份证国徽面
+  </div>
+  <div
+    class="upload-content"
+    data-v-b50ff116=""
+  >
+    <div
+      class="t-upload reverse"
+      data-v-b50ff116=""
+    >
+      
+      
+      
+      <div
+        class="t-upload__item t-upload__item--add"
+      >
+        <div
+          class="t-upload__add-icon"
+        >
+          
+          <div
+            class="add-content"
+            data-v-b50ff116=""
+          >
+            <div
+              class="t-image t-image--square"
+              data-v-b50ff116=""
+              style="width: 32px; height: 32px;"
+            >
+              <div
+                class="t-image__mask"
+              >
+                <div
+                  class="t-loading"
+                  style="font-size: 20px;"
+                >
+                  
+                  <div
+                    class="t-loading__dots"
+                    style="animation-duration: 800ms; width: 20px; height: 20px;"
+                  >
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                    />
+                    <div
+                      class="t-loading__dot"
+                      style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                    />
+                  </div>
+                  
+                  <!--v-if-->
+                  <!---->
+                </div>
+              </div>
+              <picture>
+                <!--v-if-->
+                <img
+                  alt=""
+                  class="t-image__img"
+                  src="https://oteam-tdesign-1258344706.cos-internal.ap-guangzhou.tencentcos.cn/mobile/demos/upload3.png"
+                  style="object-fit: fill; object-position: center;"
+                />
+              </picture>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <input
+        accept="image/png"
+        hidden=""
+        type="file"
+      />
+      <!--v-if-->
+    </div>
   </div>
 </div>
 `;
@@ -101,19 +285,23 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           <div
             class="t-upload__item t-upload__item--add"
           >
-            <svg
-              class="t-icon t-icon-add t-upload__add-icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-upload__add-icon"
             >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-add"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
           <input
@@ -348,19 +536,23 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           <div
             class="t-upload__item t-upload__item--add"
           >
-            <svg
-              class="t-icon t-icon-add t-upload__add-icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-upload__add-icon"
             >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-add"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
           <input
@@ -595,19 +787,23 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           <div
             class="t-upload__item t-upload__item--add"
           >
-            <svg
-              class="t-icon t-icon-add t-upload__add-icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-upload__add-icon"
             >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-add"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
           <input
@@ -735,19 +931,23 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
           <div
             class="t-upload__item t-upload__item--add"
           >
-            <svg
-              class="t-icon t-icon-add t-upload__add-icon"
-              fill="none"
-              height="1em"
-              viewBox="0 0 16 16"
-              width="1em"
+            <div
+              class="t-upload__add-icon"
             >
-              <path
-                d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-                fill="currentColor"
-                fill-opacity="0.9"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-add"
+                fill="none"
+                height="1em"
+                viewBox="0 0 16 16"
+                width="1em"
+              >
+                <path
+                  d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+                  fill="currentColor"
+                  fill-opacity="0.9"
+                />
+              </svg>
+            </div>
           </div>
           
           <input
@@ -759,6 +959,207 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
         </div>
       </div>
       
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 样式自定义
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        单选上传
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="upload-demo"
+        data-v-b50ff116=""
+      >
+        <div
+          class="upload-title"
+          data-v-b50ff116=""
+        >
+          请上传身份证人像面
+        </div>
+        <div
+          class="upload-content"
+          data-v-b50ff116=""
+        >
+          <div
+            class="t-upload front"
+            data-v-b50ff116=""
+          >
+            
+            
+            
+            <div
+              class="t-upload__item t-upload__item--add"
+            >
+              <div
+                class="t-upload__add-icon"
+              >
+                
+                <div
+                  class="add-content"
+                  data-v-b50ff116=""
+                >
+                  <div
+                    class="t-image t-image--square"
+                    data-v-b50ff116=""
+                    style="width: 32px; height: 32px;"
+                  >
+                    <div
+                      class="t-image__mask"
+                    >
+                      <div
+                        class="t-loading"
+                        style="font-size: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dots"
+                          style="animation-duration: 800ms; width: 20px; height: 20px;"
+                        >
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                          />
+                        </div>
+                        
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <picture>
+                      <!--v-if-->
+                      <img
+                        alt=""
+                        class="t-image__img"
+                        src="https://oteam-tdesign-1258344706.cos-internal.ap-guangzhou.tencentcos.cn/mobile/demos/upload3.png"
+                        style="object-fit: fill; object-position: center;"
+                      />
+                    </picture>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <input
+              accept="image/png"
+              hidden=""
+              type="file"
+            />
+            <!--v-if-->
+          </div>
+        </div>
+        <div
+          class="upload-title"
+          data-v-b50ff116=""
+        >
+          请上传身份证国徽面
+        </div>
+        <div
+          class="upload-content"
+          data-v-b50ff116=""
+        >
+          <div
+            class="t-upload reverse"
+            data-v-b50ff116=""
+          >
+            
+            
+            
+            <div
+              class="t-upload__item t-upload__item--add"
+            >
+              <div
+                class="t-upload__add-icon"
+              >
+                
+                <div
+                  class="add-content"
+                  data-v-b50ff116=""
+                >
+                  <div
+                    class="t-image t-image--square"
+                    data-v-b50ff116=""
+                    style="width: 32px; height: 32px;"
+                  >
+                    <div
+                      class="t-image__mask"
+                    >
+                      <div
+                        class="t-loading"
+                        style="font-size: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dots"
+                          style="animation-duration: 800ms; width: 20px; height: 20px;"
+                        >
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                          />
+                        </div>
+                        
+                        <!--v-if-->
+                        <!---->
+                      </div>
+                    </div>
+                    <picture>
+                      <!--v-if-->
+                      <img
+                        alt=""
+                        class="t-image__img"
+                        src="https://oteam-tdesign-1258344706.cos-internal.ap-guangzhou.tencentcos.cn/mobile/demos/upload3.png"
+                        style="object-fit: fill; object-position: center;"
+                      />
+                    </picture>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <input
+              accept="image/png"
+              hidden=""
+              type="file"
+            />
+            <!--v-if-->
+          </div>
+        </div>
+      </div>
       
     </div>
   </div>
@@ -970,19 +1371,23 @@ exports[`Upload > Upload multipleVue demo works fine 1`] = `
     <div
       class="t-upload__item t-upload__item--add"
     >
-      <svg
-        class="t-icon t-icon-add t-upload__add-icon"
-        fill="none"
-        height="1em"
-        viewBox="0 0 16 16"
-        width="1em"
+      <div
+        class="t-upload__add-icon"
       >
-        <path
-          d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-          fill="currentColor"
-          fill-opacity="0.9"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-add"
+          fill="none"
+          height="1em"
+          viewBox="0 0 16 16"
+          width="1em"
+        >
+          <path
+            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+            fill="currentColor"
+            fill-opacity="0.9"
+          />
+        </svg>
+      </div>
     </div>
     
     <input
@@ -1199,19 +1604,23 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       <div
         class="t-upload__item t-upload__item--add"
       >
-        <svg
-          class="t-icon t-icon-add t-upload__add-icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
+        <div
+          class="t-upload__add-icon"
         >
-          <path
-            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
+          <svg
+            class="t-icon t-icon-add"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
       
       <input
@@ -1339,19 +1748,23 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
       <div
         class="t-upload__item t-upload__item--add"
       >
-        <svg
-          class="t-icon t-icon-add t-upload__add-icon"
-          fill="none"
-          height="1em"
-          viewBox="0 0 16 16"
-          width="1em"
+        <div
+          class="t-upload__add-icon"
         >
-          <path
-            d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
-            fill="currentColor"
-            fill-opacity="0.9"
-          />
-        </svg>
+          <svg
+            class="t-icon t-icon-add"
+            fill="none"
+            height="1em"
+            viewBox="0 0 16 16"
+            width="1em"
+          >
+            <path
+              d="M7.35 8.65v3.85h1.3V8.65h3.85v-1.3H8.65V3.5h-1.3v3.85H3.5v1.3h3.85z"
+              fill="currentColor"
+              fill-opacity="0.9"
+            />
+          </svg>
+        </div>
       </div>
       
       <input
