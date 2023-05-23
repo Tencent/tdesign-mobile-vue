@@ -50,9 +50,10 @@ export default {
     type: Number,
     default: 300,
   },
-  /** 当使用垂直方向滚动时的高度 */
+  /** 已废弃。轮播的高度；默认单位 `px` */
   height: {
-    type: Number,
+    type: [String, Number] as PropType<TdSwiperProps['height']>,
+    default: 192,
   },
   /** 轮播间隔时间 */
   interval: {
@@ -68,15 +69,18 @@ export default {
   navigation: {
     type: [Object, Function] as PropType<TdSwiperProps['navigation']>,
   },
-  /** 页码信息展示位置 */
-  paginationPosition: {
-    type: String as PropType<TdSwiperProps['paginationPosition']>,
-    default: 'bottom' as TdSwiperProps['paginationPosition'],
-    validator(val: TdSwiperProps['paginationPosition']): boolean {
-      if (!val) return true;
-      return ['top-left', 'top', 'top-right', 'bottom-left', 'bottom', 'bottom-right'].includes(val);
-    },
+  /** 后边距偏移量，可用于露出后一项的一小部分。默认单位 `px` */
+  nextAffset: {
+    type: [String, Number] as PropType<TdSwiperProps['nextAffset']>,
+    default: 0,
+  },
+  /** 前边距偏移量，可用于露出前一项的一小部分。默认单位 `px` */
+  previousAffset: {
+    type: [String, Number] as PropType<TdSwiperProps['previousAffset']>,
+    default: 0,
   },
   /** 轮播切换时触发 */
   onChange: Function as PropType<TdSwiperProps['onChange']>,
+  /** 点击轮播项时触发 */
+  onClick: Function as PropType<TdSwiperProps['onClick']>,
 };
