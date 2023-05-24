@@ -11,9 +11,9 @@ import {
 } from 'vue';
 import { isFunction, isString } from 'lodash';
 import { SwipeInitData } from './swipe-cell.vue';
-import { renderTNode } from '@/shared';
+import { renderTNode } from '../shared';
 import { SwipeActionItem } from './type';
-import { TNode } from '@/common';
+import { TNode } from '../common';
 
 // 二次确认
 export function useSureConfirm(instance: ComponentInternalInstance | null, initData: SwipeInitData) {
