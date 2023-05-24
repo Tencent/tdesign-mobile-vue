@@ -1,44 +1,31 @@
 <template>
-  <div ref="boxRef" :class="boxClasses" :style="boxStyles">
-    <div ref="contentRef" class="t-indexes__anchor" :style="anchorStyle">
-      <t-node :content="stickyContent"></t-node>
+  <div :class="`${name}`" :data-index="index">
+    <div :class="`${name}__wrapper`">
+      <div :class="`${name}__slot`">
+        <slot />
+      </div>
+      <div :class="`${name}__header`">{{ index }}</div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, getCurrentInstance, defineComponent } from 'vue';
-import { useElementBounding, templateRef } from '@vueuse/core';
+import { ComponentInternalInstance, defineComponent, getCurrentInstance, inject } from 'vue';
 import config from '../config';
-import { renderContent, TNode } from '../shared';
+import indexesAnchorProps from './indexes-anchor-props';
 
 const name = `${config.prefix}-indexes-anchor`;
 
 export default defineComponent({
   name,
-  components: { TNode },
-  props: {
-    anchorStyle: {
-      type: String,
-      default: '',
-    },
-  },
-  setup(props, context) {
-    const boxClasses = name;
-    const stickyContent = computed(() => renderContent(getCurrentInstance(), 'default', ''));
-
-    // box 用于占位和记录边界
-    // content 用于实际定位
-    const boxRef = templateRef('boxRef');
-    const contentRef = templateRef('contentRef');
-    const { height } = useElementBounding(contentRef);
-
-    const boxStyles = computed(() => `height:${height.value}px;`);
-
+  props: indexesAnchorProps,
+  setup() {
+    const instance = getCurrentInstance();
+    const indexesProvide: any = inject('indexesProvide', undefined);
+    const { proxy } = instance as ComponentInternalInstance;
+    indexesProvide.relation(proxy);
     return {
-      boxClasses,
-      boxStyles,
-      stickyContent,
+      name,
     };
   },
 });
